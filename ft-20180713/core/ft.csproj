@@ -34,8 +34,9 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.7"/>
+    <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.9"/>
     <PackageReference Include="AlibabaCloud.RPCClient" Version="1.0.0"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
+    <PackageReference Include="AlibabaCloud.SDK.Common" Version="0.2.5"/>
   </ItemGroup>
 </Project>
