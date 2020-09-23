@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterUserKubeconfigRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        /// <summary>
         /// ApiServer是否为内网地址。
         /// </summary>
         [NameInMap("PrivateIpAddress")]

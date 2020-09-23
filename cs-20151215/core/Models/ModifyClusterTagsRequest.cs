@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterTagsRequest : TeaModel {
         /// <summary>
-        /// 汲取ID
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        /// <summary>
         /// 标签列表。
         /// </summary>
         [NameInMap("body")]

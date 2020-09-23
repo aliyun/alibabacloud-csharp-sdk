@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetKubernetesTriggerRequest : TeaModel {
         /// <summary>
-        /// 集群ID
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        /// <summary>
         /// 应用所属命名空间。
         /// </summary>
         [NameInMap("Namespace")]

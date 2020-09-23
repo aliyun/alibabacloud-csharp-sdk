@@ -13,13 +13,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class AttachInstancesRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        /// <summary>
         /// 待添加的实例列表。
         /// </summary>
         [NameInMap("instances")]

@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAddonsUpgradeStatusRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        /// <summary>
         /// 组件列表。
         /// </summary>
         [NameInMap("componentIds")]

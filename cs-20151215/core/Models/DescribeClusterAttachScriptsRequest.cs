@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAttachScriptsRequest : TeaModel {
         /// <summary>
-        /// 集群ID。
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        /// <summary>
         /// 节点CPU架构,支持amd64、arm、arm64。
         /// </summary>
         [NameInMap("arch")]

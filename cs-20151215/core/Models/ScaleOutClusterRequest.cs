@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ScaleOutClusterRequest : TeaModel {
         /// <summary>
-        /// 扩容目标集群的集群ID。
-        /// </summary>
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        /// <summary>
         /// 扩容实例数量。
         /// </summary>
         [NameInMap("count")]

@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
-        /// 部署模板ID。
-        /// </summary>
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public string TemplateId { get; set; }
-
-        /// <summary>
         /// 部署模板名称。
         /// </summary>
         [NameInMap("name")]
