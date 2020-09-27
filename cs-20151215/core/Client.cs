@@ -1351,7 +1351,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DescribeClusterNodePoolDetailResponse>(DoROARequest("DescribeClusterNodePoolDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools/{NodepoolId}", "none", req, runtime));
+            return TeaModel.ToObject<DescribeClusterNodePoolDetailResponse>(DoROARequest("DescribeClusterNodePoolDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools/{NodepoolId}", "json", req, runtime));
         }
 
         public async Task<DescribeClusterNodePoolDetailResponse> DescribeClusterNodePoolDetailWithOptionsAsync(string ClusterId, string NodepoolId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1360,7 +1360,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DescribeClusterNodePoolDetailResponse>(await DoROARequestAsync("DescribeClusterNodePoolDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools/{NodepoolId}", "none", req, runtime));
+            return TeaModel.ToObject<DescribeClusterNodePoolDetailResponse>(await DoROARequestAsync("DescribeClusterNodePoolDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools/{NodepoolId}", "json", req, runtime));
         }
 
         public DescribeClusterNodePoolsResponse DescribeClusterNodePools(string ClusterId)
@@ -2094,7 +2094,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(DoROARequest("ListTagResources", "2015-12-15", "HTTPS", "GET", "AK", "/tags", "none", req, runtime));
+            return TeaModel.ToObject<ListTagResourcesResponse>(DoROARequest("ListTagResources", "2015-12-15", "HTTPS", "GET", "AK", "/tags", "json", req, runtime));
         }
 
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2122,7 +2122,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(await DoROARequestAsync("ListTagResources", "2015-12-15", "HTTPS", "GET", "AK", "/tags", "none", req, runtime));
+            return TeaModel.ToObject<ListTagResourcesResponse>(await DoROARequestAsync("ListTagResources", "2015-12-15", "HTTPS", "GET", "AK", "/tags", "json", req, runtime));
         }
 
         public ModifyClusterResponse ModifyCluster(string ClusterId, ModifyClusterRequest request)
