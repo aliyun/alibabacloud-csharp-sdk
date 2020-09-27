@@ -10,35 +10,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterConfigurationRequest : TeaModel {
         /// <summary>
-        /// 自定配置。
+        /// 配置集合。
         /// </summary>
-        [NameInMap("customize_config")]
+        [NameInMap("configs")]
         [Validation(Required=false)]
-        public ModifyClusterConfigurationRequestCustomizeConfig CustomizeConfig { get; set; }
-        public class ModifyClusterConfigurationRequestCustomizeConfig : TeaModel {
-            [NameInMap("configs")]
+        public ModifyClusterConfigurationRequestConfigs Configs { get; set; }
+        public class ModifyClusterConfigurationRequestConfigs : TeaModel {
+            [NameInMap("key")]
             [Validation(Required=false)]
-            public ModifyClusterConfigurationRequestCustomizeConfigConfigs Configs { get; set; }
-            public class ModifyClusterConfigurationRequestCustomizeConfigConfigs : TeaModel {
-                /// <summary>
-                /// key。
-                /// </summary>
-                [NameInMap("key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                /// <summary>
-                /// value。
-                /// </summary>
-                [NameInMap("value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
-            [NameInMap("name")]
+            public string Key { get; set; }
+            [NameInMap("value")]
             [Validation(Required=false)]
-            public string Name { get; set; }
+            public string Value { get; set; }
         };
+
+        /// <summary>
+        /// 配置名称。
+        /// </summary>
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
     }
 

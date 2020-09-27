@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateKubernetesTriggerRequest : TeaModel {
         /// <summary>
-        /// 地域ID。
+        /// 触发器行为。
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("Action")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Action { get; set; }
 
         /// <summary>
         /// 集群ID。
@@ -29,6 +29,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
+
+        /// <summary>
+        /// 地域ID。
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         /// <summary>
         /// 触发器类型。

@@ -81,12 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("StandardComponents")]
         [Validation(Required=false)]
-        public DescribeAddonsResponseBodyStandardComponents StandardComponents { get; set; }
-        public class DescribeAddonsResponseBodyStandardComponents : TeaModel {
-            [NameInMap("ComponentName")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> ComponentName { get; set; }
-        };
+        public Dictionary<string, Dictionary<string, object>> StandardComponents { get; set; }
 
     }
 

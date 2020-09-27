@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterRequest : TeaModel {
         /// <summary>
-        /// 集群是否开启删除保护。
-        /// </summary>
-        [NameInMap("deletion_protection")]
-        [Validation(Required=false)]
-        public bool? DeletionProtection { get; set; }
-
-        /// <summary>
-        /// 集群的Ingress SLB的ID。
-        /// </summary>
-        [NameInMap("ingress_loadbalancer_id")]
-        [Validation(Required=false)]
-        public string IngressLoadbalancerId { get; set; }
-
-        /// <summary>
         /// 集群是否开启EIP。
         /// </summary>
         [NameInMap("api_server_eip")]
@@ -38,11 +24,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ApiServerEipId { get; set; }
 
         /// <summary>
-        /// 集群资源组ID。
+        /// 集群是否开启删除保护。
         /// </summary>
-        [NameInMap("resource_group_id")]
+        [NameInMap("deletion_protection")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public bool? DeletionProtection { get; set; }
 
         /// <summary>
         /// 域名是否重新绑定到Ingress的SLB地址。
@@ -50,6 +36,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("ingress_domain_rebinding")]
         [Validation(Required=false)]
         public string IngressDomainRebinding { get; set; }
+
+        /// <summary>
+        /// 集群的Ingress SLB的ID。
+        /// </summary>
+        [NameInMap("ingress_loadbalancer_id")]
+        [Validation(Required=false)]
+        public string IngressLoadbalancerId { get; set; }
+
+        /// <summary>
+        /// 集群资源组ID。
+        /// </summary>
+        [NameInMap("resource_group_id")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 
