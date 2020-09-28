@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// 是否多可用区。
+        /// </summary>
+        [NameInMap("MultiAZ")]
+        [Validation(Required=false)]
+        public bool? MultiAZ { get; set; }
+
+        /// <summary>
         /// 集群类型。
         /// </summary>
         [NameInMap("ClusterType")]

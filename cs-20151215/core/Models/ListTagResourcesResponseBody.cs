@@ -10,18 +10,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// 下一个查询token。
+        /// </summary>
+        [NameInMap("next_token")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 请求ID。
+        /// </summary>
+        [NameInMap("request_id")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 资源标签列表。
         /// </summary>
         [NameInMap("tag_resources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
-            [NameInMap("next_token")]
-            [Validation(Required=false)]
-            public string NextToken { get; set; }
-            [NameInMap("request_id")]
-            [Validation(Required=false)]
-            public string RequestId { get; set; }
             [NameInMap("tag_resource")]
             [Validation(Required=false)]
             public ListTagResourcesResponseBodyTagResourcesTagResource TagResource { get; set; }

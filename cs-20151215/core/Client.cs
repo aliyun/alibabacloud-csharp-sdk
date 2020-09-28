@@ -1383,7 +1383,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(DoROARequest("DescribeClusterNodePools", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools", "none", req, runtime));
+            return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(DoROARequest("DescribeClusterNodePools", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools", "json", req, runtime));
         }
 
         public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePoolsWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1392,7 +1392,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(await DoROARequestAsync("DescribeClusterNodePools", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools", "none", req, runtime));
+            return TeaModel.ToObject<DescribeClusterNodePoolsResponse>(await DoROARequestAsync("DescribeClusterNodePools", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools", "json", req, runtime));
         }
 
         public DescribeClusterNodesResponse DescribeClusterNodes(string ClusterId, DescribeClusterNodesRequest request)
@@ -1767,6 +1767,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 query["Region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiAZ))
+            {
+                query["MultiAZ"] = request.MultiAZ;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 query["ClusterType"] = request.ClusterType;
@@ -1784,7 +1788,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<DescribeKubernetesVersionMetadataResponse>(DoROARequest("DescribeKubernetesVersionMetadata", "2015-12-15", "HTTPS", "GET", "AK", "/api/v1/metadata/versions", "none", req, runtime));
+            return TeaModel.ToObject<DescribeKubernetesVersionMetadataResponse>(DoROARequest("DescribeKubernetesVersionMetadata", "2015-12-15", "HTTPS", "GET", "AK", "/api/v1/metadata/versions", "array", req, runtime));
         }
 
         public async Task<DescribeKubernetesVersionMetadataResponse> DescribeKubernetesVersionMetadataWithOptionsAsync(DescribeKubernetesVersionMetadataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1795,6 +1799,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 query["Region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiAZ))
+            {
+                query["MultiAZ"] = request.MultiAZ;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 query["ClusterType"] = request.ClusterType;
@@ -1812,7 +1820,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<DescribeKubernetesVersionMetadataResponse>(await DoROARequestAsync("DescribeKubernetesVersionMetadata", "2015-12-15", "HTTPS", "GET", "AK", "/api/v1/metadata/versions", "none", req, runtime));
+            return TeaModel.ToObject<DescribeKubernetesVersionMetadataResponse>(await DoROARequestAsync("DescribeKubernetesVersionMetadata", "2015-12-15", "HTTPS", "GET", "AK", "/api/v1/metadata/versions", "array", req, runtime));
         }
 
         public DescribeTemplateAttributeResponse DescribeTemplateAttribute(string TemplateId)
@@ -1835,7 +1843,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DescribeTemplateAttributeResponse>(DoROARequest("DescribeTemplateAttribute", "2015-12-15", "HTTPS", "GET", "AK", "/templates/" + TemplateId, "none", req, runtime));
+            return TeaModel.ToObject<DescribeTemplateAttributeResponse>(DoROARequest("DescribeTemplateAttribute", "2015-12-15", "HTTPS", "GET", "AK", "/templates/" + TemplateId, "array", req, runtime));
         }
 
         public async Task<DescribeTemplateAttributeResponse> DescribeTemplateAttributeWithOptionsAsync(string TemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1844,7 +1852,7 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DescribeTemplateAttributeResponse>(await DoROARequestAsync("DescribeTemplateAttribute", "2015-12-15", "HTTPS", "GET", "AK", "/templates/" + TemplateId, "none", req, runtime));
+            return TeaModel.ToObject<DescribeTemplateAttributeResponse>(await DoROARequestAsync("DescribeTemplateAttribute", "2015-12-15", "HTTPS", "GET", "AK", "/templates/" + TemplateId, "array", req, runtime));
         }
 
         public DescribeTemplatesResponse DescribeTemplates(DescribeTemplatesRequest request)

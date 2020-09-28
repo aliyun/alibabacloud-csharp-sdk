@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class DescribeClusterNodePoolDetailResponseBodyKubernetesConfig : TeaModel {
             [NameInMap("cms_enabled")]
             [Validation(Required=false)]
-            public string CmsEnabled { get; set; }
+            public bool? CmsEnabled { get; set; }
             [NameInMap("cpu_policy")]
             [Validation(Required=false)]
             public string CpuPolicy { get; set; }
