@@ -8,21 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
-    public class CalcCACSResponse : TeaModel {
+    public class RunMedQAResponse : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=true)]
-        public CalcCACSResponseData Data { get; set; }
-        public class CalcCACSResponseData : TeaModel {
-            [NameInMap("Score")]
+        public RunMedQAResponseData Data { get; set; }
+        public class RunMedQAResponseData : TeaModel {
+            [NameInMap("Answer")]
             [Validation(Required=true)]
-            public string Score { get; set; }
-            [NameInMap("ResultUrl")]
+            public string Answer { get; set; }
+            [NameInMap("SimilarQuestion")]
             [Validation(Required=true)]
-            public string ResultUrl { get; set; }
+            public List<string> SimilarQuestion { get; set; }
         };
 
     }
