@@ -1,3 +1,6 @@
+2020-10-13 Version: 1.0.7
+- Release DetectSkinDisease.
+
 2020-09-29 Version: 1.0.6
 - Update CalcCACS.
 
