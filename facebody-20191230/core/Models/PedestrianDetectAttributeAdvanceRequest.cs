@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class ExtractPedestrianFeatureAttributeAdvanceRequest : TeaModel {
+    public class PedestrianDetectAttributeAdvanceRequest : TeaModel {
         [NameInMap("ImageURLObject")]
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }

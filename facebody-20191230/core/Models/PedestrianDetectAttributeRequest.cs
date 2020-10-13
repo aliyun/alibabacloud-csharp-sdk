@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class ExtractPedestrianFeatureAttributeRequest : TeaModel {
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
+    public class PedestrianDetectAttributeRequest : TeaModel {
         [NameInMap("ImageURL")]
         [Validation(Required=true)]
         public string ImageURL { get; set; }
