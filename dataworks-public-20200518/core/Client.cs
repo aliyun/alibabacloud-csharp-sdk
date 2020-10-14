@@ -3366,13 +3366,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         public GetQualityEntityResponse GetQualityEntityWithOptions(GetQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetQualityEntityResponse>(DoRequest("GetQualityEntity", "HTTP", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+            return TeaModel.ToObject<GetQualityEntityResponse>(DoRequest("GetQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
         }
 
         public async Task<GetQualityEntityResponse> GetQualityEntityWithOptionsAsync(GetQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetQualityEntityResponse>(await DoRequestAsync("GetQualityEntity", "HTTP", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+            return TeaModel.ToObject<GetQualityEntityResponse>(await DoRequestAsync("GetQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
         }
 
         public GetQualityEntityResponse GetQualityEntity(GetQualityEntityRequest request)
@@ -3438,13 +3438,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         public CreateQualityEntityResponse CreateQualityEntityWithOptions(CreateQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<CreateQualityEntityResponse>(DoRequest("CreateQualityEntity", "HTTP", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+            return TeaModel.ToObject<CreateQualityEntityResponse>(DoRequest("CreateQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
         }
 
         public async Task<CreateQualityEntityResponse> CreateQualityEntityWithOptionsAsync(CreateQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<CreateQualityEntityResponse>(await DoRequestAsync("CreateQualityEntity", "HTTP", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+            return TeaModel.ToObject<CreateQualityEntityResponse>(await DoRequestAsync("CreateQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
         }
 
         public CreateQualityEntityResponse CreateQualityEntity(CreateQualityEntityRequest request)

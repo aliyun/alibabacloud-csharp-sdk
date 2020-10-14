@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ResourceGroupIdentifier { get; set; }
 
+        [NameInMap("ConnectionName")]
+        [Validation(Required=false)]
+        public string ConnectionName { get; set; }
+
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
+
     }
 
 }
