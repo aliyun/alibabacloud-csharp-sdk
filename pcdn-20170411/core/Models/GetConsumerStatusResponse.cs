@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Pcdn20170411.Models
 
         [NameInMap("BusinessType")]
         [Validation(Required=true)]
-        public bool? BusinessType { get; set; }
+        public string BusinessType { get; set; }
 
         [NameInMap("Audit")]
         [Validation(Required=true)]
