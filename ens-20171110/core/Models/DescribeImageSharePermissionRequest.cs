@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        [NameInMap("AliyunId")]
+        [Validation(Required=false)]
+        public long AliyunId { get; set; }
+
     }
 
 }
