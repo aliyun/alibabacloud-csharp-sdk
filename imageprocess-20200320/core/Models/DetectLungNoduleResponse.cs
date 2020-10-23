@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     public float? ImageX { get; set; }
                     public float? ImageY { get; set; }
                     public float? ImageZ { get; set; }
+                    public string SOPInstanceUID { get; set; }
                 }
                 public List<string> Origin { get; set; }
                 public List<string> Spacing { get; set; }
