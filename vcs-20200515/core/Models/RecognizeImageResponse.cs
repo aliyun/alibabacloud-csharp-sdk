@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
                 public string RespiratorColor { get; set; }
                 public string RightBottomX { get; set; }
                 public string RightBottomY { get; set; }
+                public float? Quality { get; set; }
+                public float? KeyPointQuality { get; set; }
             }
         };
 

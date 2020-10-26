@@ -24,6 +24,150 @@ namespace AlibabaCloud.SDK.Vcs20200515
         }
 
 
+        public UnsubscribeDeviceEventResponse UnsubscribeDeviceEventWithOptions(UnsubscribeDeviceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<UnsubscribeDeviceEventResponse>(DoRequest("UnsubscribeDeviceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<UnsubscribeDeviceEventResponse> UnsubscribeDeviceEventWithOptionsAsync(UnsubscribeDeviceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<UnsubscribeDeviceEventResponse>(await DoRequestAsync("UnsubscribeDeviceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public UnsubscribeDeviceEventResponse UnsubscribeDeviceEvent(UnsubscribeDeviceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnsubscribeDeviceEventWithOptions(request, runtime);
+        }
+
+        public async Task<UnsubscribeDeviceEventResponse> UnsubscribeDeviceEventAsync(UnsubscribeDeviceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnsubscribeDeviceEventWithOptionsAsync(request, runtime);
+        }
+
+        public ListSubscribeDeviceResponse ListSubscribeDeviceWithOptions(ListSubscribeDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ListSubscribeDeviceResponse>(DoRequest("ListSubscribeDevice", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<ListSubscribeDeviceResponse> ListSubscribeDeviceWithOptionsAsync(ListSubscribeDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ListSubscribeDeviceResponse>(await DoRequestAsync("ListSubscribeDevice", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public ListSubscribeDeviceResponse ListSubscribeDevice(ListSubscribeDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSubscribeDeviceWithOptions(request, runtime);
+        }
+
+        public async Task<ListSubscribeDeviceResponse> ListSubscribeDeviceAsync(ListSubscribeDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSubscribeDeviceWithOptionsAsync(request, runtime);
+        }
+
+        public SubscribeDeviceEventResponse SubscribeDeviceEventWithOptions(SubscribeDeviceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<SubscribeDeviceEventResponse>(DoRequest("SubscribeDeviceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<SubscribeDeviceEventResponse> SubscribeDeviceEventWithOptionsAsync(SubscribeDeviceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<SubscribeDeviceEventResponse>(await DoRequestAsync("SubscribeDeviceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public SubscribeDeviceEventResponse SubscribeDeviceEvent(SubscribeDeviceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubscribeDeviceEventWithOptions(request, runtime);
+        }
+
+        public async Task<SubscribeDeviceEventResponse> SubscribeDeviceEventAsync(SubscribeDeviceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubscribeDeviceEventWithOptionsAsync(request, runtime);
+        }
+
+        public SubscribeSpaceEventResponse SubscribeSpaceEventWithOptions(SubscribeSpaceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<SubscribeSpaceEventResponse>(DoRequest("SubscribeSpaceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<SubscribeSpaceEventResponse> SubscribeSpaceEventWithOptionsAsync(SubscribeSpaceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<SubscribeSpaceEventResponse>(await DoRequestAsync("SubscribeSpaceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public SubscribeSpaceEventResponse SubscribeSpaceEvent(SubscribeSpaceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubscribeSpaceEventWithOptions(request, runtime);
+        }
+
+        public async Task<SubscribeSpaceEventResponse> SubscribeSpaceEventAsync(SubscribeSpaceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubscribeSpaceEventWithOptionsAsync(request, runtime);
+        }
+
+        public UnsubscribeSpaceEventResponse UnsubscribeSpaceEventWithOptions(UnsubscribeSpaceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<UnsubscribeSpaceEventResponse>(DoRequest("UnsubscribeSpaceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<UnsubscribeSpaceEventResponse> UnsubscribeSpaceEventWithOptionsAsync(UnsubscribeSpaceEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<UnsubscribeSpaceEventResponse>(await DoRequestAsync("UnsubscribeSpaceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, request.ToMap(), runtime));
+        }
+
+        public UnsubscribeSpaceEventResponse UnsubscribeSpaceEvent(UnsubscribeSpaceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnsubscribeSpaceEventWithOptions(request, runtime);
+        }
+
+        public async Task<UnsubscribeSpaceEventResponse> UnsubscribeSpaceEventAsync(UnsubscribeSpaceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnsubscribeSpaceEventWithOptionsAsync(request, runtime);
+        }
+
+        public ListPersonTraceDetailsResponse ListPersonTraceDetailsWithOptions(ListPersonTraceDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ListPersonTraceDetailsResponse>(DoRequest("ListPersonTraceDetails", "HTTPS", "POST", "2020-05-15", "AK,APP", null, request.ToMap(), runtime));
+        }
+
+        public async Task<ListPersonTraceDetailsResponse> ListPersonTraceDetailsWithOptionsAsync(ListPersonTraceDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ListPersonTraceDetailsResponse>(await DoRequestAsync("ListPersonTraceDetails", "HTTPS", "POST", "2020-05-15", "AK,APP", null, request.ToMap(), runtime));
+        }
+
+        public ListPersonTraceDetailsResponse ListPersonTraceDetails(ListPersonTraceDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPersonTraceDetailsWithOptions(request, runtime);
+        }
+
+        public async Task<ListPersonTraceDetailsResponse> ListPersonTraceDetailsAsync(ListPersonTraceDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPersonTraceDetailsWithOptionsAsync(request, runtime);
+        }
+
         public GetMonitorListResponse GetMonitorListWithOptions(GetMonitorListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
