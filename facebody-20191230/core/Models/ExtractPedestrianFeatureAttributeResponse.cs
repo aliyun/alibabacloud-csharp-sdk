@@ -71,6 +71,29 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("AgeScore")]
             [Validation(Required=true)]
             public float? AgeScore { get; set; }
+            [NameInMap("Elements")]
+            [Validation(Required=true)]
+            public List<ExtractPedestrianFeatureAttributeResponseDataElements> Elements { get; set; }
+            public class ExtractPedestrianFeatureAttributeResponseDataElements : TeaModel {
+                public string ObjType { get; set; }
+                public float? ObjTypeScore { get; set; }
+                public string Feature { get; set; }
+                public float? QualityScore { get; set; }
+                public string UpperColor { get; set; }
+                public float? UpperColorScore { get; set; }
+                public string UpperType { get; set; }
+                public float? UpperTypeScore { get; set; }
+                public string LowerColor { get; set; }
+                public float? LowerColorScore { get; set; }
+                public string LowerType { get; set; }
+                public float? LowerTypeScore { get; set; }
+                public string Gender { get; set; }
+                public float? GenderScore { get; set; }
+                public string Hair { get; set; }
+                public float? HairScore { get; set; }
+                public string Age { get; set; }
+                public float? AgeScore { get; set; }
+            }
         };
 
     }

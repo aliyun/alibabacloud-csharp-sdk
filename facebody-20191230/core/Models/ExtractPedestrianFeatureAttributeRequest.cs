@@ -14,8 +14,18 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public string Mode { get; set; }
 
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
+
+        [NameInMap("UrlList")]
+        [Validation(Required=false)]
+        public List<ExtractPedestrianFeatureAttributeRequestUrlList> UrlList { get; set; }
+        public class ExtractPedestrianFeatureAttributeRequestUrlList : TeaModel {
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
 
     }
 

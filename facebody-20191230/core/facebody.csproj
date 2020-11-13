@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Facebody20191230</AssemblyName>
-    <Version>0.0.12</Version>
+    <Version>0.0.9</Version>
     <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
@@ -34,7 +34,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="AlibabaCloud.SDK.OSS.Client" Version="1.0.2"/>
+    <PackageReference Include="AlibabaCloud.SDK.OSS.Client" Version="1.0.3"/>
     <PackageReference Include="AlibabaCloud.SDK.OpenPlatform20191219" Version="1.0.0"/>
     <PackageReference Include="AlibabaCloud.SDK.Common" Version="0.2.5"/>
     <PackageReference Include="AlibabaCloud.RPCClient" Version="1.0.1"/>

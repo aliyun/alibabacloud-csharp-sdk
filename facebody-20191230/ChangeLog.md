@@ -1,3 +1,6 @@
+2020-11-13 Version: 0.0.9
+- Release GenerateHumanAnimeStyle CountCrowd.
+
 2020-10-13 Version: 0.0.12
 - Release GenerateDynamicImage.
 
