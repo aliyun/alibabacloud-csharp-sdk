@@ -61,6 +61,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long BeginRunningTime { get; set; }
                 public string ParamValues { get; set; }
                 public long FinishTime { get; set; }
+                public int? Priority { get; set; }
+                public long BaselineId { get; set; }
+                public bool? Repeatability { get; set; }
+                public long RepeatInterval { get; set; }
+                public string Connection { get; set; }
+                public int? DqcType { get; set; }
+                public string DqcDescription { get; set; }
+                public string ErrorMessage { get; set; }
+                public long RelatedFlowId { get; set; }
             }
         };
 

@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("DagId")]
+        [Validation(Required=false)]
+        public long DagId { get; set; }
+
     }
 
 }

@@ -78,6 +78,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("NodeName")]
             [Validation(Required=true)]
             public string NodeName { get; set; }
+            [NameInMap("Priority")]
+            [Validation(Required=true)]
+            public int? Priority { get; set; }
+            [NameInMap("BaselineId")]
+            [Validation(Required=true)]
+            public long BaselineId { get; set; }
+            [NameInMap("Repeatability")]
+            [Validation(Required=true)]
+            public bool? Repeatability { get; set; }
+            [NameInMap("RepeatInterval")]
+            [Validation(Required=true)]
+            public long RepeatInterval { get; set; }
+            [NameInMap("Connection")]
+            [Validation(Required=true)]
+            public string Connection { get; set; }
+            [NameInMap("DqcType")]
+            [Validation(Required=true)]
+            public int? DqcType { get; set; }
+            [NameInMap("DqcDescription")]
+            [Validation(Required=true)]
+            public string DqcDescription { get; set; }
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=true)]
+            public string ErrorMessage { get; set; }
+            [NameInMap("RelatedFlowId")]
+            [Validation(Required=true)]
+            public long RelatedFlowId { get; set; }
         };
 
     }

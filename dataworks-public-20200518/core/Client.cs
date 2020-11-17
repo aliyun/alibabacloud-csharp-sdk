@@ -51,6 +51,102 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
 
+        public GetDagResponse GetDagWithOptions(GetDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<GetDagResponse>(DoRequest("GetDag", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<GetDagResponse> GetDagWithOptionsAsync(GetDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<GetDagResponse>(await DoRequestAsync("GetDag", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public GetDagResponse GetDag(GetDagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDagWithOptions(request, runtime);
+        }
+
+        public async Task<GetDagResponse> GetDagAsync(GetDagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDagWithOptionsAsync(request, runtime);
+        }
+
+        public SearchNodesByOutputResponse SearchNodesByOutputWithOptions(SearchNodesByOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<SearchNodesByOutputResponse>(DoRequest("SearchNodesByOutput", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<SearchNodesByOutputResponse> SearchNodesByOutputWithOptionsAsync(SearchNodesByOutputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<SearchNodesByOutputResponse>(await DoRequestAsync("SearchNodesByOutput", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public SearchNodesByOutputResponse SearchNodesByOutput(SearchNodesByOutputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchNodesByOutputWithOptions(request, runtime);
+        }
+
+        public async Task<SearchNodesByOutputResponse> SearchNodesByOutputAsync(SearchNodesByOutputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchNodesByOutputWithOptionsAsync(request, runtime);
+        }
+
+        public GetManualDagInstancesResponse GetManualDagInstancesWithOptions(GetManualDagInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<GetManualDagInstancesResponse>(DoRequest("GetManualDagInstances", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<GetManualDagInstancesResponse> GetManualDagInstancesWithOptionsAsync(GetManualDagInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<GetManualDagInstancesResponse>(await DoRequestAsync("GetManualDagInstances", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public GetManualDagInstancesResponse GetManualDagInstances(GetManualDagInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetManualDagInstancesWithOptions(request, runtime);
+        }
+
+        public async Task<GetManualDagInstancesResponse> GetManualDagInstancesAsync(GetManualDagInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetManualDagInstancesWithOptionsAsync(request, runtime);
+        }
+
+        public CreateManualDagResponse CreateManualDagWithOptions(CreateManualDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<CreateManualDagResponse>(DoRequest("CreateManualDag", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<CreateManualDagResponse> CreateManualDagWithOptionsAsync(CreateManualDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<CreateManualDagResponse>(await DoRequestAsync("CreateManualDag", "HTTPS", "POST", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public CreateManualDagResponse CreateManualDag(CreateManualDagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateManualDagWithOptions(request, runtime);
+        }
+
+        public async Task<CreateManualDagResponse> CreateManualDagAsync(CreateManualDagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateManualDagWithOptionsAsync(request, runtime);
+        }
+
         public ListQualityResultsByEntityResponse ListQualityResultsByEntityWithOptions(ListQualityResultsByEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

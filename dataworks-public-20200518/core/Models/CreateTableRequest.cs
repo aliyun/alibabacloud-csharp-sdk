@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string AppGuid { get; set; }
 
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
+
     }
 
 }

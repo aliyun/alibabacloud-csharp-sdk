@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class ListNodeIOResponse : TeaModel {
+    public class SearchNodesByOutputResponse : TeaModel {
         [NameInMap("Success")]
         [Validation(Required=true)]
         public bool? Success { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=true)]
+        public int? HttpStatusCode { get; set; }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=true)]
@@ -21,31 +25,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=true)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=true)]
-        public List<ListNodeIOResponseData> Data { get; set; }
-        public class ListNodeIOResponseData : TeaModel {
-            [NameInMap("TableName")]
-            [Validation(Required=true)]
-            public string TableName { get; set; }
-
-            [NameInMap("Data")]
-            [Validation(Required=true)]
-            public string Data { get; set; }
-
-            [NameInMap("NodeId")]
-            [Validation(Required=true)]
-            public long NodeId { get; set; }
-
-        }
+        public Dictionary<string, object> Data { get; set; }
 
     }
 
