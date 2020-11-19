@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=true)]
         public DetectPedestrianResponseData Data { get; set; }
         public class DetectPedestrianResponseData : TeaModel {
-            [NameInMap("Width")]
-            [Validation(Required=true)]
-            public int? Width { get; set; }
             [NameInMap("Height")]
             [Validation(Required=true)]
             public int? Height { get; set; }
+            [NameInMap("Width")]
+            [Validation(Required=true)]
+            public int? Width { get; set; }
             [NameInMap("Elements")]
             [Validation(Required=true)]
             public List<DetectPedestrianResponseDataElements> Elements { get; set; }
