@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=true)]
         public string Result { get; set; }
 
+        [NameInMap("RunAt")]
+        [Validation(Required=true)]
+        public string RunAt { get; set; }
+
     }
 
 }

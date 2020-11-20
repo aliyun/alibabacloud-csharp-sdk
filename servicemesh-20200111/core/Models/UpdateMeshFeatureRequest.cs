@@ -93,6 +93,34 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string IncludeIPRanges { get; set; }
 
+        [NameInMap("EnableNamespacesByDefault")]
+        [Validation(Required=false)]
+        public bool? EnableNamespacesByDefault { get; set; }
+
+        [NameInMap("AutoInjectionPolicyEnabled")]
+        [Validation(Required=false)]
+        public bool? AutoInjectionPolicyEnabled { get; set; }
+
+        [NameInMap("SidecarInjectorRequestCPU")]
+        [Validation(Required=false)]
+        public string SidecarInjectorRequestCPU { get; set; }
+
+        [NameInMap("SidecarInjectorRequestMemory")]
+        [Validation(Required=false)]
+        public string SidecarInjectorRequestMemory { get; set; }
+
+        [NameInMap("SidecarInjectorLimitCPU")]
+        [Validation(Required=false)]
+        public string SidecarInjectorLimitCPU { get; set; }
+
+        [NameInMap("SidecarInjectorLimitMemory")]
+        [Validation(Required=false)]
+        public string SidecarInjectorLimitMemory { get; set; }
+
+        [NameInMap("SidecarInjectorWebhookAsYaml")]
+        [Validation(Required=false)]
+        public string SidecarInjectorWebhookAsYaml { get; set; }
+
     }
 
 }

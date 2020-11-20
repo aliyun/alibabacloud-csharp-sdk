@@ -47,6 +47,12 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("HostsContent")]
             [Validation(Required=true)]
             public string HostsContent { get; set; }
+            [NameInMap("TokenPath")]
+            [Validation(Required=true)]
+            public string TokenPath { get; set; }
+            [NameInMap("TokenContent")]
+            [Validation(Required=true)]
+            public string TokenContent { get; set; }
         };
 
     }

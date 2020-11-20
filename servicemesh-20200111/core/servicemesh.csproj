@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Servicemesh20200111</AssemblyName>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
@@ -35,7 +35,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.9"/>
-    <PackageReference Include="AlibabaCloud.RPCClient" Version="1.0.0"/>
+    <PackageReference Include="AlibabaCloud.RPCClient" Version="1.0.1"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
+    <PackageReference Include="Tea" Version="1.0.2"/>
   </ItemGroup>
 </Project>

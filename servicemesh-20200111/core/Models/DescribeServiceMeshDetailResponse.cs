@@ -195,6 +195,39 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string LimitMemory { get; set; }
 
                     }
+                    [NameInMap("SidecarInjector")]
+                    [Validation(Required=true)]
+                    public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector SidecarInjector { get; set; }
+                    public class DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector : TeaModel {
+                        [NameInMap("EnableNamespacesByDefault")]
+                        [Validation(Required=true)]
+                        public bool? EnableNamespacesByDefault { get; set; }
+
+                        [NameInMap("AutoInjectionPolicyEnabled")]
+                        [Validation(Required=true)]
+                        public bool? AutoInjectionPolicyEnabled { get; set; }
+
+                        [NameInMap("RequestCPU")]
+                        [Validation(Required=true)]
+                        public string RequestCPU { get; set; }
+
+                        [NameInMap("RequestMemory")]
+                        [Validation(Required=true)]
+                        public string RequestMemory { get; set; }
+
+                        [NameInMap("LimitCPU")]
+                        [Validation(Required=true)]
+                        public string LimitCPU { get; set; }
+
+                        [NameInMap("LimitMemory")]
+                        [Validation(Required=true)]
+                        public string LimitMemory { get; set; }
+
+                        [NameInMap("SidecarInjectorWebhookAsYaml")]
+                        [Validation(Required=true)]
+                        public string SidecarInjectorWebhookAsYaml { get; set; }
+
+                    }
                 };
 
                 [NameInMap("Network")]
