@@ -51,6 +51,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         }
 
 
+        public RunTriggerNodeResponse RunTriggerNodeWithOptions(RunTriggerNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<RunTriggerNodeResponse>(DoRequest("RunTriggerNode", "HTTPS", "PUT", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<RunTriggerNodeResponse> RunTriggerNodeWithOptionsAsync(RunTriggerNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<RunTriggerNodeResponse>(await DoRequestAsync("RunTriggerNode", "HTTPS", "PUT", "2020-05-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public RunTriggerNodeResponse RunTriggerNode(RunTriggerNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunTriggerNodeWithOptions(request, runtime);
+        }
+
+        public async Task<RunTriggerNodeResponse> RunTriggerNodeAsync(RunTriggerNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunTriggerNodeWithOptionsAsync(request, runtime);
+        }
+
         public GetDagResponse GetDagWithOptions(GetDagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
