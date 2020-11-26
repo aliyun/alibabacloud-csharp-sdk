@@ -1,0 +1,74 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cloudauth20190307.Models
+{
+    public class DescribeVerifyTokenRequest : TeaModel {
+        [NameInMap("IdCardBackImageUrl")]
+        [Validation(Required=false)]
+        public string IdCardBackImageUrl { get; set; }
+
+        [NameInMap("BizType")]
+        [Validation(Required=true)]
+        public string BizType { get; set; }
+
+        [NameInMap("FailedRedirectUrl")]
+        [Validation(Required=false)]
+        public string FailedRedirectUrl { get; set; }
+
+        [NameInMap("FaceRetainedImageUrl")]
+        [Validation(Required=false)]
+        public string FaceRetainedImageUrl { get; set; }
+
+        [NameInMap("CallbackSeed")]
+        [Validation(Required=false)]
+        public string CallbackSeed { get; set; }
+
+        [NameInMap("IdCardFrontImageUrl")]
+        [Validation(Required=false)]
+        public string IdCardFrontImageUrl { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
+
+        [NameInMap("BizId")]
+        [Validation(Required=true)]
+        public string BizId { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("IdCardNumber")]
+        [Validation(Required=false)]
+        public string IdCardNumber { get; set; }
+
+        [NameInMap("PassedRedirectUrl")]
+        [Validation(Required=false)]
+        public string PassedRedirectUrl { get; set; }
+
+        [NameInMap("CallbackUrl")]
+        [Validation(Required=false)]
+        public string CallbackUrl { get; set; }
+
+        [NameInMap("UserIp")]
+        [Validation(Required=false)]
+        public string UserIp { get; set; }
+
+        [NameInMap("UserPhoneNumber")]
+        [Validation(Required=false)]
+        public string UserPhoneNumber { get; set; }
+
+        [NameInMap("UserRegistTime")]
+        [Validation(Required=false)]
+        public long UserRegistTime { get; set; }
+
+    }
+
+}
