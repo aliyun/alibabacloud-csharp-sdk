@@ -36,6 +36,18 @@ namespace AlibabaCloud.SDK.Cloudauth20200618
             return TeaModel.ToObject<ElementSmartVerifyResponse>(await DoRequestAsync("ElementSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, request.ToMap(), runtime));
         }
 
+        public ElementSmartVerifyResponse ElementSmartVerifySimply(ElementSmartVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ElementSmartVerify(request, runtime);
+        }
+
+        public async Task<ElementSmartVerifyResponse> ElementSmartVerifySimplyAsync(ElementSmartVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ElementSmartVerifyAsync(request, runtime);
+        }
+
         public ElementSmartVerifyResponse ElementSmartVerifyAdvance(ElementSmartVerifyAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
@@ -70,8 +82,8 @@ namespace AlibabaCloud.SDK.Cloudauth20200618
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            ElementSmartVerifyRequest elementSmartVerifyreq = new ElementSmartVerifyRequest();
-            AlibabaCloud.Commons.Common.Convert(request, elementSmartVerifyreq);
+            ElementSmartVerifyRequest elementSmartVerifyReq = new ElementSmartVerifyRequest();
+            AlibabaCloud.Commons.Common.Convert(request, elementSmartVerifyReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -97,8 +109,8 @@ namespace AlibabaCloud.SDK.Cloudauth20200618
                 Header = ossHeader,
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
-            elementSmartVerifyreq.CertFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            ElementSmartVerifyResponse elementSmartVerifyResp = ElementSmartVerify(elementSmartVerifyreq, runtime);
+            elementSmartVerifyReq.CertFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            ElementSmartVerifyResponse elementSmartVerifyResp = ElementSmartVerify(elementSmartVerifyReq, runtime);
             return elementSmartVerifyResp;
         }
 
@@ -136,8 +148,8 @@ namespace AlibabaCloud.SDK.Cloudauth20200618
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            ElementSmartVerifyRequest elementSmartVerifyreq = new ElementSmartVerifyRequest();
-            AlibabaCloud.Commons.Common.Convert(request, elementSmartVerifyreq);
+            ElementSmartVerifyRequest elementSmartVerifyReq = new ElementSmartVerifyRequest();
+            AlibabaCloud.Commons.Common.Convert(request, elementSmartVerifyReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -163,8 +175,8 @@ namespace AlibabaCloud.SDK.Cloudauth20200618
                 Header = ossHeader,
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-            elementSmartVerifyreq.CertFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            ElementSmartVerifyResponse elementSmartVerifyResp = await ElementSmartVerifyAsync(elementSmartVerifyreq, runtime);
+            elementSmartVerifyReq.CertFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            ElementSmartVerifyResponse elementSmartVerifyResp = await ElementSmartVerifyAsync(elementSmartVerifyReq, runtime);
             return elementSmartVerifyResp;
         }
 
@@ -180,6 +192,18 @@ namespace AlibabaCloud.SDK.Cloudauth20200618
             return TeaModel.ToObject<InitSmartVerifyResponse>(await DoRequestAsync("InitSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, request.ToMap(), runtime));
         }
 
+        public InitSmartVerifyResponse InitSmartVerifySimply(InitSmartVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InitSmartVerify(request, runtime);
+        }
+
+        public async Task<InitSmartVerifyResponse> InitSmartVerifySimplyAsync(InitSmartVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InitSmartVerifyAsync(request, runtime);
+        }
+
         public DescribeSmartVerifyResponse DescribeSmartVerify(DescribeSmartVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -190,6 +214,18 @@ namespace AlibabaCloud.SDK.Cloudauth20200618
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             return TeaModel.ToObject<DescribeSmartVerifyResponse>(await DoRequestAsync("DescribeSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, request.ToMap(), runtime));
+        }
+
+        public DescribeSmartVerifyResponse DescribeSmartVerifySimply(DescribeSmartVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSmartVerify(request, runtime);
+        }
+
+        public async Task<DescribeSmartVerifyResponse> DescribeSmartVerifySimplyAsync(DescribeSmartVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSmartVerifyAsync(request, runtime);
         }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
