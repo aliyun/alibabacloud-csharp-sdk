@@ -40,6 +40,78 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         }
 
 
+        public DescribeModifyParameterLogResponse DescribeModifyParameterLogWithOptions(DescribeModifyParameterLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<DescribeModifyParameterLogResponse>(DoRequest("DescribeModifyParameterLog", "HTTPS", "POST", "2016-05-03", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<DescribeModifyParameterLogResponse> DescribeModifyParameterLogWithOptionsAsync(DescribeModifyParameterLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<DescribeModifyParameterLogResponse>(await DoRequestAsync("DescribeModifyParameterLog", "HTTPS", "POST", "2016-05-03", "AK", null, request.ToMap(), runtime));
+        }
+
+        public DescribeModifyParameterLogResponse DescribeModifyParameterLog(DescribeModifyParameterLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeModifyParameterLogWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeModifyParameterLogResponse> DescribeModifyParameterLogAsync(DescribeModifyParameterLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeModifyParameterLogWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeParametersResponse DescribeParametersWithOptions(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<DescribeParametersResponse>(DoRequest("DescribeParameters", "HTTPS", "POST", "2016-05-03", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<DescribeParametersResponse> DescribeParametersWithOptionsAsync(DescribeParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<DescribeParametersResponse>(await DoRequestAsync("DescribeParameters", "HTTPS", "POST", "2016-05-03", "AK", null, request.ToMap(), runtime));
+        }
+
+        public DescribeParametersResponse DescribeParameters(DescribeParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeParametersWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeParametersResponse> DescribeParametersAsync(DescribeParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeParametersWithOptionsAsync(request, runtime);
+        }
+
+        public ModifyParametersResponse ModifyParametersWithOptions(ModifyParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ModifyParametersResponse>(DoRequest("ModifyParameters", "HTTPS", "POST", "2016-05-03", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<ModifyParametersResponse> ModifyParametersWithOptionsAsync(ModifyParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ModifyParametersResponse>(await DoRequestAsync("ModifyParameters", "HTTPS", "POST", "2016-05-03", "AK", null, request.ToMap(), runtime));
+        }
+
+        public ModifyParametersResponse ModifyParameters(ModifyParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyParametersWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyParametersResponse> ModifyParametersAsync(ModifyParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyParametersWithOptionsAsync(request, runtime);
+        }
+
         public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

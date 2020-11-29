@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class ModifyDBInstanceSSLRequest : TeaModel {
+    public class DescribeModifyParameterLogRequest : TeaModel {
         [NameInMap("DBInstanceId")]
         [Validation(Required=true)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("ConnectionString")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string ConnectionString { get; set; }
+        public string StartTime { get; set; }
 
-        [NameInMap("SSLEnabled")]
-        [Validation(Required=true)]
-        public int? SSLEnabled { get; set; }
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
 
     }
 
