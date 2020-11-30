@@ -42,6 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? SourceDiskSize { get; set; }
                 public string SourceDiskType { get; set; }
                 public string Category { get; set; }
+                public bool? InstantAccess { get; set; }
                 public long TotalSize { get; set; }
                 public int? TotalCount { get; set; }
             }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DisableInstantAccess")]
+        [Validation(Required=false)]
+        public bool? DisableInstantAccess { get; set; }
+
     }
 
 }

@@ -408,6 +408,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Id { get; set; }
         };
 
+        [NameInMap("Isp")]
+        [Validation(Required=false)]
+        public string Isp { get; set; }
+
     }
 
 }

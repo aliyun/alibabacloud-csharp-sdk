@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
         public string SnapshotName { get; set; }

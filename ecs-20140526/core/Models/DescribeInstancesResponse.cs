@@ -79,6 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string StoppedMode { get; set; }
                 public string CreditSpecification { get; set; }
                 public bool? DeletionProtection { get; set; }
+                public string ISP { get; set; }
                 public DescribeInstancesResponseInstancesInstanceNetworkInterfaces NetworkInterfaces { get; set; }
                 public class DescribeInstancesResponseInstancesInstanceNetworkInterfaces : TeaModel {
                     [NameInMap("NetworkInterface")]
@@ -96,6 +97,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("PrimaryIpAddress")]
                         [Validation(Required=true)]
                         public string PrimaryIpAddress { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=true)]
+                        public string Type { get; set; }
+
+                        [NameInMap("PrivateIpSets")]
+                        [Validation(Required=true)]
+                        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets PrivateIpSets { get; set; }
+                        public class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets : TeaModel {
+                            [NameInMap("PrivateIpSet")]
+                            [Validation(Required=true)]
+                            public List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
+                            public class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet : TeaModel {
+                                public string PrivateIpAddress { get; set; }
+                                public bool? Primary { get; set; }
+                            }
+                        };
+
+                        [NameInMap("Ipv6Sets")]
+                        [Validation(Required=true)]
+                        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets Ipv6Sets { get; set; }
+                        public class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets : TeaModel {
+                            [NameInMap("Ipv6Set")]
+                            [Validation(Required=true)]
+                            public List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> Ipv6Set { get; set; }
+                            public class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set : TeaModel {
+                                public string Ipv6Address { get; set; }
+                            }
+                        };
 
                     }
 

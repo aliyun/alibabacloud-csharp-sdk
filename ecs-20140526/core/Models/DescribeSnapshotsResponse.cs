@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=true)]
         public int? PageSize { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=true)]
+        public string NextToken { get; set; }
+
         [NameInMap("Snapshots")]
         [Validation(Required=true)]
         public DescribeSnapshotsResponseSnapshots Snapshots { get; set; }
@@ -54,6 +58,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string KMSKeyId { get; set; }
                 public string Category { get; set; }
                 public string SnapshotType { get; set; }
+                public bool? InstantAccess { get; set; }
+                public int? InstantAccessRetentionDays { get; set; }
                 public DescribeSnapshotsResponseSnapshotsSnapshotTags Tags { get; set; }
                 public class DescribeSnapshotsResponseSnapshotsSnapshotTags : TeaModel {
                     [NameInMap("Tag")]

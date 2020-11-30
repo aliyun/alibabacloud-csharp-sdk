@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string BootMode { get; set; }
 
+        [NameInMap("LicenseType")]
+        [Validation(Required=false)]
+        public string LicenseType { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

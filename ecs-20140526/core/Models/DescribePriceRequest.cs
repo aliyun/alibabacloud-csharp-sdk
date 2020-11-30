@@ -118,6 +118,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> InstanceTypeList { get; set; }
 
+        [NameInMap("Isp")]
+        [Validation(Required=false)]
+        public string Isp { get; set; }
+
     }
 
 }

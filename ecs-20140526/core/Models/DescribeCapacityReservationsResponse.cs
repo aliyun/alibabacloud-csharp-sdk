@@ -44,6 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EndTimeType { get; set; }
                 public string InstanceChargeType { get; set; }
                 public string Platform { get; set; }
+                public string TimeSlot { get; set; }
                 public DescribeCapacityReservationsResponseCapacityReservationSetCapacityReservationItemAllocatedResources AllocatedResources { get; set; }
                 public class DescribeCapacityReservationsResponseCapacityReservationSetCapacityReservationItemAllocatedResources : TeaModel {
                     [NameInMap("AllocatedResource")]

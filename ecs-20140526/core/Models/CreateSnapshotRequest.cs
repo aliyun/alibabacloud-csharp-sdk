@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("InstantAccess")]
+        [Validation(Required=false)]
+        public bool? InstantAccess { get; set; }
+
+        [NameInMap("InstantAccessRetentionDays")]
+        [Validation(Required=false)]
+        public int? InstantAccessRetentionDays { get; set; }
+
     }
 
 }

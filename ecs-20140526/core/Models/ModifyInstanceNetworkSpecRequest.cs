@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? InternetMaxBandwidthIn { get; set; }
 
+        [NameInMap("ISP")]
+        [Validation(Required=false)]
+        public string ISP { get; set; }
+
         [NameInMap("NetworkChargeType")]
         [Validation(Required=false)]
         public string NetworkChargeType { get; set; }
