@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
             [Validation(Required=true)]
             public List<SegmentHeadResponseDataElements> Elements { get; set; }
             public class SegmentHeadResponseDataElements : TeaModel {
-                public string ImageURL { get; set; }
                 public int? X { get; set; }
                 public int? Y { get; set; }
-                public int? Width { get; set; }
+                public string ImageURL { get; set; }
                 public int? Height { get; set; }
+                public int? Width { get; set; }
             }
         };
 

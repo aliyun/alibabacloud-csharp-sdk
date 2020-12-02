@@ -1,3 +1,6 @@
+2020-12-02 Version: 0.0.15
+- Update SegmentHead.
+
 2020-11-19 Version: 0.0.14
 - Update SegmentBody.
 

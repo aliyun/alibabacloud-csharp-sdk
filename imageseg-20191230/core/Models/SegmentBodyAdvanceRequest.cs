@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
+        [NameInMap("ReturnForm")]
+        [Validation(Required=false)]
+        public string ReturnForm { get; set; }
+
     }
 
 }
