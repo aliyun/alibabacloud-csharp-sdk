@@ -22,6 +22,7 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             public List<DetectLungNoduleResponseDataSeries> Series { get; set; }
             public class DetectLungNoduleResponseDataSeries : TeaModel {
                 public string SeriesInstanceUid { get; set; }
+                public string Report { get; set; }
                 public List<DetectLungNoduleResponseDataSeriesElements> Elements { get; set; }
                 public class DetectLungNoduleResponseDataSeriesElements : TeaModel {
                     public string Category { get; set; }
@@ -36,6 +37,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     public float? ImageY { get; set; }
                     public float? ImageZ { get; set; }
                     public string SOPInstanceUID { get; set; }
+                    public float? Volume { get; set; }
+                    public float? MeanValue { get; set; }
                 }
                 public List<string> Origin { get; set; }
                 public List<string> Spacing { get; set; }

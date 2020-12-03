@@ -36,6 +36,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return TeaModel.ToObject<DetectSkinDiseaseResponse>(await DoRequestAsync("DetectSkinDisease", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
         }
 
+        public DetectSkinDiseaseResponse DetectSkinDiseaseSimply(DetectSkinDiseaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectSkinDisease(request, runtime);
+        }
+
+        public async Task<DetectSkinDiseaseResponse> DetectSkinDiseaseSimplyAsync(DetectSkinDiseaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectSkinDiseaseAsync(request, runtime);
+        }
+
         public DetectSkinDiseaseResponse DetectSkinDiseaseAdvance(DetectSkinDiseaseAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
@@ -70,8 +82,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectSkinDiseaseRequest detectSkinDiseasereq = new DetectSkinDiseaseRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectSkinDiseasereq);
+            DetectSkinDiseaseRequest detectSkinDiseaseReq = new DetectSkinDiseaseRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectSkinDiseaseReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -97,8 +109,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
-            detectSkinDiseasereq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectSkinDiseaseResponse detectSkinDiseaseResp = DetectSkinDisease(detectSkinDiseasereq, runtime);
+            detectSkinDiseaseReq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectSkinDiseaseResponse detectSkinDiseaseResp = DetectSkinDisease(detectSkinDiseaseReq, runtime);
             return detectSkinDiseaseResp;
         }
 
@@ -136,8 +148,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectSkinDiseaseRequest detectSkinDiseasereq = new DetectSkinDiseaseRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectSkinDiseasereq);
+            DetectSkinDiseaseRequest detectSkinDiseaseReq = new DetectSkinDiseaseRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectSkinDiseaseReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -163,8 +175,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-            detectSkinDiseasereq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectSkinDiseaseResponse detectSkinDiseaseResp = await DetectSkinDiseaseAsync(detectSkinDiseasereq, runtime);
+            detectSkinDiseaseReq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectSkinDiseaseResponse detectSkinDiseaseResp = await DetectSkinDiseaseAsync(detectSkinDiseaseReq, runtime);
             return detectSkinDiseaseResp;
         }
 
@@ -180,6 +192,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return TeaModel.ToObject<RunMedQAResponse>(await DoRequestAsync("RunMedQA", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
         }
 
+        public RunMedQAResponse RunMedQASimply(RunMedQARequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunMedQA(request, runtime);
+        }
+
+        public async Task<RunMedQAResponse> RunMedQASimplyAsync(RunMedQARequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunMedQAAsync(request, runtime);
+        }
+
         public DetectKneeKeypointXRayResponse DetectKneeKeypointXRay(DetectKneeKeypointXRayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -190,6 +214,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             return TeaModel.ToObject<DetectKneeKeypointXRayResponse>(await DoRequestAsync("DetectKneeKeypointXRay", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public DetectKneeKeypointXRayResponse DetectKneeKeypointXRaySimply(DetectKneeKeypointXRayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectKneeKeypointXRay(request, runtime);
+        }
+
+        public async Task<DetectKneeKeypointXRayResponse> DetectKneeKeypointXRaySimplyAsync(DetectKneeKeypointXRayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectKneeKeypointXRayAsync(request, runtime);
         }
 
         public DetectKneeKeypointXRayResponse DetectKneeKeypointXRayAdvance(DetectKneeKeypointXRayAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -226,8 +262,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectKneeKeypointXRayRequest detectKneeKeypointXRayreq = new DetectKneeKeypointXRayRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectKneeKeypointXRayreq);
+            DetectKneeKeypointXRayRequest detectKneeKeypointXRayReq = new DetectKneeKeypointXRayRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectKneeKeypointXRayReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -253,8 +289,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
-            detectKneeKeypointXRayreq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectKneeKeypointXRayResponse detectKneeKeypointXRayResp = DetectKneeKeypointXRay(detectKneeKeypointXRayreq, runtime);
+            detectKneeKeypointXRayReq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectKneeKeypointXRayResponse detectKneeKeypointXRayResp = DetectKneeKeypointXRay(detectKneeKeypointXRayReq, runtime);
             return detectKneeKeypointXRayResp;
         }
 
@@ -292,8 +328,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectKneeKeypointXRayRequest detectKneeKeypointXRayreq = new DetectKneeKeypointXRayRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectKneeKeypointXRayreq);
+            DetectKneeKeypointXRayRequest detectKneeKeypointXRayReq = new DetectKneeKeypointXRayRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectKneeKeypointXRayReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -319,8 +355,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-            detectKneeKeypointXRayreq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectKneeKeypointXRayResponse detectKneeKeypointXRayResp = await DetectKneeKeypointXRayAsync(detectKneeKeypointXRayreq, runtime);
+            detectKneeKeypointXRayReq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectKneeKeypointXRayResponse detectKneeKeypointXRayResp = await DetectKneeKeypointXRayAsync(detectKneeKeypointXRayReq, runtime);
             return detectKneeKeypointXRayResp;
         }
 
@@ -334,6 +370,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             return TeaModel.ToObject<ClassifyFNFResponse>(await DoRequestAsync("ClassifyFNF", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public ClassifyFNFResponse ClassifyFNFSimply(ClassifyFNFRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ClassifyFNF(request, runtime);
+        }
+
+        public async Task<ClassifyFNFResponse> ClassifyFNFSimplyAsync(ClassifyFNFRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ClassifyFNFAsync(request, runtime);
         }
 
         public ClassifyFNFResponse ClassifyFNFAdvance(ClassifyFNFAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -370,8 +418,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            ClassifyFNFRequest classifyFNFreq = new ClassifyFNFRequest();
-            AlibabaCloud.Commons.Common.Convert(request, classifyFNFreq);
+            ClassifyFNFRequest classifyFNFReq = new ClassifyFNFRequest();
+            AlibabaCloud.Commons.Common.Convert(request, classifyFNFReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -397,8 +445,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
-            classifyFNFreq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            ClassifyFNFResponse classifyFNFResp = ClassifyFNF(classifyFNFreq, runtime);
+            classifyFNFReq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            ClassifyFNFResponse classifyFNFResp = ClassifyFNF(classifyFNFReq, runtime);
             return classifyFNFResp;
         }
 
@@ -436,8 +484,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            ClassifyFNFRequest classifyFNFreq = new ClassifyFNFRequest();
-            AlibabaCloud.Commons.Common.Convert(request, classifyFNFreq);
+            ClassifyFNFRequest classifyFNFReq = new ClassifyFNFRequest();
+            AlibabaCloud.Commons.Common.Convert(request, classifyFNFReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -463,8 +511,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-            classifyFNFreq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            ClassifyFNFResponse classifyFNFResp = await ClassifyFNFAsync(classifyFNFreq, runtime);
+            classifyFNFReq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            ClassifyFNFResponse classifyFNFResp = await ClassifyFNFAsync(classifyFNFReq, runtime);
             return classifyFNFResp;
         }
 
@@ -480,6 +528,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return TeaModel.ToObject<RunCTRegistrationResponse>(await DoRequestAsync("RunCTRegistration", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
         }
 
+        public RunCTRegistrationResponse RunCTRegistrationSimply(RunCTRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunCTRegistration(request, runtime);
+        }
+
+        public async Task<RunCTRegistrationResponse> RunCTRegistrationSimplyAsync(RunCTRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunCTRegistrationAsync(request, runtime);
+        }
+
         public DetectHipKeypointXRayResponse DetectHipKeypointXRay(DetectHipKeypointXRayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -490,6 +550,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             return TeaModel.ToObject<DetectHipKeypointXRayResponse>(await DoRequestAsync("DetectHipKeypointXRay", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public DetectHipKeypointXRayResponse DetectHipKeypointXRaySimply(DetectHipKeypointXRayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectHipKeypointXRay(request, runtime);
+        }
+
+        public async Task<DetectHipKeypointXRayResponse> DetectHipKeypointXRaySimplyAsync(DetectHipKeypointXRayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectHipKeypointXRayAsync(request, runtime);
         }
 
         public DetectHipKeypointXRayResponse DetectHipKeypointXRayAdvance(DetectHipKeypointXRayAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -526,8 +598,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectHipKeypointXRayRequest detectHipKeypointXRayreq = new DetectHipKeypointXRayRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectHipKeypointXRayreq);
+            DetectHipKeypointXRayRequest detectHipKeypointXRayReq = new DetectHipKeypointXRayRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectHipKeypointXRayReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -553,8 +625,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
-            detectHipKeypointXRayreq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectHipKeypointXRayResponse detectHipKeypointXRayResp = DetectHipKeypointXRay(detectHipKeypointXRayreq, runtime);
+            detectHipKeypointXRayReq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectHipKeypointXRayResponse detectHipKeypointXRayResp = DetectHipKeypointXRay(detectHipKeypointXRayReq, runtime);
             return detectHipKeypointXRayResp;
         }
 
@@ -592,8 +664,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectHipKeypointXRayRequest detectHipKeypointXRayreq = new DetectHipKeypointXRayRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectHipKeypointXRayreq);
+            DetectHipKeypointXRayRequest detectHipKeypointXRayReq = new DetectHipKeypointXRayRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectHipKeypointXRayReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -619,8 +691,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-            detectHipKeypointXRayreq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectHipKeypointXRayResponse detectHipKeypointXRayResp = await DetectHipKeypointXRayAsync(detectHipKeypointXRayreq, runtime);
+            detectHipKeypointXRayReq.ImageUrl = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectHipKeypointXRayResponse detectHipKeypointXRayResp = await DetectHipKeypointXRayAsync(detectHipKeypointXRayReq, runtime);
             return detectHipKeypointXRayResp;
         }
 
@@ -636,6 +708,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return TeaModel.ToObject<CalcCACSResponse>(await DoRequestAsync("CalcCACS", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
         }
 
+        public CalcCACSResponse CalcCACSSimply(CalcCACSRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CalcCACS(request, runtime);
+        }
+
+        public async Task<CalcCACSResponse> CalcCACSSimplyAsync(CalcCACSRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CalcCACSAsync(request, runtime);
+        }
+
         public DetectKneeXRayResponse DetectKneeXRay(DetectKneeXRayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -646,6 +730,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             return TeaModel.ToObject<DetectKneeXRayResponse>(await DoRequestAsync("DetectKneeXRay", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public DetectKneeXRayResponse DetectKneeXRaySimply(DetectKneeXRayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectKneeXRay(request, runtime);
+        }
+
+        public async Task<DetectKneeXRayResponse> DetectKneeXRaySimplyAsync(DetectKneeXRayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectKneeXRayAsync(request, runtime);
         }
 
         public DetectKneeXRayResponse DetectKneeXRayAdvance(DetectKneeXRayAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -682,8 +778,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectKneeXRayRequest detectKneeXRayreq = new DetectKneeXRayRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectKneeXRayreq);
+            DetectKneeXRayRequest detectKneeXRayReq = new DetectKneeXRayRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectKneeXRayReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -709,8 +805,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
-            detectKneeXRayreq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectKneeXRayResponse detectKneeXRayResp = DetectKneeXRay(detectKneeXRayreq, runtime);
+            detectKneeXRayReq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectKneeXRayResponse detectKneeXRayResp = DetectKneeXRay(detectKneeXRayReq, runtime);
             return detectKneeXRayResp;
         }
 
@@ -748,8 +844,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            DetectKneeXRayRequest detectKneeXRayreq = new DetectKneeXRayRequest();
-            AlibabaCloud.Commons.Common.Convert(request, detectKneeXRayreq);
+            DetectKneeXRayRequest detectKneeXRayReq = new DetectKneeXRayRequest();
+            AlibabaCloud.Commons.Common.Convert(request, detectKneeXRayReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -775,8 +871,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
                 Header = ossHeader,
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-            detectKneeXRayreq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            DetectKneeXRayResponse detectKneeXRayResp = await DetectKneeXRayAsync(detectKneeXRayreq, runtime);
+            detectKneeXRayReq.Url = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            DetectKneeXRayResponse detectKneeXRayResp = await DetectKneeXRayAsync(detectKneeXRayReq, runtime);
             return detectKneeXRayResp;
         }
 
@@ -792,6 +888,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return TeaModel.ToObject<DetectSpineMRIResponse>(await DoRequestAsync("DetectSpineMRI", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
         }
 
+        public DetectSpineMRIResponse DetectSpineMRISimply(DetectSpineMRIRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectSpineMRI(request, runtime);
+        }
+
+        public async Task<DetectSpineMRIResponse> DetectSpineMRISimplyAsync(DetectSpineMRIRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectSpineMRIAsync(request, runtime);
+        }
+
         public TranslateMedResponse TranslateMed(TranslateMedRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -802,6 +910,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             return TeaModel.ToObject<TranslateMedResponse>(await DoRequestAsync("TranslateMed", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public TranslateMedResponse TranslateMedSimply(TranslateMedRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TranslateMed(request, runtime);
+        }
+
+        public async Task<TranslateMedResponse> TranslateMedSimplyAsync(TranslateMedRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TranslateMedAsync(request, runtime);
         }
 
         public DetectLungNoduleResponse DetectLungNodule(DetectLungNoduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -816,6 +936,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return TeaModel.ToObject<DetectLungNoduleResponse>(await DoRequestAsync("DetectLungNodule", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
         }
 
+        public DetectLungNoduleResponse DetectLungNoduleSimply(DetectLungNoduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectLungNodule(request, runtime);
+        }
+
+        public async Task<DetectLungNoduleResponse> DetectLungNoduleSimplyAsync(DetectLungNoduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectLungNoduleAsync(request, runtime);
+        }
+
         public DetectCovid19CadResponse DetectCovid19Cad(DetectCovid19CadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -828,6 +960,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
             return TeaModel.ToObject<DetectCovid19CadResponse>(await DoRequestAsync("DetectCovid19Cad", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
         }
 
+        public DetectCovid19CadResponse DetectCovid19CadSimply(DetectCovid19CadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectCovid19Cad(request, runtime);
+        }
+
+        public async Task<DetectCovid19CadResponse> DetectCovid19CadSimplyAsync(DetectCovid19CadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectCovid19CadAsync(request, runtime);
+        }
+
         public GetAsyncJobResultResponse GetAsyncJobResult(GetAsyncJobResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -838,6 +982,18 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             return TeaModel.ToObject<GetAsyncJobResultResponse>(await DoRequestAsync("GetAsyncJobResult", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public GetAsyncJobResultResponse GetAsyncJobResultSimply(GetAsyncJobResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAsyncJobResult(request, runtime);
+        }
+
+        public async Task<GetAsyncJobResultResponse> GetAsyncJobResultSimplyAsync(GetAsyncJobResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAsyncJobResultAsync(request, runtime);
         }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)

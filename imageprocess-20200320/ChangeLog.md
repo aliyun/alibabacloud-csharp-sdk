@@ -1,3 +1,6 @@
+2020-12-03 Version: 1.0.10
+- Update DetectLungNodule.
+
 2020-10-23 Version: 1.0.9
 - Update DetectLungNodule.
 
