@@ -1,3 +1,6 @@
+2020-12-09 Version: 0.0.16
+- Update SegmentCommodity.
+
 2020-12-02 Version: 0.0.15
 - Update SegmentHead.
 
