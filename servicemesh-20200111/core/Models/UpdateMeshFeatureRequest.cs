@@ -121,6 +121,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string SidecarInjectorWebhookAsYaml { get; set; }
 
+        [NameInMap("CniEnabled")]
+        [Validation(Required=false)]
+        public bool? CniEnabled { get; set; }
+
+        [NameInMap("CniExcludeNamespaces")]
+        [Validation(Required=false)]
+        public string CniExcludeNamespaces { get; set; }
+
+        [NameInMap("OpaEnabled")]
+        [Validation(Required=false)]
+        public bool? OpaEnabled { get; set; }
+
+        [NameInMap("Http10Enabled")]
+        [Validation(Required=false)]
+        public bool? Http10Enabled { get; set; }
+
     }
 
 }

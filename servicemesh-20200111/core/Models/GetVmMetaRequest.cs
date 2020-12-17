@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string TrustDomain { get; set; }
 
         [NameInMap("Namespace")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Namespace { get; set; }
 
         [NameInMap("ServiceAccount")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceAccount { get; set; }
 
     }

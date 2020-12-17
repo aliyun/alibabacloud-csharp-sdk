@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string Name { get; set; }
 
         [NameInMap("VSwitches")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string VSwitches { get; set; }
 
         [NameInMap("TraceSampling")]
@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ExcludeInboundPorts")]
         [Validation(Required=false)]
         public string ExcludeInboundPorts { get; set; }
+
+        [NameInMap("OpaEnabled")]
+        [Validation(Required=false)]
+        public bool? OpaEnabled { get; set; }
 
     }
 

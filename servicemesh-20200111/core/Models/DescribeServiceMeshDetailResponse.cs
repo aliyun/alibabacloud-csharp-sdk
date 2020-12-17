@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=true)]
                         public float? TraceSampling { get; set; }
 
+                        [NameInMap("Http10Enabled")]
+                        [Validation(Required=true)]
+                        public bool? Http10Enabled { get; set; }
+
                     }
                     [NameInMap("OPA")]
                     [Validation(Required=true)]
@@ -226,6 +230,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [NameInMap("SidecarInjectorWebhookAsYaml")]
                         [Validation(Required=true)]
                         public string SidecarInjectorWebhookAsYaml { get; set; }
+
+                        [NameInMap("InitCNIConfiguration")]
+                        [Validation(Required=true)]
+                        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration InitCNIConfiguration { get; set; }
+                        public class DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration : TeaModel {
+                            [NameInMap("Enabled")]
+                            [Validation(Required=true)]
+                            public bool? Enabled { get; set; }
+                            [NameInMap("ExcludeNamespaces")]
+                            [Validation(Required=true)]
+                            public string ExcludeNamespaces { get; set; }
+                        };
 
                     }
                 };

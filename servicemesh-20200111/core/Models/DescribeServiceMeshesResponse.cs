@@ -117,6 +117,43 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [Validation(Required=true)]
                     public bool? Telemetry { get; set; }
 
+                    [NameInMap("Pilot")]
+                    [Validation(Required=true)]
+                    public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot Pilot { get; set; }
+                    public class DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot : TeaModel {
+                        [NameInMap("TraceSampling")]
+                        [Validation(Required=true)]
+                        public float? TraceSampling { get; set; }
+                        [NameInMap("Http10Enabled")]
+                        [Validation(Required=true)]
+                        public bool? Http10Enabled { get; set; }
+                    };
+
+                    [NameInMap("SidecarInjector")]
+                    [Validation(Required=true)]
+                    public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector SidecarInjector { get; set; }
+                    public class DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector : TeaModel {
+                        [NameInMap("EnableNamespacesByDefault")]
+                        [Validation(Required=true)]
+                        public bool? EnableNamespacesByDefault { get; set; }
+                        [NameInMap("AutoInjectionPolicyEnabled")]
+                        [Validation(Required=true)]
+                        public bool? AutoInjectionPolicyEnabled { get; set; }
+                        [NameInMap("InitCNIConfiguration")]
+                        [Validation(Required=true)]
+                        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration InitCNIConfiguration { get; set; }
+                        public class DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration : TeaModel {
+                            [NameInMap("Enabled")]
+                            [Validation(Required=true)]
+                            public bool? Enabled { get; set; }
+
+                            [NameInMap("ExcludeNamespaces")]
+                            [Validation(Required=true)]
+                            public string ExcludeNamespaces { get; set; }
+
+                        }
+                    };
+
                 }
                 [NameInMap("Network")]
                 [Validation(Required=true)]
