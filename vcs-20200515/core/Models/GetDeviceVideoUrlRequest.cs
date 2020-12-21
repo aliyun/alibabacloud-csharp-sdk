@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,7 +13,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetDeviceVideoUrlRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("GbId")]

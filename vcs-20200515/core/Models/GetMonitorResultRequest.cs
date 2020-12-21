@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetMonitorResultRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("TaskId")]
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string MinRecordId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long EndTime { get; set; }
 
         [NameInMap("AlgorithmVendor")]

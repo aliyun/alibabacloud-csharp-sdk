@@ -9,45 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetFaceOptionsResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public List<GetFaceOptionsResponseData> Data { get; set; }
-        public class GetFaceOptionsResponseData : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=true)]
-            public string Key { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
-
-            [NameInMap("OptionList")]
-            [Validation(Required=true)]
-            public List<GetFaceOptionsResponseDataOptionList> OptionList { get; set; }
-            public class GetFaceOptionsResponseDataOptionList : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=true)]
-                public string Key { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=true)]
-                public string Name { get; set; }
-
-            }
-
-        }
+        public GetFaceOptionsResponseBody Body { get; set; }
 
     }
 

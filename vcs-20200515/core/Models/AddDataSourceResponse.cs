@@ -9,28 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class AddDataSourceResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public AddDataSourceResponseData Data { get; set; }
-        public class AddDataSourceResponseData : TeaModel {
-            [NameInMap("DataSourceId")]
-            [Validation(Required=true)]
-            public string DataSourceId { get; set; }
-            [NameInMap("KafkaTopic")]
-            [Validation(Required=true)]
-            public string KafkaTopic { get; set; }
-            [NameInMap("OssPath")]
-            [Validation(Required=true)]
-            public string OssPath { get; set; }
-        };
+        public AddDataSourceResponseBody Body { get; set; }
 
     }
 

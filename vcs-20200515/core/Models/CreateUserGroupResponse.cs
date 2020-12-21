@@ -9,32 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class CreateUserGroupResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public CreateUserGroupResponseData Data { get; set; }
-        public class CreateUserGroupResponseData : TeaModel {
-            [NameInMap("UserGroupName")]
-            [Validation(Required=true)]
-            public string UserGroupName { get; set; }
-            [NameInMap("IsvSubId")]
-            [Validation(Required=true)]
-            public string IsvSubId { get; set; }
-            [NameInMap("UserGroupId")]
-            [Validation(Required=true)]
-            public long UserGroupId { get; set; }
-        };
+        public CreateUserGroupResponseBody Body { get; set; }
 
     }
 

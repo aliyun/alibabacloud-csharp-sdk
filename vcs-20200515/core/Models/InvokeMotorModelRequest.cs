@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class InvokeMotorModelRequest : TeaModel {
         [NameInMap("PicId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PicId { get; set; }
 
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("PicPath")]

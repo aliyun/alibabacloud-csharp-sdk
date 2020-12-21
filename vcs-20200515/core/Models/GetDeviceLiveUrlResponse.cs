@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetDeviceLiveUrlResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Url")]
-        [Validation(Required=true)]
-        public string Url { get; set; }
-
-        [NameInMap("OutProtocol")]
-        [Validation(Required=true)]
-        public string OutProtocol { get; set; }
-
-        [NameInMap("StreamType")]
-        [Validation(Required=true)]
-        public int? StreamType { get; set; }
+        public GetDeviceLiveUrlResponseBody Body { get; set; }
 
     }
 

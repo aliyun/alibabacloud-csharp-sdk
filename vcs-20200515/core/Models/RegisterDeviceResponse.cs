@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class RegisterDeviceResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("RetryInterval")]
-        [Validation(Required=true)]
-        public string RetryInterval { get; set; }
+        public RegisterDeviceResponseBody Body { get; set; }
 
     }
 

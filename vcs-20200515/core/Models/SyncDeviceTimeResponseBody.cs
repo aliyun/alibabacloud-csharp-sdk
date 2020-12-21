@@ -1,0 +1,42 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Vcs20200515.Models
+{
+    public class SyncDeviceTimeResponseBody : TeaModel {
+        [NameInMap("SyncInterval")]
+        [Validation(Required=false)]
+        public string SyncInterval { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RetryInterval")]
+        [Validation(Required=false)]
+        public string RetryInterval { get; set; }
+
+        [NameInMap("NTPServer")]
+        [Validation(Required=false)]
+        public string NTPServer { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("TimeStamp")]
+        [Validation(Required=false)]
+        public string TimeStamp { get; set; }
+
+    }
+
+}

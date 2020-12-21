@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class CreateCorpGroupRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GroupId { get; set; }
 
         [NameInMap("ClientToken")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClientToken { get; set; }
 
     }

@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string CorpId { get; set; }
 
         [NameInMap("IsvSubId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IsvSubId { get; set; }
 
         [NameInMap("CatalogId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CatalogId { get; set; }
 
     }

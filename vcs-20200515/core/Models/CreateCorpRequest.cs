@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class CreateCorpRequest : TeaModel {
         [NameInMap("CorpName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpName { get; set; }
 
         [NameInMap("AppName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppName { get; set; }
 
         [NameInMap("ParentCorpId")]

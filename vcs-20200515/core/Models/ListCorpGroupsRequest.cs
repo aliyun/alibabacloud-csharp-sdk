@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class ListCorpGroupsRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long PageSize { get; set; }
 
     }

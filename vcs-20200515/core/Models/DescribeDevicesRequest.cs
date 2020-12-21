@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class DescribeDevicesRequest : TeaModel {
         [NameInMap("PageNum")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("CorpIdList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpIdList { get; set; }
 
     }

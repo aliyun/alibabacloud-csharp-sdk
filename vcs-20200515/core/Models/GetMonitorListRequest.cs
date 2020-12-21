@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetMonitorListRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
     }

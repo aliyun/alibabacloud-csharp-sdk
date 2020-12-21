@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class BindCorpGroupRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("CorpGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpGroupId { get; set; }
 
     }

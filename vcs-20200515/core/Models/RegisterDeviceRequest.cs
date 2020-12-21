@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class RegisterDeviceRequest : TeaModel {
         [NameInMap("DeviceSn")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeviceSn { get; set; }
 
         [NameInMap("DeviceId")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string ServerId { get; set; }
 
         [NameInMap("DeviceTimeStamp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeviceTimeStamp { get; set; }
 
     }

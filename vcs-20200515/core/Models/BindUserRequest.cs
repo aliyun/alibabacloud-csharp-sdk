@@ -14,19 +14,19 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string CorpId { get; set; }
 
         [NameInMap("IsvSubId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IsvSubId { get; set; }
 
         [NameInMap("MatchingRate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MatchingRate { get; set; }
 
         [NameInMap("PersonId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PersonId { get; set; }
 
         [NameInMap("UserId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long UserId { get; set; }
 
     }

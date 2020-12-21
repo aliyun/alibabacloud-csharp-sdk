@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetFaceModelResultRequest : TeaModel {
         [NameInMap("PictureId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PictureId { get; set; }
 
         [NameInMap("PictureContent")]

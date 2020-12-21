@@ -9,43 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetCatalogListResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public List<GetCatalogListResponseData> Data { get; set; }
-        public class GetCatalogListResponseData : TeaModel {
-            [NameInMap("IsvSubId")]
-            [Validation(Required=true)]
-            public string IsvSubId { get; set; }
-
-            [NameInMap("ParentCatalogId")]
-            [Validation(Required=true)]
-            public long ParentCatalogId { get; set; }
-
-            [NameInMap("ProfileCount")]
-            [Validation(Required=true)]
-            public long ProfileCount { get; set; }
-
-            [NameInMap("CatalogId")]
-            [Validation(Required=true)]
-            public long CatalogId { get; set; }
-
-            [NameInMap("CatalogName")]
-            [Validation(Required=true)]
-            public string CatalogName { get; set; }
-
-        }
+        public GetCatalogListResponseBody Body { get; set; }
 
     }
 

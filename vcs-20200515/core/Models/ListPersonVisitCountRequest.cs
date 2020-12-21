@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class ListPersonVisitCountRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("AggregateType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AggregateType { get; set; }
 
         [NameInMap("TagCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TagCode { get; set; }
 
         [NameInMap("TimeAggregateType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TimeAggregateType { get; set; }
 
         [NameInMap("MinVal")]

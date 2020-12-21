@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class AddDataSourceRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("DataSourceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DataSourceName { get; set; }
 
         [NameInMap("DataSourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
         [NameInMap("Description")]

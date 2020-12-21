@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class UploadImageRequest : TeaModel {
         [NameInMap("ImageUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
     }

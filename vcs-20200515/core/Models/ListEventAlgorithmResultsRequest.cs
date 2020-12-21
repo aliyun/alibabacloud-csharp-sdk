@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class ListEventAlgorithmResultsRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("EventType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EventType { get; set; }
 
         [NameInMap("DataSourceId")]
@@ -22,19 +22,19 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string DataSourceId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageSize { get; set; }
 
         [NameInMap("ExtendValue")]

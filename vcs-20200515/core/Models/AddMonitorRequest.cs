@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class AddMonitorRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("MonitorType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MonitorType { get; set; }
 
         [NameInMap("Description")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public int? BatchIndicator { get; set; }
 
         [NameInMap("AlgorithmVendor")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AlgorithmVendor { get; set; }
 
         [NameInMap("NotifierType")]

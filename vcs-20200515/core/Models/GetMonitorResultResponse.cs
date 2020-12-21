@@ -9,49 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetMonitorResultResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetMonitorResultResponseData Data { get; set; }
-        public class GetMonitorResultResponseData : TeaModel {
-            [NameInMap("MaxId")]
-            [Validation(Required=true)]
-            public string MaxId { get; set; }
-            [NameInMap("Records")]
-            [Validation(Required=true)]
-            public List<GetMonitorResultResponseDataRecords> Records { get; set; }
-            public class GetMonitorResultResponseDataRecords : TeaModel {
-                public string RightBottomY { get; set; }
-                public string RightBottomX { get; set; }
-                public string LeftUpY { get; set; }
-                public string LeftUpX { get; set; }
-                public string GbId { get; set; }
-                public string Score { get; set; }
-                public string PicUrl { get; set; }
-                public string ShotTime { get; set; }
-                public string MonitorPicUrl { get; set; }
-                public string TargetPicUrl { get; set; }
-                public string TaskId { get; set; }
-                public GetMonitorResultResponseDataRecordsExtendInfo ExtendInfo { get; set; }
-                public class GetMonitorResultResponseDataRecordsExtendInfo : TeaModel {
-                    [NameInMap("PlateNo")]
-                    [Validation(Required=true)]
-                    public string PlateNo { get; set; }
-
-                }
-            }
-        };
+        public GetMonitorResultResponseBody Body { get; set; }
 
     }
 

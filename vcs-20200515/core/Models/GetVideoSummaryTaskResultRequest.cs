@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetVideoSummaryTaskResultRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("TaskId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskId { get; set; }
 
     }

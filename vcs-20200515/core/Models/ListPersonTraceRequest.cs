@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class ListPersonTraceRequest : TeaModel {
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("CorpId")]
@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string CorpId { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageSize { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("DataSourceId")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string PersonId { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GroupId { get; set; }
 
     }

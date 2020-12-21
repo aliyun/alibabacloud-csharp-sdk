@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class SearchBodyShrinkRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("GbId")]
@@ -18,19 +18,19 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string GbId { get; set; }
 
         [NameInMap("StartTimeStamp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long StartTimeStamp { get; set; }
 
         [NameInMap("EndTimeStamp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long EndTimeStamp { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("OptionList")]

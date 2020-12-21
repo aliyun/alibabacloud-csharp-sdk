@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string CorpId { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long PageSize { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("PersonId")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string PersonId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("SubId")]

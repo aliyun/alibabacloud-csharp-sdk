@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string CorpId { get; set; }
 
         [NameInMap("IsvSubId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IsvSubId { get; set; }
 
         [NameInMap("Name")]
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string BizId { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long PageSize { get; set; }
 
         [NameInMap("PersonIdList")]

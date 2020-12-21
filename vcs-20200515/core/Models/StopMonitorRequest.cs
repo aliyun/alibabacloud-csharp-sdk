@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class StopMonitorRequest : TeaModel {
         [NameInMap("TaskId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskId { get; set; }
 
         [NameInMap("AlgorithmVendor")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AlgorithmVendor { get; set; }
 
     }

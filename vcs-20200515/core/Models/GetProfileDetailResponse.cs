@@ -9,62 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetProfileDetailResponse : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Code { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetProfileDetailResponseData Data { get; set; }
-        public class GetProfileDetailResponseData : TeaModel {
-            [NameInMap("LiveAddress")]
-            [Validation(Required=true)]
-            public string LiveAddress { get; set; }
-            [NameInMap("SceneType")]
-            [Validation(Required=true)]
-            public string SceneType { get; set; }
-            [NameInMap("BizId")]
-            [Validation(Required=true)]
-            public string BizId { get; set; }
-            [NameInMap("FaceUrl")]
-            [Validation(Required=true)]
-            public string FaceUrl { get; set; }
-            [NameInMap("Gender")]
-            [Validation(Required=true)]
-            public string Gender { get; set; }
-            [NameInMap("IdNumber")]
-            [Validation(Required=true)]
-            public string IdNumber { get; set; }
-            [NameInMap("IsvSubId")]
-            [Validation(Required=true)]
-            public string IsvSubId { get; set; }
-            [NameInMap("PhoneNo")]
-            [Validation(Required=true)]
-            public string PhoneNo { get; set; }
-            [NameInMap("PlateNo")]
-            [Validation(Required=true)]
-            public string PlateNo { get; set; }
-            [NameInMap("CatalogId")]
-            [Validation(Required=true)]
-            public int? CatalogId { get; set; }
-            [NameInMap("ProfileId")]
-            [Validation(Required=true)]
-            public int? ProfileId { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
-            [NameInMap("PersonId")]
-            [Validation(Required=true)]
-            public string PersonId { get; set; }
-        };
+        public GetProfileDetailResponseBody Body { get; set; }
 
     }
 

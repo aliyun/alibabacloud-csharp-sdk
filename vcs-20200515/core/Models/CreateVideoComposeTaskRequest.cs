@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class CreateVideoComposeTaskRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("BucketName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BucketName { get; set; }
 
         [NameInMap("DomainName")]
@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string DomainName { get; set; }
 
         [NameInMap("ImageFileNames")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageFileNames { get; set; }
 
         [NameInMap("AudioFileName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AudioFileName { get; set; }
 
         [NameInMap("ImageParameters")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageParameters { get; set; }
 
         [NameInMap("VideoFormat")]

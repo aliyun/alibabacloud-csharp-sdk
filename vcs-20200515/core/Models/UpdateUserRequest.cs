@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string CorpId { get; set; }
 
         [NameInMap("IsvSubId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IsvSubId { get; set; }
 
         [NameInMap("UserName")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string UserName { get; set; }
 
         [NameInMap("UserGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long UserGroupId { get; set; }
 
         [NameInMap("IdNumber")]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string BizId { get; set; }
 
         [NameInMap("UserId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long UserId { get; set; }
 
     }

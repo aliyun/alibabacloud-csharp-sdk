@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class RecognizeImageRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("PicContent")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string PicContent { get; set; }
 
         [NameInMap("PicFormat")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PicFormat { get; set; }
 
         [NameInMap("PicUrl")]

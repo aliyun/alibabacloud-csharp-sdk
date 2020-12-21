@@ -22,20 +22,24 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string Name { get; set; }
 
         [NameInMap("IsPage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? IsPage { get; set; }
 
         [NameInMap("PageNum")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("Group")]
         [Validation(Required=false)]
         public string Group { get; set; }
+
+        [NameInMap("DataSourceType")]
+        [Validation(Required=false)]
+        public string DataSourceType { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class UploadFileRequest : TeaModel {
         [NameInMap("FileType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileType { get; set; }
 
         [NameInMap("MD5")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string MD5 { get; set; }
 
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("FileContent")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string FileContent { get; set; }
 
         [NameInMap("FileName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileName { get; set; }
 
         [NameInMap("FileAliasName")]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public string FileAliasName { get; set; }
 
         [NameInMap("DataSourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
         [NameInMap("FilePath")]

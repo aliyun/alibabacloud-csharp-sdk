@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class GetVideoComposeResultRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("TaskRequestId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskRequestId { get; set; }
 
     }

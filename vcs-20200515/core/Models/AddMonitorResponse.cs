@@ -9,26 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class AddMonitorResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public AddMonitorResponseData Data { get; set; }
-        public class AddMonitorResponseData : TeaModel {
-            [NameInMap("TaskId")]
-            [Validation(Required=true)]
-            public string TaskId { get; set; }
-        };
+        public AddMonitorResponseBody Body { get; set; }
 
     }
 

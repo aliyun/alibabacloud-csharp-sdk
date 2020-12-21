@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
     public class CreateVideoSummaryTaskRequest : TeaModel {
         [NameInMap("CorpId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CorpId { get; set; }
 
         [NameInMap("DeviceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeviceId { get; set; }
 
         [NameInMap("StartTimeStamp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long StartTimeStamp { get; set; }
 
         [NameInMap("EndTimeStamp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long EndTimeStamp { get; set; }
 
         [NameInMap("OptionList")]
