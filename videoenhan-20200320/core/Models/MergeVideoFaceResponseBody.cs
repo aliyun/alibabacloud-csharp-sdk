@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
-    public class ToneSdrVideoResponse : TeaModel {
+    public class MergeVideoFaceResponseBody : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ToneSdrVideoResponseData Data { get; set; }
-        public class ToneSdrVideoResponseData : TeaModel {
+        [Validation(Required=false)]
+        public MergeVideoFaceResponseBodyData Data { get; set; }
+        public class MergeVideoFaceResponseBodyData : TeaModel {
             [NameInMap("VideoURL")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string VideoURL { get; set; }
         };
 
