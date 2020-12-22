@@ -24,6 +24,54 @@ namespace AlibabaCloud.SDK.Imageprocess20200320
         }
 
 
+        public DetectRibFractureResponse DetectRibFracture(DetectRibFractureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<DetectRibFractureResponse>(DoRequest("DetectRibFracture", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<DetectRibFractureResponse> DetectRibFractureAsync(DetectRibFractureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<DetectRibFractureResponse>(await DoRequestAsync("DetectRibFracture", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public DetectRibFractureResponse DetectRibFractureSimply(DetectRibFractureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetectRibFracture(request, runtime);
+        }
+
+        public async Task<DetectRibFractureResponse> DetectRibFractureSimplyAsync(DetectRibFractureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetectRibFractureAsync(request, runtime);
+        }
+
+        public ScreenChestCTResponse ScreenChestCT(ScreenChestCTRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ScreenChestCTResponse>(DoRequest("ScreenChestCT", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<ScreenChestCTResponse> ScreenChestCTAsync(ScreenChestCTRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<ScreenChestCTResponse>(await DoRequestAsync("ScreenChestCT", "HTTPS", "POST", "2020-03-20", "AK", null, request.ToMap(), runtime));
+        }
+
+        public ScreenChestCTResponse ScreenChestCTSimply(ScreenChestCTRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ScreenChestCT(request, runtime);
+        }
+
+        public async Task<ScreenChestCTResponse> ScreenChestCTSimplyAsync(ScreenChestCTRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ScreenChestCTAsync(request, runtime);
+        }
+
         public DetectSkinDiseaseResponse DetectSkinDisease(DetectSkinDiseaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
