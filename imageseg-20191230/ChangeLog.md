@@ -1,3 +1,6 @@
+2020-12-22 Version: 0.0.18
+- Update SegmentAnimal SegmentCommonImage.
+
 2020-12-17 Version: 0.0.17
 - Update SegmentFood.
 
