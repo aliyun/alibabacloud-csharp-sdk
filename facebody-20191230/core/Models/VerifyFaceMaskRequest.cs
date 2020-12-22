@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class VerifyFaceMaskRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
         [NameInMap("RefUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RefUrl { get; set; }
 
     }

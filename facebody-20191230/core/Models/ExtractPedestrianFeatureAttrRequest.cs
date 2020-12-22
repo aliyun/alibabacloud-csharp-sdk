@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,7 +13,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class ExtractPedestrianFeatureAttrRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
         [NameInMap("Mode")]

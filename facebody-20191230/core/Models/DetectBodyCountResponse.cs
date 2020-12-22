@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectBodyCountResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DetectBodyCountResponseData Data { get; set; }
-        public class DetectBodyCountResponseData : TeaModel {
-            [NameInMap("PersonNumber")]
-            [Validation(Required=true)]
-            public int? PersonNumber { get; set; }
-        };
+        public DetectBodyCountResponseBody Body { get; set; }
 
     }
 

@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DeleteFaceEntityResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public DeleteFaceEntityResponseBody Body { get; set; }
 
     }
 

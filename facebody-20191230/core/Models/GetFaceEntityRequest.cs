@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class GetFaceEntityRequest : TeaModel {
         [NameInMap("DbName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DbName { get; set; }
 
         [NameInMap("EntityId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EntityId { get; set; }
 
     }

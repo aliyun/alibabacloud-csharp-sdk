@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("Strength")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public float? Strength { get; set; }
 
     }

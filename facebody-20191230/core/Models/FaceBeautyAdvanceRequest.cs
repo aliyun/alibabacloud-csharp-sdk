@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("Sharp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public float? Sharp { get; set; }
 
         [NameInMap("Smooth")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public float? Smooth { get; set; }
 
         [NameInMap("White")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public float? White { get; set; }
 
     }

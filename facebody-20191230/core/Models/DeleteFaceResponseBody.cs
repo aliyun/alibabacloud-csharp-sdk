@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class ListFaceDbsRequest : TeaModel {
+    public class DeleteFaceResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
     }
 
 }

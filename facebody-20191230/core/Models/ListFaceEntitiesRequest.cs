@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class ListFaceEntitiesRequest : TeaModel {
         [NameInMap("DbName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DbName { get; set; }
 
         [NameInMap("Offset")]

@@ -1,3 +1,6 @@
+2020-12-22 Version: 0.0.16
+- Release DetectPedestrianIntrusion.
+
 2020-11-19 Version: 0.0.15
 - Update GenerateHumanAnimeStyle.
 

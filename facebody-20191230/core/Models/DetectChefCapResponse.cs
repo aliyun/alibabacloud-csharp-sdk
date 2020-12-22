@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectChefCapResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DetectChefCapResponseData Data { get; set; }
-        public class DetectChefCapResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<DetectChefCapResponseDataElements> Elements { get; set; }
-            public class DetectChefCapResponseDataElements : TeaModel {
-                public string Category { get; set; }
-                public float? Confidence { get; set; }
-                public List<string> Box { get; set; }
-            }
-        };
+        public DetectChefCapResponseBody Body { get; set; }
 
     }
 

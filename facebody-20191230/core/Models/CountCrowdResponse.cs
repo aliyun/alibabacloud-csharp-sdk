@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class CountCrowdResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public CountCrowdResponseData Data { get; set; }
-        public class CountCrowdResponseData : TeaModel {
-            [NameInMap("PeopleNumber")]
-            [Validation(Required=true)]
-            public int? PeopleNumber { get; set; }
-            [NameInMap("HotMap")]
-            [Validation(Required=true)]
-            public string HotMap { get; set; }
-        };
+        public CountCrowdResponseBody Body { get; set; }
 
     }
 

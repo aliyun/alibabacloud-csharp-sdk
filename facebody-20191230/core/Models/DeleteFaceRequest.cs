@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DeleteFaceRequest : TeaModel {
         [NameInMap("DbName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DbName { get; set; }
 
         [NameInMap("FaceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FaceId { get; set; }
 
     }

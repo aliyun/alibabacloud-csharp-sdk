@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class RecognizeActionRequest : TeaModel {
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public int? Type { get; set; }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public string VideoUrl { get; set; }
+
         [NameInMap("URLList")]
         [Validation(Required=false)]
         public List<RecognizeActionRequestURLList> URLList { get; set; }
@@ -18,14 +26,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             public string URL { get; set; }
 
         }
-
-        [NameInMap("Type")]
-        [Validation(Required=true)]
-        public int? Type { get; set; }
-
-        [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
-        public string VideoUrl { get; set; }
 
     }
 

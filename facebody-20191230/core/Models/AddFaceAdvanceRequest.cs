@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public Stream ImageUrlObject { get; set; }
 
         [NameInMap("DbName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DbName { get; set; }
 
         [NameInMap("EntityId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EntityId { get; set; }
 
         [NameInMap("ExtraData")]

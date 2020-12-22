@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectVideoLivingFaceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DetectVideoLivingFaceResponseData Data { get; set; }
-        public class DetectVideoLivingFaceResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<DetectVideoLivingFaceResponseDataElements> Elements { get; set; }
-            public class DetectVideoLivingFaceResponseDataElements : TeaModel {
-                public float? LiveConfidence { get; set; }
-                public float? FaceConfidence { get; set; }
-                public List<string> Rect { get; set; }
-            }
-        };
+        public DetectVideoLivingFaceResponseBody Body { get; set; }
 
     }
 

@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class SearchFaceRequest : TeaModel {
         [NameInMap("DbName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DbName { get; set; }
 
         [NameInMap("ImageUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
         [NameInMap("Limit")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Limit { get; set; }
+
+        [NameInMap("DbNames")]
+        [Validation(Required=false)]
+        public string DbNames { get; set; }
 
     }
 

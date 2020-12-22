@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class FaceTidyupResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public FaceTidyupResponseData Data { get; set; }
-        public class FaceTidyupResponseData : TeaModel {
-            [NameInMap("ImageURL")]
-            [Validation(Required=true)]
-            public string ImageURL { get; set; }
-        };
+        public FaceTidyupResponseBody Body { get; set; }
 
     }
 

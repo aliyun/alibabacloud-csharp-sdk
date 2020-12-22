@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectMaskResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DetectMaskResponseData Data { get; set; }
-        public class DetectMaskResponseData : TeaModel {
-            [NameInMap("Mask")]
-            [Validation(Required=true)]
-            public int? Mask { get; set; }
-            [NameInMap("FaceProbability")]
-            [Validation(Required=true)]
-            public float? FaceProbability { get; set; }
-        };
+        public DetectMaskResponseBody Body { get; set; }
 
     }
 

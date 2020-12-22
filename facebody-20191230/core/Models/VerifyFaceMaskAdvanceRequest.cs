@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("RefUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RefUrl { get; set; }
 
     }

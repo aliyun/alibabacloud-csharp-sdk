@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectFaceRequest : TeaModel {
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public int? ImageType { get; set; }
+
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
     }

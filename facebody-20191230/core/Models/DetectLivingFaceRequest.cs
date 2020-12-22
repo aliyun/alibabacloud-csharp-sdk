@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectLivingFaceRequest : TeaModel {
         [NameInMap("Tasks")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<DetectLivingFaceRequestTasks> Tasks { get; set; }
         public class DetectLivingFaceRequestTasks : TeaModel {
             [NameInMap("ImageURL")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string ImageURL { get; set; }
 
         }

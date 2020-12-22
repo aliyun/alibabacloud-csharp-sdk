@@ -9,41 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class RecognizeExpressionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeExpressionResponseData Data { get; set; }
-        public class RecognizeExpressionResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<RecognizeExpressionResponseDataElements> Elements { get; set; }
-            public class RecognizeExpressionResponseDataElements : TeaModel {
-                public string Expression { get; set; }
-                public float? FaceProbability { get; set; }
-                public RecognizeExpressionResponseDataElementsFaceRectangle FaceRectangle { get; set; }
-                public class RecognizeExpressionResponseDataElementsFaceRectangle : TeaModel {
-                    [NameInMap("Height")]
-                    [Validation(Required=true)]
-                    public int? Height { get; set; }
-
-                    [NameInMap("Left")]
-                    [Validation(Required=true)]
-                    public int? Left { get; set; }
-
-                    [NameInMap("Top")]
-                    [Validation(Required=true)]
-                    public int? Top { get; set; }
-
-                    [NameInMap("Width")]
-                    [Validation(Required=true)]
-                    public int? Width { get; set; }
-
-                }
-            }
-        };
+        public RecognizeExpressionResponseBody Body { get; set; }
 
     }
 

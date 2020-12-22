@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectVideoLivingFaceRequest : TeaModel {
         [NameInMap("VideoUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VideoUrl { get; set; }
 
     }

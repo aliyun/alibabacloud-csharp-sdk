@@ -9,51 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class HandPostureResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public HandPostureResponseData Data { get; set; }
-        public class HandPostureResponseData : TeaModel {
-            [NameInMap("Outputs")]
-            [Validation(Required=true)]
-            public List<HandPostureResponseDataOutputs> Outputs { get; set; }
-            public class HandPostureResponseDataOutputs : TeaModel {
-                public int? HandCount { get; set; }
-                public List<HandPostureResponseDataOutputsResults> Results { get; set; }
-                public class HandPostureResponseDataOutputsResults : TeaModel {
-                    [NameInMap("Confident")]
-                    [Validation(Required=true)]
-                    public float? Confident { get; set; }
-
-                    [NameInMap("Positions")]
-                    [Validation(Required=true)]
-                    public List<HandPostureResponseDataOutputsResultsPositions> Positions { get; set; }
-                    public class HandPostureResponseDataOutputsResultsPositions : TeaModel {
-                        [NameInMap("Points")]
-                        [Validation(Required=true)]
-                        public List<float?> Points { get; set; }
-
-                    }
-
-                }
-            }
-            [NameInMap("MetaObject")]
-            [Validation(Required=true)]
-            public HandPostureResponseDataMetaObject MetaObject { get; set; }
-            public class HandPostureResponseDataMetaObject : TeaModel {
-                [NameInMap("Height")]
-                [Validation(Required=true)]
-                public int? Height { get; set; }
-
-                [NameInMap("Width")]
-                [Validation(Required=true)]
-                public int? Width { get; set; }
-
-            }
-        };
+        public HandPostureResponseBody Body { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
+        [NameInMap("AlgoType")]
+        [Validation(Required=false)]
+        public string AlgoType { get; set; }
+
     }
 
 }

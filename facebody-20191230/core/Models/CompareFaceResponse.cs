@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class CompareFaceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public CompareFaceResponseData Data { get; set; }
-        public class CompareFaceResponseData : TeaModel {
-            [NameInMap("Confidence")]
-            [Validation(Required=true)]
-            public float? Confidence { get; set; }
-            [NameInMap("Thresholds")]
-            [Validation(Required=true)]
-            public List<string> Thresholds { get; set; }
-            [NameInMap("RectAList")]
-            [Validation(Required=true)]
-            public List<string> RectAList { get; set; }
-            [NameInMap("RectBList")]
-            [Validation(Required=true)]
-            public List<string> RectBList { get; set; }
-        };
+        public CompareFaceResponseBody Body { get; set; }
 
     }
 
