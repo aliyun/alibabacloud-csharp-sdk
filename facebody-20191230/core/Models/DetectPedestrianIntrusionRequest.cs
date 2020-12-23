@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string ImageURL { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("DetectRegion")]
         [Validation(Required=false)]
-        public List<DetectPedestrianIntrusionRequestRegion> Region { get; set; }
-        public class DetectPedestrianIntrusionRequestRegion : TeaModel {
+        public List<DetectPedestrianIntrusionRequestDetectRegion> DetectRegion { get; set; }
+        public class DetectPedestrianIntrusionRequestDetectRegion : TeaModel {
             [NameInMap("Rect")]
             [Validation(Required=false)]
-            public DetectPedestrianIntrusionRequestRegionRect Rect { get; set; }
-            public class DetectPedestrianIntrusionRequestRegionRect : TeaModel {
+            public DetectPedestrianIntrusionRequestDetectRegionRect Rect { get; set; }
+            public class DetectPedestrianIntrusionRequestDetectRegionRect : TeaModel {
                 [NameInMap("Left")]
                 [Validation(Required=false)]
                 public long Left { get; set; }
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
             [NameInMap("Line")]
             [Validation(Required=false)]
-            public DetectPedestrianIntrusionRequestRegionLine Line { get; set; }
-            public class DetectPedestrianIntrusionRequestRegionLine : TeaModel {
+            public DetectPedestrianIntrusionRequestDetectRegionLine Line { get; set; }
+            public class DetectPedestrianIntrusionRequestDetectRegionLine : TeaModel {
                 [NameInMap("X1")]
                 [Validation(Required=false)]
                 public long X1 { get; set; }

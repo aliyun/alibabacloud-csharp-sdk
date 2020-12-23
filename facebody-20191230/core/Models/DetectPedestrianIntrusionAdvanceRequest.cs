@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("DetectRegion")]
         [Validation(Required=false)]
-        public List<DetectPedestrianIntrusionAdvanceRequestRegion> Region { get; set; }
-        public class DetectPedestrianIntrusionAdvanceRequestRegion : TeaModel {
+        public List<DetectPedestrianIntrusionAdvanceRequestDetectRegion> DetectRegion { get; set; }
+        public class DetectPedestrianIntrusionAdvanceRequestDetectRegion : TeaModel {
             [NameInMap("Rect")]
             [Validation(Required=false)]
-            public DetectPedestrianIntrusionAdvanceRequestRegionRect Rect { get; set; }
-            public class DetectPedestrianIntrusionAdvanceRequestRegionRect : TeaModel {
+            public DetectPedestrianIntrusionAdvanceRequestDetectRegionRect Rect { get; set; }
+            public class DetectPedestrianIntrusionAdvanceRequestDetectRegionRect : TeaModel {
                 [NameInMap("Left")]
                 [Validation(Required=false)]
                 public long Left { get; set; }
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
             [NameInMap("Line")]
             [Validation(Required=false)]
-            public DetectPedestrianIntrusionAdvanceRequestRegionLine Line { get; set; }
-            public class DetectPedestrianIntrusionAdvanceRequestRegionLine : TeaModel {
+            public DetectPedestrianIntrusionAdvanceRequestDetectRegionLine Line { get; set; }
+            public class DetectPedestrianIntrusionAdvanceRequestDetectRegionLine : TeaModel {
                 [NameInMap("X1")]
                 [Validation(Required=false)]
                 public long X1 { get; set; }

@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string ImageURL { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("DetectRegion")]
         [Validation(Required=false)]
-        public string RegionShrink { get; set; }
+        public string DetectRegionShrink { get; set; }
 
         [NameInMap("RegionType")]
         [Validation(Required=false)]

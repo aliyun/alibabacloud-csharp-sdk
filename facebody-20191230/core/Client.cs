@@ -3722,9 +3722,9 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DetectPedestrianIntrusionShrinkRequest request = new DetectPedestrianIntrusionShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Region))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DetectRegion))
             {
-                request.RegionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Region, "Region", "json");
+                request.DetectRegionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DetectRegion, "DetectRegion", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3738,9 +3738,9 @@ namespace AlibabaCloud.SDK.Facebody20191230
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DetectPedestrianIntrusionShrinkRequest request = new DetectPedestrianIntrusionShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Region))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DetectRegion))
             {
-                request.RegionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Region, "Region", "json");
+                request.DetectRegionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DetectRegion, "DetectRegion", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
