@@ -1,3 +1,6 @@
+2020-12-24 Version: 1.1.1
+- Supported ContrastSmartVerify.
+
 2020-11-27 Version: 1.1.0
 - Generated csharp 2020-06-18 for Cloudauth.
 
