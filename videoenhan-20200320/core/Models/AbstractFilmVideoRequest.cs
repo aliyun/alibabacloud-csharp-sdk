@@ -10,15 +10,11 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AbstractFilmVideoRequest : TeaModel {
         [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string VideoUrl { get; set; }
 
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
         [NameInMap("Length")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Length { get; set; }
 
     }

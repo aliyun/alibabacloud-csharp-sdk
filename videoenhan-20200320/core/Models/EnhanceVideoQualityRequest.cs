@@ -10,12 +10,8 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class EnhanceVideoQualityRequest : TeaModel {
         [NameInMap("VideoURL")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string VideoURL { get; set; }
-
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
 
         [NameInMap("OutPutWidth")]
         [Validation(Required=false)]

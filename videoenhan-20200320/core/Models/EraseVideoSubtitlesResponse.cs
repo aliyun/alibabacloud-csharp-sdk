@@ -9,13 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class EraseVideoSubtitlesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Data")]
         [Validation(Required=true)]
-        public EraseVideoSubtitlesResponseBody Body { get; set; }
+        public EraseVideoSubtitlesResponseData Data { get; set; }
+        public class EraseVideoSubtitlesResponseData : TeaModel {
+            [NameInMap("VideoUrl")]
+            [Validation(Required=true)]
+            public string VideoUrl { get; set; }
+        };
 
     }
 

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=true)]
         public Stream VideoUrlObject { get; set; }
 
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
         [NameInMap("VideoBitrate")]
         [Validation(Required=false)]
         public string VideoBitrate { get; set; }
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         public string VideoFormat { get; set; }
 
         [NameInMap("Mode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Mode { get; set; }
 
     }

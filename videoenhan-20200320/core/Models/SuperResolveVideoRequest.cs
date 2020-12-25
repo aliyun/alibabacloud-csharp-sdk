@@ -10,12 +10,8 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class SuperResolveVideoRequest : TeaModel {
         [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string VideoUrl { get; set; }
-
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
 
         [NameInMap("BitRate")]
         [Validation(Required=false)]
