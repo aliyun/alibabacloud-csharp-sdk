@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeAddonsResponseBodyComponentGroups> ComponentGroups { get; set; }
         public class DescribeAddonsResponseBodyComponentGroups : TeaModel {
             /// <summary>
-            /// 默认组件组。
-            /// </summary>
-            [NameInMap("default")]
-            [Validation(Required=false)]
-            public List<string> Default { get; set; }
-
-            /// <summary>
             /// 组件组名称。
             /// </summary>
             [NameInMap("group_name")]
@@ -31,46 +24,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// 组件清单。
+            /// 组件列表
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<DescribeAddonsResponseBodyComponentGroupsItems> Items { get; set; }
             public class DescribeAddonsResponseBodyComponentGroupsItems : TeaModel {
                 /// <summary>
-                /// 组件描述信息。
-                /// </summary>
-                [NameInMap("description")]
-                [Validation(Required=false)]
-                public string Description { get; set; }
-
-                /// <summary>
-                /// 是否禁止默认安装。
-                /// </summary>
-                [NameInMap("disabled")]
-                [Validation(Required=false)]
-                public bool? Disabled { get; set; }
-
-                /// <summary>
                 /// 组件名称。
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
-
-                /// <summary>
-                /// 是否为必需组件。
-                /// </summary>
-                [NameInMap("required")]
-                [Validation(Required=false)]
-                public string Required { get; set; }
-
-                /// <summary>
-                /// 组件版本。
-                /// </summary>
-                [NameInMap("version")]
-                [Validation(Required=false)]
-                public string Version { get; set; }
 
             }
 
@@ -81,7 +46,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("StandardComponents")]
         [Validation(Required=false)]
-        public Dictionary<string, Dictionary<string, object>> StandardComponents { get; set; }
+        public Dictionary<string, StandardComponentsValue> StandardComponents { get; set; }
 
     }
 

@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class RemoveClusterNodesRequest : TeaModel {
+    public class Addon : TeaModel {
         /// <summary>
-        /// 是否排空节点上的Pod。
+        /// 插件名称。
         /// </summary>
-        [NameInMap("drain_node")]
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public bool? DrainNode { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// 要移除的Node列表。
+        /// 插件配置参数。
         /// </summary>
-        [NameInMap("nodes")]
+        [NameInMap("config")]
         [Validation(Required=false)]
-        public List<string> Nodes { get; set; }
+        public string Config { get; set; }
 
         /// <summary>
-        /// 是否同时释放ECS。
+        /// 是否禁止默认安装。true | false。
         /// </summary>
-        [NameInMap("release_node")]
+        [NameInMap("disabled")]
         [Validation(Required=false)]
-        public bool? ReleaseNode { get; set; }
+        public bool? Disabled { get; set; }
 
     }
 

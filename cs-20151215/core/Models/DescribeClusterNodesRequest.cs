@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodesRequest : TeaModel {
         /// <summary>
-        /// 每页展示结果数。
+        /// 节点实例ID，按照实例ID进行过滤。  节点池ID不为空时会忽略此字段。
         /// </summary>
-        [NameInMap("pageSize")]
+        [NameInMap("instanceIds")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
-
-        /// <summary>
-        /// 结果只展示几页。
-        /// </summary>
-        [NameInMap("pageNumber")]
-        [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public List<string> InstanceIds { get; set; }
 
         /// <summary>
         /// 节点池ID。
@@ -31,11 +24,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// 节点状态信息。
+        /// 节点状态。默认值：all。
         /// </summary>
         [NameInMap("state")]
         [Validation(Required=false)]
         public string State { get; set; }
+
+        /// <summary>
+        /// 每页大小。
+        /// </summary>
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
+        /// <summary>
+        /// 分页数量
+        /// </summary>
+        [NameInMap("pageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
 
     }
 

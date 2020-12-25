@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListTagResourcesRequest : TeaModel {
+    public class DeleteClusterNodesRequest : TeaModel {
         /// <summary>
-        /// 集群ID列表。
+        /// 是否自动排空节点上的Pod。
         /// </summary>
-        [NameInMap("resource_ids")]
+        [NameInMap("drain_node")]
         [Validation(Required=false)]
-        public List<string> ResourceIds { get; set; }
+        public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// 按标签查找。
+        /// 是否同时释放 ECS
         /// </summary>
-        [NameInMap("tags")]
+        [NameInMap("release_node")]
         [Validation(Required=false)]
-        public List<Tag> Tags { get; set; }
+        public bool? ReleaseNode { get; set; }
 
         /// <summary>
-        /// 下一次查询Token。
+        /// 移除节点列表。
         /// </summary>
-        [NameInMap("next_token")]
+        [NameInMap("nodes")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public List<string> Nodes { get; set; }
 
     }
 

@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterAddonsUpgradeStatusRequest : TeaModel {
+    public class ScaleClusterNodePoolResponseBody : TeaModel {
         /// <summary>
-        /// 组件名称列表。
+        /// 任务ID。
         /// </summary>
-        [NameInMap("componentIds")]
+        [NameInMap("task_id")]
         [Validation(Required=false)]
-        public List<string> ComponentIds { get; set; }
+        public string TaskId { get; set; }
 
     }
 

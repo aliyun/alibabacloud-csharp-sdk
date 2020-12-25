@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// 节点实例名称。
+            /// 节点名称。
             /// </summary>
             [NameInMap("instance_name")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeStatus { get; set; }
 
             /// <summary>
-            /// 节点所属的节点池ID。
+            /// 节点池ID。
             /// </summary>
             [NameInMap("nodepool_id")]
             [Validation(Required=false)]
@@ -143,11 +143,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// ECS运行状态，例如：running。
+            /// ECS运行状态，例如：Running。
             /// </summary>
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
+
+            /// <summary>
+            /// 抢占时实例类型
+            /// </summary>
+            [NameInMap("spot_strategy")]
+            [Validation(Required=false)]
+            public string SpotStrategy { get; set; }
 
         }
 

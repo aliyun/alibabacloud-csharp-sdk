@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// 下一个查询token。
+        /// 下一个查询开始Token，为空说明没有下一个
         /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
@@ -32,36 +32,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             [NameInMap("tag_resource")]
             [Validation(Required=false)]
-            public ListTagResourcesResponseBodyTagResourcesTagResource TagResource { get; set; }
+            public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// 资源ID。
-                /// </summary>
-                [NameInMap("resource_id")]
-                [Validation(Required=false)]
-                public string ResourceId { get; set; }
-
-                /// <summary>
-                /// 资源类型
-                /// </summary>
-                [NameInMap("resource_type")]
-                [Validation(Required=false)]
-                public string ResourceType { get; set; }
-
-                /// <summary>
-                /// 标签key。
-                /// </summary>
-                [NameInMap("tag_key")]
-                [Validation(Required=false)]
                 public string TagKey { get; set; }
-
-                /// <summary>
-                /// 标签值。
-                /// </summary>
-                [NameInMap("tag_value")]
-                [Validation(Required=false)]
                 public string TagValue { get; set; }
-
+                public string ResourceId { get; set; }
+                public string ResourceType { get; set; }
             }
         };
 

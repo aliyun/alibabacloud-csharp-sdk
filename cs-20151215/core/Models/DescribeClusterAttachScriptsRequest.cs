@@ -10,7 +10,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAttachScriptsRequest : TeaModel {
         /// <summary>
-        /// 节点CPU架构,支持amd64、arm、arm64。
+        /// 节点池ID。将节点加入指定节点池。
+        /// </summary>
+        [NameInMap("nodepool_id")]
+        [Validation(Required=false)]
+        public string NodepoolId { get; set; }
+
+        /// <summary>
+        /// 数据盘挂载
+        /// </summary>
+        [NameInMap("format_disk")]
+        [Validation(Required=false)]
+        public bool? FormatDisk { get; set; }
+
+        /// <summary>
+        /// 保留实例名称
+        /// </summary>
+        [NameInMap("keep_instance_name")]
+        [Validation(Required=false)]
+        public bool? KeepInstanceName { get; set; }
+
+        /// <summary>
+        /// RDS白名单
+        /// </summary>
+        [NameInMap("rds_instances")]
+        [Validation(Required=false)]
+        public List<string> RdsInstances { get; set; }
+
+        /// <summary>
+        /// 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
         /// </summary>
         [NameInMap("arch")]
         [Validation(Required=false)]
@@ -21,30 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("options")]
         [Validation(Required=false)]
-        public DescribeClusterAttachScriptsRequestOptions Options { get; set; }
-        public class DescribeClusterAttachScriptsRequestOptions : TeaModel {
-            [NameInMap("allowedClusterAddons")]
-            [Validation(Required=false)]
-            public List<string> AllowedClusterAddons { get; set; }
-            [NameInMap("enableIptables")]
-            [Validation(Required=false)]
-            public bool? EnableIptables { get; set; }
-            [NameInMap("flannelIface")]
-            [Validation(Required=false)]
-            public string FlannelIface { get; set; }
-            [NameInMap("gpuVersion")]
-            [Validation(Required=false)]
-            public string GpuVersion { get; set; }
-            [NameInMap("manageRuntime")]
-            [Validation(Required=false)]
-            public bool? ManageRuntime { get; set; }
-            [NameInMap("nodeNameOverride")]
-            [Validation(Required=false)]
-            public string NodeNameOverride { get; set; }
-            [NameInMap("quiet")]
-            [Validation(Required=false)]
-            public string Quiet { get; set; }
-        };
+        public string Options { get; set; }
 
     }
 

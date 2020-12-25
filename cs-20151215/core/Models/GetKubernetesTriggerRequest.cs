@@ -30,6 +30,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// 触发器行为。
+        /// </summary>
+        [NameInMap("action")]
+        [Validation(Required=false)]
+        public string Action { get; set; }
+
     }
 
 }

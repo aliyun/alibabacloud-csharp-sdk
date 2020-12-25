@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeClusterAddonUpgradeStatusResponseBody Body { get; set; }
+        public Dictionary<string, object> Body { get; set; }
 
     }
 

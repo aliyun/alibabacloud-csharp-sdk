@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// 是否多可用区。
-        /// </summary>
-        [NameInMap("MultiAZ")]
-        [Validation(Required=false)]
-        public bool? MultiAZ { get; set; }
-
-        /// <summary>
         /// 集群类型。
         /// </summary>
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
+
+        /// <summary>
+        /// 是否查询多可用区。
+        /// </summary>
+        [NameInMap("MultiAZ")]
+        [Validation(Required=false)]
+        public bool? MultiAZ { get; set; }
 
         /// <summary>
         /// 要查询的版本，如果为空则查所有版本。

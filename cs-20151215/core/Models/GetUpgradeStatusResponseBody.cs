@@ -37,6 +37,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string UpgradeStep { get; set; }
 
+        /// <summary>
+        /// 升级任务详情。
+        /// </summary>
+        [NameInMap("upgrade_task")]
+        [Validation(Required=false)]
+        public GetUpgradeStatusResponseBodyUpgradeTask UpgradeTask { get; set; }
+        public class GetUpgradeStatusResponseBodyUpgradeTask : TeaModel {
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+        };
+
     }
 
 }

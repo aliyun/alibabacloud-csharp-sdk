@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListTagResourcesRequest : TeaModel {
+    public class Taint : TeaModel {
         /// <summary>
-        /// 集群ID列表。
+        /// key值。
         /// </summary>
-        [NameInMap("resource_ids")]
+        [NameInMap("key")]
         [Validation(Required=false)]
-        public List<string> ResourceIds { get; set; }
+        public string Key { get; set; }
 
         /// <summary>
-        /// 按标签查找。
+        /// value值。
         /// </summary>
-        [NameInMap("tags")]
+        [NameInMap("value")]
         [Validation(Required=false)]
-        public List<Tag> Tags { get; set; }
+        public string Value { get; set; }
 
         /// <summary>
-        /// 下一次查询Token。
+        /// 污点生效策略。
         /// </summary>
-        [NameInMap("next_token")]
+        [NameInMap("effect")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string Effect { get; set; }
 
     }
 

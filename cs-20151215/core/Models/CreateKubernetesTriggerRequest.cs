@@ -10,37 +10,30 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateKubernetesTriggerRequest : TeaModel {
         /// <summary>
-        /// 触发器行为。
-        /// </summary>
-        [NameInMap("Action")]
-        [Validation(Required=false)]
-        public string Action { get; set; }
-
-        /// <summary>
         /// 集群ID。
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
         /// 项目名称。
         /// </summary>
-        [NameInMap("ProjectId")]
+        [NameInMap("project_id")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// 地域ID。
+        /// 触发器行为
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("action")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Action { get; set; }
 
         /// <summary>
-        /// 触发器类型。
+        /// 触发器类型。默认deployment。
         /// </summary>
-        [NameInMap("Type")]
+        [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 

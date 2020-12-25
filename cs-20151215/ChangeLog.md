@@ -1,3 +1,6 @@
+2020-12-25 Version: 2.1.0
+- AMP Version Upgrade.
+
 2020-09-28 Version: 2.0.6
 - AMP Version.
 

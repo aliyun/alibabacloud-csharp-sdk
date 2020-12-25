@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClustersV1ResponseBodyClusters> Clusters { get; set; }
         public class DescribeClustersV1ResponseBodyClusters : TeaModel {
             /// <summary>
-            /// 集群健康状态。
-            /// </summary>
-            [NameInMap("cluster_healthy")]
-            [Validation(Required=false)]
-            public string ClusterHealthy { get; set; }
-
-            /// <summary>
             /// 集群ID。
             /// </summary>
             [NameInMap("cluster_id")]
@@ -38,11 +31,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// 集群创建时间。
+            /// 集群初始化时间。
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public string Created { get; set; }
+
+            /// <summary>
+            /// 集群初始化版本。
+            /// </summary>
+            [NameInMap("init_version")]
+            [Validation(Required=false)]
+            public string InitVersion { get; set; }
 
             /// <summary>
             /// 集群当前版本。
@@ -52,18 +52,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// 数据盘类型。
+            /// 集群可升级版本。
             /// </summary>
-            [NameInMap("data_disk_category")]
+            [NameInMap("next_version")]
             [Validation(Required=false)]
-            public string DataDiskCategory { get; set; }
-
-            /// <summary>
-            /// 数据盘大小。
-            /// </summary>
-            [NameInMap("data_disk_size")]
-            [Validation(Required=false)]
-            public long? DataDiskSize { get; set; }
+            public string NextVersion { get; set; }
 
             /// <summary>
             /// 集群是否开启删除保护。
@@ -80,21 +73,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DockerVersion { get; set; }
 
             /// <summary>
-            /// 集群Ingress对应的SLB的地址。
+            /// 集群负载均衡服务的ID。
             /// </summary>
             [NameInMap("external_loadbalancer_id")]
             [Validation(Required=false)]
             public string ExternalLoadbalancerId { get; set; }
 
             /// <summary>
-            /// 集群初始化版本。
-            /// </summary>
-            [NameInMap("init_version")]
-            [Validation(Required=false)]
-            public string InitVersion { get; set; }
-
-            /// <summary>
-            /// 集群访问的端点信息。
+            /// 集群访问地址列表。
             /// </summary>
             [NameInMap("master_url")]
             [Validation(Required=false)]
@@ -120,13 +106,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("network_mode")]
             [Validation(Required=false)]
             public string NetworkMode { get; set; }
-
-            /// <summary>
-            /// 节点状态。
-            /// </summary>
-            [NameInMap("node_status")]
-            [Validation(Required=false)]
-            public string NodeStatus { get; set; }
 
             /// <summary>
             /// 集群是否开启Private Zone。
@@ -168,7 +147,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("size")]
             [Validation(Required=false)]
-            public long? Size { get; set; }
+            public long Size { get; set; }
 
             /// <summary>
             /// 集群运行状态。
@@ -189,23 +168,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
-            public List<DescribeClustersV1ResponseBodyClustersTags> Tags { get; set; }
-            public class DescribeClustersV1ResponseBodyClustersTags : TeaModel {
-                /// <summary>
-                /// 标签键。
-                /// </summary>
-                [NameInMap("key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                /// <summary>
-                /// 标签值。
-                /// </summary>
-                [NameInMap("value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
+            public List<Tag> Tags { get; set; }
 
             /// <summary>
             /// 集群更新时间。
@@ -220,13 +183,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("vpc_id")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
-
-            /// <summary>
-            /// 虚拟交换机CIDR。
-            /// </summary>
-            [NameInMap("vswitch_cidr")]
-            [Validation(Required=false)]
-            public string VswitchCidr { get; set; }
 
             /// <summary>
             /// 集群使用的虚拟交换ID。
@@ -248,6 +204,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("zone_id")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
+
+            /// <summary>
+            /// 托管版集群类型，面向托管集群。 • ack.pro.small：专业托管集群。 • ack.standard ：标准托管集群。
+            /// </summary>
+            [NameInMap("cluster_spec")]
+            [Validation(Required=false)]
+            public string ClusterSpec { get; set; }
+
+            [NameInMap("maintenance_window")]
+            [Validation(Required=false)]
+            public MaintenanceWindow MaintenanceWindow { get; set; }
 
         }
 
