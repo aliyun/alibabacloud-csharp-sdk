@@ -10,8 +10,12 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AdjustVideoColorRequest : TeaModel {
         [NameInMap("VideoUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VideoUrl { get; set; }
+
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
 
         [NameInMap("VideoBitrate")]
         [Validation(Required=false)]
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         public string VideoFormat { get; set; }
 
         [NameInMap("Mode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Mode { get; set; }
 
     }

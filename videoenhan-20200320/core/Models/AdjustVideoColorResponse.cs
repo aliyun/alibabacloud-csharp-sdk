@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class AdjustVideoColorResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public AdjustVideoColorResponseData Data { get; set; }
-        public class AdjustVideoColorResponseData : TeaModel {
-            [NameInMap("VideoUrl")]
-            [Validation(Required=true)]
-            public string VideoUrl { get; set; }
-        };
+        public AdjustVideoColorResponseBody Body { get; set; }
 
     }
 

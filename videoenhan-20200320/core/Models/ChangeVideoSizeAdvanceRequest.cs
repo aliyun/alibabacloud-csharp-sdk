@@ -13,12 +13,16 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=true)]
         public Stream VideoUrlObject { get; set; }
 
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
         [NameInMap("Width")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Width { get; set; }
 
         [NameInMap("Height")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Height { get; set; }
 
         [NameInMap("CropType")]
