@@ -9,34 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class BatchAuditTest01Response : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Name { get; set; }
-
-        [NameInMap("Demo01")]
-        [Validation(Required=true)]
-        public BatchAuditTest01ResponseDemo01 Demo01 { get; set; }
-        public class BatchAuditTest01ResponseDemo01 : TeaModel {
-            [NameInMap("Demo011")]
-            [Validation(Required=true)]
-            public BatchAuditTest01ResponseDemo01Demo011 Demo011 { get; set; }
-            public class BatchAuditTest01ResponseDemo01Demo011 : TeaModel {
-                [NameInMap("Demo011")]
-                [Validation(Required=true)]
-                public List<BatchAuditTest01ResponseDemo01Demo011Demo011> Demo011 { get; set; }
-                public class BatchAuditTest01ResponseDemo01Demo011Demo011 : TeaModel {
-                    [NameInMap("Demo0111")]
-                    [Validation(Required=true)]
-                    public string Demo0111 { get; set; }
-
-                }
-
-            }
-        };
+        public BatchAuditTest01ResponseBody Body { get; set; }
 
     }
 

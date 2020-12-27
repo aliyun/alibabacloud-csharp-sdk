@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Ft20180713.Models
         [Validation(Required=false)]
         public List<FtParamListRequestDisk> Disk { get; set; }
         public class FtParamListRequestDisk : TeaModel {
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public List<string> Size { get; set; }
-
             [NameInMap("Type")]
             [Validation(Required=false)]
             public List<string> Type { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public List<string> Size { get; set; }
 
         }
 
