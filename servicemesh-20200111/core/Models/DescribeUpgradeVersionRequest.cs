@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeUpgradeVersionRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
     }

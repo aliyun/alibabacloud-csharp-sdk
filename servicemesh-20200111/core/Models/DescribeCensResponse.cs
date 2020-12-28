@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeCensResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Clusters")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<string> Clusters { get; set; }
+        public DescribeCensResponseBody Body { get; set; }
 
     }
 

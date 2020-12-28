@@ -1,3 +1,6 @@
+2020-12-28 Version: 2.0.0
+- AMP Version Change.
+
 2020-12-17 Version: 1.0.9
 - Generated csharp 2020-01-11 for servicemesh.
 

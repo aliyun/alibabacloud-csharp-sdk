@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetRegisteredServiceEndpointsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ServiceEndpoints")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<GetRegisteredServiceEndpointsResponseServiceEndpoints> ServiceEndpoints { get; set; }
-        public class GetRegisteredServiceEndpointsResponseServiceEndpoints : TeaModel {
-            [NameInMap("Address")]
-            [Validation(Required=true)]
-            public string Address { get; set; }
-
-            [NameInMap("ClusterId")]
-            [Validation(Required=true)]
-            public string ClusterId { get; set; }
-
-        }
+        public GetRegisteredServiceEndpointsResponseBody Body { get; set; }
 
     }
 

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class RemoveVmAppFromMeshRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         [NameInMap("Namespace")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Namespace { get; set; }
 
         [NameInMap("ServiceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceName { get; set; }
 
     }

@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeUpgradeVersionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Version")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeUpgradeVersionResponseVersion Version { get; set; }
-        public class DescribeUpgradeVersionResponseVersion : TeaModel {
-            [NameInMap("IstioVersion")]
-            [Validation(Required=true)]
-            public string IstioVersion { get; set; }
-            [NameInMap("IstioOperatorVersion")]
-            [Validation(Required=true)]
-            public string IstioOperatorVersion { get; set; }
-            [NameInMap("KubernetesVersion")]
-            [Validation(Required=true)]
-            public string KubernetesVersion { get; set; }
-        };
+        public DescribeUpgradeVersionResponseBody Body { get; set; }
 
     }
 

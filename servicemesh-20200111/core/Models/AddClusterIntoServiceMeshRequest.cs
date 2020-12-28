@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,11 +13,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class AddClusterIntoServiceMeshRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
     }
