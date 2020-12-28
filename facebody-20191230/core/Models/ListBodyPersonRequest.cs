@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class DeleteBodyPersonRequest : TeaModel {
+    public class ListBodyPersonRequest : TeaModel {
         /// <summary>
         /// 数据库ID
         /// </summary>
@@ -17,11 +17,18 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public long? DbId { get; set; }
 
         /// <summary>
-        /// 人员ID
+        /// 起始位置(不含)
         /// </summary>
-        [NameInMap("PersonId")]
+        [NameInMap("Offset")]
         [Validation(Required=false)]
-        public long? PersonId { get; set; }
+        public long? Offset { get; set; }
+
+        /// <summary>
+        /// 分页数量
+        /// </summary>
+        [NameInMap("Limit")]
+        [Validation(Required=false)]
+        public long? Limit { get; set; }
 
     }
 

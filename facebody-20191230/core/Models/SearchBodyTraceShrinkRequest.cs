@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
-        public long DbId { get; set; }
+        public long? DbId { get; set; }
 
         /// <summary>
         /// Trace图片信息列表
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
-        public long Limit { get; set; }
+        public long? Limit { get; set; }
 
         /// <summary>
         /// score阈值，只返回大于等于该score的数据，取值范围[-1.0, 1.0]，默认为空

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class ListBodyDbsResponseBody : TeaModel {
+    public class ListBodyPersonResponseBody : TeaModel {
         /// <summary>
         /// RequestId
         /// </summary>
@@ -18,17 +18,20 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ListBodyDbsResponseBodyData Data { get; set; }
-        public class ListBodyDbsResponseBodyData : TeaModel {
+        public ListBodyPersonResponseBodyData Data { get; set; }
+        public class ListBodyPersonResponseBodyData : TeaModel {
             [NameInMap("Total")]
             [Validation(Required=false)]
             public long? Total { get; set; }
-            [NameInMap("DbList")]
+            [NameInMap("PersonList")]
             [Validation(Required=false)]
-            public List<ListBodyDbsResponseBodyDataDbList> DbList { get; set; }
-            public class ListBodyDbsResponseBodyDataDbList : TeaModel {
-                public long? Id { get; set; }
+            public List<ListBodyPersonResponseBodyDataPersonList> PersonList { get; set; }
+            public class ListBodyPersonResponseBodyDataPersonList : TeaModel {
+                public long? InstanceId { get; set; }
+                public long? DbId { get; set; }
                 public string Name { get; set; }
+                public long? TraceCount { get; set; }
+                public long? Id { get; set; }
             }
         };
 

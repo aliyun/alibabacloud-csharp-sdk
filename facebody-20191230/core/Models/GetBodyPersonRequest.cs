@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
-        public long DbId { get; set; }
+        public long? DbId { get; set; }
 
         /// <summary>
         /// 人员ID
         /// </summary>
         [NameInMap("PersonId")]
         [Validation(Required=false)]
-        public long PersonId { get; set; }
+        public long? PersonId { get; set; }
 
     }
 

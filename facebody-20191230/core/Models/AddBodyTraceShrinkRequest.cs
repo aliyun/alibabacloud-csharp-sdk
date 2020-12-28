@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
-        public long DbId { get; set; }
+        public long? DbId { get; set; }
 
         /// <summary>
         /// 实体ID，可以包含数字、字母和下划线，相同db下不可以重复，长度1-64。
         /// </summary>
         [NameInMap("PersonId")]
         [Validation(Required=false)]
-        public long PersonId { get; set; }
+        public long? PersonId { get; set; }
 
         /// <summary>
         /// Trace图片信息列表

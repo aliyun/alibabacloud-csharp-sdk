@@ -22,16 +22,8 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public class CreateBodyPersonResponseBodyData : TeaModel {
             [NameInMap("Id")]
             [Validation(Required=false)]
-            public long Id { get; set; }
+            public long? Id { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
     }
 

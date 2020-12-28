@@ -8,33 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class CreateBodyInstanceResponseBody : TeaModel {
-        /// <summary>
-        /// RequestId
-        /// </summary>
+    public class GenRealPersonVerificationTokenResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 实例id
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CreateBodyInstanceResponseBodyData Data { get; set; }
-        public class CreateBodyInstanceResponseBodyData : TeaModel {
-            [NameInMap("Id")]
+        public GenRealPersonVerificationTokenResponseBodyData Data { get; set; }
+        public class GenRealPersonVerificationTokenResponseBodyData : TeaModel {
+            [NameInMap("VerificationToken")]
             [Validation(Required=false)]
-            public long Id { get; set; }
+            public string VerificationToken { get; set; }
         };
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
 
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public bool? Success { get; set; }
 
     }
 

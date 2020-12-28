@@ -1937,6 +1937,38 @@ namespace AlibabaCloud.SDK.Facebody20191230
             return detectMaskResp;
         }
 
+        public GenRealPersonVerificationTokenResponse GenRealPersonVerificationTokenWithOptions(GenRealPersonVerificationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GenRealPersonVerificationTokenResponse>(DoRPCRequest("GenRealPersonVerificationToken", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GenRealPersonVerificationTokenResponse> GenRealPersonVerificationTokenWithOptionsAsync(GenRealPersonVerificationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GenRealPersonVerificationTokenResponse>(await DoRPCRequestAsync("GenRealPersonVerificationToken", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GenRealPersonVerificationTokenResponse GenRealPersonVerificationToken(GenRealPersonVerificationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenRealPersonVerificationTokenWithOptions(request, runtime);
+        }
+
+        public async Task<GenRealPersonVerificationTokenResponse> GenRealPersonVerificationTokenAsync(GenRealPersonVerificationTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenRealPersonVerificationTokenWithOptionsAsync(request, runtime);
+        }
+
         public ListFaceDbsResponse ListFaceDbsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2353,6 +2385,38 @@ namespace AlibabaCloud.SDK.Facebody20191230
             return detectCelebrityResp;
         }
 
+        public GetRealPersonVerificationResultResponse GetRealPersonVerificationResultWithOptions(GetRealPersonVerificationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRealPersonVerificationResultResponse>(DoRPCRequest("GetRealPersonVerificationResult", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetRealPersonVerificationResultResponse> GetRealPersonVerificationResultWithOptionsAsync(GetRealPersonVerificationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRealPersonVerificationResultResponse>(await DoRPCRequestAsync("GetRealPersonVerificationResult", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetRealPersonVerificationResultResponse GetRealPersonVerificationResult(GetRealPersonVerificationResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRealPersonVerificationResultWithOptions(request, runtime);
+        }
+
+        public async Task<GetRealPersonVerificationResultResponse> GetRealPersonVerificationResultAsync(GetRealPersonVerificationResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRealPersonVerificationResultWithOptionsAsync(request, runtime);
+        }
+
         public DeleteFaceResponse DeleteFaceWithOptions(DeleteFaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2383,30 +2447,6 @@ namespace AlibabaCloud.SDK.Facebody20191230
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFaceWithOptionsAsync(request, runtime);
-        }
-
-        public CreateBodyInstanceResponse CreateBodyInstanceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<CreateBodyInstanceResponse>(DoRPCRequest("CreateBodyInstance", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<CreateBodyInstanceResponse> CreateBodyInstanceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<CreateBodyInstanceResponse>(await DoRPCRequestAsync("CreateBodyInstance", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public CreateBodyInstanceResponse CreateBodyInstance()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateBodyInstanceWithOptions(runtime);
-        }
-
-        public async Task<CreateBodyInstanceResponse> CreateBodyInstanceAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateBodyInstanceWithOptionsAsync(runtime);
         }
 
         public ExtractPedestrianFeatureAttributeResponse ExtractPedestrianFeatureAttributeWithOptions(ExtractPedestrianFeatureAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4285,6 +4325,40 @@ namespace AlibabaCloud.SDK.Facebody20191230
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFaceDbWithOptionsAsync(request, runtime);
+        }
+
+        public ListBodyPersonResponse ListBodyPersonWithOptions(ListBodyPersonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListBodyPersonResponse>(DoRPCRequest("ListBodyPerson", "2019-12-30", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListBodyPersonResponse> ListBodyPersonWithOptionsAsync(ListBodyPersonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListBodyPersonResponse>(await DoRPCRequestAsync("ListBodyPerson", "2019-12-30", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public ListBodyPersonResponse ListBodyPerson(ListBodyPersonRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListBodyPersonWithOptions(request, runtime);
+        }
+
+        public async Task<ListBodyPersonResponse> ListBodyPersonAsync(ListBodyPersonRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListBodyPersonWithOptionsAsync(request, runtime);
         }
 
         public ListBodyDbsResponse ListBodyDbsWithOptions(ListBodyDbsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

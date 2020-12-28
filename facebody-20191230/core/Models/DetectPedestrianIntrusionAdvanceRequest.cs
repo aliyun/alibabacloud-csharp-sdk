@@ -23,16 +23,16 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             public class DetectPedestrianIntrusionAdvanceRequestDetectRegionRect : TeaModel {
                 [NameInMap("Left")]
                 [Validation(Required=false)]
-                public long Left { get; set; }
+                public long? Left { get; set; }
                 [NameInMap("Top")]
                 [Validation(Required=false)]
-                public long Top { get; set; }
+                public long? Top { get; set; }
                 [NameInMap("Right")]
                 [Validation(Required=false)]
-                public long Right { get; set; }
+                public long? Right { get; set; }
                 [NameInMap("Bottom")]
                 [Validation(Required=false)]
-                public long Bottom { get; set; }
+                public long? Bottom { get; set; }
             };
 
             [NameInMap("Line")]
@@ -41,16 +41,16 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             public class DetectPedestrianIntrusionAdvanceRequestDetectRegionLine : TeaModel {
                 [NameInMap("X1")]
                 [Validation(Required=false)]
-                public long X1 { get; set; }
+                public long? X1 { get; set; }
                 [NameInMap("Y1")]
                 [Validation(Required=false)]
-                public long Y1 { get; set; }
+                public long? Y1 { get; set; }
                 [NameInMap("X2")]
                 [Validation(Required=false)]
-                public long X2 { get; set; }
+                public long? X2 { get; set; }
                 [NameInMap("Y2")]
                 [Validation(Required=false)]
-                public long Y2 { get; set; }
+                public long? Y2 { get; set; }
             };
 
         }

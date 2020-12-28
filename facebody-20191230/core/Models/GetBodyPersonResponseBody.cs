@@ -22,35 +22,27 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public class GetBodyPersonResponseBodyData : TeaModel {
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
-            public long InstanceId { get; set; }
+            public long? InstanceId { get; set; }
             [NameInMap("DbId")]
             [Validation(Required=false)]
-            public long DbId { get; set; }
+            public long? DbId { get; set; }
             [NameInMap("Id")]
             [Validation(Required=false)]
-            public long Id { get; set; }
+            public long? Id { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
             [NameInMap("TraceCount")]
             [Validation(Required=false)]
-            public long TraceCount { get; set; }
+            public long? TraceCount { get; set; }
             [NameInMap("TraceList")]
             [Validation(Required=false)]
             public List<GetBodyPersonResponseBodyDataTraceList> TraceList { get; set; }
             public class GetBodyPersonResponseBodyDataTraceList : TeaModel {
-                public long Id { get; set; }
+                public long? Id { get; set; }
                 public string ExtraData { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
     }
 

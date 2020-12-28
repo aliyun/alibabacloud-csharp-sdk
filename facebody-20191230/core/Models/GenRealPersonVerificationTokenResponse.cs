@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class CreateBodyInstanceResponse : TeaModel {
+    public class GenRealPersonVerificationTokenResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateBodyInstanceResponseBody Body { get; set; }
+        public GenRealPersonVerificationTokenResponseBody Body { get; set; }
 
     }
 
