@@ -9,8 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostsRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ZoneId")]
@@ -45,6 +57,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDedicatedHostsRequestTag> Tag { get; set; }
@@ -58,10 +78,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
     }
 

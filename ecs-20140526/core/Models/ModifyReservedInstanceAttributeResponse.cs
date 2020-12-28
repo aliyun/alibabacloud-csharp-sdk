@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstanceAttributeResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
+        public ModifyReservedInstanceAttributeResponseBody Body { get; set; }
 
     }
 

@@ -9,34 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceHistoryEventsRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("EventId")]
-        [Validation(Required=false)]
-        public List<string> EventId { get; set; }
-
-        [NameInMap("InstanceEventCycleStatus")]
-        [Validation(Required=false)]
-        public List<string> InstanceEventCycleStatus { get; set; }
-
-        [NameInMap("EventCycleStatus")]
-        [Validation(Required=false)]
-        public string EventCycleStatus { get; set; }
-
-        [NameInMap("InstanceEventType")]
-        [Validation(Required=false)]
-        public List<string> InstanceEventType { get; set; }
-
-        [NameInMap("EventType")]
-        [Validation(Required=false)]
-        public string EventType { get; set; }
-
         [NameInMap("NotBefore")]
         [Validation(Required=false)]
         public DescribeInstanceHistoryEventsRequestNotBefore NotBefore { get; set; }
@@ -61,6 +33,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
         };
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("EventCycleStatus")]
+        [Validation(Required=false)]
+        public string EventCycleStatus { get; set; }
+
+        [NameInMap("EventType")]
+        [Validation(Required=false)]
+        public string EventType { get; set; }
+
         [NameInMap("ImpactLevel")]
         [Validation(Required=false)]
         public string ImpactLevel { get; set; }
@@ -72,6 +76,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("EventId")]
+        [Validation(Required=false)]
+        public List<string> EventId { get; set; }
+
+        [NameInMap("InstanceEventCycleStatus")]
+        [Validation(Required=false)]
+        public List<string> InstanceEventCycleStatus { get; set; }
+
+        [NameInMap("InstanceEventType")]
+        [Validation(Required=false)]
+        public List<string> InstanceEventType { get; set; }
 
     }
 

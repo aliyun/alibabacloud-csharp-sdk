@@ -9,9 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateElasticityAssuranceRequest : TeaModel {
+        [NameInMap("PrivatePoolOptions")]
+        [Validation(Required=false)]
+        public CreateElasticityAssuranceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
+        public class CreateElasticityAssuranceRequestPrivatePoolOptions : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("MatchCriteria")]
+            [Validation(Required=false)]
+            public string MatchCriteria { get; set; }
+        };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -25,18 +57,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("PrivatePoolOptions")]
-        [Validation(Required=false)]
-        public CreateElasticityAssuranceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
-        public class CreateElasticityAssuranceRequestPrivatePoolOptions : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("MatchCriteria")]
-            [Validation(Required=false)]
-            public string MatchCriteria { get; set; }
-        };
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -44,14 +64,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("AssuranceTimes")]
         [Validation(Required=false)]
         public string AssuranceTimes { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=true)]
-        public List<string> ZoneId { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=true)]
-        public List<string> InstanceType { get; set; }
 
         [NameInMap("InstanceAmount")]
         [Validation(Required=false)]
@@ -64,6 +76,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
+
+        [NameInMap("Platform")]
+        [Validation(Required=false)]
+        public string Platform { get; set; }
+
+        [NameInMap("PackageType")]
+        [Validation(Required=false)]
+        public string PackageType { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public List<string> ZoneId { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public List<string> InstanceType { get; set; }
 
     }
 

@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHpcClustersResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("HpcClusters")]
-        [Validation(Required=true)]
-        public DescribeHpcClustersResponseHpcClusters HpcClusters { get; set; }
-        public class DescribeHpcClustersResponseHpcClusters : TeaModel {
-            [NameInMap("HpcCluster")]
-            [Validation(Required=true)]
-            public List<DescribeHpcClustersResponseHpcClustersHpcCluster> HpcCluster { get; set; }
-            public class DescribeHpcClustersResponseHpcClustersHpcCluster : TeaModel {
-                public string HpcClusterId { get; set; }
-                public string Name { get; set; }
-                public string Description { get; set; }
-            }
-        };
+        public DescribeHpcClustersResponseBody Body { get; set; }
 
     }
 

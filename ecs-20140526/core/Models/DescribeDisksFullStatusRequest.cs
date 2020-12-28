@@ -9,17 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDisksFullStatusRequest : TeaModel {
+        [NameInMap("EventTime")]
+        [Validation(Required=false)]
+        public DescribeDisksFullStatusRequestEventTime EventTime { get; set; }
+        public class DescribeDisksFullStatusRequestEventTime : TeaModel {
+            [NameInMap("Start")]
+            [Validation(Required=false)]
+            public string Start { get; set; }
+            [NameInMap("End")]
+            [Validation(Required=false)]
+            public string End { get; set; }
+        };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("DiskId")]
-        [Validation(Required=false)]
-        public List<string> DiskId { get; set; }
-
-        [NameInMap("EventId")]
-        [Validation(Required=false)]
-        public List<string> EventId { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -33,18 +53,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string EventType { get; set; }
 
-        [NameInMap("EventTime")]
-        [Validation(Required=false)]
-        public DescribeDisksFullStatusRequestEventTime EventTime { get; set; }
-        public class DescribeDisksFullStatusRequestEventTime : TeaModel {
-            [NameInMap("Start")]
-            [Validation(Required=false)]
-            public string Start { get; set; }
-            [NameInMap("End")]
-            [Validation(Required=false)]
-            public string End { get; set; }
-        };
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -52,6 +60,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("DiskId")]
+        [Validation(Required=false)]
+        public List<string> DiskId { get; set; }
+
+        [NameInMap("EventId")]
+        [Validation(Required=false)]
+        public List<string> EventId { get; set; }
 
     }
 

@@ -9,16 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ExportSnapshotRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("SnapshotId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("OssBucket")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OssBucket { get; set; }
 
         [NameInMap("RoleName")]

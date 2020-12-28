@@ -9,22 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAccessPointsRequest : TeaModel {
-        [NameInMap("Filter")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public List<DescribeAccessPointsRequestFilter> Filter { get; set; }
-        public class DescribeAccessPointsRequestFilter : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
+        public long? OwnerId { get; set; }
 
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public List<string> Value { get; set; }
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
 
-        }
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Type")]
@@ -38,6 +36,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<DescribeAccessPointsRequestFilter> Filter { get; set; }
+        public class DescribeAccessPointsRequestFilter : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public List<string> Value { get; set; }
+
+        }
 
     }
 

@@ -9,8 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfaceRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Tag")]
@@ -32,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("VSwitchId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
         [NameInMap("PrimaryIpAddress")]
@@ -42,10 +58,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
-
-        [NameInMap("SecurityGroupIds")]
-        [Validation(Required=false)]
-        public List<string> SecurityGroupIds { get; set; }
 
         [NameInMap("NetworkInterfaceName")]
         [Validation(Required=false)]
@@ -67,10 +79,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string BusinessType { get; set; }
 
-        [NameInMap("PrivateIpAddress")]
-        [Validation(Required=false)]
-        public List<string> PrivateIpAddress { get; set; }
-
         [NameInMap("SecondaryPrivateIpAddressCount")]
         [Validation(Required=false)]
         public int? SecondaryPrivateIpAddressCount { get; set; }
@@ -82,6 +90,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<string> SecurityGroupIds { get; set; }
+
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public List<string> PrivateIpAddress { get; set; }
 
     }
 

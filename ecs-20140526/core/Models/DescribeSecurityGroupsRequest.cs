@@ -9,8 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("VpcId")]
@@ -25,23 +37,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public string SecurityGroupIds { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeSecurityGroupsRequestTag> Tag { get; set; }
-        public class DescribeSecurityGroupsRequestTag : TeaModel {
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-        }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -74,6 +76,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeSecurityGroupsRequestTag> Tag { get; set; }
+        public class DescribeSecurityGroupsRequestTag : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

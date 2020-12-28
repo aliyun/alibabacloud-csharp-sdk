@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StopInstancesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InstanceResponses")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public StopInstancesResponseInstanceResponses InstanceResponses { get; set; }
-        public class StopInstancesResponseInstanceResponses : TeaModel {
-            [NameInMap("InstanceResponse")]
-            [Validation(Required=true)]
-            public List<StopInstancesResponseInstanceResponsesInstanceResponse> InstanceResponse { get; set; }
-            public class StopInstancesResponseInstanceResponsesInstanceResponse : TeaModel {
-                public string InstanceId { get; set; }
-                public string PreviousStatus { get; set; }
-                public string CurrentStatus { get; set; }
-                public string Code { get; set; }
-                public string Message { get; set; }
-            }
-        };
+        public StopInstancesResponseBody Body { get; set; }
 
     }
 

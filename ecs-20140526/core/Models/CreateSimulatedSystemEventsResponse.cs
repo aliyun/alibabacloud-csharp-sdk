@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSimulatedSystemEventsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("EventIdSet")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateSimulatedSystemEventsResponseEventIdSet EventIdSet { get; set; }
-        public class CreateSimulatedSystemEventsResponseEventIdSet : TeaModel {
-            [NameInMap("EventId")]
-            [Validation(Required=true)]
-            public List<string> EventId { get; set; }
-        };
+        public CreateSimulatedSystemEventsResponseBody Body { get; set; }
 
     }
 

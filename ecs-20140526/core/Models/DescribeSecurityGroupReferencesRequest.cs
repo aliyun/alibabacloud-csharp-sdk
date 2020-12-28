@@ -10,11 +10,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupReferencesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("SecurityGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> SecurityGroupId { get; set; }
 
     }

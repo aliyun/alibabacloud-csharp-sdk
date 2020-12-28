@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateLaunchTemplateVersionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LaunchTemplateVersionNumber")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public long LaunchTemplateVersionNumber { get; set; }
+        public CreateLaunchTemplateVersionResponseBody Body { get; set; }
 
     }
 

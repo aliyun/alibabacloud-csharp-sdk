@@ -9,28 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReportInstancesStatusRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("InstanceId")]
-        [Validation(Required=true)]
-        public List<string> InstanceId { get; set; }
-
-        [NameInMap("DiskId")]
-        [Validation(Required=false)]
-        public List<string> DiskId { get; set; }
-
-        [NameInMap("Device")]
-        [Validation(Required=false)]
-        public List<string> Device { get; set; }
-
         [NameInMap("Reason")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Reason { get; set; }
 
         [NameInMap("Description")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Description { get; set; }
 
         [NameInMap("StartTime")]
@@ -40,6 +44,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("IssueCategory")]
+        [Validation(Required=false)]
+        public string IssueCategory { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
+        [NameInMap("DiskId")]
+        [Validation(Required=false)]
+        public List<string> DiskId { get; set; }
+
+        [NameInMap("Device")]
+        [Validation(Required=false)]
+        public List<string> Device { get; set; }
 
     }
 

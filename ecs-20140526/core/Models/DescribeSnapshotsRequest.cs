@@ -9,6 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotsRequest : TeaModel {
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<DescribeSnapshotsRequestFilter> Filter { get; set; }
+        public class DescribeSnapshotsRequestFilter : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -22,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotLinkId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("SnapshotIds")]
@@ -45,6 +71,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
         public string SnapshotName { get; set; }
@@ -57,20 +87,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string SnapshotType { get; set; }
 
-        [NameInMap("Filter")]
-        [Validation(Required=false)]
-        public List<DescribeSnapshotsRequestFilter> Filter { get; set; }
-        public class DescribeSnapshotsRequestFilter : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
         [NameInMap("Usage")]
         [Validation(Required=false)]
         public string Usage { get; set; }
@@ -78,20 +94,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("SourceDiskType")]
         [Validation(Required=false)]
         public string SourceDiskType { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeSnapshotsRequestTag> Tag { get; set; }
-        public class DescribeSnapshotsRequestTag : TeaModel {
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-        }
 
         [NameInMap("Encrypted")]
         [Validation(Required=false)]
@@ -112,6 +114,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeSnapshotsRequestTag> Tag { get; set; }
+        public class DescribeSnapshotsRequestTag : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateVSwitchResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("VSwitchId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string VSwitchId { get; set; }
+        public CreateVSwitchResponseBody Body { get; set; }
 
     }
 

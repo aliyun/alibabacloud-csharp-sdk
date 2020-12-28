@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskSpecResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string TaskId { get; set; }
+        public ModifyDiskSpecResponseBody Body { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReplaceSystemDiskRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=true)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public ReplaceSystemDiskRequestSystemDisk SystemDisk { get; set; }
@@ -26,9 +18,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
         };
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("UseAdditionalService")]
         [Validation(Required=false)]

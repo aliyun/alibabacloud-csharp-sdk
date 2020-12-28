@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartElasticityAssuranceRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
         public StartElasticityAssuranceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class StartElasticityAssuranceRequestPrivatePoolOptions : TeaModel {
             [NameInMap("Id")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Id { get; set; }
         };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

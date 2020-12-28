@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RunCommandResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CommandId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string CommandId { get; set; }
-
-        [NameInMap("InvokeId")]
-        [Validation(Required=true)]
-        public string InvokeId { get; set; }
+        public RunCommandResponseBody Body { get; set; }
 
     }
 

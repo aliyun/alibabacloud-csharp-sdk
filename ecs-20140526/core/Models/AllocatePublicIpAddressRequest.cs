@@ -9,8 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocatePublicIpAddressRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("IpAddress")]
@@ -20,6 +32,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("VlanId")]
         [Validation(Required=false)]
         public string VlanId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
     }
 

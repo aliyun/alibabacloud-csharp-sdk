@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportSnapshotResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string TaskId { get; set; }
-
-        [NameInMap("SnapshotId")]
-        [Validation(Required=true)]
-        public string SnapshotId { get; set; }
+        public ImportSnapshotResponseBody Body { get; set; }
 
     }
 

@@ -9,8 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocateDedicatedHostsRequest : TeaModel {
+        [NameInMap("NetworkAttributes")]
+        [Validation(Required=false)]
+        public AllocateDedicatedHostsRequestNetworkAttributes NetworkAttributes { get; set; }
+        public class AllocateDedicatedHostsRequestNetworkAttributes : TeaModel {
+            [NameInMap("SlbUdpTimeout")]
+            [Validation(Required=false)]
+            public int? SlbUdpTimeout { get; set; }
+            [NameInMap("UdpTimeout")]
+            [Validation(Required=false)]
+            public int? UdpTimeout { get; set; }
+        };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Tag")]
@@ -44,24 +72,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostClusterId { get; set; }
 
         [NameInMap("DedicatedHostType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DedicatedHostType { get; set; }
 
         [NameInMap("ActionOnMaintenance")]
         [Validation(Required=false)]
         public string ActionOnMaintenance { get; set; }
-
-        [NameInMap("NetworkAttributes")]
-        [Validation(Required=false)]
-        public AllocateDedicatedHostsRequestNetworkAttributes NetworkAttributes { get; set; }
-        public class AllocateDedicatedHostsRequestNetworkAttributes : TeaModel {
-            [NameInMap("SlbUdpTimeout")]
-            [Validation(Required=false)]
-            public int? SlbUdpTimeout { get; set; }
-            [NameInMap("UdpTimeout")]
-            [Validation(Required=false)]
-            public int? UdpTimeout { get; set; }
-        };
 
         [NameInMap("Description")]
         [Validation(Required=false)]

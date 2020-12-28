@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocateDedicatedHostsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DedicatedHostIdSets")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public AllocateDedicatedHostsResponseDedicatedHostIdSets DedicatedHostIdSets { get; set; }
-        public class AllocateDedicatedHostsResponseDedicatedHostIdSets : TeaModel {
-            [NameInMap("DedicatedHostId")]
-            [Validation(Required=true)]
-            public List<string> DedicatedHostId { get; set; }
-        };
+        public AllocateDedicatedHostsResponseBody Body { get; set; }
 
     }
 

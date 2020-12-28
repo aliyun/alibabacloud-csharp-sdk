@@ -9,25 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceAttachmentAttributesRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=true)]
-        public string InstanceId { get; set; }
-
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
         public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions : TeaModel {
             [NameInMap("MatchCriteria")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string MatchCriteria { get; set; }
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
         };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

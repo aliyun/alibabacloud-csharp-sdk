@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostAutoRenewResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DedicatedHostRenewAttributes")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeDedicatedHostAutoRenewResponseDedicatedHostRenewAttributes DedicatedHostRenewAttributes { get; set; }
-        public class DescribeDedicatedHostAutoRenewResponseDedicatedHostRenewAttributes : TeaModel {
-            [NameInMap("DedicatedHostRenewAttribute")]
-            [Validation(Required=true)]
-            public List<DescribeDedicatedHostAutoRenewResponseDedicatedHostRenewAttributesDedicatedHostRenewAttribute> DedicatedHostRenewAttribute { get; set; }
-            public class DescribeDedicatedHostAutoRenewResponseDedicatedHostRenewAttributesDedicatedHostRenewAttribute : TeaModel {
-                public string DedicatedHostId { get; set; }
-                public bool? AutoRenewEnabled { get; set; }
-                public int? Duration { get; set; }
-                public string PeriodUnit { get; set; }
-                public string RenewalStatus { get; set; }
-            }
-        };
+        public DescribeDedicatedHostAutoRenewResponseBody Body { get; set; }
 
     }
 

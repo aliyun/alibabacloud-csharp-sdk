@@ -9,8 +9,115 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateAutoProvisioningGroupRequest : TeaModel {
+        [NameInMap("LaunchConfiguration")]
+        [Validation(Required=false)]
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration LaunchConfiguration { get; set; }
+        public class CreateAutoProvisioningGroupRequestLaunchConfiguration : TeaModel {
+            [NameInMap("ImageId")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+            [NameInMap("IoOptimized")]
+            [Validation(Required=false)]
+            public string IoOptimized { get; set; }
+            [NameInMap("InternetChargeType")]
+            [Validation(Required=false)]
+            public string InternetChargeType { get; set; }
+            [NameInMap("InternetMaxBandwidthIn")]
+            [Validation(Required=false)]
+            public int? InternetMaxBandwidthIn { get; set; }
+            [NameInMap("InternetMaxBandwidthOut")]
+            [Validation(Required=false)]
+            public int? InternetMaxBandwidthOut { get; set; }
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+            [NameInMap("HostName")]
+            [Validation(Required=false)]
+            public string HostName { get; set; }
+            [NameInMap("InstanceDescription")]
+            [Validation(Required=false)]
+            public string InstanceDescription { get; set; }
+            [NameInMap("KeyPairName")]
+            [Validation(Required=false)]
+            public string KeyPairName { get; set; }
+            [NameInMap("RamRoleName")]
+            [Validation(Required=false)]
+            public string RamRoleName { get; set; }
+            [NameInMap("SecurityEnhancementStrategy")]
+            [Validation(Required=false)]
+            public string SecurityEnhancementStrategy { get; set; }
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
+            [NameInMap("SystemDiskCategory")]
+            [Validation(Required=false)]
+            public string SystemDiskCategory { get; set; }
+            [NameInMap("SystemDiskSize")]
+            [Validation(Required=false)]
+            public int? SystemDiskSize { get; set; }
+            [NameInMap("SystemDiskName")]
+            [Validation(Required=false)]
+            public string SystemDiskName { get; set; }
+            [NameInMap("SystemDiskDescription")]
+            [Validation(Required=false)]
+            public string SystemDiskDescription { get; set; }
+            [NameInMap("SystemDiskPerformanceLevel")]
+            [Validation(Required=false)]
+            public string SystemDiskPerformanceLevel { get; set; }
+            [NameInMap("PasswordInherit")]
+            [Validation(Required=false)]
+            public bool? PasswordInherit { get; set; }
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+            [NameInMap("CreditSpecification")]
+            [Validation(Required=false)]
+            public string CreditSpecification { get; set; }
+            [NameInMap("DataDisk")]
+            [Validation(Required=false)]
+            public List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
+            public class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk : TeaModel {
+                public string PerformanceLevel { get; set; }
+                public string Description { get; set; }
+                public string KmsKeyId { get; set; }
+                public string SnapshotId { get; set; }
+                public int? Size { get; set; }
+                public string Device { get; set; }
+                public string DiskName { get; set; }
+                public string Category { get; set; }
+                public bool? DeleteWithInstance { get; set; }
+                public bool? Encrypted { get; set; }
+            }
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> Tag { get; set; }
+            public class CreateAutoProvisioningGroupRequestLaunchConfigurationTag : TeaModel {
+                public string Key { get; set; }
+                public string Value { get; set; }
+            }
+        };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
@@ -66,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? MaxSpotPrice { get; set; }
 
         [NameInMap("TotalTargetCapacity")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TotalTargetCapacity { get; set; }
 
         [NameInMap("PayAsYouGoTargetCapacity")]
@@ -89,110 +196,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LaunchTemplateVersion { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("LaunchTemplateConfig")]
         [Validation(Required=false)]
         public List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
         public class CreateAutoProvisioningGroupRequestLaunchTemplateConfig : TeaModel {
-            [NameInMap("InstanceType")]
+            [NameInMap("VSwitchId")]
             [Validation(Required=false)]
-            public string InstanceType { get; set; }
+            public string VSwitchId { get; set; }
 
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
             public double? MaxPrice { get; set; }
 
-            [NameInMap("VSwitchId")]
+            [NameInMap("Priority")]
             [Validation(Required=false)]
-            public string VSwitchId { get; set; }
+            public int? Priority { get; set; }
 
             [NameInMap("WeightedCapacity")]
             [Validation(Required=false)]
             public double? WeightedCapacity { get; set; }
 
-            [NameInMap("Priority")]
+            [NameInMap("InstanceType")]
             [Validation(Required=false)]
-            public int? Priority { get; set; }
+            public string InstanceType { get; set; }
 
         }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("LaunchConfiguration")]
-        [Validation(Required=false)]
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration LaunchConfiguration { get; set; }
-        public class CreateAutoProvisioningGroupRequestLaunchConfiguration : TeaModel {
-            [NameInMap("ImageId")]
-            [Validation(Required=false)]
-            public string ImageId { get; set; }
-            [NameInMap("SecurityGroupId")]
-            [Validation(Required=false)]
-            public string SecurityGroupId { get; set; }
-            [NameInMap("IoOptimized")]
-            [Validation(Required=false)]
-            public string IoOptimized { get; set; }
-            [NameInMap("DataDisk")]
-            [Validation(Required=false)]
-            public List<string> DataDisk { get; set; }
-            [NameInMap("InternetChargeType")]
-            [Validation(Required=false)]
-            public string InternetChargeType { get; set; }
-            [NameInMap("InternetMaxBandwidthIn")]
-            [Validation(Required=false)]
-            public int? InternetMaxBandwidthIn { get; set; }
-            [NameInMap("InternetMaxBandwidthOut")]
-            [Validation(Required=false)]
-            public int? InternetMaxBandwidthOut { get; set; }
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-            [NameInMap("HostName")]
-            [Validation(Required=false)]
-            public string HostName { get; set; }
-            [NameInMap("InstanceDescription")]
-            [Validation(Required=false)]
-            public string InstanceDescription { get; set; }
-            [NameInMap("KeyPairName")]
-            [Validation(Required=false)]
-            public string KeyPairName { get; set; }
-            [NameInMap("RamRoleName")]
-            [Validation(Required=false)]
-            public string RamRoleName { get; set; }
-            [NameInMap("SecurityEnhancementStrategy")]
-            [Validation(Required=false)]
-            public string SecurityEnhancementStrategy { get; set; }
-            [NameInMap("Tag")]
-            [Validation(Required=false)]
-            public List<string> Tag { get; set; }
-            [NameInMap("UserData")]
-            [Validation(Required=false)]
-            public string UserData { get; set; }
-            [NameInMap("SystemDiskCategory")]
-            [Validation(Required=false)]
-            public string SystemDiskCategory { get; set; }
-            [NameInMap("SystemDiskSize")]
-            [Validation(Required=false)]
-            public int? SystemDiskSize { get; set; }
-            [NameInMap("SystemDiskName")]
-            [Validation(Required=false)]
-            public string SystemDiskName { get; set; }
-            [NameInMap("SystemDiskDescription")]
-            [Validation(Required=false)]
-            public string SystemDiskDescription { get; set; }
-            [NameInMap("SystemDiskPerformanceLevel")]
-            [Validation(Required=false)]
-            public string SystemDiskPerformanceLevel { get; set; }
-            [NameInMap("PasswordInherit")]
-            [Validation(Required=false)]
-            public bool? PasswordInherit { get; set; }
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-            [NameInMap("CreditSpecification")]
-            [Validation(Required=false)]
-            public string CreditSpecification { get; set; }
-        };
 
         [NameInMap("SystemDiskConfig")]
         [Validation(Required=false)]

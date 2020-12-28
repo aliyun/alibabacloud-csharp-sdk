@@ -9,22 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotMonitorDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("MonitorData")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSnapshotMonitorDataResponseMonitorData MonitorData { get; set; }
-        public class DescribeSnapshotMonitorDataResponseMonitorData : TeaModel {
-            [NameInMap("DataPoint")]
-            [Validation(Required=true)]
-            public List<DescribeSnapshotMonitorDataResponseMonitorDataDataPoint> DataPoint { get; set; }
-            public class DescribeSnapshotMonitorDataResponseMonitorDataDataPoint : TeaModel {
-                public string TimeStamp { get; set; }
-                public long Size { get; set; }
-            }
-        };
+        public DescribeSnapshotMonitorDataResponseBody Body { get; set; }
 
     }
 

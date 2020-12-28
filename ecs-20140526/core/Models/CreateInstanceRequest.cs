@@ -9,8 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateInstanceRequest : TeaModel {
+        [NameInMap("SystemDisk")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestSystemDisk SystemDisk { get; set; }
+        public class CreateInstanceRequestSystemDisk : TeaModel {
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+            [NameInMap("DiskName")]
+            [Validation(Required=false)]
+            public string DiskName { get; set; }
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+        };
+
+        [NameInMap("PrivatePoolOptions")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
+        public class CreateInstanceRequestPrivatePoolOptions : TeaModel {
+            [NameInMap("MatchCriteria")]
+            [Validation(Required=false)]
+            public string MatchCriteria { get; set; }
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+        };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ImageId")]
@@ -22,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageFamily { get; set; }
 
         [NameInMap("InstanceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         [NameInMap("SecurityGroupId")]
@@ -93,95 +138,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InnerIpAddress { get; set; }
 
-        [NameInMap("SystemDisk")]
-        [Validation(Required=false)]
-        public CreateInstanceRequestSystemDisk SystemDisk { get; set; }
-        public class CreateInstanceRequestSystemDisk : TeaModel {
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-            [NameInMap("DiskName")]
-            [Validation(Required=false)]
-            public string DiskName { get; set; }
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-            [NameInMap("PerformanceLevel")]
-            [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
-        };
-
-        [NameInMap("DataDisk")]
-        [Validation(Required=false)]
-        public List<CreateInstanceRequestDataDisk> DataDisk { get; set; }
-        public class CreateInstanceRequestDataDisk : TeaModel {
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-
-            [NameInMap("SnapshotId")]
-            [Validation(Required=false)]
-            public string SnapshotId { get; set; }
-
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("DiskName")]
-            [Validation(Required=false)]
-            public string DiskName { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("Device")]
-            [Validation(Required=false)]
-            public string Device { get; set; }
-
-            [NameInMap("DeleteWithInstance")]
-            [Validation(Required=false)]
-            public bool? DeleteWithInstance { get; set; }
-
-            [NameInMap("Encrypted")]
-            [Validation(Required=false)]
-            public bool? Encrypted { get; set; }
-
-            [NameInMap("KMSKeyId")]
-            [Validation(Required=false)]
-            public string KMSKeyId { get; set; }
-
-            [NameInMap("PerformanceLevel")]
-            [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
-
-            [NameInMap("EncryptAlgorithm")]
-            [Validation(Required=false)]
-            public string EncryptAlgorithm { get; set; }
-
-        }
-
-        [NameInMap("Arn")]
-        [Validation(Required=false)]
-        public List<CreateInstanceRequestArn> Arn { get; set; }
-        public class CreateInstanceRequestArn : TeaModel {
-            [NameInMap("AssumeRoleFor")]
-            [Validation(Required=false)]
-            public long AssumeRoleFor { get; set; }
-
-            [NameInMap("Rolearn")]
-            [Validation(Required=false)]
-            public string Rolearn { get; set; }
-
-            [NameInMap("RoleType")]
-            [Validation(Required=false)]
-            public string RoleType { get; set; }
-
-        }
-
         [NameInMap("NodeControllerId")]
         [Validation(Required=false)]
         public string NodeControllerId { get; set; }
@@ -202,6 +158,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string IoOptimized { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("UseAdditionalService")]
         [Validation(Required=false)]
         public bool? UseAdditionalService { get; set; }
@@ -217,20 +177,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<CreateInstanceRequestTag> Tag { get; set; }
-        public class CreateInstanceRequestTag : TeaModel {
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-        }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]
@@ -288,6 +234,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
+        [NameInMap("CapacityReservationId")]
+        [Validation(Required=false)]
+        public string CapacityReservationId { get; set; }
+
+        [NameInMap("CapacityReservationPreference")]
+        [Validation(Required=false)]
+        public string CapacityReservationPreference { get; set; }
+
         [NameInMap("Affinity")]
         [Validation(Required=false)]
         public string Affinity { get; set; }
@@ -316,17 +270,87 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? HttpPutResponseHopLimit { get; set; }
 
-        [NameInMap("PrivatePoolOptions")]
+        [NameInMap("DataDisk")]
         [Validation(Required=false)]
-        public CreateInstanceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
-        public class CreateInstanceRequestPrivatePoolOptions : TeaModel {
-            [NameInMap("MatchCriteria")]
+        public List<CreateInstanceRequestDataDisk> DataDisk { get; set; }
+        public class CreateInstanceRequestDataDisk : TeaModel {
+            [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
-            public string MatchCriteria { get; set; }
-            [NameInMap("Id")]
+            public string PerformanceLevel { get; set; }
+
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string Id { get; set; }
-        };
+            public string Description { get; set; }
+
+            [NameInMap("SnapshotId")]
+            [Validation(Required=false)]
+            public string SnapshotId { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+            [NameInMap("Device")]
+            [Validation(Required=false)]
+            public string Device { get; set; }
+
+            [NameInMap("DiskName")]
+            [Validation(Required=false)]
+            public string DiskName { get; set; }
+
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("KMSKeyId")]
+            [Validation(Required=false)]
+            public string KMSKeyId { get; set; }
+
+            [NameInMap("DeleteWithInstance")]
+            [Validation(Required=false)]
+            public bool? DeleteWithInstance { get; set; }
+
+            [NameInMap("EncryptAlgorithm")]
+            [Validation(Required=false)]
+            public string EncryptAlgorithm { get; set; }
+
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public bool? Encrypted { get; set; }
+
+        }
+
+        [NameInMap("Arn")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestArn> Arn { get; set; }
+        public class CreateInstanceRequestArn : TeaModel {
+            [NameInMap("RoleType")]
+            [Validation(Required=false)]
+            public string RoleType { get; set; }
+
+            [NameInMap("Rolearn")]
+            [Validation(Required=false)]
+            public string Rolearn { get; set; }
+
+            [NameInMap("AssumeRoleFor")]
+            [Validation(Required=false)]
+            public long? AssumeRoleFor { get; set; }
+
+        }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestTag> Tag { get; set; }
+        public class CreateInstanceRequestTag : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

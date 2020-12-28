@@ -9,53 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostTypesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DedicatedHostTypes")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeDedicatedHostTypesResponseDedicatedHostTypes DedicatedHostTypes { get; set; }
-        public class DescribeDedicatedHostTypesResponseDedicatedHostTypes : TeaModel {
-            [NameInMap("DedicatedHostType")]
-            [Validation(Required=true)]
-            public List<DescribeDedicatedHostTypesResponseDedicatedHostTypesDedicatedHostType> DedicatedHostType { get; set; }
-            public class DescribeDedicatedHostTypesResponseDedicatedHostTypesDedicatedHostType : TeaModel {
-                public string DedicatedHostType { get; set; }
-                public int? Sockets { get; set; }
-                public int? TotalVcpus { get; set; }
-                public int? TotalVgpus { get; set; }
-                public int? Cores { get; set; }
-                public int? PhysicalGpus { get; set; }
-                public float? MemorySize { get; set; }
-                public long LocalStorageCapacity { get; set; }
-                public int? LocalStorageAmount { get; set; }
-                public string LocalStorageCategory { get; set; }
-                public string GPUSpec { get; set; }
-                public bool? SupportCpuOverCommitRatio { get; set; }
-                public string CpuOverCommitRatioRange { get; set; }
-                public DescribeDedicatedHostTypesResponseDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies SupportedInstanceTypeFamilies { get; set; }
-                public class DescribeDedicatedHostTypesResponseDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies : TeaModel {
-                    /// <summary>
-                    /// SupportedInstanceTypeFamily
-                    /// </summary>
-                    [NameInMap("SupportedInstanceTypeFamily")]
-                    [Validation(Required=true)]
-                    public List<string> SupportedInstanceTypeFamily { get; set; }
-
-                }
-                public DescribeDedicatedHostTypesResponseDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList SupportedInstanceTypesList { get; set; }
-                public class DescribeDedicatedHostTypesResponseDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList : TeaModel {
-                    /// <summary>
-                    /// SupportedInstanceTypesList
-                    /// </summary>
-                    [NameInMap("SupportedInstanceTypesList")]
-                    [Validation(Required=true)]
-                    public List<string> SupportedInstanceTypesList { get; set; }
-
-                }
-            }
-        };
+        public DescribeDedicatedHostTypesResponseBody Body { get; set; }
 
     }
 

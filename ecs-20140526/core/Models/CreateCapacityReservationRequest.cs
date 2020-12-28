@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateCapacityReservationRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=true)]
-        public List<string> ZoneId { get; set; }
-
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
         public CreateCapacityReservationRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
@@ -33,16 +21,52 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MatchCriteria { get; set; }
         };
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         [NameInMap("InstanceAmount")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? InstanceAmount { get; set; }
 
         [NameInMap("InstanceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         [NameInMap("StartTime")]
@@ -60,6 +84,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
+
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
+
+        [NameInMap("PackageType")]
+        [Validation(Required=false)]
+        public string PackageType { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("EfficientStatus")]
+        [Validation(Required=false)]
+        public int? EfficientStatus { get; set; }
+
+        [NameInMap("TimeSlot")]
+        [Validation(Required=false)]
+        public string TimeSlot { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public List<string> ZoneId { get; set; }
 
     }
 

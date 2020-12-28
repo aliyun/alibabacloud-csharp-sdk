@@ -9,22 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypeFamiliesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InstanceTypeFamilies")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeInstanceTypeFamiliesResponseInstanceTypeFamilies InstanceTypeFamilies { get; set; }
-        public class DescribeInstanceTypeFamiliesResponseInstanceTypeFamilies : TeaModel {
-            [NameInMap("InstanceTypeFamily")]
-            [Validation(Required=true)]
-            public List<DescribeInstanceTypeFamiliesResponseInstanceTypeFamiliesInstanceTypeFamily> InstanceTypeFamily { get; set; }
-            public class DescribeInstanceTypeFamiliesResponseInstanceTypeFamiliesInstanceTypeFamily : TeaModel {
-                public string InstanceTypeFamilyId { get; set; }
-                public string Generation { get; set; }
-            }
-        };
+        public DescribeInstanceTypeFamiliesResponseBody Body { get; set; }
 
     }
 

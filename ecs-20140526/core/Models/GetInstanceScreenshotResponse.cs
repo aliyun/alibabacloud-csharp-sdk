@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class GetInstanceScreenshotResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("Screenshot")]
-        [Validation(Required=true)]
-        public string Screenshot { get; set; }
+        public GetInstanceScreenshotResponseBody Body { get; set; }
 
     }
 

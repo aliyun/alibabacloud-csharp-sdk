@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateRouterInterfaceRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Role")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Role { get; set; }
 
         [NameInMap("OppositeRegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OppositeRegionId { get; set; }
 
         [NameInMap("Spec")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Spec { get; set; }
 
         [NameInMap("RouterType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RouterType { get; set; }
 
         [NameInMap("RouterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RouterId { get; set; }
 
         [NameInMap("OppositeInterfaceId")]
@@ -92,6 +92,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("UserCidr")]
         [Validation(Required=false)]

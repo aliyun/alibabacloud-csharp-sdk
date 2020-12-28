@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeClustersResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Clusters")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeClustersResponseClusters Clusters { get; set; }
-        public class DescribeClustersResponseClusters : TeaModel {
-            [NameInMap("Cluster")]
-            [Validation(Required=true)]
-            public List<DescribeClustersResponseClustersCluster> Cluster { get; set; }
-            public class DescribeClustersResponseClustersCluster : TeaModel {
-                public string ClusterId { get; set; }
-            }
-        };
+        public DescribeClustersResponseBody Body { get; set; }
 
     }
 

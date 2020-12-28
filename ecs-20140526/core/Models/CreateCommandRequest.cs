@@ -9,12 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateCommandRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("Description")]
@@ -22,11 +38,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
         [NameInMap("CommandContent")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CommandContent { get; set; }
 
         [NameInMap("WorkingDir")]
@@ -35,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Timeout")]
         [Validation(Required=false)]
-        public long Timeout { get; set; }
+        public long? Timeout { get; set; }
 
         [NameInMap("EnableParameter")]
         [Validation(Required=false)]

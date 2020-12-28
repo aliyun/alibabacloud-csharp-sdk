@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDeploymentSetResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DeploymentSetId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DeploymentSetId { get; set; }
+        public CreateDeploymentSetResponseBody Body { get; set; }
 
     }
 

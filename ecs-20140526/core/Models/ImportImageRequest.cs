@@ -9,38 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportImageRequest : TeaModel {
-        [NameInMap("DiskDeviceMapping")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public List<ImportImageRequestDiskDeviceMapping> DiskDeviceMapping { get; set; }
-        public class ImportImageRequestDiskDeviceMapping : TeaModel {
-            [NameInMap("Format")]
-            [Validation(Required=false)]
-            public string Format { get; set; }
+        public long? OwnerId { get; set; }
 
-            [NameInMap("OSSBucket")]
-            [Validation(Required=false)]
-            public string OSSBucket { get; set; }
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
 
-            [NameInMap("OSSObject")]
-            [Validation(Required=false)]
-            public string OSSObject { get; set; }
-
-            [NameInMap("DiskImSize")]
-            [Validation(Required=false)]
-            public int? DiskImSize { get; set; }
-
-            [NameInMap("DiskImageSize")]
-            [Validation(Required=false)]
-            public int? DiskImageSize { get; set; }
-
-            [NameInMap("Device")]
-            [Validation(Required=false)]
-            public string Device { get; set; }
-
-        }
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ImageName")]
@@ -75,6 +57,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LicenseType { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("DiskDeviceMapping")]
+        [Validation(Required=false)]
+        public List<ImportImageRequestDiskDeviceMapping> DiskDeviceMapping { get; set; }
+        public class ImportImageRequestDiskDeviceMapping : TeaModel {
+            [NameInMap("DiskImSize")]
+            [Validation(Required=false)]
+            public int? DiskImSize { get; set; }
+
+            [NameInMap("Device")]
+            [Validation(Required=false)]
+            public string Device { get; set; }
+
+            [NameInMap("OSSBucket")]
+            [Validation(Required=false)]
+            public string OSSBucket { get; set; }
+
+            [NameInMap("Format")]
+            [Validation(Required=false)]
+            public string Format { get; set; }
+
+            [NameInMap("OSSObject")]
+            [Validation(Required=false)]
+            public string OSSObject { get; set; }
+
+            [NameInMap("DiskImageSize")]
+            [Validation(Required=false)]
+            public int? DiskImageSize { get; set; }
+
+        }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ImportImageRequestTag> Tag { get; set; }
@@ -88,10 +104,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
     }
 

@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRecommendInstanceTypeRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("Cores")]
         [Validation(Required=false)]
         public int? Cores { get; set; }
@@ -26,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         [NameInMap("NetworkType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NetworkType { get; set; }
 
         [NameInMap("InstanceChargeType")]
@@ -41,10 +57,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string IoOptimized { get; set; }
 
-        [NameInMap("InstanceTypeFamily")]
-        [Validation(Required=false)]
-        public List<string> InstanceTypeFamily { get; set; }
-
         [NameInMap("PriorityStrategy")]
         [Validation(Required=false)]
         public string PriorityStrategy { get; set; }
@@ -53,8 +65,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public float? MaxPrice { get; set; }
 
+        [NameInMap("InstanceBandwidthRx")]
+        [Validation(Required=false)]
+        public int? InstanceBandwidthRx { get; set; }
+
+        [NameInMap("InstanceBandwidthTx")]
+        [Validation(Required=false)]
+        public int? InstanceBandwidthTx { get; set; }
+
+        [NameInMap("InstancePpsRx")]
+        [Validation(Required=false)]
+        public int? InstancePpsRx { get; set; }
+
+        [NameInMap("InstancePpsTx")]
+        [Validation(Required=false)]
+        public int? InstancePpsTx { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ZoneId")]
@@ -68,6 +96,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }
+
+        [NameInMap("InstanceTypeFamily")]
+        [Validation(Required=false)]
+        public List<string> InstanceTypeFamily { get; set; }
 
     }
 

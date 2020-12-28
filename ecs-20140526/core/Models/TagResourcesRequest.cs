@@ -9,20 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class TagResourcesRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         [NameInMap("Tag")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             [NameInMap("Key")]

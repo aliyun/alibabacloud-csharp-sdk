@@ -9,38 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePriceRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
-        [NameInMap("IoOptimized")]
-        [Validation(Required=false)]
-        public string IoOptimized { get; set; }
-
-        [NameInMap("InstanceNetworkType")]
-        [Validation(Required=false)]
-        public string InstanceNetworkType { get; set; }
-
-        [NameInMap("InternetChargeType")]
-        [Validation(Required=false)]
-        public string InternetChargeType { get; set; }
-
-        [NameInMap("InternetMaxBandwidthOut")]
-        [Validation(Required=false)]
-        public int? InternetMaxBandwidthOut { get; set; }
-
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public DescribePriceRequestSystemDisk SystemDisk { get; set; }
@@ -73,6 +41,54 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PerformanceLevel { get; set; }
 
         }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        [NameInMap("IoOptimized")]
+        [Validation(Required=false)]
+        public string IoOptimized { get; set; }
+
+        [NameInMap("InstanceNetworkType")]
+        [Validation(Required=false)]
+        public string InstanceNetworkType { get; set; }
+
+        [NameInMap("InternetChargeType")]
+        [Validation(Required=false)]
+        public string InternetChargeType { get; set; }
+
+        [NameInMap("InternetMaxBandwidthOut")]
+        [Validation(Required=false)]
+        public int? InternetMaxBandwidthOut { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -114,13 +130,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? InstanceCpuCoreCount { get; set; }
 
-        [NameInMap("InstanceTypeList")]
-        [Validation(Required=false)]
-        public List<string> InstanceTypeList { get; set; }
-
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }
+
+        [NameInMap("InstanceTypeList")]
+        [Validation(Required=false)]
+        public List<string> InstanceTypeList { get; set; }
 
     }
 

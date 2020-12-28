@@ -9,8 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstancesRequest : TeaModel {
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<DescribeInstancesRequestFilter> Filter { get; set; }
+        public class DescribeInstancesRequestFilter : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("VpcId")]
@@ -61,6 +87,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string EipAddresses { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
@@ -85,20 +115,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LockReason { get; set; }
 
-        [NameInMap("Filter")]
-        [Validation(Required=false)]
-        public List<DescribeInstancesRequestFilter> Filter { get; set; }
-        public class DescribeInstancesRequestFilter : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
         [NameInMap("DeviceAvailable")]
         [Validation(Required=false)]
         public bool? DeviceAvailable { get; set; }
@@ -110,20 +126,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("NeedSaleCycle")]
         [Validation(Required=false)]
         public bool? NeedSaleCycle { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeInstancesRequestTag> Tag { get; set; }
-        public class DescribeInstancesRequestTag : TeaModel {
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-        }
 
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -153,10 +155,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        [NameInMap("AdditionalAttributes")]
-        [Validation(Required=false)]
-        public List<string> AdditionalAttributes { get; set; }
-
         [NameInMap("HttpEndpoint")]
         [Validation(Required=false)]
         public string HttpEndpoint { get; set; }
@@ -168,6 +166,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("HttpPutResponseHopLimit")]
         [Validation(Required=false)]
         public int? HttpPutResponseHopLimit { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeInstancesRequestTag> Tag { get; set; }
+        public class DescribeInstancesRequestTag : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("AdditionalAttributes")]
+        [Validation(Required=false)]
+        public List<string> AdditionalAttributes { get; set; }
 
     }
 

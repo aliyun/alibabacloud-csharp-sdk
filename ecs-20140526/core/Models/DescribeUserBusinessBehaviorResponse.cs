@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeUserBusinessBehaviorResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("StatusValue")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string StatusValue { get; set; }
+        public DescribeUserBusinessBehaviorResponseBody Body { get; set; }
 
     }
 

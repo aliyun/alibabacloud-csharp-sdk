@@ -9,12 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyRouterInterfaceAttributeRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("RouterInterfaceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RouterInterfaceId { get; set; }
 
         [NameInMap("Name")]
@@ -39,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("OppositeInterfaceOwnerId")]
         [Validation(Required=false)]
-        public long OppositeInterfaceOwnerId { get; set; }
+        public long? OppositeInterfaceOwnerId { get; set; }
 
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]

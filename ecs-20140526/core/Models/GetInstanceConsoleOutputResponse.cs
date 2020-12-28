@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class GetInstanceConsoleOutputResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("ConsoleOutput")]
-        [Validation(Required=true)]
-        public string ConsoleOutput { get; set; }
-
-        [NameInMap("LastUpdateTime")]
-        [Validation(Required=true)]
-        public string LastUpdateTime { get; set; }
+        public GetInstanceConsoleOutputResponseBody Body { get; set; }
 
     }
 

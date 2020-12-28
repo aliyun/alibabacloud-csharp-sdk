@@ -9,8 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiskRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ZoneId")]
@@ -45,41 +57,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<CreateDiskRequestTag> Tag { get; set; }
-        public class CreateDiskRequestTag : TeaModel {
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-        }
-
-        [NameInMap("Arn")]
-        [Validation(Required=false)]
-        public List<CreateDiskRequestArn> Arn { get; set; }
-        public class CreateDiskRequestArn : TeaModel {
-            [NameInMap("AssumeRoleFor")]
-            [Validation(Required=false)]
-            public long AssumeRoleFor { get; set; }
-
-            [NameInMap("Rolearn")]
-            [Validation(Required=false)]
-            public string Rolearn { get; set; }
-
-            [NameInMap("RoleType")]
-            [Validation(Required=false)]
-            public string RoleType { get; set; }
-
-        }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -108,6 +92,38 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("StorageSetPartitionNumber")]
         [Validation(Required=false)]
         public int? StorageSetPartitionNumber { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateDiskRequestTag> Tag { get; set; }
+        public class CreateDiskRequestTag : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("Arn")]
+        [Validation(Required=false)]
+        public List<CreateDiskRequestArn> Arn { get; set; }
+        public class CreateDiskRequestArn : TeaModel {
+            [NameInMap("RoleType")]
+            [Validation(Required=false)]
+            public string RoleType { get; set; }
+
+            [NameInMap("Rolearn")]
+            [Validation(Required=false)]
+            public string Rolearn { get; set; }
+
+            [NameInMap("AssumeRoleFor")]
+            [Validation(Required=false)]
+            public long? AssumeRoleFor { get; set; }
+
+        }
 
     }
 

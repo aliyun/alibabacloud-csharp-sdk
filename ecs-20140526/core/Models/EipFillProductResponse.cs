@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class EipFillProductResponse : TeaModel {
-        [NameInMap("requestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Data { get; set; }
-
-        [NameInMap("code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
+        public EipFillProductResponseBody Body { get; set; }
 
     }
 

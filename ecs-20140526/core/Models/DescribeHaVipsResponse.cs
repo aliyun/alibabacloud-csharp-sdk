@@ -9,61 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHaVipsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("HaVips")]
-        [Validation(Required=true)]
-        public DescribeHaVipsResponseHaVips HaVips { get; set; }
-        public class DescribeHaVipsResponseHaVips : TeaModel {
-            [NameInMap("HaVip")]
-            [Validation(Required=true)]
-            public List<DescribeHaVipsResponseHaVipsHaVip> HaVip { get; set; }
-            public class DescribeHaVipsResponseHaVipsHaVip : TeaModel {
-                public string HaVipId { get; set; }
-                public string RegionId { get; set; }
-                public string VpcId { get; set; }
-                public string VSwitchId { get; set; }
-                public string IpAddress { get; set; }
-                public string Status { get; set; }
-                public string MasterInstanceId { get; set; }
-                public string Description { get; set; }
-                public string CreateTime { get; set; }
-                public DescribeHaVipsResponseHaVipsHaVipAssociatedInstances AssociatedInstances { get; set; }
-                public class DescribeHaVipsResponseHaVipsHaVipAssociatedInstances : TeaModel {
-                    /// <summary>
-                    /// associatedInstance
-                    /// </summary>
-                    [NameInMap("associatedInstance")]
-                    [Validation(Required=true)]
-                    public List<string> AssociatedInstance { get; set; }
-
-                }
-                public DescribeHaVipsResponseHaVipsHaVipAssociatedEipAddresses AssociatedEipAddresses { get; set; }
-                public class DescribeHaVipsResponseHaVipsHaVipAssociatedEipAddresses : TeaModel {
-                    /// <summary>
-                    /// associatedEipAddresse
-                    /// </summary>
-                    [NameInMap("associatedEipAddresse")]
-                    [Validation(Required=true)]
-                    public List<string> AssociatedEipAddresse { get; set; }
-
-                }
-            }
-        };
+        public DescribeHaVipsResponseBody Body { get; set; }
 
     }
 

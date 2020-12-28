@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPrepayInstanceSpecResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("OrderId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string OrderId { get; set; }
+        public ModifyPrepayInstanceSpecResponseBody Body { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateInstanceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("TradePrice")]
-        [Validation(Required=true)]
-        public float? TradePrice { get; set; }
+        public CreateInstanceResponseBody Body { get; set; }
 
     }
 

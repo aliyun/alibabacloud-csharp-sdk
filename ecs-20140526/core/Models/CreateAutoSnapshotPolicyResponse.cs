@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateAutoSnapshotPolicyResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("AutoSnapshotPolicyId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string AutoSnapshotPolicyId { get; set; }
+        public CreateAutoSnapshotPolicyResponseBody Body { get; set; }
 
     }
 

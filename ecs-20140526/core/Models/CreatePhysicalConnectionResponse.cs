@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreatePhysicalConnectionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PhysicalConnectionId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string PhysicalConnectionId { get; set; }
+        public CreatePhysicalConnectionResponseBody Body { get; set; }
 
     }
 

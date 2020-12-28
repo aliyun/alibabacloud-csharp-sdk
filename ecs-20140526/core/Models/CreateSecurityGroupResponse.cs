@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSecurityGroupResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("SecurityGroupId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string SecurityGroupId { get; set; }
+        public CreateSecurityGroupResponseBody Body { get; set; }
 
     }
 

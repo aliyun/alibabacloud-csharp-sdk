@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateVirtualBorderRouterResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("VbrId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string VbrId { get; set; }
+        public CreateVirtualBorderRouterResponseBody Body { get; set; }
 
     }
 

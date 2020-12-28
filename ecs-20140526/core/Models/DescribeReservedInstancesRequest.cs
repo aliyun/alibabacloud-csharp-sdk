@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -27,29 +51,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
-        [NameInMap("ReservedInstanceId")]
-        [Validation(Required=false)]
-        public List<string> ReservedInstanceId { get; set; }
-
         [NameInMap("ReservedInstanceName")]
         [Validation(Required=false)]
         public string ReservedInstanceName { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public List<string> Status { get; set; }
 
         [NameInMap("LockReason")]
         [Validation(Required=false)]
@@ -74,6 +82,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("AllocationType")]
         [Validation(Required=false)]
         public string AllocationType { get; set; }
+
+        [NameInMap("ReservedInstanceId")]
+        [Validation(Required=false)]
+        public List<string> ReservedInstanceId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public List<string> Status { get; set; }
 
     }
 

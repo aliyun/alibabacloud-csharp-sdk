@@ -9,8 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateLaunchTemplateVersionRequest : TeaModel {
+        [NameInMap("SystemDisk")]
+        [Validation(Required=false)]
+        public CreateLaunchTemplateVersionRequestSystemDisk SystemDisk { get; set; }
+        public class CreateLaunchTemplateVersionRequestSystemDisk : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+            [NameInMap("DiskName")]
+            [Validation(Required=false)]
+            public string DiskName { get; set; }
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+            [NameInMap("Iops")]
+            [Validation(Required=false)]
+            public int? Iops { get; set; }
+        };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("LaunchTemplateId")]
@@ -77,94 +114,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
-        [NameInMap("SystemDisk")]
-        [Validation(Required=false)]
-        public CreateLaunchTemplateVersionRequestSystemDisk SystemDisk { get; set; }
-        public class CreateLaunchTemplateVersionRequestSystemDisk : TeaModel {
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-            [NameInMap("DiskName")]
-            [Validation(Required=false)]
-            public string DiskName { get; set; }
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-            [NameInMap("Iops")]
-            [Validation(Required=false)]
-            public int? Iops { get; set; }
-        };
-
-        [NameInMap("DataDisk")]
-        [Validation(Required=false)]
-        public List<CreateLaunchTemplateVersionRequestDataDisk> DataDisk { get; set; }
-        public class CreateLaunchTemplateVersionRequestDataDisk : TeaModel {
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-
-            [NameInMap("SnapshotId")]
-            [Validation(Required=false)]
-            public string SnapshotId { get; set; }
-
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("Encrypted")]
-            [Validation(Required=false)]
-            public string Encrypted { get; set; }
-
-            [NameInMap("DiskName")]
-            [Validation(Required=false)]
-            public string DiskName { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("DeleteWithInstance")]
-            [Validation(Required=false)]
-            public bool? DeleteWithInstance { get; set; }
-
-            [NameInMap("Device")]
-            [Validation(Required=false)]
-            public string Device { get; set; }
-
-        }
-
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
         public string IoOptimized { get; set; }
-
-        [NameInMap("NetworkInterface")]
-        [Validation(Required=false)]
-        public List<CreateLaunchTemplateVersionRequestNetworkInterface> NetworkInterface { get; set; }
-        public class CreateLaunchTemplateVersionRequestNetworkInterface : TeaModel {
-            [NameInMap("PrimaryIpAddress")]
-            [Validation(Required=false)]
-            public string PrimaryIpAddress { get; set; }
-
-            [NameInMap("VSwitchId")]
-            [Validation(Required=false)]
-            public string VSwitchId { get; set; }
-
-            [NameInMap("SecurityGroupId")]
-            [Validation(Required=false)]
-            public string SecurityGroupId { get; set; }
-
-            [NameInMap("NetworkInterfaceName")]
-            [Validation(Required=false)]
-            public string NetworkInterfaceName { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-        }
 
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -221,6 +173,70 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("SecurityEnhancementStrategy")]
         [Validation(Required=false)]
         public string SecurityEnhancementStrategy { get; set; }
+
+        [NameInMap("DataDisk")]
+        [Validation(Required=false)]
+        public List<CreateLaunchTemplateVersionRequestDataDisk> DataDisk { get; set; }
+        public class CreateLaunchTemplateVersionRequestDataDisk : TeaModel {
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("SnapshotId")]
+            [Validation(Required=false)]
+            public string SnapshotId { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+            [NameInMap("Device")]
+            [Validation(Required=false)]
+            public string Device { get; set; }
+
+            [NameInMap("DiskName")]
+            [Validation(Required=false)]
+            public string DiskName { get; set; }
+
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("DeleteWithInstance")]
+            [Validation(Required=false)]
+            public bool? DeleteWithInstance { get; set; }
+
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public string Encrypted { get; set; }
+
+        }
+
+        [NameInMap("NetworkInterface")]
+        [Validation(Required=false)]
+        public List<CreateLaunchTemplateVersionRequestNetworkInterface> NetworkInterface { get; set; }
+        public class CreateLaunchTemplateVersionRequestNetworkInterface : TeaModel {
+            [NameInMap("NetworkInterfaceName")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceName { get; set; }
+
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            [NameInMap("PrimaryIpAddress")]
+            [Validation(Required=false)]
+            public string PrimaryIpAddress { get; set; }
+
+        }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskAttributeRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }
-
-        [NameInMap("DiskIds")]
-        [Validation(Required=false)]
-        public List<string> DiskIds { get; set; }
 
         [NameInMap("DiskName")]
         [Validation(Required=false)]
@@ -36,6 +44,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("EnableAutoSnapshot")]
         [Validation(Required=false)]
         public bool? EnableAutoSnapshot { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("DiskIds")]
+        [Validation(Required=false)]
+        public List<string> DiskIds { get; set; }
 
     }
 

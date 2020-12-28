@@ -9,30 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignPrivateIpAddressesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("AssignedPrivateIpAddressesSet")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet AssignedPrivateIpAddressesSet { get; set; }
-        public class AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet : TeaModel {
-            [NameInMap("NetworkInterfaceId")]
-            [Validation(Required=true)]
-            public string NetworkInterfaceId { get; set; }
-            [NameInMap("PrivateIpSet")]
-            [Validation(Required=true)]
-            public AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet PrivateIpSet { get; set; }
-            public class AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet : TeaModel {
-                /// <summary>
-                /// PrivateIpAddress
-                /// </summary>
-                [NameInMap("PrivateIpAddress")]
-                [Validation(Required=true)]
-                public List<string> PrivateIpAddress { get; set; }
-
-            }
-        };
+        public AssignPrivateIpAddressesResponseBody Body { get; set; }
 
     }
 

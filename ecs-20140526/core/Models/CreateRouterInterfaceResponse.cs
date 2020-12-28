@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateRouterInterfaceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RouterInterfaceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RouterInterfaceId { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=true)]
-        public long OrderId { get; set; }
+        public CreateRouterInterfaceResponseBody Body { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDedicatedHostClusterResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DedicatedHostClusterId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DedicatedHostClusterId { get; set; }
+        public CreateDedicatedHostClusterResponseBody Body { get; set; }
 
     }
 

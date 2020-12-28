@@ -9,8 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDisksRequest : TeaModel {
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public List<DescribeDisksRequestFilter> Filter { get; set; }
+        public class DescribeDisksRequestFilter : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ZoneId")]
@@ -69,6 +95,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("DiskName")]
         [Validation(Required=false)]
         public string DiskName { get; set; }
@@ -93,34 +123,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LockReason { get; set; }
 
-        [NameInMap("Filter")]
-        [Validation(Required=false)]
-        public List<DescribeDisksRequestFilter> Filter { get; set; }
-        public class DescribeDisksRequestFilter : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeDisksRequestTag> Tag { get; set; }
-        public class DescribeDisksRequestTag : TeaModel {
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-        }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -133,10 +135,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? Encrypted { get; set; }
 
-        [NameInMap("AdditionalAttributes")]
-        [Validation(Required=false)]
-        public List<string> AdditionalAttributes { get; set; }
-
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -144,6 +142,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("KMSKeyId")]
         [Validation(Required=false)]
         public string KMSKeyId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeDisksRequestTag> Tag { get; set; }
+        public class DescribeDisksRequestTag : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("AdditionalAttributes")]
+        [Validation(Required=false)]
+        public List<string> AdditionalAttributes { get; set; }
 
     }
 

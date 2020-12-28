@@ -9,16 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPrepayInstanceSpecRequest : TeaModel {
+        [NameInMap("SystemDisk")]
+        [Validation(Required=false)]
+        public ModifyPrepayInstanceSpecRequestSystemDisk SystemDisk { get; set; }
+        public class ModifyPrepayInstanceSpecRequestSystemDisk : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+        };
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("InstanceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         [NameInMap("OperatorType")]
@@ -37,14 +58,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? MigrateAcrossZone { get; set; }
 
-        [NameInMap("SystemDisk")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public ModifyPrepayInstanceSpecRequestSystemDisk SystemDisk { get; set; }
-        public class ModifyPrepayInstanceSpecRequestSystemDisk : TeaModel {
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-        };
+        public string OwnerAccount { get; set; }
 
         [NameInMap("RebootTime")]
         [Validation(Required=false)]
