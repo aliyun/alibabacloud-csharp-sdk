@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         /// <summary>
         /// keypair名称，和login_password二选一。
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_period")]
         [Validation(Required=false)]
-        public long WorkerPeriod { get; set; }
+        public long? WorkerPeriod { get; set; }
 
         /// <summary>
         /// Worker节点包年包月周期
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_auto_renew_period")]
         [Validation(Required=false)]
-        public long WorkerAutoRenewPeriod { get; set; }
+        public long? WorkerAutoRenewPeriod { get; set; }
 
         /// <summary>
         /// Worker节点实例规格
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_system_disk_size")]
         [Validation(Required=false)]
-        public long WorkerSystemDiskSize { get; set; }
+        public long? WorkerSystemDiskSize { get; set; }
 
         /// <summary>
         /// Worker节点数据盘配置

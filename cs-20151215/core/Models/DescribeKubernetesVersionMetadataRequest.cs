@@ -24,13 +24,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// 是否查询多可用区。
-        /// </summary>
-        [NameInMap("MultiAZ")]
-        [Validation(Required=false)]
-        public bool? MultiAZ { get; set; }
-
-        /// <summary>
         /// 要查询的版本，如果为空则查所有版本。
         /// </summary>
         [NameInMap("KubernetesVersion")]

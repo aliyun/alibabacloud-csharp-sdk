@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("ID")]
             [Validation(Required=false)]
-            public long ID { get; set; }
+            public long? ID { get; set; }
 
             /// <summary>
             /// 集群ID。

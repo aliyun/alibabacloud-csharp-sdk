@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         /// <summary>
         /// 节点CPU策略。
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_auto_renew_period")]
         [Validation(Required=false)]
-        public long WorkerAutoRenewPeriod { get; set; }
+        public long? WorkerAutoRenewPeriod { get; set; }
 
         /// <summary>
         /// 是否挂载数据盘。
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_period")]
         [Validation(Required=false)]
-        public long WorkerPeriod { get; set; }
+        public long? WorkerPeriod { get; set; }
 
         /// <summary>
         /// 当指定为PrePaid的时候需要指定周期。
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_system_disk_size")]
         [Validation(Required=false)]
-        public long WorkerSystemDiskSize { get; set; }
+        public long? WorkerSystemDiskSize { get; set; }
 
     }
 

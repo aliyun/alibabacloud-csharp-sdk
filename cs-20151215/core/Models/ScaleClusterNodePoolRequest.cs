@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
     }
 

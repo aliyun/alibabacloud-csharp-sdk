@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
-        public long Size { get; set; }
+        public long? Size { get; set; }
 
         /// <summary>
         /// 是否对数据盘加密。

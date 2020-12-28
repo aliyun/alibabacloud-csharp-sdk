@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Enable { get; set; }
             [NameInMap("max_instances")]
             [Validation(Required=false)]
-            public long MaxInstances { get; set; }
+            public long? MaxInstances { get; set; }
             [NameInMap("min_instances")]
             [Validation(Required=false)]
-            public long MinInstances { get; set; }
+            public long? MinInstances { get; set; }
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string EipInternetChargeType { get; set; }
             [NameInMap("eip_bandwidth")]
             [Validation(Required=false)]
-            public long EipBandwidth { get; set; }
+            public long? EipBandwidth { get; set; }
         };
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
             [NameInMap("auto_renew_period")]
             [Validation(Required=false)]
-            public long AutoRenewPeriod { get; set; }
+            public long? AutoRenewPeriod { get; set; }
             [NameInMap("data_disks")]
             [Validation(Required=false)]
             public List<string> DataDisks { get; set; }
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LoginPassword { get; set; }
             [NameInMap("period")]
             [Validation(Required=false)]
-            public long Period { get; set; }
+            public long? Period { get; set; }
             [NameInMap("period_unit")]
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskCategory { get; set; }
             [NameInMap("system_disk_size")]
             [Validation(Required=false)]
-            public long SystemDiskSize { get; set; }
+            public long? SystemDiskSize { get; set; }
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<CreateClusterNodePoolRequestScalingGroupTags> Tags { get; set; }
@@ -164,13 +164,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string MultiAzPolicy { get; set; }
             [NameInMap("on_demand_base_capacity")]
             [Validation(Required=false)]
-            public long OnDemandBaseCapacity { get; set; }
+            public long? OnDemandBaseCapacity { get; set; }
             [NameInMap("on_demand_percentage_above_base_capacity")]
             [Validation(Required=false)]
-            public long OnDemandPercentageAboveBaseCapacity { get; set; }
+            public long? OnDemandPercentageAboveBaseCapacity { get; set; }
             [NameInMap("spot_instance_pools")]
             [Validation(Required=false)]
-            public long SpotInstancePools { get; set; }
+            public long? SpotInstancePools { get; set; }
             [NameInMap("spot_instance_remedy")]
             [Validation(Required=false)]
             public bool? SpotInstanceRemedy { get; set; }
@@ -220,21 +220,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </summary>
                 [NameInMap("surge")]
                 [Validation(Required=false)]
-                public long Surge { get; set; }
+                public long? Surge { get; set; }
 
                 /// <summary>
                 /// 额外节点比例。和surge二选一。
                 /// </summary>
                 [NameInMap("surge_percentage")]
                 [Validation(Required=false)]
-                public long SurgePercentage { get; set; }
+                public long? SurgePercentage { get; set; }
 
                 /// <summary>
                 /// 最大不可用节点数量。
                 /// </summary>
                 [NameInMap("max_unavailable")]
                 [Validation(Required=false)]
-                public long MaxUnavailable { get; set; }
+                public long? MaxUnavailable { get; set; }
 
             }
         };
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
     }
 

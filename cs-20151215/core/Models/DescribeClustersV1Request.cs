@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         /// <summary>
         /// 分页数。
         /// </summary>
         [NameInMap("page_number")]
         [Validation(Required=false)]
-        public long PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
     }
 

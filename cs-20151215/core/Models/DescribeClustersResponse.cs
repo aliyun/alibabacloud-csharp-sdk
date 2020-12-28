@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("data_disk_size")]
             [Validation(Required=false)]
-            public long DataDiskSize { get; set; }
+            public long? DataDiskSize { get; set; }
 
             /// <summary>
             /// 集群是否开启删除保护。
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("size")]
             [Validation(Required=false)]
-            public long Size { get; set; }
+            public long? Size { get; set; }
 
             /// <summary>
             /// 集群运行状态。

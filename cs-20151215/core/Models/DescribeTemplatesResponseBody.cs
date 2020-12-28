@@ -97,13 +97,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class DescribeTemplatesResponseBodyPageInfo : TeaModel {
             [NameInMap("page_number")]
             [Validation(Required=false)]
-            public long PageNumber { get; set; }
+            public long? PageNumber { get; set; }
             [NameInMap("page_size")]
             [Validation(Required=false)]
-            public long PageSize { get; set; }
+            public long? PageSize { get; set; }
             [NameInMap("total_count")]
             [Validation(Required=false)]
-            public long TotalCount { get; set; }
+            public long? TotalCount { get; set; }
         };
 
     }

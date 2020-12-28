@@ -351,10 +351,6 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 query["ClusterType"] = request.ClusterType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiAZ))
-            {
-                query["MultiAZ"] = request.MultiAZ;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
             {
                 query["KubernetesVersion"] = request.KubernetesVersion;
@@ -382,10 +378,6 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
             {
                 query["ClusterType"] = request.ClusterType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiAZ))
-            {
-                query["MultiAZ"] = request.MultiAZ;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
             {
@@ -3586,7 +3578,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteClusterNodesResponse>(DoROARequest("DeleteClusterNodes", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/nodes", "json", req, runtime));
+            return TeaModel.ToObject<DeleteClusterNodesResponse>(DoROARequest("DeleteClusterNodes", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/nodes", "none", req, runtime));
         }
 
         public async Task<DeleteClusterNodesResponse> DeleteClusterNodesWithOptionsAsync(string ClusterId, DeleteClusterNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3610,7 +3602,7 @@ namespace AlibabaCloud.SDK.CS20151215
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteClusterNodesResponse>(await DoROARequestAsync("DeleteClusterNodes", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/nodes", "json", req, runtime));
+            return TeaModel.ToObject<DeleteClusterNodesResponse>(await DoROARequestAsync("DeleteClusterNodes", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/nodes", "none", req, runtime));
         }
 
     }

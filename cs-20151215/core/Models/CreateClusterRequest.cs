@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_count")]
         [Validation(Required=false)]
-        public long MasterCount { get; set; }
+        public long? MasterCount { get; set; }
 
         /// <summary>
         /// 集群Master节点使用的虚拟交换机
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_system_disk_size")]
         [Validation(Required=false)]
-        public long MasterSystemDiskSize { get; set; }
+        public long? MasterSystemDiskSize { get; set; }
 
         /// <summary>
         /// 集群Master节点自动快照备份策略
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_period")]
         [Validation(Required=false)]
-        public long MasterPeriod { get; set; }
+        public long? MasterPeriod { get; set; }
 
         /// <summary>
         /// 集群Master节点是否自动续费
@@ -347,14 +347,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("master_auto_renew_period")]
         [Validation(Required=false)]
-        public long MasterAutoRenewPeriod { get; set; }
+        public long? MasterAutoRenewPeriod { get; set; }
 
         /// <summary>
         /// 集群Worker节点数量
         /// </summary>
         [NameInMap("num_of_nodes")]
         [Validation(Required=false)]
-        public long NumOfNodes { get; set; }
+        public long? NumOfNodes { get; set; }
 
         /// <summary>
         /// 集群Worker节点所在虚拟交换机
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_system_disk_size")]
         [Validation(Required=false)]
-        public long WorkerSystemDiskSize { get; set; }
+        public long? WorkerSystemDiskSize { get; set; }
 
         /// <summary>
         /// 集群Worker节点系统盘快照备份策略
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_period")]
         [Validation(Required=false)]
-        public long WorkerPeriod { get; set; }
+        public long? WorkerPeriod { get; set; }
 
         /// <summary>
         /// 集群Worker节点到期是否自动续费
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_auto_renew_period")]
         [Validation(Required=false)]
-        public long WorkerAutoRenewPeriod { get; set; }
+        public long? WorkerAutoRenewPeriod { get; set; }
 
         /// <summary>
         /// 使用已有节点创建集群时，已有实例列表
@@ -501,7 +501,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("timeout_mins")]
         [Validation(Required=false)]
-        public long TimeoutMins { get; set; }
+        public long? TimeoutMins { get; set; }
 
     }
 

@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("page_num")]
         [Validation(Required=false)]
-        public long PageNum { get; set; }
+        public long? PageNum { get; set; }
 
         /// <summary>
         /// 对查询结果进行分页处理，指定每页包含的数据条数。  默认值为 10
         /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
     }
 
