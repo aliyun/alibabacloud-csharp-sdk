@@ -209,43 +209,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public MaintenanceWindow MaintenanceWindow { get; set; }
 
-        /// <summary>
-        /// 创建集群参数。
-        /// </summary>
-        [NameInMap("parameters")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Parameters { get; set; }
-
-        /// <summary>
-        /// 集群创建的资源列表。
-        /// </summary>
-        [NameInMap("outputs")]
-        [Validation(Required=false)]
-        public List<DescribeClusterDetailResponseBodyOutputs> Outputs { get; set; }
-        public class DescribeClusterDetailResponseBodyOutputs : TeaModel {
-            /// <summary>
-            /// 资源ID。
-            /// </summary>
-            [NameInMap("OutputKey")]
-            [Validation(Required=false)]
-            public string OutputKey { get; set; }
-
-            /// <summary>
-            /// 资源名称。
-            /// </summary>
-            [NameInMap("OutputValue")]
-            [Validation(Required=false)]
-            public string OutputValue { get; set; }
-
-            /// <summary>
-            /// 资源描述。
-            /// </summary>
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-        }
-
     }
 
 }
