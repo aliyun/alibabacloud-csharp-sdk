@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class FtIpFlowControlResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Name")]
         [Validation(Required=true)]
-        public FtIpFlowControlResponseBody Body { get; set; }
+        public string Name { get; set; }
 
     }
 

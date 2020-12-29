@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class TestHttpApiResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Params")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Params { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ServiceRpcSign")]
         [Validation(Required=true)]
-        public TestHttpApiResponseBody Body { get; set; }
+        public string ServiceRpcSign { get; set; }
 
     }
 

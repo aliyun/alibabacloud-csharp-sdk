@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
-    public class FtDynamicAddressHsfResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+    public class FtDynamicAddressHsfRequest : TeaModel {
     }
 
 }

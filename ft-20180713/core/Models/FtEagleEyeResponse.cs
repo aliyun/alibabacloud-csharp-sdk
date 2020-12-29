@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class FtEagleEyeResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Name")]
         [Validation(Required=true)]
-        public FtEagleEyeResponseBody Body { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("eagleEyeTraceId")]
+        [Validation(Required=true)]
+        public string EagleEyeTraceId { get; set; }
 
     }
 

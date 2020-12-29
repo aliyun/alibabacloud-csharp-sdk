@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class FtGatedLaunchPolicy4Response : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("IsGatedLaunch")]
         [Validation(Required=true)]
-        public FtGatedLaunchPolicy4ResponseBody Body { get; set; }
+        public string IsGatedLaunch { get; set; }
 
     }
 

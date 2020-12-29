@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ft20180713.Models
 {
     public class FtDynamicAddressHsfResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public FtDynamicAddressHsfResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 
