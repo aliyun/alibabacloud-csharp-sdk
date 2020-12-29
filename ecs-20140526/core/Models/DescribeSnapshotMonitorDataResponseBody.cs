@@ -15,17 +15,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
-        public List<DescribeSnapshotMonitorDataResponseBodyMonitorData> MonitorData { get; set; }
+        public DescribeSnapshotMonitorDataResponseBodyMonitorData MonitorData { get; set; }
         public class DescribeSnapshotMonitorDataResponseBodyMonitorData : TeaModel {
-            [NameInMap("Size")]
+            [NameInMap("DataPoint")]
             [Validation(Required=false)]
-            public long? Size { get; set; }
-
-            [NameInMap("TimeStamp")]
-            [Validation(Required=false)]
-            public string TimeStamp { get; set; }
-
-        }
+            public List<DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint> DataPoint { get; set; }
+            public class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint : TeaModel {
+                public long? Size { get; set; }
+                public string TimeStamp { get; set; }
+            }
+        };
 
     }
 

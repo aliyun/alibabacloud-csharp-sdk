@@ -23,25 +23,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
-        public List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypes> InstanceTypes { get; set; }
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes InstanceTypes { get; set; }
         public class DescribeImageSupportInstanceTypesResponseBodyInstanceTypes : TeaModel {
-            [NameInMap("InstanceTypeId")]
+            [NameInMap("InstanceType")]
             [Validation(Required=false)]
-            public string InstanceTypeId { get; set; }
-
-            [NameInMap("InstanceTypeFamily")]
-            [Validation(Required=false)]
-            public string InstanceTypeFamily { get; set; }
-
-            [NameInMap("CpuCoreCount")]
-            [Validation(Required=false)]
-            public int? CpuCoreCount { get; set; }
-
-            [NameInMap("MemorySize")]
-            [Validation(Required=false)]
-            public float? MemorySize { get; set; }
-
-        }
+            public List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType> InstanceType { get; set; }
+            public class DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType : TeaModel {
+                public string InstanceTypeId { get; set; }
+                public string InstanceTypeFamily { get; set; }
+                public int? CpuCoreCount { get; set; }
+                public float? MemorySize { get; set; }
+            }
+        };
 
     }
 

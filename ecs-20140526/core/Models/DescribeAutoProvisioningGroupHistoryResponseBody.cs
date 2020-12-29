@@ -27,39 +27,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("AutoProvisioningGroupHistories")]
         [Validation(Required=false)]
-        public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories> AutoProvisioningGroupHistories { get; set; }
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories AutoProvisioningGroupHistories { get; set; }
         public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AutoProvisioningGroupHistory")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("ActivityDetails")]
-            [Validation(Required=false)]
-            public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails> ActivityDetails { get; set; }
-            public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
+            public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory> AutoProvisioningGroupHistory { get; set; }
+            public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory : TeaModel {
                 public string Status { get; set; }
+                public string StartTime { get; set; }
+                public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails ActivityDetails { get; set; }
+                public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails : TeaModel {
+                    [NameInMap("ActivityDetail")]
+                    [Validation(Required=false)]
+                    public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> ActivityDetail { get; set; }
+                    public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail : TeaModel {
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
 
-                [NameInMap("Detail")]
-                [Validation(Required=false)]
-                public string Detail { get; set; }
+                        [NameInMap("Detail")]
+                        [Validation(Required=false)]
+                        public string Detail { get; set; }
 
+                    }
+
+                }
+                public string TaskId { get; set; }
+                public string LastEventTime { get; set; }
             }
-
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public string TaskId { get; set; }
-
-            [NameInMap("LastEventTime")]
-            [Validation(Required=false)]
-            public string LastEventTime { get; set; }
-
-        }
+        };
 
     }
 

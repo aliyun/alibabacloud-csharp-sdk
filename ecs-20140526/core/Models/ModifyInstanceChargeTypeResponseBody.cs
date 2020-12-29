@@ -11,21 +11,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyInstanceChargeTypeResponseBody : TeaModel {
         [NameInMap("FeeOfInstances")]
         [Validation(Required=false)]
-        public List<ModifyInstanceChargeTypeResponseBodyFeeOfInstances> FeeOfInstances { get; set; }
+        public ModifyInstanceChargeTypeResponseBodyFeeOfInstances FeeOfInstances { get; set; }
         public class ModifyInstanceChargeTypeResponseBodyFeeOfInstances : TeaModel {
-            [NameInMap("InstanceId")]
+            [NameInMap("FeeOfInstance")]
             [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("Currency")]
-            [Validation(Required=false)]
-            public string Currency { get; set; }
-
-            [NameInMap("Fee")]
-            [Validation(Required=false)]
-            public string Fee { get; set; }
-
-        }
+            public List<ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> FeeOfInstance { get; set; }
+            public class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance : TeaModel {
+                public string InstanceId { get; set; }
+                public string Currency { get; set; }
+                public string Fee { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

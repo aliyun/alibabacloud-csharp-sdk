@@ -27,137 +27,99 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("AutoProvisioningGroups")]
         [Validation(Required=false)]
-        public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups> AutoProvisioningGroups { get; set; }
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups AutoProvisioningGroups { get; set; }
         public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AutoProvisioningGroup")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup> AutoProvisioningGroup { get; set; }
+            public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup : TeaModel {
+                public string Status { get; set; }
+                public string AutoProvisioningGroupName { get; set; }
+                public string CreationTime { get; set; }
+                public float? MaxSpotPrice { get; set; }
+                public bool? TerminateInstances { get; set; }
+                public string LaunchTemplateId { get; set; }
+                public string State { get; set; }
+                public string ValidFrom { get; set; }
+                public string LaunchTemplateVersion { get; set; }
+                public string ValidUntil { get; set; }
+                public string RegionId { get; set; }
+                public bool? TerminateInstancesWithExpiration { get; set; }
+                public string AutoProvisioningGroupType { get; set; }
+                public string AutoProvisioningGroupId { get; set; }
+                public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions PayAsYouGoOptions { get; set; }
+                public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions : TeaModel {
+                    [NameInMap("AllocationStrategy")]
+                    [Validation(Required=false)]
+                    public string AllocationStrategy { get; set; }
 
-            [NameInMap("AutoProvisioningGroupName")]
-            [Validation(Required=false)]
-            public string AutoProvisioningGroupName { get; set; }
+                }
+                public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification TargetCapacitySpecification { get; set; }
+                public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification : TeaModel {
+                    [NameInMap("SpotTargetCapacity")]
+                    [Validation(Required=false)]
+                    public float? SpotTargetCapacity { get; set; }
 
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
+                    [NameInMap("DefaultTargetCapacityType")]
+                    [Validation(Required=false)]
+                    public string DefaultTargetCapacityType { get; set; }
 
-            [NameInMap("MaxSpotPrice")]
-            [Validation(Required=false)]
-            public float? MaxSpotPrice { get; set; }
+                    [NameInMap("TotalTargetCapacity")]
+                    [Validation(Required=false)]
+                    public float? TotalTargetCapacity { get; set; }
 
-            [NameInMap("TerminateInstances")]
-            [Validation(Required=false)]
-            public bool? TerminateInstances { get; set; }
+                    [NameInMap("PayAsYouGoTargetCapacity")]
+                    [Validation(Required=false)]
+                    public float? PayAsYouGoTargetCapacity { get; set; }
 
-            [NameInMap("LaunchTemplateId")]
-            [Validation(Required=false)]
-            public string LaunchTemplateId { get; set; }
+                }
+                public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions SpotOptions { get; set; }
+                public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions : TeaModel {
+                    [NameInMap("InstancePoolsToUseCount")]
+                    [Validation(Required=false)]
+                    public int? InstancePoolsToUseCount { get; set; }
 
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
+                    [NameInMap("InstanceInterruptionBehavior")]
+                    [Validation(Required=false)]
+                    public string InstanceInterruptionBehavior { get; set; }
 
-            [NameInMap("ValidFrom")]
-            [Validation(Required=false)]
-            public string ValidFrom { get; set; }
+                    [NameInMap("AllocationStrategy")]
+                    [Validation(Required=false)]
+                    public string AllocationStrategy { get; set; }
 
-            [NameInMap("LaunchTemplateVersion")]
-            [Validation(Required=false)]
-            public string LaunchTemplateVersion { get; set; }
+                }
+                public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs LaunchTemplateConfigs { get; set; }
+                public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs : TeaModel {
+                    [NameInMap("LaunchTemplateConfig")]
+                    [Validation(Required=false)]
+                    public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
+                    public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig : TeaModel {
+                        [NameInMap("VSwitchId")]
+                        [Validation(Required=false)]
+                        public string VSwitchId { get; set; }
 
-            [NameInMap("ValidUntil")]
-            [Validation(Required=false)]
-            public string ValidUntil { get; set; }
+                        [NameInMap("MaxPrice")]
+                        [Validation(Required=false)]
+                        public float? MaxPrice { get; set; }
 
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
+                        [NameInMap("Priority")]
+                        [Validation(Required=false)]
+                        public float? Priority { get; set; }
 
-            [NameInMap("TerminateInstancesWithExpiration")]
-            [Validation(Required=false)]
-            public bool? TerminateInstancesWithExpiration { get; set; }
+                        [NameInMap("WeightedCapacity")]
+                        [Validation(Required=false)]
+                        public float? WeightedCapacity { get; set; }
 
-            [NameInMap("AutoProvisioningGroupType")]
-            [Validation(Required=false)]
-            public string AutoProvisioningGroupType { get; set; }
+                        [NameInMap("InstanceType")]
+                        [Validation(Required=false)]
+                        public string InstanceType { get; set; }
 
-            [NameInMap("AutoProvisioningGroupId")]
-            [Validation(Required=false)]
-            public string AutoProvisioningGroupId { get; set; }
+                    }
 
-            [NameInMap("PayAsYouGoOptions")]
-            [Validation(Required=false)]
-            public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsPayAsYouGoOptions PayAsYouGoOptions { get; set; }
-            public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsPayAsYouGoOptions : TeaModel {
-                [NameInMap("AllocationStrategy")]
-                [Validation(Required=false)]
-                public string AllocationStrategy { get; set; }
-            };
-
-            [NameInMap("TargetCapacitySpecification")]
-            [Validation(Required=false)]
-            public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsTargetCapacitySpecification TargetCapacitySpecification { get; set; }
-            public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsTargetCapacitySpecification : TeaModel {
-                [NameInMap("SpotTargetCapacity")]
-                [Validation(Required=false)]
-                public float? SpotTargetCapacity { get; set; }
-                [NameInMap("DefaultTargetCapacityType")]
-                [Validation(Required=false)]
-                public string DefaultTargetCapacityType { get; set; }
-                [NameInMap("TotalTargetCapacity")]
-                [Validation(Required=false)]
-                public float? TotalTargetCapacity { get; set; }
-                [NameInMap("PayAsYouGoTargetCapacity")]
-                [Validation(Required=false)]
-                public float? PayAsYouGoTargetCapacity { get; set; }
-            };
-
-            [NameInMap("SpotOptions")]
-            [Validation(Required=false)]
-            public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsSpotOptions SpotOptions { get; set; }
-            public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsSpotOptions : TeaModel {
-                [NameInMap("InstancePoolsToUseCount")]
-                [Validation(Required=false)]
-                public int? InstancePoolsToUseCount { get; set; }
-                [NameInMap("InstanceInterruptionBehavior")]
-                [Validation(Required=false)]
-                public string InstanceInterruptionBehavior { get; set; }
-                [NameInMap("AllocationStrategy")]
-                [Validation(Required=false)]
-                public string AllocationStrategy { get; set; }
-            };
-
-            [NameInMap("LaunchTemplateConfigs")]
-            [Validation(Required=false)]
-            public List<DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsLaunchTemplateConfigs> LaunchTemplateConfigs { get; set; }
-            public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsLaunchTemplateConfigs : TeaModel {
-                [NameInMap("VSwitchId")]
-                [Validation(Required=false)]
-                public string VSwitchId { get; set; }
-
-                [NameInMap("MaxPrice")]
-                [Validation(Required=false)]
-                public float? MaxPrice { get; set; }
-
-                [NameInMap("Priority")]
-                [Validation(Required=false)]
-                public float? Priority { get; set; }
-
-                [NameInMap("WeightedCapacity")]
-                [Validation(Required=false)]
-                public float? WeightedCapacity { get; set; }
-
-                [NameInMap("InstanceType")]
-                [Validation(Required=false)]
-                public string InstanceType { get; set; }
-
+                }
+                public string ExcessCapacityTerminationPolicy { get; set; }
             }
-
-            [NameInMap("ExcessCapacityTerminationPolicy")]
-            [Validation(Required=false)]
-            public string ExcessCapacityTerminationPolicy { get; set; }
-
-        }
+        };
 
     }
 

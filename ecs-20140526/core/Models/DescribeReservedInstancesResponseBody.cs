@@ -27,97 +27,60 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("ReservedInstances")]
         [Validation(Required=false)]
-        public List<DescribeReservedInstancesResponseBodyReservedInstances> ReservedInstances { get; set; }
+        public DescribeReservedInstancesResponseBodyReservedInstances ReservedInstances { get; set; }
         public class DescribeReservedInstancesResponseBodyReservedInstances : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("ReservedInstance")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
+            public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> ReservedInstance { get; set; }
+            public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance : TeaModel {
+                public string CreationTime { get; set; }
+                public string Status { get; set; }
+                public string ReservedInstanceName { get; set; }
+                public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks OperationLocks { get; set; }
+                public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks : TeaModel {
+                    [NameInMap("OperationLock")]
+                    [Validation(Required=false)]
+                    public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock> OperationLock { get; set; }
+                    public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock : TeaModel {
+                        [NameInMap("LockReason")]
+                        [Validation(Required=false)]
+                        public string LockReason { get; set; }
 
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
+                    }
 
-            [NameInMap("ReservedInstanceName")]
-            [Validation(Required=false)]
-            public string ReservedInstanceName { get; set; }
+                }
+                public string ReservedInstanceId { get; set; }
+                public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags Tags { get; set; }
+                public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag> Tag { get; set; }
+                    public class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag : TeaModel {
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
 
-            [NameInMap("OperationLocks")]
-            [Validation(Required=false)]
-            public List<DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks> OperationLocks { get; set; }
-            public class DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks : TeaModel {
-                [NameInMap("LockReason")]
-                [Validation(Required=false)]
-                public string LockReason { get; set; }
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
 
+                    }
+
+                }
+                public string InstanceType { get; set; }
+                public int? InstanceAmount { get; set; }
+                public string OfferingType { get; set; }
+                public string RegionId { get; set; }
+                public string StartTime { get; set; }
+                public string Description { get; set; }
+                public string AllocationStatus { get; set; }
+                public string ExpiredTime { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string ZoneId { get; set; }
+                public string Platform { get; set; }
+                public string Scope { get; set; }
             }
-
-            [NameInMap("ReservedInstanceId")]
-            [Validation(Required=false)]
-            public string ReservedInstanceId { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<DescribeReservedInstancesResponseBodyReservedInstancesTags> Tags { get; set; }
-            public class DescribeReservedInstancesResponseBodyReservedInstancesTags : TeaModel {
-                [NameInMap("TagValue")]
-                [Validation(Required=false)]
-                public string TagValue { get; set; }
-
-                [NameInMap("TagKey")]
-                [Validation(Required=false)]
-                public string TagKey { get; set; }
-
-            }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-            [NameInMap("InstanceAmount")]
-            [Validation(Required=false)]
-            public int? InstanceAmount { get; set; }
-
-            [NameInMap("OfferingType")]
-            [Validation(Required=false)]
-            public string OfferingType { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("AllocationStatus")]
-            [Validation(Required=false)]
-            public string AllocationStatus { get; set; }
-
-            [NameInMap("ExpiredTime")]
-            [Validation(Required=false)]
-            public string ExpiredTime { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("Platform")]
-            [Validation(Required=false)]
-            public string Platform { get; set; }
-
-            [NameInMap("Scope")]
-            [Validation(Required=false)]
-            public string Scope { get; set; }
-
-        }
+        };
 
     }
 

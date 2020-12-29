@@ -15,17 +15,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
-        public List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies> InstanceTypeFamilies { get; set; }
+        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies InstanceTypeFamilies { get; set; }
         public class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies : TeaModel {
-            [NameInMap("InstanceTypeFamilyId")]
+            [NameInMap("InstanceTypeFamily")]
             [Validation(Required=false)]
-            public string InstanceTypeFamilyId { get; set; }
-
-            [NameInMap("Generation")]
-            [Validation(Required=false)]
-            public string Generation { get; set; }
-
-        }
+            public List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> InstanceTypeFamily { get; set; }
+            public class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily : TeaModel {
+                public string InstanceTypeFamilyId { get; set; }
+                public string Generation { get; set; }
+            }
+        };
 
     }
 

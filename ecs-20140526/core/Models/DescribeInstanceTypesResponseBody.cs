@@ -15,109 +15,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
-        public List<DescribeInstanceTypesResponseBodyInstanceTypes> InstanceTypes { get; set; }
+        public DescribeInstanceTypesResponseBodyInstanceTypes InstanceTypes { get; set; }
         public class DescribeInstanceTypesResponseBodyInstanceTypes : TeaModel {
-            [NameInMap("EniTotalQuantity")]
+            [NameInMap("InstanceType")]
             [Validation(Required=false)]
-            public int? EniTotalQuantity { get; set; }
-
-            [NameInMap("LocalStorageCategory")]
-            [Validation(Required=false)]
-            public string LocalStorageCategory { get; set; }
-
-            [NameInMap("PrimaryEniQueueNumber")]
-            [Validation(Required=false)]
-            public int? PrimaryEniQueueNumber { get; set; }
-
-            [NameInMap("MemorySize")]
-            [Validation(Required=false)]
-            public float? MemorySize { get; set; }
-
-            [NameInMap("LocalStorageCapacity")]
-            [Validation(Required=false)]
-            public long? LocalStorageCapacity { get; set; }
-
-            [NameInMap("InstanceFamilyLevel")]
-            [Validation(Required=false)]
-            public string InstanceFamilyLevel { get; set; }
-
-            [NameInMap("InstancePpsRx")]
-            [Validation(Required=false)]
-            public long? InstancePpsRx { get; set; }
-
-            [NameInMap("EniIpv6AddressQuantity")]
-            [Validation(Required=false)]
-            public int? EniIpv6AddressQuantity { get; set; }
-
-            [NameInMap("MaximumQueueNumberPerEni")]
-            [Validation(Required=false)]
-            public int? MaximumQueueNumberPerEni { get; set; }
-
-            [NameInMap("InstanceTypeId")]
-            [Validation(Required=false)]
-            public string InstanceTypeId { get; set; }
-
-            [NameInMap("InstanceBandwidthRx")]
-            [Validation(Required=false)]
-            public int? InstanceBandwidthRx { get; set; }
-
-            [NameInMap("GPUSpec")]
-            [Validation(Required=false)]
-            public string GPUSpec { get; set; }
-
-            [NameInMap("SecondaryEniQueueNumber")]
-            [Validation(Required=false)]
-            public int? SecondaryEniQueueNumber { get; set; }
-
-            [NameInMap("InstanceBandwidthTx")]
-            [Validation(Required=false)]
-            public int? InstanceBandwidthTx { get; set; }
-
-            [NameInMap("GPUAmount")]
-            [Validation(Required=false)]
-            public int? GPUAmount { get; set; }
-
-            [NameInMap("TotalEniQueueQuantity")]
-            [Validation(Required=false)]
-            public int? TotalEniQueueQuantity { get; set; }
-
-            [NameInMap("InitialCredit")]
-            [Validation(Required=false)]
-            public int? InitialCredit { get; set; }
-
-            [NameInMap("LocalStorageAmount")]
-            [Validation(Required=false)]
-            public int? LocalStorageAmount { get; set; }
-
-            [NameInMap("BaselineCredit")]
-            [Validation(Required=false)]
-            public int? BaselineCredit { get; set; }
-
-            [NameInMap("InstancePpsTx")]
-            [Validation(Required=false)]
-            public long? InstancePpsTx { get; set; }
-
-            [NameInMap("EniPrivateIpAddressQuantity")]
-            [Validation(Required=false)]
-            public int? EniPrivateIpAddressQuantity { get; set; }
-
-            [NameInMap("InstanceTypeFamily")]
-            [Validation(Required=false)]
-            public string InstanceTypeFamily { get; set; }
-
-            [NameInMap("CpuCoreCount")]
-            [Validation(Required=false)]
-            public int? CpuCoreCount { get; set; }
-
-            [NameInMap("EniQuantity")]
-            [Validation(Required=false)]
-            public int? EniQuantity { get; set; }
-
-            [NameInMap("EniTrunkSupported")]
-            [Validation(Required=false)]
-            public bool? EniTrunkSupported { get; set; }
-
-        }
+            public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> InstanceType { get; set; }
+            public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType : TeaModel {
+                public int? EniTotalQuantity { get; set; }
+                public string LocalStorageCategory { get; set; }
+                public int? PrimaryEniQueueNumber { get; set; }
+                public float? MemorySize { get; set; }
+                public long? LocalStorageCapacity { get; set; }
+                public string InstanceFamilyLevel { get; set; }
+                public long? InstancePpsRx { get; set; }
+                public int? EniIpv6AddressQuantity { get; set; }
+                public int? MaximumQueueNumberPerEni { get; set; }
+                public string InstanceTypeId { get; set; }
+                public int? InstanceBandwidthRx { get; set; }
+                public string GPUSpec { get; set; }
+                public int? SecondaryEniQueueNumber { get; set; }
+                public int? InstanceBandwidthTx { get; set; }
+                public int? GPUAmount { get; set; }
+                public int? TotalEniQueueQuantity { get; set; }
+                public int? InitialCredit { get; set; }
+                public int? LocalStorageAmount { get; set; }
+                public int? BaselineCredit { get; set; }
+                public long? InstancePpsTx { get; set; }
+                public int? EniPrivateIpAddressQuantity { get; set; }
+                public string InstanceTypeFamily { get; set; }
+                public int? CpuCoreCount { get; set; }
+                public int? EniQuantity { get; set; }
+                public bool? EniTrunkSupported { get; set; }
+            }
+        };
 
     }
 

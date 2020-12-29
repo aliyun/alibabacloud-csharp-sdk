@@ -15,33 +15,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("EipMonitorDatas")]
         [Validation(Required=false)]
-        public List<DescribeEipMonitorDataResponseBodyEipMonitorDatas> EipMonitorDatas { get; set; }
+        public DescribeEipMonitorDataResponseBodyEipMonitorDatas EipMonitorDatas { get; set; }
         public class DescribeEipMonitorDataResponseBodyEipMonitorDatas : TeaModel {
-            [NameInMap("EipTX")]
+            [NameInMap("EipMonitorData")]
             [Validation(Required=false)]
-            public int? EipTX { get; set; }
-
-            [NameInMap("EipPackets")]
-            [Validation(Required=false)]
-            public int? EipPackets { get; set; }
-
-            [NameInMap("EipBandwidth")]
-            [Validation(Required=false)]
-            public int? EipBandwidth { get; set; }
-
-            [NameInMap("TimeStamp")]
-            [Validation(Required=false)]
-            public string TimeStamp { get; set; }
-
-            [NameInMap("EipFlow")]
-            [Validation(Required=false)]
-            public int? EipFlow { get; set; }
-
-            [NameInMap("EipRX")]
-            [Validation(Required=false)]
-            public int? EipRX { get; set; }
-
-        }
+            public List<DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData> EipMonitorData { get; set; }
+            public class DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData : TeaModel {
+                public int? EipTX { get; set; }
+                public int? EipPackets { get; set; }
+                public int? EipBandwidth { get; set; }
+                public string TimeStamp { get; set; }
+                public int? EipFlow { get; set; }
+                public int? EipRX { get; set; }
+            }
+        };
 
     }
 

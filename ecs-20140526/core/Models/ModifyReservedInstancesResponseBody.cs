@@ -11,7 +11,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyReservedInstancesResponseBody : TeaModel {
         [NameInMap("ReservedInstanceIdSets")]
         [Validation(Required=false)]
-        public List<string> ReservedInstanceIdSets { get; set; }
+        public ModifyReservedInstancesResponseBodyReservedInstanceIdSets ReservedInstanceIdSets { get; set; }
+        public class ModifyReservedInstancesResponseBodyReservedInstanceIdSets : TeaModel {
+            [NameInMap("ReservedInstanceId")]
+            [Validation(Required=false)]
+            public List<string> ReservedInstanceId { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

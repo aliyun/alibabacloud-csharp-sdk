@@ -15,47 +15,52 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("AccountAttributeItems")]
         [Validation(Required=false)]
-        public List<DescribeAccountAttributesResponseBodyAccountAttributeItems> AccountAttributeItems { get; set; }
+        public DescribeAccountAttributesResponseBodyAccountAttributeItems AccountAttributeItems { get; set; }
         public class DescribeAccountAttributesResponseBodyAccountAttributeItems : TeaModel {
-            [NameInMap("AttributeName")]
+            [NameInMap("AccountAttributeItem")]
             [Validation(Required=false)]
-            public string AttributeName { get; set; }
+            public List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem> AccountAttributeItem { get; set; }
+            public class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem : TeaModel {
+                public string AttributeName { get; set; }
+                public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues AttributeValues { get; set; }
+                public class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues : TeaModel {
+                    [NameInMap("ValueItem")]
+                    [Validation(Required=false)]
+                    public List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem> ValueItem { get; set; }
+                    public class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem : TeaModel {
+                        [NameInMap("DiskCategory")]
+                        [Validation(Required=false)]
+                        public string DiskCategory { get; set; }
 
-            [NameInMap("AttributeValues")]
-            [Validation(Required=false)]
-            public List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues> AttributeValues { get; set; }
-            public class DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues : TeaModel {
-                [NameInMap("DiskCategory")]
-                [Validation(Required=false)]
-                public string DiskCategory { get; set; }
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
+                        [NameInMap("ExpiredTime")]
+                        [Validation(Required=false)]
+                        public string ExpiredTime { get; set; }
 
-                [NameInMap("ExpiredTime")]
-                [Validation(Required=false)]
-                public string ExpiredTime { get; set; }
+                        [NameInMap("ZoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
 
-                [NameInMap("ZoneId")]
-                [Validation(Required=false)]
-                public string ZoneId { get; set; }
+                        [NameInMap("InstanceType")]
+                        [Validation(Required=false)]
+                        public string InstanceType { get; set; }
 
-                [NameInMap("InstanceType")]
-                [Validation(Required=false)]
-                public string InstanceType { get; set; }
+                        [NameInMap("Count")]
+                        [Validation(Required=false)]
+                        public int? Count { get; set; }
 
-                [NameInMap("Count")]
-                [Validation(Required=false)]
-                public int? Count { get; set; }
+                        [NameInMap("InstanceChargeType")]
+                        [Validation(Required=false)]
+                        public string InstanceChargeType { get; set; }
 
-                [NameInMap("InstanceChargeType")]
-                [Validation(Required=false)]
-                public string InstanceChargeType { get; set; }
+                    }
 
+                }
             }
-
-        }
+        };
 
     }
 

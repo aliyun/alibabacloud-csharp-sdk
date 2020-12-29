@@ -61,7 +61,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceId { get; set; }
             [NameInMap("MemberNetworkInterfaceIds")]
             [Validation(Required=false)]
-            public List<string> MemberNetworkInterfaceIds { get; set; }
+            public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds MemberNetworkInterfaceIds { get; set; }
+            public class DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds : TeaModel {
+                [NameInMap("MemberNetworkInterfaceId")]
+                [Validation(Required=false)]
+                public List<string> MemberNetworkInterfaceId { get; set; }
+
+            }
             [NameInMap("TrunkNetworkInterfaceId")]
             [Validation(Required=false)]
             public string TrunkNetworkInterfaceId { get; set; }
@@ -77,7 +83,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
-        public List<string> SecurityGroupIds { get; set; }
+        public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
+        public class DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds : TeaModel {
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupId { get; set; }
+        };
 
         [NameInMap("ServiceID")]
         [Validation(Required=false)]
@@ -93,13 +104,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
-        public List<DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets> Ipv6Sets { get; set; }
+        public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets Ipv6Sets { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets : TeaModel {
-            [NameInMap("Ipv6Address")]
+            [NameInMap("Ipv6Set")]
             [Validation(Required=false)]
-            public string Ipv6Address { get; set; }
-
-        }
+            public List<DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set> Ipv6Set { get; set; }
+            public class DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set : TeaModel {
+                public string Ipv6Address { get; set; }
+            }
+        };
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -127,43 +140,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<DescribeNetworkInterfaceAttributeResponseBodyTags> Tags { get; set; }
+        public DescribeNetworkInterfaceAttributeResponseBodyTags Tags { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyTags : TeaModel {
-            [NameInMap("TagValue")]
+            [NameInMap("Tag")]
             [Validation(Required=false)]
-            public string TagValue { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
+            public List<DescribeNetworkInterfaceAttributeResponseBodyTagsTag> Tag { get; set; }
+            public class DescribeNetworkInterfaceAttributeResponseBodyTagsTag : TeaModel {
+                public string TagValue { get; set; }
+                public string TagKey { get; set; }
+            }
+        };
 
         [NameInMap("PrivateIpSets")]
         [Validation(Required=false)]
-        public List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets> PrivateIpSets { get; set; }
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets PrivateIpSets { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets : TeaModel {
-            [NameInMap("AssociatedPublicIp")]
+            [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
-            public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsAssociatedPublicIp AssociatedPublicIp { get; set; }
-            public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsAssociatedPublicIp : TeaModel {
+            public List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
+            public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
                 [NameInMap("AllocationId")]
                 [Validation(Required=false)]
                 public string AllocationId { get; set; }
+
                 [NameInMap("PublicIpAddress")]
                 [Validation(Required=false)]
                 public string PublicIpAddress { get; set; }
-            };
 
-            [NameInMap("Primary")]
-            [Validation(Required=false)]
-            public bool? Primary { get; set; }
-
-            [NameInMap("PrivateIpAddress")]
-            [Validation(Required=false)]
-            public string PrivateIpAddress { get; set; }
-
-        }
+            }
+        };
 
     }
 

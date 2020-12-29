@@ -27,53 +27,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Commands")]
         [Validation(Required=false)]
-        public List<DescribeCommandsResponseBodyCommands> Commands { get; set; }
+        public DescribeCommandsResponseBodyCommands Commands { get; set; }
         public class DescribeCommandsResponseBodyCommands : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("Command")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
+            public List<DescribeCommandsResponseBodyCommandsCommand> Command { get; set; }
+            public class DescribeCommandsResponseBodyCommandsCommand : TeaModel {
+                public string CreationTime { get; set; }
+                public long? Timeout { get; set; }
+                public string Type { get; set; }
+                public DescribeCommandsResponseBodyCommandsCommandParameterNames ParameterNames { get; set; }
+                public class DescribeCommandsResponseBodyCommandsCommandParameterNames : TeaModel {
+                    [NameInMap("ParameterName")]
+                    [Validation(Required=false)]
+                    public List<string> ParameterName { get; set; }
 
-            [NameInMap("Timeout")]
-            [Validation(Required=false)]
-            public long? Timeout { get; set; }
-
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("ParameterNames")]
-            [Validation(Required=false)]
-            public List<string> ParameterNames { get; set; }
-
-            [NameInMap("InvokeTimes")]
-            [Validation(Required=false)]
-            public int? InvokeTimes { get; set; }
-
-            [NameInMap("WorkingDir")]
-            [Validation(Required=false)]
-            public string WorkingDir { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("CommandContent")]
-            [Validation(Required=false)]
-            public string CommandContent { get; set; }
-
-            [NameInMap("CommandId")]
-            [Validation(Required=false)]
-            public string CommandId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("EnableParameter")]
-            [Validation(Required=false)]
-            public bool? EnableParameter { get; set; }
-
-        }
+                }
+                public int? InvokeTimes { get; set; }
+                public string WorkingDir { get; set; }
+                public string Description { get; set; }
+                public string CommandContent { get; set; }
+                public string CommandId { get; set; }
+                public string Name { get; set; }
+                public bool? EnableParameter { get; set; }
+            }
+        };
 
     }
 

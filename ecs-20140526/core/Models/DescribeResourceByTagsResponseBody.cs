@@ -27,21 +27,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Resources")]
         [Validation(Required=false)]
-        public List<DescribeResourceByTagsResponseBodyResources> Resources { get; set; }
+        public DescribeResourceByTagsResponseBodyResources Resources { get; set; }
         public class DescribeResourceByTagsResponseBodyResources : TeaModel {
-            [NameInMap("ResourceType")]
+            [NameInMap("Resource")]
             [Validation(Required=false)]
-            public string ResourceType { get; set; }
-
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+            public List<DescribeResourceByTagsResponseBodyResourcesResource> Resource { get; set; }
+            public class DescribeResourceByTagsResponseBodyResourcesResource : TeaModel {
+                public string ResourceType { get; set; }
+                public string ResourceId { get; set; }
+                public string RegionId { get; set; }
+            }
+        };
 
     }
 

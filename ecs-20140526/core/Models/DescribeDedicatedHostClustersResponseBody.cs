@@ -11,77 +11,77 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeDedicatedHostClustersResponseBody : TeaModel {
         [NameInMap("DedicatedHostClusters")]
         [Validation(Required=false)]
-        public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters> DedicatedHostClusters { get; set; }
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters DedicatedHostClusters { get; set; }
         public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters : TeaModel {
-            [NameInMap("Description")]
+            [NameInMap("DedicatedHostCluster")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster> DedicatedHostCluster { get; set; }
+            public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster : TeaModel {
+                public string Description { get; set; }
+                public string DedicatedHostClusterId { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string ZoneId { get; set; }
+                public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags Tags { get; set; }
+                public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag> Tag { get; set; }
+                    public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag : TeaModel {
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
 
-            [NameInMap("DedicatedHostClusterId")]
-            [Validation(Required=false)]
-            public string DedicatedHostClusterId { get; set; }
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
 
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+                    }
 
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersTags> Tags { get; set; }
-            public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersTags : TeaModel {
-                [NameInMap("TagValue")]
-                [Validation(Required=false)]
-                public string TagValue { get; set; }
-
-                [NameInMap("TagKey")]
-                [Validation(Required=false)]
-                public string TagKey { get; set; }
-
-            }
-
-            [NameInMap("DedicatedHostClusterCapacity")]
-            [Validation(Required=false)]
-            public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterCapacity DedicatedHostClusterCapacity { get; set; }
-            public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterCapacity : TeaModel {
-                [NameInMap("LocalStorageCapacities")]
-                [Validation(Required=false)]
-                public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterCapacityLocalStorageCapacities> LocalStorageCapacities { get; set; }
-                public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterCapacityLocalStorageCapacities : TeaModel {
-                    public string DataDiskCategory { get; set; }
-                    public int? AvailableDisk { get; set; }
-                    public int? TotalDisk { get; set; }
                 }
-                [NameInMap("AvailableMemory")]
-                [Validation(Required=false)]
-                public int? AvailableMemory { get; set; }
-                [NameInMap("TotalMemory")]
-                [Validation(Required=false)]
-                public int? TotalMemory { get; set; }
-                [NameInMap("TotalVcpus")]
-                [Validation(Required=false)]
-                public int? TotalVcpus { get; set; }
-                [NameInMap("AvailableVcpus")]
-                [Validation(Required=false)]
-                public int? AvailableVcpus { get; set; }
-            };
+                public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity DedicatedHostClusterCapacity { get; set; }
+                public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity : TeaModel {
+                    [NameInMap("LocalStorageCapacities")]
+                    [Validation(Required=false)]
+                    public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities LocalStorageCapacities { get; set; }
+                    public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities : TeaModel {
+                        [NameInMap("LocalStorageCapacity")]
+                        [Validation(Required=false)]
+                        public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity> LocalStorageCapacity { get; set; }
+                        public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacitiesLocalStorageCapacity : TeaModel {
+                            public string DataDiskCategory { get; set; }
+                            public int? AvailableDisk { get; set; }
+                            public int? TotalDisk { get; set; }
+                        }
+                    };
 
-            [NameInMap("DedicatedHostIds")]
-            [Validation(Required=false)]
-            public List<string> DedicatedHostIds { get; set; }
+                    [NameInMap("AvailableMemory")]
+                    [Validation(Required=false)]
+                    public int? AvailableMemory { get; set; }
 
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
+                    [NameInMap("TotalMemory")]
+                    [Validation(Required=false)]
+                    public int? TotalMemory { get; set; }
 
-            [NameInMap("DedicatedHostClusterName")]
-            [Validation(Required=false)]
-            public string DedicatedHostClusterName { get; set; }
+                    [NameInMap("TotalVcpus")]
+                    [Validation(Required=false)]
+                    public int? TotalVcpus { get; set; }
 
-        }
+                    [NameInMap("AvailableVcpus")]
+                    [Validation(Required=false)]
+                    public int? AvailableVcpus { get; set; }
+
+                }
+                public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds DedicatedHostIds { get; set; }
+                public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds : TeaModel {
+                    [NameInMap("DedicatedHostId")]
+                    [Validation(Required=false)]
+                    public List<string> DedicatedHostId { get; set; }
+
+                }
+                public string RegionId { get; set; }
+                public string DedicatedHostClusterName { get; set; }
+            }
+        };
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

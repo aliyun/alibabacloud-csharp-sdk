@@ -15,7 +15,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("DedicatedHostIdSets")]
         [Validation(Required=false)]
-        public List<string> DedicatedHostIdSets { get; set; }
+        public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets DedicatedHostIdSets { get; set; }
+        public class AllocateDedicatedHostsResponseBodyDedicatedHostIdSets : TeaModel {
+            [NameInMap("DedicatedHostId")]
+            [Validation(Required=false)]
+            public List<string> DedicatedHostId { get; set; }
+        };
 
     }
 

@@ -55,7 +55,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
-        public List<string> SecurityGroupIds { get; set; }
+        public CreateNetworkInterfaceResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
+        public class CreateNetworkInterfaceResponseBodySecurityGroupIds : TeaModel {
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupId { get; set; }
+        };
 
         [NameInMap("ServiceID")]
         [Validation(Required=false)]
@@ -75,31 +80,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<CreateNetworkInterfaceResponseBodyTags> Tags { get; set; }
+        public CreateNetworkInterfaceResponseBodyTags Tags { get; set; }
         public class CreateNetworkInterfaceResponseBodyTags : TeaModel {
-            [NameInMap("TagValue")]
+            [NameInMap("Tag")]
             [Validation(Required=false)]
-            public string TagValue { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
+            public List<CreateNetworkInterfaceResponseBodyTagsTag> Tag { get; set; }
+            public class CreateNetworkInterfaceResponseBodyTagsTag : TeaModel {
+                public string TagValue { get; set; }
+                public string TagKey { get; set; }
+            }
+        };
 
         [NameInMap("PrivateIpSets")]
         [Validation(Required=false)]
-        public List<CreateNetworkInterfaceResponseBodyPrivateIpSets> PrivateIpSets { get; set; }
+        public CreateNetworkInterfaceResponseBodyPrivateIpSets PrivateIpSets { get; set; }
         public class CreateNetworkInterfaceResponseBodyPrivateIpSets : TeaModel {
-            [NameInMap("Primary")]
+            [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
-            public bool? Primary { get; set; }
-
-            [NameInMap("PrivateIpAddress")]
-            [Validation(Required=false)]
-            public string PrivateIpAddress { get; set; }
-
-        }
+            public List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
+            public class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
+                public bool? Primary { get; set; }
+                public string PrivateIpAddress { get; set; }
+            }
+        };
 
     }
 

@@ -35,23 +35,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("ShareGroups")]
         [Validation(Required=false)]
-        public List<DescribeImageSharePermissionResponseBodyShareGroups> ShareGroups { get; set; }
+        public DescribeImageSharePermissionResponseBodyShareGroups ShareGroups { get; set; }
         public class DescribeImageSharePermissionResponseBodyShareGroups : TeaModel {
-            [NameInMap("Group")]
+            [NameInMap("ShareGroup")]
             [Validation(Required=false)]
-            public string Group { get; set; }
-
-        }
+            public List<DescribeImageSharePermissionResponseBodyShareGroupsShareGroup> ShareGroup { get; set; }
+            public class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup : TeaModel {
+                public string Group { get; set; }
+            }
+        };
 
         [NameInMap("Accounts")]
         [Validation(Required=false)]
-        public List<DescribeImageSharePermissionResponseBodyAccounts> Accounts { get; set; }
+        public DescribeImageSharePermissionResponseBodyAccounts Accounts { get; set; }
         public class DescribeImageSharePermissionResponseBodyAccounts : TeaModel {
-            [NameInMap("AliyunId")]
+            [NameInMap("Account")]
             [Validation(Required=false)]
-            public string AliyunId { get; set; }
-
-        }
+            public List<DescribeImageSharePermissionResponseBodyAccountsAccount> Account { get; set; }
+            public class DescribeImageSharePermissionResponseBodyAccountsAccount : TeaModel {
+                public string AliyunId { get; set; }
+            }
+        };
 
     }
 

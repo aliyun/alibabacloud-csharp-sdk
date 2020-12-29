@@ -27,53 +27,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
-        public List<DescribeVSwitchesResponseBodyVSwitches> VSwitches { get; set; }
+        public DescribeVSwitchesResponseBodyVSwitches VSwitches { get; set; }
         public class DescribeVSwitchesResponseBodyVSwitches : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("VSwitch")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("IsDefault")]
-            [Validation(Required=false)]
-            public bool? IsDefault { get; set; }
-
-            [NameInMap("VSwitchId")]
-            [Validation(Required=false)]
-            public string VSwitchId { get; set; }
-
-            [NameInMap("CidrBlock")]
-            [Validation(Required=false)]
-            public string CidrBlock { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("AvailableIpAddressCount")]
-            [Validation(Required=false)]
-            public long? AvailableIpAddressCount { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("VSwitchName")]
-            [Validation(Required=false)]
-            public string VSwitchName { get; set; }
-
-        }
+            public List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> VSwitch { get; set; }
+            public class DescribeVSwitchesResponseBodyVSwitchesVSwitch : TeaModel {
+                public string CreationTime { get; set; }
+                public string Status { get; set; }
+                public string VpcId { get; set; }
+                public bool? IsDefault { get; set; }
+                public string VSwitchId { get; set; }
+                public string CidrBlock { get; set; }
+                public string Description { get; set; }
+                public long? AvailableIpAddressCount { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string ZoneId { get; set; }
+                public string VSwitchName { get; set; }
+            }
+        };
 
     }
 

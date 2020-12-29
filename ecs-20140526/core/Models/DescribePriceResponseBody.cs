@@ -39,39 +39,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 [NameInMap("DetailInfos")]
                 [Validation(Required=false)]
-                public List<DescribePriceResponseBodyPriceInfoPriceDetailInfos> DetailInfos { get; set; }
+                public DescribePriceResponseBodyPriceInfoPriceDetailInfos DetailInfos { get; set; }
                 public class DescribePriceResponseBodyPriceInfoPriceDetailInfos : TeaModel {
-                    [NameInMap("Resource")]
+                    [NameInMap("ResourcePriceModel")]
                     [Validation(Required=false)]
-                    public string Resource { get; set; }
+                    public List<DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> ResourcePriceModel { get; set; }
+                    public class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel : TeaModel {
+                        public string Resource { get; set; }
+                        public float? DiscountPrice { get; set; }
+                        public float? TradePrice { get; set; }
+                        public float? OriginalPrice { get; set; }
+                        public DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules SubRules { get; set; }
+                        public class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules : TeaModel {
+                            [NameInMap("Rule")]
+                            [Validation(Required=false)]
+                            public List<DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> Rule { get; set; }
+                            public class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule : TeaModel {
+                                [NameInMap("Description")]
+                                [Validation(Required=false)]
+                                public string Description { get; set; }
 
-                    [NameInMap("DiscountPrice")]
-                    [Validation(Required=false)]
-                    public float? DiscountPrice { get; set; }
+                                [NameInMap("RuleId")]
+                                [Validation(Required=false)]
+                                public long? RuleId { get; set; }
 
-                    [NameInMap("TradePrice")]
-                    [Validation(Required=false)]
-                    public float? TradePrice { get; set; }
+                            }
 
-                    [NameInMap("OriginalPrice")]
-                    [Validation(Required=false)]
-                    public float? OriginalPrice { get; set; }
-
-                    [NameInMap("SubRules")]
-                    [Validation(Required=false)]
-                    public List<DescribePriceResponseBodyPriceInfoPriceDetailInfosSubRules> SubRules { get; set; }
-                    public class DescribePriceResponseBodyPriceInfoPriceDetailInfosSubRules : TeaModel {
-                        [NameInMap("Description")]
-                        [Validation(Required=false)]
-                        public string Description { get; set; }
-
-                        [NameInMap("RuleId")]
-                        [Validation(Required=false)]
-                        public long? RuleId { get; set; }
-
+                        }
                     }
-
-                }
+                };
 
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
@@ -80,10 +76,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
             [NameInMap("Rules")]
             [Validation(Required=false)]
-            public List<DescribePriceResponseBodyPriceInfoRules> Rules { get; set; }
+            public DescribePriceResponseBodyPriceInfoRules Rules { get; set; }
             public class DescribePriceResponseBodyPriceInfoRules : TeaModel {
-                public string Description { get; set; }
-                public long? RuleId { get; set; }
+                [NameInMap("Rule")]
+                [Validation(Required=false)]
+                public List<DescribePriceResponseBodyPriceInfoRulesRule> Rule { get; set; }
+                public class DescribePriceResponseBodyPriceInfoRulesRule : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("RuleId")]
+                    [Validation(Required=false)]
+                    public long? RuleId { get; set; }
+
+                }
+
             }
         };
 

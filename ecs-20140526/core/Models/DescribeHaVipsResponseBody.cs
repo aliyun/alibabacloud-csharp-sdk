@@ -15,53 +15,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("HaVips")]
         [Validation(Required=false)]
-        public List<DescribeHaVipsResponseBodyHaVips> HaVips { get; set; }
+        public DescribeHaVipsResponseBodyHaVips HaVips { get; set; }
         public class DescribeHaVipsResponseBodyHaVips : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("HaVip")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public List<DescribeHaVipsResponseBodyHaVipsHaVip> HaVip { get; set; }
+            public class DescribeHaVipsResponseBodyHaVipsHaVip : TeaModel {
+                public string Status { get; set; }
+                public string VpcId { get; set; }
+                public string VSwitchId { get; set; }
+                public string IpAddress { get; set; }
+                public string Description { get; set; }
+                public string HaVipId { get; set; }
+                public string CreateTime { get; set; }
+                public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances AssociatedInstances { get; set; }
+                public class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances : TeaModel {
+                    [NameInMap("associatedInstance")]
+                    [Validation(Required=false)]
+                    public List<string> AssociatedInstance { get; set; }
 
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
+                }
+                public string MasterInstanceId { get; set; }
+                public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses AssociatedEipAddresses { get; set; }
+                public class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses : TeaModel {
+                    [NameInMap("associatedEipAddresse")]
+                    [Validation(Required=false)]
+                    public List<string> AssociatedEipAddresse { get; set; }
 
-            [NameInMap("VSwitchId")]
-            [Validation(Required=false)]
-            public string VSwitchId { get; set; }
-
-            [NameInMap("IpAddress")]
-            [Validation(Required=false)]
-            public string IpAddress { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("HaVipId")]
-            [Validation(Required=false)]
-            public string HaVipId { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("AssociatedInstances")]
-            [Validation(Required=false)]
-            public List<string> AssociatedInstances { get; set; }
-
-            [NameInMap("MasterInstanceId")]
-            [Validation(Required=false)]
-            public string MasterInstanceId { get; set; }
-
-            [NameInMap("AssociatedEipAddresses")]
-            [Validation(Required=false)]
-            public List<string> AssociatedEipAddresses { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+                }
+                public string RegionId { get; set; }
+            }
+        };
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]

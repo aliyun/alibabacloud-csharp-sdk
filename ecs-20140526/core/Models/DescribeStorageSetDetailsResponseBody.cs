@@ -27,41 +27,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Disks")]
         [Validation(Required=false)]
-        public List<DescribeStorageSetDetailsResponseBodyDisks> Disks { get; set; }
+        public DescribeStorageSetDetailsResponseBodyDisks Disks { get; set; }
         public class DescribeStorageSetDetailsResponseBodyDisks : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("Disk")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("DiskName")]
-            [Validation(Required=false)]
-            public string DiskName { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("StorageSetId")]
-            [Validation(Required=false)]
-            public string StorageSetId { get; set; }
-
-            [NameInMap("DiskId")]
-            [Validation(Required=false)]
-            public string DiskId { get; set; }
-
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("StorageSetPartitionNumber")]
-            [Validation(Required=false)]
-            public int? StorageSetPartitionNumber { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+            public List<DescribeStorageSetDetailsResponseBodyDisksDisk> Disk { get; set; }
+            public class DescribeStorageSetDetailsResponseBodyDisksDisk : TeaModel {
+                public string CreationTime { get; set; }
+                public string DiskName { get; set; }
+                public string ZoneId { get; set; }
+                public string StorageSetId { get; set; }
+                public string DiskId { get; set; }
+                public string Category { get; set; }
+                public int? StorageSetPartitionNumber { get; set; }
+                public string RegionId { get; set; }
+            }
+        };
 
     }
 

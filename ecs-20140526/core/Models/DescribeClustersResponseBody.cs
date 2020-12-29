@@ -15,13 +15,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Clusters")]
         [Validation(Required=false)]
-        public List<DescribeClustersResponseBodyClusters> Clusters { get; set; }
+        public DescribeClustersResponseBodyClusters Clusters { get; set; }
         public class DescribeClustersResponseBodyClusters : TeaModel {
-            [NameInMap("ClusterId")]
+            [NameInMap("Cluster")]
             [Validation(Required=false)]
-            public string ClusterId { get; set; }
-
-        }
+            public List<DescribeClustersResponseBodyClustersCluster> Cluster { get; set; }
+            public class DescribeClustersResponseBodyClustersCluster : TeaModel {
+                public string ClusterId { get; set; }
+            }
+        };
 
     }
 

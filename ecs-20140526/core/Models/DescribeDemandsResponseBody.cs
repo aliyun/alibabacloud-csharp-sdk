@@ -27,103 +27,57 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Demands")]
         [Validation(Required=false)]
-        public List<DescribeDemandsResponseBodyDemands> Demands { get; set; }
+        public DescribeDemandsResponseBodyDemands Demands { get; set; }
         public class DescribeDemandsResponseBodyDemands : TeaModel {
-            [NameInMap("Comment")]
+            [NameInMap("Demand")]
             [Validation(Required=false)]
-            public string Comment { get; set; }
+            public List<DescribeDemandsResponseBodyDemandsDemand> Demand { get; set; }
+            public class DescribeDemandsResponseBodyDemandsDemand : TeaModel {
+                public string Comment { get; set; }
+                public string DemandId { get; set; }
+                public string DemandDescription { get; set; }
+                public string DemandTime { get; set; }
+                public DescribeDemandsResponseBodyDemandsDemandSupplyInfos SupplyInfos { get; set; }
+                public class DescribeDemandsResponseBodyDemandsDemandSupplyInfos : TeaModel {
+                    [NameInMap("SupplyInfo")]
+                    [Validation(Required=false)]
+                    public List<DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo> SupplyInfo { get; set; }
+                    public class DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo : TeaModel {
+                        [NameInMap("Amount")]
+                        [Validation(Required=false)]
+                        public int? Amount { get; set; }
 
-            [NameInMap("DemandId")]
-            [Validation(Required=false)]
-            public string DemandId { get; set; }
+                        [NameInMap("SupplyEndTime")]
+                        [Validation(Required=false)]
+                        public string SupplyEndTime { get; set; }
 
-            [NameInMap("DemandDescription")]
-            [Validation(Required=false)]
-            public string DemandDescription { get; set; }
+                        [NameInMap("SupplyStatus")]
+                        [Validation(Required=false)]
+                        public string SupplyStatus { get; set; }
 
-            [NameInMap("DemandTime")]
-            [Validation(Required=false)]
-            public string DemandTime { get; set; }
+                        [NameInMap("SupplyStartTime")]
+                        [Validation(Required=false)]
+                        public string SupplyStartTime { get; set; }
 
-            [NameInMap("SupplyInfos")]
-            [Validation(Required=false)]
-            public List<DescribeDemandsResponseBodyDemandsSupplyInfos> SupplyInfos { get; set; }
-            public class DescribeDemandsResponseBodyDemandsSupplyInfos : TeaModel {
-                [NameInMap("Amount")]
-                [Validation(Required=false)]
-                public int? Amount { get; set; }
+                    }
 
-                [NameInMap("SupplyEndTime")]
-                [Validation(Required=false)]
-                public string SupplyEndTime { get; set; }
-
-                [NameInMap("SupplyStatus")]
-                [Validation(Required=false)]
-                public string SupplyStatus { get; set; }
-
-                [NameInMap("SupplyStartTime")]
-                [Validation(Required=false)]
-                public string SupplyStartTime { get; set; }
-
+                }
+                public string DemandName { get; set; }
+                public string InstanceType { get; set; }
+                public string InstanceChargeType { get; set; }
+                public int? Period { get; set; }
+                public string EndTime { get; set; }
+                public int? AvailableAmount { get; set; }
+                public string StartTime { get; set; }
+                public string PeriodUnit { get; set; }
+                public string ZoneId { get; set; }
+                public int? UsedAmount { get; set; }
+                public int? TotalAmount { get; set; }
+                public int? DeliveringAmount { get; set; }
+                public string InstanceTypeFamily { get; set; }
+                public string DemandStatus { get; set; }
             }
-
-            [NameInMap("DemandName")]
-            [Validation(Required=false)]
-            public string DemandName { get; set; }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-            [NameInMap("InstanceChargeType")]
-            [Validation(Required=false)]
-            public string InstanceChargeType { get; set; }
-
-            [NameInMap("Period")]
-            [Validation(Required=false)]
-            public int? Period { get; set; }
-
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public string EndTime { get; set; }
-
-            [NameInMap("AvailableAmount")]
-            [Validation(Required=false)]
-            public int? AvailableAmount { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("PeriodUnit")]
-            [Validation(Required=false)]
-            public string PeriodUnit { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("UsedAmount")]
-            [Validation(Required=false)]
-            public int? UsedAmount { get; set; }
-
-            [NameInMap("TotalAmount")]
-            [Validation(Required=false)]
-            public int? TotalAmount { get; set; }
-
-            [NameInMap("DeliveringAmount")]
-            [Validation(Required=false)]
-            public int? DeliveringAmount { get; set; }
-
-            [NameInMap("InstanceTypeFamily")]
-            [Validation(Required=false)]
-            public string InstanceTypeFamily { get; set; }
-
-            [NameInMap("DemandStatus")]
-            [Validation(Required=false)]
-            public string DemandStatus { get; set; }
-
-        }
+        };
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -27,39 +27,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("DetachInstanceRamRoleResults")]
         [Validation(Required=false)]
-        public List<DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults> DetachInstanceRamRoleResults { get; set; }
+        public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults DetachInstanceRamRoleResults { get; set; }
         public class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults : TeaModel {
-            [NameInMap("InstanceRamRoleSets")]
+            [NameInMap("DetachInstanceRamRoleResult")]
             [Validation(Required=false)]
-            public List<DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsInstanceRamRoleSets> InstanceRamRoleSets { get; set; }
-            public class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsInstanceRamRoleSets : TeaModel {
-                [NameInMap("RamRoleName")]
+            public List<DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult> DetachInstanceRamRoleResult { get; set; }
+            public class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult : TeaModel {
+                [NameInMap("InstanceRamRoleSet")]
                 [Validation(Required=false)]
-                public string RamRoleName { get; set; }
+                public List<DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSet> InstanceRamRoleSet { get; set; }
+                public class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSet : TeaModel {
+                    [NameInMap("RamRoleName")]
+                    [Validation(Required=false)]
+                    public string RamRoleName { get; set; }
 
-                [NameInMap("InstanceId")]
-                [Validation(Required=false)]
-                public string InstanceId { get; set; }
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                }
 
             }
-
-            [NameInMap("Success")]
-            [Validation(Required=false)]
-            public bool? Success { get; set; }
-
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+        };
 
     }
 

@@ -23,25 +23,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Results")]
         [Validation(Required=false)]
-        public List<DetachKeyPairResponseBodyResults> Results { get; set; }
+        public DetachKeyPairResponseBodyResults Results { get; set; }
         public class DetachKeyPairResponseBodyResults : TeaModel {
-            [NameInMap("Success")]
+            [NameInMap("Result")]
             [Validation(Required=false)]
-            public string Success { get; set; }
-
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<DetachKeyPairResponseBodyResultsResult> Result { get; set; }
+            public class DetachKeyPairResponseBodyResultsResult : TeaModel {
+                public string Success { get; set; }
+                public string Code { get; set; }
+                public string Message { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
         [NameInMap("FailCount")]
         [Validation(Required=false)]

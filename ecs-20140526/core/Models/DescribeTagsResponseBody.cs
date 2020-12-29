@@ -27,59 +27,62 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<DescribeTagsResponseBodyTags> Tags { get; set; }
+        public DescribeTagsResponseBodyTags Tags { get; set; }
         public class DescribeTagsResponseBodyTags : TeaModel {
-            [NameInMap("ResourceTypeCount")]
+            [NameInMap("Tag")]
             [Validation(Required=false)]
-            public DescribeTagsResponseBodyTagsResourceTypeCount ResourceTypeCount { get; set; }
-            public class DescribeTagsResponseBodyTagsResourceTypeCount : TeaModel {
+            public List<DescribeTagsResponseBodyTagsTag> Tag { get; set; }
+            public class DescribeTagsResponseBodyTagsTag : TeaModel {
                 [NameInMap("Instance")]
                 [Validation(Required=false)]
                 public int? Instance { get; set; }
+
                 [NameInMap("Image")]
                 [Validation(Required=false)]
                 public int? Image { get; set; }
+
                 [NameInMap("SnapshotPolicy")]
                 [Validation(Required=false)]
                 public int? SnapshotPolicy { get; set; }
+
                 [NameInMap("Ddh")]
                 [Validation(Required=false)]
                 public int? Ddh { get; set; }
+
                 [NameInMap("Securitygroup")]
                 [Validation(Required=false)]
                 public int? Securitygroup { get; set; }
+
                 [NameInMap("Snapshot")]
                 [Validation(Required=false)]
                 public int? Snapshot { get; set; }
+
                 [NameInMap("ReservedInstance")]
                 [Validation(Required=false)]
                 public int? ReservedInstance { get; set; }
+
                 [NameInMap("Eni")]
                 [Validation(Required=false)]
                 public int? Eni { get; set; }
+
                 [NameInMap("LaunchTemplate")]
                 [Validation(Required=false)]
                 public int? LaunchTemplate { get; set; }
+
                 [NameInMap("KeyPair")]
                 [Validation(Required=false)]
                 public int? KeyPair { get; set; }
+
                 [NameInMap("Disk")]
                 [Validation(Required=false)]
                 public int? Disk { get; set; }
+
                 [NameInMap("Volume")]
                 [Validation(Required=false)]
                 public int? Volume { get; set; }
-            };
 
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
+            }
+        };
 
     }
 

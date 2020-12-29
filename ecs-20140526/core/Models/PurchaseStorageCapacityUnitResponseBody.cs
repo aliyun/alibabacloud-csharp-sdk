@@ -11,7 +11,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class PurchaseStorageCapacityUnitResponseBody : TeaModel {
         [NameInMap("StorageCapacityUnitIds")]
         [Validation(Required=false)]
-        public List<string> StorageCapacityUnitIds { get; set; }
+        public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds StorageCapacityUnitIds { get; set; }
+        public class PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds : TeaModel {
+            [NameInMap("StorageCapacityUnitId")]
+            [Validation(Required=false)]
+            public List<string> StorageCapacityUnitId { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

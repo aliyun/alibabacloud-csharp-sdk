@@ -27,42 +27,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("MaintenanceAttributes")]
         [Validation(Required=false)]
-        public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes> MaintenanceAttributes { get; set; }
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes MaintenanceAttributes { get; set; }
         public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes : TeaModel {
-            [NameInMap("MaintenanceWindows")]
+            [NameInMap("MaintenanceAttribute")]
             [Validation(Required=false)]
-            public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows> MaintenanceWindows { get; set; }
-            public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows : TeaModel {
-                [NameInMap("EndTime")]
+            public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> MaintenanceAttribute { get; set; }
+            public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute : TeaModel {
+                [NameInMap("MaintenanceWindow")]
                 [Validation(Required=false)]
-                public string EndTime { get; set; }
+                public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindow> MaintenanceWindow { get; set; }
+                public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindow : TeaModel {
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public string EndTime { get; set; }
 
-                [NameInMap("StartTime")]
-                [Validation(Required=false)]
-                public string StartTime { get; set; }
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
+                }
 
             }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("ActionOnMaintenance")]
-            [Validation(Required=false)]
-            public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance ActionOnMaintenance { get; set; }
-            public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance : TeaModel {
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-                [NameInMap("SupportedValues")]
-                [Validation(Required=false)]
-                public List<string> SupportedValues { get; set; }
-                [NameInMap("DefaultValue")]
-                [Validation(Required=false)]
-                public string DefaultValue { get; set; }
-            };
-
-        }
+        };
 
     }
 

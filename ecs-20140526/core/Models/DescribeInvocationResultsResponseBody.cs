@@ -25,23 +25,74 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? PageNumber { get; set; }
             [NameInMap("InvocationResults")]
             [Validation(Required=false)]
-            public List<DescribeInvocationResultsResponseBodyInvocationInvocationResults> InvocationResults { get; set; }
+            public DescribeInvocationResultsResponseBodyInvocationInvocationResults InvocationResults { get; set; }
             public class DescribeInvocationResultsResponseBodyInvocationInvocationResults : TeaModel {
-                public string InvocationStatus { get; set; }
-                public int? Repeats { get; set; }
-                public string Output { get; set; }
-                public string InstanceId { get; set; }
-                public string CommandId { get; set; }
-                public int? Dropped { get; set; }
-                public string StopTime { get; set; }
-                public long? ExitCode { get; set; }
-                public string StartTime { get; set; }
-                public string ErrorInfo { get; set; }
-                public string ErrorCode { get; set; }
-                public string FinishedTime { get; set; }
-                public string InvokeId { get; set; }
-                public string InvokeRecordStatus { get; set; }
-                public string Username { get; set; }
+                [NameInMap("InvocationResult")]
+                [Validation(Required=false)]
+                public List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult> InvocationResult { get; set; }
+                public class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult : TeaModel {
+                    [NameInMap("InvocationStatus")]
+                    [Validation(Required=false)]
+                    public string InvocationStatus { get; set; }
+
+                    [NameInMap("Repeats")]
+                    [Validation(Required=false)]
+                    public int? Repeats { get; set; }
+
+                    [NameInMap("Output")]
+                    [Validation(Required=false)]
+                    public string Output { get; set; }
+
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    [NameInMap("CommandId")]
+                    [Validation(Required=false)]
+                    public string CommandId { get; set; }
+
+                    [NameInMap("Dropped")]
+                    [Validation(Required=false)]
+                    public int? Dropped { get; set; }
+
+                    [NameInMap("StopTime")]
+                    [Validation(Required=false)]
+                    public string StopTime { get; set; }
+
+                    [NameInMap("ExitCode")]
+                    [Validation(Required=false)]
+                    public long? ExitCode { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
+                    [NameInMap("ErrorInfo")]
+                    [Validation(Required=false)]
+                    public string ErrorInfo { get; set; }
+
+                    [NameInMap("ErrorCode")]
+                    [Validation(Required=false)]
+                    public string ErrorCode { get; set; }
+
+                    [NameInMap("FinishedTime")]
+                    [Validation(Required=false)]
+                    public string FinishedTime { get; set; }
+
+                    [NameInMap("InvokeId")]
+                    [Validation(Required=false)]
+                    public string InvokeId { get; set; }
+
+                    [NameInMap("InvokeRecordStatus")]
+                    [Validation(Required=false)]
+                    public string InvokeRecordStatus { get; set; }
+
+                    [NameInMap("Username")]
+                    [Validation(Required=false)]
+                    public string Username { get; set; }
+
+                }
+
             }
             [NameInMap("TotalCount")]
             [Validation(Required=false)]

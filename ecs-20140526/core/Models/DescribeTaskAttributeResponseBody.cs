@@ -47,35 +47,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
-        public List<DescribeTaskAttributeResponseBodyOperationProgressSet> OperationProgressSet { get; set; }
+        public DescribeTaskAttributeResponseBodyOperationProgressSet OperationProgressSet { get; set; }
         public class DescribeTaskAttributeResponseBodyOperationProgressSet : TeaModel {
-            [NameInMap("ErrorCode")]
+            [NameInMap("OperationProgress")]
             [Validation(Required=false)]
-            public string ErrorCode { get; set; }
+            public List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
+            public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress : TeaModel {
+                public string ErrorCode { get; set; }
+                public string ErrorMsg { get; set; }
+                public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet RelatedItemSet { get; set; }
+                public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet : TeaModel {
+                    [NameInMap("RelatedItem")]
+                    [Validation(Required=false)]
+                    public List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> RelatedItem { get; set; }
+                    public class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem : TeaModel {
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-            [NameInMap("ErrorMsg")]
-            [Validation(Required=false)]
-            public string ErrorMsg { get; set; }
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
 
-            [NameInMap("RelatedItemSet")]
-            [Validation(Required=false)]
-            public List<DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet> RelatedItemSet { get; set; }
-            public class DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet : TeaModel {
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
+                    }
 
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
+                }
+                public string OperationStatus { get; set; }
             }
-
-            [NameInMap("OperationStatus")]
-            [Validation(Required=false)]
-            public string OperationStatus { get; set; }
-
-        }
+        };
 
         [NameInMap("CreationTime")]
         [Validation(Required=false)]

@@ -15,35 +15,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("AvailableSpotZones")]
         [Validation(Required=false)]
-        public List<DescribeSpotAdviceResponseBodyAvailableSpotZones> AvailableSpotZones { get; set; }
+        public DescribeSpotAdviceResponseBodyAvailableSpotZones AvailableSpotZones { get; set; }
         public class DescribeSpotAdviceResponseBodyAvailableSpotZones : TeaModel {
-            [NameInMap("AvailableSpotResources")]
+            [NameInMap("AvailableSpotZone")]
             [Validation(Required=false)]
-            public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources> AvailableSpotResources { get; set; }
-            public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources : TeaModel {
-                [NameInMap("InterruptRateDesc")]
+            public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone> AvailableSpotZone { get; set; }
+            public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone : TeaModel {
+                [NameInMap("AvailableSpotResource")]
                 [Validation(Required=false)]
-                public string InterruptRateDesc { get; set; }
+                public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResource> AvailableSpotResource { get; set; }
+                public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResource : TeaModel {
+                    [NameInMap("InterruptRateDesc")]
+                    [Validation(Required=false)]
+                    public string InterruptRateDesc { get; set; }
 
-                [NameInMap("AverageSpotDiscount")]
-                [Validation(Required=false)]
-                public int? AverageSpotDiscount { get; set; }
+                    [NameInMap("AverageSpotDiscount")]
+                    [Validation(Required=false)]
+                    public int? AverageSpotDiscount { get; set; }
 
-                [NameInMap("InstanceType")]
-                [Validation(Required=false)]
-                public string InstanceType { get; set; }
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
 
-                [NameInMap("InterruptionRate")]
-                [Validation(Required=false)]
-                public float? InterruptionRate { get; set; }
+                    [NameInMap("InterruptionRate")]
+                    [Validation(Required=false)]
+                    public float? InterruptionRate { get; set; }
+
+                }
 
             }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-        }
+        };
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

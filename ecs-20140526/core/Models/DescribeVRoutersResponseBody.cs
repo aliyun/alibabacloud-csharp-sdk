@@ -11,37 +11,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeVRoutersResponseBody : TeaModel {
         [NameInMap("VRouters")]
         [Validation(Required=false)]
-        public List<DescribeVRoutersResponseBodyVRouters> VRouters { get; set; }
+        public DescribeVRoutersResponseBodyVRouters VRouters { get; set; }
         public class DescribeVRoutersResponseBodyVRouters : TeaModel {
-            [NameInMap("VpcId")]
+            [NameInMap("VRouter")]
             [Validation(Required=false)]
-            public string VpcId { get; set; }
+            public List<DescribeVRoutersResponseBodyVRoutersVRouter> VRouter { get; set; }
+            public class DescribeVRoutersResponseBodyVRoutersVRouter : TeaModel {
+                public string VpcId { get; set; }
+                public string CreationTime { get; set; }
+                public string VRouterId { get; set; }
+                public string Description { get; set; }
+                public string VRouterName { get; set; }
+                public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds RouteTableIds { get; set; }
+                public class DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds : TeaModel {
+                    [NameInMap("RouteTableId")]
+                    [Validation(Required=false)]
+                    public List<string> RouteTableId { get; set; }
 
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("VRouterId")]
-            [Validation(Required=false)]
-            public string VRouterId { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("VRouterName")]
-            [Validation(Required=false)]
-            public string VRouterName { get; set; }
-
-            [NameInMap("RouteTableIds")]
-            [Validation(Required=false)]
-            public List<string> RouteTableIds { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+                }
+                public string RegionId { get; set; }
+            }
+        };
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

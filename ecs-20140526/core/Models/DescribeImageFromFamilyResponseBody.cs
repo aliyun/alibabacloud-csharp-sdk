@@ -40,10 +40,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsSupportIoOptimized { get; set; }
             [NameInMap("Tags")]
             [Validation(Required=false)]
-            public List<DescribeImageFromFamilyResponseBodyImageTags> Tags { get; set; }
+            public DescribeImageFromFamilyResponseBodyImageTags Tags { get; set; }
             public class DescribeImageFromFamilyResponseBodyImageTags : TeaModel {
-                public string TagValue { get; set; }
-                public string TagKey { get; set; }
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
+                public List<DescribeImageFromFamilyResponseBodyImageTagsTag> Tag { get; set; }
+                public class DescribeImageFromFamilyResponseBodyImageTagsTag : TeaModel {
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                }
+
             }
             [NameInMap("IsSupportCloudinit")]
             [Validation(Required=false)]
@@ -53,15 +65,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageVersion { get; set; }
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
-            public List<DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings> DiskDeviceMappings { get; set; }
+            public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings DiskDeviceMappings { get; set; }
             public class DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings : TeaModel {
-                public string Type { get; set; }
-                public string ImportOSSBucket { get; set; }
-                public string SnapshotId { get; set; }
-                public string ImportOSSObject { get; set; }
-                public string Size { get; set; }
-                public string Device { get; set; }
-                public string Format { get; set; }
+                [NameInMap("DiskDeviceMapping")]
+                [Validation(Required=false)]
+                public List<DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping> DiskDeviceMapping { get; set; }
+                public class DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping : TeaModel {
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                    [NameInMap("ImportOSSBucket")]
+                    [Validation(Required=false)]
+                    public string ImportOSSBucket { get; set; }
+
+                    [NameInMap("SnapshotId")]
+                    [Validation(Required=false)]
+                    public string SnapshotId { get; set; }
+
+                    [NameInMap("ImportOSSObject")]
+                    [Validation(Required=false)]
+                    public string ImportOSSObject { get; set; }
+
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public string Size { get; set; }
+
+                    [NameInMap("Device")]
+                    [Validation(Required=false)]
+                    public string Device { get; set; }
+
+                    [NameInMap("Format")]
+                    [Validation(Required=false)]
+                    public string Format { get; set; }
+
+                }
+
             }
             [NameInMap("Usage")]
             [Validation(Required=false)]

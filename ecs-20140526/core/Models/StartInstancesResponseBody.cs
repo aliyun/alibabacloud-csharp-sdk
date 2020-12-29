@@ -15,29 +15,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceResponses")]
         [Validation(Required=false)]
-        public List<StartInstancesResponseBodyInstanceResponses> InstanceResponses { get; set; }
+        public StartInstancesResponseBodyInstanceResponses InstanceResponses { get; set; }
         public class StartInstancesResponseBodyInstanceResponses : TeaModel {
-            [NameInMap("CurrentStatus")]
+            [NameInMap("InstanceResponse")]
             [Validation(Required=false)]
-            public string CurrentStatus { get; set; }
-
-            [NameInMap("PreviousStatus")]
-            [Validation(Required=false)]
-            public string PreviousStatus { get; set; }
-
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<StartInstancesResponseBodyInstanceResponsesInstanceResponse> InstanceResponse { get; set; }
+            public class StartInstancesResponseBodyInstanceResponsesInstanceResponse : TeaModel {
+                public string CurrentStatus { get; set; }
+                public string PreviousStatus { get; set; }
+                public string Code { get; set; }
+                public string Message { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 

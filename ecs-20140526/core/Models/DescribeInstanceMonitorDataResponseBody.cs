@@ -15,77 +15,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
-        public List<DescribeInstanceMonitorDataResponseBodyMonitorData> MonitorData { get; set; }
+        public DescribeInstanceMonitorDataResponseBodyMonitorData MonitorData { get; set; }
         public class DescribeInstanceMonitorDataResponseBodyMonitorData : TeaModel {
-            [NameInMap("CPUCreditBalance")]
+            [NameInMap("InstanceMonitorData")]
             [Validation(Required=false)]
-            public float? CPUCreditBalance { get; set; }
-
-            [NameInMap("BPSRead")]
-            [Validation(Required=false)]
-            public int? BPSRead { get; set; }
-
-            [NameInMap("InternetTX")]
-            [Validation(Required=false)]
-            public int? InternetTX { get; set; }
-
-            [NameInMap("CPU")]
-            [Validation(Required=false)]
-            public int? CPU { get; set; }
-
-            [NameInMap("CPUCreditUsage")]
-            [Validation(Required=false)]
-            public float? CPUCreditUsage { get; set; }
-
-            [NameInMap("IOPSWrite")]
-            [Validation(Required=false)]
-            public int? IOPSWrite { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("IntranetTX")]
-            [Validation(Required=false)]
-            public int? IntranetTX { get; set; }
-
-            [NameInMap("BPSWrite")]
-            [Validation(Required=false)]
-            public int? BPSWrite { get; set; }
-
-            [NameInMap("CPUNotpaidSurplusCreditUsage")]
-            [Validation(Required=false)]
-            public float? CPUNotpaidSurplusCreditUsage { get; set; }
-
-            [NameInMap("IOPSRead")]
-            [Validation(Required=false)]
-            public int? IOPSRead { get; set; }
-
-            [NameInMap("CPUAdvanceCreditBalance")]
-            [Validation(Required=false)]
-            public float? CPUAdvanceCreditBalance { get; set; }
-
-            [NameInMap("InternetBandwidth")]
-            [Validation(Required=false)]
-            public int? InternetBandwidth { get; set; }
-
-            [NameInMap("InternetRX")]
-            [Validation(Required=false)]
-            public int? InternetRX { get; set; }
-
-            [NameInMap("TimeStamp")]
-            [Validation(Required=false)]
-            public string TimeStamp { get; set; }
-
-            [NameInMap("IntranetRX")]
-            [Validation(Required=false)]
-            public int? IntranetRX { get; set; }
-
-            [NameInMap("IntranetBandwidth")]
-            [Validation(Required=false)]
-            public int? IntranetBandwidth { get; set; }
-
-        }
+            public List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> InstanceMonitorData { get; set; }
+            public class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData : TeaModel {
+                public float? CPUCreditBalance { get; set; }
+                public int? BPSRead { get; set; }
+                public int? InternetTX { get; set; }
+                public int? CPU { get; set; }
+                public float? CPUCreditUsage { get; set; }
+                public int? IOPSWrite { get; set; }
+                public string InstanceId { get; set; }
+                public int? IntranetTX { get; set; }
+                public int? BPSWrite { get; set; }
+                public float? CPUNotpaidSurplusCreditUsage { get; set; }
+                public int? IOPSRead { get; set; }
+                public float? CPUAdvanceCreditBalance { get; set; }
+                public int? InternetBandwidth { get; set; }
+                public int? InternetRX { get; set; }
+                public string TimeStamp { get; set; }
+                public int? IntranetRX { get; set; }
+                public int? IntranetBandwidth { get; set; }
+            }
+        };
 
     }
 

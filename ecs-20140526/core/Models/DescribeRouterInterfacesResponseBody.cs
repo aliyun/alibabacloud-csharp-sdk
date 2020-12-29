@@ -27,109 +27,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("RouterInterfaceSet")]
         [Validation(Required=false)]
-        public List<DescribeRouterInterfacesResponseBodyRouterInterfaceSet> RouterInterfaceSet { get; set; }
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet RouterInterfaceSet { get; set; }
         public class DescribeRouterInterfacesResponseBodyRouterInterfaceSet : TeaModel {
-            [NameInMap("HealthCheckTargetIp")]
+            [NameInMap("RouterInterfaceType")]
             [Validation(Required=false)]
-            public string HealthCheckTargetIp { get; set; }
-
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("Spec")]
-            [Validation(Required=false)]
-            public string Spec { get; set; }
-
-            [NameInMap("OppositeInterfaceId")]
-            [Validation(Required=false)]
-            public string OppositeInterfaceId { get; set; }
-
-            [NameInMap("RouterInterfaceId")]
-            [Validation(Required=false)]
-            public string RouterInterfaceId { get; set; }
-
-            [NameInMap("ChargeType")]
-            [Validation(Required=false)]
-            public string ChargeType { get; set; }
-
-            [NameInMap("OppositeRouterType")]
-            [Validation(Required=false)]
-            public string OppositeRouterType { get; set; }
-
-            [NameInMap("OppositeInterfaceOwnerId")]
-            [Validation(Required=false)]
-            public string OppositeInterfaceOwnerId { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("OppositeRouterId")]
-            [Validation(Required=false)]
-            public string OppositeRouterId { get; set; }
-
-            [NameInMap("OppositeInterfaceSpec")]
-            [Validation(Required=false)]
-            public string OppositeInterfaceSpec { get; set; }
-
-            [NameInMap("RouterId")]
-            [Validation(Required=false)]
-            public string RouterId { get; set; }
-
-            [NameInMap("OppositeInterfaceBusinessStatus")]
-            [Validation(Required=false)]
-            public string OppositeInterfaceBusinessStatus { get; set; }
-
-            [NameInMap("ConnectedTime")]
-            [Validation(Required=false)]
-            public string ConnectedTime { get; set; }
-
-            [NameInMap("HealthCheckSourceIp")]
-            [Validation(Required=false)]
-            public string HealthCheckSourceIp { get; set; }
-
-            [NameInMap("OppositeInterfaceStatus")]
-            [Validation(Required=false)]
-            public string OppositeInterfaceStatus { get; set; }
-
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public string EndTime { get; set; }
-
-            [NameInMap("OppositeRegionId")]
-            [Validation(Required=false)]
-            public string OppositeRegionId { get; set; }
-
-            [NameInMap("OppositeAccessPointId")]
-            [Validation(Required=false)]
-            public string OppositeAccessPointId { get; set; }
-
-            [NameInMap("BusinessStatus")]
-            [Validation(Required=false)]
-            public string BusinessStatus { get; set; }
-
-            [NameInMap("RouterType")]
-            [Validation(Required=false)]
-            public string RouterType { get; set; }
-
-            [NameInMap("Role")]
-            [Validation(Required=false)]
-            public string Role { get; set; }
-
-            [NameInMap("AccessPointId")]
-            [Validation(Required=false)]
-            public string AccessPointId { get; set; }
-
-        }
+            public List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType> RouterInterfaceType { get; set; }
+            public class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType : TeaModel {
+                public string HealthCheckTargetIp { get; set; }
+                public string CreationTime { get; set; }
+                public string Status { get; set; }
+                public string Spec { get; set; }
+                public string OppositeInterfaceId { get; set; }
+                public string RouterInterfaceId { get; set; }
+                public string ChargeType { get; set; }
+                public string OppositeRouterType { get; set; }
+                public string OppositeInterfaceOwnerId { get; set; }
+                public string Description { get; set; }
+                public string Name { get; set; }
+                public string OppositeRouterId { get; set; }
+                public string OppositeInterfaceSpec { get; set; }
+                public string RouterId { get; set; }
+                public string OppositeInterfaceBusinessStatus { get; set; }
+                public string ConnectedTime { get; set; }
+                public string HealthCheckSourceIp { get; set; }
+                public string OppositeInterfaceStatus { get; set; }
+                public string EndTime { get; set; }
+                public string OppositeRegionId { get; set; }
+                public string OppositeAccessPointId { get; set; }
+                public string BusinessStatus { get; set; }
+                public string RouterType { get; set; }
+                public string Role { get; set; }
+                public string AccessPointId { get; set; }
+            }
+        };
 
     }
 

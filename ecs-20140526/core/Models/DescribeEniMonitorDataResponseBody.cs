@@ -19,41 +19,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
-        public List<DescribeEniMonitorDataResponseBodyMonitorData> MonitorData { get; set; }
+        public DescribeEniMonitorDataResponseBodyMonitorData MonitorData { get; set; }
         public class DescribeEniMonitorDataResponseBodyMonitorData : TeaModel {
-            [NameInMap("PacketRx")]
+            [NameInMap("EniMonitorData")]
             [Validation(Required=false)]
-            public string PacketRx { get; set; }
-
-            [NameInMap("TimeStamp")]
-            [Validation(Required=false)]
-            public string TimeStamp { get; set; }
-
-            [NameInMap("DropPacketRx")]
-            [Validation(Required=false)]
-            public string DropPacketRx { get; set; }
-
-            [NameInMap("EniId")]
-            [Validation(Required=false)]
-            public string EniId { get; set; }
-
-            [NameInMap("DropPacketTx")]
-            [Validation(Required=false)]
-            public string DropPacketTx { get; set; }
-
-            [NameInMap("PacketTx")]
-            [Validation(Required=false)]
-            public string PacketTx { get; set; }
-
-            [NameInMap("IntranetTx")]
-            [Validation(Required=false)]
-            public string IntranetTx { get; set; }
-
-            [NameInMap("IntranetRx")]
-            [Validation(Required=false)]
-            public string IntranetRx { get; set; }
-
-        }
+            public List<DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData> EniMonitorData { get; set; }
+            public class DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData : TeaModel {
+                public string PacketRx { get; set; }
+                public string TimeStamp { get; set; }
+                public string DropPacketRx { get; set; }
+                public string EniId { get; set; }
+                public string DropPacketTx { get; set; }
+                public string PacketTx { get; set; }
+                public string IntranetTx { get; set; }
+                public string IntranetRx { get; set; }
+            }
+        };
 
     }
 

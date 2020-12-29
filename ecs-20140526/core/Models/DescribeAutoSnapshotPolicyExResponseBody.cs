@@ -27,75 +27,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("AutoSnapshotPolicies")]
         [Validation(Required=false)]
-        public List<DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies> AutoSnapshotPolicies { get; set; }
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies AutoSnapshotPolicies { get; set; }
         public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AutoSnapshotPolicy")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public List<DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy> AutoSnapshotPolicy { get; set; }
+            public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy : TeaModel {
+                public string Status { get; set; }
+                public string CreationTime { get; set; }
+                public string TimePoints { get; set; }
+                public string AutoSnapshotPolicyName { get; set; }
+                public string TargetCopyRegions { get; set; }
+                public int? CopiedSnapshotsRetentionDays { get; set; }
+                public string AutoSnapshotPolicyId { get; set; }
+                public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags Tags { get; set; }
+                public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag> Tag { get; set; }
+                    public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag : TeaModel {
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
 
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
 
-            [NameInMap("TimePoints")]
-            [Validation(Required=false)]
-            public string TimePoints { get; set; }
+                    }
 
-            [NameInMap("AutoSnapshotPolicyName")]
-            [Validation(Required=false)]
-            public string AutoSnapshotPolicyName { get; set; }
-
-            [NameInMap("TargetCopyRegions")]
-            [Validation(Required=false)]
-            public string TargetCopyRegions { get; set; }
-
-            [NameInMap("CopiedSnapshotsRetentionDays")]
-            [Validation(Required=false)]
-            public int? CopiedSnapshotsRetentionDays { get; set; }
-
-            [NameInMap("AutoSnapshotPolicyId")]
-            [Validation(Required=false)]
-            public string AutoSnapshotPolicyId { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesTags> Tags { get; set; }
-            public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesTags : TeaModel {
-                [NameInMap("TagValue")]
-                [Validation(Required=false)]
-                public string TagValue { get; set; }
-
-                [NameInMap("TagKey")]
-                [Validation(Required=false)]
-                public string TagKey { get; set; }
-
+                }
+                public int? RetentionDays { get; set; }
+                public string RegionId { get; set; }
+                public int? DiskNums { get; set; }
+                public bool? EnableCrossRegionCopy { get; set; }
+                public string RepeatWeekdays { get; set; }
+                public int? VolumeNums { get; set; }
             }
-
-            [NameInMap("RetentionDays")]
-            [Validation(Required=false)]
-            public int? RetentionDays { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("DiskNums")]
-            [Validation(Required=false)]
-            public int? DiskNums { get; set; }
-
-            [NameInMap("EnableCrossRegionCopy")]
-            [Validation(Required=false)]
-            public bool? EnableCrossRegionCopy { get; set; }
-
-            [NameInMap("RepeatWeekdays")]
-            [Validation(Required=false)]
-            public string RepeatWeekdays { get; set; }
-
-            [NameInMap("VolumeNums")]
-            [Validation(Required=false)]
-            public int? VolumeNums { get; set; }
-
-        }
+        };
 
     }
 

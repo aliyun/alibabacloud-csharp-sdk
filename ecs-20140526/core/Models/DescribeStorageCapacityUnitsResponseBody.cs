@@ -27,49 +27,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("StorageCapacityUnits")]
         [Validation(Required=false)]
-        public List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits> StorageCapacityUnits { get; set; }
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits StorageCapacityUnits { get; set; }
         public class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("StorageCapacityUnit")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("Capacity")]
-            [Validation(Required=false)]
-            public int? Capacity { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("AllocationStatus")]
-            [Validation(Required=false)]
-            public string AllocationStatus { get; set; }
-
-            [NameInMap("ExpiredTime")]
-            [Validation(Required=false)]
-            public string ExpiredTime { get; set; }
-
-            [NameInMap("StorageCapacityUnitId")]
-            [Validation(Required=false)]
-            public string StorageCapacityUnitId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+            public List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit> StorageCapacityUnit { get; set; }
+            public class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit : TeaModel {
+                public string CreationTime { get; set; }
+                public string Status { get; set; }
+                public string StartTime { get; set; }
+                public int? Capacity { get; set; }
+                public string Description { get; set; }
+                public string AllocationStatus { get; set; }
+                public string ExpiredTime { get; set; }
+                public string StorageCapacityUnitId { get; set; }
+                public string Name { get; set; }
+                public string RegionId { get; set; }
+            }
+        };
 
     }
 

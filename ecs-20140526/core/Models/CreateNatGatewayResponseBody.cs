@@ -15,11 +15,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("ForwardTableIds")]
         [Validation(Required=false)]
-        public List<string> ForwardTableIds { get; set; }
+        public CreateNatGatewayResponseBodyForwardTableIds ForwardTableIds { get; set; }
+        public class CreateNatGatewayResponseBodyForwardTableIds : TeaModel {
+            [NameInMap("ForwardTableId")]
+            [Validation(Required=false)]
+            public List<string> ForwardTableId { get; set; }
+        };
 
         [NameInMap("BandwidthPackageIds")]
         [Validation(Required=false)]
-        public List<string> BandwidthPackageIds { get; set; }
+        public CreateNatGatewayResponseBodyBandwidthPackageIds BandwidthPackageIds { get; set; }
+        public class CreateNatGatewayResponseBodyBandwidthPackageIds : TeaModel {
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public List<string> BandwidthPackageId { get; set; }
+        };
 
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]

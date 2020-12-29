@@ -19,49 +19,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
-        public List<DescribeDiskMonitorDataResponseBodyMonitorData> MonitorData { get; set; }
+        public DescribeDiskMonitorDataResponseBodyMonitorData MonitorData { get; set; }
         public class DescribeDiskMonitorDataResponseBodyMonitorData : TeaModel {
-            [NameInMap("BPSRead")]
+            [NameInMap("DiskMonitorData")]
             [Validation(Required=false)]
-            public int? BPSRead { get; set; }
-
-            [NameInMap("IOPSRead")]
-            [Validation(Required=false)]
-            public int? IOPSRead { get; set; }
-
-            [NameInMap("LatencyRead")]
-            [Validation(Required=false)]
-            public int? LatencyRead { get; set; }
-
-            [NameInMap("BPSTotal")]
-            [Validation(Required=false)]
-            public int? BPSTotal { get; set; }
-
-            [NameInMap("IOPSTotal")]
-            [Validation(Required=false)]
-            public int? IOPSTotal { get; set; }
-
-            [NameInMap("TimeStamp")]
-            [Validation(Required=false)]
-            public string TimeStamp { get; set; }
-
-            [NameInMap("LatencyWrite")]
-            [Validation(Required=false)]
-            public int? LatencyWrite { get; set; }
-
-            [NameInMap("IOPSWrite")]
-            [Validation(Required=false)]
-            public int? IOPSWrite { get; set; }
-
-            [NameInMap("DiskId")]
-            [Validation(Required=false)]
-            public string DiskId { get; set; }
-
-            [NameInMap("BPSWrite")]
-            [Validation(Required=false)]
-            public int? BPSWrite { get; set; }
-
-        }
+            public List<DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData> DiskMonitorData { get; set; }
+            public class DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData : TeaModel {
+                public int? BPSRead { get; set; }
+                public int? IOPSRead { get; set; }
+                public int? LatencyRead { get; set; }
+                public int? BPSTotal { get; set; }
+                public int? IOPSTotal { get; set; }
+                public string TimeStamp { get; set; }
+                public int? LatencyWrite { get; set; }
+                public int? IOPSWrite { get; set; }
+                public string DiskId { get; set; }
+                public int? BPSWrite { get; set; }
+            }
+        };
 
     }
 

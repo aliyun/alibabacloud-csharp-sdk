@@ -11,41 +11,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeAccessPointsResponseBody : TeaModel {
         [NameInMap("AccessPointSet")]
         [Validation(Required=false)]
-        public List<DescribeAccessPointsResponseBodyAccessPointSet> AccessPointSet { get; set; }
+        public DescribeAccessPointsResponseBodyAccessPointSet AccessPointSet { get; set; }
         public class DescribeAccessPointsResponseBodyAccessPointSet : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AccessPointType")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("HostOperator")]
-            [Validation(Required=false)]
-            public string HostOperator { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("AttachedRegionNo")]
-            [Validation(Required=false)]
-            public string AttachedRegionNo { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("AccessPointId")]
-            [Validation(Required=false)]
-            public string AccessPointId { get; set; }
-
-            [NameInMap("Location")]
-            [Validation(Required=false)]
-            public string Location { get; set; }
-
-        }
+            public List<DescribeAccessPointsResponseBodyAccessPointSetAccessPointType> AccessPointType { get; set; }
+            public class DescribeAccessPointsResponseBodyAccessPointSetAccessPointType : TeaModel {
+                public string Status { get; set; }
+                public string Type { get; set; }
+                public string HostOperator { get; set; }
+                public string Description { get; set; }
+                public string AttachedRegionNo { get; set; }
+                public string Name { get; set; }
+                public string AccessPointId { get; set; }
+                public string Location { get; set; }
+            }
+        };
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

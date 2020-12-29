@@ -15,57 +15,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("SnapshotLinks")]
         [Validation(Required=false)]
-        public List<DescribeSnapshotLinksResponseBodySnapshotLinks> SnapshotLinks { get; set; }
+        public DescribeSnapshotLinksResponseBodySnapshotLinks SnapshotLinks { get; set; }
         public class DescribeSnapshotLinksResponseBodySnapshotLinks : TeaModel {
-            [NameInMap("InstantAccess")]
+            [NameInMap("SnapshotLink")]
             [Validation(Required=false)]
-            public bool? InstantAccess { get; set; }
-
-            [NameInMap("TotalSize")]
-            [Validation(Required=false)]
-            public long? TotalSize { get; set; }
-
-            [NameInMap("SourceDiskName")]
-            [Validation(Required=false)]
-            public string SourceDiskName { get; set; }
-
-            [NameInMap("SourceDiskSize")]
-            [Validation(Required=false)]
-            public int? SourceDiskSize { get; set; }
-
-            [NameInMap("SourceDiskType")]
-            [Validation(Required=false)]
-            public string SourceDiskType { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-
-            [NameInMap("SnapshotLinkId")]
-            [Validation(Required=false)]
-            public string SnapshotLinkId { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("SourceDiskId")]
-            [Validation(Required=false)]
-            public string SourceDiskId { get; set; }
-
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-        }
+            public List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> SnapshotLink { get; set; }
+            public class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink : TeaModel {
+                public bool? InstantAccess { get; set; }
+                public long? TotalSize { get; set; }
+                public string SourceDiskName { get; set; }
+                public int? SourceDiskSize { get; set; }
+                public string SourceDiskType { get; set; }
+                public string InstanceId { get; set; }
+                public int? TotalCount { get; set; }
+                public string SnapshotLinkId { get; set; }
+                public string RegionId { get; set; }
+                public string SourceDiskId { get; set; }
+                public string InstanceName { get; set; }
+                public string Category { get; set; }
+            }
+        };
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]

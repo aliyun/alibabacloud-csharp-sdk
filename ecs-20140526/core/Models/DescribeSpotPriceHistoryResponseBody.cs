@@ -23,37 +23,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("SpotPrices")]
         [Validation(Required=false)]
-        public List<DescribeSpotPriceHistoryResponseBodySpotPrices> SpotPrices { get; set; }
+        public DescribeSpotPriceHistoryResponseBodySpotPrices SpotPrices { get; set; }
         public class DescribeSpotPriceHistoryResponseBodySpotPrices : TeaModel {
-            [NameInMap("IoOptimized")]
+            [NameInMap("SpotPriceType")]
             [Validation(Required=false)]
-            public string IoOptimized { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("SpotPrice")]
-            [Validation(Required=false)]
-            public float? SpotPrice { get; set; }
-
-            [NameInMap("Timestamp")]
-            [Validation(Required=false)]
-            public string Timestamp { get; set; }
-
-            [NameInMap("NetworkType")]
-            [Validation(Required=false)]
-            public string NetworkType { get; set; }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-            [NameInMap("OriginPrice")]
-            [Validation(Required=false)]
-            public float? OriginPrice { get; set; }
-
-        }
+            public List<DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType> SpotPriceType { get; set; }
+            public class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType : TeaModel {
+                public string IoOptimized { get; set; }
+                public string ZoneId { get; set; }
+                public float? SpotPrice { get; set; }
+                public string Timestamp { get; set; }
+                public string NetworkType { get; set; }
+                public string InstanceType { get; set; }
+                public float? OriginPrice { get; set; }
+            }
+        };
 
     }
 

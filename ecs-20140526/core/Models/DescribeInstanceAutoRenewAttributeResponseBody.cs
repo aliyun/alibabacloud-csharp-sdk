@@ -15,29 +15,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceRenewAttributes")]
         [Validation(Required=false)]
-        public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes> InstanceRenewAttributes { get; set; }
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes InstanceRenewAttributes { get; set; }
         public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes : TeaModel {
-            [NameInMap("PeriodUnit")]
+            [NameInMap("InstanceRenewAttribute")]
             [Validation(Required=false)]
-            public string PeriodUnit { get; set; }
-
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public int? Duration { get; set; }
-
-            [NameInMap("RenewalStatus")]
-            [Validation(Required=false)]
-            public string RenewalStatus { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("AutoRenewEnabled")]
-            [Validation(Required=false)]
-            public bool? AutoRenewEnabled { get; set; }
-
-        }
+            public List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
+            public class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
+                public string PeriodUnit { get; set; }
+                public int? Duration { get; set; }
+                public string RenewalStatus { get; set; }
+                public string InstanceId { get; set; }
+                public bool? AutoRenewEnabled { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

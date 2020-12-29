@@ -15,29 +15,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("DedicatedHostRenewAttributes")]
         [Validation(Required=false)]
-        public List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes> DedicatedHostRenewAttributes { get; set; }
+        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes DedicatedHostRenewAttributes { get; set; }
         public class DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes : TeaModel {
-            [NameInMap("PeriodUnit")]
+            [NameInMap("DedicatedHostRenewAttribute")]
             [Validation(Required=false)]
-            public string PeriodUnit { get; set; }
-
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public int? Duration { get; set; }
-
-            [NameInMap("DedicatedHostId")]
-            [Validation(Required=false)]
-            public string DedicatedHostId { get; set; }
-
-            [NameInMap("RenewalStatus")]
-            [Validation(Required=false)]
-            public string RenewalStatus { get; set; }
-
-            [NameInMap("AutoRenewEnabled")]
-            [Validation(Required=false)]
-            public bool? AutoRenewEnabled { get; set; }
-
-        }
+            public List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute> DedicatedHostRenewAttribute { get; set; }
+            public class DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute : TeaModel {
+                public string PeriodUnit { get; set; }
+                public int? Duration { get; set; }
+                public string DedicatedHostId { get; set; }
+                public string RenewalStatus { get; set; }
+                public bool? AutoRenewEnabled { get; set; }
+            }
+        };
 
     }
 

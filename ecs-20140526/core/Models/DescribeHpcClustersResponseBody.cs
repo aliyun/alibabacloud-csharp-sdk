@@ -27,21 +27,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("HpcClusters")]
         [Validation(Required=false)]
-        public List<DescribeHpcClustersResponseBodyHpcClusters> HpcClusters { get; set; }
+        public DescribeHpcClustersResponseBodyHpcClusters HpcClusters { get; set; }
         public class DescribeHpcClustersResponseBodyHpcClusters : TeaModel {
-            [NameInMap("Description")]
+            [NameInMap("HpcCluster")]
             [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("HpcClusterId")]
-            [Validation(Required=false)]
-            public string HpcClusterId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-        }
+            public List<DescribeHpcClustersResponseBodyHpcClustersHpcCluster> HpcCluster { get; set; }
+            public class DescribeHpcClustersResponseBodyHpcClustersHpcCluster : TeaModel {
+                public string Description { get; set; }
+                public string HpcClusterId { get; set; }
+                public string Name { get; set; }
+            }
+        };
 
     }
 

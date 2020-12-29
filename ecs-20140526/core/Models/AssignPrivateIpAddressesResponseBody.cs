@@ -22,7 +22,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceId { get; set; }
             [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
-            public List<string> PrivateIpSet { get; set; }
+            public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet PrivateIpSet { get; set; }
+            public class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet : TeaModel {
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
+                public List<string> PrivateIpAddress { get; set; }
+
+            }
         };
 
     }

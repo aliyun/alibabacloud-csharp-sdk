@@ -27,157 +27,99 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Images")]
         [Validation(Required=false)]
-        public List<DescribeImagesResponseBodyImages> Images { get; set; }
+        public DescribeImagesResponseBodyImages Images { get; set; }
         public class DescribeImagesResponseBodyImages : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("Image")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public List<DescribeImagesResponseBodyImagesImage> Image { get; set; }
+            public class DescribeImagesResponseBodyImagesImage : TeaModel {
+                public string Status { get; set; }
+                public string CreationTime { get; set; }
+                public bool? IsSupportIoOptimized { get; set; }
+                public DescribeImagesResponseBodyImagesImageTags Tags { get; set; }
+                public class DescribeImagesResponseBodyImagesImageTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeImagesResponseBodyImagesImageTagsTag> Tag { get; set; }
+                    public class DescribeImagesResponseBodyImagesImageTagsTag : TeaModel {
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
 
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
 
-            [NameInMap("IsSupportIoOptimized")]
-            [Validation(Required=false)]
-            public bool? IsSupportIoOptimized { get; set; }
+                    }
 
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<DescribeImagesResponseBodyImagesTags> Tags { get; set; }
-            public class DescribeImagesResponseBodyImagesTags : TeaModel {
-                [NameInMap("TagValue")]
-                [Validation(Required=false)]
-                public string TagValue { get; set; }
-
-                [NameInMap("TagKey")]
-                [Validation(Required=false)]
-                public string TagKey { get; set; }
-
-            }
-
-            [NameInMap("ImageVersion")]
-            [Validation(Required=false)]
-            public string ImageVersion { get; set; }
-
-            [NameInMap("IsSelfShared")]
-            [Validation(Required=false)]
-            public string IsSelfShared { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("OSNameEn")]
-            [Validation(Required=false)]
-            public string OSNameEn { get; set; }
-
-            [NameInMap("Platform")]
-            [Validation(Required=false)]
-            public string Platform { get; set; }
-
-            [NameInMap("OSName")]
-            [Validation(Required=false)]
-            public string OSName { get; set; }
-
-            [NameInMap("ImageId")]
-            [Validation(Required=false)]
-            public string ImageId { get; set; }
-
-            [NameInMap("IsSubscribed")]
-            [Validation(Required=false)]
-            public bool? IsSubscribed { get; set; }
-
-            [NameInMap("ImageFamily")]
-            [Validation(Required=false)]
-            public string ImageFamily { get; set; }
-
-            [NameInMap("Progress")]
-            [Validation(Required=false)]
-            public string Progress { get; set; }
-
-            [NameInMap("IsCopied")]
-            [Validation(Required=false)]
-            public bool? IsCopied { get; set; }
-
-            [NameInMap("ImageOwnerAlias")]
-            [Validation(Required=false)]
-            public string ImageOwnerAlias { get; set; }
-
-            [NameInMap("IsSupportCloudinit")]
-            [Validation(Required=false)]
-            public bool? IsSupportCloudinit { get; set; }
-
-            [NameInMap("DiskDeviceMappings")]
-            [Validation(Required=false)]
-            public List<DescribeImagesResponseBodyImagesDiskDeviceMappings> DiskDeviceMappings { get; set; }
-            public class DescribeImagesResponseBodyImagesDiskDeviceMappings : TeaModel {
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("ImportOSSBucket")]
-                [Validation(Required=false)]
-                public string ImportOSSBucket { get; set; }
-
-                [NameInMap("Progress")]
-                [Validation(Required=false)]
+                }
+                public string ImageVersion { get; set; }
+                public string IsSelfShared { get; set; }
+                public string Description { get; set; }
+                public string OSNameEn { get; set; }
+                public string Platform { get; set; }
+                public string OSName { get; set; }
+                public string ImageId { get; set; }
+                public bool? IsSubscribed { get; set; }
+                public string ImageFamily { get; set; }
                 public string Progress { get; set; }
+                public bool? IsCopied { get; set; }
+                public string ImageOwnerAlias { get; set; }
+                public bool? IsSupportCloudinit { get; set; }
+                public DescribeImagesResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }
+                public class DescribeImagesResponseBodyImagesImageDiskDeviceMappings : TeaModel {
+                    [NameInMap("DiskDeviceMapping")]
+                    [Validation(Required=false)]
+                    public List<DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> DiskDeviceMapping { get; set; }
+                    public class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping : TeaModel {
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
 
-                [NameInMap("SnapshotId")]
-                [Validation(Required=false)]
-                public string SnapshotId { get; set; }
+                        [NameInMap("ImportOSSBucket")]
+                        [Validation(Required=false)]
+                        public string ImportOSSBucket { get; set; }
 
-                [NameInMap("ImportOSSObject")]
-                [Validation(Required=false)]
-                public string ImportOSSObject { get; set; }
+                        [NameInMap("Progress")]
+                        [Validation(Required=false)]
+                        public string Progress { get; set; }
 
-                [NameInMap("Device")]
-                [Validation(Required=false)]
-                public string Device { get; set; }
+                        [NameInMap("SnapshotId")]
+                        [Validation(Required=false)]
+                        public string SnapshotId { get; set; }
 
-                [NameInMap("Size")]
-                [Validation(Required=false)]
-                public string Size { get; set; }
+                        [NameInMap("ImportOSSObject")]
+                        [Validation(Required=false)]
+                        public string ImportOSSObject { get; set; }
 
-                [NameInMap("RemainTime")]
-                [Validation(Required=false)]
-                public int? RemainTime { get; set; }
+                        [NameInMap("Device")]
+                        [Validation(Required=false)]
+                        public string Device { get; set; }
 
-                [NameInMap("Format")]
-                [Validation(Required=false)]
-                public string Format { get; set; }
+                        [NameInMap("Size")]
+                        [Validation(Required=false)]
+                        public string Size { get; set; }
 
+                        [NameInMap("RemainTime")]
+                        [Validation(Required=false)]
+                        public int? RemainTime { get; set; }
+
+                        [NameInMap("Format")]
+                        [Validation(Required=false)]
+                        public string Format { get; set; }
+
+                    }
+
+                }
+                public string Usage { get; set; }
+                public int? Size { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string ImageName { get; set; }
+                public string OSType { get; set; }
+                public string Architecture { get; set; }
+                public string ProductCode { get; set; }
             }
-
-            [NameInMap("Usage")]
-            [Validation(Required=false)]
-            public string Usage { get; set; }
-
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            [NameInMap("ImageName")]
-            [Validation(Required=false)]
-            public string ImageName { get; set; }
-
-            [NameInMap("OSType")]
-            [Validation(Required=false)]
-            public string OSType { get; set; }
-
-            [NameInMap("Architecture")]
-            [Validation(Required=false)]
-            public string Architecture { get; set; }
-
-            [NameInMap("ProductCode")]
-            [Validation(Required=false)]
-            public string ProductCode { get; set; }
-
-        }
+        };
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

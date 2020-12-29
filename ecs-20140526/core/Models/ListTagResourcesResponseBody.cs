@@ -19,25 +19,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("TagResources")]
         [Validation(Required=false)]
-        public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
+        public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
-            [NameInMap("ResourceType")]
+            [NameInMap("TagResource")]
             [Validation(Required=false)]
-            public string ResourceType { get; set; }
-
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
+            public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
+            public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
+                public string ResourceType { get; set; }
+                public string TagValue { get; set; }
+                public string ResourceId { get; set; }
+                public string TagKey { get; set; }
+            }
+        };
 
     }
 

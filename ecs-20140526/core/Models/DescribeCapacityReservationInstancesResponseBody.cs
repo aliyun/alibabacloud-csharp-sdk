@@ -11,13 +11,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeCapacityReservationInstancesResponseBody : TeaModel {
         [NameInMap("CapacityReservationItem")]
         [Validation(Required=false)]
-        public List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem> CapacityReservationItem { get; set; }
+        public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem CapacityReservationItem { get; set; }
         public class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem : TeaModel {
-            [NameInMap("InstanceId")]
+            [NameInMap("InstanceIdSet")]
             [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet> InstanceIdSet { get; set; }
+            public class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet : TeaModel {
+                public string InstanceId { get; set; }
+            }
+        };
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -27,17 +27,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceStatuses")]
         [Validation(Required=false)]
-        public List<DescribeInstanceStatusResponseBodyInstanceStatuses> InstanceStatuses { get; set; }
+        public DescribeInstanceStatusResponseBodyInstanceStatuses InstanceStatuses { get; set; }
         public class DescribeInstanceStatusResponseBodyInstanceStatuses : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("InstanceStatus")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus> InstanceStatus { get; set; }
+            public class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus : TeaModel {
+                public string Status { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 

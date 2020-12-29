@@ -23,17 +23,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceRamRoleSets")]
         [Validation(Required=false)]
-        public List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets> InstanceRamRoleSets { get; set; }
+        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets InstanceRamRoleSets { get; set; }
         public class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets : TeaModel {
-            [NameInMap("RamRoleName")]
+            [NameInMap("InstanceRamRoleSet")]
             [Validation(Required=false)]
-            public string RamRoleName { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet> InstanceRamRoleSet { get; set; }
+            public class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet : TeaModel {
+                public string RamRoleName { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 

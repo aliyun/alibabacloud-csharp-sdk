@@ -31,11 +31,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("PublicIpAddress")]
         [Validation(Required=false)]
-        public List<string> PublicIpAddress { get; set; }
+        public DescribeInstanceAttributeResponseBodyPublicIpAddress PublicIpAddress { get; set; }
+        public class DescribeInstanceAttributeResponseBodyPublicIpAddress : TeaModel {
+            [NameInMap("IpAddress")]
+            [Validation(Required=false)]
+            public List<string> IpAddress { get; set; }
+        };
 
         [NameInMap("InnerIpAddress")]
         [Validation(Required=false)]
-        public List<string> InnerIpAddress { get; set; }
+        public DescribeInstanceAttributeResponseBodyInnerIpAddress InnerIpAddress { get; set; }
+        public class DescribeInstanceAttributeResponseBodyInnerIpAddress : TeaModel {
+            [NameInMap("IpAddress")]
+            [Validation(Required=false)]
+            public List<string> IpAddress { get; set; }
+        };
 
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
@@ -117,7 +127,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
-        public List<string> SecurityGroupIds { get; set; }
+        public DescribeInstanceAttributeResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
+        public class DescribeInstanceAttributeResponseBodySecurityGroupIds : TeaModel {
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupId { get; set; }
+        };
 
         [NameInMap("VpcAttributes")]
         [Validation(Required=false)]
@@ -134,18 +149,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string VSwitchId { get; set; }
             [NameInMap("PrivateIpAddress")]
             [Validation(Required=false)]
-            public List<string> PrivateIpAddress { get; set; }
+            public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress PrivateIpAddress { get; set; }
+            public class DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress : TeaModel {
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
+                public List<string> IpAddress { get; set; }
+
+            }
         };
 
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
-        public List<DescribeInstanceAttributeResponseBodyOperationLocks> OperationLocks { get; set; }
+        public DescribeInstanceAttributeResponseBodyOperationLocks OperationLocks { get; set; }
         public class DescribeInstanceAttributeResponseBodyOperationLocks : TeaModel {
             [NameInMap("LockReason")]
             [Validation(Required=false)]
-            public string LockReason { get; set; }
-
-        }
+            public List<DescribeInstanceAttributeResponseBodyOperationLocksLockReason> LockReason { get; set; }
+            public class DescribeInstanceAttributeResponseBodyOperationLocksLockReason : TeaModel {
+                public string LockReason { get; set; }
+            }
+        };
 
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]

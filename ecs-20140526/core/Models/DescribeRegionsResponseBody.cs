@@ -15,25 +15,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Regions")]
         [Validation(Required=false)]
-        public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
+        public DescribeRegionsResponseBodyRegions Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("Region")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("LocalName")]
-            [Validation(Required=false)]
-            public string LocalName { get; set; }
-
-            [NameInMap("RegionEndpoint")]
-            [Validation(Required=false)]
-            public string RegionEndpoint { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+            public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
+            public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
+                public string Status { get; set; }
+                public string LocalName { get; set; }
+                public string RegionEndpoint { get; set; }
+                public string RegionId { get; set; }
+            }
+        };
 
     }
 

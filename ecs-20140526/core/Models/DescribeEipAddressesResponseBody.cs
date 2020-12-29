@@ -23,67 +23,39 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
-        public List<DescribeEipAddressesResponseBodyEipAddresses> EipAddresses { get; set; }
+        public DescribeEipAddressesResponseBodyEipAddresses EipAddresses { get; set; }
         public class DescribeEipAddressesResponseBodyEipAddresses : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("EipAddress")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public List<DescribeEipAddressesResponseBodyEipAddressesEipAddress> EipAddress { get; set; }
+            public class DescribeEipAddressesResponseBodyEipAddressesEipAddress : TeaModel {
+                public string Status { get; set; }
+                public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks OperationLocks { get; set; }
+                public class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks : TeaModel {
+                    [NameInMap("LockReason")]
+                    [Validation(Required=false)]
+                    public List<DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason> LockReason { get; set; }
+                    public class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason : TeaModel {
+                        [NameInMap("LockReason")]
+                        [Validation(Required=false)]
+                        public string LockReason { get; set; }
 
-            [NameInMap("OperationLocks")]
-            [Validation(Required=false)]
-            public List<DescribeEipAddressesResponseBodyEipAddressesOperationLocks> OperationLocks { get; set; }
-            public class DescribeEipAddressesResponseBodyEipAddressesOperationLocks : TeaModel {
-                [NameInMap("LockReason")]
-                [Validation(Required=false)]
-                public string LockReason { get; set; }
+                    }
 
+                }
+                public string AllocationTime { get; set; }
+                public string ChargeType { get; set; }
+                public string InstanceId { get; set; }
+                public string InstanceType { get; set; }
+                public string RegionId { get; set; }
+                public string IpAddress { get; set; }
+                public string Bandwidth { get; set; }
+                public string ExpiredTime { get; set; }
+                public string AllocationId { get; set; }
+                public string InternetChargeType { get; set; }
+                public string EipBandwidth { get; set; }
             }
-
-            [NameInMap("AllocationTime")]
-            [Validation(Required=false)]
-            public string AllocationTime { get; set; }
-
-            [NameInMap("ChargeType")]
-            [Validation(Required=false)]
-            public string ChargeType { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("IpAddress")]
-            [Validation(Required=false)]
-            public string IpAddress { get; set; }
-
-            [NameInMap("Bandwidth")]
-            [Validation(Required=false)]
-            public string Bandwidth { get; set; }
-
-            [NameInMap("ExpiredTime")]
-            [Validation(Required=false)]
-            public string ExpiredTime { get; set; }
-
-            [NameInMap("AllocationId")]
-            [Validation(Required=false)]
-            public string AllocationId { get; set; }
-
-            [NameInMap("InternetChargeType")]
-            [Validation(Required=false)]
-            public string InternetChargeType { get; set; }
-
-            [NameInMap("EipBandwidth")]
-            [Validation(Required=false)]
-            public string EipBandwidth { get; set; }
-
-        }
+        };
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

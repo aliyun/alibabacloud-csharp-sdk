@@ -27,41 +27,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("VirtualBorderRouterForPhysicalConnectionSet")]
         [Validation(Required=false)]
-        public List<DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSet> VirtualBorderRouterForPhysicalConnectionSet { get; set; }
+        public DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSet VirtualBorderRouterForPhysicalConnectionSet { get; set; }
         public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSet : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("VirtualBorderRouterForPhysicalConnectionType")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("CircuitCode")]
-            [Validation(Required=false)]
-            public string CircuitCode { get; set; }
-
-            [NameInMap("RecoveryTime")]
-            [Validation(Required=false)]
-            public string RecoveryTime { get; set; }
-
-            [NameInMap("TerminationTime")]
-            [Validation(Required=false)]
-            public string TerminationTime { get; set; }
-
-            [NameInMap("ActivationTime")]
-            [Validation(Required=false)]
-            public string ActivationTime { get; set; }
-
-            [NameInMap("VbrOwnerUid")]
-            [Validation(Required=false)]
-            public long? VbrOwnerUid { get; set; }
-
-            [NameInMap("VbrId")]
-            [Validation(Required=false)]
-            public string VbrId { get; set; }
-
-            [NameInMap("VlanId")]
-            [Validation(Required=false)]
-            public int? VlanId { get; set; }
-
-        }
+            public List<DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType> VirtualBorderRouterForPhysicalConnectionType { get; set; }
+            public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType : TeaModel {
+                public string CreationTime { get; set; }
+                public string CircuitCode { get; set; }
+                public string RecoveryTime { get; set; }
+                public string TerminationTime { get; set; }
+                public string ActivationTime { get; set; }
+                public long? VbrOwnerUid { get; set; }
+                public string VbrId { get; set; }
+                public int? VlanId { get; set; }
+            }
+        };
 
     }
 

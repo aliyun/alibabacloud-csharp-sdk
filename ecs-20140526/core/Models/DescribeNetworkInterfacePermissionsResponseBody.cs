@@ -27,33 +27,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("NetworkInterfacePermissions")]
         [Validation(Required=false)]
-        public List<DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions> NetworkInterfacePermissions { get; set; }
+        public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions NetworkInterfacePermissions { get; set; }
         public class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions : TeaModel {
-            [NameInMap("Permission")]
+            [NameInMap("NetworkInterfacePermission")]
             [Validation(Required=false)]
-            public string Permission { get; set; }
-
-            [NameInMap("NetworkInterfaceId")]
-            [Validation(Required=false)]
-            public string NetworkInterfaceId { get; set; }
-
-            [NameInMap("AccountId")]
-            [Validation(Required=false)]
-            public long? AccountId { get; set; }
-
-            [NameInMap("NetworkInterfacePermissionId")]
-            [Validation(Required=false)]
-            public string NetworkInterfacePermissionId { get; set; }
-
-            [NameInMap("ServiceName")]
-            [Validation(Required=false)]
-            public string ServiceName { get; set; }
-
-            [NameInMap("PermissionState")]
-            [Validation(Required=false)]
-            public string PermissionState { get; set; }
-
-        }
+            public List<DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission> NetworkInterfacePermission { get; set; }
+            public class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission : TeaModel {
+                public string Permission { get; set; }
+                public string NetworkInterfaceId { get; set; }
+                public long? AccountId { get; set; }
+                public string NetworkInterfacePermissionId { get; set; }
+                public string ServiceName { get; set; }
+                public string PermissionState { get; set; }
+            }
+        };
 
     }
 

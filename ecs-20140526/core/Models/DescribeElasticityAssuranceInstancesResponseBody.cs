@@ -27,13 +27,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("ElasticityAssuranceItem")]
         [Validation(Required=false)]
-        public List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem> ElasticityAssuranceItem { get; set; }
+        public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem ElasticityAssuranceItem { get; set; }
         public class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem : TeaModel {
-            [NameInMap("InstanceId")]
+            [NameInMap("InstanceIdSet")]
             [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet> InstanceIdSet { get; set; }
+            public class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet : TeaModel {
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 

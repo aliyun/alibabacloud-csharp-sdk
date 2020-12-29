@@ -27,41 +27,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("ForwardTableEntries")]
         [Validation(Required=false)]
-        public List<DescribeForwardTableEntriesResponseBodyForwardTableEntries> ForwardTableEntries { get; set; }
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntries ForwardTableEntries { get; set; }
         public class DescribeForwardTableEntriesResponseBodyForwardTableEntries : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("ForwardTableEntry")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("ForwardEntryId")]
-            [Validation(Required=false)]
-            public string ForwardEntryId { get; set; }
-
-            [NameInMap("InternalIp")]
-            [Validation(Required=false)]
-            public string InternalIp { get; set; }
-
-            [NameInMap("InternalPort")]
-            [Validation(Required=false)]
-            public string InternalPort { get; set; }
-
-            [NameInMap("ForwardTableId")]
-            [Validation(Required=false)]
-            public string ForwardTableId { get; set; }
-
-            [NameInMap("ExternalPort")]
-            [Validation(Required=false)]
-            public string ExternalPort { get; set; }
-
-            [NameInMap("IpProtocol")]
-            [Validation(Required=false)]
-            public string IpProtocol { get; set; }
-
-            [NameInMap("ExternalIp")]
-            [Validation(Required=false)]
-            public string ExternalIp { get; set; }
-
-        }
+            public List<DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry> ForwardTableEntry { get; set; }
+            public class DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry : TeaModel {
+                public string Status { get; set; }
+                public string ForwardEntryId { get; set; }
+                public string InternalIp { get; set; }
+                public string InternalPort { get; set; }
+                public string ForwardTableId { get; set; }
+                public string ExternalPort { get; set; }
+                public string IpProtocol { get; set; }
+                public string ExternalIp { get; set; }
+            }
+        };
 
     }
 

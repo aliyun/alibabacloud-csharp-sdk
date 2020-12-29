@@ -27,39 +27,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
-        public List<DescribeKeyPairsResponseBodyKeyPairs> KeyPairs { get; set; }
+        public DescribeKeyPairsResponseBodyKeyPairs KeyPairs { get; set; }
         public class DescribeKeyPairsResponseBodyKeyPairs : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("KeyPair")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
+            public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
+            public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
+                public string CreationTime { get; set; }
+                public string KeyPairName { get; set; }
+                public string ResourceGroupId { get; set; }
+                public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags Tags { get; set; }
+                public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag> Tag { get; set; }
+                    public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag : TeaModel {
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
 
-            [NameInMap("KeyPairName")]
-            [Validation(Required=false)]
-            public string KeyPairName { get; set; }
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
 
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
+                    }
 
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<DescribeKeyPairsResponseBodyKeyPairsTags> Tags { get; set; }
-            public class DescribeKeyPairsResponseBodyKeyPairsTags : TeaModel {
-                [NameInMap("TagValue")]
-                [Validation(Required=false)]
-                public string TagValue { get; set; }
-
-                [NameInMap("TagKey")]
-                [Validation(Required=false)]
-                public string TagKey { get; set; }
-
+                }
+                public string KeyPairFingerPrint { get; set; }
             }
-
-            [NameInMap("KeyPairFingerPrint")]
-            [Validation(Required=false)]
-            public string KeyPairFingerPrint { get; set; }
-
-        }
+        };
 
     }
 

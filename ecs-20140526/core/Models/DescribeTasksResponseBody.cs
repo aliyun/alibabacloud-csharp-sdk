@@ -27,33 +27,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("TaskSet")]
         [Validation(Required=false)]
-        public List<DescribeTasksResponseBodyTaskSet> TaskSet { get; set; }
+        public DescribeTasksResponseBodyTaskSet TaskSet { get; set; }
         public class DescribeTasksResponseBodyTaskSet : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("Task")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("TaskStatus")]
-            [Validation(Required=false)]
-            public string TaskStatus { get; set; }
-
-            [NameInMap("FinishedTime")]
-            [Validation(Required=false)]
-            public string FinishedTime { get; set; }
-
-            [NameInMap("SupportCancel")]
-            [Validation(Required=false)]
-            public string SupportCancel { get; set; }
-
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public string TaskId { get; set; }
-
-            [NameInMap("TaskAction")]
-            [Validation(Required=false)]
-            public string TaskAction { get; set; }
-
-        }
+            public List<DescribeTasksResponseBodyTaskSetTask> Task { get; set; }
+            public class DescribeTasksResponseBodyTaskSetTask : TeaModel {
+                public string CreationTime { get; set; }
+                public string TaskStatus { get; set; }
+                public string FinishedTime { get; set; }
+                public string SupportCancel { get; set; }
+                public string TaskId { get; set; }
+                public string TaskAction { get; set; }
+            }
+        };
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

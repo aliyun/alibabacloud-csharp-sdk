@@ -15,7 +15,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("EventIdSet")]
         [Validation(Required=false)]
-        public List<string> EventIdSet { get; set; }
+        public CreateSimulatedSystemEventsResponseBodyEventIdSet EventIdSet { get; set; }
+        public class CreateSimulatedSystemEventsResponseBodyEventIdSet : TeaModel {
+            [NameInMap("EventId")]
+            [Validation(Required=false)]
+            public List<string> EventId { get; set; }
+        };
 
     }
 

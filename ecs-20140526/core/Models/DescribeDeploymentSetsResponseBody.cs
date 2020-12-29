@@ -27,53 +27,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("DeploymentSets")]
         [Validation(Required=false)]
-        public List<DescribeDeploymentSetsResponseBodyDeploymentSets> DeploymentSets { get; set; }
+        public DescribeDeploymentSetsResponseBodyDeploymentSets DeploymentSets { get; set; }
         public class DescribeDeploymentSetsResponseBodyDeploymentSets : TeaModel {
-            [NameInMap("CreationTime")]
+            [NameInMap("DeploymentSet")]
             [Validation(Required=false)]
-            public string CreationTime { get; set; }
+            public List<DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet> DeploymentSet { get; set; }
+            public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet : TeaModel {
+                public string CreationTime { get; set; }
+                public string Strategy { get; set; }
+                public string DeploymentSetId { get; set; }
+                public string DeploymentStrategy { get; set; }
+                public string DeploymentSetDescription { get; set; }
+                public string Domain { get; set; }
+                public int? GroupCount { get; set; }
+                public string Granularity { get; set; }
+                public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds InstanceIds { get; set; }
+                public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds : TeaModel {
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public List<string> InstanceId { get; set; }
 
-            [NameInMap("Strategy")]
-            [Validation(Required=false)]
-            public string Strategy { get; set; }
-
-            [NameInMap("DeploymentSetId")]
-            [Validation(Required=false)]
-            public string DeploymentSetId { get; set; }
-
-            [NameInMap("DeploymentStrategy")]
-            [Validation(Required=false)]
-            public string DeploymentStrategy { get; set; }
-
-            [NameInMap("DeploymentSetDescription")]
-            [Validation(Required=false)]
-            public string DeploymentSetDescription { get; set; }
-
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
-            [NameInMap("GroupCount")]
-            [Validation(Required=false)]
-            public int? GroupCount { get; set; }
-
-            [NameInMap("Granularity")]
-            [Validation(Required=false)]
-            public string Granularity { get; set; }
-
-            [NameInMap("InstanceIds")]
-            [Validation(Required=false)]
-            public List<string> InstanceIds { get; set; }
-
-            [NameInMap("DeploymentSetName")]
-            [Validation(Required=false)]
-            public string DeploymentSetName { get; set; }
-
-            [NameInMap("InstanceAmount")]
-            [Validation(Required=false)]
-            public int? InstanceAmount { get; set; }
-
-        }
+                }
+                public string DeploymentSetName { get; set; }
+                public int? InstanceAmount { get; set; }
+            }
+        };
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

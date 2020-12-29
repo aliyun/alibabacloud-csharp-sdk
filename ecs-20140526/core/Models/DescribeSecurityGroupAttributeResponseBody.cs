@@ -31,85 +31,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Permissions")]
         [Validation(Required=false)]
-        public List<DescribeSecurityGroupAttributeResponseBodyPermissions> Permissions { get; set; }
+        public DescribeSecurityGroupAttributeResponseBodyPermissions Permissions { get; set; }
         public class DescribeSecurityGroupAttributeResponseBodyPermissions : TeaModel {
-            [NameInMap("Direction")]
+            [NameInMap("Permission")]
             [Validation(Required=false)]
-            public string Direction { get; set; }
-
-            [NameInMap("SourceGroupId")]
-            [Validation(Required=false)]
-            public string SourceGroupId { get; set; }
-
-            [NameInMap("DestGroupOwnerAccount")]
-            [Validation(Required=false)]
-            public string DestGroupOwnerAccount { get; set; }
-
-            [NameInMap("SourceCidrIp")]
-            [Validation(Required=false)]
-            public string SourceCidrIp { get; set; }
-
-            [NameInMap("Ipv6DestCidrIp")]
-            [Validation(Required=false)]
-            public string Ipv6DestCidrIp { get; set; }
-
-            [NameInMap("Ipv6SourceCidrIp")]
-            [Validation(Required=false)]
-            public string Ipv6SourceCidrIp { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("DestGroupId")]
-            [Validation(Required=false)]
-            public string DestGroupId { get; set; }
-
-            [NameInMap("IpProtocol")]
-            [Validation(Required=false)]
-            public string IpProtocol { get; set; }
-
-            [NameInMap("DestCidrIp")]
-            [Validation(Required=false)]
-            public string DestCidrIp { get; set; }
-
-            [NameInMap("Priority")]
-            [Validation(Required=false)]
-            public string Priority { get; set; }
-
-            [NameInMap("DestGroupName")]
-            [Validation(Required=false)]
-            public string DestGroupName { get; set; }
-
-            [NameInMap("NicType")]
-            [Validation(Required=false)]
-            public string NicType { get; set; }
-
-            [NameInMap("Policy")]
-            [Validation(Required=false)]
-            public string Policy { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("PortRange")]
-            [Validation(Required=false)]
-            public string PortRange { get; set; }
-
-            [NameInMap("SourceGroupOwnerAccount")]
-            [Validation(Required=false)]
-            public string SourceGroupOwnerAccount { get; set; }
-
-            [NameInMap("SourceGroupName")]
-            [Validation(Required=false)]
-            public string SourceGroupName { get; set; }
-
-            [NameInMap("SourcePortRange")]
-            [Validation(Required=false)]
-            public string SourcePortRange { get; set; }
-
-        }
+            public List<DescribeSecurityGroupAttributeResponseBodyPermissionsPermission> Permission { get; set; }
+            public class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission : TeaModel {
+                public string Direction { get; set; }
+                public string SourceGroupId { get; set; }
+                public string DestGroupOwnerAccount { get; set; }
+                public string SourceCidrIp { get; set; }
+                public string Ipv6DestCidrIp { get; set; }
+                public string Ipv6SourceCidrIp { get; set; }
+                public string CreateTime { get; set; }
+                public string DestGroupId { get; set; }
+                public string IpProtocol { get; set; }
+                public string DestCidrIp { get; set; }
+                public string Priority { get; set; }
+                public string DestGroupName { get; set; }
+                public string NicType { get; set; }
+                public string Policy { get; set; }
+                public string Description { get; set; }
+                public string PortRange { get; set; }
+                public string SourceGroupOwnerAccount { get; set; }
+                public string SourceGroupName { get; set; }
+                public string SourcePortRange { get; set; }
+            }
+        };
 
         [NameInMap("InnerAccessPolicy")]
         [Validation(Required=false)]

@@ -15,21 +15,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("InstanceCloudAssistantStatusSet")]
         [Validation(Required=false)]
-        public List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet> InstanceCloudAssistantStatusSet { get; set; }
+        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet InstanceCloudAssistantStatusSet { get; set; }
         public class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet : TeaModel {
-            [NameInMap("CloudAssistantStatus")]
+            [NameInMap("InstanceCloudAssistantStatus")]
             [Validation(Required=false)]
-            public string CloudAssistantStatus { get; set; }
-
-            [NameInMap("CloudAssistantVersion")]
-            [Validation(Required=false)]
-            public string CloudAssistantVersion { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus> InstanceCloudAssistantStatus { get; set; }
+            public class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus : TeaModel {
+                public string CloudAssistantStatus { get; set; }
+                public string CloudAssistantVersion { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 

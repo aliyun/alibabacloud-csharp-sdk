@@ -27,17 +27,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("Links")]
         [Validation(Required=false)]
-        public List<DescribeClassicLinkInstancesResponseBodyLinks> Links { get; set; }
+        public DescribeClassicLinkInstancesResponseBodyLinks Links { get; set; }
         public class DescribeClassicLinkInstancesResponseBodyLinks : TeaModel {
-            [NameInMap("VpcId")]
+            [NameInMap("Link")]
             [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<DescribeClassicLinkInstancesResponseBodyLinksLink> Link { get; set; }
+            public class DescribeClassicLinkInstancesResponseBodyLinksLink : TeaModel {
+                public string VpcId { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 
