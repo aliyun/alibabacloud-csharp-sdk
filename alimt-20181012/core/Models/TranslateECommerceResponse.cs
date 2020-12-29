@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class TranslateECommerceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public TranslateECommerceResponseData Data { get; set; }
-        public class TranslateECommerceResponseData : TeaModel {
-            [NameInMap("Translated")]
-            [Validation(Required=true)]
-            public string Translated { get; set; }
-            [NameInMap("WordCount")]
-            [Validation(Required=true)]
-            public string WordCount { get; set; }
-        };
+        public TranslateECommerceResponseBody Body { get; set; }
 
     }
 

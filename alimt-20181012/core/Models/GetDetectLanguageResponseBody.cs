@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class OpenAlimtServiceRequest : TeaModel {
-        [NameInMap("OwnerId")]
+    public class GetDetectLanguageResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("DetectedLanguage")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string DetectedLanguage { get; set; }
 
     }
 

@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         public Stream ImageUrlObject { get; set; }
 
         [NameInMap("SourceLanguage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceLanguage { get; set; }
 
         [NameInMap("TargetLanguage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TargetLanguage { get; set; }
 
         [NameInMap("CertificateType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CertificateType { get; set; }
 
         [NameInMap("ResultType")]

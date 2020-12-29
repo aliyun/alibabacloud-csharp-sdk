@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTitleDiagnoseRequest : TeaModel {
         [NameInMap("Title")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Title { get; set; }
 
         [NameInMap("Language")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Language { get; set; }
 
         [NameInMap("Platform")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Platform { get; set; }
 
         [NameInMap("CategoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CategoryId { get; set; }
 
         [NameInMap("Extra")]

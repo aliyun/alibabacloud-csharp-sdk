@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetDetectLanguageRequest : TeaModel {
         [NameInMap("SourceText")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceText { get; set; }
 
     }
