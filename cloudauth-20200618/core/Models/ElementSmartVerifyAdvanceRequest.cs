@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 
         [NameInMap("SceneId")]
         [Validation(Required=false)]
-        public long SceneId { get; set; }
+        public long? SceneId { get; set; }
 
         [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]

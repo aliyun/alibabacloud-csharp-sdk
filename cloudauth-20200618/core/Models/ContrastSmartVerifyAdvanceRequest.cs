@@ -14,19 +14,19 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         public Stream FacePicFileObject { get; set; }
 
         [NameInMap("SceneId")]
-        [Validation(Required=true)]
-        public long SceneId { get; set; }
+        [Validation(Required=false)]
+        public long? SceneId { get; set; }
 
         [NameInMap("OuterOrderNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OuterOrderNo { get; set; }
 
         [NameInMap("Mode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Mode { get; set; }
 
         [NameInMap("CertType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CertType { get; set; }
 
         [NameInMap("Mobile")]
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         public string UserId { get; set; }
 
         [NameInMap("CertName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CertName { get; set; }
 
         [NameInMap("CertNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CertNo { get; set; }
 
         [NameInMap("FacePicUrl")]
