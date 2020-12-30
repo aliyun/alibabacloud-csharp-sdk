@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
         public bool? AsyncMode { get; set; }
 
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
     }

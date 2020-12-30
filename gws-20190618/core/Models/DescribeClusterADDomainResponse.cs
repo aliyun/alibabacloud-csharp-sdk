@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class DescribeClusterADDomainResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("IsSupported")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? IsSupported { get; set; }
-
-        [NameInMap("TaskFinished")]
-        [Validation(Required=true)]
-        public bool? TaskFinished { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public string TaskId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=true)]
-        public string DomainName { get; set; }
-
-        [NameInMap("DomainDnsIp")]
-        [Validation(Required=true)]
-        public string DomainDnsIp { get; set; }
+        public DescribeClusterADDomainResponseBody Body { get; set; }
 
     }
 

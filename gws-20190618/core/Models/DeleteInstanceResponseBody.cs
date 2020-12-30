@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gws20190618.Models
 {
-    public class DescribeAvailableResourceRequest : TeaModel {
+    public class DeleteInstanceResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
     }
 
 }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class DeleteImageRequest : TeaModel {
         [NameInMap("ImageId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageId { get; set; }
 
     }

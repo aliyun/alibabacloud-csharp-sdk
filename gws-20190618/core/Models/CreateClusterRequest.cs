@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,11 +13,11 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class CreateClusterRequest : TeaModel {
         [NameInMap("VpcId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VpcId { get; set; }
 
         [NameInMap("ClusterType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterType { get; set; }
 
         [NameInMap("VSwitchId")]

@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
     public class DescribeInstancesRequest : TeaModel {
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 
         [NameInMap("UserUid")]
         [Validation(Required=false)]
-        public long UserUid { get; set; }
+        public long? UserUid { get; set; }
 
         [NameInMap("UserName")]
         [Validation(Required=false)]

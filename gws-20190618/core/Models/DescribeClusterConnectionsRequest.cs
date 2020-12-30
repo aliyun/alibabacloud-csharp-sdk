@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class DescribeClusterConnectionsRequest : TeaModel {
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("TaskId")]

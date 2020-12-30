@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class SetInstanceUserRequest : TeaModel {
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("UserUid")]
-        [Validation(Required=true)]
-        public long UserUid { get; set; }
+        [Validation(Required=false)]
+        public long? UserUid { get; set; }
 
         [NameInMap("UserName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string UserName { get; set; }
 
     }

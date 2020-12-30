@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class SetClusterADDomainRequest : TeaModel {
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         [NameInMap("DomainDnsIp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainDnsIp { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("DomainPassword")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainPassword { get; set; }
 
         [NameInMap("DomainAdmin")]

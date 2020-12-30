@@ -9,41 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class DescribeClusterPolicyResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("UsbRedirect")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string UsbRedirect { get; set; }
-
-        [NameInMap("Watermark")]
-        [Validation(Required=true)]
-        public string Watermark { get; set; }
-
-        [NameInMap("LocalDrive")]
-        [Validation(Required=true)]
-        public string LocalDrive { get; set; }
-
-        [NameInMap("Clipboard")]
-        [Validation(Required=true)]
-        public string Clipboard { get; set; }
-
-        [NameInMap("UdpPort")]
-        [Validation(Required=true)]
-        public string UdpPort { get; set; }
-
-        [NameInMap("DomainList")]
-        [Validation(Required=true)]
-        public string DomainList { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public string TaskId { get; set; }
-
-        [NameInMap("TaskFinished")]
-        [Validation(Required=true)]
-        public bool? TaskFinished { get; set; }
+        public DescribeClusterPolicyResponseBody Body { get; set; }
 
     }
 

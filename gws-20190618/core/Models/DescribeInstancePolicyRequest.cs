@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class DescribeInstancePolicyRequest : TeaModel {
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("TaskId")]

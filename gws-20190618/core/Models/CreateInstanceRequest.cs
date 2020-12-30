@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class CreateInstanceRequest : TeaModel {
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         [NameInMap("VSwitchId")]
@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
         public string Name { get; set; }
 
         [NameInMap("ImageId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageId { get; set; }
 
         [NameInMap("SystemDiskSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }
 
         [NameInMap("SystemDiskCategory")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SystemDiskCategory { get; set; }
 
         [NameInMap("AllocatePublicAddress")]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         [NameInMap("InstanceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         [NameInMap("InstanceChargeType")]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
         public string PeriodUnit { get; set; }
 
         [NameInMap("WorkMode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string WorkMode { get; set; }
 
         [NameInMap("AppList")]

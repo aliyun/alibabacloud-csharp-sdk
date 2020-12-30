@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class SetClusterPolicyRequest : TeaModel {
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         [NameInMap("UsbRedirect")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string UsbRedirect { get; set; }
 
         [NameInMap("Watermark")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Watermark { get; set; }
 
         [NameInMap("LocalDrive")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string LocalDrive { get; set; }
 
         [NameInMap("Clipboard")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Clipboard { get; set; }
 
         [NameInMap("UdpPort")]

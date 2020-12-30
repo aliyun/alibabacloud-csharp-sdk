@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class SetClusterNameRequest : TeaModel {
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
     }

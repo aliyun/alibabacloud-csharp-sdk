@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class DescribeClusterADDomainRequest : TeaModel {
         [NameInMap("ClusterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         [NameInMap("TaskId")]

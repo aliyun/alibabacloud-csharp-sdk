@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class IsUserAdminResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("IsAdmin")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? IsAdmin { get; set; }
-
-        [NameInMap("IsAllow")]
-        [Validation(Required=true)]
-        public bool? IsAllow { get; set; }
+        public IsUserAdminResponseBody Body { get; set; }
 
     }
 

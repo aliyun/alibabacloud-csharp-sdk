@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gws20190618.Models
 {
     public class DescribeInstancePolicyResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("VisualLossless")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string VisualLossless { get; set; }
-
-        [NameInMap("OptimizeFor3d")]
-        [Validation(Required=true)]
-        public string OptimizeFor3d { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public string TaskId { get; set; }
-
-        [NameInMap("TaskFinished")]
-        [Validation(Required=true)]
-        public bool? TaskFinished { get; set; }
+        public DescribeInstancePolicyResponseBody Body { get; set; }
 
     }
 
