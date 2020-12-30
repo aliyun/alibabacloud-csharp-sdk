@@ -1,0 +1,82 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Aegis20161111.Models
+{
+    public class DescribeStratetyResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Strategies")]
+        [Validation(Required=false)]
+        public List<DescribeStratetyResponseBodyStrategies> Strategies { get; set; }
+        public class DescribeStratetyResponseBodyStrategies : TeaModel {
+            [NameInMap("ExecStatus")]
+            [Validation(Required=false)]
+            public int? ExecStatus { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
+
+            [NameInMap("ConfigTargets")]
+            [Validation(Required=false)]
+            public List<DescribeStratetyResponseBodyStrategiesConfigTargets> ConfigTargets { get; set; }
+            public class DescribeStratetyResponseBodyStrategiesConfigTargets : TeaModel {
+                [NameInMap("Flag")]
+                [Validation(Required=false)]
+                public string Flag { get; set; }
+
+                [NameInMap("Target")]
+                [Validation(Required=false)]
+                public string Target { get; set; }
+
+                [NameInMap("TargetType")]
+                [Validation(Required=false)]
+                public string TargetType { get; set; }
+
+            }
+
+            [NameInMap("CycleStartTime")]
+            [Validation(Required=false)]
+            public int? CycleStartTime { get; set; }
+
+            [NameInMap("EcsCount")]
+            [Validation(Required=false)]
+            public int? EcsCount { get; set; }
+
+            [NameInMap("ProcessRate")]
+            [Validation(Required=false)]
+            public int? ProcessRate { get; set; }
+
+            [NameInMap("CycleDays")]
+            [Validation(Required=false)]
+            public int? CycleDays { get; set; }
+
+            [NameInMap("RiskCount")]
+            [Validation(Required=false)]
+            public int? RiskCount { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("PassRate")]
+            [Validation(Required=false)]
+            public int? PassRate { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public int? Id { get; set; }
+
+        }
+
+    }
+
+}
