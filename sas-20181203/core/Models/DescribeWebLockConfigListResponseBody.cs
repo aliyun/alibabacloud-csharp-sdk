@@ -1,0 +1,72 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Sas20181203.Models
+{
+    public class DescribeWebLockConfigListResponseBody : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ConfigList")]
+        [Validation(Required=false)]
+        public List<DescribeWebLockConfigListResponseBodyConfigList> ConfigList { get; set; }
+        public class DescribeWebLockConfigListResponseBodyConfigList : TeaModel {
+            [NameInMap("ExclusiveDir")]
+            [Validation(Required=false)]
+            public string ExclusiveDir { get; set; }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
+
+            [NameInMap("InclusiveFileType")]
+            [Validation(Required=false)]
+            public string InclusiveFileType { get; set; }
+
+            [NameInMap("DefenceMode")]
+            [Validation(Required=false)]
+            public string DefenceMode { get; set; }
+
+            [NameInMap("ExclusiveFileType")]
+            [Validation(Required=false)]
+            public string ExclusiveFileType { get; set; }
+
+            [NameInMap("InclusiveFile")]
+            [Validation(Required=false)]
+            public string InclusiveFile { get; set; }
+
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
+            [NameInMap("Dir")]
+            [Validation(Required=false)]
+            public string Dir { get; set; }
+
+            [NameInMap("ExclusiveFile")]
+            [Validation(Required=false)]
+            public string ExclusiveFile { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("LocalBackupDir")]
+            [Validation(Required=false)]
+            public string LocalBackupDir { get; set; }
+
+        }
+
+    }
+
+}
