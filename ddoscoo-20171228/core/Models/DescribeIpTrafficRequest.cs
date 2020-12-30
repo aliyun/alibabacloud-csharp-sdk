@@ -18,19 +18,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public long StartTime { get; set; }
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
         [NameInMap("Interval")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Interval { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public long EndTime { get; set; }
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
 
         [NameInMap("Eip")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Eip { get; set; }
 
         [NameInMap("Port")]

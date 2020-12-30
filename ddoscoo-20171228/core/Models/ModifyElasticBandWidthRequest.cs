@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string SourceIp { get; set; }
 
         [NameInMap("ElasticBandwidth")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? ElasticBandwidth { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
     }

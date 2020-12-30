@@ -9,53 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeDomainQpsWithCacheResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Interval")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Interval { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public long StartTime { get; set; }
-
-        [NameInMap("Totals")]
-        [Validation(Required=true)]
-        public List<string> Totals { get; set; }
-
-        [NameInMap("Blocks")]
-        [Validation(Required=true)]
-        public List<string> Blocks { get; set; }
-
-        [NameInMap("CacheHits")]
-        [Validation(Required=true)]
-        public List<string> CacheHits { get; set; }
-
-        [NameInMap("PreciseBlocks")]
-        [Validation(Required=true)]
-        public List<string> PreciseBlocks { get; set; }
-
-        [NameInMap("RegionBlocks")]
-        [Validation(Required=true)]
-        public List<string> RegionBlocks { get; set; }
-
-        [NameInMap("IpBlockQps")]
-        [Validation(Required=true)]
-        public List<string> IpBlockQps { get; set; }
-
-        [NameInMap("CcJsQps")]
-        [Validation(Required=true)]
-        public List<string> CcJsQps { get; set; }
-
-        [NameInMap("PreciseJsQps")]
-        [Validation(Required=true)]
-        public List<string> PreciseJsQps { get; set; }
-
-        [NameInMap("CcBlockQps")]
-        [Validation(Required=true)]
-        public List<string> CcBlockQps { get; set; }
+        public DescribeDomainQpsWithCacheResponseBody Body { get; set; }
 
     }
 

@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
     }

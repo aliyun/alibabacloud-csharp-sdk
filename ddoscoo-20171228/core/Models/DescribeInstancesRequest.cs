@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string InstanceIds { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageSize { get; set; }
 
         [NameInMap("Ip")]
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 
         [NameInMap("ExpireStartTime")]
         [Validation(Required=false)]
-        public long ExpireStartTime { get; set; }
+        public long? ExpireStartTime { get; set; }
 
         [NameInMap("ExpireEndTime")]
         [Validation(Required=false)]
-        public long ExpireEndTime { get; set; }
+        public long? ExpireEndTime { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

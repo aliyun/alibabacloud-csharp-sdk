@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string Lang { get; set; }
 
         [NameInMap("Ttl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Ttl { get; set; }
 
         [NameInMap("ResourceGroupId")]

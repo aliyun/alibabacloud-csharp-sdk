@@ -9,28 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ListTagResourcesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string NextToken { get; set; }
-
-        [NameInMap("TagResources")]
-        [Validation(Required=true)]
-        public ListTagResourcesResponseTagResources TagResources { get; set; }
-        public class ListTagResourcesResponseTagResources : TeaModel {
-            [NameInMap("TagResource")]
-            [Validation(Required=true)]
-            public List<ListTagResourcesResponseTagResourcesTagResource> TagResource { get; set; }
-            public class ListTagResourcesResponseTagResourcesTagResource : TeaModel {
-                public string ResourceType { get; set; }
-                public string ResourceId { get; set; }
-                public string TagKey { get; set; }
-                public string TagValue { get; set; }
-            }
-        };
+        public ListTagResourcesResponseBody Body { get; set; }
 
     }
 

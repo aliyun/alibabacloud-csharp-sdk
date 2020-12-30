@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ConfigLayer7CertRequest : TeaModel {
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         [NameInMap("Domain")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Domain { get; set; }
 
         [NameInMap("CertId")]

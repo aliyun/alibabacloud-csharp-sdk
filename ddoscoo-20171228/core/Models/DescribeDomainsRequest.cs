@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string QueryDomainPattern { get; set; }
 
         [NameInMap("Offset")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Offset { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageSize { get; set; }
 
         [NameInMap("InstanceIds")]

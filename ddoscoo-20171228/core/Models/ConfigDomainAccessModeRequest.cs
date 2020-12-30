@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string SourceIp { get; set; }
 
         [NameInMap("Domain")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Domain { get; set; }
 
         [NameInMap("AccessMode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? AccessMode { get; set; }
 
     }

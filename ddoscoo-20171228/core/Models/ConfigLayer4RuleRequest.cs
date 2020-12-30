@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ConfigLayer4RuleRequest : TeaModel {
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("Listeners")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Listeners { get; set; }
 
     }

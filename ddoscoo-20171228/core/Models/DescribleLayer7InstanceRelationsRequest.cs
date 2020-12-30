@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("DomainList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> DomainList { get; set; }
 
     }
