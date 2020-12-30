@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Pcdn20170411.Models
         public string SecurityToken { get; set; }
 
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("BusinessType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BusinessType { get; set; }
 
         [NameInMap("Domain")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Domain { get; set; }
 
         [NameInMap("LiveFormat")]

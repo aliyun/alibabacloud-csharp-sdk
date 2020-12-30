@@ -14,35 +14,35 @@ namespace AlibabaCloud.SDK.Pcdn20170411.Models
         public string SecurityToken { get; set; }
 
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("Region")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Region { get; set; }
 
         [NameInMap("IspName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IspName { get; set; }
 
         [NameInMap("PlatformType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PlatformType { get; set; }
 
         [NameInMap("BusinessType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BusinessType { get; set; }
 
         [NameInMap("Market")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Market { get; set; }
 
         [NameInMap("AppVersion")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppVersion { get; set; }
 
     }

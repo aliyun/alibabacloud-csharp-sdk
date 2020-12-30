@@ -9,44 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pcdn20170411.Models
 {
     public class GetFluencyDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("DataList")]
-        [Validation(Required=true)]
-        public GetFluencyDataResponseDataList DataList { get; set; }
-        public class GetFluencyDataResponseDataList : TeaModel {
-            [NameInMap("UsageData")]
-            [Validation(Required=true)]
-            public List<GetFluencyDataResponseDataListUsageData> UsageData { get; set; }
-            public class GetFluencyDataResponseDataListUsageData : TeaModel {
-                public string Date { get; set; }
-                public GetFluencyDataResponseDataListUsageDataValues Values { get; set; }
-                public class GetFluencyDataResponseDataListUsageDataValues : TeaModel {
-                    /// <summary>
-                    /// Values
-                    /// </summary>
-                    [NameInMap("Values")]
-                    [Validation(Required=true)]
-                    public List<string> Values { get; set; }
-
-                }
-            }
-        };
-
-        [NameInMap("Labels")]
-        [Validation(Required=true)]
-        public GetFluencyDataResponseLabels Labels { get; set; }
-        public class GetFluencyDataResponseLabels : TeaModel {
-            [NameInMap("Label")]
-            [Validation(Required=true)]
-            public List<string> Label { get; set; }
-        };
+        public GetFluencyDataResponseBody Body { get; set; }
 
     }
 

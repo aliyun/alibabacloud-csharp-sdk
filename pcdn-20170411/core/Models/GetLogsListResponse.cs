@@ -9,28 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pcdn20170411.Models
 {
     public class GetLogsListResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("LogList")]
-        [Validation(Required=true)]
-        public GetLogsListResponseLogList LogList { get; set; }
-        public class GetLogsListResponseLogList : TeaModel {
-            [NameInMap("Log")]
-            [Validation(Required=true)]
-            public List<GetLogsListResponseLogListLog> Log { get; set; }
-            public class GetLogsListResponseLogListLog : TeaModel {
-                public string Url { get; set; }
-                public string FileName { get; set; }
-                public string StartDate { get; set; }
-                public string EndDate { get; set; }
-            }
-        };
+        public GetLogsListResponseBody Body { get; set; }
 
     }
 

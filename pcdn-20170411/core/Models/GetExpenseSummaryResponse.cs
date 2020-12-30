@@ -9,37 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pcdn20170411.Models
 {
     public class GetExpenseSummaryResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetExpenseSummaryResponseData Data { get; set; }
-        public class GetExpenseSummaryResponseData : TeaModel {
-            [NameInMap("TotalTraffic")]
-            [Validation(Required=true)]
-            public long TotalTraffic { get; set; }
-            [NameInMap("TotalUV")]
-            [Validation(Required=true)]
-            public int? TotalUV { get; set; }
-            [NameInMap("ShareRate")]
-            [Validation(Required=true)]
-            public float? ShareRate { get; set; }
-            [NameInMap("CoverRate")]
-            [Validation(Required=true)]
-            public float? CoverRate { get; set; }
-            [NameInMap("ForecastFluency")]
-            [Validation(Required=true)]
-            public float? ForecastFluency { get; set; }
-            [NameInMap("TopBandwidth")]
-            [Validation(Required=true)]
-            public long TopBandwidth { get; set; }
-        };
+        public GetExpenseSummaryResponseBody Body { get; set; }
 
     }
 

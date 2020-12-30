@@ -9,26 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pcdn20170411.Models
 {
     public class GetAllPlatformTypesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("DataList")]
-        [Validation(Required=true)]
-        public GetAllPlatformTypesResponseDataList DataList { get; set; }
-        public class GetAllPlatformTypesResponseDataList : TeaModel {
-            [NameInMap("UsageData")]
-            [Validation(Required=true)]
-            public List<GetAllPlatformTypesResponseDataListUsageData> UsageData { get; set; }
-            public class GetAllPlatformTypesResponseDataListUsageData : TeaModel {
-                public int? Code { get; set; }
-                public string Name { get; set; }
-            }
-        };
+        public GetAllPlatformTypesResponseBody Body { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pcdn20170411.Models
 {
     public class DisablePcdnControlRuleResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=true)]
-        public string ResourceId { get; set; }
+        public DisablePcdnControlRuleResponseBody Body { get; set; }
 
     }
 

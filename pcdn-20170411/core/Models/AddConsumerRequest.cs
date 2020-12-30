@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -14,27 +17,27 @@ namespace AlibabaCloud.SDK.Pcdn20170411.Models
         public string SecurityToken { get; set; }
 
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("BusinessType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BusinessType { get; set; }
 
         [NameInMap("Company")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Company { get; set; }
 
         [NameInMap("Site")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Site { get; set; }
 
         [NameInMap("Requirement")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Requirement { get; set; }
 
         [NameInMap("Mobile")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Mobile { get; set; }
 
         [NameInMap("Ca")]

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Pcdn20170411.Models
         public string SecurityToken { get; set; }
 
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("DataInterval")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Pcdn20170411.Models
         public int? DataInterval { get; set; }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceId { get; set; }
 
     }

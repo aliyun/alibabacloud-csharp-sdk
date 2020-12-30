@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Pcdn20170411.Models
         public string SecurityToken { get; set; }
 
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("Page")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Page { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PageSize { get; set; }
 
     }

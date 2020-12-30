@@ -9,44 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pcdn20170411.Models
 {
     public class GetFirstFrameDelayDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("DataList")]
-        [Validation(Required=true)]
-        public GetFirstFrameDelayDataResponseDataList DataList { get; set; }
-        public class GetFirstFrameDelayDataResponseDataList : TeaModel {
-            [NameInMap("UsageData")]
-            [Validation(Required=true)]
-            public List<GetFirstFrameDelayDataResponseDataListUsageData> UsageData { get; set; }
-            public class GetFirstFrameDelayDataResponseDataListUsageData : TeaModel {
-                public string Date { get; set; }
-                public GetFirstFrameDelayDataResponseDataListUsageDataValues Values { get; set; }
-                public class GetFirstFrameDelayDataResponseDataListUsageDataValues : TeaModel {
-                    /// <summary>
-                    /// Values
-                    /// </summary>
-                    [NameInMap("Values")]
-                    [Validation(Required=true)]
-                    public List<string> Values { get; set; }
-
-                }
-            }
-        };
-
-        [NameInMap("Labels")]
-        [Validation(Required=true)]
-        public GetFirstFrameDelayDataResponseLabels Labels { get; set; }
-        public class GetFirstFrameDelayDataResponseLabels : TeaModel {
-            [NameInMap("Label")]
-            [Validation(Required=true)]
-            public List<string> Label { get; set; }
-        };
+        public GetFirstFrameDelayDataResponseBody Body { get; set; }
 
     }
 

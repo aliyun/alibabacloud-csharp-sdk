@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Pcdn20170411.Models
 {
     public class GetAllIspResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("DataList")]
-        [Validation(Required=true)]
-        public GetAllIspResponseDataList DataList { get; set; }
-        public class GetAllIspResponseDataList : TeaModel {
-            [NameInMap("UsageData")]
-            [Validation(Required=true)]
-            public List<GetAllIspResponseDataListUsageData> UsageData { get; set; }
-            public class GetAllIspResponseDataListUsageData : TeaModel {
-                public string NameCn { get; set; }
-                public string NameEn { get; set; }
-                public string ResourceId { get; set; }
-            }
-        };
+        public GetAllIspResponseBody Body { get; set; }
 
     }
 
