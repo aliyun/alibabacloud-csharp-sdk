@@ -1,0 +1,31 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cassandra20190101.Models
+{
+    public class ListTagsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public ListTagsResponseBodyTags Tags { get; set; }
+        public class ListTagsResponseBodyTags : TeaModel {
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<ListTagsResponseBodyTagsTag> Tag { get; set; }
+            public class ListTagsResponseBodyTagsTag : TeaModel {
+                public string TagValue { get; set; }
+                public string TagKey { get; set; }
+            }
+        };
+
+    }
+
+}
