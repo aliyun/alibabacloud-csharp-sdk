@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
     public class LivenessFaceVerifyRequest : TeaModel {
         [NameInMap("SceneId")]
         [Validation(Required=false)]
-        public long SceneId { get; set; }
+        public long? SceneId { get; set; }
 
         [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]

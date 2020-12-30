@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DetectFaceAttributesRequest : TeaModel {
         [NameInMap("MaterialValue")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MaterialValue { get; set; }
 
         [NameInMap("BizType")]
