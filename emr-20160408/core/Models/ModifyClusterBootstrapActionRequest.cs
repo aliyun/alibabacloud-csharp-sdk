@@ -1,0 +1,60 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Emr20160408.Models
+{
+    public class ModifyClusterBootstrapActionRequest : TeaModel {
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        [NameInMap("BootstrapAction")]
+        [Validation(Required=false)]
+        public List<ModifyClusterBootstrapActionRequestBootstrapAction> BootstrapAction { get; set; }
+        public class ModifyClusterBootstrapActionRequestBootstrapAction : TeaModel {
+            [NameInMap("ExecutionFailStrategy")]
+            [Validation(Required=false)]
+            public string ExecutionFailStrategy { get; set; }
+
+            [NameInMap("Arg")]
+            [Validation(Required=false)]
+            public string Arg { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+            [NameInMap("ExecutionTarget")]
+            [Validation(Required=false)]
+            public string ExecutionTarget { get; set; }
+
+            [NameInMap("ExecutionMoment")]
+            [Validation(Required=false)]
+            public string ExecutionMoment { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Emr20160408.Models
+{
+    public class ListClusterOperationTaskResponseBody : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("ClusterOperationTaskList")]
+        [Validation(Required=false)]
+        public ListClusterOperationTaskResponseBodyClusterOperationTaskList ClusterOperationTaskList { get; set; }
+        public class ListClusterOperationTaskResponseBodyClusterOperationTaskList : TeaModel {
+            [NameInMap("ClusterOperationTask")]
+            [Validation(Required=false)]
+            public List<ListClusterOperationTaskResponseBodyClusterOperationTaskListClusterOperationTask> ClusterOperationTask { get; set; }
+            public class ListClusterOperationTaskResponseBodyClusterOperationTaskListClusterOperationTask : TeaModel {
+                public string Status { get; set; }
+                public string TaskName { get; set; }
+                public string Percentage { get; set; }
+                public string TaskId { get; set; }
+            }
+        };
+
+    }
+
+}
