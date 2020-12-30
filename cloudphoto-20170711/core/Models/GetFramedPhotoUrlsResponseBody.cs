@@ -1,0 +1,46 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.CloudPhoto20170711.Models
+{
+    public class GetFramedPhotoUrlsResponseBody : TeaModel {
+        [NameInMap("Action")]
+        [Validation(Required=false)]
+        public string Action { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Results")]
+        [Validation(Required=false)]
+        public GetFramedPhotoUrlsResponseBodyResults Results { get; set; }
+        public class GetFramedPhotoUrlsResponseBodyResults : TeaModel {
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public List<GetFramedPhotoUrlsResponseBodyResultsResult> Result { get; set; }
+            public class GetFramedPhotoUrlsResponseBodyResultsResult : TeaModel {
+                public string PhotoIdStr { get; set; }
+                public string FramedPhotoUrl { get; set; }
+                public string Code { get; set; }
+                public string Message { get; set; }
+                public long? PhotoId { get; set; }
+            }
+        };
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+    }
+
+}
