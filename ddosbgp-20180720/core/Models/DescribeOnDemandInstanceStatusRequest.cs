@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeOnDemandInstanceStatusRequest : TeaModel {
-        [NameInMap("InstanceIdList")]
-        [Validation(Required=true)]
-        public List<string> InstanceIdList { get; set; }
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("InstanceIdList")]
+        [Validation(Required=false)]
+        public List<string> InstanceIdList { get; set; }
 
     }
 

@@ -9,40 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ConfigSchedruleOnDemandRequest : TeaModel {
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("RuleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleName { get; set; }
 
         [NameInMap("RuleConditionMbps")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleConditionMbps { get; set; }
 
         [NameInMap("RuleConditionKpps")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleConditionKpps { get; set; }
 
         [NameInMap("RuleConditionCnt")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleConditionCnt { get; set; }
 
         [NameInMap("RuleAction")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleAction { get; set; }
 
         [NameInMap("RuleSwitch")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleSwitch { get; set; }
 
         [NameInMap("RuleUndoMode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleUndoMode { get; set; }
 
         [NameInMap("RuleUndoBeginTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleUndoBeginTime { get; set; }
 
         [NameInMap("RuleUndoEndTime")]
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RuleUndoEndTime { get; set; }
 
         [NameInMap("TimeZone")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TimeZone { get; set; }
 
         [NameInMap("RegionId")]

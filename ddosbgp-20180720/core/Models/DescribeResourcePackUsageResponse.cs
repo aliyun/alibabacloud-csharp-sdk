@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeResourcePackUsageResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Interval")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public long Interval { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public long StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public long EndTime { get; set; }
-
-        [NameInMap("PackUsages")]
-        [Validation(Required=true)]
-        public List<DescribeResourcePackUsageResponsePackUsages> PackUsages { get; set; }
-        public class DescribeResourcePackUsageResponsePackUsages : TeaModel {
-            [NameInMap("Traffic")]
-            [Validation(Required=true)]
-            public float? Traffic { get; set; }
-
-            [NameInMap("Time")]
-            [Validation(Required=true)]
-            public long Time { get; set; }
-
-        }
+        public DescribeResourcePackUsageResponseBody Body { get; set; }
 
     }
 

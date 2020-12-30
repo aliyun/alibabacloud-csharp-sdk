@@ -14,12 +14,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string SourceIp { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public long EndTime { get; set; }
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public long StartTime { get; set; }
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

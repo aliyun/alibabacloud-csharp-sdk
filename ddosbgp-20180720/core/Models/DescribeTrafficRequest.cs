@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeTrafficRequest : TeaModel {
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Ip { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StartTime { get; set; }
 
         [NameInMap("EndTime")]

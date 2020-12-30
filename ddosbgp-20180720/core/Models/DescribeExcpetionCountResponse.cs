@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeExcpetionCountResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ExceptionIpCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? ExceptionIpCount { get; set; }
-
-        [NameInMap("ExpireTimeCount")]
-        [Validation(Required=true)]
-        public int? ExpireTimeCount { get; set; }
+        public DescribeExcpetionCountResponseBody Body { get; set; }
 
     }
 

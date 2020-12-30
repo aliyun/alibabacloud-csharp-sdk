@@ -9,43 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeTrafficResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("FlowList")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<DescribeTrafficResponseFlowList> FlowList { get; set; }
-        public class DescribeTrafficResponseFlowList : TeaModel {
-            [NameInMap("Pps")]
-            [Validation(Required=true)]
-            public int? Pps { get; set; }
-
-            [NameInMap("FlowType")]
-            [Validation(Required=true)]
-            public string FlowType { get; set; }
-
-            [NameInMap("Kbps")]
-            [Validation(Required=true)]
-            public int? Kbps { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
-
-            [NameInMap("AttackBps")]
-            [Validation(Required=true)]
-            public long AttackBps { get; set; }
-
-            [NameInMap("AttackPps")]
-            [Validation(Required=true)]
-            public long AttackPps { get; set; }
-
-            [NameInMap("Time")]
-            [Validation(Required=true)]
-            public int? Time { get; set; }
-
-        }
+        public DescribeTrafficResponseBody Body { get; set; }
 
     }
 
