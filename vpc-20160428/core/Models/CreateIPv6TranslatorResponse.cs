@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Ipv6TranslatorId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Ipv6TranslatorId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=true)]
-        public string Name { get; set; }
-
-        [NameInMap("Spec")]
-        [Validation(Required=true)]
-        public string Spec { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=true)]
-        public long OrderId { get; set; }
+        public CreateIPv6TranslatorResponseBody Body { get; set; }
 
     }
 

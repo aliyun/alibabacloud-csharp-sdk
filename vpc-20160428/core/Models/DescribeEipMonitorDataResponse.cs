@@ -9,26 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEipMonitorDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("EipMonitorDatas")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeEipMonitorDataResponseEipMonitorDatas EipMonitorDatas { get; set; }
-        public class DescribeEipMonitorDataResponseEipMonitorDatas : TeaModel {
-            [NameInMap("EipMonitorData")]
-            [Validation(Required=true)]
-            public List<DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData> EipMonitorData { get; set; }
-            public class DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData : TeaModel {
-                public long EipRX { get; set; }
-                public long EipTX { get; set; }
-                public int? EipFlow { get; set; }
-                public int? EipBandwidth { get; set; }
-                public int? EipPackets { get; set; }
-                public string TimeStamp { get; set; }
-            }
-        };
+        public DescribeEipMonitorDataResponseBody Body { get; set; }
 
     }
 

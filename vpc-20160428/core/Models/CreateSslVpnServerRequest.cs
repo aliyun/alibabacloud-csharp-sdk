@@ -9,16 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateSslVpnServerRequest : TeaModel {
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("VpnGatewayId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VpnGatewayId { get; set; }
 
         [NameInMap("Name")]
@@ -26,11 +42,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         [NameInMap("ClientIpPool")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClientIpPool { get; set; }
 
         [NameInMap("LocalSubnet")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string LocalSubnet { get; set; }
 
         [NameInMap("Proto")]

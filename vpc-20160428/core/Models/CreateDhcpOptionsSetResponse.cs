@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateDhcpOptionsSetResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DhcpOptionsSetId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DhcpOptionsSetId { get; set; }
+        public CreateDhcpOptionsSetResponseBody Body { get; set; }
 
     }
 

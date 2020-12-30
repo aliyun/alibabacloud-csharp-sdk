@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVirtualBorderRouterAttributeRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("VbrId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VbrId { get; set; }
 
         [NameInMap("VlanId")]
@@ -39,15 +39,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         [NameInMap("MinTxInterval")]
         [Validation(Required=false)]
-        public long MinTxInterval { get; set; }
+        public long? MinTxInterval { get; set; }
 
         [NameInMap("MinRxInterval")]
         [Validation(Required=false)]
-        public long MinRxInterval { get; set; }
+        public long? MinRxInterval { get; set; }
 
         [NameInMap("DetectMultiplier")]
         [Validation(Required=false)]
-        public long DetectMultiplier { get; set; }
+        public long? DetectMultiplier { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -61,9 +61,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string AssociatedPhysicalConnections { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("LocalIpv6GatewayIp")]
         [Validation(Required=false)]
@@ -80,6 +96,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("EnableIpv6")]
         [Validation(Required=false)]
         public bool? EnableIpv6 { get; set; }
+
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
 
     }
 

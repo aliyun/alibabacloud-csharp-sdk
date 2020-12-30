@@ -9,12 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatGatewayRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("VpcId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VpcId { get; set; }
 
         [NameInMap("Name")]
@@ -32,28 +48,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Spec")]
         [Validation(Required=false)]
         public string Spec { get; set; }
-
-        [NameInMap("BandwidthPackage")]
-        [Validation(Required=false)]
-        public List<CreateNatGatewayRequestBandwidthPackage> BandwidthPackage { get; set; }
-        public class CreateNatGatewayRequestBandwidthPackage : TeaModel {
-            [NameInMap("IpCount")]
-            [Validation(Required=true)]
-            public int? IpCount { get; set; }
-
-            [NameInMap("Bandwidth")]
-            [Validation(Required=true)]
-            public int? Bandwidth { get; set; }
-
-            [NameInMap("Zone")]
-            [Validation(Required=true)]
-            public string Zone { get; set; }
-
-            [NameInMap("ISP")]
-            [Validation(Required=true)]
-            public string ISP { get; set; }
-
-        }
 
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -82,6 +76,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
+
+        [NameInMap("BandwidthPackage")]
+        [Validation(Required=false)]
+        public List<CreateNatGatewayRequestBandwidthPackage> BandwidthPackage { get; set; }
+        public class CreateNatGatewayRequestBandwidthPackage : TeaModel {
+        }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateHaVipResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("HaVipId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string HaVipId { get; set; }
-
-        [NameInMap("IpAddress")]
-        [Validation(Required=true)]
-        public string IpAddress { get; set; }
+        public CreateHaVipResponseBody Body { get; set; }
 
     }
 

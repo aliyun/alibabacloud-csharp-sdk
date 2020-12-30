@@ -9,21 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateGlobalAccelerationInstanceRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("GlobalAccelerationInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GlobalAccelerationInstanceId { get; set; }
 
         [NameInMap("BackendServerId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BackendServerId { get; set; }
 
         [NameInMap("BackendServerRegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BackendServerRegionId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("BackendServerType")]
         [Validation(Required=false)]

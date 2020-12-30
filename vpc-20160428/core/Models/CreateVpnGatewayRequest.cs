@@ -9,8 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnGatewayRequest : TeaModel {
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Name")]
@@ -18,7 +34,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         [NameInMap("VpcId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VpcId { get; set; }
 
         [NameInMap("InstanceChargeType")]
@@ -34,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? AutoPay { get; set; }
 
         [NameInMap("Bandwidth")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
         [NameInMap("EnableIpsec")]
@@ -52,6 +68,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        [NameInMap("VpnType")]
+        [Validation(Required=false)]
+        public string VpnType { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListDhcpOptionsSetsRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("NextToken")]
@@ -25,13 +25,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("DhcpOptionsSetName")]
+        [Validation(Required=false)]
+        public string DhcpOptionsSetName { get; set; }
+
         [NameInMap("DhcpOptionsSetId")]
         [Validation(Required=false)]
         public List<string> DhcpOptionsSetId { get; set; }
 
-        [NameInMap("DhcpOptionsSetName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string DhcpOptionsSetName { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
     }
 

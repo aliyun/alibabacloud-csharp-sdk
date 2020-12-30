@@ -9,8 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVpcAttributeRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("VpcId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VpcId { get; set; }
 
         [NameInMap("Description")]
@@ -32,6 +44,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("EnableIPv6")]
         [Validation(Required=false)]
         public bool? EnableIPv6 { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("Ipv6CidrBlock")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class EnableNatGatewayEcsMetricRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DryRun")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         [NameInMap("NatGatewayId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
     }

@@ -10,16 +10,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateVpcCidrBlockRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("VpcId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VpcId { get; set; }
 
         [NameInMap("SecondaryCidrBlock")]
         [Validation(Required=false)]
         public string SecondaryCidrBlock { get; set; }
+
+        [NameInMap("IPv6CidrBlock")]
+        [Validation(Required=false)]
+        public string IPv6CidrBlock { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
     }
 

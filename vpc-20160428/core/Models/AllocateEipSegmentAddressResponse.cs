@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipSegmentAddressResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("EipSegmentInstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string EipSegmentInstanceId { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=true)]
-        public long OrderId { get; set; }
+        public AllocateEipSegmentAddressResponseBody Body { get; set; }
 
     }
 

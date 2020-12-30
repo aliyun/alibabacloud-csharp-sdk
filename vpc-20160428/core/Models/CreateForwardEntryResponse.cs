@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateForwardEntryResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ForwardEntryId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ForwardEntryId { get; set; }
+        public CreateForwardEntryResponseBody Body { get; set; }
 
     }
 

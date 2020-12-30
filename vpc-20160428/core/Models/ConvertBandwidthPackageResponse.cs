@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ConvertBandwidthPackageResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ConvertInstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ConvertInstanceId { get; set; }
+        public ConvertBandwidthPackageResponseBody Body { get; set; }
 
     }
 

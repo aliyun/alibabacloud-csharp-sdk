@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateIpv6InternetBandwidthResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Ipv6AddressId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Ipv6AddressId { get; set; }
-
-        [NameInMap("InternetBandwidthId")]
-        [Validation(Required=true)]
-        public string InternetBandwidthId { get; set; }
+        public AllocateIpv6InternetBandwidthResponseBody Body { get; set; }
 
     }
 

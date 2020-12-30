@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListNatGatewayEcsMetricRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DryRun")]
@@ -18,12 +18,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         [NameInMap("NatGatewayId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
         [NameInMap("TimePoint")]
-        [Validation(Required=true)]
-        public long TimePoint { get; set; }
+        [Validation(Required=false)]
+        public long? TimePoint { get; set; }
 
         [NameInMap("OrderKey")]
         [Validation(Required=false)]

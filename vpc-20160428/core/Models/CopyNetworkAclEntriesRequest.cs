@@ -10,16 +10,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CopyNetworkAclEntriesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("NetworkAclId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NetworkAclId { get; set; }
 
         [NameInMap("SourceNetworkAclId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceNetworkAclId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

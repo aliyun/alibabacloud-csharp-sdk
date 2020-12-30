@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnGatewayResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("VpnGatewayId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string VpnGatewayId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=true)]
-        public string Name { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=true)]
-        public long OrderId { get; set; }
+        public CreateVpnGatewayResponseBody Body { get; set; }
 
     }
 

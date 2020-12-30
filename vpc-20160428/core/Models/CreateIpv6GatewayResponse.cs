@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIpv6GatewayResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Ipv6GatewayId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Ipv6GatewayId { get; set; }
+        public CreateIpv6GatewayResponseBody Body { get; set; }
 
     }
 

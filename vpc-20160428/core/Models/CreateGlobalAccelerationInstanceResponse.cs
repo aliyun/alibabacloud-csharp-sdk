@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateGlobalAccelerationInstanceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("GlobalAccelerationInstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string GlobalAccelerationInstanceId { get; set; }
-
-        [NameInMap("IpAddress")]
-        [Validation(Required=true)]
-        public string IpAddress { get; set; }
+        public CreateGlobalAccelerationInstanceResponseBody Body { get; set; }
 
     }
 

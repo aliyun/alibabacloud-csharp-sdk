@@ -9,36 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeInstanceAutoRenewAttributeResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string TotalCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public string PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public string PageNumber { get; set; }
-
-        [NameInMap("InstanceRenewAttributes")]
-        [Validation(Required=true)]
-        public DescribeInstanceAutoRenewAttributeResponseInstanceRenewAttributes InstanceRenewAttributes { get; set; }
-        public class DescribeInstanceAutoRenewAttributeResponseInstanceRenewAttributes : TeaModel {
-            [NameInMap("InstanceRenewAttribute")]
-            [Validation(Required=true)]
-            public List<DescribeInstanceAutoRenewAttributeResponseInstanceRenewAttributesInstanceRenewAttribute> InstanceRenewAttribute { get; set; }
-            public class DescribeInstanceAutoRenewAttributeResponseInstanceRenewAttributesInstanceRenewAttribute : TeaModel {
-                public string InstanceId { get; set; }
-                public string RenewalStatus { get; set; }
-                public int? Duration { get; set; }
-                public string PricingCycle { get; set; }
-            }
-        };
+        public DescribeInstanceAutoRenewAttributeResponseBody Body { get; set; }
 
     }
 

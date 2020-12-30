@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpcResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("VpcId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string VpcId { get; set; }
-
-        [NameInMap("VRouterId")]
-        [Validation(Required=true)]
-        public string VRouterId { get; set; }
-
-        [NameInMap("RouteTableId")]
-        [Validation(Required=true)]
-        public string RouteTableId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=true)]
-        public string ResourceGroupId { get; set; }
+        public CreateVpcResponseBody Body { get; set; }
 
     }
 

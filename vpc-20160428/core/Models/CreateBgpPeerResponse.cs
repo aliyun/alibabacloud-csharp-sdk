@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateBgpPeerResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("BgpPeerId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string BgpPeerId { get; set; }
+        public CreateBgpPeerResponseBody Body { get; set; }
 
     }
 

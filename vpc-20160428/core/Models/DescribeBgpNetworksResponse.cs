@@ -9,36 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpNetworksResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("BgpNetworks")]
-        [Validation(Required=true)]
-        public DescribeBgpNetworksResponseBgpNetworks BgpNetworks { get; set; }
-        public class DescribeBgpNetworksResponseBgpNetworks : TeaModel {
-            [NameInMap("BgpNetwork")]
-            [Validation(Required=true)]
-            public List<DescribeBgpNetworksResponseBgpNetworksBgpNetwork> BgpNetwork { get; set; }
-            public class DescribeBgpNetworksResponseBgpNetworksBgpNetwork : TeaModel {
-                public string VpcId { get; set; }
-                public string DstCidrBlock { get; set; }
-                public string RouterId { get; set; }
-                public string Status { get; set; }
-            }
-        };
+        public DescribeBgpNetworksResponseBody Body { get; set; }
 
     }
 

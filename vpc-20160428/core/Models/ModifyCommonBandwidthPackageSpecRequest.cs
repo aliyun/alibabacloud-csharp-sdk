@@ -9,16 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCommonBandwidthPackageSpecRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("BandwidthPackageId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         [NameInMap("Bandwidth")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Bandwidth { get; set; }
 
     }
