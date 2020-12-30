@@ -9,32 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class ElementSmartVerifyResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ResultObject")]
-        [Validation(Required=true)]
-        public ElementSmartVerifyResponseResultObject ResultObject { get; set; }
-        public class ElementSmartVerifyResponseResultObject : TeaModel {
-            [NameInMap("Passed")]
-            [Validation(Required=true)]
-            public string Passed { get; set; }
-            [NameInMap("SubCode")]
-            [Validation(Required=true)]
-            public string SubCode { get; set; }
-            [NameInMap("MaterialInfo")]
-            [Validation(Required=true)]
-            public string MaterialInfo { get; set; }
-        };
+        public ElementSmartVerifyResponseBody Body { get; set; }
 
     }
 
