@@ -1,0 +1,64 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cdn20180510.Models
+{
+    public class DescribeDomainCcActivityLogResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
+
+        [NameInMap("ActivityLog")]
+        [Validation(Required=false)]
+        public List<DescribeDomainCcActivityLogResponseBodyActivityLog> ActivityLog { get; set; }
+        public class DescribeDomainCcActivityLogResponseBodyActivityLog : TeaModel {
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+            [NameInMap("Ttl")]
+            [Validation(Required=false)]
+            public long? Ttl { get; set; }
+
+            [NameInMap("Action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            [NameInMap("TriggerObject")]
+            [Validation(Required=false)]
+            public string TriggerObject { get; set; }
+
+            [NameInMap("TimeStamp")]
+            [Validation(Required=false)]
+            public string TimeStamp { get; set; }
+
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+
+            [NameInMap("RuleName")]
+            [Validation(Required=false)]
+            public string RuleName { get; set; }
+
+        }
+
+        [NameInMap("PageIndex")]
+        [Validation(Required=false)]
+        public long? PageIndex { get; set; }
+
+    }
+
+}
