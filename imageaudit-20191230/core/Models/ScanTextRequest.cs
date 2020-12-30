@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 {
     public class ScanTextRequest : TeaModel {
         [NameInMap("Tasks")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<ScanTextRequestTasks> Tasks { get; set; }
         public class ScanTextRequestTasks : TeaModel {
             [NameInMap("Content")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Content { get; set; }
 
         }
 
         [NameInMap("Labels")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<ScanTextRequestLabels> Labels { get; set; }
         public class ScanTextRequestLabels : TeaModel {
             [NameInMap("Label")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Label { get; set; }
 
         }

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,33 +13,33 @@ namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 {
     public class ScanImageRequest : TeaModel {
         [NameInMap("Task")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<ScanImageRequestTask> Task { get; set; }
         public class ScanImageRequestTask : TeaModel {
-            [NameInMap("DataId")]
-            [Validation(Required=false)]
-            public string DataId { get; set; }
-
-            [NameInMap("ImageURL")]
-            [Validation(Required=true)]
-            public string ImageURL { get; set; }
-
             [NameInMap("ImageTimeMillisecond")]
             [Validation(Required=false)]
-            public long ImageTimeMillisecond { get; set; }
+            public long? ImageTimeMillisecond { get; set; }
 
             [NameInMap("Interval")]
             [Validation(Required=false)]
             public int? Interval { get; set; }
 
+            [NameInMap("ImageURL")]
+            [Validation(Required=false)]
+            public string ImageURL { get; set; }
+
             [NameInMap("MaxFrames")]
             [Validation(Required=false)]
             public int? MaxFrames { get; set; }
 
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
         }
 
         [NameInMap("Scene")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> Scene { get; set; }
 
     }

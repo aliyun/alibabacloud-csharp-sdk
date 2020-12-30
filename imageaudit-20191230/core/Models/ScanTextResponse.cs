@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 {
     public class ScanTextResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public ScanTextResponseData Data { get; set; }
-        public class ScanTextResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<ScanTextResponseDataElements> Elements { get; set; }
-            public class ScanTextResponseDataElements : TeaModel {
-                public string TaskId { get; set; }
-                public List<ScanTextResponseDataElementsResults> Results { get; set; }
-                public class ScanTextResponseDataElementsResults : TeaModel {
-                    public string Label { get; set; }
-                    public string Suggestion { get; set; }
-                    public float? Rate { get; set; }
-                    public List<ScanTextResponseDataElementsResultsDetails> Details { get; set; }
-                    public class ScanTextResponseDataElementsResultsDetails : TeaModel {
-                        public string Label { get; set; }
-                        public List<ScanTextResponseDataElementsResultsDetailsContexts> Contexts { get; set; }
-                        public class ScanTextResponseDataElementsResultsDetailsContexts : TeaModel {
-                            public string Context { get; set; }
-                        }
-                    }
-                }
-            }
-        };
+        public ScanTextResponseBody Body { get; set; }
 
     }
 
