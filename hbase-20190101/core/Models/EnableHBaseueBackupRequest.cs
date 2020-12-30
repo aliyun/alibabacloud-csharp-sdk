@@ -1,0 +1,30 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.HBase20190101.Models
+{
+    public class EnableHBaseueBackupRequest : TeaModel {
+        [NameInMap("HbaseueClusterId")]
+        [Validation(Required=false)]
+        public string HbaseueClusterId { get; set; }
+
+        [NameInMap("NodeCount")]
+        [Validation(Required=false)]
+        public int? NodeCount { get; set; }
+
+        [NameInMap("ColdStorageSize")]
+        [Validation(Required=false)]
+        public int? ColdStorageSize { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+    }
+
+}
