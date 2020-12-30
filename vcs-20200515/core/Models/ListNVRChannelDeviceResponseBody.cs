@@ -64,6 +64,14 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
             [Validation(Required=false)]
             public string SampleName { get; set; }
 
+            [NameInMap("RegionName")]
+            [Validation(Required=false)]
+            public string RegionName { get; set; }
+
+            [NameInMap("CorpId")]
+            [Validation(Required=false)]
+            public string CorpId { get; set; }
+
         }
 
     }

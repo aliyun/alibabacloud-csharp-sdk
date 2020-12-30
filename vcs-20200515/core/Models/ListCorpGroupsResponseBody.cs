@@ -26,16 +26,16 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
             public List<string> Records { get; set; }
             [NameInMap("TotalPage")]
             [Validation(Required=false)]
-            public long TotalPage { get; set; }
+            public long? TotalPage { get; set; }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
-            public long PageNumber { get; set; }
+            public long? PageNumber { get; set; }
             [NameInMap("PageSize")]
             [Validation(Required=false)]
-            public long PageSize { get; set; }
+            public long? PageSize { get; set; }
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public long TotalCount { get; set; }
+            public long? TotalCount { get; set; }
         };
 
         [NameInMap("Code")]

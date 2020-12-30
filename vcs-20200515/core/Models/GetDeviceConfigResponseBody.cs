@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("GovLength")]
         [Validation(Required=false)]
-        public long GovLength { get; set; }
+        public long? GovLength { get; set; }
 
         [NameInMap("Latitude")]
         [Validation(Required=false)]

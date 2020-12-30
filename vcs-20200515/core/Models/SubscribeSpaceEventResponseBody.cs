@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
-    public class UnbindUserRequest : TeaModel {
-        [NameInMap("CorpId")]
+    public class SubscribeSpaceEventResponseBody : TeaModel {
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string CorpId { get; set; }
+        public string Message { get; set; }
 
-        [NameInMap("IsvSubId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string IsvSubId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("UserId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public string Code { get; set; }
 
     }
 

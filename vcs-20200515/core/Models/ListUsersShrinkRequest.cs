@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
-        public long UserGroupId { get; set; }
+        public long? UserGroupId { get; set; }
 
         [NameInMap("IdNumber")]
         [Validation(Required=false)]
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("PersonList")]
         [Validation(Required=false)]

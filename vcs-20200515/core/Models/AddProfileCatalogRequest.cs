@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("ParentCatalogId")]
         [Validation(Required=false)]
-        public long ParentCatalogId { get; set; }
+        public long? ParentCatalogId { get; set; }
 
     }
 

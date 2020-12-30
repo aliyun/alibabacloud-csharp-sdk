@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
                 public string TargetImageUrl { get; set; }
                 public int? LeftTopY { get; set; }
                 public string TargetImagePath { get; set; }
-                public long ShotTime { get; set; }
+                public long? ShotTime { get; set; }
                 public int? LeftTopX { get; set; }
                 public string SourceImagePath { get; set; }
             }

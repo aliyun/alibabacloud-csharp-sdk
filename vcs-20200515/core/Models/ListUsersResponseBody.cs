@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public class ListUsersResponseBodyData : TeaModel {
             [NameInMap("Success")]
             [Validation(Required=false)]
-            public long Success { get; set; }
+            public long? Success { get; set; }
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<ListUsersResponseBodyDataRecords> Records { get; set; }
@@ -43,13 +43,13 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
-            public long PageNumber { get; set; }
+            public long? PageNumber { get; set; }
             [NameInMap("PageSize")]
             [Validation(Required=false)]
-            public long PageSize { get; set; }
+            public long? PageSize { get; set; }
             [NameInMap("Total")]
             [Validation(Required=false)]
-            public long Total { get; set; }
+            public long? Total { get; set; }
         };
 
         [NameInMap("Code")]

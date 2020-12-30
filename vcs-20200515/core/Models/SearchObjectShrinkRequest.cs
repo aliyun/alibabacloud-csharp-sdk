@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public long StartTime { get; set; }
+        public long? StartTime { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public long EndTime { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

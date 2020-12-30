@@ -80,51 +80,13 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
             [Validation(Required=false)]
             public string DeviceSn { get; set; }
 
-            [NameInMap("ChannelList")]
-            [Validation(Required=false)]
-            public List<ListNVRDeviceResponseBodyDataChannelList> ChannelList { get; set; }
-            public class ListNVRDeviceResponseBodyDataChannelList : TeaModel {
-                [NameInMap("DeviceCode")]
-                [Validation(Required=false)]
-                public string DeviceCode { get; set; }
-
-                [NameInMap("DeviceName")]
-                [Validation(Required=false)]
-                public string DeviceName { get; set; }
-
-                [NameInMap("DeviceType")]
-                [Validation(Required=false)]
-                public string DeviceType { get; set; }
-
-                [NameInMap("DatasourceType")]
-                [Validation(Required=false)]
-                public string DatasourceType { get; set; }
-
-                [NameInMap("DeviceStatus")]
-                [Validation(Required=false)]
-                public string DeviceStatus { get; set; }
-
-                [NameInMap("StreamStatus")]
-                [Validation(Required=false)]
-                public string StreamStatus { get; set; }
-
-                [NameInMap("ComptureStatus")]
-                [Validation(Required=false)]
-                public string ComptureStatus { get; set; }
-
-                [NameInMap("DeviceSn")]
-                [Validation(Required=false)]
-                public string DeviceSn { get; set; }
-
-                [NameInMap("SampleName")]
-                [Validation(Required=false)]
-                public string SampleName { get; set; }
-
-            }
-
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            [NameInMap("CorpId")]
+            [Validation(Required=false)]
+            public string CorpId { get; set; }
 
         }
 

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public long TaskId { get; set; }
+        public long? TaskId { get; set; }
 
         [NameInMap("SaveVideo")]
         [Validation(Required=false)]

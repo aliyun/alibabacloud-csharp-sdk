@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]
-        public long UserGroupId { get; set; }
+        public long? UserGroupId { get; set; }
 
         [NameInMap("IdNumber")]
         [Validation(Required=false)]

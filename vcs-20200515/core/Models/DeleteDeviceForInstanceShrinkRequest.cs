@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         [Validation(Required=false)]
         public bool? DeleteInstanceFlag { get; set; }
 
+        [NameInMap("DeviceCount")]
+        [Validation(Required=false)]
+        public string DeviceCount { get; set; }
+
     }
 
 }

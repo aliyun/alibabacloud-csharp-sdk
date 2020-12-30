@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public class UpdateProfileCatalogResponseBodyData : TeaModel {
             [NameInMap("CatalogId")]
             [Validation(Required=false)]
-            public long CatalogId { get; set; }
+            public long? CatalogId { get; set; }
             [NameInMap("CatalogName")]
             [Validation(Required=false)]
             public string CatalogName { get; set; }
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
             public string ParentCatalogId { get; set; }
             [NameInMap("ProfileCount")]
             [Validation(Required=false)]
-            public long ProfileCount { get; set; }
+            public long? ProfileCount { get; set; }
         };
 
         [NameInMap("Code")]

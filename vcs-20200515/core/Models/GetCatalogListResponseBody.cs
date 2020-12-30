@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public class GetCatalogListResponseBodyData : TeaModel {
             [NameInMap("CatalogId")]
             [Validation(Required=false)]
-            public long CatalogId { get; set; }
+            public long? CatalogId { get; set; }
 
             [NameInMap("CatalogName")]
             [Validation(Required=false)]
@@ -35,11 +35,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
             [NameInMap("ParentCatalogId")]
             [Validation(Required=false)]
-            public long ParentCatalogId { get; set; }
+            public long? ParentCatalogId { get; set; }
 
             [NameInMap("ProfileCount")]
             [Validation(Required=false)]
-            public long ProfileCount { get; set; }
+            public long? ProfileCount { get; set; }
 
         }
 

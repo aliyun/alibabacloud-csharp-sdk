@@ -19,15 +19,15 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("IsPage")]
         [Validation(Required=false)]
-        public long IsPage { get; set; }
+        public long? IsPage { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public long PageNum { get; set; }
+        public long? PageNum { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
     }
 

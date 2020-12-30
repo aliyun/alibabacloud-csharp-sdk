@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
     public class ListPersonTraceDetailsResponseBody : TeaModel {
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public long TotalCount { get; set; }
+        public long? TotalCount { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]

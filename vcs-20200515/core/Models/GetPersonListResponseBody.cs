@@ -35,18 +35,18 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
                 public string FaceUrl { get; set; }
                 public string SearchMatchingRate { get; set; }
                 public string PersonId { get; set; }
-                public long LastShotTime { get; set; }
-                public long FirstShotTime { get; set; }
+                public long? LastShotTime { get; set; }
+                public long? FirstShotTime { get; set; }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
-            public long PageNumber { get; set; }
+            public long? PageNumber { get; set; }
             [NameInMap("PageSize")]
             [Validation(Required=false)]
-            public long PageSize { get; set; }
+            public long? PageSize { get; set; }
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public long TotalCount { get; set; }
+            public long? TotalCount { get; set; }
         };
 
         [NameInMap("Code")]

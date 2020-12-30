@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("UserId")]
         [Validation(Required=false)]
-        public long UserId { get; set; }
+        public long? UserId { get; set; }
 
         [NameInMap("NeedFaceDetail")]
         [Validation(Required=false)]

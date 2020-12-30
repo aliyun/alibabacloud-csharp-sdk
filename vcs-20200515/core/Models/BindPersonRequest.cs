@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
         [NameInMap("ProfileId")]
         [Validation(Required=false)]
-        public long ProfileId { get; set; }
+        public long? ProfileId { get; set; }
 
     }
 

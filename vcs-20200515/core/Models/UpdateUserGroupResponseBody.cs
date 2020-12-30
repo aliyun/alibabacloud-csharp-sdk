@@ -26,13 +26,13 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
             public string IsvSubId { get; set; }
             [NameInMap("UserGroupId")]
             [Validation(Required=false)]
-            public long UserGroupId { get; set; }
+            public long? UserGroupId { get; set; }
             [NameInMap("UserGroupName")]
             [Validation(Required=false)]
             public string UserGroupName { get; set; }
             [NameInMap("UserCount")]
             [Validation(Required=false)]
-            public long UserCount { get; set; }
+            public long? UserCount { get; set; }
             [NameInMap("ParentUserGroupId")]
             [Validation(Required=false)]
             public string ParentUserGroupId { get; set; }

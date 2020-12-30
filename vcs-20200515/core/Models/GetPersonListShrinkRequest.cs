@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
     public class GetPersonListShrinkRequest : TeaModel {
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("FaceUrl")]
         [Validation(Required=false)]

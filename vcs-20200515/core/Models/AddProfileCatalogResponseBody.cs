@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         public class AddProfileCatalogResponseBodyData : TeaModel {
             [NameInMap("CatalogId")]
             [Validation(Required=false)]
-            public long CatalogId { get; set; }
+            public long? CatalogId { get; set; }
             [NameInMap("CatalogName")]
             [Validation(Required=false)]
             public string CatalogName { get; set; }

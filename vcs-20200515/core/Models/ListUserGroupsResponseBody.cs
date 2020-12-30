@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
             [NameInMap("UserGroupId")]
             [Validation(Required=false)]
-            public long UserGroupId { get; set; }
+            public long? UserGroupId { get; set; }
 
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
 
             [NameInMap("UserCount")]
             [Validation(Required=false)]
-            public long UserCount { get; set; }
+            public long? UserCount { get; set; }
 
             [NameInMap("ParentUserGroupId")]
             [Validation(Required=false)]
-            public long ParentUserGroupId { get; set; }
+            public long? ParentUserGroupId { get; set; }
 
             [NameInMap("Creator")]
             [Validation(Required=false)]
