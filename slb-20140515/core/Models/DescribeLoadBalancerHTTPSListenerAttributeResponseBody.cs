@@ -23,21 +23,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("DomainExtensions")]
         [Validation(Required=false)]
-        public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions> DomainExtensions { get; set; }
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions DomainExtensions { get; set; }
         public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions : TeaModel {
-            [NameInMap("Domain")]
+            [NameInMap("DomainExtension")]
             [Validation(Required=false)]
-            public string Domain { get; set; }
-
-            [NameInMap("ServerCertificateId")]
-            [Validation(Required=false)]
-            public string ServerCertificateId { get; set; }
-
-            [NameInMap("DomainExtensionId")]
-            [Validation(Required=false)]
-            public string DomainExtensionId { get; set; }
-
-        }
+            public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> DomainExtension { get; set; }
+            public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension : TeaModel {
+                public string Domain { get; set; }
+                public string ServerCertificateId { get; set; }
+                public string DomainExtensionId { get; set; }
+            }
+        };
 
         [NameInMap("BackendServerPort")]
         [Validation(Required=false)]
@@ -173,29 +169,19 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
-        public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules> Rules { get; set; }
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules Rules { get; set; }
         public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules : TeaModel {
-            [NameInMap("VServerGroupId")]
+            [NameInMap("Rule")]
             [Validation(Required=false)]
-            public string VServerGroupId { get; set; }
-
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
-            [NameInMap("Url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
-
-            [NameInMap("RuleName")]
-            [Validation(Required=false)]
-            public string RuleName { get; set; }
-
-            [NameInMap("RuleId")]
-            [Validation(Required=false)]
-            public string RuleId { get; set; }
-
-        }
+            public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule> Rule { get; set; }
+            public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule : TeaModel {
+                public string VServerGroupId { get; set; }
+                public string Domain { get; set; }
+                public string Url { get; set; }
+                public string RuleName { get; set; }
+                public string RuleId { get; set; }
+            }
+        };
 
         [NameInMap("XForwardedFor_ClientCertIssuerDN")]
         [Validation(Required=false)]

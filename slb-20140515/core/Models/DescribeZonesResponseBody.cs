@@ -15,31 +15,33 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("Zones")]
         [Validation(Required=false)]
-        public List<DescribeZonesResponseBodyZones> Zones { get; set; }
+        public DescribeZonesResponseBodyZones Zones { get; set; }
         public class DescribeZonesResponseBodyZones : TeaModel {
-            [NameInMap("LocalName")]
+            [NameInMap("Zone")]
             [Validation(Required=false)]
-            public string LocalName { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-            [NameInMap("SlaveZones")]
-            [Validation(Required=false)]
-            public List<DescribeZonesResponseBodyZonesSlaveZones> SlaveZones { get; set; }
-            public class DescribeZonesResponseBodyZonesSlaveZones : TeaModel {
-                [NameInMap("LocalName")]
-                [Validation(Required=false)]
+            public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
+            public class DescribeZonesResponseBodyZonesZone : TeaModel {
                 public string LocalName { get; set; }
-
-                [NameInMap("ZoneId")]
-                [Validation(Required=false)]
                 public string ZoneId { get; set; }
+                public DescribeZonesResponseBodyZonesZoneSlaveZones SlaveZones { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneSlaveZones : TeaModel {
+                    [NameInMap("SlaveZone")]
+                    [Validation(Required=false)]
+                    public List<DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone> SlaveZone { get; set; }
+                    public class DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone : TeaModel {
+                        [NameInMap("LocalName")]
+                        [Validation(Required=false)]
+                        public string LocalName { get; set; }
 
+                        [NameInMap("ZoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
+
+                    }
+
+                }
             }
-
-        }
+        };
 
     }
 

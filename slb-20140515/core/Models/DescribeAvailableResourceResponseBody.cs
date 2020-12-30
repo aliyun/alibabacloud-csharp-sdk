@@ -15,31 +15,33 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("AvailableResources")]
         [Validation(Required=false)]
-        public List<DescribeAvailableResourceResponseBodyAvailableResources> AvailableResources { get; set; }
+        public DescribeAvailableResourceResponseBodyAvailableResources AvailableResources { get; set; }
         public class DescribeAvailableResourceResponseBodyAvailableResources : TeaModel {
-            [NameInMap("SlaveZoneId")]
+            [NameInMap("AvailableResource")]
             [Validation(Required=false)]
-            public string SlaveZoneId { get; set; }
+            public List<DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource> AvailableResource { get; set; }
+            public class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource : TeaModel {
+                public string SlaveZoneId { get; set; }
+                public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources SupportResources { get; set; }
+                public class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources : TeaModel {
+                    [NameInMap("SupportResource")]
+                    [Validation(Required=false)]
+                    public List<DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource> SupportResource { get; set; }
+                    public class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource : TeaModel {
+                        [NameInMap("AddressIPVersion")]
+                        [Validation(Required=false)]
+                        public string AddressIPVersion { get; set; }
 
-            [NameInMap("SupportResources")]
-            [Validation(Required=false)]
-            public List<DescribeAvailableResourceResponseBodyAvailableResourcesSupportResources> SupportResources { get; set; }
-            public class DescribeAvailableResourceResponseBodyAvailableResourcesSupportResources : TeaModel {
-                [NameInMap("AddressIPVersion")]
-                [Validation(Required=false)]
-                public string AddressIPVersion { get; set; }
+                        [NameInMap("AddressType")]
+                        [Validation(Required=false)]
+                        public string AddressType { get; set; }
 
-                [NameInMap("AddressType")]
-                [Validation(Required=false)]
-                public string AddressType { get; set; }
+                    }
 
+                }
+                public string MasterZoneId { get; set; }
             }
-
-            [NameInMap("MasterZoneId")]
-            [Validation(Required=false)]
-            public string MasterZoneId { get; set; }
-
-        }
+        };
 
     }
 

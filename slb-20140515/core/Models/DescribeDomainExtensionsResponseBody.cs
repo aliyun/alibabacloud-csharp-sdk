@@ -15,21 +15,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("DomainExtensions")]
         [Validation(Required=false)]
-        public List<DescribeDomainExtensionsResponseBodyDomainExtensions> DomainExtensions { get; set; }
+        public DescribeDomainExtensionsResponseBodyDomainExtensions DomainExtensions { get; set; }
         public class DescribeDomainExtensionsResponseBodyDomainExtensions : TeaModel {
-            [NameInMap("Domain")]
+            [NameInMap("DomainExtension")]
             [Validation(Required=false)]
-            public string Domain { get; set; }
-
-            [NameInMap("ServerCertificateId")]
-            [Validation(Required=false)]
-            public string ServerCertificateId { get; set; }
-
-            [NameInMap("DomainExtensionId")]
-            [Validation(Required=false)]
-            public string DomainExtensionId { get; set; }
-
-        }
+            public List<DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension> DomainExtension { get; set; }
+            public class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension : TeaModel {
+                public string Domain { get; set; }
+                public string ServerCertificateId { get; set; }
+                public string DomainExtensionId { get; set; }
+            }
+        };
 
     }
 

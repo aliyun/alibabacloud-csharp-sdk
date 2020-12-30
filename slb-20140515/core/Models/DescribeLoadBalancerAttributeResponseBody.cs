@@ -19,39 +19,31 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("ListenerPortsAndProtocal")]
         [Validation(Required=false)]
-        public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal> ListenerPortsAndProtocal { get; set; }
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal ListenerPortsAndProtocal { get; set; }
         public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal : TeaModel {
-            [NameInMap("ListenerProtocal")]
+            [NameInMap("ListenerPortAndProtocal")]
             [Validation(Required=false)]
-            public string ListenerProtocal { get; set; }
-
-            [NameInMap("ListenerPort")]
-            [Validation(Required=false)]
-            public int? ListenerPort { get; set; }
-
-        }
+            public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal> ListenerPortAndProtocal { get; set; }
+            public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal : TeaModel {
+                public string ListenerProtocal { get; set; }
+                public int? ListenerPort { get; set; }
+            }
+        };
 
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
-        public List<DescribeLoadBalancerAttributeResponseBodyBackendServers> BackendServers { get; set; }
+        public DescribeLoadBalancerAttributeResponseBodyBackendServers BackendServers { get; set; }
         public class DescribeLoadBalancerAttributeResponseBodyBackendServers : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("BackendServer")]
             [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("Weight")]
-            [Validation(Required=false)]
-            public int? Weight { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("ServerId")]
-            [Validation(Required=false)]
-            public string ServerId { get; set; }
-
-        }
+            public List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> BackendServer { get; set; }
+            public class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer : TeaModel {
+                public string Type { get; set; }
+                public int? Weight { get; set; }
+                public string Description { get; set; }
+                public string ServerId { get; set; }
+            }
+        };
 
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
@@ -63,7 +55,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("ListenerPorts")]
         [Validation(Required=false)]
-        public List<int?> ListenerPorts { get; set; }
+        public DescribeLoadBalancerAttributeResponseBodyListenerPorts ListenerPorts { get; set; }
+        public class DescribeLoadBalancerAttributeResponseBodyListenerPorts : TeaModel {
+            [NameInMap("ListenerPort")]
+            [Validation(Required=false)]
+            public List<string> ListenerPort { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -123,29 +120,19 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("ListenerPortsAndProtocol")]
         [Validation(Required=false)]
-        public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol> ListenerPortsAndProtocol { get; set; }
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol ListenerPortsAndProtocol { get; set; }
         public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol : TeaModel {
-            [NameInMap("ListenerProtocol")]
+            [NameInMap("ListenerPortAndProtocol")]
             [Validation(Required=false)]
-            public string ListenerProtocol { get; set; }
-
-            [NameInMap("ListenerForward")]
-            [Validation(Required=false)]
-            public string ListenerForward { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("ListenerPort")]
-            [Validation(Required=false)]
-            public int? ListenerPort { get; set; }
-
-            [NameInMap("ForwardPort")]
-            [Validation(Required=false)]
-            public int? ForwardPort { get; set; }
-
-        }
+            public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol> ListenerPortAndProtocol { get; set; }
+            public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol : TeaModel {
+                public string ListenerProtocol { get; set; }
+                public string ListenerForward { get; set; }
+                public string Description { get; set; }
+                public int? ListenerPort { get; set; }
+                public int? ForwardPort { get; set; }
+            }
+        };
 
         [NameInMap("ModificationProtectionStatus")]
         [Validation(Required=false)]

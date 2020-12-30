@@ -27,89 +27,34 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("LoadBalancers")]
         [Validation(Required=false)]
-        public List<DescribeLoadBalancersResponseBodyLoadBalancers> LoadBalancers { get; set; }
+        public DescribeLoadBalancersResponseBodyLoadBalancers LoadBalancers { get; set; }
         public class DescribeLoadBalancersResponseBodyLoadBalancers : TeaModel {
-            [NameInMap("VpcId")]
+            [NameInMap("LoadBalancer")]
             [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("CreateTimeStamp")]
-            [Validation(Required=false)]
-            public long? CreateTimeStamp { get; set; }
-
-            [NameInMap("LoadBalancerId")]
-            [Validation(Required=false)]
-            public string LoadBalancerId { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("PayType")]
-            [Validation(Required=false)]
-            public string PayType { get; set; }
-
-            [NameInMap("AddressType")]
-            [Validation(Required=false)]
-            public string AddressType { get; set; }
-
-            [NameInMap("NetworkType")]
-            [Validation(Required=false)]
-            public string NetworkType { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("ModificationProtectionReason")]
-            [Validation(Required=false)]
-            public string ModificationProtectionReason { get; set; }
-
-            [NameInMap("ModificationProtectionStatus")]
-            [Validation(Required=false)]
-            public string ModificationProtectionStatus { get; set; }
-
-            [NameInMap("AddressIPVersion")]
-            [Validation(Required=false)]
-            public string AddressIPVersion { get; set; }
-
-            [NameInMap("VSwitchId")]
-            [Validation(Required=false)]
-            public string VSwitchId { get; set; }
-
-            [NameInMap("LoadBalancerStatus")]
-            [Validation(Required=false)]
-            public string LoadBalancerStatus { get; set; }
-
-            [NameInMap("LoadBalancerName")]
-            [Validation(Required=false)]
-            public string LoadBalancerName { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            [NameInMap("InternetChargeType")]
-            [Validation(Required=false)]
-            public string InternetChargeType { get; set; }
-
-            [NameInMap("Address")]
-            [Validation(Required=false)]
-            public string Address { get; set; }
-
-            [NameInMap("SlaveZoneId")]
-            [Validation(Required=false)]
-            public string SlaveZoneId { get; set; }
-
-            [NameInMap("RegionIdAlias")]
-            [Validation(Required=false)]
-            public string RegionIdAlias { get; set; }
-
-            [NameInMap("MasterZoneId")]
-            [Validation(Required=false)]
-            public string MasterZoneId { get; set; }
-
-        }
+            public List<DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer> LoadBalancer { get; set; }
+            public class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer : TeaModel {
+                public string VpcId { get; set; }
+                public long? CreateTimeStamp { get; set; }
+                public string LoadBalancerId { get; set; }
+                public string CreateTime { get; set; }
+                public string PayType { get; set; }
+                public string AddressType { get; set; }
+                public string NetworkType { get; set; }
+                public string RegionId { get; set; }
+                public string ModificationProtectionReason { get; set; }
+                public string ModificationProtectionStatus { get; set; }
+                public string AddressIPVersion { get; set; }
+                public string VSwitchId { get; set; }
+                public string LoadBalancerStatus { get; set; }
+                public string LoadBalancerName { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string InternetChargeType { get; set; }
+                public string Address { get; set; }
+                public string SlaveZoneId { get; set; }
+                public string RegionIdAlias { get; set; }
+                public string MasterZoneId { get; set; }
+            }
+        };
 
     }
 

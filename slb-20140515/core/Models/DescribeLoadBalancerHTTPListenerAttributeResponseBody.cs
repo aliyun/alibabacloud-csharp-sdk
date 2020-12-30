@@ -111,29 +111,19 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
-        public List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules> Rules { get; set; }
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules Rules { get; set; }
         public class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules : TeaModel {
-            [NameInMap("VServerGroupId")]
+            [NameInMap("Rule")]
             [Validation(Required=false)]
-            public string VServerGroupId { get; set; }
-
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
-            [NameInMap("Url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
-
-            [NameInMap("RuleName")]
-            [Validation(Required=false)]
-            public string RuleName { get; set; }
-
-            [NameInMap("RuleId")]
-            [Validation(Required=false)]
-            public string RuleId { get; set; }
-
-        }
+            public List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule> Rule { get; set; }
+            public class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule : TeaModel {
+                public string VServerGroupId { get; set; }
+                public string Domain { get; set; }
+                public string Url { get; set; }
+                public string RuleName { get; set; }
+                public string RuleId { get; set; }
+            }
+        };
 
         [NameInMap("ListenerForward")]
         [Validation(Required=false)]

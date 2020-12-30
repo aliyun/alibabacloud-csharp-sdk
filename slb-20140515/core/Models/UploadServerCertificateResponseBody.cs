@@ -31,7 +31,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("SubjectAlternativeNames")]
         [Validation(Required=false)]
-        public List<string> SubjectAlternativeNames { get; set; }
+        public UploadServerCertificateResponseBodySubjectAlternativeNames SubjectAlternativeNames { get; set; }
+        public class UploadServerCertificateResponseBodySubjectAlternativeNames : TeaModel {
+            [NameInMap("SubjectAlternativeName")]
+            [Validation(Required=false)]
+            public List<string> SubjectAlternativeName { get; set; }
+        };
 
         [NameInMap("AliCloudCertificateId")]
         [Validation(Required=false)]

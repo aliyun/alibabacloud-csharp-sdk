@@ -15,30 +15,32 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("MasterSlaveServerGroups")]
         [Validation(Required=false)]
-        public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups> MasterSlaveServerGroups { get; set; }
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups MasterSlaveServerGroups { get; set; }
         public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups : TeaModel {
-            [NameInMap("MasterSlaveServerGroupId")]
+            [NameInMap("MasterSlaveServerGroup")]
             [Validation(Required=false)]
-            public string MasterSlaveServerGroupId { get; set; }
+            public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup> MasterSlaveServerGroup { get; set; }
+            public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup : TeaModel {
+                public string MasterSlaveServerGroupId { get; set; }
+                public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects AssociatedObjects { get; set; }
+                public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects : TeaModel {
+                    [NameInMap("Listeners")]
+                    [Validation(Required=false)]
+                    public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners Listeners { get; set; }
+                    public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners : TeaModel {
+                        [NameInMap("Listener")]
+                        [Validation(Required=false)]
+                        public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener> Listener { get; set; }
+                        public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener : TeaModel {
+                            public string Protocol { get; set; }
+                            public int? Port { get; set; }
+                        }
+                    };
 
-            [NameInMap("AssociatedObjects")]
-            [Validation(Required=false)]
-            public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects AssociatedObjects { get; set; }
-            public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects : TeaModel {
-                [NameInMap("Listeners")]
-                [Validation(Required=false)]
-                public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners> Listeners { get; set; }
-                public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners : TeaModel {
-                    public string Protocol { get; set; }
-                    public int? Port { get; set; }
                 }
-            };
-
-            [NameInMap("MasterSlaveServerGroupName")]
-            [Validation(Required=false)]
-            public string MasterSlaveServerGroupName { get; set; }
-
-        }
+                public string MasterSlaveServerGroupName { get; set; }
+            }
+        };
 
     }
 

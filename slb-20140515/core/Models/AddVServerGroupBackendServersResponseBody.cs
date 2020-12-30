@@ -19,29 +19,19 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
-        public List<AddVServerGroupBackendServersResponseBodyBackendServers> BackendServers { get; set; }
+        public AddVServerGroupBackendServersResponseBodyBackendServers BackendServers { get; set; }
         public class AddVServerGroupBackendServersResponseBodyBackendServers : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("BackendServer")]
             [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("Weight")]
-            [Validation(Required=false)]
-            public int? Weight { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("Port")]
-            [Validation(Required=false)]
-            public int? Port { get; set; }
-
-            [NameInMap("ServerId")]
-            [Validation(Required=false)]
-            public string ServerId { get; set; }
-
-        }
+            public List<AddVServerGroupBackendServersResponseBodyBackendServersBackendServer> BackendServer { get; set; }
+            public class AddVServerGroupBackendServersResponseBodyBackendServersBackendServer : TeaModel {
+                public string Type { get; set; }
+                public int? Weight { get; set; }
+                public string Description { get; set; }
+                public int? Port { get; set; }
+                public string ServerId { get; set; }
+            }
+        };
 
     }
 

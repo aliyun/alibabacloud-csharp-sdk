@@ -15,39 +15,47 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("VServerGroups")]
         [Validation(Required=false)]
-        public List<DescribeVServerGroupsResponseBodyVServerGroups> VServerGroups { get; set; }
+        public DescribeVServerGroupsResponseBodyVServerGroups VServerGroups { get; set; }
         public class DescribeVServerGroupsResponseBodyVServerGroups : TeaModel {
-            [NameInMap("VServerGroupId")]
+            [NameInMap("VServerGroup")]
             [Validation(Required=false)]
-            public string VServerGroupId { get; set; }
+            public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup> VServerGroup { get; set; }
+            public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroup : TeaModel {
+                public string VServerGroupId { get; set; }
+                public string VServerGroupName { get; set; }
+                public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects AssociatedObjects { get; set; }
+                public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjects : TeaModel {
+                    [NameInMap("Listeners")]
+                    [Validation(Required=false)]
+                    public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListeners Listeners { get; set; }
+                    public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListeners : TeaModel {
+                        [NameInMap("Listener")]
+                        [Validation(Required=false)]
+                        public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener> Listener { get; set; }
+                        public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener : TeaModel {
+                            public string Protocol { get; set; }
+                            public int? Port { get; set; }
+                        }
+                    };
 
-            [NameInMap("VServerGroupName")]
-            [Validation(Required=false)]
-            public string VServerGroupName { get; set; }
+                    [NameInMap("Rules")]
+                    [Validation(Required=false)]
+                    public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRules Rules { get; set; }
+                    public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRules : TeaModel {
+                        [NameInMap("Rule")]
+                        [Validation(Required=false)]
+                        public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule> Rule { get; set; }
+                        public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule : TeaModel {
+                            public string Domain { get; set; }
+                            public string Url { get; set; }
+                            public string RuleName { get; set; }
+                            public string RuleId { get; set; }
+                        }
+                    };
 
-            [NameInMap("AssociatedObjects")]
-            [Validation(Required=false)]
-            public DescribeVServerGroupsResponseBodyVServerGroupsAssociatedObjects AssociatedObjects { get; set; }
-            public class DescribeVServerGroupsResponseBodyVServerGroupsAssociatedObjects : TeaModel {
-                [NameInMap("Listeners")]
-                [Validation(Required=false)]
-                public List<DescribeVServerGroupsResponseBodyVServerGroupsAssociatedObjectsListeners> Listeners { get; set; }
-                public class DescribeVServerGroupsResponseBodyVServerGroupsAssociatedObjectsListeners : TeaModel {
-                    public string Protocol { get; set; }
-                    public int? Port { get; set; }
                 }
-                [NameInMap("Rules")]
-                [Validation(Required=false)]
-                public List<DescribeVServerGroupsResponseBodyVServerGroupsAssociatedObjectsRules> Rules { get; set; }
-                public class DescribeVServerGroupsResponseBodyVServerGroupsAssociatedObjectsRules : TeaModel {
-                    public string Domain { get; set; }
-                    public string Url { get; set; }
-                    public string RuleName { get; set; }
-                    public string RuleId { get; set; }
-                }
-            };
-
-        }
+            }
+        };
 
     }
 

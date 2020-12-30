@@ -27,25 +27,18 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("Acls")]
         [Validation(Required=false)]
-        public List<DescribeAccessControlListsResponseBodyAcls> Acls { get; set; }
+        public DescribeAccessControlListsResponseBodyAcls Acls { get; set; }
         public class DescribeAccessControlListsResponseBodyAcls : TeaModel {
-            [NameInMap("AclId")]
+            [NameInMap("Acl")]
             [Validation(Required=false)]
-            public string AclId { get; set; }
-
-            [NameInMap("AddressIPVersion")]
-            [Validation(Required=false)]
-            public string AddressIPVersion { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            [NameInMap("AclName")]
-            [Validation(Required=false)]
-            public string AclName { get; set; }
-
-        }
+            public List<DescribeAccessControlListsResponseBodyAclsAcl> Acl { get; set; }
+            public class DescribeAccessControlListsResponseBodyAclsAcl : TeaModel {
+                public string AclId { get; set; }
+                public string AddressIPVersion { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string AclName { get; set; }
+            }
+        };
 
         [NameInMap("Count")]
         [Validation(Required=false)]

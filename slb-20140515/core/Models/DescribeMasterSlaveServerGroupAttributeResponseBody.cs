@@ -27,33 +27,20 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("MasterSlaveBackendServers")]
         [Validation(Required=false)]
-        public List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers> MasterSlaveBackendServers { get; set; }
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers MasterSlaveBackendServers { get; set; }
         public class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("MasterSlaveBackendServer")]
             [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("Weight")]
-            [Validation(Required=false)]
-            public int? Weight { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("Port")]
-            [Validation(Required=false)]
-            public int? Port { get; set; }
-
-            [NameInMap("ServerId")]
-            [Validation(Required=false)]
-            public string ServerId { get; set; }
-
-            [NameInMap("ServerType")]
-            [Validation(Required=false)]
-            public string ServerType { get; set; }
-
-        }
+            public List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer> MasterSlaveBackendServer { get; set; }
+            public class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer : TeaModel {
+                public string Type { get; set; }
+                public int? Weight { get; set; }
+                public string Description { get; set; }
+                public int? Port { get; set; }
+                public string ServerId { get; set; }
+                public string ServerType { get; set; }
+            }
+        };
 
     }
 

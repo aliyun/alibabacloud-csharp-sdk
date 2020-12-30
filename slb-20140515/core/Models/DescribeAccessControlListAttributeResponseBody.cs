@@ -11,17 +11,16 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
     public class DescribeAccessControlListAttributeResponseBody : TeaModel {
         [NameInMap("AclEntrys")]
         [Validation(Required=false)]
-        public List<DescribeAccessControlListAttributeResponseBodyAclEntrys> AclEntrys { get; set; }
+        public DescribeAccessControlListAttributeResponseBodyAclEntrys AclEntrys { get; set; }
         public class DescribeAccessControlListAttributeResponseBodyAclEntrys : TeaModel {
-            [NameInMap("AclEntryComment")]
+            [NameInMap("AclEntry")]
             [Validation(Required=false)]
-            public string AclEntryComment { get; set; }
-
-            [NameInMap("AclEntryIP")]
-            [Validation(Required=false)]
-            public string AclEntryIP { get; set; }
-
-        }
+            public List<DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry> AclEntry { get; set; }
+            public class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry : TeaModel {
+                public string AclEntryComment { get; set; }
+                public string AclEntryIP { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -41,25 +40,18 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("RelatedListeners")]
         [Validation(Required=false)]
-        public List<DescribeAccessControlListAttributeResponseBodyRelatedListeners> RelatedListeners { get; set; }
+        public DescribeAccessControlListAttributeResponseBodyRelatedListeners RelatedListeners { get; set; }
         public class DescribeAccessControlListAttributeResponseBodyRelatedListeners : TeaModel {
-            [NameInMap("AclType")]
+            [NameInMap("RelatedListener")]
             [Validation(Required=false)]
-            public string AclType { get; set; }
-
-            [NameInMap("Protocol")]
-            [Validation(Required=false)]
-            public string Protocol { get; set; }
-
-            [NameInMap("LoadBalancerId")]
-            [Validation(Required=false)]
-            public string LoadBalancerId { get; set; }
-
-            [NameInMap("ListenerPort")]
-            [Validation(Required=false)]
-            public int? ListenerPort { get; set; }
-
-        }
+            public List<DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener> RelatedListener { get; set; }
+            public class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener : TeaModel {
+                public string AclType { get; set; }
+                public string Protocol { get; set; }
+                public string LoadBalancerId { get; set; }
+                public int? ListenerPort { get; set; }
+            }
+        };
 
         [NameInMap("AclName")]
         [Validation(Required=false)]

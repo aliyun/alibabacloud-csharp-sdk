@@ -15,17 +15,16 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
-        public List<CreateRulesResponseBodyRules> Rules { get; set; }
+        public CreateRulesResponseBodyRules Rules { get; set; }
         public class CreateRulesResponseBodyRules : TeaModel {
-            [NameInMap("RuleName")]
+            [NameInMap("Rule")]
             [Validation(Required=false)]
-            public string RuleName { get; set; }
-
-            [NameInMap("RuleId")]
-            [Validation(Required=false)]
-            public string RuleId { get; set; }
-
-        }
+            public List<CreateRulesResponseBodyRulesRule> Rule { get; set; }
+            public class CreateRulesResponseBodyRulesRule : TeaModel {
+                public string RuleName { get; set; }
+                public string RuleId { get; set; }
+            }
+        };
 
     }
 

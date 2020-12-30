@@ -27,21 +27,17 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("TagSets")]
         [Validation(Required=false)]
-        public List<DescribeTagsResponseBodyTagSets> TagSets { get; set; }
+        public DescribeTagsResponseBodyTagSets TagSets { get; set; }
         public class DescribeTagsResponseBodyTagSets : TeaModel {
-            [NameInMap("InstanceCount")]
+            [NameInMap("TagSet")]
             [Validation(Required=false)]
-            public int? InstanceCount { get; set; }
-
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
+            public List<DescribeTagsResponseBodyTagSetsTagSet> TagSet { get; set; }
+            public class DescribeTagsResponseBodyTagSetsTagSet : TeaModel {
+                public int? InstanceCount { get; set; }
+                public string TagValue { get; set; }
+                public string TagKey { get; set; }
+            }
+        };
 
     }
 

@@ -15,49 +15,24 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         [NameInMap("CACertificates")]
         [Validation(Required=false)]
-        public List<DescribeCACertificatesResponseBodyCACertificates> CACertificates { get; set; }
+        public DescribeCACertificatesResponseBodyCACertificates CACertificates { get; set; }
         public class DescribeCACertificatesResponseBodyCACertificates : TeaModel {
-            [NameInMap("CreateTimeStamp")]
+            [NameInMap("CACertificate")]
             [Validation(Required=false)]
-            public long? CreateTimeStamp { get; set; }
-
-            [NameInMap("ExpireTime")]
-            [Validation(Required=false)]
-            public string ExpireTime { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("ExpireTimeStamp")]
-            [Validation(Required=false)]
-            public long? ExpireTimeStamp { get; set; }
-
-            [NameInMap("CACertificateId")]
-            [Validation(Required=false)]
-            public string CACertificateId { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("Fingerprint")]
-            [Validation(Required=false)]
-            public string Fingerprint { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            [NameInMap("CommonName")]
-            [Validation(Required=false)]
-            public string CommonName { get; set; }
-
-            [NameInMap("CACertificateName")]
-            [Validation(Required=false)]
-            public string CACertificateName { get; set; }
-
-        }
+            public List<DescribeCACertificatesResponseBodyCACertificatesCACertificate> CACertificate { get; set; }
+            public class DescribeCACertificatesResponseBodyCACertificatesCACertificate : TeaModel {
+                public long? CreateTimeStamp { get; set; }
+                public string ExpireTime { get; set; }
+                public string CreateTime { get; set; }
+                public long? ExpireTimeStamp { get; set; }
+                public string CACertificateId { get; set; }
+                public string RegionId { get; set; }
+                public string Fingerprint { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string CommonName { get; set; }
+                public string CACertificateName { get; set; }
+            }
+        };
 
     }
 
