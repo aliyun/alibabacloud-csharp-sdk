@@ -10,30 +10,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateStackGroupRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("StackGroupName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackGroupName { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<CreateStackGroupRequestParameters> Parameters { get; set; }
-        public class CreateStackGroupRequestParameters : TeaModel {
-            [NameInMap("ParameterValue")]
-            [Validation(Required=true)]
-            public string ParameterValue { get; set; }
-
-            [NameInMap("ParameterKey")]
-            [Validation(Required=true)]
-            public string ParameterKey { get; set; }
-
-        }
 
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
@@ -62,6 +48,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<CreateStackGroupRequestParameters> Parameters { get; set; }
+        public class CreateStackGroupRequestParameters : TeaModel {
+            [NameInMap("ParameterKey")]
+            [Validation(Required=false)]
+            public string ParameterKey { get; set; }
+
+            [NameInMap("ParameterValue")]
+            [Validation(Required=false)]
+            public string ParameterValue { get; set; }
+
+        }
 
     }
 

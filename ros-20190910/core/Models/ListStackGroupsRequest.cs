@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackGroupsRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Status")]
@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
     }
 

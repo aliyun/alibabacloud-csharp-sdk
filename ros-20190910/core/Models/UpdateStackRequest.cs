@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackRequest : TeaModel {
         [NameInMap("StackId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackId { get; set; }
 
         [NameInMap("ClientToken")]
@@ -23,29 +23,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("TimeoutInMinutes")]
         [Validation(Required=false)]
-        public long TimeoutInMinutes { get; set; }
+        public long? TimeoutInMinutes { get; set; }
 
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<UpdateStackRequestParameters> Parameters { get; set; }
-        public class UpdateStackRequestParameters : TeaModel {
-            [NameInMap("ParameterValue")]
-            [Validation(Required=true)]
-            public string ParameterValue { get; set; }
-
-            [NameInMap("ParameterKey")]
-            [Validation(Required=true)]
-            public string ParameterKey { get; set; }
-
-        }
-
         [NameInMap("StackPolicyURL")]
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
+
+        [NameInMap("UpdateAllowPolicy")]
+        [Validation(Required=false)]
+        public string UpdateAllowPolicy { get; set; }
 
         [NameInMap("StackPolicyDuringUpdateURL")]
         [Validation(Required=false)]
@@ -60,12 +50,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? UsePreviousParameters { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DisableRollback")]
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
+
+        [NameInMap("EnableRecover")]
+        [Validation(Required=false)]
+        public bool? EnableRecover { get; set; }
 
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]
@@ -86,6 +80,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<UpdateStackRequestParameters> Parameters { get; set; }
+        public class UpdateStackRequestParameters : TeaModel {
+            [NameInMap("ParameterKey")]
+            [Validation(Required=false)]
+            public string ParameterKey { get; set; }
+
+            [NameInMap("ParameterValue")]
+            [Validation(Required=false)]
+            public string ParameterValue { get; set; }
+
+        }
 
     }
 

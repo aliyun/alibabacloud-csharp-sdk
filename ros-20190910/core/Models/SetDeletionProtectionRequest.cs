@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class SetDeletionProtectionRequest : TeaModel {
         [NameInMap("StackId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackId { get; set; }
 
         [NameInMap("DeletionProtection")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeletionProtection { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
     }

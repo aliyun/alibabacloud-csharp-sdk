@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ExecuteChangeSetRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ChangeSetId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ChangeSetId { get; set; }
 
         [NameInMap("ClientToken")]

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DetectStackDriftResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DriftDetectionId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DriftDetectionId { get; set; }
+        public DetectStackDriftResponseBody Body { get; set; }
 
     }
 

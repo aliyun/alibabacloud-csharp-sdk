@@ -9,63 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplatesResponse : TeaModel {
-        [NameInMap("PageNumber")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public int? PageNumber { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=true)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("Templates")]
-        [Validation(Required=true)]
-        public List<ListTemplatesResponseTemplates> Templates { get; set; }
-        public class ListTemplatesResponseTemplates : TeaModel {
-            [NameInMap("CreateTime")]
-            [Validation(Required=true)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=true)]
-            public string Description { get; set; }
-
-            [NameInMap("TemplateId")]
-            [Validation(Required=true)]
-            public string TemplateId { get; set; }
-
-            [NameInMap("TemplateName")]
-            [Validation(Required=true)]
-            public string TemplateName { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=true)]
-            public string UpdateTime { get; set; }
-
-            [NameInMap("TemplateVersion")]
-            [Validation(Required=true)]
-            public string TemplateVersion { get; set; }
-
-            [NameInMap("ShareType")]
-            [Validation(Required=true)]
-            public string ShareType { get; set; }
-
-            [NameInMap("OwnerId")]
-            [Validation(Required=true)]
-            public string OwnerId { get; set; }
-
-            [NameInMap("TemplateARN")]
-            [Validation(Required=true)]
-            public string TemplateARN { get; set; }
-
-        }
+        public ListTemplatesResponseBody Body { get; set; }
 
     }
 

@@ -11,15 +11,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
     public class ListTemplatesRequest : TeaModel {
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
+
+        [NameInMap("ShareType")]
+        [Validation(Required=false)]
+        public string ShareType { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -34,10 +38,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("ShareType")]
-        [Validation(Required=false)]
-        public string ShareType { get; set; }
 
     }
 

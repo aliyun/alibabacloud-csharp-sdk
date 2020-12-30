@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
-    public class ListResourceTypesRequest : TeaModel {
+    public class SetStackPolicyResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
     }
 
 }

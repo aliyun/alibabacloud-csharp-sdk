@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetResourceTypeRequest : TeaModel {
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
     }

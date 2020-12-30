@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ValidateTemplateResponse : TeaModel {
-        [NameInMap("Description")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Description { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=true)]
-        public List<Dictionary<string, object>> Parameters { get; set; }
+        public ValidateTemplateResponseBody Body { get; set; }
 
     }
 

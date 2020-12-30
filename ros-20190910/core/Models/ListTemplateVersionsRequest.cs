@@ -15,10 +15,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public long MaxResults { get; set; }
+        public long? MaxResults { get; set; }
 
         [NameInMap("TemplateId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TemplateId { get; set; }
 
     }
