@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class SetAllowIPRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("NetworkType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NetworkType { get; set; }
 
         [NameInMap("Product")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
         public string Product { get; set; }
 
         [NameInMap("AllowIP")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AllowIP { get; set; }
 
         [NameInMap("Append")]

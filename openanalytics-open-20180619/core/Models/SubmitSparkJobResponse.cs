@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class SubmitSparkJobResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string JobId { get; set; }
+        public SubmitSparkJobResponseBody Body { get; set; }
 
     }
 

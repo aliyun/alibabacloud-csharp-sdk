@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,11 +13,11 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class AddAccountRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("AccountName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountName { get; set; }
 
         [NameInMap("Password")]

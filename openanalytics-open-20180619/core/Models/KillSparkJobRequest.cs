@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class KillSparkJobRequest : TeaModel {
         [NameInMap("VcName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VcName { get; set; }
 
         [NameInMap("JobId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string JobId { get; set; }
 
     }

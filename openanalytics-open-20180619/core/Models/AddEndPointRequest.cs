@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class AddEndPointRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("NetworkType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NetworkType { get; set; }
 
         [NameInMap("VpcID")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VpcID { get; set; }
 
         [NameInMap("Vswitch")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Vswitch { get; set; }
 
         [NameInMap("Zone")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Zone { get; set; }
 
         [NameInMap("Product")]

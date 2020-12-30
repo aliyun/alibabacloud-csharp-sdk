@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class DeleteAccountRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("AccountName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountName { get; set; }
 
         [NameInMap("IsShort")]

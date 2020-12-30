@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
         public string RegionId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
     }

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class ResetMainPasswordRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("UseRandomPassword")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? UseRandomPassword { get; set; }
 
         [NameInMap("InitPassword")]

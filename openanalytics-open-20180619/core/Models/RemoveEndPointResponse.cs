@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class RemoveEndPointResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RegionId { get; set; }
+        public RemoveEndPointResponseBody Body { get; set; }
 
     }
 

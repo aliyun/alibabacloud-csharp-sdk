@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class GetEndPointRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("EndPointID")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndPointID { get; set; }
 
     }

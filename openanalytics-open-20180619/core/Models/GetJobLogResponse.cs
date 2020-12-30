@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class GetJobLogResponse : TeaModel {
-        [NameInMap("Data")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Data { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public GetJobLogResponseBody Body { get; set; }
 
     }
 

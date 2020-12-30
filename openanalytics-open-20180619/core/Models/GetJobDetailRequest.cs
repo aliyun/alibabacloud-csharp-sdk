@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class GetJobDetailRequest : TeaModel {
         [NameInMap("JobId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string JobId { get; set; }
 
         [NameInMap("VcName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VcName { get; set; }
 
     }

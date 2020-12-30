@@ -9,63 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Openanalytics_open20180619.Models
 {
     public class QueryEndPointListResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RegionId { get; set; }
-
-        [NameInMap("EndPointList")]
-        [Validation(Required=true)]
-        public List<QueryEndPointListResponseEndPointList> EndPointList { get; set; }
-        public class QueryEndPointListResponseEndPointList : TeaModel {
-            [NameInMap("endPointID")]
-            [Validation(Required=true)]
-            public string EndPointID { get; set; }
-
-            [NameInMap("zone")]
-            [Validation(Required=true)]
-            public string Zone { get; set; }
-
-            [NameInMap("vSwitch")]
-            [Validation(Required=true)]
-            public string VSwitch { get; set; }
-
-            [NameInMap("status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-
-            [NameInMap("vpcID")]
-            [Validation(Required=true)]
-            public string VpcID { get; set; }
-
-            [NameInMap("host")]
-            [Validation(Required=true)]
-            public string Host { get; set; }
-
-            [NameInMap("domainURL")]
-            [Validation(Required=true)]
-            public string DomainURL { get; set; }
-
-            [NameInMap("networkType")]
-            [Validation(Required=true)]
-            public string NetworkType { get; set; }
-
-            [NameInMap("allowIP")]
-            [Validation(Required=true)]
-            public string AllowIP { get; set; }
-
-            [NameInMap("port")]
-            [Validation(Required=true)]
-            public string Port { get; set; }
-
-            [NameInMap("product")]
-            [Validation(Required=true)]
-            public string Product { get; set; }
-
-        }
+        public QueryEndPointListResponseBody Body { get; set; }
 
     }
 
