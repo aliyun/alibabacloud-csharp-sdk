@@ -529,38 +529,6 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeClusterDetailResponse>(await DoROARequestAsync("DescribeClusterDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId, "json", req, runtime));
         }
 
-        public PauseComponentUpgradeResponse PauseComponentUpgrade(string clusterid, string componentid)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return PauseComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
-        }
-
-        public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeAsync(string clusterid, string componentid)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await PauseComponentUpgradeWithOptionsAsync(clusterid, componentid, headers, runtime);
-        }
-
-        public PauseComponentUpgradeResponse PauseComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            return TeaModel.ToObject<PauseComponentUpgradeResponse>(DoROARequest("PauseComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterid + "/components/{componentid}/pause", "none", req, runtime));
-        }
-
-        public async Task<PauseComponentUpgradeResponse> PauseComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            return TeaModel.ToObject<PauseComponentUpgradeResponse>(await DoROARequestAsync("PauseComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterid + "/components/{componentid}/pause", "none", req, runtime));
-        }
-
         public DescribeClustersResponse DescribeClusters(DescribeClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1453,6 +1421,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["num_of_nodes"] = request.NumOfNodes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIds))
+            {
+                body["vswitch_ids"] = request.VswitchIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerVswitchIds))
             {
                 body["worker_vswitch_ids"] = request.WorkerVswitchIds;
@@ -1748,6 +1720,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumOfNodes))
             {
                 body["num_of_nodes"] = request.NumOfNodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIds))
+            {
+                body["vswitch_ids"] = request.VswitchIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerVswitchIds))
             {
@@ -2439,38 +2415,6 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DeleteClusterResponse>(await DoROARequestWithFormAsync("DeleteCluster", "2015-12-15", "HTTPS", "DELETE", "AK", "/clusters/" + ClusterId, "none", req, runtime));
         }
 
-        public CancelComponentUpgradeResponse CancelComponentUpgrade(string clusterId, string componentId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CancelComponentUpgradeWithOptions(clusterId, componentId, headers, runtime);
-        }
-
-        public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeAsync(string clusterId, string componentId)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CancelComponentUpgradeWithOptionsAsync(clusterId, componentId, headers, runtime);
-        }
-
-        public CancelComponentUpgradeResponse CancelComponentUpgradeWithOptions(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            return TeaModel.ToObject<CancelComponentUpgradeResponse>(DoROARequest("CancelComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterId + "/components/{componentId}/cancel", "none", req, runtime));
-        }
-
-        public async Task<CancelComponentUpgradeResponse> CancelComponentUpgradeWithOptionsAsync(string clusterId, string componentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            return TeaModel.ToObject<CancelComponentUpgradeResponse>(await DoROARequestAsync("CancelComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterId + "/components/{componentId}/cancel", "none", req, runtime));
-        }
-
         public DescribeClusterAddonsVersionResponse DescribeClusterAddonsVersion(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2583,38 +2527,6 @@ namespace AlibabaCloud.SDK.CS20151215
                 Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Addons),
             };
             return TeaModel.ToObject<UnInstallClusterAddonsResponse>(await DoROARequestAsync("UnInstallClusterAddons", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/components/uninstall", "none", req, runtime));
-        }
-
-        public ResumeComponentUpgradeResponse ResumeComponentUpgrade(string clusterid, string componentid)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ResumeComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
-        }
-
-        public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeAsync(string clusterid, string componentid)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ResumeComponentUpgradeWithOptionsAsync(clusterid, componentid, headers, runtime);
-        }
-
-        public ResumeComponentUpgradeResponse ResumeComponentUpgradeWithOptions(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            return TeaModel.ToObject<ResumeComponentUpgradeResponse>(DoROARequest("ResumeComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterid + "/components/{componentid}/resume", "none", req, runtime));
-        }
-
-        public async Task<ResumeComponentUpgradeResponse> ResumeComponentUpgradeWithOptionsAsync(string clusterid, string componentid, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-            };
-            return TeaModel.ToObject<ResumeComponentUpgradeResponse>(await DoROARequestAsync("ResumeComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterid + "/components/{componentid}/resume", "none", req, runtime));
         }
 
         public DescribeClustersV1Response DescribeClustersV1(DescribeClustersV1Request request)

@@ -357,6 +357,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? NumOfNodes { get; set; }
 
         /// <summary>
+        /// 集群节点所在虚拟交换机。
+        /// </summary>
+        [NameInMap("vswitch_ids")]
+        [Validation(Required=false)]
+        public List<string> VswitchIds { get; set; }
+
+        /// <summary>
         /// 集群Worker节点所在虚拟交换机
         /// </summary>
         [NameInMap("worker_vswitch_ids")]
