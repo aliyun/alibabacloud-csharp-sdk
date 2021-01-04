@@ -27,41 +27,22 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         [NameInMap("SmsSendDetailDTOs")]
         [Validation(Required=false)]
-        public List<QuerySendDetailsResponseBodySmsSendDetailDTOs> SmsSendDetailDTOs { get; set; }
+        public QuerySendDetailsResponseBodySmsSendDetailDTOs SmsSendDetailDTOs { get; set; }
         public class QuerySendDetailsResponseBodySmsSendDetailDTOs : TeaModel {
-            [NameInMap("ErrCode")]
+            [NameInMap("SmsSendDetailDTO")]
             [Validation(Required=false)]
-            public string ErrCode { get; set; }
-
-            [NameInMap("TemplateCode")]
-            [Validation(Required=false)]
-            public string TemplateCode { get; set; }
-
-            [NameInMap("OutId")]
-            [Validation(Required=false)]
-            public string OutId { get; set; }
-
-            [NameInMap("ReceiveDate")]
-            [Validation(Required=false)]
-            public string ReceiveDate { get; set; }
-
-            [NameInMap("SendDate")]
-            [Validation(Required=false)]
-            public string SendDate { get; set; }
-
-            [NameInMap("PhoneNum")]
-            [Validation(Required=false)]
-            public string PhoneNum { get; set; }
-
-            [NameInMap("Content")]
-            [Validation(Required=false)]
-            public string Content { get; set; }
-
-            [NameInMap("SendStatus")]
-            [Validation(Required=false)]
-            public long? SendStatus { get; set; }
-
-        }
+            public List<QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO> SmsSendDetailDTO { get; set; }
+            public class QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO : TeaModel {
+                public string ErrCode { get; set; }
+                public string TemplateCode { get; set; }
+                public string OutId { get; set; }
+                public string ReceiveDate { get; set; }
+                public string SendDate { get; set; }
+                public string PhoneNum { get; set; }
+                public string Content { get; set; }
+                public long? SendStatus { get; set; }
+            }
+        };
 
     }
 
