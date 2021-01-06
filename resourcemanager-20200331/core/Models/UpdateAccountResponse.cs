@@ -17,36 +17,36 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=true)]
         public UpdateAccountResponseAccount Account { get; set; }
         public class UpdateAccountResponseAccount : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=true)]
+            public string Status { get; set; }
+            [NameInMap("ModifyTime")]
+            [Validation(Required=true)]
+            public string ModifyTime { get; set; }
+            [NameInMap("JoinMethod")]
+            [Validation(Required=true)]
+            public string JoinMethod { get; set; }
             [NameInMap("ResourceDirectoryId")]
             [Validation(Required=true)]
             public string ResourceDirectoryId { get; set; }
+            [NameInMap("Type")]
+            [Validation(Required=true)]
+            public string Type { get; set; }
             [NameInMap("AccountId")]
             [Validation(Required=true)]
             public string AccountId { get; set; }
             [NameInMap("DisplayName")]
             [Validation(Required=true)]
             public string DisplayName { get; set; }
-            [NameInMap("AccountName")]
-            [Validation(Required=true)]
-            public string AccountName { get; set; }
-            [NameInMap("FolderId")]
-            [Validation(Required=true)]
-            public string FolderId { get; set; }
-            [NameInMap("JoinMethod")]
-            [Validation(Required=true)]
-            public string JoinMethod { get; set; }
             [NameInMap("JoinTime")]
             [Validation(Required=true)]
             public string JoinTime { get; set; }
-            [NameInMap("ModifyTime")]
+            [NameInMap("FolderId")]
             [Validation(Required=true)]
-            public string ModifyTime { get; set; }
-            [NameInMap("Type")]
+            public string FolderId { get; set; }
+            [NameInMap("AccountName")]
             [Validation(Required=true)]
-            public string Type { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
+            public string AccountName { get; set; }
         };
 
     }

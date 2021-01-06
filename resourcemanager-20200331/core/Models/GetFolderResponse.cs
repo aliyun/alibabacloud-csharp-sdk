@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=true)]
         public GetFolderResponseFolder Folder { get; set; }
         public class GetFolderResponseFolder : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=true)]
+            public string CreateTime { get; set; }
             [NameInMap("FolderId")]
             [Validation(Required=true)]
             public string FolderId { get; set; }
@@ -26,9 +29,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("ParentFolderId")]
             [Validation(Required=true)]
             public string ParentFolderId { get; set; }
-            [NameInMap("CreateTime")]
-            [Validation(Required=true)]
-            public string CreateTime { get; set; }
         };
 
     }

@@ -20,18 +20,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("ResourceDirectoryId")]
             [Validation(Required=true)]
             public string ResourceDirectoryId { get; set; }
-            [NameInMap("MasterAccountId")]
-            [Validation(Required=true)]
-            public string MasterAccountId { get; set; }
             [NameInMap("MasterAccountName")]
             [Validation(Required=true)]
             public string MasterAccountName { get; set; }
-            [NameInMap("RootFolderId")]
-            [Validation(Required=true)]
-            public string RootFolderId { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=true)]
             public string CreateTime { get; set; }
+            [NameInMap("RootFolderId")]
+            [Validation(Required=true)]
+            public string RootFolderId { get; set; }
+            [NameInMap("MasterAccountId")]
+            [Validation(Required=true)]
+            public string MasterAccountId { get; set; }
         };
 
     }

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPoliciesResponse : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=true)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("PageNumber")]
         [Validation(Required=true)]
         public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=true)]
-        public int? TotalCount { get; set; }
 
         [NameInMap("Policies")]
         [Validation(Required=true)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=true)]
             public List<ListPoliciesResponsePoliciesPolicy> Policy { get; set; }
             public class ListPoliciesResponsePoliciesPolicy : TeaModel {
-                public string PolicyName { get; set; }
                 public string PolicyType { get; set; }
+                public string UpdateDate { get; set; }
                 public string Description { get; set; }
+                public int? AttachmentCount { get; set; }
+                public string PolicyName { get; set; }
                 public string DefaultVersion { get; set; }
                 public string CreateDate { get; set; }
-                public string UpdateDate { get; set; }
-                public int? AttachmentCount { get; set; }
             }
         };
 

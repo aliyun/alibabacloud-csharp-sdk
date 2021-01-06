@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=true)]
         public UpdateFolderResponseFolder Folder { get; set; }
         public class UpdateFolderResponseFolder : TeaModel {
-            [NameInMap("FolderId")]
-            [Validation(Required=true)]
-            public string FolderId { get; set; }
-            [NameInMap("ParentFolderId")]
-            [Validation(Required=true)]
-            public string ParentFolderId { get; set; }
-            [NameInMap("FolderName")]
-            [Validation(Required=true)]
-            public string FolderName { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=true)]
             public string CreateTime { get; set; }
+            [NameInMap("FolderId")]
+            [Validation(Required=true)]
+            public string FolderId { get; set; }
+            [NameInMap("FolderName")]
+            [Validation(Required=true)]
+            public string FolderName { get; set; }
+            [NameInMap("ParentFolderId")]
+            [Validation(Required=true)]
+            public string ParentFolderId { get; set; }
         };
 
     }

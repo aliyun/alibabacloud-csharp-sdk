@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyAttachmentsResponse : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=true)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("PageNumber")]
         [Validation(Required=true)]
         public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=true)]
-        public int? TotalCount { get; set; }
 
         [NameInMap("PolicyAttachments")]
         [Validation(Required=true)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=true)]
             public List<ListPolicyAttachmentsResponsePolicyAttachmentsPolicyAttachment> PolicyAttachment { get; set; }
             public class ListPolicyAttachmentsResponsePolicyAttachmentsPolicyAttachment : TeaModel {
-                public string ResourceGroupId { get; set; }
                 public string PolicyType { get; set; }
-                public string PolicyName { get; set; }
-                public string PrincipalType { get; set; }
-                public string PrincipalName { get; set; }
-                public string AttachDate { get; set; }
                 public string Description { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string AttachDate { get; set; }
+                public string PolicyName { get; set; }
+                public string PrincipalName { get; set; }
+                public string PrincipalType { get; set; }
             }
         };
 

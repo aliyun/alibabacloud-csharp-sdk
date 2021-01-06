@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string PayerAccountId { get; set; }
 
+        [NameInMap("AccountNamePrefix")]
+        [Validation(Required=false)]
+        public string AccountNamePrefix { get; set; }
+
     }
 
 }

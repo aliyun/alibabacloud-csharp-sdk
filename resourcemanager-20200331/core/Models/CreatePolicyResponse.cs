@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=true)]
         public CreatePolicyResponsePolicy Policy { get; set; }
         public class CreatePolicyResponsePolicy : TeaModel {
-            [NameInMap("PolicyName")]
-            [Validation(Required=true)]
-            public string PolicyName { get; set; }
             [NameInMap("PolicyType")]
             [Validation(Required=true)]
             public string PolicyType { get; set; }
             [NameInMap("Description")]
             [Validation(Required=true)]
             public string Description { get; set; }
+            [NameInMap("PolicyName")]
+            [Validation(Required=true)]
+            public string PolicyName { get; set; }
             [NameInMap("DefaultVersion")]
             [Validation(Required=true)]
             public string DefaultVersion { get; set; }

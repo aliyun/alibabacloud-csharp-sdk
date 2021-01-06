@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=true)]
             public List<ListAncestorsResponseFoldersFolder> Folder { get; set; }
             public class ListAncestorsResponseFoldersFolder : TeaModel {
+                public string CreateTime { get; set; }
                 public string FolderId { get; set; }
                 public string FolderName { get; set; }
-                public string CreateTime { get; set; }
             }
         };
 

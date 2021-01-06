@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         [NameInMap("MaxSessionDuration")]
         [Validation(Required=false)]
-        public long MaxSessionDuration { get; set; }
+        public long? MaxSessionDuration { get; set; }
 
     }
 

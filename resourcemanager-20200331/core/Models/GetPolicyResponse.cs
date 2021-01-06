@@ -17,15 +17,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=true)]
         public GetPolicyResponsePolicy Policy { get; set; }
         public class GetPolicyResponsePolicy : TeaModel {
-            [NameInMap("PolicyName")]
-            [Validation(Required=true)]
-            public string PolicyName { get; set; }
             [NameInMap("PolicyType")]
             [Validation(Required=true)]
             public string PolicyType { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=true)]
+            public string UpdateDate { get; set; }
             [NameInMap("Description")]
             [Validation(Required=true)]
             public string Description { get; set; }
+            [NameInMap("AttachmentCount")]
+            [Validation(Required=true)]
+            public int? AttachmentCount { get; set; }
+            [NameInMap("PolicyName")]
+            [Validation(Required=true)]
+            public string PolicyName { get; set; }
             [NameInMap("DefaultVersion")]
             [Validation(Required=true)]
             public string DefaultVersion { get; set; }
@@ -35,12 +41,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("CreateDate")]
             [Validation(Required=true)]
             public string CreateDate { get; set; }
-            [NameInMap("UpdateDate")]
-            [Validation(Required=true)]
-            public string UpdateDate { get; set; }
-            [NameInMap("AttachmentCount")]
-            [Validation(Required=true)]
-            public int? AttachmentCount { get; set; }
         };
 
     }

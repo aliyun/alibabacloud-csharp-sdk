@@ -17,45 +17,45 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=true)]
         public GetHandshakeResponseHandshake Handshake { get; set; }
         public class GetHandshakeResponseHandshake : TeaModel {
-            [NameInMap("HandshakeId")]
-            [Validation(Required=true)]
-            public string HandshakeId { get; set; }
-            [NameInMap("ResourceDirectoryId")]
-            [Validation(Required=true)]
-            public string ResourceDirectoryId { get; set; }
-            [NameInMap("MasterAccountId")]
-            [Validation(Required=true)]
-            public string MasterAccountId { get; set; }
-            [NameInMap("MasterAccountName")]
-            [Validation(Required=true)]
-            public string MasterAccountName { get; set; }
-            [NameInMap("MasterAccountRealName")]
-            [Validation(Required=true)]
-            public string MasterAccountRealName { get; set; }
-            [NameInMap("TargetEntity")]
-            [Validation(Required=true)]
-            public string TargetEntity { get; set; }
-            [NameInMap("TargetType")]
-            [Validation(Required=true)]
-            public string TargetType { get; set; }
-            [NameInMap("InvitedAccountRealName")]
-            [Validation(Required=true)]
-            public string InvitedAccountRealName { get; set; }
-            [NameInMap("Note")]
-            [Validation(Required=true)]
-            public string Note { get; set; }
             [NameInMap("Status")]
             [Validation(Required=true)]
             public string Status { get; set; }
-            [NameInMap("CreateTime")]
-            [Validation(Required=true)]
-            public string CreateTime { get; set; }
             [NameInMap("ModifyTime")]
             [Validation(Required=true)]
             public string ModifyTime { get; set; }
+            [NameInMap("ResourceDirectoryId")]
+            [Validation(Required=true)]
+            public string ResourceDirectoryId { get; set; }
+            [NameInMap("HandshakeId")]
+            [Validation(Required=true)]
+            public string HandshakeId { get; set; }
+            [NameInMap("MasterAccountName")]
+            [Validation(Required=true)]
+            public string MasterAccountName { get; set; }
+            [NameInMap("Note")]
+            [Validation(Required=true)]
+            public string Note { get; set; }
+            [NameInMap("CreateTime")]
+            [Validation(Required=true)]
+            public string CreateTime { get; set; }
+            [NameInMap("TargetType")]
+            [Validation(Required=true)]
+            public string TargetType { get; set; }
+            [NameInMap("MasterAccountId")]
+            [Validation(Required=true)]
+            public string MasterAccountId { get; set; }
+            [NameInMap("MasterAccountRealName")]
+            [Validation(Required=true)]
+            public string MasterAccountRealName { get; set; }
             [NameInMap("ExpireTime")]
             [Validation(Required=true)]
             public string ExpireTime { get; set; }
+            [NameInMap("InvitedAccountRealName")]
+            [Validation(Required=true)]
+            public string InvitedAccountRealName { get; set; }
+            [NameInMap("TargetEntity")]
+            [Validation(Required=true)]
+            public string TargetEntity { get; set; }
         };
 
     }
