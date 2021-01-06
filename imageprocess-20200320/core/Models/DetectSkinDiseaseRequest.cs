@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class DetectSkinDiseaseRequest : TeaModel {
         [NameInMap("Url")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Url { get; set; }
 
         [NameInMap("OrgId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgId { get; set; }
 
         [NameInMap("OrgName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgName { get; set; }
 
     }

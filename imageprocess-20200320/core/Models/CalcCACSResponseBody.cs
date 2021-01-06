@@ -1,0 +1,30 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Imageprocess20200320.Models
+{
+    public class CalcCACSResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public CalcCACSResponseBodyData Data { get; set; }
+        public class CalcCACSResponseBodyData : TeaModel {
+            [NameInMap("ResultUrl")]
+            [Validation(Required=false)]
+            public string ResultUrl { get; set; }
+            [NameInMap("Score")]
+            [Validation(Required=false)]
+            public string Score { get; set; }
+        };
+
+    }
+
+}

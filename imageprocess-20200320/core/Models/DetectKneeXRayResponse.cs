@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class DetectKneeXRayResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DetectKneeXRayResponseData Data { get; set; }
-        public class DetectKneeXRayResponseData : TeaModel {
-            [NameInMap("KLDetections")]
-            [Validation(Required=true)]
-            public List<DetectKneeXRayResponseDataKLDetections> KLDetections { get; set; }
-            public class DetectKneeXRayResponseDataKLDetections : TeaModel {
-                public List<string> Detections { get; set; }
-            }
-        };
+        public DetectKneeXRayResponseBody Body { get; set; }
 
     }
 

@@ -9,31 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class CalcCACSRequest : TeaModel {
-        [NameInMap("URLList")]
-        [Validation(Required=true)]
-        public List<CalcCACSRequestURLList> URLList { get; set; }
-        public class CalcCACSRequestURLList : TeaModel {
-            [NameInMap("URL")]
-            [Validation(Required=true)]
-            public string URL { get; set; }
-
-        }
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
 
         [NameInMap("DataFormat")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DataFormat { get; set; }
 
         [NameInMap("OrgName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgName { get; set; }
 
         [NameInMap("OrgId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgId { get; set; }
 
         [NameInMap("DataSourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DataSourceType { get; set; }
+
+        [NameInMap("URLList")]
+        [Validation(Required=false)]
+        public List<CalcCACSRequestURLList> URLList { get; set; }
+        public class CalcCACSRequestURLList : TeaModel {
+            [NameInMap("URL")]
+            [Validation(Required=false)]
+            public string URL { get; set; }
+
+        }
 
     }
 

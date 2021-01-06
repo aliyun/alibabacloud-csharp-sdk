@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,19 +13,19 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class ClassifyFNFRequest : TeaModel {
         [NameInMap("ImageUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
         [NameInMap("DataFormat")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DataFormat { get; set; }
 
         [NameInMap("OrgId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgId { get; set; }
 
         [NameInMap("OrgName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgName { get; set; }
 
         [NameInMap("TracerId")]

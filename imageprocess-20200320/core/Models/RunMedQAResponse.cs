@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class RunMedQAResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RunMedQAResponseData Data { get; set; }
-        public class RunMedQAResponseData : TeaModel {
-            [NameInMap("Answer")]
-            [Validation(Required=true)]
-            public string Answer { get; set; }
-            [NameInMap("SimilarQuestion")]
-            [Validation(Required=true)]
-            public List<string> SimilarQuestion { get; set; }
-        };
+        public RunMedQAResponseBody Body { get; set; }
 
     }
 

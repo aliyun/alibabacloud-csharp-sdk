@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class CalcCACSResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public CalcCACSResponseData Data { get; set; }
-        public class CalcCACSResponseData : TeaModel {
-            [NameInMap("Score")]
-            [Validation(Required=true)]
-            public string Score { get; set; }
-            [NameInMap("ResultUrl")]
-            [Validation(Required=true)]
-            public string ResultUrl { get; set; }
-        };
+        public CalcCACSResponseBody Body { get; set; }
 
     }
 

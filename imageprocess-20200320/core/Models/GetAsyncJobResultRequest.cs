@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class GetAsyncJobResultRequest : TeaModel {
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
         [NameInMap("JobId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string JobId { get; set; }
 
     }

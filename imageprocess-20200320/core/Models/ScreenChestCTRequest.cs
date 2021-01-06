@@ -9,24 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class ScreenChestCTRequest : TeaModel {
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
         [NameInMap("DataFormat")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DataFormat { get; set; }
 
         [NameInMap("OrgName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgName { get; set; }
 
         [NameInMap("OrgId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrgId { get; set; }
 
         [NameInMap("URLList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<ScreenChestCTRequestURLList> URLList { get; set; }
         public class ScreenChestCTRequestURLList : TeaModel {
             [NameInMap("URL")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string URL { get; set; }
 
         }

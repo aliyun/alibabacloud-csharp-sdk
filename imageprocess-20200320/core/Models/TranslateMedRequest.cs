@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class TranslateMedRequest : TeaModel {
         [NameInMap("FromLanguage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FromLanguage { get; set; }
 
         [NameInMap("ToLanguage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ToLanguage { get; set; }
 
         [NameInMap("Text")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Text { get; set; }
 
     }
