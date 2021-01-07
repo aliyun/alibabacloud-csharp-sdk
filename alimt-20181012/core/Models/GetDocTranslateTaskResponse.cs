@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetDocTranslateTaskResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("TaskId")]
         [Validation(Required=true)]
-        public GetDocTranslateTaskResponseBody Body { get; set; }
+        public string TaskId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=true)]
+        public string Status { get; set; }
+
+        [NameInMap("TranslateFileUrl")]
+        [Validation(Required=true)]
+        public string TranslateFileUrl { get; set; }
+
+        [NameInMap("TranslateErrorCode")]
+        [Validation(Required=true)]
+        public string TranslateErrorCode { get; set; }
+
+        [NameInMap("TranslateErrorMessage")]
+        [Validation(Required=true)]
+        public string TranslateErrorMessage { get; set; }
+
+        [NameInMap("PageCount")]
+        [Validation(Required=true)]
+        public int? PageCount { get; set; }
 
     }
 

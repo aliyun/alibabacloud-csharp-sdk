@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,15 +10,15 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class CreateDocTranslateTaskRequest : TeaModel {
         [NameInMap("SourceLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceLanguage { get; set; }
 
         [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetLanguage { get; set; }
 
         [NameInMap("FileUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FileUrl { get; set; }
 
         [NameInMap("Scene")]

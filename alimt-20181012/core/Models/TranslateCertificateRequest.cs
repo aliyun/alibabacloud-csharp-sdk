@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class TranslateCertificateRequest : TeaModel {
         [NameInMap("SourceLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceLanguage { get; set; }
 
         [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetLanguage { get; set; }
 
         [NameInMap("ImageUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ImageUrl { get; set; }
 
         [NameInMap("CertificateType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string CertificateType { get; set; }
 
         [NameInMap("ResultType")]

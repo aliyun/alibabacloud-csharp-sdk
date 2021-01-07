@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetImageTranslateRequest : TeaModel {
         [NameInMap("Url")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Url { get; set; }
 
         [NameInMap("SourceLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceLanguage { get; set; }
 
         [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetLanguage { get; set; }
 
         [NameInMap("Extra")]

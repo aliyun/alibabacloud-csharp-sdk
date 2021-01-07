@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class TranslateRequest : TeaModel {
         [NameInMap("FormatType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FormatType { get; set; }
 
         [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetLanguage { get; set; }
 
         [NameInMap("SourceLanguage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceLanguage { get; set; }
 
         [NameInMap("SourceText")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceText { get; set; }
 
         [NameInMap("Scene")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Scene { get; set; }
 
     }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetImageDiagnoseRequest : TeaModel {
         [NameInMap("Url")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Url { get; set; }
 
         [NameInMap("Extra")]

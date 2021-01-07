@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTitleIntelligenceRequest : TeaModel {
         [NameInMap("Platform")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Platform { get; set; }
 
         [NameInMap("Extra")]
@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         public string Extra { get; set; }
 
         [NameInMap("CatLevelThreeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? CatLevelThreeId { get; set; }
 
         [NameInMap("CatLevelTwoId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? CatLevelTwoId { get; set; }
 
         [NameInMap("Keywords")]

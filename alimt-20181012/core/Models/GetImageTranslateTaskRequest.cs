@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetImageTranslateTaskRequest : TeaModel {
         [NameInMap("TaskId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TaskId { get; set; }
 
     }

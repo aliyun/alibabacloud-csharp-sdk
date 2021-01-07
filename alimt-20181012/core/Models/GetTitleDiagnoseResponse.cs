@@ -9,13 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTitleDiagnoseResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public GetTitleDiagnoseResponseBody Body { get; set; }
+        public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=true)]
+        public string Message { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public GetTitleDiagnoseResponseData Data { get; set; }
+        public class GetTitleDiagnoseResponseData : TeaModel {
+            [NameInMap("ContainCoreClasses")]
+            [Validation(Required=true)]
+            public string ContainCoreClasses { get; set; }
+            [NameInMap("OverLengthLimit")]
+            [Validation(Required=true)]
+            public string OverLengthLimit { get; set; }
+            [NameInMap("WordSpelledCorrectError")]
+            [Validation(Required=true)]
+            public string WordSpelledCorrectError { get; set; }
+            [NameInMap("AllUppercaseWords")]
+            [Validation(Required=true)]
+            public string AllUppercaseWords { get; set; }
+            [NameInMap("NoFirstUppercaseList")]
+            [Validation(Required=true)]
+            public string NoFirstUppercaseList { get; set; }
+            [NameInMap("DuplicateWords")]
+            [Validation(Required=true)]
+            public string DuplicateWords { get; set; }
+            [NameInMap("DisableWords")]
+            [Validation(Required=true)]
+            public string DisableWords { get; set; }
+            [NameInMap("WordCount")]
+            [Validation(Required=true)]
+            public string WordCount { get; set; }
+            [NameInMap("TotalScore")]
+            [Validation(Required=true)]
+            public string TotalScore { get; set; }
+            [NameInMap("LanguageQualityScore")]
+            [Validation(Required=true)]
+            public string LanguageQualityScore { get; set; }
+        };
 
     }
 

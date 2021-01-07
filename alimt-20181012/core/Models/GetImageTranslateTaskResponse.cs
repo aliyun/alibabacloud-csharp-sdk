@@ -9,13 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetImageTranslateTaskResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public GetImageTranslateTaskResponseBody Body { get; set; }
+        public int? Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=true)]
+        public string Message { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public GetImageTranslateTaskResponseData Data { get; set; }
+        public class GetImageTranslateTaskResponseData : TeaModel {
+            [NameInMap("ImageData")]
+            [Validation(Required=true)]
+            public string ImageData { get; set; }
+        };
 
     }
 
