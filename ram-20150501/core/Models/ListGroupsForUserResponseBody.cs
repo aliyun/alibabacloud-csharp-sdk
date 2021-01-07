@@ -15,25 +15,18 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         [NameInMap("Groups")]
         [Validation(Required=false)]
-        public List<ListGroupsForUserResponseBodyGroups> Groups { get; set; }
+        public ListGroupsForUserResponseBodyGroups Groups { get; set; }
         public class ListGroupsForUserResponseBodyGroups : TeaModel {
-            [NameInMap("GroupId")]
+            [NameInMap("Group")]
             [Validation(Required=false)]
-            public string GroupId { get; set; }
-
-            [NameInMap("GroupName")]
-            [Validation(Required=false)]
-            public string GroupName { get; set; }
-
-            [NameInMap("Comments")]
-            [Validation(Required=false)]
-            public string Comments { get; set; }
-
-            [NameInMap("JoinDate")]
-            [Validation(Required=false)]
-            public string JoinDate { get; set; }
-
-        }
+            public List<ListGroupsForUserResponseBodyGroupsGroup> Group { get; set; }
+            public class ListGroupsForUserResponseBodyGroupsGroup : TeaModel {
+                public string GroupId { get; set; }
+                public string GroupName { get; set; }
+                public string Comments { get; set; }
+                public string JoinDate { get; set; }
+            }
+        };
 
     }
 

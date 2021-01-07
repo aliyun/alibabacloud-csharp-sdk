@@ -19,37 +19,21 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         [NameInMap("Roles")]
         [Validation(Required=false)]
-        public List<ListRolesResponseBodyRoles> Roles { get; set; }
+        public ListRolesResponseBodyRoles Roles { get; set; }
         public class ListRolesResponseBodyRoles : TeaModel {
-            [NameInMap("Description")]
+            [NameInMap("Role")]
             [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("UpdateDate")]
-            [Validation(Required=false)]
-            public string UpdateDate { get; set; }
-
-            [NameInMap("MaxSessionDuration")]
-            [Validation(Required=false)]
-            public long? MaxSessionDuration { get; set; }
-
-            [NameInMap("RoleName")]
-            [Validation(Required=false)]
-            public string RoleName { get; set; }
-
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
-
-            [NameInMap("RoleId")]
-            [Validation(Required=false)]
-            public string RoleId { get; set; }
-
-            [NameInMap("Arn")]
-            [Validation(Required=false)]
-            public string Arn { get; set; }
-
-        }
+            public List<ListRolesResponseBodyRolesRole> Role { get; set; }
+            public class ListRolesResponseBodyRolesRole : TeaModel {
+                public string Description { get; set; }
+                public string UpdateDate { get; set; }
+                public long? MaxSessionDuration { get; set; }
+                public string RoleName { get; set; }
+                public string CreateDate { get; set; }
+                public string RoleId { get; set; }
+                public string Arn { get; set; }
+            }
+        };
 
         [NameInMap("Marker")]
         [Validation(Required=false)]

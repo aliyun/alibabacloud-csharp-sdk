@@ -11,21 +11,17 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
     public class ListAccessKeysResponseBody : TeaModel {
         [NameInMap("AccessKeys")]
         [Validation(Required=false)]
-        public List<ListAccessKeysResponseBodyAccessKeys> AccessKeys { get; set; }
+        public ListAccessKeysResponseBodyAccessKeys AccessKeys { get; set; }
         public class ListAccessKeysResponseBodyAccessKeys : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AccessKey")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("AccessKeyId")]
-            [Validation(Required=false)]
-            public string AccessKeyId { get; set; }
-
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
-
-        }
+            public List<ListAccessKeysResponseBodyAccessKeysAccessKey> AccessKey { get; set; }
+            public class ListAccessKeysResponseBodyAccessKeysAccessKey : TeaModel {
+                public string Status { get; set; }
+                public string AccessKeyId { get; set; }
+                public string CreateDate { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

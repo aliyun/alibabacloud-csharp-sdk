@@ -15,25 +15,18 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         [NameInMap("PolicyVersions")]
         [Validation(Required=false)]
-        public List<ListPolicyVersionsResponseBodyPolicyVersions> PolicyVersions { get; set; }
+        public ListPolicyVersionsResponseBodyPolicyVersions PolicyVersions { get; set; }
         public class ListPolicyVersionsResponseBodyPolicyVersions : TeaModel {
-            [NameInMap("IsDefaultVersion")]
+            [NameInMap("PolicyVersion")]
             [Validation(Required=false)]
-            public bool? IsDefaultVersion { get; set; }
-
-            [NameInMap("PolicyDocument")]
-            [Validation(Required=false)]
-            public string PolicyDocument { get; set; }
-
-            [NameInMap("VersionId")]
-            [Validation(Required=false)]
-            public string VersionId { get; set; }
-
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
-
-        }
+            public List<ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion> PolicyVersion { get; set; }
+            public class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion : TeaModel {
+                public bool? IsDefaultVersion { get; set; }
+                public string PolicyDocument { get; set; }
+                public string VersionId { get; set; }
+                public string CreateDate { get; set; }
+            }
+        };
 
     }
 

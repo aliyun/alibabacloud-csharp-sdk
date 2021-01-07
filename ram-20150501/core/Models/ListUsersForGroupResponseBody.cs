@@ -23,21 +23,17 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         [NameInMap("Users")]
         [Validation(Required=false)]
-        public List<ListUsersForGroupResponseBodyUsers> Users { get; set; }
+        public ListUsersForGroupResponseBodyUsers Users { get; set; }
         public class ListUsersForGroupResponseBodyUsers : TeaModel {
-            [NameInMap("DisplayName")]
+            [NameInMap("User")]
             [Validation(Required=false)]
-            public string DisplayName { get; set; }
-
-            [NameInMap("JoinDate")]
-            [Validation(Required=false)]
-            public string JoinDate { get; set; }
-
-            [NameInMap("UserName")]
-            [Validation(Required=false)]
-            public string UserName { get; set; }
-
-        }
+            public List<ListUsersForGroupResponseBodyUsersUser> User { get; set; }
+            public class ListUsersForGroupResponseBodyUsersUser : TeaModel {
+                public string DisplayName { get; set; }
+                public string JoinDate { get; set; }
+                public string UserName { get; set; }
+            }
+        };
 
     }
 

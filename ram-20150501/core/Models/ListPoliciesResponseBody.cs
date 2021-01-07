@@ -11,37 +11,21 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
     public class ListPoliciesResponseBody : TeaModel {
         [NameInMap("Policies")]
         [Validation(Required=false)]
-        public List<ListPoliciesResponseBodyPolicies> Policies { get; set; }
+        public ListPoliciesResponseBodyPolicies Policies { get; set; }
         public class ListPoliciesResponseBodyPolicies : TeaModel {
-            [NameInMap("DefaultVersion")]
+            [NameInMap("Policy")]
             [Validation(Required=false)]
-            public string DefaultVersion { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("UpdateDate")]
-            [Validation(Required=false)]
-            public string UpdateDate { get; set; }
-
-            [NameInMap("AttachmentCount")]
-            [Validation(Required=false)]
-            public int? AttachmentCount { get; set; }
-
-            [NameInMap("PolicyName")]
-            [Validation(Required=false)]
-            public string PolicyName { get; set; }
-
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
-
-            [NameInMap("PolicyType")]
-            [Validation(Required=false)]
-            public string PolicyType { get; set; }
-
-        }
+            public List<ListPoliciesResponseBodyPoliciesPolicy> Policy { get; set; }
+            public class ListPoliciesResponseBodyPoliciesPolicy : TeaModel {
+                public string DefaultVersion { get; set; }
+                public string Description { get; set; }
+                public string UpdateDate { get; set; }
+                public int? AttachmentCount { get; set; }
+                public string PolicyName { get; set; }
+                public string CreateDate { get; set; }
+                public string PolicyType { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

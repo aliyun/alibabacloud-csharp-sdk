@@ -11,32 +11,31 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
     public class ListVirtualMFADevicesResponseBody : TeaModel {
         [NameInMap("VirtualMFADevices")]
         [Validation(Required=false)]
-        public List<ListVirtualMFADevicesResponseBodyVirtualMFADevices> VirtualMFADevices { get; set; }
+        public ListVirtualMFADevicesResponseBodyVirtualMFADevices VirtualMFADevices { get; set; }
         public class ListVirtualMFADevicesResponseBodyVirtualMFADevices : TeaModel {
-            [NameInMap("SerialNumber")]
+            [NameInMap("VirtualMFADevice")]
             [Validation(Required=false)]
-            public string SerialNumber { get; set; }
+            public List<ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice> VirtualMFADevice { get; set; }
+            public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice : TeaModel {
+                public string SerialNumber { get; set; }
+                public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser User { get; set; }
+                public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser : TeaModel {
+                    [NameInMap("DisplayName")]
+                    [Validation(Required=false)]
+                    public string DisplayName { get; set; }
 
-            [NameInMap("User")]
-            [Validation(Required=false)]
-            public ListVirtualMFADevicesResponseBodyVirtualMFADevicesUser User { get; set; }
-            public class ListVirtualMFADevicesResponseBodyVirtualMFADevicesUser : TeaModel {
-                [NameInMap("DisplayName")]
-                [Validation(Required=false)]
-                public string DisplayName { get; set; }
-                [NameInMap("UserId")]
-                [Validation(Required=false)]
-                public string UserId { get; set; }
-                [NameInMap("UserName")]
-                [Validation(Required=false)]
-                public string UserName { get; set; }
-            };
+                    [NameInMap("UserId")]
+                    [Validation(Required=false)]
+                    public string UserId { get; set; }
 
-            [NameInMap("ActivateDate")]
-            [Validation(Required=false)]
-            public string ActivateDate { get; set; }
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public string UserName { get; set; }
 
-        }
+                }
+                public string ActivateDate { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
