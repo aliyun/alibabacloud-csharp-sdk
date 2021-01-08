@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videosearch20200225.Models
 {
-    public class GetStorageHistoryResponse : TeaModel {
+    public class ListStorageVideoTasksResponse : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=true)]
-        public GetStorageHistoryResponseData Data { get; set; }
-        public class GetStorageHistoryResponseData : TeaModel {
+        public ListStorageVideoTasksResponseData Data { get; set; }
+        public class ListStorageVideoTasksResponseData : TeaModel {
             [NameInMap("PageNumber")]
             [Validation(Required=true)]
             public int? PageNumber { get; set; }
@@ -26,15 +26,20 @@ namespace AlibabaCloud.SDK.Videosearch20200225.Models
             [NameInMap("Count")]
             [Validation(Required=true)]
             public long? Count { get; set; }
-            [NameInMap("List")]
+            [NameInMap("TaskList")]
             [Validation(Required=true)]
-            public List<GetStorageHistoryResponseDataList> List { get; set; }
-            public class GetStorageHistoryResponseDataList : TeaModel {
+            public List<ListStorageVideoTasksResponseDataTaskList> TaskList { get; set; }
+            public class ListStorageVideoTasksResponseDataTaskList : TeaModel {
+                public long? TaskId { get; set; }
                 public string VideoId { get; set; }
-                public string Description { get; set; }
-                public int? StorageType { get; set; }
+                public string VideoName { get; set; }
+                public long? ProcessTime { get; set; }
                 public int? StorageInfo { get; set; }
                 public long? ModifiedTime { get; set; }
+                public string Status { get; set; }
+                public string ErrorDetail { get; set; }
+                public string RemoteTaskId { get; set; }
+                public string Description { get; set; }
                 public string VideoUrl { get; set; }
             }
         };

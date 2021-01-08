@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Videosearch20200225.Models
         public class GetTaskStatusResponseTaskInfo : TeaModel {
             [NameInMap("AnalysisUseTime")]
             [Validation(Required=true)]
-            public long AnalysisUseTime { get; set; }
+            public long? AnalysisUseTime { get; set; }
             [NameInMap("Duration")]
             [Validation(Required=true)]
             public float? Duration { get; set; }
@@ -38,13 +38,13 @@ namespace AlibabaCloud.SDK.Videosearch20200225.Models
             public int? Status { get; set; }
             [NameInMap("SubmitTime")]
             [Validation(Required=true)]
-            public long SubmitTime { get; set; }
+            public long? SubmitTime { get; set; }
             [NameInMap("FinishTime")]
             [Validation(Required=true)]
-            public long FinishTime { get; set; }
+            public long? FinishTime { get; set; }
             [NameInMap("TaskId")]
             [Validation(Required=true)]
-            public long TaskId { get; set; }
+            public long? TaskId { get; set; }
             [NameInMap("ErrorInfo")]
             [Validation(Required=true)]
             public string ErrorInfo { get; set; }
