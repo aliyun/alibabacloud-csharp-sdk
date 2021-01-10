@@ -502,6 +502,18 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                         [Validation(Required=false)]
                         public string Model { get; set; }
 
+                        [NameInMap("Minor")]
+                        [Validation(Required=false)]
+                        public long? Minor { get; set; }
+
+                        [NameInMap("Temperature")]
+                        [Validation(Required=false)]
+                        public long? Temperature { get; set; }
+
+                        [NameInMap("PowerUsage")]
+                        [Validation(Required=false)]
+                        public long? PowerUsage { get; set; }
+
                         [NameInMap("MemoryTotal")]
                         [Validation(Required=false)]
                         public long? MemoryTotal { get; set; }
@@ -514,13 +526,13 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                         [Validation(Required=false)]
                         public long? DutyCycle { get; set; }
 
-                        [NameInMap("Id")]
-                        [Validation(Required=false)]
-                        public string Id { get; set; }
-
                         [NameInMap("MemoryUsed")]
                         [Validation(Required=false)]
                         public long? MemoryUsed { get; set; }
+
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public string Id { get; set; }
 
                     }
 
@@ -671,11 +683,85 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                             public long? Major { get; set; }
                             public string Device { get; set; }
                         }
+                        [NameInMap("IoServiceBytes")]
+                        [Validation(Required=false)]
+                        public List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoServiceBytes> IoServiceBytes { get; set; }
+                        public class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoServiceBytes : TeaModel {
+                            public string Stats { get; set; }
+                            public long? Minor { get; set; }
+                            public long? Major { get; set; }
+                            public string Device { get; set; }
+                        }
+                        [NameInMap("IoMerged")]
+                        [Validation(Required=false)]
+                        public List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoMerged> IoMerged { get; set; }
+                        public class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoMerged : TeaModel {
+                            public string Stats { get; set; }
+                            public long? Minor { get; set; }
+                            public long? Major { get; set; }
+                            public string Device { get; set; }
+                        }
+                        [NameInMap("Sectors")]
+                        [Validation(Required=false)]
+                        public List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsSectors> Sectors { get; set; }
+                        public class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsSectors : TeaModel {
+                            public string Stats { get; set; }
+                            public long? Minor { get; set; }
+                            public long? Major { get; set; }
+                            public string Device { get; set; }
+                        }
+                        [NameInMap("IoQueued")]
+                        [Validation(Required=false)]
+                        public List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoQueued> IoQueued { get; set; }
+                        public class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoQueued : TeaModel {
+                            public string Stats { get; set; }
+                            public long? Minor { get; set; }
+                            public long? Major { get; set; }
+                            public string Device { get; set; }
+                        }
+                        [NameInMap("IoTime")]
+                        [Validation(Required=false)]
+                        public List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoTime> IoTime { get; set; }
+                        public class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoTime : TeaModel {
+                            public string Stats { get; set; }
+                            public long? Minor { get; set; }
+                            public long? Major { get; set; }
+                            public string Device { get; set; }
+                        }
+                        [NameInMap("IoWaitTime")]
+                        [Validation(Required=false)]
+                        public List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoWaitTime> IoWaitTime { get; set; }
+                        public class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasContainerInfosContainerStatsDiskIoStatsIoWaitTime : TeaModel {
+                            public string Stats { get; set; }
+                            public long? Minor { get; set; }
+                            public long? Major { get; set; }
+                            public string Device { get; set; }
+                        }
                     };
 
                 }
 
+                [NameInMap("Labels")]
+                [Validation(Required=false)]
+                public string Labels { get; set; }
+
+                [NameInMap("Namespace")]
+                [Validation(Required=false)]
+                public string Namespace { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
             }
+
+            [NameInMap("ContainerGroupId")]
+            [Validation(Required=false)]
+            public string ContainerGroupId { get; set; }
 
         }
 

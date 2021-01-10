@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public float? Memory { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<UpdateContainerGroupRequestTag> Tag { get; set; }

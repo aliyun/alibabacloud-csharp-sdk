@@ -208,6 +208,22 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public long? EgressBandwidth { get; set; }
 
+        [NameInMap("CpuOptionsCore")]
+        [Validation(Required=false)]
+        public int? CpuOptionsCore { get; set; }
+
+        [NameInMap("CpuOptionsThreadsPerCore")]
+        [Validation(Required=false)]
+        public int? CpuOptionsThreadsPerCore { get; set; }
+
+        [NameInMap("CpuOptionsNuma")]
+        [Validation(Required=false)]
+        public string CpuOptionsNuma { get; set; }
+
+        [NameInMap("EphemeralStorage")]
+        [Validation(Required=false)]
+        public int? EphemeralStorage { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateContainerGroupRequestTag> Tag { get; set; }

@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
+            [NameInMap("EphemeralStorage")]
+            [Validation(Required=false)]
+            public int? EphemeralStorage { get; set; }
+
             [NameInMap("TenantEniInstanceId")]
             [Validation(Required=false)]
             public string TenantEniInstanceId { get; set; }
