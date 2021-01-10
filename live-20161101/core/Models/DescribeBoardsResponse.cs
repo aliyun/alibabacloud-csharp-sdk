@@ -9,31 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeBoardsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Boards")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<DescribeBoardsResponseBoards> Boards { get; set; }
-        public class DescribeBoardsResponseBoards : TeaModel {
-            [NameInMap("BoardId")]
-            [Validation(Required=true)]
-            public string BoardId { get; set; }
-
-            [NameInMap("Topic")]
-            [Validation(Required=true)]
-            public string Topic { get; set; }
-
-            [NameInMap("State")]
-            [Validation(Required=true)]
-            public int? State { get; set; }
-
-            [NameInMap("UserId")]
-            [Validation(Required=true)]
-            public string UserId { get; set; }
-
-        }
+        public DescribeBoardsResponseBody Body { get; set; }
 
     }
 

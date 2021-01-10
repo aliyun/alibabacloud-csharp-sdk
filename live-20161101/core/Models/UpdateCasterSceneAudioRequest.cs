@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateCasterSceneAudioRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("SceneId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SceneId { get; set; }
 
         [NameInMap("FollowEnable")]
@@ -29,13 +33,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public float? VolumeRate { get; set; }
 
-            [NameInMap("ValidChannel")]
-            [Validation(Required=false)]
-            public string ValidChannel { get; set; }
-
             [NameInMap("FixedDelayDuration")]
             [Validation(Required=false)]
             public int? FixedDelayDuration { get; set; }
+
+            [NameInMap("ValidChannel")]
+            [Validation(Required=false)]
+            public string ValidChannel { get; set; }
 
         }
 

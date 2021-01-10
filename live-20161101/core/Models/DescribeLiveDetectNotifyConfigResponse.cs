@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDetectNotifyConfigResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LiveDetectNotifyConfig")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig LiveDetectNotifyConfig { get; set; }
-        public class DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig : TeaModel {
-            [NameInMap("DomainName")]
-            [Validation(Required=true)]
-            public string DomainName { get; set; }
-            [NameInMap("NotifyUrl")]
-            [Validation(Required=true)]
-            public string NotifyUrl { get; set; }
-        };
+        public DescribeLiveDetectNotifyConfigResponseBody Body { get; set; }
 
     }
 

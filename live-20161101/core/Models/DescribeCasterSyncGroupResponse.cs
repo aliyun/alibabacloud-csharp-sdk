@@ -9,36 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterSyncGroupResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CasterId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string CasterId { get; set; }
-
-        [NameInMap("SyncGroups")]
-        [Validation(Required=true)]
-        public DescribeCasterSyncGroupResponseSyncGroups SyncGroups { get; set; }
-        public class DescribeCasterSyncGroupResponseSyncGroups : TeaModel {
-            [NameInMap("SyncGroup")]
-            [Validation(Required=true)]
-            public List<DescribeCasterSyncGroupResponseSyncGroupsSyncGroup> SyncGroup { get; set; }
-            public class DescribeCasterSyncGroupResponseSyncGroupsSyncGroup : TeaModel {
-                public int? Mode { get; set; }
-                public string HostResourceId { get; set; }
-                public DescribeCasterSyncGroupResponseSyncGroupsSyncGroupResourceIds ResourceIds { get; set; }
-                public class DescribeCasterSyncGroupResponseSyncGroupsSyncGroupResourceIds : TeaModel {
-                    /// <summary>
-                    /// ResourceId
-                    /// </summary>
-                    [NameInMap("ResourceId")]
-                    [Validation(Required=true)]
-                    public List<string> ResourceId { get; set; }
-
-                }
-            }
-        };
+        public DescribeCasterSyncGroupResponseBody Body { get; set; }
 
     }
 

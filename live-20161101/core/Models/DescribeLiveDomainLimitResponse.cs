@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainLimitResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LiveDomainLimitList")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveDomainLimitResponseLiveDomainLimitList LiveDomainLimitList { get; set; }
-        public class DescribeLiveDomainLimitResponseLiveDomainLimitList : TeaModel {
-            [NameInMap("LiveDomainLimit")]
-            [Validation(Required=true)]
-            public List<DescribeLiveDomainLimitResponseLiveDomainLimitListLiveDomainLimit> LiveDomainLimit { get; set; }
-            public class DescribeLiveDomainLimitResponseLiveDomainLimitListLiveDomainLimit : TeaModel {
-                public string DomainName { get; set; }
-                public int? LimitNum { get; set; }
-                public int? LimitTranscodeNum { get; set; }
-            }
-        };
+        public DescribeLiveDomainLimitResponseBody Body { get; set; }
 
     }
 

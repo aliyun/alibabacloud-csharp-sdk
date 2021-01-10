@@ -13,24 +13,28 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("AppName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppName { get; set; }
 
         [NameInMap("TimeInterval")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? TimeInterval { get; set; }
 
         [NameInMap("OssEndpoint")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OssEndpoint { get; set; }
 
         [NameInMap("OssBucket")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OssBucket { get; set; }
 
         [NameInMap("OverwriteOssObject")]

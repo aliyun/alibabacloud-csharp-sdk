@@ -9,20 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StopLiveIndexRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("AppName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppName { get; set; }
 
         [NameInMap("StreamName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StreamName { get; set; }
 
         [NameInMap("TaskId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskId { get; set; }
 
     }

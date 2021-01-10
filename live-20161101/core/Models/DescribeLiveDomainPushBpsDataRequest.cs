@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainPushBpsDataRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

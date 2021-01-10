@@ -9,22 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveRealtimeLogDeliveryDomainsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Content")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public ListLiveRealtimeLogDeliveryDomainsResponseContent Content { get; set; }
-        public class ListLiveRealtimeLogDeliveryDomainsResponseContent : TeaModel {
-            [NameInMap("Domains")]
-            [Validation(Required=true)]
-            public List<ListLiveRealtimeLogDeliveryDomainsResponseContentDomains> Domains { get; set; }
-            public class ListLiveRealtimeLogDeliveryDomainsResponseContentDomains : TeaModel {
-                public string DomainName { get; set; }
-                public string Status { get; set; }
-            }
-        };
+        public ListLiveRealtimeLogDeliveryDomainsResponseBody Body { get; set; }
 
     }
 

@@ -9,16 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CompleteBoardRecordRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("RecordId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RecordId { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
     }

@@ -9,12 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsControlHistoryRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("AppName")]
@@ -22,12 +22,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("Page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
+        [NameInMap("Rows")]
+        [Validation(Required=false)]
+        public int? Rows { get; set; }
 
     }
 

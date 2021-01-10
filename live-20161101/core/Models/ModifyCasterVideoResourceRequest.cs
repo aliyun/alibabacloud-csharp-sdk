@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterVideoResourceRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         [NameInMap("ResourceName")]

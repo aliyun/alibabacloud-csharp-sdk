@@ -9,22 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamHistoryUserNumResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LiveStreamUserNumInfos")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos LiveStreamUserNumInfos { get; set; }
-        public class DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos : TeaModel {
-            [NameInMap("LiveStreamUserNumInfo")]
-            [Validation(Required=true)]
-            public List<DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo> LiveStreamUserNumInfo { get; set; }
-            public class DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo : TeaModel {
-                public string StreamTime { get; set; }
-                public string UserNum { get; set; }
-            }
-        };
+        public DescribeLiveStreamHistoryUserNumResponseBody Body { get; set; }
 
     }
 

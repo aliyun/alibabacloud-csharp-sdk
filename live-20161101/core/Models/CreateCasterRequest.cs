@@ -9,20 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateCasterRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterName")]
         [Validation(Required=false)]
         public string CasterName { get; set; }
 
         [NameInMap("ClientToken")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         [NameInMap("NormType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? NormType { get; set; }
 
         [NameInMap("ChargeType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         [NameInMap("PurchaseTime")]

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterVideoResourceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CasterId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string CasterId { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=true)]
-        public string ResourceId { get; set; }
+        public ModifyCasterVideoResourceResponseBody Body { get; set; }
 
     }
 

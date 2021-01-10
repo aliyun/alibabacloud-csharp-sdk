@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("LiveDomainType")]
         [Validation(Required=false)]
         public string LiveDomainType { get; set; }

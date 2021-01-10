@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteMixStreamRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("AppName")]
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         [NameInMap("MixStreamId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MixStreamId { get; set; }
 
     }

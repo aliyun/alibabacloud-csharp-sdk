@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetBoardCallbackRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("AuthKey")]
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AuthSwitch { get; set; }
 
         [NameInMap("CallbackEnable")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? CallbackEnable { get; set; }
 
         [NameInMap("CallbackUri")]

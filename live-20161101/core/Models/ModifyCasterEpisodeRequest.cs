@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterEpisodeRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("EpisodeId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EpisodeId { get; set; }
 
         [NameInMap("EpisodeName")]
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
-
-        [NameInMap("ComponentId")]
-        [Validation(Required=false)]
-        public List<string> ComponentId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("SwitchType")]
         [Validation(Required=false)]
         public string SwitchType { get; set; }
+
+        [NameInMap("ComponentId")]
+        [Validation(Required=false)]
+        public List<string> ComponentId { get; set; }
 
     }
 

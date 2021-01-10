@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCastersRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }

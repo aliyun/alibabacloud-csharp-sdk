@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRealtimeDeliveryAccResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RealTimeDeliveryAccData")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveRealtimeDeliveryAccResponseRealTimeDeliveryAccData RealTimeDeliveryAccData { get; set; }
-        public class DescribeLiveRealtimeDeliveryAccResponseRealTimeDeliveryAccData : TeaModel {
-            [NameInMap("AccData")]
-            [Validation(Required=true)]
-            public List<DescribeLiveRealtimeDeliveryAccResponseRealTimeDeliveryAccDataAccData> AccData { get; set; }
-            public class DescribeLiveRealtimeDeliveryAccResponseRealTimeDeliveryAccDataAccData : TeaModel {
-                public string TimeStamp { get; set; }
-                public int? SuccessNum { get; set; }
-                public int? FailedNum { get; set; }
-            }
-        };
+        public DescribeLiveRealtimeDeliveryAccResponseBody Body { get; set; }
 
     }
 

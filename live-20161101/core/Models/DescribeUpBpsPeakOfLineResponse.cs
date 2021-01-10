@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeUpBpsPeakOfLineResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DescribeUpBpsPeakOfLines")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeUpBpsPeakOfLineResponseDescribeUpBpsPeakOfLines DescribeUpBpsPeakOfLines { get; set; }
-        public class DescribeUpBpsPeakOfLineResponseDescribeUpBpsPeakOfLines : TeaModel {
-            [NameInMap("DescribeUpBpsPeakOfLine")]
-            [Validation(Required=true)]
-            public List<DescribeUpBpsPeakOfLineResponseDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine> DescribeUpBpsPeakOfLine { get; set; }
-            public class DescribeUpBpsPeakOfLineResponseDescribeUpBpsPeakOfLinesDescribeUpBpsPeakOfLine : TeaModel {
-                public float? BandWidth { get; set; }
-                public string PeakTime { get; set; }
-                public string QueryTime { get; set; }
-                public string StatName { get; set; }
-            }
-        };
+        public DescribeUpBpsPeakOfLineResponseBody Body { get; set; }
 
     }
 

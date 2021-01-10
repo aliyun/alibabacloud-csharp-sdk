@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveRecordVodConfigRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("AppName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppName { get; set; }
 
         [NameInMap("StreamName")]
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         [NameInMap("VodTranscodeGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VodTranscodeGroupId { get; set; }
 
         [NameInMap("CycleDuration")]

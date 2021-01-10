@@ -9,16 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateRoomRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("RoomId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RoomId { get; set; }
 
         [NameInMap("AnchorId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AnchorId { get; set; }
 
         [NameInMap("TemplateIds")]

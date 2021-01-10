@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteCasterComponentRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("ComponentId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ComponentId { get; set; }
 
     }

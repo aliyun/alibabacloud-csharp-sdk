@@ -9,26 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLivePullStreamConfigResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LiveAppRecordList")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLivePullStreamConfigResponseLiveAppRecordList LiveAppRecordList { get; set; }
-        public class DescribeLivePullStreamConfigResponseLiveAppRecordList : TeaModel {
-            [NameInMap("LiveAppRecord")]
-            [Validation(Required=true)]
-            public List<DescribeLivePullStreamConfigResponseLiveAppRecordListLiveAppRecord> LiveAppRecord { get; set; }
-            public class DescribeLivePullStreamConfigResponseLiveAppRecordListLiveAppRecord : TeaModel {
-                public string DomainName { get; set; }
-                public string AppName { get; set; }
-                public string StreamName { get; set; }
-                public string SourceUrl { get; set; }
-                public string StartTime { get; set; }
-                public string EndTime { get; set; }
-            }
-        };
+        public DescribeLivePullStreamConfigResponseBody Body { get; set; }
 
     }
 

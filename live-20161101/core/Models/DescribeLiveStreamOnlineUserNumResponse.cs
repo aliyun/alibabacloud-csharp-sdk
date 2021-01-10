@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamOnlineUserNumResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalUserNumber")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public long TotalUserNumber { get; set; }
-
-        [NameInMap("OnlineUserInfo")]
-        [Validation(Required=true)]
-        public DescribeLiveStreamOnlineUserNumResponseOnlineUserInfo OnlineUserInfo { get; set; }
-        public class DescribeLiveStreamOnlineUserNumResponseOnlineUserInfo : TeaModel {
-            [NameInMap("LiveStreamOnlineUserNumInfo")]
-            [Validation(Required=true)]
-            public List<DescribeLiveStreamOnlineUserNumResponseOnlineUserInfoLiveStreamOnlineUserNumInfo> LiveStreamOnlineUserNumInfo { get; set; }
-            public class DescribeLiveStreamOnlineUserNumResponseOnlineUserInfoLiveStreamOnlineUserNumInfo : TeaModel {
-                public string StreamUrl { get; set; }
-                public long UserNumber { get; set; }
-                public string Time { get; set; }
-            }
-        };
+        public DescribeLiveStreamOnlineUserNumResponseBody Body { get; set; }
 
     }
 

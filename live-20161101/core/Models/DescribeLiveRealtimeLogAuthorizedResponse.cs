@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRealtimeLogAuthorizedResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("AuthorizedStatus")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string AuthorizedStatus { get; set; }
+        public DescribeLiveRealtimeLogAuthorizedResponseBody Body { get; set; }
 
     }
 

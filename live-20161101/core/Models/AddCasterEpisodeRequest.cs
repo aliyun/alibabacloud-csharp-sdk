@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterEpisodeRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("EpisodeType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EpisodeType { get; set; }
 
         [NameInMap("EpisodeName")]
@@ -25,21 +29,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
-        [NameInMap("ComponentId")]
-        [Validation(Required=false)]
-        public List<string> ComponentId { get; set; }
-
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("SwitchType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SwitchType { get; set; }
+
+        [NameInMap("ComponentId")]
+        [Validation(Required=false)]
+        public List<string> ComponentId { get; set; }
 
     }
 

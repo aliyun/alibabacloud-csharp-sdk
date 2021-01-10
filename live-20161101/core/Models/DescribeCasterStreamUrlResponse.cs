@@ -9,53 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterStreamUrlResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CasterId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string CasterId { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=true)]
-        public int? Total { get; set; }
-
-        [NameInMap("CasterStreams")]
-        [Validation(Required=true)]
-        public DescribeCasterStreamUrlResponseCasterStreams CasterStreams { get; set; }
-        public class DescribeCasterStreamUrlResponseCasterStreams : TeaModel {
-            [NameInMap("CasterStream")]
-            [Validation(Required=true)]
-            public List<DescribeCasterStreamUrlResponseCasterStreamsCasterStream> CasterStream { get; set; }
-            public class DescribeCasterStreamUrlResponseCasterStreamsCasterStream : TeaModel {
-                public string SceneId { get; set; }
-                public string StreamUrl { get; set; }
-                public string RtmpUrl { get; set; }
-                public int? OutputType { get; set; }
-                public DescribeCasterStreamUrlResponseCasterStreamsCasterStreamStreamInfos StreamInfos { get; set; }
-                public class DescribeCasterStreamUrlResponseCasterStreamsCasterStreamStreamInfos : TeaModel {
-                    [NameInMap("StreamInfo")]
-                    [Validation(Required=true)]
-                    public List<DescribeCasterStreamUrlResponseCasterStreamsCasterStreamStreamInfosStreamInfo> StreamInfo { get; set; }
-                    public class DescribeCasterStreamUrlResponseCasterStreamsCasterStreamStreamInfosStreamInfo : TeaModel {
-                        [NameInMap("TranscodeConfig")]
-                        [Validation(Required=true)]
-                        public string TranscodeConfig { get; set; }
-
-                        [NameInMap("VideoFormat")]
-                        [Validation(Required=true)]
-                        public string VideoFormat { get; set; }
-
-                        [NameInMap("OutputStreamUrl")]
-                        [Validation(Required=true)]
-                        public string OutputStreamUrl { get; set; }
-
-                    }
-
-                }
-            }
-        };
+        public DescribeCasterStreamUrlResponseBody Body { get; set; }
 
     }
 

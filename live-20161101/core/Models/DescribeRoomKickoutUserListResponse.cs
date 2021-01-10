@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRoomKickoutUserListResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalNum")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? TotalNum { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=true)]
-        public int? TotalPage { get; set; }
-
-        [NameInMap("UserList")]
-        [Validation(Required=true)]
-        public List<DescribeRoomKickoutUserListResponseUserList> UserList { get; set; }
-        public class DescribeRoomKickoutUserListResponseUserList : TeaModel {
-            [NameInMap("AppUid")]
-            [Validation(Required=true)]
-            public string AppUid { get; set; }
-
-            [NameInMap("OpStartTime")]
-            [Validation(Required=true)]
-            public string OpStartTime { get; set; }
-
-            [NameInMap("OpEndTime")]
-            [Validation(Required=true)]
-            public string OpEndTime { get; set; }
-
-        }
+        public DescribeRoomKickoutUserListResponseBody Body { get; set; }
 
     }
 

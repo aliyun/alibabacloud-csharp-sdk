@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveTopDomainsByFlowRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
@@ -19,7 +23,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
         [NameInMap("Limit")]
         [Validation(Required=false)]
-        public long Limit { get; set; }
+        public long? Limit { get; set; }
 
     }
 

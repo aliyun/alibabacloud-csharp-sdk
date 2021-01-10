@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteCasterEpisodeGroupRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("ProgramId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProgramId { get; set; }
 
     }

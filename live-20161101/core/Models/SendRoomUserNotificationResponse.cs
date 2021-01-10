@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SendRoomUserNotificationResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("MessageId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string MessageId { get; set; }
+        public SendRoomUserNotificationResponseBody Body { get; set; }
 
     }
 

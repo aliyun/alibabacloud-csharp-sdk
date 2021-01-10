@@ -9,16 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetLiveStreamOptimizedFeatureConfigRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("ConfigName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConfigName { get; set; }
 
         [NameInMap("ConfigStatus")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConfigStatus { get; set; }
 
         [NameInMap("ConfigValue")]

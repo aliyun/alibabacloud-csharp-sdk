@@ -9,24 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SendRoomUserNotificationRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("RoomId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RoomId { get; set; }
 
         [NameInMap("AppUid")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppUid { get; set; }
 
         [NameInMap("ToAppUid")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ToAppUid { get; set; }
 
         [NameInMap("Data")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Data { get; set; }
 
         [NameInMap("Priority")]

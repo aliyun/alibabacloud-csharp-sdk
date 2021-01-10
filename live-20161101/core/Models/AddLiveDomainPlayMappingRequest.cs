@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveDomainPlayMappingRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PlayDomain")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PlayDomain { get; set; }
 
         [NameInMap("PullDomain")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PullDomain { get; set; }
 
     }

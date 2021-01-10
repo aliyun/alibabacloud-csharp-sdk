@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeBoardEventsRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         [NameInMap("BoardId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BoardId { get; set; }
 
     }

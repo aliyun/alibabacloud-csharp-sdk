@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetLiveDomainCertificateRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("CertName")]
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CertType { get; set; }
 
         [NameInMap("SSLProtocol")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SSLProtocol { get; set; }
 
         [NameInMap("SSLPub")]

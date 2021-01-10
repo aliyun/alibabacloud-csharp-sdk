@@ -9,33 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveTagResourcesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TagResources")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<DescribeLiveTagResourcesResponseTagResources> TagResources { get; set; }
-        public class DescribeLiveTagResourcesResponseTagResources : TeaModel {
-            [NameInMap("ResourceId")]
-            [Validation(Required=true)]
-            public string ResourceId { get; set; }
-
-            [NameInMap("Tag")]
-            [Validation(Required=true)]
-            public List<DescribeLiveTagResourcesResponseTagResourcesTag> Tag { get; set; }
-            public class DescribeLiveTagResourcesResponseTagResourcesTag : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=true)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=true)]
-                public string Value { get; set; }
-
-            }
-
-        }
+        public DescribeLiveTagResourcesResponseBody Body { get; set; }
 
     }
 

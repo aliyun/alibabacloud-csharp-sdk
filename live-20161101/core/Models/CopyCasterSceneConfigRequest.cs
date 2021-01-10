@@ -9,16 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CopyCasterSceneConfigRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("FromSceneId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FromSceneId { get; set; }
 
         [NameInMap("ToSceneId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ToSceneId { get; set; }
 
     }

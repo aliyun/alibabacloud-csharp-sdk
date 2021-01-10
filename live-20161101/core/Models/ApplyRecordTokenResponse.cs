@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ApplyRecordTokenResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("SecurityToken")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("AccessKeySecret")]
-        [Validation(Required=true)]
-        public string AccessKeySecret { get; set; }
-
-        [NameInMap("AccessKeyId")]
-        [Validation(Required=true)]
-        public string AccessKeyId { get; set; }
-
-        [NameInMap("Expiration")]
-        [Validation(Required=true)]
-        public string Expiration { get; set; }
+        public ApplyRecordTokenResponseBody Body { get; set; }
 
     }
 

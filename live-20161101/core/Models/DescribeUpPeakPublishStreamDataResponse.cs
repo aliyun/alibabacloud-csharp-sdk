@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeUpPeakPublishStreamDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DescribeUpPeakPublishStreamDatas")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeUpPeakPublishStreamDataResponseDescribeUpPeakPublishStreamDatas DescribeUpPeakPublishStreamDatas { get; set; }
-        public class DescribeUpPeakPublishStreamDataResponseDescribeUpPeakPublishStreamDatas : TeaModel {
-            [NameInMap("DescribeUpPeakPublishStreamData")]
-            [Validation(Required=true)]
-            public List<DescribeUpPeakPublishStreamDataResponseDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData> DescribeUpPeakPublishStreamData { get; set; }
-            public class DescribeUpPeakPublishStreamDataResponseDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData : TeaModel {
-                public int? PublishStreamNum { get; set; }
-                public string PeakTime { get; set; }
-                public string QueryTime { get; set; }
-                public string StatName { get; set; }
-                public string BandWidth { get; set; }
-            }
-        };
+        public DescribeUpPeakPublishStreamDataResponseBody Body { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CompleteBoardRecordResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("OssPath")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string OssPath { get; set; }
+        public CompleteBoardRecordResponseBody Body { get; set; }
 
     }
 

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetCasterSyncGroupRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("SyncGroup")]
@@ -23,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
             [NameInMap("SyncDelayThreshold")]
             [Validation(Required=false)]
-            public long SyncDelayThreshold { get; set; }
+            public long? SyncDelayThreshold { get; set; }
 
             [NameInMap("HostResourceId")]
             [Validation(Required=false)]

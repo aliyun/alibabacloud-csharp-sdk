@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ControlHtmlResourceRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("HtmlResourceId")]
         [Validation(Required=false)]
         public string HtmlResourceId { get; set; }
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         [NameInMap("Operate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Operate { get; set; }
 
     }

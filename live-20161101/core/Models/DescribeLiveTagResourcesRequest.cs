@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveTagResourcesRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("Tag")]
@@ -30,6 +34,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
 
     }
 

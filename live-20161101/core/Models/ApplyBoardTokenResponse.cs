@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ApplyBoardTokenResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Token")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Token { get; set; }
-
-        [NameInMap("Expired")]
-        [Validation(Required=true)]
-        public string Expired { get; set; }
+        public ApplyBoardTokenResponseBody Body { get; set; }
 
     }
 

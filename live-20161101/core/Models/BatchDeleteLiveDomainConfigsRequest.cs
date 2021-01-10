@@ -9,16 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class BatchDeleteLiveDomainConfigsRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
         [NameInMap("DomainNames")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainNames { get; set; }
 
         [NameInMap("FunctionNames")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FunctionNames { get; set; }
 
     }

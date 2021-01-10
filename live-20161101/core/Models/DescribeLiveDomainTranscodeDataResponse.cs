@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainTranscodeDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TranscodeDataInfos")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveDomainTranscodeDataResponseTranscodeDataInfos TranscodeDataInfos { get; set; }
-        public class DescribeLiveDomainTranscodeDataResponseTranscodeDataInfos : TeaModel {
-            [NameInMap("TranscodeDataInfo")]
-            [Validation(Required=true)]
-            public List<DescribeLiveDomainTranscodeDataResponseTranscodeDataInfosTranscodeDataInfo> TranscodeDataInfo { get; set; }
-            public class DescribeLiveDomainTranscodeDataResponseTranscodeDataInfosTranscodeDataInfo : TeaModel {
-                public string Date { get; set; }
-                public int? Total { get; set; }
-                public string Detail { get; set; }
-            }
-        };
+        public DescribeLiveDomainTranscodeDataResponseBody Body { get; set; }
 
     }
 

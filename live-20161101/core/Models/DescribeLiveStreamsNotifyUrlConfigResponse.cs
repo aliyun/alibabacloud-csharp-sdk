@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsNotifyUrlConfigResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LiveStreamsNotifyConfig")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveStreamsNotifyUrlConfigResponseLiveStreamsNotifyConfig LiveStreamsNotifyConfig { get; set; }
-        public class DescribeLiveStreamsNotifyUrlConfigResponseLiveStreamsNotifyConfig : TeaModel {
-            [NameInMap("DomainName")]
-            [Validation(Required=true)]
-            public string DomainName { get; set; }
-            [NameInMap("NotifyUrl")]
-            [Validation(Required=true)]
-            public string NotifyUrl { get; set; }
-            [NameInMap("AuthType")]
-            [Validation(Required=true)]
-            public string AuthType { get; set; }
-            [NameInMap("AuthKey")]
-            [Validation(Required=true)]
-            public string AuthKey { get; set; }
-        };
+        public DescribeLiveStreamsNotifyUrlConfigResponseBody Body { get; set; }
 
     }
 

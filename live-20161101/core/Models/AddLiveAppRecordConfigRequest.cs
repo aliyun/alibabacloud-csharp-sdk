@@ -13,43 +13,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("AppName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppName { get; set; }
 
         [NameInMap("OssEndpoint")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OssEndpoint { get; set; }
 
         [NameInMap("OssBucket")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OssBucket { get; set; }
-
-        [NameInMap("RecordFormat")]
-        [Validation(Required=true)]
-        public List<AddLiveAppRecordConfigRequestRecordFormat> RecordFormat { get; set; }
-        public class AddLiveAppRecordConfigRequestRecordFormat : TeaModel {
-            [NameInMap("Format")]
-            [Validation(Required=false)]
-            public string Format { get; set; }
-
-            [NameInMap("OssObjectPrefix")]
-            [Validation(Required=false)]
-            public string OssObjectPrefix { get; set; }
-
-            [NameInMap("SliceOssObjectPrefix")]
-            [Validation(Required=false)]
-            public string SliceOssObjectPrefix { get; set; }
-
-            [NameInMap("CycleDuration")]
-            [Validation(Required=false)]
-            public int? CycleDuration { get; set; }
-
-        }
 
         [NameInMap("StreamName")]
         [Validation(Required=false)]
@@ -66,6 +48,28 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("OnDemand")]
         [Validation(Required=false)]
         public int? OnDemand { get; set; }
+
+        [NameInMap("RecordFormat")]
+        [Validation(Required=false)]
+        public List<AddLiveAppRecordConfigRequestRecordFormat> RecordFormat { get; set; }
+        public class AddLiveAppRecordConfigRequestRecordFormat : TeaModel {
+            [NameInMap("SliceOssObjectPrefix")]
+            [Validation(Required=false)]
+            public string SliceOssObjectPrefix { get; set; }
+
+            [NameInMap("CycleDuration")]
+            [Validation(Required=false)]
+            public int? CycleDuration { get; set; }
+
+            [NameInMap("OssObjectPrefix")]
+            [Validation(Required=false)]
+            public string OssObjectPrefix { get; set; }
+
+            [NameInMap("Format")]
+            [Validation(Required=false)]
+            public string Format { get; set; }
+
+        }
 
     }
 

@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamOptimizedFeatureConfigResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LiveStreamOptimizedFeatureConfigList")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveStreamOptimizedFeatureConfigResponseLiveStreamOptimizedFeatureConfigList LiveStreamOptimizedFeatureConfigList { get; set; }
-        public class DescribeLiveStreamOptimizedFeatureConfigResponseLiveStreamOptimizedFeatureConfigList : TeaModel {
-            [NameInMap("LiveStreamOptimizedFeatureConfig")]
-            [Validation(Required=true)]
-            public List<DescribeLiveStreamOptimizedFeatureConfigResponseLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig> LiveStreamOptimizedFeatureConfig { get; set; }
-            public class DescribeLiveStreamOptimizedFeatureConfigResponseLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig : TeaModel {
-                public string DomainName { get; set; }
-                public string ConfigName { get; set; }
-                public string ConfigStatus { get; set; }
-                public string ConfigValue { get; set; }
-            }
-        };
+        public DescribeLiveStreamOptimizedFeatureConfigResponseBody Body { get; set; }
 
     }
 

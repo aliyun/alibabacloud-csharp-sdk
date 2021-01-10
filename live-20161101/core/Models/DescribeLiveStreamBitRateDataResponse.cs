@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamBitRateDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("FrameRateAndBitRateInfos")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveStreamBitRateDataResponseFrameRateAndBitRateInfos FrameRateAndBitRateInfos { get; set; }
-        public class DescribeLiveStreamBitRateDataResponseFrameRateAndBitRateInfos : TeaModel {
-            [NameInMap("FrameRateAndBitRateInfo")]
-            [Validation(Required=true)]
-            public List<DescribeLiveStreamBitRateDataResponseFrameRateAndBitRateInfosFrameRateAndBitRateInfo> FrameRateAndBitRateInfo { get; set; }
-            public class DescribeLiveStreamBitRateDataResponseFrameRateAndBitRateInfosFrameRateAndBitRateInfo : TeaModel {
-                public string StreamUrl { get; set; }
-                public float? VideoFrameRate { get; set; }
-                public float? AudioFrameRate { get; set; }
-                public float? BitRate { get; set; }
-                public string Time { get; set; }
-            }
-        };
+        public DescribeLiveStreamBitRateDataResponseBody Body { get; set; }
 
     }
 

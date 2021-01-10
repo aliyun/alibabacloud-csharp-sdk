@@ -9,40 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterSceneAudioResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("CasterId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string CasterId { get; set; }
-
-        [NameInMap("FollowEnable")]
-        [Validation(Required=true)]
-        public int? FollowEnable { get; set; }
-
-        [NameInMap("AudioLayers")]
-        [Validation(Required=true)]
-        public DescribeCasterSceneAudioResponseAudioLayers AudioLayers { get; set; }
-        public class DescribeCasterSceneAudioResponseAudioLayers : TeaModel {
-            [NameInMap("AudioLayer")]
-            [Validation(Required=true)]
-            public List<DescribeCasterSceneAudioResponseAudioLayersAudioLayer> AudioLayer { get; set; }
-            public class DescribeCasterSceneAudioResponseAudioLayersAudioLayer : TeaModel {
-                public float? VolumeRate { get; set; }
-                public string ValidChannel { get; set; }
-                public int? FixedDelayDuration { get; set; }
-            }
-        };
-
-        [NameInMap("MixList")]
-        [Validation(Required=true)]
-        public DescribeCasterSceneAudioResponseMixList MixList { get; set; }
-        public class DescribeCasterSceneAudioResponseMixList : TeaModel {
-            [NameInMap("LocationId")]
-            [Validation(Required=true)]
-            public List<string> LocationId { get; set; }
-        };
+        public DescribeCasterSceneAudioResponseBody Body { get; set; }
 
     }
 

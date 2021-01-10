@@ -9,45 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamDelayConfigResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("LiveStreamHlsDelayConfig")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveStreamDelayConfigResponseLiveStreamHlsDelayConfig LiveStreamHlsDelayConfig { get; set; }
-        public class DescribeLiveStreamDelayConfigResponseLiveStreamHlsDelayConfig : TeaModel {
-            [NameInMap("Level")]
-            [Validation(Required=true)]
-            public string Level { get; set; }
-            [NameInMap("Delay")]
-            [Validation(Required=true)]
-            public int? Delay { get; set; }
-        };
-
-        [NameInMap("LiveStreamFlvDelayConfig")]
-        [Validation(Required=true)]
-        public DescribeLiveStreamDelayConfigResponseLiveStreamFlvDelayConfig LiveStreamFlvDelayConfig { get; set; }
-        public class DescribeLiveStreamDelayConfigResponseLiveStreamFlvDelayConfig : TeaModel {
-            [NameInMap("Level")]
-            [Validation(Required=true)]
-            public string Level { get; set; }
-            [NameInMap("Delay")]
-            [Validation(Required=true)]
-            public int? Delay { get; set; }
-        };
-
-        [NameInMap("LiveStreamRtmpDelayConfig")]
-        [Validation(Required=true)]
-        public DescribeLiveStreamDelayConfigResponseLiveStreamRtmpDelayConfig LiveStreamRtmpDelayConfig { get; set; }
-        public class DescribeLiveStreamDelayConfigResponseLiveStreamRtmpDelayConfig : TeaModel {
-            [NameInMap("Level")]
-            [Validation(Required=true)]
-            public string Level { get; set; }
-            [NameInMap("Delay")]
-            [Validation(Required=true)]
-            public int? Delay { get; set; }
-        };
+        public DescribeLiveStreamDelayConfigResponseBody Body { get; set; }
 
     }
 

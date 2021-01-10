@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -9,8 +12,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterComponentRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("ComponentName")]
@@ -18,11 +25,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ComponentName { get; set; }
 
         [NameInMap("LocationId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string LocationId { get; set; }
 
         [NameInMap("ComponentType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ComponentType { get; set; }
 
         [NameInMap("Effect")]
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Effect { get; set; }
 
         [NameInMap("ComponentLayer")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ComponentLayer { get; set; }
 
         [NameInMap("LayerOrder")]

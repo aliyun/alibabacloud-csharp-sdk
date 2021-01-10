@@ -9,25 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterLayoutRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("CasterId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CasterId { get; set; }
 
         [NameInMap("VideoLayer")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<AddCasterLayoutRequestVideoLayer> VideoLayer { get; set; }
         public class AddCasterLayoutRequestVideoLayer : TeaModel {
-            [NameInMap("FillMode")]
+            [NameInMap("FixedDelayDuration")]
             [Validation(Required=false)]
-            public string FillMode { get; set; }
+            public int? FixedDelayDuration { get; set; }
 
             [NameInMap("HeightNormalized")]
             [Validation(Required=false)]
             public float? HeightNormalized { get; set; }
 
-            [NameInMap("WidthNormalized")]
+            [NameInMap("FillMode")]
             [Validation(Required=false)]
-            public float? WidthNormalized { get; set; }
+            public string FillMode { get; set; }
 
             [NameInMap("PositionRefer")]
             [Validation(Required=false)]
@@ -35,38 +39,38 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
             [NameInMap("PositionNormalized")]
             [Validation(Required=false)]
-            public List<float?> PositionNormalized { get; set; }
+            public List<int?> PositionNormalized { get; set; }
 
-            [NameInMap("FixedDelayDuration")]
+            [NameInMap("WidthNormalized")]
             [Validation(Required=false)]
-            public int? FixedDelayDuration { get; set; }
+            public float? WidthNormalized { get; set; }
 
         }
 
         [NameInMap("AudioLayer")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<AddCasterLayoutRequestAudioLayer> AudioLayer { get; set; }
         public class AddCasterLayoutRequestAudioLayer : TeaModel {
             [NameInMap("VolumeRate")]
             [Validation(Required=false)]
             public float? VolumeRate { get; set; }
 
-            [NameInMap("ValidChannel")]
-            [Validation(Required=false)]
-            public string ValidChannel { get; set; }
-
             [NameInMap("FixedDelayDuration")]
             [Validation(Required=false)]
             public int? FixedDelayDuration { get; set; }
 
+            [NameInMap("ValidChannel")]
+            [Validation(Required=false)]
+            public string ValidChannel { get; set; }
+
         }
 
         [NameInMap("BlendList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> BlendList { get; set; }
 
         [NameInMap("MixList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> MixList { get; set; }
 
     }

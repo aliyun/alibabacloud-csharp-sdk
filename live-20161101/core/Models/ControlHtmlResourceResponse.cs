@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ControlHtmlResourceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("StreamId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string StreamId { get; set; }
+        public ControlHtmlResourceResponseBody Body { get; set; }
 
     }
 

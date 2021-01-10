@@ -9,25 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ForbidLiveStreamRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("AppName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppName { get; set; }
 
         [NameInMap("StreamName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StreamName { get; set; }
 
         [NameInMap("LiveStreamType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string LiveStreamType { get; set; }
 
         [NameInMap("Oneshot")]
         [Validation(Required=false)]
         public string Oneshot { get; set; }
+
+        [NameInMap("ControlStreamAction")]
+        [Validation(Required=false)]
+        public string ControlStreamAction { get; set; }
 
         [NameInMap("ResumeTime")]
         [Validation(Required=false)]

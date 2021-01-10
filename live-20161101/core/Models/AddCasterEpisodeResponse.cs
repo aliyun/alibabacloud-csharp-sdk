@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterEpisodeResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("EpisodeId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string EpisodeId { get; set; }
+        public AddCasterEpisodeResponseBody Body { get; set; }
 
     }
 
