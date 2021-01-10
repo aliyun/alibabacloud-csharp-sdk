@@ -1,0 +1,38 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.SOFA20190815.Models
+{
+    public class QueryODPEnvironmentMiddlewareTenantResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResultCode")]
+        [Validation(Required=false)]
+        public string ResultCode { get; set; }
+
+        [NameInMap("ResultMessage")]
+        [Validation(Required=false)]
+        public string ResultMessage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public QueryODPEnvironmentMiddlewareTenantResponseBodyData Data { get; set; }
+        public class QueryODPEnvironmentMiddlewareTenantResponseBodyData : TeaModel {
+            [NameInMap("Middleware")]
+            [Validation(Required=false)]
+            public bool? Middleware { get; set; }
+            [NameInMap("TenantList")]
+            [Validation(Required=false)]
+            public List<string> TenantList { get; set; }
+        };
+
+    }
+
+}

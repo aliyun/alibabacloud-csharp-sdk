@@ -1,0 +1,79 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.SOFA20190815.Models
+{
+    public class GetLinkeLinklogKnowledgefeedbacklistResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResultCode")]
+        [Validation(Required=false)]
+        public string ResultCode { get; set; }
+
+        [NameInMap("ResultMessage")]
+        [Validation(Required=false)]
+        public string ResultMessage { get; set; }
+
+        [NameInMap("ErrorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
+        [NameInMap("ResponseContentRange")]
+        [Validation(Required=false)]
+        public string ResponseContentRange { get; set; }
+
+        [NameInMap("ResponseContentType")]
+        [Validation(Required=false)]
+        public string ResponseContentType { get; set; }
+
+        [NameInMap("ResponseStatusCode")]
+        [Validation(Required=false)]
+        public long? ResponseStatusCode { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public GetLinkeLinklogKnowledgefeedbacklistResponseBodyResult Result { get; set; }
+        public class GetLinkeLinklogKnowledgefeedbacklistResponseBodyResult : TeaModel {
+            [NameInMap("Begin")]
+            [Validation(Required=false)]
+            public long? Begin { get; set; }
+            [NameInMap("BeginText")]
+            [Validation(Required=false)]
+            public string BeginText { get; set; }
+            [NameInMap("End")]
+            [Validation(Required=false)]
+            public long? End { get; set; }
+            [NameInMap("EndText")]
+            [Validation(Required=false)]
+            public string EndText { get; set; }
+            [NameInMap("Feedback")]
+            [Validation(Required=false)]
+            public string Feedback { get; set; }
+            [NameInMap("StoreIds")]
+            [Validation(Required=false)]
+            public long? StoreIds { get; set; }
+            [NameInMap("Data")]
+            [Validation(Required=false)]
+            public List<string> Data { get; set; }
+            [NameInMap("Fields")]
+            [Validation(Required=false)]
+            public List<string> Fields { get; set; }
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<string> List { get; set; }
+        };
+
+    }
+
+}
