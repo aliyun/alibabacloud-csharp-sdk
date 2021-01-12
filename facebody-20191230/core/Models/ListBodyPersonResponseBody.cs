@@ -27,7 +27,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<ListBodyPersonResponseBodyDataPersonList> PersonList { get; set; }
             public class ListBodyPersonResponseBodyDataPersonList : TeaModel {
-                public long? InstanceId { get; set; }
                 public long? DbId { get; set; }
                 public string Name { get; set; }
                 public long? TraceCount { get; set; }

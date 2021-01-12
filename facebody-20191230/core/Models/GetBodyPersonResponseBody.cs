@@ -20,9 +20,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public GetBodyPersonResponseBodyData Data { get; set; }
         public class GetBodyPersonResponseBodyData : TeaModel {
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public long? InstanceId { get; set; }
             [NameInMap("DbId")]
             [Validation(Required=false)]
             public long? DbId { get; set; }
