@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Videosearch20200225.Models
                 public string BucketName { get; set; }
                 public string DataPath { get; set; }
                 public string MetaFile { get; set; }
-                public string ModifiedTime { get; set; }
+                public long? ModifiedTime { get; set; }
                 public string ProcessMessage { get; set; }
             }
         };
