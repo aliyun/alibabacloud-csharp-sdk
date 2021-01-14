@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpgradeMeshVersionResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public UpgradeMeshVersionResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

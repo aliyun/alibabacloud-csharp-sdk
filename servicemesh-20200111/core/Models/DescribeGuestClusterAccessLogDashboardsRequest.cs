@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeGuestClusterAccessLogDashboardsRequest : TeaModel {
         [NameInMap("K8sClusterId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string K8sClusterId { get; set; }
 
     }

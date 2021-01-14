@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetRegisteredServicesRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceMeshId { get; set; }
 
         [NameInMap("Namespace")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Namespace { get; set; }
 
     }

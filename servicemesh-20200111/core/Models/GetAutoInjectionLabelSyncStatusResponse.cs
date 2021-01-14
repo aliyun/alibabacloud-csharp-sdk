@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class DescribeIngressGatewaysResponseBody : TeaModel {
+    public class GetAutoInjectionLabelSyncStatusResponse : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RequestId { get; set; }
 
-        [NameInMap("IngressGateways")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> IngressGateways { get; set; }
+        [NameInMap("Status")]
+        [Validation(Required=true)]
+        public string Status { get; set; }
 
     }
 

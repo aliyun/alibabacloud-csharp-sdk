@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class CreateServiceMeshRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("IstioVersion")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string IstioVersion { get; set; }
 
         [NameInMap("VpcId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string VpcId { get; set; }
 
         [NameInMap("ApiServerPublicEip")]
@@ -29,14 +29,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? PilotPublicEip { get; set; }
 
-        [NameInMap("StrictMTLS")]
-        [Validation(Required=false)]
-        public bool? StrictMTLS { get; set; }
-
-        [NameInMap("OutboundTrafficPolicy")]
-        [Validation(Required=false)]
-        public string OutboundTrafficPolicy { get; set; }
-
         [NameInMap("Tracing")]
         [Validation(Required=false)]
         public bool? Tracing { get; set; }
@@ -46,7 +38,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string Name { get; set; }
 
         [NameInMap("VSwitches")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string VSwitches { get; set; }
 
         [NameInMap("TraceSampling")]
@@ -93,22 +85,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string AuditProject { get; set; }
 
-        [NameInMap("CADisableSecretAutoGeneration")]
-        [Validation(Required=false)]
-        public bool? CADisableSecretAutoGeneration { get; set; }
-
-        [NameInMap("CAListenedNamespaces")]
-        [Validation(Required=false)]
-        public string CAListenedNamespaces { get; set; }
-
-        [NameInMap("AppNamespaces")]
-        [Validation(Required=false)]
-        public string AppNamespaces { get; set; }
-
-        [NameInMap("ClusterDomain")]
-        [Validation(Required=false)]
-        public string ClusterDomain { get; set; }
-
         [NameInMap("ProxyRequestCPU")]
         [Validation(Required=false)]
         public string ProxyRequestCPU { get; set; }
@@ -144,6 +120,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("OpaEnabled")]
         [Validation(Required=false)]
         public bool? OpaEnabled { get; set; }
+
+        [NameInMap("KialiEnabled")]
+        [Validation(Required=false)]
+        public bool? KialiEnabled { get; set; }
+
+        [NameInMap("AccessLogEnabled")]
+        [Validation(Required=false)]
+        public bool? AccessLogEnabled { get; set; }
+
+        [NameInMap("CustomizedPrometheus")]
+        [Validation(Required=false)]
+        public bool? CustomizedPrometheus { get; set; }
+
+        [NameInMap("PrometheusUrl")]
+        [Validation(Required=false)]
+        public string PrometheusUrl { get; set; }
 
     }
 

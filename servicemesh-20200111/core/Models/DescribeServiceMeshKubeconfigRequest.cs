@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshKubeconfigRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceMeshId { get; set; }
 
         [NameInMap("PrivateIpAddress")]

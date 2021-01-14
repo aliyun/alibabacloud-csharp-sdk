@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeClusterPrometheusResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Prometheus")]
         [Validation(Required=true)]
-        public DescribeClusterPrometheusResponseBody Body { get; set; }
+        public string Prometheus { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetRegisteredServiceNamespacesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Namespaces")]
         [Validation(Required=true)]
-        public GetRegisteredServiceNamespacesResponseBody Body { get; set; }
+        public List<string> Namespaces { get; set; }
 
     }
 

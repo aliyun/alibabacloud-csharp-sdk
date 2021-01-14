@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateMeshFeatureRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceMeshId { get; set; }
 
         [NameInMap("Tracing")]
@@ -53,10 +53,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string OPALimitMemory { get; set; }
 
-        [NameInMap("PilotPublicEip")]
-        [Validation(Required=false)]
-        public bool? PilotPublicEip { get; set; }
-
         [NameInMap("EnableAudit")]
         [Validation(Required=false)]
         public bool? EnableAudit { get; set; }
@@ -64,18 +60,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("AuditProject")]
         [Validation(Required=false)]
         public string AuditProject { get; set; }
-
-        [NameInMap("CADisableSecretAutoGeneration")]
-        [Validation(Required=false)]
-        public bool? CADisableSecretAutoGeneration { get; set; }
-
-        [NameInMap("CAListenedNamespaces")]
-        [Validation(Required=false)]
-        public string CAListenedNamespaces { get; set; }
-
-        [NameInMap("AppNamespaces")]
-        [Validation(Required=false)]
-        public string AppNamespaces { get; set; }
 
         [NameInMap("ClusterDomain")]
         [Validation(Required=false)]
@@ -152,6 +136,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("Http10Enabled")]
         [Validation(Required=false)]
         public bool? Http10Enabled { get; set; }
+
+        [NameInMap("KialiEnabled")]
+        [Validation(Required=false)]
+        public bool? KialiEnabled { get; set; }
+
+        [NameInMap("CustomizedPrometheus")]
+        [Validation(Required=false)]
+        public bool? CustomizedPrometheus { get; set; }
+
+        [NameInMap("PrometheusUrl")]
+        [Validation(Required=false)]
+        public string PrometheusUrl { get; set; }
+
+        [NameInMap("AccessLogEnabled")]
+        [Validation(Required=false)]
+        public bool? AccessLogEnabled { get; set; }
 
     }
 

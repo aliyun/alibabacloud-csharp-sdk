@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class UpdateMeshFeatureResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+    public class GetAutoInjectionLabelSyncStatusRequest : TeaModel {
+        [NameInMap("ServiceMeshId")]
+        [Validation(Required=true)]
+        public string ServiceMeshId { get; set; }
 
     }
 

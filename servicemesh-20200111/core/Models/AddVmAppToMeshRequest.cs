@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class AddVmAppToMeshRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceMeshId { get; set; }
 
         [NameInMap("Namespace")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Namespace { get; set; }
 
         [NameInMap("ServiceName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceName { get; set; }
 
         [NameInMap("Ips")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Ips { get; set; }
 
         [NameInMap("Ports")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Ports { get; set; }
 
         [NameInMap("Labels")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Labels { get; set; }
 
         [NameInMap("Annotations")]
@@ -40,10 +40,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ServiceAccount")]
         [Validation(Required=false)]
         public string ServiceAccount { get; set; }
-
-        [NameInMap("UseWorkload")]
-        [Validation(Required=false)]
-        public bool? UseWorkload { get; set; }
 
         [NameInMap("Force")]
         [Validation(Required=false)]

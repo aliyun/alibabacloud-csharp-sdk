@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class RemoveClusterFromServiceMeshRequest : TeaModel {
         [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceMeshId { get; set; }
 
         [NameInMap("ClusterId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ClusterId { get; set; }
 
     }
