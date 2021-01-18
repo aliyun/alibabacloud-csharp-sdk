@@ -1,0 +1,22 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Facebody20200910.Models
+{
+    public class ExecuteServerSideVerificationResponse : TeaModel {
+        [NameInMap("headers")]
+        [Validation(Required=true)]
+        public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public ExecuteServerSideVerificationResponseBody Body { get; set; }
+
+    }
+
+}
