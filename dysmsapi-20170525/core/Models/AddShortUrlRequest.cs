@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -22,16 +25,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("SourceUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceUrl { get; set; }
 
         [NameInMap("ShortUrlName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ShortUrlName { get; set; }
 
         [NameInMap("EffectiveDays")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EffectiveDays { get; set; }
+
+        [NameInMap("ProdCode")]
+        [Validation(Required=false)]
+        public string ProdCode { get; set; }
 
     }
 

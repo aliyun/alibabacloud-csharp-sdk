@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class QuerySmsSignRequest : TeaModel {
-        [NameInMap("OwnerId")]
+    public class DeleteSmsSignResponseBody : TeaModel {
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Message { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("SignName")]
         [Validation(Required=false)]

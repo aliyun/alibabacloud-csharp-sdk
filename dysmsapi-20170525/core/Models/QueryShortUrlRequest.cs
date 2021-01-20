@@ -21,8 +21,12 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ProdCode")]
+        [Validation(Required=false)]
+        public string ProdCode { get; set; }
+
         [NameInMap("ShortUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ShortUrl { get; set; }
 
     }

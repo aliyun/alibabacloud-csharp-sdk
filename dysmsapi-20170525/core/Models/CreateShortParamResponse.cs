@@ -9,32 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class CreateShortParamResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public CreateShortParamResponseData Data { get; set; }
-        public class CreateShortParamResponseData : TeaModel {
-            [NameInMap("ParamDetail")]
-            [Validation(Required=true)]
-            public string ParamDetail { get; set; }
-            [NameInMap("PhoneNumbers")]
-            [Validation(Required=true)]
-            public string PhoneNumbers { get; set; }
-            [NameInMap("ShortParam")]
-            [Validation(Required=true)]
-            public string ShortParam { get; set; }
-        };
+        public CreateShortParamResponseBody Body { get; set; }
 
     }
 

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("TemplateCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
     }

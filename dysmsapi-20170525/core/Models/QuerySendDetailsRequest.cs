@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("PhoneNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
         [NameInMap("BizId")]
@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public string BizId { get; set; }
 
         [NameInMap("SendDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SendDate { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? CurrentPage { get; set; }
 
     }

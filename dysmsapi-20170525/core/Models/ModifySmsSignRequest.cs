@@ -22,30 +22,30 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("SignName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SignName { get; set; }
 
         [NameInMap("SignSource")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? SignSource { get; set; }
 
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
         [NameInMap("SignFileList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<ModifySmsSignRequestSignFileList> SignFileList { get; set; }
         public class ModifySmsSignRequestSignFileList : TeaModel {
-            [NameInMap("FileSuffix")]
-            [Validation(Required=true)]
-            public string FileSuffix { get; set; }
-
             [NameInMap("FileContents")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string FileContents { get; set; }
 
-        }
+            [NameInMap("FileSuffix")]
+            [Validation(Required=false)]
+            public string FileSuffix { get; set; }
 
-        [NameInMap("Remark")]
-        [Validation(Required=true)]
-        public string Remark { get; set; }
+        }
 
     }
 
