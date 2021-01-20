@@ -22,18 +22,18 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("PhoneNumberJson")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PhoneNumberJson { get; set; }
 
         [NameInMap("SignNameJson")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SignNameJson { get; set; }
 
         [NameInMap("TemplateCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateCode { get; set; }
 
-        [NameInMap("templateParamJson")]
+        [NameInMap("TemplateParamJson")]
         [Validation(Required=false)]
         public string TemplateParamJson { get; set; }
 

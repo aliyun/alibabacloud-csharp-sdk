@@ -22,23 +22,23 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("TemplateType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? TemplateType { get; set; }
 
         [NameInMap("TemplateName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateName { get; set; }
 
         [NameInMap("TemplateCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateCode { get; set; }
 
         [NameInMap("TemplateContent")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateContent { get; set; }
 
         [NameInMap("Remark")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Remark { get; set; }
 
     }

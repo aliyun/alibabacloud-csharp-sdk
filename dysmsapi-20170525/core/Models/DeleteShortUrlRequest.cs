@@ -22,12 +22,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("SourceUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceUrl { get; set; }
-
-        [NameInMap("ProdCode")]
-        [Validation(Required=false)]
-        public string ProdCode { get; set; }
 
     }
 

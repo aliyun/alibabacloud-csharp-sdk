@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendSmsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("BizId")]
         [Validation(Required=true)]
-        public SendSmsResponseBody Body { get; set; }
+        public string BizId { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=true)]
+        public string Message { get; set; }
 
     }
 
