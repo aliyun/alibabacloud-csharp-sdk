@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? TimeoutInMinutes { get; set; }
 
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<PreviewStackRequestParameters> Parameters { get; set; }
+        public class PreviewStackRequestParameters : TeaModel {
+            [NameInMap("ParameterValue")]
+            [Validation(Required=true)]
+            public string ParameterValue { get; set; }
+
+            [NameInMap("ParameterKey")]
+            [Validation(Required=true)]
+            public string ParameterKey { get; set; }
+
+        }
+
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
@@ -26,7 +40,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyURL { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("StackPolicyBody")]
@@ -34,7 +48,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyBody { get; set; }
 
         [NameInMap("StackName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StackName { get; set; }
 
         [NameInMap("ClientToken")]
@@ -52,20 +66,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<PreviewStackRequestParameters> Parameters { get; set; }
-        public class PreviewStackRequestParameters : TeaModel {
-            [NameInMap("ParameterKey")]
-            [Validation(Required=false)]
-            public string ParameterKey { get; set; }
-
-            [NameInMap("ParameterValue")]
-            [Validation(Required=false)]
-            public string ParameterValue { get; set; }
-
-        }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteTemplateRequest : TeaModel {
         [NameInMap("TemplateId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateId { get; set; }
 
     }

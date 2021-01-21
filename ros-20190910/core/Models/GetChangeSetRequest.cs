@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? ShowTemplate { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("ChangeSetId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ChangeSetId { get; set; }
 
     }

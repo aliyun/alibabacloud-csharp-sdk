@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStacksRequest : TeaModel {
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public List<string> Status { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
@@ -18,8 +22,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ParentStackId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
+
+        [NameInMap("StackName")]
+        [Validation(Required=false)]
+        public List<string> StackName { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -28,18 +36,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("ShowNestedStack")]
         [Validation(Required=false)]
         public bool? ShowNestedStack { get; set; }
-
-        [NameInMap("StackId")]
-        [Validation(Required=false)]
-        public string StackId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public List<string> Status { get; set; }
-
-        [NameInMap("StackName")]
-        [Validation(Required=false)]
-        public List<string> StackName { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -54,6 +50,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
 
     }
 

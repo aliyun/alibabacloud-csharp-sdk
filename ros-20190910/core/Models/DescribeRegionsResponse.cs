@@ -9,13 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DescribeRegionsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Regions")]
         [Validation(Required=true)]
-        public DescribeRegionsResponseBody Body { get; set; }
+        public List<DescribeRegionsResponseRegions> Regions { get; set; }
+        public class DescribeRegionsResponseRegions : TeaModel {
+            [NameInMap("RegionId")]
+            [Validation(Required=true)]
+            public string RegionId { get; set; }
+
+            [NameInMap("LocalName")]
+            [Validation(Required=true)]
+            public string LocalName { get; set; }
+
+            [NameInMap("RegionEndpoint")]
+            [Validation(Required=true)]
+            public string RegionEndpoint { get; set; }
+
+        }
 
     }
 

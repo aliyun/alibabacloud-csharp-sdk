@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ContinueCreateStackRequest : TeaModel {
         [NameInMap("StackId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StackId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("RecreatingResources")]
         [Validation(Required=false)]
+        public List<string> RecreatingResources { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("RamRoleName")]
@@ -33,6 +37,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
 
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<ContinueCreateStackRequestParameters> Parameters { get; set; }
+        public class ContinueCreateStackRequestParameters : TeaModel {
+            [NameInMap("ParameterKey")]
+            [Validation(Required=true)]
+            public string ParameterKey { get; set; }
+
+            [NameInMap("ParameterValue")]
+            [Validation(Required=true)]
+            public string ParameterValue { get; set; }
+
+        }
+
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -44,24 +62,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
-
-        [NameInMap("RecreatingResources")]
-        [Validation(Required=false)]
-        public List<string> RecreatingResources { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<ContinueCreateStackRequestParameters> Parameters { get; set; }
-        public class ContinueCreateStackRequestParameters : TeaModel {
-            [NameInMap("ParameterKey")]
-            [Validation(Required=false)]
-            public string ParameterKey { get; set; }
-
-            [NameInMap("ParameterValue")]
-            [Validation(Required=false)]
-            public string ParameterValue { get; set; }
-
-        }
 
     }
 

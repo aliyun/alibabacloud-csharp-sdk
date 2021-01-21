@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateChangeSetResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("ChangeSetId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string ChangeSetId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public CreateChangeSetResponseBody Body { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("StackId")]
+        [Validation(Required=true)]
+        public string StackId { get; set; }
 
     }
 

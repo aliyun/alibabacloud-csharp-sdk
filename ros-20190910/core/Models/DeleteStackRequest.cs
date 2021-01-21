@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteStackRequest : TeaModel {
         [NameInMap("StackId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StackId { get; set; }
 
         [NameInMap("RetainAllResources")]
@@ -18,16 +18,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? RetainAllResources { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
-
-        [NameInMap("RamRoleName")]
-        [Validation(Required=false)]
-        public string RamRoleName { get; set; }
 
         [NameInMap("RetainResources")]
         [Validation(Required=false)]
         public List<string> RetainResources { get; set; }
+
+        [NameInMap("RamRoleName")]
+        [Validation(Required=false)]
+        public string RamRoleName { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackTemplateByResourcesRequest : TeaModel {
         [NameInMap("StackId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StackId { get; set; }
 
         [NameInMap("DryRun")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? DryRun { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("ClientToken")]
