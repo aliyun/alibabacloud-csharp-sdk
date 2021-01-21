@@ -13,23 +13,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
 
+        [NameInMap("ChannelId")]
+        [Validation(Required=false)]
+        public string ChannelId { get; set; }
+
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<CreateStackRequestParameters> Parameters { get; set; }
-        public class CreateStackRequestParameters : TeaModel {
-            [NameInMap("ParameterValue")]
-            [Validation(Required=true)]
-            public string ParameterValue { get; set; }
-
-            [NameInMap("ParameterKey")]
-            [Validation(Required=true)]
-            public string ParameterKey { get; set; }
-
-        }
 
         [NameInMap("StackPolicyURL")]
         [Validation(Required=false)]
@@ -44,12 +34,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyBody { get; set; }
 
         [NameInMap("StackName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackName { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ActivityId")]
+        [Validation(Required=false)]
+        public string ActivityId { get; set; }
+
+        [NameInMap("OrderSource")]
+        [Validation(Required=false)]
+        public string OrderSource { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -58,10 +56,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
-
-        [NameInMap("NotificationURLs")]
-        [Validation(Required=false)]
-        public List<string> NotificationURLs { get; set; }
 
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
@@ -83,19 +77,23 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
 
-        [NameInMap("Tags")]
+        [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public List<CreateStackRequestTags> Tags { get; set; }
-        public class CreateStackRequestTags : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=true)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
+        public List<CreateStackRequestParameters> Parameters { get; set; }
+        public class CreateStackRequestParameters : TeaModel {
+            [NameInMap("ParameterKey")]
             [Validation(Required=false)]
-            public string Value { get; set; }
+            public string ParameterKey { get; set; }
+
+            [NameInMap("ParameterValue")]
+            [Validation(Required=false)]
+            public string ParameterValue { get; set; }
 
         }
+
+        [NameInMap("NotificationURLs")]
+        [Validation(Required=false)]
+        public List<string> NotificationURLs { get; set; }
 
     }
 

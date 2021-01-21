@@ -10,27 +10,31 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class SignalResourceRequest : TeaModel {
         [NameInMap("StackId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackId { get; set; }
 
         [NameInMap("Status")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Status { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("UniqueId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string UniqueId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
+
         [NameInMap("LogicalResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string LogicalResourceId { get; set; }
 
     }

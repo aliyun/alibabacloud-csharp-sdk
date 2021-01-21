@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTagValuesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("NextToken")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string NextToken { get; set; }
 
         [NameInMap("Key")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Key { get; set; }
 
     }

@@ -10,33 +10,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackInstancesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("StackGroupName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackGroupName { get; set; }
 
-        [NameInMap("ParameterOverrides")]
-        [Validation(Required=false)]
-        public List<UpdateStackInstancesRequestParameterOverrides> ParameterOverrides { get; set; }
-        public class UpdateStackInstancesRequestParameterOverrides : TeaModel {
-            [NameInMap("ParameterValue")]
-            [Validation(Required=true)]
-            public string ParameterValue { get; set; }
-
-            [NameInMap("ParameterKey")]
-            [Validation(Required=true)]
-            public string ParameterKey { get; set; }
-
-        }
-
         [NameInMap("AccountIds")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, object> AccountIds { get; set; }
 
         [NameInMap("RegionIds")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, object> RegionIds { get; set; }
 
         [NameInMap("ClientToken")]
@@ -54,6 +40,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TimeoutInMinutes")]
         [Validation(Required=false)]
         public long? TimeoutInMinutes { get; set; }
+
+        [NameInMap("ParameterOverrides")]
+        [Validation(Required=false)]
+        public List<UpdateStackInstancesRequestParameterOverrides> ParameterOverrides { get; set; }
+        public class UpdateStackInstancesRequestParameterOverrides : TeaModel {
+            [NameInMap("ParameterKey")]
+            [Validation(Required=false)]
+            public string ParameterKey { get; set; }
+
+            [NameInMap("ParameterValue")]
+            [Validation(Required=false)]
+            public string ParameterValue { get; set; }
+
+        }
 
     }
 

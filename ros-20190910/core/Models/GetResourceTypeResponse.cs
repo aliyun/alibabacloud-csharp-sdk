@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetResourceTypeResponse : TeaModel {
-        [NameInMap("Attributes")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public Dictionary<string, object> Attributes { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Properties")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public Dictionary<string, object> Properties { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=true)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("SupportDriftDetection")]
-        [Validation(Required=true)]
-        public bool? SupportDriftDetection { get; set; }
+        public GetResourceTypeResponseBody Body { get; set; }
 
     }
 

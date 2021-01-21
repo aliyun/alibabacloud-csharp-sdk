@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         [NameInMap("TemplateId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TemplateId { get; set; }
 
     }

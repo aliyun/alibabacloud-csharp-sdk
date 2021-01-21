@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        [NameInMap("ShareType")]
+        [Validation(Required=false)]
+        public string ShareType { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTemplatesRequestTag> Tag { get; set; }
@@ -34,10 +38,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("ShareType")]
-        [Validation(Required=false)]
-        public string ShareType { get; set; }
 
     }
 

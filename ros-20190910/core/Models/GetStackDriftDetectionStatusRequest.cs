@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackDriftDetectionStatusRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DriftDetectionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriftDetectionId { get; set; }
 
     }

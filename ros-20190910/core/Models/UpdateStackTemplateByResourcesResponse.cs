@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackTemplateByResourcesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("OldTemplateBody")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string OldTemplateBody { get; set; }
-
-        [NameInMap("NewTemplateBody")]
-        [Validation(Required=true)]
-        public string NewTemplateBody { get; set; }
+        public UpdateStackTemplateByResourcesResponseBody Body { get; set; }
 
     }
 

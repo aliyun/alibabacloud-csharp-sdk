@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetResourceTypeTemplateResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TemplateBody")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public Dictionary<string, object> TemplateBody { get; set; }
+        public GetResourceTypeTemplateResponseBody Body { get; set; }
 
     }
 
