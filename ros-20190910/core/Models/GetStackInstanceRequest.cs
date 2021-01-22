@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackInstanceRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("StackGroupName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackGroupName { get; set; }
 
         [NameInMap("StackInstanceAccountId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackInstanceAccountId { get; set; }
 
         [NameInMap("StackInstanceRegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StackInstanceRegionId { get; set; }
 
     }

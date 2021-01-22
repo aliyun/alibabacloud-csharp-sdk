@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTagKeysResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string NextToken { get; set; }
-
-        [NameInMap("Keys")]
-        [Validation(Required=true)]
-        public List<string> Keys { get; set; }
+        public ListTagKeysResponseBody Body { get; set; }
 
     }
 
