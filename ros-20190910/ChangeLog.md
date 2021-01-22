@@ -1,3 +1,6 @@
+2021-01-22 Version: 0.3.0
+- Generated csharp 2019-09-10 for ROS.
+
 2021-01-21 Version: 0.2.3
 - Generated csharp 2019-09-10 for ROS.
 

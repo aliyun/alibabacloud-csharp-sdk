@@ -14,8 +14,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateURL { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<GetTemplateEstimateCostRequestParameters> Parameters { get; set; }
+        public class GetTemplateEstimateCostRequestParameters : TeaModel {
+            [NameInMap("ParameterValue")]
+            [Validation(Required=true)]
+            public string ParameterValue { get; set; }
+
+            [NameInMap("ParameterKey")]
+            [Validation(Required=true)]
+            public string ParameterKey { get; set; }
+
+        }
 
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
@@ -32,20 +46,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<GetTemplateEstimateCostRequestParameters> Parameters { get; set; }
-        public class GetTemplateEstimateCostRequestParameters : TeaModel {
-            [NameInMap("ParameterKey")]
-            [Validation(Required=false)]
-            public string ParameterKey { get; set; }
-
-            [NameInMap("ParameterValue")]
-            [Validation(Required=false)]
-            public string ParameterValue { get; set; }
-
-        }
 
     }
 

@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class SetTemplatePermissionRequest : TeaModel {
         [NameInMap("ShareOption")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ShareOption { get; set; }
 
         [NameInMap("VersionOption")]
         [Validation(Required=false)]
         public string VersionOption { get; set; }
 
+        [NameInMap("AccountIds")]
+        [Validation(Required=true)]
+        public List<string> AccountIds { get; set; }
+
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
 
         [NameInMap("TemplateId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateId { get; set; }
-
-        [NameInMap("AccountIds")]
-        [Validation(Required=false)]
-        public List<string> AccountIds { get; set; }
 
     }
 

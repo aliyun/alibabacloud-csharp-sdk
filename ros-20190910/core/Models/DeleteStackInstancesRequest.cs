@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteStackInstancesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("StackGroupName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StackGroupName { get; set; }
 
         [NameInMap("AccountIds")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public Dictionary<string, object> AccountIds { get; set; }
 
         [NameInMap("RegionIds")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public Dictionary<string, object> RegionIds { get; set; }
 
         [NameInMap("RetainStacks")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public bool? RetainStacks { get; set; }
 
         [NameInMap("ClientToken")]

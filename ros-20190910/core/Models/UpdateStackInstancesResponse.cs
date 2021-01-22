@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackInstancesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("OperationId")]
         [Validation(Required=true)]
-        public UpdateStackInstancesResponseBody Body { get; set; }
+        public string OperationId { get; set; }
 
     }
 

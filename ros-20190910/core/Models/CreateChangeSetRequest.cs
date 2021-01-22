@@ -13,9 +13,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackId { get; set; }
 
-        [NameInMap("ChannelId")]
+        [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public string ChannelId { get; set; }
+        public List<CreateChangeSetRequestParameters> Parameters { get; set; }
+        public class CreateChangeSetRequestParameters : TeaModel {
+            [NameInMap("ParameterValue")]
+            [Validation(Required=true)]
+            public string ParameterValue { get; set; }
+
+            [NameInMap("ParameterKey")]
+            [Validation(Required=true)]
+            public string ParameterKey { get; set; }
+
+        }
 
         [NameInMap("StackPolicyURL")]
         [Validation(Required=false)]
@@ -42,7 +52,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("ClientToken")]
@@ -61,33 +71,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
-        [NameInMap("UpdateAllowPolicy")]
-        [Validation(Required=false)]
-        public string UpdateAllowPolicy { get; set; }
-
         [NameInMap("TimeoutInMinutes")]
         [Validation(Required=false)]
         public long? TimeoutInMinutes { get; set; }
-
-        [NameInMap("ActivityId")]
-        [Validation(Required=false)]
-        public string ActivityId { get; set; }
-
-        [NameInMap("OrderSource")]
-        [Validation(Required=false)]
-        public string OrderSource { get; set; }
 
         [NameInMap("DisableRollback")]
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
 
         [NameInMap("ChangeSetName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ChangeSetName { get; set; }
 
         [NameInMap("StackPolicyDuringUpdateBody")]
         [Validation(Required=false)]
         public string StackPolicyDuringUpdateBody { get; set; }
+
+        [NameInMap("NotificationURLs")]
+        [Validation(Required=false)]
+        public List<string> NotificationURLs { get; set; }
 
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
@@ -97,6 +99,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ReplacementOption { get; set; }
 
+        [NameInMap("ResourcesToImport")]
+        [Validation(Required=false)]
+        public List<CreateChangeSetRequestResourcesToImport> ResourcesToImport { get; set; }
+        public class CreateChangeSetRequestResourcesToImport : TeaModel {
+            [NameInMap("LogicalResourceId")]
+            [Validation(Required=true)]
+            public string LogicalResourceId { get; set; }
+
+            [NameInMap("ResourceType")]
+            [Validation(Required=true)]
+            public string ResourceType { get; set; }
+
+            [NameInMap("ResourceIdentifier")]
+            [Validation(Required=true)]
+            public string ResourceIdentifier { get; set; }
+
+        }
+
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
@@ -104,42 +124,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TemplateVersion")]
         [Validation(Required=false)]
         public string TemplateVersion { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public List<CreateChangeSetRequestParameters> Parameters { get; set; }
-        public class CreateChangeSetRequestParameters : TeaModel {
-            [NameInMap("ParameterKey")]
-            [Validation(Required=false)]
-            public string ParameterKey { get; set; }
-
-            [NameInMap("ParameterValue")]
-            [Validation(Required=false)]
-            public string ParameterValue { get; set; }
-
-        }
-
-        [NameInMap("NotificationURLs")]
-        [Validation(Required=false)]
-        public List<string> NotificationURLs { get; set; }
-
-        [NameInMap("ResourcesToImport")]
-        [Validation(Required=false)]
-        public List<CreateChangeSetRequestResourcesToImport> ResourcesToImport { get; set; }
-        public class CreateChangeSetRequestResourcesToImport : TeaModel {
-            [NameInMap("ResourceIdentifier")]
-            [Validation(Required=false)]
-            public string ResourceIdentifier { get; set; }
-
-            [NameInMap("LogicalResourceId")]
-            [Validation(Required=false)]
-            public string LogicalResourceId { get; set; }
-
-            [NameInMap("ResourceType")]
-            [Validation(Required=false)]
-            public string ResourceType { get; set; }
-
-        }
 
     }
 

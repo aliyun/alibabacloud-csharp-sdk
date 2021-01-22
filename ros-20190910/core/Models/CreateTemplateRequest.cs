@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         [NameInMap("TemplateName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateName { get; set; }
 
     }
