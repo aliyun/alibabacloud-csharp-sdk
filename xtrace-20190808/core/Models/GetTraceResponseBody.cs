@@ -15,83 +15,68 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         [NameInMap("Spans")]
         [Validation(Required=false)]
-        public List<GetTraceResponseBodySpans> Spans { get; set; }
+        public GetTraceResponseBodySpans Spans { get; set; }
         public class GetTraceResponseBodySpans : TeaModel {
-            [NameInMap("TagEntryList")]
+            [NameInMap("Span")]
             [Validation(Required=false)]
-            public List<GetTraceResponseBodySpansTagEntryList> TagEntryList { get; set; }
-            public class GetTraceResponseBodySpansTagEntryList : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-            }
-
-            [NameInMap("LogEventList")]
-            [Validation(Required=false)]
-            public List<GetTraceResponseBodySpansLogEventList> LogEventList { get; set; }
-            public class GetTraceResponseBodySpansLogEventList : TeaModel {
-                [NameInMap("TagEntryList")]
-                [Validation(Required=false)]
-                public List<GetTraceResponseBodySpansLogEventListTagEntryList> TagEntryList { get; set; }
-                public class GetTraceResponseBodySpansLogEventListTagEntryList : TeaModel {
-                    [NameInMap("Key")]
+            public List<GetTraceResponseBodySpansSpan> Span { get; set; }
+            public class GetTraceResponseBodySpansSpan : TeaModel {
+                public string SpanId { get; set; }
+                public string OperationName { get; set; }
+                public string ResultCode { get; set; }
+                public long? Timestamp { get; set; }
+                public GetTraceResponseBodySpansSpanTagEntryList TagEntryList { get; set; }
+                public class GetTraceResponseBodySpansSpanTagEntryList : TeaModel {
+                    [NameInMap("TagEntry")]
                     [Validation(Required=false)]
-                    public string Key { get; set; }
+                    public List<GetTraceResponseBodySpansSpanTagEntryListTagEntry> TagEntry { get; set; }
+                    public class GetTraceResponseBodySpansSpanTagEntryListTagEntry : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
 
-                    [NameInMap("Value")]
-                    [Validation(Required=false)]
-                    public string Value { get; set; }
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
 
                 }
+                public GetTraceResponseBodySpansSpanLogEventList LogEventList { get; set; }
+                public class GetTraceResponseBodySpansSpanLogEventList : TeaModel {
+                    [NameInMap("LogEvent")]
+                    [Validation(Required=false)]
+                    public List<GetTraceResponseBodySpansSpanLogEventListLogEvent> LogEvent { get; set; }
+                    public class GetTraceResponseBodySpansSpanLogEventListLogEvent : TeaModel {
+                        [NameInMap("TagEntryList")]
+                        [Validation(Required=false)]
+                        public GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList TagEntryList { get; set; }
+                        public class GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList : TeaModel {
+                            [NameInMap("TagEntry")]
+                            [Validation(Required=false)]
+                            public List<GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryListTagEntry> TagEntry { get; set; }
+                            public class GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryListTagEntry : TeaModel {
+                                public string Key { get; set; }
+                                public string Value { get; set; }
+                            }
+                        };
 
-                [NameInMap("Timestamp")]
-                [Validation(Required=false)]
-                public long? Timestamp { get; set; }
+                        [NameInMap("Timestamp")]
+                        [Validation(Required=false)]
+                        public long? Timestamp { get; set; }
 
+                    }
+
+                }
+                public bool? HaveStack { get; set; }
+                public string ServiceIp { get; set; }
+                public string ParentSpanId { get; set; }
+                public long? Duration { get; set; }
+                public string RpcId { get; set; }
+                public string ServiceName { get; set; }
+                public string TraceID { get; set; }
             }
-
-            [NameInMap("HaveStack")]
-            [Validation(Required=false)]
-            public bool? HaveStack { get; set; }
-
-            [NameInMap("ServiceIp")]
-            [Validation(Required=false)]
-            public string ServiceIp { get; set; }
-
-            [NameInMap("OperationName")]
-            [Validation(Required=false)]
-            public string OperationName { get; set; }
-
-            [NameInMap("ResultCode")]
-            [Validation(Required=false)]
-            public string ResultCode { get; set; }
-
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public long? Duration { get; set; }
-
-            [NameInMap("RpcId")]
-            [Validation(Required=false)]
-            public string RpcId { get; set; }
-
-            [NameInMap("Timestamp")]
-            [Validation(Required=false)]
-            public long? Timestamp { get; set; }
-
-            [NameInMap("ServiceName")]
-            [Validation(Required=false)]
-            public string ServiceName { get; set; }
-
-            [NameInMap("TraceID")]
-            [Validation(Required=false)]
-            public string TraceID { get; set; }
-
-        }
+        };
 
     }
 

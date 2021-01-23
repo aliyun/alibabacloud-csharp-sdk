@@ -15,14 +15,38 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         public class SearchTracesResponseBodyPageBean : TeaModel {
             [NameInMap("TraceInfos")]
             [Validation(Required=false)]
-            public List<SearchTracesResponseBodyPageBeanTraceInfos> TraceInfos { get; set; }
+            public SearchTracesResponseBodyPageBeanTraceInfos TraceInfos { get; set; }
             public class SearchTracesResponseBodyPageBeanTraceInfos : TeaModel {
-                public string OperationName { get; set; }
-                public string ServiceIp { get; set; }
-                public long? Duration { get; set; }
-                public long? Timestamp { get; set; }
-                public string ServiceName { get; set; }
-                public string TraceID { get; set; }
+                [NameInMap("TraceInfo")]
+                [Validation(Required=false)]
+                public List<SearchTracesResponseBodyPageBeanTraceInfosTraceInfo> TraceInfo { get; set; }
+                public class SearchTracesResponseBodyPageBeanTraceInfosTraceInfo : TeaModel {
+                    [NameInMap("OperationName")]
+                    [Validation(Required=false)]
+                    public string OperationName { get; set; }
+
+                    [NameInMap("ServiceIp")]
+                    [Validation(Required=false)]
+                    public string ServiceIp { get; set; }
+
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
+                    public long? Duration { get; set; }
+
+                    [NameInMap("Timestamp")]
+                    [Validation(Required=false)]
+                    public long? Timestamp { get; set; }
+
+                    [NameInMap("ServiceName")]
+                    [Validation(Required=false)]
+                    public string ServiceName { get; set; }
+
+                    [NameInMap("TraceID")]
+                    [Validation(Required=false)]
+                    public string TraceID { get; set; }
+
+                }
+
             }
             [NameInMap("PageSize")]
             [Validation(Required=false)]

@@ -11,7 +11,12 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
     public class ListSpanNamesResponseBody : TeaModel {
         [NameInMap("SpanNames")]
         [Validation(Required=false)]
-        public List<string> SpanNames { get; set; }
+        public ListSpanNamesResponseBodySpanNames SpanNames { get; set; }
+        public class ListSpanNamesResponseBodySpanNames : TeaModel {
+            [NameInMap("SpanName")]
+            [Validation(Required=false)]
+            public List<string> SpanName { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

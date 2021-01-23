@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
         [Validation(Required=false)]
         public string ProxyUserId { get; set; }
 
+        [NameInMap("IsForce")]
+        [Validation(Required=false)]
+        public bool? IsForce { get; set; }
+
     }
 
 }

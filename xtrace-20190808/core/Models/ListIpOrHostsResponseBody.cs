@@ -15,7 +15,12 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         [NameInMap("IpNames")]
         [Validation(Required=false)]
-        public List<string> IpNames { get; set; }
+        public ListIpOrHostsResponseBodyIpNames IpNames { get; set; }
+        public class ListIpOrHostsResponseBodyIpNames : TeaModel {
+            [NameInMap("IpName")]
+            [Validation(Required=false)]
+            public List<string> IpName { get; set; }
+        };
 
     }
 

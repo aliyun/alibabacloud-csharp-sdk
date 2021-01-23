@@ -37,70 +37,6 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public CheckServiceLinkedRoleForDeletingResponse CheckServiceLinkedRoleForDeletingWithOptions(CheckServiceLinkedRoleForDeletingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<CheckServiceLinkedRoleForDeletingResponse>(DoRPCRequest("CheckServiceLinkedRoleForDeleting", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<CheckServiceLinkedRoleForDeletingResponse> CheckServiceLinkedRoleForDeletingWithOptionsAsync(CheckServiceLinkedRoleForDeletingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<CheckServiceLinkedRoleForDeletingResponse>(await DoRPCRequestAsync("CheckServiceLinkedRoleForDeleting", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public CheckServiceLinkedRoleForDeletingResponse CheckServiceLinkedRoleForDeleting(CheckServiceLinkedRoleForDeletingRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CheckServiceLinkedRoleForDeletingWithOptions(request, runtime);
-        }
-
-        public async Task<CheckServiceLinkedRoleForDeletingResponse> CheckServiceLinkedRoleForDeletingAsync(CheckServiceLinkedRoleForDeletingRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CheckServiceLinkedRoleForDeletingWithOptionsAsync(request, runtime);
-        }
-
-        public GetSamplingResponse GetSamplingWithOptions(GetSamplingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetSamplingResponse>(DoRPCRequest("GetSampling", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<GetSamplingResponse> GetSamplingWithOptionsAsync(GetSamplingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetSamplingResponse>(await DoRPCRequestAsync("GetSampling", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public GetSamplingResponse GetSampling(GetSamplingRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetSamplingWithOptions(request, runtime);
-        }
-
-        public async Task<GetSamplingResponse> GetSamplingAsync(GetSamplingRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetSamplingWithOptionsAsync(request, runtime);
-        }
-
         public GetTagKeyResponse GetTagKeyWithOptions(GetTagKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -357,30 +293,6 @@ namespace AlibabaCloud.SDK.Xtrace20190808
             return await ListSpanNamesWithOptionsAsync(request, runtime);
         }
 
-        public OpenXtraceServiceResponse OpenXtraceServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<OpenXtraceServiceResponse>(DoRPCRequest("OpenXtraceService", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<OpenXtraceServiceResponse> OpenXtraceServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<OpenXtraceServiceResponse>(await DoRPCRequestAsync("OpenXtraceService", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public OpenXtraceServiceResponse OpenXtraceService()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return OpenXtraceServiceWithOptions(runtime);
-        }
-
-        public async Task<OpenXtraceServiceResponse> OpenXtraceServiceAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await OpenXtraceServiceWithOptionsAsync(runtime);
-        }
-
         public QueryMetricResponse QueryMetricWithOptions(QueryMetricRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -443,38 +355,6 @@ namespace AlibabaCloud.SDK.Xtrace20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchTracesWithOptionsAsync(request, runtime);
-        }
-
-        public UpdateSamplingResponse UpdateSamplingWithOptions(UpdateSamplingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<UpdateSamplingResponse>(DoRPCRequest("UpdateSampling", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<UpdateSamplingResponse> UpdateSamplingWithOptionsAsync(UpdateSamplingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<UpdateSamplingResponse>(await DoRPCRequestAsync("UpdateSampling", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public UpdateSamplingResponse UpdateSampling(UpdateSamplingRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateSamplingWithOptions(request, runtime);
-        }
-
-        public async Task<UpdateSamplingResponse> UpdateSamplingAsync(UpdateSamplingRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateSamplingWithOptionsAsync(request, runtime);
         }
 
     }

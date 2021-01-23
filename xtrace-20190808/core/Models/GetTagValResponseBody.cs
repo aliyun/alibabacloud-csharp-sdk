@@ -15,7 +15,12 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
 
         [NameInMap("TagValues")]
         [Validation(Required=false)]
-        public List<string> TagValues { get; set; }
+        public GetTagValResponseBodyTagValues TagValues { get; set; }
+        public class GetTagValResponseBodyTagValues : TeaModel {
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public List<string> TagValue { get; set; }
+        };
 
     }
 

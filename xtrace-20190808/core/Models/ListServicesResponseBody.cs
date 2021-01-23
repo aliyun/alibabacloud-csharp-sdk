@@ -11,21 +11,17 @@ namespace AlibabaCloud.SDK.Xtrace20190808.Models
     public class ListServicesResponseBody : TeaModel {
         [NameInMap("Services")]
         [Validation(Required=false)]
-        public List<ListServicesResponseBodyServices> Services { get; set; }
+        public ListServicesResponseBodyServices Services { get; set; }
         public class ListServicesResponseBodyServices : TeaModel {
-            [NameInMap("Pid")]
+            [NameInMap("Service")]
             [Validation(Required=false)]
-            public string Pid { get; set; }
-
-            [NameInMap("ServiceName")]
-            [Validation(Required=false)]
-            public string ServiceName { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+            public List<ListServicesResponseBodyServicesService> Service { get; set; }
+            public class ListServicesResponseBodyServicesService : TeaModel {
+                public string Pid { get; set; }
+                public string ServiceName { get; set; }
+                public string RegionId { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
