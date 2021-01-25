@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class GetDiagnosisResponse : TeaModel {
+    public class SetServiceRegistrySourceResponse : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
@@ -16,14 +16,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("Result")]
         [Validation(Required=true)]
         public string Result { get; set; }
-
-        [NameInMap("RunAt")]
-        [Validation(Required=true)]
-        public string RunAt { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=true)]
-        public string Status { get; set; }
 
     }
 

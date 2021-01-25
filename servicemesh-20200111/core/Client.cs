@@ -24,6 +24,66 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
         }
 
 
+        public GetServiceRegistrySourceResponse GetServiceRegistrySourceWithOptions(GetServiceRegistrySourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<GetServiceRegistrySourceResponse>(DoRequest("GetServiceRegistrySource", "HTTPS", "POST", "2020-01-11", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<GetServiceRegistrySourceResponse> GetServiceRegistrySourceWithOptionsAsync(GetServiceRegistrySourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            return TeaModel.ToObject<GetServiceRegistrySourceResponse>(await DoRequestAsync("GetServiceRegistrySource", "HTTPS", "POST", "2020-01-11", "AK", null, request.ToMap(), runtime));
+        }
+
+        public GetServiceRegistrySourceResponse GetServiceRegistrySource(GetServiceRegistrySourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetServiceRegistrySourceWithOptions(request, runtime);
+        }
+
+        public async Task<GetServiceRegistrySourceResponse> GetServiceRegistrySourceAsync(GetServiceRegistrySourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetServiceRegistrySourceWithOptionsAsync(request, runtime);
+        }
+
+        public SetServiceRegistrySourceResponse SetServiceRegistrySourceWithOptions(SetServiceRegistrySourceRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            SetServiceRegistrySourceShrinkRequest request = new SetServiceRegistrySourceShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.Config);
+            }
+            return TeaModel.ToObject<SetServiceRegistrySourceResponse>(DoRequest("SetServiceRegistrySource", "HTTPS", "POST", "2020-01-11", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<SetServiceRegistrySourceResponse> SetServiceRegistrySourceWithOptionsAsync(SetServiceRegistrySourceRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            SetServiceRegistrySourceShrinkRequest request = new SetServiceRegistrySourceShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.Config);
+            }
+            return TeaModel.ToObject<SetServiceRegistrySourceResponse>(await DoRequestAsync("SetServiceRegistrySource", "HTTPS", "POST", "2020-01-11", "AK", null, request.ToMap(), runtime));
+        }
+
+        public SetServiceRegistrySourceResponse SetServiceRegistrySource(SetServiceRegistrySourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetServiceRegistrySourceWithOptions(request, runtime);
+        }
+
+        public async Task<SetServiceRegistrySourceResponse> SetServiceRegistrySourceAsync(SetServiceRegistrySourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetServiceRegistrySourceWithOptionsAsync(request, runtime);
+        }
+
         public GetAutoInjectionLabelSyncStatusResponse GetAutoInjectionLabelSyncStatusWithOptions(GetAutoInjectionLabelSyncStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

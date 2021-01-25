@@ -1,3 +1,6 @@
+2021-01-25 Version: 1.0.11
+- Generated csharp 2020-01-11 for servicemesh.
+
 2021-01-14 Version: 1.0.10
 - Generated csharp 2020-01-11 for servicemesh.
 

@@ -255,6 +255,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=true)]
                         public bool? Enabled { get; set; }
 
+                        [NameInMap("Url")]
+                        [Validation(Required=true)]
+                        public string Url { get; set; }
+
                     }
                     [NameInMap("Prometheus")]
                     [Validation(Required=true)]
