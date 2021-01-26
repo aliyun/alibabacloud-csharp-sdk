@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class GetImageDiagnoseRequest : TeaModel {
-        [NameInMap("Url")]
+    public class GetDetectLanguageResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Url { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("Extra")]
+        [NameInMap("DetectedLanguage")]
         [Validation(Required=false)]
-        public string Extra { get; set; }
+        public string DetectedLanguage { get; set; }
 
     }
 

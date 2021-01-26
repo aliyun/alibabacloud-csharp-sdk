@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class GetDocTranslateTaskRequest : TeaModel {
+    public class CreateDocTranslateTaskResponseBody : TeaModel {
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

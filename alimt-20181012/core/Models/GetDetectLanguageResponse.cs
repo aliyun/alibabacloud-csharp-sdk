@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetDetectLanguageResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DetectedLanguage")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DetectedLanguage { get; set; }
+        public GetDetectLanguageResponseBody Body { get; set; }
 
     }
 

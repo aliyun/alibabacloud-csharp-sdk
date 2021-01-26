@@ -9,26 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTitleIntelligenceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetTitleIntelligenceResponseData Data { get; set; }
-        public class GetTitleIntelligenceResponseData : TeaModel {
-            [NameInMap("Titles")]
-            [Validation(Required=true)]
-            public string Titles { get; set; }
-        };
+        public GetTitleIntelligenceResponseBody Body { get; set; }
 
     }
 
