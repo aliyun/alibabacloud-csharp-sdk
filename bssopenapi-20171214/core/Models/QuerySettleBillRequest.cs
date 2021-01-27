@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySettleBillRequest : TeaModel {
         [NameInMap("BillingCycle")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
         [NameInMap("Type")]
@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public bool? IsDisplayLocalCurrency { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("BillOwnerId")]
         [Validation(Required=false)]
-        public long BillOwnerId { get; set; }
+        public long? BillOwnerId { get; set; }
 
     }
 

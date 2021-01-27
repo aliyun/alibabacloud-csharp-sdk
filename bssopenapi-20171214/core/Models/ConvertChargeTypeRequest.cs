@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ConvertChargeTypeRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         [NameInMap("SubscriptionType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SubscriptionType { get; set; }
 
         [NameInMap("Period")]
@@ -22,11 +26,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Period { get; set; }
 
         [NameInMap("ProductCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
     }

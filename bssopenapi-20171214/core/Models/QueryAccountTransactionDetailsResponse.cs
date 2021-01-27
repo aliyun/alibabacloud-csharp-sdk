@@ -9,102 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountTransactionDetailsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryAccountTransactionDetailsResponseData Data { get; set; }
-        public class QueryAccountTransactionDetailsResponseData : TeaModel {
-            [NameInMap("AccountName")]
-            [Validation(Required=true)]
-            public string AccountName { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=true)]
-            public int? TotalCount { get; set; }
-            [NameInMap("NextToken")]
-            [Validation(Required=true)]
-            public string NextToken { get; set; }
-            [NameInMap("MaxResults")]
-            [Validation(Required=true)]
-            public int? MaxResults { get; set; }
-            [NameInMap("AccountTransactionsList")]
-            [Validation(Required=true)]
-            public QueryAccountTransactionDetailsResponseDataAccountTransactionsList AccountTransactionsList { get; set; }
-            public class QueryAccountTransactionDetailsResponseDataAccountTransactionsList : TeaModel {
-                [NameInMap("AccountTransactionsList")]
-                [Validation(Required=true)]
-                public List<QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList> AccountTransactionsList { get; set; }
-                public class QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList : TeaModel {
-                    [NameInMap("TransactionNumber")]
-                    [Validation(Required=true)]
-                    public string TransactionNumber { get; set; }
-
-                    [NameInMap("TransactionTime")]
-                    [Validation(Required=true)]
-                    public string TransactionTime { get; set; }
-
-                    [NameInMap("TransactionFlow")]
-                    [Validation(Required=true)]
-                    public string TransactionFlow { get; set; }
-
-                    [NameInMap("TransactionType")]
-                    [Validation(Required=true)]
-                    public string TransactionType { get; set; }
-
-                    [NameInMap("TransactionChannel")]
-                    [Validation(Required=true)]
-                    public string TransactionChannel { get; set; }
-
-                    [NameInMap("TransactionChannelSN")]
-                    [Validation(Required=true)]
-                    public string TransactionChannelSN { get; set; }
-
-                    [NameInMap("FundType")]
-                    [Validation(Required=true)]
-                    public string FundType { get; set; }
-
-                    [NameInMap("RecordID")]
-                    [Validation(Required=true)]
-                    public string RecordID { get; set; }
-
-                    [NameInMap("Remarks")]
-                    [Validation(Required=true)]
-                    public string Remarks { get; set; }
-
-                    [NameInMap("BillingCycle")]
-                    [Validation(Required=true)]
-                    public string BillingCycle { get; set; }
-
-                    [NameInMap("Amount")]
-                    [Validation(Required=true)]
-                    public string Amount { get; set; }
-
-                    [NameInMap("Balance")]
-                    [Validation(Required=true)]
-                    public string Balance { get; set; }
-
-                    [NameInMap("TransactionAccount")]
-                    [Validation(Required=true)]
-                    public string TransactionAccount { get; set; }
-
-                }
-
-            }
-        };
+        public QueryAccountTransactionDetailsResponseBody Body { get; set; }
 
     }
 

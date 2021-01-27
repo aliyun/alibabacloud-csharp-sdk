@@ -10,29 +10,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateInstanceRequest : TeaModel {
         [NameInMap("ProductCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductCode { get; set; }
 
-        [NameInMap("Parameter")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public List<CreateInstanceRequestParameter> Parameter { get; set; }
-        public class CreateInstanceRequestParameter : TeaModel {
-            [NameInMap("Code")]
-            [Validation(Required=true)]
-            public string Code { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=true)]
-            public string Value { get; set; }
-
-        }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         [NameInMap("SubscriptionType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SubscriptionType { get; set; }
 
         [NameInMap("Period")]
@@ -50,6 +40,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("Parameter")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestParameter> Parameter { get; set; }
+        public class CreateInstanceRequestParameter : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? QueryTotalCount { get; set; }
 
         [NameInMap("PageNum")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         [NameInMap("PageSize")]

@@ -9,39 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ModifyCostUnitResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public List<ModifyCostUnitResponseData> Data { get; set; }
-        public class ModifyCostUnitResponseData : TeaModel {
-            [NameInMap("OwnerUid")]
-            [Validation(Required=true)]
-            public long OwnerUid { get; set; }
-
-            [NameInMap("UnitId")]
-            [Validation(Required=true)]
-            public long UnitId { get; set; }
-
-            [NameInMap("IsSuccess")]
-            [Validation(Required=true)]
-            public bool? IsSuccess { get; set; }
-
-        }
+        public ModifyCostUnitResponseBody Body { get; set; }
 
     }
 

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetResellerUserQuotaRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("Amount")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Amount { get; set; }
 
         [NameInMap("Currency")]

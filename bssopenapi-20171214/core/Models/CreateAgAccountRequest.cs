@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateAgAccountRequest : TeaModel {
         [NameInMap("LoginEmail")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string LoginEmail { get; set; }
 
         [NameInMap("AccountAttr")]

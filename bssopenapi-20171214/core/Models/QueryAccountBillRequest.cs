@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountBillRequest : TeaModel {
         [NameInMap("BillingCycle")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
         [NameInMap("PageNum")]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("OwnerID")]
         [Validation(Required=false)]
-        public long OwnerID { get; set; }
+        public long? OwnerID { get; set; }
 
         [NameInMap("IsGroupByProduct")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("BillOwnerId")]
         [Validation(Required=false)]
-        public long BillOwnerId { get; set; }
+        public long? BillOwnerId { get; set; }
 
     }
 

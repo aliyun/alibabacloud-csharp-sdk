@@ -14,8 +14,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? RenewalPeriod { get; set; }
 
         [NameInMap("InstanceIDs")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceIDs { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RenewalPeriodUnit { get; set; }
 
         [NameInMap("RenewalStatus")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RenewalStatus { get; set; }
 
     }

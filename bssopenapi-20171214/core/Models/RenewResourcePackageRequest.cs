@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RenewResourcePackageRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("EffectiveDate")]
@@ -18,11 +22,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EffectiveDate { get; set; }
 
         [NameInMap("Duration")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Duration { get; set; }
 
         [NameInMap("PricingCycle")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
     }

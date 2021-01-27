@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DeleteCostUnitRequest : TeaModel {
         [NameInMap("OwnerUid")]
-        [Validation(Required=true)]
-        public long OwnerUid { get; set; }
+        [Validation(Required=false)]
+        public long? OwnerUid { get; set; }
 
         [NameInMap("UnitId")]
-        [Validation(Required=true)]
-        public long UnitId { get; set; }
+        [Validation(Required=false)]
+        public long? UnitId { get; set; }
 
     }
 

@@ -9,37 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateResourcePackageResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("OrderId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public long OrderId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public CreateResourcePackageResponseData Data { get; set; }
-        public class CreateResourcePackageResponseData : TeaModel {
-            [NameInMap("OrderId")]
-            [Validation(Required=true)]
-            public long OrderId { get; set; }
-            [NameInMap("InstanceId")]
-            [Validation(Required=true)]
-            public string InstanceId { get; set; }
-        };
+        public CreateResourcePackageResponseBody Body { get; set; }
 
     }
 

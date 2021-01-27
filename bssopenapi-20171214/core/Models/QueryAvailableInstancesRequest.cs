@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }

@@ -10,8 +10,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class EnableBillGenerationRequest : TeaModel {
         [NameInMap("ProductCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductCode { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

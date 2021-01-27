@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<CreateCostUnitRequestUnitEntityList> UnitEntityList { get; set; }
         public class CreateCostUnitRequestUnitEntityList : TeaModel {
             [NameInMap("OwnerUid")]
-            [Validation(Required=true)]
-            public long OwnerUid { get; set; }
+            [Validation(Required=false)]
+            public long? OwnerUid { get; set; }
 
             [NameInMap("ParentUnitId")]
-            [Validation(Required=true)]
-            public long ParentUnitId { get; set; }
+            [Validation(Required=false)]
+            public long? ParentUnitId { get; set; }
 
             [NameInMap("UnitName")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string UnitName { get; set; }
 
         }

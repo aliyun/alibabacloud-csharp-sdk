@@ -9,45 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCostUnitResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryCostUnitResponseData Data { get; set; }
-        public class QueryCostUnitResponseData : TeaModel {
-            [NameInMap("PageNum")]
-            [Validation(Required=true)]
-            public int? PageNum { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=true)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=true)]
-            public int? TotalCount { get; set; }
-            [NameInMap("CostUnitDtoList")]
-            [Validation(Required=true)]
-            public List<QueryCostUnitResponseDataCostUnitDtoList> CostUnitDtoList { get; set; }
-            public class QueryCostUnitResponseDataCostUnitDtoList : TeaModel {
-                public long OwnerUid { get; set; }
-                public long ParentUnitId { get; set; }
-                public long UnitId { get; set; }
-                public string UnitName { get; set; }
-            }
-        };
+        public QueryCostUnitResponseBody Body { get; set; }
 
     }
 

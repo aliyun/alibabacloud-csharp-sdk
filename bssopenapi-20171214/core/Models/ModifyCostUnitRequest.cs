@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public List<ModifyCostUnitRequestUnitEntityList> UnitEntityList { get; set; }
         public class ModifyCostUnitRequestUnitEntityList : TeaModel {
+            [NameInMap("NewUnitName")]
+            [Validation(Required=false)]
+            public string NewUnitName { get; set; }
+
             [NameInMap("OwnerUid")]
-            [Validation(Required=true)]
-            public long OwnerUid { get; set; }
+            [Validation(Required=false)]
+            public long? OwnerUid { get; set; }
 
             [NameInMap("UnitId")]
-            [Validation(Required=true)]
-            public long UnitId { get; set; }
-
-            [NameInMap("NewUnitName")]
-            [Validation(Required=true)]
-            public string NewUnitName { get; set; }
+            [Validation(Required=false)]
+            public long? UnitId { get; set; }
 
         }
 

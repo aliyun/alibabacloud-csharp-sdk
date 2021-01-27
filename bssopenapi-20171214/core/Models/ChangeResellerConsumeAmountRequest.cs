@@ -9,28 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ChangeResellerConsumeAmountRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("AdjustType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AdjustType { get; set; }
 
         [NameInMap("Amount")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Amount { get; set; }
 
         [NameInMap("Currency")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Currency { get; set; }
 
         [NameInMap("BusinessType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BusinessType { get; set; }
 
         [NameInMap("Source")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Source { get; set; }
 
         [NameInMap("OutBizId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OutBizId { get; set; }
 
         [NameInMap("ExtendMap")]

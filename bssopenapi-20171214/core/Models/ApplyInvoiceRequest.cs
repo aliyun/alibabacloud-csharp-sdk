@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ApplyInvoiceRequest : TeaModel {
         [NameInMap("InvoiceAmount")]
-        [Validation(Required=true)]
-        public long InvoiceAmount { get; set; }
+        [Validation(Required=false)]
+        public long? InvoiceAmount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("CustomerId")]
-        [Validation(Required=true)]
-        public long CustomerId { get; set; }
+        [Validation(Required=false)]
+        public long? CustomerId { get; set; }
 
         [NameInMap("AddressId")]
-        [Validation(Required=true)]
-        public long AddressId { get; set; }
+        [Validation(Required=false)]
+        public long? AddressId { get; set; }
 
         [NameInMap("InvoicingType")]
         [Validation(Required=false)]
@@ -30,16 +34,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? ProcessWay { get; set; }
 
         [NameInMap("ApplyUserNick")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApplyUserNick { get; set; }
-
-        [NameInMap("SelectedIds")]
-        [Validation(Required=true)]
-        public List<long> SelectedIds { get; set; }
 
         [NameInMap("InvoiceByAmount")]
         [Validation(Required=false)]
         public bool? InvoiceByAmount { get; set; }
+
+        [NameInMap("SelectedIds")]
+        [Validation(Required=false)]
+        public List<int?> SelectedIds { get; set; }
 
     }
 

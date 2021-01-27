@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceSpec { get; set; }
 
         [NameInMap("RICommodityCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RICommodityCode { get; set; }
 
         [NameInMap("DeductedInstanceId")]
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string DeductedInstanceId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
         [NameInMap("PageNum")]

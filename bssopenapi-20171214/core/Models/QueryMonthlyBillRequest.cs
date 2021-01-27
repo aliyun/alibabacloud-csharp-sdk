@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryMonthlyBillRequest : TeaModel {
         [NameInMap("BillingCycle")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
     }

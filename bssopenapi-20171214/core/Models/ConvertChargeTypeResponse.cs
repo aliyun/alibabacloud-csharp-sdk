@@ -9,30 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ConvertChargeTypeResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ConvertChargeTypeResponseData Data { get; set; }
-        public class ConvertChargeTypeResponseData : TeaModel {
-            [NameInMap("OrderId")]
-            [Validation(Required=true)]
-            public string OrderId { get; set; }
-        };
+        public ConvertChargeTypeResponseBody Body { get; set; }
 
     }
 

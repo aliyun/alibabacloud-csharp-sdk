@@ -14,15 +14,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ServicePeriodUnit { get; set; }
 
         [NameInMap("SubscriptionType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SubscriptionType { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("ProductCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         [NameInMap("OrderType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrderType { get; set; }
 
         [NameInMap("ServicePeriodQuantity")]
@@ -41,17 +45,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Quantity")]
+        [Validation(Required=false)]
+        public int? Quantity { get; set; }
+
         [NameInMap("ModuleList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<GetSubscriptionPriceRequestModuleList> ModuleList { get; set; }
         public class GetSubscriptionPriceRequestModuleList : TeaModel {
-            [NameInMap("ModuleCode")]
-            [Validation(Required=true)]
-            public string ModuleCode { get; set; }
-
             [NameInMap("Config")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Config { get; set; }
+
+            [NameInMap("ModuleCode")]
+            [Validation(Required=false)]
+            public string ModuleCode { get; set; }
 
             [NameInMap("ModuleStatus")]
             [Validation(Required=false)]
@@ -62,10 +70,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Tag { get; set; }
 
         }
-
-        [NameInMap("Quantity")]
-        [Validation(Required=false)]
-        public int? Quantity { get; set; }
 
     }
 

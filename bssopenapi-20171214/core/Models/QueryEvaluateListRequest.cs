@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string OutBizId { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -27,11 +31,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("StartAmount")]
         [Validation(Required=false)]
-        public long StartAmount { get; set; }
+        public long? StartAmount { get; set; }
 
         [NameInMap("EndAmount")]
         [Validation(Required=false)]
-        public long EndAmount { get; set; }
+        public long? EndAmount { get; set; }
 
         [NameInMap("StartBizTime")]
         [Validation(Required=false)]

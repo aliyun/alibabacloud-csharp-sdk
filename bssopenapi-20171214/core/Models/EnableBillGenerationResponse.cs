@@ -9,30 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class EnableBillGenerationResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=true)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public EnableBillGenerationResponseData Data { get; set; }
-        public class EnableBillGenerationResponseData : TeaModel {
-            [NameInMap("Boolean")]
-            [Validation(Required=true)]
-            public bool? Boolean { get; set; }
-        };
+        public EnableBillGenerationResponseBody Body { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SubscribeBillToOSSRequest : TeaModel {
         [NameInMap("SubscribeBucket")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SubscribeBucket { get; set; }
 
         [NameInMap("SubscribeType")]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("BucketOwnerId")]
         [Validation(Required=false)]
-        public long BucketOwnerId { get; set; }
+        public long? BucketOwnerId { get; set; }
 
     }
 

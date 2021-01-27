@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class UnsubscribeBillToOSSRequest : TeaModel {
         [NameInMap("SubscribeType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SubscribeType { get; set; }
 
         [NameInMap("MultAccountRelSubscribe")]

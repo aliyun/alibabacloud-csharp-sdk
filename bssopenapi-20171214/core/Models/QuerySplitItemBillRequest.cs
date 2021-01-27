@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySplitItemBillRequest : TeaModel {
         [NameInMap("BillingCycle")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
         [NameInMap("ProductCode")]
@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("BillOwnerId")]
         [Validation(Required=false)]
-        public long BillOwnerId { get; set; }
+        public long? BillOwnerId { get; set; }
 
     }
 

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetResellerUserAlarmThresholdRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("AlarmType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AlarmType { get; set; }
 
         [NameInMap("AlarmThresholds")]
