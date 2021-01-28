@@ -36,6 +36,18 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
             return TeaModel.ToObject<LivenessDetectResponse>(await DoRequestAsync("LivenessDetect", "HTTPS", "POST", "2020-11-12", "AK", null, request.ToMap(), runtime));
         }
 
+        public LivenessDetectResponse LivenessDetectSimply(LivenessDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LivenessDetect(request, runtime);
+        }
+
+        public async Task<LivenessDetectResponse> LivenessDetectSimplyAsync(LivenessDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LivenessDetectAsync(request, runtime);
+        }
+
         public LivenessDetectResponse LivenessDetectAdvance(LivenessDetectAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
@@ -70,8 +82,8 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            LivenessDetectRequest livenessDetectreq = new LivenessDetectRequest();
-            AlibabaCloud.Commons.Common.Convert(request, livenessDetectreq);
+            LivenessDetectRequest livenessDetectReq = new LivenessDetectRequest();
+            AlibabaCloud.Commons.Common.Convert(request, livenessDetectReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -97,8 +109,8 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
                 Header = ossHeader,
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
-            livenessDetectreq.MediaFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            LivenessDetectResponse livenessDetectResp = LivenessDetect(livenessDetectreq, runtime);
+            livenessDetectReq.MediaFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            LivenessDetectResponse livenessDetectResp = LivenessDetect(livenessDetectReq, runtime);
             return livenessDetectResp;
         }
 
@@ -136,8 +148,8 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
             AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
-            LivenessDetectRequest livenessDetectreq = new LivenessDetectRequest();
-            AlibabaCloud.Commons.Common.Convert(request, livenessDetectreq);
+            LivenessDetectRequest livenessDetectReq = new LivenessDetectRequest();
+            AlibabaCloud.Commons.Common.Convert(request, livenessDetectReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
             ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
@@ -163,8 +175,8 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
                 Header = ossHeader,
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-            livenessDetectreq.MediaFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            LivenessDetectResponse livenessDetectResp = await LivenessDetectAsync(livenessDetectreq, runtime);
+            livenessDetectReq.MediaFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            LivenessDetectResponse livenessDetectResp = await LivenessDetectAsync(livenessDetectReq, runtime);
             return livenessDetectResp;
         }
 
