@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeTakeoutOrderResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeTakeoutOrderResponseData Data { get; set; }
-        public class RecognizeTakeoutOrderResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<RecognizeTakeoutOrderResponseDataElements> Elements { get; set; }
-            public class RecognizeTakeoutOrderResponseDataElements : TeaModel {
-                public float? Score { get; set; }
-                public string Name { get; set; }
-                public string Value { get; set; }
-                public List<string> Boxes { get; set; }
-            }
-        };
+        public RecognizeTakeoutOrderResponseBody Body { get; set; }
 
     }
 

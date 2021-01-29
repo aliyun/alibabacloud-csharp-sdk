@@ -9,28 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeTableRequest : TeaModel {
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public int? ImageType { get; set; }
+
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
         [NameInMap("OutputFormat")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OutputFormat { get; set; }
 
         [NameInMap("UseFinanceModel")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? UseFinanceModel { get; set; }
 
         [NameInMap("AssureDirection")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? AssureDirection { get; set; }
 
         [NameInMap("HasLine")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? HasLine { get; set; }
 
         [NameInMap("SkipDetection")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? SkipDetection { get; set; }
 
     }

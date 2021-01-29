@@ -13,8 +13,12 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public int? ImageType { get; set; }
+
         [NameInMap("Side")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Side { get; set; }
 
     }

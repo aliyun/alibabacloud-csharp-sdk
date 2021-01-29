@@ -9,41 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizePoiNameResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizePoiNameResponseData Data { get; set; }
-        public class RecognizePoiNameResponseData : TeaModel {
-            [NameInMap("Signboards")]
-            [Validation(Required=true)]
-            public List<RecognizePoiNameResponseDataSignboards> Signboards { get; set; }
-            public class RecognizePoiNameResponseDataSignboards : TeaModel {
-                public List<RecognizePoiNameResponseDataSignboardsTexts> Texts { get; set; }
-                public class RecognizePoiNameResponseDataSignboardsTexts : TeaModel {
-                    public string Label { get; set; }
-                    public float? Score { get; set; }
-                    public string Tag { get; set; }
-                    public string Type { get; set; }
-                    public List<string> Points { get; set; }
-                }
-            }
-            [NameInMap("Summary")]
-            [Validation(Required=true)]
-            public RecognizePoiNameResponseDataSummary Summary { get; set; }
-            public class RecognizePoiNameResponseDataSummary : TeaModel {
-                [NameInMap("Brand")]
-                [Validation(Required=true)]
-                public string Brand { get; set; }
-
-                [NameInMap("Score")]
-                [Validation(Required=true)]
-                public float? Score { get; set; }
-
-            }
-        };
+        public RecognizePoiNameResponseBody Body { get; set; }
 
     }
 

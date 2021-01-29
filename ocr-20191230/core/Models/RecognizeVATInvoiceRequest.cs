@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeVATInvoiceRequest : TeaModel {
         [NameInMap("FileURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileURL { get; set; }
 
         [NameInMap("FileType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileType { get; set; }
 
     }

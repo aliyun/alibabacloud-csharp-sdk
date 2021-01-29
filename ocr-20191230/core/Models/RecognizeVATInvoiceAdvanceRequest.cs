@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
         public Stream FileURLObject { get; set; }
 
         [NameInMap("FileType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileType { get; set; }
 
     }

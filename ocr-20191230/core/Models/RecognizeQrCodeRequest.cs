@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeQrCodeRequest : TeaModel {
         [NameInMap("Tasks")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<RecognizeQrCodeRequestTasks> Tasks { get; set; }
         public class RecognizeQrCodeRequestTasks : TeaModel {
             [NameInMap("ImageURL")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string ImageURL { get; set; }
 
         }

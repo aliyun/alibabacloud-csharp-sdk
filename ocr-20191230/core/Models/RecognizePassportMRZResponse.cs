@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizePassportMRZResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizePassportMRZResponseData Data { get; set; }
-        public class RecognizePassportMRZResponseData : TeaModel {
-            [NameInMap("Regions")]
-            [Validation(Required=true)]
-            public List<RecognizePassportMRZResponseDataRegions> Regions { get; set; }
-            public class RecognizePassportMRZResponseDataRegions : TeaModel {
-                public string Name { get; set; }
-                public float? RecognitionScore { get; set; }
-                public string Content { get; set; }
-                public float? DetectionScore { get; set; }
-                public List<string> BandBoxes { get; set; }
-            }
-        };
+        public RecognizePassportMRZResponseBody Body { get; set; }
 
     }
 

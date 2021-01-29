@@ -9,38 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeTableResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeTableResponseData Data { get; set; }
-        public class RecognizeTableResponseData : TeaModel {
-            [NameInMap("FileContent")]
-            [Validation(Required=true)]
-            public string FileContent { get; set; }
-            [NameInMap("Tables")]
-            [Validation(Required=true)]
-            public List<RecognizeTableResponseDataTables> Tables { get; set; }
-            public class RecognizeTableResponseDataTables : TeaModel {
-                public List<RecognizeTableResponseDataTablesTableRows> TableRows { get; set; }
-                public class RecognizeTableResponseDataTablesTableRows : TeaModel {
-                    public List<RecognizeTableResponseDataTablesTableRowsTableColumns> TableColumns { get; set; }
-                    public class RecognizeTableResponseDataTablesTableRowsTableColumns : TeaModel {
-                        public int? StartColumn { get; set; }
-                        public int? StartRow { get; set; }
-                        public int? EndColumn { get; set; }
-                        public int? EndRow { get; set; }
-                        public int? Height { get; set; }
-                        public int? Width { get; set; }
-                        public List<string> Texts { get; set; }
-                    }
-                }
-                public List<string> Head { get; set; }
-                public List<string> Tail { get; set; }
-            }
-        };
+        public RecognizeTableResponseBody Body { get; set; }
 
     }
 

@@ -9,43 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeLicensePlateResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeLicensePlateResponseData Data { get; set; }
-        public class RecognizeLicensePlateResponseData : TeaModel {
-            [NameInMap("Plates")]
-            [Validation(Required=true)]
-            public List<RecognizeLicensePlateResponseDataPlates> Plates { get; set; }
-            public class RecognizeLicensePlateResponseDataPlates : TeaModel {
-                public float? Confidence { get; set; }
-                public string PlateNumber { get; set; }
-                public string PlateType { get; set; }
-                public float? PlateTypeConfidence { get; set; }
-                public RecognizeLicensePlateResponseDataPlatesRoi Roi { get; set; }
-                public class RecognizeLicensePlateResponseDataPlatesRoi : TeaModel {
-                    [NameInMap("H")]
-                    [Validation(Required=true)]
-                    public int? H { get; set; }
-
-                    [NameInMap("W")]
-                    [Validation(Required=true)]
-                    public int? W { get; set; }
-
-                    [NameInMap("X")]
-                    [Validation(Required=true)]
-                    public int? X { get; set; }
-
-                    [NameInMap("Y")]
-                    [Validation(Required=true)]
-                    public int? Y { get; set; }
-
-                }
-            }
-        };
+        public RecognizeLicensePlateResponseBody Body { get; set; }
 
     }
 

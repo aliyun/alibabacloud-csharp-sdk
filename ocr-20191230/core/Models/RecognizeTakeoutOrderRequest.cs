@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeTakeoutOrderRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
     }

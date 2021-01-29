@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeBankCardResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeBankCardResponseData Data { get; set; }
-        public class RecognizeBankCardResponseData : TeaModel {
-            [NameInMap("BankName")]
-            [Validation(Required=true)]
-            public string BankName { get; set; }
-            [NameInMap("CardNumber")]
-            [Validation(Required=true)]
-            public string CardNumber { get; set; }
-            [NameInMap("ValidDate")]
-            [Validation(Required=true)]
-            public string ValidDate { get; set; }
-        };
+        public RecognizeBankCardResponseBody Body { get; set; }
 
     }
 

@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class TrimDocumentRequest : TeaModel {
         [NameInMap("FileURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileURL { get; set; }
 
         [NameInMap("FileType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileType { get; set; }
 
         [NameInMap("OutputType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OutputType { get; set; }
+
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
 
     }
 
