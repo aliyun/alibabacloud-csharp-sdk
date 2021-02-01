@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videorecog20200320.Models
 {
-    public class DetectVideoShotRequest : TeaModel {
-        [NameInMap("VideoUrl")]
+    public class UnderstandVideoContentRequest : TeaModel {
+        /// <summary>
+        /// A short description of struct
+        /// </summary>
+        [NameInMap("VideoURL")]
         [Validation(Required=false)]
-        public string VideoUrl { get; set; }
+        public string VideoURL { get; set; }
 
         [NameInMap("Async")]
         [Validation(Required=false)]
