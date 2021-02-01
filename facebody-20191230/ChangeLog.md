@@ -1,3 +1,6 @@
+2021-02-01 Version: 1.0.4
+- Release GenerateHumanSketchStyle MergeImageFace AddFaceImageTemplate QueryFaceImageTemplate DeleteFaceImageTemplate.
+
 2021-01-12 Version: 1.0.3
 - Update ExtractPedestrianFeatureAttr.
 

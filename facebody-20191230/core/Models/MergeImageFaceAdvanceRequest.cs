@@ -8,18 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class ExtractPedestrianFeatureAttrAdvanceRequest : TeaModel {
+    public class MergeImageFaceAdvanceRequest : TeaModel {
         [NameInMap("ImageURLObject")]
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
-        [NameInMap("Mode")]
+        /// <summary>
+        /// A short description of struct
+        /// </summary>
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string Mode { get; set; }
+        public string UserId { get; set; }
 
-        [NameInMap("ServiceVersion")]
+        [NameInMap("TemplateId")]
         [Validation(Required=false)]
-        public string ServiceVersion { get; set; }
+        public string TemplateId { get; set; }
 
     }
 
