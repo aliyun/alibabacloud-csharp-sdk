@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class TaggingImageRequest : TeaModel {
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public int? ImageType { get; set; }
+
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
     }

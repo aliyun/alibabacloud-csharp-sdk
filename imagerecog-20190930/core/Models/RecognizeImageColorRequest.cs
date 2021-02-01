@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class RecognizeImageColorRequest : TeaModel {
         [NameInMap("Url")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Url { get; set; }
 
         [NameInMap("ColorCount")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class DetectFruitsRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
     }

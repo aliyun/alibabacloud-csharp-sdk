@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
-    public class RecognizeImageStyleRequest : TeaModel {
-        [NameInMap("Url")]
+    public class RecognizeFoodRequest : TeaModel {
+        /// <summary>
+        /// A short description of struct
+        /// </summary>
+        [NameInMap("ImageURL")]
         [Validation(Required=false)]
-        public string Url { get; set; }
+        public string ImageURL { get; set; }
 
     }
 

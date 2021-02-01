@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class ClassifyingRubbishResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public ClassifyingRubbishResponseData Data { get; set; }
-        public class ClassifyingRubbishResponseData : TeaModel {
-            [NameInMap("Sensitive")]
-            [Validation(Required=true)]
-            public bool? Sensitive { get; set; }
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<ClassifyingRubbishResponseDataElements> Elements { get; set; }
-            public class ClassifyingRubbishResponseDataElements : TeaModel {
-                public string Category { get; set; }
-                public float? CategoryScore { get; set; }
-                public string Rubbish { get; set; }
-                public float? RubbishScore { get; set; }
-            }
-        };
+        public ClassifyingRubbishResponseBody Body { get; set; }
 
     }
 

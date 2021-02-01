@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class EvaluateCertificateQualityResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public EvaluateCertificateQualityResponseData Data { get; set; }
-        public class EvaluateCertificateQualityResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<EvaluateCertificateQualityResponseDataElements> Elements { get; set; }
-            public class EvaluateCertificateQualityResponseDataElements : TeaModel {
-                public string Value { get; set; }
-                public string Pass { get; set; }
-                public string Score { get; set; }
-            }
-        };
+        public EvaluateCertificateQualityResponseBody Body { get; set; }
 
     }
 

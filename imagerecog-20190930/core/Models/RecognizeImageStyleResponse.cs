@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class RecognizeImageStyleResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeImageStyleResponseData Data { get; set; }
-        public class RecognizeImageStyleResponseData : TeaModel {
-            [NameInMap("Styles")]
-            [Validation(Required=true)]
-            public List<string> Styles { get; set; }
-        };
+        public RecognizeImageStyleResponseBody Body { get; set; }
 
     }
 

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,7 +13,7 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class DetectImageElementsRequest : TeaModel {
         [NameInMap("Url")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Url { get; set; }
 
     }

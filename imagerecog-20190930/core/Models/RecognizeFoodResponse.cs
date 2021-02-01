@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
-    public class RecognizeVehicleTypeResponse : TeaModel {
+    public class RecognizeFoodResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeVehicleTypeResponseBody Body { get; set; }
+        public RecognizeFoodResponseBody Body { get; set; }
 
     }
 

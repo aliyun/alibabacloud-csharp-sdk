@@ -9,22 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class RecognizeSceneResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecognizeSceneResponseData Data { get; set; }
-        public class RecognizeSceneResponseData : TeaModel {
-            [NameInMap("Tags")]
-            [Validation(Required=true)]
-            public List<RecognizeSceneResponseDataTags> Tags { get; set; }
-            public class RecognizeSceneResponseDataTags : TeaModel {
-                public float? Confidence { get; set; }
-                public string Value { get; set; }
-            }
-        };
+        public RecognizeSceneResponseBody Body { get; set; }
 
     }
 

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
     }

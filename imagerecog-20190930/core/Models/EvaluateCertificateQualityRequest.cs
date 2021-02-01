@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class EvaluateCertificateQualityRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
     }
