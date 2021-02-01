@@ -39,6 +39,7 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
                 public string InProtocol { get; set; }
                 public string Latitude { get; set; }
                 public string Vendor { get; set; }
+                public string CapturedPictureId { get; set; }
             }
             [NameInMap("TotalPage")]
             [Validation(Required=false)]

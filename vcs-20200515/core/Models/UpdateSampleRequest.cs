@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vcs20200515.Models
 {
-    public class UnbindPersonRequest : TeaModel {
-        [NameInMap("CorpId")]
+    public class UpdateSampleRequest : TeaModel {
+        [NameInMap("AlgorithmId")]
         [Validation(Required=false)]
-        public string CorpId { get; set; }
+        public string AlgorithmId { get; set; }
 
-        [NameInMap("IsvSubId")]
+        [NameInMap("SampleId")]
         [Validation(Required=false)]
-        public string IsvSubId { get; set; }
+        public string SampleId { get; set; }
 
-        [NameInMap("ProfileId")]
+        [NameInMap("LabelId")]
         [Validation(Required=false)]
-        public long? ProfileId { get; set; }
+        public string LabelId { get; set; }
 
     }
 

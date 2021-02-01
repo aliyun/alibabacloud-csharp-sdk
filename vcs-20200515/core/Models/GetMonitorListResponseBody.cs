@@ -34,16 +34,16 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
                 public string NotifierType { get; set; }
                 public string Description { get; set; }
                 public string Expression { get; set; }
-                public string NotifierExtra { get; set; }
+                public string NotifierExtendValues { get; set; }
                 public string Attributes { get; set; }
                 public string DeviceList { get; set; }
                 public string TaskId { get; set; }
                 public string ModifiedDate { get; set; }
                 public string AlgorithmVendor { get; set; }
             }
-            [NameInMap("PageNo")]
+            [NameInMap("PageNumber")]
             [Validation(Required=false)]
-            public int? PageNo { get; set; }
+            public int? PageNumber { get; set; }
             [NameInMap("TotalPage")]
             [Validation(Required=false)]
             public int? TotalPage { get; set; }

@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Vcs20200515.Models
         [Validation(Required=false)]
         public string CorpId { get; set; }
 
-        [NameInMap("PageNo")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? PageNo { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
