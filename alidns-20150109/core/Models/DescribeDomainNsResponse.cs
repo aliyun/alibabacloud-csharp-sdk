@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainNsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("AllAliDns")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? AllAliDns { get; set; }
-
-        [NameInMap("IncludeAliDns")]
-        [Validation(Required=true)]
-        public bool? IncludeAliDns { get; set; }
-
-        [NameInMap("DnsServers")]
-        [Validation(Required=true)]
-        public DescribeDomainNsResponseDnsServers DnsServers { get; set; }
-        public class DescribeDomainNsResponseDnsServers : TeaModel {
-            [NameInMap("DnsServer")]
-            [Validation(Required=true)]
-            public List<string> DnsServer { get; set; }
-        };
-
-        [NameInMap("ExpectDnsServers")]
-        [Validation(Required=true)]
-        public DescribeDomainNsResponseExpectDnsServers ExpectDnsServers { get; set; }
-        public class DescribeDomainNsResponseExpectDnsServers : TeaModel {
-            [NameInMap("ExpectDnsServer")]
-            [Validation(Required=true)]
-            public List<string> ExpectDnsServer { get; set; }
-        };
+        public DescribeDomainNsResponseBody Body { get; set; }
 
     }
 

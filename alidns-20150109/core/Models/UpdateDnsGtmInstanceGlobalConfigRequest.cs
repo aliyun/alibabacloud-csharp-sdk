@@ -13,8 +13,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("InstanceName")]
@@ -49,13 +53,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public List<UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig> AlertConfig { get; set; }
         public class UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig : TeaModel {
-            [NameInMap("NoticeType")]
-            [Validation(Required=false)]
-            public string NoticeType { get; set; }
-
             [NameInMap("SmsNotice")]
             [Validation(Required=false)]
             public bool? SmsNotice { get; set; }
+
+            [NameInMap("NoticeType")]
+            [Validation(Required=false)]
+            public string NoticeType { get; set; }
 
             [NameInMap("EmailNotice")]
             [Validation(Required=false)]

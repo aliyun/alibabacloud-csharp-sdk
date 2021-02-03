@@ -13,8 +13,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("StartDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartDate { get; set; }
 
         [NameInMap("EndDate")]
@@ -22,11 +26,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DomainName { get; set; }
 
         [NameInMap("Rr")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Rr { get; set; }
 
         [NameInMap("DomainType")]

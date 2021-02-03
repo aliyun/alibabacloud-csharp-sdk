@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmRecoveryPlanResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RecoveryPlanId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RecoveryPlanId { get; set; }
+        public AddGtmRecoveryPlanResponseBody Body { get; set; }
 
     }
 

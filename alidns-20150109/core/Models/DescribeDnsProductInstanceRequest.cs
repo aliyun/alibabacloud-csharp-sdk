@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UserClientIp { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
     }

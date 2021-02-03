@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAvailableAlertGroupResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("AvailableAlertGroup")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string AvailableAlertGroup { get; set; }
+        public DescribeDnsGtmAvailableAlertGroupResponseBody Body { get; set; }
 
     }
 

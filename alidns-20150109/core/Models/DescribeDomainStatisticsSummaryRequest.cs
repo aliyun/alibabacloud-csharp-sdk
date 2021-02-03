@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -22,12 +26,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         [NameInMap("StartDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartDate { get; set; }
 
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
+
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
+        [NameInMap("Direction")]
+        [Validation(Required=false)]
+        public string Direction { get; set; }
 
         [NameInMap("SearchMode")]
         [Validation(Required=false)]

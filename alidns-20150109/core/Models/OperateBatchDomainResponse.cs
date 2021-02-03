@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class OperateBatchDomainResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public long? TaskId { get; set; }
+        public OperateBatchDomainResponseBody Body { get; set; }
 
     }
 

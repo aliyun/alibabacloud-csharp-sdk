@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSupportLinesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RecordLines")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSupportLinesResponseRecordLines RecordLines { get; set; }
-        public class DescribeSupportLinesResponseRecordLines : TeaModel {
-            [NameInMap("RecordLine")]
-            [Validation(Required=true)]
-            public List<DescribeSupportLinesResponseRecordLinesRecordLine> RecordLine { get; set; }
-            public class DescribeSupportLinesResponseRecordLinesRecordLine : TeaModel {
-                public string LineCode { get; set; }
-                public string FatherCode { get; set; }
-                public string LineName { get; set; }
-                public string LineDisplayName { get; set; }
-            }
-        };
+        public DescribeSupportLinesResponseBody Body { get; set; }
 
     }
 

@@ -9,37 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeBatchResultCountResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Status { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=true)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("SuccessCount")]
-        [Validation(Required=true)]
-        public int? SuccessCount { get; set; }
-
-        [NameInMap("FailedCount")]
-        [Validation(Required=true)]
-        public int? FailedCount { get; set; }
-
-        [NameInMap("Reason")]
-        [Validation(Required=true)]
-        public string Reason { get; set; }
-
-        [NameInMap("BatchType")]
-        [Validation(Required=true)]
-        public string BatchType { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public long? TaskId { get; set; }
+        public DescribeBatchResultCountResponseBody Body { get; set; }
 
     }
 

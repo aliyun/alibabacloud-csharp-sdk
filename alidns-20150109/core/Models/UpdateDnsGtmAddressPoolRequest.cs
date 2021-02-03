@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmAddressPoolRequest : TeaModel {
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         [NameInMap("AddrPoolId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
         [NameInMap("Name")]
@@ -22,32 +26,32 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         [NameInMap("LbaStrategy")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string LbaStrategy { get; set; }
 
         [NameInMap("Addr")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<UpdateDnsGtmAddressPoolRequestAddr> Addr { get; set; }
         public class UpdateDnsGtmAddressPoolRequestAddr : TeaModel {
-            [NameInMap("Addr")]
-            [Validation(Required=true)]
-            public string Addr { get; set; }
-
-            [NameInMap("LbaWeight")]
+            [NameInMap("AttributeInfo")]
             [Validation(Required=false)]
-            public int? LbaWeight { get; set; }
-
-            [NameInMap("Mode")]
-            [Validation(Required=true)]
-            public string Mode { get; set; }
+            public string AttributeInfo { get; set; }
 
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
-            [NameInMap("AttributeInfo")]
+            [NameInMap("LbaWeight")]
             [Validation(Required=false)]
-            public string AttributeInfo { get; set; }
+            public int? LbaWeight { get; set; }
+
+            [NameInMap("Addr")]
+            [Validation(Required=false)]
+            public string Addr { get; set; }
+
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
 
         }
 

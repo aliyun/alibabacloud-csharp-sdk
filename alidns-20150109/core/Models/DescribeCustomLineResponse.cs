@@ -9,39 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCustomLineResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Id")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public long? Id { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=true)]
-        public string Name { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=true)]
-        public string DomainName { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("IpSegmentList")]
-        [Validation(Required=true)]
-        public List<DescribeCustomLineResponseIpSegmentList> IpSegmentList { get; set; }
-        public class DescribeCustomLineResponseIpSegmentList : TeaModel {
-            [NameInMap("StartIp")]
-            [Validation(Required=true)]
-            public string StartIp { get; set; }
-
-            [NameInMap("EndIp")]
-            [Validation(Required=true)]
-            public string EndIp { get; set; }
-
-        }
+        public DescribeCustomLineResponseBody Body { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         [NameInMap("TransferType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TransferType { get; set; }
 
         [NameInMap("DomainName")]

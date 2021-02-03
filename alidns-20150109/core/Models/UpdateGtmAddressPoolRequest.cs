@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmAddressPoolRequest : TeaModel {
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         [NameInMap("AddrPoolId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
         [NameInMap("Name")]
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
         [NameInMap("MinAvailableAddrNum")]
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? MinAvailableAddrNum { get; set; }
 
         [NameInMap("Addr")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<UpdateGtmAddressPoolRequestAddr> Addr { get; set; }
         public class UpdateGtmAddressPoolRequestAddr : TeaModel {
             [NameInMap("Value")]

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteDomainGroupResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("GroupName")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string GroupName { get; set; }
+        public DeleteDomainGroupResponseBody Body { get; set; }
 
     }
 

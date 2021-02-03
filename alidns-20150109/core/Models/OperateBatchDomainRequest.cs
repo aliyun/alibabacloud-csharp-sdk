@@ -13,25 +13,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
         [NameInMap("DomainRecordInfo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<OperateBatchDomainRequestDomainRecordInfo> DomainRecordInfo { get; set; }
         public class OperateBatchDomainRequestDomainRecordInfo : TeaModel {
-            [NameInMap("Domain")]
-            [Validation(Required=true)]
-            public string Domain { get; set; }
-
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-
-            [NameInMap("Rr")]
-            [Validation(Required=false)]
-            public string Rr { get; set; }
 
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -41,9 +37,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public int? Ttl { get; set; }
 
-            [NameInMap("Priority")]
+            [NameInMap("Domain")]
             [Validation(Required=false)]
-            public int? Priority { get; set; }
+            public string Domain { get; set; }
 
             [NameInMap("Line")]
             [Validation(Required=false)]
@@ -52,6 +48,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("NewRr")]
             [Validation(Required=false)]
             public string NewRr { get; set; }
+
+            [NameInMap("Rr")]
+            [Validation(Required=false)]
+            public string Rr { get; set; }
+
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
 
             [NameInMap("NewType")]
             [Validation(Required=false)]

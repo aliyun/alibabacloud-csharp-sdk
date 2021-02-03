@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         [NameInMap("SubDomain")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SubDomain { get; set; }
 
         [NameInMap("StartDate")]

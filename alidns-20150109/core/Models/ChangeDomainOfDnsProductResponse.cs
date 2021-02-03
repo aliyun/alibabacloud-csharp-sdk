@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ChangeDomainOfDnsProductResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("OriginalDomain")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string OriginalDomain { get; set; }
+        public ChangeDomainOfDnsProductResponseBody Body { get; set; }
 
     }
 

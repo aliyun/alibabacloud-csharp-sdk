@@ -13,12 +13,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("OverWrite")]
+        [Validation(Required=false)]
+        public bool? OverWrite { get; set; }
+
         [NameInMap("Tag")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             [NameInMap("Key")]
@@ -32,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
     }

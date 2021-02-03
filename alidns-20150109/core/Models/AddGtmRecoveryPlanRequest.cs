@@ -13,8 +13,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("Remark")]
@@ -22,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         [NameInMap("FaultAddrPool")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FaultAddrPool { get; set; }
 
     }

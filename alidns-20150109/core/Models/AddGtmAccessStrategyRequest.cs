@@ -13,24 +13,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("UserClientIp")]
+        [Validation(Required=false)]
+        public string UserClientIp { get; set; }
+
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("StrategyName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StrategyName { get; set; }
 
         [NameInMap("DefaultAddrPoolId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DefaultAddrPoolId { get; set; }
 
         [NameInMap("FailoverAddrPoolId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FailoverAddrPoolId { get; set; }
 
         [NameInMap("AccessLines")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccessLines { get; set; }
 
     }

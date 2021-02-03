@@ -9,39 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainLogsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public long? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("DomainLogs")]
-        [Validation(Required=true)]
-        public DescribeDomainLogsResponseDomainLogs DomainLogs { get; set; }
-        public class DescribeDomainLogsResponseDomainLogs : TeaModel {
-            [NameInMap("DomainLog")]
-            [Validation(Required=true)]
-            public List<DescribeDomainLogsResponseDomainLogsDomainLog> DomainLog { get; set; }
-            public class DescribeDomainLogsResponseDomainLogsDomainLog : TeaModel {
-                public string ActionTime { get; set; }
-                public long? ActionTimestamp { get; set; }
-                public string DomainName { get; set; }
-                public string Action { get; set; }
-                public string Message { get; set; }
-                public string ClientIp { get; set; }
-                public string ZoneId { get; set; }
-            }
-        };
+        public DescribeDomainLogsResponseBody Body { get; set; }
 
     }
 

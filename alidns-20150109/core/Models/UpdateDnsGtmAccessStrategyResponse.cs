@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmAccessStrategyResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("StrategyId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string StrategyId { get; set; }
+        public UpdateDnsGtmAccessStrategyResponseBody Body { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ChangeDomainGroupResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string GroupId { get; set; }
-
-        [NameInMap("GroupName")]
-        [Validation(Required=true)]
-        public string GroupName { get; set; }
+        public ChangeDomainGroupResponseBody Body { get; set; }
 
     }
 
