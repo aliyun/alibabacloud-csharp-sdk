@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UserClientIp { get; set; }
 
         [NameInMap("RecordId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RecordId { get; set; }
 
         [NameInMap("Status")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Status { get; set; }
 
     }

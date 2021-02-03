@@ -9,13 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohDomainStatisticsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Statistics")]
         [Validation(Required=true)]
-        public DescribeDohDomainStatisticsResponseBody Body { get; set; }
+        public List<DescribeDohDomainStatisticsResponseStatistics> Statistics { get; set; }
+        public class DescribeDohDomainStatisticsResponseStatistics : TeaModel {
+            [NameInMap("Timestamp")]
+            [Validation(Required=true)]
+            public long? Timestamp { get; set; }
+
+            [NameInMap("V4HttpCount")]
+            [Validation(Required=true)]
+            public long? V4HttpCount { get; set; }
+
+            [NameInMap("V6HttpCount")]
+            [Validation(Required=true)]
+            public long? V6HttpCount { get; set; }
+
+            [NameInMap("V4HttpsCount")]
+            [Validation(Required=true)]
+            public long? V4HttpsCount { get; set; }
+
+            [NameInMap("V6HttpsCount")]
+            [Validation(Required=true)]
+            public long? V6HttpsCount { get; set; }
+
+            [NameInMap("TotalCount")]
+            [Validation(Required=true)]
+            public long? TotalCount { get; set; }
+
+        }
 
     }
 

@@ -14,16 +14,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceId { get; set; }
 
         [NameInMap("NewResourceGroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string NewResourceGroupId { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

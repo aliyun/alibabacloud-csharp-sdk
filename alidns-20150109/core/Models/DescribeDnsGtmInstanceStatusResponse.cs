@@ -9,13 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstanceStatusResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("AddrNotAvailableNum")]
         [Validation(Required=true)]
-        public DescribeDnsGtmInstanceStatusResponseBody Body { get; set; }
+        public int? AddrNotAvailableNum { get; set; }
+
+        [NameInMap("AddrPoolGroupNotAvailableNum")]
+        [Validation(Required=true)]
+        public int? AddrPoolGroupNotAvailableNum { get; set; }
+
+        [NameInMap("SwitchToFailoverStrategyNum")]
+        [Validation(Required=true)]
+        public int? SwitchToFailoverStrategyNum { get; set; }
+
+        [NameInMap("StrategyNotAvailableNum")]
+        [Validation(Required=true)]
+        public int? StrategyNotAvailableNum { get; set; }
+
+        [NameInMap("AddrAvailableNum")]
+        [Validation(Required=true)]
+        public int? AddrAvailableNum { get; set; }
 
     }
 

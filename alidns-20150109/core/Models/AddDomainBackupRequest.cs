@@ -14,16 +14,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DomainName { get; set; }
 
         [NameInMap("PeriodType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PeriodType { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

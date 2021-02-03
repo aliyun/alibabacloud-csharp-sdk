@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddCustomLineResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("LineId")]
         [Validation(Required=true)]
-        public AddCustomLineResponseBody Body { get; set; }
+        public long? LineId { get; set; }
+
+        [NameInMap("LineCode")]
+        [Validation(Required=true)]
+        public string LineCode { get; set; }
 
     }
 

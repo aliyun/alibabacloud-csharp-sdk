@@ -13,21 +13,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("ResourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceType { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("Size")]
-        [Validation(Required=false)]
-        public int? Size { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -46,6 +34,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
     }
 

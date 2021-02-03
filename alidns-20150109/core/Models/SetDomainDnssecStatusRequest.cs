@@ -9,20 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDomainDnssecStatusRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DomainName { get; set; }
 
         [NameInMap("Status")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Status { get; set; }
 
     }

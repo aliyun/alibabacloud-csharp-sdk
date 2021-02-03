@@ -18,19 +18,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UserClientIp { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DomainName { get; set; }
 
         [NameInMap("RR")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RR { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Type { get; set; }
 
         [NameInMap("Value")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Value { get; set; }
 
         [NameInMap("TTL")]

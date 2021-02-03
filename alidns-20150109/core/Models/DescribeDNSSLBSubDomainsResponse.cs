@@ -9,13 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDNSSLBSubDomainsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("TotalCount")]
         [Validation(Required=true)]
-        public DescribeDNSSLBSubDomainsResponseBody Body { get; set; }
+        public long? TotalCount { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=true)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("SlbSubDomains")]
+        [Validation(Required=true)]
+        public DescribeDNSSLBSubDomainsResponseSlbSubDomains SlbSubDomains { get; set; }
+        public class DescribeDNSSLBSubDomainsResponseSlbSubDomains : TeaModel {
+            [NameInMap("SlbSubDomain")]
+            [Validation(Required=true)]
+            public List<DescribeDNSSLBSubDomainsResponseSlbSubDomainsSlbSubDomain> SlbSubDomain { get; set; }
+            public class DescribeDNSSLBSubDomainsResponseSlbSubDomainsSlbSubDomain : TeaModel {
+                public string SubDomain { get; set; }
+                public long? RecordCount { get; set; }
+                public bool? Open { get; set; }
+                public string Type { get; set; }
+                public DescribeDNSSLBSubDomainsResponseSlbSubDomainsSlbSubDomainLineAlgorithms LineAlgorithms { get; set; }
+                public class DescribeDNSSLBSubDomainsResponseSlbSubDomainsSlbSubDomainLineAlgorithms : TeaModel {
+                    [NameInMap("LineAlgorithm")]
+                    [Validation(Required=true)]
+                    public List<DescribeDNSSLBSubDomainsResponseSlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm> LineAlgorithm { get; set; }
+                    public class DescribeDNSSLBSubDomainsResponseSlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm : TeaModel {
+                        [NameInMap("Line")]
+                        [Validation(Required=true)]
+                        public string Line { get; set; }
+
+                        [NameInMap("Open")]
+                        [Validation(Required=true)]
+                        public bool? Open { get; set; }
+
+                    }
+
+                }
+            }
+        };
 
     }
 

@@ -9,13 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmMonitorAvailableConfigResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("IspCityNodes")]
         [Validation(Required=true)]
-        public DescribeGtmMonitorAvailableConfigResponseBody Body { get; set; }
+        public DescribeGtmMonitorAvailableConfigResponseIspCityNodes IspCityNodes { get; set; }
+        public class DescribeGtmMonitorAvailableConfigResponseIspCityNodes : TeaModel {
+            [NameInMap("IspCityNode")]
+            [Validation(Required=true)]
+            public List<DescribeGtmMonitorAvailableConfigResponseIspCityNodesIspCityNode> IspCityNode { get; set; }
+            public class DescribeGtmMonitorAvailableConfigResponseIspCityNodesIspCityNode : TeaModel {
+                public string IspName { get; set; }
+                public string IspCode { get; set; }
+                public string CityName { get; set; }
+                public string CityCode { get; set; }
+                public bool? DefaultSelected { get; set; }
+                public bool? Mainland { get; set; }
+                public string GroupType { get; set; }
+                public string GroupName { get; set; }
+            }
+        };
 
     }
 

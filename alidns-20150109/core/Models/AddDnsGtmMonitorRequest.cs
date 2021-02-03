@@ -9,40 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmMonitorRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         [NameInMap("AddrPoolId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string AddrPoolId { get; set; }
 
         [NameInMap("ProtocolType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProtocolType { get; set; }
 
         [NameInMap("Interval")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Interval { get; set; }
 
         [NameInMap("EvaluationCount")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? EvaluationCount { get; set; }
 
         [NameInMap("Timeout")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Timeout { get; set; }
 
         [NameInMap("MonitorExtendInfo")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string MonitorExtendInfo { get; set; }
 
         [NameInMap("IspCityNode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<AddDnsGtmMonitorRequestIspCityNode> IspCityNode { get; set; }
         public class AddDnsGtmMonitorRequestIspCityNode : TeaModel {
             [NameInMap("CityCode")]

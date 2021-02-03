@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDomainBackupResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("DomainName")]
         [Validation(Required=true)]
-        public AddDomainBackupResponseBody Body { get; set; }
+        public string DomainName { get; set; }
+
+        [NameInMap("PeriodType")]
+        [Validation(Required=true)]
+        public string PeriodType { get; set; }
 
     }
 

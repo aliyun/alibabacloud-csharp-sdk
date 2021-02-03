@@ -9,29 +9,51 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmAddressPoolRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Name { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Type { get; set; }
 
         [NameInMap("LbaStrategy")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string LbaStrategy { get; set; }
+
+        [NameInMap("Addr")]
+        [Validation(Required=true)]
+        public List<AddDnsGtmAddressPoolRequestAddr> Addr { get; set; }
+        public class AddDnsGtmAddressPoolRequestAddr : TeaModel {
+            [NameInMap("Addr")]
+            [Validation(Required=true)]
+            public string Addr { get; set; }
+
+            [NameInMap("LbaWeight")]
+            [Validation(Required=false)]
+            public int? LbaWeight { get; set; }
+
+            [NameInMap("Mode")]
+            [Validation(Required=true)]
+            public string Mode { get; set; }
+
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
+            [NameInMap("AttributeInfo")]
+            [Validation(Required=true)]
+            public string AttributeInfo { get; set; }
+
+        }
 
         [NameInMap("MonitorStatus")]
         [Validation(Required=false)]
@@ -56,32 +78,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
         public string MonitorExtendInfo { get; set; }
-
-        [NameInMap("Addr")]
-        [Validation(Required=false)]
-        public List<AddDnsGtmAddressPoolRequestAddr> Addr { get; set; }
-        public class AddDnsGtmAddressPoolRequestAddr : TeaModel {
-            [NameInMap("AttributeInfo")]
-            [Validation(Required=false)]
-            public string AttributeInfo { get; set; }
-
-            [NameInMap("Remark")]
-            [Validation(Required=false)]
-            public string Remark { get; set; }
-
-            [NameInMap("LbaWeight")]
-            [Validation(Required=false)]
-            public int? LbaWeight { get; set; }
-
-            [NameInMap("Addr")]
-            [Validation(Required=false)]
-            public string Addr { get; set; }
-
-            [NameInMap("Mode")]
-            [Validation(Required=false)]
-            public string Mode { get; set; }
-
-        }
 
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]

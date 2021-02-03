@@ -29,14 +29,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
-        [NameInMap("OrderBy")]
-        [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        [NameInMap("Direction")]
-        [Validation(Required=false)]
-        public string Direction { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

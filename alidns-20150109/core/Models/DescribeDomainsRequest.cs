@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
@@ -41,31 +37,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("OrderBy")]
-        [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        [NameInMap("Direction")]
-        [Validation(Required=false)]
-        public string Direction { get; set; }
-
         [NameInMap("Starmark")]
         [Validation(Required=false)]
         public bool? Starmark { get; set; }
-
-        [NameInMap("StartDate")]
-        [Validation(Required=false)]
-        public string StartDate { get; set; }
-
-        [NameInMap("EndDate")]
-        [Validation(Required=false)]
-        public string EndDate { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeDomainsRequestTag> Tag { get; set; }
-        public class DescribeDomainsRequestTag : TeaModel {
-        }
 
     }
 

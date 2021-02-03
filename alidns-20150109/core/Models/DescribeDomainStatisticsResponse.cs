@@ -9,13 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainStatisticsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Statistics")]
         [Validation(Required=true)]
-        public DescribeDomainStatisticsResponseBody Body { get; set; }
+        public DescribeDomainStatisticsResponseStatistics Statistics { get; set; }
+        public class DescribeDomainStatisticsResponseStatistics : TeaModel {
+            [NameInMap("Statistic")]
+            [Validation(Required=true)]
+            public List<DescribeDomainStatisticsResponseStatisticsStatistic> Statistic { get; set; }
+            public class DescribeDomainStatisticsResponseStatisticsStatistic : TeaModel {
+                public long? Timestamp { get; set; }
+                public long? Count { get; set; }
+            }
+        };
 
     }
 

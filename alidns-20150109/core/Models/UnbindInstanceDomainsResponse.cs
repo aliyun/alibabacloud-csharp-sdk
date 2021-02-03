@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UnbindInstanceDomainsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("SuccessCount")]
         [Validation(Required=true)]
-        public UnbindInstanceDomainsResponseBody Body { get; set; }
+        public int? SuccessCount { get; set; }
+
+        [NameInMap("FailedCount")]
+        [Validation(Required=true)]
+        public int? FailedCount { get; set; }
 
     }
 

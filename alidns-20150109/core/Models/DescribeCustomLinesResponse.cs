@@ -9,13 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCustomLinesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("TotalItems")]
         [Validation(Required=true)]
-        public DescribeCustomLinesResponseBody Body { get; set; }
+        public int? TotalItems { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=true)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("TotalPages")]
+        [Validation(Required=true)]
+        public int? TotalPages { get; set; }
+
+        [NameInMap("CustomLines")]
+        [Validation(Required=true)]
+        public List<DescribeCustomLinesResponseCustomLines> CustomLines { get; set; }
+        public class DescribeCustomLinesResponseCustomLines : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=true)]
+            public long? Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=true)]
+            public string Name { get; set; }
+
+            [NameInMap("Code")]
+            [Validation(Required=true)]
+            public string Code { get; set; }
+
+        }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstanceSystemCnameResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("SystemCname")]
         [Validation(Required=true)]
-        public DescribeDnsGtmInstanceSystemCnameResponseBody Body { get; set; }
+        public string SystemCname { get; set; }
 
     }
 

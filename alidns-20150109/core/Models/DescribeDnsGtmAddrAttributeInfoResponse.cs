@@ -9,13 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAddrAttributeInfoResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Addr")]
         [Validation(Required=true)]
-        public DescribeDnsGtmAddrAttributeInfoResponseBody Body { get; set; }
+        public DescribeDnsGtmAddrAttributeInfoResponseAddr Addr { get; set; }
+        public class DescribeDnsGtmAddrAttributeInfoResponseAddr : TeaModel {
+            [NameInMap("Addr")]
+            [Validation(Required=true)]
+            public List<DescribeDnsGtmAddrAttributeInfoResponseAddrAddr> Addr { get; set; }
+            public class DescribeDnsGtmAddrAttributeInfoResponseAddrAddr : TeaModel {
+                public string Addr { get; set; }
+                public DescribeDnsGtmAddrAttributeInfoResponseAddrAddrAttributeInfo AttributeInfo { get; set; }
+                public class DescribeDnsGtmAddrAttributeInfoResponseAddrAddrAttributeInfo : TeaModel {
+                    [NameInMap("LineCode")]
+                    [Validation(Required=true)]
+                    public string LineCode { get; set; }
+
+                    [NameInMap("LineName")]
+                    [Validation(Required=true)]
+                    public string LineName { get; set; }
+
+                    [NameInMap("GroupCode")]
+                    [Validation(Required=true)]
+                    public string GroupCode { get; set; }
+
+                    [NameInMap("GroupName")]
+                    [Validation(Required=true)]
+                    public string GroupName { get; set; }
+
+                    [NameInMap("FatherCode")]
+                    [Validation(Required=true)]
+                    public string FatherCode { get; set; }
+
+                }
+            }
+        };
 
     }
 

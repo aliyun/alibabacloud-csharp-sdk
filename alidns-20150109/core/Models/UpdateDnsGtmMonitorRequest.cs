@@ -9,20 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmMonitorRequest : TeaModel {
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         [NameInMap("MonitorConfigId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string MonitorConfigId { get; set; }
 
         [NameInMap("ProtocolType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProtocolType { get; set; }
 
         [NameInMap("Interval")]
@@ -38,11 +34,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Timeout { get; set; }
 
         [NameInMap("MonitorExtendInfo")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string MonitorExtendInfo { get; set; }
 
         [NameInMap("IspCityNode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<UpdateDnsGtmMonitorRequestIspCityNode> IspCityNode { get; set; }
         public class UpdateDnsGtmMonitorRequestIspCityNode : TeaModel {
             [NameInMap("CityCode")]

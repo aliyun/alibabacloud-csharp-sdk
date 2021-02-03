@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmMonitorResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("MonitorConfigId")]
         [Validation(Required=true)]
-        public AddDnsGtmMonitorResponseBody Body { get; set; }
+        public string MonitorConfigId { get; set; }
 
     }
 

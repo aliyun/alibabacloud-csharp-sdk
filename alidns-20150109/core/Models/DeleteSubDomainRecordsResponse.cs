@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteSubDomainRecordsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RR")]
         [Validation(Required=true)]
-        public DeleteSubDomainRecordsResponseBody Body { get; set; }
+        public string RR { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=true)]
+        public string TotalCount { get; set; }
 
     }
 

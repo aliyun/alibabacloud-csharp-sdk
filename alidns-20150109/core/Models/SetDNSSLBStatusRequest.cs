@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UserClientIp { get; set; }
 
         [NameInMap("SubDomain")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SubDomain { get; set; }
 
         [NameInMap("Open")]
@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("Line")]
+        [Validation(Required=false)]
+        public string Line { get; set; }
 
     }
 

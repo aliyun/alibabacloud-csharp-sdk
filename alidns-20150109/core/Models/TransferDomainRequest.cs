@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         [NameInMap("DomainNames")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DomainNames { get; set; }
 
         [NameInMap("Remark")]
@@ -22,12 +22,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         [NameInMap("TargetUserId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? TargetUserId { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

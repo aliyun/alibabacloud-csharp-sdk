@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDnsGtmMonitorStatusResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public SetDnsGtmMonitorStatusResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

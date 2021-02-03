@@ -13,16 +13,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("StrategyId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StrategyId { get; set; }
 
         [NameInMap("StrategyName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StrategyName { get; set; }
 
         [NameInMap("Lines")]
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lines { get; set; }
 
         [NameInMap("DefaultAddrPoolType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DefaultAddrPoolType { get; set; }
 
         [NameInMap("DefaultLbaStrategy")]
@@ -38,7 +34,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DefaultLbaStrategy { get; set; }
 
         [NameInMap("DefaultMinAvailableAddrNum")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? DefaultMinAvailableAddrNum { get; set; }
 
         [NameInMap("DefaultMaxReturnAddrNum")]
@@ -70,16 +66,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string FailoverLatencyOptimization { get; set; }
 
         [NameInMap("DefaultAddrPool")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<UpdateDnsGtmAccessStrategyRequestDefaultAddrPool> DefaultAddrPool { get; set; }
         public class UpdateDnsGtmAccessStrategyRequestDefaultAddrPool : TeaModel {
-            [NameInMap("LbaWeight")]
-            [Validation(Required=false)]
-            public int? LbaWeight { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("LbaWeight")]
+            [Validation(Required=false)]
+            public int? LbaWeight { get; set; }
 
         }
 
@@ -87,13 +83,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public List<UpdateDnsGtmAccessStrategyRequestFailoverAddrPool> FailoverAddrPool { get; set; }
         public class UpdateDnsGtmAccessStrategyRequestFailoverAddrPool : TeaModel {
-            [NameInMap("LbaWeight")]
-            [Validation(Required=false)]
-            public int? LbaWeight { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("LbaWeight")]
+            [Validation(Required=false)]
+            public int? LbaWeight { get; set; }
 
         }
 

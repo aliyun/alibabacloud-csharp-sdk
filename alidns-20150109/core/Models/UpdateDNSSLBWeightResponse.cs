@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDNSSLBWeightResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RecordId")]
         [Validation(Required=true)]
-        public UpdateDNSSLBWeightResponseBody Body { get; set; }
+        public string RecordId { get; set; }
+
+        [NameInMap("Weight")]
+        [Validation(Required=true)]
+        public int? Weight { get; set; }
 
     }
 

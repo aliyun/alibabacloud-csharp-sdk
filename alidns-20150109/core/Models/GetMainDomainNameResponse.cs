@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class GetMainDomainNameResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("DomainName")]
         [Validation(Required=true)]
-        public GetMainDomainNameResponseBody Body { get; set; }
+        public string DomainName { get; set; }
+
+        [NameInMap("RR")]
+        [Validation(Required=true)]
+        public string RR { get; set; }
+
+        [NameInMap("DomainLevel")]
+        [Validation(Required=true)]
+        public long? DomainLevel { get; set; }
 
     }
 

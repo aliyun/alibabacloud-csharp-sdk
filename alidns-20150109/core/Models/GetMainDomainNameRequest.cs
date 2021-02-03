@@ -13,12 +13,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
         [NameInMap("InputString")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InputString { get; set; }
 
     }

@@ -9,13 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ModifyHichinaDomainDNSResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("OriginalDnsServers")]
         [Validation(Required=true)]
-        public ModifyHichinaDomainDNSResponseBody Body { get; set; }
+        public ModifyHichinaDomainDNSResponseOriginalDnsServers OriginalDnsServers { get; set; }
+        public class ModifyHichinaDomainDNSResponseOriginalDnsServers : TeaModel {
+            [NameInMap("DnsServer")]
+            [Validation(Required=true)]
+            public List<string> DnsServer { get; set; }
+        };
+
+        [NameInMap("NewDnsServers")]
+        [Validation(Required=true)]
+        public ModifyHichinaDomainDNSResponseNewDnsServers NewDnsServers { get; set; }
+        public class ModifyHichinaDomainDNSResponseNewDnsServers : TeaModel {
+            [NameInMap("DnsServer")]
+            [Validation(Required=true)]
+            public List<string> DnsServer { get; set; }
+        };
 
     }
 
