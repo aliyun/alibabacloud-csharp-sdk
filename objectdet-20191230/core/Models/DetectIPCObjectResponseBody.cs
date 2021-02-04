@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                 public float? Score { get; set; }
                 public List<string> Box { get; set; }
             }
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public long? Width { get; set; }
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public long? Height { get; set; }
         };
 
     }
