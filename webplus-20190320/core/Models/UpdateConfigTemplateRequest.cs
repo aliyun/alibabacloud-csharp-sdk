@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320.Models
         [Validation(Required=false)]
         public string OptionSettings { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
     }
 
 }

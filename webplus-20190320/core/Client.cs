@@ -80,6 +80,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public AbortChangeResponse AbortChangeWithOptions(AbortChangeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
@@ -88,6 +93,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<AbortChangeResponse>(DoROARequestWithForm("AbortChange", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/change/abort", "json", req, runtime));
@@ -96,6 +102,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<AbortChangeResponse> AbortChangeWithOptionsAsync(AbortChangeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
@@ -104,6 +115,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<AbortChangeResponse>(await DoROARequestWithFormAsync("AbortChange", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/change/abort", "json", req, runtime));
@@ -126,6 +138,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public CreateAppEnvResponse CreateAppEnvWithOptions(CreateAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvName))
             {
@@ -174,6 +191,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateAppEnvResponse>(DoROARequestWithForm("CreateAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv", "json", req, runtime));
@@ -182,6 +200,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<CreateAppEnvResponse> CreateAppEnvWithOptionsAsync(CreateAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvName))
             {
@@ -230,6 +253,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateAppEnvResponse>(await DoROARequestWithFormAsync("CreateAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv", "json", req, runtime));
@@ -252,6 +276,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public CreateApplicationResponse CreateApplicationWithOptions(CreateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -272,6 +301,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateApplicationResponse>(DoROARequestWithForm("CreateApplication", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/application", "json", req, runtime));
@@ -280,6 +310,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<CreateApplicationResponse> CreateApplicationWithOptionsAsync(CreateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -300,6 +335,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateApplicationResponse>(await DoROARequestWithFormAsync("CreateApplication", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/application", "json", req, runtime));
@@ -322,6 +358,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public CreateConfigTemplateResponse CreateConfigTemplateWithOptions(CreateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
             {
@@ -362,6 +403,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateConfigTemplateResponse>(DoROARequestWithForm("CreateConfigTemplate", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/configTemplate", "json", req, runtime));
@@ -370,6 +412,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<CreateConfigTemplateResponse> CreateConfigTemplateWithOptionsAsync(CreateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
             {
@@ -410,6 +457,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateConfigTemplateResponse>(await DoROARequestWithFormAsync("CreateConfigTemplate", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/configTemplate", "json", req, runtime));
@@ -432,6 +480,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public CreateOrderResponse CreateOrderWithOptions(CreateOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
             {
@@ -440,6 +493,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateOrderResponse>(DoROARequestWithForm("CreateOrder", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/paas/createOrder", "json", req, runtime));
@@ -448,6 +502,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<CreateOrderResponse> CreateOrderWithOptionsAsync(CreateOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
             {
@@ -456,6 +515,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreateOrderResponse>(await DoROARequestWithFormAsync("CreateOrder", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/paas/createOrder", "json", req, runtime));
@@ -478,6 +538,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public CreatePkgVersionResponse CreatePkgVersionWithOptions(CreatePkgVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgVersionLabel))
             {
@@ -498,6 +563,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreatePkgVersionResponse>(DoROARequestWithForm("CreatePkgVersion", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/pkgVersion", "json", req, runtime));
@@ -506,6 +572,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<CreatePkgVersionResponse> CreatePkgVersionWithOptionsAsync(CreatePkgVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgVersionLabel))
             {
@@ -526,39 +597,54 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<CreatePkgVersionResponse>(await DoROARequestWithFormAsync("CreatePkgVersion", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/pkgVersion", "json", req, runtime));
         }
 
-        public CreateStorageResponse CreateStorage()
+        public CreateStorageResponse CreateStorage(CreateStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateStorageWithOptions(headers, runtime);
+            return CreateStorageWithOptions(request, headers, runtime);
         }
 
-        public async Task<CreateStorageResponse> CreateStorageAsync()
+        public async Task<CreateStorageResponse> CreateStorageAsync(CreateStorageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateStorageWithOptionsAsync(headers, runtime);
+            return await CreateStorageWithOptionsAsync(request, headers, runtime);
         }
 
-        public CreateStorageResponse CreateStorageWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateStorageResponse CreateStorageWithOptions(CreateStorageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             return TeaModel.ToObject<CreateStorageResponse>(DoROARequest("CreateStorage", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/storage", "json", req, runtime));
         }
 
-        public async Task<CreateStorageResponse> CreateStorageWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateStorageResponse> CreateStorageWithOptionsAsync(CreateStorageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             return TeaModel.ToObject<CreateStorageResponse>(await DoROARequestAsync("CreateStorage", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/storage", "json", req, runtime));
         }
@@ -585,6 +671,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["EnvId"] = request.EnvId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -600,6 +690,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
                 query["EnvId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -631,6 +725,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -646,6 +744,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -677,6 +779,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["ChangeId"] = request.ChangeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -692,6 +798,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
                 query["ChangeId"] = request.ChangeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -723,6 +833,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -738,6 +852,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -769,6 +887,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["PkgVersionId"] = request.PkgVersionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -784,6 +906,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgVersionId))
             {
                 query["PkgVersionId"] = request.PkgVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -810,6 +936,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public DeployAppEnvResponse DeployAppEnvWithOptions(DeployAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -838,6 +969,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<DeployAppEnvResponse>(DoROARequestWithForm("DeployAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/deploy", "json", req, runtime));
@@ -846,6 +978,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<DeployAppEnvResponse> DeployAppEnvWithOptionsAsync(DeployAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -874,6 +1011,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<DeployAppEnvResponse>(await DoROARequestWithFormAsync("DeployAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/deploy", "json", req, runtime));
@@ -901,6 +1039,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["EnvId"] = request.EnvId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -916,6 +1058,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
                 query["EnvId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -979,6 +1125,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["StackSearch"] = request.StackSearch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1027,6 +1177,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["StackSearch"] = request.StackSearch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1057,6 +1211,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["EnvId"] = request.EnvId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1072,6 +1230,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
                 query["EnvId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1131,6 +1293,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["CategorySearch"] = request.CategorySearch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1175,6 +1341,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["CategorySearch"] = request.CategorySearch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1183,34 +1353,48 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             return TeaModel.ToObject<DescribeApplicationsResponse>(await DoROARequestAsync("DescribeApplications", "2019-03-20", "HTTPS", "GET", "AK", "/pop/v1/wam/application", "json", req, runtime));
         }
 
-        public DescribeCategoriesResponse DescribeCategories()
+        public DescribeCategoriesResponse DescribeCategories(DescribeCategoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeCategoriesWithOptions(headers, runtime);
+            return DescribeCategoriesWithOptions(request, headers, runtime);
         }
 
-        public async Task<DescribeCategoriesResponse> DescribeCategoriesAsync()
+        public async Task<DescribeCategoriesResponse> DescribeCategoriesAsync(DescribeCategoriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeCategoriesWithOptionsAsync(headers, runtime);
+            return await DescribeCategoriesWithOptionsAsync(request, headers, runtime);
         }
 
-        public DescribeCategoriesResponse DescribeCategoriesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeCategoriesResponse DescribeCategoriesWithOptions(DescribeCategoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             return TeaModel.ToObject<DescribeCategoriesResponse>(DoROARequest("DescribeCategories", "2019-03-20", "HTTPS", "GET", "AK", "/pop/v1/wam/category", "json", req, runtime));
         }
 
-        public async Task<DescribeCategoriesResponse> DescribeCategoriesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeCategoriesResponse> DescribeCategoriesWithOptionsAsync(DescribeCategoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             return TeaModel.ToObject<DescribeCategoriesResponse>(await DoROARequestAsync("DescribeCategories", "2019-03-20", "HTTPS", "GET", "AK", "/pop/v1/wam/category", "json", req, runtime));
         }
@@ -1241,6 +1425,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["ChangeId"] = request.ChangeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1260,6 +1448,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
                 query["ChangeId"] = request.ChangeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1303,6 +1495,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["PageNumber"] = request.PageNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1330,6 +1526,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1373,6 +1573,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["TemplateId"] = request.TemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1400,6 +1604,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1439,6 +1647,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["ProfileName"] = request.ProfileName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1462,6 +1674,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileName))
             {
                 query["ProfileName"] = request.ProfileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1505,6 +1721,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["OptionName"] = request.OptionName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1532,6 +1752,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionName))
             {
                 query["OptionName"] = request.OptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1579,6 +1803,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["PageNumber"] = request.PageNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1611,6 +1839,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["PageNumber"] = request.PageNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1641,6 +1873,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["EnvId"] = request.EnvId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1656,6 +1892,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
                 query["EnvId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1715,6 +1955,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["ReverseByTimestamp"] = request.ReverseByTimestamp;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1759,6 +2003,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["ReverseByTimestamp"] = request.ReverseByTimestamp;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1789,6 +2037,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["ChangeId"] = request.ChangeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1804,6 +2056,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
                 query["ChangeId"] = request.ChangeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1835,6 +2091,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["ChangeId"] = request.ChangeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1850,6 +2110,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
                 query["ChangeId"] = request.ChangeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1881,6 +2145,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1896,6 +2164,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1943,6 +2215,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["PkgVersionSearch"] = request.PkgVersionSearch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1974,6 +2250,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgVersionSearch))
             {
                 query["PkgVersionSearch"] = request.PkgVersionSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2013,6 +2293,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["PageNumber"] = request.PageNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2036,6 +2320,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2079,6 +2367,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["PageNumber"] = request.PageNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2106,6 +2398,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2137,6 +2433,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             {
                 query["UsingSharedStorage"] = request.UsingSharedStorage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2152,6 +2452,10 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsingSharedStorage))
             {
                 query["UsingSharedStorage"] = request.UsingSharedStorage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2178,6 +2482,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public GatherAppEnvLogResponse GatherAppEnvLogWithOptions(GatherAppEnvLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2194,6 +2503,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<GatherAppEnvLogResponse>(DoROARequestWithForm("GatherAppEnvLog", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/gatherLog", "json", req, runtime));
@@ -2202,6 +2512,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<GatherAppEnvLogResponse> GatherAppEnvLogWithOptionsAsync(GatherAppEnvLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2218,6 +2533,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<GatherAppEnvLogResponse>(await DoROARequestWithFormAsync("GatherAppEnvLog", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/gatherLog", "json", req, runtime));
@@ -2240,6 +2556,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public GatherAppEnvStatsResponse GatherAppEnvStatsWithOptions(GatherAppEnvStatsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2252,6 +2573,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<GatherAppEnvStatsResponse>(DoROARequestWithForm("GatherAppEnvStats", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/gatherStats", "json", req, runtime));
@@ -2260,6 +2582,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<GatherAppEnvStatsResponse> GatherAppEnvStatsWithOptionsAsync(GatherAppEnvStatsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2272,6 +2599,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<GatherAppEnvStatsResponse>(await DoROARequestWithFormAsync("GatherAppEnvStats", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/gatherStats", "json", req, runtime));
@@ -2294,6 +2622,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public PauseChangeResponse PauseChangeWithOptions(PauseChangeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
@@ -2302,6 +2635,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<PauseChangeResponse>(DoROARequestWithForm("PauseChange", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/change/pause", "json", req, runtime));
@@ -2310,6 +2644,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<PauseChangeResponse> PauseChangeWithOptionsAsync(PauseChangeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
@@ -2318,6 +2657,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<PauseChangeResponse>(await DoROARequestWithFormAsync("PauseChange", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/change/pause", "json", req, runtime));
@@ -2340,6 +2680,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public RebuildAppEnvResponse RebuildAppEnvWithOptions(RebuildAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2352,6 +2697,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<RebuildAppEnvResponse>(DoROARequestWithForm("RebuildAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/rebuild", "json", req, runtime));
@@ -2360,6 +2706,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<RebuildAppEnvResponse> RebuildAppEnvWithOptionsAsync(RebuildAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2372,6 +2723,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<RebuildAppEnvResponse>(await DoROARequestWithFormAsync("RebuildAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/rebuild", "json", req, runtime));
@@ -2394,6 +2746,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public RestartAppEnvResponse RestartAppEnvWithOptions(RestartAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2418,6 +2775,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<RestartAppEnvResponse>(DoROARequestWithForm("RestartAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/restart", "json", req, runtime));
@@ -2426,6 +2784,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<RestartAppEnvResponse> RestartAppEnvWithOptionsAsync(RestartAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2450,6 +2813,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<RestartAppEnvResponse>(await DoROARequestWithFormAsync("RestartAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/restart", "json", req, runtime));
@@ -2472,6 +2836,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public ResumeChangeResponse ResumeChangeWithOptions(ResumeChangeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
@@ -2480,6 +2849,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<ResumeChangeResponse>(DoROARequestWithForm("ResumeChange", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/change/resume", "json", req, runtime));
@@ -2488,6 +2858,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<ResumeChangeResponse> ResumeChangeWithOptionsAsync(ResumeChangeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeId))
             {
@@ -2496,6 +2871,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<ResumeChangeResponse>(await DoROARequestWithFormAsync("ResumeChange", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/change/resume", "json", req, runtime));
@@ -2518,6 +2894,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public StartAppEnvResponse StartAppEnvWithOptions(StartAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2526,6 +2907,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<StartAppEnvResponse>(DoROARequestWithForm("StartAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/start", "json", req, runtime));
@@ -2534,6 +2916,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<StartAppEnvResponse> StartAppEnvWithOptionsAsync(StartAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2542,6 +2929,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<StartAppEnvResponse>(await DoROARequestWithFormAsync("StartAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/start", "json", req, runtime));
@@ -2564,6 +2952,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public StopAppEnvResponse StopAppEnvWithOptions(StopAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2572,6 +2965,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<StopAppEnvResponse>(DoROARequestWithForm("StopAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/stop", "json", req, runtime));
@@ -2580,6 +2974,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<StopAppEnvResponse> StopAppEnvWithOptionsAsync(StopAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2588,6 +2987,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<StopAppEnvResponse>(await DoROARequestWithFormAsync("StopAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/stop", "json", req, runtime));
@@ -2610,6 +3010,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public TerminateAppEnvResponse TerminateAppEnvWithOptions(TerminateAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2622,6 +3027,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<TerminateAppEnvResponse>(DoROARequestWithForm("TerminateAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/terminate", "json", req, runtime));
@@ -2630,6 +3036,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<TerminateAppEnvResponse> TerminateAppEnvWithOptionsAsync(TerminateAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2642,6 +3053,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<TerminateAppEnvResponse>(await DoROARequestWithFormAsync("TerminateAppEnv", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/appEnv/terminate", "json", req, runtime));
@@ -2664,6 +3076,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public UpdateAppEnvResponse UpdateAppEnvWithOptions(UpdateAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvDescription))
             {
@@ -2712,6 +3129,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateAppEnvResponse>(DoROARequestWithForm("UpdateAppEnv", "2019-03-20", "HTTPS", "PUT", "AK", "/pop/v1/wam/appEnv", "json", req, runtime));
@@ -2720,6 +3138,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<UpdateAppEnvResponse> UpdateAppEnvWithOptionsAsync(UpdateAppEnvRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvDescription))
             {
@@ -2768,6 +3191,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateAppEnvResponse>(await DoROARequestWithFormAsync("UpdateAppEnv", "2019-03-20", "HTTPS", "PUT", "AK", "/pop/v1/wam/appEnv", "json", req, runtime));
@@ -2790,6 +3214,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public UpdateApplicationResponse UpdateApplicationWithOptions(UpdateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -2802,6 +3231,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateApplicationResponse>(DoROARequestWithForm("UpdateApplication", "2019-03-20", "HTTPS", "PUT", "AK", "/pop/v1/wam/application", "json", req, runtime));
@@ -2810,6 +3240,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<UpdateApplicationResponse> UpdateApplicationWithOptionsAsync(UpdateApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -2822,6 +3257,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateApplicationResponse>(await DoROARequestWithFormAsync("UpdateApplication", "2019-03-20", "HTTPS", "PUT", "AK", "/pop/v1/wam/application", "json", req, runtime));
@@ -2844,6 +3280,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public UpdateConfigTemplateResponse UpdateConfigTemplateWithOptions(UpdateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateDescription))
             {
@@ -2860,6 +3301,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateConfigTemplateResponse>(DoROARequestWithForm("UpdateConfigTemplate", "2019-03-20", "HTTPS", "PUT", "AK", "/pop/v1/wam/configTemplate", "json", req, runtime));
@@ -2868,6 +3310,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<UpdateConfigTemplateResponse> UpdateConfigTemplateWithOptionsAsync(UpdateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateDescription))
             {
@@ -2884,6 +3331,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateConfigTemplateResponse>(await DoROARequestWithFormAsync("UpdateConfigTemplate", "2019-03-20", "HTTPS", "PUT", "AK", "/pop/v1/wam/configTemplate", "json", req, runtime));
@@ -2906,6 +3354,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public ValidateConfigSettingResponse ValidateConfigSettingWithOptions(ValidateConfigSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2926,6 +3379,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<ValidateConfigSettingResponse>(DoROARequestWithForm("ValidateConfigSetting", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/config/configSetting/validate", "json", req, runtime));
@@ -2934,6 +3388,11 @@ namespace AlibabaCloud.SDK.WebPlus20190320
         public async Task<ValidateConfigSettingResponse> ValidateConfigSettingWithOptionsAsync(ValidateConfigSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
             {
@@ -2954,6 +3413,7 @@ namespace AlibabaCloud.SDK.WebPlus20190320
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<ValidateConfigSettingResponse>(await DoROARequestWithFormAsync("ValidateConfigSetting", "2019-03-20", "HTTPS", "POST", "AK", "/pop/v1/wam/config/configSetting/validate", "json", req, runtime));

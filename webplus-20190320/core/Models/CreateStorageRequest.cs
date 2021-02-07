@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.WebPlus20190320.Models
 {
-    public class DescribeEnvResourceRequest : TeaModel {
-        [NameInMap("EnvId")]
-        [Validation(Required=false)]
-        public string EnvId { get; set; }
-
+    public class CreateStorageRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
