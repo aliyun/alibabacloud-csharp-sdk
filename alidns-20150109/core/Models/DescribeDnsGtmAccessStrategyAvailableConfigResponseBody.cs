@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody : TeaModel {
+        [NameInMap("SelectedDomainLines")]
+        [Validation(Required=false)]
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines SelectedDomainLines { get; set; }
+        public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedDomainLines : TeaModel {
+            [NameInMap("SelectedDomainLine")]
+            [Validation(Required=false)]
+            public List<string> SelectedDomainLine { get; set; }
+        };
+
         [NameInMap("DomainAddrPools")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPools DomainAddrPools { get; set; }
@@ -41,6 +50,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SelectedIpv4Lines")]
+        [Validation(Required=false)]
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines SelectedIpv4Lines { get; set; }
+        public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv4Lines : TeaModel {
+            [NameInMap("SelectedIpv4Line")]
+            [Validation(Required=false)]
+            public List<string> SelectedIpv4Line { get; set; }
+        };
+
         [NameInMap("Ipv6AddrPools")]
         [Validation(Required=false)]
         public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPools Ipv6AddrPools { get; set; }
@@ -58,6 +76,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("SuggestSetDefaultLine")]
         [Validation(Required=false)]
         public bool? SuggestSetDefaultLine { get; set; }
+
+        [NameInMap("SelectedIpv6Lines")]
+        [Validation(Required=false)]
+        public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines SelectedIpv6Lines { get; set; }
+        public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines : TeaModel {
+            [NameInMap("SelectedIpv6Line")]
+            [Validation(Required=false)]
+            public List<string> SelectedIpv6Line { get; set; }
+        };
 
         [NameInMap("Lines")]
         [Validation(Required=false)]

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("Rr")]
+        [Validation(Required=false)]
+        public string Rr { get; set; }
+
     }
 
 }

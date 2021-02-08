@@ -37,6 +37,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public long? RecordCount { get; set; }
                 public bool? Open { get; set; }
                 public string SubDomain { get; set; }
+                public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms LineAlgorithms { get; set; }
+                public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms : TeaModel {
+                    [NameInMap("LineAlgorithm")]
+                    [Validation(Required=false)]
+                    public List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm> LineAlgorithm { get; set; }
+                    public class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm : TeaModel {
+                        [NameInMap("Line")]
+                        [Validation(Required=false)]
+                        public string Line { get; set; }
+
+                        [NameInMap("Open")]
+                        [Validation(Required=false)]
+                        public bool? Open { get; set; }
+
+                    }
+
+                }
             }
         };
 

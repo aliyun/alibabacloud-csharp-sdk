@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class SetDNSSLBStatusRequest : TeaModel {
+    public class DescribeDnsCacheDomainsRequest : TeaModel {
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -17,25 +17,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
 
-        [NameInMap("SubDomain")]
+        [NameInMap("Keyword")]
         [Validation(Required=false)]
-        public string SubDomain { get; set; }
+        public string Keyword { get; set; }
 
-        [NameInMap("Open")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public bool? Open { get; set; }
+        public long? PageNumber { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("Line")]
-        [Validation(Required=false)]
-        public string Line { get; set; }
+        public long? PageSize { get; set; }
 
     }
 
