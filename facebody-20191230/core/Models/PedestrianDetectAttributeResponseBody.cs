@@ -43,6 +43,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("PersonNumber")]
             [Validation(Required=false)]
             public int? PersonNumber { get; set; }
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public long? Width { get; set; }
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public long? Height { get; set; }
         };
 
     }
