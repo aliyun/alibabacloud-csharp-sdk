@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string SortOrder { get; set; }
 
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeFileSystemsRequestTag> Tag { get; set; }
