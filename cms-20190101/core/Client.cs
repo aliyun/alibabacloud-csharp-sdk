@@ -1351,40 +1351,6 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeAlertHistoryListWithOptionsAsync(request, runtime);
         }
 
-        public DescribeAlertingMetricRuleResourcesResponse DescribeAlertingMetricRuleResourcesWithOptions(DescribeAlertingMetricRuleResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = query,
-            };
-            return TeaModel.ToObject<DescribeAlertingMetricRuleResourcesResponse>(DoRPCRequest("DescribeAlertingMetricRuleResources", "2019-01-01", "HTTPS", "GET", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribeAlertingMetricRuleResourcesResponse> DescribeAlertingMetricRuleResourcesWithOptionsAsync(DescribeAlertingMetricRuleResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = query,
-            };
-            return TeaModel.ToObject<DescribeAlertingMetricRuleResourcesResponse>(await DoRPCRequestAsync("DescribeAlertingMetricRuleResources", "2019-01-01", "HTTPS", "GET", "AK", "json", req, runtime));
-        }
-
-        public DescribeAlertingMetricRuleResourcesResponse DescribeAlertingMetricRuleResources(DescribeAlertingMetricRuleResourcesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeAlertingMetricRuleResourcesWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeAlertingMetricRuleResourcesResponse> DescribeAlertingMetricRuleResourcesAsync(DescribeAlertingMetricRuleResourcesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeAlertingMetricRuleResourcesWithOptionsAsync(request, runtime);
-        }
-
         public DescribeAlertLogCountResponse DescribeAlertLogCountWithOptions(DescribeAlertLogCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

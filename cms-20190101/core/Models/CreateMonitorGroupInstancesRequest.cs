@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class CreateMonitorGroupInstancesRequest : TeaModel {
         [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public long? GroupId { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("Instances")]
         [Validation(Required=false)]
