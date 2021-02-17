@@ -15,21 +15,17 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<OnsMessageTraceResponseBodyData> Data { get; set; }
+        public OnsMessageTraceResponseBodyData Data { get; set; }
         public class OnsMessageTraceResponseBodyData : TeaModel {
-            [NameInMap("TrackType")]
+            [NameInMap("MessageTrack")]
             [Validation(Required=false)]
-            public string TrackType { get; set; }
-
-            [NameInMap("ConsumerGroup")]
-            [Validation(Required=false)]
-            public string ConsumerGroup { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<OnsMessageTraceResponseBodyDataMessageTrack> MessageTrack { get; set; }
+            public class OnsMessageTraceResponseBodyDataMessageTrack : TeaModel {
+                public string TrackType { get; set; }
+                public string ConsumerGroup { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 

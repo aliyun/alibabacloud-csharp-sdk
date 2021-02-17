@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public class OnsGroupSubDetailResponseBodyData : TeaModel {
             [NameInMap("SubscriptionDataList")]
             [Validation(Required=false)]
-            public List<OnsGroupSubDetailResponseBodyDataSubscriptionDataList> SubscriptionDataList { get; set; }
+            public OnsGroupSubDetailResponseBodyDataSubscriptionDataList SubscriptionDataList { get; set; }
             public class OnsGroupSubDetailResponseBodyDataSubscriptionDataList : TeaModel {
-                public string SubString { get; set; }
-                public string Topic { get; set; }
+                [NameInMap("SubscriptionDataList")]
+                [Validation(Required=false)]
+                public List<OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> SubscriptionDataList { get; set; }
+                public class OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList : TeaModel {
+                    [NameInMap("SubString")]
+                    [Validation(Required=false)]
+                    public string SubString { get; set; }
+
+                    [NameInMap("Topic")]
+                    [Validation(Required=false)]
+                    public string Topic { get; set; }
+
+                }
+
             }
             [NameInMap("GroupId")]
             [Validation(Required=false)]

@@ -15,63 +15,41 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<OnsMessageGetByKeyResponseBodyData> Data { get; set; }
+        public OnsMessageGetByKeyResponseBodyData Data { get; set; }
         public class OnsMessageGetByKeyResponseBodyData : TeaModel {
-            [NameInMap("StoreSize")]
+            [NameInMap("OnsRestMessageDo")]
             [Validation(Required=false)]
-            public int? StoreSize { get; set; }
+            public List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo> OnsRestMessageDo { get; set; }
+            public class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo : TeaModel {
+                public int? StoreSize { get; set; }
+                public int? ReconsumeTimes { get; set; }
+                public long? StoreTimestamp { get; set; }
+                public string InstanceId { get; set; }
+                public string MsgId { get; set; }
+                public string StoreHost { get; set; }
+                public string Topic { get; set; }
+                public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList PropertyList { get; set; }
+                public class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList : TeaModel {
+                    [NameInMap("MessageProperty")]
+                    [Validation(Required=false)]
+                    public List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty> MessageProperty { get; set; }
+                    public class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty : TeaModel {
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-            [NameInMap("ReconsumeTimes")]
-            [Validation(Required=false)]
-            public int? ReconsumeTimes { get; set; }
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
 
-            [NameInMap("StoreTimestamp")]
-            [Validation(Required=false)]
-            public long? StoreTimestamp { get; set; }
+                    }
 
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("MsgId")]
-            [Validation(Required=false)]
-            public string MsgId { get; set; }
-
-            [NameInMap("StoreHost")]
-            [Validation(Required=false)]
-            public string StoreHost { get; set; }
-
-            [NameInMap("Topic")]
-            [Validation(Required=false)]
-            public string Topic { get; set; }
-
-            [NameInMap("PropertyList")]
-            [Validation(Required=false)]
-            public List<OnsMessageGetByKeyResponseBodyDataPropertyList> PropertyList { get; set; }
-            public class OnsMessageGetByKeyResponseBodyDataPropertyList : TeaModel {
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
+                }
+                public long? BornTimestamp { get; set; }
+                public int? BodyCRC { get; set; }
+                public string BornHost { get; set; }
             }
-
-            [NameInMap("BornTimestamp")]
-            [Validation(Required=false)]
-            public long? BornTimestamp { get; set; }
-
-            [NameInMap("BodyCRC")]
-            [Validation(Required=false)]
-            public int? BodyCRC { get; set; }
-
-            [NameInMap("BornHost")]
-            [Validation(Required=false)]
-            public string BornHost { get; set; }
-
-        }
+        };
 
     }
 

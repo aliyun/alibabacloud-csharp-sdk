@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public class OnsMqttQueryMsgTransTrendResponseBodyData : TeaModel {
             [NameInMap("Records")]
             [Validation(Required=false)]
-            public List<OnsMqttQueryMsgTransTrendResponseBodyDataRecords> Records { get; set; }
+            public OnsMqttQueryMsgTransTrendResponseBodyDataRecords Records { get; set; }
             public class OnsMqttQueryMsgTransTrendResponseBodyDataRecords : TeaModel {
-                public float? Y { get; set; }
-                public long? X { get; set; }
+                [NameInMap("StatsDataDo")]
+                [Validation(Required=false)]
+                public List<OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo> StatsDataDo { get; set; }
+                public class OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo : TeaModel {
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
+                    public float? Y { get; set; }
+
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
+                    public long? X { get; set; }
+
+                }
+
             }
             [NameInMap("XUnit")]
             [Validation(Required=false)]

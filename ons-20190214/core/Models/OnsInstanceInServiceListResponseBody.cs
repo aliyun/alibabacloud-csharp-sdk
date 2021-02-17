@@ -15,47 +15,37 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<OnsInstanceInServiceListResponseBodyData> Data { get; set; }
+        public OnsInstanceInServiceListResponseBodyData Data { get; set; }
         public class OnsInstanceInServiceListResponseBodyData : TeaModel {
-            [NameInMap("IndependentNaming")]
+            [NameInMap("InstanceVO")]
             [Validation(Required=false)]
-            public bool? IndependentNaming { get; set; }
+            public List<OnsInstanceInServiceListResponseBodyDataInstanceVO> InstanceVO { get; set; }
+            public class OnsInstanceInServiceListResponseBodyDataInstanceVO : TeaModel {
+                public bool? IndependentNaming { get; set; }
+                public string InstanceName { get; set; }
+                public long? ReleaseTime { get; set; }
+                public int? InstanceStatus { get; set; }
+                public OnsInstanceInServiceListResponseBodyDataInstanceVOTags Tags { get; set; }
+                public class OnsInstanceInServiceListResponseBodyDataInstanceVOTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag> Tag { get; set; }
+                    public class OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
 
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-            [NameInMap("ReleaseTime")]
-            [Validation(Required=false)]
-            public long? ReleaseTime { get; set; }
+                    }
 
-            [NameInMap("InstanceStatus")]
-            [Validation(Required=false)]
-            public int? InstanceStatus { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<OnsInstanceInServiceListResponseBodyDataTags> Tags { get; set; }
-            public class OnsInstanceInServiceListResponseBodyDataTags : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
+                }
+                public string InstanceId { get; set; }
+                public int? InstanceType { get; set; }
             }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public int? InstanceType { get; set; }
-
-        }
+        };
 
     }
 

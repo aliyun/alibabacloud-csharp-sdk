@@ -22,23 +22,67 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public long? CurrentPage { get; set; }
             [NameInMap("MsgFoundList")]
             [Validation(Required=false)]
-            public List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList> MsgFoundList { get; set; }
+            public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList MsgFoundList { get; set; }
             public class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList : TeaModel {
-                public int? StoreSize { get; set; }
-                public int? ReconsumeTimes { get; set; }
-                public long? StoreTimestamp { get; set; }
-                public string InstanceId { get; set; }
-                public string MsgId { get; set; }
-                public string StoreHost { get; set; }
-                public string Topic { get; set; }
-                public List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList> PropertyList { get; set; }
-                public class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList : TeaModel {
-                    public string Value { get; set; }
-                    public string Name { get; set; }
+                [NameInMap("OnsRestMessageDo")]
+                [Validation(Required=false)]
+                public List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo> OnsRestMessageDo { get; set; }
+                public class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo : TeaModel {
+                    [NameInMap("StoreSize")]
+                    [Validation(Required=false)]
+                    public int? StoreSize { get; set; }
+
+                    [NameInMap("ReconsumeTimes")]
+                    [Validation(Required=false)]
+                    public int? ReconsumeTimes { get; set; }
+
+                    [NameInMap("StoreTimestamp")]
+                    [Validation(Required=false)]
+                    public long? StoreTimestamp { get; set; }
+
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    [NameInMap("MsgId")]
+                    [Validation(Required=false)]
+                    public string MsgId { get; set; }
+
+                    [NameInMap("StoreHost")]
+                    [Validation(Required=false)]
+                    public string StoreHost { get; set; }
+
+                    [NameInMap("Topic")]
+                    [Validation(Required=false)]
+                    public string Topic { get; set; }
+
+                    [NameInMap("PropertyList")]
+                    [Validation(Required=false)]
+                    public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList PropertyList { get; set; }
+                    public class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList : TeaModel {
+                        [NameInMap("MessageProperty")]
+                        [Validation(Required=false)]
+                        public List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty> MessageProperty { get; set; }
+                        public class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty : TeaModel {
+                            public string Value { get; set; }
+                            public string Name { get; set; }
+                        }
+                    };
+
+                    [NameInMap("BornTimestamp")]
+                    [Validation(Required=false)]
+                    public long? BornTimestamp { get; set; }
+
+                    [NameInMap("BodyCRC")]
+                    [Validation(Required=false)]
+                    public int? BodyCRC { get; set; }
+
+                    [NameInMap("BornHost")]
+                    [Validation(Required=false)]
+                    public string BornHost { get; set; }
+
                 }
-                public long? BornTimestamp { get; set; }
-                public int? BodyCRC { get; set; }
-                public string BornHost { get; set; }
+
             }
             [NameInMap("MaxPageCount")]
             [Validation(Required=false)]

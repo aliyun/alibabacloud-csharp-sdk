@@ -40,10 +40,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public string Topic { get; set; }
             [NameInMap("PropertyList")]
             [Validation(Required=false)]
-            public List<OnsDLQMessageGetByIdResponseBodyDataPropertyList> PropertyList { get; set; }
+            public OnsDLQMessageGetByIdResponseBodyDataPropertyList PropertyList { get; set; }
             public class OnsDLQMessageGetByIdResponseBodyDataPropertyList : TeaModel {
-                public string Value { get; set; }
-                public string Name { get; set; }
+                [NameInMap("MessageProperty")]
+                [Validation(Required=false)]
+                public List<OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty> MessageProperty { get; set; }
+                public class OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty : TeaModel {
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
             }
             [NameInMap("BornTimestamp")]
             [Validation(Required=false)]

@@ -31,11 +31,26 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public string ClientId { get; set; }
             [NameInMap("SubScriptonData")]
             [Validation(Required=false)]
-            public List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData> SubScriptonData { get; set; }
+            public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData SubScriptonData { get; set; }
             public class OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData : TeaModel {
-                public string SubTopic { get; set; }
-                public string ParentTopic { get; set; }
-                public int? Qos { get; set; }
+                [NameInMap("SubscriptionDo")]
+                [Validation(Required=false)]
+                public List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo> SubscriptionDo { get; set; }
+                public class OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo : TeaModel {
+                    [NameInMap("SubTopic")]
+                    [Validation(Required=false)]
+                    public string SubTopic { get; set; }
+
+                    [NameInMap("ParentTopic")]
+                    [Validation(Required=false)]
+                    public string ParentTopic { get; set; }
+
+                    [NameInMap("Qos")]
+                    [Validation(Required=false)]
+                    public int? Qos { get; set; }
+
+                }
+
             }
         };
 

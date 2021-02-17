@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public class OnsMqttQueryHistoryOnlineResponseBodyData : TeaModel {
             [NameInMap("Records")]
             [Validation(Required=false)]
-            public List<OnsMqttQueryHistoryOnlineResponseBodyDataRecords> Records { get; set; }
+            public OnsMqttQueryHistoryOnlineResponseBodyDataRecords Records { get; set; }
             public class OnsMqttQueryHistoryOnlineResponseBodyDataRecords : TeaModel {
-                public float? Y { get; set; }
-                public long? X { get; set; }
+                [NameInMap("StatsDataDo")]
+                [Validation(Required=false)]
+                public List<OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo> StatsDataDo { get; set; }
+                public class OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo : TeaModel {
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
+                    public float? Y { get; set; }
+
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
+                    public long? X { get; set; }
+
+                }
+
             }
             [NameInMap("XUnit")]
             [Validation(Required=false)]

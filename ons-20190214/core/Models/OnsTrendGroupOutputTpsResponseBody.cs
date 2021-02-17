@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public class OnsTrendGroupOutputTpsResponseBodyData : TeaModel {
             [NameInMap("Records")]
             [Validation(Required=false)]
-            public List<OnsTrendGroupOutputTpsResponseBodyDataRecords> Records { get; set; }
+            public OnsTrendGroupOutputTpsResponseBodyDataRecords Records { get; set; }
             public class OnsTrendGroupOutputTpsResponseBodyDataRecords : TeaModel {
-                public float? Y { get; set; }
-                public long? X { get; set; }
+                [NameInMap("StatsDataDo")]
+                [Validation(Required=false)]
+                public List<OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo> StatsDataDo { get; set; }
+                public class OnsTrendGroupOutputTpsResponseBodyDataRecordsStatsDataDo : TeaModel {
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
+                    public float? Y { get; set; }
+
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
+                    public long? X { get; set; }
+
+                }
+
             }
             [NameInMap("XUnit")]
             [Validation(Required=false)]

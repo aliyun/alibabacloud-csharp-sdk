@@ -19,12 +19,30 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
         public class OnsConsumerGetConnectionResponseBodyData : TeaModel {
             [NameInMap("ConnectionList")]
             [Validation(Required=false)]
-            public List<OnsConsumerGetConnectionResponseBodyDataConnectionList> ConnectionList { get; set; }
+            public OnsConsumerGetConnectionResponseBodyDataConnectionList ConnectionList { get; set; }
             public class OnsConsumerGetConnectionResponseBodyDataConnectionList : TeaModel {
-                public string Version { get; set; }
-                public string ClientAddr { get; set; }
-                public string Language { get; set; }
-                public string ClientId { get; set; }
+                [NameInMap("ConnectionDo")]
+                [Validation(Required=false)]
+                public List<OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo> ConnectionDo { get; set; }
+                public class OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo : TeaModel {
+                    [NameInMap("Version")]
+                    [Validation(Required=false)]
+                    public string Version { get; set; }
+
+                    [NameInMap("ClientAddr")]
+                    [Validation(Required=false)]
+                    public string ClientAddr { get; set; }
+
+                    [NameInMap("Language")]
+                    [Validation(Required=false)]
+                    public string Language { get; set; }
+
+                    [NameInMap("ClientId")]
+                    [Validation(Required=false)]
+                    public string ClientId { get; set; }
+
+                }
+
             }
         };
 

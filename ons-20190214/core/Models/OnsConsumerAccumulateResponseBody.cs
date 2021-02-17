@@ -34,12 +34,30 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
             public bool? Online { get; set; }
             [NameInMap("DetailInTopicList")]
             [Validation(Required=false)]
-            public List<OnsConsumerAccumulateResponseBodyDataDetailInTopicList> DetailInTopicList { get; set; }
+            public OnsConsumerAccumulateResponseBodyDataDetailInTopicList DetailInTopicList { get; set; }
             public class OnsConsumerAccumulateResponseBodyDataDetailInTopicList : TeaModel {
-                public long? DelayTime { get; set; }
-                public long? TotalDiff { get; set; }
-                public long? LastTimestamp { get; set; }
-                public string Topic { get; set; }
+                [NameInMap("DetailInTopicDo")]
+                [Validation(Required=false)]
+                public List<OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo> DetailInTopicDo { get; set; }
+                public class OnsConsumerAccumulateResponseBodyDataDetailInTopicListDetailInTopicDo : TeaModel {
+                    [NameInMap("DelayTime")]
+                    [Validation(Required=false)]
+                    public long? DelayTime { get; set; }
+
+                    [NameInMap("TotalDiff")]
+                    [Validation(Required=false)]
+                    public long? TotalDiff { get; set; }
+
+                    [NameInMap("LastTimestamp")]
+                    [Validation(Required=false)]
+                    public long? LastTimestamp { get; set; }
+
+                    [NameInMap("Topic")]
+                    [Validation(Required=false)]
+                    public string Topic { get; set; }
+
+                }
+
             }
         };
 

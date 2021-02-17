@@ -15,7 +15,12 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<string> Data { get; set; }
+        public OnsDLQMessageResendByIdResponseBodyData Data { get; set; }
+        public class OnsDLQMessageResendByIdResponseBodyData : TeaModel {
+            [NameInMap("MsgId")]
+            [Validation(Required=false)]
+            public List<string> MsgId { get; set; }
+        };
 
     }
 

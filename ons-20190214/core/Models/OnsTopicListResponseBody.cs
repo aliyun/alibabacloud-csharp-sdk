@@ -15,63 +15,40 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<OnsTopicListResponseBodyData> Data { get; set; }
+        public OnsTopicListResponseBodyData Data { get; set; }
         public class OnsTopicListResponseBodyData : TeaModel {
-            [NameInMap("MessageType")]
+            [NameInMap("PublishInfoDo")]
             [Validation(Required=false)]
-            public int? MessageType { get; set; }
+            public List<OnsTopicListResponseBodyDataPublishInfoDo> PublishInfoDo { get; set; }
+            public class OnsTopicListResponseBodyDataPublishInfoDo : TeaModel {
+                public int? MessageType { get; set; }
+                public string RelationName { get; set; }
+                public string Owner { get; set; }
+                public bool? IndependentNaming { get; set; }
+                public string Remark { get; set; }
+                public int? Relation { get; set; }
+                public long? CreateTime { get; set; }
+                public string Topic { get; set; }
+                public OnsTopicListResponseBodyDataPublishInfoDoTags Tags { get; set; }
+                public class OnsTopicListResponseBodyDataPublishInfoDoTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<OnsTopicListResponseBodyDataPublishInfoDoTagsTag> Tag { get; set; }
+                    public class OnsTopicListResponseBodyDataPublishInfoDoTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
 
-            [NameInMap("RelationName")]
-            [Validation(Required=false)]
-            public string RelationName { get; set; }
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-            [NameInMap("Owner")]
-            [Validation(Required=false)]
-            public string Owner { get; set; }
+                    }
 
-            [NameInMap("IndependentNaming")]
-            [Validation(Required=false)]
-            public bool? IndependentNaming { get; set; }
-
-            [NameInMap("Remark")]
-            [Validation(Required=false)]
-            public string Remark { get; set; }
-
-            [NameInMap("Relation")]
-            [Validation(Required=false)]
-            public int? Relation { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-
-            [NameInMap("Topic")]
-            [Validation(Required=false)]
-            public string Topic { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<OnsTopicListResponseBodyDataTags> Tags { get; set; }
-            public class OnsTopicListResponseBodyDataTags : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
+                }
+                public string InstanceId { get; set; }
             }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
-
-        [NameInMap("HelpUrl")]
-        [Validation(Required=false)]
-        public string HelpUrl { get; set; }
+        };
 
     }
 

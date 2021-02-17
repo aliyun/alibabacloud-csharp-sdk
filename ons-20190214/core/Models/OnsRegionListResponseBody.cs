@@ -15,17 +15,16 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<OnsRegionListResponseBodyData> Data { get; set; }
+        public OnsRegionListResponseBodyData Data { get; set; }
         public class OnsRegionListResponseBodyData : TeaModel {
-            [NameInMap("RegionName")]
+            [NameInMap("RegionDo")]
             [Validation(Required=false)]
-            public string RegionName { get; set; }
-
-            [NameInMap("OnsRegionId")]
-            [Validation(Required=false)]
-            public string OnsRegionId { get; set; }
-
-        }
+            public List<OnsRegionListResponseBodyDataRegionDo> RegionDo { get; set; }
+            public class OnsRegionListResponseBodyDataRegionDo : TeaModel {
+                public string RegionName { get; set; }
+                public string OnsRegionId { get; set; }
+            }
+        };
 
     }
 

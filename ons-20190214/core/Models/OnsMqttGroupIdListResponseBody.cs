@@ -15,29 +15,19 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<OnsMqttGroupIdListResponseBodyData> Data { get; set; }
+        public OnsMqttGroupIdListResponseBodyData Data { get; set; }
         public class OnsMqttGroupIdListResponseBodyData : TeaModel {
-            [NameInMap("UpdateTime")]
+            [NameInMap("MqttGroupIdDo")]
             [Validation(Required=false)]
-            public long? UpdateTime { get; set; }
-
-            [NameInMap("IndependentNaming")]
-            [Validation(Required=false)]
-            public bool? IndependentNaming { get; set; }
-
-            [NameInMap("GroupId")]
-            [Validation(Required=false)]
-            public string GroupId { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo> MqttGroupIdDo { get; set; }
+            public class OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo : TeaModel {
+                public long? UpdateTime { get; set; }
+                public bool? IndependentNaming { get; set; }
+                public string GroupId { get; set; }
+                public long? CreateTime { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 
