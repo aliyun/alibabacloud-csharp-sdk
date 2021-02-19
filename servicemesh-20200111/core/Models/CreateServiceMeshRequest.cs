@@ -137,6 +137,30 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string PrometheusUrl { get; set; }
 
+        [NameInMap("RedisFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? RedisFilterEnabled { get; set; }
+
+        [NameInMap("MysqlFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? MysqlFilterEnabled { get; set; }
+
+        [NameInMap("ThriftFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? ThriftFilterEnabled { get; set; }
+
+        [NameInMap("WebAssemblyFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? WebAssemblyFilterEnabled { get; set; }
+
+        [NameInMap("MSEEnabled")]
+        [Validation(Required=false)]
+        public bool? MSEEnabled { get; set; }
+
+        [NameInMap("DNSProxyingEnabled")]
+        [Validation(Required=false)]
+        public bool? DNSProxyingEnabled { get; set; }
+
     }
 
 }
