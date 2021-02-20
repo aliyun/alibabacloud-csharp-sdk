@@ -9,41 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRegionIdResourceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("EnsRegionIdResources")]
-        [Validation(Required=true)]
-        public DescribeEnsRegionIdResourceResponseEnsRegionIdResources EnsRegionIdResources { get; set; }
-        public class DescribeEnsRegionIdResourceResponseEnsRegionIdResources : TeaModel {
-            [NameInMap("EnsRegionIdResource")]
-            [Validation(Required=true)]
-            public List<DescribeEnsRegionIdResourceResponseEnsRegionIdResourcesEnsRegionIdResource> EnsRegionIdResource { get; set; }
-            public class DescribeEnsRegionIdResourceResponseEnsRegionIdResourcesEnsRegionIdResource : TeaModel {
-                public string Area { get; set; }
-                public string AreaCode { get; set; }
-                public string EnsRegionId { get; set; }
-                public string EnsRegionIdName { get; set; }
-                public int? VCpu { get; set; }
-                public int? InternetBandwidth { get; set; }
-                public string Isp { get; set; }
-                public string BizDate { get; set; }
-                public int? InstanceCount { get; set; }
-            }
-        };
+        public DescribeEnsRegionIdResourceResponseBody Body { get; set; }
 
     }
 

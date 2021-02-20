@@ -9,22 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEipAddressesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("EipAddresses")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeEipAddressesResponseEipAddresses EipAddresses { get; set; }
-        public class DescribeEipAddressesResponseEipAddresses : TeaModel {
-            [NameInMap("EipAddress")]
-            [Validation(Required=true)]
-            public List<DescribeEipAddressesResponseEipAddressesEipAddress> EipAddress { get; set; }
-            public class DescribeEipAddressesResponseEipAddressesEipAddress : TeaModel {
-                public string Eip { get; set; }
-                public string InstanceIdInternetIp { get; set; }
-            }
-        };
+        public DescribeEipAddressesResponseBody Body { get; set; }
 
     }
 

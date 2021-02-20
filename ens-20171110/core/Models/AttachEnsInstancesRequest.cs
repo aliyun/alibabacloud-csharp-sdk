@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachEnsInstancesRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("Scripts")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Scripts { get; set; }
 
     }

@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PreCreateEnsServiceRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("EnsServiceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EnsServiceName { get; set; }
 
         [NameInMap("ImageId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageId { get; set; }
 
         [NameInMap("InstanceSpec")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
         [NameInMap("SystemDiskSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SystemDiskSize { get; set; }
 
         [NameInMap("DataDiskSize")]
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DataDiskSize { get; set; }
 
         [NameInMap("BandwidthType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BandwidthType { get; set; }
 
         [NameInMap("InstanceBandwithdLimit")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceBandwithdLimit { get; set; }
 
         [NameInMap("Password")]
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string UserData { get; set; }
 
         [NameInMap("NetLevel")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NetLevel { get; set; }
 
         [NameInMap("SchedulingStrategy")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SchedulingStrategy { get; set; }
 
         [NameInMap("SchedulingPriceStrategy")]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SchedulingPriceStrategy { get; set; }
 
         [NameInMap("BuyResourcesDetail")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BuyResourcesDetail { get; set; }
 
     }

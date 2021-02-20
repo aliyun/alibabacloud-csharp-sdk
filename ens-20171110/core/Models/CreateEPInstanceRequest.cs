@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEPInstanceRequest : TeaModel {
         [NameInMap("EPNInstanceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EPNInstanceType { get; set; }
 
         [NameInMap("EPNInstanceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EPNInstanceName { get; set; }
 
         [NameInMap("InternetChargeType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
         [NameInMap("NetworkingModel")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NetworkingModel { get; set; }
 
         [NameInMap("InternetMaxBandwidthOut")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? InternetMaxBandwidthOut { get; set; }
 
     }

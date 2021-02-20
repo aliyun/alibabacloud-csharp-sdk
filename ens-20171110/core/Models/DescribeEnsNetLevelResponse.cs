@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsNetLevelResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("EnsNetLevels")]
-        [Validation(Required=true)]
-        public DescribeEnsNetLevelResponseEnsNetLevels EnsNetLevels { get; set; }
-        public class DescribeEnsNetLevelResponseEnsNetLevels : TeaModel {
-            [NameInMap("EnsNetLevel")]
-            [Validation(Required=true)]
-            public List<DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel> EnsNetLevel { get; set; }
-            public class DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel : TeaModel {
-                public string EnsNetLevelCode { get; set; }
-            }
-        };
+        public DescribeEnsNetLevelResponseBody Body { get; set; }
 
     }
 

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEpnBandwitdhByInternetChargeTypeResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InternetChargeType")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string InternetChargeType { get; set; }
-
-        [NameInMap("BandwidthValue")]
-        [Validation(Required=true)]
-        public long BandwidthValue { get; set; }
-
-        [NameInMap("TimeStamp")]
-        [Validation(Required=true)]
-        public string TimeStamp { get; set; }
+        public DescribeEpnBandwitdhByInternetChargeTypeResponseBody Body { get; set; }
 
     }
 

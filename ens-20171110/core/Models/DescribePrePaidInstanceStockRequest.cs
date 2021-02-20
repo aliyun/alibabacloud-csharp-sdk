@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribePrePaidInstanceStockRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("EnsRegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         [NameInMap("SystemDiskSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }
 
         [NameInMap("DataDiskSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? DataDiskSize { get; set; }
 
         [NameInMap("InstanceSpec")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
     }

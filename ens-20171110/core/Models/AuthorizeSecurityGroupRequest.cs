@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AuthorizeSecurityGroupRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("IpProtocol")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IpProtocol { get; set; }
 
         [NameInMap("PortRange")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PortRange { get; set; }
 
         [NameInMap("SecurityGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         [NameInMap("Policy")]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Priority { get; set; }
 
         [NameInMap("SourceCidrIp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceCidrIp { get; set; }
 
         [NameInMap("SourcePortRange")]

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UpgradeApplicationRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("Template")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Template { get; set; }
 
         [NameInMap("Timeout")]

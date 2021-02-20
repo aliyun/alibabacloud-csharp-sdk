@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ExportBillDetailDataRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("StartDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartDate { get; set; }
 
         [NameInMap("EndDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndDate { get; set; }
 
     }

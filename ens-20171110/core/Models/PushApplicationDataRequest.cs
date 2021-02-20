@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PushApplicationDataRequest : TeaModel {
         [NameInMap("Data")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Data { get; set; }
 
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("Timeout")]

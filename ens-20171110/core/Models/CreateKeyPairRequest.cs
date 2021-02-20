@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateKeyPairRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("KeyPairName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
     }

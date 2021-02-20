@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RollbackApplicationRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("FromAppVersion")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FromAppVersion { get; set; }
 
         [NameInMap("ToAppVersion")]

@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ExportImageRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("ImageId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageId { get; set; }
 
         [NameInMap("OSSBucket")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OSSBucket { get; set; }
 
         [NameInMap("OSSRegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OSSRegionId { get; set; }
 
         [NameInMap("OSSPrefix")]

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeCreatePrePaidInstanceResultResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InstanceCreateResult")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult InstanceCreateResult { get; set; }
-        public class DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult : TeaModel {
-            [NameInMap("InstanceCreateStatus")]
-            [Validation(Required=true)]
-            public string InstanceCreateStatus { get; set; }
-            [NameInMap("InstanceId")]
-            [Validation(Required=true)]
-            public string InstanceId { get; set; }
-        };
+        public DescribeCreatePrePaidInstanceResultResponseBody Body { get; set; }
 
     }
 

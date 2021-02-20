@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RunServiceScheduleRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("Uuid")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Uuid { get; set; }
 
         [NameInMap("ClientIp")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClientIp { get; set; }
 
         [NameInMap("ServiceAction")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceAction { get; set; }
 
         [NameInMap("PodConfigName")]

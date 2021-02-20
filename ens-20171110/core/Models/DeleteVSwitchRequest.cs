@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteVSwitchRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("VSwitchId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
     }

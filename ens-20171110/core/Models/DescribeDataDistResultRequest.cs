@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDataDistResultRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("DataNames")]

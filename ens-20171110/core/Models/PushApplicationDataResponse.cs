@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PushApplicationDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PushResults")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public PushApplicationDataResponsePushResults PushResults { get; set; }
-        public class PushApplicationDataResponsePushResults : TeaModel {
-            [NameInMap("PushResult")]
-            [Validation(Required=true)]
-            public List<PushApplicationDataResponsePushResultsPushResult> PushResult { get; set; }
-            public class PushApplicationDataResponsePushResultsPushResult : TeaModel {
-                public string Version { get; set; }
-                public string ResultDescrip { get; set; }
-                public int? ResultCode { get; set; }
-                public string Name { get; set; }
-            }
-        };
+        public PushApplicationDataResponseBody Body { get; set; }
 
     }
 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class JoinPublicIpsToEpnInstanceRequest : TeaModel {
         [NameInMap("EPNInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EPNInstanceId { get; set; }
 
         [NameInMap("InstanceInfos")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceInfos { get; set; }
 
     }

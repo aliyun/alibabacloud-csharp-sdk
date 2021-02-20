@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReInitDiskRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("DiskId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DiskId { get; set; }
 
         [NameInMap("ImageId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageId { get; set; }
 
     }

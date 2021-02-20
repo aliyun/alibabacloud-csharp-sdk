@@ -9,40 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeExportImageInfoResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("Images")]
-        [Validation(Required=true)]
-        public DescribeExportImageInfoResponseImages Images { get; set; }
-        public class DescribeExportImageInfoResponseImages : TeaModel {
-            [NameInMap("Image")]
-            [Validation(Required=true)]
-            public List<DescribeExportImageInfoResponseImagesImage> Image { get; set; }
-            public class DescribeExportImageInfoResponseImagesImage : TeaModel {
-                public string CreationTime { get; set; }
-                public string ImageId { get; set; }
-                public string ImageName { get; set; }
-                public string Architecture { get; set; }
-                public string ImageOwnerAlias { get; set; }
-                public string Platform { get; set; }
-                public string ImageExportStatus { get; set; }
-                public string ExportedImageURL { get; set; }
-            }
-        };
+        public DescribeExportImageInfoResponseBody Body { get; set; }
 
     }
 

@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeBandWithdChargeTypeResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("BandWithTypeInfo")]
-        [Validation(Required=true)]
-        public string BandWithTypeInfo { get; set; }
-
-        [NameInMap("ChargeCycleInfo")]
-        [Validation(Required=true)]
-        public string ChargeCycleInfo { get; set; }
-
-        [NameInMap("ChargeContractType")]
-        [Validation(Required=true)]
-        public string ChargeContractType { get; set; }
+        public DescribeBandWithdChargeTypeResponseBody Body { get; set; }
 
     }
 

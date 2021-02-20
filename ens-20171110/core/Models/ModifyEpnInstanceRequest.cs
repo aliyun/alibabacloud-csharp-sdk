@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyEpnInstanceRequest : TeaModel {
         [NameInMap("EPNInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EPNInstanceId { get; set; }
 
         [NameInMap("EPNInstanceName")]

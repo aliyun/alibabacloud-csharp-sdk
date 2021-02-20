@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReleaseEipAddressRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("EnsRegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         [NameInMap("Eips")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Eips { get; set; }
 
     }

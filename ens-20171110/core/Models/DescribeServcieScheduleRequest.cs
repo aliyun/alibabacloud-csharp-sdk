@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeServcieScheduleRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("Uuid")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Uuid { get; set; }
 
         [NameInMap("PodConfigName")]

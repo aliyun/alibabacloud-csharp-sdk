@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEnsServiceRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("EnsServiceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EnsServiceId { get; set; }
 
         [NameInMap("OrderType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OrderType { get; set; }
 
     }

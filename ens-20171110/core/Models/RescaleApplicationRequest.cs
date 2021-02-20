@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RescaleApplicationRequest : TeaModel {
         [NameInMap("AppId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppId { get; set; }
 
         [NameInMap("RescaleType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RescaleType { get; set; }
 
         [NameInMap("RescaleLevel")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RescaleLevel { get; set; }
 
         [NameInMap("ResourceSelector")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceSelector { get; set; }
 
         [NameInMap("ToAppVersion")]

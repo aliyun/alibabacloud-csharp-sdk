@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceAutoRenewAttributeRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("InstanceIds")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceIds { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeCreatePrePaidInstanceResultRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
     }

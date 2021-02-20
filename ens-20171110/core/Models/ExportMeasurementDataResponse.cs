@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ExportMeasurementDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("FilePath")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string FilePath { get; set; }
+        public ExportMeasurementDataResponseBody Body { get; set; }
 
     }
 

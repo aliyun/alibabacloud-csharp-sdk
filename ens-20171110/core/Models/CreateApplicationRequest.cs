@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateApplicationRequest : TeaModel {
         [NameInMap("Template")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Template { get; set; }
 
         [NameInMap("Timeout")]

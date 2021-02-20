@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSecurityGroupRequest : TeaModel {
         [NameInMap("Version")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Version { get; set; }
 
         [NameInMap("SecurityGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
     }

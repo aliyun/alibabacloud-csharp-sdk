@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,11 +13,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AddNetworkInterfaceToInstanceRequest : TeaModel {
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("Networks")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Networks { get; set; }
 
     }

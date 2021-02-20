@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEpnInstanceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("EPNInstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string EPNInstanceId { get; set; }
+        public CreateEpnInstanceResponseBody Body { get; set; }
 
     }
 

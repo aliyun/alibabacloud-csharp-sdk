@@ -9,28 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceTypesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? Code { get; set; }
-
-        [NameInMap("InstanceTypes")]
-        [Validation(Required=true)]
-        public DescribeInstanceTypesResponseInstanceTypes InstanceTypes { get; set; }
-        public class DescribeInstanceTypesResponseInstanceTypes : TeaModel {
-            [NameInMap("InstanceType")]
-            [Validation(Required=true)]
-            public List<DescribeInstanceTypesResponseInstanceTypesInstanceType> InstanceType { get; set; }
-            public class DescribeInstanceTypesResponseInstanceTypesInstanceType : TeaModel {
-                public int? CpuCoreCount { get; set; }
-                public int? MemorySize { get; set; }
-                public string InstanceTypeId { get; set; }
-                public string InstanceTypeName { get; set; }
-            }
-        };
+        public DescribeInstanceTypesResponseBody Body { get; set; }
 
     }
 
