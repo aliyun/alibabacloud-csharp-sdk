@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateRoleRequest : TeaModel {
         [NameInMap("RoleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RoleName { get; set; }
 
         [NameInMap("NewAssumeRolePolicyDocument")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NewAssumeRolePolicyDocument { get; set; }
 
         [NameInMap("NewMaxSessionDuration")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ResendPromoteResourceAccountEmailRequest : TeaModel {
         [NameInMap("RecordId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RecordId { get; set; }
 
     }

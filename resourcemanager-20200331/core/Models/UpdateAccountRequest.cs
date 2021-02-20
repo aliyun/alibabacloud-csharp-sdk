@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateAccountRequest : TeaModel {
         [NameInMap("NewDisplayName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NewDisplayName { get; set; }
 
         [NameInMap("AccountId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountId { get; set; }
 
     }

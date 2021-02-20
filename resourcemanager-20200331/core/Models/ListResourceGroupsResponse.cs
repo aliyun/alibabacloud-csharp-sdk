@@ -9,38 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupsResponse : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("ResourceGroups")]
-        [Validation(Required=true)]
-        public ListResourceGroupsResponseResourceGroups ResourceGroups { get; set; }
-        public class ListResourceGroupsResponseResourceGroups : TeaModel {
-            [NameInMap("ResourceGroup")]
-            [Validation(Required=true)]
-            public List<ListResourceGroupsResponseResourceGroupsResourceGroup> ResourceGroup { get; set; }
-            public class ListResourceGroupsResponseResourceGroupsResourceGroup : TeaModel {
-                public string Status { get; set; }
-                public string AccountId { get; set; }
-                public string DisplayName { get; set; }
-                public string Id { get; set; }
-                public string CreateDate { get; set; }
-                public string Name { get; set; }
-            }
-        };
+        public ListResourceGroupsResponseBody Body { get; set; }
 
     }
 

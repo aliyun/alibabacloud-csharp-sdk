@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CancelPromoteResourceAccountResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public CancelPromoteResourceAccountResponseBody Body { get; set; }
 
     }
 

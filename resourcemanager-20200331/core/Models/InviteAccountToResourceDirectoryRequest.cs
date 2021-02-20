@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class InviteAccountToResourceDirectoryRequest : TeaModel {
         [NameInMap("TargetEntity")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TargetEntity { get; set; }
 
         [NameInMap("TargetType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TargetType { get; set; }
 
         [NameInMap("Note")]

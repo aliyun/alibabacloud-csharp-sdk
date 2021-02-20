@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class DestroyResourceDirectoryRequest : TeaModel {
+    public class AttachPolicyResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
     }
 
 }

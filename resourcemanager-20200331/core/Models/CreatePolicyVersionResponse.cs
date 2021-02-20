@@ -9,24 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreatePolicyVersionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PolicyVersion")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public CreatePolicyVersionResponsePolicyVersion PolicyVersion { get; set; }
-        public class CreatePolicyVersionResponsePolicyVersion : TeaModel {
-            [NameInMap("VersionId")]
-            [Validation(Required=true)]
-            public string VersionId { get; set; }
-            [NameInMap("IsDefaultVersion")]
-            [Validation(Required=true)]
-            public bool? IsDefaultVersion { get; set; }
-            [NameInMap("CreateDate")]
-            [Validation(Required=true)]
-            public string CreateDate { get; set; }
-        };
+        public CreatePolicyVersionResponseBody Body { get; set; }
 
     }
 

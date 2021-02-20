@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetPayerForAccountResponse : TeaModel {
-        [NameInMap("PayerAccountName")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string PayerAccountName { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PayerAccountId")]
-        [Validation(Required=true)]
-        public string PayerAccountId { get; set; }
+        public GetPayerForAccountResponseBody Body { get; set; }
 
     }
 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyVersionsRequest : TeaModel {
         [NameInMap("PolicyType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PolicyType { get; set; }
 
         [NameInMap("PolicyName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PolicyName { get; set; }
 
     }

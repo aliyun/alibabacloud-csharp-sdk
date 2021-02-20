@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAccountRequest : TeaModel {
         [NameInMap("AccountId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountId { get; set; }
 
     }

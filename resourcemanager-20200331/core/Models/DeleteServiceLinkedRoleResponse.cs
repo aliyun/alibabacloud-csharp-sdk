@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteServiceLinkedRoleResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DeletionTaskId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DeletionTaskId { get; set; }
+        public DeleteServiceLinkedRoleResponseBody Body { get; set; }
 
     }
 

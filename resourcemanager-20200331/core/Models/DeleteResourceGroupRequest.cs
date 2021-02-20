@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteResourceGroupRequest : TeaModel {
         [NameInMap("ResourceGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
     }

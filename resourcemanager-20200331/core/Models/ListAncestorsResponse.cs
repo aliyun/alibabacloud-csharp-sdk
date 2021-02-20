@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAncestorsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Folders")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public ListAncestorsResponseFolders Folders { get; set; }
-        public class ListAncestorsResponseFolders : TeaModel {
-            [NameInMap("Folder")]
-            [Validation(Required=true)]
-            public List<ListAncestorsResponseFoldersFolder> Folder { get; set; }
-            public class ListAncestorsResponseFoldersFolder : TeaModel {
-                public string CreateTime { get; set; }
-                public string FolderId { get; set; }
-                public string FolderName { get; set; }
-            }
-        };
+        public ListAncestorsResponseBody Body { get; set; }
 
     }
 

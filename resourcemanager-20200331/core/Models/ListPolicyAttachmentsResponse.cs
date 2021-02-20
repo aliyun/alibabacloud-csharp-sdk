@@ -9,39 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyAttachmentsResponse : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PolicyAttachments")]
-        [Validation(Required=true)]
-        public ListPolicyAttachmentsResponsePolicyAttachments PolicyAttachments { get; set; }
-        public class ListPolicyAttachmentsResponsePolicyAttachments : TeaModel {
-            [NameInMap("PolicyAttachment")]
-            [Validation(Required=true)]
-            public List<ListPolicyAttachmentsResponsePolicyAttachmentsPolicyAttachment> PolicyAttachment { get; set; }
-            public class ListPolicyAttachmentsResponsePolicyAttachmentsPolicyAttachment : TeaModel {
-                public string PolicyType { get; set; }
-                public string Description { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string AttachDate { get; set; }
-                public string PolicyName { get; set; }
-                public string PrincipalName { get; set; }
-                public string PrincipalType { get; set; }
-            }
-        };
+        public ListPolicyAttachmentsResponseBody Body { get; set; }
 
     }
 

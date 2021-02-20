@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateRoleRequest : TeaModel {
         [NameInMap("RoleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RoleName { get; set; }
 
         [NameInMap("Description")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Description { get; set; }
 
         [NameInMap("AssumeRolePolicyDocument")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AssumeRolePolicyDocument { get; set; }
 
         [NameInMap("MaxSessionDuration")]

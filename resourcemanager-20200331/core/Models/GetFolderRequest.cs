@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetFolderRequest : TeaModel {
         [NameInMap("FolderId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FolderId { get; set; }
 
     }

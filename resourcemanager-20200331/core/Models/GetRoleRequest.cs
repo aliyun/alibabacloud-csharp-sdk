@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetRoleRequest : TeaModel {
         [NameInMap("RoleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RoleName { get; set; }
 
         [NameInMap("Language")]

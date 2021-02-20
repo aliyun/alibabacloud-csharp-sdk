@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("DisplayName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DisplayName { get; set; }
 
     }

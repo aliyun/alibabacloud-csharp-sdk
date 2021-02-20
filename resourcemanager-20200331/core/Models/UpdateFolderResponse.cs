@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateFolderResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Folder")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateFolderResponseFolder Folder { get; set; }
-        public class UpdateFolderResponseFolder : TeaModel {
-            [NameInMap("CreateTime")]
-            [Validation(Required=true)]
-            public string CreateTime { get; set; }
-            [NameInMap("FolderId")]
-            [Validation(Required=true)]
-            public string FolderId { get; set; }
-            [NameInMap("FolderName")]
-            [Validation(Required=true)]
-            public string FolderName { get; set; }
-            [NameInMap("ParentFolderId")]
-            [Validation(Required=true)]
-            public string ParentFolderId { get; set; }
-        };
+        public UpdateFolderResponseBody Body { get; set; }
 
     }
 

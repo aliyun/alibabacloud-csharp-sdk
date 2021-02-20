@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateServiceLinkedRoleRequest : TeaModel {
         [NameInMap("ServiceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         [NameInMap("CustomSuffix")]

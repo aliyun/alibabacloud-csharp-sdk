@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateFolderRequest : TeaModel {
         [NameInMap("FolderId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FolderId { get; set; }
 
         [NameInMap("NewFolderName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NewFolderName { get; set; }
 
     }

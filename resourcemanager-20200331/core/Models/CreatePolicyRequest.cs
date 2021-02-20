@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreatePolicyRequest : TeaModel {
         [NameInMap("PolicyName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         [NameInMap("Description")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Description { get; set; }
 
         [NameInMap("PolicyDocument")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PolicyDocument { get; set; }
 
     }

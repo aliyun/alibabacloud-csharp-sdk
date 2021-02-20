@@ -9,45 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateCloudAccountResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Account")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateCloudAccountResponseAccount Account { get; set; }
-        public class CreateCloudAccountResponseAccount : TeaModel {
-            [NameInMap("ResourceDirectoryId")]
-            [Validation(Required=true)]
-            public string ResourceDirectoryId { get; set; }
-            [NameInMap("AccountId")]
-            [Validation(Required=true)]
-            public string AccountId { get; set; }
-            [NameInMap("DisplayName")]
-            [Validation(Required=true)]
-            public string DisplayName { get; set; }
-            [NameInMap("AccountName")]
-            [Validation(Required=true)]
-            public string AccountName { get; set; }
-            [NameInMap("FolderId")]
-            [Validation(Required=true)]
-            public string FolderId { get; set; }
-            [NameInMap("JoinMethod")]
-            [Validation(Required=true)]
-            public string JoinMethod { get; set; }
-            [NameInMap("ModifyTime")]
-            [Validation(Required=true)]
-            public string ModifyTime { get; set; }
-            [NameInMap("Type")]
-            [Validation(Required=true)]
-            public string Type { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-            [NameInMap("RecordId")]
-            [Validation(Required=true)]
-            public string RecordId { get; set; }
-        };
+        public CreateCloudAccountResponseBody Body { get; set; }
 
     }
 

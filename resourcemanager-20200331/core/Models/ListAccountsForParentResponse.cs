@@ -9,41 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAccountsForParentResponse : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Accounts")]
-        [Validation(Required=true)]
-        public ListAccountsForParentResponseAccounts Accounts { get; set; }
-        public class ListAccountsForParentResponseAccounts : TeaModel {
-            [NameInMap("Account")]
-            [Validation(Required=true)]
-            public List<ListAccountsForParentResponseAccountsAccount> Account { get; set; }
-            public class ListAccountsForParentResponseAccountsAccount : TeaModel {
-                public string Status { get; set; }
-                public string ModifyTime { get; set; }
-                public string JoinMethod { get; set; }
-                public string ResourceDirectoryId { get; set; }
-                public string Type { get; set; }
-                public string AccountId { get; set; }
-                public string DisplayName { get; set; }
-                public string JoinTime { get; set; }
-                public string FolderId { get; set; }
-            }
-        };
+        public ListAccountsForParentResponseBody Body { get; set; }
 
     }
 

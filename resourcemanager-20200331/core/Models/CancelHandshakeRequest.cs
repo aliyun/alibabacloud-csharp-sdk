@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CancelHandshakeRequest : TeaModel {
         [NameInMap("HandshakeId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string HandshakeId { get; set; }
 
     }

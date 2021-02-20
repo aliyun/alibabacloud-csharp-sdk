@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class MoveAccountRequest : TeaModel {
         [NameInMap("AccountId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountId { get; set; }
 
         [NameInMap("DestinationFolderId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DestinationFolderId { get; set; }
 
     }

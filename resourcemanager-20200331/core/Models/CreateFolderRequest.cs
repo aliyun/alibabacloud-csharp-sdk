@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ParentFolderId { get; set; }
 
         [NameInMap("FolderName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FolderName { get; set; }
 
     }

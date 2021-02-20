@@ -9,42 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateRoleResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Role")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public UpdateRoleResponseRole Role { get; set; }
-        public class UpdateRoleResponseRole : TeaModel {
-            [NameInMap("MaxSessionDuration")]
-            [Validation(Required=true)]
-            public long? MaxSessionDuration { get; set; }
-            [NameInMap("UpdateDate")]
-            [Validation(Required=true)]
-            public string UpdateDate { get; set; }
-            [NameInMap("RoleName")]
-            [Validation(Required=true)]
-            public string RoleName { get; set; }
-            [NameInMap("Description")]
-            [Validation(Required=true)]
-            public string Description { get; set; }
-            [NameInMap("AssumeRolePolicyDocument")]
-            [Validation(Required=true)]
-            public string AssumeRolePolicyDocument { get; set; }
-            [NameInMap("Arn")]
-            [Validation(Required=true)]
-            public string Arn { get; set; }
-            [NameInMap("RoleId")]
-            [Validation(Required=true)]
-            public string RoleId { get; set; }
-            [NameInMap("CreateDate")]
-            [Validation(Required=true)]
-            public string CreateDate { get; set; }
-            [NameInMap("RolePrincipalName")]
-            [Validation(Required=true)]
-            public string RolePrincipalName { get; set; }
-        };
+        public UpdateRoleResponseBody Body { get; set; }
 
     }
 

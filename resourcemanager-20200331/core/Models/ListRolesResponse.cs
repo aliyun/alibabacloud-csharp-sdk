@@ -9,52 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListRolesResponse : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public int? TotalCount { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Roles")]
-        [Validation(Required=true)]
-        public ListRolesResponseRoles Roles { get; set; }
-        public class ListRolesResponseRoles : TeaModel {
-            [NameInMap("Role")]
-            [Validation(Required=true)]
-            public List<ListRolesResponseRolesRole> Role { get; set; }
-            public class ListRolesResponseRolesRole : TeaModel {
-                public long? MaxSessionDuration { get; set; }
-                public string UpdateDate { get; set; }
-                public string RoleName { get; set; }
-                public string Description { get; set; }
-                public bool? IsServiceLinkedRole { get; set; }
-                public string Arn { get; set; }
-                public string RoleId { get; set; }
-                public string CreateDate { get; set; }
-                public string RolePrincipalName { get; set; }
-                public ListRolesResponseRolesRoleLatestDeletionTask LatestDeletionTask { get; set; }
-                public class ListRolesResponseRolesRoleLatestDeletionTask : TeaModel {
-                    [NameInMap("CreateDate")]
-                    [Validation(Required=true)]
-                    public string CreateDate { get; set; }
-
-                    [NameInMap("DeletionTaskId")]
-                    [Validation(Required=true)]
-                    public string DeletionTaskId { get; set; }
-
-                }
-            }
-        };
+        public ListRolesResponseBody Body { get; set; }
 
     }
 

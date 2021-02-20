@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateCloudAccountRequest : TeaModel {
         [NameInMap("DisplayName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         [NameInMap("ParentFolderId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ParentFolderId { get; set; }
 
         [NameInMap("Email")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Email { get; set; }
 
         [NameInMap("PayerAccountId")]

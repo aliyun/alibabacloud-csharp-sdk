@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAncestorsRequest : TeaModel {
         [NameInMap("ChildId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ChildId { get; set; }
 
     }
