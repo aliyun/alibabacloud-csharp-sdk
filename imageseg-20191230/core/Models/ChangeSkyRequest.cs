@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,11 +13,11 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class ChangeSkyRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
         [NameInMap("ReplaceImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ReplaceImageURL { get; set; }
 
     }

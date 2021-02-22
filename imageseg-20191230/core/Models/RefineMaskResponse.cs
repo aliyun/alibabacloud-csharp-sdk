@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class RefineMaskResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RefineMaskResponseData Data { get; set; }
-        public class RefineMaskResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<RefineMaskResponseDataElements> Elements { get; set; }
-            public class RefineMaskResponseDataElements : TeaModel {
-                public string ImageURL { get; set; }
-            }
-        };
+        public RefineMaskResponseBody Body { get; set; }
 
     }
 

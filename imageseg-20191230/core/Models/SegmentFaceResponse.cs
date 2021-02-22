@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentFaceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public SegmentFaceResponseData Data { get; set; }
-        public class SegmentFaceResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<SegmentFaceResponseDataElements> Elements { get; set; }
-            public class SegmentFaceResponseDataElements : TeaModel {
-                public string ImageURL { get; set; }
-                public int? X { get; set; }
-                public int? Y { get; set; }
-                public int? Width { get; set; }
-                public int? Height { get; set; }
-            }
-        };
+        public SegmentFaceResponseBody Body { get; set; }
 
     }
 

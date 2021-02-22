@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
         [Validation(Required=true)]
         public Stream ImageUrlObject { get; set; }
 
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
     }
 
 }

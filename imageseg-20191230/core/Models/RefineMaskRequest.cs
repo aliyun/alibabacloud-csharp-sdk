@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class RefineMaskRequest : TeaModel {
         [NameInMap("MaskImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MaskImageURL { get; set; }
 
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
     }

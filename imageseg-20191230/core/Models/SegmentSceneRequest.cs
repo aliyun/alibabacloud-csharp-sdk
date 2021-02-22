@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
 {
     public class SegmentSceneRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
     }

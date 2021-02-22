@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imageseg20191230.Models
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("MaskImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MaskImageURL { get; set; }
 
     }
