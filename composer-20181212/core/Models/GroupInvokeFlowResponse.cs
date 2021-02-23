@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class GroupInvokeFlowResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("GroupInvocationId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string GroupInvocationId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("CurrentCount")]
-        [Validation(Required=true)]
-        public int? CurrentCount { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=true)]
-        public string Status { get; set; }
+        public GroupInvokeFlowResponseBody Body { get; set; }
 
     }
 

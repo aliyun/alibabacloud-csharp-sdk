@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
-    public class CloneFlowRequest : TeaModel {
-        [NameInMap("FlowId")]
+    public class TagResourcesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string FlowId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("VersionId")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string VersionId { get; set; }
+        public bool? Success { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class InvokeFlowRequest : TeaModel {
         [NameInMap("FlowId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FlowId { get; set; }
 
         [NameInMap("Parameters")]

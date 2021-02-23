@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("ResourceId")]
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             [NameInMap("Key")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Key { get; set; }
 
             [NameInMap("Value")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Value { get; set; }
 
         }

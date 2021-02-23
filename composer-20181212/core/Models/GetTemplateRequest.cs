@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class GetTemplateRequest : TeaModel {
         [NameInMap("TemplateId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TemplateId { get; set; }
 
     }

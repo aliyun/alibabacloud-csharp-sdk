@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
-    public class ListVersionsRequest : TeaModel {
-        [NameInMap("FlowId")]
+    public class InvokeFlowResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string FlowId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("InvocationId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string InvocationId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public bool? Success { get; set; }
 
     }
 

@@ -9,25 +9,47 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class GroupInvokeFlowRequest : TeaModel {
+        /// <summary>
+        /// FlowId
+        /// </summary>
         [NameInMap("FlowId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FlowId { get; set; }
 
+        /// <summary>
+        /// GroupKey
+        /// </summary>
         [NameInMap("GroupKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GroupKey { get; set; }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         [NameInMap("Data")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Data { get; set; }
 
+        /// <summary>
+        /// ClientToken
+        /// </summary>
         [NameInMap("ClientToken")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// TotalCount
+        /// </summary>
         [NameInMap("TotalCount")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? TotalCount { get; set; }
+
+        /// <summary>
+        /// Tags
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
 
     }
 

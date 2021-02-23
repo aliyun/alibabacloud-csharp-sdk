@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
-    public class DisableFlowRequest : TeaModel {
+    public class CloneFlowResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public string FlowId { get; set; }

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class UntagResourcesRequest : TeaModel {
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         [NameInMap("TagKey")]
