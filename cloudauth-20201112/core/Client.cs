@@ -13,10 +13,10 @@ using AlibabaCloud.SDK.Cloudauth20201112.Models;
 
 namespace AlibabaCloud.SDK.Cloudauth20201112
 {
-    public class Client : AlibabaCloud.RPCClient.Client
+    public class Client : AlibabaCloud.OpenApiClient.Client
     {
 
-        public Client(AlibabaCloud.RPCClient.Models.Config config): base(config)
+        public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "central";
             CheckConfig(config);
@@ -24,28 +24,49 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
         }
 
 
-        public LivenessDetectResponse LivenessDetect(LivenessDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
+        {
+            if (!AlibabaCloud.TeaUtil.Common.Empty(endpoint))
+            {
+                return endpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(endpointMap) && !AlibabaCloud.TeaUtil.Common.Empty(endpointMap.Get(regionId)))
+            {
+                return endpointMap.Get(regionId);
+            }
+            return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
+        }
+
+        public LivenessDetectResponse LivenessDetectWithOptions(LivenessDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<LivenessDetectResponse>(DoRequest("LivenessDetect", "HTTPS", "POST", "2020-11-12", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<LivenessDetectResponse>(DoRPCRequest("LivenessDetect", "2020-11-12", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<LivenessDetectResponse> LivenessDetectAsync(LivenessDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<LivenessDetectResponse> LivenessDetectWithOptionsAsync(LivenessDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<LivenessDetectResponse>(await DoRequestAsync("LivenessDetect", "HTTPS", "POST", "2020-11-12", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<LivenessDetectResponse>(await DoRPCRequestAsync("LivenessDetect", "2020-11-12", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public LivenessDetectResponse LivenessDetectSimply(LivenessDetectRequest request)
+        public LivenessDetectResponse LivenessDetect(LivenessDetectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return LivenessDetect(request, runtime);
+            return LivenessDetectWithOptions(request, runtime);
         }
 
-        public async Task<LivenessDetectResponse> LivenessDetectSimplyAsync(LivenessDetectRequest request)
+        public async Task<LivenessDetectResponse> LivenessDetectAsync(LivenessDetectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await LivenessDetectAsync(request, runtime);
+            return await LivenessDetectWithOptionsAsync(request, runtime);
         }
 
         public LivenessDetectResponse LivenessDetectAdvance(LivenessDetectAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -81,12 +102,12 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
             LivenessDetectRequest livenessDetectReq = new LivenessDetectRequest();
-            AlibabaCloud.Commons.Common.Convert(request, livenessDetectReq);
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, livenessDetectReq);
             authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
-            ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+            ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
             ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
             {
@@ -110,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
             };
             ossClient.PostObject(uploadRequest, ossRuntime);
             livenessDetectReq.MediaFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            LivenessDetectResponse livenessDetectResp = LivenessDetect(livenessDetectReq, runtime);
+            LivenessDetectResponse livenessDetectResp = LivenessDetectWithOptions(livenessDetectReq, runtime);
             return livenessDetectResp;
         }
 
@@ -147,12 +168,12 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
             AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
             AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
             AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.Commons.Common.Convert(runtime, ossRuntime);
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
             LivenessDetectRequest livenessDetectReq = new LivenessDetectRequest();
-            AlibabaCloud.Commons.Common.Convert(request, livenessDetectReq);
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, livenessDetectReq);
             authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
             ossConfig.AccessKeyId = authResponse.AccessKeyId;
-            ossConfig.Endpoint = AlibabaCloud.Commons.Common.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+            ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
             ossClient = new AlibabaCloud.OSS.Client(ossConfig);
             fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
             {
@@ -176,21 +197,8 @@ namespace AlibabaCloud.SDK.Cloudauth20201112
             };
             await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
             livenessDetectReq.MediaFile = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
-            LivenessDetectResponse livenessDetectResp = await LivenessDetectAsync(livenessDetectReq, runtime);
+            LivenessDetectResponse livenessDetectResp = await LivenessDetectWithOptionsAsync(livenessDetectReq, runtime);
             return livenessDetectResp;
-        }
-
-        public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
-        {
-            if (!AlibabaCloud.TeaUtil.Common.Empty(endpoint))
-            {
-                return endpoint;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(endpointMap) && !AlibabaCloud.TeaUtil.Common.Empty(endpointMap.Get(regionId)))
-            {
-                return endpointMap.Get(regionId);
-            }
-            return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
     }
