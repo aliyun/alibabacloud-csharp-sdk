@@ -76,6 +76,58 @@ namespace AlibabaCloud.SDK.Ft20180713
         }
 
 
+        public FtDynamicAddressHttpVpcResponse FtDynamicAddressHttpVpcWithOptions(FtDynamicAddressHttpVpcRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            FtDynamicAddressHttpVpcShrinkRequest request = new FtDynamicAddressHttpVpcShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.StringValue))
+            {
+                request.StringValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.StringValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.DefaultValue))
+            {
+                request.DefaultValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.DefaultValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.OtherParam))
+            {
+                request.OtherParamShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.OtherParam);
+            }
+            return TeaModel.ToObject<FtDynamicAddressHttpVpcResponse>(DoRequest("FtDynamicAddressHttpVpc", "HTTPS", "POST", "2018-07-13", "AK", null, request.ToMap(), runtime));
+        }
+
+        public async Task<FtDynamicAddressHttpVpcResponse> FtDynamicAddressHttpVpcWithOptionsAsync(FtDynamicAddressHttpVpcRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            FtDynamicAddressHttpVpcShrinkRequest request = new FtDynamicAddressHttpVpcShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.StringValue))
+            {
+                request.StringValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.StringValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.DefaultValue))
+            {
+                request.DefaultValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.DefaultValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.OtherParam))
+            {
+                request.OtherParamShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.OtherParam);
+            }
+            return TeaModel.ToObject<FtDynamicAddressHttpVpcResponse>(await DoRequestAsync("FtDynamicAddressHttpVpc", "HTTPS", "POST", "2018-07-13", "AK", null, request.ToMap(), runtime));
+        }
+
+        public FtDynamicAddressHttpVpcResponse FtDynamicAddressHttpVpc(FtDynamicAddressHttpVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FtDynamicAddressHttpVpcWithOptions(request, runtime);
+        }
+
+        public async Task<FtDynamicAddressHttpVpcResponse> FtDynamicAddressHttpVpcAsync(FtDynamicAddressHttpVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FtDynamicAddressHttpVpcWithOptionsAsync(request, runtime);
+        }
+
         public TestFlowStrategy01Response TestFlowStrategy01WithOptions(TestFlowStrategy01Request tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
