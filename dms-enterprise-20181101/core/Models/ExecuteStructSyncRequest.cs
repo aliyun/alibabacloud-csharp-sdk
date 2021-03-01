@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class CheckFinishMissionRequest : TeaModel {
-        [NameInMap("MissionType")]
+    public class ExecuteStructSyncRequest : TeaModel {
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string MissionType { get; set; }
+        public long? OrderId { get; set; }
 
     }
 

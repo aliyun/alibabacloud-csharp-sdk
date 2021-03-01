@@ -8,26 +8,29 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class CheckFinishMissionResponseBody : TeaModel {
-        [NameInMap("HasFinish")]
-        [Validation(Required=false)]
-        public bool? HasFinish { get; set; }
-
+    public class GetDataCorrectSQLFileResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorCode")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string ErrorCode { get; set; }
+
+        [NameInMap("FileUrl")]
+        [Validation(Required=false)]
+        public string FileUrl { get; set; }
 
     }
 

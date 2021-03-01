@@ -34,27 +34,41 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListInstancesResponseBodyInstanceListInstance> Instance { get; set; }
             public class ListInstancesResponseBodyInstanceListInstance : TeaModel {
                 public string VpcId { get; set; }
-                public string Host { get; set; }
                 public string DatabaseUser { get; set; }
-                public string State { get; set; }
                 public string DbaId { get; set; }
-                public string DataLinkName { get; set; }
-                public int? ExportTimeout { get; set; }
-                public string InstanceId { get; set; }
                 public int? UseDsql { get; set; }
-                public string InstanceType { get; set; }
                 public int? Port { get; set; }
                 public string EcsInstanceId { get; set; }
-                public string DatabasePassword { get; set; }
                 public string EnvType { get; set; }
                 public string Sid { get; set; }
-                public string InstanceAlias { get; set; }
-                public int? DdlOnline { get; set; }
+                public ListInstancesResponseBodyInstanceListInstanceOwnerIdList OwnerIdList { get; set; }
+                public class ListInstancesResponseBodyInstanceListInstanceOwnerIdList : TeaModel {
+                    [NameInMap("OwnerIds")]
+                    [Validation(Required=false)]
+                    public List<string> OwnerIds { get; set; }
+
+                }
                 public string SafeRuleId { get; set; }
-                public string EcsRegion { get; set; }
+                public ListInstancesResponseBodyInstanceListInstanceOwnerNameList OwnerNameList { get; set; }
+                public class ListInstancesResponseBodyInstanceListInstanceOwnerNameList : TeaModel {
+                    [NameInMap("OwnerNames")]
+                    [Validation(Required=false)]
+                    public List<string> OwnerNames { get; set; }
+
+                }
                 public string DbaNickName { get; set; }
                 public int? QueryTimeout { get; set; }
                 public string InstanceSource { get; set; }
+                public string Host { get; set; }
+                public string State { get; set; }
+                public string DataLinkName { get; set; }
+                public int? ExportTimeout { get; set; }
+                public string InstanceId { get; set; }
+                public string InstanceType { get; set; }
+                public string DatabasePassword { get; set; }
+                public string InstanceAlias { get; set; }
+                public int? DdlOnline { get; set; }
+                public string EcsRegion { get; set; }
             }
         };
 
