@@ -1,0 +1,22 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Edas20170801.Models
+{
+    public class UpdateHealthCheckUrlRequest : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        [NameInMap("hcURL")]
+        [Validation(Required=false)]
+        public string HcURL { get; set; }
+
+    }
+
+}
