@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [Validation(Required=false)]
                     public List<ScreenChestCTResponseBodyDataLungNoduleSeriesElements> Elements { get; set; }
                     public class ScreenChestCTResponseBodyDataLungNoduleSeriesElements : TeaModel {
-                        [NameInMap("Z")]
-                        [Validation(Required=false)]
-                        public float? Z { get; set; }
-
                         [NameInMap("Lobe")]
                         [Validation(Required=false)]
                         public string Lobe { get; set; }
@@ -44,10 +40,6 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                         [NameInMap("MeanValue")]
                         [Validation(Required=false)]
                         public float? MeanValue { get; set; }
-
-                        [NameInMap("ImageZ")]
-                        [Validation(Required=false)]
-                        public float? ImageZ { get; set; }
 
                         [NameInMap("Lung")]
                         [Validation(Required=false)]
@@ -61,14 +53,6 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                         [Validation(Required=false)]
                         public string SOPInstanceUID { get; set; }
 
-                        [NameInMap("ImageX")]
-                        [Validation(Required=false)]
-                        public float? ImageX { get; set; }
-
-                        [NameInMap("Y")]
-                        [Validation(Required=false)]
-                        public float? Y { get; set; }
-
                         [NameInMap("Category")]
                         [Validation(Required=false)]
                         public string Category { get; set; }
@@ -77,10 +61,6 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                         [Validation(Required=false)]
                         public float? Volume { get; set; }
 
-                        [NameInMap("ImageY")]
-                        [Validation(Required=false)]
-                        public float? ImageY { get; set; }
-
                         [NameInMap("Diameter")]
                         [Validation(Required=false)]
                         public float? Diameter { get; set; }
@@ -88,6 +68,26 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                         [NameInMap("X")]
                         [Validation(Required=false)]
                         public float? X { get; set; }
+
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
+                        public float? Y { get; set; }
+
+                        [NameInMap("Z")]
+                        [Validation(Required=false)]
+                        public float? Z { get; set; }
+
+                        [NameInMap("ImageX")]
+                        [Validation(Required=false)]
+                        public float? ImageX { get; set; }
+
+                        [NameInMap("ImageY")]
+                        [Validation(Required=false)]
+                        public float? ImageY { get; set; }
+
+                        [NameInMap("ImageZ")]
+                        [Validation(Required=false)]
+                        public float? ImageZ { get; set; }
 
                     }
 
@@ -142,6 +142,49 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 [NameInMap("Mask")]
                 [Validation(Required=false)]
                 public string Mask { get; set; }
+
+            }
+            [NameInMap("DetectRibFracture")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataDetectRibFracture DetectRibFracture { get; set; }
+            public class ScreenChestCTResponseBodyDataDetectRibFracture : TeaModel {
+                [NameInMap("ResultURL")]
+                [Validation(Required=false)]
+                public string ResultURL { get; set; }
+
+                [NameInMap("Spacing")]
+                [Validation(Required=false)]
+                public List<float?> Spacing { get; set; }
+
+                [NameInMap("Origin")]
+                [Validation(Required=false)]
+                public List<float?> Origin { get; set; }
+
+                [NameInMap("Detections")]
+                [Validation(Required=false)]
+                public List<ScreenChestCTResponseBodyDataDetectRibFractureDetections> Detections { get; set; }
+                public class ScreenChestCTResponseBodyDataDetectRibFractureDetections : TeaModel {
+                    [NameInMap("FractureId")]
+                    [Validation(Required=false)]
+                    public long? FractureId { get; set; }
+
+                    [NameInMap("FractureConfidence")]
+                    [Validation(Required=false)]
+                    public float? FractureConfidence { get; set; }
+
+                    [NameInMap("FractureCategory")]
+                    [Validation(Required=false)]
+                    public long? FractureCategory { get; set; }
+
+                    [NameInMap("Coordinates")]
+                    [Validation(Required=false)]
+                    public List<long?> Coordinates { get; set; }
+
+                    [NameInMap("CoordinateImage")]
+                    [Validation(Required=false)]
+                    public List<long?> CoordinateImage { get; set; }
+
+                }
 
             }
         };
