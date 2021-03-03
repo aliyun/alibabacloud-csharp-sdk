@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 
             [NameInMap("Content")]
             [Validation(Required=false)]
-            public string Content { get; set; }
+            public Dictionary<string, object> Content { get; set; }
 
             [NameInMap("RuleId")]
             [Validation(Required=false)]

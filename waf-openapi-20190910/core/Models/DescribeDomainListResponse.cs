@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
-    public class ModifyDomainClusterTypeResponse : TeaModel {
+    public class DescribeDomainListResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyDomainClusterTypeResponseBody Body { get; set; }
+        public DescribeDomainListResponseBody Body { get; set; }
 
     }
 

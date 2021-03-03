@@ -29,6 +29,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
                     public string Protocol { get; set; }
                     public string Ports { get; set; }
                 }
+                public string RedirectionTypeName { get; set; }
                 public string CloudNativeProductName { get; set; }
                 public string InstanceId { get; set; }
                 public string IPAddressList { get; set; }
