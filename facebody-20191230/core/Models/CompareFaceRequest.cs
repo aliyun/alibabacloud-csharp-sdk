@@ -9,9 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class CompareFaceRequest : TeaModel {
-        [NameInMap("ImageType")]
+        /// <summary>
+        /// 质量分阈值，取值范围 [0.0, 100.0],   0.0或空  表示不做质量分判断逻辑。
+        /// </summary>
+        [NameInMap("QualityScoreThreshold")]
         [Validation(Required=false)]
-        public int? ImageType { get; set; }
+        public float? QualityScoreThreshold { get; set; }
 
         [NameInMap("ImageURLA")]
         [Validation(Required=false)]
@@ -20,6 +23,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("ImageURLB")]
         [Validation(Required=false)]
         public string ImageURLB { get; set; }
+
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public int? ImageType { get; set; }
 
     }
 

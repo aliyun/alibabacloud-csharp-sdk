@@ -29,7 +29,20 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("RectAList")]
             [Validation(Required=false)]
             public List<string> RectAList { get; set; }
+            [NameInMap("QualityScoreA")]
+            [Validation(Required=false)]
+            public float? QualityScoreA { get; set; }
+            [NameInMap("QualityScoreB")]
+            [Validation(Required=false)]
+            public float? QualityScoreB { get; set; }
+            [NameInMap("MessageTips")]
+            [Validation(Required=false)]
+            public string MessageTips { get; set; }
         };
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
 
     }
 
