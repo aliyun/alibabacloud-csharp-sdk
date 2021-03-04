@@ -24,30 +24,50 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public int? HandCount { get; set; }
                 public List<HandPostureResponseBodyDataOutputsResults> Results { get; set; }
                 public class HandPostureResponseBodyDataOutputsResults : TeaModel {
-                    [NameInMap("KeyPoints")]
-                    [Validation(Required=false)]
-                    public List<HandPostureResponseBodyDataOutputsResultsKeyPoints> KeyPoints { get; set; }
-                    public class HandPostureResponseBodyDataOutputsResultsKeyPoints : TeaModel {
+                    public HandPostureResponseBodyDataOutputsResultsHands Hands { get; set; }
+                    public class HandPostureResponseBodyDataOutputsResultsHands : TeaModel {
+                        [NameInMap("KeyPoints")]
+                        [Validation(Required=false)]
+                        public List<HandPostureResponseBodyDataOutputsResultsHandsKeyPoints> KeyPoints { get; set; }
+                        public class HandPostureResponseBodyDataOutputsResultsHandsKeyPoints : TeaModel {
+                            [NameInMap("Positions")]
+                            [Validation(Required=false)]
+                            public List<HandPostureResponseBodyDataOutputsResultsHandsKeyPointsPositions> Positions { get; set; }
+                            public class HandPostureResponseBodyDataOutputsResultsHandsKeyPointsPositions : TeaModel {
+                                [NameInMap("Points")]
+                                [Validation(Required=false)]
+                                public List<float?> Points { get; set; }
+
+                            }
+
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                        }
+
+                        [NameInMap("Confident")]
+                        [Validation(Required=false)]
+                        public float? Confident { get; set; }
+
+                    }
+                    public HandPostureResponseBodyDataOutputsResultsBox Box { get; set; }
+                    public class HandPostureResponseBodyDataOutputsResultsBox : TeaModel {
                         [NameInMap("Positions")]
                         [Validation(Required=false)]
-                        public List<HandPostureResponseBodyDataOutputsResultsKeyPointsPositions> Positions { get; set; }
-                        public class HandPostureResponseBodyDataOutputsResultsKeyPointsPositions : TeaModel {
+                        public List<HandPostureResponseBodyDataOutputsResultsBoxPositions> Positions { get; set; }
+                        public class HandPostureResponseBodyDataOutputsResultsBoxPositions : TeaModel {
                             [NameInMap("Points")]
                             [Validation(Required=false)]
                             public List<float?> Points { get; set; }
 
                         }
 
-                        [NameInMap("Label")]
+                        [NameInMap("Confident")]
                         [Validation(Required=false)]
-                        public string Label { get; set; }
+                        public float? Confident { get; set; }
 
                     }
-
-                    [NameInMap("Confident")]
-                    [Validation(Required=false)]
-                    public float? Confident { get; set; }
-
                 }
             }
             [NameInMap("MetaObject")]

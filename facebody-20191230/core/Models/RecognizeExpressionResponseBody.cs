@@ -21,22 +21,27 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<RecognizeExpressionResponseBodyDataElements> Elements { get; set; }
             public class RecognizeExpressionResponseBodyDataElements : TeaModel {
-                [NameInMap("Top")]
-                [Validation(Required=false)]
-                public int? Top { get; set; }
+                public RecognizeExpressionResponseBodyDataElementsFaceRectangle FaceRectangle { get; set; }
+                public class RecognizeExpressionResponseBodyDataElementsFaceRectangle : TeaModel {
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public int? Top { get; set; }
 
-                [NameInMap("Width")]
-                [Validation(Required=false)]
-                public int? Width { get; set; }
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
+                    public int? Width { get; set; }
 
-                [NameInMap("Height")]
-                [Validation(Required=false)]
-                public int? Height { get; set; }
+                    [NameInMap("Height")]
+                    [Validation(Required=false)]
+                    public int? Height { get; set; }
 
-                [NameInMap("Left")]
-                [Validation(Required=false)]
-                public int? Left { get; set; }
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public int? Left { get; set; }
 
+                }
+                public string Expression { get; set; }
+                public float? FaceProbability { get; set; }
             }
         };
 
