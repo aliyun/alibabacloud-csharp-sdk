@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Hitsdb20170601.Models
     public class DescribeHiTSDBInstanceResponseBody : TeaModel {
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
-        public bool? AutoRenew { get; set; }
+        public string AutoRenew { get; set; }
 
         [NameInMap("GmtCreated")]
         [Validation(Required=false)]
