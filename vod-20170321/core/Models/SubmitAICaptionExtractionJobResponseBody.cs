@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class GetMediaAuditResultDetailRequest : TeaModel {
-        [NameInMap("MediaId")]
+    public class SubmitAICaptionExtractionJobResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string MediaId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("PageNo")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public int? PageNo { get; set; }
+        public string JobId { get; set; }
 
     }
 

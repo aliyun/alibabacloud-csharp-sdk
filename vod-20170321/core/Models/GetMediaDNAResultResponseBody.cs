@@ -25,14 +25,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Similarity { get; set; }
                 public List<GetMediaDNAResultResponseBodyDNAResultVideoDNADetail> Detail { get; set; }
                 public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetail : TeaModel {
-                    [NameInMap("Start")]
-                    [Validation(Required=false)]
-                    public string Start { get; set; }
+                    public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication Duplication { get; set; }
+                    public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication : TeaModel {
+                        [NameInMap("Start")]
+                        [Validation(Required=false)]
+                        public string Start { get; set; }
 
-                    [NameInMap("Duration")]
-                    [Validation(Required=false)]
-                    public string Duration { get; set; }
+                        [NameInMap("Duration")]
+                        [Validation(Required=false)]
+                        public string Duration { get; set; }
 
+                    }
+                    public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput Input { get; set; }
+                    public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput : TeaModel {
+                        [NameInMap("Start")]
+                        [Validation(Required=false)]
+                        public string Start { get; set; }
+
+                        [NameInMap("Duration")]
+                        [Validation(Required=false)]
+                        public string Duration { get; set; }
+
+                    }
                 }
             }
         };

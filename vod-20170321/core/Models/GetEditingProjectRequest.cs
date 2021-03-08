@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
+        [NameInMap("FEExtendFlag")]
+        [Validation(Required=false)]
+        public int? FEExtendFlag { get; set; }
+
     }
 
 }

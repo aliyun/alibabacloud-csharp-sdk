@@ -32,6 +32,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
                 public int? CateId { get; set; }
                 public string Tags { get; set; }
+                public string MaterialType { get; set; }
                 public string SpriteConfig { get; set; }
                 public string Source { get; set; }
                 public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots Snapshots { get; set; }

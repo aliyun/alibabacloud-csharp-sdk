@@ -17,20 +17,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodAIDataResponseBodyAIDataAIDataItem> AIDataItem { get; set; }
             public class DescribeVodAIDataResponseBodyAIDataAIDataItem : TeaModel {
-                [NameInMap("DataItem")]
-                [Validation(Required=false)]
-                public List<DescribeVodAIDataResponseBodyAIDataAIDataItemDataItem> DataItem { get; set; }
-                public class DescribeVodAIDataResponseBodyAIDataAIDataItemDataItem : TeaModel {
-                    [NameInMap("Value")]
+                public DescribeVodAIDataResponseBodyAIDataAIDataItemData Data { get; set; }
+                public class DescribeVodAIDataResponseBodyAIDataAIDataItemData : TeaModel {
+                    [NameInMap("DataItem")]
                     [Validation(Required=false)]
-                    public string Value { get; set; }
+                    public List<DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem> DataItem { get; set; }
+                    public class DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem : TeaModel {
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
 
                 }
-
+                public string TimeStamp { get; set; }
             }
         };
 

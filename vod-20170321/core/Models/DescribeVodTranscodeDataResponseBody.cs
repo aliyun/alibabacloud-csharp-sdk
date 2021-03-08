@@ -21,20 +21,24 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem> TranscodeDataItem { get; set; }
             public class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem : TeaModel {
-                [NameInMap("DataItem")]
-                [Validation(Required=false)]
-                public List<DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataItem> DataItem { get; set; }
-                public class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataItem : TeaModel {
-                    [NameInMap("Value")]
+                public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData Data { get; set; }
+                public class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData : TeaModel {
+                    [NameInMap("DataItem")]
                     [Validation(Required=false)]
-                    public string Value { get; set; }
+                    public List<DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem> DataItem { get; set; }
+                    public class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem : TeaModel {
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
 
                 }
-
+                public string TimeStamp { get; set; }
             }
         };
 

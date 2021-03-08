@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class GetMediaAuditResultRequest : TeaModel {
-        [NameInMap("MediaId")]
+    public class GetAICaptionExtractionJobsRequest : TeaModel {
+        [NameInMap("JobIds")]
         [Validation(Required=false)]
-        public string MediaId { get; set; }
+        public string JobIds { get; set; }
 
     }
 

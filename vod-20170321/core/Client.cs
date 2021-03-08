@@ -1875,6 +1875,38 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DetachAppPolicyFromIdentityWithOptionsAsync(request, runtime);
         }
 
+        public GetAICaptionExtractionJobsResponse GetAICaptionExtractionJobsWithOptions(GetAICaptionExtractionJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAICaptionExtractionJobsResponse>(DoRPCRequest("GetAICaptionExtractionJobs", "2017-03-21", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetAICaptionExtractionJobsResponse> GetAICaptionExtractionJobsWithOptionsAsync(GetAICaptionExtractionJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAICaptionExtractionJobsResponse>(await DoRPCRequestAsync("GetAICaptionExtractionJobs", "2017-03-21", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetAICaptionExtractionJobsResponse GetAICaptionExtractionJobs(GetAICaptionExtractionJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAICaptionExtractionJobsWithOptions(request, runtime);
+        }
+
+        public async Task<GetAICaptionExtractionJobsResponse> GetAICaptionExtractionJobsAsync(GetAICaptionExtractionJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAICaptionExtractionJobsWithOptionsAsync(request, runtime);
+        }
+
         public GetAIImageJobsResponse GetAIImageJobsWithOptions(GetAIImageJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3793,6 +3825,38 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetVodDomainCertificateWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitAICaptionExtractionJobResponse SubmitAICaptionExtractionJobWithOptions(SubmitAICaptionExtractionJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitAICaptionExtractionJobResponse>(DoRPCRequest("SubmitAICaptionExtractionJob", "2017-03-21", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SubmitAICaptionExtractionJobResponse> SubmitAICaptionExtractionJobWithOptionsAsync(SubmitAICaptionExtractionJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitAICaptionExtractionJobResponse>(await DoRPCRequestAsync("SubmitAICaptionExtractionJob", "2017-03-21", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SubmitAICaptionExtractionJobResponse SubmitAICaptionExtractionJob(SubmitAICaptionExtractionJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitAICaptionExtractionJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitAICaptionExtractionJobResponse> SubmitAICaptionExtractionJobAsync(SubmitAICaptionExtractionJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitAICaptionExtractionJobWithOptionsAsync(request, runtime);
         }
 
         public SubmitAIImageAuditJobResponse SubmitAIImageAuditJobWithOptions(SubmitAIImageAuditJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

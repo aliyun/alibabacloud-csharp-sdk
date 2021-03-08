@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Division { get; set; }
 
+        [NameInMap("FEExtend")]
+        [Validation(Required=false)]
+        public string FEExtend { get; set; }
+
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public float? Duration { get; set; }
+
     }
 
 }

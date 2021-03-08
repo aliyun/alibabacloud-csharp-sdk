@@ -78,6 +78,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
                 }
 
+                [NameInMap("AudioResult")]
+                [Validation(Required=false)]
+                public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> AudioResult { get; set; }
+                public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult : TeaModel {
+                    [NameInMap("Suggestion")]
+                    [Validation(Required=false)]
+                    public string Suggestion { get; set; }
+
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public string Score { get; set; }
+
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
+                    public string Label { get; set; }
+
+                    [NameInMap("Scene")]
+                    [Validation(Required=false)]
+                    public string Scene { get; set; }
+
+                }
+
                 [NameInMap("VideoResult")]
                 [Validation(Required=false)]
                 public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult VideoResult { get; set; }
