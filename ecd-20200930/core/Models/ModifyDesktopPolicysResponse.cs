@@ -9,31 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopPolicysResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Results")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<ModifyDesktopPolicysResponseResults> Results { get; set; }
-        public class ModifyDesktopPolicysResponseResults : TeaModel {
-            [NameInMap("DesktopId")]
-            [Validation(Required=true)]
-            public string DesktopId { get; set; }
-
-            [NameInMap("Success")]
-            [Validation(Required=true)]
-            public string Success { get; set; }
-
-            [NameInMap("Code")]
-            [Validation(Required=true)]
-            public string Code { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=true)]
-            public string Message { get; set; }
-
-        }
+        public ModifyDesktopPolicysResponseBody Body { get; set; }
 
     }
 

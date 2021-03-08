@@ -10,12 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopPolicysRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("DesktopId")]
-        [Validation(Required=true)]
-        public List<string> DesktopId { get; set; }
 
         [NameInMap("Clipboard")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Watermark")]
         [Validation(Required=false)]
         public string Watermark { get; set; }
+
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public List<string> DesktopId { get; set; }
 
     }
 

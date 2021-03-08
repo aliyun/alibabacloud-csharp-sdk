@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreatePolicyGroupRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Clipboard")]
@@ -32,6 +32,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("WatermarkType")]
+        [Validation(Required=false)]
+        public string WatermarkType { get; set; }
+
+        [NameInMap("WatermarkCustomText")]
+        [Validation(Required=false)]
+        public string WatermarkCustomText { get; set; }
+
+        [NameInMap("WatermarkTransparency")]
+        [Validation(Required=false)]
+        public string WatermarkTransparency { get; set; }
 
     }
 

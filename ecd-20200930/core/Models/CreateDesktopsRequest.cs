@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDesktopsRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("GroupId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         [NameInMap("BundleId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BundleId { get; set; }
 
         [NameInMap("SystemDiskSize")]
@@ -49,12 +49,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
-        [NameInMap("EndUserId")]
-        [Validation(Required=true)]
-        public List<string> EndUserId { get; set; }
-
         [NameInMap("PolicyGroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
         [NameInMap("ChargeType")]
@@ -72,6 +68,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
+
+        [NameInMap("EndUserId")]
+        [Validation(Required=false)]
+        public List<string> EndUserId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateDesktopsRequestTag> Tag { get; set; }
+        public class CreateDesktopsRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

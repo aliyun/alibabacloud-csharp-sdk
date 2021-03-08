@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateRAMDirectoryRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DirectoryName")]
@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("EnableInternetAccess")]
         [Validation(Required=false)]
         public bool? EnableInternetAccess { get; set; }
+
+        [NameInMap("EnableAdminAccess")]
+        [Validation(Required=false)]
+        public bool? EnableAdminAccess { get; set; }
+
+        [NameInMap("DesktopAccessType")]
+        [Validation(Required=false)]
+        public string DesktopAccessType { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

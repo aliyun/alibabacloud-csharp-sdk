@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         [NameInMap("Hid")]
         [Validation(Required=false)]
-        public long Hid { get; set; }
+        public long? Hid { get; set; }
 
         [NameInMap("Country")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GmtWakeup { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
     }

@@ -1,0 +1,26 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Ecd20200930.Models
+{
+    public class CreateDesktopsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public List<string> DesktopId { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
+    }
+
+}

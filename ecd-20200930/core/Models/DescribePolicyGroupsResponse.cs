@@ -9,47 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePolicyGroupsResponse : TeaModel {
-        [NameInMap("NextToken")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string NextToken { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DescribePolicyGroups")]
-        [Validation(Required=true)]
-        public List<DescribePolicyGroupsResponseDescribePolicyGroups> DescribePolicyGroups { get; set; }
-        public class DescribePolicyGroupsResponseDescribePolicyGroups : TeaModel {
-            [NameInMap("PolicyGroupId")]
-            [Validation(Required=true)]
-            public string PolicyGroupId { get; set; }
-
-            [NameInMap("PolicyGroupType")]
-            [Validation(Required=true)]
-            public string PolicyGroupType { get; set; }
-
-            [NameInMap("Clipboard")]
-            [Validation(Required=true)]
-            public string Clipboard { get; set; }
-
-            [NameInMap("LocalDrive")]
-            [Validation(Required=true)]
-            public string LocalDrive { get; set; }
-
-            [NameInMap("UsbRedirect")]
-            [Validation(Required=true)]
-            public string UsbRedirect { get; set; }
-
-            [NameInMap("Watermark")]
-            [Validation(Required=true)]
-            public string Watermark { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
-
-        }
+        public DescribePolicyGroupsResponseBody Body { get; set; }
 
     }
 

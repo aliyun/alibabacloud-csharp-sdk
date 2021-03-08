@@ -10,12 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopPolicysRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DesktopId")]
         [Validation(Required=false)]
-        public List<string> DesktopId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        [NameInMap("DesktopId")]
+        [Validation(Required=false)]
+        public List<string> DesktopId { get; set; }
 
     }
 

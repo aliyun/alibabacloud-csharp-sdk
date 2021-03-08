@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class PayOrderCallbackRequest : TeaModel {
         [NameInMap("data")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Data { get; set; }
 
     }

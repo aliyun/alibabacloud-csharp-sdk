@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteDirectoriesResponse : TeaModel {
-        [NameInMap("NextToken")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string NextToken { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public DeleteDirectoriesResponseBody Body { get; set; }
 
     }
 

@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDirectoriesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DirectoryType")]
         [Validation(Required=false)]
         public string DirectoryType { get; set; }
-
-        [NameInMap("DirectoryId")]
-        [Validation(Required=false)]
-        public List<string> DirectoryId { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("DirectoryId")]
+        [Validation(Required=false)]
+        public List<string> DirectoryId { get; set; }
 
     }
 
