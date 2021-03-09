@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
+        [NameInMap("ProductTag")]
+        [Validation(Required=false)]
+        public List<CreateProductTagsRequestProductTag> ProductTag { get; set; }
+        public class CreateProductTagsRequestProductTag : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
         [NameInMap("RealTenantId")]
         [Validation(Required=false)]
         public string RealTenantId { get; set; }
@@ -32,20 +46,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("RealTripartiteKey")]
         [Validation(Required=false)]
         public string RealTripartiteKey { get; set; }
-
-        [NameInMap("ProductTag")]
-        [Validation(Required=false)]
-        public List<CreateProductTagsRequestProductTag> ProductTag { get; set; }
-        public class CreateProductTagsRequestProductTag : TeaModel {
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
 
     }
 

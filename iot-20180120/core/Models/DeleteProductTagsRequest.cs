@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
+        [NameInMap("ProductTagKey")]
+        [Validation(Required=false)]
+        public List<string> ProductTagKey { get; set; }
+
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
@@ -32,10 +36,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("RealTripartiteKey")]
         [Validation(Required=false)]
         public string RealTripartiteKey { get; set; }
-
-        [NameInMap("ProductTagKey")]
-        [Validation(Required=false)]
-        public List<string> ProductTagKey { get; set; }
 
     }
 

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
+        [NameInMap("SrcVersion")]
+        [Validation(Required=false)]
+        public List<string> SrcVersion { get; set; }
+
         [NameInMap("RetryInterval")]
         [Validation(Required=false)]
         public int? RetryInterval { get; set; }
@@ -52,10 +56,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("DynamicMode")]
         [Validation(Required=false)]
         public int? DynamicMode { get; set; }
-
-        [NameInMap("SrcVersion")]
-        [Validation(Required=false)]
-        public List<string> SrcVersion { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

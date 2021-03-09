@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("DriverConfigList")]
         [Validation(Required=false)]
         public List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> DriverConfigList { get; set; }
@@ -25,10 +37,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList> ConfigList { get; set; }
             public class BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
                 [NameInMap("ConfigId")]
                 [Validation(Required=false)]
                 public string ConfigId { get; set; }
@@ -41,21 +49,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
             }
 
         }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

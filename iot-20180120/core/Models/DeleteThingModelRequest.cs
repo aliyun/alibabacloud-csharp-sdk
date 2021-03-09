@@ -29,6 +29,18 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
+        [NameInMap("PropertyIdentifier")]
+        [Validation(Required=false)]
+        public List<string> PropertyIdentifier { get; set; }
+
+        [NameInMap("ServiceIdentifier")]
+        [Validation(Required=false)]
+        public List<string> ServiceIdentifier { get; set; }
+
+        [NameInMap("EventIdentifier")]
+        [Validation(Required=false)]
+        public List<string> EventIdentifier { get; set; }
+
         [NameInMap("FunctionBlockId")]
         [Validation(Required=false)]
         public string FunctionBlockId { get; set; }
@@ -44,18 +56,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("RealTripartiteKey")]
         [Validation(Required=false)]
         public string RealTripartiteKey { get; set; }
-
-        [NameInMap("PropertyIdentifier")]
-        [Validation(Required=false)]
-        public List<string> PropertyIdentifier { get; set; }
-
-        [NameInMap("ServiceIdentifier")]
-        [Validation(Required=false)]
-        public List<string> ServiceIdentifier { get; set; }
-
-        [NameInMap("EventIdentifier")]
-        [Validation(Required=false)]
-        public List<string> EventIdentifier { get; set; }
 
     }
 

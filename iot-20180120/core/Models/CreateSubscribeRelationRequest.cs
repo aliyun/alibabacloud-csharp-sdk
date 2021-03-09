@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        [NameInMap("ConsumerGroupIds")]
+        [Validation(Required=false)]
+        public List<string> ConsumerGroupIds { get; set; }
+
         [NameInMap("OtaEventFlag")]
         [Validation(Required=false)]
         public bool? OtaEventFlag { get; set; }
@@ -72,10 +76,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("OtaJobFlag")]
         [Validation(Required=false)]
         public bool? OtaJobFlag { get; set; }
-
-        [NameInMap("ConsumerGroupIds")]
-        [Validation(Required=false)]
-        public List<string> ConsumerGroupIds { get; set; }
 
     }
 

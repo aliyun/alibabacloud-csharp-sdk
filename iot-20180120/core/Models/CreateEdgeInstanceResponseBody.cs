@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

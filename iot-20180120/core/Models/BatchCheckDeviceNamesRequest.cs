@@ -33,15 +33,23 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public List<BatchCheckDeviceNamesRequestDeviceNameList> DeviceNameList { get; set; }
         public class BatchCheckDeviceNamesRequestDeviceNameList : TeaModel {
-            [NameInMap("DeviceNickname")]
-            [Validation(Required=false)]
-            public string DeviceNickname { get; set; }
-
             [NameInMap("DeviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
 
+            [NameInMap("DeviceNickname")]
+            [Validation(Required=false)]
+            public string DeviceNickname { get; set; }
+
         }
+
+        [NameInMap("RealTenantId")]
+        [Validation(Required=false)]
+        public string RealTenantId { get; set; }
+
+        [NameInMap("RealTripartiteKey")]
+        [Validation(Required=false)]
+        public string RealTripartiteKey { get; set; }
 
     }
 

@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateLoRaNodesTaskResponseBody : TeaModel {
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

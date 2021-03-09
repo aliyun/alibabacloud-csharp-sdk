@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class DeleteClientIdsRequest : TeaModel {
+    public class QueryDeviceDistributeJobRequest : TeaModel {
         [NameInMap("ApiProduct")]
         [Validation(Required=false)]
         public string ApiProduct { get; set; }
@@ -17,17 +17,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ApiRevision { get; set; }
 
-        [NameInMap("IotId")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string IotId { get; set; }
-
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
-        [NameInMap("AuthConfig")]
-        [Validation(Required=false)]
-        public string AuthConfig { get; set; }
+        public string JobId { get; set; }
 
     }
 

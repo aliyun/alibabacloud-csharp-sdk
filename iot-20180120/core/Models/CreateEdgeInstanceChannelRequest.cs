@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public List<CreateEdgeInstanceChannelRequestConfigs> Configs { get; set; }
         public class CreateEdgeInstanceChannelRequestConfigs : TeaModel {
-            [NameInMap("Key")]
+            [NameInMap("Format")]
             [Validation(Required=false)]
-            public string Key { get; set; }
+            public string Format { get; set; }
 
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
-            [NameInMap("Format")]
+            [NameInMap("Key")]
             [Validation(Required=false)]
-            public string Format { get; set; }
+            public string Key { get; set; }
 
         }
 

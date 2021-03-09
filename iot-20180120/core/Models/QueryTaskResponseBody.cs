@@ -29,23 +29,42 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public QueryTaskResponseBodyData Data { get; set; }
         public class QueryTaskResponseBodyData : TeaModel {
-            [NameInMap("data")]
+            [NameInMap("JobId")]
             [Validation(Required=false)]
-            public List<QueryTaskResponseBodyDataData> Data { get; set; }
-            public class QueryTaskResponseBodyDataData : TeaModel {
-                public string JobId { get; set; }
-                public string JobName { get; set; }
-                public string TaskId { get; set; }
-                public string ProductKey { get; set; }
-                public string DeviceName { get; set; }
-                public string IotId { get; set; }
-                public string Progress { get; set; }
-                public string UtcQueueTime { get; set; }
-                public string UtcModified { get; set; }
-                public string StatusDetail { get; set; }
-                public string Status { get; set; }
-                public string Message { get; set; }
-            }
+            public string JobId { get; set; }
+            [NameInMap("JobName")]
+            [Validation(Required=false)]
+            public string JobName { get; set; }
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+            [NameInMap("ProductKey")]
+            [Validation(Required=false)]
+            public string ProductKey { get; set; }
+            [NameInMap("DeviceName")]
+            [Validation(Required=false)]
+            public string DeviceName { get; set; }
+            [NameInMap("IotId")]
+            [Validation(Required=false)]
+            public string IotId { get; set; }
+            [NameInMap("Progress")]
+            [Validation(Required=false)]
+            public string Progress { get; set; }
+            [NameInMap("UtcQueueTime")]
+            [Validation(Required=false)]
+            public string UtcQueueTime { get; set; }
+            [NameInMap("UtcModified")]
+            [Validation(Required=false)]
+            public string UtcModified { get; set; }
+            [NameInMap("StatusDetail")]
+            [Validation(Required=false)]
+            public string StatusDetail { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
         };
 
     }

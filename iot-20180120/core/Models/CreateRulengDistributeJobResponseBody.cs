@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class TransformClientIdResponseBody : TeaModel {
+    public class CreateRulengDistributeJobResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

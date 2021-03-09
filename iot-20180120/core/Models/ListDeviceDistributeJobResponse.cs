@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class QueryClientIdsResponse : TeaModel {
+    public class ListDeviceDistributeJobResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public QueryClientIdsResponseBody Body { get; set; }
+        public ListDeviceDistributeJobResponseBody Body { get; set; }
 
     }
 

@@ -13,19 +13,28 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public InvokeDataAPIServiceResponseBodyData Data { get; set; }
         public class InvokeDataAPIServiceResponseBodyData : TeaModel {
-            [NameInMap("ResultList")]
+            [NameInMap("PageNo")]
             [Validation(Required=false)]
-            public InvokeDataAPIServiceResponseBodyDataResultList ResultList { get; set; }
-            public class InvokeDataAPIServiceResponseBodyDataResultList : TeaModel {
-                [NameInMap("ResultList")]
-                [Validation(Required=false)]
-                public List<Dictionary<string, object>> ResultList { get; set; }
-
-            }
+            public int? PageNo { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
             [NameInMap("ApiSrn")]
             [Validation(Required=false)]
             public string ApiSrn { get; set; }
@@ -38,25 +47,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public List<string> FieldNameList { get; set; }
 
             }
-            [NameInMap("PageNo")]
+            [NameInMap("ResultList")]
             [Validation(Required=false)]
-            public int? PageNo { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
+            public InvokeDataAPIServiceResponseBodyDataResultList ResultList { get; set; }
+            public class InvokeDataAPIServiceResponseBodyDataResultList : TeaModel {
+                [NameInMap("ResultList")]
+                [Validation(Required=false)]
+                public List<Dictionary<string, string>> ResultList { get; set; }
+
+            }
         };
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

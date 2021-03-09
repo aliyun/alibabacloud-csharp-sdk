@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("SrcTopic")]
-        [Validation(Required=false)]
-        public string SrcTopic { get; set; }
-
         [NameInMap("DstTopic")]
         [Validation(Required=false)]
         public List<string> DstTopic { get; set; }
+
+        [NameInMap("SrcTopic")]
+        [Validation(Required=false)]
+        public string SrcTopic { get; set; }
 
     }
 

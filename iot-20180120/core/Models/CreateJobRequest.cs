@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         [NameInMap("JobFile")]
         [Validation(Required=false)]
-        public Dictionary<string, object> JobFile { get; set; }
+        public string JobFile { get; set; }
 
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -43,15 +43,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         [NameInMap("TimeoutConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> TimeoutConfig { get; set; }
+        public string TimeoutConfig { get; set; }
 
         [NameInMap("RolloutConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> RolloutConfig { get; set; }
+        public string RolloutConfig { get; set; }
 
         [NameInMap("TargetConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> TargetConfig { get; set; }
+        public string TargetConfig { get; set; }
 
     }
 

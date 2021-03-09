@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string TargetSelection { get; set; }
 
+        [NameInMap("SrcVersion")]
+        [Validation(Required=false)]
+        public List<string> SrcVersion { get; set; }
+
         [NameInMap("ScheduleTime")]
         [Validation(Required=false)]
         public long? ScheduleTime { get; set; }
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string GrayPercent { get; set; }
 
+        [NameInMap("TargetDeviceName")]
+        [Validation(Required=false)]
+        public List<string> TargetDeviceName { get; set; }
+
         [NameInMap("ScheduleFinishTime")]
         [Validation(Required=false)]
         public long? ScheduleFinishTime { get; set; }
@@ -64,18 +72,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("OverwriteMode")]
         [Validation(Required=false)]
         public int? OverwriteMode { get; set; }
-
-        [NameInMap("DnListFileUrl")]
-        [Validation(Required=false)]
-        public string DnListFileUrl { get; set; }
-
-        [NameInMap("SrcVersion")]
-        [Validation(Required=false)]
-        public List<string> SrcVersion { get; set; }
-
-        [NameInMap("TargetDeviceName")]
-        [Validation(Required=false)]
-        public List<string> TargetDeviceName { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -90,6 +86,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("DnListFileUrl")]
+        [Validation(Required=false)]
+        public string DnListFileUrl { get; set; }
 
     }
 

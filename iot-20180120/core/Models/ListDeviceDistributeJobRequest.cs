@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class TransformClientIdRequest : TeaModel {
+    public class ListDeviceDistributeJobRequest : TeaModel {
         [NameInMap("ApiProduct")]
         [Validation(Required=false)]
         public string ApiProduct { get; set; }
@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ApiRevision { get; set; }
 
-        [NameInMap("IotId")]
+        [NameInMap("TargetUid")]
         [Validation(Required=false)]
-        public string IotId { get; set; }
+        public string TargetUid { get; set; }
 
-        [NameInMap("ClientId")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string ClientId { get; set; }
+        public int? CurrentPage { get; set; }
 
-        [NameInMap("IotInstanceId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("AuthConfig")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string AuthConfig { get; set; }
+        public int? Status { get; set; }
 
     }
 

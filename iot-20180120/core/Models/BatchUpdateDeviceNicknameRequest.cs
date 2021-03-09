@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("RealTenantId")]
-        [Validation(Required=false)]
-        public string RealTenantId { get; set; }
-
-        [NameInMap("RealTripartiteKey")]
-        [Validation(Required=false)]
-        public string RealTripartiteKey { get; set; }
-
         [NameInMap("DeviceNicknameInfo")]
         [Validation(Required=false)]
         public List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> DeviceNicknameInfo { get; set; }
@@ -50,6 +42,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public string IotId { get; set; }
 
         }
+
+        [NameInMap("RealTenantId")]
+        [Validation(Required=false)]
+        public string RealTenantId { get; set; }
+
+        [NameInMap("RealTripartiteKey")]
+        [Validation(Required=false)]
+        public string RealTripartiteKey { get; set; }
 
     }
 

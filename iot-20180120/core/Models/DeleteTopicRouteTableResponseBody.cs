@@ -13,18 +13,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("FailureTopics")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public DeleteTopicRouteTableResponseBodyFailureTopics FailureTopics { get; set; }
-        public class DeleteTopicRouteTableResponseBodyFailureTopics : TeaModel {
-            [NameInMap("Topic")]
-            [Validation(Required=false)]
-            public List<string> Topic { get; set; }
-        };
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -34,9 +25,18 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public bool? IsAllSucceed { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("FailureTopics")]
+        [Validation(Required=false)]
+        public DeleteTopicRouteTableResponseBodyFailureTopics FailureTopics { get; set; }
+        public class DeleteTopicRouteTableResponseBodyFailureTopics : TeaModel {
+            [NameInMap("Topic")]
+            [Validation(Required=false)]
+            public List<string> Topic { get; set; }
+        };
 
     }
 

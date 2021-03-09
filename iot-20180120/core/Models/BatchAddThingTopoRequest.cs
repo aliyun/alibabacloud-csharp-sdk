@@ -21,18 +21,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("GwProductKey")]
-        [Validation(Required=false)]
-        public string GwProductKey { get; set; }
-
-        [NameInMap("Ext")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Ext { get; set; }
-
-        [NameInMap("GwDeviceName")]
-        [Validation(Required=false)]
-        public string GwDeviceName { get; set; }
-
         [NameInMap("TopoAddItem")]
         [Validation(Required=false)]
         public List<BatchAddThingTopoRequestTopoAddItem> TopoAddItem { get; set; }
@@ -49,19 +37,31 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public string Sign { get; set; }
 
-            [NameInMap("Timestamp")]
-            [Validation(Required=false)]
-            public string Timestamp { get; set; }
-
             [NameInMap("SignMethod")]
             [Validation(Required=false)]
             public string SignMethod { get; set; }
+
+            [NameInMap("Timestamp")]
+            [Validation(Required=false)]
+            public string Timestamp { get; set; }
 
             [NameInMap("ClientId")]
             [Validation(Required=false)]
             public string ClientId { get; set; }
 
         }
+
+        [NameInMap("GwProductKey")]
+        [Validation(Required=false)]
+        public string GwProductKey { get; set; }
+
+        [NameInMap("Ext")]
+        [Validation(Required=false)]
+        public string Ext { get; set; }
+
+        [NameInMap("GwDeviceName")]
+        [Validation(Required=false)]
+        public string GwDeviceName { get; set; }
 
     }
 

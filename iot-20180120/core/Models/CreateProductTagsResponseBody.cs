@@ -13,18 +13,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("InvalidProductTags")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public CreateProductTagsResponseBodyInvalidProductTags InvalidProductTags { get; set; }
-        public class CreateProductTagsResponseBodyInvalidProductTags : TeaModel {
-            [NameInMap("ProductTag")]
-            [Validation(Required=false)]
-            public List<CreateProductTagsResponseBodyInvalidProductTagsProductTag> ProductTag { get; set; }
-            public class CreateProductTagsResponseBodyInvalidProductTagsProductTag : TeaModel {
-                public string TagValue { get; set; }
-                public string TagKey { get; set; }
-            }
-        };
+        public bool? Success { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -34,9 +25,18 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("InvalidProductTags")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public CreateProductTagsResponseBodyInvalidProductTags InvalidProductTags { get; set; }
+        public class CreateProductTagsResponseBodyInvalidProductTags : TeaModel {
+            [NameInMap("ProductTag")]
+            [Validation(Required=false)]
+            public List<CreateProductTagsResponseBodyInvalidProductTagsProductTag> ProductTag { get; set; }
+            public class CreateProductTagsResponseBodyInvalidProductTagsProductTag : TeaModel {
+                public string TagKey { get; set; }
+                public string TagValue { get; set; }
+            }
+        };
 
     }
 

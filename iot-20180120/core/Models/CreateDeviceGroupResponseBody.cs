@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateDeviceGroupResponseBodyData Data { get; set; }
@@ -20,28 +32,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
-            [NameInMap("GroupName")]
-            [Validation(Required=false)]
-            public string GroupName { get; set; }
             [NameInMap("UtcCreate")]
             [Validation(Required=false)]
             public string UtcCreate { get; set; }
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
             [NameInMap("GroupDesc")]
             [Validation(Required=false)]
             public string GroupDesc { get; set; }
         };
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
