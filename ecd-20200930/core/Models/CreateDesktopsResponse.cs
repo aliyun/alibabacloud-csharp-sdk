@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDesktopsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("OrderId")]
         [Validation(Required=true)]
-        public CreateDesktopsResponseBody Body { get; set; }
+        public string OrderId { get; set; }
+
+        [NameInMap("DesktopId")]
+        [Validation(Required=true)]
+        public List<string> DesktopId { get; set; }
 
     }
 

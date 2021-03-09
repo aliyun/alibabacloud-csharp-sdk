@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateRAMDirectoryResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("DirectoryId")]
         [Validation(Required=true)]
-        public CreateRAMDirectoryResponseBody Body { get; set; }
+        public string DirectoryId { get; set; }
 
     }
 

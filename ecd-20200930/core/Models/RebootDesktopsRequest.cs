@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebootDesktopsRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("DesktopId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> DesktopId { get; set; }
 
     }

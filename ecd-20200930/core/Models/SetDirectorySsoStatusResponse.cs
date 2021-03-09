@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class RenewDesktopsResponseBody : TeaModel {
+    public class SetDirectorySsoStatusResponse : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RequestId { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
 
     }
 

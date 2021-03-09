@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StopInvocationRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("InvokeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InvokeId { get; set; }
 
         [NameInMap("DesktopId")]

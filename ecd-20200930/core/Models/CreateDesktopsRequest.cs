@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDesktopsRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("GroupId")]
@@ -18,16 +18,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         [NameInMap("BundleId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BundleId { get; set; }
-
-        [NameInMap("SystemDiskSize")]
-        [Validation(Required=false)]
-        public int? SystemDiskSize { get; set; }
-
-        [NameInMap("DataDiskSize")]
-        [Validation(Required=false)]
-        public int? DataDiskSize { get; set; }
 
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
@@ -49,8 +41,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
+        [NameInMap("EndUserId")]
+        [Validation(Required=true)]
+        public List<string> EndUserId { get; set; }
+
         [NameInMap("PolicyGroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PolicyGroupId { get; set; }
 
         [NameInMap("ChargeType")]
@@ -69,10 +65,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        [NameInMap("EndUserId")]
-        [Validation(Required=false)]
-        public List<string> EndUserId { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDesktopsRequestTag> Tag { get; set; }
@@ -86,6 +78,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
 
     }
 

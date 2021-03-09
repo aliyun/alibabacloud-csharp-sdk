@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ResetSnapshotRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("SnapshotId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SnapshotId { get; set; }
 
     }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImagesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("MaxResults")]
@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ImageStatus { get; set; }
 
-        [NameInMap("GpuCategory")]
-        [Validation(Required=false)]
-        public bool? GpuCategory { get; set; }
-
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
+
+        [NameInMap("GpuCategory")]
+        [Validation(Required=false)]
+        public bool? GpuCategory { get; set; }
 
     }
 

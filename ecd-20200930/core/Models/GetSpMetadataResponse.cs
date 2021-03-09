@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class DeleteSnapshotResponseBody : TeaModel {
+    public class GetSpMetadataResponse : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RequestId { get; set; }
+
+        [NameInMap("SpMetadata")]
+        [Validation(Required=true)]
+        public string SpMetadata { get; set; }
 
     }
 

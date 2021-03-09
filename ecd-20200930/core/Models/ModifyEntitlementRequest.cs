@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyEntitlementRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("DesktopId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DesktopId { get; set; }
 
         [NameInMap("EndUserId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> EndUserId { get; set; }
 
     }

@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class ModifyImageAttributeRequest : TeaModel {
+    public class ModifyBundleRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=true)]
         public string RegionId { get; set; }
 
-        [NameInMap("ImageId")]
+        [NameInMap("BundleId")]
         [Validation(Required=true)]
+        public string BundleId { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("BundleName")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string BundleName { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]

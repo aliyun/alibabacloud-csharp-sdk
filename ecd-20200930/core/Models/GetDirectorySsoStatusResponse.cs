@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class CreateSnapshotResponseBody : TeaModel {
-        [NameInMap("SnapshotId")]
-        [Validation(Required=false)]
-        public string SnapshotId { get; set; }
-
+    public class GetDirectorySsoStatusResponse : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RequestId { get; set; }
+
+        [NameInMap("SsoStatus")]
+        [Validation(Required=true)]
+        public bool? SsoStatus { get; set; }
 
     }
 

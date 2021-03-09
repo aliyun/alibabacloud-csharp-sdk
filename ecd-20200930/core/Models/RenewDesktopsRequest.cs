@@ -10,8 +10,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewDesktopsRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
+
+        [NameInMap("DesktopId")]
+        [Validation(Required=true)]
+        public List<string> DesktopId { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
-
-        [NameInMap("DesktopId")]
-        [Validation(Required=false)]
-        public List<string> DesktopId { get; set; }
 
     }
 

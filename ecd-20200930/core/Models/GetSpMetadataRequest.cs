@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class GetConnectionTicketResponse : TeaModel {
-        [NameInMap("headers")]
+    public class GetSpMetadataRequest : TeaModel {
+        [NameInMap("RegionId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("DirectoryId")]
         [Validation(Required=true)]
-        public GetConnectionTicketResponseBody Body { get; set; }
+        public string DirectoryId { get; set; }
 
     }
 

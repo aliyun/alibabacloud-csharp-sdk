@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class TagResourcesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceType { get; set; }
 
         [NameInMap("ResourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> ResourceId { get; set; }
 
         [NameInMap("Tag")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             [NameInMap("Key")]

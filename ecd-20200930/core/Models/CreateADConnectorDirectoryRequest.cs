@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,20 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorDirectoryRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("DomainName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DomainName { get; set; }
 
         [NameInMap("DomainUserName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DomainUserName { get; set; }
 
         [NameInMap("DomainPassword")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DomainPassword { get; set; }
+
+        [NameInMap("DnsAddress")]
+        [Validation(Required=true)]
+        public List<string> DnsAddress { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=true)]
+        public List<string> VSwitchId { get; set; }
 
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
@@ -40,21 +45,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
 
+        [NameInMap("SubDomainDnsAddress")]
+        [Validation(Required=false)]
+        public List<string> SubDomainDnsAddress { get; set; }
+
         [NameInMap("SubDomainName")]
         [Validation(Required=false)]
         public string SubDomainName { get; set; }
 
-        [NameInMap("DnsAddress")]
+        [NameInMap("MfaEnabled")]
         [Validation(Required=false)]
-        public List<string> DnsAddress { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public List<string> VSwitchId { get; set; }
-
-        [NameInMap("SubDomainDnsAddress")]
-        [Validation(Required=false)]
-        public List<string> SubDomainDnsAddress { get; set; }
+        public bool? MfaEnabled { get; set; }
 
     }
 

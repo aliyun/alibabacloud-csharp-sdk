@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListTagResourcesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("NextToken")]
         [Validation(Required=true)]
-        public ListTagResourcesResponseBody Body { get; set; }
+        public string NextToken { get; set; }
+
+        [NameInMap("TagResources")]
+        [Validation(Required=true)]
+        public List<ListTagResourcesResponseTagResources> TagResources { get; set; }
+        public class ListTagResourcesResponseTagResources : TeaModel {
+            [NameInMap("ResourceType")]
+            [Validation(Required=true)]
+            public string ResourceType { get; set; }
+
+            [NameInMap("ResourceId")]
+            [Validation(Required=true)]
+            public string ResourceId { get; set; }
+
+            [NameInMap("TagKey")]
+            [Validation(Required=true)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=true)]
+            public string TagValue { get; set; }
+
+        }
 
     }
 

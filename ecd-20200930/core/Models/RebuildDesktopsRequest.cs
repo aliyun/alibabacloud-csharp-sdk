@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class PayOrderCallbackResponse : TeaModel {
-        [NameInMap("headers")]
+    public class RebuildDesktopsRequest : TeaModel {
+        [NameInMap("RegionId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("DesktopId")]
         [Validation(Required=true)]
-        public PayOrderCallbackResponseBody Body { get; set; }
+        public List<string> DesktopId { get; set; }
 
     }
 

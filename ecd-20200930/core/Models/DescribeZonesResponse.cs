@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeZonesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Zones")]
         [Validation(Required=true)]
-        public DescribeZonesResponseBody Body { get; set; }
+        public List<DescribeZonesResponseZones> Zones { get; set; }
+        public class DescribeZonesResponseZones : TeaModel {
+            [NameInMap("ZoneId")]
+            [Validation(Required=true)]
+            public string ZoneId { get; set; }
+
+        }
 
     }
 

@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class ModifyDesktopNameResponseBody : TeaModel {
+    public class SetIdpMetadataResponse : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RequestId { get; set; }
+
+        [NameInMap("IdpEntityId")]
+        [Validation(Required=true)]
+        public string IdpEntityId { get; set; }
 
     }
 

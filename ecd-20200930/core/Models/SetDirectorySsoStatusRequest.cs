@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class StartDesktopsRequest : TeaModel {
+    public class SetDirectorySsoStatusRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=true)]
         public string RegionId { get; set; }
 
-        [NameInMap("DesktopId")]
+        [NameInMap("DirectoryId")]
         [Validation(Required=true)]
-        public List<string> DesktopId { get; set; }
+        public string DirectoryId { get; set; }
+
+        [NameInMap("EnableSso")]
+        [Validation(Required=true)]
+        public bool? EnableSso { get; set; }
 
     }
 

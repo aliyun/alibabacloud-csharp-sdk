@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class ModifyDesktopsPolicyGroupResponse : TeaModel {
+    public class RebuildDesktopsResponse : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
 
-        [NameInMap("ModifyResults")]
+        [NameInMap("RebuildResults")]
         [Validation(Required=true)]
-        public List<ModifyDesktopsPolicyGroupResponseModifyResults> ModifyResults { get; set; }
-        public class ModifyDesktopsPolicyGroupResponseModifyResults : TeaModel {
+        public List<RebuildDesktopsResponseRebuildResults> RebuildResults { get; set; }
+        public class RebuildDesktopsResponseRebuildResults : TeaModel {
             [NameInMap("DesktopId")]
             [Validation(Required=true)]
             public string DesktopId { get; set; }

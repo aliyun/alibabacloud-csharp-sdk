@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyPolicyGroupRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("PolicyGroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PolicyGroupId { get; set; }
 
         [NameInMap("Name")]

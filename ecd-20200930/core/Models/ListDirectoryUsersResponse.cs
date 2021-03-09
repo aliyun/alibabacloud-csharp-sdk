@@ -9,13 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListDirectoryUsersResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("NextToken")]
         [Validation(Required=true)]
-        public ListDirectoryUsersResponseBody Body { get; set; }
+        public string NextToken { get; set; }
+
+        [NameInMap("Users")]
+        [Validation(Required=true)]
+        public List<ListDirectoryUsersResponseUsers> Users { get; set; }
+        public class ListDirectoryUsersResponseUsers : TeaModel {
+            [NameInMap("EndUser")]
+            [Validation(Required=true)]
+            public string EndUser { get; set; }
+
+        }
 
     }
 
