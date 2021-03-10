@@ -1,3 +1,6 @@
+2021-03-10 Version: 2.0.2
+- AMP Version Change.
+
 2021-02-04 Version: 2.0.1
 - Update DetectVehicleIllegalParking DetectVehicleICongestion.
 

@@ -27,6 +27,7 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                 public string Type { get; set; }
                 public float? Score { get; set; }
                 public List<string> Box { get; set; }
+                public float? TargetRate { get; set; }
             }
             [NameInMap("Width")]
             [Validation(Required=false)]
