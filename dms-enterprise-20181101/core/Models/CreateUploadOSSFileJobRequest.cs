@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string ObjectName { get; set; }
         };
 
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
+
     }
 
 }

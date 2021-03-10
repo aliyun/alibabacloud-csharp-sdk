@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("SecurityRule")]
             [Validation(Required=false)]
             public string SecurityRule { get; set; }
+            [NameInMap("DBTaskGroupId")]
+            [Validation(Required=false)]
+            public long? DBTaskGroupId { get; set; }
         };
 
     }

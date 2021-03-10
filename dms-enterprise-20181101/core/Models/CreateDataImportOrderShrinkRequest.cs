@@ -8,30 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class CreateOrderRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
+    public class CreateDataImportOrderShrinkRequest : TeaModel {
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
-        [NameInMap("PluginParam")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> PluginParam { get; set; }
-
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
-        public string RelatedUserList { get; set; }
+        public string RelatedUserListShrink { get; set; }
 
-        [NameInMap("PluginType")]
+        [NameInMap("Param")]
         [Validation(Required=false)]
-        public string PluginType { get; set; }
+        public string ParamShrink { get; set; }
 
         [NameInMap("AttachmentKey")]
         [Validation(Required=false)]
         public string AttachmentKey { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
 
     }
 

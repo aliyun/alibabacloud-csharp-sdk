@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class GetPermApplyOrderDetailRequest : TeaModel {
-        [NameInMap("OrderId")]
+    public class GetTableTopologyRequest : TeaModel {
+        [NameInMap("TableGuid")]
         [Validation(Required=false)]
-        public long? OrderId { get; set; }
+        public string TableGuid { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

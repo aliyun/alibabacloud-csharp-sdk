@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class GetPermApplyOrderDetailRequest : TeaModel {
+    public class GetDataCronClearTaskDetailListRequest : TeaModel {
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ParamShrink { get; set; }
 
+        [NameInMap("AttachmentKey")]
+        [Validation(Required=false)]
+        public string AttachmentKey { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
+
     }
 
 }

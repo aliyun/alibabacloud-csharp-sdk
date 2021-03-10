@@ -120,6 +120,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 }
 
             }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
         };
 
         [NameInMap("ErrorCode")]
