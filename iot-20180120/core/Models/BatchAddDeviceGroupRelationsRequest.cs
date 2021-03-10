@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,20 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchAddDeviceGroupRelationsRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string GroupId { get; set; }
 
         [NameInMap("Device")]
@@ -33,22 +22,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<BatchAddDeviceGroupRelationsRequestDevice> Device { get; set; }
         public class BatchAddDeviceGroupRelationsRequestDevice : TeaModel {
             [NameInMap("ProductKey")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string ProductKey { get; set; }
 
             [NameInMap("DeviceName")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string DeviceName { get; set; }
 
         }
-
-        [NameInMap("RealTenantId")]
-        [Validation(Required=false)]
-        public string RealTenantId { get; set; }
-
-        [NameInMap("RealTripartiteKey")]
-        [Validation(Required=false)]
-        public string RealTripartiteKey { get; set; }
 
     }
 

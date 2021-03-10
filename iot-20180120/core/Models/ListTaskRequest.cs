@@ -9,20 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListTaskRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("Limit")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Limit { get; set; }
 
         [NameInMap("JobId")]
@@ -35,7 +27,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         [NameInMap("Device")]
         [Validation(Required=false)]
-        public string Device { get; set; }
+        public Dictionary<string, object> Device { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

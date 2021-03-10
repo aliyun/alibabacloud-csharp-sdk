@@ -9,20 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class RegisterDeviceRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("DeviceName")]
@@ -52,14 +44,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("LoraNodeType")]
         [Validation(Required=false)]
         public string LoraNodeType { get; set; }
-
-        [NameInMap("RealTenantId")]
-        [Validation(Required=false)]
-        public string RealTenantId { get; set; }
-
-        [NameInMap("RealTripartiteKey")]
-        [Validation(Required=false)]
-        public string RealTripartiteKey { get; set; }
 
     }
 

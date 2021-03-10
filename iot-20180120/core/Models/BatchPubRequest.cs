@@ -9,24 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchPubRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("DeviceName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> DeviceName { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("Qos")]
@@ -34,11 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? Qos { get; set; }
 
         [NameInMap("TopicShortName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TopicShortName { get; set; }
 
         [NameInMap("MessageContent")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string MessageContent { get; set; }
 
     }

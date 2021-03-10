@@ -9,13 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateProductTagsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public UpdateProductTagsResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("InvalidProductTags")]
+        [Validation(Required=true)]
+        public UpdateProductTagsResponseInvalidProductTags InvalidProductTags { get; set; }
+        public class UpdateProductTagsResponseInvalidProductTags : TeaModel {
+            [NameInMap("ProductTag")]
+            [Validation(Required=true)]
+            public List<UpdateProductTagsResponseInvalidProductTagsProductTag> ProductTag { get; set; }
+            public class UpdateProductTagsResponseInvalidProductTagsProductTag : TeaModel {
+                public string TagKey { get; set; }
+                public string TagValue { get; set; }
+            }
+        };
 
     }
 

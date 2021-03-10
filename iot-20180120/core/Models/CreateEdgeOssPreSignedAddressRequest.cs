@@ -9,20 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateEdgeOssPreSignedAddressRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("ResourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceId { get; set; }
 
         [NameInMap("FileName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FileName { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -30,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Type { get; set; }
 
         [NameInMap("InstanceId")]
@@ -38,7 +30,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string InstanceId { get; set; }
 
         [NameInMap("ResourceVersion")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceVersion { get; set; }
 
     }

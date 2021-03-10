@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateEdgeOssPreSignedAddressResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public CreateEdgeOssPreSignedAddressResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public CreateEdgeOssPreSignedAddressResponseData Data { get; set; }
+        public class CreateEdgeOssPreSignedAddressResponseData : TeaModel {
+            [NameInMap("OssPreSignedAddress")]
+            [Validation(Required=true)]
+            public string OssPreSignedAddress { get; set; }
+            [NameInMap("OssAddress")]
+            [Validation(Required=true)]
+            public string OssAddress { get; set; }
+        };
 
     }
 

@@ -9,13 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListOTAModuleVersionsByDeviceResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public ListOTAModuleVersionsByDeviceResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=true)]
+        public int? Total { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("PageCount")]
+        [Validation(Required=true)]
+        public int? PageCount { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=true)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public ListOTAModuleVersionsByDeviceResponseData Data { get; set; }
+        public class ListOTAModuleVersionsByDeviceResponseData : TeaModel {
+            [NameInMap("SimpleOTAModuleInfo")]
+            [Validation(Required=true)]
+            public List<ListOTAModuleVersionsByDeviceResponseDataSimpleOTAModuleInfo> SimpleOTAModuleInfo { get; set; }
+            public class ListOTAModuleVersionsByDeviceResponseDataSimpleOTAModuleInfo : TeaModel {
+                public string ProductKey { get; set; }
+                public string DeviceName { get; set; }
+                public string IotId { get; set; }
+                public string ModuleVersion { get; set; }
+                public string ModuleName { get; set; }
+            }
+        };
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SetDevicePropertyRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -34,16 +26,8 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotId { get; set; }
 
         [NameInMap("Items")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Items { get; set; }
-
-        [NameInMap("RealTenantId")]
-        [Validation(Required=false)]
-        public string RealTenantId { get; set; }
-
-        [NameInMap("RealTripartiteKey")]
-        [Validation(Required=false)]
-        public string RealTripartiteKey { get; set; }
 
     }
 

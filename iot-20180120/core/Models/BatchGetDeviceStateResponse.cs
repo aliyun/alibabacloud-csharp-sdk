@@ -9,13 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetDeviceStateResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public BatchGetDeviceStateResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("DeviceStatusList")]
+        [Validation(Required=true)]
+        public BatchGetDeviceStateResponseDeviceStatusList DeviceStatusList { get; set; }
+        public class BatchGetDeviceStateResponseDeviceStatusList : TeaModel {
+            [NameInMap("DeviceStatus")]
+            [Validation(Required=true)]
+            public List<BatchGetDeviceStateResponseDeviceStatusListDeviceStatus> DeviceStatus { get; set; }
+            public class BatchGetDeviceStateResponseDeviceStatusListDeviceStatus : TeaModel {
+                public string DeviceId { get; set; }
+                public string DeviceName { get; set; }
+                public string Status { get; set; }
+                public string AsAddress { get; set; }
+                public string LastOnlineTime { get; set; }
+                public string IotId { get; set; }
+            }
+        };
 
     }
 

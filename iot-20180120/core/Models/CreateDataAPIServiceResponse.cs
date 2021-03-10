@@ -9,13 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDataAPIServiceResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public CreateDataAPIServiceResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public CreateDataAPIServiceResponseData Data { get; set; }
+        public class CreateDataAPIServiceResponseData : TeaModel {
+            [NameInMap("ApiSrn")]
+            [Validation(Required=true)]
+            public string ApiSrn { get; set; }
+            [NameInMap("CreateTime")]
+            [Validation(Required=true)]
+            public long? CreateTime { get; set; }
+            [NameInMap("LastUpdateTime")]
+            [Validation(Required=true)]
+            public long? LastUpdateTime { get; set; }
+        };
 
     }
 

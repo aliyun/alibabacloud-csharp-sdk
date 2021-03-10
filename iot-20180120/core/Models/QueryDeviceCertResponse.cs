@@ -9,13 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceCertResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public QueryDeviceCertResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("DeviceCertInfo")]
+        [Validation(Required=true)]
+        public QueryDeviceCertResponseDeviceCertInfo DeviceCertInfo { get; set; }
+        public class QueryDeviceCertResponseDeviceCertInfo : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=true)]
+            public int? Status { get; set; }
+            [NameInMap("Certificate")]
+            [Validation(Required=true)]
+            public string Certificate { get; set; }
+            [NameInMap("PrivateKey")]
+            [Validation(Required=true)]
+            public string PrivateKey { get; set; }
+            [NameInMap("CertSN")]
+            [Validation(Required=true)]
+            public string CertSN { get; set; }
+        };
 
     }
 

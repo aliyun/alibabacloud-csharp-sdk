@@ -9,28 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateDeviceShadowRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("DeviceName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DeviceName { get; set; }
 
         [NameInMap("ShadowMessage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ShadowMessage { get; set; }
 
         [NameInMap("DeltaUpdate")]

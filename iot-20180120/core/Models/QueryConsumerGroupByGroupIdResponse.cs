@@ -9,13 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryConsumerGroupByGroupIdResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public QueryConsumerGroupByGroupIdResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public QueryConsumerGroupByGroupIdResponseData Data { get; set; }
+        public class QueryConsumerGroupByGroupIdResponseData : TeaModel {
+            [NameInMap("GroupId")]
+            [Validation(Required=true)]
+            public string GroupId { get; set; }
+            [NameInMap("GroupName")]
+            [Validation(Required=true)]
+            public string GroupName { get; set; }
+            [NameInMap("CreateTime")]
+            [Validation(Required=true)]
+            public string CreateTime { get; set; }
+        };
 
     }
 

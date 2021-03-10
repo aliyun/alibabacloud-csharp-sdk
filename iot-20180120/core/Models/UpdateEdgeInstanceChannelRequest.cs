@@ -9,44 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateEdgeInstanceChannelRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("DriverId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverId { get; set; }
 
         [NameInMap("ChannelId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ChannelId { get; set; }
 
         [NameInMap("ChannelName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ChannelName { get; set; }
 
         [NameInMap("Configs")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<UpdateEdgeInstanceChannelRequestConfigs> Configs { get; set; }
         public class UpdateEdgeInstanceChannelRequestConfigs : TeaModel {
             [NameInMap("Format")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string Format { get; set; }
 
             [NameInMap("Content")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string Content { get; set; }
 
             [NameInMap("Key")]

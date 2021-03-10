@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DisableThingRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -32,14 +24,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
-
-        [NameInMap("RealTenantId")]
-        [Validation(Required=false)]
-        public string RealTenantId { get; set; }
-
-        [NameInMap("RealTripartiteKey")]
-        [Validation(Required=false)]
-        public string RealTripartiteKey { get; set; }
 
     }
 

@@ -9,28 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateProductFilterConfigRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("PropertyTimestampFilter")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public bool? PropertyTimestampFilter { get; set; }
 
         [NameInMap("PropertyValueFilter")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public bool? PropertyValueFilter { get; set; }
 
     }

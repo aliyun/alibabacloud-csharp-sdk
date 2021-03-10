@@ -9,28 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateOTAFirmwareRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("FirmwareName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FirmwareName { get; set; }
 
         [NameInMap("DestVersion")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DestVersion { get; set; }
 
         [NameInMap("FirmwareUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FirmwareUrl { get; set; }
 
         [NameInMap("FirmwareSign")]

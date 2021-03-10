@@ -9,28 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateOTAStaticUpgradeJobRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("FirmwareId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FirmwareId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProductKey { get; set; }
 
         [NameInMap("TargetSelection")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetSelection { get; set; }
 
         [NameInMap("SrcVersion")]
@@ -78,11 +70,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<CreateOTAStaticUpgradeJobRequestTag> Tag { get; set; }
         public class CreateOTAStaticUpgradeJobRequestTag : TeaModel {
             [NameInMap("Key")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string Key { get; set; }
 
             [NameInMap("Value")]
-            [Validation(Required=false)]
+            [Validation(Required=true)]
             public string Value { get; set; }
 
         }

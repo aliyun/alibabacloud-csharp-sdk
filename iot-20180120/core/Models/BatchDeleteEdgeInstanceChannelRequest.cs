@@ -9,28 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchDeleteEdgeInstanceChannelRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("DriverId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverId { get; set; }
 
         [NameInMap("ChannelIds")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> ChannelIds { get; set; }
 
     }

@@ -9,24 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryEdgeInstanceDeviceByDriverRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("ChannelId")]
@@ -34,11 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ChannelId { get; set; }
 
         [NameInMap("DriverId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DriverId { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? CurrentPage { get; set; }
 
     }

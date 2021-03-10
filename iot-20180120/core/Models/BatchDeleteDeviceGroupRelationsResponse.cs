@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchDeleteDeviceGroupRelationsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public BatchDeleteDeviceGroupRelationsResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("ValidDeviceCount")]
+        [Validation(Required=true)]
+        public int? ValidDeviceCount { get; set; }
+
+        [NameInMap("AlreadyRelatedGroupDeviceCount")]
+        [Validation(Required=true)]
+        public int? AlreadyRelatedGroupDeviceCount { get; set; }
+
+        [NameInMap("SuccessDeviceCount")]
+        [Validation(Required=true)]
+        public int? SuccessDeviceCount { get; set; }
 
     }
 

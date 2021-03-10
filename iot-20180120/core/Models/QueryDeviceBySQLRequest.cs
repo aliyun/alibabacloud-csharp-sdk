@@ -9,20 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceBySQLRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("SQL")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SQL { get; set; }
 
     }

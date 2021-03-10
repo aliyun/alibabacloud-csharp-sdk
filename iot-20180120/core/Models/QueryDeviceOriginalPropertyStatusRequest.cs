@@ -9,20 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceOriginalPropertyStatusRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
@@ -42,7 +34,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotId { get; set; }
 
         [NameInMap("Asc")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Asc { get; set; }
 
     }

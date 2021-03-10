@@ -9,13 +9,63 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetEdgeDriverVersionResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public GetEdgeDriverVersionResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public GetEdgeDriverVersionResponseData Data { get; set; }
+        public class GetEdgeDriverVersionResponseData : TeaModel {
+            [NameInMap("DriverId")]
+            [Validation(Required=true)]
+            public string DriverId { get; set; }
+            [NameInMap("DriverVersion")]
+            [Validation(Required=true)]
+            public string DriverVersion { get; set; }
+            [NameInMap("VersionState")]
+            [Validation(Required=true)]
+            public string VersionState { get; set; }
+            [NameInMap("EdgeVersion")]
+            [Validation(Required=true)]
+            public string EdgeVersion { get; set; }
+            [NameInMap("Description")]
+            [Validation(Required=true)]
+            public string Description { get; set; }
+            [NameInMap("SourceConfig")]
+            [Validation(Required=true)]
+            public string SourceConfig { get; set; }
+            [NameInMap("DriverConfig")]
+            [Validation(Required=true)]
+            public string DriverConfig { get; set; }
+            [NameInMap("ContainerConfig")]
+            [Validation(Required=true)]
+            public string ContainerConfig { get; set; }
+            [NameInMap("ConfigCheckRule")]
+            [Validation(Required=true)]
+            public string ConfigCheckRule { get; set; }
+            [NameInMap("GmtCreateTimestamp")]
+            [Validation(Required=true)]
+            public long? GmtCreateTimestamp { get; set; }
+            [NameInMap("GmtModifiedTimestamp")]
+            [Validation(Required=true)]
+            public long? GmtModifiedTimestamp { get; set; }
+            [NameInMap("Argument")]
+            [Validation(Required=true)]
+            public string Argument { get; set; }
+        };
 
     }
 

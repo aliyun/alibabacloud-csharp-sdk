@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CopyThingModelRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -26,24 +18,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("SourceProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SourceProductKey { get; set; }
 
         [NameInMap("TargetProductKey")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetProductKey { get; set; }
 
         [NameInMap("SourceModelVersion")]
         [Validation(Required=false)]
         public string SourceModelVersion { get; set; }
-
-        [NameInMap("RealTenantId")]
-        [Validation(Required=false)]
-        public string RealTenantId { get; set; }
-
-        [NameInMap("RealTripartiteKey")]
-        [Validation(Required=false)]
-        public string RealTripartiteKey { get; set; }
 
     }
 

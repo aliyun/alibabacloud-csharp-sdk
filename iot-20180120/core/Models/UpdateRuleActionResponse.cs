@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateRuleActionResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public UpdateRuleActionResponseBody Body { get; set; }
+        public string Code { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
 
     }
 

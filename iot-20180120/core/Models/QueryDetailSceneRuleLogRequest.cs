@@ -9,40 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDetailSceneRuleLogRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("RuleId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RuleId { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? EndTime { get; set; }
 
         [NameInMap("TraceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TraceId { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? CurrentPage { get; set; }
 
     }

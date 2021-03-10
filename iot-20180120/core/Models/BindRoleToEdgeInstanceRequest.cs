@@ -9,28 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BindRoleToEdgeInstanceRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("RoleArn")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RoleArn { get; set; }
 
         [NameInMap("RoleName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RoleName { get; set; }
 
     }

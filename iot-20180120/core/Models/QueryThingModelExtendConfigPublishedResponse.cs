@@ -9,13 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryThingModelExtendConfigPublishedResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public QueryThingModelExtendConfigPublishedResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public QueryThingModelExtendConfigPublishedResponseData Data { get; set; }
+        public class QueryThingModelExtendConfigPublishedResponseData : TeaModel {
+            [NameInMap("Configuration")]
+            [Validation(Required=true)]
+            public string Configuration { get; set; }
+        };
 
     }
 

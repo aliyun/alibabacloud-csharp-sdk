@@ -9,16 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListDistributedDeviceRequest : TeaModel {
-        [NameInMap("ApiProduct")]
-        [Validation(Required=false)]
-        public string ApiProduct { get; set; }
-
-        [NameInMap("ApiRevision")]
-        [Validation(Required=false)]
-        public string ApiRevision { get; set; }
-
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
@@ -30,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DeviceName { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? CurrentPage { get; set; }
 
         [NameInMap("TargetUid")]
@@ -40,10 +32,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("SourceInstanceId")]
         [Validation(Required=false)]
         public string SourceInstanceId { get; set; }
-
-        [NameInMap("TargetInstanceId")]
-        [Validation(Required=false)]
-        public string TargetInstanceId { get; set; }
 
     }
 

@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListThingTemplatesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public ListThingTemplatesResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public List<ListThingTemplatesResponseData> Data { get; set; }
+        public class ListThingTemplatesResponseData : TeaModel {
+            [NameInMap("CategoryKey")]
+            [Validation(Required=true)]
+            public string CategoryKey { get; set; }
+
+            [NameInMap("CategoryName")]
+            [Validation(Required=true)]
+            public string CategoryName { get; set; }
+
+        }
 
     }
 

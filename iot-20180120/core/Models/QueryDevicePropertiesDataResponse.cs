@@ -9,13 +9,58 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDevicePropertiesDataResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public QueryDevicePropertiesDataResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=true)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("NextValid")]
+        [Validation(Required=true)]
+        public bool? NextValid { get; set; }
+
+        [NameInMap("NextTime")]
+        [Validation(Required=true)]
+        public long? NextTime { get; set; }
+
+        [NameInMap("PropertyDataInfos")]
+        [Validation(Required=true)]
+        public QueryDevicePropertiesDataResponsePropertyDataInfos PropertyDataInfos { get; set; }
+        public class QueryDevicePropertiesDataResponsePropertyDataInfos : TeaModel {
+            [NameInMap("PropertyDataInfo")]
+            [Validation(Required=true)]
+            public List<QueryDevicePropertiesDataResponsePropertyDataInfosPropertyDataInfo> PropertyDataInfo { get; set; }
+            public class QueryDevicePropertiesDataResponsePropertyDataInfosPropertyDataInfo : TeaModel {
+                public string Identifier { get; set; }
+                public QueryDevicePropertiesDataResponsePropertyDataInfosPropertyDataInfoList List { get; set; }
+                public class QueryDevicePropertiesDataResponsePropertyDataInfosPropertyDataInfoList : TeaModel {
+                    [NameInMap("PropertyInfo")]
+                    [Validation(Required=true)]
+                    public List<QueryDevicePropertiesDataResponsePropertyDataInfosPropertyDataInfoListPropertyInfo> PropertyInfo { get; set; }
+                    public class QueryDevicePropertiesDataResponsePropertyDataInfosPropertyDataInfoListPropertyInfo : TeaModel {
+                        [NameInMap("Time")]
+                        [Validation(Required=true)]
+                        public long? Time { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=true)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+            }
+        };
 
     }
 
