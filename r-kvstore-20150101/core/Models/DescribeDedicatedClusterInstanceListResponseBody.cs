@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("BandWidth")]
+            [Validation(Required=false)]
+            public long? BandWidth { get; set; }
+
+            [NameInMap("CurrentBandWidth")]
+            [Validation(Required=false)]
+            public long? CurrentBandWidth { get; set; }
+
             [NameInMap("EngineVersion")]
             [Validation(Required=false)]
             public string EngineVersion { get; set; }

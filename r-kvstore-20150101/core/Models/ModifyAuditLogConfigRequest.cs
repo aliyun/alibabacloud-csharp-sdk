@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeRoleZoneInfoRequest : TeaModel {
+    public class ModifyAuditLogConfigRequest : TeaModel {
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -33,29 +33,29 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Product")]
+        [NameInMap("AuditLogSwitchSource")]
         [Validation(Required=false)]
-        public string Product { get; set; }
+        public string AuditLogSwitchSource { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("ServiceType")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public string ServiceType { get; set; }
 
-        [NameInMap("QueryType")]
+        [NameInMap("Retention")]
         [Validation(Required=false)]
-        public int? QueryType { get; set; }
+        public int? Retention { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("ProxyAudit")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string ProxyAudit { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("DbAudit")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public bool? DbAudit { get; set; }
 
-        [NameInMap("Role")]
+        [NameInMap("AuditCommand")]
         [Validation(Required=false)]
-        public string Role { get; set; }
+        public string AuditCommand { get; set; }
 
     }
 

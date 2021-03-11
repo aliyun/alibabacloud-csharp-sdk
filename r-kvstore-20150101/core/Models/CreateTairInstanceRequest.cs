@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class CreateInstanceRequest : TeaModel {
+    public class CreateTairInstanceRequest : TeaModel {
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("Token")]
-        [Validation(Required=false)]
-        public string Token { get; set; }
-
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
@@ -44,10 +40,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
-
-        [NameInMap("Capacity")]
-        [Validation(Required=false)]
-        public long? Capacity { get; set; }
 
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
@@ -57,21 +49,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
-        [NameInMap("Config")]
-        [Validation(Required=false)]
-        public string Config { get; set; }
-
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
-
-        [NameInMap("NodeType")]
-        [Validation(Required=false)]
-        public string NodeType { get; set; }
-
-        [NameInMap("NetworkType")]
-        [Validation(Required=false)]
-        public string NetworkType { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]
@@ -83,7 +63,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         [NameInMap("Period")]
         [Validation(Required=false)]
-        public string Period { get; set; }
+        public int? Period { get; set; }
 
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
@@ -100,14 +80,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
-        [NameInMap("EngineVersion")]
-        [Validation(Required=false)]
-        public string EngineVersion { get; set; }
 
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -127,31 +99,39 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public int? ResourceGroupId { get; set; }
 
-        [NameInMap("RestoreTime")]
+        [NameInMap("AutoPay")]
         [Validation(Required=false)]
-        public string RestoreTime { get; set; }
+        public bool? AutoPay { get; set; }
 
-        [NameInMap("DedicatedHostGroupId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string DedicatedHostGroupId { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
+
+        [NameInMap("Storage")]
+        [Validation(Required=false)]
+        public int? Storage { get; set; }
+
+        [NameInMap("ShardType")]
+        [Validation(Required=false)]
+        public string ShardType { get; set; }
 
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
 
-        [NameInMap("GlobalInstanceId")]
+        [NameInMap("EngineVersion")]
         [Validation(Required=false)]
-        public string GlobalInstanceId { get; set; }
+        public string EngineVersion { get; set; }
 
-        [NameInMap("GlobalInstance")]
+        [NameInMap("InstanceType")]
         [Validation(Required=false)]
-        public bool? GlobalInstance { get; set; }
-
-        [NameInMap("SecondaryZoneId")]
-        [Validation(Required=false)]
-        public string SecondaryZoneId { get; set; }
+        public string InstanceType { get; set; }
 
     }
 

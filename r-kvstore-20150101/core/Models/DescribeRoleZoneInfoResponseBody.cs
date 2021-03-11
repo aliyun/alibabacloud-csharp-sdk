@@ -33,14 +33,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeRoleZoneInfoResponseBodyNodeNodeInfo> NodeInfo { get; set; }
             public class DescribeRoleZoneInfoResponseBodyNodeNodeInfo : TeaModel {
+                public long? DefaultBandWidth { get; set; }
                 public string CurrentMinorVersion { get; set; }
+                public long? CurrentBandWidth { get; set; }
                 public int? InsType { get; set; }
                 public int? IsLatestVersion { get; set; }
-                public string InsName { get; set; }
                 public string NodeType { get; set; }
+                public string InsName { get; set; }
                 public string ZoneId { get; set; }
-                public string Role { get; set; }
+                public bool? IsOpenBandWidthService { get; set; }
                 public string CustinsId { get; set; }
+                public string Role { get; set; }
                 public string NodeId { get; set; }
             }
         };

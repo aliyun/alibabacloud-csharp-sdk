@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? IntranetBandwidth { get; set; }
 
+        [NameInMap("BandwidthExpireTime")]
+        [Validation(Required=false)]
+        public string BandwidthExpireTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

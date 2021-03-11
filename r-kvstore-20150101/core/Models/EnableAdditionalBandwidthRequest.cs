@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeAvailableResourceRequest : TeaModel {
+    public class EnableAdditionalBandwidthRequest : TeaModel {
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -29,37 +29,29 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("InstanceChargeType")]
-        [Validation(Required=false)]
-        public string InstanceChargeType { get; set; }
-
-        [NameInMap("OrderType")]
-        [Validation(Required=false)]
-        public string OrderType { get; set; }
-
-        [NameInMap("Level")]
-        [Validation(Required=false)]
-        public string Level { get; set; }
-
-        [NameInMap("Engine")]
-        [Validation(Required=false)]
-        public string Engine { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("AcceptLanguage")]
+        [NameInMap("CouponNo")]
         [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string CouponNo { get; set; }
+
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public string NodeId { get; set; }
+
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public string Bandwidth { get; set; }
+
+        [NameInMap("OrderTimeLength")]
+        [Validation(Required=false)]
+        public string OrderTimeLength { get; set; }
 
     }
 
