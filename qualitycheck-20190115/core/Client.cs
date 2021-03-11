@@ -18,63 +18,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-northeast-1", "qualitycheck.aliyuncs.com"},
-                {"ap-northeast-2-pop", "qualitycheck.aliyuncs.com"},
-                {"ap-south-1", "qualitycheck.aliyuncs.com"},
-                {"ap-southeast-1", "qualitycheck.aliyuncs.com"},
-                {"ap-southeast-2", "qualitycheck.aliyuncs.com"},
-                {"ap-southeast-3", "qualitycheck.aliyuncs.com"},
-                {"ap-southeast-5", "qualitycheck.aliyuncs.com"},
-                {"cn-beijing", "qualitycheck.aliyuncs.com"},
-                {"cn-beijing-finance-1", "qualitycheck.aliyuncs.com"},
-                {"cn-beijing-finance-pop", "qualitycheck.aliyuncs.com"},
-                {"cn-beijing-gov-1", "qualitycheck.aliyuncs.com"},
-                {"cn-beijing-nu16-b01", "qualitycheck.aliyuncs.com"},
-                {"cn-chengdu", "qualitycheck.aliyuncs.com"},
-                {"cn-edge-1", "qualitycheck.aliyuncs.com"},
-                {"cn-fujian", "qualitycheck.aliyuncs.com"},
-                {"cn-haidian-cm12-c01", "qualitycheck.aliyuncs.com"},
-                {"cn-hangzhou-bj-b01", "qualitycheck.aliyuncs.com"},
-                {"cn-hangzhou-finance", "qualitycheck.aliyuncs.com"},
-                {"cn-hangzhou-internal-prod-1", "qualitycheck.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-1", "qualitycheck.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-2", "qualitycheck.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-3", "qualitycheck.aliyuncs.com"},
-                {"cn-hangzhou-test-306", "qualitycheck.aliyuncs.com"},
-                {"cn-hongkong", "qualitycheck.aliyuncs.com"},
-                {"cn-hongkong-finance-pop", "qualitycheck.aliyuncs.com"},
-                {"cn-huhehaote", "qualitycheck.aliyuncs.com"},
-                {"cn-north-2-gov-1", "qualitycheck.aliyuncs.com"},
-                {"cn-qingdao", "qualitycheck.aliyuncs.com"},
-                {"cn-qingdao-nebula", "qualitycheck.aliyuncs.com"},
-                {"cn-shanghai", "qualitycheck.aliyuncs.com"},
-                {"cn-shanghai-et15-b01", "qualitycheck.aliyuncs.com"},
-                {"cn-shanghai-et2-b01", "qualitycheck.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "qualitycheck.aliyuncs.com"},
-                {"cn-shanghai-inner", "qualitycheck.aliyuncs.com"},
-                {"cn-shanghai-internal-test-1", "qualitycheck.aliyuncs.com"},
-                {"cn-shenzhen", "qualitycheck.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "qualitycheck.aliyuncs.com"},
-                {"cn-shenzhen-inner", "qualitycheck.aliyuncs.com"},
-                {"cn-shenzhen-st4-d01", "qualitycheck.aliyuncs.com"},
-                {"cn-shenzhen-su18-b01", "qualitycheck.aliyuncs.com"},
-                {"cn-wuhan", "qualitycheck.aliyuncs.com"},
-                {"cn-yushanfang", "qualitycheck.aliyuncs.com"},
-                {"cn-zhangbei-na61-b01", "qualitycheck.aliyuncs.com"},
-                {"cn-zhangjiakou", "qualitycheck.aliyuncs.com"},
-                {"cn-zhangjiakou-na62-a01", "qualitycheck.aliyuncs.com"},
-                {"cn-zhengzhou-nebula-1", "qualitycheck.aliyuncs.com"},
-                {"eu-central-1", "qualitycheck.aliyuncs.com"},
-                {"eu-west-1", "qualitycheck.aliyuncs.com"},
-                {"eu-west-1-oxs", "qualitycheck.aliyuncs.com"},
-                {"me-east-1", "qualitycheck.aliyuncs.com"},
-                {"rus-west-1-pop", "qualitycheck.aliyuncs.com"},
-                {"us-east-1", "qualitycheck.aliyuncs.com"},
-                {"us-west-1", "qualitycheck.aliyuncs.com"},
-            };
+            this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("qualitycheck", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -2459,38 +2403,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRuleWithOptionsAsync(request, runtime);
-        }
-
-        public UpdateRuleForAntResponse UpdateRuleForAntWithOptions(UpdateRuleForAntRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<UpdateRuleForAntResponse>(DoRPCRequest("UpdateRuleForAnt", "2019-01-15", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<UpdateRuleForAntResponse> UpdateRuleForAntWithOptionsAsync(UpdateRuleForAntRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<UpdateRuleForAntResponse>(await DoRPCRequestAsync("UpdateRuleForAnt", "2019-01-15", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public UpdateRuleForAntResponse UpdateRuleForAnt(UpdateRuleForAntRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateRuleForAntWithOptions(request, runtime);
-        }
-
-        public async Task<UpdateRuleForAntResponse> UpdateRuleForAntAsync(UpdateRuleForAntRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateRuleForAntWithOptionsAsync(request, runtime);
         }
 
         public UpdateScoreForApiResponse UpdateScoreForApiWithOptions(UpdateScoreForApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

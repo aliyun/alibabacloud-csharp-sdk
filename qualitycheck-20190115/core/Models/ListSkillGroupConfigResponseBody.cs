@@ -48,6 +48,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public int? AllContentQualityCheck { get; set; }
                 public string CreateTime { get; set; }
                 public string SkillGroupId { get; set; }
+                public bool? ScreenSwitch { get; set; }
                 public string InstanceId { get; set; }
                 public long? VocabId { get; set; }
                 public int? SkillGroupFrom { get; set; }
@@ -75,6 +76,31 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public string Name { get; set; }
                 public long? ModelId { get; set; }
                 public long? Id { get; set; }
+                public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens SkillGroupScreens { get; set; }
+                public class ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens : TeaModel {
+                    [NameInMap("SkillGroupScreen")]
+                    [Validation(Required=false)]
+                    public List<ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen> SkillGroupScreen { get; set; }
+                    public class ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen : TeaModel {
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                        [NameInMap("DataType")]
+                        [Validation(Required=false)]
+                        public int? DataType { get; set; }
+
+                        [NameInMap("Symbol")]
+                        [Validation(Required=false)]
+                        public int? Symbol { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                }
                 public int? QualityCheckType { get; set; }
                 public string VocabName { get; set; }
             }

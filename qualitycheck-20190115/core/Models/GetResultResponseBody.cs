@@ -34,14 +34,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public List<GetResultResponseBodyDataResultInfo> ResultInfo { get; set; }
             public class GetResultResponseBodyDataResultInfo : TeaModel {
                 public int? Status { get; set; }
+                public string AssignmentTime { get; set; }
+                public string LastDataId { get; set; }
                 public string ErrorMessage { get; set; }
-                public string Reviewer { get; set; }
-                public string CreateTime { get; set; }
                 public int? ReviewStatus { get; set; }
+                public string CreateTime { get; set; }
+                public string Reviewer { get; set; }
                 public string TaskName { get; set; }
                 public string ReviewTimeLong { get; set; }
-                public int? ReviewResult { get; set; }
                 public int? Score { get; set; }
+                public int? ReviewResult { get; set; }
                 public GetResultResponseBodyDataResultInfoAgent Agent { get; set; }
                 public class GetResultResponseBodyDataResultInfoAgent : TeaModel {
                     [NameInMap("Name")]
@@ -278,6 +280,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
                 public string TaskId { get; set; }
+                public int? ReviewType { get; set; }
                 public string Resolver { get; set; }
             }
         };
