@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public float? QualityScoreThreshold { get; set; }
 
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public int? ImageType { get; set; }
+
         [NameInMap("ImageURLA")]
         [Validation(Required=false)]
         public string ImageURLA { get; set; }
@@ -24,9 +28,13 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string ImageURLB { get; set; }
 
-        [NameInMap("ImageType")]
+        [NameInMap("ImageDataA")]
         [Validation(Required=false)]
-        public int? ImageType { get; set; }
+        public byte[] ImageDataA { get; set; }
+
+        [NameInMap("ImageDataB")]
+        [Validation(Required=false)]
+        public byte[] ImageDataB { get; set; }
 
     }
 

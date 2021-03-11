@@ -25,7 +25,15 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public string URL { get; set; }
 
+            [NameInMap("imageData")]
+            [Validation(Required=false)]
+            public byte[] ImageData { get; set; }
+
         }
+
+        [NameInMap("VideoData")]
+        [Validation(Required=false)]
+        public byte[] VideoData { get; set; }
 
     }
 

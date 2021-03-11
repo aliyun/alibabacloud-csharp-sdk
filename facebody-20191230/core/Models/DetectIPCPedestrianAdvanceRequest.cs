@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class DetectIPCPedestrianRequest : TeaModel {
+    public class DetectIPCPedestrianAdvanceRequest : TeaModel {
+        [NameInMap("ImageURLObject")]
+        [Validation(Required=true)]
+        public Stream ImageURLObject { get; set; }
+
         [NameInMap("ContinueOnError")]
         [Validation(Required=false)]
         public bool? ContinueOnError { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("Height")]
         [Validation(Required=false)]
         public int? Height { get; set; }
-
-        [NameInMap("ImageURL")]
-        [Validation(Required=false)]
-        public string ImageURL { get; set; }
 
         [NameInMap("DataId")]
         [Validation(Required=false)]
