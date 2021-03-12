@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeClusterGrafanaResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Dashboards")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<DescribeClusterGrafanaResponseDashboards> Dashboards { get; set; }
-        public class DescribeClusterGrafanaResponseDashboards : TeaModel {
-            [NameInMap("Url")]
-            [Validation(Required=true)]
-            public string Url { get; set; }
-
-            [NameInMap("Title")]
-            [Validation(Required=true)]
-            public string Title { get; set; }
-
-        }
+        public DescribeClusterGrafanaResponseBody Body { get; set; }
 
     }
 

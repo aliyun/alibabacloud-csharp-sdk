@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeIngressGatewaysResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("IngressGateways")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<Dictionary<string, object>> IngressGateways { get; set; }
+        public DescribeIngressGatewaysResponseBody Body { get; set; }
 
     }
 

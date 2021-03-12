@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshKubeconfigResponse : TeaModel {
-        [NameInMap("Kubeconfig")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Kubeconfig { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public DescribeServiceMeshKubeconfigResponseBody Body { get; set; }
 
     }
 

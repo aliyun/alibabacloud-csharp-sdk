@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetAutoInjectionLabelSyncStatusResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Status { get; set; }
+        public GetAutoInjectionLabelSyncStatusResponseBody Body { get; set; }
 
     }
 
