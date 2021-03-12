@@ -84,6 +84,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                             public float? YawAngle { get; set; }
 
                         }
+                        [NameInMap("AppearanceScore")]
+                        [Validation(Required=false)]
+                        public float? AppearanceScore { get; set; }
                         [NameInMap("Blur")]
                         [Validation(Required=false)]
                         public float? Blur { get; set; }

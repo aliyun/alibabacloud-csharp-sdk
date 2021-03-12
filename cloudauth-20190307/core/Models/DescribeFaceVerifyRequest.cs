@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string CertifyId { get; set; }
 
+        [NameInMap("PictureReturnType")]
+        [Validation(Required=false)]
+        public string PictureReturnType { get; set; }
+
     }
 
 }
