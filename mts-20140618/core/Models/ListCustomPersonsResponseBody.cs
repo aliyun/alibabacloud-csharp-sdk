@@ -21,37 +21,43 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<ListCustomPersonsResponseBodyCategoriesCategory> Category { get; set; }
             public class ListCustomPersonsResponseBodyCategoriesCategory : TeaModel {
-                [NameInMap("Person")]
-                [Validation(Required=false)]
-                public List<ListCustomPersonsResponseBodyCategoriesCategoryPerson> Person { get; set; }
-                public class ListCustomPersonsResponseBodyCategoriesCategoryPerson : TeaModel {
-                    [NameInMap("PersonName")]
+                public ListCustomPersonsResponseBodyCategoriesCategoryPersons Persons { get; set; }
+                public class ListCustomPersonsResponseBodyCategoriesCategoryPersons : TeaModel {
+                    [NameInMap("Person")]
                     [Validation(Required=false)]
-                    public string PersonName { get; set; }
-
-                    [NameInMap("PersonDescription")]
-                    [Validation(Required=false)]
-                    public string PersonDescription { get; set; }
-
-                    [NameInMap("Faces")]
-                    [Validation(Required=false)]
-                    public ListCustomPersonsResponseBodyCategoriesCategoryPersonFaces Faces { get; set; }
-                    public class ListCustomPersonsResponseBodyCategoriesCategoryPersonFaces : TeaModel {
-                        [NameInMap("Face")]
+                    public List<ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson> Person { get; set; }
+                    public class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson : TeaModel {
+                        [NameInMap("PersonName")]
                         [Validation(Required=false)]
-                        public List<ListCustomPersonsResponseBodyCategoriesCategoryPersonFacesFace> Face { get; set; }
-                        public class ListCustomPersonsResponseBodyCategoriesCategoryPersonFacesFace : TeaModel {
-                            public string ImageUrl { get; set; }
-                            public string FaceId { get; set; }
-                        }
-                    };
+                        public string PersonName { get; set; }
 
-                    [NameInMap("PersonId")]
-                    [Validation(Required=false)]
-                    public string PersonId { get; set; }
+                        [NameInMap("PersonDescription")]
+                        [Validation(Required=false)]
+                        public string PersonDescription { get; set; }
+
+                        [NameInMap("Faces")]
+                        [Validation(Required=false)]
+                        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFaces Faces { get; set; }
+                        public class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFaces : TeaModel {
+                            [NameInMap("Face")]
+                            [Validation(Required=false)]
+                            public List<ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace> Face { get; set; }
+                            public class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace : TeaModel {
+                                public string ImageUrl { get; set; }
+                                public string FaceId { get; set; }
+                            }
+                        };
+
+                        [NameInMap("PersonId")]
+                        [Validation(Required=false)]
+                        public string PersonId { get; set; }
+
+                    }
 
                 }
-
+                public string CategoryId { get; set; }
+                public string CategoryName { get; set; }
+                public string CategoryDescription { get; set; }
             }
         };
 

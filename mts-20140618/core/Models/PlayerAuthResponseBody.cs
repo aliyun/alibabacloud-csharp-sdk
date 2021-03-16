@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<PlayerAuthResponseBodySwitchListSwitch> Switch { get; set; }
             public class PlayerAuthResponseBodySwitchListSwitch : TeaModel {
-                public string State { get; set; }
                 public string FunctionId { get; set; }
-                public string SwitchId { get; set; }
                 public string FunctionName { get; set; }
+                public string State { get; set; }
+                public string SwitchId { get; set; }
             }
         };
 

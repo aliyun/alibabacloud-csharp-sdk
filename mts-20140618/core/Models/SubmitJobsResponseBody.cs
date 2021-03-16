@@ -17,229 +17,419 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<SubmitJobsResponseBodyJobResultListJobResult> JobResult { get; set; }
             public class SubmitJobsResponseBodyJobResultListJobResult : TeaModel {
-                [NameInMap("CreationTime")]
-                [Validation(Required=false)]
-                public string CreationTime { get; set; }
-
-                [NameInMap("Percent")]
-                [Validation(Required=false)]
-                public long? Percent { get; set; }
-
-                [NameInMap("FinishTime")]
-                [Validation(Required=false)]
-                public string FinishTime { get; set; }
-
-                [NameInMap("State")]
-                [Validation(Required=false)]
-                public string State { get; set; }
-
-                [NameInMap("JobId")]
-                [Validation(Required=false)]
-                public string JobId { get; set; }
-
-                [NameInMap("Code")]
-                [Validation(Required=false)]
-                public string Code { get; set; }
-
-                [NameInMap("Message")]
-                [Validation(Required=false)]
-                public string Message { get; set; }
-
-                [NameInMap("Output")]
-                [Validation(Required=false)]
-                public SubmitJobsResponseBodyJobResultListJobResultOutput Output { get; set; }
-                public class SubmitJobsResponseBodyJobResultListJobResultOutput : TeaModel {
-                    [NameInMap("Video")]
+                public SubmitJobsResponseBodyJobResultListJobResultJob Job { get; set; }
+                public class SubmitJobsResponseBodyJobResultListJobResultJob : TeaModel {
+                    [NameInMap("CreationTime")]
                     [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputVideo Video { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputVideo : TeaModel {
-                        [NameInMap("Bufsize")]
-                        [Validation(Required=false)]
-                        public string Bufsize { get; set; }
+                    public string CreationTime { get; set; }
 
-                        [NameInMap("Degrain")]
-                        [Validation(Required=false)]
-                        public string Degrain { get; set; }
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public long? Percent { get; set; }
 
-                        [NameInMap("BitrateBnd")]
+                    [NameInMap("FinishTime")]
+                    [Validation(Required=false)]
+                    public string FinishTime { get; set; }
+
+                    [NameInMap("State")]
+                    [Validation(Required=false)]
+                    public string State { get; set; }
+
+                    [NameInMap("JobId")]
+                    [Validation(Required=false)]
+                    public string JobId { get; set; }
+
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public string Code { get; set; }
+
+                    [NameInMap("Message")]
+                    [Validation(Required=false)]
+                    public string Message { get; set; }
+
+                    [NameInMap("Output")]
+                    [Validation(Required=false)]
+                    public SubmitJobsResponseBodyJobResultListJobResultJobOutput Output { get; set; }
+                    public class SubmitJobsResponseBodyJobResultListJobResultJobOutput : TeaModel {
+                        [NameInMap("Video")]
                         [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputVideoBitrateBnd BitrateBnd { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputVideoBitrateBnd : TeaModel {
-                            [NameInMap("Max")]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputVideo Video { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputVideo : TeaModel {
+                            [NameInMap("Bufsize")]
                             [Validation(Required=false)]
-                            public string Max { get; set; }
-                            [NameInMap("Min")]
+                            public string Bufsize { get; set; }
+
+                            [NameInMap("Degrain")]
                             [Validation(Required=false)]
-                            public string Min { get; set; }
-                        };
+                            public string Degrain { get; set; }
 
-                        [NameInMap("PixFmt")]
-                        [Validation(Required=false)]
-                        public string PixFmt { get; set; }
+                            [NameInMap("BitrateBnd")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputVideoBitrateBnd BitrateBnd { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputVideoBitrateBnd : TeaModel {
+                                [NameInMap("Max")]
+                                [Validation(Required=false)]
+                                public string Max { get; set; }
+                                [NameInMap("Min")]
+                                [Validation(Required=false)]
+                                public string Min { get; set; }
+                            };
 
-                        [NameInMap("Pad")]
-                        [Validation(Required=false)]
-                        public string Pad { get; set; }
+                            [NameInMap("PixFmt")]
+                            [Validation(Required=false)]
+                            public string PixFmt { get; set; }
 
-                        [NameInMap("Codec")]
-                        [Validation(Required=false)]
-                        public string Codec { get; set; }
+                            [NameInMap("Pad")]
+                            [Validation(Required=false)]
+                            public string Pad { get; set; }
 
-                        [NameInMap("Height")]
-                        [Validation(Required=false)]
-                        public string Height { get; set; }
+                            [NameInMap("Codec")]
+                            [Validation(Required=false)]
+                            public string Codec { get; set; }
 
-                        [NameInMap("Qscale")]
-                        [Validation(Required=false)]
-                        public string Qscale { get; set; }
+                            [NameInMap("Height")]
+                            [Validation(Required=false)]
+                            public string Height { get; set; }
 
-                        [NameInMap("Crop")]
-                        [Validation(Required=false)]
-                        public string Crop { get; set; }
+                            [NameInMap("Qscale")]
+                            [Validation(Required=false)]
+                            public string Qscale { get; set; }
 
-                        [NameInMap("Bitrate")]
-                        [Validation(Required=false)]
-                        public string Bitrate { get; set; }
+                            [NameInMap("Crop")]
+                            [Validation(Required=false)]
+                            public string Crop { get; set; }
 
-                        [NameInMap("Maxrate")]
-                        [Validation(Required=false)]
-                        public string Maxrate { get; set; }
+                            [NameInMap("Bitrate")]
+                            [Validation(Required=false)]
+                            public string Bitrate { get; set; }
 
-                        [NameInMap("MaxFps")]
-                        [Validation(Required=false)]
-                        public string MaxFps { get; set; }
+                            [NameInMap("Maxrate")]
+                            [Validation(Required=false)]
+                            public string Maxrate { get; set; }
 
-                        [NameInMap("Profile")]
-                        [Validation(Required=false)]
-                        public string Profile { get; set; }
+                            [NameInMap("MaxFps")]
+                            [Validation(Required=false)]
+                            public string MaxFps { get; set; }
 
-                        [NameInMap("Crf")]
-                        [Validation(Required=false)]
-                        public string Crf { get; set; }
+                            [NameInMap("Profile")]
+                            [Validation(Required=false)]
+                            public string Profile { get; set; }
 
-                        [NameInMap("Gop")]
-                        [Validation(Required=false)]
-                        public string Gop { get; set; }
+                            [NameInMap("Crf")]
+                            [Validation(Required=false)]
+                            public string Crf { get; set; }
 
-                        [NameInMap("Width")]
-                        [Validation(Required=false)]
-                        public string Width { get; set; }
+                            [NameInMap("Gop")]
+                            [Validation(Required=false)]
+                            public string Gop { get; set; }
 
-                        [NameInMap("Fps")]
-                        [Validation(Required=false)]
-                        public string Fps { get; set; }
+                            [NameInMap("Width")]
+                            [Validation(Required=false)]
+                            public string Width { get; set; }
 
-                        [NameInMap("Preset")]
-                        [Validation(Required=false)]
-                        public string Preset { get; set; }
+                            [NameInMap("Fps")]
+                            [Validation(Required=false)]
+                            public string Fps { get; set; }
 
-                        [NameInMap("ScanMode")]
-                        [Validation(Required=false)]
-                        public string ScanMode { get; set; }
+                            [NameInMap("Preset")]
+                            [Validation(Required=false)]
+                            public string Preset { get; set; }
 
-                        [NameInMap("ResoPriority")]
-                        [Validation(Required=false)]
-                        public string ResoPriority { get; set; }
+                            [NameInMap("ScanMode")]
+                            [Validation(Required=false)]
+                            public string ScanMode { get; set; }
 
-                    }
-                    [NameInMap("TransConfig")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputTransConfig TransConfig { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputTransConfig : TeaModel {
-                        [NameInMap("IsCheckAudioBitrate")]
-                        [Validation(Required=false)]
-                        public string IsCheckAudioBitrate { get; set; }
+                            [NameInMap("ResoPriority")]
+                            [Validation(Required=false)]
+                            public string ResoPriority { get; set; }
 
-                        [NameInMap("TransMode")]
+                        }
+                        [NameInMap("TransConfig")]
                         [Validation(Required=false)]
-                        public string TransMode { get; set; }
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputTransConfig TransConfig { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputTransConfig : TeaModel {
+                            [NameInMap("IsCheckAudioBitrate")]
+                            [Validation(Required=false)]
+                            public string IsCheckAudioBitrate { get; set; }
 
-                        [NameInMap("IsCheckReso")]
-                        [Validation(Required=false)]
-                        public string IsCheckReso { get; set; }
+                            [NameInMap("TransMode")]
+                            [Validation(Required=false)]
+                            public string TransMode { get; set; }
 
-                        [NameInMap("IsCheckVideoBitrateFail")]
-                        [Validation(Required=false)]
-                        public string IsCheckVideoBitrateFail { get; set; }
+                            [NameInMap("IsCheckReso")]
+                            [Validation(Required=false)]
+                            public string IsCheckReso { get; set; }
 
-                        [NameInMap("AdjDarMethod")]
-                        [Validation(Required=false)]
-                        public string AdjDarMethod { get; set; }
+                            [NameInMap("IsCheckVideoBitrateFail")]
+                            [Validation(Required=false)]
+                            public string IsCheckVideoBitrateFail { get; set; }
 
-                        [NameInMap("IsCheckVideoBitrate")]
-                        [Validation(Required=false)]
-                        public string IsCheckVideoBitrate { get; set; }
+                            [NameInMap("AdjDarMethod")]
+                            [Validation(Required=false)]
+                            public string AdjDarMethod { get; set; }
 
-                        [NameInMap("IsCheckResoFail")]
-                        [Validation(Required=false)]
-                        public string IsCheckResoFail { get; set; }
+                            [NameInMap("IsCheckVideoBitrate")]
+                            [Validation(Required=false)]
+                            public string IsCheckVideoBitrate { get; set; }
 
-                        [NameInMap("IsCheckAudioBitrateFail")]
-                        [Validation(Required=false)]
-                        public string IsCheckAudioBitrateFail { get; set; }
+                            [NameInMap("IsCheckResoFail")]
+                            [Validation(Required=false)]
+                            public string IsCheckResoFail { get; set; }
 
-                    }
-                    [NameInMap("Encryption")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputEncryption Encryption { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputEncryption : TeaModel {
-                        [NameInMap("Type")]
-                        [Validation(Required=false)]
-                        public string Type { get; set; }
+                            [NameInMap("IsCheckAudioBitrateFail")]
+                            [Validation(Required=false)]
+                            public string IsCheckAudioBitrateFail { get; set; }
 
-                        [NameInMap("Key")]
+                        }
+                        [NameInMap("Encryption")]
                         [Validation(Required=false)]
-                        public string Key { get; set; }
-
-                        [NameInMap("KeyType")]
-                        [Validation(Required=false)]
-                        public string KeyType { get; set; }
-
-                        [NameInMap("Id")]
-                        [Validation(Required=false)]
-                        public string Id { get; set; }
-
-                        [NameInMap("KeyUri")]
-                        [Validation(Required=false)]
-                        public string KeyUri { get; set; }
-
-                        [NameInMap("SkipCnt")]
-                        [Validation(Required=false)]
-                        public string SkipCnt { get; set; }
-
-                    }
-                    [NameInMap("WaterMarkList")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputWaterMarkList WaterMarkList { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputWaterMarkList : TeaModel {
-                        [NameInMap("WaterMark")]
-                        [Validation(Required=false)]
-                        public List<SubmitJobsResponseBodyJobResultListJobResultOutputWaterMarkListWaterMark> WaterMark { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputWaterMarkListWaterMark : TeaModel {
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputEncryption Encryption { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputEncryption : TeaModel {
                             [NameInMap("Type")]
                             [Validation(Required=false)]
                             public string Type { get; set; }
 
-                            [NameInMap("ReferPos")]
+                            [NameInMap("Key")]
                             [Validation(Required=false)]
-                            public string ReferPos { get; set; }
+                            public string Key { get; set; }
 
-                            [NameInMap("Dx")]
+                            [NameInMap("KeyType")]
                             [Validation(Required=false)]
-                            public string Dx { get; set; }
+                            public string KeyType { get; set; }
 
-                            [NameInMap("Width")]
+                            [NameInMap("Id")]
                             [Validation(Required=false)]
-                            public string Width { get; set; }
+                            public string Id { get; set; }
 
-                            [NameInMap("Height")]
+                            [NameInMap("KeyUri")]
                             [Validation(Required=false)]
-                            public string Height { get; set; }
+                            public string KeyUri { get; set; }
+
+                            [NameInMap("SkipCnt")]
+                            [Validation(Required=false)]
+                            public string SkipCnt { get; set; }
+
+                        }
+                        [NameInMap("WaterMarkList")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkList WaterMarkList { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkList : TeaModel {
+                            [NameInMap("WaterMark")]
+                            [Validation(Required=false)]
+                            public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkListWaterMark> WaterMark { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkListWaterMark : TeaModel {
+                                [NameInMap("Type")]
+                                [Validation(Required=false)]
+                                public string Type { get; set; }
+
+                                [NameInMap("ReferPos")]
+                                [Validation(Required=false)]
+                                public string ReferPos { get; set; }
+
+                                [NameInMap("Dx")]
+                                [Validation(Required=false)]
+                                public string Dx { get; set; }
+
+                                [NameInMap("Width")]
+                                [Validation(Required=false)]
+                                public string Width { get; set; }
+
+                                [NameInMap("Height")]
+                                [Validation(Required=false)]
+                                public string Height { get; set; }
+
+                                [NameInMap("InputFile")]
+                                [Validation(Required=false)]
+                                public SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkListWaterMarkInputFile InputFile { get; set; }
+                                public class SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkListWaterMarkInputFile : TeaModel {
+                                    [NameInMap("Object")]
+                                    [Validation(Required=false)]
+                                    public string Object { get; set; }
+                                    [NameInMap("Location")]
+                                    [Validation(Required=false)]
+                                    public string Location { get; set; }
+                                    [NameInMap("Bucket")]
+                                    [Validation(Required=false)]
+                                    public string Bucket { get; set; }
+                                };
+
+                                [NameInMap("WaterMarkTemplateId")]
+                                [Validation(Required=false)]
+                                public string WaterMarkTemplateId { get; set; }
+
+                                [NameInMap("Dy")]
+                                [Validation(Required=false)]
+                                public string Dy { get; set; }
+
+                            }
+
+                        }
+                        [NameInMap("WaterMarkConfigUrl")]
+                        [Validation(Required=false)]
+                        public string WaterMarkConfigUrl { get; set; }
+                        [NameInMap("DeWatermark")]
+                        [Validation(Required=false)]
+                        public string DeWatermark { get; set; }
+                        [NameInMap("M3U8NonStandardSupport")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupport M3U8NonStandardSupport { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupport : TeaModel {
+                            [NameInMap("TS")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupportTS TS { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupportTS : TeaModel {
+                                [NameInMap("SizeSupport")]
+                                [Validation(Required=false)]
+                                public bool? SizeSupport { get; set; }
+                                [NameInMap("Md5Support")]
+                                [Validation(Required=false)]
+                                public bool? Md5Support { get; set; }
+                            };
+
+                        }
+                        [NameInMap("Priority")]
+                        [Validation(Required=false)]
+                        public string Priority { get; set; }
+                        [NameInMap("Audio")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputAudio Audio { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputAudio : TeaModel {
+                            [NameInMap("Profile")]
+                            [Validation(Required=false)]
+                            public string Profile { get; set; }
+
+                            [NameInMap("Codec")]
+                            [Validation(Required=false)]
+                            public string Codec { get; set; }
+
+                            [NameInMap("Samplerate")]
+                            [Validation(Required=false)]
+                            public string Samplerate { get; set; }
+
+                            [NameInMap("Qscale")]
+                            [Validation(Required=false)]
+                            public string Qscale { get; set; }
+
+                            [NameInMap("Channels")]
+                            [Validation(Required=false)]
+                            public string Channels { get; set; }
+
+                            [NameInMap("Volume")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputAudioVolume Volume { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputAudioVolume : TeaModel {
+                                [NameInMap("Method")]
+                                [Validation(Required=false)]
+                                public string Method { get; set; }
+                                [NameInMap("Level")]
+                                [Validation(Required=false)]
+                                public string Level { get; set; }
+                            };
+
+                            [NameInMap("Bitrate")]
+                            [Validation(Required=false)]
+                            public string Bitrate { get; set; }
+
+                        }
+                        [NameInMap("AudioStreamMap")]
+                        [Validation(Required=false)]
+                        public string AudioStreamMap { get; set; }
+                        [NameInMap("MergeList")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputMergeList MergeList { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputMergeList : TeaModel {
+                            [NameInMap("Merge")]
+                            [Validation(Required=false)]
+                            public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputMergeListMerge> Merge { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputMergeListMerge : TeaModel {
+                                [NameInMap("Start")]
+                                [Validation(Required=false)]
+                                public string Start { get; set; }
+
+                                [NameInMap("RoleArn")]
+                                [Validation(Required=false)]
+                                public string RoleArn { get; set; }
+
+                                [NameInMap("MergeURL")]
+                                [Validation(Required=false)]
+                                public string MergeURL { get; set; }
+
+                                [NameInMap("Duration")]
+                                [Validation(Required=false)]
+                                public string Duration { get; set; }
+
+                            }
+
+                        }
+                        [NameInMap("SuperReso")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputSuperReso SuperReso { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputSuperReso : TeaModel {
+                            [NameInMap("IsHalfSample")]
+                            [Validation(Required=false)]
+                            public string IsHalfSample { get; set; }
+
+                        }
+                        [NameInMap("UserData")]
+                        [Validation(Required=false)]
+                        public string UserData { get; set; }
+                        [NameInMap("OutSubtitleList")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleList OutSubtitleList { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleList : TeaModel {
+                            [NameInMap("OutSubtitle")]
+                            [Validation(Required=false)]
+                            public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleListOutSubtitle> OutSubtitle { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleListOutSubtitle : TeaModel {
+                                [NameInMap("Map")]
+                                [Validation(Required=false)]
+                                public string Map { get; set; }
+
+                                [NameInMap("OutSubtitleFile")]
+                                [Validation(Required=false)]
+                                public SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleListOutSubtitleOutSubtitleFile OutSubtitleFile { get; set; }
+                                public class SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleListOutSubtitleOutSubtitleFile : TeaModel {
+                                    [NameInMap("RoleArn")]
+                                    [Validation(Required=false)]
+                                    public string RoleArn { get; set; }
+                                    [NameInMap("Object")]
+                                    [Validation(Required=false)]
+                                    public string Object { get; set; }
+                                    [NameInMap("Location")]
+                                    [Validation(Required=false)]
+                                    public string Location { get; set; }
+                                    [NameInMap("Bucket")]
+                                    [Validation(Required=false)]
+                                    public string Bucket { get; set; }
+                                };
+
+                                [NameInMap("Success")]
+                                [Validation(Required=false)]
+                                public bool? Success { get; set; }
+
+                                [NameInMap("Message")]
+                                [Validation(Required=false)]
+                                public string Message { get; set; }
+
+                            }
+
+                        }
+                        [NameInMap("DigiWaterMark")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMark DigiWaterMark { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMark : TeaModel {
+                            [NameInMap("Type")]
+                            [Validation(Required=false)]
+                            public string Type { get; set; }
+
+                            [NameInMap("Alpha")]
+                            [Validation(Required=false)]
+                            public string Alpha { get; set; }
 
                             [NameInMap("InputFile")]
                             [Validation(Required=false)]
-                            public SubmitJobsResponseBodyJobResultListJobResultOutputWaterMarkListWaterMarkInputFile InputFile { get; set; }
-                            public class SubmitJobsResponseBodyJobResultListJobResultOutputWaterMarkListWaterMarkInputFile : TeaModel {
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMarkInputFile InputFile { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMarkInputFile : TeaModel {
                                 [NameInMap("Object")]
                                 [Validation(Required=false)]
                                 public string Object { get; set; }
@@ -251,750 +441,566 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                                 public string Bucket { get; set; }
                             };
 
-                            [NameInMap("WaterMarkTemplateId")]
-                            [Validation(Required=false)]
-                            public string WaterMarkTemplateId { get; set; }
-
-                            [NameInMap("Dy")]
-                            [Validation(Required=false)]
-                            public string Dy { get; set; }
-
                         }
-
-                    }
-                    [NameInMap("WaterMarkConfigUrl")]
-                    [Validation(Required=false)]
-                    public string WaterMarkConfigUrl { get; set; }
-                    [NameInMap("DeWatermark")]
-                    [Validation(Required=false)]
-                    public string DeWatermark { get; set; }
-                    [NameInMap("M3U8NonStandardSupport")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputM3U8NonStandardSupport M3U8NonStandardSupport { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputM3U8NonStandardSupport : TeaModel {
-                        [NameInMap("TS")]
+                        [NameInMap("VideoStreamMap")]
                         [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputM3U8NonStandardSupportTS TS { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputM3U8NonStandardSupportTS : TeaModel {
-                            [NameInMap("SizeSupport")]
-                            [Validation(Required=false)]
-                            public bool? SizeSupport { get; set; }
-                            [NameInMap("Md5Support")]
-                            [Validation(Required=false)]
-                            public bool? Md5Support { get; set; }
-                        };
-
-                    }
-                    [NameInMap("Priority")]
-                    [Validation(Required=false)]
-                    public string Priority { get; set; }
-                    [NameInMap("Audio")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputAudio Audio { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputAudio : TeaModel {
-                        [NameInMap("Profile")]
+                        public string VideoStreamMap { get; set; }
+                        [NameInMap("OutputFile")]
                         [Validation(Required=false)]
-                        public string Profile { get; set; }
-
-                        [NameInMap("Codec")]
-                        [Validation(Required=false)]
-                        public string Codec { get; set; }
-
-                        [NameInMap("Samplerate")]
-                        [Validation(Required=false)]
-                        public string Samplerate { get; set; }
-
-                        [NameInMap("Qscale")]
-                        [Validation(Required=false)]
-                        public string Qscale { get; set; }
-
-                        [NameInMap("Channels")]
-                        [Validation(Required=false)]
-                        public string Channels { get; set; }
-
-                        [NameInMap("Volume")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputAudioVolume Volume { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputAudioVolume : TeaModel {
-                            [NameInMap("Method")]
-                            [Validation(Required=false)]
-                            public string Method { get; set; }
-                            [NameInMap("Level")]
-                            [Validation(Required=false)]
-                            public string Level { get; set; }
-                        };
-
-                        [NameInMap("Bitrate")]
-                        [Validation(Required=false)]
-                        public string Bitrate { get; set; }
-
-                    }
-                    [NameInMap("AudioStreamMap")]
-                    [Validation(Required=false)]
-                    public string AudioStreamMap { get; set; }
-                    [NameInMap("MergeList")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputMergeList MergeList { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputMergeList : TeaModel {
-                        [NameInMap("Merge")]
-                        [Validation(Required=false)]
-                        public List<SubmitJobsResponseBodyJobResultListJobResultOutputMergeListMerge> Merge { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputMergeListMerge : TeaModel {
-                            [NameInMap("Start")]
-                            [Validation(Required=false)]
-                            public string Start { get; set; }
-
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputOutputFile OutputFile { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputOutputFile : TeaModel {
                             [NameInMap("RoleArn")]
                             [Validation(Required=false)]
                             public string RoleArn { get; set; }
 
-                            [NameInMap("MergeURL")]
-                            [Validation(Required=false)]
-                            public string MergeURL { get; set; }
-
-                            [NameInMap("Duration")]
-                            [Validation(Required=false)]
-                            public string Duration { get; set; }
-
-                        }
-
-                    }
-                    [NameInMap("SuperReso")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputSuperReso SuperReso { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputSuperReso : TeaModel {
-                        [NameInMap("IsHalfSample")]
-                        [Validation(Required=false)]
-                        public string IsHalfSample { get; set; }
-
-                    }
-                    [NameInMap("UserData")]
-                    [Validation(Required=false)]
-                    public string UserData { get; set; }
-                    [NameInMap("OutSubtitleList")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputOutSubtitleList OutSubtitleList { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputOutSubtitleList : TeaModel {
-                        [NameInMap("OutSubtitle")]
-                        [Validation(Required=false)]
-                        public List<SubmitJobsResponseBodyJobResultListJobResultOutputOutSubtitleListOutSubtitle> OutSubtitle { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputOutSubtitleListOutSubtitle : TeaModel {
-                            [NameInMap("Map")]
-                            [Validation(Required=false)]
-                            public string Map { get; set; }
-
-                            [NameInMap("OutSubtitleFile")]
-                            [Validation(Required=false)]
-                            public SubmitJobsResponseBodyJobResultListJobResultOutputOutSubtitleListOutSubtitleOutSubtitleFile OutSubtitleFile { get; set; }
-                            public class SubmitJobsResponseBodyJobResultListJobResultOutputOutSubtitleListOutSubtitleOutSubtitleFile : TeaModel {
-                                [NameInMap("RoleArn")]
-                                [Validation(Required=false)]
-                                public string RoleArn { get; set; }
-                                [NameInMap("Object")]
-                                [Validation(Required=false)]
-                                public string Object { get; set; }
-                                [NameInMap("Location")]
-                                [Validation(Required=false)]
-                                public string Location { get; set; }
-                                [NameInMap("Bucket")]
-                                [Validation(Required=false)]
-                                public string Bucket { get; set; }
-                            };
-
-                            [NameInMap("Success")]
-                            [Validation(Required=false)]
-                            public bool? Success { get; set; }
-
-                            [NameInMap("Message")]
-                            [Validation(Required=false)]
-                            public string Message { get; set; }
-
-                        }
-
-                    }
-                    [NameInMap("DigiWaterMark")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputDigiWaterMark DigiWaterMark { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputDigiWaterMark : TeaModel {
-                        [NameInMap("Type")]
-                        [Validation(Required=false)]
-                        public string Type { get; set; }
-
-                        [NameInMap("Alpha")]
-                        [Validation(Required=false)]
-                        public string Alpha { get; set; }
-
-                        [NameInMap("InputFile")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputDigiWaterMarkInputFile InputFile { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputDigiWaterMarkInputFile : TeaModel {
                             [NameInMap("Object")]
                             [Validation(Required=false)]
                             public string Object { get; set; }
+
                             [NameInMap("Location")]
                             [Validation(Required=false)]
                             public string Location { get; set; }
+
                             [NameInMap("Bucket")]
                             [Validation(Required=false)]
                             public string Bucket { get; set; }
-                        };
-
-                    }
-                    [NameInMap("VideoStreamMap")]
-                    [Validation(Required=false)]
-                    public string VideoStreamMap { get; set; }
-                    [NameInMap("OutputFile")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputOutputFile OutputFile { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputOutputFile : TeaModel {
-                        [NameInMap("RoleArn")]
-                        [Validation(Required=false)]
-                        public string RoleArn { get; set; }
-
-                        [NameInMap("Object")]
-                        [Validation(Required=false)]
-                        public string Object { get; set; }
-
-                        [NameInMap("Location")]
-                        [Validation(Required=false)]
-                        public string Location { get; set; }
-
-                        [NameInMap("Bucket")]
-                        [Validation(Required=false)]
-                        public string Bucket { get; set; }
-
-                    }
-                    [NameInMap("AmixList")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputAmixList AmixList { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputAmixList : TeaModel {
-                        [NameInMap("Amix")]
-                        [Validation(Required=false)]
-                        public List<SubmitJobsResponseBodyJobResultListJobResultOutputAmixListAmix> Amix { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputAmixListAmix : TeaModel {
-                            [NameInMap("Map")]
-                            [Validation(Required=false)]
-                            public string Map { get; set; }
-
-                            [NameInMap("Start")]
-                            [Validation(Required=false)]
-                            public string Start { get; set; }
-
-                            [NameInMap("AmixURL")]
-                            [Validation(Required=false)]
-                            public string AmixURL { get; set; }
-
-                            [NameInMap("Duration")]
-                            [Validation(Required=false)]
-                            public string Duration { get; set; }
-
-                            [NameInMap("MixDurMode")]
-                            [Validation(Required=false)]
-                            public string MixDurMode { get; set; }
 
                         }
-
-                    }
-                    [NameInMap("Rotate")]
-                    [Validation(Required=false)]
-                    public string Rotate { get; set; }
-                    [NameInMap("Container")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputContainer Container { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputContainer : TeaModel {
-                        [NameInMap("Format")]
+                        [NameInMap("AmixList")]
                         [Validation(Required=false)]
-                        public string Format { get; set; }
-
-                    }
-                    [NameInMap("Clip")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputClip Clip { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputClip : TeaModel {
-                        [NameInMap("TimeSpan")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputClipTimeSpan TimeSpan { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputClipTimeSpan : TeaModel {
-                            [NameInMap("Seek")]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputAmixList AmixList { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputAmixList : TeaModel {
+                            [NameInMap("Amix")]
                             [Validation(Required=false)]
-                            public string Seek { get; set; }
-                            [NameInMap("Duration")]
-                            [Validation(Required=false)]
-                            public string Duration { get; set; }
-                        };
-
-                    }
-                    [NameInMap("MergeConfigUrl")]
-                    [Validation(Required=false)]
-                    public string MergeConfigUrl { get; set; }
-                    [NameInMap("OpeningList")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputOpeningList OpeningList { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputOpeningList : TeaModel {
-                        [NameInMap("Opening")]
-                        [Validation(Required=false)]
-                        public List<SubmitJobsResponseBodyJobResultListJobResultOutputOpeningListOpening> Opening { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputOpeningListOpening : TeaModel {
-                            [NameInMap("openUrl")]
-                            [Validation(Required=false)]
-                            public string OpenUrl { get; set; }
-
-                            [NameInMap("Start")]
-                            [Validation(Required=false)]
-                            public string Start { get; set; }
-
-                            [NameInMap("Width")]
-                            [Validation(Required=false)]
-                            public string Width { get; set; }
-
-                            [NameInMap("Height")]
-                            [Validation(Required=false)]
-                            public string Height { get; set; }
-
-                        }
-
-                    }
-                    [NameInMap("MuxConfig")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfig MuxConfig { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfig : TeaModel {
-                        [NameInMap("Webp")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfigWebp Webp { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfigWebp : TeaModel {
-                            [NameInMap("Loop")]
-                            [Validation(Required=false)]
-                            public string Loop { get; set; }
-                        };
-
-                        [NameInMap("Gif")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfigGif Gif { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfigGif : TeaModel {
-                            [NameInMap("FinalDelay")]
-                            [Validation(Required=false)]
-                            public string FinalDelay { get; set; }
-                            [NameInMap("DitherMode")]
-                            [Validation(Required=false)]
-                            public string DitherMode { get; set; }
-                            [NameInMap("Loop")]
-                            [Validation(Required=false)]
-                            public string Loop { get; set; }
-                            [NameInMap("IsCustomPalette")]
-                            [Validation(Required=false)]
-                            public string IsCustomPalette { get; set; }
-                        };
-
-                        [NameInMap("Segment")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfigSegment Segment { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputMuxConfigSegment : TeaModel {
-                            [NameInMap("Duration")]
-                            [Validation(Required=false)]
-                            public string Duration { get; set; }
-                        };
-
-                    }
-                    [NameInMap("TailSlateList")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputTailSlateList TailSlateList { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputTailSlateList : TeaModel {
-                        [NameInMap("TailSlate")]
-                        [Validation(Required=false)]
-                        public List<SubmitJobsResponseBodyJobResultListJobResultOutputTailSlateListTailSlate> TailSlate { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputTailSlateListTailSlate : TeaModel {
-                            [NameInMap("Start")]
-                            [Validation(Required=false)]
-                            public string Start { get; set; }
-
-                            [NameInMap("BgColor")]
-                            [Validation(Required=false)]
-                            public string BgColor { get; set; }
-
-                            [NameInMap("IsMergeAudio")]
-                            [Validation(Required=false)]
-                            public bool? IsMergeAudio { get; set; }
-
-                            [NameInMap("Width")]
-                            [Validation(Required=false)]
-                            public string Width { get; set; }
-
-                            [NameInMap("Height")]
-                            [Validation(Required=false)]
-                            public string Height { get; set; }
-
-                            [NameInMap("BlendDuration")]
-                            [Validation(Required=false)]
-                            public string BlendDuration { get; set; }
-
-                            [NameInMap("TailUrl")]
-                            [Validation(Required=false)]
-                            public string TailUrl { get; set; }
-
-                        }
-
-                    }
-                    [NameInMap("TemplateId")]
-                    [Validation(Required=false)]
-                    public string TemplateId { get; set; }
-                    [NameInMap("SubtitleConfig")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfig SubtitleConfig { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfig : TeaModel {
-                        [NameInMap("ExtSubtitleList")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigExtSubtitleList ExtSubtitleList { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigExtSubtitleList : TeaModel {
-                            [NameInMap("ExtSubtitle")]
-                            [Validation(Required=false)]
-                            public List<SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigExtSubtitleListExtSubtitle> ExtSubtitle { get; set; }
-                            public class SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigExtSubtitleListExtSubtitle : TeaModel {
-                                public string CharEnc { get; set; }
-                                public string FontName { get; set; }
-                                public SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigExtSubtitleListExtSubtitleInput Input { get; set; }
-                                public class SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigExtSubtitleListExtSubtitleInput : TeaModel {
-                                    [NameInMap("Object")]
-                                    [Validation(Required=false)]
-                                    public string Object { get; set; }
-
-                                    [NameInMap("Location")]
-                                    [Validation(Required=false)]
-                                    public string Location { get; set; }
-
-                                    [NameInMap("Bucket")]
-                                    [Validation(Required=false)]
-                                    public string Bucket { get; set; }
-
-                                }
-                            }
-                        };
-
-                        [NameInMap("SubtitleList")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigSubtitleList SubtitleList { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigSubtitleList : TeaModel {
-                            [NameInMap("Subtitle")]
-                            [Validation(Required=false)]
-                            public List<SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigSubtitleListSubtitle> Subtitle { get; set; }
-                            public class SubmitJobsResponseBodyJobResultListJobResultOutputSubtitleConfigSubtitleListSubtitle : TeaModel {
+                            public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputAmixListAmix> Amix { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputAmixListAmix : TeaModel {
+                                [NameInMap("Map")]
+                                [Validation(Required=false)]
                                 public string Map { get; set; }
-                            }
-                        };
 
-                    }
-                    [NameInMap("Properties")]
-                    [Validation(Required=false)]
-                    public SubmitJobsResponseBodyJobResultListJobResultOutputProperties Properties { get; set; }
-                    public class SubmitJobsResponseBodyJobResultListJobResultOutputProperties : TeaModel {
-                        [NameInMap("Width")]
-                        [Validation(Required=false)]
-                        public string Width { get; set; }
-
-                        [NameInMap("Height")]
-                        [Validation(Required=false)]
-                        public string Height { get; set; }
-
-                        [NameInMap("Duration")]
-                        [Validation(Required=false)]
-                        public string Duration { get; set; }
-
-                        [NameInMap("Fps")]
-                        [Validation(Required=false)]
-                        public string Fps { get; set; }
-
-                        [NameInMap("Bitrate")]
-                        [Validation(Required=false)]
-                        public string Bitrate { get; set; }
-
-                        [NameInMap("FileFormat")]
-                        [Validation(Required=false)]
-                        public string FileFormat { get; set; }
-
-                        [NameInMap("Streams")]
-                        [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreams Streams { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreams : TeaModel {
-                            [NameInMap("VideoStreamList")]
-                            [Validation(Required=false)]
-                            public SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsVideoStreamList VideoStreamList { get; set; }
-                            public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsVideoStreamList : TeaModel {
-                                [NameInMap("VideoStream")]
+                                [NameInMap("Start")]
                                 [Validation(Required=false)]
-                                public List<SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsVideoStreamListVideoStream> VideoStream { get; set; }
-                                public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsVideoStreamListVideoStream : TeaModel {
-                                    [NameInMap("Index")]
-                                    [Validation(Required=false)]
-                                    public string Index { get; set; }
+                                public string Start { get; set; }
 
-                                    [NameInMap("Timebase")]
-                                    [Validation(Required=false)]
-                                    public string Timebase { get; set; }
-
-                                    [NameInMap("AvgFPS")]
-                                    [Validation(Required=false)]
-                                    public string AvgFPS { get; set; }
-
-                                    [NameInMap("PixFmt")]
-                                    [Validation(Required=false)]
-                                    public string PixFmt { get; set; }
-
-                                    [NameInMap("Sar")]
-                                    [Validation(Required=false)]
-                                    public string Sar { get; set; }
-
-                                    [NameInMap("Lang")]
-                                    [Validation(Required=false)]
-                                    public string Lang { get; set; }
-
-                                    [NameInMap("CodecLongName")]
-                                    [Validation(Required=false)]
-                                    public string CodecLongName { get; set; }
-
-                                    [NameInMap("Height")]
-                                    [Validation(Required=false)]
-                                    public string Height { get; set; }
-
-                                    [NameInMap("NumFrames")]
-                                    [Validation(Required=false)]
-                                    public string NumFrames { get; set; }
-
-                                    [NameInMap("Bitrate")]
-                                    [Validation(Required=false)]
-                                    public string Bitrate { get; set; }
-
-                                    [NameInMap("CodecTagString")]
-                                    [Validation(Required=false)]
-                                    public string CodecTagString { get; set; }
-
-                                    [NameInMap("HasBFrames")]
-                                    [Validation(Required=false)]
-                                    public string HasBFrames { get; set; }
-
-                                    [NameInMap("Profile")]
-                                    [Validation(Required=false)]
-                                    public string Profile { get; set; }
-
-                                    [NameInMap("StartTime")]
-                                    [Validation(Required=false)]
-                                    public string StartTime { get; set; }
-
-                                    [NameInMap("NetworkCost")]
-                                    [Validation(Required=false)]
-                                    public SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost NetworkCost { get; set; }
-                                    public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost : TeaModel {
-                                        [NameInMap("PreloadTime")]
-                                        [Validation(Required=false)]
-                                        public string PreloadTime { get; set; }
-                                        [NameInMap("AvgBitrate")]
-                                        [Validation(Required=false)]
-                                        public string AvgBitrate { get; set; }
-                                        [NameInMap("CostBandwidth")]
-                                        [Validation(Required=false)]
-                                        public string CostBandwidth { get; set; }
-                                    };
-
-                                    [NameInMap("Dar")]
-                                    [Validation(Required=false)]
-                                    public string Dar { get; set; }
-
-                                    [NameInMap("CodecName")]
-                                    [Validation(Required=false)]
-                                    public string CodecName { get; set; }
-
-                                    [NameInMap("Width")]
-                                    [Validation(Required=false)]
-                                    public string Width { get; set; }
-
-                                    [NameInMap("Duration")]
-                                    [Validation(Required=false)]
-                                    public string Duration { get; set; }
-
-                                    [NameInMap("Fps")]
-                                    [Validation(Required=false)]
-                                    public string Fps { get; set; }
-
-                                    [NameInMap("CodecTag")]
-                                    [Validation(Required=false)]
-                                    public string CodecTag { get; set; }
-
-                                    [NameInMap("CodecTimeBase")]
-                                    [Validation(Required=false)]
-                                    public string CodecTimeBase { get; set; }
-
-                                    [NameInMap("Level")]
-                                    [Validation(Required=false)]
-                                    public string Level { get; set; }
-
-                                }
-
-                            }
-                            [NameInMap("AudioStreamList")]
-                            [Validation(Required=false)]
-                            public SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsAudioStreamList AudioStreamList { get; set; }
-                            public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsAudioStreamList : TeaModel {
-                                [NameInMap("AudioStream")]
+                                [NameInMap("AmixURL")]
                                 [Validation(Required=false)]
-                                public List<SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsAudioStreamListAudioStream> AudioStream { get; set; }
-                                public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsAudioStreamListAudioStream : TeaModel {
-                                    [NameInMap("Timebase")]
-                                    [Validation(Required=false)]
-                                    public string Timebase { get; set; }
+                                public string AmixURL { get; set; }
 
-                                    [NameInMap("Index")]
-                                    [Validation(Required=false)]
-                                    public string Index { get; set; }
-
-                                    [NameInMap("SampleFmt")]
-                                    [Validation(Required=false)]
-                                    public string SampleFmt { get; set; }
-
-                                    [NameInMap("ChannelLayout")]
-                                    [Validation(Required=false)]
-                                    public string ChannelLayout { get; set; }
-
-                                    [NameInMap("Lang")]
-                                    [Validation(Required=false)]
-                                    public string Lang { get; set; }
-
-                                    [NameInMap("Samplerate")]
-                                    [Validation(Required=false)]
-                                    public string Samplerate { get; set; }
-
-                                    [NameInMap("CodecLongName")]
-                                    [Validation(Required=false)]
-                                    public string CodecLongName { get; set; }
-
-                                    [NameInMap("Channels")]
-                                    [Validation(Required=false)]
-                                    public string Channels { get; set; }
-
-                                    [NameInMap("NumFrames")]
-                                    [Validation(Required=false)]
-                                    public string NumFrames { get; set; }
-
-                                    [NameInMap("Bitrate")]
-                                    [Validation(Required=false)]
-                                    public string Bitrate { get; set; }
-
-                                    [NameInMap("CodecTagString")]
-                                    [Validation(Required=false)]
-                                    public string CodecTagString { get; set; }
-
-                                    [NameInMap("StartTime")]
-                                    [Validation(Required=false)]
-                                    public string StartTime { get; set; }
-
-                                    [NameInMap("CodecName")]
-                                    [Validation(Required=false)]
-                                    public string CodecName { get; set; }
-
-                                    [NameInMap("Duration")]
-                                    [Validation(Required=false)]
-                                    public string Duration { get; set; }
-
-                                    [NameInMap("CodecTag")]
-                                    [Validation(Required=false)]
-                                    public string CodecTag { get; set; }
-
-                                    [NameInMap("CodecTimeBase")]
-                                    [Validation(Required=false)]
-                                    public string CodecTimeBase { get; set; }
-
-                                }
-
-                            }
-                            [NameInMap("SubtitleStreamList")]
-                            [Validation(Required=false)]
-                            public SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsSubtitleStreamList SubtitleStreamList { get; set; }
-                            public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsSubtitleStreamList : TeaModel {
-                                [NameInMap("SubtitleStream")]
+                                [NameInMap("Duration")]
                                 [Validation(Required=false)]
-                                public List<SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsSubtitleStreamListSubtitleStream> SubtitleStream { get; set; }
-                                public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesStreamsSubtitleStreamListSubtitleStream : TeaModel {
-                                    [NameInMap("Index")]
-                                    [Validation(Required=false)]
-                                    public string Index { get; set; }
+                                public string Duration { get; set; }
 
-                                    [NameInMap("Lang")]
-                                    [Validation(Required=false)]
-                                    public string Lang { get; set; }
-
-                                }
+                                [NameInMap("MixDurMode")]
+                                [Validation(Required=false)]
+                                public string MixDurMode { get; set; }
 
                             }
-                        };
 
-                        [NameInMap("Format")]
+                        }
+                        [NameInMap("Rotate")]
                         [Validation(Required=false)]
-                        public SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesFormat Format { get; set; }
-                        public class SubmitJobsResponseBodyJobResultListJobResultOutputPropertiesFormat : TeaModel {
-                            [NameInMap("StartTime")]
+                        public string Rotate { get; set; }
+                        [NameInMap("Container")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputContainer Container { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputContainer : TeaModel {
+                            [NameInMap("Format")]
                             [Validation(Required=false)]
-                            public string StartTime { get; set; }
-                            [NameInMap("NumPrograms")]
+                            public string Format { get; set; }
+
+                        }
+                        [NameInMap("Clip")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputClip Clip { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputClip : TeaModel {
+                            [NameInMap("TimeSpan")]
                             [Validation(Required=false)]
-                            public string NumPrograms { get; set; }
-                            [NameInMap("Size")]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputClipTimeSpan TimeSpan { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputClipTimeSpan : TeaModel {
+                                [NameInMap("Seek")]
+                                [Validation(Required=false)]
+                                public string Seek { get; set; }
+                                [NameInMap("Duration")]
+                                [Validation(Required=false)]
+                                public string Duration { get; set; }
+                            };
+
+                        }
+                        [NameInMap("MergeConfigUrl")]
+                        [Validation(Required=false)]
+                        public string MergeConfigUrl { get; set; }
+                        [NameInMap("OpeningList")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputOpeningList OpeningList { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputOpeningList : TeaModel {
+                            [NameInMap("Opening")]
                             [Validation(Required=false)]
-                            public string Size { get; set; }
-                            [NameInMap("NumStreams")]
+                            public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputOpeningListOpening> Opening { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputOpeningListOpening : TeaModel {
+                                [NameInMap("openUrl")]
+                                [Validation(Required=false)]
+                                public string OpenUrl { get; set; }
+
+                                [NameInMap("Start")]
+                                [Validation(Required=false)]
+                                public string Start { get; set; }
+
+                                [NameInMap("Width")]
+                                [Validation(Required=false)]
+                                public string Width { get; set; }
+
+                                [NameInMap("Height")]
+                                [Validation(Required=false)]
+                                public string Height { get; set; }
+
+                            }
+
+                        }
+                        [NameInMap("MuxConfig")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfig MuxConfig { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfig : TeaModel {
+                            [NameInMap("Webp")]
                             [Validation(Required=false)]
-                            public string NumStreams { get; set; }
-                            [NameInMap("FormatLongName")]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigWebp Webp { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigWebp : TeaModel {
+                                [NameInMap("Loop")]
+                                [Validation(Required=false)]
+                                public string Loop { get; set; }
+                            };
+
+                            [NameInMap("Gif")]
                             [Validation(Required=false)]
-                            public string FormatLongName { get; set; }
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigGif Gif { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigGif : TeaModel {
+                                [NameInMap("FinalDelay")]
+                                [Validation(Required=false)]
+                                public string FinalDelay { get; set; }
+                                [NameInMap("DitherMode")]
+                                [Validation(Required=false)]
+                                public string DitherMode { get; set; }
+                                [NameInMap("Loop")]
+                                [Validation(Required=false)]
+                                public string Loop { get; set; }
+                                [NameInMap("IsCustomPalette")]
+                                [Validation(Required=false)]
+                                public string IsCustomPalette { get; set; }
+                            };
+
+                            [NameInMap("Segment")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigSegment Segment { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigSegment : TeaModel {
+                                [NameInMap("Duration")]
+                                [Validation(Required=false)]
+                                public string Duration { get; set; }
+                            };
+
+                        }
+                        [NameInMap("TailSlateList")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputTailSlateList TailSlateList { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputTailSlateList : TeaModel {
+                            [NameInMap("TailSlate")]
+                            [Validation(Required=false)]
+                            public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputTailSlateListTailSlate> TailSlate { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputTailSlateListTailSlate : TeaModel {
+                                [NameInMap("Start")]
+                                [Validation(Required=false)]
+                                public string Start { get; set; }
+
+                                [NameInMap("BgColor")]
+                                [Validation(Required=false)]
+                                public string BgColor { get; set; }
+
+                                [NameInMap("IsMergeAudio")]
+                                [Validation(Required=false)]
+                                public bool? IsMergeAudio { get; set; }
+
+                                [NameInMap("Width")]
+                                [Validation(Required=false)]
+                                public string Width { get; set; }
+
+                                [NameInMap("Height")]
+                                [Validation(Required=false)]
+                                public string Height { get; set; }
+
+                                [NameInMap("BlendDuration")]
+                                [Validation(Required=false)]
+                                public string BlendDuration { get; set; }
+
+                                [NameInMap("TailUrl")]
+                                [Validation(Required=false)]
+                                public string TailUrl { get; set; }
+
+                            }
+
+                        }
+                        [NameInMap("TemplateId")]
+                        [Validation(Required=false)]
+                        public string TemplateId { get; set; }
+                        [NameInMap("SubtitleConfig")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfig SubtitleConfig { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfig : TeaModel {
+                            [NameInMap("ExtSubtitleList")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleList ExtSubtitleList { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleList : TeaModel {
+                                [NameInMap("ExtSubtitle")]
+                                [Validation(Required=false)]
+                                public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleListExtSubtitle> ExtSubtitle { get; set; }
+                                public class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleListExtSubtitle : TeaModel {
+                                    public string CharEnc { get; set; }
+                                    public string FontName { get; set; }
+                                    public SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleListExtSubtitleInput Input { get; set; }
+                                    public class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleListExtSubtitleInput : TeaModel {
+                                        [NameInMap("Object")]
+                                        [Validation(Required=false)]
+                                        public string Object { get; set; }
+
+                                        [NameInMap("Location")]
+                                        [Validation(Required=false)]
+                                        public string Location { get; set; }
+
+                                        [NameInMap("Bucket")]
+                                        [Validation(Required=false)]
+                                        public string Bucket { get; set; }
+
+                                    }
+                                }
+                            };
+
+                            [NameInMap("SubtitleList")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigSubtitleList SubtitleList { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigSubtitleList : TeaModel {
+                                [NameInMap("Subtitle")]
+                                [Validation(Required=false)]
+                                public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigSubtitleListSubtitle> Subtitle { get; set; }
+                                public class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigSubtitleListSubtitle : TeaModel {
+                                    public string Map { get; set; }
+                                }
+                            };
+
+                        }
+                        [NameInMap("Properties")]
+                        [Validation(Required=false)]
+                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputProperties Properties { get; set; }
+                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputProperties : TeaModel {
+                            [NameInMap("Width")]
+                            [Validation(Required=false)]
+                            public string Width { get; set; }
+
+                            [NameInMap("Height")]
+                            [Validation(Required=false)]
+                            public string Height { get; set; }
+
                             [NameInMap("Duration")]
                             [Validation(Required=false)]
                             public string Duration { get; set; }
+
+                            [NameInMap("Fps")]
+                            [Validation(Required=false)]
+                            public string Fps { get; set; }
+
                             [NameInMap("Bitrate")]
                             [Validation(Required=false)]
                             public string Bitrate { get; set; }
-                            [NameInMap("FormatName")]
+
+                            [NameInMap("FileFormat")]
                             [Validation(Required=false)]
-                            public string FormatName { get; set; }
-                        };
+                            public string FileFormat { get; set; }
 
-                        [NameInMap("FileSize")]
+                            [NameInMap("Streams")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreams Streams { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreams : TeaModel {
+                                [NameInMap("VideoStreamList")]
+                                [Validation(Required=false)]
+                                public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamList VideoStreamList { get; set; }
+                                public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamList : TeaModel {
+                                    [NameInMap("VideoStream")]
+                                    [Validation(Required=false)]
+                                    public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamListVideoStream> VideoStream { get; set; }
+                                    public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamListVideoStream : TeaModel {
+                                        [NameInMap("Index")]
+                                        [Validation(Required=false)]
+                                        public string Index { get; set; }
+
+                                        [NameInMap("Timebase")]
+                                        [Validation(Required=false)]
+                                        public string Timebase { get; set; }
+
+                                        [NameInMap("AvgFPS")]
+                                        [Validation(Required=false)]
+                                        public string AvgFPS { get; set; }
+
+                                        [NameInMap("PixFmt")]
+                                        [Validation(Required=false)]
+                                        public string PixFmt { get; set; }
+
+                                        [NameInMap("Sar")]
+                                        [Validation(Required=false)]
+                                        public string Sar { get; set; }
+
+                                        [NameInMap("Lang")]
+                                        [Validation(Required=false)]
+                                        public string Lang { get; set; }
+
+                                        [NameInMap("CodecLongName")]
+                                        [Validation(Required=false)]
+                                        public string CodecLongName { get; set; }
+
+                                        [NameInMap("Height")]
+                                        [Validation(Required=false)]
+                                        public string Height { get; set; }
+
+                                        [NameInMap("NumFrames")]
+                                        [Validation(Required=false)]
+                                        public string NumFrames { get; set; }
+
+                                        [NameInMap("Bitrate")]
+                                        [Validation(Required=false)]
+                                        public string Bitrate { get; set; }
+
+                                        [NameInMap("CodecTagString")]
+                                        [Validation(Required=false)]
+                                        public string CodecTagString { get; set; }
+
+                                        [NameInMap("HasBFrames")]
+                                        [Validation(Required=false)]
+                                        public string HasBFrames { get; set; }
+
+                                        [NameInMap("Profile")]
+                                        [Validation(Required=false)]
+                                        public string Profile { get; set; }
+
+                                        [NameInMap("StartTime")]
+                                        [Validation(Required=false)]
+                                        public string StartTime { get; set; }
+
+                                        [NameInMap("NetworkCost")]
+                                        [Validation(Required=false)]
+                                        public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost NetworkCost { get; set; }
+                                        public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost : TeaModel {
+                                            [NameInMap("PreloadTime")]
+                                            [Validation(Required=false)]
+                                            public string PreloadTime { get; set; }
+                                            [NameInMap("AvgBitrate")]
+                                            [Validation(Required=false)]
+                                            public string AvgBitrate { get; set; }
+                                            [NameInMap("CostBandwidth")]
+                                            [Validation(Required=false)]
+                                            public string CostBandwidth { get; set; }
+                                        };
+
+                                        [NameInMap("Dar")]
+                                        [Validation(Required=false)]
+                                        public string Dar { get; set; }
+
+                                        [NameInMap("CodecName")]
+                                        [Validation(Required=false)]
+                                        public string CodecName { get; set; }
+
+                                        [NameInMap("Width")]
+                                        [Validation(Required=false)]
+                                        public string Width { get; set; }
+
+                                        [NameInMap("Duration")]
+                                        [Validation(Required=false)]
+                                        public string Duration { get; set; }
+
+                                        [NameInMap("Fps")]
+                                        [Validation(Required=false)]
+                                        public string Fps { get; set; }
+
+                                        [NameInMap("CodecTag")]
+                                        [Validation(Required=false)]
+                                        public string CodecTag { get; set; }
+
+                                        [NameInMap("CodecTimeBase")]
+                                        [Validation(Required=false)]
+                                        public string CodecTimeBase { get; set; }
+
+                                        [NameInMap("Level")]
+                                        [Validation(Required=false)]
+                                        public string Level { get; set; }
+
+                                    }
+
+                                }
+                                [NameInMap("AudioStreamList")]
+                                [Validation(Required=false)]
+                                public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsAudioStreamList AudioStreamList { get; set; }
+                                public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsAudioStreamList : TeaModel {
+                                    [NameInMap("AudioStream")]
+                                    [Validation(Required=false)]
+                                    public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsAudioStreamListAudioStream> AudioStream { get; set; }
+                                    public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsAudioStreamListAudioStream : TeaModel {
+                                        [NameInMap("Timebase")]
+                                        [Validation(Required=false)]
+                                        public string Timebase { get; set; }
+
+                                        [NameInMap("Index")]
+                                        [Validation(Required=false)]
+                                        public string Index { get; set; }
+
+                                        [NameInMap("SampleFmt")]
+                                        [Validation(Required=false)]
+                                        public string SampleFmt { get; set; }
+
+                                        [NameInMap("ChannelLayout")]
+                                        [Validation(Required=false)]
+                                        public string ChannelLayout { get; set; }
+
+                                        [NameInMap("Lang")]
+                                        [Validation(Required=false)]
+                                        public string Lang { get; set; }
+
+                                        [NameInMap("Samplerate")]
+                                        [Validation(Required=false)]
+                                        public string Samplerate { get; set; }
+
+                                        [NameInMap("CodecLongName")]
+                                        [Validation(Required=false)]
+                                        public string CodecLongName { get; set; }
+
+                                        [NameInMap("Channels")]
+                                        [Validation(Required=false)]
+                                        public string Channels { get; set; }
+
+                                        [NameInMap("NumFrames")]
+                                        [Validation(Required=false)]
+                                        public string NumFrames { get; set; }
+
+                                        [NameInMap("Bitrate")]
+                                        [Validation(Required=false)]
+                                        public string Bitrate { get; set; }
+
+                                        [NameInMap("CodecTagString")]
+                                        [Validation(Required=false)]
+                                        public string CodecTagString { get; set; }
+
+                                        [NameInMap("StartTime")]
+                                        [Validation(Required=false)]
+                                        public string StartTime { get; set; }
+
+                                        [NameInMap("CodecName")]
+                                        [Validation(Required=false)]
+                                        public string CodecName { get; set; }
+
+                                        [NameInMap("Duration")]
+                                        [Validation(Required=false)]
+                                        public string Duration { get; set; }
+
+                                        [NameInMap("CodecTag")]
+                                        [Validation(Required=false)]
+                                        public string CodecTag { get; set; }
+
+                                        [NameInMap("CodecTimeBase")]
+                                        [Validation(Required=false)]
+                                        public string CodecTimeBase { get; set; }
+
+                                    }
+
+                                }
+                                [NameInMap("SubtitleStreamList")]
+                                [Validation(Required=false)]
+                                public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsSubtitleStreamList SubtitleStreamList { get; set; }
+                                public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsSubtitleStreamList : TeaModel {
+                                    [NameInMap("SubtitleStream")]
+                                    [Validation(Required=false)]
+                                    public List<SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsSubtitleStreamListSubtitleStream> SubtitleStream { get; set; }
+                                    public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsSubtitleStreamListSubtitleStream : TeaModel {
+                                        [NameInMap("Index")]
+                                        [Validation(Required=false)]
+                                        public string Index { get; set; }
+
+                                        [NameInMap("Lang")]
+                                        [Validation(Required=false)]
+                                        public string Lang { get; set; }
+
+                                    }
+
+                                }
+                            };
+
+                            [NameInMap("Format")]
+                            [Validation(Required=false)]
+                            public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesFormat Format { get; set; }
+                            public class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesFormat : TeaModel {
+                                [NameInMap("StartTime")]
+                                [Validation(Required=false)]
+                                public string StartTime { get; set; }
+                                [NameInMap("NumPrograms")]
+                                [Validation(Required=false)]
+                                public string NumPrograms { get; set; }
+                                [NameInMap("Size")]
+                                [Validation(Required=false)]
+                                public string Size { get; set; }
+                                [NameInMap("NumStreams")]
+                                [Validation(Required=false)]
+                                public string NumStreams { get; set; }
+                                [NameInMap("FormatLongName")]
+                                [Validation(Required=false)]
+                                public string FormatLongName { get; set; }
+                                [NameInMap("Duration")]
+                                [Validation(Required=false)]
+                                public string Duration { get; set; }
+                                [NameInMap("Bitrate")]
+                                [Validation(Required=false)]
+                                public string Bitrate { get; set; }
+                                [NameInMap("FormatName")]
+                                [Validation(Required=false)]
+                                public string FormatName { get; set; }
+                            };
+
+                            [NameInMap("FileSize")]
+                            [Validation(Required=false)]
+                            public string FileSize { get; set; }
+
+                        }
+                    };
+
+                    [NameInMap("PipelineId")]
+                    [Validation(Required=false)]
+                    public string PipelineId { get; set; }
+
+                    [NameInMap("Input")]
+                    [Validation(Required=false)]
+                    public SubmitJobsResponseBodyJobResultListJobResultJobInput Input { get; set; }
+                    public class SubmitJobsResponseBodyJobResultListJobResultJobInput : TeaModel {
+                        [NameInMap("Object")]
                         [Validation(Required=false)]
-                        public string FileSize { get; set; }
+                        public string Object { get; set; }
+                        [NameInMap("Location")]
+                        [Validation(Required=false)]
+                        public string Location { get; set; }
+                        [NameInMap("Bucket")]
+                        [Validation(Required=false)]
+                        public string Bucket { get; set; }
+                    };
 
-                    }
-                };
+                    [NameInMap("MNSMessageResult")]
+                    [Validation(Required=false)]
+                    public SubmitJobsResponseBodyJobResultListJobResultJobMNSMessageResult MNSMessageResult { get; set; }
+                    public class SubmitJobsResponseBodyJobResultListJobResultJobMNSMessageResult : TeaModel {
+                        [NameInMap("MessageId")]
+                        [Validation(Required=false)]
+                        public string MessageId { get; set; }
+                        [NameInMap("ErrorMessage")]
+                        [Validation(Required=false)]
+                        public string ErrorMessage { get; set; }
+                        [NameInMap("ErrorCode")]
+                        [Validation(Required=false)]
+                        public string ErrorCode { get; set; }
+                    };
 
-                [NameInMap("PipelineId")]
-                [Validation(Required=false)]
-                public string PipelineId { get; set; }
-
-                [NameInMap("Input")]
-                [Validation(Required=false)]
-                public SubmitJobsResponseBodyJobResultListJobResultInput Input { get; set; }
-                public class SubmitJobsResponseBodyJobResultListJobResultInput : TeaModel {
-                    [NameInMap("Object")]
-                    [Validation(Required=false)]
-                    public string Object { get; set; }
-                    [NameInMap("Location")]
-                    [Validation(Required=false)]
-                    public string Location { get; set; }
-                    [NameInMap("Bucket")]
-                    [Validation(Required=false)]
-                    public string Bucket { get; set; }
-                };
-
-                [NameInMap("MNSMessageResult")]
-                [Validation(Required=false)]
-                public SubmitJobsResponseBodyJobResultListJobResultMNSMessageResult MNSMessageResult { get; set; }
-                public class SubmitJobsResponseBodyJobResultListJobResultMNSMessageResult : TeaModel {
-                    [NameInMap("MessageId")]
-                    [Validation(Required=false)]
-                    public string MessageId { get; set; }
-                    [NameInMap("ErrorMessage")]
-                    [Validation(Required=false)]
-                    public string ErrorMessage { get; set; }
-                    [NameInMap("ErrorCode")]
-                    [Validation(Required=false)]
-                    public string ErrorCode { get; set; }
-                };
-
+                }
+                public bool? Success { get; set; }
+                public string Code { get; set; }
+                public string Message { get; set; }
             }
         };
 

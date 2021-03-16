@@ -17,15 +17,6 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public AddCensorPipelineResponseBodyPipeline Pipeline { get; set; }
         public class AddCensorPipelineResponseBodyPipeline : TeaModel {
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("Priority")]
-            [Validation(Required=false)]
-            public int? Priority { get; set; }
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
@@ -42,6 +33,15 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 public string Queue { get; set; }
 
             }
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
         };
 
     }

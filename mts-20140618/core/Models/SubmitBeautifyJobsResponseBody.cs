@@ -21,51 +21,50 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<SubmitBeautifyJobsResponseBodyJobListJob> Job { get; set; }
             public class SubmitBeautifyJobsResponseBodyJobListJob : TeaModel {
-                public string Id { get; set; }
-                public string UserData { get; set; }
-                public string PipelineId { get; set; }
-                public string State { get; set; }
-                public string Code { get; set; }
-                public string Message { get; set; }
                 public string CreationTime { get; set; }
-                public SubmitBeautifyJobsResponseBodyJobListJobInput Input { get; set; }
-                public class SubmitBeautifyJobsResponseBodyJobListJobInput : TeaModel {
-                    [NameInMap("Bucket")]
-                    [Validation(Required=false)]
-                    public string Bucket { get; set; }
-
-                    [NameInMap("Location")]
-                    [Validation(Required=false)]
-                    public string Location { get; set; }
-
-                    [NameInMap("Object")]
-                    [Validation(Required=false)]
-                    public string Object { get; set; }
-
-                    [NameInMap("RoleArn")]
-                    [Validation(Required=false)]
-                    public string RoleArn { get; set; }
-
-                }
                 public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig BeautifyConfig { get; set; }
                 public class SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig : TeaModel {
                     [NameInMap("OutputFile")]
                     [Validation(Required=false)]
                     public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile OutputFile { get; set; }
                     public class SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile : TeaModel {
-                        [NameInMap("Bucket")]
-                        [Validation(Required=false)]
-                        public string Bucket { get; set; }
-                        [NameInMap("Location")]
-                        [Validation(Required=false)]
-                        public string Location { get; set; }
-                        [NameInMap("Object")]
-                        [Validation(Required=false)]
-                        public string Object { get; set; }
                         [NameInMap("RoleArn")]
                         [Validation(Required=false)]
                         public string RoleArn { get; set; }
+                        [NameInMap("Object")]
+                        [Validation(Required=false)]
+                        public string Object { get; set; }
+                        [NameInMap("Location")]
+                        [Validation(Required=false)]
+                        public string Location { get; set; }
+                        [NameInMap("Bucket")]
+                        [Validation(Required=false)]
+                        public string Bucket { get; set; }
                     };
+
+                }
+                public string State { get; set; }
+                public string UserData { get; set; }
+                public string Code { get; set; }
+                public string Message { get; set; }
+                public string PipelineId { get; set; }
+                public SubmitBeautifyJobsResponseBodyJobListJobInput Input { get; set; }
+                public class SubmitBeautifyJobsResponseBodyJobListJobInput : TeaModel {
+                    [NameInMap("RoleArn")]
+                    [Validation(Required=false)]
+                    public string RoleArn { get; set; }
+
+                    [NameInMap("Object")]
+                    [Validation(Required=false)]
+                    public string Object { get; set; }
+
+                    [NameInMap("Location")]
+                    [Validation(Required=false)]
+                    public string Location { get; set; }
+
+                    [NameInMap("Bucket")]
+                    [Validation(Required=false)]
+                    public string Bucket { get; set; }
 
                 }
                 public SubmitBeautifyJobsResponseBodyJobListJobMNSMessageResult MNSMessageResult { get; set; }
@@ -83,6 +82,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     public string ErrorCode { get; set; }
 
                 }
+                public string Id { get; set; }
             }
         };
 

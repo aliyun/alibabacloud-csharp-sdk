@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class ListPornPipelineResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
 
         [NameInMap("PipelineList")]
         [Validation(Required=false)]
@@ -33,10 +33,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<ListPornPipelineResponseBodyPipelineListPipeline> Pipeline { get; set; }
             public class ListPornPipelineResponseBodyPipelineListPipeline : TeaModel {
-                public string Id { get; set; }
-                public string Name { get; set; }
                 public string State { get; set; }
-                public string Priority { get; set; }
                 public ListPornPipelineResponseBodyPipelineListPipelineNotifyConfig NotifyConfig { get; set; }
                 public class ListPornPipelineResponseBodyPipelineListPipelineNotifyConfig : TeaModel {
                     [NameInMap("Topic")]
@@ -48,6 +45,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                     public string Queue { get; set; }
 
                 }
+                public string Priority { get; set; }
+                public string Name { get; set; }
+                public string Id { get; set; }
             }
         };
 

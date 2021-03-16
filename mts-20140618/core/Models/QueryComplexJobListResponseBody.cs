@@ -855,18 +855,33 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             [Validation(Required=false)]
                             public List<QueryComplexJobListResponseBodyJobListJobInputsInputsEditingInputsEditingInput> EditingInput { get; set; }
                             public class QueryComplexJobListResponseBodyJobListJobInputsInputsEditingInputsEditingInput : TeaModel {
-                                [NameInMap("Object")]
-                                [Validation(Required=false)]
-                                public string Object { get; set; }
+                                public QueryComplexJobListResponseBodyJobListJobInputsInputsEditingInputsEditingInputInputFile InputFile { get; set; }
+                                public class QueryComplexJobListResponseBodyJobListJobInputsInputsEditingInputsEditingInputInputFile : TeaModel {
+                                    [NameInMap("Object")]
+                                    [Validation(Required=false)]
+                                    public string Object { get; set; }
 
-                                [NameInMap("Location")]
-                                [Validation(Required=false)]
-                                public string Location { get; set; }
+                                    [NameInMap("Location")]
+                                    [Validation(Required=false)]
+                                    public string Location { get; set; }
 
-                                [NameInMap("Bucket")]
-                                [Validation(Required=false)]
-                                public string Bucket { get; set; }
+                                    [NameInMap("Bucket")]
+                                    [Validation(Required=false)]
+                                    public string Bucket { get; set; }
 
+                                }
+                                public QueryComplexJobListResponseBodyJobListJobInputsInputsEditingInputsEditingInputInputConfig InputConfig { get; set; }
+                                public class QueryComplexJobListResponseBodyJobListJobInputsInputsEditingInputsEditingInputInputConfig : TeaModel {
+                                    [NameInMap("IsNormalSar")]
+                                    [Validation(Required=false)]
+                                    public string IsNormalSar { get; set; }
+
+                                    [NameInMap("DeinterlaceMethod")]
+                                    [Validation(Required=false)]
+                                    public string DeinterlaceMethod { get; set; }
+
+                                }
+                                public string Id { get; set; }
                             }
                         };
 

@@ -9,29 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class PhysicalDeleteResourceResponseBody : TeaModel {
-        [NameInMap("Interrupt")]
+        [NameInMap("GmtWakeup")]
         [Validation(Required=false)]
-        public bool? Interrupt { get; set; }
-
-        [NameInMap("Invoker")]
-        [Validation(Required=false)]
-        public string Invoker { get; set; }
-
-        [NameInMap("Pk")]
-        [Validation(Required=false)]
-        public string Pk { get; set; }
-
-        [NameInMap("Bid")]
-        [Validation(Required=false)]
-        public string Bid { get; set; }
+        public string GmtWakeup { get; set; }
 
         [NameInMap("Hid")]
         [Validation(Required=false)]
         public long? Hid { get; set; }
 
-        [NameInMap("Country")]
+        [NameInMap("Invoker")]
         [Validation(Required=false)]
-        public string Country { get; set; }
+        public string Invoker { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("TaskIdentifier")]
         [Validation(Required=false)]
@@ -41,17 +33,25 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string TaskExtraData { get; set; }
 
-        [NameInMap("GmtWakeup")]
+        [NameInMap("Country")]
         [Validation(Required=false)]
-        public string GmtWakeup { get; set; }
+        public string Country { get; set; }
+
+        [NameInMap("Pk")]
+        [Validation(Required=false)]
+        public string Pk { get; set; }
+
+        [NameInMap("Bid")]
+        [Validation(Required=false)]
+        public string Bid { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("Interrupt")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public bool? Interrupt { get; set; }
 
     }
 

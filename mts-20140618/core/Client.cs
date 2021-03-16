@@ -1552,6 +1552,38 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await ListFpShotDBWithOptionsAsync(request, runtime);
         }
 
+        public ListFpShotFilesResponse ListFpShotFilesWithOptions(ListFpShotFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListFpShotFilesResponse>(DoRPCRequest("ListFpShotFiles", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListFpShotFilesResponse> ListFpShotFilesWithOptionsAsync(ListFpShotFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListFpShotFilesResponse>(await DoRPCRequestAsync("ListFpShotFiles", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListFpShotFilesResponse ListFpShotFiles(ListFpShotFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFpShotFilesWithOptions(request, runtime);
+        }
+
+        public async Task<ListFpShotFilesResponse> ListFpShotFilesAsync(ListFpShotFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFpShotFilesWithOptionsAsync(request, runtime);
+        }
+
         public ListFpShotNotaryResponse ListFpShotNotaryWithOptions(ListFpShotNotaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2288,6 +2320,70 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await QueryFpCompareJobListWithOptionsAsync(request, runtime);
         }
 
+        public QueryFpDBDeleteJobListResponse QueryFpDBDeleteJobListWithOptions(QueryFpDBDeleteJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryFpDBDeleteJobListResponse>(DoRPCRequest("QueryFpDBDeleteJobList", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryFpDBDeleteJobListResponse> QueryFpDBDeleteJobListWithOptionsAsync(QueryFpDBDeleteJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryFpDBDeleteJobListResponse>(await DoRPCRequestAsync("QueryFpDBDeleteJobList", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryFpDBDeleteJobListResponse QueryFpDBDeleteJobList(QueryFpDBDeleteJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryFpDBDeleteJobListWithOptions(request, runtime);
+        }
+
+        public async Task<QueryFpDBDeleteJobListResponse> QueryFpDBDeleteJobListAsync(QueryFpDBDeleteJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryFpDBDeleteJobListWithOptionsAsync(request, runtime);
+        }
+
+        public QueryFpFileDeleteJobListResponse QueryFpFileDeleteJobListWithOptions(QueryFpFileDeleteJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryFpFileDeleteJobListResponse>(DoRPCRequest("QueryFpFileDeleteJobList", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryFpFileDeleteJobListResponse> QueryFpFileDeleteJobListWithOptionsAsync(QueryFpFileDeleteJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryFpFileDeleteJobListResponse>(await DoRPCRequestAsync("QueryFpFileDeleteJobList", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryFpFileDeleteJobListResponse QueryFpFileDeleteJobList(QueryFpFileDeleteJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryFpFileDeleteJobListWithOptions(request, runtime);
+        }
+
+        public async Task<QueryFpFileDeleteJobListResponse> QueryFpFileDeleteJobListAsync(QueryFpFileDeleteJobListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryFpFileDeleteJobListWithOptionsAsync(request, runtime);
+        }
+
         public QueryFpImportResultResponse QueryFpImportResultWithOptions(QueryFpImportResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2382,6 +2478,38 @@ namespace AlibabaCloud.SDK.Mts20140618
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryImageSearchJobListWithOptionsAsync(request, runtime);
+        }
+
+        public QueryInnerJobResponse QueryInnerJobWithOptions(QueryInnerJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryInnerJobResponse>(DoRPCRequest("QueryInnerJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryInnerJobResponse> QueryInnerJobWithOptionsAsync(QueryInnerJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryInnerJobResponse>(await DoRPCRequestAsync("QueryInnerJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryInnerJobResponse QueryInnerJob(QueryInnerJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryInnerJobWithOptions(request, runtime);
+        }
+
+        public async Task<QueryInnerJobResponse> QueryInnerJobAsync(QueryInnerJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryInnerJobWithOptionsAsync(request, runtime);
         }
 
         public QueryIProductionJobResponse QueryIProductionJobWithOptions(QueryIProductionJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3310,6 +3438,38 @@ namespace AlibabaCloud.SDK.Mts20140618
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryVideoPoseJobListWithOptionsAsync(request, runtime);
+        }
+
+        public QueryVideoQualityJobResponse QueryVideoQualityJobWithOptions(QueryVideoQualityJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryVideoQualityJobResponse>(DoRPCRequest("QueryVideoQualityJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryVideoQualityJobResponse> QueryVideoQualityJobWithOptionsAsync(QueryVideoQualityJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryVideoQualityJobResponse>(await DoRPCRequestAsync("QueryVideoQualityJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryVideoQualityJobResponse QueryVideoQualityJob(QueryVideoQualityJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryVideoQualityJobWithOptions(request, runtime);
+        }
+
+        public async Task<QueryVideoQualityJobResponse> QueryVideoQualityJobAsync(QueryVideoQualityJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryVideoQualityJobWithOptionsAsync(request, runtime);
         }
 
         public QueryVideoSplitJobListResponse QueryVideoSplitJobListWithOptions(QueryVideoSplitJobListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4368,6 +4528,70 @@ namespace AlibabaCloud.SDK.Mts20140618
             return await SubmitFpCompareJobWithOptionsAsync(request, runtime);
         }
 
+        public SubmitFpDBDeleteJobResponse SubmitFpDBDeleteJobWithOptions(SubmitFpDBDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitFpDBDeleteJobResponse>(DoRPCRequest("SubmitFpDBDeleteJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SubmitFpDBDeleteJobResponse> SubmitFpDBDeleteJobWithOptionsAsync(SubmitFpDBDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitFpDBDeleteJobResponse>(await DoRPCRequestAsync("SubmitFpDBDeleteJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SubmitFpDBDeleteJobResponse SubmitFpDBDeleteJob(SubmitFpDBDeleteJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitFpDBDeleteJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitFpDBDeleteJobResponse> SubmitFpDBDeleteJobAsync(SubmitFpDBDeleteJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitFpDBDeleteJobWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitFpFileDeleteJobResponse SubmitFpFileDeleteJobWithOptions(SubmitFpFileDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitFpFileDeleteJobResponse>(DoRPCRequest("SubmitFpFileDeleteJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SubmitFpFileDeleteJobResponse> SubmitFpFileDeleteJobWithOptionsAsync(SubmitFpFileDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitFpFileDeleteJobResponse>(await DoRPCRequestAsync("SubmitFpFileDeleteJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SubmitFpFileDeleteJobResponse SubmitFpFileDeleteJob(SubmitFpFileDeleteJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitFpFileDeleteJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitFpFileDeleteJobResponse> SubmitFpFileDeleteJobAsync(SubmitFpFileDeleteJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitFpFileDeleteJobWithOptionsAsync(request, runtime);
+        }
+
         public SubmitFpShotJobResponse SubmitFpShotJobWithOptions(SubmitFpShotJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4462,6 +4686,38 @@ namespace AlibabaCloud.SDK.Mts20140618
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitImageSearchJobWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitInnerJobResponse SubmitInnerJobWithOptions(SubmitInnerJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitInnerJobResponse>(DoRPCRequest("SubmitInnerJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SubmitInnerJobResponse> SubmitInnerJobWithOptionsAsync(SubmitInnerJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitInnerJobResponse>(await DoRPCRequestAsync("SubmitInnerJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SubmitInnerJobResponse SubmitInnerJob(SubmitInnerJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitInnerJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitInnerJobResponse> SubmitInnerJobAsync(SubmitInnerJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitInnerJobWithOptionsAsync(request, runtime);
         }
 
         public SubmitIProductionJobResponse SubmitIProductionJobWithOptions(SubmitIProductionJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4974,6 +5230,38 @@ namespace AlibabaCloud.SDK.Mts20140618
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitVideoPoseJobWithOptionsAsync(request, runtime);
+        }
+
+        public SubmitVideoQualityJobResponse SubmitVideoQualityJobWithOptions(SubmitVideoQualityJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitVideoQualityJobResponse>(DoRPCRequest("SubmitVideoQualityJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SubmitVideoQualityJobResponse> SubmitVideoQualityJobWithOptionsAsync(SubmitVideoQualityJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SubmitVideoQualityJobResponse>(await DoRPCRequestAsync("SubmitVideoQualityJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SubmitVideoQualityJobResponse SubmitVideoQualityJob(SubmitVideoQualityJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVideoQualityJobWithOptions(request, runtime);
+        }
+
+        public async Task<SubmitVideoQualityJobResponse> SubmitVideoQualityJobAsync(SubmitVideoQualityJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVideoQualityJobWithOptionsAsync(request, runtime);
         }
 
         public SubmitVideoSplitJobResponse SubmitVideoSplitJobWithOptions(SubmitVideoSplitJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

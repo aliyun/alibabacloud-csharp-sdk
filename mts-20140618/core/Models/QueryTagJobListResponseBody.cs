@@ -41,24 +41,28 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                         [Validation(Required=false)]
                         public List<QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResult> TagFrResult { get; set; }
                         public class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResult : TeaModel {
-                            [NameInMap("TagFace")]
-                            [Validation(Required=false)]
-                            public List<QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFace> TagFace { get; set; }
-                            public class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFace : TeaModel {
-                                [NameInMap("Score")]
+                            public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFaces TagFaces { get; set; }
+                            public class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFaces : TeaModel {
+                                [NameInMap("TagFace")]
                                 [Validation(Required=false)]
-                                public string Score { get; set; }
+                                public List<QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFacesTagFace> TagFace { get; set; }
+                                public class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFacesTagFace : TeaModel {
+                                    [NameInMap("Score")]
+                                    [Validation(Required=false)]
+                                    public string Score { get; set; }
 
-                                [NameInMap("Name")]
-                                [Validation(Required=false)]
-                                public string Name { get; set; }
+                                    [NameInMap("Name")]
+                                    [Validation(Required=false)]
+                                    public string Name { get; set; }
 
-                                [NameInMap("Target")]
-                                [Validation(Required=false)]
-                                public string Target { get; set; }
+                                    [NameInMap("Target")]
+                                    [Validation(Required=false)]
+                                    public string Target { get; set; }
+
+                                }
 
                             }
-
+                            public string Time { get; set; }
                         }
                     };
 

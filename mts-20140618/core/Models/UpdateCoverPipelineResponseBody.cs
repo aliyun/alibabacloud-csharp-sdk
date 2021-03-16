@@ -17,21 +17,9 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public UpdateCoverPipelineResponseBodyPipeline Pipeline { get; set; }
         public class UpdateCoverPipelineResponseBodyPipeline : TeaModel {
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-            [NameInMap("Priority")]
-            [Validation(Required=false)]
-            public int? Priority { get; set; }
-            [NameInMap("Role")]
-            [Validation(Required=false)]
-            public string Role { get; set; }
             [NameInMap("NotifyConfig")]
             [Validation(Required=false)]
             public UpdateCoverPipelineResponseBodyPipelineNotifyConfig NotifyConfig { get; set; }
@@ -45,6 +33,18 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 public string Queue { get; set; }
 
             }
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+            [NameInMap("Role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
         };
 
     }

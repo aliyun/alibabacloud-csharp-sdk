@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<QueryMcuTemplateResponseBodyTemplatesJob> Job { get; set; }
             public class QueryMcuTemplateResponseBodyTemplatesJob : TeaModel {
-                public string TemplateId { get; set; }
                 public string Template { get; set; }
+                public string TemplateId { get; set; }
             }
         };
 

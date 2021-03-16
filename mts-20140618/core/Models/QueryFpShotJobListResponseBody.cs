@@ -34,106 +34,154 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJob> FpShotJob { get; set; }
             public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJob : TeaModel {
-                [NameInMap("AudioFpShots")]
-                [Validation(Required=false)]
-                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShots AudioFpShots { get; set; }
-                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShots : TeaModel {
-                    [NameInMap("FpShot")]
+                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult FpShotResult { get; set; }
+                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult : TeaModel {
+                    [NameInMap("AudioFpShots")]
                     [Validation(Required=false)]
-                    public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShot> FpShot { get; set; }
-                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShot : TeaModel {
-                        public string PrimaryKey { get; set; }
-                        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlices FpShotSlices { get; set; }
-                        public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlices : TeaModel {
-                            [NameInMap("FpShotSlice")]
-                            [Validation(Required=false)]
-                            public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlicesFpShotSlice> FpShotSlice { get; set; }
-                            public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlicesFpShotSlice : TeaModel {
-                                [NameInMap("Duplication")]
+                    public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShots AudioFpShots { get; set; }
+                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShots : TeaModel {
+                        [NameInMap("FpShot")]
+                        [Validation(Required=false)]
+                        public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShot> FpShot { get; set; }
+                        public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShot : TeaModel {
+                            public string PrimaryKey { get; set; }
+                            public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlices FpShotSlices { get; set; }
+                            public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlices : TeaModel {
+                                [NameInMap("FpShotSlice")]
                                 [Validation(Required=false)]
-                                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlicesFpShotSliceDuplication Duplication { get; set; }
-                                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlicesFpShotSliceDuplication : TeaModel {
-                                    [NameInMap("Start")]
+                                public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSlice> FpShotSlice { get; set; }
+                                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSlice : TeaModel {
+                                    [NameInMap("Duplication")]
                                     [Validation(Required=false)]
-                                    public string Start { get; set; }
-                                    [NameInMap("Duration")]
-                                    [Validation(Required=false)]
-                                    public string Duration { get; set; }
-                                };
+                                    public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceDuplication Duplication { get; set; }
+                                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceDuplication : TeaModel {
+                                        [NameInMap("Start")]
+                                        [Validation(Required=false)]
+                                        public string Start { get; set; }
+                                        [NameInMap("Duration")]
+                                        [Validation(Required=false)]
+                                        public string Duration { get; set; }
+                                    };
 
-                                [NameInMap("Similarity")]
-                                [Validation(Required=false)]
-                                public string Similarity { get; set; }
+                                    [NameInMap("Similarity")]
+                                    [Validation(Required=false)]
+                                    public string Similarity { get; set; }
 
-                                [NameInMap("Input")]
-                                [Validation(Required=false)]
-                                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlicesFpShotSliceInput Input { get; set; }
-                                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobAudioFpShotsFpShotFpShotSlicesFpShotSliceInput : TeaModel {
-                                    [NameInMap("Start")]
+                                    [NameInMap("Input")]
                                     [Validation(Required=false)]
-                                    public string Start { get; set; }
-                                    [NameInMap("Duration")]
-                                    [Validation(Required=false)]
-                                    public string Duration { get; set; }
-                                };
+                                    public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceInput Input { get; set; }
+                                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShotsFpShotFpShotSlicesFpShotSliceInput : TeaModel {
+                                        [NameInMap("Start")]
+                                        [Validation(Required=false)]
+                                        public string Start { get; set; }
+                                        [NameInMap("Duration")]
+                                        [Validation(Required=false)]
+                                        public string Duration { get; set; }
+                                    };
+
+                                }
 
                             }
-
+                            public string Similarity { get; set; }
                         }
-                        public string Similarity { get; set; }
-                    }
-                };
+                    };
 
-                [NameInMap("FpShots")]
-                [Validation(Required=false)]
-                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShots FpShots { get; set; }
-                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShots : TeaModel {
-                    [NameInMap("FpShot")]
+                    [NameInMap("FpShots")]
                     [Validation(Required=false)]
-                    public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShot> FpShot { get; set; }
-                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShot : TeaModel {
-                        public string PrimaryKey { get; set; }
-                        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlices FpShotSlices { get; set; }
-                        public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlices : TeaModel {
-                            [NameInMap("FpShotSlice")]
-                            [Validation(Required=false)]
-                            public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlicesFpShotSlice> FpShotSlice { get; set; }
-                            public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlicesFpShotSlice : TeaModel {
-                                [NameInMap("Duplication")]
+                    public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShots FpShots { get; set; }
+                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShots : TeaModel {
+                        [NameInMap("FpShot")]
+                        [Validation(Required=false)]
+                        public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShot> FpShot { get; set; }
+                        public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShot : TeaModel {
+                            public string PrimaryKey { get; set; }
+                            public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlices FpShotSlices { get; set; }
+                            public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlices : TeaModel {
+                                [NameInMap("FpShotSlice")]
                                 [Validation(Required=false)]
-                                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlicesFpShotSliceDuplication Duplication { get; set; }
-                                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlicesFpShotSliceDuplication : TeaModel {
-                                    [NameInMap("Start")]
+                                public List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSlice> FpShotSlice { get; set; }
+                                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSlice : TeaModel {
+                                    [NameInMap("Duplication")]
                                     [Validation(Required=false)]
-                                    public string Start { get; set; }
-                                    [NameInMap("Duration")]
-                                    [Validation(Required=false)]
-                                    public string Duration { get; set; }
-                                };
+                                    public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceDuplication Duplication { get; set; }
+                                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceDuplication : TeaModel {
+                                        [NameInMap("Start")]
+                                        [Validation(Required=false)]
+                                        public string Start { get; set; }
+                                        [NameInMap("Duration")]
+                                        [Validation(Required=false)]
+                                        public string Duration { get; set; }
+                                    };
 
-                                [NameInMap("Similarity")]
-                                [Validation(Required=false)]
-                                public string Similarity { get; set; }
+                                    [NameInMap("Similarity")]
+                                    [Validation(Required=false)]
+                                    public string Similarity { get; set; }
 
-                                [NameInMap("Input")]
-                                [Validation(Required=false)]
-                                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlicesFpShotSliceInput Input { get; set; }
-                                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotsFpShotFpShotSlicesFpShotSliceInput : TeaModel {
-                                    [NameInMap("Start")]
+                                    [NameInMap("Input")]
                                     [Validation(Required=false)]
-                                    public string Start { get; set; }
-                                    [NameInMap("Duration")]
-                                    [Validation(Required=false)]
-                                    public string Duration { get; set; }
-                                };
+                                    public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceInput Input { get; set; }
+                                    public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShotsFpShotFpShotSlicesFpShotSliceInput : TeaModel {
+                                        [NameInMap("Start")]
+                                        [Validation(Required=false)]
+                                        public string Start { get; set; }
+                                        [NameInMap("Duration")]
+                                        [Validation(Required=false)]
+                                        public string Duration { get; set; }
+                                    };
+
+                                }
 
                             }
-
+                            public string Similarity { get; set; }
                         }
-                        public string Similarity { get; set; }
-                    }
-                };
+                    };
 
+                }
+                public string CreationTime { get; set; }
+                public string FinishTime { get; set; }
+                public string State { get; set; }
+                public string Message { get; set; }
+                public string TxHash { get; set; }
+                public string TransactionId { get; set; }
+                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotConfig FpShotConfig { get; set; }
+                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotConfig : TeaModel {
+                    [NameInMap("PrimaryKey")]
+                    [Validation(Required=false)]
+                    public string PrimaryKey { get; set; }
+
+                    [NameInMap("SaveType")]
+                    [Validation(Required=false)]
+                    public string SaveType { get; set; }
+
+                    [NameInMap("Notary")]
+                    [Validation(Required=false)]
+                    public string Notary { get; set; }
+
+                    [NameInMap("FpDBId")]
+                    [Validation(Required=false)]
+                    public string FpDBId { get; set; }
+
+                }
+                public string FileId { get; set; }
+                public string UserData { get; set; }
+                public string Code { get; set; }
+                public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobInputFile InputFile { get; set; }
+                public class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobInputFile : TeaModel {
+                    [NameInMap("Object")]
+                    [Validation(Required=false)]
+                    public string Object { get; set; }
+
+                    [NameInMap("Location")]
+                    [Validation(Required=false)]
+                    public string Location { get; set; }
+
+                    [NameInMap("Bucket")]
+                    [Validation(Required=false)]
+                    public string Bucket { get; set; }
+
+                }
+                public string PipelineId { get; set; }
+                public string Id { get; set; }
             }
         };
 

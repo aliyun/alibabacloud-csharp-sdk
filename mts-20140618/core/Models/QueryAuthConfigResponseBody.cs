@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20140618.Models
 {
     public class QueryAuthConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Key2")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Key2 { get; set; }
 
         [NameInMap("Key1")]
         [Validation(Required=false)]
         public string Key1 { get; set; }
 
-        [NameInMap("Key2")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Key2 { get; set; }
+        public string RequestId { get; set; }
 
     }
 

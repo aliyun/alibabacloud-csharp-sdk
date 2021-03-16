@@ -21,27 +21,27 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage> RegisteredPersonage { get; set; }
             public class RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage : TeaModel {
-                public string PersonName { get; set; }
-                public string FaceId { get; set; }
-                public string Target { get; set; }
                 public string Quality { get; set; }
-                public string Gender { get; set; }
-                public string ImageId { get; set; }
                 public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile ImageFile { get; set; }
                 public class RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile : TeaModel {
-                    [NameInMap("Bucket")]
+                    [NameInMap("Object")]
                     [Validation(Required=false)]
-                    public string Bucket { get; set; }
+                    public string Object { get; set; }
 
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public string Location { get; set; }
 
-                    [NameInMap("Object")]
+                    [NameInMap("Bucket")]
                     [Validation(Required=false)]
-                    public string Object { get; set; }
+                    public string Bucket { get; set; }
 
                 }
+                public string PersonName { get; set; }
+                public string Gender { get; set; }
+                public string FaceId { get; set; }
+                public string Target { get; set; }
+                public string ImageId { get; set; }
             }
         };
 
@@ -53,23 +53,23 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
             [Validation(Required=false)]
             public List<RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage> FailedImage { get; set; }
             public class RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage : TeaModel {
-                public string Code { get; set; }
-                public string Success { get; set; }
                 public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile ImageFile { get; set; }
                 public class RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile : TeaModel {
-                    [NameInMap("Bucket")]
+                    [NameInMap("Object")]
                     [Validation(Required=false)]
-                    public string Bucket { get; set; }
+                    public string Object { get; set; }
 
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public string Location { get; set; }
 
-                    [NameInMap("Object")]
+                    [NameInMap("Bucket")]
                     [Validation(Required=false)]
-                    public string Object { get; set; }
+                    public string Bucket { get; set; }
 
                 }
+                public string Success { get; set; }
+                public string Code { get; set; }
             }
         };
 
