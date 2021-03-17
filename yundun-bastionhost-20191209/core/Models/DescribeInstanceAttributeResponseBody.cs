@@ -75,12 +75,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("PublicWhiteList")]
             [Validation(Required=false)]
             public List<string> PublicWhiteList { get; set; }
+            [NameInMap("WebTerminalModule")]
+            [Validation(Required=false)]
+            public string WebTerminalModule { get; set; }
             [NameInMap("InstanceStatus")]
             [Validation(Required=false)]
             public string InstanceStatus { get; set; }
             [NameInMap("LicenseCode")]
             [Validation(Required=false)]
             public string LicenseCode { get; set; }
+            [NameInMap("PublicIps")]
+            [Validation(Required=false)]
+            public List<string> PublicIps { get; set; }
             [NameInMap("PublicNetworkAccess")]
             [Validation(Required=false)]
             public bool? PublicNetworkAccess { get; set; }

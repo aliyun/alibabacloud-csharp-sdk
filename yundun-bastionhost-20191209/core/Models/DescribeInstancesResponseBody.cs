@@ -9,34 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("InstanceStatus")]
-            [Validation(Required=false)]
-            public string InstanceStatus { get; set; }
-
-            [NameInMap("Legacy")]
-            [Validation(Required=false)]
-            public bool? Legacy { get; set; }
-
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
@@ -45,25 +21,49 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string VswitchId { get; set; }
 
-            [NameInMap("IntranetEndpoint")]
+            [NameInMap("ImageVersion")]
             [Validation(Required=false)]
-            public string IntranetEndpoint { get; set; }
+            public string ImageVersion { get; set; }
 
-            [NameInMap("InternetEndpoint")]
+            [NameInMap("PlanCode")]
             [Validation(Required=false)]
-            public string InternetEndpoint { get; set; }
+            public string PlanCode { get; set; }
 
-            [NameInMap("StartTime")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public long? StartTime { get; set; }
+            public string Description { get; set; }
 
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
-            [NameInMap("Description")]
+            [NameInMap("Legacy")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public bool? Legacy { get; set; }
+
+            [NameInMap("InternetEndpoint")]
+            [Validation(Required=false)]
+            public string InternetEndpoint { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("IntranetEndpoint")]
+            [Validation(Required=false)]
+            public string IntranetEndpoint { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
+            [NameInMap("InstanceStatus")]
+            [Validation(Required=false)]
+            public string InstanceStatus { get; set; }
 
             [NameInMap("LicenseCode")]
             [Validation(Required=false)]
@@ -73,11 +73,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public bool? PublicNetworkAccess { get; set; }
 
-            [NameInMap("ImageVersion")]
-            [Validation(Required=false)]
-            public string ImageVersion { get; set; }
-
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
