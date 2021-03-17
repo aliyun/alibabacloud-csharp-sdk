@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class IntelligentCompositionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public IntelligentCompositionResponseData Data { get; set; }
-        public class IntelligentCompositionResponseData : TeaModel {
-            [NameInMap("Elements")]
-            [Validation(Required=true)]
-            public List<IntelligentCompositionResponseDataElements> Elements { get; set; }
-            public class IntelligentCompositionResponseDataElements : TeaModel {
-                public int? MinX { get; set; }
-                public int? MinY { get; set; }
-                public int? MaxX { get; set; }
-                public int? MaxY { get; set; }
-                public float? Score { get; set; }
-            }
-        };
+        public IntelligentCompositionResponseBody Body { get; set; }
 
     }
 

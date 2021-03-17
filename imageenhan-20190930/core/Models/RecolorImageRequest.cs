@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class RecolorImageRequest : TeaModel {
         [NameInMap("Url")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Url { get; set; }
 
         [NameInMap("Mode")]

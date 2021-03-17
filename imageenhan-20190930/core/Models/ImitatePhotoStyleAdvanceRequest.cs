@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("StyleUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StyleUrl { get; set; }
 
     }

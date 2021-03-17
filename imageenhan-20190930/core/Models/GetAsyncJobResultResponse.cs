@@ -9,30 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class GetAsyncJobResultResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public GetAsyncJobResultResponseData Data { get; set; }
-        public class GetAsyncJobResultResponseData : TeaModel {
-            [NameInMap("JobId")]
-            [Validation(Required=true)]
-            public string JobId { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-            [NameInMap("Result")]
-            [Validation(Required=true)]
-            public string Result { get; set; }
-            [NameInMap("ErrorCode")]
-            [Validation(Required=true)]
-            public string ErrorCode { get; set; }
-            [NameInMap("ErrorMessage")]
-            [Validation(Required=true)]
-            public string ErrorMessage { get; set; }
-        };
+        public GetAsyncJobResultResponseBody Body { get; set; }
 
     }
 

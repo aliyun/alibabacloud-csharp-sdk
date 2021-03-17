@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public Stream OriginImageURLObject { get; set; }
 
         [NameInMap("FunctionType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FunctionType { get; set; }
 
         [NameInMap("Text")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public string OutputFileType { get; set; }
 
         [NameInMap("QualityFactor")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? QualityFactor { get; set; }
 
     }

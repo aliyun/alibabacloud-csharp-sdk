@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public Stream UrlObject { get; set; }
 
         [NameInMap("Width")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Width { get; set; }
 
         [NameInMap("Height")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Height { get; set; }
 
     }

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class ExtendImageStyleResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public ExtendImageStyleResponseData Data { get; set; }
-        public class ExtendImageStyleResponseData : TeaModel {
-            [NameInMap("Url")]
-            [Validation(Required=true)]
-            public string Url { get; set; }
-            [NameInMap("MajorUrl")]
-            [Validation(Required=true)]
-            public string MajorUrl { get; set; }
-        };
+        public ExtendImageStyleResponseBody Body { get; set; }
 
     }
 

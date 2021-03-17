@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class RecolorImageResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public RecolorImageResponseData Data { get; set; }
-        public class RecolorImageResponseData : TeaModel {
-            [NameInMap("ImageList")]
-            [Validation(Required=true)]
-            public List<string> ImageList { get; set; }
-        };
+        public RecolorImageResponseBody Body { get; set; }
 
     }
 

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class EnhanceImageColorRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
         [NameInMap("OutputFormat")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OutputFormat { get; set; }
 
         [NameInMap("Mode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Mode { get; set; }
 
     }

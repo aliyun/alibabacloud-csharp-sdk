@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class ImageBlindPicWatermarkResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public ImageBlindPicWatermarkResponseData Data { get; set; }
-        public class ImageBlindPicWatermarkResponseData : TeaModel {
-            [NameInMap("WatermarkImageURL")]
-            [Validation(Required=true)]
-            public string WatermarkImageURL { get; set; }
-            [NameInMap("LogoURL")]
-            [Validation(Required=true)]
-            public string LogoURL { get; set; }
-        };
+        public ImageBlindPicWatermarkResponseBody Body { get; set; }
 
     }
 

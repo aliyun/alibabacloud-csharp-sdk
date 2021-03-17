@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class AssessCompositionRequest : TeaModel {
         [NameInMap("ImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageURL { get; set; }
 
     }

@@ -9,18 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class AssessCompositionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public AssessCompositionResponseData Data { get; set; }
-        public class AssessCompositionResponseData : TeaModel {
-            [NameInMap("Score")]
-            [Validation(Required=true)]
-            public float? Score { get; set; }
-        };
+        public AssessCompositionResponseBody Body { get; set; }
 
     }
 

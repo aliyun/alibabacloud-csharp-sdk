@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public Stream ImageURLObject { get; set; }
 
         [NameInMap("UserMask")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string UserMask { get; set; }
 
     }

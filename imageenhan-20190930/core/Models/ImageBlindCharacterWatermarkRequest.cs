@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 {
     public class ImageBlindCharacterWatermarkRequest : TeaModel {
         [NameInMap("FunctionType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FunctionType { get; set; }
 
         [NameInMap("Text")]
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public string OutputFileType { get; set; }
 
         [NameInMap("QualityFactor")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? QualityFactor { get; set; }
 
         [NameInMap("OriginImageURL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OriginImageURL { get; set; }
 
     }

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public Stream UrlObject { get; set; }
 
         [NameInMap("Operation")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Operation { get; set; }
 
     }

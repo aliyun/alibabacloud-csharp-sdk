@@ -1,3 +1,6 @@
+2021-03-17 Version: 1.0.0
+- Update MakeSuperResolutionImage.
+
 2020-12-02 Version: 0.0.6
 - Release ColorizeImage.
 

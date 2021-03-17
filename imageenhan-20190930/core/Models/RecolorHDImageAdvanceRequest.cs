@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=false)]
         public int? ColorCount { get; set; }
 
+        [NameInMap("Degree")]
+        [Validation(Required=false)]
+        public string Degree { get; set; }
+
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
         [NameInMap("ColorTemplate")]
         [Validation(Required=false)]
         public List<RecolorHDImageAdvanceRequestColorTemplate> ColorTemplate { get; set; }
@@ -34,10 +42,6 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
             public string Color { get; set; }
 
         }
-
-        [NameInMap("Degree")]
-        [Validation(Required=true)]
-        public string Degree { get; set; }
 
     }
 
