@@ -25,13 +25,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=true)]
             public List<DescribeDBInstanceNetInfoResponseDBInstanceNetInfosDBInstanceNetInfo> DBInstanceNetInfo { get; set; }
             public class DescribeDBInstanceNetInfoResponseDBInstanceNetInfosDBInstanceNetInfo : TeaModel {
-                public string ConnectionString { get; set; }
-                public string IPAddress { get; set; }
                 public string IPType { get; set; }
-                public string Port { get; set; }
                 public string VPCId { get; set; }
+                public string Port { get; set; }
                 public string VSwitchId { get; set; }
                 public string VpcInstanceId { get; set; }
+                public string AddressType { get; set; }
+                public string IPAddress { get; set; }
+                public string ConnectionString { get; set; }
             }
         };
 

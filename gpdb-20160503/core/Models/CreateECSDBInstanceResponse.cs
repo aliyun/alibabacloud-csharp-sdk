@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=true)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("Port")]
+        [Validation(Required=true)]
+        public string Port { get; set; }
+
         [NameInMap("OrderId")]
         [Validation(Required=true)]
         public string OrderId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("ConnectionString")]
         [Validation(Required=true)]
         public string ConnectionString { get; set; }
-
-        [NameInMap("Port")]
-        [Validation(Required=true)]
-        public string Port { get; set; }
 
     }
 

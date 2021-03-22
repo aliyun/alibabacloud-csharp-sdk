@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateECSDBInstanceRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=true)]
         public string RegionId { get; set; }
@@ -80,6 +84,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
+
+        [NameInMap("EncryptionKey")]
+        [Validation(Required=false)]
+        public string EncryptionKey { get; set; }
+
+        [NameInMap("EncryptionType")]
+        [Validation(Required=false)]
+        public string EncryptionType { get; set; }
+
+        [NameInMap("MasterNodeNum")]
+        [Validation(Required=false)]
+        public int? MasterNodeNum { get; set; }
 
     }
 

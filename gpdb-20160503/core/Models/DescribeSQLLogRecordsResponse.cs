@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string AccountName { get; set; }
                 public string HostAddress { get; set; }
                 public string SQLText { get; set; }
-                public long TotalExecutionTimes { get; set; }
-                public long ReturnRowCounts { get; set; }
+                public long? TotalExecutionTimes { get; set; }
+                public long? ReturnRowCounts { get; set; }
                 public string ExecuteTime { get; set; }
                 public string ThreadID { get; set; }
             }

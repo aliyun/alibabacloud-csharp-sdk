@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("SQLId")]
         [Validation(Required=false)]
-        public long SQLId { get; set; }
+        public long? SQLId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=true)]

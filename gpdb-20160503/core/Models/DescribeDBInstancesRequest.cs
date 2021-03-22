@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=true)]
         public string RegionId { get; set; }
@@ -25,6 +29,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceIds { get; set; }
 
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTag> Tag { get; set; }
@@ -38,14 +50,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

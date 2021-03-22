@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string EngineVersion { get; set; }
                 public string DBInstanceClass { get; set; }
                 public int? DBInstanceCpuCores { get; set; }
-                public long DBInstanceMemory { get; set; }
-                public long DBInstanceStorage { get; set; }
-                public long DBInstanceDiskMBPS { get; set; }
+                public long? DBInstanceMemory { get; set; }
+                public long? DBInstanceStorage { get; set; }
+                public long? DBInstanceDiskMBPS { get; set; }
                 public string HostType { get; set; }
                 public string DBInstanceGroupCount { get; set; }
                 public string DBInstanceNetType { get; set; }

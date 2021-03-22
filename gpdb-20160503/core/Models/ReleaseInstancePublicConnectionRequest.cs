@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=true)]
         public string CurrentConnectionString { get; set; }
 
+        [NameInMap("AddressType")]
+        [Validation(Required=false)]
+        public string AddressType { get; set; }
+
     }
 
 }

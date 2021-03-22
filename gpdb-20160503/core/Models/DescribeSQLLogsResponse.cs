@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             [NameInMap("ReturnRowCounts")]
             [Validation(Required=true)]
-            public long ReturnRowCounts { get; set; }
+            public long? ReturnRowCounts { get; set; }
 
             [NameInMap("ExecuteCost")]
             [Validation(Required=true)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             [NameInMap("ScanRowCounts")]
             [Validation(Required=true)]
-            public long ScanRowCounts { get; set; }
+            public long? ScanRowCounts { get; set; }
 
             [NameInMap("SQLPlan")]
             [Validation(Required=true)]

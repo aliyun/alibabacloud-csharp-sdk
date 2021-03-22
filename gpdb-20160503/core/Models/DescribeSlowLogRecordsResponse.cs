@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string HostAddress { get; set; }
                 public string DBName { get; set; }
                 public string SQLText { get; set; }
-                public long QueryTimes { get; set; }
-                public long LockTimes { get; set; }
-                public long ParseRowCounts { get; set; }
-                public long ReturnRowCounts { get; set; }
+                public long? QueryTimes { get; set; }
+                public long? LockTimes { get; set; }
+                public long? ParseRowCounts { get; set; }
+                public long? ReturnRowCounts { get; set; }
                 public string ExecutionStartTime { get; set; }
             }
         };
