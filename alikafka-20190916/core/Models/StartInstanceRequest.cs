@@ -53,13 +53,21 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("CrossZone")]
-        [Validation(Required=false)]
-        public bool? CrossZone { get; set; }
-
         [NameInMap("SecurityGroup")]
         [Validation(Required=false)]
         public string SecurityGroup { get; set; }
+
+        [NameInMap("ServiceVersion")]
+        [Validation(Required=false)]
+        public string ServiceVersion { get; set; }
+
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
+        [NameInMap("KMSKeyId")]
+        [Validation(Required=false)]
+        public string KMSKeyId { get; set; }
 
     }
 

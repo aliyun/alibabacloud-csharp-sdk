@@ -27,33 +27,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         [NameInMap("KafkaAclList")]
         [Validation(Required=false)]
-        public List<DescribeAclsResponseBodyKafkaAclList> KafkaAclList { get; set; }
+        public DescribeAclsResponseBodyKafkaAclList KafkaAclList { get; set; }
         public class DescribeAclsResponseBodyKafkaAclList : TeaModel {
-            [NameInMap("AclResourceType")]
+            [NameInMap("KafkaAclVO")]
             [Validation(Required=false)]
-            public string AclResourceType { get; set; }
-
-            [NameInMap("Host")]
-            [Validation(Required=false)]
-            public string Host { get; set; }
-
-            [NameInMap("AclOperationType")]
-            [Validation(Required=false)]
-            public string AclOperationType { get; set; }
-
-            [NameInMap("AclResourceName")]
-            [Validation(Required=false)]
-            public string AclResourceName { get; set; }
-
-            [NameInMap("AclResourcePatternType")]
-            [Validation(Required=false)]
-            public string AclResourcePatternType { get; set; }
-
-            [NameInMap("Username")]
-            [Validation(Required=false)]
-            public string Username { get; set; }
-
-        }
+            public List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> KafkaAclVO { get; set; }
+            public class DescribeAclsResponseBodyKafkaAclListKafkaAclVO : TeaModel {
+                public string AclResourceType { get; set; }
+                public string Host { get; set; }
+                public string AclOperationType { get; set; }
+                public string AclResourceName { get; set; }
+                public string AclResourcePatternType { get; set; }
+                public string Username { get; set; }
+            }
+        };
 
     }
 

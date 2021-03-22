@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
-    public class ReleaseInstanceRequest : TeaModel {
-        [NameInMap("InstanceId")]
+    public class UpdateInstanceConfigRequest : TeaModel {
+        [NameInMap("Config")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Config { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ForceDeleteInstance")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public bool? ForceDeleteInstance { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

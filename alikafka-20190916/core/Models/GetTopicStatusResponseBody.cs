@@ -29,13 +29,34 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public long? TotalCount { get; set; }
             [NameInMap("OffsetTable")]
             [Validation(Required=false)]
-            public List<GetTopicStatusResponseBodyTopicStatusOffsetTable> OffsetTable { get; set; }
+            public GetTopicStatusResponseBodyTopicStatusOffsetTable OffsetTable { get; set; }
             public class GetTopicStatusResponseBodyTopicStatusOffsetTable : TeaModel {
-                public long? MinOffset { get; set; }
-                public string Topic { get; set; }
-                public int? Partition { get; set; }
-                public long? LastUpdateTimestamp { get; set; }
-                public long? MaxOffset { get; set; }
+                [NameInMap("OffsetTable")]
+                [Validation(Required=false)]
+                public List<GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable> OffsetTable { get; set; }
+                public class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable : TeaModel {
+                    [NameInMap("MinOffset")]
+                    [Validation(Required=false)]
+                    public long? MinOffset { get; set; }
+
+                    [NameInMap("Topic")]
+                    [Validation(Required=false)]
+                    public string Topic { get; set; }
+
+                    [NameInMap("Partition")]
+                    [Validation(Required=false)]
+                    public int? Partition { get; set; }
+
+                    [NameInMap("LastUpdateTimestamp")]
+                    [Validation(Required=false)]
+                    public long? LastUpdateTimestamp { get; set; }
+
+                    [NameInMap("MaxOffset")]
+                    [Validation(Required=false)]
+                    public long? MaxOffset { get; set; }
+
+                }
+
             }
         };
 

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string AclResourceName { get; set; }
 
+        [NameInMap("AclResourcePatternType")]
+        [Validation(Required=false)]
+        public string AclResourcePatternType { get; set; }
+
     }
 
 }

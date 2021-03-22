@@ -23,27 +23,81 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public class GetMetaProductListResponseBodyMetaData : TeaModel {
             [NameInMap("ProductsNormal")]
             [Validation(Required=false)]
-            public List<GetMetaProductListResponseBodyMetaDataProductsNormal> ProductsNormal { get; set; }
+            public GetMetaProductListResponseBodyMetaDataProductsNormal ProductsNormal { get; set; }
             public class GetMetaProductListResponseBodyMetaDataProductsNormal : TeaModel {
-                public string TopicQuota { get; set; }
-                public string SpecType { get; set; }
-                public string DeployType { get; set; }
-                public string DiskSize { get; set; }
-                public long? IoMax { get; set; }
-                public string DiskType { get; set; }
-                public string RegionId { get; set; }
+                [NameInMap("SpecVO")]
+                [Validation(Required=false)]
+                public List<GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO> SpecVO { get; set; }
+                public class GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO : TeaModel {
+                    [NameInMap("TopicQuota")]
+                    [Validation(Required=false)]
+                    public string TopicQuota { get; set; }
+
+                    [NameInMap("SpecType")]
+                    [Validation(Required=false)]
+                    public string SpecType { get; set; }
+
+                    [NameInMap("DeployType")]
+                    [Validation(Required=false)]
+                    public string DeployType { get; set; }
+
+                    [NameInMap("DiskSize")]
+                    [Validation(Required=false)]
+                    public string DiskSize { get; set; }
+
+                    [NameInMap("IoMax")]
+                    [Validation(Required=false)]
+                    public long? IoMax { get; set; }
+
+                    [NameInMap("DiskType")]
+                    [Validation(Required=false)]
+                    public string DiskType { get; set; }
+
+                    [NameInMap("RegionId")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+
+                }
+
             }
             [NameInMap("ProductsProfessional")]
             [Validation(Required=false)]
-            public List<GetMetaProductListResponseBodyMetaDataProductsProfessional> ProductsProfessional { get; set; }
+            public GetMetaProductListResponseBodyMetaDataProductsProfessional ProductsProfessional { get; set; }
             public class GetMetaProductListResponseBodyMetaDataProductsProfessional : TeaModel {
-                public string TopicQuota { get; set; }
-                public string SpecType { get; set; }
-                public string DeployType { get; set; }
-                public string DiskSize { get; set; }
-                public int? IoMax { get; set; }
-                public string DiskType { get; set; }
-                public string RegionId { get; set; }
+                [NameInMap("SpecVO")]
+                [Validation(Required=false)]
+                public List<GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO> SpecVO { get; set; }
+                public class GetMetaProductListResponseBodyMetaDataProductsProfessionalSpecVO : TeaModel {
+                    [NameInMap("TopicQuota")]
+                    [Validation(Required=false)]
+                    public string TopicQuota { get; set; }
+
+                    [NameInMap("SpecType")]
+                    [Validation(Required=false)]
+                    public string SpecType { get; set; }
+
+                    [NameInMap("DeployType")]
+                    [Validation(Required=false)]
+                    public string DeployType { get; set; }
+
+                    [NameInMap("DiskSize")]
+                    [Validation(Required=false)]
+                    public string DiskSize { get; set; }
+
+                    [NameInMap("IoMax")]
+                    [Validation(Required=false)]
+                    public int? IoMax { get; set; }
+
+                    [NameInMap("DiskType")]
+                    [Validation(Required=false)]
+                    public string DiskType { get; set; }
+
+                    [NameInMap("RegionId")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+
+                }
+
             }
             [NameInMap("Names")]
             [Validation(Required=false)]

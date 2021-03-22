@@ -25,17 +25,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("CompactTopic")]
-        [Validation(Required=false)]
-        public bool? CompactTopic { get; set; }
-
         [NameInMap("PartitionNum")]
         [Validation(Required=false)]
         public string PartitionNum { get; set; }
-
-        [NameInMap("LocalTopic")]
-        [Validation(Required=false)]
-        public bool? LocalTopic { get; set; }
 
     }
 

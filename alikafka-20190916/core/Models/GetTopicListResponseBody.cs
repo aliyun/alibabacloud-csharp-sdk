@@ -31,51 +31,38 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         [NameInMap("TopicList")]
         [Validation(Required=false)]
-        public List<GetTopicListResponseBodyTopicList> TopicList { get; set; }
+        public GetTopicListResponseBodyTopicList TopicList { get; set; }
         public class GetTopicListResponseBodyTopicList : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("TopicVO")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public List<GetTopicListResponseBodyTopicListTopicVO> TopicVO { get; set; }
+            public class GetTopicListResponseBodyTopicListTopicVO : TeaModel {
+                public int? Status { get; set; }
+                public string Remark { get; set; }
+                public long? CreateTime { get; set; }
+                public string Topic { get; set; }
+                public string StatusName { get; set; }
+                public GetTopicListResponseBodyTopicListTopicVOTags Tags { get; set; }
+                public class GetTopicListResponseBodyTopicListTopicVOTags : TeaModel {
+                    [NameInMap("TagVO")]
+                    [Validation(Required=false)]
+                    public List<GetTopicListResponseBodyTopicListTopicVOTagsTagVO> TagVO { get; set; }
+                    public class GetTopicListResponseBodyTopicListTopicVOTagsTagVO : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
 
-            [NameInMap("Remark")]
-            [Validation(Required=false)]
-            public string Remark { get; set; }
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
+                    }
 
-            [NameInMap("Topic")]
-            [Validation(Required=false)]
-            public string Topic { get; set; }
-
-            [NameInMap("StatusName")]
-            [Validation(Required=false)]
-            public string StatusName { get; set; }
-
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<GetTopicListResponseBodyTopicListTags> Tags { get; set; }
-            public class GetTopicListResponseBodyTopicListTags : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
+                }
+                public string InstanceId { get; set; }
+                public string RegionId { get; set; }
             }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+        };
 
         [NameInMap("Code")]
         [Validation(Required=false)]

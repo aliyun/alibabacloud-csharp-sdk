@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public int? EipMax { get; set; }
 
-        [NameInMap("PaidType")]
-        [Validation(Required=false)]
-        public int? PaidType { get; set; }
-
         [NameInMap("SpecType")]
         [Validation(Required=false)]
         public string SpecType { get; set; }

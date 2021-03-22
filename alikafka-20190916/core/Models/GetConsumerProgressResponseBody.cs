@@ -23,18 +23,41 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public class GetConsumerProgressResponseBodyConsumerProgress : TeaModel {
             [NameInMap("TopicList")]
             [Validation(Required=false)]
-            public List<GetConsumerProgressResponseBodyConsumerProgressTopicList> TopicList { get; set; }
+            public GetConsumerProgressResponseBodyConsumerProgressTopicList TopicList { get; set; }
             public class GetConsumerProgressResponseBodyConsumerProgressTopicList : TeaModel {
-                public long? TotalDiff { get; set; }
-                public long? LastTimestamp { get; set; }
-                public string Topic { get; set; }
-                public List<GetConsumerProgressResponseBodyConsumerProgressTopicListOffsetList> OffsetList { get; set; }
-                public class GetConsumerProgressResponseBodyConsumerProgressTopicListOffsetList : TeaModel {
-                    public long? BrokerOffset { get; set; }
-                    public long? ConsumerOffset { get; set; }
+                [NameInMap("TopicList")]
+                [Validation(Required=false)]
+                public List<GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList> TopicList { get; set; }
+                public class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList : TeaModel {
+                    [NameInMap("TotalDiff")]
+                    [Validation(Required=false)]
+                    public long? TotalDiff { get; set; }
+
+                    [NameInMap("LastTimestamp")]
+                    [Validation(Required=false)]
                     public long? LastTimestamp { get; set; }
-                    public int? Partition { get; set; }
+
+                    [NameInMap("Topic")]
+                    [Validation(Required=false)]
+                    public string Topic { get; set; }
+
+                    [NameInMap("OffsetList")]
+                    [Validation(Required=false)]
+                    public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList OffsetList { get; set; }
+                    public class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList : TeaModel {
+                        [NameInMap("OffsetList")]
+                        [Validation(Required=false)]
+                        public List<GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList> OffsetList { get; set; }
+                        public class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList : TeaModel {
+                            public long? BrokerOffset { get; set; }
+                            public long? ConsumerOffset { get; set; }
+                            public long? LastTimestamp { get; set; }
+                            public int? Partition { get; set; }
+                        }
+                    };
+
                 }
+
             }
             [NameInMap("LastTimestamp")]
             [Validation(Required=false)]
