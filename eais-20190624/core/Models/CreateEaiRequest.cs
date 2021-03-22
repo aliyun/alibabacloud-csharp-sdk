@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
     }
 
 }
