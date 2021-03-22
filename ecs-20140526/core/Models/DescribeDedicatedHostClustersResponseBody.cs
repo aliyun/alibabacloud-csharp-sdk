@@ -66,6 +66,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public int? TotalVcpus { get; set; }
 
+                    [NameInMap("AvailableInstanceTypes")]
+                    [Validation(Required=false)]
+                    public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes AvailableInstanceTypes { get; set; }
+                    public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes : TeaModel {
+                        [NameInMap("AvailableInstanceType")]
+                        [Validation(Required=false)]
+                        public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType> AvailableInstanceType { get; set; }
+                        public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType : TeaModel {
+                            public int? AvailableInstanceCapacity { get; set; }
+                            public string InstanceType { get; set; }
+                        }
+                    };
+
                     [NameInMap("AvailableVcpus")]
                     [Validation(Required=false)]
                     public int? AvailableVcpus { get; set; }

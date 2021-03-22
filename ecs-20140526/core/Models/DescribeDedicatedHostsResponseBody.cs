@@ -99,6 +99,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SaleCycle { get; set; }
                 public string Description { get; set; }
                 public string DedicatedHostType { get; set; }
+                public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo HostDetailInfo { get; set; }
+                public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo : TeaModel {
+                    [NameInMap("SerialNumber")]
+                    [Validation(Required=false)]
+                    public string SerialNumber { get; set; }
+
+                }
                 public string DedicatedHostId { get; set; }
                 public int? Sockets { get; set; }
                 public int? Cores { get; set; }
@@ -137,6 +144,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
                 public string RegionId { get; set; }
+                public string DedicatedHostName { get; set; }
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes NetworkAttributes { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes : TeaModel {
                     [NameInMap("UdpTimeout")]
@@ -148,7 +156,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? SlbUdpTimeout { get; set; }
 
                 }
-                public string DedicatedHostName { get; set; }
                 public string ExpiredTime { get; set; }
                 public string DedicatedHostClusterId { get; set; }
                 public string ResourceGroupId { get; set; }

@@ -159,14 +159,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
-                [NameInMap("AllocationId")]
-                [Validation(Required=false)]
-                public string AllocationId { get; set; }
+                public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp AssociatedPublicIp { get; set; }
+                public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp : TeaModel {
+                    [NameInMap("AllocationId")]
+                    [Validation(Required=false)]
+                    public string AllocationId { get; set; }
 
-                [NameInMap("PublicIpAddress")]
-                [Validation(Required=false)]
-                public string PublicIpAddress { get; set; }
+                    [NameInMap("PublicIpAddress")]
+                    [Validation(Required=false)]
+                    public string PublicIpAddress { get; set; }
 
+                }
+                public bool? Primary { get; set; }
+                public string PrivateIpAddress { get; set; }
             }
         };
 

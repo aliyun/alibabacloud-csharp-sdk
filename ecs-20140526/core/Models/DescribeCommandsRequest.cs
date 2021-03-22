@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Provider")]
+        [Validation(Required=false)]
+        public string Provider { get; set; }
+
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }

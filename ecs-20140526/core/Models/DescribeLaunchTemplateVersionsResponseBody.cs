@@ -43,12 +43,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=true)]
                     public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk SystemDisk { get; set; }
                     public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk : TeaModel {
+                        [NameInMap("PerformanceLevel")]
+                        [Validation(Required=false)]
+                        public string PerformanceLevel { get; set; }
                         [NameInMap("Size")]
                         [Validation(Required=false)]
                         public int? Size { get; set; }
                         [NameInMap("DiskName")]
                         [Validation(Required=false)]
                         public string DiskName { get; set; }
+                        [NameInMap("DeleteWithInstance")]
+                        [Validation(Required=false)]
+                        public bool? DeleteWithInstance { get; set; }
                         [NameInMap("Category")]
                         [Validation(Required=false)]
                         public string Category { get; set; }
@@ -59,6 +65,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public int? Iops { get; set; }
                     };
+
+                    [NameInMap("DeploymentSetId")]
+                    [Validation(Required=false)]
+                    public string DeploymentSetId { get; set; }
 
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
@@ -97,6 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk> DataDisk { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk : TeaModel {
+                            public string PerformanceLevel { get; set; }
                             public string Description { get; set; }
                             public string SnapshotId { get; set; }
                             public string Device { get; set; }
@@ -120,13 +131,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
-                    [NameInMap("SpotDuration")]
-                    [Validation(Required=false)]
-                    public int? SpotDuration { get; set; }
-
                     [NameInMap("InstanceName")]
                     [Validation(Required=false)]
                     public string InstanceName { get; set; }
+
+                    [NameInMap("SpotDuration")]
+                    [Validation(Required=false)]
+                    public int? SpotDuration { get; set; }
 
                     [NameInMap("UserData")]
                     [Validation(Required=false)]
@@ -143,6 +154,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [NameInMap("SpotPriceLimit")]
                     [Validation(Required=false)]
                     public float? SpotPriceLimit { get; set; }
+
+                    [NameInMap("PrivateIpAddress")]
+                    [Validation(Required=false)]
+                    public string PrivateIpAddress { get; set; }
 
                     [NameInMap("ImageId")]
                     [Validation(Required=false)]
@@ -171,6 +186,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
                     public string InstanceType { get; set; }
+
+                    [NameInMap("SecurityGroupIds")]
+                    [Validation(Required=false)]
+                    public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSecurityGroupIds SecurityGroupIds { get; set; }
+                    public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSecurityGroupIds : TeaModel {
+                        [NameInMap("SecurityGroupId")]
+                        [Validation(Required=false)]
+                        public List<string> SecurityGroupId { get; set; }
+                    };
 
                     [NameInMap("Period")]
                     [Validation(Required=false)]
@@ -217,6 +241,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public string Description { get; set; }
                             public string SecurityGroupId { get; set; }
                             public string PrimaryIpAddress { get; set; }
+                            public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds SecurityGroupIds { get; set; }
+                            public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds : TeaModel {
+                                [NameInMap("SecurityGroupId")]
+                                [Validation(Required=false)]
+                                public List<string> SecurityGroupId { get; set; }
+
+                            }
                         }
                     };
 

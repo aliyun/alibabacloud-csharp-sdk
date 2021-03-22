@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        [NameInMap("ExpectedRenewDay")]
+        [Validation(Required=false)]
+        public int? ExpectedRenewDay { get; set; }
+
     }
 
 }

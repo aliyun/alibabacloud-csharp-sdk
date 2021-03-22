@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("DedicatedHostType")]
+        [Validation(Required=false)]
+        public string DedicatedHostType { get; set; }
+
         [NameInMap("IoOptimized")]
         [Validation(Required=false)]
         public string IoOptimized { get; set; }

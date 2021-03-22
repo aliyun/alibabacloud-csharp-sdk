@@ -65,6 +65,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string AutoProvisioningGroupName { get; set; }
 
+        [NameInMap("LaunchTemplateConfig")]
+        [Validation(Required=false)]
+        public List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> LaunchTemplateConfig { get; set; }
+        public class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig : TeaModel {
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("MaxPrice")]
+            [Validation(Required=false)]
+            public double? MaxPrice { get; set; }
+
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+            [NameInMap("WeightedCapacity")]
+            [Validation(Required=false)]
+            public double? WeightedCapacity { get; set; }
+
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+        }
+
     }
 
 }

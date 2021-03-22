@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public float? CpuOverCommitRatio { get; set; }
 
+        [NameInMap("MinQuantity")]
+        [Validation(Required=false)]
+        public int? MinQuantity { get; set; }
+
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }

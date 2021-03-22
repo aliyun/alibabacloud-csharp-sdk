@@ -65,22 +65,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public float? MaxPrice { get; set; }
 
-        [NameInMap("InstanceBandwidthRx")]
-        [Validation(Required=false)]
-        public int? InstanceBandwidthRx { get; set; }
-
-        [NameInMap("InstanceBandwidthTx")]
-        [Validation(Required=false)]
-        public int? InstanceBandwidthTx { get; set; }
-
-        [NameInMap("InstancePpsRx")]
-        [Validation(Required=false)]
-        public int? InstancePpsRx { get; set; }
-
-        [NameInMap("InstancePpsTx")]
-        [Validation(Required=false)]
-        public int? InstancePpsTx { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -92,6 +76,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("SystemDiskCategory")]
         [Validation(Required=false)]
         public string SystemDiskCategory { get; set; }
+
+        [NameInMap("ZoneMatchMode")]
+        [Validation(Required=false)]
+        public string ZoneMatchMode { get; set; }
 
         [NameInMap("Scene")]
         [Validation(Required=false)]

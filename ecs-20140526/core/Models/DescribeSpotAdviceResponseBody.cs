@@ -21,28 +21,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone> AvailableSpotZone { get; set; }
             public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone : TeaModel {
-                [NameInMap("AvailableSpotResource")]
-                [Validation(Required=false)]
-                public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResource> AvailableSpotResource { get; set; }
-                public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResource : TeaModel {
-                    [NameInMap("InterruptRateDesc")]
+                public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources AvailableSpotResources { get; set; }
+                public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources : TeaModel {
+                    [NameInMap("AvailableSpotResource")]
                     [Validation(Required=false)]
-                    public string InterruptRateDesc { get; set; }
+                    public List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource> AvailableSpotResource { get; set; }
+                    public class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource : TeaModel {
+                        [NameInMap("InterruptRateDesc")]
+                        [Validation(Required=false)]
+                        public string InterruptRateDesc { get; set; }
 
-                    [NameInMap("AverageSpotDiscount")]
-                    [Validation(Required=false)]
-                    public int? AverageSpotDiscount { get; set; }
+                        [NameInMap("AverageSpotDiscount")]
+                        [Validation(Required=false)]
+                        public int? AverageSpotDiscount { get; set; }
 
-                    [NameInMap("InstanceType")]
-                    [Validation(Required=false)]
-                    public string InstanceType { get; set; }
+                        [NameInMap("InstanceType")]
+                        [Validation(Required=false)]
+                        public string InstanceType { get; set; }
 
-                    [NameInMap("InterruptionRate")]
-                    [Validation(Required=false)]
-                    public float? InterruptionRate { get; set; }
+                        [NameInMap("InterruptionRate")]
+                        [Validation(Required=false)]
+                        public float? InterruptionRate { get; set; }
+
+                    }
 
                 }
-
+                public string ZoneId { get; set; }
             }
         };
 

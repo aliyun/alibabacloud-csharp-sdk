@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
+        [NameInMap("Policy")]
+        [Validation(Required=false)]
+        public string Policy { get; set; }
+
     }
 
 }

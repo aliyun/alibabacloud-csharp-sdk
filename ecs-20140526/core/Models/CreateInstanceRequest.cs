@@ -234,14 +234,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
-        [NameInMap("CapacityReservationId")]
-        [Validation(Required=false)]
-        public string CapacityReservationId { get; set; }
-
-        [NameInMap("CapacityReservationPreference")]
-        [Validation(Required=false)]
-        public string CapacityReservationPreference { get; set; }
-
         [NameInMap("Affinity")]
         [Validation(Required=false)]
         public string Affinity { get; set; }

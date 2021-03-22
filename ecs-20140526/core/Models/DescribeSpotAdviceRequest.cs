@@ -65,14 +65,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? GpuAmount { get; set; }
 
-        [NameInMap("NetworkType")]
-        [Validation(Required=false)]
-        public string NetworkType { get; set; }
-
-        [NameInMap("IoOptimized")]
-        [Validation(Required=false)]
-        public string IoOptimized { get; set; }
-
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }

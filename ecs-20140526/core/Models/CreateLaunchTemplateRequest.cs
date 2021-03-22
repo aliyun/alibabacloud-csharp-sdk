@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Iops")]
             [Validation(Required=false)]
             public int? Iops { get; set; }
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+            [NameInMap("DeleteWithInstance")]
+            [Validation(Required=false)]
+            public bool? DeleteWithInstance { get; set; }
         };
 
         [NameInMap("OwnerId")]
@@ -188,10 +194,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string SecurityEnhancementStrategy { get; set; }
 
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
+        [NameInMap("DeploymentSetId")]
+        [Validation(Required=false)]
+        public string DeploymentSetId { get; set; }
+
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<CreateLaunchTemplateRequestDataDisk> DataDisk { get; set; }
         public class CreateLaunchTemplateRequestDataDisk : TeaModel {
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -250,6 +268,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string PrimaryIpAddress { get; set; }
 
+            [NameInMap("SecurityGroupIds")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupIds { get; set; }
+
         }
 
         [NameInMap("Tag")]
@@ -265,6 +287,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<string> SecurityGroupIds { get; set; }
 
     }
 

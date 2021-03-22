@@ -29,6 +29,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("OSType")]
+        [Validation(Required=false)]
+        public string OSType { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }

@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("CreditSpecification")]
             [Validation(Required=false)]
             public string CreditSpecification { get; set; }
+            [NameInMap("DeploymentSetId")]
+            [Validation(Required=false)]
+            public string DeploymentSetId { get; set; }
             [NameInMap("DataDisk")]
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
@@ -199,6 +202,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         [NameInMap("LaunchTemplateConfig")]
         [Validation(Required=false)]

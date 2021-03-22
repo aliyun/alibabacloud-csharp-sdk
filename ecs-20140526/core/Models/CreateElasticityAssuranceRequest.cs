@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
-
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
@@ -76,22 +72,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("InstanceChargeType")]
-        [Validation(Required=false)]
-        public string InstanceChargeType { get; set; }
-
-        [NameInMap("Platform")]
-        [Validation(Required=false)]
-        public string Platform { get; set; }
-
-        [NameInMap("PackageType")]
-        [Validation(Required=false)]
-        public string PackageType { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

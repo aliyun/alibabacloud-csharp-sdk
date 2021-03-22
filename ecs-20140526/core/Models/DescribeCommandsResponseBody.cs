@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeCommandsResponseBodyCommandsCommand> Command { get; set; }
             public class DescribeCommandsResponseBodyCommandsCommand : TeaModel {
-                public string CreationTime { get; set; }
                 public long? Timeout { get; set; }
                 public string Type { get; set; }
+                public string CreationTime { get; set; }
                 public DescribeCommandsResponseBodyCommandsCommandParameterNames ParameterNames { get; set; }
                 public class DescribeCommandsResponseBodyCommandsCommandParameterNames : TeaModel {
                     [NameInMap("ParameterName")]
@@ -44,10 +44,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
                 public int? InvokeTimes { get; set; }
+                public string CommandId { get; set; }
                 public string WorkingDir { get; set; }
                 public string Description { get; set; }
+                public int? Version { get; set; }
                 public string CommandContent { get; set; }
-                public string CommandId { get; set; }
+                public string Provider { get; set; }
+                public string Category { get; set; }
+                public bool? Latest { get; set; }
                 public string Name { get; set; }
                 public bool? EnableParameter { get; set; }
             }

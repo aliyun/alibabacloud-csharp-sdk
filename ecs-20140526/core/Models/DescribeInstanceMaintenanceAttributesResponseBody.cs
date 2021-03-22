@@ -33,20 +33,45 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> MaintenanceAttribute { get; set; }
             public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute : TeaModel {
-                [NameInMap("MaintenanceWindow")]
-                [Validation(Required=false)]
-                public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindow> MaintenanceWindow { get; set; }
-                public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindow : TeaModel {
-                    [NameInMap("EndTime")]
+                public bool? NotifyOnMaintenance { get; set; }
+                public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows MaintenanceWindows { get; set; }
+                public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows : TeaModel {
+                    [NameInMap("MaintenanceWindow")]
                     [Validation(Required=false)]
-                    public string EndTime { get; set; }
+                    public List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> MaintenanceWindow { get; set; }
+                    public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow : TeaModel {
+                        [NameInMap("EndTime")]
+                        [Validation(Required=false)]
+                        public string EndTime { get; set; }
 
-                    [NameInMap("StartTime")]
-                    [Validation(Required=false)]
-                    public string StartTime { get; set; }
+                        [NameInMap("StartTime")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
+
+                    }
 
                 }
+                public string InstanceId { get; set; }
+                public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance ActionOnMaintenance { get; set; }
+                public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance : TeaModel {
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
 
+                    [NameInMap("SupportedValues")]
+                    [Validation(Required=false)]
+                    public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues SupportedValues { get; set; }
+                    public class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues : TeaModel {
+                        [NameInMap("SupportedValue")]
+                        [Validation(Required=false)]
+                        public List<string> SupportedValue { get; set; }
+                    };
+
+                    [NameInMap("DefaultValue")]
+                    [Validation(Required=false)]
+                    public string DefaultValue { get; set; }
+
+                }
             }
         };
 

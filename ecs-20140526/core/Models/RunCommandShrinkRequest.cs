@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Username { get; set; }
 
+        [NameInMap("WindowsPasswordName")]
+        [Validation(Required=false)]
+        public string WindowsPasswordName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }

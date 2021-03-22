@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ActionOnMaintenance { get; set; }
 
+        [NameInMap("NotifyOnMaintenance")]
+        [Validation(Required=false)]
+        public bool? NotifyOnMaintenance { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }

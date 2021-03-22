@@ -41,18 +41,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
-
-        [NameInMap("PeriodUnit")]
-        [Validation(Required=false)]
-        public string PeriodUnit { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -84,26 +72,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
-
-        [NameInMap("InstanceChargeType")]
-        [Validation(Required=false)]
-        public string InstanceChargeType { get; set; }
-
-        [NameInMap("PackageType")]
-        [Validation(Required=false)]
-        public string PackageType { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("EfficientStatus")]
-        [Validation(Required=false)]
-        public int? EfficientStatus { get; set; }
-
-        [NameInMap("TimeSlot")]
-        [Validation(Required=false)]
-        public string TimeSlot { get; set; }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
