@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string ServiceAccount { get; set; }
 
-        [NameInMap("UseWorkload")]
-        [Validation(Required=false)]
-        public bool? UseWorkload { get; set; }
-
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

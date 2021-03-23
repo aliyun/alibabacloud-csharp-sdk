@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Servicemesh20200111
+dotnet add package AlibabaCloud.SDK.Servicemesh20200111
 ```
 
 ## 问题
