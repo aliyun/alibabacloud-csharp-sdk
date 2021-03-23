@@ -49,10 +49,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
-        [NameInMap("Date")]
-        [Validation(Required=false)]
-        public string Date { get; set; }
-
     }
 
 }

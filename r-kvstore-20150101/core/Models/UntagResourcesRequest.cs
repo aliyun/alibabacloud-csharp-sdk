@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("All")]
-        [Validation(Required=false)]
-        public bool? All { get; set; }
-
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -44,6 +40,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }
+
+        [NameInMap("All")]
+        [Validation(Required=false)]
+        public bool? All { get; set; }
 
     }
 

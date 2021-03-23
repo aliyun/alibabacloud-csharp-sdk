@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                public string ResourceType { get; set; }
-                public string TagValue { get; set; }
-                public string ResourceId { get; set; }
                 public string TagKey { get; set; }
+                public string TagValue { get; set; }
+                public string ResourceType { get; set; }
+                public string ResourceId { get; set; }
             }
         };
 

@@ -93,22 +93,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
-        [NameInMap("VpcCloudInsInfo")]
-        [Validation(Required=false)]
-        public int? VpcCloudInsInfo { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("GlobalInstance")]
-        [Validation(Required=false)]
-        public bool? GlobalInstance { get; set; }
-
-        [NameInMap("EditionType")]
-        [Validation(Required=false)]
-        public string EditionType { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeInstancesRequestTag> Tag { get; set; }
@@ -122,6 +106,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("GlobalInstance")]
+        [Validation(Required=false)]
+        public bool? GlobalInstance { get; set; }
+
+        [NameInMap("EditionType")]
+        [Validation(Required=false)]
+        public string EditionType { get; set; }
 
     }
 

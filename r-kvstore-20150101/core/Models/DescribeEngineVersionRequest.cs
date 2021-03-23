@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public string Parameters { get; set; }
-
     }
 
 }

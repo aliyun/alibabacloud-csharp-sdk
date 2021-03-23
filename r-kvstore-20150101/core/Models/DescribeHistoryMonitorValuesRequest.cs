@@ -53,22 +53,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
-        [NameInMap("AccessType")]
-        [Validation(Required=false)]
-        public string AccessType { get; set; }
-
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
-        [NameInMap("ReplicatorJobId")]
-        [Validation(Required=false)]
-        public string ReplicatorJobId { get; set; }
-
     }
 
 }

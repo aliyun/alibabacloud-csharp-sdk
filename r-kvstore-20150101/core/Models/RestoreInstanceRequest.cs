@@ -37,14 +37,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
-        [NameInMap("RestoreType")]
-        [Validation(Required=false)]
-        public string RestoreType { get; set; }
-
-        [NameInMap("RestoreTime")]
-        [Validation(Required=false)]
-        public string RestoreTime { get; set; }
-
     }
 
 }

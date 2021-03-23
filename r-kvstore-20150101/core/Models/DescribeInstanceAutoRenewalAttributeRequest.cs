@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("proxyId")]
-        [Validation(Required=false)]
-        public string ProxyId { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -48,10 +44,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
-
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
 
     }
 

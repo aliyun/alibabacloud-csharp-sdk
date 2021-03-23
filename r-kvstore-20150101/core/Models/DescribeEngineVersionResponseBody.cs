@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEngineVersionResponseBody : TeaModel {
-        [NameInMap("MajorVersion")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string MajorVersion { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
 
         [NameInMap("IsLatestVersion")]
         [Validation(Required=false)]
         public bool? IsLatestVersion { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("MinorVersion")]
         [Validation(Required=false)]
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public bool? EnableUpgradeMinorVersion { get; set; }
 
-        [NameInMap("Engine")]
+        [NameInMap("MajorVersion")]
         [Validation(Required=false)]
-        public string Engine { get; set; }
+        public string MajorVersion { get; set; }
 
         [NameInMap("EnableUpgradeMajorVersion")]
         [Validation(Required=false)]

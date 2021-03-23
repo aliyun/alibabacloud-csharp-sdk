@@ -33,29 +33,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("AuditLogSwitchSource")]
-        [Validation(Required=false)]
-        public string AuditLogSwitchSource { get; set; }
-
-        [NameInMap("ServiceType")]
-        [Validation(Required=false)]
-        public string ServiceType { get; set; }
-
         [NameInMap("Retention")]
         [Validation(Required=false)]
         public int? Retention { get; set; }
 
-        [NameInMap("ProxyAudit")]
-        [Validation(Required=false)]
-        public string ProxyAudit { get; set; }
-
         [NameInMap("DbAudit")]
         [Validation(Required=false)]
         public bool? DbAudit { get; set; }
-
-        [NameInMap("AuditCommand")]
-        [Validation(Required=false)]
-        public string AuditCommand { get; set; }
 
     }
 

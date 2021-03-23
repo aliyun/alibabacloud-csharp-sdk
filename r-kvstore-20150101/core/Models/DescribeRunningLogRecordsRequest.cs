@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
-        [NameInMap("SQLId")]
-        [Validation(Required=false)]
-        public long? SQLId { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

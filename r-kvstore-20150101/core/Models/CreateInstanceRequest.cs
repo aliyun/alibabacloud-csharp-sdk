@@ -137,10 +137,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
 
-        [NameInMap("ShardCount")]
-        [Validation(Required=false)]
-        public int? ShardCount { get; set; }
-
         [NameInMap("GlobalInstanceId")]
         [Validation(Required=false)]
         public string GlobalInstanceId { get; set; }
@@ -148,10 +144,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("GlobalInstance")]
         [Validation(Required=false)]
         public bool? GlobalInstance { get; set; }
-
-        [NameInMap("SecondaryZoneId")]
-        [Validation(Required=false)]
-        public string SecondaryZoneId { get; set; }
 
     }
 

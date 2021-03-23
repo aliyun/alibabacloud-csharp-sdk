@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeMonitorItemsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("MonitorItems")]
         [Validation(Required=false)]
         public DescribeMonitorItemsResponseBodyMonitorItems MonitorItems { get; set; }
@@ -21,10 +25,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Unit { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

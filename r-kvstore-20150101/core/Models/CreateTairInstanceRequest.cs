@@ -97,10 +97,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string AutoRenewPeriod { get; set; }
 
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public int? ResourceGroupId { get; set; }
-
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }

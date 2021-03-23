@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation> EcsSecurityGroupRelation { get; set; }
             public class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation : TeaModel {
+                public string RegionId { get; set; }
                 public string SecurityGroupId { get; set; }
                 public string NetType { get; set; }
-                public string RegionId { get; set; }
             }
         };
 

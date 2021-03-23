@@ -41,14 +41,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? SwitchMode { get; set; }
 
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
         [NameInMap("SwitchType")]
         [Validation(Required=false)]
         public string SwitchType { get; set; }

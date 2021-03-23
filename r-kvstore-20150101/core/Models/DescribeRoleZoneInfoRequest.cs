@@ -33,14 +33,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
         [NameInMap("QueryType")]
         [Validation(Required=false)]
         public int? QueryType { get; set; }
@@ -52,10 +44,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("Role")]
-        [Validation(Required=false)]
-        public string Role { get; set; }
 
     }
 

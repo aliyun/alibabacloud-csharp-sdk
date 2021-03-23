@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("NodeIds")]
-        [Validation(Required=false)]
-        public List<string> NodeIds { get; set; }
-
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
+
+        [NameInMap("NodeIds")]
+        [Validation(Required=false)]
+        public List<string> NodeIds { get; set; }
 
     }
 

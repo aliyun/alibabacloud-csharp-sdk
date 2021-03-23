@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
-        [NameInMap("FromApp")]
-        [Validation(Required=false)]
-        public string FromApp { get; set; }
-
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }

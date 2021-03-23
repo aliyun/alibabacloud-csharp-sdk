@@ -41,14 +41,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string Port { get; set; }
 
-        [NameInMap("OnlyAllocateIp")]
-        [Validation(Required=false)]
-        public bool? OnlyAllocateIp { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
     }
 
 }

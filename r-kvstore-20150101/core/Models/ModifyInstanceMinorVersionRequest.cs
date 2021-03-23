@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string Minorversion { get; set; }
 
-        [NameInMap("EffectTime")]
-        [Validation(Required=false)]
-        public string EffectTime { get; set; }
-
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }

@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string OrderTimeLength { get; set; }
 
+        [NameInMap("SourceBiz")]
+        [Validation(Required=false)]
+        public string SourceBiz { get; set; }
+
     }
 
 }

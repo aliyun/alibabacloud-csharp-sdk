@@ -21,7 +21,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
+                public string InstanceId { get; set; }
+                public string AccountName { get; set; }
                 public string AccountStatus { get; set; }
+                public string AccountType { get; set; }
+                public string AccountDescription { get; set; }
                 public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges DatabasePrivileges { get; set; }
                 public class DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges : TeaModel {
                     [NameInMap("DatabasePrivilege")]
@@ -35,10 +39,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     }
 
                 }
-                public string AccountDescription { get; set; }
-                public string InstanceId { get; set; }
-                public string AccountType { get; set; }
-                public string AccountName { get; set; }
             }
         };
 

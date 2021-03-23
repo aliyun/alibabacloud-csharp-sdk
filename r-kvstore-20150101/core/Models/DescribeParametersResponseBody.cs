@@ -9,30 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
-        [NameInMap("RunningParameters")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public DescribeParametersResponseBodyRunningParameters RunningParameters { get; set; }
-        public class DescribeParametersResponseBodyRunningParameters : TeaModel {
-            [NameInMap("Parameter")]
-            [Validation(Required=false)]
-            public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
-            public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
-                public string CheckingCode { get; set; }
-                public string ParameterName { get; set; }
-                public string ParameterValue { get; set; }
-                public string ForceRestart { get; set; }
-                public string ParameterDescription { get; set; }
-                public string ModifiableStatus { get; set; }
-            }
-        };
+        public string RequestId { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
 
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
@@ -42,18 +29,31 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyConfigParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyConfigParametersParameter : TeaModel {
-                public string CheckingCode { get; set; }
                 public string ParameterName { get; set; }
                 public string ParameterValue { get; set; }
-                public bool? ForceRestart { get; set; }
-                public string ParameterDescription { get; set; }
                 public bool? ModifiableStatus { get; set; }
+                public bool? ForceRestart { get; set; }
+                public string CheckingCode { get; set; }
+                public string ParameterDescription { get; set; }
             }
         };
 
-        [NameInMap("Engine")]
+        [NameInMap("RunningParameters")]
         [Validation(Required=false)]
-        public string Engine { get; set; }
+        public DescribeParametersResponseBodyRunningParameters RunningParameters { get; set; }
+        public class DescribeParametersResponseBodyRunningParameters : TeaModel {
+            [NameInMap("Parameter")]
+            [Validation(Required=false)]
+            public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
+            public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
+                public string ParameterName { get; set; }
+                public string ParameterValue { get; set; }
+                public string ModifiableStatus { get; set; }
+                public string ForceRestart { get; set; }
+                public string CheckingCode { get; set; }
+                public string ParameterDescription { get; set; }
+            }
+        };
 
     }
 

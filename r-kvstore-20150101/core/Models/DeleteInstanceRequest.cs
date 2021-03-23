@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string GlobalInstanceId { get; set; }
 
-        [NameInMap("ReleaseSubInstance")]
-        [Validation(Required=false)]
-        public bool? ReleaseSubInstance { get; set; }
-
     }
 
 }

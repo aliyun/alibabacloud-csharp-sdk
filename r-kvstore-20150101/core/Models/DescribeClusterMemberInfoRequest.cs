@@ -33,22 +33,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("FilterService")]
-        [Validation(Required=false)]
-        public string FilterService { get; set; }
-
-        [NameInMap("NeedReplica")]
-        [Validation(Required=false)]
-        public string NeedReplica { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
     }
 
 }

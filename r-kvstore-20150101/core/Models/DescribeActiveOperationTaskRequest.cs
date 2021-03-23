@@ -49,10 +49,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("ProductId")]
-        [Validation(Required=false)]
-        public string ProductId { get; set; }
-
     }
 
 }

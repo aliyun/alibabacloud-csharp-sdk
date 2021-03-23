@@ -21,18 +21,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public List<DescribeBackupTasksResponseBodyBackupJobs> BackupJobs { get; set; }
         public class DescribeBackupTasksResponseBodyBackupJobs : TeaModel {
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("Process")]
-            [Validation(Required=false)]
-            public string Process { get; set; }
-
-            [NameInMap("JobMode")]
-            [Validation(Required=false)]
-            public string JobMode { get; set; }
-
             [NameInMap("BackupJobID")]
             [Validation(Required=false)]
             public int? BackupJobID { get; set; }
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [NameInMap("BackupProgressStatus")]
             [Validation(Required=false)]
             public string BackupProgressStatus { get; set; }
+
+            [NameInMap("JobMode")]
+            [Validation(Required=false)]
+            public string JobMode { get; set; }
+
+            [NameInMap("Process")]
+            [Validation(Required=false)]
+            public string Process { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
 
             [NameInMap("TaskAction")]
             [Validation(Required=false)]
