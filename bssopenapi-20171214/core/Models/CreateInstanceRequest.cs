@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        [NameInMap("Parameter")]
+        [Validation(Required=false)]
+        public List<CreateInstanceRequestParameter> Parameter { get; set; }
+        public class CreateInstanceRequestParameter : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -41,19 +55,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("Parameter")]
+        [NameInMap("Logistics")]
         [Validation(Required=false)]
-        public List<CreateInstanceRequestParameter> Parameter { get; set; }
-        public class CreateInstanceRequestParameter : TeaModel {
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string Logistics { get; set; }
 
     }
 

@@ -45,21 +45,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Quantity")]
-        [Validation(Required=false)]
-        public int? Quantity { get; set; }
-
         [NameInMap("ModuleList")]
         [Validation(Required=false)]
         public List<GetSubscriptionPriceRequestModuleList> ModuleList { get; set; }
         public class GetSubscriptionPriceRequestModuleList : TeaModel {
-            [NameInMap("Config")]
-            [Validation(Required=false)]
-            public string Config { get; set; }
-
             [NameInMap("ModuleCode")]
             [Validation(Required=false)]
             public string ModuleCode { get; set; }
+
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
 
             [NameInMap("ModuleStatus")]
             [Validation(Required=false)]
@@ -70,6 +66,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Tag { get; set; }
 
         }
+
+        [NameInMap("Quantity")]
+        [Validation(Required=false)]
+        public int? Quantity { get; set; }
 
     }
 

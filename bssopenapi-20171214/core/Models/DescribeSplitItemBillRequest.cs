@@ -41,6 +41,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? BillOwnerId { get; set; }
 
+        [NameInMap("TagFilter")]
+        [Validation(Required=false)]
+        public List<DescribeSplitItemBillRequestTagFilter> TagFilter { get; set; }
+        public class DescribeSplitItemBillRequestTagFilter : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValues")]
+            [Validation(Required=false)]
+            public List<string> TagValues { get; set; }
+
+        }
+
         [NameInMap("InstanceID")]
         [Validation(Required=false)]
         public string InstanceID { get; set; }
@@ -48,20 +62,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("SplitItemID")]
         [Validation(Required=false)]
         public string SplitItemID { get; set; }
-
-        [NameInMap("TagFilter")]
-        [Validation(Required=false)]
-        public List<DescribeSplitItemBillRequestTagFilter> TagFilter { get; set; }
-        public class DescribeSplitItemBillRequestTagFilter : TeaModel {
-            [NameInMap("TagValues")]
-            [Validation(Required=false)]
-            public List<string> TagValues { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
 
     }
 

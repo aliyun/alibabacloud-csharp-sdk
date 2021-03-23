@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryBillToOSSSubscriptionResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,42 +43,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public List<QueryBillToOSSSubscriptionResponseBodyDataItemsItem> Item { get; set; }
                 public class QueryBillToOSSSubscriptionResponseBodyDataItemsItem : TeaModel {
-                    [NameInMap("BucketOwnerId")]
+                    [NameInMap("SubscribeType")]
                     [Validation(Required=false)]
-                    public long? BucketOwnerId { get; set; }
+                    public string SubscribeType { get; set; }
 
                     [NameInMap("SubscribeBucket")]
                     [Validation(Required=false)]
                     public string SubscribeBucket { get; set; }
 
-                    [NameInMap("SubscribeLanguage")]
+                    [NameInMap("BucketOwnerId")]
                     [Validation(Required=false)]
-                    public string SubscribeLanguage { get; set; }
+                    public long? BucketOwnerId { get; set; }
 
                     [NameInMap("SubscribeTime")]
                     [Validation(Required=false)]
                     public string SubscribeTime { get; set; }
 
-                    [NameInMap("SubscribeType")]
+                    [NameInMap("SubscribeLanguage")]
                     [Validation(Required=false)]
-                    public string SubscribeType { get; set; }
+                    public string SubscribeLanguage { get; set; }
 
                 }
 
             }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

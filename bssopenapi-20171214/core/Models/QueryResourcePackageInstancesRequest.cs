@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class QueryRelationListRequest : TeaModel {
-        [NameInMap("UserId")]
+    public class QueryResourcePackageInstancesRequest : TeaModel {
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("StatusList")]
+        [NameInMap("ProductCode")]
         [Validation(Required=false)]
-        public List<string> StatusList { get; set; }
+        public string ProductCode { get; set; }
+
+        [NameInMap("ExpiryTimeStart")]
+        [Validation(Required=false)]
+        public string ExpiryTimeStart { get; set; }
+
+        [NameInMap("ExpiryTimeEnd")]
+        [Validation(Required=false)]
+        public string ExpiryTimeEnd { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]

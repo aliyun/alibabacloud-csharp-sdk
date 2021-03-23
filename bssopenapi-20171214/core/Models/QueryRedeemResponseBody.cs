@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRedeemResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -23,6 +35,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
             [NameInMap("Redeem")]
             [Validation(Required=false)]
             public QueryRedeemResponseBodyDataRedeem Redeem { get; set; }
@@ -31,13 +46,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public List<QueryRedeemResponseBodyDataRedeemRedeem> Redeem { get; set; }
                 public class QueryRedeemResponseBodyDataRedeemRedeem : TeaModel {
-                    [NameInMap("ApplicableProducts")]
+                    [NameInMap("RedeemId")]
                     [Validation(Required=false)]
-                    public string ApplicableProducts { get; set; }
+                    public string RedeemId { get; set; }
 
-                    [NameInMap("Balance")]
+                    [NameInMap("RedeemNo")]
                     [Validation(Required=false)]
-                    public string Balance { get; set; }
+                    public string RedeemNo { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("GrantedTime")]
+                    [Validation(Required=false)]
+                    public string GrantedTime { get; set; }
 
                     [NameInMap("EffectiveTime")]
                     [Validation(Required=false)]
@@ -47,49 +70,26 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public string ExpiryTime { get; set; }
 
-                    [NameInMap("GrantedTime")]
-                    [Validation(Required=false)]
-                    public string GrantedTime { get; set; }
-
                     [NameInMap("NominalValue")]
                     [Validation(Required=false)]
                     public string NominalValue { get; set; }
 
-                    [NameInMap("RedeemId")]
+                    [NameInMap("Balance")]
                     [Validation(Required=false)]
-                    public string RedeemId { get; set; }
+                    public string Balance { get; set; }
 
-                    [NameInMap("RedeemNo")]
+                    [NameInMap("ApplicableProducts")]
                     [Validation(Required=false)]
-                    public string RedeemNo { get; set; }
+                    public string ApplicableProducts { get; set; }
 
                     [NameInMap("Specification")]
                     [Validation(Required=false)]
                     public string Specification { get; set; }
 
-                    [NameInMap("Status")]
-                    [Validation(Required=false)]
-                    public string Status { get; set; }
-
                 }
 
             }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

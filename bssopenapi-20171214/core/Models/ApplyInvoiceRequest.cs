@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string ApplyUserNick { get; set; }
 
+        [NameInMap("SelectedIds")]
+        [Validation(Required=false)]
+        public List<long?> SelectedIds { get; set; }
+
         [NameInMap("InvoiceByAmount")]
         [Validation(Required=false)]
         public bool? InvoiceByAmount { get; set; }
-
-        [NameInMap("SelectedIds")]
-        [Validation(Required=false)]
-        public List<int?> SelectedIds { get; set; }
 
     }
 
