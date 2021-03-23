@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iovcc20180501.Models
 {
     public class GenerateAssistFileUploadUrlResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("FileKey")]
         [Validation(Required=false)]
         public string FileKey { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [NameInMap("UploadUrl")]
         [Validation(Required=false)]
         public string UploadUrl { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

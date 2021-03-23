@@ -9,10 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iovcc20180501.Models
 {
     public class ListFunctionExecuteLogResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("LogList")]
         [Validation(Required=false)]
         public ListFunctionExecuteLogResponseBodyLogList LogList { get; set; }
         public class ListFunctionExecuteLogResponseBodyLogList : TeaModel {
+            [NameInMap("Logs")]
+            [Validation(Required=false)]
+            public List<ListFunctionExecuteLogResponseBodyLogListLogs> Logs { get; set; }
+            public class ListFunctionExecuteLogResponseBodyLogListLogs : TeaModel {
+                public string Message { get; set; }
+                public string BackEndRequestId { get; set; }
+            }
             [NameInMap("Pagination")]
             [Validation(Required=false)]
             public ListFunctionExecuteLogResponseBodyLogListPagination Pagination { get; set; }
@@ -30,18 +41,7 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
                 public bool? HasNextPage { get; set; }
 
             }
-            [NameInMap("Logs")]
-            [Validation(Required=false)]
-            public List<ListFunctionExecuteLogResponseBodyLogListLogs> Logs { get; set; }
-            public class ListFunctionExecuteLogResponseBodyLogListLogs : TeaModel {
-                public string Message { get; set; }
-                public string BackEndRequestId { get; set; }
-            }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

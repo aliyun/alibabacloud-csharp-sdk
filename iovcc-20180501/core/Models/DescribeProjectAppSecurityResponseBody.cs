@@ -17,24 +17,24 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public DescribeProjectAppSecurityResponseBodyProjectAppSecurity ProjectAppSecurity { get; set; }
         public class DescribeProjectAppSecurityResponseBodyProjectAppSecurity : TeaModel {
-            [NameInMap("AppSecret")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public string AppSecret { get; set; }
-            [NameInMap("AppKey")]
-            [Validation(Required=false)]
-            public string AppKey { get; set; }
+            public long? Id { get; set; }
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
+            [NameInMap("AppKey")]
+            [Validation(Required=false)]
+            public string AppKey { get; set; }
+            [NameInMap("AppSecret")]
+            [Validation(Required=false)]
+            public string AppSecret { get; set; }
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public long? Id { get; set; }
         };
 
     }

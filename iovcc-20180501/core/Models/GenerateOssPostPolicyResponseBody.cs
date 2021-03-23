@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public GenerateOssPostPolicyResponseBodyOssPostPolicy OssPostPolicy { get; set; }
         public class GenerateOssPostPolicyResponseBodyOssPostPolicy : TeaModel {
+            [NameInMap("AccessId")]
+            [Validation(Required=false)]
+            public string AccessId { get; set; }
+            [NameInMap("Policy")]
+            [Validation(Required=false)]
+            public string Policy { get; set; }
             [NameInMap("Signature")]
             [Validation(Required=false)]
             public string Signature { get; set; }
             [NameInMap("Host")]
             [Validation(Required=false)]
             public string Host { get; set; }
-            [NameInMap("Policy")]
-            [Validation(Required=false)]
-            public string Policy { get; set; }
             [NameInMap("Expire")]
             [Validation(Required=false)]
             public string Expire { get; set; }
-            [NameInMap("AccessId")]
-            [Validation(Required=false)]
-            public string AccessId { get; set; }
         };
 
     }

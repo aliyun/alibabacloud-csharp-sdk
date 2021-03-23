@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iovcc20180501.Models
 {
     public class DescribeMqttClientStatusResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ClientStatus")]
         [Validation(Required=false)]
         public DescribeMqttClientStatusResponseBodyClientStatus ClientStatus { get; set; }
@@ -16,17 +20,13 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-            [NameInMap("CleanSession")]
-            [Validation(Required=false)]
-            public string CleanSession { get; set; }
             [NameInMap("LastUpdate")]
             [Validation(Required=false)]
             public long? LastUpdate { get; set; }
+            [NameInMap("CleanSession")]
+            [Validation(Required=false)]
+            public string CleanSession { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

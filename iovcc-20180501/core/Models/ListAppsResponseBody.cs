@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<ListAppsResponseBodyApps> Apps { get; set; }
         public class ListAppsResponseBodyApps : TeaModel {
-            [NameInMap("AppName")]
-            [Validation(Required=false)]
-            public string AppName { get; set; }
-
             [NameInMap("AppKey")]
             [Validation(Required=false)]
             public string AppKey { get; set; }
 
-            [NameInMap("OsType")]
+            [NameInMap("AppName")]
             [Validation(Required=false)]
-            public int? OsType { get; set; }
+            public string AppName { get; set; }
 
             [NameInMap("AppPackage")]
             [Validation(Required=false)]
             public string AppPackage { get; set; }
+
+            [NameInMap("OsType")]
+            [Validation(Required=false)]
+            public int? OsType { get; set; }
 
         }
 

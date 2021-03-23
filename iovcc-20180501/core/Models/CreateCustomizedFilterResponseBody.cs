@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iovcc20180501.Models
 {
     public class CreateCustomizedFilterResponseBody : TeaModel {
-        [NameInMap("CustomizedFilterId")]
-        [Validation(Required=false)]
-        public string CustomizedFilterId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("CustomizedFilterId")]
+        [Validation(Required=false)]
+        public string CustomizedFilterId { get; set; }
 
     }
 

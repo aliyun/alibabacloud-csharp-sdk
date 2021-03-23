@@ -17,38 +17,38 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public ListUpstreamAppKeyRelationsResponseBodyRelationList RelationList { get; set; }
         public class ListUpstreamAppKeyRelationsResponseBodyRelationList : TeaModel {
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<ListUpstreamAppKeyRelationsResponseBodyRelationListList> List { get; set; }
+            public class ListUpstreamAppKeyRelationsResponseBodyRelationListList : TeaModel {
+                public long? Id { get; set; }
+                public string AppKey { get; set; }
+                public string PAppKey { get; set; }
+                public string ProjectId { get; set; }
+                public long? GmtCreate { get; set; }
+                public string AppName { get; set; }
+                public string AppPackage { get; set; }
+            }
             [NameInMap("Pagination")]
             [Validation(Required=false)]
             public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination Pagination { get; set; }
             public class ListUpstreamAppKeyRelationsResponseBodyRelationListPagination : TeaModel {
-                [NameInMap("PageIndex")]
+                [NameInMap("TotalCount")]
                 [Validation(Required=false)]
-                public int? PageIndex { get; set; }
+                public int? TotalCount { get; set; }
 
                 [NameInMap("TotalPageCount")]
                 [Validation(Required=false)]
                 public int? TotalPageCount { get; set; }
 
+                [NameInMap("PageIndex")]
+                [Validation(Required=false)]
+                public int? PageIndex { get; set; }
+
                 [NameInMap("PageSize")]
                 [Validation(Required=false)]
                 public int? PageSize { get; set; }
 
-                [NameInMap("TotalCount")]
-                [Validation(Required=false)]
-                public int? TotalCount { get; set; }
-
-            }
-            [NameInMap("List")]
-            [Validation(Required=false)]
-            public List<ListUpstreamAppKeyRelationsResponseBodyRelationListList> List { get; set; }
-            public class ListUpstreamAppKeyRelationsResponseBodyRelationListList : TeaModel {
-                public string AppName { get; set; }
-                public string AppKey { get; set; }
-                public string AppPackage { get; set; }
-                public string ProjectId { get; set; }
-                public long? GmtCreate { get; set; }
-                public string PAppKey { get; set; }
-                public long? Id { get; set; }
             }
         };
 

@@ -17,34 +17,34 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public ListOfflineMessagesResponseBodyOfflineMessages OfflineMessages { get; set; }
         public class ListOfflineMessagesResponseBodyOfflineMessages : TeaModel {
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<ListOfflineMessagesResponseBodyOfflineMessagesList> List { get; set; }
+            public class ListOfflineMessagesResponseBodyOfflineMessagesList : TeaModel {
+                public long? Mid { get; set; }
+                public long? GmtCreate { get; set; }
+                public long? ExpiredTime { get; set; }
+            }
             [NameInMap("Pagination")]
             [Validation(Required=false)]
             public ListOfflineMessagesResponseBodyOfflineMessagesPagination Pagination { get; set; }
             public class ListOfflineMessagesResponseBodyOfflineMessagesPagination : TeaModel {
-                [NameInMap("PageIndex")]
+                [NameInMap("TotalCount")]
                 [Validation(Required=false)]
-                public int? PageIndex { get; set; }
+                public int? TotalCount { get; set; }
 
                 [NameInMap("TotalPageCount")]
                 [Validation(Required=false)]
                 public int? TotalPageCount { get; set; }
 
+                [NameInMap("PageIndex")]
+                [Validation(Required=false)]
+                public int? PageIndex { get; set; }
+
                 [NameInMap("PageSize")]
                 [Validation(Required=false)]
                 public int? PageSize { get; set; }
 
-                [NameInMap("TotalCount")]
-                [Validation(Required=false)]
-                public int? TotalCount { get; set; }
-
-            }
-            [NameInMap("List")]
-            [Validation(Required=false)]
-            public List<ListOfflineMessagesResponseBodyOfflineMessagesList> List { get; set; }
-            public class ListOfflineMessagesResponseBodyOfflineMessagesList : TeaModel {
-                public long? ExpiredTime { get; set; }
-                public long? Mid { get; set; }
-                public long? GmtCreate { get; set; }
             }
         };
 

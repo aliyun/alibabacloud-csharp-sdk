@@ -17,20 +17,20 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public FindVersionGroupDevicesResponseBodyGroupDeviceList GroupDeviceList { get; set; }
         public class FindVersionGroupDevicesResponseBodyGroupDeviceList : TeaModel {
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<FindVersionGroupDevicesResponseBodyGroupDeviceListItems> Items { get; set; }
             public class FindVersionGroupDevicesResponseBodyGroupDeviceListItems : TeaModel {
-                public long? GmtCreateTimestamp { get; set; }
-                public string OriginalId { get; set; }
+                public string Id { get; set; }
                 public string DeviceId { get; set; }
                 public string IdType { get; set; }
+                public string OriginalId { get; set; }
                 public string GmtCreate { get; set; }
-                public string Id { get; set; }
+                public long? GmtCreateTimestamp { get; set; }
             }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
         };
 
     }

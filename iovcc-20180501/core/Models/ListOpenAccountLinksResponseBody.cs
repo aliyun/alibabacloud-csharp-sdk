@@ -17,37 +17,17 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<ListOpenAccountLinksResponseBodyOpenAccounts> OpenAccounts { get; set; }
         public class ListOpenAccountLinksResponseBodyOpenAccounts : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("IdentityId")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string IdentityId { get; set; }
 
-            [NameInMap("Type")]
+            [NameInMap("AliyunId")]
             [Validation(Required=false)]
-            public int? Type { get; set; }
+            public string AliyunId { get; set; }
 
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
-
-            [NameInMap("CreateAccessKey")]
-            [Validation(Required=false)]
-            public string CreateAccessKey { get; set; }
-
-            [NameInMap("OpenId")]
-            [Validation(Required=false)]
-            public string OpenId { get; set; }
-
-            [NameInMap("Mobile")]
-            [Validation(Required=false)]
-            public string Mobile { get; set; }
-
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
-
-            [NameInMap("IdentityId")]
-            [Validation(Required=false)]
-            public string IdentityId { get; set; }
 
             [NameInMap("LoginId")]
             [Validation(Required=false)]
@@ -57,9 +37,29 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public string Idp { get; set; }
 
-            [NameInMap("AliyunId")]
+            [NameInMap("OpenId")]
             [Validation(Required=false)]
-            public string AliyunId { get; set; }
+            public string OpenId { get; set; }
+
+            [NameInMap("Mobile")]
+            [Validation(Required=false)]
+            public string Mobile { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
+
+            [NameInMap("CreateAccessKey")]
+            [Validation(Required=false)]
+            public string CreateAccessKey { get; set; }
 
         }
 

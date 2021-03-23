@@ -229,6 +229,38 @@ namespace AlibabaCloud.SDK.Iovcc20180501
             return await ConnectAssistDeviceWithOptionsAsync(request, runtime);
         }
 
+        public CountActivatedOrNewRegistrationDeviceResponse CountActivatedOrNewRegistrationDeviceWithOptions(CountActivatedOrNewRegistrationDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CountActivatedOrNewRegistrationDeviceResponse>(DoRPCRequest("CountActivatedOrNewRegistrationDevice", "2018-05-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CountActivatedOrNewRegistrationDeviceResponse> CountActivatedOrNewRegistrationDeviceWithOptionsAsync(CountActivatedOrNewRegistrationDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CountActivatedOrNewRegistrationDeviceResponse>(await DoRPCRequestAsync("CountActivatedOrNewRegistrationDevice", "2018-05-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CountActivatedOrNewRegistrationDeviceResponse CountActivatedOrNewRegistrationDevice(CountActivatedOrNewRegistrationDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CountActivatedOrNewRegistrationDeviceWithOptions(request, runtime);
+        }
+
+        public async Task<CountActivatedOrNewRegistrationDeviceResponse> CountActivatedOrNewRegistrationDeviceAsync(CountActivatedOrNewRegistrationDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CountActivatedOrNewRegistrationDeviceWithOptionsAsync(request, runtime);
+        }
+
         public CountDeviceBrandsResponse CountDeviceBrandsWithOptions(CountDeviceBrandsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3531,6 +3563,38 @@ namespace AlibabaCloud.SDK.Iovcc20180501
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetNamespaceDataWithOptionsAsync(request, runtime);
+        }
+
+        public GetNamespaceStatisticsDataResponse GetNamespaceStatisticsDataWithOptions(GetNamespaceStatisticsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetNamespaceStatisticsDataResponse>(DoRPCRequest("GetNamespaceStatisticsData", "2018-05-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetNamespaceStatisticsDataResponse> GetNamespaceStatisticsDataWithOptionsAsync(GetNamespaceStatisticsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetNamespaceStatisticsDataResponse>(await DoRPCRequestAsync("GetNamespaceStatisticsData", "2018-05-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetNamespaceStatisticsDataResponse GetNamespaceStatisticsData(GetNamespaceStatisticsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNamespaceStatisticsDataWithOptions(request, runtime);
+        }
+
+        public async Task<GetNamespaceStatisticsDataResponse> GetNamespaceStatisticsDataAsync(GetNamespaceStatisticsDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNamespaceStatisticsDataWithOptionsAsync(request, runtime);
         }
 
         public GetOssUploadMetaResponse GetOssUploadMetaWithOptions(GetOssUploadMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

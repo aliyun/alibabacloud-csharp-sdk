@@ -17,21 +17,29 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<ListAssistActionDetailsResponseBodyResults> Results { get; set; }
         public class ListAssistActionDetailsResponseBodyResults : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("DeviceId")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public string DeviceId { get; set; }
 
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
+            [NameInMap("Timestamp")]
+            [Validation(Required=false)]
+            public string Timestamp { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
 
-            [NameInMap("DeviceId")]
+            [NameInMap("ID")]
             [Validation(Required=false)]
-            public string DeviceId { get; set; }
+            public string ID { get; set; }
 
             [NameInMap("CreatedAt")]
             [Validation(Required=false)]
@@ -40,14 +48,6 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [NameInMap("UpdatedAt")]
             [Validation(Required=false)]
             public long? UpdatedAt { get; set; }
-
-            [NameInMap("Timestamp")]
-            [Validation(Required=false)]
-            public string Timestamp { get; set; }
-
-            [NameInMap("ID")]
-            [Validation(Required=false)]
-            public string ID { get; set; }
 
         }
 

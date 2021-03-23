@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public long? TotalBrandCount { get; set; }
 
-            [NameInMap("TotalDeviceCount")]
-            [Validation(Required=false)]
-            public long? TotalDeviceCount { get; set; }
-
             [NameInMap("TotalDeviceModelCount")]
             [Validation(Required=false)]
             public long? TotalDeviceModelCount { get; set; }
+
+            [NameInMap("TotalDeviceCount")]
+            [Validation(Required=false)]
+            public long? TotalDeviceCount { get; set; }
 
         }
 

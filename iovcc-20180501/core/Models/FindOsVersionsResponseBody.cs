@@ -17,30 +17,30 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public FindOsVersionsResponseBodyOsVersionList OsVersionList { get; set; }
         public class FindOsVersionsResponseBodyOsVersionList : TeaModel {
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<FindOsVersionsResponseBodyOsVersionListItems> Items { get; set; }
             public class FindOsVersionsResponseBodyOsVersionListItems : TeaModel {
-                public string Status { get; set; }
-                public long? GmtCreateTimestamp { get; set; }
+                public long? Id { get; set; }
                 public string DeviceModelId { get; set; }
-                public string GmtModify { get; set; }
-                public string IsMilestone { get; set; }
-                public string Remark { get; set; }
                 public string SystemVersion { get; set; }
-                public string StatusName { get; set; }
-                public string IsForceReboot { get; set; }
-                public string DeviceModelName { get; set; }
+                public string Status { get; set; }
+                public string IsMilestone { get; set; }
+                public string IsForceUpgrade { get; set; }
                 public string IsSilentUpgrade { get; set; }
-                public long? GmtModifyTimestamp { get; set; }
+                public string IsForceReboot { get; set; }
                 public string IsForceNightUpgrade { get; set; }
                 public string GmtCreate { get; set; }
-                public string IsForceUpgrade { get; set; }
-                public long? Id { get; set; }
+                public string GmtModify { get; set; }
+                public string Remark { get; set; }
+                public string StatusName { get; set; }
+                public string DeviceModelName { get; set; }
+                public long? GmtCreateTimestamp { get; set; }
+                public long? GmtModifyTimestamp { get; set; }
             }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
         };
 
     }
