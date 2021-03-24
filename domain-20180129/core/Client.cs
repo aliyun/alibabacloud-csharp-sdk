@@ -421,6 +421,38 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await ConfirmTransferInEmailWithOptionsAsync(request, runtime);
         }
 
+        public DeleteContactTemplatesResponse DeleteContactTemplatesWithOptions(DeleteContactTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteContactTemplatesResponse>(DoRPCRequest("DeleteContactTemplates", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DeleteContactTemplatesResponse> DeleteContactTemplatesWithOptionsAsync(DeleteContactTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteContactTemplatesResponse>(await DoRPCRequestAsync("DeleteContactTemplates", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DeleteContactTemplatesResponse DeleteContactTemplates(DeleteContactTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContactTemplatesWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteContactTemplatesResponse> DeleteContactTemplatesAsync(DeleteContactTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContactTemplatesWithOptionsAsync(request, runtime);
+        }
+
         public DeleteDomainGroupResponse DeleteDomainGroupWithOptions(DeleteDomainGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2117,6 +2149,38 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveBatchTaskForModifyingDomainDnsWithOptionsAsync(request, runtime);
         }
 
+        public SaveBatchTaskForReserveDropListDomainResponse SaveBatchTaskForReserveDropListDomainWithOptions(SaveBatchTaskForReserveDropListDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SaveBatchTaskForReserveDropListDomainResponse>(DoRPCRequest("SaveBatchTaskForReserveDropListDomain", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SaveBatchTaskForReserveDropListDomainResponse> SaveBatchTaskForReserveDropListDomainWithOptionsAsync(SaveBatchTaskForReserveDropListDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SaveBatchTaskForReserveDropListDomainResponse>(await DoRPCRequestAsync("SaveBatchTaskForReserveDropListDomain", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SaveBatchTaskForReserveDropListDomainResponse SaveBatchTaskForReserveDropListDomain(SaveBatchTaskForReserveDropListDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveBatchTaskForReserveDropListDomainWithOptions(request, runtime);
+        }
+
+        public async Task<SaveBatchTaskForReserveDropListDomainResponse> SaveBatchTaskForReserveDropListDomainAsync(SaveBatchTaskForReserveDropListDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveBatchTaskForReserveDropListDomainWithOptionsAsync(request, runtime);
+        }
+
         public SaveBatchTaskForTransferProhibitionLockResponse SaveBatchTaskForTransferProhibitionLockWithOptions(SaveBatchTaskForTransferProhibitionLockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2307,6 +2371,38 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SaveRegistrantProfileWithOptionsAsync(request, runtime);
+        }
+
+        public SaveRegistrantProfileRealNameVerificationResponse SaveRegistrantProfileRealNameVerificationWithOptions(SaveRegistrantProfileRealNameVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SaveRegistrantProfileRealNameVerificationResponse>(DoRPCRequest("SaveRegistrantProfileRealNameVerification", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SaveRegistrantProfileRealNameVerificationResponse> SaveRegistrantProfileRealNameVerificationWithOptionsAsync(SaveRegistrantProfileRealNameVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SaveRegistrantProfileRealNameVerificationResponse>(await DoRPCRequestAsync("SaveRegistrantProfileRealNameVerification", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SaveRegistrantProfileRealNameVerificationResponse SaveRegistrantProfileRealNameVerification(SaveRegistrantProfileRealNameVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveRegistrantProfileRealNameVerificationWithOptions(request, runtime);
+        }
+
+        public async Task<SaveRegistrantProfileRealNameVerificationResponse> SaveRegistrantProfileRealNameVerificationAsync(SaveRegistrantProfileRealNameVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveRegistrantProfileRealNameVerificationWithOptionsAsync(request, runtime);
         }
 
         public SaveSingleTaskForAddingDSRecordResponse SaveSingleTaskForAddingDSRecordWithOptions(SaveSingleTaskForAddingDSRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3235,6 +3331,38 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ScrollDomainListWithOptionsAsync(request, runtime);
+        }
+
+        public SetDefaultRegistrantProfileResponse SetDefaultRegistrantProfileWithOptions(SetDefaultRegistrantProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetDefaultRegistrantProfileResponse>(DoRPCRequest("SetDefaultRegistrantProfile", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SetDefaultRegistrantProfileResponse> SetDefaultRegistrantProfileWithOptionsAsync(SetDefaultRegistrantProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetDefaultRegistrantProfileResponse>(await DoRPCRequestAsync("SetDefaultRegistrantProfile", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SetDefaultRegistrantProfileResponse SetDefaultRegistrantProfile(SetDefaultRegistrantProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetDefaultRegistrantProfileWithOptions(request, runtime);
+        }
+
+        public async Task<SetDefaultRegistrantProfileResponse> SetDefaultRegistrantProfileAsync(SetDefaultRegistrantProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetDefaultRegistrantProfileWithOptionsAsync(request, runtime);
         }
 
         public SubmitEmailVerificationResponse SubmitEmailVerificationWithOptions(SubmitEmailVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
