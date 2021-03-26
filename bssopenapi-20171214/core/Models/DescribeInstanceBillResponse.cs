@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class DescribePricingModuleResponse : TeaModel {
+    public class DescribeInstanceBillResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribePricingModuleResponseBody Body { get; set; }
+        public DescribeInstanceBillResponseBody Body { get; set; }
 
     }
 

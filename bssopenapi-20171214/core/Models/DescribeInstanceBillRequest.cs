@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class DescribeSplitItemBillRequest : TeaModel {
+    public class DescribeInstanceBillRequest : TeaModel {
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("IsBillingItem")]
+        [Validation(Required=false)]
+        public bool? IsBillingItem { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -37,6 +41,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("IsHideZeroCharge")]
+        [Validation(Required=false)]
+        public bool? IsHideZeroCharge { get; set; }
+
+        [NameInMap("BillingDate")]
+        [Validation(Required=false)]
+        public string BillingDate { get; set; }
+
+        [NameInMap("Granularity")]
+        [Validation(Required=false)]
+        public string Granularity { get; set; }
+
         [NameInMap("BillOwnerId")]
         [Validation(Required=false)]
         public long? BillOwnerId { get; set; }
@@ -44,24 +60,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("InstanceID")]
         [Validation(Required=false)]
         public string InstanceID { get; set; }
-
-        [NameInMap("SplitItemID")]
-        [Validation(Required=false)]
-        public string SplitItemID { get; set; }
-
-        [NameInMap("TagFilter")]
-        [Validation(Required=false)]
-        public List<DescribeSplitItemBillRequestTagFilter> TagFilter { get; set; }
-        public class DescribeSplitItemBillRequestTagFilter : TeaModel {
-            [NameInMap("TagValues")]
-            [Validation(Required=false)]
-            public List<string> TagValues { get; set; }
-
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-        }
 
     }
 

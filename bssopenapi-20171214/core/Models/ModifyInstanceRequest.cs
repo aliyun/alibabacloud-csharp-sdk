@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public List<ModifyInstanceRequestParameter> Parameter { get; set; }
@@ -46,10 +50,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

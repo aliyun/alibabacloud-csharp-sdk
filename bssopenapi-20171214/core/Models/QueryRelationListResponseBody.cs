@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRelationListResponseBody : TeaModel {
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -42,18 +34,26 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public List<QueryRelationListResponseBodyDataFinancialRelationInfoList> FinancialRelationInfoList { get; set; }
             public class QueryRelationListResponseBodyDataFinancialRelationInfoList : TeaModel {
-                public long? RelationId { get; set; }
-                public string AccountType { get; set; }
-                public long? AccountId { get; set; }
-                public string AccountName { get; set; }
-                public string AccountNickName { get; set; }
-                public string RelationType { get; set; }
-                public string State { get; set; }
-                public string SetupTime { get; set; }
-                public string StartTime { get; set; }
                 public string EndTime { get; set; }
+                public string RelationType { get; set; }
+                public string AccountNickName { get; set; }
+                public string StartTime { get; set; }
+                public string State { get; set; }
+                public long? AccountId { get; set; }
+                public string SetupTime { get; set; }
+                public string AccountType { get; set; }
+                public string AccountName { get; set; }
+                public long? RelationId { get; set; }
             }
         };
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

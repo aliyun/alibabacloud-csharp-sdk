@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? UserId { get; set; }
 
-        [NameInMap("StatusList")]
-        [Validation(Required=false)]
-        public List<string> StatusList { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("StatusList")]
+        [Validation(Required=false)]
+        public List<string> StatusList { get; set; }
 
     }
 

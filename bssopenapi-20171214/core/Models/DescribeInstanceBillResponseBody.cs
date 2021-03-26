@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class DescribeSplitItemBillResponseBody : TeaModel {
+    public class DescribeInstanceBillResponseBody : TeaModel {
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -19,26 +19,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DescribeSplitItemBillResponseBodyData Data { get; set; }
-        public class DescribeSplitItemBillResponseBodyData : TeaModel {
+        public DescribeInstanceBillResponseBodyData Data { get; set; }
+        public class DescribeInstanceBillResponseBodyData : TeaModel {
             [NameInMap("Items")]
             [Validation(Required=false)]
-            public List<DescribeSplitItemBillResponseBodyDataItems> Items { get; set; }
-            public class DescribeSplitItemBillResponseBodyDataItems : TeaModel {
+            public List<DescribeInstanceBillResponseBodyDataItems> Items { get; set; }
+            public class DescribeInstanceBillResponseBodyDataItems : TeaModel {
                 public string BillingDate { get; set; }
                 public string InstanceConfig { get; set; }
                 public string InternetIP { get; set; }
-                public string SplitItemID { get; set; }
                 public string Item { get; set; }
-                public string SplitAccountID { get; set; }
                 public string Tag { get; set; }
                 public string InstanceID { get; set; }
                 public string Currency { get; set; }
                 public float? DeductedByCashCoupons { get; set; }
                 public string SubscriptionType { get; set; }
                 public string InstanceSpec { get; set; }
-                public string BillingItem { get; set; }
                 public float? DeductedByCoupons { get; set; }
+                public string BillingItem { get; set; }
                 public string Region { get; set; }
                 public float? OutstandingAmount { get; set; }
                 public string CostUnit { get; set; }
@@ -49,26 +47,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ServicePeriodUnit { get; set; }
                 public string ProductName { get; set; }
                 public string CommodityCode { get; set; }
-                public string SplitProductDetail { get; set; }
                 public string NickName { get; set; }
                 public string ProductDetail { get; set; }
                 public string Usage { get; set; }
                 public string IntranetIP { get; set; }
                 public string OwnerID { get; set; }
-                public string SplitCommodityCode { get; set; }
                 public float? DeductedByPrepaidCard { get; set; }
                 public string UsageUnit { get; set; }
                 public float? PaymentAmount { get; set; }
                 public float? InvoiceDiscount { get; set; }
                 public string DeductedByResourcePackage { get; set; }
                 public string ProductType { get; set; }
-                public string SplitBillingCycle { get; set; }
                 public string ServicePeriod { get; set; }
-                public string SplitItemName { get; set; }
                 public string Zone { get; set; }
                 public string ListPrice { get; set; }
                 public float? PretaxGrossAmount { get; set; }
-                public string SplitAccountName { get; set; }
                 public string ProductCode { get; set; }
                 public string BillingType { get; set; }
             }
