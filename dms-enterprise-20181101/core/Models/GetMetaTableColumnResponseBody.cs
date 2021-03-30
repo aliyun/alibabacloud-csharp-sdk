@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             [NameInMap("DataLength")]
             [Validation(Required=false)]
-            public int? DataLength { get; set; }
+            public long? DataLength { get; set; }
 
         }
 

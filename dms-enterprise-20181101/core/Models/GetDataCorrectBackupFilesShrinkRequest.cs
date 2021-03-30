@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
-        [NameInMap("ActionName")]
-        [Validation(Required=false)]
-        public string ActionName { get; set; }
-
         [NameInMap("ActionDetail")]
         [Validation(Required=false)]
         public string ActionDetailShrink { get; set; }

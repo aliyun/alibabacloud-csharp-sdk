@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Dms-enterprise20181101
+dotnet add package AlibabaCloud.SDK.Dms-enterprise20181101
 ```
 
 ## 问题

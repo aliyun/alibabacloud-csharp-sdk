@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string FileName { get; set; }
 
-        [NameInMap("UploadType")]
-        [Validation(Required=false)]
-        public string UploadType { get; set; }
-
         [NameInMap("UploadTarget")]
         [Validation(Required=false)]
         public string UploadTargetShrink { get; set; }

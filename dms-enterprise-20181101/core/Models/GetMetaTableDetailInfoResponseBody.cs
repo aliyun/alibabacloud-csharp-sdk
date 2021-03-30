@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string Position { get; set; }
                 public bool? Nullable { get; set; }
                 public string ColumnId { get; set; }
-                public int? DataLength { get; set; }
+                public long? DataLength { get; set; }
             }
         };
 

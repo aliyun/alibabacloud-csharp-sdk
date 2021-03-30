@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ExecuteDataExportRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
+    public class ListDDLPublishRecordsRequest : TeaModel {
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
-        [NameInMap("ActionDetail")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public Dictionary<string, object> ActionDetail { get; set; }
+        public long? Tid { get; set; }
 
     }
 
