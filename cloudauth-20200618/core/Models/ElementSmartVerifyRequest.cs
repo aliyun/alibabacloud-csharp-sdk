@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string CertFile { get; set; }
 
+        [NameInMap("CertNationalEmblemUrl")]
+        [Validation(Required=false)]
+        public string CertNationalEmblemUrl { get; set; }
+
     }
 
 }
