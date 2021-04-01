@@ -26,19 +26,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string EntityObject { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? EndTime { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
     }

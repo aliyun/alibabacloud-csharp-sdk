@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string SourceIp { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("ForwardProtocol")]
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public int? FrontendPort { get; set; }
 
         [NameInMap("Offset")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Offset { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PageSize { get; set; }
 
     }

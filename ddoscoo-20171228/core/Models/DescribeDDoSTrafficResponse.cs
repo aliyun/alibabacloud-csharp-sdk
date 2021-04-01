@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeDDoSTrafficResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("DefenseInBytes")]
         [Validation(Required=true)]
-        public DescribeDDoSTrafficResponseBody Body { get; set; }
+        public long? DefenseInBytes { get; set; }
+
+        [NameInMap("SourceInBytes")]
+        [Validation(Required=true)]
+        public long? SourceInBytes { get; set; }
+
+        [NameInMap("DDoSTrafficPoints")]
+        [Validation(Required=true)]
+        public List<DescribeDDoSTrafficResponseDDoSTrafficPoints> DDoSTrafficPoints { get; set; }
+        public class DescribeDDoSTrafficResponseDDoSTrafficPoints : TeaModel {
+            [NameInMap("Time")]
+            [Validation(Required=true)]
+            public long? Time { get; set; }
+
+            [NameInMap("DefenseMaxInBps")]
+            [Validation(Required=true)]
+            public long? DefenseMaxInBps { get; set; }
+
+            [NameInMap("SourceMaxInBps")]
+            [Validation(Required=true)]
+            public long? SourceMaxInBps { get; set; }
+
+        }
 
     }
 

@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeInstanceStatisticsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("InstanceStatistics")]
         [Validation(Required=true)]
-        public DescribeInstanceStatisticsResponseBody Body { get; set; }
+        public List<DescribeInstanceStatisticsResponseInstanceStatistics> InstanceStatistics { get; set; }
+        public class DescribeInstanceStatisticsResponseInstanceStatistics : TeaModel {
+            [NameInMap("InstanceId")]
+            [Validation(Required=true)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("PortUsage")]
+            [Validation(Required=true)]
+            public int? PortUsage { get; set; }
+
+            [NameInMap("DomainUsage")]
+            [Validation(Required=true)]
+            public int? DomainUsage { get; set; }
+
+            [NameInMap("SiteUsage")]
+            [Validation(Required=true)]
+            public int? SiteUsage { get; set; }
+
+            [NameInMap("DefenseCountUsage")]
+            [Validation(Required=true)]
+            public int? DefenseCountUsage { get; set; }
+
+        }
 
     }
 

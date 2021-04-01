@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DeleteLayer4RuleRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Listeners")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Listeners { get; set; }
 
     }

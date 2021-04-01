@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("Domain")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Domain { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? EndTime { get; set; }
 
     }

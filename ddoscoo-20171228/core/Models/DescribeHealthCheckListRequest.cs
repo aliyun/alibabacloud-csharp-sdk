@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string SourceIp { get; set; }
 
         [NameInMap("Listeners")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Listeners { get; set; }
 
     }

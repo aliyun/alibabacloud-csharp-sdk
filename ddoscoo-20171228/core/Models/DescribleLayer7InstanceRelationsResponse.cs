@@ -9,13 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribleLayer7InstanceRelationsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Layer7InstanceRelations")]
         [Validation(Required=true)]
-        public DescribleLayer7InstanceRelationsResponseBody Body { get; set; }
+        public List<DescribleLayer7InstanceRelationsResponseLayer7InstanceRelations> Layer7InstanceRelations { get; set; }
+        public class DescribleLayer7InstanceRelationsResponseLayer7InstanceRelations : TeaModel {
+            [NameInMap("Domain")]
+            [Validation(Required=true)]
+            public string Domain { get; set; }
+
+            [NameInMap("InstanceDetails")]
+            [Validation(Required=true)]
+            public List<DescribleLayer7InstanceRelationsResponseLayer7InstanceRelationsInstanceDetails> InstanceDetails { get; set; }
+            public class DescribleLayer7InstanceRelationsResponseLayer7InstanceRelationsInstanceDetails : TeaModel {
+                [NameInMap("InstanceId")]
+                [Validation(Required=true)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("FunctionVersion")]
+                [Validation(Required=true)]
+                public string FunctionVersion { get; set; }
+
+                [NameInMap("EipList")]
+                [Validation(Required=true)]
+                public List<string> EipList { get; set; }
+
+            }
+
+        }
 
     }
 

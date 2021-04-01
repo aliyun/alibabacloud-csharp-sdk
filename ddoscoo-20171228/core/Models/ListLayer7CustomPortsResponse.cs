@@ -9,13 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ListLayer7CustomPortsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Layer7CustomPorts")]
         [Validation(Required=true)]
-        public ListLayer7CustomPortsResponseBody Body { get; set; }
+        public List<ListLayer7CustomPortsResponseLayer7CustomPorts> Layer7CustomPorts { get; set; }
+        public class ListLayer7CustomPortsResponseLayer7CustomPorts : TeaModel {
+            [NameInMap("ProxyType")]
+            [Validation(Required=true)]
+            public string ProxyType { get; set; }
+
+            [NameInMap("ProxyPorts")]
+            [Validation(Required=true)]
+            public List<string> ProxyPorts { get; set; }
+
+        }
 
     }
 

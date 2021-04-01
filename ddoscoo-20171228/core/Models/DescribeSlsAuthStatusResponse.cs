@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeSlsAuthStatusResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("SlsAuthStatus")]
         [Validation(Required=true)]
-        public DescribeSlsAuthStatusResponseBody Body { get; set; }
+        public bool? SlsAuthStatus { get; set; }
 
     }
 

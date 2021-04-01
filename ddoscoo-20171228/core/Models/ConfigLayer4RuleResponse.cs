@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ConfigLayer4RuleResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public ConfigLayer4RuleResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

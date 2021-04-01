@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ListTagResourcesRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
@@ -22,12 +18,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceType { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -46,6 +38,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
     }
 

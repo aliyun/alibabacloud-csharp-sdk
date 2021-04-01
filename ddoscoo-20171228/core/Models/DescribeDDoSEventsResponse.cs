@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeDDoSEventsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Total")]
         [Validation(Required=true)]
-        public DescribeDDoSEventsResponseBody Body { get; set; }
+        public long? Total { get; set; }
+
+        [NameInMap("Events")]
+        [Validation(Required=true)]
+        public List<DescribeDDoSEventsResponseEvents> Events { get; set; }
+        public class DescribeDDoSEventsResponseEvents : TeaModel {
+            [NameInMap("StartTime")]
+            [Validation(Required=true)]
+            public long? StartTime { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=true)]
+            public long? EndTime { get; set; }
+
+            [NameInMap("Interval")]
+            [Validation(Required=true)]
+            public int? Interval { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=true)]
+            public string Status { get; set; }
+
+        }
 
     }
 

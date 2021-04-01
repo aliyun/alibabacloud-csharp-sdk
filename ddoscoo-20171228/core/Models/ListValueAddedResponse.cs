@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ListValueAddedResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ValueAddedList")]
         [Validation(Required=true)]
-        public ListValueAddedResponseBody Body { get; set; }
+        public List<ListValueAddedResponseValueAddedList> ValueAddedList { get; set; }
+        public class ListValueAddedResponseValueAddedList : TeaModel {
+            [NameInMap("InstanceId")]
+            [Validation(Required=true)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=true)]
+            public int? Status { get; set; }
+
+            [NameInMap("ExpireTime")]
+            [Validation(Required=true)]
+            public long? ExpireTime { get; set; }
+
+            [NameInMap("GmtCreate")]
+            [Validation(Required=true)]
+            public long? GmtCreate { get; set; }
+
+            [NameInMap("LogSize")]
+            [Validation(Required=true)]
+            public long? LogSize { get; set; }
+
+        }
 
     }
 
