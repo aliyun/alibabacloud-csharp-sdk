@@ -8,7 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class RecognizeFaceRequest : TeaModel {
+    public class MonitorExaminationRequest : TeaModel {
+        /// <summary>
+        /// A short description of struct
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public long? Type { get; set; }
+
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }

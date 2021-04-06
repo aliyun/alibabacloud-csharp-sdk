@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public float? QualityScoreThreshold { get; set; }
 
-        [NameInMap("ImageType")]
-        [Validation(Required=false)]
-        public int? ImageType { get; set; }
-
         [NameInMap("ImageURLA")]
         [Validation(Required=false)]
         public string ImageURLA { get; set; }

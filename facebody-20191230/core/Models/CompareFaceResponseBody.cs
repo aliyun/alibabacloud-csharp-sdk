@@ -40,10 +40,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             public string MessageTips { get; set; }
         };
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
     }
 
 }

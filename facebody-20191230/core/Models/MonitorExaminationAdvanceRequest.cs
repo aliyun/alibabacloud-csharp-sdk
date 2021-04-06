@@ -8,22 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class DetectIPCPedestrianAdvanceRequest : TeaModel {
+    public class MonitorExaminationAdvanceRequest : TeaModel {
         [NameInMap("ImageURLObject")]
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
-        [NameInMap("ImageData")]
+        /// <summary>
+        /// A short description of struct
+        /// </summary>
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string ImageData { get; set; }
-
-        [NameInMap("Width")]
-        [Validation(Required=false)]
-        public int? Width { get; set; }
-
-        [NameInMap("Height")]
-        [Validation(Required=false)]
-        public int? Height { get; set; }
+        public long? Type { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectIPCPedestrianRequest : TeaModel {
-        [NameInMap("ContinueOnError")]
-        [Validation(Required=false)]
-        public bool? ContinueOnError { get; set; }
-
         [NameInMap("ImageData")]
         [Validation(Required=false)]
         public string ImageData { get; set; }
@@ -28,10 +24,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }
-
-        [NameInMap("DataId")]
-        [Validation(Required=false)]
-        public string DataId { get; set; }
 
     }
 
