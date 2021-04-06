@@ -184,6 +184,14 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                     [Validation(Required=false)]
                     public List<long?> CoordinateImage { get; set; }
 
+                    [NameInMap("FractureLocation")]
+                    [Validation(Required=false)]
+                    public string FractureLocation { get; set; }
+
+                    [NameInMap("FractureSegment")]
+                    [Validation(Required=false)]
+                    public long? FractureSegment { get; set; }
+
                 }
 
             }

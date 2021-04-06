@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 public List<string> CoordinateImage { get; set; }
                 public float? FractureConfidence { get; set; }
                 public string FractureCategory { get; set; }
+                public string FractureLocation { get; set; }
+                public long? FractureSegment { get; set; }
             }
             [NameInMap("Origin")]
             [Validation(Required=false)]

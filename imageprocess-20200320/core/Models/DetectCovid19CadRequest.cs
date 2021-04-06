@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class DetectCovid19CadRequest : TeaModel {
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
         public string DataFormat { get; set; }
