@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
-    public class DetectVehicleAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
+    public class DetectVideoIPCObjectAdvanceRequest : TeaModel {
+        [NameInMap("VideoURLObject")]
         [Validation(Required=true)]
-        public Stream ImageURLObject { get; set; }
+        public Stream VideoURLObject { get; set; }
 
     }
 

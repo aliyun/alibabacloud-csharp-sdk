@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
-    public class DetectVehicleAdvanceRequest : TeaModel {
-        [NameInMap("ImageURLObject")]
-        [Validation(Required=true)]
-        public Stream ImageURLObject { get; set; }
+    public class GetAsyncJobResultRequest : TeaModel {
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
     }
 
