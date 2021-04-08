@@ -81,6 +81,14 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string OssObjectName { get; set; }
 
+        [NameInMap("IdNo")]
+        [Validation(Required=false)]
+        public string IdNo { get; set; }
+
+        [NameInMap("IdName")]
+        [Validation(Required=false)]
+        public string IdName { get; set; }
+
     }
 
 }
