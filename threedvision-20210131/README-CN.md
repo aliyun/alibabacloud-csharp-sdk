@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Threedvision20210131
+dotnet add package AlibabaCloud.SDK.Threedvision20210131
 ```
 
 ## 问题
