@@ -9,16 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyDeviceInfoRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("DeviceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DeviceId { get; set; }
 
         [NameInMap("UserDeviceId")]

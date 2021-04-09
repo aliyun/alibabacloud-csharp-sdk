@@ -9,20 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateVerifySettingRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("BizType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizType { get; set; }
 
         [NameInMap("BizName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizName { get; set; }
 
         [NameInMap("Solution")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Solution { get; set; }
 
         [NameInMap("GuideStep")]

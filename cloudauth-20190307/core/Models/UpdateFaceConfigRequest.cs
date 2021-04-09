@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Lang { get; set; }
 
         [NameInMap("BizType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizType { get; set; }
 
         [NameInMap("BizName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizName { get; set; }
 
     }

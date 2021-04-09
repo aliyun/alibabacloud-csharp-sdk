@@ -9,16 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateVerifySDKRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("AppUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string AppUrl { get; set; }
 
         [NameInMap("Platform")]

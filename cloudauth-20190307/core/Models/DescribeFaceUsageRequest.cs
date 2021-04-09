@@ -9,16 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeFaceUsageRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("StartDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StartDate { get; set; }
 
         [NameInMap("EndDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EndDate { get; set; }
 
     }

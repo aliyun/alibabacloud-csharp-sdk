@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeSdkUrlRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Id")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? Id { get; set; }
 
         [NameInMap("Debug")]
