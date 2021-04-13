@@ -13,13 +13,9 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=true)]
         public Stream VideoUrlObject { get; set; }
 
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
         [NameInMap("VideoBitrate")]
         [Validation(Required=false)]
-        public string VideoBitrate { get; set; }
+        public long? VideoBitrate { get; set; }
 
         [NameInMap("VideoCodec")]
         [Validation(Required=false)]

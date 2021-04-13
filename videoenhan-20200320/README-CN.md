@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Videoenhan20200320
+dotnet add package AlibabaCloud.SDK.Videoenhan20200320
 ```
 
 ## 问题

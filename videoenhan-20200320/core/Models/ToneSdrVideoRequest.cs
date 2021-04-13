@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,10 +15,6 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [NameInMap("VideoURL")]
         [Validation(Required=false)]
         public string VideoURL { get; set; }
-
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
 
         [NameInMap("Bitrate")]
         [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
     public class GenerateVideoRequest : TeaModel {
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }

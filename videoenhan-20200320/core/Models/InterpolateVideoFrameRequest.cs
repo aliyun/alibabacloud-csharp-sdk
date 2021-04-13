@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
-    public class MergeVideoFaceRequest : TeaModel {
+    public class InterpolateVideoFrameRequest : TeaModel {
         [NameInMap("VideoURL")]
         [Validation(Required=false)]
         public string VideoURL { get; set; }
 
-        [NameInMap("PostURL")]
+        [NameInMap("FrameRate")]
         [Validation(Required=false)]
-        public string PostURL { get; set; }
+        public int? FrameRate { get; set; }
 
-        [NameInMap("ReferenceURL")]
+        [NameInMap("Bitrate")]
         [Validation(Required=false)]
-        public string ReferenceURL { get; set; }
+        public int? Bitrate { get; set; }
 
     }
 

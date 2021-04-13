@@ -8,18 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 {
-    public class ToneSdrVideoAdvanceRequest : TeaModel {
+    public class AddFaceVideoTemplateAdvanceRequest : TeaModel {
         [NameInMap("VideoURLObject")]
         [Validation(Required=true)]
         public Stream VideoURLObject { get; set; }
 
-        [NameInMap("Bitrate")]
+        /// <summary>
+        /// A short description of struct
+        /// </summary>
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public int? Bitrate { get; set; }
-
-        [NameInMap("RecolorModel")]
-        [Validation(Required=false)]
-        public string RecolorModel { get; set; }
+        public string UserId { get; set; }
 
     }
 
