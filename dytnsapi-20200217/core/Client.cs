@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("dytnsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -99,6 +99,30 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePhoneNumberStatusWithOptionsAsync(request, runtime);
+        }
+
+        public PvrCallbackFCUResponse PvrCallbackFCUWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            return TeaModel.ToObject<PvrCallbackFCUResponse>(DoRPCRequest("PvrCallbackFCU", "2020-02-17", "HTTPS", "POST", "AK", "none", req, runtime));
+        }
+
+        public async Task<PvrCallbackFCUResponse> PvrCallbackFCUWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            return TeaModel.ToObject<PvrCallbackFCUResponse>(await DoRPCRequestAsync("PvrCallbackFCU", "2020-02-17", "HTTPS", "POST", "AK", "none", req, runtime));
+        }
+
+        public PvrCallbackFCUResponse PvrCallbackFCU()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PvrCallbackFCUWithOptions(runtime);
+        }
+
+        public async Task<PvrCallbackFCUResponse> PvrCallbackFCUAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PvrCallbackFCUWithOptionsAsync(runtime);
         }
 
         public QueryPhoneNumberAttributeResponse QueryPhoneNumberAttributeWithOptions(QueryPhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
