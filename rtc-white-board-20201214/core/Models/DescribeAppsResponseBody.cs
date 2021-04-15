@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc_white_board20201214.Models
 {
-    public class CreateWhiteBoardResponseBody : TeaModel {
+    public class DescribeAppsResponseBody : TeaModel {
         /// <summary>
         /// 请求ID
         /// </summary>
@@ -42,11 +42,25 @@ namespace AlibabaCloud.SDK.Rtc_white_board20201214.Models
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public CreateWhiteBoardResponseBodyResult Result { get; set; }
-        public class CreateWhiteBoardResponseBodyResult : TeaModel {
-            [NameInMap("DocKey")]
+        public DescribeAppsResponseBodyResult Result { get; set; }
+        public class DescribeAppsResponseBodyResult : TeaModel {
+            [NameInMap("TotalNum")]
             [Validation(Required=false)]
-            public string DocKey { get; set; }
+            public long? TotalNum { get; set; }
+            [NameInMap("TotalPage")]
+            [Validation(Required=false)]
+            public long? TotalPage { get; set; }
+            [NameInMap("AppList")]
+            [Validation(Required=false)]
+            public List<DescribeAppsResponseBodyResultAppList> AppList { get; set; }
+            public class DescribeAppsResponseBodyResultAppList : TeaModel {
+                public string AppID { get; set; }
+                public string AppName { get; set; }
+                public long? Status { get; set; }
+                public string CallbackUrl { get; set; }
+                public string DomainNames { get; set; }
+                public string CreateTime { get; set; }
+            }
         };
 
     }

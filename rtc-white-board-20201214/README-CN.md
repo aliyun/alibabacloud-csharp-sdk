@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Rtc-white-board20201214
+dotnet add package AlibabaCloud.SDK.Rtc-white-board20201214
 ```
 
 ## 问题

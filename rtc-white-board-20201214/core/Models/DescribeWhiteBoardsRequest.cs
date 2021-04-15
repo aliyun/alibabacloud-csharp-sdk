@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc_white_board20201214.Models
 {
-    public class SetAppCallbackUrlRequest : TeaModel {
+    public class DescribeWhiteBoardsRequest : TeaModel {
         /// <summary>
         /// 白板应用唯一标识符
         /// </summary>
@@ -17,18 +17,25 @@ namespace AlibabaCloud.SDK.Rtc_white_board20201214.Models
         public string AppID { get; set; }
 
         /// <summary>
-        /// 白板应用回调地址URL
+        /// 白板文档状态，默认查询所有状态。（取值：1:启用，2:停用）
         /// </summary>
-        [NameInMap("AppCallbackUrl")]
+        [NameInMap("DocStatus")]
         [Validation(Required=false)]
-        public string AppCallbackUrl { get; set; }
+        public long? DocStatus { get; set; }
 
         /// <summary>
-        /// 白板应用回调鉴权码，由8~20位大小写字母、数字或下划线组成
+        /// 第几页，默认查询第1页
         /// </summary>
-        [NameInMap("AppCallbackAuthKey")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string AppCallbackAuthKey { get; set; }
+        public long? PageNum { get; set; }
+
+        /// <summary>
+        /// 每页显示个数，默认为10
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
     }
 

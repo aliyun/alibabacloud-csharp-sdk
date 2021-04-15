@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc_white_board20201214.Models
 {
-    public class GetWhiteBoardProfileCallbackResponse : TeaModel {
+    public class DescribeWhiteBoardsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetWhiteBoardProfileCallbackResponseBody Body { get; set; }
+        public DescribeWhiteBoardsResponseBody Body { get; set; }
 
     }
 
