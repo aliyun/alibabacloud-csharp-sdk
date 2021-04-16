@@ -805,6 +805,38 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303
             return await GetDevopsProjectTaskInfoWithOptionsAsync(request, runtime);
         }
 
+        public GetLastWorkspaceResponse GetLastWorkspaceWithOptions(GetLastWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetLastWorkspaceResponse>(DoRPCRequest("GetLastWorkspace", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetLastWorkspaceResponse> GetLastWorkspaceWithOptionsAsync(GetLastWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetLastWorkspaceResponse>(await DoRPCRequestAsync("GetLastWorkspace", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetLastWorkspaceResponse GetLastWorkspace(GetLastWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLastWorkspaceWithOptions(request, runtime);
+        }
+
+        public async Task<GetLastWorkspaceResponse> GetLastWorkspaceAsync(GetLastWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLastWorkspaceWithOptionsAsync(request, runtime);
+        }
+
         public GetPipelineInstanceBuildNumberStatusResponse GetPipelineInstanceBuildNumberStatusWithOptions(GetPipelineInstanceBuildNumberStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

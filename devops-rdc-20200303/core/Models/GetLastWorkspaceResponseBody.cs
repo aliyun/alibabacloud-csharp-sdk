@@ -8,24 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
-    public class ListUserOrganizationResponseBody : TeaModel {
+    public class GetLastWorkspaceResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("Object")]
         [Validation(Required=false)]
-        public List<ListUserOrganizationResponseBodyObject> Object { get; set; }
-        public class ListUserOrganizationResponseBodyObject : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
-        }
+        public string Object { get; set; }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
