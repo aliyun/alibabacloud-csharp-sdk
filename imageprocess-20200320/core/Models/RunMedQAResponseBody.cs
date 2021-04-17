@@ -17,12 +17,24 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
         [Validation(Required=false)]
         public RunMedQAResponseBodyData Data { get; set; }
         public class RunMedQAResponseBodyData : TeaModel {
-            [NameInMap("Answer")]
+            [NameInMap("SessionId")]
             [Validation(Required=false)]
-            public string Answer { get; set; }
-            [NameInMap("SimilarQuestion")]
+            public string SessionId { get; set; }
+            [NameInMap("QuestionType")]
             [Validation(Required=false)]
-            public List<string> SimilarQuestion { get; set; }
+            public string QuestionType { get; set; }
+            [NameInMap("Question")]
+            [Validation(Required=false)]
+            public string Question { get; set; }
+            [NameInMap("AnswerType")]
+            [Validation(Required=false)]
+            public string AnswerType { get; set; }
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public List<string> Options { get; set; }
+            [NameInMap("Reports")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Reports { get; set; }
         };
 
     }
