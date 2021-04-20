@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string TargetImageValue { get; set; }
 
-        [NameInMap("BizType")]
-        [Validation(Required=false)]
-        public string BizType { get; set; }
-
     }
 
 }

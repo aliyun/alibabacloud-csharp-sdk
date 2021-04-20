@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("SubCode")]
             [Validation(Required=true)]
             public string SubCode { get; set; }
+            [NameInMap("CertifyId")]
+            [Validation(Required=true)]
+            public string CertifyId { get; set; }
         };
 
     }
