@@ -293,6 +293,38 @@ namespace AlibabaCloud.SDK.Rtc_white_board20201214
             return await CreateAppWithOptionsAsync(request, runtime);
         }
 
+        public SetUsersPermissionsResponse SetUsersPermissionsWithOptions(SetUsersPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetUsersPermissionsResponse>(DoRPCRequest("SetUsersPermissions", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SetUsersPermissionsResponse> SetUsersPermissionsWithOptionsAsync(SetUsersPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetUsersPermissionsResponse>(await DoRPCRequestAsync("SetUsersPermissions", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SetUsersPermissionsResponse SetUsersPermissions(SetUsersPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetUsersPermissionsWithOptions(request, runtime);
+        }
+
+        public async Task<SetUsersPermissionsResponse> SetUsersPermissionsAsync(SetUsersPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetUsersPermissionsWithOptionsAsync(request, runtime);
+        }
+
         public CreateWhiteBoardResponse CreateWhiteBoardWithOptions(CreateWhiteBoardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
