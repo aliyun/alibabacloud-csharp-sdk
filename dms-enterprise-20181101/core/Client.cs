@@ -2597,6 +2597,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await UpdateUserWithOptionsAsync(request, runtime);
         }
 
+        public GetPhysicalDatabaseResponse GetPhysicalDatabaseWithOptions(GetPhysicalDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetPhysicalDatabaseResponse>(DoRPCRequest("GetPhysicalDatabase", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetPhysicalDatabaseResponse> GetPhysicalDatabaseWithOptionsAsync(GetPhysicalDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetPhysicalDatabaseResponse>(await DoRPCRequestAsync("GetPhysicalDatabase", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetPhysicalDatabaseResponse GetPhysicalDatabase(GetPhysicalDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPhysicalDatabaseWithOptions(request, runtime);
+        }
+
+        public async Task<GetPhysicalDatabaseResponse> GetPhysicalDatabaseAsync(GetPhysicalDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPhysicalDatabaseWithOptionsAsync(request, runtime);
+        }
+
         public GetStructSyncExecSqlDetailResponse GetStructSyncExecSqlDetailWithOptions(GetStructSyncExecSqlDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
