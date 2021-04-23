@@ -74,12 +74,17 @@ namespace AlibabaCloud.SDK.Threedvision20210131
             // Step 0: init client
             string accessKeyId = this._credential.GetAccessKeyId();
             string accessKeySecret = this._credential.GetAccessKeySecret();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
             AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
-                Endpoint = "openplatform.aliyuncs.com",
+                Endpoint = openPlatformEndpoint,
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
@@ -140,12 +145,17 @@ namespace AlibabaCloud.SDK.Threedvision20210131
             // Step 0: init client
             string accessKeyId = await this._credential.GetAccessKeyIdAsync();
             string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
             AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
-                Endpoint = "openplatform.aliyuncs.com",
+                Endpoint = openPlatformEndpoint,
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
@@ -238,12 +248,17 @@ namespace AlibabaCloud.SDK.Threedvision20210131
             // Step 0: init client
             string accessKeyId = this._credential.GetAccessKeyId();
             string accessKeySecret = this._credential.GetAccessKeySecret();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
             AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
-                Endpoint = "openplatform.aliyuncs.com",
+                Endpoint = openPlatformEndpoint,
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
@@ -304,12 +319,17 @@ namespace AlibabaCloud.SDK.Threedvision20210131
             // Step 0: init client
             string accessKeyId = await this._credential.GetAccessKeyIdAsync();
             string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
             AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
-                Endpoint = "openplatform.aliyuncs.com",
+                Endpoint = openPlatformEndpoint,
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
@@ -434,12 +454,17 @@ namespace AlibabaCloud.SDK.Threedvision20210131
             // Step 0: init client
             string accessKeyId = this._credential.GetAccessKeyId();
             string accessKeySecret = this._credential.GetAccessKeySecret();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
             AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
-                Endpoint = "openplatform.aliyuncs.com",
+                Endpoint = openPlatformEndpoint,
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
@@ -500,12 +525,17 @@ namespace AlibabaCloud.SDK.Threedvision20210131
             // Step 0: init client
             string accessKeyId = await this._credential.GetAccessKeyIdAsync();
             string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
             AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
             {
                 AccessKeyId = accessKeyId,
                 AccessKeySecret = accessKeySecret,
                 Type = "access_key",
-                Endpoint = "openplatform.aliyuncs.com",
+                Endpoint = openPlatformEndpoint,
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
@@ -591,6 +621,180 @@ namespace AlibabaCloud.SDK.Threedvision20210131
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EstimateStereoImageDepthWithOptionsAsync(request, runtime);
+        }
+
+        public EstimateStereoVideoDepthResponse EstimateStereoVideoDepthWithOptions(EstimateStereoVideoDepthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<EstimateStereoVideoDepthResponse>(DoRPCRequest("EstimateStereoVideoDepth", "2021-01-31", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<EstimateStereoVideoDepthResponse> EstimateStereoVideoDepthWithOptionsAsync(EstimateStereoVideoDepthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<EstimateStereoVideoDepthResponse>(await DoRPCRequestAsync("EstimateStereoVideoDepth", "2021-01-31", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public EstimateStereoVideoDepthResponse EstimateStereoVideoDepth(EstimateStereoVideoDepthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EstimateStereoVideoDepthWithOptions(request, runtime);
+        }
+
+        public async Task<EstimateStereoVideoDepthResponse> EstimateStereoVideoDepthAsync(EstimateStereoVideoDepthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EstimateStereoVideoDepthWithOptionsAsync(request, runtime);
+        }
+
+        public EstimateStereoVideoDepthResponse EstimateStereoVideoDepthAdvance(EstimateStereoVideoDepthAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            string accessKeyId = this._credential.GetAccessKeyId();
+            string accessKeySecret = this._credential.GetAccessKeySecret();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            {
+                Product = "threedvision",
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
+            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            {
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
+            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
+            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            EstimateStereoVideoDepthRequest estimateStereoVideoDepthReq = new EstimateStereoVideoDepthRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, estimateStereoVideoDepthReq);
+            authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.AccessKeyId = authResponse.AccessKeyId;
+            ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+            ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+            {
+                Filename = authResponse.ObjectKey,
+                Content = request.VideoURLObject,
+                ContentType = "",
+            };
+            ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+            {
+                AccessKeyId = authResponse.AccessKeyId,
+                Policy = authResponse.EncodedPolicy,
+                Signature = authResponse.Signature,
+                Key = authResponse.ObjectKey,
+                File = fileObj,
+                SuccessActionStatus = "201",
+            };
+            uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+            {
+                BucketName = authResponse.Bucket,
+                Header = ossHeader,
+            };
+            ossClient.PostObject(uploadRequest, ossRuntime);
+            estimateStereoVideoDepthReq.VideoURL = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            EstimateStereoVideoDepthResponse estimateStereoVideoDepthResp = EstimateStereoVideoDepthWithOptions(estimateStereoVideoDepthReq, runtime);
+            return estimateStereoVideoDepthResp;
+        }
+
+        public async Task<EstimateStereoVideoDepthResponse> EstimateStereoVideoDepthAdvanceAsync(EstimateStereoVideoDepthAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
+            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            AlibabaCloud.RPCClient.Models.Config authConfig = new AlibabaCloud.RPCClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            {
+                Product = "threedvision",
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
+            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            {
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
+            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
+            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            EstimateStereoVideoDepthRequest estimateStereoVideoDepthReq = new EstimateStereoVideoDepthRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, estimateStereoVideoDepthReq);
+            authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
+            ossConfig.AccessKeyId = authResponse.AccessKeyId;
+            ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Endpoint, authResponse.UseAccelerate, _endpointType);
+            ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+            {
+                Filename = authResponse.ObjectKey,
+                Content = request.VideoURLObject,
+                ContentType = "",
+            };
+            ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+            {
+                AccessKeyId = authResponse.AccessKeyId,
+                Policy = authResponse.EncodedPolicy,
+                Signature = authResponse.Signature,
+                Key = authResponse.ObjectKey,
+                File = fileObj,
+                SuccessActionStatus = "201",
+            };
+            uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+            {
+                BucketName = authResponse.Bucket,
+                Header = ossHeader,
+            };
+            await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
+            estimateStereoVideoDepthReq.VideoURL = "http://" + authResponse.Bucket + "." + authResponse.Endpoint + "/" + authResponse.ObjectKey;
+            EstimateStereoVideoDepthResponse estimateStereoVideoDepthResp = await EstimateStereoVideoDepthWithOptionsAsync(estimateStereoVideoDepthReq, runtime);
+            return estimateStereoVideoDepthResp;
         }
 
     }
