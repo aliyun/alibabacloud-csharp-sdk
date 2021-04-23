@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList> LiveAsrConfigList { get; set; }
             public class DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList : TeaModel {
-                public int? DomainName { get; set; }
                 public string AppName { get; set; }
+                public string MnsRegion { get; set; }
                 public string StreamName { get; set; }
+                public string HttpCallbackURL { get; set; }
+                public int? DomainName { get; set; }
                 public int? Period { get; set; }
                 public string MnsTopic { get; set; }
-                public string MnsRegion { get; set; }
-                public string HttpCallbackURL { get; set; }
             }
         };
 

@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PlayStatus { get; set; }
 
-        [NameInMap("ReloadFlag")]
-        [Validation(Required=false)]
-        public int? ReloadFlag { get; set; }
-
     }
 
 }

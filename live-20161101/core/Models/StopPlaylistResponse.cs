@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
-    public class DescribeLiveStreamsFrameRateAndBitRateDataResponse : TeaModel {
+    public class StopPlaylistResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveStreamsFrameRateAndBitRateDataResponseBody Body { get; set; }
+        public StopPlaylistResponseBody Body { get; set; }
 
     }
 

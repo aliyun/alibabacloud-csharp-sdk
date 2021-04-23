@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRecordResponseBody : TeaModel {
+        [NameInMap("BoardId")]
+        [Validation(Required=false)]
+        public int? BoardId { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("RecordId")]
-        [Validation(Required=false)]
-        public string RecordId { get; set; }
 
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("BoardId")]
-        [Validation(Required=false)]
-        public int? BoardId { get; set; }
-
         [NameInMap("RecordStartTime")]
         [Validation(Required=false)]
         public long? RecordStartTime { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("OssEndpoint")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public string OssEndpoint { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]
@@ -45,13 +41,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string OssPath { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
         public string OssBucket { get; set; }
 
-        [NameInMap("OssEndpoint")]
+        [NameInMap("RecordId")]
         [Validation(Required=false)]
-        public string OssEndpoint { get; set; }
+        public string RecordId { get; set; }
 
     }
 

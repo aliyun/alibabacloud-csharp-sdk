@@ -17,24 +17,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public DescribeHtmlResourceResponseBodyHtmlResource HtmlResource { get; set; }
         public class DescribeHtmlResourceResponseBodyHtmlResource : TeaModel {
-            [NameInMap("HtmlResourceId")]
-            [Validation(Required=false)]
-            public string HtmlResourceId { get; set; }
             [NameInMap("HtmlUrl")]
             [Validation(Required=false)]
             public string HtmlUrl { get; set; }
-            [NameInMap("HtmlContent")]
-            [Validation(Required=false)]
-            public string HtmlContent { get; set; }
             [NameInMap("CasterId")]
             [Validation(Required=false)]
             public string CasterId { get; set; }
-            [NameInMap("Config")]
-            [Validation(Required=false)]
-            public string Config { get; set; }
             [NameInMap("StreamId")]
             [Validation(Required=false)]
             public string StreamId { get; set; }
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+            [NameInMap("HtmlResourceId")]
+            [Validation(Required=false)]
+            public string HtmlResourceId { get; set; }
+            [NameInMap("HtmlContent")]
+            [Validation(Required=false)]
+            public string HtmlContent { get; set; }
         };
 
     }

@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("PullAlways")]
-        [Validation(Required=false)]
-        public string PullAlways { get; set; }
-
     }
 
 }

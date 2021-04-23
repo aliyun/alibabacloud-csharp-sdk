@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public long? EventId { get; set; }
 
+            [NameInMap("Data")]
+            [Validation(Required=false)]
+            public string Data { get; set; }
+
             [NameInMap("EventType")]
             [Validation(Required=false)]
             public int? EventType { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public int? UserId { get; set; }
-
-            [NameInMap("Data")]
-            [Validation(Required=false)]
-            public string Data { get; set; }
 
             [NameInMap("Timestamp")]
             [Validation(Required=false)]

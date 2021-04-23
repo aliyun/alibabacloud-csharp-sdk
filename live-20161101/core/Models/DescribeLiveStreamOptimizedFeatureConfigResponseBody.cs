@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig> LiveStreamOptimizedFeatureConfig { get; set; }
             public class DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig : TeaModel {
-                public string DomainName { get; set; }
                 public string ConfigName { get; set; }
-                public string ConfigStatus { get; set; }
                 public string ConfigValue { get; set; }
+                public string ConfigStatus { get; set; }
+                public string DomainName { get; set; }
             }
         };
 

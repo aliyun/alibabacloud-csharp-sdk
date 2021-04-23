@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public string BoardId { get; set; }
 
-            [NameInMap("Topic")]
-            [Validation(Required=false)]
-            public string Topic { get; set; }
-
             [NameInMap("State")]
             [Validation(Required=false)]
             public int? State { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
+
+            [NameInMap("Topic")]
+            [Validation(Required=false)]
+            public string Topic { get; set; }
 
         }
 

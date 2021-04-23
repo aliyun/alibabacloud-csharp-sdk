@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainRealtimeLogDeliveryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Status { get; set; }
 
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
 
-        [NameInMap("Region")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Region { get; set; }
 
     }
 

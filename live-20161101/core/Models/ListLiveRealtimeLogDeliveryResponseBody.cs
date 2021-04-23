@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo> RealtimeLogDeliveryInfo { get; set; }
             public class ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo : TeaModel {
-                public string Project { get; set; }
-                public string Logstore { get; set; }
-                public string Region { get; set; }
-                public string DomainName { get; set; }
-                public int? DmId { get; set; }
                 public string Status { get; set; }
+                public int? DmId { get; set; }
+                public string Region { get; set; }
+                public string Logstore { get; set; }
+                public string Project { get; set; }
+                public string DomainName { get; set; }
             }
         };
 

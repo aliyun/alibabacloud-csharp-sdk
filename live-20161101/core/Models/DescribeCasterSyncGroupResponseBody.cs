@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("CasterId")]
-        [Validation(Required=false)]
-        public string CasterId { get; set; }
-
         [NameInMap("SyncGroups")]
         [Validation(Required=false)]
         public DescribeCasterSyncGroupResponseBodySyncGroups SyncGroups { get; set; }
@@ -25,7 +21,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup> SyncGroup { get; set; }
             public class DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup : TeaModel {
-                public int? Mode { get; set; }
                 public string HostResourceId { get; set; }
                 public DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroupResourceIds ResourceIds { get; set; }
                 public class DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroupResourceIds : TeaModel {
@@ -34,8 +29,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public List<string> ResourceId { get; set; }
 
                 }
+                public int? Mode { get; set; }
             }
         };
+
+        [NameInMap("CasterId")]
+        [Validation(Required=false)]
+        public string CasterId { get; set; }
 
     }
 

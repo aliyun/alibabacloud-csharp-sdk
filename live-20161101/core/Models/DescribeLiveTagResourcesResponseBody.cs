@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public List<DescribeLiveTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class DescribeLiveTagResourcesResponseBodyTagResources : TeaModel {
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
-
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<DescribeLiveTagResourcesResponseBodyTagResourcesTag> Tag { get; set; }
@@ -34,6 +30,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
 
         }
 

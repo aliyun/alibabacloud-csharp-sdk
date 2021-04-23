@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule> DataModule { get; set; }
             public class DescribeLiveDetectPornDataResponseBodyDetectPornDataDataModule : TeaModel {
-                public string TimeStamp { get; set; }
-                public string App { get; set; }
                 public string Domain { get; set; }
-                public string Stream { get; set; }
-                public string Fee { get; set; }
-                public string Scene { get; set; }
                 public string Region { get; set; }
+                public string App { get; set; }
+                public string Stream { get; set; }
+                public string TimeStamp { get; set; }
                 public long? Count { get; set; }
+                public string Scene { get; set; }
+                public string Fee { get; set; }
             }
         };
 

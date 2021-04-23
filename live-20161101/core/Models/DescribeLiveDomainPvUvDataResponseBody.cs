@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainPvUvDataResponseBody : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public List<DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo> PvUvDataInfo { get; set; }
             public class DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo : TeaModel {
                 public string PV { get; set; }
-                public string UV { get; set; }
                 public string TimeStamp { get; set; }
+                public string UV { get; set; }
             }
         };
 

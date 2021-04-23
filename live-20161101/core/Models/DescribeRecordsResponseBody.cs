@@ -17,41 +17,41 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public List<DescribeRecordsResponseBodyRecords> Records { get; set; }
         public class DescribeRecordsResponseBodyRecords : TeaModel {
-            [NameInMap("RecordId")]
+            [NameInMap("EndTime")]
             [Validation(Required=false)]
-            public string RecordId { get; set; }
-
-            [NameInMap("AppId")]
-            [Validation(Required=false)]
-            public string AppId { get; set; }
-
-            [NameInMap("BoardId")]
-            [Validation(Required=false)]
-            public int? BoardId { get; set; }
-
-            [NameInMap("RecordStartTime")]
-            [Validation(Required=false)]
-            public long? RecordStartTime { get; set; }
+            public long? EndTime { get; set; }
 
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
-            [NameInMap("EndTime")]
+            [NameInMap("BoardId")]
             [Validation(Required=false)]
-            public long? EndTime { get; set; }
+            public int? BoardId { get; set; }
 
             [NameInMap("State")]
             [Validation(Required=false)]
             public int? State { get; set; }
 
-            [NameInMap("OssPath")]
+            [NameInMap("AppId")]
             [Validation(Required=false)]
-            public string OssPath { get; set; }
+            public string AppId { get; set; }
+
+            [NameInMap("RecordId")]
+            [Validation(Required=false)]
+            public string RecordId { get; set; }
 
             [NameInMap("OssBucket")]
             [Validation(Required=false)]
             public string OssBucket { get; set; }
+
+            [NameInMap("RecordStartTime")]
+            [Validation(Required=false)]
+            public long? RecordStartTime { get; set; }
+
+            [NameInMap("OssPath")]
+            [Validation(Required=false)]
+            public string OssPath { get; set; }
 
             [NameInMap("OssEndpoint")]
             [Validation(Required=false)]

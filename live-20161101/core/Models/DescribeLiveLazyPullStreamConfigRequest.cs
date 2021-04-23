@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
-        [NameInMap("LiveapiRequestFrom")]
-        [Validation(Required=false)]
-        public string LiveapiRequestFrom { get; set; }
-
     }
 
 }

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainTimeShiftDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("TimeShiftData")]
         [Validation(Required=false)]
         public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftData TimeShiftData { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule> DataModule { get; set; }
             public class DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule : TeaModel {
-                public string TimeStamp { get; set; }
-                public string Size { get; set; }
                 public string Type { get; set; }
+                public string Size { get; set; }
+                public string TimeStamp { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

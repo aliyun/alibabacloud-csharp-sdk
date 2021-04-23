@@ -34,24 +34,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<StartCasterResponseBodyPgmSceneInfosSceneInfo> SceneInfo { get; set; }
             public class StartCasterResponseBodyPgmSceneInfosSceneInfo : TeaModel {
-                [NameInMap("StreamInfo")]
-                [Validation(Required=false)]
-                public List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfo> StreamInfo { get; set; }
-                public class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfo : TeaModel {
-                    [NameInMap("VideoFormat")]
+                public StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos StreamInfos { get; set; }
+                public class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfos : TeaModel {
+                    [NameInMap("StreamInfo")]
                     [Validation(Required=false)]
-                    public string VideoFormat { get; set; }
+                    public List<StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo> StreamInfo { get; set; }
+                    public class StartCasterResponseBodyPgmSceneInfosSceneInfoStreamInfosStreamInfo : TeaModel {
+                        [NameInMap("VideoFormat")]
+                        [Validation(Required=false)]
+                        public string VideoFormat { get; set; }
 
-                    [NameInMap("OutputStreamUrl")]
-                    [Validation(Required=false)]
-                    public string OutputStreamUrl { get; set; }
+                        [NameInMap("OutputStreamUrl")]
+                        [Validation(Required=false)]
+                        public string OutputStreamUrl { get; set; }
 
-                    [NameInMap("TranscodeConfig")]
-                    [Validation(Required=false)]
-                    public string TranscodeConfig { get; set; }
+                        [NameInMap("TranscodeConfig")]
+                        [Validation(Required=false)]
+                        public string TranscodeConfig { get; set; }
+
+                    }
 
                 }
-
+                public string SceneId { get; set; }
+                public string StreamUrl { get; set; }
             }
         };
 

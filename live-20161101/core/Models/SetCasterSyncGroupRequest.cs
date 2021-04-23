@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public List<SetCasterSyncGroupRequestSyncGroup> SyncGroup { get; set; }
         public class SetCasterSyncGroupRequestSyncGroup : TeaModel {
-            [NameInMap("Mode")]
-            [Validation(Required=false)]
-            public int? Mode { get; set; }
-
-            [NameInMap("SyncDelayThreshold")]
-            [Validation(Required=false)]
-            public long? SyncDelayThreshold { get; set; }
-
             [NameInMap("HostResourceId")]
             [Validation(Required=false)]
             public string HostResourceId { get; set; }
@@ -36,6 +28,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("ResourceIds")]
             [Validation(Required=false)]
             public List<string> ResourceIds { get; set; }
+
+            [NameInMap("SyncDelayThreshold")]
+            [Validation(Required=false)]
+            public long? SyncDelayThreshold { get; set; }
+
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public int? Mode { get; set; }
 
         }
 

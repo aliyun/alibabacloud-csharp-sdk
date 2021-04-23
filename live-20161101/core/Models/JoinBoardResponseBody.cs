@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class JoinBoardResponseBody : TeaModel {
+        [NameInMap("BoardId")]
+        [Validation(Required=false)]
+        public string BoardId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
-
-        [NameInMap("BoardId")]
-        [Validation(Required=false)]
-        public string BoardId { get; set; }
 
         [NameInMap("TopicId")]
         [Validation(Required=false)]

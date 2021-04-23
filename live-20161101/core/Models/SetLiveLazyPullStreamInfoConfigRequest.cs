@@ -33,22 +33,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string PullProtocol { get; set; }
 
-        [NameInMap("PullAuthType")]
-        [Validation(Required=false)]
-        public string PullAuthType { get; set; }
-
-        [NameInMap("PullAuthKey")]
-        [Validation(Required=false)]
-        public string PullAuthKey { get; set; }
-
-        [NameInMap("PullArgs")]
-        [Validation(Required=false)]
-        public string PullArgs { get; set; }
-
-        [NameInMap("LiveapiRequestFrom")]
-        [Validation(Required=false)]
-        public string LiveapiRequestFrom { get; set; }
-
     }
 
 }

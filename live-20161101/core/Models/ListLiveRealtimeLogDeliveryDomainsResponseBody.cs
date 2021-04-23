@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains> Domains { get; set; }
             public class ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains : TeaModel {
-                public string DomainName { get; set; }
                 public string Status { get; set; }
+                public string DomainName { get; set; }
             }
         };
 

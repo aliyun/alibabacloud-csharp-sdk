@@ -21,18 +21,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string NotifyUrl { get; set; }
 
-        [NameInMap("NotifyType")]
-        [Validation(Required=false)]
-        public string NotifyType { get; set; }
-
-        [NameInMap("AuthType")]
-        [Validation(Required=false)]
-        public string AuthType { get; set; }
-
-        [NameInMap("AuthKey")]
-        [Validation(Required=false)]
-        public string AuthKey { get; set; }
-
     }
 
 }

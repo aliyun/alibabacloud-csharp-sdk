@@ -33,22 +33,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Lazy { get; set; }
 
-        [NameInMap("Watermark")]
-        [Validation(Required=false)]
-        public string Watermark { get; set; }
-
-        [NameInMap("Mix")]
-        [Validation(Required=false)]
-        public string Mix { get; set; }
-
-        [NameInMap("OnlyAudio")]
-        [Validation(Required=false)]
-        public string OnlyAudio { get; set; }
-
-        [NameInMap("WaterPattern")]
-        [Validation(Required=false)]
-        public string WaterPattern { get; set; }
-
     }
 
 }

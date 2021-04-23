@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
-    public class DescribeLiveStreamOnlineUserNumResponse : TeaModel {
+    public class DeletePlaylistItemsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeLiveStreamOnlineUserNumResponseBody Body { get; set; }
+        public DeletePlaylistItemsResponseBody Body { get; set; }
 
     }
 

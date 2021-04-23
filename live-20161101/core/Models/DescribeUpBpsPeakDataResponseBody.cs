@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeUpBpsPeakDataResponseBodyDescribeUpPeakTrafficsDescribeUpPeakTraffic> DescribeUpPeakTraffic { get; set; }
             public class DescribeUpBpsPeakDataResponseBodyDescribeUpPeakTrafficsDescribeUpPeakTraffic : TeaModel {
-                public string PeakTime { get; set; }
                 public string QueryTime { get; set; }
                 public string StatName { get; set; }
+                public string PeakTime { get; set; }
                 public string BandWidth { get; set; }
             }
         };

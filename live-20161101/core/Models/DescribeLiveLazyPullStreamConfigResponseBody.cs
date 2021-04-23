@@ -21,14 +21,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig> LiveLazyPullConfig { get; set; }
             public class DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig : TeaModel {
-                public string DomainName { get; set; }
                 public string AppName { get; set; }
-                public string PullDomainName { get; set; }
                 public string PullAppName { get; set; }
                 public string PullProtocol { get; set; }
-                public string PullAuthType { get; set; }
-                public string PullAuthKey { get; set; }
-                public string PullArgs { get; set; }
+                public string PullDomainName { get; set; }
+                public string DomainName { get; set; }
             }
         };
 

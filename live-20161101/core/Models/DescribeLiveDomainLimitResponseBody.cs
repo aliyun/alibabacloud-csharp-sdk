@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit> LiveDomainLimit { get; set; }
             public class DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit : TeaModel {
-                public string DomainName { get; set; }
-                public int? LimitNum { get; set; }
                 public int? LimitTranscodeNum { get; set; }
+                public int? LimitNum { get; set; }
+                public string DomainName { get; set; }
             }
         };
 

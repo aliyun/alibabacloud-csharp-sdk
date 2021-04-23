@@ -29,14 +29,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("Page")]
-        [Validation(Required=false)]
-        public int? Page { get; set; }
-
-        [NameInMap("Rows")]
-        [Validation(Required=false)]
-        public int? Rows { get; set; }
-
     }
 
 }

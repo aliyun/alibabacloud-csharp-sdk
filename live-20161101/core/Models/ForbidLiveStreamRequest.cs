@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Oneshot { get; set; }
 
-        [NameInMap("ControlStreamAction")]
-        [Validation(Required=false)]
-        public string ControlStreamAction { get; set; }
-
         [NameInMap("ResumeTime")]
         [Validation(Required=false)]
         public string ResumeTime { get; set; }
