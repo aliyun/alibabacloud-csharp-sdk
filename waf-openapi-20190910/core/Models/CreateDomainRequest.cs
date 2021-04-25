@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class CreateDomainRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [NameInMap("IsAccessProduct")]
         [Validation(Required=false)]
         public int? IsAccessProduct { get; set; }
+
+        [NameInMap("AccessHeaderMode")]
+        [Validation(Required=false)]
+        public int? AccessHeaderMode { get; set; }
+
+        [NameInMap("AccessHeaders")]
+        [Validation(Required=false)]
+        public string AccessHeaders { get; set; }
 
         [NameInMap("LoadBalancing")]
         [Validation(Required=false)]

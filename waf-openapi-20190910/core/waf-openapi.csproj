@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Waf-openapi20190910</AssemblyName>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
@@ -37,6 +37,6 @@
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.11"/>
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.10"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
-    <PackageReference Include="Tea" Version="1.0.9"/>
+    <PackageReference Include="Tea" Version="1.0.11"/>
   </ItemGroup>
 </Project>

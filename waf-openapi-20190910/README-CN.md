@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Waf-openapi20190910
+dotnet add package AlibabaCloud.SDK.Waf-openapi20190910
 ```
 
 ## 问题

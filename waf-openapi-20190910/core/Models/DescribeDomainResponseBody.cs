@@ -50,6 +50,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
             [NameInMap("IsAccessProduct")]
             [Validation(Required=false)]
             public int? IsAccessProduct { get; set; }
+            [NameInMap("AccessHeaders")]
+            [Validation(Required=false)]
+            public List<string> AccessHeaders { get; set; }
+            [NameInMap("AccessHeaderMode")]
+            [Validation(Required=false)]
+            public int? AccessHeaderMode { get; set; }
             [NameInMap("HttpsRedirect")]
             [Validation(Required=false)]
             public int? HttpsRedirect { get; set; }
@@ -68,12 +74,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
             [NameInMap("ClusterType")]
             [Validation(Required=false)]
             public int? ClusterType { get; set; }
-            [NameInMap("WriteTime")]
-            [Validation(Required=false)]
-            public int? WriteTime { get; set; }
             [NameInMap("ReadTime")]
             [Validation(Required=false)]
             public int? ReadTime { get; set; }
+            [NameInMap("WriteTime")]
+            [Validation(Required=false)]
+            public int? WriteTime { get; set; }
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
