@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("Qos")]
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? Qos { get; set; }
 
         [NameInMap("TopicFullName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TopicFullName { get; set; }
 
         [NameInMap("MessageContent")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MessageContent { get; set; }
 
         [NameInMap("ResponseTopic")]

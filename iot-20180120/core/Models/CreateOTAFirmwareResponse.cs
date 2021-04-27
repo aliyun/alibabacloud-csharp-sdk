@@ -9,33 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateOTAFirmwareResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public CreateOTAFirmwareResponseData Data { get; set; }
-        public class CreateOTAFirmwareResponseData : TeaModel {
-            [NameInMap("FirmwareId")]
-            [Validation(Required=true)]
-            public string FirmwareId { get; set; }
-            [NameInMap("UtcCreate")]
-            [Validation(Required=true)]
-            public string UtcCreate { get; set; }
-        };
+        public CreateOTAFirmwareResponseBody Body { get; set; }
 
     }
 

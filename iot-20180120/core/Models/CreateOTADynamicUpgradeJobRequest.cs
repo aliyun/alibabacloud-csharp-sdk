@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("FirmwareId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("SrcVersion")]
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<CreateOTADynamicUpgradeJobRequestTag> Tag { get; set; }
         public class CreateOTADynamicUpgradeJobRequestTag : TeaModel {
             [NameInMap("Key")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Key { get; set; }
 
             [NameInMap("Value")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Value { get; set; }
 
         }

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateRulengDistributeJobRequest : TeaModel {
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("SourceInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceInstanceId { get; set; }
 
         [NameInMap("TargetInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TargetInstanceId { get; set; }
 
     }

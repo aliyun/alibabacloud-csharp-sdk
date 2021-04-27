@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SetDevicesPropertyRequest : TeaModel {
         [NameInMap("DeviceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> DeviceName { get; set; }
 
         [NameInMap("IotInstanceId")]
@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("Items")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Items { get; set; }
 
     }

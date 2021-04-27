@@ -9,59 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetEdgeInstanceChannelResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public BatchGetEdgeInstanceChannelResponseData Data { get; set; }
-        public class BatchGetEdgeInstanceChannelResponseData : TeaModel {
-            [NameInMap("Channel")]
-            [Validation(Required=true)]
-            public List<BatchGetEdgeInstanceChannelResponseDataChannel> Channel { get; set; }
-            public class BatchGetEdgeInstanceChannelResponseDataChannel : TeaModel {
-                public string ChannelId { get; set; }
-                public string ChannelName { get; set; }
-                public BatchGetEdgeInstanceChannelResponseDataChannelConfigList ConfigList { get; set; }
-                public class BatchGetEdgeInstanceChannelResponseDataChannelConfigList : TeaModel {
-                    [NameInMap("Config")]
-                    [Validation(Required=true)]
-                    public List<BatchGetEdgeInstanceChannelResponseDataChannelConfigListConfig> Config { get; set; }
-                    public class BatchGetEdgeInstanceChannelResponseDataChannelConfigListConfig : TeaModel {
-                        [NameInMap("ConfigId")]
-                        [Validation(Required=true)]
-                        public string ConfigId { get; set; }
-
-                        [NameInMap("Format")]
-                        [Validation(Required=true)]
-                        public string Format { get; set; }
-
-                        [NameInMap("Content")]
-                        [Validation(Required=true)]
-                        public string Content { get; set; }
-
-                        [NameInMap("Key")]
-                        [Validation(Required=true)]
-                        public string Key { get; set; }
-
-                    }
-
-                }
-            }
-        };
+        public BatchGetEdgeInstanceChannelResponseBody Body { get; set; }
 
     }
 

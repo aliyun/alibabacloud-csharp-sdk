@@ -9,36 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceStatisticsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryDeviceStatisticsResponseData Data { get; set; }
-        public class QueryDeviceStatisticsResponseData : TeaModel {
-            [NameInMap("deviceCount")]
-            [Validation(Required=true)]
-            public long? DeviceCount { get; set; }
-            [NameInMap("onlineCount")]
-            [Validation(Required=true)]
-            public long? OnlineCount { get; set; }
-            [NameInMap("activeCount")]
-            [Validation(Required=true)]
-            public long? ActiveCount { get; set; }
-        };
+        public QueryDeviceStatisticsResponseBody Body { get; set; }
 
     }
 

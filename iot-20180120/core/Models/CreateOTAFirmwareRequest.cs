@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("FirmwareName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareName { get; set; }
 
         [NameInMap("DestVersion")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DestVersion { get; set; }
 
         [NameInMap("FirmwareUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FirmwareUrl { get; set; }
 
         [NameInMap("FirmwareSign")]

@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DeviceName { get; set; }
 
         [NameInMap("Identifier")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Identifier { get; set; }
 
         [NameInMap("Args")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Args { get; set; }
 
         [NameInMap("IotId")]

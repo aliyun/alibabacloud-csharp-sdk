@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("Limit")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Limit { get; set; }
 
         [NameInMap("JobId")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         [NameInMap("Device")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Device { get; set; }
+        public string Device { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

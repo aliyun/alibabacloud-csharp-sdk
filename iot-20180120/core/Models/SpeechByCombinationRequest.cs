@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SpeechByCombinationRequest : TeaModel {
         [NameInMap("CombinationList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> CombinationList { get; set; }
 
         [NameInMap("IotId")]

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DeviceName { get; set; }
 
         [NameInMap("PropKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string PropKey { get; set; }
 
         [NameInMap("IotId")]

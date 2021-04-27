@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetDeviceBindStatusResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public List<BatchGetDeviceBindStatusResponseData> Data { get; set; }
-        public class BatchGetDeviceBindStatusResponseData : TeaModel {
-            [NameInMap("IotId")]
-            [Validation(Required=true)]
-            public string IotId { get; set; }
-
-            [NameInMap("BindStatus")]
-            [Validation(Required=true)]
-            public int? BindStatus { get; set; }
-
-        }
+        public BatchGetDeviceBindStatusResponseBody Body { get; set; }
 
     }
 

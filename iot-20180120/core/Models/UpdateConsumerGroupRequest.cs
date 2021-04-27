@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("NewGroupName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string NewGroupName { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GroupId { get; set; }
 
     }

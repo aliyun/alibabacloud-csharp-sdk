@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("PropertyTimestampFilter")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? PropertyTimestampFilter { get; set; }
 
         [NameInMap("PropertyValueFilter")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? PropertyValueFilter { get; set; }
 
     }

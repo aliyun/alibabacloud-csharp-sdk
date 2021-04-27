@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotId { get; set; }
 
         [NameInMap("FileId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileId { get; set; }
 
     }

@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string ProductKey { get; set; }
 
         [NameInMap("Items")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Items { get; set; }
 
         [NameInMap("Versions")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Versions { get; set; }
 
     }

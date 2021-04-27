@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDataAPIServiceRequest : TeaModel {
         [NameInMap("DisplayName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         [NameInMap("OriginSql")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string OriginSql { get; set; }
 
         [NameInMap("RequestParam")]
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         }
 
         [NameInMap("TemplateSql")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TemplateSql { get; set; }
 
         [NameInMap("ApiPath")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApiPath { get; set; }
 
         [NameInMap("IotInstanceId")]

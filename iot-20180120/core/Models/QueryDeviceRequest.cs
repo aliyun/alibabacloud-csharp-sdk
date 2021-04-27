@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("CurrentPage")]

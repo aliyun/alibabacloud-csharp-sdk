@@ -9,51 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GenerateDeviceNameListURLResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GenerateDeviceNameListURLResponseData Data { get; set; }
-        public class GenerateDeviceNameListURLResponseData : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=true)]
-            public string Key { get; set; }
-            [NameInMap("Host")]
-            [Validation(Required=true)]
-            public string Host { get; set; }
-            [NameInMap("Policy")]
-            [Validation(Required=true)]
-            public string Policy { get; set; }
-            [NameInMap("AccessKeyId")]
-            [Validation(Required=true)]
-            public string AccessKeyId { get; set; }
-            [NameInMap("Signature")]
-            [Validation(Required=true)]
-            public string Signature { get; set; }
-            [NameInMap("FileUrl")]
-            [Validation(Required=true)]
-            public string FileUrl { get; set; }
-            [NameInMap("UtcCreate")]
-            [Validation(Required=true)]
-            public string UtcCreate { get; set; }
-            [NameInMap("ObjectStorage")]
-            [Validation(Required=true)]
-            public string ObjectStorage { get; set; }
-        };
+        public GenerateDeviceNameListURLResponseBody Body { get; set; }
 
     }
 

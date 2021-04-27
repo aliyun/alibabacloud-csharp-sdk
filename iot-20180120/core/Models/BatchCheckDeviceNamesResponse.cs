@@ -9,54 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchCheckDeviceNamesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public BatchCheckDeviceNamesResponseData Data { get; set; }
-        public class BatchCheckDeviceNamesResponseData : TeaModel {
-            [NameInMap("ApplyId")]
-            [Validation(Required=true)]
-            public long? ApplyId { get; set; }
-            [NameInMap("InvalidDeviceNameList")]
-            [Validation(Required=true)]
-            public BatchCheckDeviceNamesResponseDataInvalidDeviceNameList InvalidDeviceNameList { get; set; }
-            public class BatchCheckDeviceNamesResponseDataInvalidDeviceNameList : TeaModel {
-                /// <summary>
-                /// InvalidDeviceName
-                /// </summary>
-                [NameInMap("InvalidDeviceName")]
-                [Validation(Required=true)]
-                public List<string> InvalidDeviceName { get; set; }
-
-            }
-            [NameInMap("InvalidDeviceNicknameList")]
-            [Validation(Required=true)]
-            public BatchCheckDeviceNamesResponseDataInvalidDeviceNicknameList InvalidDeviceNicknameList { get; set; }
-            public class BatchCheckDeviceNamesResponseDataInvalidDeviceNicknameList : TeaModel {
-                /// <summary>
-                /// InvalidDeviceNickname
-                /// </summary>
-                [NameInMap("InvalidDeviceNickname")]
-                [Validation(Required=true)]
-                public List<string> InvalidDeviceNickname { get; set; }
-
-            }
-        };
+        public BatchCheckDeviceNamesResponseBody Body { get; set; }
 
     }
 

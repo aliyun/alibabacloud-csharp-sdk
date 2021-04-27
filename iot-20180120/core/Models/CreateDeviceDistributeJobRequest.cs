@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateDeviceDistributeJobRequest : TeaModel {
         [NameInMap("DeviceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> DeviceName { get; set; }
 
         [NameInMap("SourceInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("TargetUid")]
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string TargetAliyunId { get; set; }
 
         [NameInMap("TargetInstanceConfig")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<CreateDeviceDistributeJobRequestTargetInstanceConfig> TargetInstanceConfig { get; set; }
         public class CreateDeviceDistributeJobRequestTargetInstanceConfig : TeaModel {
             [NameInMap("TargetInstanceId")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string TargetInstanceId { get; set; }
 
         }
 
         [NameInMap("Strategy")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Strategy { get; set; }
 
     }

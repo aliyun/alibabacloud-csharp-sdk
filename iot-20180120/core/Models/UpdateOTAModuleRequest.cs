@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ModuleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ModuleName { get; set; }
 
         [NameInMap("Desc")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Desc { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
     }

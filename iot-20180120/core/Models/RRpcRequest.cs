@@ -14,19 +14,19 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("DeviceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeviceName { get; set; }
 
         [NameInMap("Timeout")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Timeout { get; set; }
 
         [NameInMap("RequestBase64Byte")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RequestBase64Byte { get; set; }
 
         [NameInMap("Topic")]

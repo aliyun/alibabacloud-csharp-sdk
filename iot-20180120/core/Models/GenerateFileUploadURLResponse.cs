@@ -9,45 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GenerateFileUploadURLResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GenerateFileUploadURLResponseData Data { get; set; }
-        public class GenerateFileUploadURLResponseData : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=true)]
-            public string Key { get; set; }
-            [NameInMap("Host")]
-            [Validation(Required=true)]
-            public string Host { get; set; }
-            [NameInMap("Policy")]
-            [Validation(Required=true)]
-            public string Policy { get; set; }
-            [NameInMap("OssAccessKeyId")]
-            [Validation(Required=true)]
-            public string OssAccessKeyId { get; set; }
-            [NameInMap("Signature")]
-            [Validation(Required=true)]
-            public string Signature { get; set; }
-            [NameInMap("ObjectStorage")]
-            [Validation(Required=true)]
-            public string ObjectStorage { get; set; }
-        };
+        public GenerateFileUploadURLResponseBody Body { get; set; }
 
     }
 

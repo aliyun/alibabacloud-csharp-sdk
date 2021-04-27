@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("ProductTag")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<CreateProductTagsRequestProductTag> ProductTag { get; set; }
         public class CreateProductTagsRequestProductTag : TeaModel {
             [NameInMap("TagKey")]

@@ -9,54 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryBatchRegisterDeviceStatusResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryBatchRegisterDeviceStatusResponseData Data { get; set; }
-        public class QueryBatchRegisterDeviceStatusResponseData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-            [NameInMap("ValidList")]
-            [Validation(Required=true)]
-            public QueryBatchRegisterDeviceStatusResponseDataValidList ValidList { get; set; }
-            public class QueryBatchRegisterDeviceStatusResponseDataValidList : TeaModel {
-                /// <summary>
-                /// Name
-                /// </summary>
-                [NameInMap("Name")]
-                [Validation(Required=true)]
-                public List<string> Name { get; set; }
-
-            }
-            [NameInMap("InvalidList")]
-            [Validation(Required=true)]
-            public QueryBatchRegisterDeviceStatusResponseDataInvalidList InvalidList { get; set; }
-            public class QueryBatchRegisterDeviceStatusResponseDataInvalidList : TeaModel {
-                /// <summary>
-                /// Name
-                /// </summary>
-                [NameInMap("Name")]
-                [Validation(Required=true)]
-                public List<string> Name { get; set; }
-
-            }
-        };
+        public QueryBatchRegisterDeviceStatusResponseBody Body { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-iot")]
 [assembly: AssemblyDescription("Alibaba Cloud IoT Platform (20180120) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1f0beb90-814a-11eb-87d1-c19b690f07c4")]
+[assembly: Guid("b7851ee0-a702-11eb-a4b6-7114edb4f117")]
 
 // Version information for an assembly consists of the following four values:
 //

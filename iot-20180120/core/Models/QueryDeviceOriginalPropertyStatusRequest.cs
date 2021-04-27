@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotId { get; set; }
 
         [NameInMap("Asc")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Asc { get; set; }
 
     }

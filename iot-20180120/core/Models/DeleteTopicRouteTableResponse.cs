@@ -9,34 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteTopicRouteTableResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("IsAllSucceed")]
-        [Validation(Required=true)]
-        public bool? IsAllSucceed { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("FailureTopics")]
-        [Validation(Required=true)]
-        public DeleteTopicRouteTableResponseFailureTopics FailureTopics { get; set; }
-        public class DeleteTopicRouteTableResponseFailureTopics : TeaModel {
-            [NameInMap("Topic")]
-            [Validation(Required=true)]
-            public List<string> Topic { get; set; }
-        };
+        public DeleteTopicRouteTableResponseBody Body { get; set; }
 
     }
 

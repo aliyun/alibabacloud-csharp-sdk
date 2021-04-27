@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public bool? ThingHistoryFlag { get; set; }
 
         [NameInMap("ProductKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductKey { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
         [NameInMap("DeviceDataFlag")]

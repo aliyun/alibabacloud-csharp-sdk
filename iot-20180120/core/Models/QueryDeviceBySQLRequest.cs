@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceBySQLRequest : TeaModel {
         [NameInMap("IotInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("SQL")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SQL { get; set; }
 
     }

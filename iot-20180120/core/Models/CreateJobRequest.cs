@@ -18,32 +18,32 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string Description { get; set; }
 
         [NameInMap("JobDocument")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string JobDocument { get; set; }
 
         [NameInMap("Type")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Type { get; set; }
 
         [NameInMap("JobFile")]
         [Validation(Required=false)]
-        public Dictionary<string, object> JobFile { get; set; }
+        public string JobFile { get; set; }
 
         [NameInMap("JobName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string JobName { get; set; }
 
         [NameInMap("TimeoutConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> TimeoutConfig { get; set; }
+        public string TimeoutConfig { get; set; }
 
         [NameInMap("RolloutConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> RolloutConfig { get; set; }
+        public string RolloutConfig { get; set; }
 
         [NameInMap("TargetConfig")]
-        [Validation(Required=true)]
-        public Dictionary<string, object> TargetConfig { get; set; }
+        [Validation(Required=false)]
+        public string TargetConfig { get; set; }
 
     }
 

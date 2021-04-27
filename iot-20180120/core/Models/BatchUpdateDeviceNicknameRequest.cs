@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("DeviceNicknameInfo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> DeviceNicknameInfo { get; set; }
         public class BatchUpdateDeviceNicknameRequestDeviceNicknameInfo : TeaModel {
             [NameInMap("ProductKey")]

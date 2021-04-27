@@ -9,33 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetThingModelTslPublishedResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetThingModelTslPublishedResponseData Data { get; set; }
-        public class GetThingModelTslPublishedResponseData : TeaModel {
-            [NameInMap("TslStr")]
-            [Validation(Required=true)]
-            public string TslStr { get; set; }
-            [NameInMap("TslUri")]
-            [Validation(Required=true)]
-            public string TslUri { get; set; }
-        };
+        public GetThingModelTslPublishedResponseBody Body { get; set; }
 
     }
 

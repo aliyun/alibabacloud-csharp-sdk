@@ -19,14 +19,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         [NameInMap("TimeoutConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> TimeoutConfig { get; set; }
+        public string TimeoutConfig { get; set; }
 
         [NameInMap("RolloutConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, object> RolloutConfig { get; set; }
+        public string RolloutConfig { get; set; }
 
         [NameInMap("JobId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string JobId { get; set; }
 
     }

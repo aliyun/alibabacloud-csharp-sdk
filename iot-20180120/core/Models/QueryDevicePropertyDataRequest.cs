@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("ProductKey")]
@@ -26,15 +26,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string DeviceName { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         [NameInMap("Identifier")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Identifier { get; set; }
 
         [NameInMap("Asc")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Asc { get; set; }
 
         [NameInMap("IotId")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotId { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? EndTime { get; set; }
 
     }

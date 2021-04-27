@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GroupId { get; set; }
 
         [NameInMap("Device")]
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<BatchDeleteDeviceGroupRelationsRequestDevice> Device { get; set; }
         public class BatchDeleteDeviceGroupRelationsRequestDevice : TeaModel {
             [NameInMap("ProductKey")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string ProductKey { get; set; }
 
             [NameInMap("DeviceName")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string DeviceName { get; set; }
 
         }

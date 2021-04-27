@@ -14,12 +14,16 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("FileSuffix")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileSuffix { get; set; }
 
         [NameInMap("BizCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizCode { get; set; }
+
+        [NameInMap("FileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
 
     }
 

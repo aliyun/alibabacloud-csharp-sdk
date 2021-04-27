@@ -14,15 +14,15 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("DriverName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriverName { get; set; }
 
         [NameInMap("DriverProtocol")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriverProtocol { get; set; }
 
         [NameInMap("Runtime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Runtime { get; set; }
 
         [NameInMap("CpuArch")]

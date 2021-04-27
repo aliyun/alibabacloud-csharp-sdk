@@ -9,52 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceListByDeviceGroupResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Page")]
-        [Validation(Required=true)]
-        public int? Page { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=true)]
-        public int? PageCount { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=true)]
-        public int? Total { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public QueryDeviceListByDeviceGroupResponseData Data { get; set; }
-        public class QueryDeviceListByDeviceGroupResponseData : TeaModel {
-            [NameInMap("SimpleDeviceInfo")]
-            [Validation(Required=true)]
-            public List<QueryDeviceListByDeviceGroupResponseDataSimpleDeviceInfo> SimpleDeviceInfo { get; set; }
-            public class QueryDeviceListByDeviceGroupResponseDataSimpleDeviceInfo : TeaModel {
-                public string ProductName { get; set; }
-                public string ProductKey { get; set; }
-                public string DeviceName { get; set; }
-                public string IotId { get; set; }
-            }
-        };
+        public QueryDeviceListByDeviceGroupResponseBody Body { get; set; }
 
     }
 

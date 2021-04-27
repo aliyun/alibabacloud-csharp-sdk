@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
     }
 
 }

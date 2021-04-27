@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListAnalyticsDataRequest : TeaModel {
         [NameInMap("IotInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
         [NameInMap("IsoId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IsoId { get; set; }
 
         [NameInMap("ApiPath")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApiPath { get; set; }
 
         [NameInMap("PageSize")]
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public List<ListAnalyticsDataRequestCondition> Condition { get; set; }
         public class ListAnalyticsDataRequestCondition : TeaModel {
             [NameInMap("FieldName")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string FieldName { get; set; }
 
             [NameInMap("Operate")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Operate { get; set; }
 
             [NameInMap("Value")]

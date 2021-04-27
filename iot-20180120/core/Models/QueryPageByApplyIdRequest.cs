@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public int? PageSize { get; set; }
 
         [NameInMap("ApplyId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ApplyId { get; set; }
 
         [NameInMap("CurrentPage")]

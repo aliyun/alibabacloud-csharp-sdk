@@ -14,27 +14,27 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         [NameInMap("DriverId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DriverId { get; set; }
 
         [NameInMap("ChannelName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ChannelName { get; set; }
 
         [NameInMap("Configs")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<CreateEdgeInstanceChannelRequestConfigs> Configs { get; set; }
         public class CreateEdgeInstanceChannelRequestConfigs : TeaModel {
             [NameInMap("Format")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Format { get; set; }
 
             [NameInMap("Content")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public string Content { get; set; }
 
             [NameInMap("Key")]

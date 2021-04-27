@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string TargetUid { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("Status")]

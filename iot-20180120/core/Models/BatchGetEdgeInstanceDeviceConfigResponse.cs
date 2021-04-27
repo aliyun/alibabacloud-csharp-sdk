@@ -9,43 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetEdgeInstanceDeviceConfigResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("DeviceConfigList")]
-        [Validation(Required=true)]
-        public List<BatchGetEdgeInstanceDeviceConfigResponseDeviceConfigList> DeviceConfigList { get; set; }
-        public class BatchGetEdgeInstanceDeviceConfigResponseDeviceConfigList : TeaModel {
-            [NameInMap("IotId")]
-            [Validation(Required=true)]
-            public string IotId { get; set; }
-
-            [NameInMap("Config")]
-            [Validation(Required=true)]
-            public BatchGetEdgeInstanceDeviceConfigResponseDeviceConfigListConfig Config { get; set; }
-            public class BatchGetEdgeInstanceDeviceConfigResponseDeviceConfigListConfig : TeaModel {
-                [NameInMap("Format")]
-                [Validation(Required=true)]
-                public string Format { get; set; }
-                [NameInMap("Content")]
-                [Validation(Required=true)]
-                public string Content { get; set; }
-            };
-
-        }
+        public BatchGetEdgeInstanceDeviceConfigResponseBody Body { get; set; }
 
     }
 

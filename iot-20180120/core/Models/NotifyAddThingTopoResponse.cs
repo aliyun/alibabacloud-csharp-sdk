@@ -9,30 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class NotifyAddThingTopoResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public NotifyAddThingTopoResponseData Data { get; set; }
-        public class NotifyAddThingTopoResponseData : TeaModel {
-            [NameInMap("MessageId")]
-            [Validation(Required=true)]
-            public string MessageId { get; set; }
-        };
+        public NotifyAddThingTopoResponseBody Body { get; set; }
 
     }
 

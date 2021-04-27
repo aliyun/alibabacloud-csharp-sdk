@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         public string IotInstanceId { get; set; }
 
         [NameInMap("ProductName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProductName { get; set; }
 
         [NameInMap("NodeType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? NodeType { get; set; }
 
         [NameInMap("DataFormat")]
@@ -36,10 +36,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("Id2")]
         [Validation(Required=false)]
         public bool? Id2 { get; set; }
-
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public long? CategoryId { get; set; }
 
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]

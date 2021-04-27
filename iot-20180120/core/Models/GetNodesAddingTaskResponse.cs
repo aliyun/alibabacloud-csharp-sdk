@@ -9,46 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetNodesAddingTaskResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public string TaskId { get; set; }
-
-        [NameInMap("TaskState")]
-        [Validation(Required=true)]
-        public string TaskState { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=true)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("SuccessCount")]
-        [Validation(Required=true)]
-        public long? SuccessCount { get; set; }
-
-        [NameInMap("SuccessDevEuis")]
-        [Validation(Required=true)]
-        public GetNodesAddingTaskResponseSuccessDevEuis SuccessDevEuis { get; set; }
-        public class GetNodesAddingTaskResponseSuccessDevEuis : TeaModel {
-            [NameInMap("SuccessDevEui")]
-            [Validation(Required=true)]
-            public List<string> SuccessDevEui { get; set; }
-        };
+        public GetNodesAddingTaskResponseBody Body { get; set; }
 
     }
 

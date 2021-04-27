@@ -9,85 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListDistributedProductResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=true)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ListDistributedProductResponseData Data { get; set; }
-        public class ListDistributedProductResponseData : TeaModel {
-            [NameInMap("Total")]
-            [Validation(Required=true)]
-            public int? Total { get; set; }
-            [NameInMap("Info")]
-            [Validation(Required=true)]
-            public ListDistributedProductResponseDataInfo Info { get; set; }
-            public class ListDistributedProductResponseDataInfo : TeaModel {
-                [NameInMap("items")]
-                [Validation(Required=true)]
-                public List<ListDistributedProductResponseDataInfoItems> Items { get; set; }
-                public class ListDistributedProductResponseDataInfoItems : TeaModel {
-                    [NameInMap("SourceUid")]
-                    [Validation(Required=true)]
-                    public string SourceUid { get; set; }
-
-                    [NameInMap("TargetUid")]
-                    [Validation(Required=true)]
-                    public string TargetUid { get; set; }
-
-                    [NameInMap("ProductKey")]
-                    [Validation(Required=true)]
-                    public string ProductKey { get; set; }
-
-                    [NameInMap("SourceInstanceId")]
-                    [Validation(Required=true)]
-                    public string SourceInstanceId { get; set; }
-
-                    [NameInMap("TargetInstanceId")]
-                    [Validation(Required=true)]
-                    public string TargetInstanceId { get; set; }
-
-                    [NameInMap("GmtCreate")]
-                    [Validation(Required=true)]
-                    public int? GmtCreate { get; set; }
-
-                    [NameInMap("TargetAliyunId")]
-                    [Validation(Required=true)]
-                    public string TargetAliyunId { get; set; }
-
-                    [NameInMap("SourceRegion")]
-                    [Validation(Required=true)]
-                    public string SourceRegion { get; set; }
-
-                    [NameInMap("TargetRegion")]
-                    [Validation(Required=true)]
-                    public string TargetRegion { get; set; }
-
-                    [NameInMap("SourceInstanceName")]
-                    [Validation(Required=true)]
-                    public string SourceInstanceName { get; set; }
-
-                    [NameInMap("TargetInstanceName")]
-                    [Validation(Required=true)]
-                    public string TargetInstanceName { get; set; }
-
-                }
-
-            }
-        };
+        public ListDistributedProductResponseBody Body { get; set; }
 
     }
 
