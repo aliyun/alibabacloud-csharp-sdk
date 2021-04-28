@@ -33,6 +33,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<QuerySavingsPlansInstanceRequestTag> Tag { get; set; }
+        public class QuerySavingsPlansInstanceRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

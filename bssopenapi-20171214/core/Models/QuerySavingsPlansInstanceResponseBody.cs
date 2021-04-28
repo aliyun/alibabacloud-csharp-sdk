@@ -26,8 +26,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<QuerySavingsPlansInstanceResponseBodyDataItems> Items { get; set; }
             public class QuerySavingsPlansInstanceResponseBodyDataItems : TeaModel {
                 public string Status { get; set; }
-                public bool? Share { get; set; }
                 public string SavingsType { get; set; }
+                public List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> Tags { get; set; }
+                public class QuerySavingsPlansInstanceResponseBodyDataItemsTags : TeaModel {
+                    public string Key { get; set; }
+                    public string Value { get; set; }
+                }
                 public string PrepayFee { get; set; }
                 public string Utilization { get; set; }
                 public string InstanceId { get; set; }
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndTime { get; set; }
                 public string StartTime { get; set; }
                 public string InstanceFamily { get; set; }
+                public string AllocationStatus { get; set; }
                 public string Region { get; set; }
                 public string TotalSave { get; set; }
                 public string PoolValue { get; set; }
