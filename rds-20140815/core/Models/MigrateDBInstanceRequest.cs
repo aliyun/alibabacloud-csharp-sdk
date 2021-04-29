@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string TargetDedicatedHostIdForSlave { get; set; }
 
-        [NameInMap("TargetDedicatedHostIdForLog")]
-        [Validation(Required=false)]
-        public string TargetDedicatedHostIdForLog { get; set; }
-
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
@@ -52,38 +48,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SpecifiedTime")]
         [Validation(Required=false)]
         public string SpecifiedTime { get; set; }
-
-        [NameInMap("TargetDBInstanceClass")]
-        [Validation(Required=false)]
-        public string TargetDBInstanceClass { get; set; }
-
-        [NameInMap("EngineVersion")]
-        [Validation(Required=false)]
-        public string EngineVersion { get; set; }
-
-        [NameInMap("DBInstanceTransType")]
-        [Validation(Required=false)]
-        public int? DBInstanceTransType { get; set; }
-
-        [NameInMap("Storage")]
-        [Validation(Required=false)]
-        public int? Storage { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("ZoneIdSlave1")]
-        [Validation(Required=false)]
-        public string ZoneIdSlave1 { get; set; }
-
-        [NameInMap("ZoneIdSlave2")]
-        [Validation(Required=false)]
-        public string ZoneIdSlave2 { get; set; }
 
         [NameInMap("ZoneIdForLog")]
         [Validation(Required=false)]

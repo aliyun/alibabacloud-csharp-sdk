@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableRecoveryTimeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("RecoveryEndTime")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RecoveryEndTime { get; set; }
 
         [NameInMap("RecoveryBeginTime")]
         [Validation(Required=false)]
         public string RecoveryBeginTime { get; set; }
 
-        [NameInMap("RecoveryEndTime")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RecoveryEndTime { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

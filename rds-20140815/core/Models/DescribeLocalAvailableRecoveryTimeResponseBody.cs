@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeLocalAvailableRecoveryTimeResponseBody : TeaModel {
+        [NameInMap("RecoveryEndTime")]
+        [Validation(Required=false)]
+        public string RecoveryEndTime { get; set; }
+
+        [NameInMap("RecoveryBeginTime")]
+        [Validation(Required=false)]
+        public string RecoveryBeginTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
-
-        [NameInMap("RecoveryBeginTime")]
-        [Validation(Required=false)]
-        public string RecoveryBeginTime { get; set; }
-
-        [NameInMap("RecoveryEndTime")]
-        [Validation(Required=false)]
-        public string RecoveryEndTime { get; set; }
 
     }
 

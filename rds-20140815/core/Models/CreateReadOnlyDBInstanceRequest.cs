@@ -113,6 +113,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstructionSetArch { get; set; }
 
+        [NameInMap("UsedTime")]
+        [Validation(Required=false)]
+        public string UsedTime { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
+
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public string AutoRenew { get; set; }
+
     }
 
 }

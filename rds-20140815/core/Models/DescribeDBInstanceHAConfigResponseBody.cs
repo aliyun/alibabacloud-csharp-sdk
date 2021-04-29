@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("SyncMode")]
-        [Validation(Required=false)]
-        public string SyncMode { get; set; }
-
         [NameInMap("HAMode")]
         [Validation(Required=false)]
         public string HAMode { get; set; }
@@ -33,15 +29,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo> NodeInfo { get; set; }
             public class DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo : TeaModel {
-                public string NodeId { get; set; }
-                public string RegionId { get; set; }
                 public string LogSyncTime { get; set; }
-                public string DataSyncTime { get; set; }
                 public string NodeType { get; set; }
                 public string ZoneId { get; set; }
                 public string SyncStatus { get; set; }
+                public string DataSyncTime { get; set; }
+                public string NodeId { get; set; }
+                public string RegionId { get; set; }
             }
         };
+
+        [NameInMap("SyncMode")]
+        [Validation(Required=false)]
+        public string SyncMode { get; set; }
 
     }
 

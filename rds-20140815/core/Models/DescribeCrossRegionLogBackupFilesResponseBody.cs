@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionLogBackupFilesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
@@ -37,9 +17,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -49,18 +45,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeCrossRegionLogBackupFilesResponseBodyItemsItem> Item { get; set; }
             public class DescribeCrossRegionLogBackupFilesResponseBodyItemsItem : TeaModel {
-                public int? CrossLogBackupId { get; set; }
-                public string CrossBackupRegion { get; set; }
-                public long? CrossLogBackupSize { get; set; }
                 public string LogBeginTime { get; set; }
-                public string LogEndTime { get; set; }
-                public string CrossDownloadLink { get; set; }
-                public string CrossIntranetDownloadLink { get; set; }
                 public string LinkExpiredTime { get; set; }
+                public string CrossIntranetDownloadLink { get; set; }
                 public string LogFileName { get; set; }
+                public string CrossBackupRegion { get; set; }
+                public string CrossDownloadLink { get; set; }
+                public long? CrossLogBackupSize { get; set; }
                 public int? InstanceId { get; set; }
+                public int? CrossLogBackupId { get; set; }
+                public string LogEndTime { get; set; }
             }
         };
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

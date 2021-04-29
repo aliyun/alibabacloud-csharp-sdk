@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string TableMeta { get; set; }
 
-        [NameInMap("RestoreTableMode")]
-        [Validation(Required=false)]
-        public string RestoreTableMode { get; set; }
-
     }
 
 }

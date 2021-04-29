@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescibeImportsFromDatabaseResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB> ImportResultFromDB { get; set; }
             public class DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB : TeaModel {
-                public int? ImportId { get; set; }
-                public string ImportDataType { get; set; }
-                public string ImportDataStatus { get; set; }
-                public string ImportDataStatusDescription { get; set; }
                 public string IncrementalImportingTime { get; set; }
+                public int? ImportId { get; set; }
+                public string ImportDataStatus { get; set; }
+                public string ImportDataType { get; set; }
+                public string ImportDataStatusDescription { get; set; }
             }
         };
 

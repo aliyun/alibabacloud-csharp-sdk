@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("ActivationState")]
+        [Validation(Required=false)]
+        public string ActivationState { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("LicenseType")]
         [Validation(Required=false)]
         public string LicenseType { get; set; }
-
-        [NameInMap("ActivationState")]
-        [Validation(Required=false)]
-        public string ActivationState { get; set; }
 
     }
 

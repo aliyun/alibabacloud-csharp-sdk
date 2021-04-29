@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("OrderId")]
+        [NameInMap("Port")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string Port { get; set; }
 
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
-        [NameInMap("Port")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string Port { get; set; }
+        public string OrderId { get; set; }
 
     }
 

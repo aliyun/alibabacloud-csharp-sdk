@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("DbInstanceName")]
+        [Validation(Required=false)]
+        public string DbInstanceName { get; set; }
+
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
     }
 
 }

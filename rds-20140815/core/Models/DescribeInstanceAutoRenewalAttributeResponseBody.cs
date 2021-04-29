@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceAutoRenewalAttributeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem> Item { get; set; }
             public class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem : TeaModel {
-                public string DBInstanceId { get; set; }
-                public string RegionId { get; set; }
-                public int? Duration { get; set; }
                 public string Status { get; set; }
                 public string AutoRenew { get; set; }
+                public int? Duration { get; set; }
+                public string DBInstanceId { get; set; }
+                public string RegionId { get; set; }
             }
         };
 

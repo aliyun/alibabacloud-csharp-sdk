@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDedicatedHostImageCategoriesResponseBodyImagesImages> Images { get; set; }
             public class DescribeDedicatedHostImageCategoriesResponseBodyImagesImages : TeaModel {
-                public string ImageName { get; set; }
                 public string ImageCode { get; set; }
+                public string ImageName { get; set; }
             }
         };
 

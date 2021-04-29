@@ -9,20 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeDBInstancesRequestTag> Tag { get; set; }
-        public class DescribeDBInstancesRequestTag : TeaModel {
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -135,9 +121,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? InstanceLevel { get; set; }
 
-        [NameInMap("NeedVpcName")]
+        [NameInMap("ConnectionString")]
         [Validation(Required=false)]
-        public bool? NeedVpcName { get; set; }
+        public string ConnectionString { get; set; }
 
     }
 

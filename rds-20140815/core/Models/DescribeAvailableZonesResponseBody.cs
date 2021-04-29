@@ -17,22 +17,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public List<DescribeAvailableZonesResponseBodyAvailableZones> AvailableZones { get; set; }
         public class DescribeAvailableZonesResponseBodyAvailableZones : TeaModel {
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
             public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> SupportedEngines { get; set; }
             public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines : TeaModel {
-                [NameInMap("Engine")]
-                [Validation(Required=false)]
-                public string Engine { get; set; }
-
                 [NameInMap("SupportedEngineVersions")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> SupportedEngineVersions { get; set; }
@@ -45,10 +33,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [Validation(Required=false)]
                     public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> SupportedCategorys { get; set; }
                     public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys : TeaModel {
-                        [NameInMap("Category")]
-                        [Validation(Required=false)]
-                        public string Category { get; set; }
-
                         [NameInMap("SupportedStorageTypes")]
                         [Validation(Required=false)]
                         public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> SupportedStorageTypes { get; set; }
@@ -59,11 +43,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                         }
 
+                        [NameInMap("Category")]
+                        [Validation(Required=false)]
+                        public string Category { get; set; }
+
                     }
 
                 }
 
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
+                public string Engine { get; set; }
+
             }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
 
         }
 

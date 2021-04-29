@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("CommodityCode")]
-        [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -64,10 +60,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
-
-        [NameInMap("PromotionCode")]
-        [Validation(Required=false)]
-        public string PromotionCode { get; set; }
 
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]

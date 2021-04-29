@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
-                public long? RuleId { get; set; }
-                public string Name { get; set; }
                 public string Description { get; set; }
+                public string Name { get; set; }
+                public long? RuleId { get; set; }
             }
         };
 
@@ -31,15 +31,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
-            [NameInMap("Currency")]
+            [NameInMap("Coupons")]
             [Validation(Required=false)]
-            public string Currency { get; set; }
-            [NameInMap("OriginalPrice")]
-            [Validation(Required=false)]
-            public float? OriginalPrice { get; set; }
-            [NameInMap("TradePrice")]
-            [Validation(Required=false)]
-            public float? TradePrice { get; set; }
+            public DescribePriceResponseBodyPriceInfoCoupons Coupons { get; set; }
+            public class DescribePriceResponseBodyPriceInfoCoupons : TeaModel {
+                [NameInMap("Coupon")]
+                [Validation(Required=false)]
+                public List<DescribePriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
+                public class DescribePriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("IsSelected")]
+                    [Validation(Required=false)]
+                    public string IsSelected { get; set; }
+
+                    [NameInMap("CouponNo")]
+                    [Validation(Required=false)]
+                    public string CouponNo { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+            }
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
@@ -52,33 +70,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public List<string> RuleId { get; set; }
 
             }
-            [NameInMap("Coupons")]
+            [NameInMap("TradePrice")]
             [Validation(Required=false)]
-            public DescribePriceResponseBodyPriceInfoCoupons Coupons { get; set; }
-            public class DescribePriceResponseBodyPriceInfoCoupons : TeaModel {
-                [NameInMap("Coupon")]
-                [Validation(Required=false)]
-                public List<DescribePriceResponseBodyPriceInfoCouponsCoupon> Coupon { get; set; }
-                public class DescribePriceResponseBodyPriceInfoCouponsCoupon : TeaModel {
-                    [NameInMap("CouponNo")]
-                    [Validation(Required=false)]
-                    public string CouponNo { get; set; }
-
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                    [NameInMap("Description")]
-                    [Validation(Required=false)]
-                    public string Description { get; set; }
-
-                    [NameInMap("IsSelected")]
-                    [Validation(Required=false)]
-                    public string IsSelected { get; set; }
-
-                }
-
-            }
+            public float? TradePrice { get; set; }
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
@@ -96,6 +90,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Success { get; set; }
 
             }
+            [NameInMap("OriginalPrice")]
+            [Validation(Required=false)]
+            public float? OriginalPrice { get; set; }
+            [NameInMap("Currency")]
+            [Validation(Required=false)]
+            public string Currency { get; set; }
         };
 
     }

@@ -37,14 +37,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
-        [NameInMap("NotEnabled")]
-        [Validation(Required=false)]
-        public int? NotEnabled { get; set; }
-
     }
 
 }

@@ -45,18 +45,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string CrossBackupRegion { get; set; }
 
-        [NameInMap("StorageOwner")]
-        [Validation(Required=false)]
-        public string StorageOwner { get; set; }
-
-        [NameInMap("StorageType")]
-        [Validation(Required=false)]
-        public string StorageType { get; set; }
-
-        [NameInMap("Endpoint")]
-        [Validation(Required=false)]
-        public string Endpoint { get; set; }
-
         [NameInMap("RetentType")]
         [Validation(Required=false)]
         public int? RetentType { get; set; }
@@ -64,10 +52,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("Retention")]
         [Validation(Required=false)]
         public int? Retention { get; set; }
-
-        [NameInMap("RelService")]
-        [Validation(Required=false)]
-        public string RelService { get; set; }
 
     }
 

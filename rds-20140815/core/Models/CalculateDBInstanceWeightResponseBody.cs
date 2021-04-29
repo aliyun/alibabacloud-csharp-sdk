@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight> DBInstanceWeight { get; set; }
             public class CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight : TeaModel {
-                public string DBInstanceId { get; set; }
-                public string DBInstanceType { get; set; }
                 public string ReadonlyInstanceSQLDelayedTime { get; set; }
                 public string Weight { get; set; }
+                public string DBInstanceType { get; set; }
+                public string DBInstanceId { get; set; }
             }
         };
 

@@ -9,29 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossBackupMetaListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("TotalPageCount")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
+        public int? TotalPageCount { get; set; }
 
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
 
-        [NameInMap("TotalPageCount")]
+        [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
-        public int? TotalPageCount { get; set; }
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -42,10 +38,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeCrossBackupMetaListResponseBodyItemsMeta> Meta { get; set; }
             public class DescribeCrossBackupMetaListResponseBodyItemsMeta : TeaModel {
                 public string Database { get; set; }
-                public string Tables { get; set; }
                 public string Size { get; set; }
+                public string Tables { get; set; }
             }
         };
+
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
 
     }
 

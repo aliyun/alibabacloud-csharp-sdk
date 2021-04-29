@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("OrderId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public long? OrderId { get; set; }
+        public string DBInstanceId { get; set; }
 
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public long? OrderId { get; set; }
 
     }
 

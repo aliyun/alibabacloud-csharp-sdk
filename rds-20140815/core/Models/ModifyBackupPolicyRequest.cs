@@ -69,18 +69,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string HighSpaceUsageProtection { get; set; }
 
-        [NameInMap("Duplication")]
-        [Validation(Required=false)]
-        public string Duplication { get; set; }
-
-        [NameInMap("DuplicationContent")]
-        [Validation(Required=false)]
-        public string DuplicationContent { get; set; }
-
-        [NameInMap("DuplicationLocation")]
-        [Validation(Required=false)]
-        public string DuplicationLocation { get; set; }
-
         [NameInMap("LogBackupFrequency")]
         [Validation(Required=false)]
         public string LogBackupFrequency { get; set; }
@@ -99,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         [NameInMap("ArchiveBackupKeepCount")]
         [Validation(Required=false)]
-        public string ArchiveBackupKeepCount { get; set; }
+        public int? ArchiveBackupKeepCount { get; set; }
 
         [NameInMap("ReleasedKeepPolicy")]
         [Validation(Required=false)]
@@ -116,6 +104,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("BackupInterval")]
         [Validation(Required=false)]
         public string BackupInterval { get; set; }
+
+        [NameInMap("BackupMethod")]
+        [Validation(Required=false)]
+        public string BackupMethod { get; set; }
 
     }
 

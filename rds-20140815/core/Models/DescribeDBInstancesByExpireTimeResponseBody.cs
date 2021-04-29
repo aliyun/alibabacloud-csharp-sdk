@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesByExpireTimeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -33,12 +33,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime> DBInstanceExpireTime { get; set; }
             public class DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime : TeaModel {
-                public string DBInstanceId { get; set; }
-                public string DBInstanceDescription { get; set; }
                 public string ExpireTime { get; set; }
-                public string DBInstanceStatus { get; set; }
-                public string LockMode { get; set; }
                 public string PayType { get; set; }
+                public string DBInstanceId { get; set; }
+                public string DBInstanceStatus { get; set; }
+                public string DBInstanceDescription { get; set; }
+                public string LockMode { get; set; }
             }
         };
 

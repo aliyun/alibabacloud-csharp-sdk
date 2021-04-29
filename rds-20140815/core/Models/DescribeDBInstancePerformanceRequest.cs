@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancePerformanceRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
@@ -40,14 +28,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
-
-        [NameInMap("UseNullWhenMissingPoint")]
-        [Validation(Required=false)]
-        public bool? UseNullWhenMissingPoint { get; set; }
-
-        [NameInMap("RoleId")]
-        [Validation(Required=false)]
-        public string RoleId { get; set; }
 
     }
 

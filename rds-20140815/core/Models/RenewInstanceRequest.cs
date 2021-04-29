@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string AutoPay { get; set; }
 
-        [NameInMap("BusinessInfo")]
-        [Validation(Required=false)]
-        public string BusinessInfo { get; set; }
-
     }
 
 }

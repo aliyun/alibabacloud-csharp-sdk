@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
-        [NameInMap("Operation")]
-        [Validation(Required=false)]
-        public string Operation { get; set; }
-
         [NameInMap("Force")]
         [Validation(Required=false)]
         public string Force { get; set; }

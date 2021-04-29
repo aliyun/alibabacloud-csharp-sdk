@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeOssDownloadsResponseBodyItemsOssDownload> OssDownload { get; set; }
             public class DescribeOssDownloadsResponseBodyItemsOssDownload : TeaModel {
-                public string FileName { get; set; }
-                public string CreateTime { get; set; }
                 public string EndTime { get; set; }
-                public string BackupMode { get; set; }
-                public string FileSize { get; set; }
                 public string Status { get; set; }
-                public string IsAvailable { get; set; }
                 public string Description { get; set; }
+                public string CreateTime { get; set; }
+                public string BackupMode { get; set; }
+                public string IsAvailable { get; set; }
+                public string FileName { get; set; }
+                public string FileSize { get; set; }
             }
         };
 

@@ -49,6 +49,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ReadOnlyInstanceWeight { get; set; }
 
+        [NameInMap("DbEndpointOperator")]
+        [Validation(Required=false)]
+        public string DbEndpointOperator { get; set; }
+
+        [NameInMap("DbEndpointAliases")]
+        [Validation(Required=false)]
+        public string DbEndpointAliases { get; set; }
+
+        [NameInMap("DbEndpointType")]
+        [Validation(Required=false)]
+        public string DbEndpointType { get; set; }
+
+        [NameInMap("DbEndpointReadWriteMode")]
+        [Validation(Required=false)]
+        public string DbEndpointReadWriteMode { get; set; }
+
     }
 
 }

@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems> DbProxyCertListItems { get; set; }
             public class GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems : TeaModel {
-                public string DbInstanceName { get; set; }
                 public string EndpointName { get; set; }
+                public string DbInstanceName { get; set; }
                 public string EndpointType { get; set; }
-                public string CertCommonName { get; set; }
                 public string SslExpiredTime { get; set; }
+                public string CertCommonName { get; set; }
             }
         };
 

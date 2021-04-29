@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
     }
 
 }

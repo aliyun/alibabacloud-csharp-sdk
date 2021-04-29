@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
-        [NameInMap("Resource")]
-        [Validation(Required=false)]
-        public string Resource { get; set; }
-
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }

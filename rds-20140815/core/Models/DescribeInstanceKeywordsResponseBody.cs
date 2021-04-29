@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Key")]
-        [Validation(Required=false)]
-        public string Key { get; set; }
-
         [NameInMap("Words")]
         [Validation(Required=false)]
         public DescribeInstanceKeywordsResponseBodyWords Words { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<string> Word { get; set; }
         };
+
+        [NameInMap("Key")]
+        [Validation(Required=false)]
+        public string Key { get; set; }
 
     }
 

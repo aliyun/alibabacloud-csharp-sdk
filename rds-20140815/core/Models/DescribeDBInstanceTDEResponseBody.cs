@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceTDEResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("TDEStatus")]
         [Validation(Required=false)]
         public string TDEStatus { get; set; }
@@ -29,6 +25,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string TDEStatus { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

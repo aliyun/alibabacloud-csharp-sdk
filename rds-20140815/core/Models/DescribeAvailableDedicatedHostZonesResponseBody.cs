@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones> DedicatedHostZones { get; set; }
             public class DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones : TeaModel {
-                public string ZoneId { get; set; }
                 public string Description { get; set; }
+                public string ZoneId { get; set; }
             }
         };
 

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public long? OrderId { get; set; }
-
         [NameInMap("DedicateHostList")]
         [Validation(Required=false)]
         public CreateDedicatedHostResponseBodyDedicateHostList DedicateHostList { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DedicatedHostId { get; set; }
             }
         };
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
 
     }
 

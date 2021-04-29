@@ -41,14 +41,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
-        [NameInMap("BackupSetType")]
-        [Validation(Required=false)]
-        public string BackupSetType { get; set; }
-
-        [NameInMap("BackupSetRegion")]
-        [Validation(Required=false)]
-        public string BackupSetRegion { get; set; }
-
         [NameInMap("RestoreTime")]
         [Validation(Required=false)]
         public string RestoreTime { get; set; }
@@ -60,14 +52,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SourceDBInstanceName")]
         [Validation(Required=false)]
         public string SourceDBInstanceName { get; set; }
-
-        [NameInMap("UserBakSetURL")]
-        [Validation(Required=false)]
-        public string UserBakSetURL { get; set; }
-
-        [NameInMap("BakSetName")]
-        [Validation(Required=false)]
-        public string BakSetName { get; set; }
 
         [NameInMap("TableMeta")]
         [Validation(Required=false)]

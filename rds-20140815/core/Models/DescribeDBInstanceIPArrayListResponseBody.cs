@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray> DBInstanceIPArray { get; set; }
             public class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray : TeaModel {
                 public string DBInstanceIPArrayName { get; set; }
-                public string DBInstanceIPArrayAttribute { get; set; }
                 public string SecurityIPType { get; set; }
                 public string SecurityIPList { get; set; }
+                public string DBInstanceIPArrayAttribute { get; set; }
             }
         };
 

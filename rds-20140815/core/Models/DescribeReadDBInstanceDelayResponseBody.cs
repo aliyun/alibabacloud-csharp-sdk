@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ReadDBInstanceId { get; set; }
 
-        [NameInMap("DelayTime")]
-        [Validation(Required=false)]
-        public int? DelayTime { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeReadDBInstanceDelayResponseBodyItems Items { get; set; }
@@ -33,19 +29,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeReadDBInstanceDelayResponseBodyItemsItems> Items { get; set; }
             public class DescribeReadDBInstanceDelayResponseBodyItemsItems : TeaModel {
-                public string DBInstanceId { get; set; }
                 public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames ReadDBInstanceNames { get; set; }
                 public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames : TeaModel {
                     [NameInMap("ReadDBInstanceName")]
                     [Validation(Required=false)]
                     public List<string> ReadDBInstanceName { get; set; }
-
-                }
-                public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes ReadDelayTimes { get; set; }
-                public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes : TeaModel {
-                    [NameInMap("ReadDelayTime")]
-                    [Validation(Required=false)]
-                    public List<string> ReadDelayTime { get; set; }
 
                 }
                 public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay ReadonlyInstanceDelay { get; set; }
@@ -54,43 +42,55 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     [Validation(Required=false)]
                     public List<DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay> ReadonlyInstanceDelay { get; set; }
                     public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay : TeaModel {
-                        [NameInMap("ReplayLatency")]
+                        [NameInMap("WriteLatency")]
                         [Validation(Required=false)]
-                        public string ReplayLatency { get; set; }
-
-                        [NameInMap("FlushLag")]
-                        [Validation(Required=false)]
-                        public string FlushLag { get; set; }
+                        public string WriteLatency { get; set; }
 
                         [NameInMap("FlushLatency")]
                         [Validation(Required=false)]
                         public string FlushLatency { get; set; }
 
-                        [NameInMap("SendLatency")]
+                        [NameInMap("ReadDBInstanceName")]
                         [Validation(Required=false)]
-                        public string SendLatency { get; set; }
+                        public string ReadDBInstanceName { get; set; }
 
                         [NameInMap("WriteLag")]
                         [Validation(Required=false)]
                         public string WriteLag { get; set; }
 
+                        [NameInMap("FlushLag")]
+                        [Validation(Required=false)]
+                        public string FlushLag { get; set; }
+
+                        [NameInMap("SendLatency")]
+                        [Validation(Required=false)]
+                        public string SendLatency { get; set; }
+
                         [NameInMap("ReplayLag")]
                         [Validation(Required=false)]
                         public string ReplayLag { get; set; }
 
-                        [NameInMap("WriteLatency")]
+                        [NameInMap("ReplayLatency")]
                         [Validation(Required=false)]
-                        public string WriteLatency { get; set; }
-
-                        [NameInMap("ReadDBInstanceName")]
-                        [Validation(Required=false)]
-                        public string ReadDBInstanceName { get; set; }
+                        public string ReplayLatency { get; set; }
 
                     }
 
                 }
+                public string DBInstanceId { get; set; }
+                public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes ReadDelayTimes { get; set; }
+                public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes : TeaModel {
+                    [NameInMap("ReadDelayTime")]
+                    [Validation(Required=false)]
+                    public List<string> ReadDelayTime { get; set; }
+
+                }
             }
         };
+
+        [NameInMap("DelayTime")]
+        [Validation(Required=false)]
+        public int? DelayTime { get; set; }
 
     }
 

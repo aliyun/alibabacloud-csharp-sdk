@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogReportsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -33,28 +33,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLLogReportsResponseBodyItemsItem> Item { get; set; }
             public class DescribeSQLLogReportsResponseBodyItemsItem : TeaModel {
-                public string ReportTime { get; set; }
-                public DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItems LatencyTopNItems { get; set; }
-                public class DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItems : TeaModel {
-                    [NameInMap("LatencyTopNItem")]
-                    [Validation(Required=false)]
-                    public List<DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem> LatencyTopNItem { get; set; }
-                    public class DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem : TeaModel {
-                        [NameInMap("SQLText")]
-                        [Validation(Required=false)]
-                        public string SQLText { get; set; }
-
-                        [NameInMap("AvgLatency")]
-                        [Validation(Required=false)]
-                        public long? AvgLatency { get; set; }
-
-                        [NameInMap("SQLExecuteTimes")]
-                        [Validation(Required=false)]
-                        public long? SQLExecuteTimes { get; set; }
-
-                    }
-
-                }
                 public DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItems QPSTopNItems { get; set; }
                 public class DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItems : TeaModel {
                     [NameInMap("QPSTopNItem")]
@@ -68,6 +46,28 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [NameInMap("SQLExecuteTimes")]
                         [Validation(Required=false)]
                         public long? SQLExecuteTimes { get; set; }
+
+                    }
+
+                }
+                public string ReportTime { get; set; }
+                public DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItems LatencyTopNItems { get; set; }
+                public class DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItems : TeaModel {
+                    [NameInMap("LatencyTopNItem")]
+                    [Validation(Required=false)]
+                    public List<DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem> LatencyTopNItem { get; set; }
+                    public class DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem : TeaModel {
+                        [NameInMap("SQLText")]
+                        [Validation(Required=false)]
+                        public string SQLText { get; set; }
+
+                        [NameInMap("SQLExecuteTimes")]
+                        [Validation(Required=false)]
+                        public long? SQLExecuteTimes { get; set; }
+
+                        [NameInMap("AvgLatency")]
+                        [Validation(Required=false)]
+                        public long? AvgLatency { get; set; }
 
                     }
 
