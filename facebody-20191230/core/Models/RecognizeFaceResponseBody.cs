@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public List<float?> PoseList { get; set; }
 
             }
-            [NameInMap("BeuatyList")]
+            [NameInMap("BeautyList")]
             [Validation(Required=false)]
-            public List<string> BeuatyList { get; set; }
+            public List<string> BeautyList { get; set; }
             [NameInMap("HatList")]
             [Validation(Required=false)]
             public List<string> HatList { get; set; }
@@ -99,6 +99,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("DenseFeatureLength")]
             [Validation(Required=false)]
             public int? DenseFeatureLength { get; set; }
+            [NameInMap("Masks")]
+            [Validation(Required=false)]
+            public List<string> Masks { get; set; }
         };
 
     }

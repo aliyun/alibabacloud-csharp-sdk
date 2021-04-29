@@ -1,3 +1,6 @@
+2021-04-29 Version: 1.0.10
+- Update RecognizeFace.
+
 2021-04-06 Version: 1.0.9
 - Release MonitorExamination.
 

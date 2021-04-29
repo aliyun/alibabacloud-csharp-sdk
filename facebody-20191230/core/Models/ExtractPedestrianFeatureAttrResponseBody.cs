@@ -71,6 +71,12 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [NameInMap("UpperColorScore")]
             [Validation(Required=false)]
             public float? UpperColorScore { get; set; }
+            [NameInMap("Orientation")]
+            [Validation(Required=false)]
+            public string Orientation { get; set; }
+            [NameInMap("OrientationScore")]
+            [Validation(Required=false)]
+            public float? OrientationScore { get; set; }
         };
 
     }
