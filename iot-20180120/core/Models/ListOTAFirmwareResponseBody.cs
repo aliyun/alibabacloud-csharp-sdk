@@ -59,7 +59,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string FirmwareDesc { get; set; }
                 public string FirmwareSign { get; set; }
                 public int? FirmwareSize { get; set; }
-                public string FirmwareUrl { get; set; }
                 public string ProductKey { get; set; }
                 public string SignMethod { get; set; }
                 public string ProductName { get; set; }

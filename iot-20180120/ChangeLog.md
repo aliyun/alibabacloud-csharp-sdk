@@ -1,3 +1,6 @@
+2021-05-02 Version: 2.1.2
+- Generated csharp 2018-01-20 for Iot.
+
 2021-04-27 Version: 2.1.1
 - Update AMP API.
 

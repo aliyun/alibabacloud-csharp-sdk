@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
-    public class GetDeviceStatusResponseBody : TeaModel {
+    public class DeleteSpeechResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,18 +24,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetDeviceStatusResponseBodyData Data { get; set; }
-        public class GetDeviceStatusResponseBodyData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("Timestamp")]
-            [Validation(Required=false)]
-            public long? Timestamp { get; set; }
-        };
 
     }
 

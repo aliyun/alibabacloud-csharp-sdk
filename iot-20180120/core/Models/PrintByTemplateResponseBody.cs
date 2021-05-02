@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("RetryCount")]
             [Validation(Required=false)]
             public int? RetryCount { get; set; }
+            [NameInMap("MaxRetryCount")]
+            [Validation(Required=false)]
+            public int? MaxRetryCount { get; set; }
         };
 
     }

@@ -1239,6 +1239,38 @@ namespace AlibabaCloud.SDK.Iot20180120
             return await CancelOTATaskByJobWithOptionsAsync(request, runtime);
         }
 
+        public CancelReleaseProductResponse CancelReleaseProductWithOptions(CancelReleaseProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CancelReleaseProductResponse>(DoRPCRequest("CancelReleaseProduct", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CancelReleaseProductResponse> CancelReleaseProductWithOptionsAsync(CancelReleaseProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CancelReleaseProductResponse>(await DoRPCRequestAsync("CancelReleaseProduct", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CancelReleaseProductResponse CancelReleaseProduct(CancelReleaseProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelReleaseProductWithOptions(request, runtime);
+        }
+
+        public async Task<CancelReleaseProductResponse> CancelReleaseProductAsync(CancelReleaseProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelReleaseProductWithOptionsAsync(request, runtime);
+        }
+
         public ClearEdgeInstanceDriverConfigsResponse ClearEdgeInstanceDriverConfigsWithOptions(ClearEdgeInstanceDriverConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2965,6 +2997,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSceneRuleWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteSpeechResponse DeleteSpeechWithOptions(DeleteSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteSpeechResponse>(DoRPCRequest("DeleteSpeech", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DeleteSpeechResponse> DeleteSpeechWithOptionsAsync(DeleteSpeechRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteSpeechResponse>(await DoRPCRequestAsync("DeleteSpeech", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DeleteSpeechResponse DeleteSpeech(DeleteSpeechRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSpeechWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteSpeechResponse> DeleteSpeechAsync(DeleteSpeechRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSpeechWithOptionsAsync(request, runtime);
         }
 
         public DeleteSubscribeRelationResponse DeleteSubscribeRelationWithOptions(DeleteSubscribeRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7225,6 +7289,38 @@ namespace AlibabaCloud.SDK.Iot20180120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseEdgeDriverVersionWithOptionsAsync(request, runtime);
+        }
+
+        public ReleaseProductResponse ReleaseProductWithOptions(ReleaseProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ReleaseProductResponse>(DoRPCRequest("ReleaseProduct", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ReleaseProductResponse> ReleaseProductWithOptionsAsync(ReleaseProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ReleaseProductResponse>(await DoRPCRequestAsync("ReleaseProduct", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ReleaseProductResponse ReleaseProduct(ReleaseProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReleaseProductWithOptions(request, runtime);
+        }
+
+        public async Task<ReleaseProductResponse> ReleaseProductAsync(ReleaseProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReleaseProductWithOptionsAsync(request, runtime);
         }
 
         public RemoveThingTopoResponse RemoveThingTopoWithOptions(RemoveThingTopoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

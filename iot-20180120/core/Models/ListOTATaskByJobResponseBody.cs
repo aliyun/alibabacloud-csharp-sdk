@@ -63,6 +63,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string Progress { get; set; }
                 public string IotId { get; set; }
                 public string UtcCreate { get; set; }
+                public string Timeout { get; set; }
             }
         };
 

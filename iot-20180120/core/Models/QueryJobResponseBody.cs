@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("UtcModified")]
             [Validation(Required=false)]
             public string UtcModified { get; set; }
+            [NameInMap("ScheduledTime")]
+            [Validation(Required=false)]
+            public long? ScheduledTime { get; set; }
             [NameInMap("RolloutConfig")]
             [Validation(Required=false)]
             public QueryJobResponseBodyDataRolloutConfig RolloutConfig { get; set; }

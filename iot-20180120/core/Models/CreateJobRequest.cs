@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string TargetConfig { get; set; }
 
+        [NameInMap("ScheduledTime")]
+        [Validation(Required=false)]
+        public long? ScheduledTime { get; set; }
+
     }
 
 }

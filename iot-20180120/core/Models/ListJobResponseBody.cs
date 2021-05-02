@@ -52,6 +52,7 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 public string Status { get; set; }
                 public string Description { get; set; }
                 public string Type { get; set; }
+                public long? ScheduledTime { get; set; }
             }
         };
 
