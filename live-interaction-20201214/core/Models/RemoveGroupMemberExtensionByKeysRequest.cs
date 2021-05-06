@@ -8,33 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class UpdateGroupMembersRoleRequest : TeaModel {
+    public class RemoveGroupMemberExtensionByKeysRequest : TeaModel {
         /// <summary>
-        /// App ID。IMPaaS租户的ID。
+        /// App ID, IMPaaS租户的ID
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// 更新群成员角色请求体。
+        /// 删除群成员扩展信息的请求体
         /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
-        public UpdateGroupMembersRoleRequestRequestParams RequestParams { get; set; }
-        public class UpdateGroupMembersRoleRequestRequestParams : TeaModel {
+        public RemoveGroupMemberExtensionByKeysRequestRequestParams RequestParams { get; set; }
+        public class RemoveGroupMemberExtensionByKeysRequestRequestParams : TeaModel {
             [NameInMap("AppCid")]
             [Validation(Required=false)]
             public string AppCid { get; set; }
-            [NameInMap("OperatorAppUid")]
+            [NameInMap("AppUid")]
             [Validation(Required=false)]
-            public string OperatorAppUid { get; set; }
-            [NameInMap("Role")]
+            public string AppUid { get; set; }
+            [NameInMap("Keys")]
             [Validation(Required=false)]
-            public int? Role { get; set; }
-            [NameInMap("AppUids")]
-            [Validation(Required=false)]
-            public List<string> AppUids { get; set; }
+            public List<string> Keys { get; set; }
         };
 
     }

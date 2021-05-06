@@ -8,20 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class UpdateGroupMembersRoleShrinkRequest : TeaModel {
+    public class GetUserMuteSettingRequest : TeaModel {
         /// <summary>
-        /// App ID。IMPaaS租户的ID。
+        /// AppId
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// 更新群成员角色请求体。
-        /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
-        public string RequestParamsShrink { get; set; }
+        public GetUserMuteSettingRequestRequestParams RequestParams { get; set; }
+        public class GetUserMuteSettingRequestRequestParams : TeaModel {
+            [NameInMap("AppUids")]
+            [Validation(Required=false)]
+            public List<string> AppUids { get; set; }
+        };
 
     }
 

@@ -8,27 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class UpdateGroupMembersRoleResponseBody : TeaModel {
+    public class UpdateAppNameResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID。
+        /// desc
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// requestId
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 错误码。
+        /// httpStatusCode
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
+        /// code
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// success
         /// </summary>
-        [NameInMap("Message")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public bool? Success { get; set; }
 
     }
 

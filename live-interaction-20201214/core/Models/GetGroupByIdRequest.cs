@@ -8,20 +8,25 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class UpdateGroupMembersRoleShrinkRequest : TeaModel {
+    public class GetGroupByIdRequest : TeaModel {
         /// <summary>
-        /// App ID。IMPaaS租户的ID。
+        /// APP ID, IMPaaS租户的ID
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// 更新群成员角色请求体。
+        /// 群会话信息获取的请求体
         /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
-        public string RequestParamsShrink { get; set; }
+        public GetGroupByIdRequestRequestParams RequestParams { get; set; }
+        public class GetGroupByIdRequestRequestParams : TeaModel {
+            [NameInMap("AppCid")]
+            [Validation(Required=false)]
+            public string AppCid { get; set; }
+        };
 
     }
 

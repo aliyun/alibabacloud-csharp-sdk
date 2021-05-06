@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Live-interaction20201214
+dotnet add package AlibabaCloud.SDK.Live-interaction20201214
 ```
 
 ## 问题

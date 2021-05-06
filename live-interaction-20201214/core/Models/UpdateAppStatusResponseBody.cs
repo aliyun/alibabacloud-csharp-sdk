@@ -8,38 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class UpdateTenantStatusResponseBody : TeaModel {
+    public class UpdateAppStatusResponseBody : TeaModel {
         /// <summary>
         /// Id of the request
         /// </summary>
-        [NameInMap("ResponseSuccess")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? ResponseSuccess { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// 错误码
+        /// 是否成功
         /// </summary>
-        [NameInMap("errorCode")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public bool? Success { get; set; }
 
         /// <summary>
         /// 错误信息
         /// </summary>
-        [NameInMap("errorMsg")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
-        /// 是否更新成功
+        /// 错误码
         /// </summary>
-        [NameInMap("result")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public bool? Result { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
     }
 

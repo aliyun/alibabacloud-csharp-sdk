@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class UpdateGroupMembersRoleShrinkRequest : TeaModel {
+    public class RemoveGroupMemberExtensionByKeysShrinkRequest : TeaModel {
         /// <summary>
-        /// App ID。IMPaaS租户的ID。
+        /// App ID, IMPaaS租户的ID
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// 更新群成员角色请求体。
+        /// 删除群成员扩展信息的请求体
         /// </summary>
         [NameInMap("RequestParams")]
         [Validation(Required=false)]

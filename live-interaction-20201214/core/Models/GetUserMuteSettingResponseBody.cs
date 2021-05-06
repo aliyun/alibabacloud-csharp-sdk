@@ -8,27 +8,33 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class UpdateGroupMembersRoleResponseBody : TeaModel {
+    public class GetUserMuteSettingResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID。
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 错误码。
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// 错误信息。
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// 返回值
+        /// </summary>
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public GetUserMuteSettingResponseBodyResult Result { get; set; }
+        public class GetUserMuteSettingResponseBodyResult : TeaModel {
+            [NameInMap("UserMuteSettings")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> UserMuteSettings { get; set; }
+        };
 
     }
 

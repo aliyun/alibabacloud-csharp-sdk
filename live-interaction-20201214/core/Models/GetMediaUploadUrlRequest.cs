@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
         [Validation(Required=false)]
         public GetMediaUploadUrlRequestRequestParams RequestParams { get; set; }
         public class GetMediaUploadUrlRequestRequestParams : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("MimeType")]
             [Validation(Required=false)]
-            public int? Type { get; set; }
+            public string MimeType { get; set; }
         };
 
     }
