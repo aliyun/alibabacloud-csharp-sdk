@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
         [NameInMap("StartTime")]
         [Validation(Required=true)]
-        public long StartTime { get; set; }
+        public long? StartTime { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=true)]
-        public long EndTime { get; set; }
+        public long? EndTime { get; set; }
 
     }
 

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
         [NameInMap("Total")]
         [Validation(Required=true)]
-        public long Total { get; set; }
+        public long? Total { get; set; }
 
         [NameInMap("TrafficList")]
         [Validation(Required=true)]

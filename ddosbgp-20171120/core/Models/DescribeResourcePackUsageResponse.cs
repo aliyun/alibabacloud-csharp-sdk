@@ -15,15 +15,15 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
         [NameInMap("Interval")]
         [Validation(Required=true)]
-        public long Interval { get; set; }
+        public long? Interval { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=true)]
-        public long StartTime { get; set; }
+        public long? StartTime { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=true)]
-        public long EndTime { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("PackUsages")]
         [Validation(Required=true)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
             [NameInMap("Time")]
             [Validation(Required=true)]
-            public long Time { get; set; }
+            public long? Time { get; set; }
 
         }
 

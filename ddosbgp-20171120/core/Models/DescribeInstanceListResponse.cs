@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
         [NameInMap("Total")]
         [Validation(Required=true)]
-        public long Total { get; set; }
+        public long? Total { get; set; }
 
         [NameInMap("InstanceList")]
         [Validation(Required=true)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
         public class DescribeInstanceListResponseInstanceList : TeaModel {
             [NameInMap("ExpireTime")]
             [Validation(Required=true)]
-            public long ExpireTime { get; set; }
+            public long? ExpireTime { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=true)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
             [NameInMap("GmtCreate")]
             [Validation(Required=true)]
-            public long GmtCreate { get; set; }
+            public long? GmtCreate { get; set; }
 
         }
 

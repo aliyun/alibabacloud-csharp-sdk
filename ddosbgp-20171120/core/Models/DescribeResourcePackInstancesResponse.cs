@@ -27,19 +27,19 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
             [NameInMap("InitCapacity")]
             [Validation(Required=true)]
-            public long InitCapacity { get; set; }
+            public long? InitCapacity { get; set; }
 
             [NameInMap("CurrCapacity")]
             [Validation(Required=true)]
-            public long CurrCapacity { get; set; }
+            public long? CurrCapacity { get; set; }
 
             [NameInMap("StartTime")]
             [Validation(Required=true)]
-            public long StartTime { get; set; }
+            public long? StartTime { get; set; }
 
             [NameInMap("EndTime")]
             [Validation(Required=true)]
-            public long EndTime { get; set; }
+            public long? EndTime { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=true)]

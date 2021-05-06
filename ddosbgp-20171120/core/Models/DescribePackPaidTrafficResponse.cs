@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
             [NameInMap("StartTime")]
             [Validation(Required=true)]
-            public long StartTime { get; set; }
+            public long? StartTime { get; set; }
 
             [NameInMap("BaseBandwidth")]
             [Validation(Required=true)]

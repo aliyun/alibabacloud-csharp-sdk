@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
             [NameInMap("GmtCreate")]
             [Validation(Required=true)]
-            public long GmtCreate { get; set; }
+            public long? GmtCreate { get; set; }
 
         }
 

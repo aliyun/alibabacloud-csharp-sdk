@@ -19,15 +19,15 @@ namespace AlibabaCloud.SDK.Ddosbgp20171120.Models
 
         [NameInMap("TotalCurrCapacity")]
         [Validation(Required=true)]
-        public long TotalCurrCapacity { get; set; }
+        public long? TotalCurrCapacity { get; set; }
 
         [NameInMap("TotalUsedCapacity")]
         [Validation(Required=true)]
-        public long TotalUsedCapacity { get; set; }
+        public long? TotalUsedCapacity { get; set; }
 
         [NameInMap("TotalInitCapacity")]
         [Validation(Required=true)]
-        public long TotalInitCapacity { get; set; }
+        public long? TotalInitCapacity { get; set; }
 
     }
 
