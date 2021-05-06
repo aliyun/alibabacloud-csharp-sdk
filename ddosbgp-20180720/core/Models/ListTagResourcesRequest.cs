@@ -9,37 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagResourcesRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
-        [NameInMap("TagOwnerUid")]
-        [Validation(Required=false)]
-        public string TagOwnerUid { get; set; }
-
-        [NameInMap("TagOwnerBid")]
-        [Validation(Required=false)]
-        public string TagOwnerBid { get; set; }
-
         [NameInMap("ResourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceType { get; set; }
-
-        [NameInMap("Scope")]
-        [Validation(Required=false)]
-        public string Scope { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -58,6 +38,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
     }
 

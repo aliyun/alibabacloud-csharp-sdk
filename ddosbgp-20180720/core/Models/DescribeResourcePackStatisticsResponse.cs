@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeResourcePackStatisticsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("AvailablePackNum")]
         [Validation(Required=true)]
-        public DescribeResourcePackStatisticsResponseBody Body { get; set; }
+        public int? AvailablePackNum { get; set; }
+
+        [NameInMap("TotalCurrCapacity")]
+        [Validation(Required=true)]
+        public long? TotalCurrCapacity { get; set; }
+
+        [NameInMap("TotalUsedCapacity")]
+        [Validation(Required=true)]
+        public long? TotalUsedCapacity { get; set; }
+
+        [NameInMap("TotalInitCapacity")]
+        [Validation(Required=true)]
+        public long? TotalInitCapacity { get; set; }
 
     }
 

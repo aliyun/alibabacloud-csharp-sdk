@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
-    public class CheckGrantResponseBody : TeaModel {
-        [NameInMap("Status")]
+    public class CheckAccessLogAuthRequest : TeaModel {
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? Status { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ResourceGroupId { get; set; }
 
     }
 

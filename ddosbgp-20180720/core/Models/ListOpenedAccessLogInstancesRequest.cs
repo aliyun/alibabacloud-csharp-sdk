@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
-    public class DescribeExcpetionCountRequest : TeaModel {
+    public class ListOpenedAccessLogInstancesRequest : TeaModel {
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

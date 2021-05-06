@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Ddosbgp20180720
+dotnet add package AlibabaCloud.SDK.Ddosbgp20180720
 ```
 
 ## 问题

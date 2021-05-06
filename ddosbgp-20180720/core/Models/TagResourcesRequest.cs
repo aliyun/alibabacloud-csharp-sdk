@@ -9,36 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class TagResourcesRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RegionId { get; set; }
 
-        [NameInMap("TagOwnerUid")]
-        [Validation(Required=false)]
-        public string TagOwnerUid { get; set; }
-
-        [NameInMap("TagOwnerBid")]
-        [Validation(Required=false)]
-        public string TagOwnerBid { get; set; }
-
         [NameInMap("ResourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ResourceType { get; set; }
 
-        [NameInMap("Scope")]
-        [Validation(Required=false)]
-        public string Scope { get; set; }
-
         [NameInMap("ResourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public List<string> ResourceId { get; set; }
 
         [NameInMap("Tag")]

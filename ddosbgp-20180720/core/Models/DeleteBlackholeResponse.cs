@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DeleteBlackholeResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public DeleteBlackholeResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagKeysResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=true)]
-        public ListTagKeysResponseBody Body { get; set; }
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=true)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("TagKeys")]
+        [Validation(Required=true)]
+        public List<ListTagKeysResponseTagKeys> TagKeys { get; set; }
+        public class ListTagKeysResponseTagKeys : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=true)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagCount")]
+            [Validation(Required=true)]
+            public int? TagCount { get; set; }
+
+        }
 
     }
 

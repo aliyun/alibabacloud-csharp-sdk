@@ -9,20 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribePackIpListRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("PageNo")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("Ip")]

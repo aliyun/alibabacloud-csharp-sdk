@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeInstanceListRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -26,11 +22,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Remark { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("IpVersion")]

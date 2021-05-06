@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class CheckGrantResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Status")]
         [Validation(Required=true)]
-        public CheckGrantResponseBody Body { get; set; }
+        public int? Status { get; set; }
 
     }
 

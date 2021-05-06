@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AddIpResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public AddIpResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

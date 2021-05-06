@@ -9,16 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DeleteBlackholeRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Ip")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Ip { get; set; }
 
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InstanceId { get; set; }
 
         [NameInMap("ResourceGroupId")]

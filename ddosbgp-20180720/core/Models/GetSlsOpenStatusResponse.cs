@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
-    public class ModifyRemarkResponseBody : TeaModel {
+    public class GetSlsOpenStatusResponse : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RequestId { get; set; }
+
+        [NameInMap("SlsOpenStatus")]
+        [Validation(Required=true)]
+        public bool? SlsOpenStatus { get; set; }
 
     }
 

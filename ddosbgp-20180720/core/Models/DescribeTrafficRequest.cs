@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeTrafficRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -26,7 +22,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Ip { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? StartTime { get; set; }
 
         [NameInMap("EndTime")]
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public int? Interval { get; set; }
+
+        [NameInMap("FlowType")]
+        [Validation(Required=false)]
+        public string FlowType { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -9,28 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeOpEntitiesRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? CurrentPage { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? EndTime { get; set; }
 
         [NameInMap("OrderBy")]
