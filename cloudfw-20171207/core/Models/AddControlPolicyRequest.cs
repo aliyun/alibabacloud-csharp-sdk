@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Release { get; set; }
 
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
+
     }
 
 }

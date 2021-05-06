@@ -8,22 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DescribeVpcFirewallControlPolicyResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+    public class DescribeControlPolicyResponseBody : TeaModel {
+        [NameInMap("PageNo")]
         [Validation(Required=false)]
-        public string TotalCount { get; set; }
+        public string PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
+
         [NameInMap("Policys")]
         [Validation(Required=false)]
-        public List<DescribeVpcFirewallControlPolicyResponseBodyPolicys> Policys { get; set; }
-        public class DescribeVpcFirewallControlPolicyResponseBodyPolicys : TeaModel {
+        public List<DescribeControlPolicyResponseBodyPolicys> Policys { get; set; }
+        public class DescribeControlPolicyResponseBodyPolicys : TeaModel {
             [NameInMap("Direction")]
             [Validation(Required=false)]
             public string Direction { get; set; }
+
+            [NameInMap("DestinationGroupType")]
+            [Validation(Required=false)]
+            public string DestinationGroupType { get; set; }
+
+            [NameInMap("HitLastTime")]
+            [Validation(Required=false)]
+            public long? HitLastTime { get; set; }
 
             [NameInMap("Destination")]
             [Validation(Required=false)]
@@ -37,13 +53,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string DestPortGroup { get; set; }
 
-            [NameInMap("SourceType")]
-            [Validation(Required=false)]
-            public string SourceType { get; set; }
-
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
+
+            [NameInMap("SourceType")]
+            [Validation(Required=false)]
+            public string SourceType { get; set; }
 
             [NameInMap("AclUuid")]
             [Validation(Required=false)]
@@ -63,19 +79,39 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             [NameInMap("HitTimes")]
             [Validation(Required=false)]
-            public int? HitTimes { get; set; }
+            public long? HitTimes { get; set; }
 
             [NameInMap("DestPort")]
             [Validation(Required=false)]
             public string DestPort { get; set; }
 
+            [NameInMap("IpVersion")]
+            [Validation(Required=false)]
+            public int? IpVersion { get; set; }
+
+            [NameInMap("SourceGroupType")]
+            [Validation(Required=false)]
+            public string SourceGroupType { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("DnsResultTime")]
+            [Validation(Required=false)]
+            public long? DnsResultTime { get; set; }
+
             [NameInMap("AclAction")]
             [Validation(Required=false)]
             public string AclAction { get; set; }
+
+            [NameInMap("Release")]
+            [Validation(Required=false)]
+            public string Release { get; set; }
+
+            [NameInMap("DnsResult")]
+            [Validation(Required=false)]
+            public string DnsResult { get; set; }
 
             [NameInMap("ApplicationId")]
             [Validation(Required=false)]

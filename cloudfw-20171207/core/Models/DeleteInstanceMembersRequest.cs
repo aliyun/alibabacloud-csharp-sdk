@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DescribePolicyPriorUsedResponseBody : TeaModel {
-        [NameInMap("End")]
+    public class DeleteInstanceMembersRequest : TeaModel {
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public int? End { get; set; }
+        public string SourceIp { get; set; }
 
-        [NameInMap("Start")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public int? Start { get; set; }
+        public string Lang { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("MemberUids")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<int?> MemberUids { get; set; }
 
     }
 

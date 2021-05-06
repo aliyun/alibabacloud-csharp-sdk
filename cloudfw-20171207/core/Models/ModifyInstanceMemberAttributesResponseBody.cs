@@ -8,15 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DescribePolicyPriorUsedResponseBody : TeaModel {
-        [NameInMap("End")]
-        [Validation(Required=false)]
-        public int? End { get; set; }
-
-        [NameInMap("Start")]
-        [Validation(Required=false)]
-        public int? Start { get; set; }
-
+    public class ModifyInstanceMemberAttributesResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

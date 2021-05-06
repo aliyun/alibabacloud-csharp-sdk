@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallPolicyPriorUsedResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("End")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? End { get; set; }
 
         [NameInMap("Start")]
         [Validation(Required=false)]
         public int? Start { get; set; }
 
-        [NameInMap("End")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? End { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DeleteVpcFirewallControlPolicyRequest : TeaModel {
+    public class DescribeVpcFirewallAclGroupListRequest : TeaModel {
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("AclUuid")]
+        [NameInMap("FirewallConfigureStatus")]
         [Validation(Required=false)]
-        public string AclUuid { get; set; }
+        public string FirewallConfigureStatus { get; set; }
 
-        [NameInMap("VpcFirewallId")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string VpcFirewallId { get; set; }
+        public string CurrentPage { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
     }
 

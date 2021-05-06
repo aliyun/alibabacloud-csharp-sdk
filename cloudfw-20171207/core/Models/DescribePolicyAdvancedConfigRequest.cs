@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class AddControlPolicyResponseBody : TeaModel {
-        [NameInMap("AclUuid")]
+    public class DescribePolicyAdvancedConfigRequest : TeaModel {
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string AclUuid { get; set; }
+        public string SourceIp { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Lang { get; set; }
 
     }
 

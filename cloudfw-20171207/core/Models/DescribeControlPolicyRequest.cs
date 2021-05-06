@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DescribeVpcFirewallControlPolicyRequest : TeaModel {
+    public class DescribeControlPolicyRequest : TeaModel {
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("VpcFirewallId")]
+        [NameInMap("Direction")]
         [Validation(Required=false)]
-        public string VpcFirewallId { get; set; }
+        public string Direction { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -44,6 +48,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("AclAction")]
         [Validation(Required=false)]
         public string AclAction { get; set; }
+
+        [NameInMap("Release")]
+        [Validation(Required=false)]
+        public string Release { get; set; }
+
+        [NameInMap("AclUuid")]
+        [Validation(Required=false)]
+        public string AclUuid { get; set; }
+
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
 
     }
 
