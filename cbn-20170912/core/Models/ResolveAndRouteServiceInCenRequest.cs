@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string HostRegionId { get; set; }
 
-        [NameInMap("UpdateInterval")]
-        [Validation(Required=false)]
-        public long? UpdateInterval { get; set; }
-
         [NameInMap("HostVpcId")]
         [Validation(Required=false)]
         public string HostVpcId { get; set; }

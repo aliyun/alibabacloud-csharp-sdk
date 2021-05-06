@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("FlowLogId")]
-        [Validation(Required=false)]
-        public string FlowLogId { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
+
+        [NameInMap("FlowLogId")]
+        [Validation(Required=false)]
+        public string FlowLogId { get; set; }
 
     }
 

@@ -49,12 +49,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string TransmitDirection { get; set; }
 
-        [NameInMap("Filter")]
-        [Validation(Required=false)]
-        public List<DescribeCenRouteMapsRequestFilter> Filter { get; set; }
-        public class DescribeCenRouteMapsRequestFilter : TeaModel {
-        }
-
     }
 
 }

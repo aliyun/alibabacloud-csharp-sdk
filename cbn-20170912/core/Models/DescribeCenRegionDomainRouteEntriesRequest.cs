@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("DestinationCidrBlock")]
-        [Validation(Required=false)]
-        public string DestinationCidrBlock { get; set; }
-
     }
 
 }

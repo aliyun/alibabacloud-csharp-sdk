@@ -15,17 +15,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         [NameInMap("Regions")]
         [Validation(Required=false)]
-        public List<DescribeChildInstanceRegionsResponseBodyRegions> Regions { get; set; }
+        public DescribeChildInstanceRegionsResponseBodyRegions Regions { get; set; }
         public class DescribeChildInstanceRegionsResponseBodyRegions : TeaModel {
-            [NameInMap("LocalName")]
+            [NameInMap("Region")]
             [Validation(Required=false)]
-            public string LocalName { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
+            public List<DescribeChildInstanceRegionsResponseBodyRegionsRegion> Region { get; set; }
+            public class DescribeChildInstanceRegionsResponseBodyRegionsRegion : TeaModel {
+                public string LocalName { get; set; }
+                public string RegionId { get; set; }
+            }
+        };
 
     }
 

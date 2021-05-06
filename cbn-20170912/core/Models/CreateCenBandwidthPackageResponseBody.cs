@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenBandwidthPackageResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CenBandwidthPackageId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("CenBandwidthPackageOrderId")]
         [Validation(Required=false)]
         public string CenBandwidthPackageOrderId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

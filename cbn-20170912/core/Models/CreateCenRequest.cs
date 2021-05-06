@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ProtectionLevel { get; set; }
 
-        [NameInMap("Ipv6Level")]
-        [Validation(Required=false)]
-        public string Ipv6Level { get; set; }
-
     }
 
 }

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeRouteServicesInCenResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,47 +21,35 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("RouteServiceEntries")]
         [Validation(Required=false)]
-        public List<DescribeRouteServicesInCenResponseBodyRouteServiceEntries> RouteServiceEntries { get; set; }
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries RouteServiceEntries { get; set; }
         public class DescribeRouteServicesInCenResponseBodyRouteServiceEntries : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("RouteServiceEntry")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public List<DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry> RouteServiceEntry { get; set; }
+            public class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry : TeaModel {
+                public string Status { get; set; }
+                public string Host { get; set; }
+                public string Description { get; set; }
+                public string HostVpcId { get; set; }
+                public string CenId { get; set; }
+                public string AccessRegionId { get; set; }
+                public string HostRegionId { get; set; }
+                public string UpdateInterval { get; set; }
+                public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs Cidrs { get; set; }
+                public class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs : TeaModel {
+                    [NameInMap("Cidr")]
+                    [Validation(Required=false)]
+                    public List<string> Cidr { get; set; }
 
-            [NameInMap("Host")]
-            [Validation(Required=false)]
-            public string Host { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("HostVpcId")]
-            [Validation(Required=false)]
-            public string HostVpcId { get; set; }
-
-            [NameInMap("Cidrs")]
-            [Validation(Required=false)]
-            public List<string> Cidrs { get; set; }
-
-            [NameInMap("CenId")]
-            [Validation(Required=false)]
-            public string CenId { get; set; }
-
-            [NameInMap("AccessRegionId")]
-            [Validation(Required=false)]
-            public string AccessRegionId { get; set; }
-
-            [NameInMap("HostRegionId")]
-            [Validation(Required=false)]
-            public string HostRegionId { get; set; }
-
-            [NameInMap("UpdateInterval")]
-            [Validation(Required=false)]
-            public string UpdateInterval { get; set; }
-
-        }
+                }
+            }
+        };
 
     }
 

@@ -15,29 +15,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         [NameInMap("GrantRules")]
         [Validation(Required=false)]
-        public List<DescribeGrantRulesToCenResponseBodyGrantRules> GrantRules { get; set; }
+        public DescribeGrantRulesToCenResponseBodyGrantRules GrantRules { get; set; }
         public class DescribeGrantRulesToCenResponseBodyGrantRules : TeaModel {
-            [NameInMap("ChildInstanceType")]
+            [NameInMap("GrantRule")]
             [Validation(Required=false)]
-            public string ChildInstanceType { get; set; }
-
-            [NameInMap("ChildInstanceRegionId")]
-            [Validation(Required=false)]
-            public string ChildInstanceRegionId { get; set; }
-
-            [NameInMap("ChildInstanceOwnerId")]
-            [Validation(Required=false)]
-            public long? ChildInstanceOwnerId { get; set; }
-
-            [NameInMap("ChildInstanceId")]
-            [Validation(Required=false)]
-            public string ChildInstanceId { get; set; }
-
-            [NameInMap("CenId")]
-            [Validation(Required=false)]
-            public string CenId { get; set; }
-
-        }
+            public List<DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
+            public class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule : TeaModel {
+                public string ChildInstanceType { get; set; }
+                public string ChildInstanceRegionId { get; set; }
+                public long? ChildInstanceOwnerId { get; set; }
+                public string ChildInstanceId { get; set; }
+                public string CenId { get; set; }
+            }
+        };
 
     }
 

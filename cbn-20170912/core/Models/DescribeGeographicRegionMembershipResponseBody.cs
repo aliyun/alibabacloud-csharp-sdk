@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -21,19 +17,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("RegionIds")]
-        [Validation(Required=false)]
-        public List<DescribeGeographicRegionMembershipResponseBodyRegionIds> RegionIds { get; set; }
-        public class DescribeGeographicRegionMembershipResponseBodyRegionIds : TeaModel {
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
-        }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("RegionIds")]
+        [Validation(Required=false)]
+        public DescribeGeographicRegionMembershipResponseBodyRegionIds RegionIds { get; set; }
+        public class DescribeGeographicRegionMembershipResponseBodyRegionIds : TeaModel {
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public List<DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId> RegionId { get; set; }
+            public class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId : TeaModel {
+                public string RegionId { get; set; }
+            }
+        };
 
     }
 

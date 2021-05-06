@@ -81,18 +81,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DestinationInstanceIdsReverseMatch { get; set; }
 
-        [NameInMap("GatewayZoneId")]
-        [Validation(Required=false)]
-        public string GatewayZoneId { get; set; }
-
-        [NameInMap("SystemPolicy")]
-        [Validation(Required=false)]
-        public bool? SystemPolicy { get; set; }
-
-        [NameInMap("MatchAddressType")]
-        [Validation(Required=false)]
-        public string MatchAddressType { get; set; }
-
         [NameInMap("SourceInstanceIds")]
         [Validation(Required=false)]
         public List<string> SourceInstanceIds { get; set; }
@@ -144,18 +132,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("PrependAsPath")]
         [Validation(Required=false)]
         public List<int?> PrependAsPath { get; set; }
-
-        [NameInMap("DestinationRegionIds")]
-        [Validation(Required=false)]
-        public List<string> DestinationRegionIds { get; set; }
-
-        [NameInMap("SourceZoneIds")]
-        [Validation(Required=false)]
-        public List<string> SourceZoneIds { get; set; }
-
-        [NameInMap("OriginalRouteTableIds")]
-        [Validation(Required=false)]
-        public List<string> OriginalRouteTableIds { get; set; }
 
     }
 

@@ -53,14 +53,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ChildInstanceRegionId { get; set; }
 
-        [NameInMap("ChildInstanceRouteTableId")]
-        [Validation(Required=false)]
-        public string ChildInstanceRouteTableId { get; set; }
-
-        [NameInMap("DestinationCidrBlock")]
-        [Validation(Required=false)]
-        public string DestinationCidrBlock { get; set; }
-
     }
 
 }

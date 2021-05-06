@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRegionDomainRouteEntriesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,79 +21,76 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("CenRouteEntries")]
         [Validation(Required=false)]
-        public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries> CenRouteEntries { get; set; }
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries CenRouteEntries { get; set; }
         public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("CenRouteEntry")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> CenRouteEntry { get; set; }
+            public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry : TeaModel {
+                public string ToOtherRegionStatus { get; set; }
+                public string Type { get; set; }
+                public string Status { get; set; }
+                public string NextHopType { get; set; }
+                public string NextHopInstanceId { get; set; }
+                public string NextHopRegionId { get; set; }
+                public string DestinationCidrBlock { get; set; }
+                public int? Preference { get; set; }
+                public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords CenRouteMapRecords { get; set; }
+                public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords : TeaModel {
+                    [NameInMap("CenRouteMapRecord")]
+                    [Validation(Required=false)]
+                    public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord> CenRouteMapRecord { get; set; }
+                    public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord : TeaModel {
+                        [NameInMap("RouteMapId")]
+                        [Validation(Required=false)]
+                        public string RouteMapId { get; set; }
 
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
+                        [NameInMap("RegionId")]
+                        [Validation(Required=false)]
+                        public string RegionId { get; set; }
 
-            [NameInMap("CenOutRouteMapRecords")]
-            [Validation(Required=false)]
-            public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords> CenOutRouteMapRecords { get; set; }
-            public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords : TeaModel {
-                [NameInMap("RouteMapId")]
-                [Validation(Required=false)]
-                public string RouteMapId { get; set; }
+                    }
 
-                [NameInMap("RegionId")]
-                [Validation(Required=false)]
-                public string RegionId { get; set; }
+                }
+                public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords CenOutRouteMapRecords { get; set; }
+                public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords : TeaModel {
+                    [NameInMap("CenOutRouteMapRecord")]
+                    [Validation(Required=false)]
+                    public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord> CenOutRouteMapRecord { get; set; }
+                    public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord : TeaModel {
+                        [NameInMap("RouteMapId")]
+                        [Validation(Required=false)]
+                        public string RouteMapId { get; set; }
 
+                        [NameInMap("RegionId")]
+                        [Validation(Required=false)]
+                        public string RegionId { get; set; }
+
+                    }
+
+                }
+                public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities Communities { get; set; }
+                public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities : TeaModel {
+                    [NameInMap("Community")]
+                    [Validation(Required=false)]
+                    public List<string> Community { get; set; }
+
+                }
+                public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths AsPaths { get; set; }
+                public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths : TeaModel {
+                    [NameInMap("AsPath")]
+                    [Validation(Required=false)]
+                    public List<string> AsPath { get; set; }
+
+                }
             }
-
-            [NameInMap("NextHopType")]
-            [Validation(Required=false)]
-            public string NextHopType { get; set; }
-
-            [NameInMap("NextHopInstanceId")]
-            [Validation(Required=false)]
-            public string NextHopInstanceId { get; set; }
-
-            [NameInMap("NextHopRegionId")]
-            [Validation(Required=false)]
-            public string NextHopRegionId { get; set; }
-
-            [NameInMap("AsPaths")]
-            [Validation(Required=false)]
-            public List<string> AsPaths { get; set; }
-
-            [NameInMap("ToOtherRegionStatus")]
-            [Validation(Required=false)]
-            public string ToOtherRegionStatus { get; set; }
-
-            [NameInMap("Communities")]
-            [Validation(Required=false)]
-            public List<string> Communities { get; set; }
-
-            [NameInMap("DestinationCidrBlock")]
-            [Validation(Required=false)]
-            public string DestinationCidrBlock { get; set; }
-
-            [NameInMap("Preference")]
-            [Validation(Required=false)]
-            public int? Preference { get; set; }
-
-            [NameInMap("CenRouteMapRecords")]
-            [Validation(Required=false)]
-            public List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords> CenRouteMapRecords { get; set; }
-            public class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords : TeaModel {
-                [NameInMap("RouteMapId")]
-                [Validation(Required=false)]
-                public string RouteMapId { get; set; }
-
-                [NameInMap("RegionId")]
-                [Validation(Required=false)]
-                public string RegionId { get; set; }
-
-            }
-
-        }
+        };
 
     }
 

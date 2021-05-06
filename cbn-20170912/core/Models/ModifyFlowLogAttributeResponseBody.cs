@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyFlowLogAttributeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

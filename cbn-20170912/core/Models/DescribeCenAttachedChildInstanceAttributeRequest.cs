@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ChildInstanceRegionId { get; set; }
 
-        [NameInMap("IncludeRouteTable")]
-        [Validation(Required=false)]
-        public bool? IncludeRouteTable { get; set; }
-
     }
 
 }

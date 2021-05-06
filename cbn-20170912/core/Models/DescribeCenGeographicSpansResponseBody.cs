@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpansResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,23 +21,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("GeographicSpanModels")]
         [Validation(Required=false)]
-        public List<DescribeCenGeographicSpansResponseBodyGeographicSpanModels> GeographicSpanModels { get; set; }
+        public DescribeCenGeographicSpansResponseBodyGeographicSpanModels GeographicSpanModels { get; set; }
         public class DescribeCenGeographicSpansResponseBodyGeographicSpanModels : TeaModel {
-            [NameInMap("GeographicSpanId")]
+            [NameInMap("GeographicSpanModel")]
             [Validation(Required=false)]
-            public string GeographicSpanId { get; set; }
-
-            [NameInMap("OppositeGeoRegionId")]
-            [Validation(Required=false)]
-            public string OppositeGeoRegionId { get; set; }
-
-            [NameInMap("LocalGeoRegionId")]
-            [Validation(Required=false)]
-            public string LocalGeoRegionId { get; set; }
-
-        }
+            public List<DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel> GeographicSpanModel { get; set; }
+            public class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel : TeaModel {
+                public string LocalGeoRegionId { get; set; }
+                public string GeographicSpanId { get; set; }
+                public string OppositeGeoRegionId { get; set; }
+            }
+        };
 
     }
 

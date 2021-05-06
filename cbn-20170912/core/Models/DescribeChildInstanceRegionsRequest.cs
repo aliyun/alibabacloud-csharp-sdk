@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
-        [NameInMap("ChildInstanceOwnerId")]
-        [Validation(Required=false)]
-        public long? ChildInstanceOwnerId { get; set; }
-
     }
 
 }

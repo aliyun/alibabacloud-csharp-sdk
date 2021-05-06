@@ -9,44 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenInterRegionBandwidthLimitsResponseBody : TeaModel {
-        [NameInMap("CenInterRegionBandwidthLimits")]
-        [Validation(Required=false)]
-        public List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits> CenInterRegionBandwidthLimits { get; set; }
-        public class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("BandwidthPackageId")]
-            [Validation(Required=false)]
-            public string BandwidthPackageId { get; set; }
-
-            [NameInMap("OppositeRegionId")]
-            [Validation(Required=false)]
-            public string OppositeRegionId { get; set; }
-
-            [NameInMap("GeographicSpanId")]
-            [Validation(Required=false)]
-            public string GeographicSpanId { get; set; }
-
-            [NameInMap("CenId")]
-            [Validation(Required=false)]
-            public string CenId { get; set; }
-
-            [NameInMap("LocalRegionId")]
-            [Validation(Required=false)]
-            public string LocalRegionId { get; set; }
-
-            [NameInMap("BandwidthLimit")]
-            [Validation(Required=false)]
-            public long? BandwidthLimit { get; set; }
-
-        }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -58,6 +20,28 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("CenInterRegionBandwidthLimits")]
+        [Validation(Required=false)]
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits CenInterRegionBandwidthLimits { get; set; }
+        public class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits : TeaModel {
+            [NameInMap("CenInterRegionBandwidthLimit")]
+            [Validation(Required=false)]
+            public List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit> CenInterRegionBandwidthLimit { get; set; }
+            public class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit : TeaModel {
+                public string Status { get; set; }
+                public string BandwidthPackageId { get; set; }
+                public string OppositeRegionId { get; set; }
+                public string GeographicSpanId { get; set; }
+                public string CenId { get; set; }
+                public string LocalRegionId { get; set; }
+                public long? BandwidthLimit { get; set; }
+            }
+        };
 
     }
 
