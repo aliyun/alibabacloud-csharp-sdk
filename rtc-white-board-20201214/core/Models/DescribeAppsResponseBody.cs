@@ -60,6 +60,7 @@ namespace AlibabaCloud.SDK.Rtc_white_board20201214.Models
                 public string CallbackUrl { get; set; }
                 public string DomainNames { get; set; }
                 public string CreateTime { get; set; }
+                public string CallbackType { get; set; }
             }
         };
 

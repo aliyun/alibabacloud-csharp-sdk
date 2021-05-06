@@ -261,6 +261,38 @@ namespace AlibabaCloud.SDK.Rtc_white_board20201214
             return await RefreshUsersPermissionsWithOptionsAsync(request, runtime);
         }
 
+        public SetAppCallbackTypeResponse SetAppCallbackTypeWithOptions(SetAppCallbackTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetAppCallbackTypeResponse>(DoRPCRequest("SetAppCallbackType", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SetAppCallbackTypeResponse> SetAppCallbackTypeWithOptionsAsync(SetAppCallbackTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetAppCallbackTypeResponse>(await DoRPCRequestAsync("SetAppCallbackType", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SetAppCallbackTypeResponse SetAppCallbackType(SetAppCallbackTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAppCallbackTypeWithOptions(request, runtime);
+        }
+
+        public async Task<SetAppCallbackTypeResponse> SetAppCallbackTypeAsync(SetAppCallbackTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAppCallbackTypeWithOptionsAsync(request, runtime);
+        }
+
         public CreateAppResponse CreateAppWithOptions(CreateAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
