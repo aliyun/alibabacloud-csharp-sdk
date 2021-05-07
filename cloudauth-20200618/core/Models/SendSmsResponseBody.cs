@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
-    public class InitSmartVerifyResponseBody : TeaModel {
+    public class SendSmsResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
-        public InitSmartVerifyResponseBodyResultObject ResultObject { get; set; }
-        public class InitSmartVerifyResponseBodyResultObject : TeaModel {
-            [NameInMap("CertifyId")]
+        public SendSmsResponseBodyResultObject ResultObject { get; set; }
+        public class SendSmsResponseBodyResultObject : TeaModel {
+            [NameInMap("BizId")]
             [Validation(Required=false)]
-            public string CertifyId { get; set; }
+            public string BizId { get; set; }
         };
 
     }

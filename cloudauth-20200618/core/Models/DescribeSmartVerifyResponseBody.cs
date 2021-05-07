@@ -9,23 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class DescribeSmartVerifyResponseBody : TeaModel {
-        [NameInMap("ResultObject")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public DescribeSmartVerifyResponseBodyResultObject ResultObject { get; set; }
-        public class DescribeSmartVerifyResponseBodyResultObject : TeaModel {
-            [NameInMap("PassedScore")]
-            [Validation(Required=false)]
-            public float? PassedScore { get; set; }
-            [NameInMap("MaterialInfo")]
-            [Validation(Required=false)]
-            public string MaterialInfo { get; set; }
-            [NameInMap("SubCode")]
-            [Validation(Required=false)]
-            public string SubCode { get; set; }
-            [NameInMap("Passed")]
-            [Validation(Required=false)]
-            public string Passed { get; set; }
-        };
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -35,9 +21,23 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("ResultObject")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public DescribeSmartVerifyResponseBodyResultObject ResultObject { get; set; }
+        public class DescribeSmartVerifyResponseBodyResultObject : TeaModel {
+            [NameInMap("SubCode")]
+            [Validation(Required=false)]
+            public string SubCode { get; set; }
+            [NameInMap("PassedScore")]
+            [Validation(Required=false)]
+            public float? PassedScore { get; set; }
+            [NameInMap("MaterialInfo")]
+            [Validation(Required=false)]
+            public string MaterialInfo { get; set; }
+            [NameInMap("Passed")]
+            [Validation(Required=false)]
+            public string Passed { get; set; }
+        };
 
     }
 

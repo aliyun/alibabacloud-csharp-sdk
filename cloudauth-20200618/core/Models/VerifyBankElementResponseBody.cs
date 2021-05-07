@@ -9,23 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class VerifyBankElementResponseBody : TeaModel {
-        [NameInMap("ResultObject")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public VerifyBankElementResponseBodyResultObject ResultObject { get; set; }
-        public class VerifyBankElementResponseBodyResultObject : TeaModel {
-            [NameInMap("MaterialInfo")]
-            [Validation(Required=false)]
-            public string MaterialInfo { get; set; }
-            [NameInMap("CertifyId")]
-            [Validation(Required=false)]
-            public string CertifyId { get; set; }
-            [NameInMap("SubCode")]
-            [Validation(Required=false)]
-            public string SubCode { get; set; }
-            [NameInMap("Passed")]
-            [Validation(Required=false)]
-            public string Passed { get; set; }
-        };
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -35,9 +21,23 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("ResultObject")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public VerifyBankElementResponseBodyResultObject ResultObject { get; set; }
+        public class VerifyBankElementResponseBodyResultObject : TeaModel {
+            [NameInMap("CertifyId")]
+            [Validation(Required=false)]
+            public string CertifyId { get; set; }
+            [NameInMap("SubCode")]
+            [Validation(Required=false)]
+            public string SubCode { get; set; }
+            [NameInMap("MaterialInfo")]
+            [Validation(Required=false)]
+            public string MaterialInfo { get; set; }
+            [NameInMap("Passed")]
+            [Validation(Required=false)]
+            public string Passed { get; set; }
+        };
 
     }
 
