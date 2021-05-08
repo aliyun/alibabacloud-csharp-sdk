@@ -49,10 +49,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        [NameInMap("FromApp")]
-        [Validation(Required=false)]
-        public string FromApp { get; set; }
-
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
         public string BusinessInfo { get; set; }

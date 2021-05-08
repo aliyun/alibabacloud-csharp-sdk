@@ -21,20 +21,24 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsDdsRegion> DdsRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsDdsRegion : TeaModel {
-                [NameInMap("Zone")]
-                [Validation(Required=false)]
-                public List<DescribeRegionsResponseBodyRegionsDdsRegionZone> Zone { get; set; }
-                public class DescribeRegionsResponseBodyRegionsDdsRegionZone : TeaModel {
-                    [NameInMap("VpcEnabled")]
+                public DescribeRegionsResponseBodyRegionsDdsRegionZones Zones { get; set; }
+                public class DescribeRegionsResponseBodyRegionsDdsRegionZones : TeaModel {
+                    [NameInMap("Zone")]
                     [Validation(Required=false)]
-                    public bool? VpcEnabled { get; set; }
+                    public List<DescribeRegionsResponseBodyRegionsDdsRegionZonesZone> Zone { get; set; }
+                    public class DescribeRegionsResponseBodyRegionsDdsRegionZonesZone : TeaModel {
+                        [NameInMap("VpcEnabled")]
+                        [Validation(Required=false)]
+                        public bool? VpcEnabled { get; set; }
 
-                    [NameInMap("ZoneName")]
-                    [Validation(Required=false)]
-                    public string ZoneName { get; set; }
+                        [NameInMap("ZoneName")]
+                        [Validation(Required=false)]
+                        public string ZoneName { get; set; }
+
+                    }
 
                 }
-
+                public string RegionId { get; set; }
             }
         };
 

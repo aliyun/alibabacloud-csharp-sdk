@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
+        [NameInMap("SwitchTime")]
+        [Validation(Required=false)]
+        public string SwitchTime { get; set; }
+
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
@@ -68,6 +72,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ReadonlyReplicas")]
         [Validation(Required=false)]
         public int? ReadonlyReplicas { get; set; }
+
+        [NameInMap("BusinessInfo")]
+        [Validation(Required=false)]
+        public string BusinessInfo { get; set; }
+
+        [NameInMap("CouponNo")]
+        [Validation(Required=false)]
+        public string CouponNo { get; set; }
 
     }
 

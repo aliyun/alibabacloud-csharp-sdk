@@ -61,17 +61,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
-
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
-
-        [NameInMap("NetworkType")]
-        [Validation(Required=false)]
-        public string NetworkType { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]
