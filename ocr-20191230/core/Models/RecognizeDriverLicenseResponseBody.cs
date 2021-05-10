@@ -25,6 +25,18 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string ArchiveNumber { get; set; }
 
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("CardNumber")]
+                [Validation(Required=false)]
+                public string CardNumber { get; set; }
+
+                [NameInMap("Record")]
+                [Validation(Required=false)]
+                public string Record { get; set; }
+
             }
             [NameInMap("FaceResult")]
             [Validation(Required=false)]
@@ -61,6 +73,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("IssueUnit")]
+                [Validation(Required=false)]
+                public string IssueUnit { get; set; }
 
             }
         };

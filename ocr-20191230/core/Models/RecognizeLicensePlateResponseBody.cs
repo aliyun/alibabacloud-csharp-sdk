@@ -44,6 +44,11 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public int? X { get; set; }
 
                 }
+                public List<RecognizeLicensePlateResponseBodyDataPlatesPositions> Positions { get; set; }
+                public class RecognizeLicensePlateResponseBodyDataPlatesPositions : TeaModel {
+                    public long? X { get; set; }
+                    public long? Y { get; set; }
+                }
             }
         };
 

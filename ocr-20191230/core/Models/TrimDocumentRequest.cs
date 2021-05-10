@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
         [Validation(Required=false)]
         public string OutputType { get; set; }
 
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
     }
 
 }

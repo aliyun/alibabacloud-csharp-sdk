@@ -12,10 +12,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeDrivingLicenseRequest : TeaModel {
-        [NameInMap("ImageType")]
-        [Validation(Required=false)]
-        public int? ImageType { get; set; }
-
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public string ImageURL { get; set; }

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class GetAsyncJobResultRequest : TeaModel {
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
