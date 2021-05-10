@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
