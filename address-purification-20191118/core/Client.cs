@@ -13,10 +13,10 @@ using AlibabaCloud.SDK.Address_purification20191118.Models;
 
 namespace AlibabaCloud.SDK.Address_purification20191118
 {
-    public class Client : AlibabaCloud.RPCClient.Client
+    public class Client : AlibabaCloud.OpenApiClient.Client
     {
 
-        public Client(AlibabaCloud.RPCClient.Models.Config config): base(config)
+        public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
             CheckConfig(config);
@@ -24,136 +24,37 @@ namespace AlibabaCloud.SDK.Address_purification20191118
         }
 
 
-        public GetAddressGeocodeResponse GetAddressGeocodeWithOptions(GetAddressGeocodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetAddressGeocodeResponse>(DoRequest("GetAddressGeocode", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public async Task<GetAddressGeocodeResponse> GetAddressGeocodeWithOptionsAsync(GetAddressGeocodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetAddressGeocodeResponse>(await DoRequestAsync("GetAddressGeocode", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public GetAddressGeocodeResponse GetAddressGeocode(GetAddressGeocodeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetAddressGeocodeWithOptions(request, runtime);
-        }
-
-        public async Task<GetAddressGeocodeResponse> GetAddressGeocodeAsync(GetAddressGeocodeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetAddressGeocodeWithOptionsAsync(request, runtime);
-        }
-
-        public CompleteAddressResponse CompleteAddressWithOptions(CompleteAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<CompleteAddressResponse>(DoRequest("CompleteAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public async Task<CompleteAddressResponse> CompleteAddressWithOptionsAsync(CompleteAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<CompleteAddressResponse>(await DoRequestAsync("CompleteAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public CompleteAddressResponse CompleteAddress(CompleteAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CompleteAddressWithOptions(request, runtime);
-        }
-
-        public async Task<CompleteAddressResponse> CompleteAddressAsync(CompleteAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CompleteAddressWithOptionsAsync(request, runtime);
-        }
-
-        public GetZipcodeResponse GetZipcodeWithOptions(GetZipcodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetZipcodeResponse>(DoRequest("GetZipcode", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public async Task<GetZipcodeResponse> GetZipcodeWithOptionsAsync(GetZipcodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetZipcodeResponse>(await DoRequestAsync("GetZipcode", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public GetZipcodeResponse GetZipcode(GetZipcodeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetZipcodeWithOptions(request, runtime);
-        }
-
-        public async Task<GetZipcodeResponse> GetZipcodeAsync(GetZipcodeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetZipcodeWithOptionsAsync(request, runtime);
-        }
-
-        public ExtractPhoneResponse ExtractPhoneWithOptions(ExtractPhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ExtractPhoneResponse>(DoRequest("ExtractPhone", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public async Task<ExtractPhoneResponse> ExtractPhoneWithOptionsAsync(ExtractPhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ExtractPhoneResponse>(await DoRequestAsync("ExtractPhone", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public ExtractPhoneResponse ExtractPhone(ExtractPhoneRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ExtractPhoneWithOptions(request, runtime);
-        }
-
-        public async Task<ExtractPhoneResponse> ExtractPhoneAsync(ExtractPhoneRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ExtractPhoneWithOptionsAsync(request, runtime);
-        }
-
-        public ExtractNameResponse ExtractNameWithOptions(ExtractNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ExtractNameResponse>(DoRequest("ExtractName", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public async Task<ExtractNameResponse> ExtractNameWithOptionsAsync(ExtractNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ExtractNameResponse>(await DoRequestAsync("ExtractName", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public ExtractNameResponse ExtractName(ExtractNameRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ExtractNameWithOptions(request, runtime);
-        }
-
-        public async Task<ExtractNameResponse> ExtractNameAsync(ExtractNameRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ExtractNameWithOptionsAsync(request, runtime);
+            if (!AlibabaCloud.TeaUtil.Common.Empty(endpoint))
+            {
+                return endpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(endpointMap) && !AlibabaCloud.TeaUtil.Common.Empty(endpointMap.Get(regionId)))
+            {
+                return endpointMap.Get(regionId);
+            }
+            return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
         public GetAddressDivisionCodeResponse GetAddressDivisionCodeWithOptions(GetAddressDivisionCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetAddressDivisionCodeResponse>(DoRequest("GetAddressDivisionCode", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressDivisionCodeResponse>(DoRPCRequest("GetAddressDivisionCode", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<GetAddressDivisionCodeResponse> GetAddressDivisionCodeWithOptionsAsync(GetAddressDivisionCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetAddressDivisionCodeResponse>(await DoRequestAsync("GetAddressDivisionCode", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressDivisionCodeResponse>(await DoRPCRequestAsync("GetAddressDivisionCode", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public GetAddressDivisionCodeResponse GetAddressDivisionCode(GetAddressDivisionCodeRequest request)
@@ -168,40 +69,24 @@ namespace AlibabaCloud.SDK.Address_purification20191118
             return await GetAddressDivisionCodeWithOptionsAsync(request, runtime);
         }
 
-        public ClassifyPOIResponse ClassifyPOIWithOptions(ClassifyPOIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ClassifyPOIResponse>(DoRequest("ClassifyPOI", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public async Task<ClassifyPOIResponse> ClassifyPOIWithOptionsAsync(ClassifyPOIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ClassifyPOIResponse>(await DoRequestAsync("ClassifyPOI", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public ClassifyPOIResponse ClassifyPOI(ClassifyPOIRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ClassifyPOIWithOptions(request, runtime);
-        }
-
-        public async Task<ClassifyPOIResponse> ClassifyPOIAsync(ClassifyPOIRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ClassifyPOIWithOptionsAsync(request, runtime);
-        }
-
         public StructureAddressResponse StructureAddressWithOptions(StructureAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<StructureAddressResponse>(DoRequest("StructureAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<StructureAddressResponse>(DoRPCRequest("StructureAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<StructureAddressResponse> StructureAddressWithOptionsAsync(StructureAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<StructureAddressResponse>(await DoRequestAsync("StructureAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<StructureAddressResponse>(await DoRPCRequestAsync("StructureAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public StructureAddressResponse StructureAddress(StructureAddressRequest request)
@@ -216,76 +101,216 @@ namespace AlibabaCloud.SDK.Address_purification20191118
             return await StructureAddressWithOptionsAsync(request, runtime);
         }
 
-        public ExtractAddressResponse ExtractAddressWithOptions(ExtractAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ExtractExpressResponse ExtractExpressWithOptions(ExtractExpressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ExtractAddressResponse>(DoRequest("ExtractAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractExpressResponse>(DoRPCRequest("ExtractExpress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<ExtractAddressResponse> ExtractAddressWithOptionsAsync(ExtractAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ExtractExpressResponse> ExtractExpressWithOptionsAsync(ExtractExpressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<ExtractAddressResponse>(await DoRequestAsync("ExtractAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
-        }
-
-        public ExtractAddressResponse ExtractAddress(ExtractAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ExtractAddressWithOptions(request, runtime);
-        }
-
-        public async Task<ExtractAddressResponse> ExtractAddressAsync(ExtractAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ExtractAddressWithOptionsAsync(request, runtime);
-        }
-
-        public UpdateProjectResponse UpdateProjectWithOptions(UpdateProjectRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
-            UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
-            AlibabaCloud.Commons.Common.Convert(tmp, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.Parameters))
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                request.ParametersShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.Parameters);
-            }
-            return TeaModel.ToObject<UpdateProjectResponse>(DoRequest("UpdateProject", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractExpressResponse>(await DoRPCRequestAsync("ExtractExpress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<UpdateProjectResponse> UpdateProjectWithOptionsAsync(UpdateProjectRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ExtractExpressResponse ExtractExpress(ExtractExpressRequest request)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
-            UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
-            AlibabaCloud.Commons.Common.Convert(tmp, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.Parameters))
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExtractExpressWithOptions(request, runtime);
+        }
+
+        public async Task<ExtractExpressResponse> ExtractExpressAsync(ExtractExpressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExtractExpressWithOptionsAsync(request, runtime);
+        }
+
+        public ExtractNameResponse ExtractNameWithOptions(ExtractNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                request.ParametersShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.Parameters);
-            }
-            return TeaModel.ToObject<UpdateProjectResponse>(await DoRequestAsync("UpdateProject", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractNameResponse>(DoRPCRequest("ExtractName", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public UpdateProjectResponse UpdateProject(UpdateProjectRequest request)
+        public async Task<ExtractNameResponse> ExtractNameWithOptionsAsync(ExtractNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateProjectWithOptions(request, runtime);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractNameResponse>(await DoRPCRequestAsync("ExtractName", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<UpdateProjectResponse> UpdateProjectAsync(UpdateProjectRequest request)
+        public ExtractNameResponse ExtractName(ExtractNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateProjectWithOptionsAsync(request, runtime);
+            return ExtractNameWithOptions(request, runtime);
+        }
+
+        public async Task<ExtractNameResponse> ExtractNameAsync(ExtractNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExtractNameWithOptionsAsync(request, runtime);
+        }
+
+        public GetAddressBlockMappingResponse GetAddressBlockMappingWithOptions(GetAddressBlockMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressBlockMappingResponse>(DoRPCRequest("GetAddressBlockMapping", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetAddressBlockMappingResponse> GetAddressBlockMappingWithOptionsAsync(GetAddressBlockMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressBlockMappingResponse>(await DoRPCRequestAsync("GetAddressBlockMapping", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetAddressBlockMappingResponse GetAddressBlockMapping(GetAddressBlockMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAddressBlockMappingWithOptions(request, runtime);
+        }
+
+        public async Task<GetAddressBlockMappingResponse> GetAddressBlockMappingAsync(GetAddressBlockMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAddressBlockMappingWithOptionsAsync(request, runtime);
+        }
+
+        public GetAddressSearchResponse GetAddressSearchWithOptions(GetAddressSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressSearchResponse>(DoRPCRequest("GetAddressSearch", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetAddressSearchResponse> GetAddressSearchWithOptionsAsync(GetAddressSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressSearchResponse>(await DoRPCRequestAsync("GetAddressSearch", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetAddressSearchResponse GetAddressSearch(GetAddressSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAddressSearchWithOptions(request, runtime);
+        }
+
+        public async Task<GetAddressSearchResponse> GetAddressSearchAsync(GetAddressSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAddressSearchWithOptionsAsync(request, runtime);
+        }
+
+        public PredictPOIResponse PredictPOIWithOptions(PredictPOIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<PredictPOIResponse>(DoRPCRequest("PredictPOI", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<PredictPOIResponse> PredictPOIWithOptionsAsync(PredictPOIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<PredictPOIResponse>(await DoRPCRequestAsync("PredictPOI", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public PredictPOIResponse PredictPOI(PredictPOIRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PredictPOIWithOptions(request, runtime);
+        }
+
+        public async Task<PredictPOIResponse> PredictPOIAsync(PredictPOIRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PredictPOIWithOptionsAsync(request, runtime);
+        }
+
+        public ClassifyPOIResponse ClassifyPOIWithOptions(ClassifyPOIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ClassifyPOIResponse>(DoRPCRequest("ClassifyPOI", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ClassifyPOIResponse> ClassifyPOIWithOptionsAsync(ClassifyPOIRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ClassifyPOIResponse>(await DoRPCRequestAsync("ClassifyPOI", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ClassifyPOIResponse ClassifyPOI(ClassifyPOIRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ClassifyPOIWithOptions(request, runtime);
+        }
+
+        public async Task<ClassifyPOIResponse> ClassifyPOIAsync(ClassifyPOIRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ClassifyPOIWithOptionsAsync(request, runtime);
         }
 
         public CorrectAddressResponse CorrectAddressWithOptions(CorrectAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<CorrectAddressResponse>(DoRequest("CorrectAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CorrectAddressResponse>(DoRPCRequest("CorrectAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<CorrectAddressResponse> CorrectAddressWithOptionsAsync(CorrectAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<CorrectAddressResponse>(await DoRequestAsync("CorrectAddress", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CorrectAddressResponse>(await DoRPCRequestAsync("CorrectAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public CorrectAddressResponse CorrectAddress(CorrectAddressRequest request)
@@ -300,16 +325,88 @@ namespace AlibabaCloud.SDK.Address_purification20191118
             return await CorrectAddressWithOptionsAsync(request, runtime);
         }
 
+        public GetZipcodeResponse GetZipcodeWithOptions(GetZipcodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetZipcodeResponse>(DoRPCRequest("GetZipcode", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetZipcodeResponse> GetZipcodeWithOptionsAsync(GetZipcodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetZipcodeResponse>(await DoRPCRequestAsync("GetZipcode", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetZipcodeResponse GetZipcode(GetZipcodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetZipcodeWithOptions(request, runtime);
+        }
+
+        public async Task<GetZipcodeResponse> GetZipcodeAsync(GetZipcodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetZipcodeWithOptionsAsync(request, runtime);
+        }
+
+        public CompleteAddressResponse CompleteAddressWithOptions(CompleteAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CompleteAddressResponse>(DoRPCRequest("CompleteAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CompleteAddressResponse> CompleteAddressWithOptionsAsync(CompleteAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CompleteAddressResponse>(await DoRPCRequestAsync("CompleteAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CompleteAddressResponse CompleteAddress(CompleteAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CompleteAddressWithOptions(request, runtime);
+        }
+
+        public async Task<CompleteAddressResponse> CompleteAddressAsync(CompleteAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CompleteAddressWithOptionsAsync(request, runtime);
+        }
+
         public GetAddressSimilarityResponse GetAddressSimilarityWithOptions(GetAddressSimilarityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetAddressSimilarityResponse>(DoRequest("GetAddressSimilarity", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressSimilarityResponse>(DoRPCRequest("GetAddressSimilarity", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<GetAddressSimilarityResponse> GetAddressSimilarityWithOptionsAsync(GetAddressSimilarityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            return TeaModel.ToObject<GetAddressSimilarityResponse>(await DoRequestAsync("GetAddressSimilarity", "HTTPS", "POST", "2019-11-18", "AK", null, request.ToMap(), runtime));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressSimilarityResponse>(await DoRPCRequestAsync("GetAddressSimilarity", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public GetAddressSimilarityResponse GetAddressSimilarity(GetAddressSimilarityRequest request)
@@ -324,17 +421,240 @@ namespace AlibabaCloud.SDK.Address_purification20191118
             return await GetAddressSimilarityWithOptionsAsync(request, runtime);
         }
 
-        public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
+        public GetAddressGeocodeResponse GetAddressGeocodeWithOptions(GetAddressGeocodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            if (!AlibabaCloud.TeaUtil.Common.Empty(endpoint))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                return endpoint;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(endpointMap) && !AlibabaCloud.TeaUtil.Common.Empty(endpointMap.Get(regionId)))
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressGeocodeResponse>(DoRPCRequest("GetAddressGeocode", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetAddressGeocodeResponse> GetAddressGeocodeWithOptionsAsync(GetAddressGeocodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                return endpointMap.Get(regionId);
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressGeocodeResponse>(await DoRPCRequestAsync("GetAddressGeocode", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetAddressGeocodeResponse GetAddressGeocode(GetAddressGeocodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAddressGeocodeWithOptions(request, runtime);
+        }
+
+        public async Task<GetAddressGeocodeResponse> GetAddressGeocodeAsync(GetAddressGeocodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAddressGeocodeWithOptionsAsync(request, runtime);
+        }
+
+        public TransferCoordResponse TransferCoordWithOptions(TransferCoordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<TransferCoordResponse>(DoRPCRequest("TransferCoord", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<TransferCoordResponse> TransferCoordWithOptionsAsync(TransferCoordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<TransferCoordResponse>(await DoRPCRequestAsync("TransferCoord", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public TransferCoordResponse TransferCoord(TransferCoordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TransferCoordWithOptions(request, runtime);
+        }
+
+        public async Task<TransferCoordResponse> TransferCoordAsync(TransferCoordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TransferCoordWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateProjectResponse UpdateProjectWithOptions(UpdateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
             }
-            return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateProjectResponse>(DoRPCRequest("UpdateProject", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<UpdateProjectResponse> UpdateProjectWithOptionsAsync(UpdateProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateProjectShrinkRequest request = new UpdateProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Parameters))
+            {
+                request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateProjectResponse>(await DoRPCRequestAsync("UpdateProject", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public UpdateProjectResponse UpdateProject(UpdateProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateProjectWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateProjectResponse> UpdateProjectAsync(UpdateProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateProjectWithOptionsAsync(request, runtime);
+        }
+
+        public ExtractPhoneResponse ExtractPhoneWithOptions(ExtractPhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractPhoneResponse>(DoRPCRequest("ExtractPhone", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ExtractPhoneResponse> ExtractPhoneWithOptionsAsync(ExtractPhoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractPhoneResponse>(await DoRPCRequestAsync("ExtractPhone", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ExtractPhoneResponse ExtractPhone(ExtractPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExtractPhoneWithOptions(request, runtime);
+        }
+
+        public async Task<ExtractPhoneResponse> ExtractPhoneAsync(ExtractPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExtractPhoneWithOptionsAsync(request, runtime);
+        }
+
+        public GetInputSearchResponse GetInputSearchWithOptions(GetInputSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetInputSearchResponse>(DoRPCRequest("GetInputSearch", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetInputSearchResponse> GetInputSearchWithOptionsAsync(GetInputSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetInputSearchResponse>(await DoRPCRequestAsync("GetInputSearch", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetInputSearchResponse GetInputSearch(GetInputSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInputSearchWithOptions(request, runtime);
+        }
+
+        public async Task<GetInputSearchResponse> GetInputSearchAsync(GetInputSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInputSearchWithOptionsAsync(request, runtime);
+        }
+
+        public GetAddressEvaluateResponse GetAddressEvaluateWithOptions(GetAddressEvaluateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressEvaluateResponse>(DoRPCRequest("GetAddressEvaluate", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetAddressEvaluateResponse> GetAddressEvaluateWithOptionsAsync(GetAddressEvaluateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetAddressEvaluateResponse>(await DoRPCRequestAsync("GetAddressEvaluate", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetAddressEvaluateResponse GetAddressEvaluate(GetAddressEvaluateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAddressEvaluateWithOptions(request, runtime);
+        }
+
+        public async Task<GetAddressEvaluateResponse> GetAddressEvaluateAsync(GetAddressEvaluateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAddressEvaluateWithOptionsAsync(request, runtime);
+        }
+
+        public ExtractAddressResponse ExtractAddressWithOptions(ExtractAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractAddressResponse>(DoRPCRequest("ExtractAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ExtractAddressResponse> ExtractAddressWithOptionsAsync(ExtractAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExtractAddressResponse>(await DoRPCRequestAsync("ExtractAddress", "2019-11-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ExtractAddressResponse ExtractAddress(ExtractAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExtractAddressWithOptions(request, runtime);
+        }
+
+        public async Task<ExtractAddressResponse> ExtractAddressAsync(ExtractAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExtractAddressWithOptionsAsync(request, runtime);
         }
 
     }

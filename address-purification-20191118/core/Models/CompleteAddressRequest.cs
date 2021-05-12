@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Address_purification20191118.Models
 {
     public class CompleteAddressRequest : TeaModel {
         [NameInMap("ServiceCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
         [NameInMap("Text")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Text { get; set; }
 
         [NameInMap("DefaultProvince")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Address_purification20191118.Models
         public string DefaultDistrict { get; set; }
 
         [NameInMap("AppKey")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AppKey { get; set; }
 
     }

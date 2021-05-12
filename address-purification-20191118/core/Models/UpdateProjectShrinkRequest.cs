@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Address_purification20191118.Models
 {
     public class UpdateProjectShrinkRequest : TeaModel {
         [NameInMap("ServiceCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
         [NameInMap("Parameters")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
     }

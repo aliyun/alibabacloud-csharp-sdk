@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Address_purification20191118.Models
 {
     public class ClassifyPOIResponse : TeaModel {
-        [NameInMap("Data")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string Data { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public ClassifyPOIResponseBody Body { get; set; }
 
     }
 
