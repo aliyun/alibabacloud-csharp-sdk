@@ -1,3 +1,6 @@
+2021-05-13 Version: 1.0.3
+- Generated csharp 2017-12-28 for ddoscoo.
+
 2021-04-01 Version: 1.0.2
 - Generated csharp 2017-12-28 for ddoscoo.
 

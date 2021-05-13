@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-ddoscoo")]
 [assembly: AssemblyDescription("Alibaba Cloud ddoscoo (20171228) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cdda4780-929c-11eb-a4c3-098731acf2d2")]
+[assembly: Guid("ff13dd40-b3b0-11eb-961a-ad2582079d28")]
 
 // Version information for an assembly consists of the following four values:
 //
