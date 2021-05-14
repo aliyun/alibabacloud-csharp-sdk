@@ -195,6 +195,9 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
                 }
 
             }
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
         };
 
     }

@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 
         }
 
+        [NameInMap("Mask")]
+        [Validation(Required=false)]
+        public long? Mask { get; set; }
+
     }
 
 }
