@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("DrdsPassword")]
-        [Validation(Required=false)]
-        public string DrdsPassword { get; set; }
-
         [NameInMap("HistoreInstanceId")]
         [Validation(Required=false)]
         public string HistoreInstanceId { get; set; }

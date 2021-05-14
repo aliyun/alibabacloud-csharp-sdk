@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Result")]
         [Validation(Required=false)]
         public string Result { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

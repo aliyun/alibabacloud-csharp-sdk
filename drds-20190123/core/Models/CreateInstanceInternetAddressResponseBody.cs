@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class CreateInstanceInternetAddressResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

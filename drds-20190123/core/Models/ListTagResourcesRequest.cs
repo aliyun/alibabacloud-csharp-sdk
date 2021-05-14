@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("NoRole")]
-        [Validation(Required=false)]
-        public bool? NoRole { get; set; }
-
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

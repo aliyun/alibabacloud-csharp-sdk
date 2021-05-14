@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class CreateDrdsInstanceResponseBody : TeaModel {
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,6 +21,9 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public CreateDrdsInstanceResponseBodyData Data { get; set; }
         public class CreateDrdsInstanceResponseBodyData : TeaModel {
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public long? OrderId { get; set; }
             [NameInMap("DrdsInstanceIdList")]
             [Validation(Required=false)]
             public CreateDrdsInstanceResponseBodyDataDrdsInstanceIdList DrdsInstanceIdList { get; set; }
@@ -26,14 +33,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 public List<string> DrdsInstanceIdList { get; set; }
 
             }
-            [NameInMap("OrderId")]
-            [Validation(Required=false)]
-            public long? OrderId { get; set; }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

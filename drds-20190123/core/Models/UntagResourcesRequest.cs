@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public bool? All { get; set; }
 
-        [NameInMap("NoRole")]
-        [Validation(Required=false)]
-        public bool? NoRole { get; set; }
-
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }

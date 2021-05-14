@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("NoRole")]
-        [Validation(Required=false)]
-        public bool? NoRole { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("BackupPolicyDO")]
         [Validation(Required=false)]
@@ -39,18 +39,18 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [NameInMap("LocalLogRetentionHours")]
             [Validation(Required=false)]
             public long? LocalLogRetentionHours { get; set; }
-            [NameInMap("GmtModified")]
-            [Validation(Required=false)]
-            public long? GmtModified { get; set; }
             [NameInMap("HighSpaceUsageProtection")]
             [Validation(Required=false)]
             public long? HighSpaceUsageProtection { get; set; }
-            [NameInMap("BackupPolicyMode")]
+            [NameInMap("GmtModified")]
             [Validation(Required=false)]
-            public string BackupPolicyMode { get; set; }
+            public long? GmtModified { get; set; }
             [NameInMap("BackupRetentionPeriod")]
             [Validation(Required=false)]
             public long? BackupRetentionPeriod { get; set; }
+            [NameInMap("BackupPolicyMode")]
+            [Validation(Required=false)]
+            public string BackupPolicyMode { get; set; }
             [NameInMap("PreferredBackupPeriod")]
             [Validation(Required=false)]
             public string PreferredBackupPeriod { get; set; }

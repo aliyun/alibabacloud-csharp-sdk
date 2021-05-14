@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeHiStoreInstanceInfoResponseBody : TeaModel {
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("HiStoreInstanceInfo")]
         [Validation(Required=false)]
         public DescribeHiStoreInstanceInfoResponseBodyHiStoreInstanceInfo HiStoreInstanceInfo { get; set; }
         public class DescribeHiStoreInstanceInfoResponseBodyHiStoreInstanceInfo : TeaModel {
+            [NameInMap("GmtCreate")]
+            [Validation(Required=false)]
+            public long? GmtCreate { get; set; }
+            [NameInMap("MachineSpec")]
+            [Validation(Required=false)]
+            public string MachineSpec { get; set; }
             [NameInMap("DiskSize")]
             [Validation(Required=false)]
             public int? DiskSize { get; set; }
@@ -22,21 +36,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [NameInMap("HistoreInstanceId")]
             [Validation(Required=false)]
             public string HistoreInstanceId { get; set; }
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
-            [NameInMap("MachineSpec")]
-            [Validation(Required=false)]
-            public string MachineSpec { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

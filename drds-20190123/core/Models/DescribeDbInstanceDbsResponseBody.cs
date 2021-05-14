@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDbInstanceDbsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public string Total { get; set; }
+
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public DescribeDbInstanceDbsResponseBodyDatabases Databases { get; set; }
@@ -22,18 +34,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 public string Description { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public string Total { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

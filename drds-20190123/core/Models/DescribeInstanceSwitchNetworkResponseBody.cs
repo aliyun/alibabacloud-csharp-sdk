@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeInstanceSwitchNetworkResponseBody : TeaModel {
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -23,6 +27,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             public class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo : TeaModel {
                 public string VpcId { get; set; }
                 public string VpcName { get; set; }
+                public string RegionId { get; set; }
                 public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfos VswitchInfos { get; set; }
                 public class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfos : TeaModel {
                     [NameInMap("VswitchInfo")]
@@ -41,24 +46,19 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                         [Validation(Required=false)]
                         public string VswitchId { get; set; }
 
-                        [NameInMap("VswitchName")]
-                        [Validation(Required=false)]
-                        public string VswitchName { get; set; }
-
                         [NameInMap("AzoneId")]
                         [Validation(Required=false)]
                         public string AzoneId { get; set; }
 
+                        [NameInMap("VswitchName")]
+                        [Validation(Required=false)]
+                        public string VswitchName { get; set; }
+
                     }
 
                 }
-                public string RegionId { get; set; }
             }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

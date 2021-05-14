@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsDbTasksResponseBody : TeaModel {
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public DescribeDrdsDbTasksResponseBodyTasks Tasks { get; set; }
@@ -17,16 +25,16 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public List<DescribeDrdsDbTasksResponseBodyTasksTask> Task { get; set; }
             public class DescribeDrdsDbTasksResponseBodyTasksTask : TeaModel {
-                public string TaskPhase { get; set; }
                 public int? Progress { get; set; }
+                public string TaskPhase { get; set; }
                 public int? TbComputeLength { get; set; }
                 public string TaskName { get; set; }
                 public string ParentJobId { get; set; }
                 public string Label { get; set; }
                 public int? TaskType { get; set; }
                 public int? DbComputeLength { get; set; }
-                public bool? AllowCancel { get; set; }
                 public int? TaskStatus { get; set; }
+                public bool? AllowCancel { get; set; }
                 public bool? ShowProgress { get; set; }
                 public string TaskDetail { get; set; }
                 public long? GmtCreate { get; set; }
@@ -35,14 +43,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 public string ExpandType { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

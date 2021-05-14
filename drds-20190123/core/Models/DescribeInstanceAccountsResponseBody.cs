@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeInstanceAccountsResponseBody : TeaModel {
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,26 +25,29 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount> InstanceAccount { get; set; }
             public class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount : TeaModel {
-                [NameInMap("DbPrivilege")]
-                [Validation(Required=false)]
-                public List<DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivilege> DbPrivilege { get; set; }
-                public class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivilege : TeaModel {
-                    [NameInMap("DbName")]
+                public string Host { get; set; }
+                public string Description { get; set; }
+                public int? AccountType { get; set; }
+                public string AccountName { get; set; }
+                public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges DbPrivileges { get; set; }
+                public class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges : TeaModel {
+                    [NameInMap("DbPrivilege")]
                     [Validation(Required=false)]
-                    public string DbName { get; set; }
+                    public List<DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivilegesDbPrivilege> DbPrivilege { get; set; }
+                    public class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivilegesDbPrivilege : TeaModel {
+                        [NameInMap("DbName")]
+                        [Validation(Required=false)]
+                        public string DbName { get; set; }
 
-                    [NameInMap("Privilege")]
-                    [Validation(Required=false)]
-                    public string Privilege { get; set; }
+                        [NameInMap("Privilege")]
+                        [Validation(Required=false)]
+                        public string Privilege { get; set; }
+
+                    }
 
                 }
-
             }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
