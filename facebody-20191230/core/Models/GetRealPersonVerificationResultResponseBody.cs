@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public GetRealPersonVerificationResultResponseBodyData Data { get; set; }
         public class GetRealPersonVerificationResultResponseBodyData : TeaModel {
-            [NameInMap("Pass")]
+            [NameInMap("Passed")]
             [Validation(Required=false)]
-            public bool? Pass { get; set; }
+            public bool? Passed { get; set; }
             [NameInMap("IdentityInfo")]
             [Validation(Required=false)]
             public string IdentityInfo { get; set; }

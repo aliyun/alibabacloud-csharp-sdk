@@ -7,8 +7,14 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Facebody20191230</AssemblyName>
-    <Version>1.0.10</Version>
+    <Version>1.0.11</Version>
     <LangVersion>5</LangVersion>
+    <Authors>Alibaba Cloud</Authors>
+    <Description>Alibaba Cloud facebody (20191230) SDK Library for .NET</Description>
+    <PackageTags>Alibaba Aliyun facebody SDK</PackageTags>
+    <Copyright>©2009-present Alibaba Cloud</Copyright>
+    <PackageProjectUrl>https://github.com/aliyun/alibabacloud-csharp-sdk</PackageProjectUrl>
+    <PackageIconUrl>https://www.alibabacloud.com/favicon.ico</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
     <DefineConstants>NETSTANDARD2_0</DefineConstants>

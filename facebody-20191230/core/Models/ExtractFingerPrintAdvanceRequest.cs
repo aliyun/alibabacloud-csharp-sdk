@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
-    public class GenerateHumanSketchStyleAdvanceRequest : TeaModel {
+    public class ExtractFingerPrintAdvanceRequest : TeaModel {
         [NameInMap("ImageURLObject")]
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
-        [NameInMap("ReturnType")]
+        [NameInMap("ImageData")]
         [Validation(Required=false)]
-        public string ReturnType { get; set; }
+        public byte[] ImageData { get; set; }
 
     }
 
