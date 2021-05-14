@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertySoftwareDetailResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageInfo")]
+        [Validation(Required=false)]
+        public DescribePropertySoftwareDetailResponseBodyPageInfo PageInfo { get; set; }
+        public class DescribePropertySoftwareDetailResponseBodyPageInfo : TeaModel {
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+        };
+
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertySoftwareDetailResponseBodyPropertys> Propertys { get; set; }
@@ -62,28 +84,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
         }
-
-        [NameInMap("PageInfo")]
-        [Validation(Required=false)]
-        public DescribePropertySoftwareDetailResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribePropertySoftwareDetailResponseBodyPageInfo : TeaModel {
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-        };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

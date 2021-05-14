@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningDetailResponseBody : TeaModel {
-        [NameInMap("Item")]
+        [NameInMap("Advice")]
         [Validation(Required=false)]
-        public string Item { get; set; }
+        public string Advice { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Item")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Item { get; set; }
 
         [NameInMap("CheckId")]
         [Validation(Required=false)]
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
-
-        [NameInMap("Advice")]
-        [Validation(Required=false)]
-        public string Advice { get; set; }
 
     }
 

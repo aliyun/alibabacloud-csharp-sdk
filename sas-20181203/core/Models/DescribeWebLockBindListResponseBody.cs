@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebLockBindListResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("BindList")]
         [Validation(Required=false)]
@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Percent { get; set; }
 
-            [NameInMap("ServiceDetail")]
-            [Validation(Required=false)]
-            public string ServiceDetail { get; set; }
-
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
+
+            [NameInMap("ServiceDetail")]
+            [Validation(Required=false)]
+            public string ServiceDetail { get; set; }
 
             [NameInMap("Os")]
             [Validation(Required=false)]

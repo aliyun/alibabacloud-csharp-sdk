@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventQuaraFilesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,14 +21,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public int? TotalCount { get; set; }
+
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
 
         [NameInMap("QuaraFiles")]
         [Validation(Required=false)]
         public List<DescribeSuspEventQuaraFilesResponseBodyQuaraFiles> QuaraFiles { get; set; }
         public class DescribeSuspEventQuaraFilesResponseBodyQuaraFiles : TeaModel {
+            [NameInMap("Link")]
+            [Validation(Required=false)]
+            public string Link { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
 
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -78,10 +90,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ModifyTime { get; set; }
 
         }
-
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
 
     }
 

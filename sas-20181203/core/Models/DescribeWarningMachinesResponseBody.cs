@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWarningMachinesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public int? TotalCount { get; set; }
+
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
 
         [NameInMap("WarningMachines")]
         [Validation(Required=false)]
@@ -74,10 +78,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
         }
-
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
 
     }
 

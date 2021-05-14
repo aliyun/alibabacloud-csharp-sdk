@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainDetailResponseBody : TeaModel {
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("VulCount")]
+        [Validation(Required=false)]
+        public int? VulCount { get; set; }
+
+        [NameInMap("AlarmCount")]
+        [Validation(Required=false)]
+        public int? AlarmCount { get; set; }
+
+        [NameInMap("RootDomain")]
+        [Validation(Required=false)]
+        public string RootDomain { get; set; }
+
         [NameInMap("DomainDetailItems")]
         [Validation(Required=false)]
         public List<DescribeDomainDetailResponseBodyDomainDetailItems> DomainDetailItems { get; set; }
@@ -38,26 +58,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetType { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("RootDomain")]
-        [Validation(Required=false)]
-        public string RootDomain { get; set; }
-
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
-
-        [NameInMap("VulCount")]
-        [Validation(Required=false)]
-        public int? VulCount { get; set; }
-
-        [NameInMap("AlarmCount")]
-        [Validation(Required=false)]
-        public int? AlarmCount { get; set; }
 
     }
 

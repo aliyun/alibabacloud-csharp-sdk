@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceListResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeExposedInstanceListResponseBodyPageInfo PageInfo { get; set; }
@@ -27,21 +31,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
         };
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ExposedInstances")]
         [Validation(Required=false)]
         public List<DescribeExposedInstanceListResponseBodyExposedInstances> ExposedInstances { get; set; }
         public class DescribeExposedInstanceListResponseBodyExposedInstances : TeaModel {
-            [NameInMap("TotalVulCount")]
-            [Validation(Required=false)]
-            public int? TotalVulCount { get; set; }
-
             [NameInMap("ExposureIp")]
             [Validation(Required=false)]
             public string ExposureIp { get; set; }
+
+            [NameInMap("TotalVulCount")]
+            [Validation(Required=false)]
+            public int? TotalVulCount { get; set; }
 
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -63,25 +63,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
-            [NameInMap("ExposureTypeId")]
-            [Validation(Required=false)]
-            public string ExposureTypeId { get; set; }
-
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("ExposureTypeId")]
+            [Validation(Required=false)]
+            public string ExposureTypeId { get; set; }
 
             [NameInMap("AsapVulCount")]
             [Validation(Required=false)]
             public int? AsapVulCount { get; set; }
 
-            [NameInMap("Uuid")]
-            [Validation(Required=false)]
-            public string Uuid { get; set; }
-
             [NameInMap("ExposurePort")]
             [Validation(Required=false)]
             public string ExposurePort { get; set; }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
 
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
+
+            [NameInMap("ExploitHealthCount")]
+            [Validation(Required=false)]
+            public int? ExploitHealthCount { get; set; }
 
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -104,10 +108,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? LaterVulCount { get; set; }
 
         }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

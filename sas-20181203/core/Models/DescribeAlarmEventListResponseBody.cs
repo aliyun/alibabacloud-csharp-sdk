@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAlarmEventListResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeAlarmEventListResponseBodyPageInfo PageInfo { get; set; }
@@ -26,10 +30,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Count { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("SuspEvents")]
         [Validation(Required=false)]
@@ -83,17 +83,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string SecurityEventIds { get; set; }
 
-            [NameInMap("CanBeDealOnLine")]
+            [NameInMap("K8sClusterId")]
             [Validation(Required=false)]
-            public bool? CanBeDealOnLine { get; set; }
+            public string K8sClusterId { get; set; }
 
             [NameInMap("ContainerImageName")]
             [Validation(Required=false)]
             public string ContainerImageName { get; set; }
 
-            [NameInMap("K8sClusterId")]
+            [NameInMap("CanBeDealOnLine")]
             [Validation(Required=false)]
-            public string K8sClusterId { get; set; }
+            public bool? CanBeDealOnLine { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -103,13 +103,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? ContainHwMode { get; set; }
 
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
             [NameInMap("K8sNodeId")]
             [Validation(Required=false)]
             public string K8sNodeId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
 
             [NameInMap("SaleVersion")]
             [Validation(Required=false)]
@@ -127,13 +127,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? HasTraceInfo { get; set; }
 
-            [NameInMap("OperateTime")]
-            [Validation(Required=false)]
-            public long? OperateTime { get; set; }
-
             [NameInMap("DataSource")]
             [Validation(Required=false)]
             public string DataSource { get; set; }
+
+            [NameInMap("OperateTime")]
+            [Validation(Required=false)]
+            public long? OperateTime { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]

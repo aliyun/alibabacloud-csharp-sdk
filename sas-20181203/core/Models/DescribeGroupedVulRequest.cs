@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedVulRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -44,10 +40,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("StatusList")]
-        [Validation(Required=false)]
-        public string StatusList { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]

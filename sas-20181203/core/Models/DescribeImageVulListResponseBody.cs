@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageVulListResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,17 +21,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("VulRecords")]
         [Validation(Required=false)]
         public List<DescribeImageVulListResponseBodyVulRecords> VulRecords { get; set; }
         public class DescribeImageVulListResponseBodyVulRecords : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("CanUpdate")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public bool? CanUpdate { get; set; }
 
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
 
             [NameInMap("ModifyTs")]
             [Validation(Required=false)]
@@ -40,10 +48,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ImageDigest")]
             [Validation(Required=false)]
             public string ImageDigest { get; set; }
-
-            [NameInMap("Layers")]
-            [Validation(Required=false)]
-            public List<string> Layers { get; set; }
 
             [NameInMap("PrimaryId")]
             [Validation(Required=false)]
@@ -57,13 +61,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Related { get; set; }
 
-            [NameInMap("LastTs")]
-            [Validation(Required=false)]
-            public long? LastTs { get; set; }
-
             [NameInMap("FirstTs")]
             [Validation(Required=false)]
             public long? FirstTs { get; set; }
+
+            [NameInMap("LastTs")]
+            [Validation(Required=false)]
+            public long? LastTs { get; set; }
 
             [NameInMap("Necessity")]
             [Validation(Required=false)]
@@ -81,6 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Layers")]
+            [Validation(Required=false)]
+            public List<string> Layers { get; set; }
+
             [NameInMap("ExtendContentJson")]
             [Validation(Required=false)]
             public DescribeImageVulListResponseBodyVulRecordsExtendContentJson ExtendContentJson { get; set; }
@@ -88,10 +96,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("OsRelease")]
                 [Validation(Required=false)]
                 public string OsRelease { get; set; }
+                [NameInMap("Os")]
+                [Validation(Required=false)]
+                public string Os { get; set; }
                 [NameInMap("RpmEntityList")]
                 [Validation(Required=false)]
                 public List<DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> RpmEntityList { get; set; }
                 public class DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList : TeaModel {
+                    public string MatchList { get; set; }
                     public string Layer { get; set; }
                     public string FullVersion { get; set; }
                     public string Version { get; set; }
@@ -100,16 +112,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Name { get; set; }
                     public string UpdateCmd { get; set; }
                 }
-                [NameInMap("Os")]
-                [Validation(Required=false)]
-                public string Os { get; set; }
             };
 
         }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

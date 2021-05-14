@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
         [NameInMap("QuaraTag")]
         [Validation(Required=false)]
         public string QuaraTag { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainListResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeDomainListResponseBodyPageInfo PageInfo { get; set; }
@@ -27,21 +31,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
         };
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainListResponseList")]
         [Validation(Required=false)]
         public List<DescribeDomainListResponseBodyDomainListResponseList> DomainListResponseList { get; set; }
         public class DescribeDomainListResponseBodyDomainListResponseList : TeaModel {
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
             [NameInMap("IpList")]
             [Validation(Required=false)]
             public string IpList { get; set; }
+
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
 
         }
 

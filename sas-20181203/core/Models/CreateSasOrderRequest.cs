@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SasWebguardOrderNum { get; set; }
 
+        [NameInMap("Vcore")]
+        [Validation(Required=false)]
+        public string Vcore { get; set; }
+
+        [NameInMap("ContainerImageScan")]
+        [Validation(Required=false)]
+        public string ContainerImageScan { get; set; }
+
     }
 
 }

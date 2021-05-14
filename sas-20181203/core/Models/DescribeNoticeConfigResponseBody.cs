@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeNoticeConfigResponseBodyNoticeConfigList> NoticeConfigList { get; set; }
         public class DescribeNoticeConfigResponseBodyNoticeConfigList : TeaModel {
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-
-            [NameInMap("Route")]
-            [Validation(Required=false)]
-            public int? Route { get; set; }
-
             [NameInMap("TimeLimit")]
             [Validation(Required=false)]
             public int? TimeLimit { get; set; }
@@ -33,9 +25,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+
             [NameInMap("Project")]
             [Validation(Required=false)]
             public string Project { get; set; }
+
+            [NameInMap("Route")]
+            [Validation(Required=false)]
+            public int? Route { get; set; }
 
         }
 

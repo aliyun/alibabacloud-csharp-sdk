@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MarkMissParam { get; set; }
 
+        [NameInMap("MarkBatch")]
+        [Validation(Required=false)]
+        public string MarkBatch { get; set; }
+
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]
         public List<string> SecurityEventIds { get; set; }

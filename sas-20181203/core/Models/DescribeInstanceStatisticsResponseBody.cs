@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Trojan { get; set; }
 
-            [NameInMap("EmgNum")]
-            [Validation(Required=false)]
-            public int? EmgNum { get; set; }
-
             [NameInMap("CveNum")]
             [Validation(Required=false)]
             public int? CveNum { get; set; }
+
+            [NameInMap("EmgNum")]
+            [Validation(Required=false)]
+            public int? EmgNum { get; set; }
 
             [NameInMap("Suspicious")]
             [Validation(Required=false)]

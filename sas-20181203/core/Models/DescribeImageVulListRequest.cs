@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageVulListRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("Ids")]
-        [Validation(Required=false)]
-        public string Ids { get; set; }
-
-        [NameInMap("Remark")]
-        [Validation(Required=false)]
-        public string Remark { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -45,10 +29,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string AliasName { get; set; }
 
-        [NameInMap("Level")]
-        [Validation(Required=false)]
-        public string Level { get; set; }
-
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public string StatusList { get; set; }
@@ -61,22 +41,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Dealed { get; set; }
 
-        [NameInMap("BatchName")]
-        [Validation(Required=false)]
-        public string BatchName { get; set; }
-
-        [NameInMap("Resource")]
-        [Validation(Required=false)]
-        public string Resource { get; set; }
-
-        [NameInMap("CreateTsStart")]
-        [Validation(Required=false)]
-        public long? CreateTsStart { get; set; }
-
-        [NameInMap("CreateTsEnd")]
-        [Validation(Required=false)]
-        public long? CreateTsEnd { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -85,21 +49,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ModifyTsStart")]
+        [NameInMap("RepoRegionId")]
         [Validation(Required=false)]
-        public long? ModifyTsStart { get; set; }
+        public string RepoRegionId { get; set; }
 
-        [NameInMap("ModifyTsEnd")]
+        [NameInMap("RepoInstanceId")]
         [Validation(Required=false)]
-        public long? ModifyTsEnd { get; set; }
+        public string RepoInstanceId { get; set; }
 
-        [NameInMap("CveId")]
+        [NameInMap("RepoId")]
         [Validation(Required=false)]
-        public string CveId { get; set; }
+        public string RepoId { get; set; }
 
         [NameInMap("RepoName")]
         [Validation(Required=false)]
         public string RepoName { get; set; }
+
+        [NameInMap("RepoNamespace")]
+        [Validation(Required=false)]
+        public string RepoNamespace { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -108,10 +76,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("RepoId")]
-        [Validation(Required=false)]
-        public string RepoId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

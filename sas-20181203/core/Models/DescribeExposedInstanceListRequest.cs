@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceListRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("From")]
-        [Validation(Required=false)]
-        public string From { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -24,10 +16,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
-
-        [NameInMap("Uuid")]
-        [Validation(Required=false)]
-        public string Uuid { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -37,13 +25,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public bool? VulStatus { get; set; }
 
+        [NameInMap("HealthStatus")]
+        [Validation(Required=false)]
+        public bool? HealthStatus { get; set; }
+
         [NameInMap("ExposureComponent")]
         [Validation(Required=false)]
         public string ExposureComponent { get; set; }
-
-        [NameInMap("ExposureType")]
-        [Validation(Required=false)]
-        public string ExposureType { get; set; }
 
         [NameInMap("ExposurePort")]
         [Validation(Required=false)]

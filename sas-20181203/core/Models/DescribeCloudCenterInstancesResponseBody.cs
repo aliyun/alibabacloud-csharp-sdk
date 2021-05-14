@@ -9,6 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudCenterInstancesResponseBody : TeaModel {
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageInfo")]
+        [Validation(Required=false)]
+        public DescribeCloudCenterInstancesResponseBodyPageInfo PageInfo { get; set; }
+        public class DescribeCloudCenterInstancesResponseBodyPageInfo : TeaModel {
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+        };
+
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeCloudCenterInstancesResponseBodyInstances> Instances { get; set; }
@@ -81,13 +107,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AlarmStatus { get; set; }
 
-            [NameInMap("HealthCheckCount")]
-            [Validation(Required=false)]
-            public int? HealthCheckCount { get; set; }
-
             [NameInMap("Importance")]
             [Validation(Required=false)]
             public int? Importance { get; set; }
+
+            [NameInMap("HealthCheckCount")]
+            [Validation(Required=false)]
+            public int? HealthCheckCount { get; set; }
 
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -97,13 +123,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Os { get; set; }
 
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
             [NameInMap("SafeEventCount")]
             [Validation(Required=false)]
             public int? SafeEventCount { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
 
             [NameInMap("AssetType")]
             [Validation(Required=false)]
@@ -120,6 +146,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
+
+            [NameInMap("AutoSnapshotsLevel")]
+            [Validation(Required=false)]
+            public int? AutoSnapshotsLevel { get; set; }
 
             [NameInMap("GroupId")]
             [Validation(Required=false)]
@@ -146,32 +176,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientVersion { get; set; }
 
         }
-
-        [NameInMap("PageInfo")]
-        [Validation(Required=false)]
-        public DescribeCloudCenterInstancesResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeCloudCenterInstancesResponseBodyPageInfo : TeaModel {
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-        };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

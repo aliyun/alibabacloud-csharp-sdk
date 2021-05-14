@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("Count")]
         [Validation(Required=false)]
@@ -65,36 +65,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Desc { get; set; }
 
-            [NameInMap("Details")]
-            [Validation(Required=false)]
-            public List<DescribeSuspEventsResponseBodySuspEventsDetails> Details { get; set; }
-            public class DescribeSuspEventsResponseBodySuspEventsDetails : TeaModel {
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-                [NameInMap("NameDisplay")]
-                [Validation(Required=false)]
-                public string NameDisplay { get; set; }
-
-                [NameInMap("InfoType")]
-                [Validation(Required=false)]
-                public string InfoType { get; set; }
-
-                [NameInMap("ValueDisplay")]
-                [Validation(Required=false)]
-                public string ValueDisplay { get; set; }
-
-            }
-
             [NameInMap("CanCancelFault")]
             [Validation(Required=false)]
             public bool? CanCancelFault { get; set; }
@@ -111,33 +81,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string SecurityEventIds { get; set; }
 
-            [NameInMap("CanBeDealOnLine")]
+            [NameInMap("K8sClusterId")]
             [Validation(Required=false)]
-            public bool? CanBeDealOnLine { get; set; }
-
-            [NameInMap("MarkMisRules")]
-            [Validation(Required=false)]
-            public string MarkMisRules { get; set; }
+            public string K8sClusterId { get; set; }
 
             [NameInMap("ContainerImageName")]
             [Validation(Required=false)]
             public string ContainerImageName { get; set; }
 
-            [NameInMap("K8sClusterId")]
+            [NameInMap("MarkMisRules")]
             [Validation(Required=false)]
-            public string K8sClusterId { get; set; }
+            public string MarkMisRules { get; set; }
+
+            [NameInMap("CanBeDealOnLine")]
+            [Validation(Required=false)]
+            public bool? CanBeDealOnLine { get; set; }
 
             [NameInMap("ContainHwMode")]
             [Validation(Required=false)]
             public bool? ContainHwMode { get; set; }
 
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
             [NameInMap("K8sNodeId")]
             [Validation(Required=false)]
             public string K8sNodeId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
 
             [NameInMap("EventStatus")]
             [Validation(Required=false)]
@@ -178,6 +148,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("OccurrenceTimeStamp")]
             [Validation(Required=false)]
             public long? OccurrenceTimeStamp { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
 
             [NameInMap("AlarmEventTypeDisplay")]
             [Validation(Required=false)]
@@ -238,6 +212,54 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("Details")]
+            [Validation(Required=false)]
+            public List<DescribeSuspEventsResponseBodySuspEventsDetails> Details { get; set; }
+            public class DescribeSuspEventsResponseBodySuspEventsDetails : TeaModel {
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("NameDisplay")]
+                [Validation(Required=false)]
+                public string NameDisplay { get; set; }
+
+                [NameInMap("InfoType")]
+                [Validation(Required=false)]
+                public string InfoType { get; set; }
+
+                [NameInMap("ValueDisplay")]
+                [Validation(Required=false)]
+                public string ValueDisplay { get; set; }
+
+            }
+
+            [NameInMap("EventNotes")]
+            [Validation(Required=false)]
+            public List<DescribeSuspEventsResponseBodySuspEventsEventNotes> EventNotes { get; set; }
+            public class DescribeSuspEventsResponseBodySuspEventsEventNotes : TeaModel {
+                [NameInMap("Note")]
+                [Validation(Required=false)]
+                public string Note { get; set; }
+
+                [NameInMap("NoteId")]
+                [Validation(Required=false)]
+                public long? NoteId { get; set; }
+
+                [NameInMap("NoteTime")]
+                [Validation(Required=false)]
+                public string NoteTime { get; set; }
+
+            }
 
         }
 

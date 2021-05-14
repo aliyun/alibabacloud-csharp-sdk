@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeRiskItemTypeResponseBodyList> List { get; set; }
         public class DescribeRiskItemTypeResponseBodyList : TeaModel {
-            [NameInMap("Title")]
-            [Validation(Required=false)]
-            public string Title { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
 
         }
 

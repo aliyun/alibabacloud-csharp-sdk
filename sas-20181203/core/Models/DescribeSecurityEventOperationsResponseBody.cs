@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string OperationCode { get; set; }
 
+            [NameInMap("UserCanOperate")]
+            [Validation(Required=false)]
+            public bool? UserCanOperate { get; set; }
+
             [NameInMap("MarkField")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> MarkField { get; set; }
@@ -33,14 +37,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string MarkMisType { get; set; }
 
-                [NameInMap("MarkMisValue")]
-                [Validation(Required=false)]
-                public string MarkMisValue { get; set; }
-
-                [NameInMap("SupportedMisType")]
-                [Validation(Required=false)]
-                public List<string> SupportedMisType { get; set; }
-
                 [NameInMap("FiledName")]
                 [Validation(Required=false)]
                 public string FiledName { get; set; }
@@ -49,24 +45,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string FiledAliasName { get; set; }
 
-            }
+                [NameInMap("MarkMisValue")]
+                [Validation(Required=false)]
+                public string MarkMisValue { get; set; }
 
-            [NameInMap("UserCanOperate")]
-            [Validation(Required=false)]
-            public bool? UserCanOperate { get; set; }
+                [NameInMap("SupportedMisType")]
+                [Validation(Required=false)]
+                public List<string> SupportedMisType { get; set; }
+
+            }
 
             [NameInMap("MarkFieldsSource")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource> MarkFieldsSource { get; set; }
             public class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource : TeaModel {
-                [NameInMap("MarkMisValue")]
-                [Validation(Required=false)]
-                public string MarkMisValue { get; set; }
-
-                [NameInMap("SupportedMisType")]
-                [Validation(Required=false)]
-                public List<string> SupportedMisType { get; set; }
-
                 [NameInMap("FiledName")]
                 [Validation(Required=false)]
                 public string FiledName { get; set; }
@@ -74,6 +66,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("FiledAliasName")]
                 [Validation(Required=false)]
                 public string FiledAliasName { get; set; }
+
+                [NameInMap("MarkMisValue")]
+                [Validation(Required=false)]
+                public string MarkMisValue { get; set; }
+
+                [NameInMap("SupportedMisType")]
+                [Validation(Required=false)]
+                public List<string> SupportedMisType { get; set; }
 
             }
 

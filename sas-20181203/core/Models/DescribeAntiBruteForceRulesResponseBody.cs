@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAntiBruteForceRulesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeAntiBruteForceRulesResponseBodyPageInfo PageInfo { get; set; }
@@ -27,18 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
         };
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<DescribeAntiBruteForceRulesResponseBodyRules> Rules { get; set; }
         public class DescribeAntiBruteForceRulesResponseBodyRules : TeaModel {
-            [NameInMap("UuidList")]
-            [Validation(Required=false)]
-            public List<string> UuidList { get; set; }
-
             [NameInMap("MachineCount")]
             [Validation(Required=false)]
             public int? MachineCount { get; set; }
@@ -70,6 +66,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("UuidList")]
+            [Validation(Required=false)]
+            public List<string> UuidList { get; set; }
 
         }
 

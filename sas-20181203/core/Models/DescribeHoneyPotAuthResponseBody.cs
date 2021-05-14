@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HoneyPotAuthCount")]
-        [Validation(Required=false)]
-        public long? HoneyPotAuthCount { get; set; }
-
         [NameInMap("HoneyPotCount")]
         [Validation(Required=false)]
         public int? HoneyPotCount { get; set; }
+
+        [NameInMap("HoneyPotAuthCount")]
+        [Validation(Required=false)]
+        public long? HoneyPotAuthCount { get; set; }
 
     }
 

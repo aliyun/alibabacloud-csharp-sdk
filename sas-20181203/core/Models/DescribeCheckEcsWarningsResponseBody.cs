@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SasVersion { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CanTry")]
         [Validation(Required=false)]
         public string CanTry { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("WeakPasswordCount")]
         [Validation(Required=false)]
         public string WeakPasswordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

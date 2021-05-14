@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedMaliciousFileImagesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageInfo")]
+        [Validation(Required=false)]
+        public DescribeAffectedMaliciousFileImagesResponseBodyPageInfo PageInfo { get; set; }
+        public class DescribeAffectedMaliciousFileImagesResponseBodyPageInfo : TeaModel {
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+        };
+
         [NameInMap("AffectedMaliciousFileImagesResponse")]
         [Validation(Required=false)]
         public List<DescribeAffectedMaliciousFileImagesResponseBodyAffectedMaliciousFileImagesResponse> AffectedMaliciousFileImagesResponse { get; set; }
@@ -33,25 +55,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
-            [NameInMap("RepoRegionId")]
-            [Validation(Required=false)]
-            public string RepoRegionId { get; set; }
-
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
+
+            [NameInMap("RepoRegionId")]
+            [Validation(Required=false)]
+            public string RepoRegionId { get; set; }
 
             [NameInMap("ImageUuid")]
             [Validation(Required=false)]
             public string ImageUuid { get; set; }
 
-            [NameInMap("MaliciousMd5")]
-            [Validation(Required=false)]
-            public string MaliciousMd5 { get; set; }
-
             [NameInMap("FirstScanTimestamp")]
             [Validation(Required=false)]
             public long? FirstScanTimestamp { get; set; }
+
+            [NameInMap("MaliciousMd5")]
+            [Validation(Required=false)]
+            public string MaliciousMd5 { get; set; }
 
             [NameInMap("FilePath")]
             [Validation(Required=false)]
@@ -78,28 +100,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
         }
-
-        [NameInMap("PageInfo")]
-        [Validation(Required=false)]
-        public DescribeAffectedMaliciousFileImagesResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeAffectedMaliciousFileImagesResponseBodyPageInfo : TeaModel {
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-        };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

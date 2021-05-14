@@ -21,39 +21,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ExposureIp { get; set; }
 
+            [NameInMap("GroupNo")]
+            [Validation(Required=false)]
+            public string GroupNo { get; set; }
+
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
-
-            [NameInMap("NntfVulCount")]
-            [Validation(Required=false)]
-            public int? NntfVulCount { get; set; }
-
-            [NameInMap("AllVulList")]
-            [Validation(Required=false)]
-            public List<DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList> AllVulList { get; set; }
-            public class DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList : TeaModel {
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public int? Type { get; set; }
-
-                [NameInMap("Necessity")]
-                [Validation(Required=false)]
-                public string Necessity { get; set; }
-
-                [NameInMap("Uuid")]
-                [Validation(Required=false)]
-                public int? Uuid { get; set; }
-
-                [NameInMap("AliasName")]
-                [Validation(Required=false)]
-                public string AliasName { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-            }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -75,13 +49,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
-            [NameInMap("AsapVulCount")]
-            [Validation(Required=false)]
-            public int? AsapVulCount { get; set; }
-
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
+
+            [NameInMap("ExposurePort")]
+            [Validation(Required=false)]
+            public string ExposurePort { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("ExposureComponent")]
+            [Validation(Required=false)]
+            public string ExposureComponent { get; set; }
 
             [NameInMap("RealVulList")]
             [Validation(Required=false)]
@@ -89,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public class DescribeExposedInstanceDetailResponseBodyExposedChainsRealVulList : TeaModel {
                 [NameInMap("Type")]
                 [Validation(Required=false)]
-                public int? Type { get; set; }
+                public string Type { get; set; }
 
                 [NameInMap("Necessity")]
                 [Validation(Required=false)]
@@ -97,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
                 [NameInMap("Uuid")]
                 [Validation(Required=false)]
-                public int? Uuid { get; set; }
+                public string Uuid { get; set; }
 
                 [NameInMap("AliasName")]
                 [Validation(Required=false)]
@@ -109,21 +91,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
-            [NameInMap("ExposurePort")]
+            [NameInMap("AllVulList")]
             [Validation(Required=false)]
-            public string ExposurePort { get; set; }
+            public List<DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList> AllVulList { get; set; }
+            public class DescribeExposedInstanceDetailResponseBodyExposedChainsAllVulList : TeaModel {
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
 
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
+                [NameInMap("Necessity")]
+                [Validation(Required=false)]
+                public string Necessity { get; set; }
 
-            [NameInMap("LaterVulCount")]
-            [Validation(Required=false)]
-            public int? LaterVulCount { get; set; }
+                [NameInMap("Uuid")]
+                [Validation(Required=false)]
+                public string Uuid { get; set; }
 
-            [NameInMap("ExposureComponent")]
-            [Validation(Required=false)]
-            public string ExposureComponent { get; set; }
+                [NameInMap("AliasName")]
+                [Validation(Required=false)]
+                public string AliasName { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
 
         }
 

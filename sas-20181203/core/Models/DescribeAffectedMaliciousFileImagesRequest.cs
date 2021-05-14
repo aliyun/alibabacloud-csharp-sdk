@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedMaliciousFileImagesRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("MaliciousMd5")]
         [Validation(Required=false)]
         public string MaliciousMd5 { get; set; }
@@ -60,10 +56,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ImageLayer")]
         [Validation(Required=false)]
         public string ImageLayer { get; set; }
-
-        [NameInMap("Uuids")]
-        [Validation(Required=false)]
-        public List<string> Uuids { get; set; }
 
     }
 

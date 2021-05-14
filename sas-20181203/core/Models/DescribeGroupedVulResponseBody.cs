@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedVulResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("TotalFixCount")]
+            [Validation(Required=false)]
+            public long? TotalFixCount { get; set; }
 
             [NameInMap("AsapCount")]
             [Validation(Required=false)]

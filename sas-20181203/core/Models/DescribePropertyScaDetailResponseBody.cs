@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScaDetailResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageInfo")]
+        [Validation(Required=false)]
+        public DescribePropertyScaDetailResponseBodyPageInfo PageInfo { get; set; }
+        public class DescribePropertyScaDetailResponseBodyPageInfo : TeaModel {
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+        };
+
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyScaDetailResponseBodyPropertys> Propertys { get; set; }
@@ -73,13 +95,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Create { get; set; }
 
-            [NameInMap("ProcessUser")]
-            [Validation(Required=false)]
-            public string ProcessUser { get; set; }
-
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
+
+            [NameInMap("ProcessUser")]
+            [Validation(Required=false)]
+            public string ProcessUser { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -126,28 +148,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
         }
-
-        [NameInMap("PageInfo")]
-        [Validation(Required=false)]
-        public DescribePropertyScaDetailResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribePropertyScaDetailResponseBodyPageInfo : TeaModel {
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-        };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

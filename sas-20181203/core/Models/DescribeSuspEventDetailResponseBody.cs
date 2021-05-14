@@ -9,9 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventDetailResponseBody : TeaModel {
-        [NameInMap("EventDesc")]
+        [NameInMap("DataSource")]
         [Validation(Required=false)]
-        public string EventDesc { get; set; }
+        public string DataSource { get; set; }
+
+        [NameInMap("EventName")]
+        [Validation(Required=false)]
+        public string EventName { get; set; }
+
+        [NameInMap("InternetIp")]
+        [Validation(Required=false)]
+        public string InternetIp { get; set; }
+
+        [NameInMap("IntranetIp")]
+        [Validation(Required=false)]
+        public string IntranetIp { get; set; }
+
+        [NameInMap("LastTime")]
+        [Validation(Required=false)]
+        public string LastTime { get; set; }
+
+        [NameInMap("OperateMsg")]
+        [Validation(Required=false)]
+        public string OperateMsg { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
+
+        [NameInMap("CanBeDealOnLine")]
+        [Validation(Required=false)]
+        public bool? CanBeDealOnLine { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,45 +49,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string EventTypeDesc { get; set; }
 
-        [NameInMap("OperateErrorCode")]
+        [NameInMap("EventDesc")]
         [Validation(Required=false)]
-        public string OperateErrorCode { get; set; }
-
-        [NameInMap("EventStatus")]
-        [Validation(Required=false)]
-        public string EventStatus { get; set; }
-
-        [NameInMap("EventName")]
-        [Validation(Required=false)]
-        public string EventName { get; set; }
-
-        [NameInMap("SaleVersion")]
-        [Validation(Required=false)]
-        public string SaleVersion { get; set; }
-
-        [NameInMap("IntranetIp")]
-        [Validation(Required=false)]
-        public string IntranetIp { get; set; }
-
-        [NameInMap("DataSource")]
-        [Validation(Required=false)]
-        public string DataSource { get; set; }
+        public string EventDesc { get; set; }
 
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("OperateMsg")]
+        [NameInMap("EventStatus")]
         [Validation(Required=false)]
-        public string OperateMsg { get; set; }
+        public string EventStatus { get; set; }
 
-        [NameInMap("CanBeDealOnLine")]
+        [NameInMap("SaleVersion")]
         [Validation(Required=false)]
-        public bool? CanBeDealOnLine { get; set; }
+        public string SaleVersion { get; set; }
 
-        [NameInMap("Uuid")]
+        [NameInMap("OperateErrorCode")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
+        public string OperateErrorCode { get; set; }
+
+        [NameInMap("SasId")]
+        [Validation(Required=false)]
+        public string SasId { get; set; }
+
+        [NameInMap("Level")]
+        [Validation(Required=false)]
+        public string Level { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public int? Id { get; set; }
 
         [NameInMap("Details")]
         [Validation(Required=false)]
@@ -82,26 +102,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InfoType { get; set; }
 
         }
-
-        [NameInMap("InternetIp")]
-        [Validation(Required=false)]
-        public string InternetIp { get; set; }
-
-        [NameInMap("Level")]
-        [Validation(Required=false)]
-        public string Level { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public int? Id { get; set; }
-
-        [NameInMap("LastTime")]
-        [Validation(Required=false)]
-        public string LastTime { get; set; }
-
-        [NameInMap("SasId")]
-        [Validation(Required=false)]
-        public string SasId { get; set; }
 
     }
 

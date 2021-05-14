@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedTagsResponseBody : TeaModel {
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
 
         [NameInMap("GroupedFileds")]
         [Validation(Required=false)]
@@ -34,14 +42,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TagId { get; set; }
 
         }
-
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

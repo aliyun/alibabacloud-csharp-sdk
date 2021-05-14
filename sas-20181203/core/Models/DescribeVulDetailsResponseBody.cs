@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulDetailsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Cves")]
         [Validation(Required=false)]
         public List<DescribeVulDetailsResponseBodyCves> Cves { get; set; }
         public class DescribeVulDetailsResponseBodyCves : TeaModel {
-            [NameInMap("Complexity")]
-            [Validation(Required=false)]
-            public string Complexity { get; set; }
-
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
+
+            [NameInMap("Complexity")]
+            [Validation(Required=false)]
+            public string Complexity { get; set; }
 
             [NameInMap("Product")]
             [Validation(Required=false)]
@@ -53,13 +57,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? PocDisclosureTime { get; set; }
 
-            [NameInMap("CvssVector")]
-            [Validation(Required=false)]
-            public string CvssVector { get; set; }
-
             [NameInMap("Classify")]
             [Validation(Required=false)]
             public string Classify { get; set; }
+
+            [NameInMap("CvssVector")]
+            [Validation(Required=false)]
+            public string CvssVector { get; set; }
 
             [NameInMap("VulLevel")]
             [Validation(Required=false)]
@@ -104,10 +108,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

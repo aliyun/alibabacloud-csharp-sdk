@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyCronDetailResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageInfo")]
+        [Validation(Required=false)]
+        public DescribePropertyCronDetailResponseBodyPageInfo PageInfo { get; set; }
+        public class DescribePropertyCronDetailResponseBodyPageInfo : TeaModel {
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+        };
+
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyCronDetailResponseBodyPropertys> Propertys { get; set; }
@@ -21,13 +43,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
-            [NameInMap("User")]
-            [Validation(Required=false)]
-            public string User { get; set; }
-
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
+
+            [NameInMap("User")]
+            [Validation(Required=false)]
+            public string User { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -37,13 +59,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Source { get; set; }
 
-            [NameInMap("Cmd")]
-            [Validation(Required=false)]
-            public string Cmd { get; set; }
-
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
+
+            [NameInMap("Cmd")]
+            [Validation(Required=false)]
+            public string Cmd { get; set; }
 
             [NameInMap("Period")]
             [Validation(Required=false)]
@@ -66,28 +88,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
         }
-
-        [NameInMap("PageInfo")]
-        [Validation(Required=false)]
-        public DescribePropertyCronDetailResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribePropertyCronDetailResponseBodyPageInfo : TeaModel {
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-        };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

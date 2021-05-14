@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse> SuspHoneyPotStatisticsResponse { get; set; }
         public class DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse : TeaModel {
-            [NameInMap("VpcName")]
-            [Validation(Required=false)]
-            public string VpcName { get; set; }
-
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -29,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
+            [NameInMap("VpcName")]
+            [Validation(Required=false)]
+            public string VpcName { get; set; }
+
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
@@ -36,10 +36,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
             [NameInMap("Count")]
             [Validation(Required=false)]

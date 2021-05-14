@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("OsDetail")]
             [Validation(Required=false)]
             public string OsDetail { get; set; }
-            [NameInMap("Kernel")]
-            [Validation(Required=false)]
-            public string Kernel { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+            [NameInMap("Kernel")]
+            [Validation(Required=false)]
+            public string Kernel { get; set; }
             [NameInMap("OsName")]
             [Validation(Required=false)]
             public string OsName { get; set; }
@@ -53,36 +53,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-            [NameInMap("IpList")]
-            [Validation(Required=false)]
-            public List<string> IpList { get; set; }
             [NameInMap("GroupTrace")]
             [Validation(Required=false)]
             public string GroupTrace { get; set; }
-            [NameInMap("DiskInfoList")]
-            [Validation(Required=false)]
-            public List<string> DiskInfoList { get; set; }
-            [NameInMap("HostName")]
-            [Validation(Required=false)]
-            public string HostName { get; set; }
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
-            [NameInMap("MacList")]
+            [NameInMap("HostName")]
             [Validation(Required=false)]
-            public List<string> MacList { get; set; }
+            public string HostName { get; set; }
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
-            [NameInMap("AssetType")]
-            [Validation(Required=false)]
-            public string AssetType { get; set; }
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
+            [NameInMap("AssetType")]
+            [Validation(Required=false)]
+            public string AssetType { get; set; }
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
             [NameInMap("SysInfo")]
             [Validation(Required=false)]
             public string SysInfo { get; set; }
@@ -95,9 +89,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
-            [NameInMap("InstanceStatus")]
+            [NameInMap("IpList")]
             [Validation(Required=false)]
-            public string InstanceStatus { get; set; }
+            public List<string> IpList { get; set; }
+            [NameInMap("MacList")]
+            [Validation(Required=false)]
+            public List<string> MacList { get; set; }
+            [NameInMap("DiskInfoList")]
+            [Validation(Required=false)]
+            public List<string> DiskInfoList { get; set; }
         };
 
     }

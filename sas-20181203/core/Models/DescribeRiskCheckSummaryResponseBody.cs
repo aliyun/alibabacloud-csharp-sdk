@@ -20,34 +20,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ItemCount")]
             [Validation(Required=false)]
             public int? ItemCount { get; set; }
-            [NameInMap("Groups")]
-            [Validation(Required=false)]
-            public List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> Groups { get; set; }
-            public class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups : TeaModel {
-                public string Status { get; set; }
-                public int? Sort { get; set; }
-                public int? RemainingTime { get; set; }
-                public List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus> CountByStatus { get; set; }
-                public class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus : TeaModel {
-                    public string Status { get; set; }
-                    public int? Count { get; set; }
-                }
-                public string Title { get; set; }
-                public long? Id { get; set; }
-            }
             [NameInMap("AffectedAssetCount")]
             [Validation(Required=false)]
             public int? AffectedAssetCount { get; set; }
             [NameInMap("DisabledRiskCount")]
             [Validation(Required=false)]
             public int? DisabledRiskCount { get; set; }
-            [NameInMap("RiskLevelCount")]
-            [Validation(Required=false)]
-            public List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount> RiskLevelCount { get; set; }
-            public class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount : TeaModel {
-                public string Key { get; set; }
-                public int? Count { get; set; }
-            }
             [NameInMap("RiskCount")]
             [Validation(Required=false)]
             public int? RiskCount { get; set; }
@@ -63,6 +41,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("EnabledRiskCount")]
             [Validation(Required=false)]
             public int? EnabledRiskCount { get; set; }
+            [NameInMap("RiskLevelCount")]
+            [Validation(Required=false)]
+            public List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount> RiskLevelCount { get; set; }
+            public class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount : TeaModel {
+                public string Key { get; set; }
+                public int? Count { get; set; }
+            }
+            [NameInMap("Groups")]
+            [Validation(Required=false)]
+            public List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> Groups { get; set; }
+            public class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups : TeaModel {
+                public int? RemainingTime { get; set; }
+                public string Status { get; set; }
+                public int? Sort { get; set; }
+                public string Title { get; set; }
+                public long? Id { get; set; }
+                public List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus> CountByStatus { get; set; }
+                public class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus : TeaModel {
+                    public string Status { get; set; }
+                    public int? Count { get; set; }
+                }
+            }
         };
 
     }

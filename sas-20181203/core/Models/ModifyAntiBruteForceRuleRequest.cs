@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? ForbiddenTime { get; set; }
 
-        [NameInMap("EnableSmartRule")]
-        [Validation(Required=false)]
-        public bool? EnableSmartRule { get; set; }
-
         [NameInMap("DefaultRule")]
         [Validation(Required=false)]
         public bool? DefaultRule { get; set; }

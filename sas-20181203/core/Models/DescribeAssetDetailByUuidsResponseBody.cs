@@ -45,13 +45,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string VpcInstanceId { get; set; }
 
-            [NameInMap("AssetType")]
-            [Validation(Required=false)]
-            public string AssetType { get; set; }
-
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
+
+            [NameInMap("AssetType")]
+            [Validation(Required=false)]
+            public string AssetType { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]

@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("NewInstanceCount")]
             [Validation(Required=false)]
             public int? NewInstanceCount { get; set; }
-            [NameInMap("GroupCount")]
-            [Validation(Required=false)]
-            public int? GroupCount { get; set; }
             [NameInMap("ExposedInstanceCount")]
             [Validation(Required=false)]
             public int? ExposedInstanceCount { get; set; }
+            [NameInMap("GroupCount")]
+            [Validation(Required=false)]
+            public int? GroupCount { get; set; }
             [NameInMap("GeneralAssetCount")]
             [Validation(Required=false)]
             public int? GeneralAssetCount { get; set; }
@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TestAssetCount")]
             [Validation(Required=false)]
             public int? TestAssetCount { get; set; }
-            [NameInMap("VpcCount")]
-            [Validation(Required=false)]
-            public int? VpcCount { get; set; }
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
+            [NameInMap("VpcCount")]
+            [Validation(Required=false)]
+            public int? VpcCount { get; set; }
             [NameInMap("NotRunningStatusCount")]
             [Validation(Required=false)]
             public int? NotRunningStatusCount { get; set; }

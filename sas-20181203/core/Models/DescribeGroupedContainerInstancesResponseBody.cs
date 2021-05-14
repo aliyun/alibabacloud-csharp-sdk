@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedContainerInstancesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeGroupedContainerInstancesResponseBodyPageInfo PageInfo { get; set; }
@@ -31,33 +35,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList> GroupedContainerInstanceList { get; set; }
         public class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList : TeaModel {
-            [NameInMap("HostIp")]
-            [Validation(Required=false)]
-            public string HostIp { get; set; }
-
             [NameInMap("RiskLevel")]
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
-            [NameInMap("RiskStatus")]
+            [NameInMap("HostIp")]
             [Validation(Required=false)]
-            public string RiskStatus { get; set; }
+            public string HostIp { get; set; }
 
             [NameInMap("Pod")]
             [Validation(Required=false)]
             public string Pod { get; set; }
 
+            [NameInMap("RiskStatus")]
+            [Validation(Required=false)]
+            public string RiskStatus { get; set; }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
-            [NameInMap("CusterState")]
-            [Validation(Required=false)]
-            public string CusterState { get; set; }
-
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
+
+            [NameInMap("CusterState")]
+            [Validation(Required=false)]
+            public string CusterState { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -104,10 +108,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

@@ -35,18 +35,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("AlarmUniqueInfo")]
             [Validation(Required=false)]
             public string AlarmUniqueInfo { get; set; }
-            [NameInMap("CauseDetails")]
-            [Validation(Required=false)]
-            public List<DescribeAlarmEventDetailResponseBodyDataCauseDetails> CauseDetails { get; set; }
-            public class DescribeAlarmEventDetailResponseBodyDataCauseDetails : TeaModel {
-                public string Key { get; set; }
-                public List<DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue> Value { get; set; }
-                public class DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue : TeaModel {
-                    public string Type { get; set; }
-                    public string Value { get; set; }
-                    public string Name { get; set; }
-                }
-            }
             [NameInMap("CanCancelFault")]
             [Validation(Required=false)]
             public bool? CanCancelFault { get; set; }
@@ -65,12 +53,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ContainHwMode")]
             [Validation(Required=false)]
             public bool? ContainHwMode { get; set; }
-            [NameInMap("K8sNodeId")]
-            [Validation(Required=false)]
-            public string K8sNodeId { get; set; }
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
+            [NameInMap("K8sNodeId")]
+            [Validation(Required=false)]
+            public string K8sNodeId { get; set; }
             [NameInMap("Solution")]
             [Validation(Required=false)]
             public string Solution { get; set; }
@@ -80,24 +68,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public long? EndTime { get; set; }
             [NameInMap("AlarmEventAliasName")]
             [Validation(Required=false)]
             public string AlarmEventAliasName { get; set; }
-            [NameInMap("StartTime")]
+            [NameInMap("EndTime")]
             [Validation(Required=false)]
-            public long? StartTime { get; set; }
+            public long? EndTime { get; set; }
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
-            [NameInMap("K8sPodName")]
+            [NameInMap("StartTime")]
             [Validation(Required=false)]
-            public string K8sPodName { get; set; }
+            public long? StartTime { get; set; }
             [NameInMap("ContainerId")]
             [Validation(Required=false)]
             public string ContainerId { get; set; }
+            [NameInMap("K8sPodName")]
+            [Validation(Required=false)]
+            public string K8sPodName { get; set; }
             [NameInMap("K8sNamespace")]
             [Validation(Required=false)]
             public string K8sNamespace { get; set; }
@@ -107,6 +95,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
+            [NameInMap("CauseDetails")]
+            [Validation(Required=false)]
+            public List<DescribeAlarmEventDetailResponseBodyDataCauseDetails> CauseDetails { get; set; }
+            public class DescribeAlarmEventDetailResponseBodyDataCauseDetails : TeaModel {
+                public string Key { get; set; }
+                public List<DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue> Value { get; set; }
+                public class DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue : TeaModel {
+                    public string Type { get; set; }
+                    public string Value { get; set; }
+                    public string Name { get; set; }
+                }
+            }
         };
 
     }
