@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
-    public class EstimateStereoVideoDepthResponseBody : TeaModel {
+    public class EstimateMonocularVideoDepthResponseBody : TeaModel {
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Threedvision20210131.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public EstimateStereoVideoDepthResponseBodyData Data { get; set; }
-        public class EstimateStereoVideoDepthResponseBodyData : TeaModel {
+        public EstimateMonocularVideoDepthResponseBodyData Data { get; set; }
+        public class EstimateMonocularVideoDepthResponseBodyData : TeaModel {
             [NameInMap("DepthUrl")]
             [Validation(Required=false)]
             public string DepthUrl { get; set; }

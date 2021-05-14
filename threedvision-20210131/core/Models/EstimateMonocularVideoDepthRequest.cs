@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
-    public class EstimateStereoVideoDepthRequest : TeaModel {
+    public class EstimateMonocularVideoDepthRequest : TeaModel {
         /// <summary>
         /// A short description of struct
         /// </summary>

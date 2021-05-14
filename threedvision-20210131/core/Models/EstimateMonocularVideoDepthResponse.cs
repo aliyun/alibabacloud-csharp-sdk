@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
-    public class EstimateStereoVideoDepthResponse : TeaModel {
+    public class EstimateMonocularVideoDepthResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public EstimateStereoVideoDepthResponseBody Body { get; set; }
+        public EstimateMonocularVideoDepthResponseBody Body { get; set; }
 
     }
 

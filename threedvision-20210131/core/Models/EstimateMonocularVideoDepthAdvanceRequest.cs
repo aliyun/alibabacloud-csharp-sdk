@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Threedvision20210131.Models
 {
-    public class EstimateStereoVideoDepthAdvanceRequest : TeaModel {
+    public class EstimateMonocularVideoDepthAdvanceRequest : TeaModel {
         [NameInMap("VideoURLObject")]
         [Validation(Required=true)]
         public Stream VideoURLObject { get; set; }
