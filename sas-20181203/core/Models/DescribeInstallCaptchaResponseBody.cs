@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class DescribeInstallCaptchaResponseBody : TeaModel {
         [NameInMap("Deadline")]
         [Validation(Required=false)]
-        public int? Deadline { get; set; }
+        public string Deadline { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
