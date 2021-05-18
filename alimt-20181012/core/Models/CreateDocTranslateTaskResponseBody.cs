@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

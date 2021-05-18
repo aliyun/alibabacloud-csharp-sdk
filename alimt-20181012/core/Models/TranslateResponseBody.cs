@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class TranslateResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public TranslateResponseBodyData Data { get; set; }
         public class TranslateResponseBodyData : TeaModel {
-            [NameInMap("WordCount")]
-            [Validation(Required=false)]
-            public string WordCount { get; set; }
             [NameInMap("Translated")]
             [Validation(Required=false)]
             public string Translated { get; set; }
+            [NameInMap("WordCount")]
+            [Validation(Required=false)]
+            public string WordCount { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
 
     }
 

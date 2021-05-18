@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class GetImageDiagnoseResponseBody : TeaModel {
+    public class GetBatchTranslateResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -21,14 +21,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("TranslatedList")]
         [Validation(Required=false)]
-        public GetImageDiagnoseResponseBodyData Data { get; set; }
-        public class GetImageDiagnoseResponseBodyData : TeaModel {
-            [NameInMap("Language")]
-            [Validation(Required=false)]
-            public string Language { get; set; }
-        };
+        public List<Dictionary<string, object>> TranslatedList { get; set; }
 
     }
 

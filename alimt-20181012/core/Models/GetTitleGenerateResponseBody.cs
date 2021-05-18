@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTitleGenerateResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -25,10 +29,6 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [Validation(Required=false)]
             public string Titles { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
 
     }
 

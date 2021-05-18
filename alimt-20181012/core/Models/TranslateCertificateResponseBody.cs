@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [Validation(Required=false)]
             public List<TranslateCertificateResponseBodyDataTranslatedValues> TranslatedValues { get; set; }
             public class TranslateCertificateResponseBodyDataTranslatedValues : TeaModel {
+                public string KeyTranslation { get; set; }
                 public string Key { get; set; }
                 public string Value { get; set; }
                 public string ValueTranslation { get; set; }
-                public string KeyTranslation { get; set; }
             }
         };
 

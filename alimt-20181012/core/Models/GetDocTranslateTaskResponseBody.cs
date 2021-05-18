@@ -13,21 +13,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("TranslateErrorMessage")]
-        [Validation(Required=false)]
-        public string TranslateErrorMessage { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=false)]
-        public int? PageCount { get; set; }
 
         [NameInMap("TranslateFileUrl")]
         [Validation(Required=false)]
@@ -36,6 +24,18 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [NameInMap("TranslateErrorCode")]
         [Validation(Required=false)]
         public string TranslateErrorCode { get; set; }
+
+        [NameInMap("PageCount")]
+        [Validation(Required=false)]
+        public int? PageCount { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
+        [NameInMap("TranslateErrorMessage")]
+        [Validation(Required=false)]
+        public string TranslateErrorMessage { get; set; }
 
     }
 
