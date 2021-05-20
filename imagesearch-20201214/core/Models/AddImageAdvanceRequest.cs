@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public int? CategoryId { get; set; }
-
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [NameInMap("PicName")]
         [Validation(Required=false)]
         public string PicName { get; set; }
+
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public int? CategoryId { get; set; }
 
         [NameInMap("Crop")]
         [Validation(Required=false)]

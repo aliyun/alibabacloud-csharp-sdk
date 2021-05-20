@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,10 +16,6 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public int? CategoryId { get; set; }
-
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
@@ -28,6 +27,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [NameInMap("PicContent")]
         [Validation(Required=false)]
         public string PicContent { get; set; }
+
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public int? CategoryId { get; set; }
 
         [NameInMap("Crop")]
         [Validation(Required=false)]

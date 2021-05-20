@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=true)]
         public Stream PicContentObject { get; set; }
 
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public int? CategoryId { get; set; }
-
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public int? CategoryId { get; set; }
 
         [NameInMap("Crop")]
         [Validation(Required=false)]
@@ -36,10 +36,6 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [NameInMap("Start")]
         [Validation(Required=false)]
         public int? Start { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
         [NameInMap("Filter")]
         [Validation(Required=false)]

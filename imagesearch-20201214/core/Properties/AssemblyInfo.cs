@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-imagesearch")]
 [assembly: AssemblyDescription("Alibaba Cloud image search (20201214) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("959ed9c0-4b4e-11eb-a2c2-f7ffeb66941d")]
+[assembly: Guid("17e31a90-b94a-11eb-bf8f-8978202b5c6d")]
 
 // Version information for an assembly consists of the following four values:
 //

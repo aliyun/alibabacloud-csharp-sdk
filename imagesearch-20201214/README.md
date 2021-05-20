@@ -6,10 +6,10 @@ English | [简体中文](README-CN.md)
 
 ## Installation
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.ImageSearch20201214
+dotnet add package AlibabaCloud.SDK.ImageSearch20201214
 ```
 
 ## Issues
