@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusStatisticRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("BizDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizDate { get; set; }
 
     }

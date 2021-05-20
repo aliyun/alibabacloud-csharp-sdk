@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StartMigrationRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("MigrationId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? MigrationId { get; set; }
 
     }

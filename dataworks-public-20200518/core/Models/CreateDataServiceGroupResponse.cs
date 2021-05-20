@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataServiceGroupResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("GroupId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string GroupId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public CreateDataServiceGroupResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

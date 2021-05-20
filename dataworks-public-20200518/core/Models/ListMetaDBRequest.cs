@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMetaDBRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("DataSourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DataSourceType { get; set; }
 
         [NameInMap("PageNum")]

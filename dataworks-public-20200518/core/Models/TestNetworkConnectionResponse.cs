@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class ExportDISyncTasksResponse : TeaModel {
+    public class TestNetworkConnectionResponse : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=true)]
         public string RequestId { get; set; }
@@ -17,13 +17,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=true)]
         public bool? Success { get; set; }
 
-        [NameInMap("TaskDetail")]
+        [NameInMap("TaskList")]
         [Validation(Required=true)]
-        public ExportDISyncTasksResponseTaskDetail TaskDetail { get; set; }
-        public class ExportDISyncTasksResponseTaskDetail : TeaModel {
-            [NameInMap("RealTimeSolution")]
+        public TestNetworkConnectionResponseTaskList TaskList { get; set; }
+        public class TestNetworkConnectionResponseTaskList : TeaModel {
+            [NameInMap("ConnectStatus")]
             [Validation(Required=true)]
-            public string RealTimeSolution { get; set; }
+            public bool? ConnectStatus { get; set; }
+            [NameInMap("ConnectMessage")]
+            [Validation(Required=true)]
+            public string ConnectMessage { get; set; }
         };
 
     }

@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateImportMigrationRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Name { get; set; }
 
         [NameInMap("PackageType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PackageType { get; set; }
 
         [NameInMap("PackageFile")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string PackageFile { get; set; }
 
         [NameInMap("ResourceGroupMap")]

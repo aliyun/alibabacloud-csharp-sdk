@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryPublicModelEngineRequest : TeaModel {
         [NameInMap("Text")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Text { get; set; }
 
         [NameInMap("TenantId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TenantId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectId { get; set; }
 
     }

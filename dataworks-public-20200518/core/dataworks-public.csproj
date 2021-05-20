@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Dataworks-public20200518</AssemblyName>
-    <Version>4.0.0</Version>
+    <Version>3.4.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud dataworks-public (20200518) SDK Library for .NET</Description>
@@ -50,5 +50,6 @@
     <PackageReference Include="AlibabaCloud.SDK.TeaFileform" Version="0.0.2"/>
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.12"/>
     <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.9"/>
+    <PackageReference Include="AlibabaCloud.SDK.Common" Version="0.2.5"/>
   </ItemGroup>
 </Project>

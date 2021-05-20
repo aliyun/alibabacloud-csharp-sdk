@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddProjectMemberToRoleRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("UserId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string UserId { get; set; }
 
         [NameInMap("RoleCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RoleCode { get; set; }
 
         [NameInMap("ClientToken")]

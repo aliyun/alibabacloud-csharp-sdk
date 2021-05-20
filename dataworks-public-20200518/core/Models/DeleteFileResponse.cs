@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteFileResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public DeleteFileResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=true)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=true)]
+        public int? HttpStatusCode { get; set; }
 
     }
 

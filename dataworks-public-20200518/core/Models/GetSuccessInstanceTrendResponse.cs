@@ -9,13 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetSuccessInstanceTrendResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("InstanceStatusTrend")]
         [Validation(Required=true)]
-        public GetSuccessInstanceTrendResponseBody Body { get; set; }
+        public GetSuccessInstanceTrendResponseInstanceStatusTrend InstanceStatusTrend { get; set; }
+        public class GetSuccessInstanceTrendResponseInstanceStatusTrend : TeaModel {
+            [NameInMap("TodayTrend")]
+            [Validation(Required=true)]
+            public List<GetSuccessInstanceTrendResponseInstanceStatusTrendTodayTrend> TodayTrend { get; set; }
+            public class GetSuccessInstanceTrendResponseInstanceStatusTrendTodayTrend : TeaModel {
+                public int? Count { get; set; }
+                public string TimePoint { get; set; }
+            }
+            [NameInMap("YesterdayTrend")]
+            [Validation(Required=true)]
+            public List<GetSuccessInstanceTrendResponseInstanceStatusTrendYesterdayTrend> YesterdayTrend { get; set; }
+            public class GetSuccessInstanceTrendResponseInstanceStatusTrendYesterdayTrend : TeaModel {
+                public int? Count { get; set; }
+                public string TimePoint { get; set; }
+            }
+            [NameInMap("AvgTrend")]
+            [Validation(Required=true)]
+            public List<GetSuccessInstanceTrendResponseInstanceStatusTrendAvgTrend> AvgTrend { get; set; }
+            public class GetSuccessInstanceTrendResponseInstanceStatusTrendAvgTrend : TeaModel {
+                public int? Count { get; set; }
+                public string TimePoint { get; set; }
+            }
+        };
 
     }
 

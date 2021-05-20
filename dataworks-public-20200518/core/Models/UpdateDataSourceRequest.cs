@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Status { get; set; }
 
         [NameInMap("DataSourceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? DataSourceId { get; set; }
 
     }

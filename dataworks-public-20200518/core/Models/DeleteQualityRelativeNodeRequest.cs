@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityRelativeNodeRequest : TeaModel {
         [NameInMap("EnvType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EnvType { get; set; }
 
         [NameInMap("MatchExpression")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string MatchExpression { get; set; }
 
         [NameInMap("NodeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? NodeId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("TargetNodeProjectName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TargetNodeProjectName { get; set; }
 
         [NameInMap("ProjectName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectName { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableName { get; set; }
 
         [NameInMap("TargetNodeProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? TargetNodeProjectId { get; set; }
 
     }

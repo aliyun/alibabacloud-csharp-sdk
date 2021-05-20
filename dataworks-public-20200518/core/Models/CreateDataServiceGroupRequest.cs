@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataServiceGroupRequest : TeaModel {
         [NameInMap("TenantId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? TenantId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("ApiGatewayGroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ApiGatewayGroupId { get; set; }
 
         [NameInMap("GroupName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string GroupName { get; set; }
 
         [NameInMap("Description")]

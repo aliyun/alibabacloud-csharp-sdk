@@ -9,13 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceConsumeTimeRankResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("InstanceConsumeTimeRank")]
         [Validation(Required=true)]
-        public GetInstanceConsumeTimeRankResponseBody Body { get; set; }
+        public GetInstanceConsumeTimeRankResponseInstanceConsumeTimeRank InstanceConsumeTimeRank { get; set; }
+        public class GetInstanceConsumeTimeRankResponseInstanceConsumeTimeRank : TeaModel {
+            [NameInMap("UpdateTime")]
+            [Validation(Required=true)]
+            public long? UpdateTime { get; set; }
+            [NameInMap("ConsumeTimeRank")]
+            [Validation(Required=true)]
+            public List<GetInstanceConsumeTimeRankResponseInstanceConsumeTimeRankConsumeTimeRank> ConsumeTimeRank { get; set; }
+            public class GetInstanceConsumeTimeRankResponseInstanceConsumeTimeRankConsumeTimeRank : TeaModel {
+                public string NodeName { get; set; }
+                public long? NodeId { get; set; }
+                public long? Bizdate { get; set; }
+                public string Owner { get; set; }
+                public long? Consumed { get; set; }
+                public long? InstanceId { get; set; }
+                public int? PrgType { get; set; }
+            }
+        };
 
     }
 

@@ -9,13 +9,117 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByOutputResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public bool? Success { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=true)]
-        public ListNodesByOutputResponseBody Body { get; set; }
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=true)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public List<ListNodesByOutputResponseData> Data { get; set; }
+        public class ListNodesByOutputResponseData : TeaModel {
+            [NameInMap("Output")]
+            [Validation(Required=true)]
+            public string Output { get; set; }
+
+            [NameInMap("NodeList")]
+            [Validation(Required=true)]
+            public List<ListNodesByOutputResponseDataNodeList> NodeList { get; set; }
+            public class ListNodesByOutputResponseDataNodeList : TeaModel {
+                [NameInMap("NodeId")]
+                [Validation(Required=true)]
+                public long? NodeId { get; set; }
+
+                [NameInMap("NodeName")]
+                [Validation(Required=true)]
+                public string NodeName { get; set; }
+
+                [NameInMap("OwnerId")]
+                [Validation(Required=true)]
+                public string OwnerId { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=true)]
+                public string Description { get; set; }
+
+                [NameInMap("ResGroupName")]
+                [Validation(Required=true)]
+                public string ResGroupName { get; set; }
+
+                [NameInMap("CronExpress")]
+                [Validation(Required=true)]
+                public string CronExpress { get; set; }
+
+                [NameInMap("Repeatability")]
+                [Validation(Required=true)]
+                public bool? Repeatability { get; set; }
+
+                [NameInMap("ProgramType")]
+                [Validation(Required=true)]
+                public string ProgramType { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=true)]
+                public long? ProjectId { get; set; }
+
+                [NameInMap("SchedulerType")]
+                [Validation(Required=true)]
+                public string SchedulerType { get; set; }
+
+                [NameInMap("ParamValues")]
+                [Validation(Required=true)]
+                public string ParamValues { get; set; }
+
+                [NameInMap("Priority")]
+                [Validation(Required=true)]
+                public int? Priority { get; set; }
+
+                [NameInMap("BaselineId")]
+                [Validation(Required=true)]
+                public long? BaselineId { get; set; }
+
+                [NameInMap("RepeatInterval")]
+                [Validation(Required=true)]
+                public int? RepeatInterval { get; set; }
+
+                [NameInMap("Connection")]
+                [Validation(Required=true)]
+                public string Connection { get; set; }
+
+                [NameInMap("DqcType")]
+                [Validation(Required=true)]
+                public int? DqcType { get; set; }
+
+                [NameInMap("DqcDescription")]
+                [Validation(Required=true)]
+                public string DqcDescription { get; set; }
+
+                [NameInMap("RelatedFlowId")]
+                [Validation(Required=true)]
+                public long? RelatedFlowId { get; set; }
+
+                [NameInMap("FileType")]
+                [Validation(Required=true)]
+                public string FileType { get; set; }
+
+            }
+
+        }
 
     }
 

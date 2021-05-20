@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableName { get; set; }
 
         [NameInMap("EnvType")]

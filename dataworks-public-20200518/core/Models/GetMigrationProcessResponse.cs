@@ -9,13 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMigrationProcessResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string ErrorCode { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=true)]
-        public GetMigrationProcessResponseBody Body { get; set; }
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=true)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public List<GetMigrationProcessResponseData> Data { get; set; }
+        public class GetMigrationProcessResponseData : TeaModel {
+            [NameInMap("TaskName")]
+            [Validation(Required=true)]
+            public string TaskName { get; set; }
+
+            [NameInMap("TaskStatus")]
+            [Validation(Required=true)]
+            public string TaskStatus { get; set; }
+
+        }
 
     }
 

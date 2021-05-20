@@ -9,13 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeployFileResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public DeployFileResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=true)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public long? Data { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=true)]
+        public int? HttpStatusCode { get; set; }
 
     }
 

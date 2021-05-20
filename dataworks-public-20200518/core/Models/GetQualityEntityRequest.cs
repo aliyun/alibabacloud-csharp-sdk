@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityEntityRequest : TeaModel {
         [NameInMap("ProjectName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectName { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableName { get; set; }
 
         [NameInMap("EnvType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EnvType { get; set; }
 
         [NameInMap("MatchExpression")]

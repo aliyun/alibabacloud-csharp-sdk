@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodeInputOrOutputRequest : TeaModel {
         [NameInMap("NodeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? NodeId { get; set; }
 
         [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("IoType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IoType { get; set; }
 
     }
