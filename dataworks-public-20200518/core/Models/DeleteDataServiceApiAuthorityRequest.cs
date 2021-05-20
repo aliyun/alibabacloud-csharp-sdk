@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDataServiceApiAuthorityRequest : TeaModel {
         [NameInMap("TenantId")]
-        [Validation(Required=true)]
-        public long TenantId { get; set; }
+        [Validation(Required=false)]
+        public long? TenantId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("ApiId")]
-        [Validation(Required=true)]
-        public long ApiId { get; set; }
+        [Validation(Required=false)]
+        public long? ApiId { get; set; }
 
         [NameInMap("AuthorizedProjectId")]
-        [Validation(Required=true)]
-        public long AuthorizedProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? AuthorizedProjectId { get; set; }
 
     }
 

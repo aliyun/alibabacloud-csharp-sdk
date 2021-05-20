@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineConfigsRequest : TeaModel {
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("Owner")]
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("Priority")]
         [Validation(Required=false)]

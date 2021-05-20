@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaTableResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("UpdateResult")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? UpdateResult { get; set; }
+        public UpdateMetaTableResponseBody Body { get; set; }
 
     }
 

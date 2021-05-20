@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetMetaCategoryRequest : TeaModel {
         [NameInMap("ParentCategoryId")]
         [Validation(Required=false)]
-        public long ParentCategoryId { get; set; }
+        public long? ParentCategoryId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]

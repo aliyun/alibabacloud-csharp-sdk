@@ -10,12 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListTableLevelRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("LevelType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? LevelType { get; set; }
+
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

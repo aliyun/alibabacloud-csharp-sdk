@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateConnectionRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("Description")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         [NameInMap("ConnectionType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConnectionType { get; set; }
 
         [NameInMap("SubType")]
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SubType { get; set; }
 
         [NameInMap("EnvType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? EnvType { get; set; }
 
         [NameInMap("Content")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Content { get; set; }
 
     }

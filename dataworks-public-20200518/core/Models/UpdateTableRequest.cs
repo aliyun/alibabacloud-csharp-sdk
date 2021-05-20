@@ -9,52 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableRequest : TeaModel {
-        [NameInMap("HasPart")]
-        [Validation(Required=false)]
-        public int? HasPart { get; set; }
-
-        [NameInMap("Columns")]
-        [Validation(Required=true)]
-        public List<UpdateTableRequestColumns> Columns { get; set; }
-        public class UpdateTableRequestColumns : TeaModel {
-            [NameInMap("ColumnName")]
-            [Validation(Required=true)]
-            public string ColumnName { get; set; }
-
-            [NameInMap("ColumnNameCn")]
-            [Validation(Required=false)]
-            public string ColumnNameCn { get; set; }
-
-            [NameInMap("ColumnType")]
-            [Validation(Required=true)]
-            public string ColumnType { get; set; }
-
-            [NameInMap("SeqNumber")]
-            [Validation(Required=false)]
-            public int? SeqNumber { get; set; }
-
-            [NameInMap("Length")]
-            [Validation(Required=false)]
-            public int? Length { get; set; }
-
-            [NameInMap("IsPartitionCol")]
-            [Validation(Required=false)]
-            public int? IsPartitionCol { get; set; }
-
-            [NameInMap("IsPrimaryKey")]
-            [Validation(Required=false)]
-            public int? IsPrimaryKey { get; set; }
-
-            [NameInMap("IsNullable")]
-            [Validation(Required=false)]
-            public int? IsNullable { get; set; }
-
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public string Comment { get; set; }
-
-        }
-
         [NameInMap("IsView")]
         [Validation(Required=false)]
         public int? IsView { get; set; }
@@ -69,15 +23,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
-        public long CategoryId { get; set; }
+        public long? CategoryId { get; set; }
 
         [NameInMap("LogicalLevelId")]
         [Validation(Required=false)]
-        public long LogicalLevelId { get; set; }
+        public long? LogicalLevelId { get; set; }
 
         [NameInMap("PhysicsLevelId")]
         [Validation(Required=false)]
-        public long PhysicsLevelId { get; set; }
+        public long? PhysicsLevelId { get; set; }
 
         [NameInMap("ExternalTableType")]
         [Validation(Required=false)]
@@ -89,10 +43,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TableName { get; set; }
 
         [NameInMap("Endpoint")]
@@ -103,20 +57,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? EnvType { get; set; }
 
-        [NameInMap("Themes")]
-        [Validation(Required=false)]
-        public List<UpdateTableRequestThemes> Themes { get; set; }
-        public class UpdateTableRequestThemes : TeaModel {
-            [NameInMap("ThemeId")]
-            [Validation(Required=false)]
-            public long ThemeId { get; set; }
-
-            [NameInMap("ThemeLevel")]
-            [Validation(Required=false)]
-            public int? ThemeLevel { get; set; }
-
-        }
-
         [NameInMap("AppGuid")]
         [Validation(Required=false)]
         public string AppGuid { get; set; }
@@ -124,6 +64,66 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("CreateIfNotExists")]
         [Validation(Required=false)]
         public bool? CreateIfNotExists { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
+
+        [NameInMap("HasPart")]
+        [Validation(Required=false)]
+        public int? HasPart { get; set; }
+
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
+
+        [NameInMap("Columns")]
+        [Validation(Required=false)]
+        public List<UpdateTableRequestColumns> Columns { get; set; }
+        public class UpdateTableRequestColumns : TeaModel {
+            [NameInMap("ColumnNameCn")]
+            [Validation(Required=false)]
+            public string ColumnNameCn { get; set; }
+
+            [NameInMap("ColumnName")]
+            [Validation(Required=false)]
+            public string ColumnName { get; set; }
+
+            [NameInMap("Comment")]
+            [Validation(Required=false)]
+            public string Comment { get; set; }
+
+            [NameInMap("ColumnType")]
+            [Validation(Required=false)]
+            public string ColumnType { get; set; }
+
+            [NameInMap("SeqNumber")]
+            [Validation(Required=false)]
+            public int? SeqNumber { get; set; }
+
+            [NameInMap("Length")]
+            [Validation(Required=false)]
+            public int? Length { get; set; }
+
+            [NameInMap("IsPartitionCol")]
+            [Validation(Required=false)]
+            public bool? IsPartitionCol { get; set; }
+
+        }
+
+        [NameInMap("Themes")]
+        [Validation(Required=false)]
+        public List<UpdateTableRequestThemes> Themes { get; set; }
+        public class UpdateTableRequestThemes : TeaModel {
+            [NameInMap("ThemeId")]
+            [Validation(Required=false)]
+            public long? ThemeId { get; set; }
+
+            [NameInMap("ThemeLevel")]
+            [Validation(Required=false)]
+            public int? ThemeLevel { get; set; }
+
+        }
 
     }
 

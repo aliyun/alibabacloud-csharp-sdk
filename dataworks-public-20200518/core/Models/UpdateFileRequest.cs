@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("StartEffectDate")]
         [Validation(Required=false)]
-        public long StartEffectDate { get; set; }
+        public long? StartEffectDate { get; set; }
 
         [NameInMap("EndEffectDate")]
         [Validation(Required=false)]
-        public long EndEffectDate { get; set; }
+        public long? EndEffectDate { get; set; }
 
         [NameInMap("CronExpress")]
         [Validation(Required=false)]
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         [NameInMap("FileId")]
-        [Validation(Required=true)]
-        public long FileId { get; set; }
+        [Validation(Required=false)]
+        public long? FileId { get; set; }
 
         [NameInMap("OutputList")]
         [Validation(Required=false)]
@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
+
+        [NameInMap("AutoParsing")]
+        [Validation(Required=false)]
+        public bool? AutoParsing { get; set; }
 
     }
 

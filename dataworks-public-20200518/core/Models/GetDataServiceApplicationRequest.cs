@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceApplicationRequest : TeaModel {
         [NameInMap("TenantId")]
-        [Validation(Required=true)]
-        public long TenantId { get; set; }
+        [Validation(Required=false)]
+        public long? TenantId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("ApplicationId")]
-        [Validation(Required=true)]
-        public long ApplicationId { get; set; }
+        [Validation(Required=false)]
+        public long? ApplicationId { get; set; }
 
     }
 

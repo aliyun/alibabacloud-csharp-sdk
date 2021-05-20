@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetFileRequest : TeaModel {
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("FileId")]
         [Validation(Required=false)]
-        public long FileId { get; set; }
+        public long? FileId { get; set; }
 
     }
 

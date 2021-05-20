@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteMetaCategoryRequest : TeaModel {
         [NameInMap("CategoryId")]
-        [Validation(Required=true)]
-        public long CategoryId { get; set; }
+        [Validation(Required=false)]
+        public long? CategoryId { get; set; }
 
     }
 

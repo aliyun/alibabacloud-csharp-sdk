@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteConnectionRequest : TeaModel {
         [NameInMap("ConnectionId")]
-        [Validation(Required=true)]
-        public long ConnectionId { get; set; }
+        [Validation(Required=false)]
+        public long? ConnectionId { get; set; }
 
     }
 

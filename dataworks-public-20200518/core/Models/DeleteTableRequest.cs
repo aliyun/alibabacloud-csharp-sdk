@@ -11,10 +11,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class DeleteTableRequest : TeaModel {
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TableName { get; set; }
 
         [NameInMap("EnvType")]

@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateRemindResponse : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorCode")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public long Data { get; set; }
+        public CreateRemindResponseBody Body { get; set; }
 
     }
 

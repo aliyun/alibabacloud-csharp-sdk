@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityFollowerRequest : TeaModel {
         [NameInMap("ProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         [NameInMap("EntityId")]
-        [Validation(Required=true)]
-        public long EntityId { get; set; }
+        [Validation(Required=false)]
+        public long? EntityId { get; set; }
 
     }
 

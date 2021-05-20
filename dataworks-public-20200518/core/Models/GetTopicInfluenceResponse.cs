@@ -9,48 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicInfluenceResponse : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorCode")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetTopicInfluenceResponseData Data { get; set; }
-        public class GetTopicInfluenceResponseData : TeaModel {
-            [NameInMap("TopicId")]
-            [Validation(Required=true)]
-            public long TopicId { get; set; }
-            [NameInMap("Influences")]
-            [Validation(Required=true)]
-            public List<GetTopicInfluenceResponseDataInfluences> Influences { get; set; }
-            public class GetTopicInfluenceResponseDataInfluences : TeaModel {
-                public long BaselineId { get; set; }
-                public long Bizdate { get; set; }
-                public int? InGroupId { get; set; }
-                public string BaselineName { get; set; }
-                public string Owner { get; set; }
-                public string Status { get; set; }
-                public long ProjectId { get; set; }
-                public int? Priority { get; set; }
-                public long Buffer { get; set; }
-            }
-        };
+        public GetTopicInfluenceResponseBody Body { get; set; }
 
     }
 

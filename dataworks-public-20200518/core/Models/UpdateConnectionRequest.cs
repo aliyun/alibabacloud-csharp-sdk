@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Status { get; set; }
 
         [NameInMap("ConnectionId")]
-        [Validation(Required=true)]
-        public long ConnectionId { get; set; }
+        [Validation(Required=false)]
+        public long? ConnectionId { get; set; }
 
     }
 

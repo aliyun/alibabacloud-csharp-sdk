@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDDLJobStatusRequest : TeaModel {
         [NameInMap("TaskId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskId { get; set; }
 
     }

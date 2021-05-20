@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class UpdateMetaTableRequest : TeaModel {
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("TableName")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
-        public long CategoryId { get; set; }
+        public long? CategoryId { get; set; }
 
         [NameInMap("Visibility")]
         [Validation(Required=false)]

@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListInstancesRequest : TeaModel {
         [NameInMap("ProjectEnv")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("NodeId")]
         [Validation(Required=false)]
-        public long NodeId { get; set; }
+        public long? NodeId { get; set; }
 
         [NameInMap("NodeName")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("BizName")]
         [Validation(Required=false)]
@@ -47,7 +47,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("DagId")]
         [Validation(Required=false)]
-        public long DagId { get; set; }
+        public long? DagId { get; set; }
+
+        [NameInMap("Bizdate")]
+        [Validation(Required=false)]
+        public string Bizdate { get; set; }
+
+        [NameInMap("BeginBizdate")]
+        [Validation(Required=false)]
+        public string BeginBizdate { get; set; }
+
+        [NameInMap("EndBizdate")]
+        [Validation(Required=false)]
+        public string EndBizdate { get; set; }
 
     }
 

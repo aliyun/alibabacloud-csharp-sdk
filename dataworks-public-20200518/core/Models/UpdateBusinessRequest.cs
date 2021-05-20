@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class UpdateBusinessRequest : TeaModel {
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         [NameInMap("BusinessId")]
-        [Validation(Required=true)]
-        public long BusinessId { get; set; }
+        [Validation(Required=false)]
+        public long? BusinessId { get; set; }
 
     }
 

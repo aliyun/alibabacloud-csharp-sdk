@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableIntroWikiRequest : TeaModel {
         [NameInMap("TableGuid")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TableGuid { get; set; }
 
         [NameInMap("WikiVersion")]
         [Validation(Required=false)]
-        public long WikiVersion { get; set; }
+        public long? WikiVersion { get; set; }
 
     }
 

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListCalcEnginesRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("CalcEngineType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CalcEngineType { get; set; }
 
         [NameInMap("EnvType")]

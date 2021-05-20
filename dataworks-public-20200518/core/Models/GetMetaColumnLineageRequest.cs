@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ColumnGuid { get; set; }
 
         [NameInMap("Direction")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Direction { get; set; }
 
         [NameInMap("PageNum")]

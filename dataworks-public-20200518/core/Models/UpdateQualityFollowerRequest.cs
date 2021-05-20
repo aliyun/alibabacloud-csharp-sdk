@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateQualityFollowerRequest : TeaModel {
         [NameInMap("ProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         [NameInMap("FollowerId")]
-        [Validation(Required=true)]
-        public long FollowerId { get; set; }
+        [Validation(Required=false)]
+        public long? FollowerId { get; set; }
 
         [NameInMap("Follower")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Follower { get; set; }
 
         [NameInMap("AlarmMode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? AlarmMode { get; set; }
 
     }

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableLevelRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
-        public long ProjectId { get; set; }
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("LevelType")]
         [Validation(Required=false)]
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         [NameInMap("LevelId")]
-        [Validation(Required=true)]
-        public long LevelId { get; set; }
+        [Validation(Required=false)]
+        public long? LevelId { get; set; }
 
     }
 

@@ -15,10 +15,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("FileName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileName { get; set; }
 
         [NameInMap("FileDescription")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileDescription { get; set; }
 
         [NameInMap("FileType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? FileType { get; set; }
 
         [NameInMap("Owner")]
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("StartEffectDate")]
         [Validation(Required=false)]
-        public long StartEffectDate { get; set; }
+        public long? StartEffectDate { get; set; }
 
         [NameInMap("EndEffectDate")]
         [Validation(Required=false)]
-        public long EndEffectDate { get; set; }
+        public long? EndEffectDate { get; set; }
 
         [NameInMap("CronExpress")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DependentNodeIdList { get; set; }
 
         [NameInMap("InputList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InputList { get; set; }
 
         [NameInMap("ProjectIdentifier")]
@@ -95,11 +95,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public long ResourceGroupId { get; set; }
+        public long? ResourceGroupId { get; set; }
 
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
         public string ConnectionName { get; set; }
+
+        [NameInMap("AutoParsing")]
+        [Validation(Required=false)]
+        public bool? AutoParsing { get; set; }
 
     }
 

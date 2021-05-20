@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class ListTableThemeRequest : TeaModel {
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public long ProjectId { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("ParentId")]
         [Validation(Required=false)]
-        public long ParentId { get; set; }
+        public long? ParentId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityEntityRequest : TeaModel {
         [NameInMap("EntityId")]
-        [Validation(Required=true)]
-        public long EntityId { get; set; }
+        [Validation(Required=false)]
+        public long? EntityId { get; set; }
 
         [NameInMap("ProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         [NameInMap("EnvType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EnvType { get; set; }
 
     }

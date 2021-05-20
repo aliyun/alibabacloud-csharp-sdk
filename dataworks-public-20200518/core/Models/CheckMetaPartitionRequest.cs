@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableGuid { get; set; }
 
         [NameInMap("Partition")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Partition { get; set; }
 
         [NameInMap("ClusterId")]

@@ -9,63 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesResponse : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=true)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ListNodesResponseData Data { get; set; }
-        public class ListNodesResponseData : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=true)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=true)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=true)]
-            public int? TotalCount { get; set; }
-            [NameInMap("Nodes")]
-            [Validation(Required=true)]
-            public List<ListNodesResponseDataNodes> Nodes { get; set; }
-            public class ListNodesResponseDataNodes : TeaModel {
-                public long NodeId { get; set; }
-                public string NodeName { get; set; }
-                public string CronExpress { get; set; }
-                public string SchedulerType { get; set; }
-                public string ProgramType { get; set; }
-                public string OwnerId { get; set; }
-                public long ProjectId { get; set; }
-                public bool? Repeatability { get; set; }
-                public string ParamValues { get; set; }
-                public string Description { get; set; }
-                public string ResGroupName { get; set; }
-                public int? Priority { get; set; }
-                public long BaselineId { get; set; }
-                public long RepeatInterval { get; set; }
-                public string Connection { get; set; }
-                public int? DqcType { get; set; }
-                public string DqcDescription { get; set; }
-                public long RelatedFlowId { get; set; }
-            }
-        };
+        public ListNodesResponseBody Body { get; set; }
 
     }
 

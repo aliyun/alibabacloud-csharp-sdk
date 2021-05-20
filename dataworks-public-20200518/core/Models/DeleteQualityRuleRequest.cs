@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityRuleRequest : TeaModel {
         [NameInMap("ProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         [NameInMap("RuleId")]
-        [Validation(Required=true)]
-        public long RuleId { get; set; }
+        [Validation(Required=false)]
+        public long? RuleId { get; set; }
 
     }
 
