@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeRulesResponseBodyRulesRule> Rule { get; set; }
             public class DescribeRulesResponseBodyRulesRule : TeaModel {
-                public string VServerGroupId { get; set; }
                 public string HealthCheckHttpCode { get; set; }
+                public string VServerGroupId { get; set; }
                 public string Domain { get; set; }
                 public string Cookie { get; set; }
-                public string Url { get; set; }
                 public int? HealthCheckInterval { get; set; }
+                public string Url { get; set; }
                 public string HealthCheckURI { get; set; }
-                public string RuleId { get; set; }
-                public string RuleName { get; set; }
                 public string StickySessionType { get; set; }
-                public string Scheduler { get; set; }
+                public string RuleName { get; set; }
+                public string RuleId { get; set; }
                 public int? HealthCheckConnectPort { get; set; }
+                public string Scheduler { get; set; }
                 public int? HealthCheckTimeout { get; set; }
                 public string ListenerSync { get; set; }
                 public int? HealthyThreshold { get; set; }

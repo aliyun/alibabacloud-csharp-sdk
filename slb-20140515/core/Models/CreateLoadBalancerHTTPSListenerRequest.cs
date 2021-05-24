@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public int? BackendServerPort { get; set; }
 
-        [NameInMap("BackendProtocol")]
-        [Validation(Required=false)]
-        public string BackendProtocol { get; set; }
-
         [NameInMap("XForwardedFor")]
         [Validation(Required=false)]
         public string XForwardedFor { get; set; }
@@ -72,18 +68,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("HealthCheck")]
         [Validation(Required=false)]
         public string HealthCheck { get; set; }
-
-        [NameInMap("HealthCheckType")]
-        [Validation(Required=false)]
-        public string HealthCheckType { get; set; }
-
-        [NameInMap("HealthCheckMethod")]
-        [Validation(Required=false)]
-        public string HealthCheckMethod { get; set; }
-
-        [NameInMap("HealthCheckHttpVersion")]
-        [Validation(Required=false)]
-        public string HealthCheckHttpVersion { get; set; }
 
         [NameInMap("HealthCheckDomain")]
         [Validation(Required=false)]
@@ -121,17 +105,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string ServerCertificateId { get; set; }
 
-        [NameInMap("MaxConnection")]
-        [Validation(Required=false)]
-        public int? MaxConnection { get; set; }
-
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
-
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
 
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]
@@ -140,10 +116,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("CACertificateId")]
         [Validation(Required=false)]
         public string CACertificateId { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
 
         [NameInMap("XForwardedFor_SLBIP")]
         [Validation(Required=false)]
@@ -173,10 +145,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AclStatus { get; set; }
 
-        [NameInMap("VpcIds")]
-        [Validation(Required=false)]
-        public string VpcIds { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -196,52 +164,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("TLSCipherPolicy")]
         [Validation(Required=false)]
         public string TLSCipherPolicy { get; set; }
-
-        [NameInMap("XForwardedFor_SLBPORT")]
-        [Validation(Required=false)]
-        public string XForwardedFor_SLBPORT { get; set; }
-
-        [NameInMap("XForwardedFor_ClientSrcPort")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientSrcPort { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertSubjectDN")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertSubjectDN { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertIssuerDN")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertIssuerDN { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertFingerprint")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertFingerprint { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertClientVerify")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertClientVerify { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertIssuerDNAlias")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertIssuerDNAlias { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertSubjectDNAlias")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertSubjectDNAlias { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertFingerprintAlias")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertFingerprintAlias { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertClientVerifyAlias")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertClientVerifyAlias { get; set; }
-
-        [NameInMap("ServerCertificate")]
-        [Validation(Required=false)]
-        public List<CreateLoadBalancerHTTPSListenerRequestServerCertificate> ServerCertificate { get; set; }
-        public class CreateLoadBalancerHTTPSListenerRequestServerCertificate : TeaModel {
-        }
 
     }
 

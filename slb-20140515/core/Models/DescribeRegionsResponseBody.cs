@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
-                public string LocalName { get; set; }
                 public string RegionEndpoint { get; set; }
+                public string LocalName { get; set; }
                 public string RegionId { get; set; }
             }
         };

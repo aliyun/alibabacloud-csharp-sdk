@@ -13,61 +13,65 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string VServerGroupId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Status { get; set; }
 
-        [NameInMap("SynProxy")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public string SynProxy { get; set; }
+        public string AclType { get; set; }
 
-        [NameInMap("UnhealthyThreshold")]
+        [NameInMap("ConnectionDrainTimeout")]
         [Validation(Required=false)]
-        public int? UnhealthyThreshold { get; set; }
+        public int? ConnectionDrainTimeout { get; set; }
 
-        [NameInMap("HealthCheckURI")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string HealthCheckURI { get; set; }
-
-        [NameInMap("Scheduler")]
-        [Validation(Required=false)]
-        public string Scheduler { get; set; }
-
-        [NameInMap("HealthCheck")]
-        [Validation(Required=false)]
-        public string HealthCheck { get; set; }
-
-        [NameInMap("BackendServerPort")]
-        [Validation(Required=false)]
-        public int? BackendServerPort { get; set; }
-
-        [NameInMap("PersistenceTimeout")]
-        [Validation(Required=false)]
-        public int? PersistenceTimeout { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("HealthCheckConnectPort")]
         [Validation(Required=false)]
         public int? HealthCheckConnectPort { get; set; }
 
-        [NameInMap("HealthCheckMethod")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string HealthCheckMethod { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
+        [NameInMap("HealthCheckType")]
+        [Validation(Required=false)]
+        public string HealthCheckType { get; set; }
+
+        [NameInMap("MasterSlaveServerGroupId")]
+        [Validation(Required=false)]
+        public string MasterSlaveServerGroupId { get; set; }
+
+        [NameInMap("BackendServerPort")]
+        [Validation(Required=false)]
+        public int? BackendServerPort { get; set; }
+
+        [NameInMap("AclStatus")]
+        [Validation(Required=false)]
+        public string AclStatus { get; set; }
+
+        [NameInMap("HealthCheckDomain")]
+        [Validation(Required=false)]
+        public string HealthCheckDomain { get; set; }
+
+        [NameInMap("UnhealthyThreshold")]
+        [Validation(Required=false)]
+        public int? UnhealthyThreshold { get; set; }
+
         [NameInMap("HealthCheckHttpCode")]
         [Validation(Required=false)]
         public string HealthCheckHttpCode { get; set; }
 
-        [NameInMap("EstablishedTimeout")]
+        [NameInMap("PersistenceTimeout")]
         [Validation(Required=false)]
-        public int? EstablishedTimeout { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
+        public int? PersistenceTimeout { get; set; }
 
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -77,41 +81,45 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public int? HealthCheckInterval { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string HealthCheckURI { get; set; }
 
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        [NameInMap("SynProxy")]
+        [Validation(Required=false)]
+        public string SynProxy { get; set; }
+
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public string Scheduler { get; set; }
+
+        [NameInMap("EstablishedTimeout")]
+        [Validation(Required=false)]
+        public int? EstablishedTimeout { get; set; }
+
         [NameInMap("HealthCheckConnectTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckConnectTimeout { get; set; }
-
-        [NameInMap("AclStatus")]
-        [Validation(Required=false)]
-        public string AclStatus { get; set; }
 
         [NameInMap("HealthyThreshold")]
         [Validation(Required=false)]
         public int? HealthyThreshold { get; set; }
 
-        [NameInMap("MasterSlaveServerGroupId")]
+        [NameInMap("ConnectionDrain")]
         [Validation(Required=false)]
-        public string MasterSlaveServerGroupId { get; set; }
+        public string ConnectionDrain { get; set; }
 
-        [NameInMap("HealthCheckDomain")]
+        [NameInMap("HealthCheckMethod")]
         [Validation(Required=false)]
-        public string HealthCheckDomain { get; set; }
+        public string HealthCheckMethod { get; set; }
 
-        [NameInMap("AclType")]
+        [NameInMap("HealthCheck")]
         [Validation(Required=false)]
-        public string AclType { get; set; }
-
-        [NameInMap("HealthCheckType")]
-        [Validation(Required=false)]
-        public string HealthCheckType { get; set; }
+        public string HealthCheck { get; set; }
 
     }
 

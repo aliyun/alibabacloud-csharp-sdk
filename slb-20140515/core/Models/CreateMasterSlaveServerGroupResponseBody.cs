@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateMasterSlaveServerGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
         public string MasterSlaveServerGroupId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("MasterSlaveBackendServers")]
         [Validation(Required=false)]

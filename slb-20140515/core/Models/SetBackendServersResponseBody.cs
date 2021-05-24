@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class SetBackendServersResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("BackendServers")]
         [Validation(Required=false)]

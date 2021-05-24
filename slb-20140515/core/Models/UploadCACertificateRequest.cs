@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -44,10 +40,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("StandardType")]
-        [Validation(Required=false)]
-        public string StandardType { get; set; }
 
     }
 

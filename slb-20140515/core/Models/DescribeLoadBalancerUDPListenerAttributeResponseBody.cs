@@ -13,37 +13,45 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string VServerGroupId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Status { get; set; }
 
-        [NameInMap("UnhealthyThreshold")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public int? UnhealthyThreshold { get; set; }
+        public string AclType { get; set; }
 
-        [NameInMap("Scheduler")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Scheduler { get; set; }
-
-        [NameInMap("HealthCheck")]
-        [Validation(Required=false)]
-        public string HealthCheck { get; set; }
-
-        [NameInMap("BackendServerPort")]
-        [Validation(Required=false)]
-        public int? BackendServerPort { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("HealthCheckConnectPort")]
         [Validation(Required=false)]
         public int? HealthCheckConnectPort { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string MasterSlaveServerGroupId { get; set; }
+
+        [NameInMap("BackendServerPort")]
+        [Validation(Required=false)]
+        public int? BackendServerPort { get; set; }
+
+        [NameInMap("AclStatus")]
+        [Validation(Required=false)]
+        public string AclStatus { get; set; }
+
+        [NameInMap("UnhealthyThreshold")]
+        [Validation(Required=false)]
+        public int? UnhealthyThreshold { get; set; }
 
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
@@ -53,41 +61,33 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public int? HealthCheckInterval { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("HealthCheckExp")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string HealthCheckExp { get; set; }
 
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public string Scheduler { get; set; }
+
         [NameInMap("HealthCheckConnectTimeout")]
         [Validation(Required=false)]
         public int? HealthCheckConnectTimeout { get; set; }
-
-        [NameInMap("AclStatus")]
-        [Validation(Required=false)]
-        public string AclStatus { get; set; }
-
-        [NameInMap("HealthCheckReq")]
-        [Validation(Required=false)]
-        public string HealthCheckReq { get; set; }
-
-        [NameInMap("HealthCheckExp")]
-        [Validation(Required=false)]
-        public string HealthCheckExp { get; set; }
 
         [NameInMap("HealthyThreshold")]
         [Validation(Required=false)]
         public int? HealthyThreshold { get; set; }
 
-        [NameInMap("MasterSlaveServerGroupId")]
+        [NameInMap("HealthCheckReq")]
         [Validation(Required=false)]
-        public string MasterSlaveServerGroupId { get; set; }
+        public string HealthCheckReq { get; set; }
 
-        [NameInMap("AclType")]
+        [NameInMap("HealthCheck")]
         [Validation(Required=false)]
-        public string AclType { get; set; }
+        public string HealthCheck { get; set; }
 
     }
 

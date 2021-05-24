@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("MasterSlaveServerGroupId")]
-        [Validation(Required=false)]
-        public string MasterSlaveServerGroupId { get; set; }
-
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("MasterSlaveServerGroupName")]
         [Validation(Required=false)]
         public string MasterSlaveServerGroupName { get; set; }
+
+        [NameInMap("MasterSlaveServerGroupId")]
+        [Validation(Required=false)]
+        public string MasterSlaveServerGroupId { get; set; }
 
         [NameInMap("MasterSlaveBackendServers")]
         [Validation(Required=false)]

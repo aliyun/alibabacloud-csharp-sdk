@@ -65,14 +65,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string HealthCheck { get; set; }
 
-        [NameInMap("HealthCheckType")]
-        [Validation(Required=false)]
-        public string HealthCheckType { get; set; }
-
-        [NameInMap("HealthCheckMethod")]
-        [Validation(Required=false)]
-        public string HealthCheckMethod { get; set; }
-
         [NameInMap("HealthCheckDomain")]
         [Validation(Required=false)]
         public string HealthCheckDomain { get; set; }
@@ -105,17 +97,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string HealthCheckHttpCode { get; set; }
 
-        [NameInMap("MaxConnection")]
-        [Validation(Required=false)]
-        public int? MaxConnection { get; set; }
-
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
-
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
 
         [NameInMap("VServerGroup")]
         [Validation(Required=false)]
@@ -124,10 +108,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]
         public string VServerGroupId { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
 
         [NameInMap("XForwardedFor_SLBIP")]
         [Validation(Required=false)]
@@ -157,10 +137,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AclStatus { get; set; }
 
-        [NameInMap("VpcIds")]
-        [Validation(Required=false)]
-        public string VpcIds { get; set; }
-
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
@@ -172,18 +148,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("XForwardedFor_SLBPORT")]
-        [Validation(Required=false)]
-        public string XForwardedFor_SLBPORT { get; set; }
-
-        [NameInMap("XForwardedFor_ClientSrcPort")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientSrcPort { get; set; }
-
-        [NameInMap("ForwardCode")]
-        [Validation(Required=false)]
-        public int? ForwardCode { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeListenerAccessControlAttributeResponseBody : TeaModel {
+        [NameInMap("SourceItems")]
+        [Validation(Required=false)]
+        public string SourceItems { get; set; }
+
         [NameInMap("AccessControlStatus")]
         [Validation(Required=false)]
         public string AccessControlStatus { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("SourceItems")]
-        [Validation(Required=false)]
-        public string SourceItems { get; set; }
 
     }
 

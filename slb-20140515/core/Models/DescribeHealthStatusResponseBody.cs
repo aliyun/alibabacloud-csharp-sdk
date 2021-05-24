@@ -21,8 +21,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeHealthStatusResponseBodyBackendServersBackendServer> BackendServer { get; set; }
             public class DescribeHealthStatusResponseBodyBackendServersBackendServer : TeaModel {
-                public string Type { get; set; }
-                public string EniHost { get; set; }
                 public string Protocol { get; set; }
                 public string ServerHealthStatus { get; set; }
                 public int? ListenerPort { get; set; }

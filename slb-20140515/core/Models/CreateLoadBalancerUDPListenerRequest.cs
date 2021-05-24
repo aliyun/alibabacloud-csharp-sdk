@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string Scheduler { get; set; }
 
-        [NameInMap("PersistenceTimeout")]
-        [Validation(Required=false)]
-        public int? PersistenceTimeout { get; set; }
-
         [NameInMap("HealthyThreshold")]
         [Validation(Required=false)]
         public int? HealthyThreshold { get; set; }
@@ -77,17 +73,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string HealthCheckExp { get; set; }
 
-        [NameInMap("MaxConnection")]
-        [Validation(Required=false)]
-        public int? MaxConnection { get; set; }
-
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
-
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
 
         [NameInMap("VServerGroupId")]
         [Validation(Required=false)]
@@ -96,10 +84,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("MasterSlaveServerGroupId")]
         [Validation(Required=false)]
         public string MasterSlaveServerGroupId { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
 
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -113,27 +97,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AclStatus { get; set; }
 
-        [NameInMap("VpcIds")]
-        [Validation(Required=false)]
-        public string VpcIds { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("ConnectionDrain")]
-        [Validation(Required=false)]
-        public string ConnectionDrain { get; set; }
-
-        [NameInMap("ConnectionDrainTimeout")]
-        [Validation(Required=false)]
-        public int? ConnectionDrainTimeout { get; set; }
-
-        [NameInMap("PortRange")]
-        [Validation(Required=false)]
-        public List<CreateLoadBalancerUDPListenerRequestPortRange> PortRange { get; set; }
-        public class CreateLoadBalancerUDPListenerRequestPortRange : TeaModel {
-        }
 
     }
 

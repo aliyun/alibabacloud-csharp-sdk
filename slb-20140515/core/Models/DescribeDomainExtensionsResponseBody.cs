@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension> DomainExtension { get; set; }
             public class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension : TeaModel {
-                public string Domain { get; set; }
                 public string ServerCertificateId { get; set; }
+                public string Domain { get; set; }
                 public string DomainExtensionId { get; set; }
             }
         };

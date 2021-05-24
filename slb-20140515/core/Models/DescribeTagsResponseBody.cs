@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeTagsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("TagSets")]
         [Validation(Required=false)]
         public DescribeTagsResponseBodyTagSets TagSets { get; set; }
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeTagsResponseBodyTagSetsTagSet> TagSet { get; set; }
             public class DescribeTagsResponseBodyTagSetsTagSet : TeaModel {
-                public int? InstanceCount { get; set; }
                 public string TagValue { get; set; }
+                public int? InstanceCount { get; set; }
                 public string TagKey { get; set; }
             }
         };

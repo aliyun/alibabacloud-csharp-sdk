@@ -9,35 +9,57 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody : TeaModel {
-        [NameInMap("UnhealthyThreshold")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public int? UnhealthyThreshold { get; set; }
+        public string AclType { get; set; }
 
-        [NameInMap("HealthCheckURI")]
+        [NameInMap("XForwardedFor_ClientCertClientVerify")]
         [Validation(Required=false)]
-        public string HealthCheckURI { get; set; }
+        public string XForwardedFor_ClientCertClientVerify { get; set; }
 
-        [NameInMap("HealthCheck")]
+        [NameInMap("CACertificateId")]
         [Validation(Required=false)]
-        public string HealthCheck { get; set; }
+        public string CACertificateId { get; set; }
 
-        [NameInMap("DomainExtensions")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions DomainExtensions { get; set; }
-        public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions : TeaModel {
-            [NameInMap("DomainExtension")]
-            [Validation(Required=false)]
-            public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> DomainExtension { get; set; }
-            public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension : TeaModel {
-                public string Domain { get; set; }
-                public string ServerCertificateId { get; set; }
-                public string DomainExtensionId { get; set; }
-            }
-        };
+        public string RequestId { get; set; }
+
+        [NameInMap("HealthCheckConnectPort")]
+        [Validation(Required=false)]
+        public int? HealthCheckConnectPort { get; set; }
 
         [NameInMap("BackendServerPort")]
         [Validation(Required=false)]
         public int? BackendServerPort { get; set; }
+
+        [NameInMap("CookieTimeout")]
+        [Validation(Required=false)]
+        public int? CookieTimeout { get; set; }
+
+        [NameInMap("HealthCheckDomain")]
+        [Validation(Required=false)]
+        public string HealthCheckDomain { get; set; }
+
+        [NameInMap("XForwardedFor")]
+        [Validation(Required=false)]
+        public string XForwardedFor { get; set; }
+
+        [NameInMap("XForwardedFor_ClientCertFingerprint")]
+        [Validation(Required=false)]
+        public string XForwardedFor_ClientCertFingerprint { get; set; }
+
+        [NameInMap("IdleTimeout")]
+        [Validation(Required=false)]
+        public int? IdleTimeout { get; set; }
+
+        [NameInMap("ListenerPort")]
+        [Validation(Required=false)]
+        public int? ListenerPort { get; set; }
+
+        [NameInMap("HealthCheckURI")]
+        [Validation(Required=false)]
+        public string HealthCheckURI { get; set; }
 
         [NameInMap("XForwardedFor_SLBPORT")]
         [Validation(Required=false)]
@@ -47,33 +69,49 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string StickySessionType { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("Scheduler")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Scheduler { get; set; }
 
-        [NameInMap("Cookie")]
+        [NameInMap("XForwardedFor_proto")]
         [Validation(Required=false)]
-        public string Cookie { get; set; }
-
-        [NameInMap("RequestTimeout")]
-        [Validation(Required=false)]
-        public int? RequestTimeout { get; set; }
+        public string XForwardedFor_proto { get; set; }
 
         [NameInMap("TLSCipherPolicy")]
         [Validation(Required=false)]
         public string TLSCipherPolicy { get; set; }
 
-        [NameInMap("HealthCheckInterval")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public int? HealthCheckInterval { get; set; }
+        public string Status { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("VServerGroupId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string VServerGroupId { get; set; }
 
-        [NameInMap("CACertificateId")]
+        [NameInMap("XForwardedFor_ClientSrcPort")]
         [Validation(Required=false)]
-        public string CACertificateId { get; set; }
+        public string XForwardedFor_ClientSrcPort { get; set; }
+
+        [NameInMap("Cookie")]
+        [Validation(Required=false)]
+        public string Cookie { get; set; }
+
+        [NameInMap("Gzip")]
+        [Validation(Required=false)]
+        public string Gzip { get; set; }
+
+        [NameInMap("EnableHttp2")]
+        [Validation(Required=false)]
+        public string EnableHttp2 { get; set; }
+
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("HealthCheckTimeout")]
         [Validation(Required=false)]
@@ -83,89 +121,61 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AclStatus { get; set; }
 
-        [NameInMap("HealthyThreshold")]
+        [NameInMap("UnhealthyThreshold")]
         [Validation(Required=false)]
-        public int? HealthyThreshold { get; set; }
-
-        [NameInMap("HealthCheckDomain")]
-        [Validation(Required=false)]
-        public string HealthCheckDomain { get; set; }
-
-        [NameInMap("AclType")]
-        [Validation(Required=false)]
-        public string AclType { get; set; }
-
-        [NameInMap("XForwardedFor_proto")]
-        [Validation(Required=false)]
-        public string XForwardedFor_proto { get; set; }
-
-        [NameInMap("EnableHttp2")]
-        [Validation(Required=false)]
-        public string EnableHttp2 { get; set; }
-
-        [NameInMap("CookieTimeout")]
-        [Validation(Required=false)]
-        public int? CookieTimeout { get; set; }
-
-        [NameInMap("VServerGroupId")]
-        [Validation(Required=false)]
-        public string VServerGroupId { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Scheduler")]
-        [Validation(Required=false)]
-        public string Scheduler { get; set; }
-
-        [NameInMap("IdleTimeout")]
-        [Validation(Required=false)]
-        public int? IdleTimeout { get; set; }
+        public int? UnhealthyThreshold { get; set; }
 
         [NameInMap("XForwardedFor_SLBID")]
         [Validation(Required=false)]
         public string XForwardedFor_SLBID { get; set; }
 
-        [NameInMap("HealthCheckConnectPort")]
+        [NameInMap("XForwardedFor_ClientCertSubjectDN")]
         [Validation(Required=false)]
-        public int? HealthCheckConnectPort { get; set; }
-
-        [NameInMap("Bandwidth")]
-        [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
+        public string XForwardedFor_ClientCertSubjectDN { get; set; }
 
         [NameInMap("SecurityStatus")]
         [Validation(Required=false)]
         public string SecurityStatus { get; set; }
 
-        [NameInMap("Gzip")]
+        [NameInMap("HealthCheckHttpCode")]
         [Validation(Required=false)]
-        public string Gzip { get; set; }
+        public string HealthCheckHttpCode { get; set; }
+
+        [NameInMap("RequestTimeout")]
+        [Validation(Required=false)]
+        public int? RequestTimeout { get; set; }
+
+        [NameInMap("HealthCheckInterval")]
+        [Validation(Required=false)]
+        public int? HealthCheckInterval { get; set; }
 
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]
         public string ServerCertificateId { get; set; }
 
+        [NameInMap("AclId")]
+        [Validation(Required=false)]
+        public string AclId { get; set; }
+
+        [NameInMap("XForwardedFor_ClientCertIssuerDN")]
+        [Validation(Required=false)]
+        public string XForwardedFor_ClientCertIssuerDN { get; set; }
+
+        [NameInMap("HealthyThreshold")]
+        [Validation(Required=false)]
+        public int? HealthyThreshold { get; set; }
+
         [NameInMap("XForwardedFor_SLBIP")]
         [Validation(Required=false)]
         public string XForwardedFor_SLBIP { get; set; }
 
-        [NameInMap("HealthCheckHttpCode")]
+        [NameInMap("StickySession")]
         [Validation(Required=false)]
-        public string HealthCheckHttpCode { get; set; }
+        public string StickySession { get; set; }
 
-        [NameInMap("ListenerPort")]
+        [NameInMap("HealthCheck")]
         [Validation(Required=false)]
-        public int? ListenerPort { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertSubjectDN")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertSubjectDN { get; set; }
-
-        [NameInMap("AclId")]
-        [Validation(Required=false)]
-        public string AclId { get; set; }
+        public string HealthCheck { get; set; }
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -176,36 +186,26 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule> Rule { get; set; }
             public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule : TeaModel {
                 public string VServerGroupId { get; set; }
-                public string Domain { get; set; }
                 public string Url { get; set; }
+                public string Domain { get; set; }
                 public string RuleName { get; set; }
                 public string RuleId { get; set; }
             }
         };
 
-        [NameInMap("XForwardedFor_ClientCertIssuerDN")]
+        [NameInMap("DomainExtensions")]
         [Validation(Required=false)]
-        public string XForwardedFor_ClientCertIssuerDN { get; set; }
-
-        [NameInMap("StickySession")]
-        [Validation(Required=false)]
-        public string StickySession { get; set; }
-
-        [NameInMap("XForwardedFor")]
-        [Validation(Required=false)]
-        public string XForwardedFor { get; set; }
-
-        [NameInMap("XForwardedFor_ClientSrcPort")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientSrcPort { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertClientVerify")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertClientVerify { get; set; }
-
-        [NameInMap("XForwardedFor_ClientCertFingerprint")]
-        [Validation(Required=false)]
-        public string XForwardedFor_ClientCertFingerprint { get; set; }
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions DomainExtensions { get; set; }
+        public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions : TeaModel {
+            [NameInMap("DomainExtension")]
+            [Validation(Required=false)]
+            public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> DomainExtension { get; set; }
+            public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension : TeaModel {
+                public string ServerCertificateId { get; set; }
+                public string Domain { get; set; }
+                public string DomainExtensionId { get; set; }
+            }
+        };
 
     }
 

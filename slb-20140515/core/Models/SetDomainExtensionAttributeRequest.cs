@@ -29,14 +29,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
-
         [NameInMap("DomainExtensionId")]
         [Validation(Required=false)]
         public string DomainExtensionId { get; set; }
@@ -44,16 +36,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("ServerCertificateId")]
         [Validation(Required=false)]
         public string ServerCertificateId { get; set; }
-
-        [NameInMap("CertificateId")]
-        [Validation(Required=false)]
-        public List<string> CertificateId { get; set; }
-
-        [NameInMap("ServerCertificate")]
-        [Validation(Required=false)]
-        public List<SetDomainExtensionAttributeRequestServerCertificate> ServerCertificate { get; set; }
-        public class SetDomainExtensionAttributeRequestServerCertificate : TeaModel {
-        }
 
     }
 

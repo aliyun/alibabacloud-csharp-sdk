@@ -27,7 +27,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public class RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer : TeaModel {
                 public string Type { get; set; }
                 public int? Weight { get; set; }
-                public string Description { get; set; }
                 public int? Port { get; set; }
                 public string ServerId { get; set; }
             }

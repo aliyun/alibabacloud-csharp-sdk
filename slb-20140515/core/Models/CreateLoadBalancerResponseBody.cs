@@ -9,17 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateLoadBalancerResponseBody : TeaModel {
-        [NameInMap("LoadBalancerName")]
-        [Validation(Required=false)]
-        public string LoadBalancerName { get; set; }
-
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        [NameInMap("AddressIPVersion")]
+        [Validation(Required=false)]
+        public string AddressIPVersion { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("LoadBalancerName")]
+        [Validation(Required=false)]
+        public string LoadBalancerName { get; set; }
+
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -32,18 +44,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
-
-        [NameInMap("AddressIPVersion")]
-        [Validation(Required=false)]
-        public string AddressIPVersion { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]

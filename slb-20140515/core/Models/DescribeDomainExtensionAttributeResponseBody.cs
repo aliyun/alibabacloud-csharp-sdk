@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeDomainExtensionAttributeResponseBody : TeaModel {
-        [NameInMap("ListenerPort")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public int? ListenerPort { get; set; }
-
-        [NameInMap("DomainExtensionId")]
-        [Validation(Required=false)]
-        public string DomainExtensionId { get; set; }
+        public string Domain { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ServerCertificateId")]
-        [Validation(Required=false)]
-        public string ServerCertificateId { get; set; }
-
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
-        [NameInMap("Domain")]
+        [NameInMap("ListenerPort")]
         [Validation(Required=false)]
-        public string Domain { get; set; }
+        public int? ListenerPort { get; set; }
+
+        [NameInMap("ServerCertificateId")]
+        [Validation(Required=false)]
+        public string ServerCertificateId { get; set; }
+
+        [NameInMap("DomainExtensionId")]
+        [Validation(Required=false)]
+        public string DomainExtensionId { get; set; }
 
     }
 

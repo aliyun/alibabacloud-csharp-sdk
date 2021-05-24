@@ -33,23 +33,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeServerCertificatesRequestTag> Tag { get; set; }
-        public class DescribeServerCertificatesRequestTag : TeaModel {
-        }
 
     }
 

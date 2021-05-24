@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup> MasterSlaveServerGroup { get; set; }
             public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup : TeaModel {
+                public string MasterSlaveServerGroupName { get; set; }
                 public string MasterSlaveServerGroupId { get; set; }
                 public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects AssociatedObjects { get; set; }
                 public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects : TeaModel {
@@ -32,13 +33,12 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         [Validation(Required=false)]
                         public List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener> Listener { get; set; }
                         public class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener : TeaModel {
-                            public string Protocol { get; set; }
                             public int? Port { get; set; }
+                            public string Protocol { get; set; }
                         }
                     };
 
                 }
-                public string MasterSlaveServerGroupName { get; set; }
             }
         };
 

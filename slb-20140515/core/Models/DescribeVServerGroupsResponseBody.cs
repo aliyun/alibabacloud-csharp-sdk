@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         [Validation(Required=false)]
                         public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener> Listener { get; set; }
                         public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener : TeaModel {
-                            public string Protocol { get; set; }
                             public int? Port { get; set; }
+                            public string Protocol { get; set; }
                         }
                     };
 
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                         [Validation(Required=false)]
                         public List<DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule> Rule { get; set; }
                         public class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule : TeaModel {
-                            public string Domain { get; set; }
                             public string Url { get; set; }
+                            public string Domain { get; set; }
                             public string RuleName { get; set; }
                             public string RuleId { get; set; }
                         }

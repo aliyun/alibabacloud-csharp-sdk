@@ -1267,6 +1267,38 @@ namespace AlibabaCloud.SDK.Slb20140515
             return await DescribeLoadBalancerHTTPSListenerAttributeWithOptionsAsync(request, runtime);
         }
 
+        public DescribeLoadBalancerListenersResponse DescribeLoadBalancerListenersWithOptions(DescribeLoadBalancerListenersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeLoadBalancerListenersResponse>(DoRPCRequest("DescribeLoadBalancerListeners", "2014-05-15", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeLoadBalancerListenersResponse> DescribeLoadBalancerListenersWithOptionsAsync(DescribeLoadBalancerListenersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeLoadBalancerListenersResponse>(await DoRPCRequestAsync("DescribeLoadBalancerListeners", "2014-05-15", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeLoadBalancerListenersResponse DescribeLoadBalancerListeners(DescribeLoadBalancerListenersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLoadBalancerListenersWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeLoadBalancerListenersResponse> DescribeLoadBalancerListenersAsync(DescribeLoadBalancerListenersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLoadBalancerListenersWithOptionsAsync(request, runtime);
+        }
+
         public DescribeLoadBalancersResponse DescribeLoadBalancersWithOptions(DescribeLoadBalancersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

@@ -85,10 +85,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
@@ -108,24 +104,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("SupportPrivateLink")]
-        [Validation(Required=false)]
-        public bool? SupportPrivateLink { get; set; }
-
-        [NameInMap("Fuzzy")]
-        [Validation(Required=false)]
-        public string Fuzzy { get; set; }
-
-        [NameInMap("BusinessStatus")]
-        [Validation(Required=false)]
-        public string BusinessStatus { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<DescribeLoadBalancersRequestTag> Tag { get; set; }
-        public class DescribeLoadBalancersRequestTag : TeaModel {
-        }
 
     }
 

@@ -65,18 +65,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string SlaveZoneId { get; set; }
 
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
-
-        [NameInMap("EnableVpcVipFlow")]
-        [Validation(Required=false)]
-        public string EnableVpcVipFlow { get; set; }
-
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
         public string LoadBalancerSpec { get; set; }
@@ -109,21 +97,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string Address { get; set; }
 
-        [NameInMap("Ratio")]
-        [Validation(Required=false)]
-        public int? Ratio { get; set; }
-
         [NameInMap("DeleteProtection")]
         [Validation(Required=false)]
         public string DeleteProtection { get; set; }
-
-        [NameInMap("CloudType")]
-        [Validation(Required=false)]
-        public string CloudType { get; set; }
-
-        [NameInMap("SupportPrivateLink")]
-        [Validation(Required=false)]
-        public bool? SupportPrivateLink { get; set; }
 
         [NameInMap("ModificationProtectionStatus")]
         [Validation(Required=false)]

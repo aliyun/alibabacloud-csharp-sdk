@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAccessControlListsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
+
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
 
         [NameInMap("Acls")]
         [Validation(Required=false)]
@@ -35,14 +39,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public class DescribeAccessControlListsResponseBodyAclsAcl : TeaModel {
                 public string AclId { get; set; }
                 public string AddressIPVersion { get; set; }
-                public string ResourceGroupId { get; set; }
                 public string AclName { get; set; }
+                public string ResourceGroupId { get; set; }
             }
         };
-
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
 
     }
 
