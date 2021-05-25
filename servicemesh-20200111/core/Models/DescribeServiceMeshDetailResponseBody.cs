@@ -183,6 +183,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=false)]
                         public float? TraceSampling { get; set; }
 
+                        [NameInMap("Feature")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature Feature { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature : TeaModel {
+                            [NameInMap("FilterGatewayClusterConfig")]
+                            [Validation(Required=false)]
+                            public bool? FilterGatewayClusterConfig { get; set; }
+                            [NameInMap("EnableSDSServer")]
+                            [Validation(Required=false)]
+                            public bool? EnableSDSServer { get; set; }
+                        };
+
                     }
                     [NameInMap("MSE")]
                     [Validation(Required=false)]
@@ -244,6 +256,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                     [NameInMap("IncludeIPRanges")]
                     [Validation(Required=false)]
                     public string IncludeIPRanges { get; set; }
+                    [NameInMap("ExcludeIPRanges")]
+                    [Validation(Required=false)]
+                    public string ExcludeIPRanges { get; set; }
+                    [NameInMap("ExcludeOutboundPorts")]
+                    [Validation(Required=false)]
+                    public string ExcludeOutboundPorts { get; set; }
+                    [NameInMap("ExcludeInboundPorts")]
+                    [Validation(Required=false)]
+                    public string ExcludeInboundPorts { get; set; }
                     [NameInMap("Telemetry")]
                     [Validation(Required=false)]
                     public bool? Telemetry { get; set; }
@@ -265,6 +286,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [NameInMap("ThriftFilterEnabled")]
                         [Validation(Required=false)]
                         public bool? ThriftFilterEnabled { get; set; }
+
+                        [NameInMap("DubboFilterEnabled")]
+                        [Validation(Required=false)]
+                        public bool? DubboFilterEnabled { get; set; }
 
                     }
                     [NameInMap("OutboundTrafficPolicy")]
@@ -338,6 +363,27 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [NameInMap("LimitCPU")]
                         [Validation(Required=false)]
                         public string LimitCPU { get; set; }
+
+                        [NameInMap("AccessLogServiceEnabled")]
+                        [Validation(Required=false)]
+                        public bool? AccessLogServiceEnabled { get; set; }
+
+                        [NameInMap("AccessLogServiceHost")]
+                        [Validation(Required=false)]
+                        public string AccessLogServiceHost { get; set; }
+
+                        [NameInMap("AccessLogServicePort")]
+                        [Validation(Required=false)]
+                        public int? AccessLogServicePort { get; set; }
+
+                    }
+                    [NameInMap("K8sNewAPIsSupport")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport K8sNewAPIsSupport { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport : TeaModel {
+                        [NameInMap("GatewayAPIEnabled")]
+                        [Validation(Required=false)]
+                        public bool? GatewayAPIEnabled { get; set; }
 
                     }
                 };

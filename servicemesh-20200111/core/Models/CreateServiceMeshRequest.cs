@@ -165,6 +165,42 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string Edition { get; set; }
 
+        [NameInMap("ConfigSourceEnabled")]
+        [Validation(Required=false)]
+        public bool? ConfigSourceEnabled { get; set; }
+
+        [NameInMap("ConfigSourceNacosID")]
+        [Validation(Required=false)]
+        public string ConfigSourceNacosID { get; set; }
+
+        [NameInMap("DubboFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? DubboFilterEnabled { get; set; }
+
+        [NameInMap("FilterGatewayClusterConfig")]
+        [Validation(Required=false)]
+        public bool? FilterGatewayClusterConfig { get; set; }
+
+        [NameInMap("EnableSDSServer")]
+        [Validation(Required=false)]
+        public bool? EnableSDSServer { get; set; }
+
+        [NameInMap("AccessLogServiceEnabled")]
+        [Validation(Required=false)]
+        public bool? AccessLogServiceEnabled { get; set; }
+
+        [NameInMap("AccessLogServiceHost")]
+        [Validation(Required=false)]
+        public string AccessLogServiceHost { get; set; }
+
+        [NameInMap("AccessLogServicePort")]
+        [Validation(Required=false)]
+        public int? AccessLogServicePort { get; set; }
+
+        [NameInMap("GatewayAPIEnabled")]
+        [Validation(Required=false)]
+        public bool? GatewayAPIEnabled { get; set; }
+
     }
 
 }
