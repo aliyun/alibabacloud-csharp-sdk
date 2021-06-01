@@ -177,5 +177,69 @@ namespace AlibabaCloud.SDK.Imp_room20210515
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
+        public GetRoomDetailResponse GetRoomDetailWithOptions(GetRoomDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRoomDetailResponse>(DoRPCRequest("GetRoomDetail", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetRoomDetailResponse> GetRoomDetailWithOptionsAsync(GetRoomDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRoomDetailResponse>(await DoRPCRequestAsync("GetRoomDetail", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetRoomDetailResponse GetRoomDetail(GetRoomDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRoomDetailWithOptions(request, runtime);
+        }
+
+        public async Task<GetRoomDetailResponse> GetRoomDetailAsync(GetRoomDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRoomDetailWithOptionsAsync(request, runtime);
+        }
+
+        public GetRoomListResponse GetRoomListWithOptions(GetRoomListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRoomListResponse>(DoRPCRequest("GetRoomList", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetRoomListResponse> GetRoomListWithOptionsAsync(GetRoomListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRoomListResponse>(await DoRPCRequestAsync("GetRoomList", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetRoomListResponse GetRoomList(GetRoomListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRoomListWithOptions(request, runtime);
+        }
+
+        public async Task<GetRoomListResponse> GetRoomListAsync(GetRoomListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRoomListWithOptionsAsync(request, runtime);
+        }
+
     }
 }
