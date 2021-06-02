@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class CheckResourceRequest : TeaModel {
         [NameInMap("Country")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Country { get; set; }
 
         [NameInMap("Interrupt")]
@@ -18,31 +18,31 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public bool? Interrupt { get; set; }
 
         [NameInMap("Invoker")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Invoker { get; set; }
 
         [NameInMap("Pk")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Pk { get; set; }
 
         [NameInMap("Bid")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Bid { get; set; }
 
         [NameInMap("Hid")]
-        [Validation(Required=true)]
-        public long Hid { get; set; }
+        [Validation(Required=false)]
+        public long? Hid { get; set; }
 
         [NameInMap("TaskIdentifier")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskIdentifier { get; set; }
 
         [NameInMap("TaskExtraData")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskExtraData { get; set; }
 
         [NameInMap("GmtWakeup")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string GmtWakeup { get; set; }
 
         [NameInMap("Success")]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 
         [NameInMap("Level")]
         [Validation(Required=false)]
-        public long Level { get; set; }
+        public long? Level { get; set; }
 
         [NameInMap("Url")]
         [Validation(Required=false)]

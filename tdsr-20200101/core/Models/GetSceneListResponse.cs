@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetSceneListResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=true)]
-        public string ErrMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public Dictionary<string, object> Data { get; set; }
+        public GetSceneListResponseBody Body { get; set; }
 
     }
 
