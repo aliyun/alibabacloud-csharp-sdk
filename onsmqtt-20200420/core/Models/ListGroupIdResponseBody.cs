@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
 
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
             [NameInMap("IndependentNaming")]
             [Validation(Required=false)]
             public bool? IndependentNaming { get; set; }
@@ -32,10 +36,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
 
         }
 

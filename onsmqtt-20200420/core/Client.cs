@@ -229,6 +229,134 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             return await ListGroupIdWithOptionsAsync(request, runtime);
         }
 
+        public QueryMqttTraceDeviceResponse QueryMqttTraceDeviceWithOptions(QueryMqttTraceDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(DoRPCRequest("QueryMqttTraceDevice", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryMqttTraceDeviceResponse> QueryMqttTraceDeviceWithOptionsAsync(QueryMqttTraceDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(await DoRPCRequestAsync("QueryMqttTraceDevice", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryMqttTraceDeviceResponse QueryMqttTraceDevice(QueryMqttTraceDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMqttTraceDeviceWithOptions(request, runtime);
+        }
+
+        public async Task<QueryMqttTraceDeviceResponse> QueryMqttTraceDeviceAsync(QueryMqttTraceDeviceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMqttTraceDeviceWithOptionsAsync(request, runtime);
+        }
+
+        public QueryMqttTraceMessageOfClientResponse QueryMqttTraceMessageOfClientWithOptions(QueryMqttTraceMessageOfClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(DoRPCRequest("QueryMqttTraceMessageOfClient", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryMqttTraceMessageOfClientResponse> QueryMqttTraceMessageOfClientWithOptionsAsync(QueryMqttTraceMessageOfClientRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(await DoRPCRequestAsync("QueryMqttTraceMessageOfClient", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryMqttTraceMessageOfClientResponse QueryMqttTraceMessageOfClient(QueryMqttTraceMessageOfClientRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMqttTraceMessageOfClientWithOptions(request, runtime);
+        }
+
+        public async Task<QueryMqttTraceMessageOfClientResponse> QueryMqttTraceMessageOfClientAsync(QueryMqttTraceMessageOfClientRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMqttTraceMessageOfClientWithOptionsAsync(request, runtime);
+        }
+
+        public QueryMqttTraceMessagePublishResponse QueryMqttTraceMessagePublishWithOptions(QueryMqttTraceMessagePublishRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(DoRPCRequest("QueryMqttTraceMessagePublish", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryMqttTraceMessagePublishResponse> QueryMqttTraceMessagePublishWithOptionsAsync(QueryMqttTraceMessagePublishRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(await DoRPCRequestAsync("QueryMqttTraceMessagePublish", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryMqttTraceMessagePublishResponse QueryMqttTraceMessagePublish(QueryMqttTraceMessagePublishRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMqttTraceMessagePublishWithOptions(request, runtime);
+        }
+
+        public async Task<QueryMqttTraceMessagePublishResponse> QueryMqttTraceMessagePublishAsync(QueryMqttTraceMessagePublishRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMqttTraceMessagePublishWithOptionsAsync(request, runtime);
+        }
+
+        public QueryMqttTraceMessageSubscribeResponse QueryMqttTraceMessageSubscribeWithOptions(QueryMqttTraceMessageSubscribeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(DoRPCRequest("QueryMqttTraceMessageSubscribe", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryMqttTraceMessageSubscribeResponse> QueryMqttTraceMessageSubscribeWithOptionsAsync(QueryMqttTraceMessageSubscribeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(await DoRPCRequestAsync("QueryMqttTraceMessageSubscribe", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryMqttTraceMessageSubscribeResponse QueryMqttTraceMessageSubscribe(QueryMqttTraceMessageSubscribeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMqttTraceMessageSubscribeWithOptions(request, runtime);
+        }
+
+        public async Task<QueryMqttTraceMessageSubscribeResponse> QueryMqttTraceMessageSubscribeAsync(QueryMqttTraceMessageSubscribeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMqttTraceMessageSubscribeWithOptionsAsync(request, runtime);
+        }
+
         public QuerySessionByClientIdResponse QuerySessionByClientIdWithOptions(QuerySessionByClientIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
