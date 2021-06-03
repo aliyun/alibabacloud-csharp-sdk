@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("TagProduct")]
+        [Validation(Required=false)]
+        public string TagProduct { get; set; }
+
     }
 
 }

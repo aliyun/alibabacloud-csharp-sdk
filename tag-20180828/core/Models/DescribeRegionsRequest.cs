@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,7 +11,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
-    public class ListTagKeysRequest : TeaModel {
+    public class DescribeRegionsRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,6 +19,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -25,25 +32,9 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("TagProduct")]
-        [Validation(Required=false)]
-        public string TagProduct { get; set; }
+        public string AcceptLanguage { get; set; }
 
     }
 
