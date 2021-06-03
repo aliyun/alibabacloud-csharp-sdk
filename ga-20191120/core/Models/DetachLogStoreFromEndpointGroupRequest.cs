@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class ListEndpointGroupsRequest : TeaModel {
+    public class DetachLogStoreFromEndpointGroupRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
@@ -29,17 +21,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
-        [NameInMap("EndpointGroupType")]
+        [NameInMap("EndpointGroupIds")]
         [Validation(Required=false)]
-        public string EndpointGroupType { get; set; }
+        public List<string> EndpointGroupIds { get; set; }
 
-        [NameInMap("AccessLogSwitch")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string AccessLogSwitch { get; set; }
-
-        [NameInMap("EndpointGroupId")]
-        [Validation(Required=false)]
-        public string EndpointGroupId { get; set; }
+        public string ClientToken { get; set; }
 
     }
 

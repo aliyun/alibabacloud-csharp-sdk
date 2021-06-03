@@ -8,14 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class DeleteListenerRequest : TeaModel {
-        [NameInMap("ClientToken")]
+    public class DissociateAclsFromListenerResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("AclIds")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
+        public List<string> AclIds { get; set; }
 
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

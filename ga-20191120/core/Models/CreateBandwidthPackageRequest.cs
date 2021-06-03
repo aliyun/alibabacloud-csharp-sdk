@@ -65,10 +65,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string CbnGeographicRegionIdB { get; set; }
 
-        [NameInMap("PromotionOptionNo")]
-        [Validation(Required=false)]
-        public string PromotionOptionNo { get; set; }
-
     }
 
 }

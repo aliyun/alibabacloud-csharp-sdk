@@ -117,9 +117,33 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<string> ForwardingRuleIds { get; set; }
 
+        [NameInMap("AcceleratorId")]
+        [Validation(Required=false)]
+        public string AcceleratorId { get; set; }
+
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
+
+        [NameInMap("SlsRegion")]
+        [Validation(Required=false)]
+        public string SlsRegion { get; set; }
+
+        [NameInMap("SlsProjectName")]
+        [Validation(Required=false)]
+        public string SlsProjectName { get; set; }
+
+        [NameInMap("SlsLogStoreName")]
+        [Validation(Required=false)]
+        public string SlsLogStoreName { get; set; }
+
+        [NameInMap("AccessLogSwitch")]
+        [Validation(Required=false)]
+        public string AccessLogSwitch { get; set; }
+
+        [NameInMap("EnableAccessLog")]
+        [Validation(Required=false)]
+        public bool? EnableAccessLog { get; set; }
 
     }
 

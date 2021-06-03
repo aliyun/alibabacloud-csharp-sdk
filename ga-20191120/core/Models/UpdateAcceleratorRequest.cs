@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
-        [NameInMap("PromotionOptionNo")]
-        [Validation(Required=false)]
-        public string PromotionOptionNo { get; set; }
-
     }
 
 }

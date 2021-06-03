@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string ListenerId { get; set; }
 
+            [NameInMap("AcceleratorId")]
+            [Validation(Required=false)]
+            public string AcceleratorId { get; set; }
+
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> EndpointConfigurations { get; set; }

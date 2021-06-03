@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string BillingType { get; set; }
 
+            [NameInMap("Ratio")]
+            [Validation(Required=false)]
+            public int? Ratio { get; set; }
+
         }
 
     }

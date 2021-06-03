@@ -83,6 +83,32 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("RelatedAcls")]
+        [Validation(Required=false)]
+        public List<DescribeListenerResponseBodyRelatedAcls> RelatedAcls { get; set; }
+        public class DescribeListenerResponseBodyRelatedAcls : TeaModel {
+            [NameInMap("AclId")]
+            [Validation(Required=false)]
+            public string AclId { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
+        [NameInMap("AclType")]
+        [Validation(Required=false)]
+        public string AclType { get; set; }
+
+        [NameInMap("AcceleratorId")]
+        [Validation(Required=false)]
+        public string AcceleratorId { get; set; }
+
+        [NameInMap("ProxyProtocol")]
+        [Validation(Required=false)]
+        public bool? ProxyProtocol { get; set; }
+
     }
 
 }

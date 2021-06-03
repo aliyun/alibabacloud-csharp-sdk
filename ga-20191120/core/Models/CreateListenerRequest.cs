@@ -65,15 +65,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
-        /// <summary>
-        /// 转发端口迁移至终端节点组portoverride
-        /// </summary>
-        [NameInMap("BackendPorts")]
-        [Validation(Required=false)]
-        public List<CreateListenerRequestBackendPorts> BackendPorts { get; set; }
-        public class CreateListenerRequestBackendPorts : TeaModel {
-        }
-
     }
 
 }
