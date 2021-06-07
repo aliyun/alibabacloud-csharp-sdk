@@ -51,10 +51,6 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string PromotionPrice { get; set; }
 
-                    [NameInMap("PriceAfterCoupon")]
-                    [Validation(Required=false)]
-                    public string PriceAfterCoupon { get; set; }
-
                     [NameInMap("UserType")]
                     [Validation(Required=false)]
                     public int? UserType { get; set; }
@@ -83,17 +79,9 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string CategoryName { get; set; }
 
-                    [NameInMap("CouponActivityId")]
-                    [Validation(Required=false)]
-                    public string CouponActivityId { get; set; }
-
                     [NameInMap("CouponTotalCount")]
                     [Validation(Required=false)]
                     public string CouponTotalCount { get; set; }
-
-                    [NameInMap("CouponSendCount")]
-                    [Validation(Required=false)]
-                    public string CouponSendCount { get; set; }
 
                     [NameInMap("CouponRemainCount")]
                     [Validation(Required=false)]
@@ -119,9 +107,9 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string CouponSaleTextInfo { get; set; }
 
-                    [NameInMap("CalTkRate")]
+                    [NameInMap("CommissionRate")]
                     [Validation(Required=false)]
-                    public string CalTkRate { get; set; }
+                    public string CommissionRate { get; set; }
 
                     [NameInMap("CouponShareUrl")]
                     [Validation(Required=false)]
@@ -130,10 +118,6 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [NameInMap("ClickUrl")]
                     [Validation(Required=false)]
                     public string ClickUrl { get; set; }
-
-                    [NameInMap("ShortUrl")]
-                    [Validation(Required=false)]
-                    public string ShortUrl { get; set; }
 
                 }
                 public float? RankScore { get; set; }
