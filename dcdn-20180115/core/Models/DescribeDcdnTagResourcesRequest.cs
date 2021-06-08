@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("Scope")]
-        [Validation(Required=false)]
-        public string Scope { get; set; }
-
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }

@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("FunctionName")]
-        [Validation(Required=false)]
-        public string FunctionName { get; set; }
-
     }
 
 }

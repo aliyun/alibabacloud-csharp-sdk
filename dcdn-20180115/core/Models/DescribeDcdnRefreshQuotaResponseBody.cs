@@ -9,37 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshQuotaResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BlockQuota")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("UrlRemain")]
-        [Validation(Required=false)]
-        public string UrlRemain { get; set; }
+        public string BlockQuota { get; set; }
 
         [NameInMap("PreloadRemain")]
         [Validation(Required=false)]
         public string PreloadRemain { get; set; }
 
-        [NameInMap("BlockQuota")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string BlockQuota { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("blockRemain")]
+        [Validation(Required=false)]
+        public string BlockRemain { get; set; }
 
         [NameInMap("DirRemain")]
         [Validation(Required=false)]
         public string DirRemain { get; set; }
 
-        [NameInMap("UrlQuota")]
+        [NameInMap("UrlRemain")]
         [Validation(Required=false)]
-        public string UrlQuota { get; set; }
+        public string UrlRemain { get; set; }
 
         [NameInMap("DirQuota")]
         [Validation(Required=false)]
         public string DirQuota { get; set; }
 
-        [NameInMap("blockRemain")]
+        [NameInMap("UrlQuota")]
         [Validation(Required=false)]
-        public string BlockRemain { get; set; }
+        public string UrlQuota { get; set; }
 
         [NameInMap("PreloadQuota")]
         [Validation(Required=false)]

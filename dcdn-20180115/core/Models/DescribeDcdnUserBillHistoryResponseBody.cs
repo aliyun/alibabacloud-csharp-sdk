@@ -21,32 +21,38 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem> BillHistoryDataItem { get; set; }
             public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem : TeaModel {
-                [NameInMap("BillingDataItem")]
-                [Validation(Required=false)]
-                public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataItem> BillingDataItem { get; set; }
-                public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataItem : TeaModel {
-                    [NameInMap("Bandwidth")]
+                public string Dimension { get; set; }
+                public string BillType { get; set; }
+                public string BillTime { get; set; }
+                public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData BillingData { get; set; }
+                public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData : TeaModel {
+                    [NameInMap("BillingDataItem")]
                     [Validation(Required=false)]
-                    public float? Bandwidth { get; set; }
+                    public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem> BillingDataItem { get; set; }
+                    public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem : TeaModel {
+                        [NameInMap("Flow")]
+                        [Validation(Required=false)]
+                        public float? Flow { get; set; }
 
-                    [NameInMap("ChargeType")]
-                    [Validation(Required=false)]
-                    public string ChargeType { get; set; }
+                        [NameInMap("Bandwidth")]
+                        [Validation(Required=false)]
+                        public float? Bandwidth { get; set; }
 
-                    [NameInMap("Flow")]
-                    [Validation(Required=false)]
-                    public float? Flow { get; set; }
+                        [NameInMap("Count")]
+                        [Validation(Required=false)]
+                        public float? Count { get; set; }
 
-                    [NameInMap("Count")]
-                    [Validation(Required=false)]
-                    public float? Count { get; set; }
+                        [NameInMap("CdnRegion")]
+                        [Validation(Required=false)]
+                        public string CdnRegion { get; set; }
 
-                    [NameInMap("CdnRegion")]
-                    [Validation(Required=false)]
-                    public string CdnRegion { get; set; }
+                        [NameInMap("ChargeType")]
+                        [Validation(Required=false)]
+                        public string ChargeType { get; set; }
+
+                    }
 
                 }
-
             }
         };
 

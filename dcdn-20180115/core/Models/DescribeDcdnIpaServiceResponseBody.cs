@@ -9,25 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpaServiceResponseBody : TeaModel {
-        [NameInMap("ChangingChargeType")]
+        [NameInMap("ChangingAffectTime")]
         [Validation(Required=false)]
-        public string ChangingChargeType { get; set; }
+        public string ChangingAffectTime { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("ChangingChargeType")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string ChangingChargeType { get; set; }
 
         [NameInMap("OpeningTime")]
         [Validation(Required=false)]
         public string OpeningTime { get; set; }
 
-        [NameInMap("ChangingAffectTime")]
+        [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
-        public string ChangingAffectTime { get; set; }
+        public string InternetChargeType { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
@@ -40,10 +44,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string LockReason { get; set; }
             }
         };
-
-        [NameInMap("InternetChargeType")]
-        [Validation(Required=false)]
-        public string InternetChargeType { get; set; }
 
     }
 

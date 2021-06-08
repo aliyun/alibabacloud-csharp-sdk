@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserDomainsByFuncResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public DescribeDcdnUserDomainsByFuncResponseBodyDomains Domains { get; set; }
@@ -24,6 +40,9 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Sandbox { get; set; }
                 public string DomainStatus { get; set; }
                 public string Cname { get; set; }
+                public string GmtModified { get; set; }
+                public string CdnType { get; set; }
+                public string DomainName { get; set; }
                 public DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSources Sources { get; set; }
                 public class DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSources : TeaModel {
                     [NameInMap("Source")]
@@ -53,27 +72,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                     }
 
                 }
-                public string GmtModified { get; set; }
-                public string CdnType { get; set; }
-                public string DomainName { get; set; }
             }
         };
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
@@ -37,24 +37,28 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData> UsageData { get; set; }
             public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData : TeaModel {
-                [NameInMap("RealTimeCodeProportionData")]
-                [Validation(Required=false)]
-                public List<DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataRealTimeCodeProportionData> RealTimeCodeProportionData { get; set; }
-                public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataRealTimeCodeProportionData : TeaModel {
-                    [NameInMap("Code")]
+                public string TimeStamp { get; set; }
+                public DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue Value { get; set; }
+                public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue : TeaModel {
+                    [NameInMap("RealTimeCodeProportionData")]
                     [Validation(Required=false)]
-                    public string Code { get; set; }
+                    public List<DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData> RealTimeCodeProportionData { get; set; }
+                    public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData : TeaModel {
+                        [NameInMap("Code")]
+                        [Validation(Required=false)]
+                        public string Code { get; set; }
 
-                    [NameInMap("Proportion")]
-                    [Validation(Required=false)]
-                    public string Proportion { get; set; }
+                        [NameInMap("Proportion")]
+                        [Validation(Required=false)]
+                        public string Proportion { get; set; }
 
-                    [NameInMap("Count")]
-                    [Validation(Required=false)]
-                    public string Count { get; set; }
+                        [NameInMap("Count")]
+                        [Validation(Required=false)]
+                        public string Count { get; set; }
+
+                    }
 
                 }
-
             }
         };
 

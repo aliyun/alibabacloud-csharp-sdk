@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnOfflineLogDeliveryFieldResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields> Fields { get; set; }
@@ -26,10 +30,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public string FieldName { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

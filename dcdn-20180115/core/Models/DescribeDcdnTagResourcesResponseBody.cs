@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public List<DescribeDcdnTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class DescribeDcdnTagResourcesResponseBodyTagResources : TeaModel {
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
+
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<DescribeDcdnTagResourcesResponseBodyTagResourcesTag> Tag { get; set; }
@@ -30,10 +34,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string Value { get; set; }
 
             }
-
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
 
         }
 

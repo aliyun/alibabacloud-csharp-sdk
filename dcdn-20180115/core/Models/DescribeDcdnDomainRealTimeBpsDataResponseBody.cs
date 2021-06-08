@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel> BpsModel { get; set; }
             public class DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel : TeaModel {
-                public string TimeStamp { get; set; }
                 public float? Bps { get; set; }
+                public string TimeStamp { get; set; }
             }
         };
 

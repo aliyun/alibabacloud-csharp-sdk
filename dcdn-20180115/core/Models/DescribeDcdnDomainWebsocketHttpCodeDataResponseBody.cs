@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
@@ -37,24 +37,28 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule : TeaModel {
-                [NameInMap("HttpCodeDataModule")]
-                [Validation(Required=false)]
-                public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataModule> HttpCodeDataModule { get; set; }
-                public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataModule : TeaModel {
-                    [NameInMap("Code")]
+                public string TimeStamp { get; set; }
+                public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval WebsocketHttpCodeDataPerInterval { get; set; }
+                public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval : TeaModel {
+                    [NameInMap("HttpCodeDataModule")]
                     [Validation(Required=false)]
-                    public int? Code { get; set; }
+                    public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerIntervalHttpCodeDataModule> HttpCodeDataModule { get; set; }
+                    public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerIntervalHttpCodeDataModule : TeaModel {
+                        [NameInMap("Code")]
+                        [Validation(Required=false)]
+                        public int? Code { get; set; }
 
-                    [NameInMap("Proportion")]
-                    [Validation(Required=false)]
-                    public float? Proportion { get; set; }
+                        [NameInMap("Proportion")]
+                        [Validation(Required=false)]
+                        public float? Proportion { get; set; }
 
-                    [NameInMap("Count")]
-                    [Validation(Required=false)]
-                    public float? Count { get; set; }
+                        [NameInMap("Count")]
+                        [Validation(Required=false)]
+                        public float? Count { get; set; }
+
+                    }
 
                 }
-
             }
         };
 

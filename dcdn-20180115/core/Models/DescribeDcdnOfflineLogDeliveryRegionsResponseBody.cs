@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnOfflineLogDeliveryRegionsResponseBodyAreasRegionInfos> RegionInfos { get; set; }
             public class DescribeDcdnOfflineLogDeliveryRegionsResponseBodyAreasRegionInfos : TeaModel {
-                [NameInMap("RegionName")]
-                [Validation(Required=false)]
-                public string RegionName { get; set; }
-
                 [NameInMap("IsOverseas")]
                 [Validation(Required=false)]
                 public string IsOverseas { get; set; }
+
+                [NameInMap("RegionName")]
+                [Validation(Required=false)]
+                public string RegionName { get; set; }
 
                 [NameInMap("OssEndpoint")]
                 [Validation(Required=false)]

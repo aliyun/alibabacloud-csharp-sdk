@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("RequestPerInterval")]
         [Validation(Required=false)]
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             public List<DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule> RequestDataModule { get; set; }
             public class DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule : TeaModel {
                 public string Type { get; set; }
-                public string Domain { get; set; }
                 public string TimeStamp { get; set; }
+                public string Domain { get; set; }
                 public long? Request { get; set; }
             }
         };

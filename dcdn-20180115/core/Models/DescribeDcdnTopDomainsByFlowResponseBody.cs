@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnTopDomainsByFlowResponseBody : TeaModel {
+        [NameInMap("DomainOnlineCount")]
+        [Validation(Required=false)]
+        public long? DomainOnlineCount { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("DomainCount")]
+        [Validation(Required=false)]
+        public long? DomainCount { get; set; }
+
         [NameInMap("TopDomains")]
         [Validation(Required=false)]
         public DescribeDcdnTopDomainsByFlowResponseBodyTopDomains TopDomains { get; set; }
@@ -26,26 +46,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string MaxBpsTime { get; set; }
             }
         };
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DomainOnlineCount")]
-        [Validation(Required=false)]
-        public long? DomainOnlineCount { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("DomainCount")]
-        [Validation(Required=false)]
-        public long? DomainCount { get; set; }
 
     }
 

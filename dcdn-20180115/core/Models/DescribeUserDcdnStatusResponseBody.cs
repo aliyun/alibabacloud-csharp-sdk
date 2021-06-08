@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeUserDcdnStatusResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("InDebt")]
         [Validation(Required=false)]
         public bool? InDebt { get; set; }
 
-        [NameInMap("Enabled")]
+        [NameInMap("OnService")]
         [Validation(Required=false)]
-        public bool? Enabled { get; set; }
+        public bool? OnService { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("InDebtOverdue")]
         [Validation(Required=false)]
         public bool? InDebtOverdue { get; set; }
 
-        [NameInMap("OnService")]
+        [NameInMap("Enabled")]
         [Validation(Required=false)]
-        public bool? OnService { get; set; }
+        public bool? Enabled { get; set; }
 
     }
 

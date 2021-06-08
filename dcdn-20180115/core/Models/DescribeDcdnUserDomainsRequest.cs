@@ -45,14 +45,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("FuncId")]
-        [Validation(Required=false)]
-        public string FuncId { get; set; }
-
-        [NameInMap("FuncFilter")]
-        [Validation(Required=false)]
-        public string FuncFilter { get; set; }
-
         [NameInMap("ChangeStartTime")]
         [Validation(Required=false)]
         public string ChangeStartTime { get; set; }

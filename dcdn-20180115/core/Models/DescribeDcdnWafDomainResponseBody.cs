@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public List<DescribeDcdnWafDomainResponseBodyOutPutDomains> OutPutDomains { get; set; }
         public class DescribeDcdnWafDomainResponseBodyOutPutDomains : TeaModel {
+            [NameInMap("AclStatus")]
+            [Validation(Required=false)]
+            public int? AclStatus { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
@@ -32,10 +36,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [NameInMap("CcStatus")]
             [Validation(Required=false)]
             public int? CcStatus { get; set; }
-
-            [NameInMap("AclStatus")]
-            [Validation(Required=false)]
-            public int? AclStatus { get; set; }
 
             [NameInMap("WafStatus")]
             [Validation(Required=false)]

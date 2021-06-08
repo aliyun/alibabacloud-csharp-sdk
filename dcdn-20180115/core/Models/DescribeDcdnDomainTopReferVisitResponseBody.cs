@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainTopReferVisitResponseBody : TeaModel {
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
 
         [NameInMap("TopReferList")]
         [Validation(Required=false)]
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainTopReferVisitResponseBodyTopReferListReferList> ReferList { get; set; }
             public class DescribeDcdnDomainTopReferVisitResponseBodyTopReferListReferList : TeaModel {
+                public string Flow { get; set; }
+                public float? FlowProportion { get; set; }
                 public string VisitData { get; set; }
                 public string ReferDetail { get; set; }
                 public float? VisitProportion { get; set; }
-                public string Flow { get; set; }
-                public float? FlowProportion { get; set; }
             }
         };
 
