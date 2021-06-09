@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodesRequest : TeaModel {
         /// <summary>
-        /// 节点实例ID，按照实例ID进行过滤。  节点池ID不为空时会忽略此字段。
+        /// 节点实例ID，按照实例ID进行过滤。  节点池ID不为空时会忽略此字段。多节点用逗号分割
         /// </summary>
         [NameInMap("instanceIds")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string InstanceIds { get; set; }
 
         /// <summary>
         /// 节点池ID。

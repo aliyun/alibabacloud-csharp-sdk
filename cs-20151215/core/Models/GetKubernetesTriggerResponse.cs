@@ -59,6 +59,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string Action { get; set; }
 
+            /// <summary>
+            /// Token
+            /// </summary>
+            [NameInMap("token")]
+            [Validation(Required=false)]
+            public string Token { get; set; }
+
         }
 
     }

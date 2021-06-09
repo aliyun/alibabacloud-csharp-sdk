@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterUserKubeconfigResponseBody : TeaModel {
+    public class OpenAckServiceResponseBody : TeaModel {
         /// <summary>
-        /// kubeconfig内容。
+        /// 请求ID
         /// </summary>
-        [NameInMap("config")]
+        [NameInMap("request_id")]
         [Validation(Required=false)]
-        public string Config { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// kubeconfig过期时间。格式：RFC3339 格式的 UTC 时间。
+        /// 开通服务的订单号。
         /// </summary>
-        [NameInMap("expiration")]
+        [NameInMap("order_id")]
         [Validation(Required=false)]
-        public string Expiration { get; set; }
+        public string OrderId { get; set; }
 
     }
 

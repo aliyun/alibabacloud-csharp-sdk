@@ -16,6 +16,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? PrivateIpAddress { get; set; }
 
+        /// <summary>
+        /// 临时kubeconfig有效期，单位：分钟。  最小值：15（15分钟）  最大值：4320（3天）。
+        /// </summary>
+        [NameInMap("TemporaryDurationMinutes")]
+        [Validation(Required=false)]
+        public long? TemporaryDurationMinutes { get; set; }
+
     }
 
 }

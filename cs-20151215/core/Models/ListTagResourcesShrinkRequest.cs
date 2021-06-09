@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListTagResourcesRequest : TeaModel {
+    public class ListTagResourcesShrinkRequest : TeaModel {
         /// <summary>
         /// 集群ID列表。
         /// </summary>
         [NameInMap("resource_ids")]
         [Validation(Required=false)]
-        public List<string> ResourceIds { get; set; }
+        public string ResourceIdsShrink { get; set; }
 
         /// <summary>
         /// 资源类型，只支持Cluster
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
-        public List<Tag> Tags { get; set; }
+        public string TagsShrink { get; set; }
 
         /// <summary>
         /// 下一次查询Token。
