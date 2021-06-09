@@ -17,10 +17,32 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy> QosPolicy { get; set; }
             public class DescribeQosPoliciesResponseBodyQosPoliciesQosPolicy : TeaModel {
-                [NameInMap("DpiSignatureId")]
-                [Validation(Required=false)]
-                public List<string> DpiSignatureId { get; set; }
+                public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds DpiSignatureIds { get; set; }
+                public class DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiSignatureIds : TeaModel {
+                    [NameInMap("DpiSignatureId")]
+                    [Validation(Required=false)]
+                    public List<string> DpiSignatureId { get; set; }
 
+                }
+                public string IpProtocol { get; set; }
+                public string QosId { get; set; }
+                public int? Priority { get; set; }
+                public string EndTime { get; set; }
+                public string StartTime { get; set; }
+                public string Description { get; set; }
+                public string DestCidr { get; set; }
+                public string DestPortRange { get; set; }
+                public string QosPolicyId { get; set; }
+                public string Name { get; set; }
+                public string SourceCidr { get; set; }
+                public string SourcePortRange { get; set; }
+                public DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds DpiGroupIds { get; set; }
+                public class DescribeQosPoliciesResponseBodyQosPoliciesQosPolicyDpiGroupIds : TeaModel {
+                    [NameInMap("DpiGroupId")]
+                    [Validation(Required=false)]
+                    public List<string> DpiGroupId { get; set; }
+
+                }
             }
         };
 

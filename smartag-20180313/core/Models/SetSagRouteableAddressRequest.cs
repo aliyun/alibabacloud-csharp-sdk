@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("access_key_id")]
-        [Validation(Required=false)]
-        public string AccessKeyId { get; set; }
-
         [NameInMap("SagId")]
         [Validation(Required=false)]
         public string SagId { get; set; }

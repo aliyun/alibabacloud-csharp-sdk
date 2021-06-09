@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
-    public class DescribeNetworkOptimizationSettingsResponse : TeaModel {
+    public class ListAccessPointNetworkQualitiesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeNetworkOptimizationSettingsResponseBody Body { get; set; }
+        public ListAccessPointNetworkQualitiesResponseBody Body { get; set; }
 
     }
 

@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string Name { get; set; }
                 public string FlowLogId { get; set; }
                 public string LogstoreName { get; set; }
+                public string ResourceGroupId { get; set; }
             }
         };
 

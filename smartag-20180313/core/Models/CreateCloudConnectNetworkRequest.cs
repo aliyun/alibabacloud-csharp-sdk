@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("IsDefault")]
-        [Validation(Required=false)]
-        public bool? IsDefault { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

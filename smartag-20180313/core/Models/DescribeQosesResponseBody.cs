@@ -38,6 +38,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string SmartAGIds { get; set; }
                 public string QosId { get; set; }
                 public string QosName { get; set; }
+                public string ResourceGroupId { get; set; }
             }
         };
 

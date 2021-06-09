@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
-            [NameInMap("SmartAGCount")]
-            [Validation(Required=false)]
-            public int? SmartAGCount { get; set; }
-
             [NameInMap("EnterpriseCode")]
             [Validation(Required=false)]
             public string EnterpriseCode { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
-    public class AddNetworkOptimizationSettingResponseBody : TeaModel {
+    public class ProbeAccessPointNetworkQualityResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

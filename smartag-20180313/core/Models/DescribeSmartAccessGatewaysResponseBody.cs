@@ -56,11 +56,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string IdaasId { get; set; }
                 public long? DataPlan { get; set; }
                 public string AssociatedCcnName { get; set; }
+                public string ResellerUid { get; set; }
                 public string DpiMonitorStatus { get; set; }
                 public string MaxBandwidth { get; set; }
                 public long? SmartAGUid { get; set; }
                 public string BackupSoftwareVersion { get; set; }
                 public long? EndTime { get; set; }
+                public string ResellerInstanceId { get; set; }
                 public string VpnStatus { get; set; }
                 public string RoutingStrategy { get; set; }
                 public int? SecurityLockThreshold { get; set; }
@@ -108,6 +110,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string ResourceGroupId { get; set; }
                 public int? UserCount { get; set; }
                 public string AccessPointId { get; set; }
+                public string ApplicationBandwidthPackageId { get; set; }
+                public long? AccelerateBandwidth { get; set; }
             }
         };
 

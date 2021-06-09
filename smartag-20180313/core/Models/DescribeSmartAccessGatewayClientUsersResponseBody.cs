@@ -38,6 +38,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string ClientIp { get; set; }
                 public string UserName { get; set; }
                 public string UserMail { get; set; }
+                public long? AccelerateBandwidth { get; set; }
             }
         };
 

@@ -118,6 +118,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("ResellerUid")]
+        [Validation(Required=false)]
+        public string ResellerUid { get; set; }
+
         [NameInMap("SecurityLockThreshold")]
         [Validation(Required=false)]
         public int? SecurityLockThreshold { get; set; }
@@ -145,6 +149,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("City")]
         [Validation(Required=false)]
         public string City { get; set; }
+
+        [NameInMap("ResellerInstanceId")]
+        [Validation(Required=false)]
+        public string ResellerInstanceId { get; set; }
 
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
@@ -189,6 +197,34 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("AclId")]
             [Validation(Required=false)]
             public List<string> AclId { get; set; }
+        };
+
+        [NameInMap("ApplicationBandwidthPackageId")]
+        [Validation(Required=false)]
+        public string ApplicationBandwidthPackageId { get; set; }
+
+        [NameInMap("ApplicationBandwidthPackageName")]
+        [Validation(Required=false)]
+        public string ApplicationBandwidthPackageName { get; set; }
+
+        [NameInMap("AccelerateBandwidth")]
+        [Validation(Required=false)]
+        public long? AccelerateBandwidth { get; set; }
+
+        [NameInMap("ApplicationBandwidthPackageBussinessStatus")]
+        [Validation(Required=false)]
+        public string ApplicationBandwidthPackageBussinessStatus { get; set; }
+
+        [NameInMap("ApplicationBandwidthPackageOperationLocks")]
+        [Validation(Required=false)]
+        public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks ApplicationBandwidthPackageOperationLocks { get; set; }
+        public class DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks : TeaModel {
+            [NameInMap("LockType")]
+            [Validation(Required=false)]
+            public string LockType { get; set; }
+            [NameInMap("LockReason")]
+            [Validation(Required=false)]
+            public string LockReason { get; set; }
         };
 
     }

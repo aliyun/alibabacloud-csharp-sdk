@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
-    public class UnicomSignConfirmResponse : TeaModel {
+    public class ProbeAccessPointNetworkQualityResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UnicomSignConfirmResponseBody Body { get; set; }
+        public ProbeAccessPointNetworkQualityResponseBody Body { get; set; }
 
     }
 

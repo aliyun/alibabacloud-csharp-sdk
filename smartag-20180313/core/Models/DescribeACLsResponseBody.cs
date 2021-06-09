@@ -36,6 +36,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string SagCount { get; set; }
                 public string AclId { get; set; }
                 public string Name { get; set; }
+                public string ResourceGroupId { get; set; }
             }
         };
 

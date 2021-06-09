@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
     }
 
 }

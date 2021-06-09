@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("City")]
-        [Validation(Required=false)]
-        public string City { get; set; }
-
         [NameInMap("SmartAGId")]
         [Validation(Required=false)]
         public string SmartAGId { get; set; }

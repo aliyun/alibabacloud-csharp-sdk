@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
-    public class AttachNetworkOptimizationSagsResponseBody : TeaModel {
+    public class ModifySAGAdminPasswordResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

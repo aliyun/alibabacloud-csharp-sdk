@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
-    public class ModifyNetworkOptimizationRequest : TeaModel {
+    public class ModifySAGAdminPasswordRequest : TeaModel {
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -29,13 +29,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("SmartAGId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string SmartAGId { get; set; }
 
-        [NameInMap("NetworkOptId")]
+        [NameInMap("SmartAGSn")]
         [Validation(Required=false)]
-        public string NetworkOptId { get; set; }
+        public string SmartAGSn { get; set; }
+
+        [NameInMap("Password")]
+        [Validation(Required=false)]
+        public string Password { get; set; }
 
     }
 

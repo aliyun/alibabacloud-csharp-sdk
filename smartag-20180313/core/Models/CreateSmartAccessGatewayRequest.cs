@@ -109,21 +109,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
-        [NameInMap("UserCount")]
-        [Validation(Required=false)]
-        public int? UserCount { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
-        [NameInMap("DataPlan")]
-        [Validation(Required=false)]
-        public long? DataPlan { get; set; }
-
         [NameInMap("AlreadyHaveSag")]
         [Validation(Required=false)]
         public bool? AlreadyHaveSag { get; set; }
+
+        [NameInMap("CPEVersion")]
+        [Validation(Required=false)]
+        public string CPEVersion { get; set; }
 
     }
 

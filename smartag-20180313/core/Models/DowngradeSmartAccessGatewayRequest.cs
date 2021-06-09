@@ -41,14 +41,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        [NameInMap("DataPlan")]
-        [Validation(Required=false)]
-        public long? DataPlan { get; set; }
-
-        [NameInMap("UserCount")]
-        [Validation(Required=false)]
-        public int? UserCount { get; set; }
-
     }
 
 }

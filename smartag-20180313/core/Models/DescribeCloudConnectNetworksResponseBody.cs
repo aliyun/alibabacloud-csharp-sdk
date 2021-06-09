@@ -45,6 +45,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 public string SnatCidrBlock { get; set; }
                 public string AssociatedCenId { get; set; }
                 public string Name { get; set; }
+                public string ResourceGroupId { get; set; }
             }
         };
 
