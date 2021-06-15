@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryPermissionListResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,15 +38,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
-            [NameInMap("PermissionList")]
-            [Validation(Required=false)]
-            public List<QueryPermissionListResponseBodyDataPermissionList> PermissionList { get; set; }
-            public class QueryPermissionListResponseBodyDataPermissionList : TeaModel {
-                public string EndTime { get; set; }
-                public string StartTime { get; set; }
-                public string PermissionCode { get; set; }
-                public string PermissionName { get; set; }
-            }
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
@@ -51,15 +50,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("SetupTime")]
             [Validation(Required=false)]
             public string SetupTime { get; set; }
+            [NameInMap("PermissionList")]
+            [Validation(Required=false)]
+            public List<QueryPermissionListResponseBodyDataPermissionList> PermissionList { get; set; }
+            public class QueryPermissionListResponseBodyDataPermissionList : TeaModel {
+                public string EndTime { get; set; }
+                public string StartTime { get; set; }
+                public string PermissionCode { get; set; }
+                public string PermissionName { get; set; }
+            }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

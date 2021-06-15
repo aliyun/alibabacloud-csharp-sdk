@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeInstanceBillResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,10 +21,32 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeInstanceBillResponseBodyData Data { get; set; }
         public class DescribeInstanceBillResponseBodyData : TeaModel {
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+            [NameInMap("BillingCycle")]
+            [Validation(Required=false)]
+            public string BillingCycle { get; set; }
+            [NameInMap("MaxResults")]
+            [Validation(Required=false)]
+            public int? MaxResults { get; set; }
+            [NameInMap("AccountID")]
+            [Validation(Required=false)]
+            public string AccountID { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+            [NameInMap("AccountName")]
+            [Validation(Required=false)]
+            public string AccountName { get; set; }
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeInstanceBillResponseBodyDataItems> Items { get; set; }
@@ -43,10 +69,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ListPriceUnit { get; set; }
                 public string ResourceGroup { get; set; }
                 public string PipCode { get; set; }
-                public float? PretaxAmount { get; set; }
                 public string ServicePeriodUnit { get; set; }
-                public string ProductName { get; set; }
+                public float? PretaxAmount { get; set; }
                 public string CommodityCode { get; set; }
+                public string ProductName { get; set; }
                 public string NickName { get; set; }
                 public string ProductDetail { get; set; }
                 public string Usage { get; set; }
@@ -65,33 +91,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductCode { get; set; }
                 public string BillingType { get; set; }
             }
-            [NameInMap("NextToken")]
-            [Validation(Required=false)]
-            public string NextToken { get; set; }
-            [NameInMap("BillingCycle")]
-            [Validation(Required=false)]
-            public string BillingCycle { get; set; }
-            [NameInMap("MaxResults")]
-            [Validation(Required=false)]
-            public int? MaxResults { get; set; }
-            [NameInMap("AccountID")]
-            [Validation(Required=false)]
-            public string AccountID { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("AccountName")]
-            [Validation(Required=false)]
-            public string AccountName { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

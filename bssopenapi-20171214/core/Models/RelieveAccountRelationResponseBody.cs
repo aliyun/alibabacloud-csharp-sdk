@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class UntagResourcesResponseBody : TeaModel {
+    public class RelieveAccountRelationResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public bool? Data { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -28,6 +24,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public RelieveAccountRelationResponseBodyData Data { get; set; }
+        public class RelieveAccountRelationResponseBodyData : TeaModel {
+            [NameInMap("HostId")]
+            [Validation(Required=false)]
+            public string HostId { get; set; }
+        };
 
     }
 

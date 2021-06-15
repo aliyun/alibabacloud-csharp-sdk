@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeSplitItemBillResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,10 +21,32 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSplitItemBillResponseBodyData Data { get; set; }
         public class DescribeSplitItemBillResponseBodyData : TeaModel {
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+            [NameInMap("BillingCycle")]
+            [Validation(Required=false)]
+            public string BillingCycle { get; set; }
+            [NameInMap("MaxResults")]
+            [Validation(Required=false)]
+            public int? MaxResults { get; set; }
+            [NameInMap("AccountID")]
+            [Validation(Required=false)]
+            public string AccountID { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+            [NameInMap("AccountName")]
+            [Validation(Required=false)]
+            public string AccountName { get; set; }
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeSplitItemBillResponseBodyDataItems> Items { get; set; }
@@ -37,18 +63,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? DeductedByCashCoupons { get; set; }
                 public string SubscriptionType { get; set; }
                 public string InstanceSpec { get; set; }
-                public string BillingItem { get; set; }
                 public float? DeductedByCoupons { get; set; }
+                public string BillingItem { get; set; }
                 public string Region { get; set; }
                 public float? OutstandingAmount { get; set; }
                 public string CostUnit { get; set; }
                 public string ListPriceUnit { get; set; }
                 public string ResourceGroup { get; set; }
                 public string PipCode { get; set; }
-                public float? PretaxAmount { get; set; }
                 public string ServicePeriodUnit { get; set; }
-                public string ProductName { get; set; }
+                public float? PretaxAmount { get; set; }
                 public string CommodityCode { get; set; }
+                public string ProductName { get; set; }
                 public string SplitProductDetail { get; set; }
                 public string NickName { get; set; }
                 public string ProductDetail { get; set; }
@@ -72,33 +98,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductCode { get; set; }
                 public string BillingType { get; set; }
             }
-            [NameInMap("NextToken")]
-            [Validation(Required=false)]
-            public string NextToken { get; set; }
-            [NameInMap("BillingCycle")]
-            [Validation(Required=false)]
-            public string BillingCycle { get; set; }
-            [NameInMap("MaxResults")]
-            [Validation(Required=false)]
-            public int? MaxResults { get; set; }
-            [NameInMap("AccountID")]
-            [Validation(Required=false)]
-            public string AccountID { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("AccountName")]
-            [Validation(Required=false)]
-            public string AccountName { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

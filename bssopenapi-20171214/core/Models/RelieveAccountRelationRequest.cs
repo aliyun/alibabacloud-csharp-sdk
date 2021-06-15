@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
-    public class UntagResourcesResponseBody : TeaModel {
-        [NameInMap("Code")]
+    public class RelieveAccountRelationRequest : TeaModel {
+        [NameInMap("RelationType")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string RelationType { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("ParentUserId")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public long? ParentUserId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("ChildUserId")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public long? ChildUserId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
