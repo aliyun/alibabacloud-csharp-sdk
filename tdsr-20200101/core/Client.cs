@@ -393,6 +393,38 @@ namespace AlibabaCloud.SDK.Tdsr20200101
             return await OptimizeRightAngleWithOptionsAsync(request, runtime);
         }
 
+        public AddRelativePositionResponse AddRelativePositionWithOptions(AddRelativePositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AddRelativePositionResponse>(DoRPCRequest("AddRelativePosition", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<AddRelativePositionResponse> AddRelativePositionWithOptionsAsync(AddRelativePositionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AddRelativePositionResponse>(await DoRPCRequestAsync("AddRelativePosition", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public AddRelativePositionResponse AddRelativePosition(AddRelativePositionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddRelativePositionWithOptions(request, runtime);
+        }
+
+        public async Task<AddRelativePositionResponse> AddRelativePositionAsync(AddRelativePositionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddRelativePositionWithOptionsAsync(request, runtime);
+        }
+
         public DetailSceneResponse DetailSceneWithOptions(DetailSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
