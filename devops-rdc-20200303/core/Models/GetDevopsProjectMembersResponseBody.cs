@@ -13,9 +13,25 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("NextPageToken")]
+        [Validation(Required=false)]
+        public string NextPageToken { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("ErrorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
+
+        [NameInMap("Successful")]
+        [Validation(Required=false)]
+        public bool? Successful { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
         [NameInMap("Object")]
         [Validation(Required=false)]
@@ -50,14 +66,6 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             public string Phone { get; set; }
 
         }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Successful")]
-        [Validation(Required=false)]
-        public bool? Successful { get; set; }
 
     }
 

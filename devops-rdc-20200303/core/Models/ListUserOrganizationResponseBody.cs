@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
     public class ListUserOrganizationResponseBody : TeaModel {
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("Object")]
         [Validation(Required=false)]
@@ -26,18 +38,6 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             public string Id { get; set; }
 
         }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
     public class CreateDevopsProjectTaskResponseBody : TeaModel {
+        [NameInMap("ErrorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorMsg")]
+        [NameInMap("Successful")]
         [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
+        public bool? Successful { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("Object")]
         [Validation(Required=false)]
@@ -63,12 +71,12 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             [NameInMap("Pos")]
             [Validation(Required=false)]
             public int? Pos { get; set; }
-            [NameInMap("StartDate")]
-            [Validation(Required=false)]
-            public string StartDate { get; set; }
             [NameInMap("StoryPoint")]
             [Validation(Required=false)]
             public string StoryPoint { get; set; }
+            [NameInMap("StartDate")]
+            [Validation(Required=false)]
+            public string StartDate { get; set; }
             [NameInMap("CreatorId")]
             [Validation(Required=false)]
             public string CreatorId { get; set; }
@@ -97,14 +105,6 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             [Validation(Required=false)]
             public string Id { get; set; }
         };
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Successful")]
-        [Validation(Required=false)]
-        public bool? Successful { get; set; }
 
     }
 

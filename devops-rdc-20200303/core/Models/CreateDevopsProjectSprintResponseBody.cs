@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
     public class CreateDevopsProjectSprintResponseBody : TeaModel {
+        [NameInMap("ErrorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorMsg")]
+        [NameInMap("Successful")]
         [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
+        public bool? Successful { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("Object")]
         [Validation(Required=false)]
@@ -51,12 +59,15 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             [NameInMap("DueDate")]
             [Validation(Required=false)]
             public string DueDate { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
             [NameInMap("Created")]
             [Validation(Required=false)]
             public string Created { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
             [NameInMap("PlanToDo")]
             [Validation(Required=false)]
             public CreateDevopsProjectSprintResponseBodyObjectPlanToDo PlanToDo { get; set; }
@@ -74,18 +85,7 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
                 public int? StoryPoints { get; set; }
 
             }
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
         };
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Successful")]
-        [Validation(Required=false)]
-        public bool? Successful { get; set; }
 
     }
 

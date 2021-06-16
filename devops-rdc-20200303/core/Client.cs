@@ -421,6 +421,38 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303
             return await DeleteCommonGroupWithOptionsAsync(request, runtime);
         }
 
+        public DeleteDevopsOrganizationResponse DeleteDevopsOrganizationWithOptions(DeleteDevopsOrganizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteDevopsOrganizationResponse>(DoRPCRequest("DeleteDevopsOrganization", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DeleteDevopsOrganizationResponse> DeleteDevopsOrganizationWithOptionsAsync(DeleteDevopsOrganizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteDevopsOrganizationResponse>(await DoRPCRequestAsync("DeleteDevopsOrganization", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DeleteDevopsOrganizationResponse DeleteDevopsOrganization(DeleteDevopsOrganizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDevopsOrganizationWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteDevopsOrganizationResponse> DeleteDevopsOrganizationAsync(DeleteDevopsOrganizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDevopsOrganizationWithOptionsAsync(request, runtime);
+        }
+
         public DeleteDevopsOrganizationMembersResponse DeleteDevopsOrganizationMembersWithOptions(DeleteDevopsOrganizationMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1443,6 +1475,38 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCredentialsWithOptionsAsync(request, runtime);
+        }
+
+        public ListDevopsProjectsResponse ListDevopsProjectsWithOptions(ListDevopsProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDevopsProjectsResponse>(DoRPCRequest("ListDevopsProjects", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListDevopsProjectsResponse> ListDevopsProjectsWithOptionsAsync(ListDevopsProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDevopsProjectsResponse>(await DoRPCRequestAsync("ListDevopsProjects", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListDevopsProjectsResponse ListDevopsProjects(ListDevopsProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDevopsProjectsWithOptions(request, runtime);
+        }
+
+        public async Task<ListDevopsProjectsResponse> ListDevopsProjectsAsync(ListDevopsProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDevopsProjectsWithOptionsAsync(request, runtime);
         }
 
         public ListDevopsProjectSprintsResponse ListDevopsProjectSprintsWithOptions(ListDevopsProjectSprintsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

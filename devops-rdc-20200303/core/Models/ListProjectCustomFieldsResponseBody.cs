@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
     public class ListProjectCustomFieldsResponseBody : TeaModel {
+        [NameInMap("ErrorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorMsg")]
+        [NameInMap("Successful")]
         [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
+        public bool? Successful { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("Object")]
         [Validation(Required=false)]
@@ -25,9 +33,17 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("CustomFieldId")]
+            [Validation(Required=false)]
+            public string CustomFieldId { get; set; }
+
             [NameInMap("Subtype")]
             [Validation(Required=false)]
             public string Subtype { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -43,23 +59,7 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 
             }
 
-            [NameInMap("CustomFieldId")]
-            [Validation(Required=false)]
-            public string CustomFieldId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
         }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Successful")]
-        [Validation(Required=false)]
-        public bool? Successful { get; set; }
 
     }
 

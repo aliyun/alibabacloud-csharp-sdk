@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
     public class GetDevopsProjectInfoResponseBody : TeaModel {
+        [NameInMap("ErrorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorMsg")]
+        [NameInMap("Successful")]
         [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
+        public bool? Successful { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("Object")]
         [Validation(Required=false)]
@@ -54,12 +62,12 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             [NameInMap("Updated")]
             [Validation(Required=false)]
             public string Updated { get; set; }
-            [NameInMap("IsArchived")]
-            [Validation(Required=false)]
-            public bool? IsArchived { get; set; }
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+            [NameInMap("IsArchived")]
+            [Validation(Required=false)]
+            public bool? IsArchived { get; set; }
             [NameInMap("EndDate")]
             [Validation(Required=false)]
             public string EndDate { get; set; }
@@ -78,15 +86,15 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             [NameInMap("SourceId")]
             [Validation(Required=false)]
             public string SourceId { get; set; }
-            [NameInMap("OrganizationId")]
-            [Validation(Required=false)]
-            public string OrganizationId { get; set; }
-            [NameInMap("IsSuspended")]
-            [Validation(Required=false)]
-            public bool? IsSuspended { get; set; }
             [NameInMap("DefaultCollectionId")]
             [Validation(Required=false)]
             public string DefaultCollectionId { get; set; }
+            [NameInMap("IsSuspended")]
+            [Validation(Required=false)]
+            public bool? IsSuspended { get; set; }
+            [NameInMap("OrganizationId")]
+            [Validation(Required=false)]
+            public string OrganizationId { get; set; }
             [NameInMap("Visibility")]
             [Validation(Required=false)]
             public string Visibility { get; set; }
@@ -109,14 +117,6 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             [Validation(Required=false)]
             public string Id { get; set; }
         };
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("Successful")]
-        [Validation(Required=false)]
-        public bool? Successful { get; set; }
 
     }
 

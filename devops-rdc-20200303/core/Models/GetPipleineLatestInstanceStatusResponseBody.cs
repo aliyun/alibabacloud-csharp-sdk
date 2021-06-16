@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("Object")]
         [Validation(Required=false)]
         public GetPipleineLatestInstanceStatusResponseBodyObject Object { get; set; }
@@ -25,6 +37,7 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
             public List<GetPipleineLatestInstanceStatusResponseBodyObjectGroups> Groups { get; set; }
             public class GetPipleineLatestInstanceStatusResponseBodyObjectGroups : TeaModel {
                 public string Status { get; set; }
+                public string Name { get; set; }
                 public List<GetPipleineLatestInstanceStatusResponseBodyObjectGroupsStages> Stages { get; set; }
                 public class GetPipleineLatestInstanceStatusResponseBodyObjectGroupsStages : TeaModel {
                     public string Status { get; set; }
@@ -32,25 +45,12 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
                     public List<GetPipleineLatestInstanceStatusResponseBodyObjectGroupsStagesComponents> Components { get; set; }
                     public class GetPipleineLatestInstanceStatusResponseBodyObjectGroupsStagesComponents : TeaModel {
                         public string Status { get; set; }
-                        public long? JobId { get; set; }
                         public string Name { get; set; }
+                        public long? JobId { get; set; }
                     }
                 }
-                public string Name { get; set; }
             }
         };
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
