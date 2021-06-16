@@ -9,19 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainTopUrlVisitResponseBody : TeaModel {
-        [NameInMap("Url500List")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public DescribeDomainTopUrlVisitResponseBodyUrl500List Url500List { get; set; }
-        public class DescribeDomainTopUrlVisitResponseBodyUrl500List : TeaModel {
+        public string StartTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("AllUrlList")]
+        [Validation(Required=false)]
+        public DescribeDomainTopUrlVisitResponseBodyAllUrlList AllUrlList { get; set; }
+        public class DescribeDomainTopUrlVisitResponseBodyAllUrlList : TeaModel {
             [NameInMap("UrlList")]
             [Validation(Required=false)]
-            public List<DescribeDomainTopUrlVisitResponseBodyUrl500ListUrlList> UrlList { get; set; }
-            public class DescribeDomainTopUrlVisitResponseBodyUrl500ListUrlList : TeaModel {
+            public List<DescribeDomainTopUrlVisitResponseBodyAllUrlListUrlList> UrlList { get; set; }
+            public class DescribeDomainTopUrlVisitResponseBodyAllUrlListUrlList : TeaModel {
+                public string Flow { get; set; }
                 public string UrlDetail { get; set; }
+                public float? FlowProportion { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
-                public string Flow { get; set; }
-                public float? FlowProportion { get; set; }
             }
         };
 
@@ -33,11 +45,27 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopUrlVisitResponseBodyUrl200ListUrlList> UrlList { get; set; }
             public class DescribeDomainTopUrlVisitResponseBodyUrl200ListUrlList : TeaModel {
+                public string Flow { get; set; }
                 public string UrlDetail { get; set; }
+                public float? FlowProportion { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
+            }
+        };
+
+        [NameInMap("Url300List")]
+        [Validation(Required=false)]
+        public DescribeDomainTopUrlVisitResponseBodyUrl300List Url300List { get; set; }
+        public class DescribeDomainTopUrlVisitResponseBodyUrl300List : TeaModel {
+            [NameInMap("UrlList")]
+            [Validation(Required=false)]
+            public List<DescribeDomainTopUrlVisitResponseBodyUrl300ListUrlList> UrlList { get; set; }
+            public class DescribeDomainTopUrlVisitResponseBodyUrl300ListUrlList : TeaModel {
                 public string Flow { get; set; }
+                public string UrlDetail { get; set; }
                 public float? FlowProportion { get; set; }
+                public string VisitData { get; set; }
+                public float? VisitProportion { get; set; }
             }
         };
 
@@ -49,55 +77,27 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTopUrlVisitResponseBodyUrl400ListUrlList> UrlList { get; set; }
             public class DescribeDomainTopUrlVisitResponseBodyUrl400ListUrlList : TeaModel {
+                public string Flow { get; set; }
                 public string UrlDetail { get; set; }
+                public float? FlowProportion { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
-                public string Flow { get; set; }
-                public float? FlowProportion { get; set; }
             }
         };
 
-        [NameInMap("RequestId")]
+        [NameInMap("Url500List")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("Url300List")]
-        [Validation(Required=false)]
-        public DescribeDomainTopUrlVisitResponseBodyUrl300List Url300List { get; set; }
-        public class DescribeDomainTopUrlVisitResponseBodyUrl300List : TeaModel {
+        public DescribeDomainTopUrlVisitResponseBodyUrl500List Url500List { get; set; }
+        public class DescribeDomainTopUrlVisitResponseBodyUrl500List : TeaModel {
             [NameInMap("UrlList")]
             [Validation(Required=false)]
-            public List<DescribeDomainTopUrlVisitResponseBodyUrl300ListUrlList> UrlList { get; set; }
-            public class DescribeDomainTopUrlVisitResponseBodyUrl300ListUrlList : TeaModel {
+            public List<DescribeDomainTopUrlVisitResponseBodyUrl500ListUrlList> UrlList { get; set; }
+            public class DescribeDomainTopUrlVisitResponseBodyUrl500ListUrlList : TeaModel {
+                public string Flow { get; set; }
                 public string UrlDetail { get; set; }
+                public float? FlowProportion { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
-                public string Flow { get; set; }
-                public float? FlowProportion { get; set; }
-            }
-        };
-
-        [NameInMap("AllUrlList")]
-        [Validation(Required=false)]
-        public DescribeDomainTopUrlVisitResponseBodyAllUrlList AllUrlList { get; set; }
-        public class DescribeDomainTopUrlVisitResponseBodyAllUrlList : TeaModel {
-            [NameInMap("UrlList")]
-            [Validation(Required=false)]
-            public List<DescribeDomainTopUrlVisitResponseBodyAllUrlListUrlList> UrlList { get; set; }
-            public class DescribeDomainTopUrlVisitResponseBodyAllUrlListUrlList : TeaModel {
-                public string UrlDetail { get; set; }
-                public string VisitData { get; set; }
-                public float? VisitProportion { get; set; }
-                public string Flow { get; set; }
-                public float? FlowProportion { get; set; }
             }
         };
 

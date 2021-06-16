@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCertificateInfoByIDResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
         public DescribeCertificateInfoByIDResponseBodyCertInfos CertInfos { get; set; }
@@ -26,10 +30,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string HttpsCrt { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

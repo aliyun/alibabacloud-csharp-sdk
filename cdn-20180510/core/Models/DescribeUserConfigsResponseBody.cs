@@ -38,13 +38,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig GreenManagerConfig { get; set; }
             public class DescribeUserConfigsResponseBodyConfigsGreenManagerConfig : TeaModel {
-                [NameInMap("Quota")]
-                [Validation(Required=false)]
-                public string Quota { get; set; }
-
                 [NameInMap("Ratio")]
                 [Validation(Required=false)]
                 public string Ratio { get; set; }
+
+                [NameInMap("Quota")]
+                [Validation(Required=false)]
+                public string Quota { get; set; }
 
             }
             [NameInMap("WafConfig")]

@@ -21,24 +21,58 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetail> DomainLogDetail { get; set; }
             public class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetail : TeaModel {
-                [NameInMap("PageInfoDetail")]
-                [Validation(Required=false)]
-                public List<DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfoDetail> PageInfoDetail { get; set; }
-                public class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfoDetail : TeaModel {
-                    [NameInMap("PageIndex")]
+                public long? LogCount { get; set; }
+                public string DomainName { get; set; }
+                public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfos PageInfos { get; set; }
+                public class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfos : TeaModel {
+                    [NameInMap("PageInfoDetail")]
                     [Validation(Required=false)]
-                    public long? PageIndex { get; set; }
+                    public List<DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfosPageInfoDetail> PageInfoDetail { get; set; }
+                    public class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailPageInfosPageInfoDetail : TeaModel {
+                        [NameInMap("PageIndex")]
+                        [Validation(Required=false)]
+                        public long? PageIndex { get; set; }
 
-                    [NameInMap("PageSize")]
-                    [Validation(Required=false)]
-                    public long? PageSize { get; set; }
+                        [NameInMap("PageSize")]
+                        [Validation(Required=false)]
+                        public long? PageSize { get; set; }
 
-                    [NameInMap("Total")]
-                    [Validation(Required=false)]
-                    public long? Total { get; set; }
+                        [NameInMap("Total")]
+                        [Validation(Required=false)]
+                        public long? Total { get; set; }
+
+                    }
 
                 }
+                public DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfos LogInfos { get; set; }
+                public class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfos : TeaModel {
+                    [NameInMap("LogInfoDetail")]
+                    [Validation(Required=false)]
+                    public List<DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> LogInfoDetail { get; set; }
+                    public class DescribeCdnDomainLogsResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail : TeaModel {
+                        [NameInMap("EndTime")]
+                        [Validation(Required=false)]
+                        public string EndTime { get; set; }
 
+                        [NameInMap("LogSize")]
+                        [Validation(Required=false)]
+                        public long? LogSize { get; set; }
+
+                        [NameInMap("StartTime")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
+
+                        [NameInMap("LogName")]
+                        [Validation(Required=false)]
+                        public string LogName { get; set; }
+
+                        [NameInMap("LogPath")]
+                        [Validation(Required=false)]
+                        public string LogPath { get; set; }
+
+                    }
+
+                }
             }
         };
 

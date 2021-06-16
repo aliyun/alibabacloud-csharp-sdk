@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class ModifyCdnServiceResponse : TeaModel {
+    public class CreateCdnSubTaskResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyCdnServiceResponseBody Body { get; set; }
+        public CreateCdnSubTaskResponseBody Body { get; set; }
 
     }
 

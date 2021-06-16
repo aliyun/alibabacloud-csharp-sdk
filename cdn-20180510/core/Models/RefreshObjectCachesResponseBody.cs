@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class RefreshObjectCachesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("RefreshTaskId")]
         [Validation(Required=false)]
         public string RefreshTaskId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

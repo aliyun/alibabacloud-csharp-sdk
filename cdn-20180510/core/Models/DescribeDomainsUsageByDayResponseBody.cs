@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainsUsageByDayResponseBody : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("DataInterval")]
+        [Validation(Required=false)]
+        public string DataInterval { get; set; }
+
         [NameInMap("UsageTotal")]
         [Validation(Required=false)]
         public DescribeDomainsUsageByDayResponseBodyUsageTotal UsageTotal { get; set; }
@@ -38,26 +58,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public string MaxSrcBps { get; set; }
         };
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("DataInterval")]
-        [Validation(Required=false)]
-        public string DataInterval { get; set; }
 
         [NameInMap("UsageByDays")]
         [Validation(Required=false)]

@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnUserQuotaResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BlockQuota")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? BlockQuota { get; set; }
 
-        [NameInMap("RefreshUrlQuota")]
+        [NameInMap("RefreshUrlRemain")]
         [Validation(Required=false)]
-        public int? RefreshUrlQuota { get; set; }
+        public int? RefreshUrlRemain { get; set; }
+
+        [NameInMap("DomainQuota")]
+        [Validation(Required=false)]
+        public int? DomainQuota { get; set; }
 
         [NameInMap("BlockRemain")]
         [Validation(Required=false)]
@@ -25,29 +29,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public int? PreloadRemain { get; set; }
 
-        [NameInMap("RefreshDirRemain")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? RefreshDirRemain { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("BlockQuota")]
+        [NameInMap("RefreshUrlQuota")]
         [Validation(Required=false)]
-        public int? BlockQuota { get; set; }
+        public int? RefreshUrlQuota { get; set; }
+
+        [NameInMap("PreloadQuota")]
+        [Validation(Required=false)]
+        public int? PreloadQuota { get; set; }
 
         [NameInMap("RefreshDirQuota")]
         [Validation(Required=false)]
         public int? RefreshDirQuota { get; set; }
 
-        [NameInMap("DomainQuota")]
+        [NameInMap("RefreshDirRemain")]
         [Validation(Required=false)]
-        public int? DomainQuota { get; set; }
-
-        [NameInMap("RefreshUrlRemain")]
-        [Validation(Required=false)]
-        public int? RefreshUrlRemain { get; set; }
-
-        [NameInMap("PreloadQuota")]
-        [Validation(Required=false)]
-        public int? PreloadQuota { get; set; }
+        public int? RefreshDirRemain { get; set; }
 
     }
 

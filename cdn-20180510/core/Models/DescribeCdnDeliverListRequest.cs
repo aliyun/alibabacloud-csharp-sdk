@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class ModifyCdnServiceRequest : TeaModel {
+    public class DescribeCdnDeliverListRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("SecurityToken")]
+        [NameInMap("DeliverId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public long? DeliverId { get; set; }
 
-        [NameInMap("InternetChargeType")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string InternetChargeType { get; set; }
+        public string Status { get; set; }
 
     }
 

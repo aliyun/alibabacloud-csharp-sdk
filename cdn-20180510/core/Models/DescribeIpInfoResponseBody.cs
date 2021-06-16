@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeIpInfoResponseBody : TeaModel {
+        [NameInMap("CdnIp")]
+        [Validation(Required=false)]
+        public string CdnIp { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ISP")]
+        [NameInMap("RegionEname")]
         [Validation(Required=false)]
-        public string ISP { get; set; }
+        public string RegionEname { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string IspEname { get; set; }
 
-        [NameInMap("CdnIp")]
+        [NameInMap("ISP")]
         [Validation(Required=false)]
-        public string CdnIp { get; set; }
-
-        [NameInMap("RegionEname")]
-        [Validation(Required=false)]
-        public string RegionEname { get; set; }
+        public string ISP { get; set; }
 
     }
 

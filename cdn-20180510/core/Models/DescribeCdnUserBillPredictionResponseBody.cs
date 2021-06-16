@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnUserBillPredictionResponseBody : TeaModel {
-        [NameInMap("BillType")]
-        [Validation(Required=false)]
-        public string BillType { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("BillType")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string BillType { get; set; }
 
         [NameInMap("BillPredictionData")]
         [Validation(Required=false)]

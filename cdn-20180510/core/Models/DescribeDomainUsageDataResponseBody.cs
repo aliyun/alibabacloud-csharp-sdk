@@ -9,6 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainUsageDataResponseBody : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Area")]
+        [Validation(Required=false)]
+        public string Area { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("DataInterval")]
+        [Validation(Required=false)]
+        public string DataInterval { get; set; }
+
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]
         public DescribeDomainUsageDataResponseBodyUsageDataPerInterval UsageDataPerInterval { get; set; }
@@ -18,39 +46,11 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
                 public string Value { get; set; }
-                public string PeakTime { get; set; }
                 public string TimeStamp { get; set; }
+                public string PeakTime { get; set; }
                 public string SpecialValue { get; set; }
             }
         };
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("Area")]
-        [Validation(Required=false)]
-        public string Area { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("DataInterval")]
-        [Validation(Required=false)]
-        public string DataInterval { get; set; }
 
     }
 

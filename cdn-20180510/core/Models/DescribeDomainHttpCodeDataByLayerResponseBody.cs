@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainHttpCodeDataByLayerResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("HttpCodeDataInterval")]
         [Validation(Required=false)]

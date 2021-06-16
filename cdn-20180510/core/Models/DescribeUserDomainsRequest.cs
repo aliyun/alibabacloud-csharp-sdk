@@ -57,14 +57,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string ChangeEndTime { get; set; }
 
-        [NameInMap("FuncId")]
-        [Validation(Required=false)]
-        public string FuncId { get; set; }
-
-        [NameInMap("FuncFilter")]
-        [Validation(Required=false)]
-        public string FuncFilter { get; set; }
-
         [NameInMap("Coverage")]
         [Validation(Required=false)]
         public string Coverage { get; set; }

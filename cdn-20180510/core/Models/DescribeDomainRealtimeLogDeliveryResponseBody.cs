@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Logstore")]
+        [Validation(Required=false)]
+        public string Logstore { get; set; }
+
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Logstore")]
-        [Validation(Required=false)]
-        public string Logstore { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]

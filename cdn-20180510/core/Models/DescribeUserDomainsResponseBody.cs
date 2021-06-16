@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeUserDomainsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public DescribeUserDomainsResponseBodyDomains Domains { get; set; }
@@ -17,8 +33,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeUserDomainsResponseBodyDomainsPageData : TeaModel {
+                public string GmtCreated { get; set; }
                 public string SslProtocol { get; set; }
+                public string Description { get; set; }
+                public string Coverage { get; set; }
+                public string ResourceGroupId { get; set; }
                 public string Sandbox { get; set; }
+                public string DomainStatus { get; set; }
+                public string Cname { get; set; }
+                public string GmtModified { get; set; }
+                public string CdnType { get; set; }
+                public string DomainName { get; set; }
                 public DescribeUserDomainsResponseBodyDomainsPageDataSources Sources { get; set; }
                 public class DescribeUserDomainsResponseBodyDomainsPageDataSources : TeaModel {
                     [NameInMap("Source")]
@@ -48,33 +73,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     }
 
                 }
-                public string GmtModified { get; set; }
-                public string DomainName { get; set; }
-                public string GmtCreated { get; set; }
-                public string Description { get; set; }
-                public string Coverage { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string DomainStatus { get; set; }
-                public string Cname { get; set; }
-                public string CdnType { get; set; }
             }
         };
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
 
     }
 

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public List<DescribeCdnUserConfigsResponseBodyConfigs> Configs { get; set; }
         public class DescribeCdnUserConfigsResponseBodyConfigs : TeaModel {
+            [NameInMap("ArgValue")]
+            [Validation(Required=false)]
+            public string ArgValue { get; set; }
+
             [NameInMap("ArgName")]
             [Validation(Required=false)]
             public string ArgName { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
-
-            [NameInMap("ArgValue")]
-            [Validation(Required=false)]
-            public string ArgValue { get; set; }
 
         }
 

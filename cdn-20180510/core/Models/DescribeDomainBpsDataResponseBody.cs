@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainBpsDataResponseBody : TeaModel {
-        [NameInMap("IspNameEn")]
-        [Validation(Required=false)]
-        public string IspNameEn { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("IspNameEn")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string IspNameEn { get; set; }
 
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
         public string LocationNameEn { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]

@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData> AccData { get; set; }
             public class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData : TeaModel {
-                public int? FailedNum { get; set; }
                 public string TimeStamp { get; set; }
+                public int? FailedNum { get; set; }
                 public int? SuccessNum { get; set; }
             }
         };

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public DescribeCdnCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
         public class DescribeCdnCertificateListResponseBodyCertificateListModel : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CertList")]
             [Validation(Required=false)]
             public DescribeCdnCertificateListResponseBodyCertificateListModelCertList CertList { get; set; }
@@ -52,9 +55,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 }
 
             }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
     }

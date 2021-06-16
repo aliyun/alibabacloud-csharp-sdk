@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("IspNameEn")]
+        [Validation(Required=false)]
+        public string IspNameEn { get; set; }
+
+        [NameInMap("LocationNameEn")]
+        [Validation(Required=false)]
+        public string LocationNameEn { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }

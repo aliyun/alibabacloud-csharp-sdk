@@ -13,41 +13,41 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("VersionId")]
+        [NameInMap("UpdateTime")]
         [Validation(Required=false)]
-        public string VersionId { get; set; }
-
-        [NameInMap("Operator")]
-        [Validation(Required=false)]
-        public string Operator { get; set; }
-
-        [NameInMap("ConfigGroupId")]
-        [Validation(Required=false)]
-        public string ConfigGroupId { get; set; }
-
-        [NameInMap("BaseVersionId")]
-        [Validation(Required=false)]
-        public string BaseVersionId { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string UpdateTime { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SeqId")]
+        [Validation(Required=false)]
+        public long? SeqId { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        [NameInMap("UpdateTime")]
+        [NameInMap("VersionId")]
         [Validation(Required=false)]
-        public string UpdateTime { get; set; }
+        public string VersionId { get; set; }
 
-        [NameInMap("SeqId")]
+        [NameInMap("ConfigGroupId")]
         [Validation(Required=false)]
-        public long? SeqId { get; set; }
+        public string ConfigGroupId { get; set; }
+
+        [NameInMap("Operator")]
+        [Validation(Required=false)]
+        public string Operator { get; set; }
+
+        [NameInMap("BaseVersionId")]
+        [Validation(Required=false)]
+        public string BaseVersionId { get; set; }
 
     }
 

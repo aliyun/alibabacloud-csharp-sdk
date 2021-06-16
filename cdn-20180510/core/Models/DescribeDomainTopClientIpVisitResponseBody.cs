@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public List<DescribeDomainTopClientIpVisitResponseBodyClientIpList> ClientIpList { get; set; }
         public class DescribeDomainTopClientIpVisitResponseBodyClientIpList : TeaModel {
-            [NameInMap("Acc")]
-            [Validation(Required=false)]
-            public long? Acc { get; set; }
-
-            [NameInMap("Traffic")]
-            [Validation(Required=false)]
-            public long? Traffic { get; set; }
-
             [NameInMap("Rank")]
             [Validation(Required=false)]
             public int? Rank { get; set; }
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [NameInMap("ClientIp")]
             [Validation(Required=false)]
             public string ClientIp { get; set; }
+
+            [NameInMap("Acc")]
+            [Validation(Required=false)]
+            public long? Acc { get; set; }
+
+            [NameInMap("Traffic")]
+            [Validation(Required=false)]
+            public long? Traffic { get; set; }
 
         }
 

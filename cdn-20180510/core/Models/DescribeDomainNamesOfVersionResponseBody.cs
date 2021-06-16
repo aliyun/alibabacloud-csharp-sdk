@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Contents")]
         [Validation(Required=false)]
         public List<DescribeDomainNamesOfVersionResponseBodyContents> Contents { get; set; }
@@ -26,10 +30,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public string DomainId { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

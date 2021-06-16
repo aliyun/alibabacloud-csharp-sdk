@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
@@ -37,24 +37,28 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageData> UsageData { get; set; }
             public class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageData : TeaModel {
-                [NameInMap("CodeProportionData")]
-                [Validation(Required=false)]
-                public List<DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataCodeProportionData> CodeProportionData { get; set; }
-                public class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataCodeProportionData : TeaModel {
-                    [NameInMap("Code")]
+                public string TimeStamp { get; set; }
+                public DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValue Value { get; set; }
+                public class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValue : TeaModel {
+                    [NameInMap("CodeProportionData")]
                     [Validation(Required=false)]
-                    public string Code { get; set; }
+                    public List<DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData> CodeProportionData { get; set; }
+                    public class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData : TeaModel {
+                        [NameInMap("Code")]
+                        [Validation(Required=false)]
+                        public string Code { get; set; }
 
-                    [NameInMap("Proportion")]
-                    [Validation(Required=false)]
-                    public string Proportion { get; set; }
+                        [NameInMap("Proportion")]
+                        [Validation(Required=false)]
+                        public string Proportion { get; set; }
 
-                    [NameInMap("Count")]
-                    [Validation(Required=false)]
-                    public string Count { get; set; }
+                        [NameInMap("Count")]
+                        [Validation(Required=false)]
+                        public string Count { get; set; }
+
+                    }
 
                 }
-
             }
         };
 

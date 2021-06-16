@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainCcActivityLogResponseBody : TeaModel {
+        [NameInMap("PageIndex")]
+        [Validation(Required=false)]
+        public long? PageIndex { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -54,10 +58,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public string RuleName { get; set; }
 
         }
-
-        [NameInMap("PageIndex")]
-        [Validation(Required=false)]
-        public long? PageIndex { get; set; }
 
     }
 

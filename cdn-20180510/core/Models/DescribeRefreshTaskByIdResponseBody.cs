@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<DescribeRefreshTaskByIdResponseBodyTasks> Tasks { get; set; }
@@ -46,10 +50,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public string TaskId { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

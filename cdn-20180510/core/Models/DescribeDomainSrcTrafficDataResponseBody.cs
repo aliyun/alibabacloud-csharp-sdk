@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
 
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule : TeaModel {
                 public string Value { get; set; }
-                public string HttpsValue { get; set; }
                 public string TimeStamp { get; set; }
+                public string HttpsValue { get; set; }
             }
         };
 

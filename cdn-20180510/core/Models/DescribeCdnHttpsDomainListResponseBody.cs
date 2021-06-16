@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnHttpsDomainListResponseBody : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
         public DescribeCdnHttpsDomainListResponseBodyCertInfos CertInfos { get; set; }
@@ -27,14 +35,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string CertCommonName { get; set; }
             }
         };
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

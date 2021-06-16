@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListDomainsByLogConfigIdResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public ListDomainsByLogConfigIdResponseBodyDomains Domains { get; set; }
@@ -17,10 +21,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<string> Domain { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 
