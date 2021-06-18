@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
+            [NameInMap("Flag")]
+            [Validation(Required=false)]
+            public int? Flag { get; set; }
+
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }

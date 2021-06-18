@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Kernel")]
             [Validation(Required=false)]
             public string Kernel { get; set; }
+            [NameInMap("Bind")]
+            [Validation(Required=false)]
+            public bool? Bind { get; set; }
             [NameInMap("OsName")]
             [Validation(Required=false)]
             public string OsName { get; set; }
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("VpcInstanceId")]
             [Validation(Required=false)]
             public string VpcInstanceId { get; set; }
+            [NameInMap("AuthVersion")]
+            [Validation(Required=false)]
+            public int? AuthVersion { get; set; }
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
@@ -65,6 +71,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }
+            [NameInMap("AuthModifyTime")]
+            [Validation(Required=false)]
+            public long? AuthModifyTime { get; set; }
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string PolicyVersion { get; set; }
 
+        [NameInMap("PolicyRegionId")]
+        [Validation(Required=false)]
+        public string PolicyRegionId { get; set; }
+
         [NameInMap("UuidList")]
         [Validation(Required=false)]
         public List<string> UuidList { get; set; }

@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ApiVersion { get; set; }
 
+        [NameInMap("IsAliYunEcs")]
+        [Validation(Required=false)]
+        public string IsAliYunEcs { get; set; }
+
     }
 
 }

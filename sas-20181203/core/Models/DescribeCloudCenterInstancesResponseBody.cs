@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            [NameInMap("Bind")]
+            [Validation(Required=false)]
+            public bool? Bind { get; set; }
+
             [NameInMap("OsName")]
             [Validation(Required=false)]
             public string OsName { get; set; }
@@ -66,6 +70,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Flag")]
             [Validation(Required=false)]
             public int? Flag { get; set; }
+
+            [NameInMap("AuthVersion")]
+            [Validation(Required=false)]
+            public int? AuthVersion { get; set; }
 
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -99,6 +107,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RiskStatus { get; set; }
 
+            [NameInMap("Cores")]
+            [Validation(Required=false)]
+            public int? Cores { get; set; }
+
             [NameInMap("VulStatus")]
             [Validation(Required=false)]
             public string VulStatus { get; set; }
@@ -123,6 +135,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Os { get; set; }
 
+            [NameInMap("AuthModifyTime")]
+            [Validation(Required=false)]
+            public long? AuthModifyTime { get; set; }
+
+            [NameInMap("ExposedCount")]
+            [Validation(Required=false)]
+            public int? ExposedCount { get; set; }
+
             [NameInMap("SafeEventCount")]
             [Validation(Required=false)]
             public int? SafeEventCount { get; set; }
@@ -138,6 +158,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
+
+            [NameInMap("Vendor")]
+            [Validation(Required=false)]
+            public int? Vendor { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -158,6 +182,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("RegionName")]
             [Validation(Required=false)]
             public string RegionName { get; set; }
+
+            [NameInMap("VendorName")]
+            [Validation(Required=false)]
+            public string VendorName { get; set; }
 
             [NameInMap("ClusterName")]
             [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVersionConfigResponseBody : TeaModel {
+        [NameInMap("MVAuthCount")]
+        [Validation(Required=false)]
+        public int? MVAuthCount { get; set; }
+
         [NameInMap("SasLog")]
         [Validation(Required=false)]
         public int? SasLog { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("HoneypotCapacity")]
         [Validation(Required=false)]
         public long? HoneypotCapacity { get; set; }
+
+        [NameInMap("MVUnusedAuthCount")]
+        [Validation(Required=false)]
+        public int? MVUnusedAuthCount { get; set; }
 
         [NameInMap("WebLock")]
         [Validation(Required=false)]
@@ -49,6 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? ReleaseTime { get; set; }
 
+        [NameInMap("HighestVersion")]
+        [Validation(Required=false)]
+        public int? HighestVersion { get; set; }
+
         [NameInMap("AssetLevel")]
         [Validation(Required=false)]
         public int? AssetLevel { get; set; }
@@ -68,6 +80,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("VmCores")]
         [Validation(Required=false)]
         public int? VmCores { get; set; }
+
+        [NameInMap("AllowPartialBuy")]
+        [Validation(Required=false)]
+        public int? AllowPartialBuy { get; set; }
 
         [NameInMap("AppWhiteList")]
         [Validation(Required=false)]

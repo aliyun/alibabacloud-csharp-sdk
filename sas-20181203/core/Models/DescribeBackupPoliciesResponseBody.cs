@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ServiceErrorCount { get; set; }
 
+            [NameInMap("PolicyRegionId")]
+            [Validation(Required=false)]
+            public string PolicyRegionId { get; set; }
+
             [NameInMap("ClientStatus")]
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
@@ -71,13 +75,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
-            [NameInMap("UuidList")]
-            [Validation(Required=false)]
-            public List<string> UuidList { get; set; }
-
             [NameInMap("ClientErrorUuidList")]
             [Validation(Required=false)]
             public List<string> ClientErrorUuidList { get; set; }
+
+            [NameInMap("RemarkedUuidList")]
+            [Validation(Required=false)]
+            public List<string> RemarkedUuidList { get; set; }
+
+            [NameInMap("UuidList")]
+            [Validation(Required=false)]
+            public List<string> UuidList { get; set; }
 
             [NameInMap("ServiceErrorUuidList")]
             [Validation(Required=false)]

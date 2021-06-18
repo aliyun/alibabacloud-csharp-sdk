@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("MachineRemark")]
+        [Validation(Required=false)]
+        public string MachineRemark { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

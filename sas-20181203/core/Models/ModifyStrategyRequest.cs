@@ -8,34 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class CreateBackupPolicyShrinkRequest : TeaModel {
+    public class ModifyStrategyRequest : TeaModel {
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("CycleDays")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string CycleDays { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Policy")]
+        [NameInMap("CycleStartTime")]
         [Validation(Required=false)]
-        public string PolicyShrink { get; set; }
+        public string CycleStartTime { get; set; }
 
-        [NameInMap("PolicyVersion")]
+        [NameInMap("RiskSubTypeName")]
         [Validation(Required=false)]
-        public string PolicyVersion { get; set; }
+        public string RiskSubTypeName { get; set; }
 
-        [NameInMap("PolicyRegionId")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string PolicyRegionId { get; set; }
-
-        [NameInMap("UuidList")]
-        [Validation(Required=false)]
-        public List<string> UuidList { get; set; }
+        public string Id { get; set; }
 
     }
 
