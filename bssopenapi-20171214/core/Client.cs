@@ -2280,6 +2280,38 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             return await SaveUserCreditWithOptionsAsync(request, runtime);
         }
 
+        public SetAllExpirationDayResponse SetAllExpirationDayWithOptions(SetAllExpirationDayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetAllExpirationDayResponse>(DoRPCRequest("SetAllExpirationDay", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SetAllExpirationDayResponse> SetAllExpirationDayWithOptionsAsync(SetAllExpirationDayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SetAllExpirationDayResponse>(await DoRPCRequestAsync("SetAllExpirationDay", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SetAllExpirationDayResponse SetAllExpirationDay(SetAllExpirationDayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAllExpirationDayWithOptions(request, runtime);
+        }
+
+        public async Task<SetAllExpirationDayResponse> SetAllExpirationDayAsync(SetAllExpirationDayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAllExpirationDayWithOptionsAsync(request, runtime);
+        }
+
         public SetCreditLabelActionResponse SetCreditLabelActionWithOptions(SetCreditLabelActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

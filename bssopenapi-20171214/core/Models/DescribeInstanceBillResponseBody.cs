@@ -58,8 +58,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Tag { get; set; }
                 public string InstanceID { get; set; }
                 public string Currency { get; set; }
+                public string BillAccountName { get; set; }
                 public float? DeductedByCashCoupons { get; set; }
                 public string SubscriptionType { get; set; }
+                public string BizType { get; set; }
                 public string InstanceSpec { get; set; }
                 public float? DeductedByCoupons { get; set; }
                 public string BillingItem { get; set; }
@@ -80,6 +82,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string OwnerID { get; set; }
                 public float? DeductedByPrepaidCard { get; set; }
                 public string UsageUnit { get; set; }
+                public string BillAccountID { get; set; }
                 public float? PaymentAmount { get; set; }
                 public float? InvoiceDiscount { get; set; }
                 public string DeductedByResourcePackage { get; set; }

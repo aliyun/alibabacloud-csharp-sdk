@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string SplitItemID { get; set; }
 
+        [NameInMap("Granularity")]
+        [Validation(Required=false)]
+        public string Granularity { get; set; }
+
+        [NameInMap("BillingDate")]
+        [Validation(Required=false)]
+        public string BillingDate { get; set; }
+
         [NameInMap("TagFilter")]
         [Validation(Required=false)]
         public List<DescribeSplitItemBillRequestTagFilter> TagFilter { get; set; }
