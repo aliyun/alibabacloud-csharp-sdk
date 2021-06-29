@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Ivision20190308.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
         [NameInMap("Faces")]
         [Validation(Required=false)]
         public List<RegisterFaceResponseBodyFaces> Faces { get; set; }
@@ -29,9 +25,6 @@ namespace AlibabaCloud.SDK.Ivision20190308.Models
             [Validation(Required=false)]
             public RegisterFaceResponseBodyFacesRect Rect { get; set; }
             public class RegisterFaceResponseBodyFacesRect : TeaModel {
-                [NameInMap("Left")]
-                [Validation(Required=false)]
-                public int? Left { get; set; }
                 [NameInMap("Top")]
                 [Validation(Required=false)]
                 public int? Top { get; set; }
@@ -41,9 +34,16 @@ namespace AlibabaCloud.SDK.Ivision20190308.Models
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
+                [NameInMap("Left")]
+                [Validation(Required=false)]
+                public int? Left { get; set; }
             };
 
         }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
 
     }
 

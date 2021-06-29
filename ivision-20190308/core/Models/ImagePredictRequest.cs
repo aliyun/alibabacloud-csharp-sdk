@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Ivision20190308.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("ShowLog")]
-        [Validation(Required=false)]
-        public string ShowLog { get; set; }
-
         [NameInMap("ModelId")]
         [Validation(Required=false)]
         public string ModelId { get; set; }

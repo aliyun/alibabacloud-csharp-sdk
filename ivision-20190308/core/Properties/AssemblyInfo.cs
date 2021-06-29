@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-ivision")]
 [assembly: AssemblyDescription("Alibaba Cloud IntelligentVision (20190308) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("14d683f0-531a-11eb-928f-0da9233ac2a2")]
+[assembly: Guid("4ec95440-d8a6-11eb-b819-a1c78734f398")]
 
 // Version information for an assembly consists of the following four values:
 //

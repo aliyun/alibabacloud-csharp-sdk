@@ -71,6 +71,38 @@ namespace AlibabaCloud.SDK.Ivision20190308
             return await CreateFaceGroupWithOptionsAsync(request, runtime);
         }
 
+        public CreateFilePredictResponse CreateFilePredictWithOptions(CreateFilePredictRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateFilePredictResponse>(DoRPCRequest("CreateFilePredict", "2019-03-08", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CreateFilePredictResponse> CreateFilePredictWithOptionsAsync(CreateFilePredictRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateFilePredictResponse>(await DoRPCRequestAsync("CreateFilePredict", "2019-03-08", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CreateFilePredictResponse CreateFilePredict(CreateFilePredictRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateFilePredictWithOptions(request, runtime);
+        }
+
+        public async Task<CreateFilePredictResponse> CreateFilePredictAsync(CreateFilePredictRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateFilePredictWithOptionsAsync(request, runtime);
+        }
+
         public CreateStreamPredictResponse CreateStreamPredictWithOptions(CreateStreamPredictRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -135,6 +167,38 @@ namespace AlibabaCloud.SDK.Ivision20190308
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFaceGroupWithOptionsAsync(request, runtime);
+        }
+
+        public DeleteFilePredictResponse DeleteFilePredictWithOptions(DeleteFilePredictRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteFilePredictResponse>(DoRPCRequest("DeleteFilePredict", "2019-03-08", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DeleteFilePredictResponse> DeleteFilePredictWithOptionsAsync(DeleteFilePredictRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteFilePredictResponse>(await DoRPCRequestAsync("DeleteFilePredict", "2019-03-08", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DeleteFilePredictResponse DeleteFilePredict(DeleteFilePredictRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFilePredictWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteFilePredictResponse> DeleteFilePredictAsync(DeleteFilePredictRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFilePredictWithOptionsAsync(request, runtime);
         }
 
         public DeleteStreamPredictResponse DeleteStreamPredictWithOptions(DeleteStreamPredictRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

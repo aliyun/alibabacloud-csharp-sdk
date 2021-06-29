@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ivision20190308.Models
 {
-    public class PredictPictureResponseBody : TeaModel {
+    public class CreateFilePredictResponseBody : TeaModel {
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.Ivision20190308.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public PredictPictureResponseBodyData Data { get; set; }
-        public class PredictPictureResponseBodyData : TeaModel {
-            [NameInMap("PredictResult")]
+        public CreateFilePredictResponseBodyData Data { get; set; }
+        public class CreateFilePredictResponseBodyData : TeaModel {
+            [NameInMap("TaskId")]
             [Validation(Required=false)]
-            public string PredictResult { get; set; }
+            public string TaskId { get; set; }
         };
 
         [NameInMap("Code")]

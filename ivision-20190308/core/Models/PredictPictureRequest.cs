@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.Ivision20190308.Models
         [Validation(Required=false)]
         public string OssPath { get; set; }
 
+        [NameInMap("ResourceUrl")]
+        [Validation(Required=false)]
+        public string ResourceUrl { get; set; }
+
+        [NameInMap("CustomerData")]
+        [Validation(Required=false)]
+        public string CustomerData { get; set; }
+
+        [NameInMap("ImageUrl")]
+        [Validation(Required=false)]
+        public string ImageUrl { get; set; }
+
     }
 
 }
