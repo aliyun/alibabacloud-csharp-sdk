@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-dms-enterprise")]
 [assembly: AssemblyDescription("Alibaba Cloud dms-enterprise (20181101) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2c331000-a305-11eb-8065-4b35257228e2")]
+[assembly: Guid("c784c4c0-d881-11eb-9363-3b06e764a015")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.16.0.0")]
-[assembly: AssemblyFileVersion("1.16.0.0")]
+[assembly: AssemblyVersion("1.17.0.0")]
+[assembly: AssemblyFileVersion("1.17.0.0")]
