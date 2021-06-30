@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20201112.Models
 {
-    public class LivenessDetectResponseBody : TeaModel {
+    public class CompareFacesResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -23,17 +23,14 @@ namespace AlibabaCloud.SDK.Cloudauth20201112.Models
 
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
-        public LivenessDetectResponseBodyResultObject ResultObject { get; set; }
-        public class LivenessDetectResponseBodyResultObject : TeaModel {
-            [NameInMap("Score")]
+        public CompareFacesResponseBodyResultObject ResultObject { get; set; }
+        public class CompareFacesResponseBodyResultObject : TeaModel {
+            [NameInMap("SimilarityScore")]
             [Validation(Required=false)]
-            public float? Score { get; set; }
-            [NameInMap("FrameUrl")]
+            public float? SimilarityScore { get; set; }
+            [NameInMap("ConfidenceThresholds")]
             [Validation(Required=false)]
-            public string FrameUrl { get; set; }
-            [NameInMap("Passed")]
-            [Validation(Required=false)]
-            public string Passed { get; set; }
+            public string ConfidenceThresholds { get; set; }
         };
 
     }

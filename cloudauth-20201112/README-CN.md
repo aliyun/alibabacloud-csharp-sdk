@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Cloudauth20201112
+dotnet add package AlibabaCloud.SDK.Cloudauth20201112
 ```
 
 ## 问题

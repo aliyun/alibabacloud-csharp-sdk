@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20201112.Models
 {
-    public class LivenessDetectRequest : TeaModel {
+    public class DetectFaceAttributesRequest : TeaModel {
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
@@ -17,17 +17,13 @@ namespace AlibabaCloud.SDK.Cloudauth20201112.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
-        [NameInMap("MediaCategory")]
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public string MediaCategory { get; set; }
+        public string ImageUrl { get; set; }
 
-        [NameInMap("MediaUrl")]
+        [NameInMap("ImageFile")]
         [Validation(Required=false)]
-        public string MediaUrl { get; set; }
-
-        [NameInMap("MediaFile")]
-        [Validation(Required=false)]
-        public string MediaFile { get; set; }
+        public string ImageFile { get; set; }
 
     }
 
