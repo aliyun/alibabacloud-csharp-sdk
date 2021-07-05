@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeLogBackupFilesResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("TotalFileSize")]
         [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? TotalFileSize { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("TotalFileSize")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? TotalFileSize { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]

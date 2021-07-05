@@ -37,6 +37,42 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? SSLEnabled { get; set; }
 
+        [NameInMap("CAType")]
+        [Validation(Required=false)]
+        public string CAType { get; set; }
+
+        [NameInMap("ServerCert")]
+        [Validation(Required=false)]
+        public string ServerCert { get; set; }
+
+        [NameInMap("ServerKey")]
+        [Validation(Required=false)]
+        public string ServerKey { get; set; }
+
+        [NameInMap("ClientCAEnabled")]
+        [Validation(Required=false)]
+        public int? ClientCAEnabled { get; set; }
+
+        [NameInMap("ClientCACert")]
+        [Validation(Required=false)]
+        public string ClientCACert { get; set; }
+
+        [NameInMap("ClientCrlEnabled")]
+        [Validation(Required=false)]
+        public int? ClientCrlEnabled { get; set; }
+
+        [NameInMap("ClientCertRevocationList")]
+        [Validation(Required=false)]
+        public string ClientCertRevocationList { get; set; }
+
+        [NameInMap("ACL")]
+        [Validation(Required=false)]
+        public string ACL { get; set; }
+
+        [NameInMap("ReplicationACL")]
+        [Validation(Required=false)]
+        public string ReplicationACL { get; set; }
+
     }
 
 }

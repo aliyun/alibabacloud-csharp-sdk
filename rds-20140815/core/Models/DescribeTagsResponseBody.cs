@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeTagsResponseBodyItemsTagInfos> TagInfos { get; set; }
             public class DescribeTagsResponseBodyItemsTagInfos : TeaModel {
+                public string TagValue { get; set; }
+                public string TagKey { get; set; }
                 public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds { get; set; }
                 public class DescribeTagsResponseBodyItemsTagInfosDBInstanceIds : TeaModel {
                     [NameInMap("DBInstanceIds")]
@@ -28,8 +30,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<string> DBInstanceIds { get; set; }
 
                 }
-                public string TagValue { get; set; }
-                public string TagKey { get; set; }
             }
         };
 

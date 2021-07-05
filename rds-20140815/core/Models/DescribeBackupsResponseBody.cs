@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string TotalRecordCount { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("TotalEcsSnapshotSize")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PageRecordCount { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string TotalRecordCount { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

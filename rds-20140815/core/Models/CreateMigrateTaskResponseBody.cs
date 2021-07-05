@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateMigrateTaskResponseBody : TeaModel {
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
+
+        [NameInMap("BackupMode")]
+        [Validation(Required=false)]
+        public string BackupMode { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string MigrateTaskId { get; set; }
 
-        [NameInMap("BackupMode")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string BackupMode { get; set; }
-
-        [NameInMap("DBName")]
-        [Validation(Required=false)]
-        public string DBName { get; set; }
+        public string TaskId { get; set; }
 
     }
 

@@ -31,20 +31,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public float? MemAllocatedAmount { get; set; }
                 public int? CpuAllocationRatio { get; set; }
                 public int? MemAllocationRatio { get; set; }
-                public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList ZoneIDList { get; set; }
-                public class DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList : TeaModel {
-                    [NameInMap("ZoneIDList")]
-                    [Validation(Required=false)]
-                    public List<string> ZoneIDList { get; set; }
-
-                }
-                public float? MemAllocateRation { get; set; }
                 public float? MemUtility { get; set; }
+                public float? MemAllocateRation { get; set; }
                 public float? CpuAllocatedAmount { get; set; }
                 public string DedicatedHostGroupDesc { get; set; }
                 public float? CpuAllocateRation { get; set; }
-                public string OpenPermission { get; set; }
                 public int? InstanceNumber { get; set; }
+                public string OpenPermission { get; set; }
                 public string VPCId { get; set; }
                 public float? DiskAllocatedAmount { get; set; }
                 public int? HostNumber { get; set; }
@@ -54,6 +47,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? DiskAllocationRatio { get; set; }
                 public string BastionInstanceId { get; set; }
                 public string HostReplacePolicy { get; set; }
+                public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList ZoneIDList { get; set; }
+                public class DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList : TeaModel {
+                    [NameInMap("ZoneIDList")]
+                    [Validation(Required=false)]
+                    public List<string> ZoneIDList { get; set; }
+
+                }
             }
         };
 

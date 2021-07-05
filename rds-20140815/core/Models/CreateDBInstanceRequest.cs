@@ -169,6 +169,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? StorageUpperBound { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        [NameInMap("UserBackupId")]
+        [Validation(Required=false)]
+        public string UserBackupId { get; set; }
+
     }
 
 }

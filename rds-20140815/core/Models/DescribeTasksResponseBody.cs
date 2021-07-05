@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeTasksResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -35,13 +35,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public class DescribeTasksResponseBodyItemsTaskProgressInfo : TeaModel {
                 public string Status { get; set; }
                 public string FinishTime { get; set; }
-                public string StepsInfo { get; set; }
                 public string Progress { get; set; }
-                public string ExpectedFinishTime { get; set; }
+                public string StepsInfo { get; set; }
                 public string BeginTime { get; set; }
+                public string ExpectedFinishTime { get; set; }
                 public string TaskErrorCode { get; set; }
-                public string ProgressInfo { get; set; }
                 public string CurrentStepName { get; set; }
+                public string ProgressInfo { get; set; }
                 public string StepProgressInfo { get; set; }
                 public string TaskErrorMessage { get; set; }
                 public string TaskAction { get; set; }

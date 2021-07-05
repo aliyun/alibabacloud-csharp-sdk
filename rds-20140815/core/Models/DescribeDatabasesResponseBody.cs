@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDatabasesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public DescribeDatabasesResponseBodyDatabases Databases { get; set; }
@@ -33,23 +37,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [Validation(Required=false)]
                         public string Account { get; set; }
 
-                        [NameInMap("AccountPrivilegeDetail")]
-                        [Validation(Required=false)]
-                        public string AccountPrivilegeDetail { get; set; }
-
                         [NameInMap("AccountPrivilege")]
                         [Validation(Required=false)]
                         public string AccountPrivilege { get; set; }
+
+                        [NameInMap("AccountPrivilegeDetail")]
+                        [Validation(Required=false)]
+                        public string AccountPrivilegeDetail { get; set; }
 
                     }
 
                 }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

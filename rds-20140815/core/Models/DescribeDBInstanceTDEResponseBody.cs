@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string TDEStatus { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public DescribeDBInstanceTDEResponseBodyDatabases Databases { get; set; }
@@ -25,10 +29,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string TDEStatus { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

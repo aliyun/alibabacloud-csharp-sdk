@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateMigrateTaskForSQLServerResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("MigrateIaskId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string MigrateIaskId { get; set; }
 
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("DBName")]
         [Validation(Required=false)]
         public string DBName { get; set; }
 
-        [NameInMap("MigrateIaskId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string MigrateIaskId { get; set; }
+        public string DBInstanceId { get; set; }
 
-        [NameInMap("DBInstanceName")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string TaskId { get; set; }
 
     }
 

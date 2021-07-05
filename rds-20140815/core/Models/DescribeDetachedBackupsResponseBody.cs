@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDetachedBackupsResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public string PageRecordCount { get; set; }
+        public string PageNumber { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public string PageRecordCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public string TotalRecordCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -33,15 +33,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDetachedBackupsResponseBodyItemsBackup> Backup { get; set; }
             public class DescribeDetachedBackupsResponseBodyItemsBackup : TeaModel {
-                public string BackupStatus { get; set; }
-                public string StoreStatus { get; set; }
                 public long? ConsistentTime { get; set; }
-                public string BackupStartTime { get; set; }
+                public string StoreStatus { get; set; }
+                public string BackupStatus { get; set; }
                 public string BackupType { get; set; }
+                public string BackupStartTime { get; set; }
                 public string BackupDownloadURL { get; set; }
                 public int? IsAvail { get; set; }
-                public string BackupEndTime { get; set; }
                 public string MetaStatus { get; set; }
+                public string BackupEndTime { get; set; }
                 public string BackupId { get; set; }
                 public string HostInstanceID { get; set; }
                 public string BackupIntranetDownloadURL { get; set; }

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBProxyInstanceKernelVersionResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string DBInstanceName { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DBInstanceName")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string TaskId { get; set; }
 
     }
 

@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeRegionsResponseBodyRegionsRDSRegion> RDSRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsRDSRegion : TeaModel {
                 public string ZoneId { get; set; }
+                public string RegionEndpoint { get; set; }
+                public string LocalName { get; set; }
                 public string RegionId { get; set; }
             }
         };

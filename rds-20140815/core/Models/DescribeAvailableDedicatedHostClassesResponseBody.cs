@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses> HostClasses { get; set; }
             public class DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses : TeaModel {
-                public string HostClassName { get; set; }
                 public string Description { get; set; }
+                public string HostClassName { get; set; }
             }
         };
 

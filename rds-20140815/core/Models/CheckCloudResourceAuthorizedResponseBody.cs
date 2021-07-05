@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckCloudResourceAuthorizedResponseBody : TeaModel {
-        [NameInMap("AuthorizationState")]
-        [Validation(Required=false)]
-        public int? AuthorizationState { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
+
+        [NameInMap("AuthorizationState")]
+        [Validation(Required=false)]
+        public int? AuthorizationState { get; set; }
 
     }
 

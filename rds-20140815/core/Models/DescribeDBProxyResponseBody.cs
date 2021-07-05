@@ -9,44 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyResponseBody : TeaModel {
-        [NameInMap("DBProxyInstanceName")]
-        [Validation(Required=false)]
-        public string DBProxyInstanceName { get; set; }
-
-        [NameInMap("DBProxyInstanceCurrentMinorVersion")]
-        [Validation(Required=false)]
-        public string DBProxyInstanceCurrentMinorVersion { get; set; }
-
         [NameInMap("DBProxyInstanceLatestMinorVersion")]
         [Validation(Required=false)]
         public string DBProxyInstanceLatestMinorVersion { get; set; }
-
-        [NameInMap("DBProxyInstanceNum")]
-        [Validation(Required=false)]
-        public int? DBProxyInstanceNum { get; set; }
-
-        [NameInMap("DBProxyServiceStatus")]
-        [Validation(Required=false)]
-        public string DBProxyServiceStatus { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DbProxyEndpointItems")]
+        [NameInMap("DBProxyInstanceCurrentMinorVersion")]
         [Validation(Required=false)]
-        public DescribeDBProxyResponseBodyDbProxyEndpointItems DbProxyEndpointItems { get; set; }
-        public class DescribeDBProxyResponseBodyDbProxyEndpointItems : TeaModel {
-            [NameInMap("DbProxyEndpointItems")]
-            [Validation(Required=false)]
-            public List<DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems> DbProxyEndpointItems { get; set; }
-            public class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems : TeaModel {
-                public string DbProxyEndpointName { get; set; }
-                public string DbProxyReadWriteMode { get; set; }
-                public string DbProxyEndpointAliases { get; set; }
-                public string DbProxyEndpointType { get; set; }
-            }
-        };
+        public string DBProxyInstanceCurrentMinorVersion { get; set; }
+
+        [NameInMap("DBProxyInstanceNum")]
+        [Validation(Required=false)]
+        public int? DBProxyInstanceNum { get; set; }
+
+        [NameInMap("DBProxyInstanceType")]
+        [Validation(Required=false)]
+        public string DBProxyInstanceType { get; set; }
+
+        [NameInMap("DBProxyInstanceStatus")]
+        [Validation(Required=false)]
+        public string DBProxyInstanceStatus { get; set; }
+
+        [NameInMap("DBProxyServiceStatus")]
+        [Validation(Required=false)]
+        public string DBProxyServiceStatus { get; set; }
+
+        [NameInMap("DBProxyInstanceName")]
+        [Validation(Required=false)]
+        public string DBProxyInstanceName { get; set; }
 
         [NameInMap("DBProxyConnectStringItems")]
         [Validation(Required=false)]
@@ -66,13 +59,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
         };
 
-        [NameInMap("DBProxyInstanceStatus")]
+        [NameInMap("DbProxyEndpointItems")]
         [Validation(Required=false)]
-        public string DBProxyInstanceStatus { get; set; }
-
-        [NameInMap("DBProxyInstanceType")]
-        [Validation(Required=false)]
-        public string DBProxyInstanceType { get; set; }
+        public DescribeDBProxyResponseBodyDbProxyEndpointItems DbProxyEndpointItems { get; set; }
+        public class DescribeDBProxyResponseBodyDbProxyEndpointItems : TeaModel {
+            [NameInMap("DbProxyEndpointItems")]
+            [Validation(Required=false)]
+            public List<DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems> DbProxyEndpointItems { get; set; }
+            public class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems : TeaModel {
+                public string DbProxyEndpointAliases { get; set; }
+                public string DbProxyEndpointName { get; set; }
+                public string DbProxyEndpointType { get; set; }
+                public string DbProxyReadWriteMode { get; set; }
+            }
+        };
 
     }
 

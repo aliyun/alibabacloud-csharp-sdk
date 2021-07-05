@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyBackupPolicyResponseBody : TeaModel {
-        [NameInMap("LogBackupLocalRetentionNumber")]
-        [Validation(Required=false)]
-        public int? LogBackupLocalRetentionNumber { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("CompressType")]
+        [Validation(Required=false)]
+        public string CompressType { get; set; }
+
+        [NameInMap("LocalLogRetentionSpace")]
+        [Validation(Required=false)]
+        public string LocalLogRetentionSpace { get; set; }
+
+        [NameInMap("LogBackupLocalRetentionNumber")]
+        [Validation(Required=false)]
+        public int? LogBackupLocalRetentionNumber { get; set; }
 
         [NameInMap("DBInstanceID")]
         [Validation(Required=false)]
@@ -25,10 +33,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EnableBackupLog { get; set; }
 
-        [NameInMap("LocalLogRetentionSpace")]
-        [Validation(Required=false)]
-        public string LocalLogRetentionSpace { get; set; }
-
         [NameInMap("LocalLogRetentionHours")]
         [Validation(Required=false)]
         public int? LocalLogRetentionHours { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("HighSpaceUsageProtection")]
         [Validation(Required=false)]
         public string HighSpaceUsageProtection { get; set; }
-
-        [NameInMap("CompressType")]
-        [Validation(Required=false)]
-        public string CompressType { get; set; }
 
     }
 

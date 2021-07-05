@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("Latest")]
-        [Validation(Required=false)]
-        public int? Latest { get; set; }
-
     }
 
 }

@@ -9,41 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
-        [NameInMap("Category")]
+        [NameInMap("LogBackupRetentionPeriod")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public int? LogBackupRetentionPeriod { get; set; }
 
-        [NameInMap("ArchiveBackupRetentionPeriod")]
+        [NameInMap("ArchiveBackupKeepPolicy")]
         [Validation(Required=false)]
-        public string ArchiveBackupRetentionPeriod { get; set; }
-
-        [NameInMap("ReleasedKeepPolicy")]
-        [Validation(Required=false)]
-        public string ReleasedKeepPolicy { get; set; }
-
-        [NameInMap("PreferredNextBackupTime")]
-        [Validation(Required=false)]
-        public string PreferredNextBackupTime { get; set; }
+        public string ArchiveBackupKeepPolicy { get; set; }
 
         [NameInMap("ArchiveBackupKeepCount")]
         [Validation(Required=false)]
         public string ArchiveBackupKeepCount { get; set; }
 
+        [NameInMap("LocalLogRetentionHours")]
+        [Validation(Required=false)]
+        public int? LocalLogRetentionHours { get; set; }
+
+        [NameInMap("BackupRetentionPeriod")]
+        [Validation(Required=false)]
+        public int? BackupRetentionPeriod { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
         public string PreferredBackupPeriod { get; set; }
 
-        [NameInMap("LogBackupRetentionPeriod")]
+        [NameInMap("CompressType")]
         [Validation(Required=false)]
-        public int? LogBackupRetentionPeriod { get; set; }
-
-        [NameInMap("LogBackupLocalRetentionNumber")]
-        [Validation(Required=false)]
-        public int? LogBackupLocalRetentionNumber { get; set; }
+        public string CompressType { get; set; }
 
         [NameInMap("SupportReleasedKeep")]
         [Validation(Required=false)]
         public int? SupportReleasedKeep { get; set; }
+
+        [NameInMap("LocalLogRetentionSpace")]
+        [Validation(Required=false)]
+        public string LocalLogRetentionSpace { get; set; }
 
         [NameInMap("SupportVolumeShadowCopy")]
         [Validation(Required=false)]
@@ -53,53 +57,49 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("LogBackupFrequency")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string LogBackupFrequency { get; set; }
 
-        [NameInMap("ArchiveBackupKeepPolicy")]
+        [NameInMap("PreferredNextBackupTime")]
         [Validation(Required=false)]
-        public string ArchiveBackupKeepPolicy { get; set; }
-
-        [NameInMap("PreferredBackupTime")]
-        [Validation(Required=false)]
-        public string PreferredBackupTime { get; set; }
-
-        [NameInMap("LocalLogRetentionHours")]
-        [Validation(Required=false)]
-        public int? LocalLogRetentionHours { get; set; }
+        public string PreferredNextBackupTime { get; set; }
 
         [NameInMap("HighSpaceUsageProtection")]
         [Validation(Required=false)]
         public string HighSpaceUsageProtection { get; set; }
 
-        [NameInMap("CompressType")]
+        [NameInMap("ArchiveBackupRetentionPeriod")]
         [Validation(Required=false)]
-        public string CompressType { get; set; }
+        public string ArchiveBackupRetentionPeriod { get; set; }
 
-        [NameInMap("LogBackupFrequency")]
+        [NameInMap("BackupInterval")]
         [Validation(Required=false)]
-        public string LogBackupFrequency { get; set; }
+        public string BackupInterval { get; set; }
 
-        [NameInMap("BackupLog")]
+        [NameInMap("ReleasedKeepPolicy")]
         [Validation(Required=false)]
-        public string BackupLog { get; set; }
+        public string ReleasedKeepPolicy { get; set; }
+
+        [NameInMap("PreferredBackupTime")]
+        [Validation(Required=false)]
+        public string PreferredBackupTime { get; set; }
+
+        [NameInMap("LogBackupLocalRetentionNumber")]
+        [Validation(Required=false)]
+        public int? LogBackupLocalRetentionNumber { get; set; }
+
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
 
         [NameInMap("EnableBackupLog")]
         [Validation(Required=false)]
         public string EnableBackupLog { get; set; }
 
-        [NameInMap("LocalLogRetentionSpace")]
+        [NameInMap("BackupLog")]
         [Validation(Required=false)]
-        public string LocalLogRetentionSpace { get; set; }
-
-        [NameInMap("BackupRetentionPeriod")]
-        [Validation(Required=false)]
-        public int? BackupRetentionPeriod { get; set; }
-
-        [NameInMap("BackupInterval")]
-        [Validation(Required=false)]
-        public string BackupInterval { get; set; }
+        public string BackupLog { get; set; }
 
     }
 

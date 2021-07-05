@@ -21,13 +21,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone : TeaModel {
+                public string ZoneId { get; set; }
                 public string Status { get; set; }
+                public string RegionId { get; set; }
                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines SupportedEngines { get; set; }
                 public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines : TeaModel {
                     [NameInMap("SupportedEngine")]
                     [Validation(Required=false)]
                     public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine> SupportedEngine { get; set; }
                     public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine : TeaModel {
+                        [NameInMap("Engine")]
+                        [Validation(Required=false)]
+                        public string Engine { get; set; }
+
                         [NameInMap("SupportedEngineVersions")]
                         [Validation(Required=false)]
                         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersions SupportedEngineVersions { get; set; }
@@ -43,6 +49,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                                     [Validation(Required=false)]
                                     public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategorysSupportedCategory> SupportedCategory { get; set; }
                                     public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategorysSupportedCategory : TeaModel {
+                                        [NameInMap("Category")]
+                                        [Validation(Required=false)]
+                                        public string Category { get; set; }
+
                                         [NameInMap("SupportedStorageTypes")]
                                         [Validation(Required=false)]
                                         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategorysSupportedCategorySupportedStorageTypes SupportedStorageTypes { get; set; }
@@ -58,6 +68,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                                                     [Validation(Required=false)]
                                                     public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategorysSupportedCategorySupportedStorageTypesSupportedStorageTypeAvailableResourcesAvailableResource> AvailableResource { get; set; }
                                                     public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategorysSupportedCategorySupportedStorageTypesSupportedStorageTypeAvailableResourcesAvailableResource : TeaModel {
+                                                        [NameInMap("StorageRange")]
+                                                        [Validation(Required=false)]
+                                                        public string StorageRange { get; set; }
+
+                                                        [NameInMap("DBInstanceClass")]
+                                                        [Validation(Required=false)]
+                                                        public string DBInstanceClass { get; set; }
+
                                                         [NameInMap("DBInstanceStorageRange")]
                                                         [Validation(Required=false)]
                                                         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEngineVersionsSupportedEngineVersionSupportedCategorysSupportedCategorySupportedStorageTypesSupportedStorageTypeAvailableResourcesAvailableResourceDBInstanceStorageRange DBInstanceStorageRange { get; set; }
@@ -73,23 +91,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                                                             public int? Min { get; set; }
                                                         };
 
-                                                        [NameInMap("StorageRange")]
-                                                        [Validation(Required=false)]
-                                                        public string StorageRange { get; set; }
-
-                                                        [NameInMap("DBInstanceClass")]
-                                                        [Validation(Required=false)]
-                                                        public string DBInstanceClass { get; set; }
-
                                                     }
 
                                                 }
                                             }
                                         };
-
-                                        [NameInMap("Category")]
-                                        [Validation(Required=false)]
-                                        public string Category { get; set; }
 
                                     }
 
@@ -97,15 +103,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                             }
                         };
 
-                        [NameInMap("Engine")]
-                        [Validation(Required=false)]
-                        public string Engine { get; set; }
-
                     }
 
                 }
-                public string ZoneId { get; set; }
-                public string RegionId { get; set; }
             }
         };
 

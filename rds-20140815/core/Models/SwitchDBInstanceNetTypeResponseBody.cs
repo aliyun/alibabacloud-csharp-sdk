@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceNetTypeResponseBody : TeaModel {
+        [NameInMap("NewConnectionString")]
+        [Validation(Required=false)]
+        public string NewConnectionString { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("OldConnectionString")]
         [Validation(Required=false)]
         public string OldConnectionString { get; set; }
-
-        [NameInMap("NewConnectionString")]
-        [Validation(Required=false)]
-        public string NewConnectionString { get; set; }
 
     }
 

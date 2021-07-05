@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeErrorLogsResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeErrorLogsResponseBodyItemsErrorLog> ErrorLog { get; set; }
             public class DescribeErrorLogsResponseBodyItemsErrorLog : TeaModel {
-                public string ErrorInfo { get; set; }
                 public string CreateTime { get; set; }
+                public string ErrorInfo { get; set; }
             }
         };
 

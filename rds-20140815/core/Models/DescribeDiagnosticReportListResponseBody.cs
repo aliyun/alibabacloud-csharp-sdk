@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
             [NameInMap("DiagnosticTime")]
             [Validation(Required=false)]
             public string DiagnosticTime { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
 
             [NameInMap("Score")]
             [Validation(Required=false)]

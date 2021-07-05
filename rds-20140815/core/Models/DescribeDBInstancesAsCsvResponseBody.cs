@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Tags { get; set; }
                 public string AvailabilityValue { get; set; }
                 public string ReadDelayTime { get; set; }
-                public string Port { get; set; }
                 public string ConnectionMode { get; set; }
-                public string LockMode { get; set; }
+                public string Port { get; set; }
                 public string AccountType { get; set; }
+                public string LockMode { get; set; }
                 public string EngineVersion { get; set; }
                 public int? MaxIOPS { get; set; }
                 public string ConnectionString { get; set; }

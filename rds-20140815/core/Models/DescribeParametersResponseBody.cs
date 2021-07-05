@@ -9,27 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
-        [NameInMap("RunningParameters")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public DescribeParametersResponseBodyRunningParameters RunningParameters { get; set; }
-        public class DescribeParametersResponseBodyRunningParameters : TeaModel {
-            [NameInMap("DBInstanceParameter")]
-            [Validation(Required=false)]
-            public List<DescribeParametersResponseBodyRunningParametersDBInstanceParameter> DBInstanceParameter { get; set; }
-            public class DescribeParametersResponseBodyRunningParametersDBInstanceParameter : TeaModel {
-                public string ParameterName { get; set; }
-                public string ParameterValue { get; set; }
-                public string ParameterDescription { get; set; }
-            }
-        };
+        public string RequestId { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
 
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
@@ -39,15 +29,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyConfigParametersDBInstanceParameter> DBInstanceParameter { get; set; }
             public class DescribeParametersResponseBodyConfigParametersDBInstanceParameter : TeaModel {
+                public string ParameterDescription { get; set; }
                 public string ParameterName { get; set; }
                 public string ParameterValue { get; set; }
-                public string ParameterDescription { get; set; }
             }
         };
 
-        [NameInMap("Engine")]
+        [NameInMap("RunningParameters")]
         [Validation(Required=false)]
-        public string Engine { get; set; }
+        public DescribeParametersResponseBodyRunningParameters RunningParameters { get; set; }
+        public class DescribeParametersResponseBodyRunningParameters : TeaModel {
+            [NameInMap("DBInstanceParameter")]
+            [Validation(Required=false)]
+            public List<DescribeParametersResponseBodyRunningParametersDBInstanceParameter> DBInstanceParameter { get; set; }
+            public class DescribeParametersResponseBodyRunningParametersDBInstanceParameter : TeaModel {
+                public string ParameterDescription { get; set; }
+                public string ParameterName { get; set; }
+                public string ParameterValue { get; set; }
+            }
+        };
 
     }
 

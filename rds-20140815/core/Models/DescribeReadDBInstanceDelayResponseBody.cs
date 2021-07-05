@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReadDBInstanceDelayResponseBody : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("DelayTime")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public int? DelayTime { get; set; }
 
         [NameInMap("ReadDBInstanceId")]
         [Validation(Required=false)]
@@ -29,13 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeReadDBInstanceDelayResponseBodyItemsItems> Items { get; set; }
             public class DescribeReadDBInstanceDelayResponseBodyItemsItems : TeaModel {
-                public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames ReadDBInstanceNames { get; set; }
-                public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames : TeaModel {
-                    [NameInMap("ReadDBInstanceName")]
-                    [Validation(Required=false)]
-                    public List<string> ReadDBInstanceName { get; set; }
-
-                }
+                public string DBInstanceId { get; set; }
                 public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay ReadonlyInstanceDelay { get; set; }
                 public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay : TeaModel {
                     [NameInMap("ReadonlyInstanceDelay")]
@@ -77,7 +75,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
-                public string DBInstanceId { get; set; }
                 public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes ReadDelayTimes { get; set; }
                 public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes : TeaModel {
                     [NameInMap("ReadDelayTime")]
@@ -85,12 +82,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     public List<string> ReadDelayTime { get; set; }
 
                 }
+                public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames ReadDBInstanceNames { get; set; }
+                public class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames : TeaModel {
+                    [NameInMap("ReadDBInstanceName")]
+                    [Validation(Required=false)]
+                    public List<string> ReadDBInstanceName { get; set; }
+
+                }
             }
         };
-
-        [NameInMap("DelayTime")]
-        [Validation(Required=false)]
-        public int? DelayTime { get; set; }
 
     }
 

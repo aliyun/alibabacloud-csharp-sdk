@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceKernelVersionResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DBInstanceName { get; set; }
 
         [NameInMap("TargetMinorVersion")]
         [Validation(Required=false)]
         public string TargetMinorVersion { get; set; }
 
-        [NameInMap("DBInstanceName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

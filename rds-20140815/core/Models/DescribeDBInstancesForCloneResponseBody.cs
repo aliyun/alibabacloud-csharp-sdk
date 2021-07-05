@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesForCloneResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -48,12 +48,21 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string InstanceNetworkType { get; set; }
                 public string MasterInstanceId { get; set; }
                 public string DBInstanceDescription { get; set; }
-                public string DBInstanceNetType { get; set; }
                 public string ExpireTime { get; set; }
+                public string DBInstanceNetType { get; set; }
                 public string DBInstanceType { get; set; }
                 public string DestroyTime { get; set; }
                 public string LockReason { get; set; }
                 public string DBInstanceStatus { get; set; }
+                public string GuardDBInstanceId { get; set; }
+                public string RegionId { get; set; }
+                public string VSwitchId { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string ZoneId { get; set; }
+                public string DBInstanceId { get; set; }
+                public string Category { get; set; }
+                public string Engine { get; set; }
+                public string DBInstanceClass { get; set; }
                 public DescribeDBInstancesForCloneResponseBodyItemsDBInstanceReadOnlyDBInstanceIds ReadOnlyDBInstanceIds { get; set; }
                 public class DescribeDBInstancesForCloneResponseBodyItemsDBInstanceReadOnlyDBInstanceIds : TeaModel {
                     [NameInMap("ReadOnlyDBInstanceId")]
@@ -67,15 +76,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
-                public string GuardDBInstanceId { get; set; }
-                public string RegionId { get; set; }
-                public string VSwitchId { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string ZoneId { get; set; }
-                public string DBInstanceId { get; set; }
-                public string Category { get; set; }
-                public string Engine { get; set; }
-                public string DBInstanceClass { get; set; }
             }
         };
 

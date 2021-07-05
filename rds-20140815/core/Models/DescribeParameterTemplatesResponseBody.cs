@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
         [NameInMap("ParameterCount")]
         [Validation(Required=false)]
         public string ParameterCount { get; set; }
@@ -33,14 +41,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ParameterDescription { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Engine")]
-        [Validation(Required=false)]
-        public string Engine { get; set; }
 
     }
 

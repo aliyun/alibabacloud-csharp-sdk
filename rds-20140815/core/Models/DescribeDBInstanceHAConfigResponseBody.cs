@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceHAConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("HAMode")]
         [Validation(Required=false)]
         public string HAMode { get; set; }
+
+        [NameInMap("SyncMode")]
+        [Validation(Required=false)]
+        public string SyncMode { get; set; }
 
         [NameInMap("HostInstanceInfos")]
         [Validation(Required=false)]
@@ -38,10 +42,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string RegionId { get; set; }
             }
         };
-
-        [NameInMap("SyncMode")]
-        [Validation(Required=false)]
-        public string SyncMode { get; set; }
 
     }
 

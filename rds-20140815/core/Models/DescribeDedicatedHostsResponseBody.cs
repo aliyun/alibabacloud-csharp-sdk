@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostsResponseBody : TeaModel {
+        [NameInMap("DedicatedHostGroupId")]
+        [Validation(Required=false)]
+        public string DedicatedHostGroupId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("DedicatedHosts")]
         [Validation(Required=false)]
         public DescribeDedicatedHostsResponseBodyDedicatedHosts DedicatedHosts { get; set; }
@@ -30,15 +38,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string HostStatus { get; set; }
                 public string HostName { get; set; }
                 public string HostCPU { get; set; }
-                public string CpuUsed { get; set; }
-                public string OpenPermission { get; set; }
                 public string InstanceNumber { get; set; }
+                public string OpenPermission { get; set; }
+                public string CpuUsed { get; set; }
                 public string VPCId { get; set; }
                 public string HostClass { get; set; }
                 public string EndTime { get; set; }
                 public string VSwitchId { get; set; }
-                public string ZoneId { get; set; }
                 public string CPUAllocationRatio { get; set; }
+                public string ZoneId { get; set; }
                 public string ImageCategory { get; set; }
                 public string Engine { get; set; }
                 public string DiskAllocationRatio { get; set; }
@@ -47,14 +55,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string AccountName { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DedicatedHostGroupId")]
-        [Validation(Required=false)]
-        public string DedicatedHostGroupId { get; set; }
 
     }
 

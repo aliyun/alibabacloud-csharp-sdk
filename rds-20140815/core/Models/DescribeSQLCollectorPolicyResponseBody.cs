@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLCollectorPolicyResponseBody : TeaModel {
-        [NameInMap("StoragePeriod")]
-        [Validation(Required=false)]
-        public int? StoragePeriod { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SQLCollectorStatus")]
         [Validation(Required=false)]
         public string SQLCollectorStatus { get; set; }
+
+        [NameInMap("StoragePeriod")]
+        [Validation(Required=false)]
+        public int? StoragePeriod { get; set; }
 
     }
 

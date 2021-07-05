@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HAConfig")]
-        [Validation(Required=false)]
-        public string HAConfig { get; set; }
-
         [NameInMap("ManualHATime")]
         [Validation(Required=false)]
         public string ManualHATime { get; set; }
+
+        [NameInMap("HAConfig")]
+        [Validation(Required=false)]
+        public string HAConfig { get; set; }
 
     }
 

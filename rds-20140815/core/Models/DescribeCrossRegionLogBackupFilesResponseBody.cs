@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionLogBackupFilesResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
+        public string EndTime { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -33,9 +37,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -57,10 +61,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string LogEndTime { get; set; }
             }
         };
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string DBInstanceId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string TaskId { get; set; }
 
         [NameInMap("ReadSQLReplicationTime")]
         [Validation(Required=false)]

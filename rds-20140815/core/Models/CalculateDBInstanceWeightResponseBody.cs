@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Weight { get; set; }
                 public string DBInstanceType { get; set; }
                 public string DBInstanceId { get; set; }
+                public string Role { get; set; }
             }
         };
 

@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute> DBInstanceAttribute { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute : TeaModel {
-                public string CreationTime { get; set; }
                 public string VpcId { get; set; }
+                public string CreationTime { get; set; }
                 public string IncrementSourceDBInstanceId { get; set; }
                 public string MaintainTime { get; set; }
                 public string PayType { get; set; }
@@ -40,32 +40,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string GuardDBInstanceId { get; set; }
                 public int? DBInstanceStorage { get; set; }
                 public string TimeZone { get; set; }
+                public string LatestKernelVersion { get; set; }
+                public int? TipsLevel { get; set; }
                 public string ZoneId { get; set; }
-                public string DBInstanceId { get; set; }
                 public int? MaxConnections { get; set; }
+                public string DBInstanceId { get; set; }
                 public string TempDBInstanceId { get; set; }
-                public long? DBInstanceMemory { get; set; }
-                public string DBInstanceStorageType { get; set; }
                 public string AdvancedFeatures { get; set; }
-                public string Port { get; set; }
-                public string ConnectionMode { get; set; }
+                public string DBInstanceStorageType { get; set; }
+                public long? DBInstanceMemory { get; set; }
                 public string ConsoleVersion { get; set; }
-                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra Extra { get; set; }
-                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra : TeaModel {
-                    [NameInMap("DBInstanceIds")]
-                    [Validation(Required=false)]
-                    public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds DBInstanceIds { get; set; }
-                    public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds : TeaModel {
-                        [NameInMap("DBInstanceId")]
-                        [Validation(Required=false)]
-                        public List<string> DBInstanceId { get; set; }
-                    };
-
-                }
+                public string ConnectionMode { get; set; }
+                public string Port { get; set; }
                 public string LockMode { get; set; }
+                public string GeneralGroupName { get; set; }
                 public string VpcCloudInstanceId { get; set; }
                 public string Collation { get; set; }
                 public int? MaxIOPS { get; set; }
+                public string Tips { get; set; }
                 public string SecurityIPMode { get; set; }
                 public string DBInstanceClassType { get; set; }
                 public int? ProxyType { get; set; }
@@ -77,19 +69,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string LockReason { get; set; }
                 public string DBInstanceStatus { get; set; }
                 public int? DBMaxQuantity { get; set; }
-                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds ReadOnlyDBInstanceIds { get; set; }
-                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds : TeaModel {
-                    [NameInMap("ReadOnlyDBInstanceId")]
-                    [Validation(Required=false)]
-                    public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId> ReadOnlyDBInstanceId { get; set; }
-                    public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId : TeaModel {
-                        [NameInMap("DBInstanceId")]
-                        [Validation(Required=false)]
-                        public string DBInstanceId { get; set; }
-
-                    }
-
-                }
                 public string RegionId { get; set; }
                 public string ReadonlyInstanceSQLDelayedTime { get; set; }
                 public string VSwitchId { get; set; }
@@ -108,6 +87,31 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string ZoneId { get; set; }
 
                     }
+
+                }
+                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds ReadOnlyDBInstanceIds { get; set; }
+                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds : TeaModel {
+                    [NameInMap("ReadOnlyDBInstanceId")]
+                    [Validation(Required=false)]
+                    public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId> ReadOnlyDBInstanceId { get; set; }
+                    public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIdsReadOnlyDBInstanceId : TeaModel {
+                        [NameInMap("DBInstanceId")]
+                        [Validation(Required=false)]
+                        public string DBInstanceId { get; set; }
+
+                    }
+
+                }
+                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra Extra { get; set; }
+                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra : TeaModel {
+                    [NameInMap("DBInstanceIds")]
+                    [Validation(Required=false)]
+                    public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds DBInstanceIds { get; set; }
+                    public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds : TeaModel {
+                        [NameInMap("DBInstanceId")]
+                        [Validation(Required=false)]
+                        public List<string> DBInstanceId { get; set; }
+                    };
 
                 }
             }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterGroupResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ParamGroup")]
         [Validation(Required=false)]
         public DescribeParameterGroupResponseBodyParamGroup ParamGroup { get; set; }
@@ -25,6 +29,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ParameterGroupName { get; set; }
                 public string Engine { get; set; }
                 public int? ParamCounts { get; set; }
+                public string EngineVersion { get; set; }
+                public int? ParameterGroupType { get; set; }
                 public DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail ParamDetail { get; set; }
                 public class DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail : TeaModel {
                     [NameInMap("ParameterDetail")]
@@ -42,14 +48,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                     }
 
                 }
-                public string EngineVersion { get; set; }
-                public int? ParameterGroupType { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

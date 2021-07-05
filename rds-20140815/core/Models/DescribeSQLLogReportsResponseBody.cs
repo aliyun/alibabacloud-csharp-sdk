@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogReportsResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -33,23 +33,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeSQLLogReportsResponseBodyItemsItem> Item { get; set; }
             public class DescribeSQLLogReportsResponseBodyItemsItem : TeaModel {
-                public DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItems QPSTopNItems { get; set; }
-                public class DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItems : TeaModel {
-                    [NameInMap("QPSTopNItem")]
-                    [Validation(Required=false)]
-                    public List<DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItemsQPSTopNItem> QPSTopNItem { get; set; }
-                    public class DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItemsQPSTopNItem : TeaModel {
-                        [NameInMap("SQLText")]
-                        [Validation(Required=false)]
-                        public string SQLText { get; set; }
-
-                        [NameInMap("SQLExecuteTimes")]
-                        [Validation(Required=false)]
-                        public long? SQLExecuteTimes { get; set; }
-
-                    }
-
-                }
                 public string ReportTime { get; set; }
                 public DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItems LatencyTopNItems { get; set; }
                 public class DescribeSQLLogReportsResponseBodyItemsItemLatencyTopNItems : TeaModel {
@@ -68,6 +51,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [NameInMap("AvgLatency")]
                         [Validation(Required=false)]
                         public long? AvgLatency { get; set; }
+
+                    }
+
+                }
+                public DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItems QPSTopNItems { get; set; }
+                public class DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItems : TeaModel {
+                    [NameInMap("QPSTopNItem")]
+                    [Validation(Required=false)]
+                    public List<DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItemsQPSTopNItem> QPSTopNItem { get; set; }
+                    public class DescribeSQLLogReportsResponseBodyItemsItemQPSTopNItemsQPSTopNItem : TeaModel {
+                        [NameInMap("SQLExecuteTimes")]
+                        [Validation(Required=false)]
+                        public long? SQLExecuteTimes { get; set; }
+
+                        [NameInMap("SQLText")]
+                        [Validation(Required=false)]
+                        public string SQLText { get; set; }
 
                     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class MigrateSecurityIPModeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("SecurityIPMode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string SecurityIPMode { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("SecurityIPMode")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string SecurityIPMode { get; set; }
+        public string RequestId { get; set; }
 
     }
 
