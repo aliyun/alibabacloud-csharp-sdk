@@ -2425,6 +2425,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await GetDataCorrectBackupFilesWithOptionsAsync(request, runtime);
         }
 
+        public ListDataCorrectPreCheckSQLResponse ListDataCorrectPreCheckSQLWithOptions(ListDataCorrectPreCheckSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDataCorrectPreCheckSQLResponse>(DoRPCRequest("ListDataCorrectPreCheckSQL", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListDataCorrectPreCheckSQLResponse> ListDataCorrectPreCheckSQLWithOptionsAsync(ListDataCorrectPreCheckSQLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDataCorrectPreCheckSQLResponse>(await DoRPCRequestAsync("ListDataCorrectPreCheckSQL", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListDataCorrectPreCheckSQLResponse ListDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataCorrectPreCheckSQLWithOptions(request, runtime);
+        }
+
+        public async Task<ListDataCorrectPreCheckSQLResponse> ListDataCorrectPreCheckSQLAsync(ListDataCorrectPreCheckSQLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataCorrectPreCheckSQLWithOptionsAsync(request, runtime);
+        }
+
         public RegisterInstanceResponse RegisterInstanceWithOptions(RegisterInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2595,6 +2627,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteDataCorrectWithOptionsAsync(request, runtime);
+        }
+
+        public ListDataCorrectPreCheckDBResponse ListDataCorrectPreCheckDBWithOptions(ListDataCorrectPreCheckDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDataCorrectPreCheckDBResponse>(DoRPCRequest("ListDataCorrectPreCheckDB", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListDataCorrectPreCheckDBResponse> ListDataCorrectPreCheckDBWithOptionsAsync(ListDataCorrectPreCheckDBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDataCorrectPreCheckDBResponse>(await DoRPCRequestAsync("ListDataCorrectPreCheckDB", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListDataCorrectPreCheckDBResponse ListDataCorrectPreCheckDB(ListDataCorrectPreCheckDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataCorrectPreCheckDBWithOptions(request, runtime);
+        }
+
+        public async Task<ListDataCorrectPreCheckDBResponse> ListDataCorrectPreCheckDBAsync(ListDataCorrectPreCheckDBRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataCorrectPreCheckDBWithOptionsAsync(request, runtime);
         }
 
         public ListTablesResponse ListTablesWithOptions(ListTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
