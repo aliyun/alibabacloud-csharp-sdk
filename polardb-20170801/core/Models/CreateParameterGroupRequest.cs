@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class ModifyDBClusterParametersRequest : TeaModel {
+    public class CreateParameterGroupRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -25,23 +25,29 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string RegionId { get; set; }
 
-        /// <summary>
-        /// Parameters与ParamGroupId二选一必传
-        /// </summary>
+        [NameInMap("DBType")]
+        [Validation(Required=false)]
+        public string DBType { get; set; }
+
+        [NameInMap("DBVersion")]
+        [Validation(Required=false)]
+        public string DBVersion { get; set; }
+
+        [NameInMap("ParameterGroupName")]
+        [Validation(Required=false)]
+        public string ParameterGroupName { get; set; }
+
+        [NameInMap("ParameterGroupDesc")]
+        [Validation(Required=false)]
+        public string ParameterGroupDesc { get; set; }
+
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
-
-        /// <summary>
-        /// Parameters与ParamGroupId二选一必传
-        /// </summary>
-        [NameInMap("ParameterGroupId")]
-        [Validation(Required=false)]
-        public string ParameterGroupId { get; set; }
 
     }
 

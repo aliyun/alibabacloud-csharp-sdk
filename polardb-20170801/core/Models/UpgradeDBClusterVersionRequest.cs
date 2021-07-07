@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public bool? FromTimeService { get; set; }
 
+        [NameInMap("UpgradeType")]
+        [Validation(Required=false)]
+        public string UpgradeType { get; set; }
+
     }
 
 }

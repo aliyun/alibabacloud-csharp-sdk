@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeSQLExplorerRetentionRequest : TeaModel {
+    public class DeleteGlobalDatabaseNetworkRequest : TeaModel {
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -29,13 +29,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("GDNId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string GDNId { get; set; }
 
     }
 

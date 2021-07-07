@@ -21,20 +21,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
-                [NameInMap("Zone")]
-                [Validation(Required=false)]
-                public List<DescribeRegionsResponseBodyRegionsRegionZone> Zone { get; set; }
-                public class DescribeRegionsResponseBodyRegionsRegionZone : TeaModel {
-                    [NameInMap("ZoneId")]
+                public DescribeRegionsResponseBodyRegionsRegionZones Zones { get; set; }
+                public class DescribeRegionsResponseBodyRegionsRegionZones : TeaModel {
+                    [NameInMap("Zone")]
                     [Validation(Required=false)]
-                    public string ZoneId { get; set; }
+                    public List<DescribeRegionsResponseBodyRegionsRegionZonesZone> Zone { get; set; }
+                    public class DescribeRegionsResponseBodyRegionsRegionZonesZone : TeaModel {
+                        [NameInMap("ZoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
 
-                    [NameInMap("VpcEnabled")]
-                    [Validation(Required=false)]
-                    public bool? VpcEnabled { get; set; }
+                        [NameInMap("VpcEnabled")]
+                        [Validation(Required=false)]
+                        public bool? VpcEnabled { get; set; }
+
+                    }
 
                 }
-
+                public string RegionId { get; set; }
             }
         };
 

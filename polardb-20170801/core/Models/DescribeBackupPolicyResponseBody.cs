@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DataLevel2BackupRetentionPeriod { get; set; }
 
+        [NameInMap("BackupFrequency")]
+        [Validation(Required=false)]
+        public string BackupFrequency { get; set; }
+
     }
 
 }

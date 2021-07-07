@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string PlannedStartTime { get; set; }
                 public string TaskId { get; set; }
                 public string OrderId { get; set; }
+                public string DbClusterStatus { get; set; }
+                public string DbClusterDescription { get; set; }
             }
             [NameInMap("TotalRecordCount")]
             [Validation(Required=false)]
@@ -45,6 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

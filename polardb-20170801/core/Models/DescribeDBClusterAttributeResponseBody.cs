@@ -173,6 +173,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        [NameInMap("SubCategory")]
+        [Validation(Required=false)]
+        public string SubCategory { get; set; }
+
     }
 
 }

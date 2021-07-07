@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Polardb20170801
+dotnet add package AlibabaCloud.SDK.Polardb20170801
 ```
 
 ## 问题

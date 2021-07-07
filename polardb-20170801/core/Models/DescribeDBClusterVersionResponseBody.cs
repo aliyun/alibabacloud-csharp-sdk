@@ -37,6 +37,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBMinorVersion { get; set; }
 
+        [NameInMap("ProxyRevisionVersion")]
+        [Validation(Required=false)]
+        public string ProxyRevisionVersion { get; set; }
+
+        [NameInMap("ProxyVersionStatus")]
+        [Validation(Required=false)]
+        public string ProxyVersionStatus { get; set; }
+
+        [NameInMap("ProxyLatestVersion")]
+        [Validation(Required=false)]
+        public string ProxyLatestVersion { get; set; }
+
+        [NameInMap("DBLatestVersion")]
+        [Validation(Required=false)]
+        public string DBLatestVersion { get; set; }
+
     }
 
 }

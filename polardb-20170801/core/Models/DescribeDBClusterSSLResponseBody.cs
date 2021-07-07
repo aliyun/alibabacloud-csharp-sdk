@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SSLAutoRotate")]
+        [Validation(Required=false)]
+        public string SSLAutoRotate { get; set; }
+
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDBClusterSSLResponseBodyItems> Items { get; set; }

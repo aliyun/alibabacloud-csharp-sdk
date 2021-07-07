@@ -7,8 +7,14 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Polardb20170801</AssemblyName>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <LangVersion>5</LangVersion>
+    <Authors>Alibaba Cloud</Authors>
+    <Description>Alibaba Cloud ApsaraDB for POLARDB (20170801) SDK Library for .NET</Description>
+    <PackageTags>Alibaba Aliyun ApsaraDB for POLARDB SDK</PackageTags>
+    <Copyright>©2009-present Alibaba Cloud</Copyright>
+    <PackageProjectUrl>https://github.com/aliyun/alibabacloud-csharp-sdk</PackageProjectUrl>
+    <PackageIconUrl>https://www.alibabacloud.com/favicon.ico</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
     <DefineConstants>NETSTANDARD2_0</DefineConstants>
@@ -35,8 +41,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.11"/>
-    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.7"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.13"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
-    <PackageReference Include="Tea" Version="1.0.9"/>
+    <PackageReference Include="Tea" Version="1.0.11"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.10"/>
   </ItemGroup>
 </Project>

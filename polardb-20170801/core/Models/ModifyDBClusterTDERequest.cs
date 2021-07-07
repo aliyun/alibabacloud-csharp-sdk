@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
+        [NameInMap("EncryptNewTables")]
+        [Validation(Required=false)]
+        public string EncryptNewTables { get; set; }
+
     }
 
 }

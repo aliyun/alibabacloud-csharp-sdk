@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string PreferredBackupPeriod { get; set; }
 
-        [NameInMap("BackupRetentionPeriod")]
-        [Validation(Required=false)]
-        public string BackupRetentionPeriod { get; set; }
-
         [NameInMap("DataLevel1BackupRetentionPeriod")]
         [Validation(Required=false)]
         public string DataLevel1BackupRetentionPeriod { get; set; }
@@ -52,6 +48,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("BackupRetentionPolicyOnClusterDeletion")]
         [Validation(Required=false)]
         public string BackupRetentionPolicyOnClusterDeletion { get; set; }
+
+        [NameInMap("BackupFrequency")]
+        [Validation(Required=false)]
+        public string BackupFrequency { get; set; }
 
     }
 

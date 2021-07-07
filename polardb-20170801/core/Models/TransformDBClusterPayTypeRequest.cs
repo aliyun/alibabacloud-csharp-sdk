@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class ModifyDBClusterParametersRequest : TeaModel {
+    public class TransformDBClusterPayTypeRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -29,19 +29,29 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        /// <summary>
-        /// Parameters与ParamGroupId二选一必传
-        /// </summary>
-        [NameInMap("Parameters")]
+        [NameInMap("PayType")]
         [Validation(Required=false)]
-        public string Parameters { get; set; }
+        public string PayType { get; set; }
 
-        /// <summary>
-        /// Parameters与ParamGroupId二选一必传
-        /// </summary>
-        [NameInMap("ParameterGroupId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ParameterGroupId { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("UsedTime")]
+        [Validation(Required=false)]
+        public string UsedTime { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 
