@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string AsrBaseId { get; set; }
 
+        [NameInMap("StreamAsr")]
+        [Validation(Required=false)]
+        public int? StreamAsr { get; set; }
+
     }
 
 }

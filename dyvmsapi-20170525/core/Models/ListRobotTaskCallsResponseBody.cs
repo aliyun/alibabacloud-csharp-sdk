@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ListRobotTaskCallsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string TotalCount { get; set; }
+        public string Data { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public string PageNo { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -25,17 +33,9 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string Data { get; set; }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public string PageNo { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+        public string TotalCount { get; set; }
 
     }
 
