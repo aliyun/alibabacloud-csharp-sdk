@@ -63,6 +63,7 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
                 public string CreateTime { get; set; }
                 public int? AppStatus { get; set; }
                 public string ProdVersion { get; set; }
+                public string InstanceId { get; set; }
             }
         };
 

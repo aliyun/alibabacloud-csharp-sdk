@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class RemoveUserExtensionByKeysResponse : TeaModel {
+    public class ListRoomMessagesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RemoveUserExtensionByKeysResponseBody Body { get; set; }
+        public ListRoomMessagesResponseBody Body { get; set; }
 
     }
 

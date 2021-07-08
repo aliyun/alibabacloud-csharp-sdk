@@ -83,30 +83,6 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 
                 }
 
-                /// <summary>
-                /// 多媒体配置
-                /// </summary>
-                [NameInMap("MediaConfig")]
-                [Validation(Required=false)]
-                public GetCommonConfigResponseBodyResultCommonConfigMediaConfig MediaConfig { get; set; }
-                public class GetCommonConfigResponseBodyResultCommonConfigMediaConfig : TeaModel {
-                    [NameInMap("Domain")]
-                    [Validation(Required=false)]
-                    public string Domain { get; set; }
-                };
-
-                /// <summary>
-                /// 长连接配置
-                /// </summary>
-                [NameInMap("ConnectionConfig")]
-                [Validation(Required=false)]
-                public GetCommonConfigResponseBodyResultCommonConfigConnectionConfig ConnectionConfig { get; set; }
-                public class GetCommonConfigResponseBodyResultCommonConfigConnectionConfig : TeaModel {
-                    [NameInMap("Domain")]
-                    [Validation(Required=false)]
-                    public string Domain { get; set; }
-                };
-
             }
         };
 

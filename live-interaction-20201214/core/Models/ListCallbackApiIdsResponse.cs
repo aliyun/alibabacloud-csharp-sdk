@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class RemoveExtensionByKeysResponse : TeaModel {
+    public class ListCallbackApiIdsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RemoveExtensionByKeysResponseBody Body { get; set; }
+        public ListCallbackApiIdsResponseBody Body { get; set; }
 
     }
 

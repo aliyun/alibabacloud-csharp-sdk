@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class SetUserExtensionByKeysResponse : TeaModel {
+    public class GetRoomStatisticsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public SetUserExtensionByKeysResponseBody Body { get; set; }
+        public GetRoomStatisticsResponseBody Body { get; set; }
 
     }
 

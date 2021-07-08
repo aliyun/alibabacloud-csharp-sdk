@@ -83,6 +83,12 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
                     [NameInMap("Apis")]
                     [Validation(Required=false)]
                     public Dictionary<string, string> Apis { get; set; }
+                    [NameInMap("Spis")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, string> Spis { get; set; }
+                    [NameInMap("Events")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, string> Events { get; set; }
                 };
 
             }
