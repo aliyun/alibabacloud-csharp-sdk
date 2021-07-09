@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
                 public string Name { get; set; }
                 public bool? IsPublic { get; set; }
                 public int? TasksCount { get; set; }
-                public int? RoleId { get; set; }
+                public string RoleId { get; set; }
                 public string Id { get; set; }
             }
         };

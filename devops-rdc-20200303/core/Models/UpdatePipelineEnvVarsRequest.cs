@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,26 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
-    public class InsertPipelineMemberRequest : TeaModel {
+    public class UpdatePipelineEnvVarsRequest : TeaModel {
         [NameInMap("OrgId")]
         [Validation(Required=false)]
         public string OrgId { get; set; }
 
+        /// <summary>
+        /// 流水线id
+        /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public long? PipelineId { get; set; }
 
-        [NameInMap("UserPk")]
+        /// <summary>
+        /// 需要修改的环境变量和默认值，json形式
+        /// </summary>
+        [NameInMap("EnvVars")]
         [Validation(Required=false)]
-        public string UserPk { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        [NameInMap("RoleName")]
-        [Validation(Required=false)]
-        public string RoleName { get; set; }
+        public string EnvVars { get; set; }
 
     }
 

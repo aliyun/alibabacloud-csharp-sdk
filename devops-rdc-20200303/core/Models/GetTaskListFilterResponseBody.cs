@@ -60,7 +60,6 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
                 public string ObjectType { get; set; }
                 public int? Progress { get; set; }
                 public string UntilDate { get; set; }
-                public int? Pos { get; set; }
                 public string StoryPoint { get; set; }
                 public int? ObjectlinksCount { get; set; }
                 public string StartDate { get; set; }

@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Devops-rdc20200303</AssemblyName>
-    <Version>1.0.2</Version>
+    <Version>2.0.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud devops-rdc (20200303) SDK Library for .NET</Description>
@@ -44,5 +44,6 @@
     <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.13"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.0.11"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.10"/>
   </ItemGroup>
 </Project>

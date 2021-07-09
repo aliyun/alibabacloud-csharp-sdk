@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,26 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 {
-    public class InsertPipelineMemberRequest : TeaModel {
+    public class AddCodeupSourceToPipelineRequest : TeaModel {
         [NameInMap("OrgId")]
         [Validation(Required=false)]
         public string OrgId { get; set; }
 
+        /// <summary>
+        /// 流水线ID
+        /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public long? PipelineId { get; set; }
 
-        [NameInMap("UserPk")]
+        /// <summary>
+        /// Codeup的代码库路径，比如 group1/repo1
+        /// </summary>
+        [NameInMap("CodePath")]
         [Validation(Required=false)]
-        public string UserPk { get; set; }
+        public string CodePath { get; set; }
 
-        [NameInMap("UserId")]
+        /// <summary>
+        /// 代码库分支
+        /// </summary>
+        [NameInMap("CodeBranch")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        [NameInMap("RoleName")]
-        [Validation(Required=false)]
-        public string RoleName { get; set; }
+        public string CodeBranch { get; set; }
 
     }
 

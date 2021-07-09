@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
 
         }
 
+        [NameInMap("NextPageToken")]
+        [Validation(Required=false)]
+        public string NextPageToken { get; set; }
+
     }
 
 }

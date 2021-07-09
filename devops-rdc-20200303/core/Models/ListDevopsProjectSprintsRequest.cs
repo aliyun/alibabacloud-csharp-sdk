@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Devops_rdc20200303.Models
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("PageToken")]
+        [Validation(Required=false)]
+        public string PageToken { get; set; }
+
     }
 
 }
