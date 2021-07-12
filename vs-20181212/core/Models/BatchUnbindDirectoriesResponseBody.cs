@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<BatchUnbindDirectoriesResponseBodyResults> Results { get; set; }
         public class BatchUnbindDirectoriesResponseBodyResults : TeaModel {
-            [NameInMap("DeviceId")]
-            [Validation(Required=false)]
-            public string DeviceId { get; set; }
-
             [NameInMap("Error")]
             [Validation(Required=false)]
             public string Error { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("DirectoryId")]
             [Validation(Required=false)]
             public string DirectoryId { get; set; }
+
+            [NameInMap("DeviceId")]
+            [Validation(Required=false)]
+            public string DeviceId { get; set; }
 
         }
 

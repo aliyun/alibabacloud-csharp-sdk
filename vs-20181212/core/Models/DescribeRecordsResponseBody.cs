@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRecordsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
@@ -21,17 +17,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("NextStartTime")]
+        [Validation(Required=false)]
+        public string NextStartTime { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
         [NameInMap("PageCount")]
         [Validation(Required=false)]
         public long? PageCount { get; set; }
-
-        [NameInMap("NextStartTime")]
-        [Validation(Required=false)]
-        public string NextStartTime { get; set; }
 
         [NameInMap("Records")]
         [Validation(Required=false)]
@@ -61,13 +61,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string StreamId { get; set; }
 
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public string EndTime { get; set; }
-
             [NameInMap("OssObject")]
             [Validation(Required=false)]
             public string OssObject { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
 
             [NameInMap("StartTime")]
             [Validation(Required=false)]

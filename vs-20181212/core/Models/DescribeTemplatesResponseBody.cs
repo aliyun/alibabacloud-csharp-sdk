@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeTemplatesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
         [NameInMap("PageCount")]
         [Validation(Required=false)]
@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Trigger { get; set; }
 
+            [NameInMap("OssFilePrefix")]
+            [Validation(Required=false)]
+            public string OssFilePrefix { get; set; }
+
             [NameInMap("HlsTs")]
             [Validation(Required=false)]
             public string HlsTs { get; set; }
@@ -49,13 +53,41 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Mp4 { get; set; }
 
+            [NameInMap("JpgOnDemand")]
+            [Validation(Required=false)]
+            public string JpgOnDemand { get; set; }
+
+            [NameInMap("OssBucket")]
+            [Validation(Required=false)]
+            public string OssBucket { get; set; }
+
+            [NameInMap("JpgSequence")]
+            [Validation(Required=false)]
+            public string JpgSequence { get; set; }
+
             [NameInMap("JpgOverwrite")]
             [Validation(Required=false)]
             public string JpgOverwrite { get; set; }
 
+            [NameInMap("FileFormat")]
+            [Validation(Required=false)]
+            public string FileFormat { get; set; }
+
             [NameInMap("Callback")]
             [Validation(Required=false)]
             public string Callback { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
+            [NameInMap("Interval")]
+            [Validation(Required=false)]
+            public long? Interval { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -73,13 +105,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string HlsM3u8 { get; set; }
 
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("Flv")]
             [Validation(Required=false)]
             public string Flv { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
@@ -89,9 +121,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string OssEndpoint { get; set; }
 
-            [NameInMap("OssFilePrefix")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public string OssFilePrefix { get; set; }
+            public string Id { get; set; }
 
             [NameInMap("TransConfigs")]
             [Validation(Required=false)]
@@ -130,38 +162,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Id { get; set; }
 
             }
-
-            [NameInMap("JpgOnDemand")]
-            [Validation(Required=false)]
-            public string JpgOnDemand { get; set; }
-
-            [NameInMap("OssBucket")]
-            [Validation(Required=false)]
-            public string OssBucket { get; set; }
-
-            [NameInMap("JpgSequence")]
-            [Validation(Required=false)]
-            public string JpgSequence { get; set; }
-
-            [NameInMap("FileFormat")]
-            [Validation(Required=false)]
-            public string FileFormat { get; set; }
-
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public string EndTime { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("Interval")]
-            [Validation(Required=false)]
-            public long? Interval { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
 
         }
 

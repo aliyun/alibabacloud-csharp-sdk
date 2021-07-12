@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDirectoriesResponseBody : TeaModel {
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public long? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
+        [NameInMap("PageCount")]
+        [Validation(Required=false)]
+        public long? PageCount { get; set; }
+
         [NameInMap("Directories")]
         [Validation(Required=false)]
         public List<DescribeDirectoriesResponseBodyDirectories> Directories { get; set; }
@@ -38,26 +58,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Id { get; set; }
 
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public long? PageNum { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=false)]
-        public long? PageCount { get; set; }
 
     }
 

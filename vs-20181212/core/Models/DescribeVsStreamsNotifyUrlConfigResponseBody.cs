@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("AuthType")]
             [Validation(Required=false)]
             public string AuthType { get; set; }
-            [NameInMap("NotifyUrl")]
-            [Validation(Required=false)]
-            public string NotifyUrl { get; set; }
             [NameInMap("AuthKey")]
             [Validation(Required=false)]
             public string AuthKey { get; set; }
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
+            [NameInMap("NotifyUrl")]
+            [Validation(Required=false)]
+            public string NotifyUrl { get; set; }
         };
 
     }

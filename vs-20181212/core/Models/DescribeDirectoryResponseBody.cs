@@ -13,21 +13,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string ParentId { get; set; }
 
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("CreatedTime")]
-        [Validation(Required=false)]
-        public string CreatedTime { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Id")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -36,6 +28,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("CreatedTime")]
+        [Validation(Required=false)]
+        public string CreatedTime { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
     }
 

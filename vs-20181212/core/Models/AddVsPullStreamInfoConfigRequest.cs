@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -15,10 +12,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ShowLog")]
-        [Validation(Required=false)]
-        public string ShowLog { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]

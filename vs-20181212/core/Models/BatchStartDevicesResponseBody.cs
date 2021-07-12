@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<BatchStartDevicesResponseBodyResults> Results { get; set; }
         public class BatchStartDevicesResponseBodyResults : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
             [NameInMap("Streams")]
             [Validation(Required=false)]
             public List<BatchStartDevicesResponseBodyResultsStreams> Streams { get; set; }
@@ -34,10 +38,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Id { get; set; }
 
             }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
 
         }
 

@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         [NameInMap("SnapshotDataPerInterval")]
         [Validation(Required=false)]
@@ -25,18 +33,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule : TeaModel {
-                public string TimeStamp { get; set; }
                 public string SnapshotValue { get; set; }
+                public string TimeStamp { get; set; }
             }
         };
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
 
     }
 

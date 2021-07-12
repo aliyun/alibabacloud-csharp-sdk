@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeGroupsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
         [NameInMap("PageCount")]
         [Validation(Required=false)]
@@ -41,21 +41,49 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public bool? LazyPull { get; set; }
 
+            [NameInMap("PlayDomain")]
+            [Validation(Required=false)]
+            public string PlayDomain { get; set; }
+
+            [NameInMap("GbPort")]
+            [Validation(Required=false)]
+            public long? GbPort { get; set; }
+
+            [NameInMap("CaptureInterval")]
+            [Validation(Required=false)]
+            public int? CaptureInterval { get; set; }
+
             [NameInMap("Callback")]
             [Validation(Required=false)]
             public string Callback { get; set; }
+
+            [NameInMap("GbId")]
+            [Validation(Required=false)]
+            public string GbId { get; set; }
+
+            [NameInMap("GbIp")]
+            [Validation(Required=false)]
+            public string GbIp { get; set; }
+
+            [NameInMap("CaptureImage")]
+            [Validation(Required=false)]
+            public int? CaptureImage { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
+
             [NameInMap("App")]
             [Validation(Required=false)]
             public string App { get; set; }
 
-            [NameInMap("Region")]
+            [NameInMap("AliasId")]
             [Validation(Required=false)]
-            public string Region { get; set; }
+            public string AliasId { get; set; }
 
             [NameInMap("Enabled")]
             [Validation(Required=false)]
@@ -65,17 +93,25 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string InProtocol { get; set; }
 
+            [NameInMap("CaptureOssPath")]
+            [Validation(Required=false)]
+            public string CaptureOssPath { get; set; }
+
+            [NameInMap("CaptureOssBucket")]
+            [Validation(Required=false)]
+            public string CaptureOssBucket { get; set; }
+
             [NameInMap("OutProtocol")]
             [Validation(Required=false)]
             public string OutProtocol { get; set; }
 
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("PushDomain")]
             [Validation(Required=false)]
             public string PushDomain { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
@@ -84,6 +120,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("CaptureVideo")]
             [Validation(Required=false)]
             public int? CaptureVideo { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("GbTcpPorts")]
+            [Validation(Required=false)]
+            public List<string> GbTcpPorts { get; set; }
+
+            [NameInMap("GbUdpPorts")]
+            [Validation(Required=false)]
+            public List<string> GbUdpPorts { get; set; }
 
             [NameInMap("Stats")]
             [Validation(Required=false)]
@@ -102,54 +150,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 [Validation(Required=false)]
                 public long? IedNum { get; set; }
             };
-
-            [NameInMap("PlayDomain")]
-            [Validation(Required=false)]
-            public string PlayDomain { get; set; }
-
-            [NameInMap("GbPort")]
-            [Validation(Required=false)]
-            public long? GbPort { get; set; }
-
-            [NameInMap("CaptureInterval")]
-            [Validation(Required=false)]
-            public int? CaptureInterval { get; set; }
-
-            [NameInMap("GbTcpPorts")]
-            [Validation(Required=false)]
-            public List<string> GbTcpPorts { get; set; }
-
-            [NameInMap("GbId")]
-            [Validation(Required=false)]
-            public string GbId { get; set; }
-
-            [NameInMap("GbIp")]
-            [Validation(Required=false)]
-            public string GbIp { get; set; }
-
-            [NameInMap("CaptureImage")]
-            [Validation(Required=false)]
-            public int? CaptureImage { get; set; }
-
-            [NameInMap("AliasId")]
-            [Validation(Required=false)]
-            public string AliasId { get; set; }
-
-            [NameInMap("CaptureOssPath")]
-            [Validation(Required=false)]
-            public string CaptureOssPath { get; set; }
-
-            [NameInMap("CaptureOssBucket")]
-            [Validation(Required=false)]
-            public string CaptureOssBucket { get; set; }
-
-            [NameInMap("GbUdpPorts")]
-            [Validation(Required=false)]
-            public List<string> GbUdpPorts { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
 
         }
 

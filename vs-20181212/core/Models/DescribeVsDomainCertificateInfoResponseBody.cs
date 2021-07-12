@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainCertificateInfoResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
         public DescribeVsDomainCertificateInfoResponseBodyCertInfos CertInfos { get; set; }
@@ -29,10 +33,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string DomainName { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

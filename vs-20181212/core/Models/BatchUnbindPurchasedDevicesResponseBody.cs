@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<BatchUnbindPurchasedDevicesResponseBodyResults> Results { get; set; }
         public class BatchUnbindPurchasedDevicesResponseBodyResults : TeaModel {
-            [NameInMap("DeviceId")]
-            [Validation(Required=false)]
-            public string DeviceId { get; set; }
-
             [NameInMap("Error")]
             [Validation(Required=false)]
             public string Error { get; set; }
+
+            [NameInMap("DeviceId")]
+            [Validation(Required=false)]
+            public string DeviceId { get; set; }
 
         }
 

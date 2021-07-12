@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<BatchBindParentPlatformDevicesResponseBodyResults> Results { get; set; }
         public class BatchBindParentPlatformDevicesResponseBodyResults : TeaModel {
+            [NameInMap("Error")]
+            [Validation(Required=false)]
+            public string Error { get; set; }
+
             [NameInMap("ParentPlatformId")]
             [Validation(Required=false)]
             public string ParentPlatformId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("DeviceId")]
             [Validation(Required=false)]
             public string DeviceId { get; set; }
-
-            [NameInMap("Error")]
-            [Validation(Required=false)]
-            public string Error { get; set; }
 
         }
 

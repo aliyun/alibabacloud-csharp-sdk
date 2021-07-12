@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsStreamsOnlineListResponseBody : TeaModel {
-        [NameInMap("TotalNum")]
-        [Validation(Required=false)]
-        public int? TotalNum { get; set; }
-
         [NameInMap("TotalPage")]
         [Validation(Required=false)]
         public int? TotalPage { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalNum")]
+        [Validation(Required=false)]
+        public int? TotalNum { get; set; }
 
         [NameInMap("OnlineInfo")]
         [Validation(Required=false)]

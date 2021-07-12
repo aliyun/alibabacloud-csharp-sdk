@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeParentPlatformsResponseBody : TeaModel {
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public long? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
+        [NameInMap("PageCount")]
+        [Validation(Required=false)]
+        public long? PageCount { get; set; }
+
         [NameInMap("Platforms")]
         [Validation(Required=false)]
         public List<DescribeParentPlatformsResponseBodyPlatforms> Platforms { get; set; }
@@ -21,13 +41,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public long? ClientPort { get; set; }
 
-            [NameInMap("ClientGbId")]
-            [Validation(Required=false)]
-            public string ClientGbId { get; set; }
-
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
+
+            [NameInMap("ClientGbId")]
+            [Validation(Required=false)]
+            public string ClientGbId { get; set; }
 
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -37,13 +57,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public long? Port { get; set; }
 
-            [NameInMap("ClientPassword")]
-            [Validation(Required=false)]
-            public string ClientPassword { get; set; }
-
             [NameInMap("ClientUsername")]
             [Validation(Required=false)]
             public string ClientUsername { get; set; }
+
+            [NameInMap("ClientPassword")]
+            [Validation(Required=false)]
+            public string ClientPassword { get; set; }
 
             [NameInMap("AutoStart")]
             [Validation(Required=false)]
@@ -78,26 +98,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Id { get; set; }
 
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public long? PageNum { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageCount")]
-        [Validation(Required=false)]
-        public long? PageCount { get; set; }
 
     }
 

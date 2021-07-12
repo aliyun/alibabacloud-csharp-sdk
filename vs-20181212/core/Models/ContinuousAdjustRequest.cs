@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("ShowLog")]
-        [Validation(Required=false)]
-        public string ShowLog { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Focus")]
         [Validation(Required=false)]
         public string Focus { get; set; }
+
+        [NameInMap("SubProtocol")]
+        [Validation(Required=false)]
+        public string SubProtocol { get; set; }
 
     }
 

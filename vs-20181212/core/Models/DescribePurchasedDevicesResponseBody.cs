@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribePurchasedDevicesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public long? PageNum { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
         [NameInMap("PageCount")]
         [Validation(Required=false)]
@@ -45,21 +45,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Vendor { get; set; }
 
-            [NameInMap("GroupName")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string GroupName { get; set; }
-
-            [NameInMap("GroupId")]
-            [Validation(Required=false)]
-            public string GroupId { get; set; }
+            public string Description { get; set; }
 
             [NameInMap("RegisterCode")]
             [Validation(Required=false)]
             public string RegisterCode { get; set; }
 
-            [NameInMap("Description")]
+            [NameInMap("GroupId")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public string GroupId { get; set; }
+
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
 
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -73,13 +73,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
-            [NameInMap("OrderId")]
-            [Validation(Required=false)]
-            public string OrderId { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public string OrderId { get; set; }
 
         }
 

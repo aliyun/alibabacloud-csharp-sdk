@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchForbidVsStreamResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ForbidResult")]
         [Validation(Required=false)]
         public BatchForbidVsStreamResponseBodyForbidResult ForbidResult { get; set; }
@@ -18,6 +22,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public List<BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo> ForbidResultInfo { get; set; }
             public class BatchForbidVsStreamResponseBodyForbidResultForbidResultInfo : TeaModel {
                 public string Result { get; set; }
+                public int? Count { get; set; }
+                public string Detail { get; set; }
                 public BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels Channels { get; set; }
                 public class BatchForbidVsStreamResponseBodyForbidResultForbidResultInfoChannels : TeaModel {
                     [NameInMap("Channel")]
@@ -25,14 +31,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                     public List<string> Channel { get; set; }
 
                 }
-                public int? Count { get; set; }
-                public string Detail { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

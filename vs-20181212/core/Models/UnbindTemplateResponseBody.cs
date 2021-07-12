@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UnbindTemplateResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("TemplateType")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string TemplateType { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("TemplateType")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string TemplateType { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("InstanceType")]
         [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsStreamsPublishListResponseBody : TeaModel {
-        [NameInMap("TotalNum")]
-        [Validation(Required=false)]
-        public int? TotalNum { get; set; }
-
         [NameInMap("TotalPage")]
         [Validation(Required=false)]
         public int? TotalPage { get; set; }
@@ -29,6 +25,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalNum")]
+        [Validation(Required=false)]
+        public int? TotalNum { get; set; }
+
         [NameInMap("PublishInfo")]
         [Validation(Required=false)]
         public DescribeVsStreamsPublishListResponseBodyPublishInfo PublishInfo { get; set; }
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string EdgeNodeAddr { get; set; }
                 public string PublishUrl { get; set; }
                 public string StreamName { get; set; }
-                public string StopTime { get; set; }
                 public string DomainName { get; set; }
+                public string StopTime { get; set; }
                 public string TranscodeId { get; set; }
                 public string PublishDomain { get; set; }
-                public string PublishTime { get; set; }
                 public string AppName { get; set; }
+                public string PublishTime { get; set; }
                 public string PublishType { get; set; }
                 public string Transcoded { get; set; }
                 public string ClientAddr { get; set; }

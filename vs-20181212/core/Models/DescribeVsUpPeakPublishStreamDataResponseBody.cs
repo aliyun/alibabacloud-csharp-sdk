@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public List<DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData> DescribeVsUpPeakPublishStreamData { get; set; }
             public class DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData : TeaModel {
                 public string QueryTime { get; set; }
+                public string BandWidth { get; set; }
                 public string StatName { get; set; }
                 public string PeakTime { get; set; }
-                public string BandWidth { get; set; }
                 public int? PublishStreamNum { get; set; }
             }
         };

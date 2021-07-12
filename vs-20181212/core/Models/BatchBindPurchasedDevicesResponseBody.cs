@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<BatchBindPurchasedDevicesResponseBodyResults> Results { get; set; }
         public class BatchBindPurchasedDevicesResponseBodyResults : TeaModel {
+            [NameInMap("Error")]
+            [Validation(Required=false)]
+            public string Error { get; set; }
+
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
-
-            [NameInMap("Error")]
-            [Validation(Required=false)]
-            public string Error { get; set; }
 
         }
 
