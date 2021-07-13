@@ -197,38 +197,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return await DescribeSagRouteListWithOptionsAsync(request, runtime);
         }
 
-        public DescribePolicyBasedRoutingsResponse DescribePolicyBasedRoutingsWithOptions(DescribePolicyBasedRoutingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePolicyBasedRoutingsResponse>(DoRPCRequest("DescribePolicyBasedRoutings", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribePolicyBasedRoutingsResponse> DescribePolicyBasedRoutingsWithOptionsAsync(DescribePolicyBasedRoutingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePolicyBasedRoutingsResponse>(await DoRPCRequestAsync("DescribePolicyBasedRoutings", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribePolicyBasedRoutingsResponse DescribePolicyBasedRoutings(DescribePolicyBasedRoutingsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribePolicyBasedRoutingsWithOptions(request, runtime);
-        }
-
-        public async Task<DescribePolicyBasedRoutingsResponse> DescribePolicyBasedRoutingsAsync(DescribePolicyBasedRoutingsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribePolicyBasedRoutingsWithOptionsAsync(request, runtime);
-        }
-
         public ProbeAccessPointNetworkQualityResponse ProbeAccessPointNetworkQualityWithOptions(ProbeAccessPointNetworkQualityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -739,38 +707,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQosWithOptionsAsync(request, runtime);
-        }
-
-        public ModifySagECRouteBackupResponse ModifySagECRouteBackupWithOptions(ModifySagECRouteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<ModifySagECRouteBackupResponse>(DoRPCRequest("ModifySagECRouteBackup", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<ModifySagECRouteBackupResponse> ModifySagECRouteBackupWithOptionsAsync(ModifySagECRouteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<ModifySagECRouteBackupResponse>(await DoRPCRequestAsync("ModifySagECRouteBackup", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public ModifySagECRouteBackupResponse ModifySagECRouteBackup(ModifySagECRouteBackupRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ModifySagECRouteBackupWithOptions(request, runtime);
-        }
-
-        public async Task<ModifySagECRouteBackupResponse> ModifySagECRouteBackupAsync(ModifySagECRouteBackupRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ModifySagECRouteBackupWithOptionsAsync(request, runtime);
         }
 
         public DiscribeSmartAccessGatewayDiagnosisReportResponse DiscribeSmartAccessGatewayDiagnosisReportWithOptions(DiscribeSmartAccessGatewayDiagnosisReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2085,38 +2021,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return await KickOutClientsWithOptionsAsync(request, runtime);
         }
 
-        public DescribeSagRouteableAddressResponse DescribeSagRouteableAddressWithOptions(DescribeSagRouteableAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeSagRouteableAddressResponse>(DoRPCRequest("DescribeSagRouteableAddress", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribeSagRouteableAddressResponse> DescribeSagRouteableAddressWithOptionsAsync(DescribeSagRouteableAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeSagRouteableAddressResponse>(await DoRPCRequestAsync("DescribeSagRouteableAddress", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribeSagRouteableAddressResponse DescribeSagRouteableAddress(DescribeSagRouteableAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSagRouteableAddressWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeSagRouteableAddressResponse> DescribeSagRouteableAddressAsync(DescribeSagRouteableAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSagRouteableAddressWithOptionsAsync(request, runtime);
-        }
-
         public ModifySagPortRoleResponse ModifySagPortRoleWithOptions(ModifySagPortRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2275,38 +2179,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmartAGEnterpriseCodeWithOptionsAsync(request, runtime);
-        }
-
-        public DescribePbrInterfacesResponse DescribePbrInterfacesWithOptions(DescribePbrInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePbrInterfacesResponse>(DoRPCRequest("DescribePbrInterfaces", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribePbrInterfacesResponse> DescribePbrInterfacesWithOptionsAsync(DescribePbrInterfacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePbrInterfacesResponse>(await DoRPCRequestAsync("DescribePbrInterfaces", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribePbrInterfacesResponse DescribePbrInterfaces(DescribePbrInterfacesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribePbrInterfacesWithOptions(request, runtime);
-        }
-
-        public async Task<DescribePbrInterfacesResponse> DescribePbrInterfacesAsync(DescribePbrInterfacesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribePbrInterfacesWithOptionsAsync(request, runtime);
         }
 
         public AssociateACLResponse AssociateACLWithOptions(AssociateACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3909,38 +3781,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return await GrantSagInstanceToCcnWithOptionsAsync(request, runtime);
         }
 
-        public OrchestrateSagECRouteBackupResponse OrchestrateSagECRouteBackupWithOptions(OrchestrateSagECRouteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<OrchestrateSagECRouteBackupResponse>(DoRPCRequest("OrchestrateSagECRouteBackup", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<OrchestrateSagECRouteBackupResponse> OrchestrateSagECRouteBackupWithOptionsAsync(OrchestrateSagECRouteBackupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<OrchestrateSagECRouteBackupResponse>(await DoRPCRequestAsync("OrchestrateSagECRouteBackup", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public OrchestrateSagECRouteBackupResponse OrchestrateSagECRouteBackup(OrchestrateSagECRouteBackupRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return OrchestrateSagECRouteBackupWithOptions(request, runtime);
-        }
-
-        public async Task<OrchestrateSagECRouteBackupResponse> OrchestrateSagECRouteBackupAsync(OrchestrateSagECRouteBackupRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await OrchestrateSagECRouteBackupWithOptionsAsync(request, runtime);
-        }
-
         public ModifySmartAccessGatewayResponse ModifySmartAccessGatewayWithOptions(ModifySmartAccessGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4005,38 +3845,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return await UpdateSmartAccessGatewayVersionWithOptionsAsync(request, runtime);
         }
 
-        public ModifySagCidrResponse ModifySagCidrWithOptions(ModifySagCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<ModifySagCidrResponse>(DoRPCRequest("ModifySagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<ModifySagCidrResponse> ModifySagCidrWithOptionsAsync(ModifySagCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<ModifySagCidrResponse>(await DoRPCRequestAsync("ModifySagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public ModifySagCidrResponse ModifySagCidr(ModifySagCidrRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ModifySagCidrWithOptions(request, runtime);
-        }
-
-        public async Task<ModifySagCidrResponse> ModifySagCidrAsync(ModifySagCidrRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ModifySagCidrWithOptionsAsync(request, runtime);
-        }
-
         public DescribeSagDropTopNResponse DescribeSagDropTopNWithOptions(DescribeSagDropTopNRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4099,38 +3907,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSagLanListWithOptionsAsync(request, runtime);
-        }
-
-        public DescribePbrRulesResponse DescribePbrRulesWithOptions(DescribePbrRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePbrRulesResponse>(DoRPCRequest("DescribePbrRules", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribePbrRulesResponse> DescribePbrRulesWithOptionsAsync(DescribePbrRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePbrRulesResponse>(await DoRPCRequestAsync("DescribePbrRules", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribePbrRulesResponse DescribePbrRules(DescribePbrRulesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribePbrRulesWithOptions(request, runtime);
-        }
-
-        public async Task<DescribePbrRulesResponse> DescribePbrRulesAsync(DescribePbrRulesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribePbrRulesWithOptionsAsync(request, runtime);
         }
 
         public DescribeACLAttributeResponse DescribeACLAttributeWithOptions(DescribeACLAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4611,38 +4387,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDnatEntryWithOptionsAsync(request, runtime);
-        }
-
-        public SetSagRouteableAddressResponse SetSagRouteableAddressWithOptions(SetSagRouteableAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<SetSagRouteableAddressResponse>(DoRPCRequest("SetSagRouteableAddress", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<SetSagRouteableAddressResponse> SetSagRouteableAddressWithOptionsAsync(SetSagRouteableAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<SetSagRouteableAddressResponse>(await DoRPCRequestAsync("SetSagRouteableAddress", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public SetSagRouteableAddressResponse SetSagRouteableAddress(SetSagRouteableAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return SetSagRouteableAddressWithOptions(request, runtime);
-        }
-
-        public async Task<SetSagRouteableAddressResponse> SetSagRouteableAddressAsync(SetSagRouteableAddressRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await SetSagRouteableAddressWithOptionsAsync(request, runtime);
         }
 
         public ModifyACLResponse ModifyACLWithOptions(ModifyACLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5347,38 +5091,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQosPolicyWithOptionsAsync(request, runtime);
-        }
-
-        public DescribeSagECRouteBackupAttributeResponse DescribeSagECRouteBackupAttributeWithOptions(DescribeSagECRouteBackupAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeSagECRouteBackupAttributeResponse>(DoRPCRequest("DescribeSagECRouteBackupAttribute", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribeSagECRouteBackupAttributeResponse> DescribeSagECRouteBackupAttributeWithOptionsAsync(DescribeSagECRouteBackupAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeSagECRouteBackupAttributeResponse>(await DoRPCRequestAsync("DescribeSagECRouteBackupAttribute", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribeSagECRouteBackupAttributeResponse DescribeSagECRouteBackupAttribute(DescribeSagECRouteBackupAttributeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSagECRouteBackupAttributeWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeSagECRouteBackupAttributeResponse> DescribeSagECRouteBackupAttributeAsync(DescribeSagECRouteBackupAttributeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSagECRouteBackupAttributeWithOptionsAsync(request, runtime);
         }
 
         public DescribeFlowLogSagsResponse DescribeFlowLogSagsWithOptions(DescribeFlowLogSagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
