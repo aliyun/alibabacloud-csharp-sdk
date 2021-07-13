@@ -1525,6 +1525,84 @@ namespace AlibabaCloud.SDK.CS20151215
             return TeaModel.ToObject<DescribeAddonsResponse>(await DoROARequestAsync("DescribeAddons", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/components/metadata", "json", req, runtime));
         }
 
+        public CreateAutoscalingConfigResponse CreateAutoscalingConfig(string ClusterId, CreateAutoscalingConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAutoscalingConfigWithOptions(ClusterId, request, headers, runtime);
+        }
+
+        public async Task<CreateAutoscalingConfigResponse> CreateAutoscalingConfigAsync(string ClusterId, CreateAutoscalingConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAutoscalingConfigWithOptionsAsync(ClusterId, request, headers, runtime);
+        }
+
+        public CreateAutoscalingConfigResponse CreateAutoscalingConfigWithOptions(string ClusterId, CreateAutoscalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoolDownDuration))
+            {
+                body["cool_down_duration"] = request.CoolDownDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnneededDuration))
+            {
+                body["unneeded_duration"] = request.UnneededDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtilizationThreshold))
+            {
+                body["utilization_threshold"] = request.UtilizationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuUtilizationThreshold))
+            {
+                body["gpu_utilization_threshold"] = request.GpuUtilizationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["scan_interval"] = request.ScanInterval;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            return TeaModel.ToObject<CreateAutoscalingConfigResponse>(DoROARequest("CreateAutoscalingConfig", "2015-12-15", "HTTPS", "POST", "AK", "/cluster/" + ClusterId + "/autoscale/config/", "none", req, runtime));
+        }
+
+        public async Task<CreateAutoscalingConfigResponse> CreateAutoscalingConfigWithOptionsAsync(string ClusterId, CreateAutoscalingConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoolDownDuration))
+            {
+                body["cool_down_duration"] = request.CoolDownDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnneededDuration))
+            {
+                body["unneeded_duration"] = request.UnneededDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtilizationThreshold))
+            {
+                body["utilization_threshold"] = request.UtilizationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuUtilizationThreshold))
+            {
+                body["gpu_utilization_threshold"] = request.GpuUtilizationThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["scan_interval"] = request.ScanInterval;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            return TeaModel.ToObject<CreateAutoscalingConfigResponse>(await DoROARequestAsync("CreateAutoscalingConfig", "2015-12-15", "HTTPS", "POST", "AK", "/cluster/" + ClusterId + "/autoscale/config/", "none", req, runtime));
+        }
+
         public CreateClusterResponse CreateCluster(CreateClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

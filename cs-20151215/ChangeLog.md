@@ -1,3 +1,6 @@
+2021-07-13 Version: 2.4.4
+- Publish CreateAutosaclingConfig API.
+
 2021-06-09 Version: 2.4.2
 - AMP Version.
 

@@ -98,7 +98,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("worker_data_disks")]
         [Validation(Required=false)]
-        public List<DataDisk> WorkerDataDisks { get; set; }
+        public List<ScaleOutClusterRequestWorkerDataDisks> WorkerDataDisks { get; set; }
+        public class ScaleOutClusterRequestWorkerDataDisks : TeaModel {
+            /// <summary>
+            /// 数据盘类型,默认值：cloud_efficiency
+            /// </summary>
+            [NameInMap("category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            /// <summary>
+            /// 数据盘大小，单位为GiB。  取值范围：[40,32768]
+            /// </summary>
+            [NameInMap("size")]
+            [Validation(Required=false)]
+            public string Size { get; set; }
+
+            /// <summary>
+            /// 是否对数据盘加密
+            /// </summary>
+            [NameInMap("encrypted")]
+            [Validation(Required=false)]
+            public string Encrypted { get; set; }
+
+            /// <summary>
+            /// 自动快照策略ID，云盘会按照快照策略自动备份。
+            /// </summary>
+            [NameInMap("auto_snapshot_policy_id")]
+            [Validation(Required=false)]
+            public string AutoSnapshotPolicyId { get; set; }
+
+        }
 
         /// <summary>
         /// 在节点上安装云监控

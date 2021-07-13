@@ -204,6 +204,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("key_pair")]
                 [Validation(Required=false)]
                 public string KeyPair { get; set; }
+                [NameInMap("internet_charge_type")]
+                [Validation(Required=false)]
+                public string InternetChargeType { get; set; }
+                [NameInMap("internet_max_bandwidth_out")]
+                [Validation(Required=false)]
+                public long? InternetMaxBandwidthOut { get; set; }
             };
 
             /// <summary>
