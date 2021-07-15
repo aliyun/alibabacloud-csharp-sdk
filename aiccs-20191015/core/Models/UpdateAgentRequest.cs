@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
-        public List<int?> SkillGroupId { get; set; }
+        public List<long?> SkillGroupId { get; set; }
 
         [NameInMap("SkillGroupIdList")]
         [Validation(Required=false)]
-        public List<int?> SkillGroupIdList { get; set; }
+        public List<long?> SkillGroupIdList { get; set; }
 
     }
 

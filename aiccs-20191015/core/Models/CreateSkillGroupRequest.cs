@@ -33,6 +33,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// 部门ID
+        /// </summary>
+        [NameInMap("DepartmentId")]
+        [Validation(Required=false)]
+        public long? DepartmentId { get; set; }
+
     }
 
 }

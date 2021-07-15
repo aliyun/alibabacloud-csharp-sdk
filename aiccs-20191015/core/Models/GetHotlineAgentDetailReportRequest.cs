@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         [NameInMap("DepIds")]
         [Validation(Required=false)]
-        public List<int?> DepIds { get; set; }
+        public List<long?> DepIds { get; set; }
 
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
-        public List<int?> GroupIds { get; set; }
+        public List<long?> GroupIds { get; set; }
 
     }
 

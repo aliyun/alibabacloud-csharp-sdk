@@ -8,36 +8,48 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
-    public class QuerySkillGroupsRequest : TeaModel {
+    public class QueryHotlineNumberRequest : TeaModel {
+        /// <summary>
+        /// 实例id
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("PageNo")]
+        /// <summary>
+        /// 当前页码
+        /// </summary>
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? PageNo { get; set; }
+        public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// 每页大小
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         /// <summary>
-        /// 技能组类型（1：热线，2：在线，4：工单）
+        /// 号码（支持模糊查询）
         /// </summary>
-        [NameInMap("ChannelType")]
+        [NameInMap("HotlineNumber")]
         [Validation(Required=false)]
-        public int? ChannelType { get; set; }
+        public string HotlineNumber { get; set; }
 
         /// <summary>
-        /// 部门ID
+        /// 部门id（技能组分组）
         /// </summary>
         [NameInMap("DepartmentId")]
         [Validation(Required=false)]
         public long? DepartmentId { get; set; }
+
+        /// <summary>
+        /// 技能组列表
+        /// </summary>
+        [NameInMap("GroupIds")]
+        [Validation(Required=false)]
+        public List<long?> GroupIds { get; set; }
 
     }
 

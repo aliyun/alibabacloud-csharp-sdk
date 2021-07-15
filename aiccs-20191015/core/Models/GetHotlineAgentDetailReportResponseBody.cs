@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Success { get; set; }
 
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public long? HttpStatusCode { get; set; }
+
     }
 
 }

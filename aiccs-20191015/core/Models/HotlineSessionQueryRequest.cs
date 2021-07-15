@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         [NameInMap("GroupIdList")]
         [Validation(Required=false)]
-        public List<int?> GroupIdList { get; set; }
+        public List<long?> GroupIdList { get; set; }
 
         [NameInMap("CallingNumberList")]
         [Validation(Required=false)]
