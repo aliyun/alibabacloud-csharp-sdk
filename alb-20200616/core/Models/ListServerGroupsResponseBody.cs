@@ -152,6 +152,29 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
+            /// <summary>
+            /// 标签列表
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListServerGroupsResponseBodyServerGroupsTags> Tags { get; set; }
+            public class ListServerGroupsResponseBodyServerGroupsTags : TeaModel {
+                /// <summary>
+                /// 标签键
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// 标签值
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>

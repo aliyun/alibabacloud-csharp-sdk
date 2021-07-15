@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public List<string> ListenerIds { get; set; }
 
+        /// <summary>
+        /// 实例ID列表
+        /// </summary>
+        [NameInMap("LoadBalancerIds")]
+        [Validation(Required=false)]
+        public List<string> LoadBalancerIds { get; set; }
+
     }
 
 }

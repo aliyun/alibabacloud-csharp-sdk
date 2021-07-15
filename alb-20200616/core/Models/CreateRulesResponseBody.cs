@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
+            /// <summary>
+            /// 转发规则优先级
+            /// </summary>
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
         }
 
     }

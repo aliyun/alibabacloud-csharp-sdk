@@ -34,13 +34,8 @@ namespace AlibabaCloud.SDK.Alb20200616
                 {"eu-central-1", "alb.eu-central-1.aliyuncs.com"},
                 {"ap-south-1", "alb.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-1", "alb.ap-northeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "alb.ap-southeast-3.aliyuncs.com"},
                 {"cn-chengdu", "alb.cn-chengdu.aliyuncs.com"},
-                {"cn-huhehaote", "alb.cn-huhehaote.aliyuncs.com"},
-                {"cn-qingdao", "alb.cn-qingdao.aliyuncs.com"},
                 {"cn-wulanchabu", "alb.cn-wulanchabu.aliyuncs.com"},
-                {"eu-west-1", "alb.eu-west-1.aliyuncs.com"},
-                {"us-west-1", "alb.us-west-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("alb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1036,6 +1031,38 @@ namespace AlibabaCloud.SDK.Alb20200616
             return await UpdateLoadBalancerEditionWithOptionsAsync(request, runtime);
         }
 
+        public UpdateRulesAttributeResponse UpdateRulesAttributeWithOptions(UpdateRulesAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateRulesAttributeResponse>(DoRPCRequest("UpdateRulesAttribute", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<UpdateRulesAttributeResponse> UpdateRulesAttributeWithOptionsAsync(UpdateRulesAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateRulesAttributeResponse>(await DoRPCRequestAsync("UpdateRulesAttribute", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public UpdateRulesAttributeResponse UpdateRulesAttribute(UpdateRulesAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRulesAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateRulesAttributeResponse> UpdateRulesAttributeAsync(UpdateRulesAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRulesAttributeWithOptionsAsync(request, runtime);
+        }
+
         public ListListenersResponse ListListenersWithOptions(ListListenersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1706,6 +1733,38 @@ namespace AlibabaCloud.SDK.Alb20200616
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveServersFromServerGroupWithOptionsAsync(request, runtime);
+        }
+
+        public ReplaceServersInServerGroupResponse ReplaceServersInServerGroupWithOptions(ReplaceServersInServerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ReplaceServersInServerGroupResponse>(DoRPCRequest("ReplaceServersInServerGroup", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ReplaceServersInServerGroupResponse> ReplaceServersInServerGroupWithOptionsAsync(ReplaceServersInServerGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ReplaceServersInServerGroupResponse>(await DoRPCRequestAsync("ReplaceServersInServerGroup", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ReplaceServersInServerGroupResponse ReplaceServersInServerGroup(ReplaceServersInServerGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReplaceServersInServerGroupWithOptions(request, runtime);
+        }
+
+        public async Task<ReplaceServersInServerGroupResponse> ReplaceServersInServerGroupAsync(ReplaceServersInServerGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReplaceServersInServerGroupWithOptionsAsync(request, runtime);
         }
 
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
