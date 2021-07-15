@@ -31,20 +31,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             public long? AccessTokenExpiredTime { get; set; }
         };
 
-        /// <summary>
-        /// 错误码，请求异常时返回
-        /// </summary>
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// 错误码信息，请求异常时返回
-        /// </summary>
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
     }
 
 }

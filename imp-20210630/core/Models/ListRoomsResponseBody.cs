@@ -56,14 +56,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             }
         };
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
     }
 
 }
