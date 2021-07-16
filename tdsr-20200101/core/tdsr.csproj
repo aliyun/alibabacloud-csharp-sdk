@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Tdsr20200101</AssemblyName>
-    <Version>2.2.2</Version>
+    <Version>2.2.3</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud 3D space reconstruction (20200101) SDK Library for .NET</Description>

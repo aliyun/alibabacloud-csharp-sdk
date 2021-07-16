@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
-    public class GetUserOssStatusResponseBody : TeaModel {
+    public class GetJobResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// 请求ID，与入参requestId对应
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// 是否启用oss
+        /// 任务运行状态
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
-        public bool? Status { get; set; }
+        public long? Status { get; set; }
 
     }
 

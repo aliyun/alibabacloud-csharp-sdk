@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
-    public class CheckPermissionRequest : TeaModel {
-        [NameInMap("AliyunId")]
+    public class GetJobRequest : TeaModel {
+        /// <summary>
+        /// 任务实例ID
+        /// </summary>
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string AliyunId { get; set; }
+        public string InstanceId { get; set; }
 
     }
 
