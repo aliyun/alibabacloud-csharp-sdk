@@ -198,6 +198,66 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
+            [NameInMap("AnalyzeChestVessel")]
+            [Validation(Required=false)]
+            public ScreenChestCTResponseBodyDataAnalyzeChestVessel AnalyzeChestVessel { get; set; }
+            public class ScreenChestCTResponseBodyDataAnalyzeChestVessel : TeaModel {
+                [NameInMap("AortaInfo")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo AortaInfo { get; set; }
+                public class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo : TeaModel {
+                    [NameInMap("MaxAreaIndex")]
+                    [Validation(Required=false)]
+                    public long? MaxAreaIndex { get; set; }
+                    [NameInMap("MaxArea")]
+                    [Validation(Required=false)]
+                    public float? MaxArea { get; set; }
+                    [NameInMap("MaxDiameter")]
+                    [Validation(Required=false)]
+                    public float? MaxDiameter { get; set; }
+                    [NameInMap("LabelValue")]
+                    [Validation(Required=false)]
+                    public long? LabelValue { get; set; }
+                    [NameInMap("Coordinates")]
+                    [Validation(Required=false)]
+                    public List<string> Coordinates { get; set; }
+                    [NameInMap("Area")]
+                    [Validation(Required=false)]
+                    public List<string> Area { get; set; }
+                };
+
+                [NameInMap("PulmonaryInfo")]
+                [Validation(Required=false)]
+                public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo PulmonaryInfo { get; set; }
+                public class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo : TeaModel {
+                    [NameInMap("MaxAreaIndex")]
+                    [Validation(Required=false)]
+                    public long? MaxAreaIndex { get; set; }
+                    [NameInMap("MaxArea")]
+                    [Validation(Required=false)]
+                    public float? MaxArea { get; set; }
+                    [NameInMap("MaxDiameter")]
+                    [Validation(Required=false)]
+                    public float? MaxDiameter { get; set; }
+                    [NameInMap("LabelValue")]
+                    [Validation(Required=false)]
+                    public long? LabelValue { get; set; }
+                    [NameInMap("Coordinates")]
+                    [Validation(Required=false)]
+                    public List<string> Coordinates { get; set; }
+                    [NameInMap("Area")]
+                    [Validation(Required=false)]
+                    public List<string> Area { get; set; }
+                    [NameInMap("NearestAortaArea")]
+                    [Validation(Required=false)]
+                    public float? NearestAortaArea { get; set; }
+                };
+
+                [NameInMap("ResultURL")]
+                [Validation(Required=false)]
+                public string ResultURL { get; set; }
+
+            }
         };
 
     }
