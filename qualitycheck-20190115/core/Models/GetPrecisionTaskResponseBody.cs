@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetPrecisionTaskResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -36,12 +44,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("VerifiedCount")]
             [Validation(Required=false)]
             public int? VerifiedCount { get; set; }
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public int? Duration { get; set; }
+            [NameInMap("DataSetName")]
+            [Validation(Required=false)]
+            public string DataSetName { get; set; }
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
             [NameInMap("Source")]
             [Validation(Required=false)]
             public int? Source { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
             [NameInMap("Precisions")]
             [Validation(Required=false)]
             public GetPrecisionTaskResponseBodyDataPrecisions Precisions { get; set; }
@@ -73,27 +93,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public int? Duration { get; set; }
-            [NameInMap("DataSetName")]
-            [Validation(Required=false)]
-            public string DataSetName { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public string TaskId { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

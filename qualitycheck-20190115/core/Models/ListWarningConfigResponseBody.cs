@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListWarningConfigResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,31 +37,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public string ConfigName { get; set; }
                 public string UpdateTime { get; set; }
                 public long? ConfigId { get; set; }
-                public ListWarningConfigResponseBodyDataWarningConfigInfoRidList RidList { get; set; }
-                public class ListWarningConfigResponseBodyDataWarningConfigInfoRidList : TeaModel {
-                    [NameInMap("RidList")]
-                    [Validation(Required=false)]
-                    public List<string> RidList { get; set; }
-
-                }
                 public string CreateTime { get; set; }
-                public ListWarningConfigResponseBodyDataWarningConfigInfoChannels Channels { get; set; }
-                public class ListWarningConfigResponseBodyDataWarningConfigInfoChannels : TeaModel {
-                    [NameInMap("Channel")]
-                    [Validation(Required=false)]
-                    public List<ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel> Channel { get; set; }
-                    public class ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel : TeaModel {
-                        [NameInMap("Type")]
-                        [Validation(Required=false)]
-                        public int? Type { get; set; }
-
-                        [NameInMap("Url")]
-                        [Validation(Required=false)]
-                        public string Url { get; set; }
-
-                    }
-
-                }
                 public ListWarningConfigResponseBodyDataWarningConfigInfoRuleList RuleList { get; set; }
                 public class ListWarningConfigResponseBodyDataWarningConfigInfoRuleList : TeaModel {
                     [NameInMap("WarningRule")]
@@ -71,16 +55,32 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+                public ListWarningConfigResponseBodyDataWarningConfigInfoChannels Channels { get; set; }
+                public class ListWarningConfigResponseBodyDataWarningConfigInfoChannels : TeaModel {
+                    [NameInMap("Channel")]
+                    [Validation(Required=false)]
+                    public List<ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel> Channel { get; set; }
+                    public class ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel : TeaModel {
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public int? Type { get; set; }
+
+                        [NameInMap("Url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
+
+                    }
+
+                }
+                public ListWarningConfigResponseBodyDataWarningConfigInfoRidList RidList { get; set; }
+                public class ListWarningConfigResponseBodyDataWarningConfigInfoRidList : TeaModel {
+                    [NameInMap("RidList")]
+                    [Validation(Required=false)]
+                    public List<string> RidList { get; set; }
+
+                }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

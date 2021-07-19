@@ -146,6 +146,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 [Validation(Required=false)]
                                 public int? MaxEmotionChangeValue { get; set; }
 
+                                [NameInMap("NotRegex")]
+                                [Validation(Required=false)]
+                                public string NotRegex { get; set; }
+
+                                [NameInMap("Similarity_threshold")]
+                                [Validation(Required=false)]
+                                public float? SimilarityThreshold { get; set; }
+
+                                [NameInMap("DelayTime")]
+                                [Validation(Required=false)]
+                                public int? DelayTime { get; set; }
+
                                 [NameInMap("OperKeyWords")]
                                 [Validation(Required=false)]
                                 public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords OperKeyWords { get; set; }
@@ -180,6 +192,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("Excludes")]
                                     [Validation(Required=false)]
                                     public List<string> Excludes { get; set; }
+                                };
+
+                                [NameInMap("Pvalues")]
+                                [Validation(Required=false)]
+                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues Pvalues { get; set; }
+                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues : TeaModel {
+                                    [NameInMap("Pvalues")]
+                                    [Validation(Required=false)]
+                                    public List<string> Pvalues { get; set; }
+                                };
+
+                                [NameInMap("AntModelInfo")]
+                                [Validation(Required=false)]
+                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo AntModelInfo { get; set; }
+                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo : TeaModel {
+                                    [NameInMap("AntModelInfo")]
+                                    [Validation(Required=false)]
+                                    public List<string> AntModelInfo { get; set; }
                                 };
 
                             }

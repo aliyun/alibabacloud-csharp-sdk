@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class SubmitQualityCheckTaskRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("JsonStr")]
         [Validation(Required=false)]
         public string JsonStr { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetNextResultToVerifyResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,19 +21,23 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetNextResultToVerifyResponseBodyData Data { get; set; }
         public class GetNextResultToVerifyResponseBodyData : TeaModel {
-            [NameInMap("AudioScheme")]
-            [Validation(Required=false)]
-            public string AudioScheme { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
             [NameInMap("Index")]
             [Validation(Required=false)]
             public int? Index { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+            [NameInMap("AudioScheme")]
+            [Validation(Required=false)]
+            public string AudioScheme { get; set; }
             [NameInMap("AudioURL")]
             [Validation(Required=false)]
             public string AudioURL { get; set; }
@@ -57,6 +65,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public string FileId { get; set; }
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public int? Duration { get; set; }
             [NameInMap("Dialogues")]
             [Validation(Required=false)]
             public GetNextResultToVerifyResponseBodyDataDialogues Dialogues { get; set; }
@@ -65,50 +76,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetNextResultToVerifyResponseBodyDataDialoguesDialogue> Dialogue { get; set; }
                 public class GetNextResultToVerifyResponseBodyDataDialoguesDialogue : TeaModel {
-                    [NameInMap("Deltas")]
-                    [Validation(Required=false)]
-                    public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltas Deltas { get; set; }
-                    public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltas : TeaModel {
-                        [NameInMap("Delta")]
-                        [Validation(Required=false)]
-                        public List<GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDelta> Delta { get; set; }
-                        public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDelta : TeaModel {
-                            public string Type { get; set; }
-                            public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSource Source { get; set; }
-                            public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSource : TeaModel {
-                                [NameInMap("Line")]
-                                [Validation(Required=false)]
-                                public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSourceLine Line { get; set; }
-                                public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSourceLine : TeaModel {
-                                    [NameInMap("Line")]
-                                    [Validation(Required=false)]
-                                    public List<string> Line { get; set; }
-                                };
-
-                                [NameInMap("Position")]
-                                [Validation(Required=false)]
-                                public int? Position { get; set; }
-
-                            }
-                            public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget Target { get; set; }
-                            public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget : TeaModel {
-                                [NameInMap("Line")]
-                                [Validation(Required=false)]
-                                public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTargetLine Line { get; set; }
-                                public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTargetLine : TeaModel {
-                                    [NameInMap("Line")]
-                                    [Validation(Required=false)]
-                                    public List<string> Line { get; set; }
-                                };
-
-                                [NameInMap("Position")]
-                                [Validation(Required=false)]
-                                public int? Position { get; set; }
-
-                            }
-                        }
-                    };
-
                     [NameInMap("Words")]
                     [Validation(Required=false)]
                     public string Words { get; set; }
@@ -137,13 +104,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public int? SpeechRate { get; set; }
 
-                    [NameInMap("SourceRole")]
-                    [Validation(Required=false)]
-                    public string SourceRole { get; set; }
-
                     [NameInMap("HourMinSec")]
                     [Validation(Required=false)]
                     public string HourMinSec { get; set; }
+
+                    [NameInMap("SourceRole")]
+                    [Validation(Required=false)]
+                    public string SourceRole { get; set; }
 
                     [NameInMap("Begin")]
                     [Validation(Required=false)]
@@ -161,21 +128,54 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public int? SilenceDuration { get; set; }
 
+                    [NameInMap("Deltas")]
+                    [Validation(Required=false)]
+                    public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltas Deltas { get; set; }
+                    public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltas : TeaModel {
+                        [NameInMap("Delta")]
+                        [Validation(Required=false)]
+                        public List<GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDelta> Delta { get; set; }
+                        public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDelta : TeaModel {
+                            public string Type { get; set; }
+                            public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSource Source { get; set; }
+                            public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSource : TeaModel {
+                                [NameInMap("Position")]
+                                [Validation(Required=false)]
+                                public int? Position { get; set; }
+
+                                [NameInMap("Line")]
+                                [Validation(Required=false)]
+                                public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSourceLine Line { get; set; }
+                                public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSourceLine : TeaModel {
+                                    [NameInMap("Line")]
+                                    [Validation(Required=false)]
+                                    public List<string> Line { get; set; }
+                                };
+
+                            }
+                            public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget Target { get; set; }
+                            public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget : TeaModel {
+                                [NameInMap("Position")]
+                                [Validation(Required=false)]
+                                public int? Position { get; set; }
+
+                                [NameInMap("Line")]
+                                [Validation(Required=false)]
+                                public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTargetLine Line { get; set; }
+                                public class GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTargetLine : TeaModel {
+                                    [NameInMap("Line")]
+                                    [Validation(Required=false)]
+                                    public List<string> Line { get; set; }
+                                };
+
+                            }
+                        }
+                    };
+
                 }
 
             }
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public int? Duration { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

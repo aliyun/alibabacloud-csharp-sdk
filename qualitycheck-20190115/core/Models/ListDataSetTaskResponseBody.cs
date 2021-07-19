@@ -9,13 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListDataSetTaskResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("DataSize")]
+        [Validation(Required=false)]
+        public int? DataSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("IsAllcomplete")]
+        [Validation(Required=false)]
+        public int? IsAllcomplete { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -25,13 +41,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("DataSize")]
-        [Validation(Required=false)]
-        public int? DataSize { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -43,6 +55,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public class ListDataSetTaskResponseBodyDataPageTaskInfo : TeaModel {
                 public int? Status { get; set; }
                 public bool? IsTaskComplete { get; set; }
+                public float? ScheduleRatio { get; set; }
+                public bool? TaskComplete { get; set; }
+                public int? DataSetSize { get; set; }
+                public int? RuleSize { get; set; }
+                public string JobName { get; set; }
+                public string TaskId { get; set; }
                 public ListDataSetTaskResponseBodyDataPageTaskInfoRuleNameInfoList RuleNameInfoList { get; set; }
                 public class ListDataSetTaskResponseBodyDataPageTaskInfoRuleNameInfoList : TeaModel {
                     [NameInMap("RuleNameInfo")]
@@ -60,8 +78,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
-                public float? ScheduleRatio { get; set; }
-                public bool? TaskComplete { get; set; }
                 public ListDataSetTaskResponseBodyDataPageTaskInfoDataSets DataSets { get; set; }
                 public class ListDataSetTaskResponseBodyDataPageTaskInfoDataSets : TeaModel {
                     [NameInMap("dataSets")]
@@ -69,24 +85,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public List<string> DataSets { get; set; }
 
                 }
-                public int? DataSetSize { get; set; }
-                public int? RuleSize { get; set; }
-                public string JobName { get; set; }
-                public string TaskId { get; set; }
             }
         };
-
-        [NameInMap("IsAllcomplete")]
-        [Validation(Required=false)]
-        public int? IsAllcomplete { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

@@ -13,17 +13,33 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("ResultCountId")]
+        [Validation(Required=false)]
+        public string ResultCountId { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("Count")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? Count { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,29 +53,19 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public string AssignmentTime { get; set; }
                 public string LastDataId { get; set; }
                 public string ErrorMessage { get; set; }
-                public int? ReviewStatus { get; set; }
-                public string CreateTime { get; set; }
                 public string Reviewer { get; set; }
-                public string TaskName { get; set; }
+                public string CreateTime { get; set; }
+                public int? ReviewStatus { get; set; }
                 public string ReviewTimeLong { get; set; }
-                public int? Score { get; set; }
+                public string TaskName { get; set; }
                 public int? ReviewResult { get; set; }
-                public GetResultResponseBodyDataResultInfoAgent Agent { get; set; }
-                public class GetResultResponseBodyDataResultInfoAgent : TeaModel {
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                    [NameInMap("SkillGroup")]
-                    [Validation(Required=false)]
-                    public string SkillGroup { get; set; }
-
-                    [NameInMap("Id")]
-                    [Validation(Required=false)]
-                    public string Id { get; set; }
-
-                }
+                public int? Score { get; set; }
                 public string CreateTimeLong { get; set; }
+                public string ReviewTime { get; set; }
+                public string Comments { get; set; }
+                public string TaskId { get; set; }
+                public int? ReviewType { get; set; }
+                public string Resolver { get; set; }
                 public GetResultResponseBodyDataResultInfoAsrResult AsrResult { get; set; }
                 public class GetResultResponseBodyDataResultInfoAsrResult : TeaModel {
                     [NameInMap("AsrResult")]
@@ -93,7 +99,97 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
-                public string ReviewTime { get; set; }
+                public GetResultResponseBodyDataResultInfoHitResult HitResult { get; set; }
+                public class GetResultResponseBodyDataResultInfoHitResult : TeaModel {
+                    [NameInMap("HitResult")]
+                    [Validation(Required=false)]
+                    public List<GetResultResponseBodyDataResultInfoHitResultHitResult> HitResult { get; set; }
+                    public class GetResultResponseBodyDataResultInfoHitResultHitResult : TeaModel {
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                        [NameInMap("ReviewResult")]
+                        [Validation(Required=false)]
+                        public int? ReviewResult { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("Rid")]
+                        [Validation(Required=false)]
+                        public string Rid { get; set; }
+
+                        [NameInMap("Hits")]
+                        [Validation(Required=false)]
+                        public GetResultResponseBodyDataResultInfoHitResultHitResultHits Hits { get; set; }
+                        public class GetResultResponseBodyDataResultInfoHitResultHitResultHits : TeaModel {
+                            [NameInMap("Hit")]
+                            [Validation(Required=false)]
+                            public List<GetResultResponseBodyDataResultInfoHitResultHitResultHitsHit> Hit { get; set; }
+                            public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHit : TeaModel {
+                                public GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitKeyWords KeyWords { get; set; }
+                                public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitKeyWords : TeaModel {
+                                    [NameInMap("KeyWord")]
+                                    [Validation(Required=false)]
+                                    public List<GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitKeyWordsKeyWord> KeyWord { get; set; }
+                                    public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitKeyWordsKeyWord : TeaModel {
+                                        [NameInMap("From")]
+                                        [Validation(Required=false)]
+                                        public int? From { get; set; }
+
+                                        [NameInMap("To")]
+                                        [Validation(Required=false)]
+                                        public int? To { get; set; }
+
+                                        [NameInMap("Val")]
+                                        [Validation(Required=false)]
+                                        public string Val { get; set; }
+
+                                        [NameInMap("Cid")]
+                                        [Validation(Required=false)]
+                                        public string Cid { get; set; }
+
+                                    }
+
+                                }
+                                public GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitCid Cid { get; set; }
+                                public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitCid : TeaModel {
+                                    [NameInMap("Cid")]
+                                    [Validation(Required=false)]
+                                    public List<string> Cid { get; set; }
+
+                                }
+                                public GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitPhrase Phrase { get; set; }
+                                public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitPhrase : TeaModel {
+                                    [NameInMap("EmotionValue")]
+                                    [Validation(Required=false)]
+                                    public int? EmotionValue { get; set; }
+
+                                    [NameInMap("End")]
+                                    [Validation(Required=false)]
+                                    public int? End { get; set; }
+
+                                    [NameInMap("Words")]
+                                    [Validation(Required=false)]
+                                    public string Words { get; set; }
+
+                                    [NameInMap("Role")]
+                                    [Validation(Required=false)]
+                                    public string Role { get; set; }
+
+                                    [NameInMap("Begin")]
+                                    [Validation(Required=false)]
+                                    public long? Begin { get; set; }
+
+                                }
+                            }
+                        };
+
+                    }
+
+                }
                 public GetResultResponseBodyDataResultInfoHitScore HitScore { get; set; }
                 public class GetResultResponseBodyDataResultInfoHitScore : TeaModel {
                     [NameInMap("HitScore")]
@@ -119,63 +215,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
-                public string Comments { get; set; }
-                public GetResultResponseBodyDataResultInfoHitResult HitResult { get; set; }
-                public class GetResultResponseBodyDataResultInfoHitResult : TeaModel {
-                    [NameInMap("HitResult")]
-                    [Validation(Required=false)]
-                    public List<GetResultResponseBodyDataResultInfoHitResultHitResult> HitResult { get; set; }
-                    public class GetResultResponseBodyDataResultInfoHitResultHitResult : TeaModel {
-                        [NameInMap("Type")]
-                        [Validation(Required=false)]
-                        public string Type { get; set; }
-
-                        [NameInMap("Hits")]
-                        [Validation(Required=false)]
-                        public GetResultResponseBodyDataResultInfoHitResultHitResultHits Hits { get; set; }
-                        public class GetResultResponseBodyDataResultInfoHitResultHitResultHits : TeaModel {
-                            [NameInMap("Hit")]
-                            [Validation(Required=false)]
-                            public List<GetResultResponseBodyDataResultInfoHitResultHitResultHitsHit> Hit { get; set; }
-                            public class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHit : TeaModel {
-                                [NameInMap("Words")]
-                                [Validation(Required=false)]
-                                public string Words { get; set; }
-
-                                [NameInMap("Begin")]
-                                [Validation(Required=false)]
-                                public long? Begin { get; set; }
-
-                                [NameInMap("EmotionValue")]
-                                [Validation(Required=false)]
-                                public int? EmotionValue { get; set; }
-
-                                [NameInMap("End")]
-                                [Validation(Required=false)]
-                                public int? End { get; set; }
-
-                                [NameInMap("Role")]
-                                [Validation(Required=false)]
-                                public string Role { get; set; }
-
-                            }
-                        };
-
-                        [NameInMap("ReviewResult")]
-                        [Validation(Required=false)]
-                        public int? ReviewResult { get; set; }
-
-                        [NameInMap("Name")]
-                        [Validation(Required=false)]
-                        public string Name { get; set; }
-
-                        [NameInMap("Rid")]
-                        [Validation(Required=false)]
-                        public string Rid { get; set; }
-
-                    }
-
-                }
                 public GetResultResponseBodyDataResultInfoRecording Recording { get; set; }
                 public class GetResultResponseBodyDataResultInfoRecording : TeaModel {
                     [NameInMap("Remark13")]
@@ -185,6 +224,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [NameInMap("Callee")]
                     [Validation(Required=false)]
                     public string Callee { get; set; }
+
+                    [NameInMap("DialogueSize")]
+                    [Validation(Required=false)]
+                    public int? DialogueSize { get; set; }
 
                     [NameInMap("PrimaryId")]
                     [Validation(Required=false)]
@@ -230,13 +273,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string Remark10 { get; set; }
 
-                    [NameInMap("Remark3")]
-                    [Validation(Required=false)]
-                    public string Remark3 { get; set; }
-
                     [NameInMap("Business")]
                     [Validation(Required=false)]
                     public string Business { get; set; }
+
+                    [NameInMap("Remark3")]
+                    [Validation(Required=false)]
+                    public string Remark3 { get; set; }
 
                     [NameInMap("Url")]
                     [Validation(Required=false)]
@@ -258,13 +301,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string Caller { get; set; }
 
-                    [NameInMap("Duration")]
-                    [Validation(Required=false)]
-                    public long? Duration { get; set; }
-
                     [NameInMap("DataSetName")]
                     [Validation(Required=false)]
                     public string DataSetName { get; set; }
+
+                    [NameInMap("Duration")]
+                    [Validation(Required=false)]
+                    public long? Duration { get; set; }
 
                     [NameInMap("Remark5")]
                     [Validation(Required=false)]
@@ -279,27 +322,23 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public string CallTime { get; set; }
 
                 }
-                public string TaskId { get; set; }
-                public int? ReviewType { get; set; }
-                public string Resolver { get; set; }
+                public GetResultResponseBodyDataResultInfoAgent Agent { get; set; }
+                public class GetResultResponseBodyDataResultInfoAgent : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("SkillGroup")]
+                    [Validation(Required=false)]
+                    public string SkillGroup { get; set; }
+
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                }
             }
         };
-
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ResultCountId")]
-        [Validation(Required=false)]
-        public string ResultCountId { get; set; }
 
     }
 

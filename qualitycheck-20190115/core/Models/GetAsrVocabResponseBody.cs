@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetAsrVocabResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,10 +21,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAsrVocabResponseBodyData Data { get; set; }
         public class GetAsrVocabResponseBodyData : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
             [NameInMap("Words")]
             [Validation(Required=false)]
             public GetAsrVocabResponseBodyDataWords Words { get; set; }
@@ -40,18 +51,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
             }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

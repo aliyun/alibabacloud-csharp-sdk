@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UploadDataSyncResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public string Tid { get; set; }
 
+                        [NameInMap("Rid")]
+                        [Validation(Required=false)]
+                        public string Rid { get; set; }
+
                         [NameInMap("Hit")]
                         [Validation(Required=false)]
                         public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHit Hit { get; set; }
@@ -44,30 +56,69 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             [Validation(Required=false)]
                             public List<UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfo> ConditionHitInfo { get; set; }
                             public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfo : TeaModel {
-                                [NameInMap("Words")]
-                                [Validation(Required=false)]
-                                public string Words { get; set; }
+                                public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWords HitKeyWords { get; set; }
+                                public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWords : TeaModel {
+                                    [NameInMap("HitKeyWord")]
+                                    [Validation(Required=false)]
+                                    public List<UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord> HitKeyWord { get; set; }
+                                    public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord : TeaModel {
+                                        [NameInMap("To")]
+                                        [Validation(Required=false)]
+                                        public int? To { get; set; }
 
-                                [NameInMap("Identity")]
-                                [Validation(Required=false)]
-                                public string Identity { get; set; }
+                                        [NameInMap("From")]
+                                        [Validation(Required=false)]
+                                        public int? From { get; set; }
 
-                                [NameInMap("Begin")]
-                                [Validation(Required=false)]
-                                public long? Begin { get; set; }
+                                        [NameInMap("Val")]
+                                        [Validation(Required=false)]
+                                        public string Val { get; set; }
 
-                                [NameInMap("BeginTime")]
-                                [Validation(Required=false)]
-                                public string BeginTime { get; set; }
+                                        [NameInMap("Tid")]
+                                        [Validation(Required=false)]
+                                        public string Tid { get; set; }
 
-                                [NameInMap("End")]
-                                [Validation(Required=false)]
-                                public long? End { get; set; }
+                                        [NameInMap("Pid")]
+                                        [Validation(Required=false)]
+                                        public int? Pid { get; set; }
 
-                                [NameInMap("Role")]
-                                [Validation(Required=false)]
-                                public string Role { get; set; }
+                                    }
 
+                                }
+                                public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitCids HitCids { get; set; }
+                                public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitCids : TeaModel {
+                                    [NameInMap("CidItem")]
+                                    [Validation(Required=false)]
+                                    public List<string> CidItem { get; set; }
+
+                                }
+                                public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoPhrase Phrase { get; set; }
+                                public class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoPhrase : TeaModel {
+                                    [NameInMap("Words")]
+                                    [Validation(Required=false)]
+                                    public string Words { get; set; }
+
+                                    [NameInMap("Identity")]
+                                    [Validation(Required=false)]
+                                    public string Identity { get; set; }
+
+                                    [NameInMap("Begin")]
+                                    [Validation(Required=false)]
+                                    public long? Begin { get; set; }
+
+                                    [NameInMap("BeginTime")]
+                                    [Validation(Required=false)]
+                                    public string BeginTime { get; set; }
+
+                                    [NameInMap("End")]
+                                    [Validation(Required=false)]
+                                    public long? End { get; set; }
+
+                                    [NameInMap("Role")]
+                                    [Validation(Required=false)]
+                                    public string Role { get; set; }
+
+                                }
                             }
                         };
 
@@ -83,10 +134,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             }
                         };
 
-                        [NameInMap("Rid")]
-                        [Validation(Required=false)]
-                        public string Rid { get; set; }
-
                     }
 
                 }
@@ -99,14 +146,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

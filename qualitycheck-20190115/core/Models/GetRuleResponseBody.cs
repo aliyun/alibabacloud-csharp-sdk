@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,38 +37,29 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetRuleResponseBodyDataRulesRuleInfo> RuleInfo { get; set; }
                 public class GetRuleResponseBodyDataRulesRuleInfo : TeaModel {
-                    [NameInMap("Type")]
-                    [Validation(Required=false)]
-                    public int? Type { get; set; }
-
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public int? Status { get; set; }
 
-                    [NameInMap("BusinessCategoryNameList")]
+                    [NameInMap("Type")]
                     [Validation(Required=false)]
-                    public GetRuleResponseBodyDataRulesRuleInfoBusinessCategoryNameList BusinessCategoryNameList { get; set; }
-                    public class GetRuleResponseBodyDataRulesRuleInfoBusinessCategoryNameList : TeaModel {
-                        [NameInMap("BusinessCategoryNameList")]
-                        [Validation(Required=false)]
-                        public List<string> BusinessCategoryNameList { get; set; }
-                    };
-
-                    [NameInMap("IsOnline")]
-                    [Validation(Required=false)]
-                    public int? IsOnline { get; set; }
+                    public int? Type { get; set; }
 
                     [NameInMap("ScoreSubId")]
                     [Validation(Required=false)]
                     public int? ScoreSubId { get; set; }
 
-                    [NameInMap("CreateEmpid")]
+                    [NameInMap("IsOnline")]
                     [Validation(Required=false)]
-                    public string CreateEmpid { get; set; }
+                    public int? IsOnline { get; set; }
 
                     [NameInMap("CreateTime")]
                     [Validation(Required=false)]
                     public string CreateTime { get; set; }
+
+                    [NameInMap("CreateEmpid")]
+                    [Validation(Required=false)]
+                    public string CreateEmpid { get; set; }
 
                     [NameInMap("LastUpdateEmpid")]
                     [Validation(Required=false)]
@@ -74,13 +73,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string Rid { get; set; }
 
-                    [NameInMap("EndTime")]
-                    [Validation(Required=false)]
-                    public string EndTime { get; set; }
-
                     [NameInMap("RuleScoreType")]
                     [Validation(Required=false)]
                     public int? RuleScoreType { get; set; }
+
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public string EndTime { get; set; }
 
                     [NameInMap("Weight")]
                     [Validation(Required=false)]
@@ -122,18 +121,19 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public int? ScoreId { get; set; }
 
+                    [NameInMap("BusinessCategoryNameList")]
+                    [Validation(Required=false)]
+                    public GetRuleResponseBodyDataRulesRuleInfoBusinessCategoryNameList BusinessCategoryNameList { get; set; }
+                    public class GetRuleResponseBodyDataRulesRuleInfoBusinessCategoryNameList : TeaModel {
+                        [NameInMap("BusinessCategoryNameList")]
+                        [Validation(Required=false)]
+                        public List<string> BusinessCategoryNameList { get; set; }
+                    };
+
                 }
 
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

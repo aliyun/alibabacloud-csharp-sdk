@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetSkillGroupConfigResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,35 +21,20 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSkillGroupConfigResponseBodyData Data { get; set; }
         public class GetSkillGroupConfigResponseBodyData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
             [NameInMap("Type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
-            [NameInMap("AllRuleList")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public GetSkillGroupConfigResponseBodyDataAllRuleList AllRuleList { get; set; }
-            public class GetSkillGroupConfigResponseBodyDataAllRuleList : TeaModel {
-                [NameInMap("RuleNameInfo")]
-                [Validation(Required=false)]
-                public List<GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo> RuleNameInfo { get; set; }
-                public class GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo : TeaModel {
-                    [NameInMap("RuleName")]
-                    [Validation(Required=false)]
-                    public string RuleName { get; set; }
-
-                    [NameInMap("Rid")]
-                    [Validation(Required=false)]
-                    public long? Rid { get; set; }
-
-                }
-
-            }
+            public int? Status { get; set; }
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
@@ -73,25 +62,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("SkillGroupName")]
             [Validation(Required=false)]
             public string SkillGroupName { get; set; }
-            [NameInMap("RuleList")]
-            [Validation(Required=false)]
-            public GetSkillGroupConfigResponseBodyDataRuleList RuleList { get; set; }
-            public class GetSkillGroupConfigResponseBodyDataRuleList : TeaModel {
-                [NameInMap("RuleNameInfo")]
-                [Validation(Required=false)]
-                public List<GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo> RuleNameInfo { get; set; }
-                public class GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo : TeaModel {
-                    [NameInMap("RuleName")]
-                    [Validation(Required=false)]
-                    public string RuleName { get; set; }
-
-                    [NameInMap("Rid")]
-                    [Validation(Required=false)]
-                    public long? Rid { get; set; }
-
-                }
-
-            }
             [NameInMap("ModelName")]
             [Validation(Required=false)]
             public string ModelName { get; set; }
@@ -113,15 +83,45 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("VocabName")]
             [Validation(Required=false)]
             public string VocabName { get; set; }
+            [NameInMap("RuleList")]
+            [Validation(Required=false)]
+            public GetSkillGroupConfigResponseBodyDataRuleList RuleList { get; set; }
+            public class GetSkillGroupConfigResponseBodyDataRuleList : TeaModel {
+                [NameInMap("RuleNameInfo")]
+                [Validation(Required=false)]
+                public List<GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo> RuleNameInfo { get; set; }
+                public class GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo : TeaModel {
+                    [NameInMap("RuleName")]
+                    [Validation(Required=false)]
+                    public string RuleName { get; set; }
+
+                    [NameInMap("Rid")]
+                    [Validation(Required=false)]
+                    public long? Rid { get; set; }
+
+                }
+
+            }
+            [NameInMap("AllRuleList")]
+            [Validation(Required=false)]
+            public GetSkillGroupConfigResponseBodyDataAllRuleList AllRuleList { get; set; }
+            public class GetSkillGroupConfigResponseBodyDataAllRuleList : TeaModel {
+                [NameInMap("RuleNameInfo")]
+                [Validation(Required=false)]
+                public List<GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo> RuleNameInfo { get; set; }
+                public class GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo : TeaModel {
+                    [NameInMap("RuleName")]
+                    [Validation(Required=false)]
+                    public string RuleName { get; set; }
+
+                    [NameInMap("Rid")]
+                    [Validation(Required=false)]
+                    public long? Rid { get; set; }
+
+                }
+
+            }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
