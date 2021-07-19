@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Service { get; set; }
 
-            [NameInMap("Task")]
-            [Validation(Required=false)]
-            public List<string> Task { get; set; }
-
             [NameInMap("API")]
             [Validation(Required=false)]
             public string API { get; set; }
+
+            [NameInMap("Task")]
+            [Validation(Required=false)]
+            public List<string> Task { get; set; }
 
             [NameInMap("Template")]
             [Validation(Required=false)]

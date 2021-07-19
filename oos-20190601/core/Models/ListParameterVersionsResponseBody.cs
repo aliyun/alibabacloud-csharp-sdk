@@ -13,14 +13,50 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("CreatedBy")]
+        [Validation(Required=false)]
+        public string CreatedBy { get; set; }
+
+        [NameInMap("CreatedDate")]
+        [Validation(Required=false)]
+        public string CreatedDate { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         [NameInMap("ParameterVersions")]
         [Validation(Required=false)]
         public List<ListParameterVersionsResponseBodyParameterVersions> ParameterVersions { get; set; }
         public class ListParameterVersionsResponseBodyParameterVersions : TeaModel {
+            [NameInMap("ParameterVersion")]
+            [Validation(Required=false)]
+            public int? ParameterVersion { get; set; }
+
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -33,43 +69,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
-            [NameInMap("ParameterVersion")]
-            [Validation(Required=false)]
-            public int? ParameterVersion { get; set; }
-
         }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("CreatedBy")]
-        [Validation(Required=false)]
-        public string CreatedBy { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("CreatedDate")]
-        [Validation(Required=false)]
-        public string CreatedDate { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
 
     }
 

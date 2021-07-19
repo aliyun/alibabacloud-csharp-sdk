@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ValidateTemplateContentResponseBody : TeaModel {
+        [NameInMap("Outputs")]
+        [Validation(Required=false)]
+        public string Outputs { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
+
+        [NameInMap("RamRole")]
+        [Validation(Required=false)]
+        public string RamRole { get; set; }
 
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -38,18 +50,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Properties { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Outputs")]
-        [Validation(Required=false)]
-        public string Outputs { get; set; }
-
-        [NameInMap("RamRole")]
-        [Validation(Required=false)]
-        public string RamRole { get; set; }
 
     }
 

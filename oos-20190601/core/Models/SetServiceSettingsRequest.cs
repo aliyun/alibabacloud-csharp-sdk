@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public bool? DeliverySlsEnabled { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RdcEnterpriseId")]
+        [Validation(Required=false)]
+        public string RdcEnterpriseId { get; set; }
+
     }
 
 }

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetParametersResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("InvalidParameters")]
+        [Validation(Required=false)]
+        public List<string> InvalidParameters { get; set; }
+
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<GetParametersResponseBodyParameters> Parameters { get; set; }
@@ -25,29 +33,37 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Tags { get; set; }
+
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
-
-            [NameInMap("Constraints")]
-            [Validation(Required=false)]
-            public string Constraints { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("Constraints")]
+            [Validation(Required=false)]
+            public string Constraints { get; set; }
+
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
 
-            [NameInMap("ParameterVersion")]
-            [Validation(Required=false)]
-            public int? ParameterVersion { get; set; }
-
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
+
+            [NameInMap("ParameterVersion")]
+            [Validation(Required=false)]
+            public int? ParameterVersion { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -62,14 +78,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string ShareType { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("InvalidParameters")]
-        [Validation(Required=false)]
-        public List<string> InvalidParameters { get; set; }
 
     }
 

@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListExecutionsResponseBody : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("Executions")]
         [Validation(Required=false)]
         public List<ListExecutionsResponseBodyExecutions> Executions { get; set; }
@@ -57,39 +69,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
-            [NameInMap("CurrentTasks")]
+            [NameInMap("UpdateDate")]
             [Validation(Required=false)]
-            public List<ListExecutionsResponseBodyExecutionsCurrentTasks> CurrentTasks { get; set; }
-            public class ListExecutionsResponseBodyExecutionsCurrentTasks : TeaModel {
-                [NameInMap("TaskExecutionId")]
-                [Validation(Required=false)]
-                public string TaskExecutionId { get; set; }
-
-                [NameInMap("TaskName")]
-                [Validation(Required=false)]
-                public string TaskName { get; set; }
-
-                [NameInMap("TaskAction")]
-                [Validation(Required=false)]
-                public string TaskAction { get; set; }
-
-            }
+            public string UpdateDate { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("UpdateDate")]
+            [NameInMap("LastTriggerTime")]
             [Validation(Required=false)]
-            public string UpdateDate { get; set; }
+            public string LastTriggerTime { get; set; }
 
             [NameInMap("ParentExecutionId")]
             [Validation(Required=false)]
             public string ParentExecutionId { get; set; }
-
-            [NameInMap("LastTriggerTime")]
-            [Validation(Required=false)]
-            public string LastTriggerTime { get; set; }
 
             [NameInMap("LastTriggerStatus")]
             [Validation(Required=false)]
@@ -103,13 +97,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Outputs { get; set; }
 
-            [NameInMap("EndDate")]
-            [Validation(Required=false)]
-            public string EndDate { get; set; }
-
             [NameInMap("ExecutedBy")]
             [Validation(Required=false)]
             public string ExecutedBy { get; set; }
+
+            [NameInMap("EndDate")]
+            [Validation(Required=false)]
+            public string EndDate { get; set; }
 
             [NameInMap("IsParent")]
             [Validation(Required=false)]
@@ -131,6 +125,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public Dictionary<string, object> Counters { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
@@ -147,19 +145,25 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ResourceStatus { get; set; }
 
+            [NameInMap("CurrentTasks")]
+            [Validation(Required=false)]
+            public List<ListExecutionsResponseBodyExecutionsCurrentTasks> CurrentTasks { get; set; }
+            public class ListExecutionsResponseBodyExecutionsCurrentTasks : TeaModel {
+                [NameInMap("TaskExecutionId")]
+                [Validation(Required=false)]
+                public string TaskExecutionId { get; set; }
+
+                [NameInMap("TaskName")]
+                [Validation(Required=false)]
+                public string TaskName { get; set; }
+
+                [NameInMap("TaskAction")]
+                [Validation(Required=false)]
+                public string TaskAction { get; set; }
+
+            }
+
         }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
     }
 

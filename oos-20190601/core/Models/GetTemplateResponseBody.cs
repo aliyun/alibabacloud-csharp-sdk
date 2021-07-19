@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetTemplateResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Template")]
         [Validation(Required=false)]
@@ -30,12 +30,12 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("UpdatedBy")]
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Tags { get; set; }
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Tags { get; set; }
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }

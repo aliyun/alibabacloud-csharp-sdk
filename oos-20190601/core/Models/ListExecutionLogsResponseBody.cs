@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("IsTruncated")]
+        [Validation(Required=false)]
+        public bool? IsTruncated { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("ExecutionLogs")]
         [Validation(Required=false)]
         public List<ListExecutionLogsResponseBodyExecutionLogs> ExecutionLogs { get; set; }
@@ -38,14 +46,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Timestamp { get; set; }
 
         }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("IsTruncated")]
-        [Validation(Required=false)]
-        public bool? IsTruncated { get; set; }
 
     }
 

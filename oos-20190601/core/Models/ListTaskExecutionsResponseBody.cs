@@ -25,17 +25,17 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public List<ListTaskExecutionsResponseBodyTaskExecutions> TaskExecutions { get; set; }
         public class ListTaskExecutionsResponseBodyTaskExecutions : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("ChildExecutionId")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string ChildExecutionId { get; set; }
 
             [NameInMap("Outputs")]
             [Validation(Required=false)]
             public string Outputs { get; set; }
 
-            [NameInMap("ChildExecutionId")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string ChildExecutionId { get; set; }
+            public string Status { get; set; }
 
             [NameInMap("EndDate")]
             [Validation(Required=false)]

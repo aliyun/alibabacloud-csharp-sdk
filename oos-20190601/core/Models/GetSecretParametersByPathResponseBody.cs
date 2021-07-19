@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class GetSecretParametersByPathResponseBody : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -37,25 +49,25 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Value { get; set; }
 
-            [NameInMap("Constraints")]
-            [Validation(Required=false)]
-            public string Constraints { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("Constraints")]
+            [Validation(Required=false)]
+            public string Constraints { get; set; }
 
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
 
-            [NameInMap("ParameterVersion")]
-            [Validation(Required=false)]
-            public int? ParameterVersion { get; set; }
-
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
+
+            [NameInMap("ParameterVersion")]
+            [Validation(Required=false)]
+            public int? ParameterVersion { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -70,18 +82,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string ShareType { get; set; }
 
         }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
     }
 

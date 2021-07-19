@@ -41,18 +41,21 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]
             public string CreatedBy { get; set; }
             [NameInMap("CreatedDate")]
             [Validation(Required=false)]
             public string CreatedDate { get; set; }
-            [NameInMap("HasTrigger")]
-            [Validation(Required=false)]
-            public bool? HasTrigger { get; set; }
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
+            [NameInMap("HasTrigger")]
+            [Validation(Required=false)]
+            public bool? HasTrigger { get; set; }
             [NameInMap("ShareType")]
             [Validation(Required=false)]
             public string ShareType { get; set; }

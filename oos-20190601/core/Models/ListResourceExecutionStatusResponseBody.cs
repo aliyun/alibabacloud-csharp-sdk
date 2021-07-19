@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("ResourceExecutionStatus")]
         [Validation(Required=false)]
         public List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> ResourceExecutionStatus { get; set; }
@@ -42,10 +46,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string ExecutionId { get; set; }
 
         }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
     }
 

@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string UpdatedBy { get; set; }
 
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> Tags { get; set; }
-
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Tags { get; set; }
 
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
@@ -61,13 +61,17 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public int? Popularity { get; set; }
 
+            [NameInMap("TotalExecutionCount")]
+            [Validation(Required=false)]
+            public int? TotalExecutionCount { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("TotalExecutionCount")]
+            [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
-            public int? TotalExecutionCount { get; set; }
+            public string ResourceGroupId { get; set; }
 
             [NameInMap("CreatedBy")]
             [Validation(Required=false)]

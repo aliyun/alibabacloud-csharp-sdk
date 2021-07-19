@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("Actions")]
         [Validation(Required=false)]
         public List<ListActionsResponseBodyActions> Actions { get; set; }
         public class ListActionsResponseBodyActions : TeaModel {
+            [NameInMap("Popularity")]
+            [Validation(Required=false)]
+            public int? Popularity { get; set; }
+
             [NameInMap("ActionType")]
             [Validation(Required=false)]
             public string ActionType { get; set; }
@@ -46,10 +54,6 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string Properties { get; set; }
 
         }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
     }
 
