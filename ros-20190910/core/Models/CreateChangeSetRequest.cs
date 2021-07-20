@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackId { get; set; }
 
-        [NameInMap("ChannelId")]
-        [Validation(Required=false)]
-        public string ChannelId { get; set; }
-
         [NameInMap("StackPolicyURL")]
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
@@ -61,21 +57,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
-        [NameInMap("UpdateAllowPolicy")]
-        [Validation(Required=false)]
-        public string UpdateAllowPolicy { get; set; }
-
         [NameInMap("TimeoutInMinutes")]
         [Validation(Required=false)]
         public long? TimeoutInMinutes { get; set; }
-
-        [NameInMap("ActivityId")]
-        [Validation(Required=false)]
-        public string ActivityId { get; set; }
-
-        [NameInMap("OrderSource")]
-        [Validation(Required=false)]
-        public string OrderSource { get; set; }
 
         [NameInMap("DisableRollback")]
         [Validation(Required=false)]

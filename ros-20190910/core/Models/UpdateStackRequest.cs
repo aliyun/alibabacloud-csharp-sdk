@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
 
-        [NameInMap("UpdateAllowPolicy")]
-        [Validation(Required=false)]
-        public string UpdateAllowPolicy { get; set; }
-
         [NameInMap("StackPolicyDuringUpdateURL")]
         [Validation(Required=false)]
         public string StackPolicyDuringUpdateURL { get; set; }
@@ -56,10 +52,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("DisableRollback")]
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
-
-        [NameInMap("EnableRecover")]
-        [Validation(Required=false)]
-        public bool? EnableRecover { get; set; }
 
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]

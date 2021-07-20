@@ -1,3 +1,7 @@
+2021-07-20 Version: 1.0.3
+- GetStack supports resource progress.
+- ValidateTemplate supports Outputs.
+
 2021-01-22 Version: 1.0.2
 - Generated csharp 2019-09-10 for ROS.
 

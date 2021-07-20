@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.ROS20190910
+dotnet add package AlibabaCloud.SDK.ROS20190910
 ```
 
 ## 问题

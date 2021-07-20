@@ -121,6 +121,40 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceProgress")]
+        [Validation(Required=false)]
+        public GetStackResponseBodyResourceProgress ResourceProgress { get; set; }
+        public class GetStackResponseBodyResourceProgress : TeaModel {
+            [NameInMap("TotalResourceCount")]
+            [Validation(Required=false)]
+            public int? TotalResourceCount { get; set; }
+            [NameInMap("SuccessResourceCount")]
+            [Validation(Required=false)]
+            public int? SuccessResourceCount { get; set; }
+            [NameInMap("FailedResourceCount")]
+            [Validation(Required=false)]
+            public int? FailedResourceCount { get; set; }
+            [NameInMap("InProgressResourceCount")]
+            [Validation(Required=false)]
+            public int? InProgressResourceCount { get; set; }
+            [NameInMap("PendingResourceCount")]
+            [Validation(Required=false)]
+            public int? PendingResourceCount { get; set; }
+            [NameInMap("InProgressResourceDetails")]
+            [Validation(Required=false)]
+            public List<GetStackResponseBodyResourceProgressInProgressResourceDetails> InProgressResourceDetails { get; set; }
+            public class GetStackResponseBodyResourceProgressInProgressResourceDetails : TeaModel {
+                public string ResourceName { get; set; }
+                public string ResourceType { get; set; }
+                public float? ProgressValue { get; set; }
+                public float? ProgressTargetValue { get; set; }
+            }
+        };
+
     }
 
 }

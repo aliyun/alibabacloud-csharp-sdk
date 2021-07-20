@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? DisableRollback { get; set; }
 
-        [NameInMap("ChannelId")]
-        [Validation(Required=false)]
-        public string ChannelId { get; set; }
-
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
@@ -40,14 +36,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("ActivityId")]
-        [Validation(Required=false)]
-        public string ActivityId { get; set; }
-
-        [NameInMap("OrderSource")]
-        [Validation(Required=false)]
-        public string OrderSource { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -108,6 +96,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 
