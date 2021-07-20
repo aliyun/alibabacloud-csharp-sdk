@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         /// <summary>
         /// 场景ID
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("SceneId")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string SceneId { get; set; }
 
     }
 
