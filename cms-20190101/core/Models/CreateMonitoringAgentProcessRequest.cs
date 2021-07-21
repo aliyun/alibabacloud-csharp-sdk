@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitoringAgentProcessRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ProcessName")]
         [Validation(Required=false)]
         public string ProcessName { get; set; }

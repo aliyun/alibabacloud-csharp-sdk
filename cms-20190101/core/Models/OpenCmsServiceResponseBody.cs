@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class OpenCmsServiceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

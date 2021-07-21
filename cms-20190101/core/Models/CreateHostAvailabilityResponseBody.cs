@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateHostAvailabilityResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? TaskId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public long? TaskId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

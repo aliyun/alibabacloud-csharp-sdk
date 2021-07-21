@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeEventRuleAttributeResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -35,28 +35,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
             [NameInMap("EventPattern")]
             [Validation(Required=false)]
             public DescribeEventRuleAttributeResponseBodyResultEventPattern EventPattern { get; set; }
             public class DescribeEventRuleAttributeResponseBodyResultEventPattern : TeaModel {
-                [NameInMap("StatusList")]
-                [Validation(Required=false)]
-                public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList StatusList { get; set; }
-                public class DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList : TeaModel {
-                    [NameInMap("StatusList")]
-                    [Validation(Required=false)]
-                    public List<string> StatusList { get; set; }
-                };
-
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
@@ -68,6 +59,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [NameInMap("LevelList")]
                     [Validation(Required=false)]
                     public List<string> LevelList { get; set; }
+                };
+
+                [NameInMap("StatusList")]
+                [Validation(Required=false)]
+                public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList StatusList { get; set; }
+                public class DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList : TeaModel {
+                    [NameInMap("StatusList")]
+                    [Validation(Required=false)]
+                    public List<string> StatusList { get; set; }
                 };
 
                 [NameInMap("NameList")]

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -33,13 +41,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeExporterOutputListResponseBodyDatapointsDatapoint> Datapoint { get; set; }
             public class DescribeExporterOutputListResponseBodyDatapointsDatapoint : TeaModel {
+                public string DestType { get; set; }
                 public long? CreateTime { get; set; }
+                public string DestName { get; set; }
                 public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson ConfigJson { get; set; }
                 public class DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson : TeaModel {
-                    [NameInMap("as")]
-                    [Validation(Required=false)]
-                    public string As { get; set; }
-
                     [NameInMap("ak")]
                     [Validation(Required=false)]
                     public string Ak { get; set; }
@@ -56,19 +62,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string Logstore { get; set; }
 
+                    [NameInMap("as")]
+                    [Validation(Required=false)]
+                    public string As { get; set; }
+
                 }
-                public string DestName { get; set; }
-                public string DestType { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

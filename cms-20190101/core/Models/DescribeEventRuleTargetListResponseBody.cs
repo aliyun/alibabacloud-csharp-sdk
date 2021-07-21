@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeEventRuleTargetListResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -31,18 +35,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
         };
 
-        [NameInMap("SlsParameters")]
+        [NameInMap("FcParameters")]
         [Validation(Required=false)]
-        public DescribeEventRuleTargetListResponseBodySlsParameters SlsParameters { get; set; }
-        public class DescribeEventRuleTargetListResponseBodySlsParameters : TeaModel {
-            [NameInMap("SlsParameter")]
+        public DescribeEventRuleTargetListResponseBodyFcParameters FcParameters { get; set; }
+        public class DescribeEventRuleTargetListResponseBodyFcParameters : TeaModel {
+            [NameInMap("FCParameter")]
             [Validation(Required=false)]
-            public List<DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter> SlsParameter { get; set; }
-            public class DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter : TeaModel {
-                public string LogStore { get; set; }
-                public string Region { get; set; }
-                public string Project { get; set; }
+            public List<DescribeEventRuleTargetListResponseBodyFcParametersFCParameter> FCParameter { get; set; }
+            public class DescribeEventRuleTargetListResponseBodyFcParametersFCParameter : TeaModel {
+                public string ServiceName { get; set; }
+                public string FunctionName { get; set; }
                 public string Arn { get; set; }
+                public string Id { get; set; }
+                public string Region { get; set; }
+            }
+        };
+
+        [NameInMap("MnsParameters")]
+        [Validation(Required=false)]
+        public DescribeEventRuleTargetListResponseBodyMnsParameters MnsParameters { get; set; }
+        public class DescribeEventRuleTargetListResponseBodyMnsParameters : TeaModel {
+            [NameInMap("MnsParameter")]
+            [Validation(Required=false)]
+            public List<DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter> MnsParameter { get; set; }
+            public class DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter : TeaModel {
+                public string Queue { get; set; }
+                public string Arn { get; set; }
+                public string Region { get; set; }
                 public string Id { get; set; }
             }
         };
@@ -55,44 +74,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> WebhookParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter : TeaModel {
-                public string Protocol { get; set; }
                 public string Url { get; set; }
                 public string Method { get; set; }
+                public string Protocol { get; set; }
                 public string Id { get; set; }
             }
         };
 
-        [NameInMap("FcParameters")]
+        [NameInMap("SlsParameters")]
         [Validation(Required=false)]
-        public DescribeEventRuleTargetListResponseBodyFcParameters FcParameters { get; set; }
-        public class DescribeEventRuleTargetListResponseBodyFcParameters : TeaModel {
-            [NameInMap("FCParameter")]
+        public DescribeEventRuleTargetListResponseBodySlsParameters SlsParameters { get; set; }
+        public class DescribeEventRuleTargetListResponseBodySlsParameters : TeaModel {
+            [NameInMap("SlsParameter")]
             [Validation(Required=false)]
-            public List<DescribeEventRuleTargetListResponseBodyFcParametersFCParameter> FCParameter { get; set; }
-            public class DescribeEventRuleTargetListResponseBodyFcParametersFCParameter : TeaModel {
-                public string FunctionName { get; set; }
-                public string Region { get; set; }
-                public string ServiceName { get; set; }
+            public List<DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter> SlsParameter { get; set; }
+            public class DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter : TeaModel {
+                public string Project { get; set; }
+                public string LogStore { get; set; }
                 public string Arn { get; set; }
-                public string Id { get; set; }
-            }
-        };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("MnsParameters")]
-        [Validation(Required=false)]
-        public DescribeEventRuleTargetListResponseBodyMnsParameters MnsParameters { get; set; }
-        public class DescribeEventRuleTargetListResponseBodyMnsParameters : TeaModel {
-            [NameInMap("MnsParameter")]
-            [Validation(Required=false)]
-            public List<DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter> MnsParameter { get; set; }
-            public class DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter : TeaModel {
                 public string Region { get; set; }
-                public string Queue { get; set; }
-                public string Arn { get; set; }
                 public string Id { get; set; }
             }
         };

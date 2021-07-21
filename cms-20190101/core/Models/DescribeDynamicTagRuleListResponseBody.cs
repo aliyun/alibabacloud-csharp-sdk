@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -38,19 +46,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup> TagGroup { get; set; }
             public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup : TeaModel {
                 public string Status { get; set; }
+                public string MatchExpressFilterRelation { get; set; }
+                public string RegionId { get; set; }
+                public string TagKey { get; set; }
+                public string DynamicTagRuleId { get; set; }
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress MatchExpress { get; set; }
                 public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress : TeaModel {
                     [NameInMap("MatchExpress")]
                     [Validation(Required=false)]
                     public List<DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress> MatchExpress { get; set; }
                     public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress : TeaModel {
-                        [NameInMap("TagValueMatchFunction")]
-                        [Validation(Required=false)]
-                        public string TagValueMatchFunction { get; set; }
-
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
+
+                        [NameInMap("TagValueMatchFunction")]
+                        [Validation(Required=false)]
+                        public string TagValueMatchFunction { get; set; }
 
                     }
 
@@ -62,20 +74,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<string> TemplateIdList { get; set; }
 
                 }
-                public string DynamicTagRuleId { get; set; }
-                public string MatchExpressFilterRelation { get; set; }
-                public string RegionId { get; set; }
-                public string TagKey { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

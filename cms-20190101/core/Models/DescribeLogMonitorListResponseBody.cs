@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -45,24 +53,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
-            [NameInMap("ValueFilter")]
-            [Validation(Required=false)]
-            public List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> ValueFilter { get; set; }
-            public class DescribeLogMonitorListResponseBodyLogMonitorListValueFilter : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-                [NameInMap("Operator")]
-                [Validation(Required=false)]
-                public string Operator { get; set; }
-
-            }
-
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
@@ -83,15 +73,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string SlsProject { get; set; }
 
+            [NameInMap("ValueFilter")]
+            [Validation(Required=false)]
+            public List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> ValueFilter { get; set; }
+            public class DescribeLogMonitorListResponseBodyLogMonitorListValueFilter : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+                [NameInMap("Operator")]
+                [Validation(Required=false)]
+                public string Operator { get; set; }
+
+            }
+
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

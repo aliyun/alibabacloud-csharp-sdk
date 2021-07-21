@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeCustomEventHistogramResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,9 +21,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Success { get; set; }
 
         [NameInMap("EventHistograms")]
         [Validation(Required=false)]
@@ -34,10 +38,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public long? Count { get; set; }
             }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricDataResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public string Period { get; set; }
-
         [NameInMap("Datapoints")]
         [Validation(Required=false)]
         public string Datapoints { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Period")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Period { get; set; }
 
     }
 

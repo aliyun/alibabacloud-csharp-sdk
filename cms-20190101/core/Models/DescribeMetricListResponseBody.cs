@@ -17,13 +17,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public string Period { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("Datapoints")]
         [Validation(Required=false)]
@@ -33,9 +29,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
 
     }
 

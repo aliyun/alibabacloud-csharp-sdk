@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeEventRuleListResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? Total { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("EventRules")]
         [Validation(Required=false)]
         public DescribeEventRuleListResponseBodyEventRules EventRules { get; set; }
@@ -32,23 +40,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string EventType { get; set; }
                 public string Description { get; set; }
                 public string GroupId { get; set; }
-                public string State { get; set; }
                 public string Name { get; set; }
+                public string State { get; set; }
                 public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern EventPattern { get; set; }
                 public class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern : TeaModel {
                     [NameInMap("EventPattern")]
                     [Validation(Required=false)]
                     public List<DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern> EventPattern { get; set; }
                     public class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern : TeaModel {
-                        [NameInMap("EventTypeList")]
-                        [Validation(Required=false)]
-                        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList EventTypeList { get; set; }
-                        public class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList : TeaModel {
-                            [NameInMap("EventTypeList")]
-                            [Validation(Required=false)]
-                            public List<string> EventTypeList { get; set; }
-                        };
-
                         [NameInMap("Product")]
                         [Validation(Required=false)]
                         public string Product { get; set; }
@@ -60,6 +59,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                             [NameInMap("LevelList")]
                             [Validation(Required=false)]
                             public List<string> LevelList { get; set; }
+                        };
+
+                        [NameInMap("EventTypeList")]
+                        [Validation(Required=false)]
+                        public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList EventTypeList { get; set; }
+                        public class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList : TeaModel {
+                            [NameInMap("EventTypeList")]
+                            [Validation(Required=false)]
+                            public List<string> EventTypeList { get; set; }
                         };
 
                         [NameInMap("NameList")]
@@ -76,14 +84,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -38,6 +46,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string TargetWindows { get; set; }
                 public long? CreateTime { get; set; }
                 public bool? Enabled { get; set; }
+                public string Dimension { get; set; }
+                public string Namespace { get; set; }
+                public string RuleName { get; set; }
                 public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName DstName { get; set; }
                 public class DescribeExporterRuleListResponseBodyDatapointsDatapointDstName : TeaModel {
                     [NameInMap("DstName")]
@@ -45,19 +56,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<string> DstName { get; set; }
 
                 }
-                public string Dimension { get; set; }
-                public string Namespace { get; set; }
-                public string RuleName { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

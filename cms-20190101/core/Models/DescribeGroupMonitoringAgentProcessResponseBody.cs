@@ -13,17 +13,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public string PageSize { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
         [NameInMap("Total")]
         [Validation(Required=false)]
@@ -38,6 +46,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess> Process { get; set; }
             public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess : TeaModel {
                 public string ProcessName { get; set; }
+                public string MatchExpressFilterRelation { get; set; }
+                public string GroupId { get; set; }
+                public string Id { get; set; }
                 public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress MatchExpress { get; set; }
                 public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress : TeaModel {
                     [NameInMap("MatchExpress")]
@@ -59,7 +70,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                 }
-                public string GroupId { get; set; }
                 public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig AlertConfig { get; set; }
                 public class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig : TeaModel {
                     [NameInMap("AlertConfig")]
@@ -105,18 +115,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                 }
-                public string MatchExpressFilterRelation { get; set; }
-                public string Id { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

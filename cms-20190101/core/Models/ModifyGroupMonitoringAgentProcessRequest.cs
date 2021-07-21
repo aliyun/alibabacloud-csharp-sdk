@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyGroupMonitoringAgentProcessRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -45,13 +49,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string EscalationsLevel { get; set; }
 
-            [NameInMap("NoEffectiveInterval")]
-            [Validation(Required=false)]
-            public string NoEffectiveInterval { get; set; }
-
             [NameInMap("EffectiveInterval")]
             [Validation(Required=false)]
             public string EffectiveInterval { get; set; }
+
+            [NameInMap("NoEffectiveInterval")]
+            [Validation(Required=false)]
+            public string NoEffectiveInterval { get; set; }
 
             [NameInMap("Threshold")]
             [Validation(Required=false)]

@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Dimensions { get; set; }
 
+        [NameInMap("ExtraDimensionJson")]
+        [Validation(Required=false)]
+        public string ExtraDimensionJson { get; set; }
+
         [NameInMap("EffectiveInterval")]
         [Validation(Required=false)]
         public string EffectiveInterval { get; set; }

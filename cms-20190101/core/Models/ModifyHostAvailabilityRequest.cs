@@ -34,6 +34,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("HttpNegative")]
             [Validation(Required=false)]
             public bool? HttpNegative { get; set; }
+            [NameInMap("HttpHeader")]
+            [Validation(Required=false)]
+            public string HttpHeader { get; set; }
+            [NameInMap("Interval")]
+            [Validation(Required=false)]
+            public int? Interval { get; set; }
         };
 
         [NameInMap("AlertConfig")]
@@ -57,6 +63,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string WebHook { get; set; }
         };
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
@@ -77,13 +87,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<ModifyHostAvailabilityRequestAlertConfigEscalationList> AlertConfigEscalationList { get; set; }
         public class ModifyHostAvailabilityRequestAlertConfigEscalationList : TeaModel {
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
             [NameInMap("Times")]
             [Validation(Required=false)]

@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class AddTagsRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<AddTagsRequestTag> Tag { get; set; }

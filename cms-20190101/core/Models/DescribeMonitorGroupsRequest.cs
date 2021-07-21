@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupsRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("SelectContactGroups")]
         [Validation(Required=false)]
         public bool? SelectContactGroups { get; set; }
@@ -45,17 +49,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string DynamicTagRuleId { get; set; }
 
+        [NameInMap("GroupFounderTagKey")]
+        [Validation(Required=false)]
+        public string GroupFounderTagKey { get; set; }
+
+        [NameInMap("GroupFounderTagValue")]
+        [Validation(Required=false)]
+        public string GroupFounderTagValue { get; set; }
+
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
-
-        [NameInMap("ServiceId")]
-        [Validation(Required=false)]
-        public string ServiceId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

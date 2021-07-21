@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
+        public string Success { get; set; }
 
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public string Message { get; set; }
 
     }
 

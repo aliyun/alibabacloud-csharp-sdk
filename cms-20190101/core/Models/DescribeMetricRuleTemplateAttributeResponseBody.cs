@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleTemplateAttributeResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public DescribeMetricRuleTemplateAttributeResponseBodyResource Resource { get; set; }
@@ -24,6 +32,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("RestVersion")]
+            [Validation(Required=false)]
+            public string RestVersion { get; set; }
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
             [NameInMap("AlertTemplates")]
             [Validation(Required=false)]
             public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates AlertTemplates { get; set; }
@@ -44,31 +61,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string Webhook { get; set; }
 
+                    [NameInMap("Namespace")]
+                    [Validation(Required=false)]
+                    public string Namespace { get; set; }
+
+                    [NameInMap("Category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("RuleName")]
+                    [Validation(Required=false)]
+                    public string RuleName { get; set; }
+
                     [NameInMap("Escalations")]
                     [Validation(Required=false)]
                     public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations Escalations { get; set; }
                     public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations : TeaModel {
-                        [NameInMap("Critical")]
-                        [Validation(Required=false)]
-                        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical Critical { get; set; }
-                        public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical : TeaModel {
-                            [NameInMap("ComparisonOperator")]
-                            [Validation(Required=false)]
-                            public string ComparisonOperator { get; set; }
-
-                            [NameInMap("Times")]
-                            [Validation(Required=false)]
-                            public int? Times { get; set; }
-
-                            [NameInMap("Threshold")]
-                            [Validation(Required=false)]
-                            public string Threshold { get; set; }
-
-                            [NameInMap("Statistics")]
-                            [Validation(Required=false)]
-                            public string Statistics { get; set; }
-
-                        }
                         [NameInMap("Info")]
                         [Validation(Required=false)]
                         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo Info { get; set; }
@@ -111,41 +119,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                             public string Statistics { get; set; }
 
                         }
+                        [NameInMap("Critical")]
+                        [Validation(Required=false)]
+                        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical Critical { get; set; }
+                        public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical : TeaModel {
+                            [NameInMap("ComparisonOperator")]
+                            [Validation(Required=false)]
+                            public string ComparisonOperator { get; set; }
+
+                            [NameInMap("Times")]
+                            [Validation(Required=false)]
+                            public int? Times { get; set; }
+
+                            [NameInMap("Threshold")]
+                            [Validation(Required=false)]
+                            public string Threshold { get; set; }
+
+                            [NameInMap("Statistics")]
+                            [Validation(Required=false)]
+                            public string Statistics { get; set; }
+
+                        }
                     };
-
-                    [NameInMap("Namespace")]
-                    [Validation(Required=false)]
-                    public string Namespace { get; set; }
-
-                    [NameInMap("Category")]
-                    [Validation(Required=false)]
-                    public string Category { get; set; }
-
-                    [NameInMap("RuleName")]
-                    [Validation(Required=false)]
-                    public string RuleName { get; set; }
 
                 }
 
             }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("RestVersion")]
-            [Validation(Required=false)]
-            public string RestVersion { get; set; }
-            [NameInMap("TemplateId")]
-            [Validation(Required=false)]
-            public string TemplateId { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

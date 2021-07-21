@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutEventRuleTargetsRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
@@ -43,13 +47,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string ContactGroupName { get; set; }
 
-            [NameInMap("Level")]
-            [Validation(Required=false)]
-            public string Level { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
 
         }
 
@@ -79,13 +83,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
-            [NameInMap("Method")]
-            [Validation(Required=false)]
-            public string Method { get; set; }
-
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
+
+            [NameInMap("Method")]
+            [Validation(Required=false)]
+            public string Method { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitorGroupDynamicRuleRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
@@ -29,13 +33,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
-                [NameInMap("Function")]
-                [Validation(Required=false)]
-                public string Function { get; set; }
-
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Function")]
+                [Validation(Required=false)]
+                public string Function { get; set; }
 
             }
 

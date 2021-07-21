@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMetricRuleTemplateRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
@@ -87,13 +91,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string Threshold { get; set; }
 
-                    [NameInMap("ComparisonOperator")]
-                    [Validation(Required=false)]
-                    public string ComparisonOperator { get; set; }
-
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
+
+                    [NameInMap("ComparisonOperator")]
+                    [Validation(Required=false)]
+                    public string ComparisonOperator { get; set; }
 
                 }
             };
@@ -110,13 +114,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
-            [NameInMap("RuleName")]
-            [Validation(Required=false)]
-            public string RuleName { get; set; }
-
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }
+
+            [NameInMap("RuleName")]
+            [Validation(Required=false)]
+            public string RuleName { get; set; }
 
             [NameInMap("Selector")]
             [Validation(Required=false)]

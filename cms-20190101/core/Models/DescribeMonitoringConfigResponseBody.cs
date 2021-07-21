@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitoringConfigResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("AutoInstall")]
         [Validation(Required=false)]
         public bool? AutoInstall { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("EnableInstallAgentNewECS")]
         [Validation(Required=false)]
         public bool? EnableInstallAgentNewECS { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Message { get; set; }
 
     }
 

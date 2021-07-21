@@ -86,13 +86,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
-            [NameInMap("NoEffectiveInterval")]
-            [Validation(Required=false)]
-            public string NoEffectiveInterval { get; set; }
-
             [NameInMap("EffectiveInterval")]
             [Validation(Required=false)]
             public string EffectiveInterval { get; set; }
+
+            [NameInMap("NoEffectiveInterval")]
+            [Validation(Required=false)]
+            public string NoEffectiveInterval { get; set; }
 
             [NameInMap("RuleId")]
             [Validation(Required=false)]

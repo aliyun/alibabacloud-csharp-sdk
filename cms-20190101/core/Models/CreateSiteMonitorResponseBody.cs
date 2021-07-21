@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateSiteMonitorResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,14 +37,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public List<CreateSiteMonitorResponseBodyDataAttachAlertResultContact> Contact { get; set; }
                 public class CreateSiteMonitorResponseBodyDataAttachAlertResultContact : TeaModel {
-                    [NameInMap("RequestId")]
-                    [Validation(Required=false)]
-                    public string RequestId { get; set; }
-
-                    [NameInMap("Success")]
-                    [Validation(Required=false)]
-                    public string Success { get; set; }
-
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
@@ -44,6 +44,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
+
+                    [NameInMap("RequestId")]
+                    [Validation(Required=false)]
+                    public string RequestId { get; set; }
+
+                    [NameInMap("Success")]
+                    [Validation(Required=false)]
+                    public string Success { get; set; }
 
                     [NameInMap("RuleId")]
                     [Validation(Required=false)]
@@ -54,10 +62,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
         };
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("CreateResultList")]
         [Validation(Required=false)]
         public CreateSiteMonitorResponseBodyCreateResultList CreateResultList { get; set; }
@@ -66,14 +70,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<CreateSiteMonitorResponseBodyCreateResultListCreateResultList> CreateResultList { get; set; }
             public class CreateSiteMonitorResponseBodyCreateResultListCreateResultList : TeaModel {
-                public string TaskName { get; set; }
                 public string TaskId { get; set; }
+                public string TaskName { get; set; }
             }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
 
     }
 

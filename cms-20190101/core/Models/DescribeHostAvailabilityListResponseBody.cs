@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHostAvailabilityListResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? Total { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public DescribeHostAvailabilityListResponseBodyTaskList TaskList { get; set; }
@@ -32,11 +40,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string TaskType { get; set; }
                 public string GroupName { get; set; }
                 public long? GroupId { get; set; }
+                public string TaskName { get; set; }
+                public bool? Disabled { get; set; }
+                public string TaskScope { get; set; }
+                public long? Id { get; set; }
+                public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances Instances { get; set; }
+                public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances : TeaModel {
+                    [NameInMap("Instance")]
+                    [Validation(Required=false)]
+                    public List<string> Instance { get; set; }
+
+                }
                 public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption TaskOption { get; set; }
                 public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption : TeaModel {
                     [NameInMap("HttpMethod")]
                     [Validation(Required=false)]
                     public string HttpMethod { get; set; }
+
+                    [NameInMap("Interval")]
+                    [Validation(Required=false)]
+                    public int? Interval { get; set; }
 
                     [NameInMap("HttpURI")]
                     [Validation(Required=false)]
@@ -63,8 +86,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string HttpKeyword { get; set; }
 
                 }
-                public string TaskName { get; set; }
-                public bool? Disabled { get; set; }
                 public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig AlertConfig { get; set; }
                 public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig : TeaModel {
                     [NameInMap("SilenceTime")]
@@ -78,6 +99,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [NameInMap("StartTime")]
                     [Validation(Required=false)]
                     public int? StartTime { get; set; }
+
+                    [NameInMap("WebHook")]
+                    [Validation(Required=false)]
+                    public string WebHook { get; set; }
 
                     [NameInMap("NotifyType")]
                     [Validation(Required=false)]
@@ -93,36 +118,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList : TeaModel {
                             public string Value { get; set; }
                             public string MetricName { get; set; }
-                            public string Times { get; set; }
                             public string Operator { get; set; }
+                            public string Times { get; set; }
                             public string Aggregate { get; set; }
                         }
                     };
 
-                    [NameInMap("WebHook")]
-                    [Validation(Required=false)]
-                    public string WebHook { get; set; }
-
                 }
-                public string TaskScope { get; set; }
-                public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances Instances { get; set; }
-                public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances : TeaModel {
-                    [NameInMap("Instance")]
-                    [Validation(Required=false)]
-                    public List<string> Instance { get; set; }
-
-                }
-                public long? Id { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

@@ -9,6 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogListResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
+
         [NameInMap("AlertLogList")]
         [Validation(Required=false)]
         public List<DescribeAlertLogListResponseBodyAlertLogList> AlertLogList { get; set; }
@@ -21,47 +49,83 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string EventName { get; set; }
 
-            [NameInMap("ContactALIIWWList")]
+            [NameInMap("Product")]
             [Validation(Required=false)]
-            public List<string> ContactALIIWWList { get; set; }
+            public string Product { get; set; }
+
+            [NameInMap("BlackListUUID")]
+            [Validation(Required=false)]
+            public string BlackListUUID { get; set; }
 
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             [NameInMap("LevelChange")]
             [Validation(Required=false)]
             public string LevelChange { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("RuleName")]
+            [Validation(Required=false)]
+            public string RuleName { get; set; }
 
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
-            [NameInMap("ExtendedInfo")]
+            [NameInMap("BlackListName")]
             [Validation(Required=false)]
-            public List<DescribeAlertLogListResponseBodyAlertLogListExtendedInfo> ExtendedInfo { get; set; }
-            public class DescribeAlertLogListResponseBodyAlertLogListExtendedInfo : TeaModel {
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
+            public string BlackListName { get; set; }
 
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-            }
-
-            [NameInMap("DingdingWebhookList")]
+            [NameInMap("GroupName")]
             [Validation(Required=false)]
-            public List<string> DingdingWebhookList { get; set; }
+            public string GroupName { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+            [NameInMap("AlertTime")]
+            [Validation(Required=false)]
+            public string AlertTime { get; set; }
 
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
-            [NameInMap("ContactMailList")]
+            [NameInMap("BlackListDetail")]
             [Validation(Required=false)]
-            public List<string> ContactMailList { get; set; }
+            public string BlackListDetail { get; set; }
+
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("SendStatus")]
+            [Validation(Required=false)]
+            public string SendStatus { get; set; }
+
+            [NameInMap("ExtendedInfo")]
+            [Validation(Required=false)]
+            public List<DescribeAlertLogListResponseBodyAlertLogListExtendedInfo> ExtendedInfo { get; set; }
+            public class DescribeAlertLogListResponseBodyAlertLogListExtendedInfo : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
@@ -77,29 +141,51 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             }
 
-            [NameInMap("ContactSMSList")]
+            [NameInMap("WebhookList")]
             [Validation(Required=false)]
-            public List<string> ContactSMSList { get; set; }
+            public List<DescribeAlertLogListResponseBodyAlertLogListWebhookList> WebhookList { get; set; }
+            public class DescribeAlertLogListResponseBodyAlertLogListWebhookList : TeaModel {
+                [NameInMap("code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
 
-            [NameInMap("SendStatus")]
+                [NameInMap("url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+                [NameInMap("message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+            }
+
+            [NameInMap("DingdingWebhookList")]
             [Validation(Required=false)]
-            public string SendStatus { get; set; }
+            public List<string> DingdingWebhookList { get; set; }
 
             [NameInMap("ContactOnCallList")]
             [Validation(Required=false)]
             public List<string> ContactOnCallList { get; set; }
 
-            [NameInMap("Product")]
+            [NameInMap("ContactMailList")]
             [Validation(Required=false)]
-            public string Product { get; set; }
+            public List<string> ContactMailList { get; set; }
 
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
             public List<string> ContactGroups { get; set; }
 
-            [NameInMap("Namespace")]
+            [NameInMap("ContactALIIWWList")]
             [Validation(Required=false)]
-            public string Namespace { get; set; }
+            public List<string> ContactALIIWWList { get; set; }
+
+            [NameInMap("ContactSMSList")]
+            [Validation(Required=false)]
+            public List<string> ContactSMSList { get; set; }
+
+            [NameInMap("ContactDingList")]
+            [Validation(Required=false)]
+            public List<string> ContactDingList { get; set; }
 
             [NameInMap("Escalation")]
             [Validation(Required=false)]
@@ -116,67 +202,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Level { get; set; }
             };
 
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("ContactDingList")]
-            [Validation(Required=false)]
-            public List<string> ContactDingList { get; set; }
-
-            [NameInMap("RuleName")]
-            [Validation(Required=false)]
-            public string RuleName { get; set; }
-
-            [NameInMap("WebhookList")]
-            [Validation(Required=false)]
-            public List<string> WebhookList { get; set; }
-
-            [NameInMap("GroupId")]
-            [Validation(Required=false)]
-            public string GroupId { get; set; }
-
-            [NameInMap("GroupName")]
-            [Validation(Required=false)]
-            public string GroupName { get; set; }
-
-            [NameInMap("AlertTime")]
-            [Validation(Required=false)]
-            public string AlertTime { get; set; }
-
-            [NameInMap("Level")]
-            [Validation(Required=false)]
-            public string Level { get; set; }
-
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

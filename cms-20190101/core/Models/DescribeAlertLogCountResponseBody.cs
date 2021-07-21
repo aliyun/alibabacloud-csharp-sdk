@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogCountResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,37 +21,33 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("AlertLogCount")]
         [Validation(Required=false)]
         public List<DescribeAlertLogCountResponseBodyAlertLogCount> AlertLogCount { get; set; }
         public class DescribeAlertLogCountResponseBodyAlertLogCount : TeaModel {
-            [NameInMap("Logs")]
-            [Validation(Required=false)]
-            public List<DescribeAlertLogCountResponseBodyAlertLogCountLogs> Logs { get; set; }
-            public class DescribeAlertLogCountResponseBodyAlertLogCountLogs : TeaModel {
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public string Value { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-            }
-
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
+            [NameInMap("Logs")]
+            [Validation(Required=false)]
+            public List<DescribeAlertLogCountResponseBodyAlertLogCountLogs> Logs { get; set; }
+            public class DescribeAlertLogCountResponseBodyAlertLogCountLogs : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

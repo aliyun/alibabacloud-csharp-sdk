@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifySiteMonitorRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("AlertIds")]
         [Validation(Required=false)]
         public string AlertIds { get; set; }
+
+        [NameInMap("IntervalUnit")]
+        [Validation(Required=false)]
+        public string IntervalUnit { get; set; }
 
     }
 

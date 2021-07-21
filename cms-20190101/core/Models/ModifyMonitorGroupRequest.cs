@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMonitorGroupRequest : TeaModel {
-        [NameInMap("BindUrls")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string BindUrls { get; set; }
-
-        [NameInMap("ServiceId")]
-        [Validation(Required=false)]
-        public long? ServiceId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]

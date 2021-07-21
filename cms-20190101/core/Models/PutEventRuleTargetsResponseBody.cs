@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutEventRuleTargetsResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,34 +21,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("FailedMnsParameters")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public PutEventRuleTargetsResponseBodyFailedMnsParameters FailedMnsParameters { get; set; }
-        public class PutEventRuleTargetsResponseBodyFailedMnsParameters : TeaModel {
-            [NameInMap("MnsParameter")]
-            [Validation(Required=false)]
-            public List<PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter> MnsParameter { get; set; }
-            public class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter : TeaModel {
-                public string Region { get; set; }
-                public string Queue { get; set; }
-                public int? Id { get; set; }
-            }
-        };
-
-        [NameInMap("FailedFcParameters")]
-        [Validation(Required=false)]
-        public PutEventRuleTargetsResponseBodyFailedFcParameters FailedFcParameters { get; set; }
-        public class PutEventRuleTargetsResponseBodyFailedFcParameters : TeaModel {
-            [NameInMap("FcParameter")]
-            [Validation(Required=false)]
-            public List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> FcParameter { get; set; }
-            public class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter : TeaModel {
-                public string FunctionName { get; set; }
-                public string Region { get; set; }
-                public string ServiceName { get; set; }
-                public int? Id { get; set; }
-            }
-        };
+        public bool? Success { get; set; }
 
         [NameInMap("FailedParameterCount")]
         [Validation(Required=false)]
@@ -64,13 +43,34 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("FailedMnsParameters")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public PutEventRuleTargetsResponseBodyFailedMnsParameters FailedMnsParameters { get; set; }
+        public class PutEventRuleTargetsResponseBodyFailedMnsParameters : TeaModel {
+            [NameInMap("MnsParameter")]
+            [Validation(Required=false)]
+            public List<PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter> MnsParameter { get; set; }
+            public class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter : TeaModel {
+                public string Queue { get; set; }
+                public int? Id { get; set; }
+                public string Region { get; set; }
+            }
+        };
 
-        [NameInMap("Success")]
+        [NameInMap("FailedFcParameters")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public PutEventRuleTargetsResponseBodyFailedFcParameters FailedFcParameters { get; set; }
+        public class PutEventRuleTargetsResponseBodyFailedFcParameters : TeaModel {
+            [NameInMap("FcParameter")]
+            [Validation(Required=false)]
+            public List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> FcParameter { get; set; }
+            public class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter : TeaModel {
+                public string ServiceName { get; set; }
+                public string FunctionName { get; set; }
+                public int? Id { get; set; }
+                public string Region { get; set; }
+            }
+        };
 
     }
 

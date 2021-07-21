@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeContactListResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Contacts")]
         [Validation(Required=false)]
@@ -26,27 +38,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeContactListResponseBodyContactsContact> Contact { get; set; }
             public class DescribeContactListResponseBodyContactsContact : TeaModel {
                 public long? UpdateTime { get; set; }
-                public DescribeContactListResponseBodyContactsContactChannelsState ChannelsState { get; set; }
-                public class DescribeContactListResponseBodyContactsContactChannelsState : TeaModel {
-                    [NameInMap("DingWebHook")]
-                    [Validation(Required=false)]
-                    public string DingWebHook { get; set; }
-
-                    [NameInMap("SMS")]
-                    [Validation(Required=false)]
-                    public string SMS { get; set; }
-
-                    [NameInMap("Mail")]
-                    [Validation(Required=false)]
-                    public string Mail { get; set; }
-
-                    [NameInMap("AliIM")]
-                    [Validation(Required=false)]
-                    public string AliIM { get; set; }
-
-                }
+                public string Name { get; set; }
                 public long? CreateTime { get; set; }
                 public string Lang { get; set; }
+                public string Desc { get; set; }
                 public DescribeContactListResponseBodyContactsContactContactGroups ContactGroups { get; set; }
                 public class DescribeContactListResponseBodyContactsContactContactGroups : TeaModel {
                     [NameInMap("ContactGroup")]
@@ -56,14 +51,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
                 public DescribeContactListResponseBodyContactsContactChannels Channels { get; set; }
                 public class DescribeContactListResponseBodyContactsContactChannels : TeaModel {
-                    [NameInMap("DingWebHook")]
-                    [Validation(Required=false)]
-                    public string DingWebHook { get; set; }
-
-                    [NameInMap("SMS")]
-                    [Validation(Required=false)]
-                    public string SMS { get; set; }
-
                     [NameInMap("Mail")]
                     [Validation(Required=false)]
                     public string Mail { get; set; }
@@ -72,23 +59,36 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string AliIM { get; set; }
 
+                    [NameInMap("DingWebHook")]
+                    [Validation(Required=false)]
+                    public string DingWebHook { get; set; }
+
+                    [NameInMap("SMS")]
+                    [Validation(Required=false)]
+                    public string SMS { get; set; }
+
                 }
-                public string Name { get; set; }
-                public string Desc { get; set; }
+                public DescribeContactListResponseBodyContactsContactChannelsState ChannelsState { get; set; }
+                public class DescribeContactListResponseBodyContactsContactChannelsState : TeaModel {
+                    [NameInMap("Mail")]
+                    [Validation(Required=false)]
+                    public string Mail { get; set; }
+
+                    [NameInMap("AliIM")]
+                    [Validation(Required=false)]
+                    public string AliIM { get; set; }
+
+                    [NameInMap("DingWebHook")]
+                    [Validation(Required=false)]
+                    public string DingWebHook { get; set; }
+
+                    [NameInMap("SMS")]
+                    [Validation(Required=false)]
+                    public string SMS { get; set; }
+
+                }
             }
         };
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
