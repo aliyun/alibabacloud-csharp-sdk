@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? DryRunResult { get; set; }
 
+        [NameInMap("TagResult")]
+        [Validation(Required=false)]
+        public bool? TagResult { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

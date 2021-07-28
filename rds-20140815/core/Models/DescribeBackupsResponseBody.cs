@@ -57,6 +57,27 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public long? BackupSize { get; set; }
                 public string BackupMode { get; set; }
                 public string DBInstanceId { get; set; }
+                public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB BackupDownloadLinkByDB { get; set; }
+                public class DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB : TeaModel {
+                    [NameInMap("BackupDownloadLinkByDB")]
+                    [Validation(Required=false)]
+                    public List<DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB> BackupDownloadLinkByDB { get; set; }
+                    public class DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB : TeaModel {
+                        [NameInMap("IntranetDownloadLink")]
+                        [Validation(Required=false)]
+                        public string IntranetDownloadLink { get; set; }
+
+                        [NameInMap("DataBase")]
+                        [Validation(Required=false)]
+                        public string DataBase { get; set; }
+
+                        [NameInMap("DownloadLink")]
+                        [Validation(Required=false)]
+                        public string DownloadLink { get; set; }
+
+                    }
+
+                }
             }
         };
 
