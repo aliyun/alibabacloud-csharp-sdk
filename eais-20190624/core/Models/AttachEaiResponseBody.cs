@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ClientInstanceId")]
-        [Validation(Required=false)]
-        public string ClientInstanceId { get; set; }
-
         [NameInMap("ElasticAcceleratedInstanceId")]
         [Validation(Required=false)]
         public string ElasticAcceleratedInstanceId { get; set; }
+
+        [NameInMap("ClientInstanceId")]
+        [Validation(Required=false)]
+        public string ClientInstanceId { get; set; }
 
     }
 

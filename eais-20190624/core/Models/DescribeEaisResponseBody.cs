@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eais20190624.Models
 {
     public class DescribeEaisResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public DescribeEaisResponseBodyInstances Instances { get; set; }
@@ -19,50 +35,34 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
             public class DescribeEaisResponseBodyInstancesInstance : TeaModel {
                 public string Status { get; set; }
                 public string CreationTime { get; set; }
+                public string ClientInstanceName { get; set; }
+                public string Description { get; set; }
+                public string ElasticAcceleratedInstanceId { get; set; }
+                public string InstanceName { get; set; }
                 public string ClientInstanceType { get; set; }
                 public string ClientInstanceId { get; set; }
+                public string ZoneId { get; set; }
+                public string InstanceType { get; set; }
+                public string RegionId { get; set; }
                 public DescribeEaisResponseBodyInstancesInstanceTags Tags { get; set; }
                 public class DescribeEaisResponseBodyInstancesInstanceTags : TeaModel {
                     [NameInMap("Tag")]
                     [Validation(Required=false)]
                     public List<DescribeEaisResponseBodyInstancesInstanceTagsTag> Tag { get; set; }
                     public class DescribeEaisResponseBodyInstancesInstanceTagsTag : TeaModel {
-                        [NameInMap("TagValue")]
-                        [Validation(Required=false)]
-                        public string TagValue { get; set; }
-
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
                     }
 
                 }
-                public string InstanceType { get; set; }
-                public string RegionId { get; set; }
-                public string ClientInstanceName { get; set; }
-                public string Description { get; set; }
-                public string ElasticAcceleratedInstanceId { get; set; }
-                public string InstanceName { get; set; }
-                public string ZoneId { get; set; }
             }
         };
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 
