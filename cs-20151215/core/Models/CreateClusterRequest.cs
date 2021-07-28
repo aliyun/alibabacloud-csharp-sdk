@@ -238,6 +238,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string OsType { get; set; }
 
         /// <summary>
+        /// 等保安全加固
+        /// </summary>
+        [NameInMap("soc_enabled")]
+        [Validation(Required=false)]
+        public bool? SocEnabled { get; set; }
+
+        /// <summary>
+        /// CIS安全加固
+        /// </summary>
+        [NameInMap("cis_enabled")]
+        [Validation(Required=false)]
+        public bool? CisEnabled { get; set; }
+
+        /// <summary>
         /// CPU策略
         /// </summary>
         [NameInMap("cpu_policy")]
@@ -399,6 +413,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string WorkerSystemDiskSnapshotPolicyId { get; set; }
 
         /// <summary>
+        /// 集群Worker节点磁盘性能，只对ESSD类型磁盘生效
+        /// </summary>
+        [NameInMap("worker_system_disk_performance_level")]
+        [Validation(Required=false)]
+        public string WorkerSystemDiskPerformanceLevel { get; set; }
+
+        /// <summary>
         /// 集群Worker节点数据盘配置
         /// </summary>
         [NameInMap("worker_data_disks")]
@@ -488,6 +509,34 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("profile")]
         [Validation(Required=false)]
         public string Profile { get; set; }
+
+        /// <summary>
+        /// ASK 集群开启日志服务
+        /// </summary>
+        [NameInMap("logging_type")]
+        [Validation(Required=false)]
+        public string LoggingType { get; set; }
+
+        /// <summary>
+        /// 控制平面日志
+        /// </summary>
+        [NameInMap("controlplane_log_ttl")]
+        [Validation(Required=false)]
+        public string ControlplaneLogTtl { get; set; }
+
+        /// <summary>
+        /// 使用已有log project时，需要指定log project
+        /// </summary>
+        [NameInMap("controlplane_log_project")]
+        [Validation(Required=false)]
+        public string ControlplaneLogProject { get; set; }
+
+        /// <summary>
+        /// 需要采集日志的组件
+        /// </summary>
+        [NameInMap("controlplane_log_components")]
+        [Validation(Required=false)]
+        public List<string> ControlplaneLogComponents { get; set; }
 
         /// <summary>
         /// 集群删除保护

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteClusterNodesResponse : TeaModel {
+    public class CreateTriggerResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DeleteClusterNodesResponseBody Body { get; set; }
+        public CreateTriggerResponseBody Body { get; set; }
 
     }
 
