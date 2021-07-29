@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.ImageSearch20210120
+dotnet add package AlibabaCloud.SDK.ImageSearch20210120
 ```
 
 ## 问题

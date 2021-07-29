@@ -8,22 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20210120.Models
 {
-    public class ImageSegmentationRequest : TeaModel {
+    public class ImageDuplicationRequest : TeaModel {
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("PicContent")]
+        [NameInMap("PicUrlList")]
         [Validation(Required=false)]
-        public string PicContent { get; set; }
+        public string PicUrlList { get; set; }
 
-        [NameInMap("ReturnPicFormat")]
+        [NameInMap("PicNumList")]
         [Validation(Required=false)]
-        public string ReturnPicFormat { get; set; }
+        public string PicNumList { get; set; }
 
-        [NameInMap("ReturnPicType")]
+        [NameInMap("ImageHeight")]
         [Validation(Required=false)]
-        public string ReturnPicType { get; set; }
+        public long? ImageHeight { get; set; }
+
+        [NameInMap("ImageWidth")]
+        [Validation(Required=false)]
+        public long? ImageWidth { get; set; }
 
     }
 
