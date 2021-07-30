@@ -222,6 +222,38 @@ namespace AlibabaCloud.SDK.Push20160801
             return await CancelPushWithOptionsAsync(request, runtime);
         }
 
+        public CheckCertificateResponse CheckCertificateWithOptions(CheckCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CheckCertificateResponse>(DoRPCRequest("CheckCertificate", "2016-08-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CheckCertificateResponse> CheckCertificateWithOptionsAsync(CheckCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CheckCertificateResponse>(await DoRPCRequestAsync("CheckCertificate", "2016-08-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CheckCertificateResponse CheckCertificate(CheckCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckCertificateWithOptions(request, runtime);
+        }
+
+        public async Task<CheckCertificateResponse> CheckCertificateAsync(CheckCertificateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckCertificateWithOptionsAsync(request, runtime);
+        }
+
         public CheckDeviceResponse CheckDeviceWithOptions(CheckDeviceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

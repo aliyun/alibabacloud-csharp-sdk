@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryPushRecordsResponseBody : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
+
+        [NameInMap("Page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
         [NameInMap("PushInfos")]
         [Validation(Required=false)]
         public QueryPushRecordsResponseBodyPushInfos PushInfos { get; set; }
@@ -29,26 +49,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                 public string Target { get; set; }
             }
         };
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
-
-        [NameInMap("Page")]
-        [Validation(Required=false)]
-        public int? Page { get; set; }
 
     }
 

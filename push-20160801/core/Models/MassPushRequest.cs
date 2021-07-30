@@ -21,25 +21,29 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string JobKey { get; set; }
 
+            [NameInMap("iOSSilentNotification")]
+            [Validation(Required=false)]
+            public bool? IOSSilentNotification { get; set; }
+
             [NameInMap("iOSNotificationCollapseId")]
             [Validation(Required=false)]
             public string IOSNotificationCollapseId { get; set; }
 
-            [NameInMap("iOSSilentNotification")]
+            [NameInMap("AndroidRenderStyle")]
             [Validation(Required=false)]
-            public bool? IOSSilentNotification { get; set; }
+            public string AndroidRenderStyle { get; set; }
 
             [NameInMap("StoreOffline")]
             [Validation(Required=false)]
             public bool? StoreOffline { get; set; }
 
-            [NameInMap("iOSNotificationCategory")]
-            [Validation(Required=false)]
-            public string IOSNotificationCategory { get; set; }
-
             [NameInMap("iOSSubtitle")]
             [Validation(Required=false)]
             public string IOSSubtitle { get; set; }
+
+            [NameInMap("iOSNotificationCategory")]
+            [Validation(Required=false)]
+            public string IOSNotificationCategory { get; set; }
 
             [NameInMap("AndroidNotificationChannel")]
             [Validation(Required=false)]
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidNotifyType { get; set; }
 
+            [NameInMap("AndroidBigBody")]
+            [Validation(Required=false)]
+            public string AndroidBigBody { get; set; }
+
             [NameInMap("iOSMutableContent")]
             [Validation(Required=false)]
             public bool? IOSMutableContent { get; set; }
@@ -96,6 +104,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("AndroidOpenUrl")]
             [Validation(Required=false)]
             public string AndroidOpenUrl { get; set; }
+
+            [NameInMap("AndroidBigTitle")]
+            [Validation(Required=false)]
+            public string AndroidBigTitle { get; set; }
 
             [NameInMap("AndroidNotificationNotifyId")]
             [Validation(Required=false)]
@@ -109,13 +121,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidNotificationVivoChannel { get; set; }
 
-            [NameInMap("AndroidOpenType")]
-            [Validation(Required=false)]
-            public string AndroidOpenType { get; set; }
-
             [NameInMap("DeviceType")]
             [Validation(Required=false)]
             public string DeviceType { get; set; }
+
+            [NameInMap("AndroidOpenType")]
+            [Validation(Required=false)]
+            public string AndroidOpenType { get; set; }
 
             [NameInMap("AndroidPopupActivity")]
             [Validation(Required=false)]
@@ -153,6 +165,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public int? AndroidNotificationBarPriority { get; set; }
 
+            [NameInMap("AndroidXiaomiBigPictureUrl")]
+            [Validation(Required=false)]
+            public string AndroidXiaomiBigPictureUrl { get; set; }
+
             [NameInMap("TargetValue")]
             [Validation(Required=false)]
             public string TargetValue { get; set; }
@@ -169,13 +185,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string PushType { get; set; }
 
-            [NameInMap("iOSBadge")]
-            [Validation(Required=false)]
-            public int? IOSBadge { get; set; }
-
             [NameInMap("SendSpeed")]
             [Validation(Required=false)]
             public int? SendSpeed { get; set; }
+
+            [NameInMap("iOSBadge")]
+            [Validation(Required=false)]
+            public int? IOSBadge { get; set; }
 
             [NameInMap("Title")]
             [Validation(Required=false)]

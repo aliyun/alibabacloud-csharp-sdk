@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryDevicesByAliasResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("DeviceIds")]
         [Validation(Required=false)]
         public QueryDevicesByAliasResponseBodyDeviceIds DeviceIds { get; set; }
@@ -17,10 +21,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<string> DeviceId { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

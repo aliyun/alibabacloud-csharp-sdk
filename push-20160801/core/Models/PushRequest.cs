@@ -205,6 +205,22 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string IOSNotificationCollapseId { get; set; }
 
+        [NameInMap("AndroidRenderStyle")]
+        [Validation(Required=false)]
+        public int? AndroidRenderStyle { get; set; }
+
+        [NameInMap("AndroidBigTitle")]
+        [Validation(Required=false)]
+        public string AndroidBigTitle { get; set; }
+
+        [NameInMap("AndroidBigBody")]
+        [Validation(Required=false)]
+        public string AndroidBigBody { get; set; }
+
+        [NameInMap("AndroidXiaomiBigPictureUrl")]
+        [Validation(Required=false)]
+        public string AndroidXiaomiBigPictureUrl { get; set; }
+
     }
 
 }

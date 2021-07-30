@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class CompleteContinuouslyPushResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
