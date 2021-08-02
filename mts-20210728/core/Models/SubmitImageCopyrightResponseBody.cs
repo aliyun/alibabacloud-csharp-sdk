@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         /// <summary>
         /// 请求id
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("RequestID")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RequestID { get; set; }
 
         /// <summary>
         /// 状态码
