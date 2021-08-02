@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Imagerecog20190930
+dotnet add package AlibabaCloud.SDK.Imagerecog20190930
 ```
 
 ## 问题

@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public string Async { get; set; }
-
     }
 
 }

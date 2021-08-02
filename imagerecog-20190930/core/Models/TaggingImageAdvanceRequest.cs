@@ -13,13 +13,9 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
-        [NameInMap("ImageType")]
+        [NameInMap("Mode")]
         [Validation(Required=false)]
-        public int? ImageType { get; set; }
-
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
+        public string Mode { get; set; }
 
     }
 
