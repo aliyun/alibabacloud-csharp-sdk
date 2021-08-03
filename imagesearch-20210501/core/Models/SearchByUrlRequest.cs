@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
         [Validation(Required=false)]
         public long? RelationId { get; set; }
 
+        [NameInMap("Pid")]
+        [Validation(Required=false)]
+        public string Pid { get; set; }
+
     }
 
 }

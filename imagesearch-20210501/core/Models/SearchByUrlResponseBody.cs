@@ -39,17 +39,37 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string ItemName { get; set; }
 
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
                     [NameInMap("Pic")]
                     [Validation(Required=false)]
                     public string Pic { get; set; }
+
+                    [NameInMap("PicUrl")]
+                    [Validation(Required=false)]
+                    public string PicUrl { get; set; }
 
                     [NameInMap("Price")]
                     [Validation(Required=false)]
                     public string Price { get; set; }
 
+                    [NameInMap("ReservePrice")]
+                    [Validation(Required=false)]
+                    public string ReservePrice { get; set; }
+
                     [NameInMap("PromotionPrice")]
                     [Validation(Required=false)]
                     public string PromotionPrice { get; set; }
+
+                    [NameInMap("ZkFinalPrice")]
+                    [Validation(Required=false)]
+                    public string ZkFinalPrice { get; set; }
+
+                    [NameInMap("PriceAfterCoupon")]
+                    [Validation(Required=false)]
+                    public string PriceAfterCoupon { get; set; }
 
                     [NameInMap("UserType")]
                     [Validation(Required=false)]
@@ -63,6 +83,10 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string SellerNickName { get; set; }
 
+                    [NameInMap("Nick")]
+                    [Validation(Required=false)]
+                    public string Nick { get; set; }
+
                     [NameInMap("SellerId")]
                     [Validation(Required=false)]
                     public string SellerId { get; set; }
@@ -70,6 +94,10 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [NameInMap("MonthSellCount")]
                     [Validation(Required=false)]
                     public int? MonthSellCount { get; set; }
+
+                    [NameInMap("Volume")]
+                    [Validation(Required=false)]
+                    public int? Volume { get; set; }
 
                     [NameInMap("LevelOneCategoryName")]
                     [Validation(Required=false)]
@@ -79,9 +107,17 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string CategoryName { get; set; }
 
+                    [NameInMap("CouponActivityId")]
+                    [Validation(Required=false)]
+                    public string CouponActivityId { get; set; }
+
                     [NameInMap("CouponTotalCount")]
                     [Validation(Required=false)]
                     public string CouponTotalCount { get; set; }
+
+                    [NameInMap("CouponSendCount")]
+                    [Validation(Required=false)]
+                    public string CouponSendCount { get; set; }
 
                     [NameInMap("CouponRemainCount")]
                     [Validation(Required=false)]
@@ -107,6 +143,18 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [Validation(Required=false)]
                     public string CouponSaleTextInfo { get; set; }
 
+                    [NameInMap("CouponInfo")]
+                    [Validation(Required=false)]
+                    public string CouponInfo { get; set; }
+
+                    [NameInMap("TkMktRate")]
+                    [Validation(Required=false)]
+                    public int? TkMktRate { get; set; }
+
+                    [NameInMap("TkRate")]
+                    [Validation(Required=false)]
+                    public int? TkRate { get; set; }
+
                     [NameInMap("CommissionRate")]
                     [Validation(Required=false)]
                     public string CommissionRate { get; set; }
@@ -118,6 +166,37 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
                     [NameInMap("ClickUrl")]
                     [Validation(Required=false)]
                     public string ClickUrl { get; set; }
+
+                    [NameInMap("Url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                    [NameInMap("ShortUrl")]
+                    [Validation(Required=false)]
+                    public string ShortUrl { get; set; }
+
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("ShopTitle")]
+                    [Validation(Required=false)]
+                    public string ShopTitle { get; set; }
+
+                    [NameInMap("MaxCommission")]
+                    [Validation(Required=false)]
+                    public SearchByUrlResponseBodyDataAuctionsResultMaxCommission MaxCommission { get; set; }
+                    public class SearchByUrlResponseBodyDataAuctionsResultMaxCommission : TeaModel {
+                        [NameInMap("MaxCommissionRate")]
+                        [Validation(Required=false)]
+                        public string MaxCommissionRate { get; set; }
+                        [NameInMap("MaxCommissionClickUrl")]
+                        [Validation(Required=false)]
+                        public string MaxCommissionClickUrl { get; set; }
+                        [NameInMap("MaxCommissionCouponShareUrl")]
+                        [Validation(Required=false)]
+                        public string MaxCommissionCouponShareUrl { get; set; }
+                    };
 
                 }
                 public float? RankScore { get; set; }
