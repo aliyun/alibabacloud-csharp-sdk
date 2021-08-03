@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListDirectoryUsersRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("Filter")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Filter { get; set; }
 
         [NameInMap("DirectoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         [NameInMap("NextToken")]

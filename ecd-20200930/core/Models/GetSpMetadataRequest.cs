@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetSpMetadataRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DirectoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DirectoryId { get; set; }
+
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
 
     }
 

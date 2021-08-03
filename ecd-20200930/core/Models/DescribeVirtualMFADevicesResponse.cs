@@ -9,47 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVirtualMFADevicesResponse : TeaModel {
-        [NameInMap("NextToken")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string NextToken { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("VirtualMFADevices")]
-        [Validation(Required=true)]
-        public List<DescribeVirtualMFADevicesResponseVirtualMFADevices> VirtualMFADevices { get; set; }
-        public class DescribeVirtualMFADevicesResponseVirtualMFADevices : TeaModel {
-            [NameInMap("DirectoryId")]
-            [Validation(Required=true)]
-            public string DirectoryId { get; set; }
-
-            [NameInMap("EndUserId")]
-            [Validation(Required=true)]
-            public string EndUserId { get; set; }
-
-            [NameInMap("GmtEnabled")]
-            [Validation(Required=true)]
-            public string GmtEnabled { get; set; }
-
-            [NameInMap("GmtUnlock")]
-            [Validation(Required=true)]
-            public string GmtUnlock { get; set; }
-
-            [NameInMap("ConsecutiveFails")]
-            [Validation(Required=true)]
-            public int? ConsecutiveFails { get; set; }
-
-            [NameInMap("SerialNumber")]
-            [Validation(Required=true)]
-            public string SerialNumber { get; set; }
-
-            [NameInMap("status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-
-        }
+        public DescribeVirtualMFADevicesResponseBody Body { get; set; }
 
     }
 

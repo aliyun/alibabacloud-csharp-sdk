@@ -10,15 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetIdpMetadataRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DirectoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
+
         [NameInMap("IdpMetadata")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IdpMetadata { get; set; }
 
     }

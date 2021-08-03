@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVirtualMFADevicesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("MaxResults")]
@@ -22,8 +22,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         [NameInMap("DirectoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DirectoryId { get; set; }
+
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
 
         [NameInMap("EndUserId")]
         [Validation(Required=false)]

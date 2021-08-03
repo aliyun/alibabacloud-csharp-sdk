@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DesktopTypeId")]
@@ -20,6 +20,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("InstanceTypeFamily")]
         [Validation(Required=false)]
         public string InstanceTypeFamily { get; set; }
+
+        [NameInMap("CpuCount")]
+        [Validation(Required=false)]
+        public int? CpuCount { get; set; }
+
+        [NameInMap("MemorySize")]
+        [Validation(Required=false)]
+        public int? MemorySize { get; set; }
+
+        [NameInMap("GpuCount")]
+        [Validation(Required=false)]
+        public float? GpuCount { get; set; }
 
     }
 

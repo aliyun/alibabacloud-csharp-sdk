@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyBundleRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("BundleId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BundleId { get; set; }
 
         [NameInMap("ImageId")]

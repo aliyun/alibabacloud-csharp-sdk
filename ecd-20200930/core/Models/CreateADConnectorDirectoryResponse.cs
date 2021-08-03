@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorDirectoryResponse : TeaModel {
-        [NameInMap("DirectoryId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string DirectoryId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TrustPassword")]
-        [Validation(Required=true)]
-        public string TrustPassword { get; set; }
-
-        [NameInMap("AdConnectors")]
-        [Validation(Required=true)]
-        public List<CreateADConnectorDirectoryResponseAdConnectors> AdConnectors { get; set; }
-        public class CreateADConnectorDirectoryResponseAdConnectors : TeaModel {
-            [NameInMap("Address")]
-            [Validation(Required=true)]
-            public string Address { get; set; }
-
-        }
+        public CreateADConnectorDirectoryResponseBody Body { get; set; }
 
     }
 

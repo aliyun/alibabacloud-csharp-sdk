@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateBundleRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ImageId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ImageId { get; set; }
 
         [NameInMap("DesktopType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DesktopType { get; set; }
 
         [NameInMap("RootDiskSizeGib")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? RootDiskSizeGib { get; set; }
 
         [NameInMap("BundleName")]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         [NameInMap("UserDiskSizeGib")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<int?> UserDiskSizeGib { get; set; }
 
     }

@@ -10,11 +10,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StopDesktopsRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("StoppedMode")]
+        [Validation(Required=false)]
+        public string StoppedMode { get; set; }
+
         [NameInMap("DesktopId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
     }

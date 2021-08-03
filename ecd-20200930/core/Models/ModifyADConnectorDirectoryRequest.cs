@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyADConnectorDirectoryRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DirectoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         [NameInMap("DomainName")]
@@ -29,17 +29,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DomainPassword { get; set; }
 
-        [NameInMap("DnsAddress")]
-        [Validation(Required=false)]
-        public List<string> DnsAddress { get; set; }
-
         [NameInMap("DirectoryName")]
         [Validation(Required=false)]
         public string DirectoryName { get; set; }
-
-        [NameInMap("SubDomainDnsAddress")]
-        [Validation(Required=false)]
-        public List<string> SubDomainDnsAddress { get; set; }
 
         [NameInMap("SubDomainName")]
         [Validation(Required=false)]
@@ -48,6 +40,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("MfaEnabled")]
         [Validation(Required=false)]
         public bool? MfaEnabled { get; set; }
+
+        [NameInMap("DnsAddress")]
+        [Validation(Required=false)]
+        public List<string> DnsAddress { get; set; }
+
+        [NameInMap("SubDomainDnsAddress")]
+        [Validation(Required=false)]
+        public List<string> SubDomainDnsAddress { get; set; }
 
     }
 

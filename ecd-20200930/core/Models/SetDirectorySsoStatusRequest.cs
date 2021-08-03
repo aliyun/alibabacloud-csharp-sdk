@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetDirectorySsoStatusRequest : TeaModel {
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("DirectoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         [NameInMap("EnableSso")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public bool? EnableSso { get; set; }
 
     }
