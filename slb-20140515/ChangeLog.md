@@ -1,3 +1,6 @@
+2021-08-03 Version: 2.0.2
+- Support query tags for DescribeLoadBalancers.
+
 2021-05-24 Version: 2.0.1
 - Generated csharp 2014-05-15 for Slb.
 

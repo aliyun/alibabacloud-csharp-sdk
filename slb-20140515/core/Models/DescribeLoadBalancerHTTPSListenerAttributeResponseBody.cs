@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string XForwardedFor_proto { get; set; }
 
+        [NameInMap("HealthCheckMethod")]
+        [Validation(Required=false)]
+        public string HealthCheckMethod { get; set; }
+
         [NameInMap("TLSCipherPolicy")]
         [Validation(Required=false)]
         public string TLSCipherPolicy { get; set; }

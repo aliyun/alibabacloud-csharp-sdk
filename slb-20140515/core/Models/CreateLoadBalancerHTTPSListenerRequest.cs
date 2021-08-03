@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string HealthCheck { get; set; }
 
+        [NameInMap("HealthCheckMethod")]
+        [Validation(Required=false)]
+        public string HealthCheckMethod { get; set; }
+
         [NameInMap("HealthCheckDomain")]
         [Validation(Required=false)]
         public string HealthCheckDomain { get; set; }

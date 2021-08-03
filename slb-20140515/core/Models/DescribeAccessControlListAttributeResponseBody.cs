@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("AclName")]
-        [Validation(Required=false)]
-        public string AclName { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("AclName")]
+        [Validation(Required=false)]
+        public string AclName { get; set; }
 
         [NameInMap("AclEntrys")]
         [Validation(Required=false)]
