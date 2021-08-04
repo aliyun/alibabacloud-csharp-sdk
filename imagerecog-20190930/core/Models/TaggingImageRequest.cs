@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
         [Validation(Required=false)]
         public string ImageURL { get; set; }
 
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
     }
 
 }

@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
-    public class TaggingImageAdvanceRequest : TeaModel {
+    public class TaggingAdImageAdvanceRequest : TeaModel {
         [NameInMap("ImageURLObject")]
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
+
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public int? ImageType { get; set; }
 
     }
 
