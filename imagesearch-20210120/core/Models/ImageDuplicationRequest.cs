@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ImageSearch20210120.Models
         [Validation(Required=false)]
         public long? ImageWidth { get; set; }
 
+        [NameInMap("OutputImageNum")]
+        [Validation(Required=false)]
+        public long? OutputImageNum { get; set; }
+
     }
 
 }
