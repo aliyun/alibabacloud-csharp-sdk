@@ -37,6 +37,38 @@ namespace AlibabaCloud.SDK.Imp20210630
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public VerifyDomainOwnerResponse VerifyDomainOwnerWithOptions(VerifyDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<VerifyDomainOwnerResponse>(DoRPCRequest("VerifyDomainOwner", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<VerifyDomainOwnerResponse> VerifyDomainOwnerWithOptionsAsync(VerifyDomainOwnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<VerifyDomainOwnerResponse>(await DoRPCRequestAsync("VerifyDomainOwner", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public VerifyDomainOwnerResponse VerifyDomainOwner(VerifyDomainOwnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyDomainOwnerWithOptions(request, runtime);
+        }
+
+        public async Task<VerifyDomainOwnerResponse> VerifyDomainOwnerAsync(VerifyDomainOwnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyDomainOwnerWithOptionsAsync(request, runtime);
+        }
+
         public CreateLiveResponse CreateLiveWithOptions(CreateLiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -615,6 +647,102 @@ namespace AlibabaCloud.SDK.Imp20210630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLiveDomainStatusWithOptionsAsync(request, runtime);
+        }
+
+        public SendCustomMessageToAllResponse SendCustomMessageToAllWithOptions(SendCustomMessageToAllRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SendCustomMessageToAllResponse>(DoRPCRequest("SendCustomMessageToAll", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SendCustomMessageToAllResponse> SendCustomMessageToAllWithOptionsAsync(SendCustomMessageToAllRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SendCustomMessageToAllResponse>(await DoRPCRequestAsync("SendCustomMessageToAll", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SendCustomMessageToAllResponse SendCustomMessageToAll(SendCustomMessageToAllRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendCustomMessageToAllWithOptions(request, runtime);
+        }
+
+        public async Task<SendCustomMessageToAllResponse> SendCustomMessageToAllAsync(SendCustomMessageToAllRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendCustomMessageToAllWithOptionsAsync(request, runtime);
+        }
+
+        public GetDomainOwnerVerifyContentResponse GetDomainOwnerVerifyContentWithOptions(GetDomainOwnerVerifyContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetDomainOwnerVerifyContentResponse>(DoRPCRequest("GetDomainOwnerVerifyContent", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetDomainOwnerVerifyContentResponse> GetDomainOwnerVerifyContentWithOptionsAsync(GetDomainOwnerVerifyContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetDomainOwnerVerifyContentResponse>(await DoRPCRequestAsync("GetDomainOwnerVerifyContent", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetDomainOwnerVerifyContentResponse GetDomainOwnerVerifyContent(GetDomainOwnerVerifyContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDomainOwnerVerifyContentWithOptions(request, runtime);
+        }
+
+        public async Task<GetDomainOwnerVerifyContentResponse> GetDomainOwnerVerifyContentAsync(GetDomainOwnerVerifyContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDomainOwnerVerifyContentWithOptionsAsync(request, runtime);
+        }
+
+        public SendCustomMessageToUsersResponse SendCustomMessageToUsersWithOptions(SendCustomMessageToUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SendCustomMessageToUsersResponse>(DoRPCRequest("SendCustomMessageToUsers", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SendCustomMessageToUsersResponse> SendCustomMessageToUsersWithOptionsAsync(SendCustomMessageToUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SendCustomMessageToUsersResponse>(await DoRPCRequestAsync("SendCustomMessageToUsers", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SendCustomMessageToUsersResponse SendCustomMessageToUsers(SendCustomMessageToUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendCustomMessageToUsersWithOptions(request, runtime);
+        }
+
+        public async Task<SendCustomMessageToUsersResponse> SendCustomMessageToUsersAsync(SendCustomMessageToUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendCustomMessageToUsersWithOptionsAsync(request, runtime);
         }
 
         public GetAuthTokenResponse GetAuthTokenWithOptions(GetAuthTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
