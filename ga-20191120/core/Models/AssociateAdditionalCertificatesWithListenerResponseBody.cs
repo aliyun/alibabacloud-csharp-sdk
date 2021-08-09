@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class DescribeIpSetRequest : TeaModel {
-        [NameInMap("RegionId")]
+    public class AssociateAdditionalCertificatesWithListenerResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("IpSetId")]
+        [NameInMap("ListenerId")]
         [Validation(Required=false)]
-        public string IpSetId { get; set; }
+        public string ListenerId { get; set; }
 
     }
 

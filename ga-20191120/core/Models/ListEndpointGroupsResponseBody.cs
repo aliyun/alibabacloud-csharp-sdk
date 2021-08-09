@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public List<string> EndpointGroupIpList { get; set; }
 
+            [NameInMap("EndpointGroupUnconfirmedIpList")]
+            [Validation(Required=false)]
+            public List<string> EndpointGroupUnconfirmedIpList { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
@@ -101,6 +105,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                 [Validation(Required=false)]
                 public int? ProbePort { get; set; }
 
+                [NameInMap("EndpointId")]
+                [Validation(Required=false)]
+                public string EndpointId { get; set; }
+
             }
 
             [NameInMap("PortOverrides")]
@@ -140,6 +148,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("HealthCheckPort")]
             [Validation(Required=false)]
             public int? HealthCheckPort { get; set; }
+
+            [NameInMap("HealthCheckEnabled")]
+            [Validation(Required=false)]
+            public bool? HealthCheckEnabled { get; set; }
 
         }
 

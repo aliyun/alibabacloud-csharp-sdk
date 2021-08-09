@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
+        [NameInMap("HealthCheckEnabled")]
+        [Validation(Required=false)]
+        public bool? HealthCheckEnabled { get; set; }
+
     }
 
 }

@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EndpointGroupIpList")]
+        [Validation(Required=false)]
+        public List<string> EndpointGroupIpList { get; set; }
+
+        [NameInMap("EndpointGroupUnconfirmedIpList")]
+        [Validation(Required=false)]
+        public List<string> EndpointGroupUnconfirmedIpList { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -144,6 +152,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("EnableAccessLog")]
         [Validation(Required=false)]
         public bool? EnableAccessLog { get; set; }
+
+        [NameInMap("HealthCheckEnabled")]
+        [Validation(Required=false)]
+        public bool? HealthCheckEnabled { get; set; }
 
     }
 

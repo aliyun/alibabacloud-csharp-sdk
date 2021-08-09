@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
-    public class ListAcceleratorsRequest : TeaModel {
+    public class DeleteEndpointGroupsRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public bool? DryRun { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("EndpointGroupIds")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
-
-        [NameInMap("State")]
-        [Validation(Required=false)]
-        public string State { get; set; }
+        public List<string> EndpointGroupIds { get; set; }
 
     }
 
