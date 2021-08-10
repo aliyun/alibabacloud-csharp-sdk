@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("AccountName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountName { get; set; }
 
         [NameInMap("AccountPassword")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
     }

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("DatabaseName")]
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DatabaseName { get; set; }
 
         [NameInMap("AccountName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountName { get; set; }
 
         [NameInMap("AccountPassword")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
         [NameInMap("AccountDescription")]

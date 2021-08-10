@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySecurityIpsRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("SecurityIPList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
         [NameInMap("DBInstanceIPArrayName")]

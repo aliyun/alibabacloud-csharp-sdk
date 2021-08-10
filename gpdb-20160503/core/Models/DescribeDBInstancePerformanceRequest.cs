@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancePerformanceRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("Key")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Key { get; set; }
 
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndTime { get; set; }
 
     }

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class AddBuDBInstanceRelationResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("BusinessUnit")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string BusinessUnit { get; set; }
-
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=true)]
-        public string DBInstanceName { get; set; }
+        public AddBuDBInstanceRelationResponseBody Body { get; set; }
 
     }
 

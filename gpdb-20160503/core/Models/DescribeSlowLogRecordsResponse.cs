@@ -9,44 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSlowLogRecordsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Engine")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string Engine { get; set; }
-
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=true)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=true)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("Items")]
-        [Validation(Required=true)]
-        public DescribeSlowLogRecordsResponseItems Items { get; set; }
-        public class DescribeSlowLogRecordsResponseItems : TeaModel {
-            [NameInMap("SQLSlowRecord")]
-            [Validation(Required=true)]
-            public List<DescribeSlowLogRecordsResponseItemsSQLSlowRecord> SQLSlowRecord { get; set; }
-            public class DescribeSlowLogRecordsResponseItemsSQLSlowRecord : TeaModel {
-                public string HostAddress { get; set; }
-                public string DBName { get; set; }
-                public string SQLText { get; set; }
-                public long? QueryTimes { get; set; }
-                public long? LockTimes { get; set; }
-                public long? ParseRowCounts { get; set; }
-                public long? ReturnRowCounts { get; set; }
-                public string ExecutionStartTime { get; set; }
-            }
-        };
+        public DescribeSlowLogRecordsResponseBody Body { get; set; }
 
     }
 

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -14,11 +17,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("BusinessUnit")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BusinessUnit { get; set; }
 
     }

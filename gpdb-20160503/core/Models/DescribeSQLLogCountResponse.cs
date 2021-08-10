@@ -9,47 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSQLLogCountResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DBClusterId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public string EndTime { get; set; }
-
-        [NameInMap("Items")]
-        [Validation(Required=true)]
-        public List<DescribeSQLLogCountResponseItems> Items { get; set; }
-        public class DescribeSQLLogCountResponseItems : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
-
-            [NameInMap("Series")]
-            [Validation(Required=true)]
-            public List<DescribeSQLLogCountResponseItemsSeries> Series { get; set; }
-            public class DescribeSQLLogCountResponseItemsSeries : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=true)]
-                public List<DescribeSQLLogCountResponseItemsSeriesValues> Values { get; set; }
-                public class DescribeSQLLogCountResponseItemsSeriesValues : TeaModel {
-                    [NameInMap("Point")]
-                    [Validation(Required=true)]
-                    public List<string> Point { get; set; }
-
-                }
-
-            }
-
-        }
+        public DescribeSQLLogCountResponseBody Body { get; set; }
 
     }
 

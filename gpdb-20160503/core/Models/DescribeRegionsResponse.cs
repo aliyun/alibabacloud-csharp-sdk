@@ -9,38 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeRegionsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Regions")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeRegionsResponseRegions Regions { get; set; }
-        public class DescribeRegionsResponseRegions : TeaModel {
-            [NameInMap("Region")]
-            [Validation(Required=true)]
-            public List<DescribeRegionsResponseRegionsRegion> Region { get; set; }
-            public class DescribeRegionsResponseRegionsRegion : TeaModel {
-                public string RegionId { get; set; }
-                public DescribeRegionsResponseRegionsRegionZones Zones { get; set; }
-                public class DescribeRegionsResponseRegionsRegionZones : TeaModel {
-                    [NameInMap("Zone")]
-                    [Validation(Required=true)]
-                    public List<DescribeRegionsResponseRegionsRegionZonesZone> Zone { get; set; }
-                    public class DescribeRegionsResponseRegionsRegionZonesZone : TeaModel {
-                        [NameInMap("ZoneId")]
-                        [Validation(Required=true)]
-                        public string ZoneId { get; set; }
-
-                        [NameInMap("VpcEnabled")]
-                        [Validation(Required=true)]
-                        public bool? VpcEnabled { get; set; }
-
-                    }
-
-                }
-            }
-        };
+        public DescribeRegionsResponseBody Body { get; set; }
 
     }
 

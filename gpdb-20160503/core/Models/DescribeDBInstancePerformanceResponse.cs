@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancePerformanceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("Engine")]
-        [Validation(Required=true)]
-        public string Engine { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public string EndTime { get; set; }
-
-        [NameInMap("PerformanceKeys")]
-        [Validation(Required=true)]
-        public List<string> PerformanceKeys { get; set; }
+        public DescribeDBInstancePerformanceResponseBody Body { get; set; }
 
     }
 

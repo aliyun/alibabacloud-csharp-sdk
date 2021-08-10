@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-gpdb")]
 [assembly: AssemblyDescription("Alibaba Cloud AnalyticDB for PostgreSQL (20160503) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("95b17b90-8ac1-11eb-bf7b-7f8fb1854907")]
+[assembly: Guid("7aef19b0-f9bc-11eb-8d24-9fb3f8e93a0c")]
 
 // Version information for an assembly consists of the following four values:
 //

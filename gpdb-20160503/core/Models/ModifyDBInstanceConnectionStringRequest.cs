@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("ConnectionStringPrefix")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         [NameInMap("Port")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Port { get; set; }
 
         [NameInMap("CurrentConnectionString")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CurrentConnectionString { get; set; }
 
     }

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSQLCollectorPolicyResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("SQLCollectorStatus")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string SQLCollectorStatus { get; set; }
+        public DescribeSQLCollectorPolicyResponseBody Body { get; set; }
 
     }
 

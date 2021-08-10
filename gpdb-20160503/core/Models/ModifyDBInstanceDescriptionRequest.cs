@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyDBInstanceDescriptionRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("DBInstanceDescription")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
     }

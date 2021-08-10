@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceIPArrayListResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Items")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeDBInstanceIPArrayListResponseItems Items { get; set; }
-        public class DescribeDBInstanceIPArrayListResponseItems : TeaModel {
-            [NameInMap("DBInstanceIPArray")]
-            [Validation(Required=true)]
-            public List<DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray> DBInstanceIPArray { get; set; }
-            public class DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray : TeaModel {
-                public string DBInstanceIPArrayName { get; set; }
-                public string DBInstanceIPArrayAttribute { get; set; }
-                public string SecurityIPList { get; set; }
-            }
-        };
+        public DescribeDBInstanceIPArrayListResponseBody Body { get; set; }
 
     }
 

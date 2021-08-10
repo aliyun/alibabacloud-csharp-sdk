@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         [NameInMap("StorageType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string StorageType { get; set; }
 
         [NameInMap("CpuCores")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? CpuCores { get; set; }
 
         [NameInMap("TotalNodeNum")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? TotalNodeNum { get; set; }
 
     }

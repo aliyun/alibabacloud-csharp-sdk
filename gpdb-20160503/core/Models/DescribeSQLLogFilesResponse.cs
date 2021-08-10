@@ -9,38 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSQLLogFilesResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=true)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=true)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("Items")]
-        [Validation(Required=true)]
-        public DescribeSQLLogFilesResponseItems Items { get; set; }
-        public class DescribeSQLLogFilesResponseItems : TeaModel {
-            [NameInMap("LogFile")]
-            [Validation(Required=true)]
-            public List<DescribeSQLLogFilesResponseItemsLogFile> LogFile { get; set; }
-            public class DescribeSQLLogFilesResponseItemsLogFile : TeaModel {
-                public string FileID { get; set; }
-                public string LogStatus { get; set; }
-                public string LogDownloadURL { get; set; }
-                public string LogSize { get; set; }
-                public string LogStartTime { get; set; }
-                public string LogEndTime { get; set; }
-            }
-        };
+        public DescribeSQLLogFilesResponseBody Body { get; set; }
 
     }
 

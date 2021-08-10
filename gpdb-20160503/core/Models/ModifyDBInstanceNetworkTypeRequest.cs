@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyDBInstanceNetworkTypeRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("InstanceNetworkType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
         [NameInMap("VPCId")]

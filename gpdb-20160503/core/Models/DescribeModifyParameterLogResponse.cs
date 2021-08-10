@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModifyParameterLogResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Changelogs")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<DescribeModifyParameterLogResponseChangelogs> Changelogs { get; set; }
-        public class DescribeModifyParameterLogResponseChangelogs : TeaModel {
-            [NameInMap("ParameterName")]
-            [Validation(Required=true)]
-            public string ParameterName { get; set; }
-
-            [NameInMap("ParameterValueBefore")]
-            [Validation(Required=true)]
-            public string ParameterValueBefore { get; set; }
-
-            [NameInMap("ParameterValueAfter")]
-            [Validation(Required=true)]
-            public string ParameterValueAfter { get; set; }
-
-            [NameInMap("ParameterValid")]
-            [Validation(Required=true)]
-            public string ParameterValid { get; set; }
-
-            [NameInMap("EffectTime")]
-            [Validation(Required=true)]
-            public string EffectTime { get; set; }
-
-        }
+        public DescribeModifyParameterLogResponseBody Body { get; set; }
 
     }
 

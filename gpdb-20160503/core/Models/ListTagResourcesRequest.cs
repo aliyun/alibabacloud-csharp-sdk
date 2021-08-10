@@ -26,12 +26,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string OwnerAccount { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -50,10 +54,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
 
     }
 

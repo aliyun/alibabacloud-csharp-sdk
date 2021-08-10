@@ -9,19 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeUserEncryptionKeyListResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("KmsKeys")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<DescribeUserEncryptionKeyListResponseKmsKeys> KmsKeys { get; set; }
-        public class DescribeUserEncryptionKeyListResponseKmsKeys : TeaModel {
-            [NameInMap("KeyId")]
-            [Validation(Required=true)]
-            public string KeyId { get; set; }
-
-        }
+        public DescribeUserEncryptionKeyListResponseBody Body { get; set; }
 
     }
 

@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? ResourceOwnerId { get; set; }
 
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("ConnectionStringPrefix")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
         [NameInMap("Port")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Port { get; set; }
 
         [NameInMap("AddressType")]

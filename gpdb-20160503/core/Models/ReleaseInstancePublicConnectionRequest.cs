@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ReleaseInstancePublicConnectionRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("CurrentConnectionString")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CurrentConnectionString { get; set; }
 
         [NameInMap("AddressType")]

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpgradeDBVersionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=true)]
-        public string DBInstanceName { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=true)]
-        public string TaskId { get; set; }
+        public UpgradeDBVersionResponseBody Body { get; set; }
 
     }
 

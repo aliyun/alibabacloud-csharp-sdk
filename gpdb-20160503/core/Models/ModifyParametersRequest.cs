@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyParametersRequest : TeaModel {
         [NameInMap("DBInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         [NameInMap("Parameters")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Parameters { get; set; }
 
         [NameInMap("ForceRestartInstance")]

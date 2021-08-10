@@ -9,33 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeResourceUsageResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("Engine")]
-        [Validation(Required=true)]
-        public string Engine { get; set; }
-
-        [NameInMap("DiskUsed")]
-        [Validation(Required=true)]
-        public long? DiskUsed { get; set; }
-
-        [NameInMap("DataSize")]
-        [Validation(Required=true)]
-        public long? DataSize { get; set; }
-
-        [NameInMap("LogSize")]
-        [Validation(Required=true)]
-        public long? LogSize { get; set; }
-
-        [NameInMap("BackupSize")]
-        [Validation(Required=true)]
-        public long? BackupSize { get; set; }
+        public DescribeResourceUsageResponseBody Body { get; set; }
 
     }
 

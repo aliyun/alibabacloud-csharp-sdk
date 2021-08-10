@@ -14,27 +14,27 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ZoneId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         [NameInMap("EngineVersion")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         [NameInMap("Engine")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Engine { get; set; }
 
         [NameInMap("DBInstanceClass")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
 
         [NameInMap("DBInstanceGroupCount")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DBInstanceGroupCount { get; set; }
 
         [NameInMap("DBInstanceDescription")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceDescription { get; set; }
 
         [NameInMap("SecurityIPList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
         [NameInMap("PayType")]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string UsedTime { get; set; }
 
         [NameInMap("ClientToken")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         [NameInMap("InstanceNetworkType")]

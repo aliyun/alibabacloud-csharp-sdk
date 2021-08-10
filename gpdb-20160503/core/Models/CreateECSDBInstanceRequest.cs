@@ -14,35 +14,35 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         [NameInMap("RegionId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RegionId { get; set; }
 
         [NameInMap("ZoneId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         [NameInMap("EngineVersion")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
         [NameInMap("Engine")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Engine { get; set; }
 
         [NameInMap("InstanceSpec")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string InstanceSpec { get; set; }
 
         [NameInMap("SegNodeNum")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? SegNodeNum { get; set; }
 
         [NameInMap("SegStorageType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SegStorageType { get; set; }
 
         [NameInMap("StorageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StorageSize { get; set; }
 
         [NameInMap("DBInstanceDescription")]
@@ -96,6 +96,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("MasterNodeNum")]
         [Validation(Required=false)]
         public int? MasterNodeNum { get; set; }
+
+        [NameInMap("SrcDbInstanceName")]
+        [Validation(Required=false)]
+        public string SrcDbInstanceName { get; set; }
+
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
 
     }
 

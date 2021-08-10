@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeAvailableResourcesRequest : TeaModel {
         [NameInMap("Region")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Region { get; set; }
 
         [NameInMap("ZoneId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ZoneId { get; set; }
 
         [NameInMap("ChargeType")]
