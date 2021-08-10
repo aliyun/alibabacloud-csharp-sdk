@@ -20,13 +20,9 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
         [Validation(Required=false)]
         public TaggingAdImageResponseBodyData Data { get; set; }
         public class TaggingAdImageResponseBodyData : TeaModel {
-            [NameInMap("Tags")]
+            [NameInMap("TagInfo")]
             [Validation(Required=false)]
-            public List<TaggingAdImageResponseBodyDataTags> Tags { get; set; }
-            public class TaggingAdImageResponseBodyDataTags : TeaModel {
-                public string Value { get; set; }
-                public float? Confidence { get; set; }
-            }
+            public Dictionary<string, string> TagInfo { get; set; }
         };
 
     }
