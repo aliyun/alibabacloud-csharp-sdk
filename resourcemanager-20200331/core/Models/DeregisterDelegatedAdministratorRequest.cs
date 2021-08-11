@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class UpdateAccountRequest : TeaModel {
-        [NameInMap("NewDisplayName")]
-        [Validation(Required=false)]
-        public string NewDisplayName { get; set; }
-
-        [NameInMap("NewAccountType")]
-        [Validation(Required=false)]
-        public string NewAccountType { get; set; }
-
+    public class DeregisterDelegatedAdministratorRequest : TeaModel {
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
+
+        [NameInMap("ServicePrincipal")]
+        [Validation(Required=false)]
+        public string ServicePrincipal { get; set; }
 
     }
 

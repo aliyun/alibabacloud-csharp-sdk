@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("MasterAccountName")]
             [Validation(Required=false)]
             public string MasterAccountName { get; set; }
+            [NameInMap("ControlPolicyStatus")]
+            [Validation(Required=false)]
+            public string ControlPolicyStatus { get; set; }
         };
 
     }

@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.ResourceManager20200331
+dotnet add package AlibabaCloud.SDK.ResourceManager20200331
 ```
 
 ## 问题

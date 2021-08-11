@@ -1,3 +1,6 @@
+2021-08-11 Version: 1.0.2
+- Generated csharp 2020-03-31 for ResourceManager.
+
 2021-02-20 Version: 2.0.0
 - AMP Version Change.
 

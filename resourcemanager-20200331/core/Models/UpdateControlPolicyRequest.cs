@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class UpdateRoleRequest : TeaModel {
-        [NameInMap("RoleName")]
+    public class UpdateControlPolicyRequest : TeaModel {
+        [NameInMap("PolicyId")]
         [Validation(Required=false)]
-        public string RoleName { get; set; }
+        public string PolicyId { get; set; }
 
-        [NameInMap("NewAssumeRolePolicyDocument")]
+        [NameInMap("NewPolicyName")]
         [Validation(Required=false)]
-        public string NewAssumeRolePolicyDocument { get; set; }
-
-        [NameInMap("NewMaxSessionDuration")]
-        [Validation(Required=false)]
-        public long? NewMaxSessionDuration { get; set; }
+        public string NewPolicyName { get; set; }
 
         [NameInMap("NewDescription")]
         [Validation(Required=false)]
         public string NewDescription { get; set; }
+
+        [NameInMap("NewPolicyDocument")]
+        [Validation(Required=false)]
+        public string NewPolicyDocument { get; set; }
 
     }
 

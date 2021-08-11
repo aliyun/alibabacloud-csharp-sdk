@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class ListTrustedServiceStatusRequest : TeaModel {
+    public class ListControlPoliciesRequest : TeaModel {
+        [NameInMap("PolicyType")]
+        [Validation(Required=false)]
+        public string PolicyType { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -17,9 +21,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("AdminAccountId")]
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public string AdminAccountId { get; set; }
+        public string Language { get; set; }
 
     }
 
