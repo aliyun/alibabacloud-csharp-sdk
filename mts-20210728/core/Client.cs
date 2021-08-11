@@ -642,6 +642,14 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Message"] = request.Message;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                body["TotalTime"] = request.TotalTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
             {
                 body["Output"] = request.Output;
@@ -681,6 +689,14 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 body["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTime))
+            {
+                body["TotalTime"] = request.TotalTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
             {

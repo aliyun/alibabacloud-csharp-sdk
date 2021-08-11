@@ -45,6 +45,20 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// 水印起始时间(单位是秒)，不填写默认为0
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        /// <summary>
+        /// 水印结束时间(单位是秒)，不填默认为60000
+        /// </summary>
+        [NameInMap("TotalTime")]
+        [Validation(Required=false)]
+        public long? TotalTime { get; set; }
+
+        /// <summary>
         /// 输出的视频，oss三元组
         /// </summary>
         [NameInMap("Output")]
