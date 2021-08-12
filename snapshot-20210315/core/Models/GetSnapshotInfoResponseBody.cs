@@ -58,6 +58,13 @@ namespace AlibabaCloud.SDK.Snapshot20210315.Models
         [Validation(Required=false)]
         public bool? Encrypted { get; set; }
 
+        /// <summary>
+        /// 快照格式。"FORMAT_VHD", "FORMAT_RAW", "FORMAT_INVALID"
+        /// </summary>
+        [NameInMap("Format")]
+        [Validation(Required=false)]
+        public string Format { get; set; }
+
     }
 
 }
