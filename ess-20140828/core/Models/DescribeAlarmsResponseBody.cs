@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
     public class DescribeAlarmsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
         [NameInMap("AlarmList")]
         [Validation(Required=false)]
@@ -37,18 +37,16 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
                 public string MetricName { get; set; }
                 public int? EvaluationCount { get; set; }
                 public string State { get; set; }
-                public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions AlarmActions { get; set; }
-                public class DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions : TeaModel {
-                    [NameInMap("AlarmAction")]
-                    [Validation(Required=false)]
-                    public List<string> AlarmAction { get; set; }
-
-                }
-                public string ScalingGroupId { get; set; }
                 public int? Period { get; set; }
+                public string ScalingGroupId { get; set; }
                 public string ComparisonOperator { get; set; }
                 public string Effective { get; set; }
                 public string Description { get; set; }
+                public string MetricType { get; set; }
+                public string Name { get; set; }
+                public float? Threshold { get; set; }
+                public bool? Enable { get; set; }
+                public string Statistics { get; set; }
                 public DescribeAlarmsResponseBodyAlarmListAlarmDimensions Dimensions { get; set; }
                 public class DescribeAlarmsResponseBodyAlarmListAlarmDimensions : TeaModel {
                     [NameInMap("Dimension")]
@@ -66,11 +64,13 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
                     }
 
                 }
-                public string MetricType { get; set; }
-                public string Name { get; set; }
-                public float? Threshold { get; set; }
-                public bool? Enable { get; set; }
-                public string Statistics { get; set; }
+                public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions AlarmActions { get; set; }
+                public class DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions : TeaModel {
+                    [NameInMap("AlarmAction")]
+                    [Validation(Required=false)]
+                    public List<string> AlarmAction { get; set; }
+
+                }
             }
         };
 

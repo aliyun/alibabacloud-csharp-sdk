@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        [NameInMap("ScalingActivityId")]
+        [Validation(Required=false)]
+        public string ScalingActivityId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }

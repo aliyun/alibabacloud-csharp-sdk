@@ -231,9 +231,21 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [Validation(Required=false)]
         public List<CreateScalingConfigurationShrinkRequestDataDisk> DataDisk { get; set; }
         public class CreateScalingConfigurationShrinkRequestDataDisk : TeaModel {
+            [NameInMap("Categorys")]
+            [Validation(Required=false)]
+            public List<string> Categorys { get; set; }
+
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
+            [NameInMap("AutoSnapshotPolicyId")]
+            [Validation(Required=false)]
+            public string AutoSnapshotPolicyId { get; set; }
+
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public string Encrypted { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -255,25 +267,17 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
             [Validation(Required=false)]
             public string DiskName { get; set; }
 
-            [NameInMap("AutoSnapshotPolicyId")]
-            [Validation(Required=false)]
-            public string AutoSnapshotPolicyId { get; set; }
-
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
-
-            [NameInMap("KMSKeyId")]
-            [Validation(Required=false)]
-            public string KMSKeyId { get; set; }
 
             [NameInMap("DeleteWithInstance")]
             [Validation(Required=false)]
             public bool? DeleteWithInstance { get; set; }
 
-            [NameInMap("Encrypted")]
+            [NameInMap("KMSKeyId")]
             [Validation(Required=false)]
-            public string Encrypted { get; set; }
+            public string KMSKeyId { get; set; }
 
         }
 
@@ -294,6 +298,32 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
+
+        [NameInMap("InstancePatternInfo")]
+        [Validation(Required=false)]
+        public List<CreateScalingConfigurationShrinkRequestInstancePatternInfo> InstancePatternInfo { get; set; }
+        public class CreateScalingConfigurationShrinkRequestInstancePatternInfo : TeaModel {
+            [NameInMap("Cores")]
+            [Validation(Required=false)]
+            public int? Cores { get; set; }
+
+            [NameInMap("InstanceFamilyLevel")]
+            [Validation(Required=false)]
+            public string InstanceFamilyLevel { get; set; }
+
+            [NameInMap("MaxPrice")]
+            [Validation(Required=false)]
+            public float? MaxPrice { get; set; }
+
+            [NameInMap("Memory")]
+            [Validation(Required=false)]
+            public float? Memory { get; set; }
+
+        }
+
+        [NameInMap("SystemDiskCategory")]
+        [Validation(Required=false)]
+        public List<string> SystemDiskCategory { get; set; }
 
     }
 

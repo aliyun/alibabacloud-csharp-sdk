@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
     public class CreateScheduledTaskResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ScheduledTaskId")]
         [Validation(Required=false)]
         public string ScheduledTaskId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

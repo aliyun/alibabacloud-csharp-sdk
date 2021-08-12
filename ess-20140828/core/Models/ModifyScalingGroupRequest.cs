@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [Validation(Required=false)]
         public bool? GroupDeletionProtection { get; set; }
 
-        [NameInMap("ScaleOutAmountCheck")]
+        [NameInMap("MultiAZPolicy")]
         [Validation(Required=false)]
-        public bool? ScaleOutAmountCheck { get; set; }
+        public string MultiAZPolicy { get; set; }
 
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

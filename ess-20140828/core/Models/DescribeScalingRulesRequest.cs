@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
     public class DescribeScalingRulesRequest : TeaModel {
-        [NameInMap("ScalingRuleId")]
-        [Validation(Required=false)]
-        public List<string> ScalingRuleId { get; set; }
-
-        [NameInMap("ScalingRuleName")]
-        [Validation(Required=false)]
-        public List<string> ScalingRuleName { get; set; }
-
-        [NameInMap("ScalingRuleAri")]
-        [Validation(Required=false)]
-        public List<string> ScalingRuleAri { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -60,6 +48,18 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
+
+        [NameInMap("ScalingRuleId")]
+        [Validation(Required=false)]
+        public List<string> ScalingRuleId { get; set; }
+
+        [NameInMap("ScalingRuleName")]
+        [Validation(Required=false)]
+        public List<string> ScalingRuleName { get; set; }
+
+        [NameInMap("ScalingRuleAri")]
+        [Validation(Required=false)]
+        public List<string> ScalingRuleAri { get; set; }
 
     }
 

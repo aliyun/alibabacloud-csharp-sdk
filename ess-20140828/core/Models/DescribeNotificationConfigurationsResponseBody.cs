@@ -22,6 +22,7 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
             public List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel> NotificationConfigurationModel { get; set; }
             public class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel : TeaModel {
                 public string NotificationArn { get; set; }
+                public string ScalingGroupId { get; set; }
                 public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes NotificationTypes { get; set; }
                 public class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes : TeaModel {
                     [NameInMap("NotificationType")]
@@ -29,7 +30,6 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
                     public List<string> NotificationType { get; set; }
 
                 }
-                public string ScalingGroupId { get; set; }
             }
         };
 

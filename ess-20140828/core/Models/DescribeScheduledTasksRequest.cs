@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
     public class DescribeScheduledTasksRequest : TeaModel {
-        [NameInMap("ScheduledAction")]
-        [Validation(Required=false)]
-        public List<string> ScheduledAction { get; set; }
-
-        [NameInMap("ScheduledTaskId")]
-        [Validation(Required=false)]
-        public List<string> ScheduledTaskId { get; set; }
-
-        [NameInMap("ScheduledTaskName")]
-        [Validation(Required=false)]
-        public List<string> ScheduledTaskName { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -52,6 +40,18 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
+
+        [NameInMap("ScheduledAction")]
+        [Validation(Required=false)]
+        public List<string> ScheduledAction { get; set; }
+
+        [NameInMap("ScheduledTaskId")]
+        [Validation(Required=false)]
+        public List<string> ScheduledTaskId { get; set; }
+
+        [NameInMap("ScheduledTaskName")]
+        [Validation(Required=false)]
+        public List<string> ScheduledTaskName { get; set; }
 
     }
 

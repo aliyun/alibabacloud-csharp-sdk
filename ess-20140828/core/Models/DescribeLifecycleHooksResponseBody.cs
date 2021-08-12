@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
     public class DescribeLifecycleHooksResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("LifecycleHooks")]
         [Validation(Required=false)]

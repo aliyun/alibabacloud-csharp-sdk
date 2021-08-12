@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
-                public string LocalName { get; set; }
-                public bool? VpcUnavailable { get; set; }
                 public bool? ClassicUnavailable { get; set; }
                 public string RegionEndpoint { get; set; }
+                public string LocalName { get; set; }
+                public bool? VpcUnavailable { get; set; }
                 public string RegionId { get; set; }
             }
         };

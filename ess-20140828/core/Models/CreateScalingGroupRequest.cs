@@ -113,10 +113,6 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [Validation(Required=false)]
         public bool? GroupDeletionProtection { get; set; }
 
-        [NameInMap("ScaleOutAmountCheck")]
-        [Validation(Required=false)]
-        public bool? ScaleOutAmountCheck { get; set; }
-
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
@@ -204,6 +200,24 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
             [NameInMap("WeightedCapacity")]
             [Validation(Required=false)]
             public int? WeightedCapacity { get; set; }
+
+        }
+
+        [NameInMap("AlbServerGroup")]
+        [Validation(Required=false)]
+        public List<CreateScalingGroupRequestAlbServerGroup> AlbServerGroup { get; set; }
+        public class CreateScalingGroupRequestAlbServerGroup : TeaModel {
+            [NameInMap("AlbServerGroupId")]
+            [Validation(Required=false)]
+            public string AlbServerGroupId { get; set; }
+
+            [NameInMap("Weight")]
+            [Validation(Required=false)]
+            public int? Weight { get; set; }
+
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
 
         }
 

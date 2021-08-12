@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-ess")]
 [assembly: AssemblyDescription("Alibaba Cloud Auto Scaling (20140828) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1df65150-72ae-11eb-b9ff-2d0bad9e9f56")]
+[assembly: Guid("69371970-fb56-11eb-8889-1ddc62ed8be8")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("0.0.1.0")]
-[assembly: AssemblyFileVersion("0.0.1.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

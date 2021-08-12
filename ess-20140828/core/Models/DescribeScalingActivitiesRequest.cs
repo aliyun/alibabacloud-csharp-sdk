@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
     public class DescribeScalingActivitiesRequest : TeaModel {
-        [NameInMap("ScalingActivityId")]
-        [Validation(Required=false)]
-        public List<string> ScalingActivityId { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -48,6 +44,10 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
+
+        [NameInMap("ScalingActivityId")]
+        [Validation(Required=false)]
+        public List<string> ScalingActivityId { get; set; }
 
     }
 

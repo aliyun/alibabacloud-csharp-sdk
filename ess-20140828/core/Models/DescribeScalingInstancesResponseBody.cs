@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
     public class DescribeScalingInstancesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +20,14 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("TotalSpotCount")]
+        [Validation(Required=false)]
+        public int? TotalSpotCount { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
         [NameInMap("ScalingInstances")]
         [Validation(Required=false)]
@@ -37,23 +41,21 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
                 public int? LoadBalancerWeight { get; set; }
                 public string LaunchTemplateId { get; set; }
                 public string InstanceId { get; set; }
+                public string SpotStrategy { get; set; }
                 public string LaunchTemplateVersion { get; set; }
                 public string HealthStatus { get; set; }
-                public string SpotStrategy { get; set; }
                 public string ScalingGroupId { get; set; }
                 public string WarmupState { get; set; }
                 public string LifecycleState { get; set; }
                 public string CreationType { get; set; }
+                public string ZoneId { get; set; }
                 public string ScalingConfigurationId { get; set; }
                 public bool? Entrusted { get; set; }
                 public int? WeightedCapacity { get; set; }
                 public string CreatedTime { get; set; }
+                public string ScalingActivityId { get; set; }
             }
         };
-
-        [NameInMap("TotalSpotCount")]
-        [Validation(Required=false)]
-        public int? TotalSpotCount { get; set; }
 
     }
 

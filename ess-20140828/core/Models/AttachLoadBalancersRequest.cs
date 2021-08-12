@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
         [NameInMap("LoadBalancer")]
         [Validation(Required=false)]
         public List<string> LoadBalancer { get; set; }

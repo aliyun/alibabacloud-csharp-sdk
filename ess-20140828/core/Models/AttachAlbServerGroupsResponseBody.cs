@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
-    public class CreateScalingConfigurationResponseBody : TeaModel {
-        [NameInMap("ScalingConfigurationId")]
+    public class AttachAlbServerGroupsResponseBody : TeaModel {
+        [NameInMap("ScalingActivityId")]
         [Validation(Required=false)]
-        public string ScalingConfigurationId { get; set; }
+        public string ScalingActivityId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

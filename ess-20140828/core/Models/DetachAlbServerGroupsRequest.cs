@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ess20140828.Models
 {
-    public class DescribeScalingConfigurationsRequest : TeaModel {
+    public class DetachAlbServerGroupsRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -17,37 +17,35 @@ namespace AlibabaCloud.SDK.Ess20140828.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("ScalingConfigurationId")]
+        [NameInMap("ForceDetach")]
         [Validation(Required=false)]
-        public List<string> ScalingConfigurationId { get; set; }
+        public bool? ForceDetach { get; set; }
 
-        [NameInMap("ScalingConfigurationName")]
+        [NameInMap("AlbServerGroup")]
         [Validation(Required=false)]
-        public List<string> ScalingConfigurationName { get; set; }
+        public List<DetachAlbServerGroupsRequestAlbServerGroup> AlbServerGroup { get; set; }
+        public class DetachAlbServerGroupsRequestAlbServerGroup : TeaModel {
+            [NameInMap("AlbServerGroupId")]
+            [Validation(Required=false)]
+            public string AlbServerGroupId { get; set; }
+
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
+
+        }
 
     }
 
