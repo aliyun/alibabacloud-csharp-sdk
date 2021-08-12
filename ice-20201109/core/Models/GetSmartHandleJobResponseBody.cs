@@ -65,9 +65,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string JobParameters { get; set; }
 
             }
-            [NameInMap("outputConfig")]
+            [NameInMap("OutputConfig")]
             [Validation(Required=false)]
-            public string OutputConfig { get; set; }
+            public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig OutputConfig { get; set; }
+            public class GetSmartHandleJobResponseBodySmartJobInfoOutputConfig : TeaModel {
+                [NameInMap("Bucket")]
+                [Validation(Required=false)]
+                public string Bucket { get; set; }
+
+                [NameInMap("Object")]
+                [Validation(Required=false)]
+                public string Object { get; set; }
+
+            }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
