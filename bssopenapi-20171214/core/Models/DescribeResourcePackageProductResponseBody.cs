@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeResourcePackageProductResponseBodyData Data { get; set; }
@@ -25,9 +41,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage> ResourcePackage { get; set; }
                 public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage : TeaModel {
+                    [NameInMap("ProductType")]
+                    [Validation(Required=false)]
+                    public string ProductType { get; set; }
+
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    [NameInMap("ProductCode")]
+                    [Validation(Required=false)]
+                    public string ProductCode { get; set; }
 
                     [NameInMap("PackageTypes")]
                     [Validation(Required=false)]
@@ -62,20 +86,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                 [Validation(Required=false)]
                                 public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification> Specification { get; set; }
                                 public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification : TeaModel {
-                                    [NameInMap("AvailableDurations")]
-                                    [Validation(Required=false)]
-                                    public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations AvailableDurations { get; set; }
-                                    public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations : TeaModel {
-                                        [NameInMap("AvailableDuration")]
-                                        [Validation(Required=false)]
-                                        public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration> AvailableDuration { get; set; }
-                                        public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration : TeaModel {
-                                            public string Name { get; set; }
-                                            public string Unit { get; set; }
-                                            public int? Value { get; set; }
-                                        }
-                                    };
-
                                     [NameInMap("Name")]
                                     [Validation(Required=false)]
                                     public string Name { get; set; }
@@ -84,40 +94,30 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                                     [Validation(Required=false)]
                                     public string Value { get; set; }
 
+                                    [NameInMap("AvailableDurations")]
+                                    [Validation(Required=false)]
+                                    public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations AvailableDurations { get; set; }
+                                    public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations : TeaModel {
+                                        [NameInMap("AvailableDuration")]
+                                        [Validation(Required=false)]
+                                        public List<DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration> AvailableDuration { get; set; }
+                                        public class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration : TeaModel {
+                                            public int? Value { get; set; }
+                                            public string Name { get; set; }
+                                            public string Unit { get; set; }
+                                        }
+                                    };
+
                                 }
 
                             }
                         }
                     };
 
-                    [NameInMap("ProductCode")]
-                    [Validation(Required=false)]
-                    public string ProductCode { get; set; }
-
-                    [NameInMap("ProductType")]
-                    [Validation(Required=false)]
-                    public string ProductType { get; set; }
-
                 }
 
             }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public long? OrderId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

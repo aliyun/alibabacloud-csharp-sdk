@@ -53,21 +53,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public List<GetSubscriptionPriceRequestModuleList> ModuleList { get; set; }
         public class GetSubscriptionPriceRequestModuleList : TeaModel {
-            [NameInMap("Config")]
+            [NameInMap("ModuleStatus")]
             [Validation(Required=false)]
-            public string Config { get; set; }
+            public int? ModuleStatus { get; set; }
 
             [NameInMap("ModuleCode")]
             [Validation(Required=false)]
             public string ModuleCode { get; set; }
 
-            [NameInMap("ModuleStatus")]
-            [Validation(Required=false)]
-            public int? ModuleStatus { get; set; }
-
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
+
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
 
         }
 

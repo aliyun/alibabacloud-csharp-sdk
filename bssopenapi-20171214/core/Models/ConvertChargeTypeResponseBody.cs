@@ -13,15 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ConvertChargeTypeResponseBodyData Data { get; set; }
-        public class ConvertChargeTypeResponseBodyData : TeaModel {
-            [NameInMap("OrderId")]
-            [Validation(Required=false)]
-            public string OrderId { get; set; }
-        };
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -33,6 +24,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ConvertChargeTypeResponseBodyData Data { get; set; }
+        public class ConvertChargeTypeResponseBodyData : TeaModel {
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public string OrderId { get; set; }
+        };
 
     }
 

@@ -41,13 +41,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public List<ModifyInstanceRequestParameter> Parameter { get; set; }
         public class ModifyInstanceRequestParameter : TeaModel {
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
+
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
 
         }
 

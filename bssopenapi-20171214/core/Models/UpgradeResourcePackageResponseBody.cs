@@ -13,25 +13,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public UpgradeResourcePackageResponseBodyData Data { get; set; }
-        public class UpgradeResourcePackageResponseBodyData : TeaModel {
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-            [NameInMap("OrderId")]
-            [Validation(Required=false)]
-            public long? OrderId { get; set; }
-        };
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public long? OrderId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -40,6 +24,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public UpgradeResourcePackageResponseBodyData Data { get; set; }
+        public class UpgradeResourcePackageResponseBodyData : TeaModel {
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public long? OrderId { get; set; }
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+        };
 
     }
 

@@ -13,21 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public CreateCostUnitResponseBodyData Data { get; set; }
-        public class CreateCostUnitResponseBodyData : TeaModel {
-            [NameInMap("CostUnitDtoList")]
-            [Validation(Required=false)]
-            public List<CreateCostUnitResponseBodyDataCostUnitDtoList> CostUnitDtoList { get; set; }
-            public class CreateCostUnitResponseBodyDataCostUnitDtoList : TeaModel {
-                public long? OwnerUid { get; set; }
-                public long? ParentUnitId { get; set; }
-                public long? UnitId { get; set; }
-                public string UnitName { get; set; }
-            }
-        };
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -39,6 +24,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public CreateCostUnitResponseBodyData Data { get; set; }
+        public class CreateCostUnitResponseBodyData : TeaModel {
+            [NameInMap("CostUnitDtoList")]
+            [Validation(Required=false)]
+            public List<CreateCostUnitResponseBodyDataCostUnitDtoList> CostUnitDtoList { get; set; }
+            public class CreateCostUnitResponseBodyDataCostUnitDtoList : TeaModel {
+                public long? ParentUnitId { get; set; }
+                public string UnitName { get; set; }
+                public long? UnitId { get; set; }
+                public long? OwnerUid { get; set; }
+            }
+        };
 
     }
 

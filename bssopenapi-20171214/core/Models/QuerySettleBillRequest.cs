@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? BillOwnerId { get; set; }
 
+        [NameInMap("RecordID")]
+        [Validation(Required=false)]
+        public string RecordID { get; set; }
+
     }
 
 }

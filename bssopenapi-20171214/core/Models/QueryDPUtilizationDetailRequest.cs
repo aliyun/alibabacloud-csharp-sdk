@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public bool? IncludeShare { get; set; }
 
+        [NameInMap("ProdCode")]
+        [Validation(Required=false)]
+        public string ProdCode { get; set; }
+
     }
 
 }

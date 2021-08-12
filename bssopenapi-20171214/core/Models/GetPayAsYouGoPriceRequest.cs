@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public List<GetPayAsYouGoPriceRequestModuleList> ModuleList { get; set; }
         public class GetPayAsYouGoPriceRequestModuleList : TeaModel {
-            [NameInMap("Config")]
-            [Validation(Required=false)]
-            public string Config { get; set; }
-
             [NameInMap("ModuleCode")]
             [Validation(Required=false)]
             public string ModuleCode { get; set; }
@@ -44,6 +40,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [NameInMap("PriceType")]
             [Validation(Required=false)]
             public string PriceType { get; set; }
+
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
 
         }
 

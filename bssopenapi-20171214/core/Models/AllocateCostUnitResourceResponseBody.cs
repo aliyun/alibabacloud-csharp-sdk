@@ -13,21 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public AllocateCostUnitResourceResponseBodyData Data { get; set; }
-        public class AllocateCostUnitResourceResponseBodyData : TeaModel {
-            [NameInMap("IsSuccess")]
-            [Validation(Required=false)]
-            public bool? IsSuccess { get; set; }
-            [NameInMap("ToUnitId")]
-            [Validation(Required=false)]
-            public long? ToUnitId { get; set; }
-            [NameInMap("ToUnitUserId")]
-            [Validation(Required=false)]
-            public long? ToUnitUserId { get; set; }
-        };
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -39,6 +24,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public AllocateCostUnitResourceResponseBodyData Data { get; set; }
+        public class AllocateCostUnitResourceResponseBodyData : TeaModel {
+            [NameInMap("ToUnitUserId")]
+            [Validation(Required=false)]
+            public long? ToUnitUserId { get; set; }
+            [NameInMap("IsSuccess")]
+            [Validation(Required=false)]
+            public bool? IsSuccess { get; set; }
+            [NameInMap("ToUnitId")]
+            [Validation(Required=false)]
+            public long? ToUnitId { get; set; }
+        };
 
     }
 

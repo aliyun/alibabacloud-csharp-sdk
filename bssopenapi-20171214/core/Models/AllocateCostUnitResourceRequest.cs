@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
-
             [NameInMap("ResourceUserId")]
             [Validation(Required=false)]
             public long? ResourceUserId { get; set; }
+
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
 
         }
 

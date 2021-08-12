@@ -13,43 +13,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetResourcePackagePriceResponseBodyData Data { get; set; }
-        public class GetResourcePackagePriceResponseBodyData : TeaModel {
-            [NameInMap("Currency")]
-            [Validation(Required=false)]
-            public string Currency { get; set; }
-            [NameInMap("DiscountPrice")]
-            [Validation(Required=false)]
-            public float? DiscountPrice { get; set; }
-            [NameInMap("OriginalPrice")]
-            [Validation(Required=false)]
-            public float? OriginalPrice { get; set; }
-            [NameInMap("Promotions")]
-            [Validation(Required=false)]
-            public GetResourcePackagePriceResponseBodyDataPromotions Promotions { get; set; }
-            public class GetResourcePackagePriceResponseBodyDataPromotions : TeaModel {
-                [NameInMap("Promotion")]
-                [Validation(Required=false)]
-                public List<GetResourcePackagePriceResponseBodyDataPromotionsPromotion> Promotion { get; set; }
-                public class GetResourcePackagePriceResponseBodyDataPromotionsPromotion : TeaModel {
-                    [NameInMap("Id")]
-                    [Validation(Required=false)]
-                    public long? Id { get; set; }
-
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                }
-
-            }
-            [NameInMap("TradePrice")]
-            [Validation(Required=false)]
-            public float? TradePrice { get; set; }
-        };
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -61,6 +24,43 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetResourcePackagePriceResponseBodyData Data { get; set; }
+        public class GetResourcePackagePriceResponseBodyData : TeaModel {
+            [NameInMap("OriginalPrice")]
+            [Validation(Required=false)]
+            public float? OriginalPrice { get; set; }
+            [NameInMap("DiscountPrice")]
+            [Validation(Required=false)]
+            public float? DiscountPrice { get; set; }
+            [NameInMap("Currency")]
+            [Validation(Required=false)]
+            public string Currency { get; set; }
+            [NameInMap("TradePrice")]
+            [Validation(Required=false)]
+            public float? TradePrice { get; set; }
+            [NameInMap("Promotions")]
+            [Validation(Required=false)]
+            public GetResourcePackagePriceResponseBodyDataPromotions Promotions { get; set; }
+            public class GetResourcePackagePriceResponseBodyDataPromotions : TeaModel {
+                [NameInMap("Promotion")]
+                [Validation(Required=false)]
+                public List<GetResourcePackagePriceResponseBodyDataPromotionsPromotion> Promotion { get; set; }
+                public class GetResourcePackagePriceResponseBodyDataPromotionsPromotion : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                }
+
+            }
+        };
 
     }
 

@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPayAsYouGoPriceResponseBodyData Data { get; set; }
@@ -36,17 +48,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public float? InvoiceDiscount { get; set; }
 
-                    [NameInMap("ModuleCode")]
+                    [NameInMap("UnitPrice")]
                     [Validation(Required=false)]
-                    public string ModuleCode { get; set; }
+                    public float? UnitPrice { get; set; }
 
                     [NameInMap("OriginalCost")]
                     [Validation(Required=false)]
                     public float? OriginalCost { get; set; }
 
-                    [NameInMap("UnitPrice")]
+                    [NameInMap("ModuleCode")]
                     [Validation(Required=false)]
-                    public float? UnitPrice { get; set; }
+                    public string ModuleCode { get; set; }
 
                 }
 
@@ -75,18 +87,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
             }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

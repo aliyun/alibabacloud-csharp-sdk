@@ -13,16 +13,37 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSubscriptionPriceResponseBodyData Data { get; set; }
         public class GetSubscriptionPriceResponseBodyData : TeaModel {
-            [NameInMap("Currency")]
+            [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
-            public string Currency { get; set; }
+            public float? OriginalPrice { get; set; }
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
+            [NameInMap("Currency")]
+            [Validation(Required=false)]
+            public string Currency { get; set; }
+            [NameInMap("Quantity")]
+            [Validation(Required=false)]
+            public int? Quantity { get; set; }
+            [NameInMap("TradePrice")]
+            [Validation(Required=false)]
+            public float? TradePrice { get; set; }
             [NameInMap("ModuleDetails")]
             [Validation(Required=false)]
             public GetSubscriptionPriceResponseBodyDataModuleDetails ModuleDetails { get; set; }
@@ -39,24 +60,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     [Validation(Required=false)]
                     public float? InvoiceDiscount { get; set; }
 
-                    [NameInMap("ModuleCode")]
+                    [NameInMap("UnitPrice")]
                     [Validation(Required=false)]
-                    public string ModuleCode { get; set; }
+                    public float? UnitPrice { get; set; }
 
                     [NameInMap("OriginalCost")]
                     [Validation(Required=false)]
                     public float? OriginalCost { get; set; }
 
-                    [NameInMap("UnitPrice")]
+                    [NameInMap("ModuleCode")]
                     [Validation(Required=false)]
-                    public float? UnitPrice { get; set; }
+                    public string ModuleCode { get; set; }
 
                 }
 
             }
-            [NameInMap("OriginalPrice")]
-            [Validation(Required=false)]
-            public float? OriginalPrice { get; set; }
             [NameInMap("PromotionDetails")]
             [Validation(Required=false)]
             public GetSubscriptionPriceResponseBodyDataPromotionDetails PromotionDetails { get; set; }
@@ -80,25 +98,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
             }
-            [NameInMap("Quantity")]
-            [Validation(Required=false)]
-            public int? Quantity { get; set; }
-            [NameInMap("TradePrice")]
-            [Validation(Required=false)]
-            public float? TradePrice { get; set; }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

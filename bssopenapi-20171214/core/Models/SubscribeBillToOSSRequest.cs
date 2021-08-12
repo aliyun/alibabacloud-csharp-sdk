@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? BucketOwnerId { get; set; }
 
+        [NameInMap("BeginBillingCycle")]
+        [Validation(Required=false)]
+        public string BeginBillingCycle { get; set; }
+
     }
 
 }

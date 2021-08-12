@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public bool? InvoiceByAmount { get; set; }
 
+        [NameInMap("UserRemark")]
+        [Validation(Required=false)]
+        public string UserRemark { get; set; }
+
         [NameInMap("SelectedIds")]
         [Validation(Required=false)]
         public List<int?> SelectedIds { get; set; }
