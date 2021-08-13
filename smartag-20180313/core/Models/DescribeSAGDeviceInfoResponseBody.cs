@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string LastConnectedControllerTime { get; set; }
 
+        [NameInMap("ResettableStatus")]
+        [Validation(Required=false)]
+        public string ResettableStatus { get; set; }
+
     }
 
 }

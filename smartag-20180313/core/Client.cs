@@ -1061,38 +1061,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
             return await DeleteQosWithOptionsAsync(request, runtime);
         }
 
-        public AddSagCidrResponse AddSagCidrWithOptions(AddSagCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<AddSagCidrResponse>(DoRPCRequest("AddSagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<AddSagCidrResponse> AddSagCidrWithOptionsAsync(AddSagCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<AddSagCidrResponse>(await DoRPCRequestAsync("AddSagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public AddSagCidrResponse AddSagCidr(AddSagCidrRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AddSagCidrWithOptions(request, runtime);
-        }
-
-        public async Task<AddSagCidrResponse> AddSagCidrAsync(AddSagCidrRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AddSagCidrWithOptionsAsync(request, runtime);
-        }
-
         public DeleteSagStaticRouteResponse DeleteSagStaticRouteWithOptions(DeleteSagStaticRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1667,38 +1635,6 @@ namespace AlibabaCloud.SDK.Smartag20180313
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddDnatEntryWithOptionsAsync(request, runtime);
-        }
-
-        public DeleteSagCidrResponse DeleteSagCidrWithOptions(DeleteSagCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DeleteSagCidrResponse>(DoRPCRequest("DeleteSagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DeleteSagCidrResponse> DeleteSagCidrWithOptionsAsync(DeleteSagCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DeleteSagCidrResponse>(await DoRPCRequestAsync("DeleteSagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DeleteSagCidrResponse DeleteSagCidr(DeleteSagCidrRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteSagCidrWithOptions(request, runtime);
-        }
-
-        public async Task<DeleteSagCidrResponse> DeleteSagCidrAsync(DeleteSagCidrRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteSagCidrWithOptionsAsync(request, runtime);
         }
 
         public DescribeSagRouteProtocolOspfResponse DescribeSagRouteProtocolOspfWithOptions(DescribeSagRouteProtocolOspfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
