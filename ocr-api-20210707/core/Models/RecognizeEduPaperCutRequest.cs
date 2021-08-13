@@ -37,13 +37,6 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public string Subject { get; set; }
 
-        /// <summary>
-        /// 是否输出原图坐标信息(如果图片被做过旋转，图片校正等处理)
-        /// </summary>
-        [NameInMap("OutputOricoord")]
-        [Validation(Required=false)]
-        public bool? OutputOricoord { get; set; }
-
     }
 
 }

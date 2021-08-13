@@ -1125,40 +1125,6 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
             return await RecognizeRussianWithOptionsAsync(request, runtime);
         }
 
-        public RecognizeHouseCertificationResponse RecognizeHouseCertificationWithOptions(RecognizeHouseCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = query,
-            };
-            return TeaModel.ToObject<RecognizeHouseCertificationResponse>(DoRPCRequest("RecognizeHouseCertification", "2021-07-07", "HTTPS", "GET", "AK", "json", req, runtime));
-        }
-
-        public async Task<RecognizeHouseCertificationResponse> RecognizeHouseCertificationWithOptionsAsync(RecognizeHouseCertificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = query,
-            };
-            return TeaModel.ToObject<RecognizeHouseCertificationResponse>(await DoRPCRequestAsync("RecognizeHouseCertification", "2021-07-07", "HTTPS", "GET", "AK", "json", req, runtime));
-        }
-
-        public RecognizeHouseCertificationResponse RecognizeHouseCertification(RecognizeHouseCertificationRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RecognizeHouseCertificationWithOptions(request, runtime);
-        }
-
-        public async Task<RecognizeHouseCertificationResponse> RecognizeHouseCertificationAsync(RecognizeHouseCertificationRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RecognizeHouseCertificationWithOptionsAsync(request, runtime);
-        }
-
         public RecognizeBasicResponse RecognizeBasicWithOptions(RecognizeBasicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
