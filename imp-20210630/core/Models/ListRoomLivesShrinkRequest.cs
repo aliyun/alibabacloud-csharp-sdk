@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class ListRoomLivesRequest : TeaModel {
+    public class ListRoomLivesShrinkRequest : TeaModel {
         /// <summary>
         /// 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
         /// </summary>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         /// </summary>
         [NameInMap("RoomIdList")]
         [Validation(Required=false)]
-        public List<string> RoomIdList { get; set; }
+        public string RoomIdListShrink { get; set; }
 
     }
 

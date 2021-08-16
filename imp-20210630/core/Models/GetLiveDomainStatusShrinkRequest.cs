@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string LiveDomainListShrink { get; set; }
 
+        /// <summary>
+        /// 直播域名类型，推流域名: push, 拉流域名: pull, 回放域名: palyback
+        /// </summary>
+        [NameInMap("LiveDomainType")]
+        [Validation(Required=false)]
+        public string LiveDomainType { get; set; }
+
     }
 
 }

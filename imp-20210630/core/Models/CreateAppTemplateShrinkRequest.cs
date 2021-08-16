@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppTemplateName { get; set; }
 
         /// <summary>
+        /// 应用模板场景，电商business，课堂classroom
+        /// </summary>
+        [NameInMap("Sence")]
+        [Validation(Required=false)]
+        public string Sence { get; set; }
+
+        /// <summary>
         /// 组件列表
         /// </summary>
         [NameInMap("ComponentList")]

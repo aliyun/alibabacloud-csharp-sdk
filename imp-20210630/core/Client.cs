@@ -197,9 +197,15 @@ namespace AlibabaCloud.SDK.Imp20210630
             return await ListApplyLinkMicUsersWithOptionsAsync(request, runtime);
         }
 
-        public ListRoomLivesResponse ListRoomLivesWithOptions(ListRoomLivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListRoomLivesResponse ListRoomLivesWithOptions(ListRoomLivesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListRoomLivesShrinkRequest request = new ListRoomLivesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoomIdList))
+            {
+                request.RoomIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoomIdList, "RoomIdList", "json");
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
@@ -207,9 +213,15 @@ namespace AlibabaCloud.SDK.Imp20210630
             return TeaModel.ToObject<ListRoomLivesResponse>(DoRPCRequest("ListRoomLives", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<ListRoomLivesResponse> ListRoomLivesWithOptionsAsync(ListRoomLivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListRoomLivesResponse> ListRoomLivesWithOptionsAsync(ListRoomLivesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListRoomLivesShrinkRequest request = new ListRoomLivesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoomIdList))
+            {
+                request.RoomIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoomIdList, "RoomIdList", "json");
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
