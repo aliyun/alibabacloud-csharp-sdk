@@ -74,6 +74,12 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string HlsUrl { get; set; }
                 public string RtmpUrl { get; set; }
             }
+            [NameInMap("CoverUrl")]
+            [Validation(Required=false)]
+            public string CoverUrl { get; set; }
+            [NameInMap("UserDefineField")]
+            [Validation(Required=false)]
+            public string UserDefineField { get; set; }
         };
 
     }
