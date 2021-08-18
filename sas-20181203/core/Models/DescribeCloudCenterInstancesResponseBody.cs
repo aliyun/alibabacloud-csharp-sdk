@@ -43,9 +43,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("CpuInfo")]
+            [Validation(Required=false)]
+            public string CpuInfo { get; set; }
+
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
+
+            [NameInMap("Kernel")]
+            [Validation(Required=false)]
+            public string Kernel { get; set; }
 
             [NameInMap("Bind")]
             [Validation(Required=false)]
@@ -63,9 +71,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
 
+            [NameInMap("Mem")]
+            [Validation(Required=false)]
+            public int? Mem { get; set; }
+
             [NameInMap("VpcInstanceId")]
             [Validation(Required=false)]
             public string VpcInstanceId { get; set; }
+
+            [NameInMap("TagId")]
+            [Validation(Required=false)]
+            public string TagId { get; set; }
 
             [NameInMap("Flag")]
             [Validation(Required=false)]
@@ -99,6 +115,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreatedTime { get; set; }
 
+            [NameInMap("GroupTrace")]
+            [Validation(Required=false)]
+            public string GroupTrace { get; set; }
+
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
@@ -119,6 +139,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AlarmStatus { get; set; }
 
+            [NameInMap("MacListString")]
+            [Validation(Required=false)]
+            public string MacListString { get; set; }
+
             [NameInMap("Importance")]
             [Validation(Required=false)]
             public int? Importance { get; set; }
@@ -138,10 +162,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("AuthModifyTime")]
             [Validation(Required=false)]
             public long? AuthModifyTime { get; set; }
-
-            [NameInMap("ExposedCount")]
-            [Validation(Required=false)]
-            public int? ExposedCount { get; set; }
 
             [NameInMap("SafeEventCount")]
             [Validation(Required=false)]
@@ -171,10 +191,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
-            [NameInMap("AutoSnapshotsLevel")]
-            [Validation(Required=false)]
-            public int? AutoSnapshotsLevel { get; set; }
-
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
@@ -186,6 +202,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("VendorName")]
             [Validation(Required=false)]
             public string VendorName { get; set; }
+
+            [NameInMap("AuthVersionName")]
+            [Validation(Required=false)]
+            public string AuthVersionName { get; set; }
 
             [NameInMap("ClusterName")]
             [Validation(Required=false)]
@@ -199,9 +219,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RiskCount { get; set; }
 
-            [NameInMap("ClientVersion")]
+            [NameInMap("IpListString")]
             [Validation(Required=false)]
-            public string ClientVersion { get; set; }
+            public string IpListString { get; set; }
 
         }
 

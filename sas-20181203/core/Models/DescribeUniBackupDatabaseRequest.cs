@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeCloudCenterInstancesRequest : TeaModel {
-        [NameInMap("RegionId")]
+    public class DescribeUniBackupDatabaseRequest : TeaModel {
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string SourceIp { get; set; }
 
-        [NameInMap("Criteria")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string Criteria { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("MachineTypes")]
+        [NameInMap("InstanceName")]
         [Validation(Required=false)]
-        public string MachineTypes { get; set; }
+        public string InstanceName { get; set; }
 
-        [NameInMap("LogicalExp")]
+        [NameInMap("DatabaseType")]
         [Validation(Required=false)]
-        public string LogicalExp { get; set; }
+        public string DatabaseType { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -33,9 +33,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("Importance")]
+        [NameInMap("QueryType")]
         [Validation(Required=false)]
-        public int? Importance { get; set; }
+        public string QueryType { get; set; }
+
+        [NameInMap("UniRegionId")]
+        [Validation(Required=false)]
+        public string UniRegionId { get; set; }
 
     }
 

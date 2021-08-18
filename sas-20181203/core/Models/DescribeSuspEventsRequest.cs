@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ParentEventTypes { get; set; }
 
+        [NameInMap("EventNames")]
+        [Validation(Required=false)]
+        public string EventNames { get; set; }
+
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

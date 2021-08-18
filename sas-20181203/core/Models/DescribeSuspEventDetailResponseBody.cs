@@ -69,10 +69,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperateErrorCode { get; set; }
 
-        [NameInMap("SasId")]
-        [Validation(Required=false)]
-        public string SasId { get; set; }
-
         [NameInMap("Level")]
         [Validation(Required=false)]
         public string Level { get; set; }
@@ -93,17 +89,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Value { get; set; }
 
-            [NameInMap("InfoType")]
-            [Validation(Required=false)]
-            public string InfoType { get; set; }
-
             [NameInMap("NameDisplay")]
             [Validation(Required=false)]
             public string NameDisplay { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
         }
 

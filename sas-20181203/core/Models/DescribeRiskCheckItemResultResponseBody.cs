@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
             [NameInMap("ContentResource")]
             [Validation(Required=false)]
-            public string ContentResource { get; set; }
+            public Dictionary<string, string> ContentResource { get; set; }
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }

@@ -20,12 +20,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Overflow")]
             [Validation(Required=false)]
             public int? Overflow { get; set; }
+            [NameInMap("UniUsageStorageByte")]
+            [Validation(Required=false)]
+            public long? UniUsageStorageByte { get; set; }
             [NameInMap("BuyStorageByte")]
             [Validation(Required=false)]
             public long? BuyStorageByte { get; set; }
             [NameInMap("UsageStorageByte")]
             [Validation(Required=false)]
             public long? UsageStorageByte { get; set; }
+            [NameInMap("EcsUsageStorageByte")]
+            [Validation(Required=false)]
+            public long? EcsUsageStorageByte { get; set; }
         };
 
     }

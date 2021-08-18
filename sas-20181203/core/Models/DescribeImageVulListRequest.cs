@@ -85,18 +85,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Digest { get; set; }
 
-        [NameInMap("ContainerFieldName")]
-        [Validation(Required=false)]
-        public string ContainerFieldName { get; set; }
-
-        [NameInMap("ContainerFieldValue")]
-        [Validation(Required=false)]
-        public string ContainerFieldValue { get; set; }
-
-        [NameInMap("TargetType")]
-        [Validation(Required=false)]
-        public string TargetType { get; set; }
-
     }
 
 }

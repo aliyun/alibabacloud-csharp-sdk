@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeSasAssetStatisticsColumnRequest : TeaModel {
-        [NameInMap("SourceIp")]
+    public class CreateUniBackupPolicyResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string RequestId { get; set; }
 
     }
 

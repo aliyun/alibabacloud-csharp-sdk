@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeSasAssetStatisticsColumnResponseBody : TeaModel {
-        [NameInMap("StatisticsColumn")]
-        [Validation(Required=false)]
-        public string StatisticsColumn { get; set; }
-
+    public class InstallUniBackupAgentResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

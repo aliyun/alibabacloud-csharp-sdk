@@ -155,7 +155,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string FullVersion { get; set; }
                     public string Version { get; set; }
                     public string MatchDetail { get; set; }
+                    public string ImageName { get; set; }
                     public string Path { get; set; }
+                    public string ContainerName { get; set; }
                     public string Name { get; set; }
                     public string UpdateCmd { get; set; }
                 }
