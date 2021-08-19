@@ -28,18 +28,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             public string MaterialMatch { get; set; }
         };
 
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
     }
 
 }
