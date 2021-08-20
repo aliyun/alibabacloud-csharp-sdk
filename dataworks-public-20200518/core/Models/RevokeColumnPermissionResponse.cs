@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RevokeColumnPermissionResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RevokeSuccess")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? RevokeSuccess { get; set; }
+        public RevokeColumnPermissionResponseBody Body { get; set; }
 
     }
 

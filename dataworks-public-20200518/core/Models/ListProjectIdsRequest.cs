@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectIdsRequest : TeaModel {
         [NameInMap("UserId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string UserId { get; set; }
 
     }

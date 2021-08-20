@@ -9,34 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateMetaCategoryResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorCode")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public CreateMetaCategoryResponseData Data { get; set; }
-        public class CreateMetaCategoryResponseData : TeaModel {
-            [NameInMap("CategoryId")]
-            [Validation(Required=true)]
-            public long? CategoryId { get; set; }
-        };
+        public CreateMetaCategoryResponseBody Body { get; set; }
 
     }
 

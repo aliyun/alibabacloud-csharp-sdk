@@ -9,28 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDISyncInstanceInfoResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetDISyncInstanceInfoResponseData Data { get; set; }
-        public class GetDISyncInstanceInfoResponseData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
-            [NameInMap("Message")]
-            [Validation(Required=true)]
-            public string Message { get; set; }
-        };
+        public GetDISyncInstanceInfoResponseBody Body { get; set; }
 
     }
 

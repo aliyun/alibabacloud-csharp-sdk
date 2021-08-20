@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ScanSensitiveDataRequest : TeaModel {
         [NameInMap("Data")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Data { get; set; }
 
     }

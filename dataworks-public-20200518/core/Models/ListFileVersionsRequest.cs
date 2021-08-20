@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFileVersionsRequest : TeaModel {
         [NameInMap("FileId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? FileId { get; set; }
 
         [NameInMap("ProjectId")]

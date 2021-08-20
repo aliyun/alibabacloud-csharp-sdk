@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         [NameInMap("BusinessId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? BusinessId { get; set; }
 
     }

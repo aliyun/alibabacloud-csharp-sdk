@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         [NameInMap("FileId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? FileId { get; set; }
 
         [NameInMap("OutputList")]

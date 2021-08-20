@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunManualDagNodesRequest : TeaModel {
         [NameInMap("ProjectEnv")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("ProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         [NameInMap("FlowName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FlowName { get; set; }
 
         [NameInMap("BizDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizDate { get; set; }
 
         [NameInMap("NodeParameters")]

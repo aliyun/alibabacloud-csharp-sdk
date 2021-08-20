@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOpSensitiveDataRequest : TeaModel {
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         [NameInMap("Date")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Date { get; set; }
 
         [NameInMap("OpType")]

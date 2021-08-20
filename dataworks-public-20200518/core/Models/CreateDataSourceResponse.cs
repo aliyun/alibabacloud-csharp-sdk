@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataSourceResponse : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string HttpStatusCode { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public long? Data { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public CreateDataSourceResponseBody Body { get; set; }
 
     }
 

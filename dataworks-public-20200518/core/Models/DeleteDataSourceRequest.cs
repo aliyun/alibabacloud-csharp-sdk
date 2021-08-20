@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDataSourceRequest : TeaModel {
         [NameInMap("DataSourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? DataSourceId { get; set; }
 
     }

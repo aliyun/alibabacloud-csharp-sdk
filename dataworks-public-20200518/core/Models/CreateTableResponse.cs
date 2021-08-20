@@ -9,27 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateTableResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("TaskInfo")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateTableResponseTaskInfo TaskInfo { get; set; }
-        public class CreateTableResponseTaskInfo : TeaModel {
-            [NameInMap("TaskId")]
-            [Validation(Required=true)]
-            public string TaskId { get; set; }
-            [NameInMap("Content")]
-            [Validation(Required=true)]
-            public string Content { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public string Status { get; set; }
-            [NameInMap("NextTaskId")]
-            [Validation(Required=true)]
-            public string NextTaskId { get; set; }
-        };
+        public CreateTableResponseBody Body { get; set; }
 
     }
 

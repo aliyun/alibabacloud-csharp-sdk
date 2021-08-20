@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteViewRequest : TeaModel {
         [NameInMap("ViewName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ViewName { get; set; }
 
         [NameInMap("AppGuid")]

@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateDataServiceApiRequest : TeaModel {
         [NameInMap("TenantId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? TenantId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         [NameInMap("ApiId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ApiId { get; set; }
 
         [NameInMap("RequestMethod")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? RequestMethod { get; set; }
 
         [NameInMap("ResponseContentType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? ResponseContentType { get; set; }
 
         [NameInMap("Timeout")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? Timeout { get; set; }
 
         [NameInMap("VisibleRange")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? VisibleRange { get; set; }
 
         [NameInMap("Protocols")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Protocols { get; set; }
 
         [NameInMap("WizardDetails")]
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RegistrationDetails { get; set; }
 
         [NameInMap("ApiPath")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApiPath { get; set; }
 
         [NameInMap("ApiDescription")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApiDescription { get; set; }
 
     }

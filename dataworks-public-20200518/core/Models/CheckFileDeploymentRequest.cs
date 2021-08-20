@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckFileDeploymentRequest : TeaModel {
         [NameInMap("CheckerInstanceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string CheckerInstanceId { get; set; }
 
         [NameInMap("Status")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Status { get; set; }
 
         [NameInMap("CheckDetailUrl")]
