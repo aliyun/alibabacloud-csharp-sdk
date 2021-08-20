@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=true)]
         public long? RootNodeId { get; set; }
 
-        [NameInMap("IncludeNodeIds")]
-        [Validation(Required=true)]
-        public string IncludeNodeIds { get; set; }
-
         [NameInMap("ExcludeNodeIds")]
         [Validation(Required=false)]
         public string ExcludeNodeIds { get; set; }
@@ -52,6 +48,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("NodeParams")]
         [Validation(Required=false)]
         public string NodeParams { get; set; }
+
+        [NameInMap("IncludeNodeIds")]
+        [Validation(Required=true)]
+        public string IncludeNodeIds { get; set; }
 
     }
 

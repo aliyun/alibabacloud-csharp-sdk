@@ -108,6 +108,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("TaskRerunTime")]
             [Validation(Required=true)]
             public int? TaskRerunTime { get; set; }
+            [NameInMap("BusinessId")]
+            [Validation(Required=true)]
+            public long? BusinessId { get; set; }
         };
 
     }

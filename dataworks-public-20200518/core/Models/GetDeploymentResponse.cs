@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=true)]
                 public string ErrorMessage { get; set; }
 
+                [NameInMap("CheckingStatus")]
+                [Validation(Required=true)]
+                public int? CheckingStatus { get; set; }
+
             }
         };
 

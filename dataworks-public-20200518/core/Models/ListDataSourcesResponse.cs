@@ -55,6 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Id { get; set; }
                 public int? ProjectId { get; set; }
                 public int? Status { get; set; }
+                public string Content { get; set; }
             }
         };
 

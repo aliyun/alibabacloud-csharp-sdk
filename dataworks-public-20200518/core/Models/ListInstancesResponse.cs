@@ -72,6 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? RelatedFlowId { get; set; }
                 public string TaskType { get; set; }
                 public int? TaskRerunTime { get; set; }
+                public long? BusinessId { get; set; }
             }
         };
 

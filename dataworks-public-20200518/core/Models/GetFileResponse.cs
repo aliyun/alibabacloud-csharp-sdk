@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=true)]
                 public long? ResourceGroupId { get; set; }
 
+                [NameInMap("SchedulerType")]
+                [Validation(Required=true)]
+                public string SchedulerType { get; set; }
+
                 [NameInMap("InputList")]
                 [Validation(Required=true)]
                 public List<GetFileResponseDataNodeConfigurationInputList> InputList { get; set; }

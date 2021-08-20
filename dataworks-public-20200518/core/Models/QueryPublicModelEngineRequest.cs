@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=true)]
         public string Text { get; set; }
 
-        [NameInMap("TenantId")]
-        [Validation(Required=true)]
-        public string TenantId { get; set; }
-
         [NameInMap("ProjectId")]
         [Validation(Required=true)]
         public string ProjectId { get; set; }

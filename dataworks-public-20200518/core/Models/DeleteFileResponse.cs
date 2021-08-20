@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=true)]
         public int? HttpStatusCode { get; set; }
 
+        [NameInMap("DeploymentId")]
+        [Validation(Required=true)]
+        public long? DeploymentId { get; set; }
+
     }
 
 }

@@ -87,6 +87,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("RelatedFlowId")]
             [Validation(Required=true)]
             public long? RelatedFlowId { get; set; }
+            [NameInMap("BusinessId")]
+            [Validation(Required=true)]
+            public long? BusinessId { get; set; }
         };
 
     }

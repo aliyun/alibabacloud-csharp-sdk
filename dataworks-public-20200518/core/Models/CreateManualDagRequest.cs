@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string DagParameters { get; set; }
 
+        [NameInMap("IncludeNodeIds")]
+        [Validation(Required=false)]
+        public string IncludeNodeIds { get; set; }
+
+        [NameInMap("ExcludeNodeIds")]
+        [Validation(Required=false)]
+        public string ExcludeNodeIds { get; set; }
+
     }
 
 }

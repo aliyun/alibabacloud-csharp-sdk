@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("BusinessDate")]
-        [Validation(Required=true)]
-        public string BusinessDate { get; set; }
-
     }
 
 }

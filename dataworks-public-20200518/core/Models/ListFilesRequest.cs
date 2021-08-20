@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public long? NodeId { get; set; }
+
     }
 
 }

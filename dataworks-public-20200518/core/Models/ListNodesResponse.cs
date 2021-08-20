@@ -64,6 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? DqcType { get; set; }
                 public string DqcDescription { get; set; }
                 public long? RelatedFlowId { get; set; }
+                public long? BusinessId { get; set; }
             }
         };
 

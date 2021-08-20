@@ -108,6 +108,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("IsView")]
             [Validation(Required=true)]
             public bool? IsView { get; set; }
+            [NameInMap("ColumnCount")]
+            [Validation(Required=true)]
+            public int? ColumnCount { get; set; }
         };
 
     }

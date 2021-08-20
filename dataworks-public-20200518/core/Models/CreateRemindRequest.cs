@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertUnit { get; set; }
 
         [NameInMap("AlertMethods")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string AlertMethods { get; set; }
 
         [NameInMap("AlertTargets")]
