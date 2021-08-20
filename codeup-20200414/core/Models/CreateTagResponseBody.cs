@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class CreateTagResponseBody : TeaModel {
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -29,19 +29,9 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public CreateTagResponseBodyResult Result { get; set; }
         public class CreateTagResponseBodyResult : TeaModel {
-            [NameInMap("Release")]
+            [NameInMap("Name")]
             [Validation(Required=false)]
-            public CreateTagResponseBodyResultRelease Release { get; set; }
-            public class CreateTagResponseBodyResultRelease : TeaModel {
-                [NameInMap("Description")]
-                [Validation(Required=false)]
-                public string Description { get; set; }
-
-                [NameInMap("TagName")]
-                [Validation(Required=false)]
-                public string TagName { get; set; }
-
-            }
+            public string Name { get; set; }
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
@@ -52,6 +42,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [NameInMap("ShortId")]
                 [Validation(Required=false)]
                 public string ShortId { get; set; }
+
+                [NameInMap("AuthorName")]
+                [Validation(Required=false)]
+                public string AuthorName { get; set; }
 
                 [NameInMap("CreatedAt")]
                 [Validation(Required=false)]
@@ -64,14 +58,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [NameInMap("AuthoredDate")]
                 [Validation(Required=false)]
                 public string AuthoredDate { get; set; }
-
-                [NameInMap("ParentIds")]
-                [Validation(Required=false)]
-                public List<string> ParentIds { get; set; }
-
-                [NameInMap("AuthorName")]
-                [Validation(Required=false)]
-                public string AuthorName { get; set; }
 
                 [NameInMap("CommitterName")]
                 [Validation(Required=false)]
@@ -97,10 +83,24 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [Validation(Required=false)]
                 public string CommittedDate { get; set; }
 
+                [NameInMap("ParentIds")]
+                [Validation(Required=false)]
+                public List<string> ParentIds { get; set; }
+
             }
-            [NameInMap("Name")]
+            [NameInMap("Release")]
             [Validation(Required=false)]
-            public string Name { get; set; }
+            public CreateTagResponseBodyResultRelease Release { get; set; }
+            public class CreateTagResponseBodyResultRelease : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("TagName")]
+                [Validation(Required=false)]
+                public string TagName { get; set; }
+
+            }
         };
 
     }

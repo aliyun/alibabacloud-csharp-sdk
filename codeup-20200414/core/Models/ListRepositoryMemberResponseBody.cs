@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class ListRepositoryMemberResponseBody : TeaModel {
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public long? Total { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -53,9 +53,17 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [Validation(Required=false)]
             public int? AccessLevel { get; set; }
 
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("Username")]
+            [Validation(Required=false)]
+            public string Username { get; set; }
 
         }
 

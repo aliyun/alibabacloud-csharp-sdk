@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class CreateBranchResponseBody : TeaModel {
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [NameInMap("ProtectedBranch")]
             [Validation(Required=false)]
             public bool? ProtectedBranch { get; set; }
+            [NameInMap("BranchName")]
+            [Validation(Required=false)]
+            public string BranchName { get; set; }
             [NameInMap("CommitInfo")]
             [Validation(Required=false)]
             public CreateBranchResponseBodyResultCommitInfo CommitInfo { get; set; }
@@ -39,6 +42,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [NameInMap("ShortId")]
                 [Validation(Required=false)]
                 public string ShortId { get; set; }
+
+                [NameInMap("AuthorName")]
+                [Validation(Required=false)]
+                public string AuthorName { get; set; }
 
                 [NameInMap("AuthorDate")]
                 [Validation(Required=false)]
@@ -51,14 +58,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
-
-                [NameInMap("ParentIds")]
-                [Validation(Required=false)]
-                public List<string> ParentIds { get; set; }
-
-                [NameInMap("AuthorName")]
-                [Validation(Required=false)]
-                public string AuthorName { get; set; }
 
                 [NameInMap("CommitterName")]
                 [Validation(Required=false)]
@@ -84,10 +83,11 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [Validation(Required=false)]
                 public string CommittedDate { get; set; }
 
+                [NameInMap("ParentIds")]
+                [Validation(Required=false)]
+                public List<string> ParentIds { get; set; }
+
             }
-            [NameInMap("BranchName")]
-            [Validation(Required=false)]
-            public string BranchName { get; set; }
         };
 
     }

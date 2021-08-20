@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -23,10 +20,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("SubUserId")]
         [Validation(Required=false)]
         public string SubUserId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

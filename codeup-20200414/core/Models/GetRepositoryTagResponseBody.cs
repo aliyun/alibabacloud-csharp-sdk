@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class GetRepositoryTagResponseBody : TeaModel {
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -29,19 +29,15 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public GetRepositoryTagResponseBodyResult Result { get; set; }
         public class GetRepositoryTagResponseBodyResult : TeaModel {
-            [NameInMap("Signature")]
+            [NameInMap("Message")]
             [Validation(Required=false)]
-            public GetRepositoryTagResponseBodyResultSignature Signature { get; set; }
-            public class GetRepositoryTagResponseBodyResultSignature : TeaModel {
-                [NameInMap("GpgKeyId")]
-                [Validation(Required=false)]
-                public string GpgKeyId { get; set; }
-
-                [NameInMap("VerificationStatus")]
-                [Validation(Required=false)]
-                public string VerificationStatus { get; set; }
-
-            }
+            public string Message { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
             [NameInMap("Commit")]
             [Validation(Required=false)]
             public GetRepositoryTagResponseBodyResultCommit Commit { get; set; }
@@ -49,6 +45,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [NameInMap("ShortId")]
                 [Validation(Required=false)]
                 public string ShortId { get; set; }
+
+                [NameInMap("AuthorName")]
+                [Validation(Required=false)]
+                public string AuthorName { get; set; }
 
                 [NameInMap("CreatedAt")]
                 [Validation(Required=false)]
@@ -61,26 +61,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [NameInMap("AuthoredDate")]
                 [Validation(Required=false)]
                 public string AuthoredDate { get; set; }
-
-                [NameInMap("Signature")]
-                [Validation(Required=false)]
-                public GetRepositoryTagResponseBodyResultCommitSignature Signature { get; set; }
-                public class GetRepositoryTagResponseBodyResultCommitSignature : TeaModel {
-                    [NameInMap("GpgKeyId")]
-                    [Validation(Required=false)]
-                    public string GpgKeyId { get; set; }
-                    [NameInMap("VerificationStatus")]
-                    [Validation(Required=false)]
-                    public string VerificationStatus { get; set; }
-                };
-
-                [NameInMap("ParentIds")]
-                [Validation(Required=false)]
-                public List<string> ParentIds { get; set; }
-
-                [NameInMap("AuthorName")]
-                [Validation(Required=false)]
-                public string AuthorName { get; set; }
 
                 [NameInMap("CommitterName")]
                 [Validation(Required=false)]
@@ -106,16 +86,36 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
                 [Validation(Required=false)]
                 public string CommittedDate { get; set; }
 
+                [NameInMap("ParentIds")]
+                [Validation(Required=false)]
+                public List<string> ParentIds { get; set; }
+
+                [NameInMap("Signature")]
+                [Validation(Required=false)]
+                public GetRepositoryTagResponseBodyResultCommitSignature Signature { get; set; }
+                public class GetRepositoryTagResponseBodyResultCommitSignature : TeaModel {
+                    [NameInMap("VerificationStatus")]
+                    [Validation(Required=false)]
+                    public string VerificationStatus { get; set; }
+                    [NameInMap("GpgKeyId")]
+                    [Validation(Required=false)]
+                    public string GpgKeyId { get; set; }
+                };
+
             }
-            [NameInMap("Message")]
+            [NameInMap("Signature")]
             [Validation(Required=false)]
-            public string Message { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
+            public GetRepositoryTagResponseBodyResultSignature Signature { get; set; }
+            public class GetRepositoryTagResponseBodyResultSignature : TeaModel {
+                [NameInMap("VerificationStatus")]
+                [Validation(Required=false)]
+                public string VerificationStatus { get; set; }
+
+                [NameInMap("GpgKeyId")]
+                [Validation(Required=false)]
+                public string GpgKeyId { get; set; }
+
+            }
         };
 
     }

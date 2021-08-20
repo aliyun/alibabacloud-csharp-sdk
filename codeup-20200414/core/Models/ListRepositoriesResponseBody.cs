@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public long? Total { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public int? ErrorCode { get; set; }
-
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public int? ErrorCode { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -57,13 +57,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
-            [NameInMap("DemoProjectStatus")]
-            [Validation(Required=false)]
-            public bool? DemoProjectStatus { get; set; }
-
             [NameInMap("Star")]
             [Validation(Required=false)]
             public bool? Star { get; set; }
+
+            [NameInMap("DemoProjectStatus")]
+            [Validation(Required=false)]
+            public bool? DemoProjectStatus { get; set; }
 
             [NameInMap("ImportStatus")]
             [Validation(Required=false)]

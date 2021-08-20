@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        [NameInMap("OrganizationId")]
+        [Validation(Required=false)]
+        public string OrganizationId { get; set; }
+
     }
 
 }

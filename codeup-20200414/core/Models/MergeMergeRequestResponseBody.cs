@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class MergeMergeRequestResponseBody : TeaModel {
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -29,156 +29,21 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public MergeMergeRequestResponseBodyResult Result { get; set; }
         public class MergeMergeRequestResponseBodyResult : TeaModel {
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
             [NameInMap("BehindCommitCount")]
             [Validation(Required=false)]
             public int? BehindCommitCount { get; set; }
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
-            [NameInMap("AssigneeList")]
-            [Validation(Required=false)]
-            public List<MergeMergeRequestResponseBodyResultAssigneeList> AssigneeList { get; set; }
-            public class MergeMergeRequestResponseBodyResultAssigneeList : TeaModel {
-                public string ExternUserId { get; set; }
-                public string AvatarUrl { get; set; }
-                public string Name { get; set; }
-                public string Id { get; set; }
-            }
             [NameInMap("CreatedAt")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
-            [NameInMap("Author")]
-            [Validation(Required=false)]
-            public MergeMergeRequestResponseBodyResultAuthor Author { get; set; }
-            public class MergeMergeRequestResponseBodyResultAuthor : TeaModel {
-                [NameInMap("ExternUserId")]
-                [Validation(Required=false)]
-                public string ExternUserId { get; set; }
-
-                [NameInMap("AvatarUrl")]
-                [Validation(Required=false)]
-                public string AvatarUrl { get; set; }
-
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-                [NameInMap("Id")]
-                [Validation(Required=false)]
-                public long? Id { get; set; }
-
-            }
             [NameInMap("AcceptedRevision")]
             [Validation(Required=false)]
             public string AcceptedRevision { get; set; }
-            [NameInMap("ApproveCheckResult")]
-            [Validation(Required=false)]
-            public MergeMergeRequestResponseBodyResultApproveCheckResult ApproveCheckResult { get; set; }
-            public class MergeMergeRequestResponseBodyResultApproveCheckResult : TeaModel {
-                [NameInMap("TotalCheckResult")]
-                [Validation(Required=false)]
-                public string TotalCheckResult { get; set; }
-
-                [NameInMap("UnsatisfiedCheckResults")]
-                [Validation(Required=false)]
-                public List<MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> UnsatisfiedCheckResults { get; set; }
-                public class MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults : TeaModel {
-                    [NameInMap("SatisfiedItems")]
-                    [Validation(Required=false)]
-                    public List<string> SatisfiedItems { get; set; }
-
-                    [NameInMap("CheckStatus")]
-                    [Validation(Required=false)]
-                    public string CheckStatus { get; set; }
-
-                    [NameInMap("CheckType")]
-                    [Validation(Required=false)]
-                    public string CheckType { get; set; }
-
-                    [NameInMap("UnsatisfiedItems")]
-                    [Validation(Required=false)]
-                    public List<string> UnsatisfiedItems { get; set; }
-
-                    [NameInMap("ExtraUsers")]
-                    [Validation(Required=false)]
-                    public List<MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> ExtraUsers { get; set; }
-                    public class MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers : TeaModel {
-                        [NameInMap("ExternUserId")]
-                        [Validation(Required=false)]
-                        public string ExternUserId { get; set; }
-
-                        [NameInMap("AvatarUrl")]
-                        [Validation(Required=false)]
-                        public string AvatarUrl { get; set; }
-
-                        [NameInMap("Name")]
-                        [Validation(Required=false)]
-                        public string Name { get; set; }
-
-                        [NameInMap("Id")]
-                        [Validation(Required=false)]
-                        public long? Id { get; set; }
-
-                    }
-
-                    [NameInMap("CheckName")]
-                    [Validation(Required=false)]
-                    public string CheckName { get; set; }
-
-                }
-
-                [NameInMap("SatisfiedCheckResults")]
-                [Validation(Required=false)]
-                public List<MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults> SatisfiedCheckResults { get; set; }
-                public class MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults : TeaModel {
-                    [NameInMap("SatisfiedItems")]
-                    [Validation(Required=false)]
-                    public List<string> SatisfiedItems { get; set; }
-
-                    [NameInMap("CheckStatus")]
-                    [Validation(Required=false)]
-                    public string CheckStatus { get; set; }
-
-                    [NameInMap("CheckType")]
-                    [Validation(Required=false)]
-                    public string CheckType { get; set; }
-
-                    [NameInMap("UnsatisfiedItems")]
-                    [Validation(Required=false)]
-                    public List<string> UnsatisfiedItems { get; set; }
-
-                    [NameInMap("ExtraUsers")]
-                    [Validation(Required=false)]
-                    public List<MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers> ExtraUsers { get; set; }
-                    public class MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers : TeaModel {
-                        [NameInMap("ExternUserId")]
-                        [Validation(Required=false)]
-                        public string ExternUserId { get; set; }
-
-                        [NameInMap("AvatarUrl")]
-                        [Validation(Required=false)]
-                        public string AvatarUrl { get; set; }
-
-                        [NameInMap("Name")]
-                        [Validation(Required=false)]
-                        public string Name { get; set; }
-
-                        [NameInMap("Id")]
-                        [Validation(Required=false)]
-                        public long? Id { get; set; }
-
-                    }
-
-                    [NameInMap("CheckName")]
-                    [Validation(Required=false)]
-                    public string CheckName { get; set; }
-
-                }
-
-            }
             [NameInMap("SourceBranch")]
             [Validation(Required=false)]
             public string SourceBranch { get; set; }
@@ -218,6 +83,141 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [NameInMap("MergeStatus")]
             [Validation(Required=false)]
             public string MergeStatus { get; set; }
+            [NameInMap("AssigneeList")]
+            [Validation(Required=false)]
+            public List<MergeMergeRequestResponseBodyResultAssigneeList> AssigneeList { get; set; }
+            public class MergeMergeRequestResponseBodyResultAssigneeList : TeaModel {
+                public string ExternUserId { get; set; }
+                public string Name { get; set; }
+                public string AvatarUrl { get; set; }
+                public string Id { get; set; }
+            }
+            [NameInMap("Author")]
+            [Validation(Required=false)]
+            public MergeMergeRequestResponseBodyResultAuthor Author { get; set; }
+            public class MergeMergeRequestResponseBodyResultAuthor : TeaModel {
+                [NameInMap("ExternUserId")]
+                [Validation(Required=false)]
+                public string ExternUserId { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("AvatarUrl")]
+                [Validation(Required=false)]
+                public string AvatarUrl { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+            }
+            [NameInMap("ApproveCheckResult")]
+            [Validation(Required=false)]
+            public MergeMergeRequestResponseBodyResultApproveCheckResult ApproveCheckResult { get; set; }
+            public class MergeMergeRequestResponseBodyResultApproveCheckResult : TeaModel {
+                [NameInMap("TotalCheckResult")]
+                [Validation(Required=false)]
+                public string TotalCheckResult { get; set; }
+
+                [NameInMap("SatisfiedCheckResults")]
+                [Validation(Required=false)]
+                public List<MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults> SatisfiedCheckResults { get; set; }
+                public class MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults : TeaModel {
+                    [NameInMap("CheckStatus")]
+                    [Validation(Required=false)]
+                    public string CheckStatus { get; set; }
+
+                    [NameInMap("CheckType")]
+                    [Validation(Required=false)]
+                    public string CheckType { get; set; }
+
+                    [NameInMap("CheckName")]
+                    [Validation(Required=false)]
+                    public string CheckName { get; set; }
+
+                    [NameInMap("ExtraUsers")]
+                    [Validation(Required=false)]
+                    public List<MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers> ExtraUsers { get; set; }
+                    public class MergeMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers : TeaModel {
+                        [NameInMap("ExternUserId")]
+                        [Validation(Required=false)]
+                        public string ExternUserId { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("AvatarUrl")]
+                        [Validation(Required=false)]
+                        public string AvatarUrl { get; set; }
+
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public long? Id { get; set; }
+
+                    }
+
+                    [NameInMap("UnsatisfiedItems")]
+                    [Validation(Required=false)]
+                    public List<string> UnsatisfiedItems { get; set; }
+
+                    [NameInMap("SatisfiedItems")]
+                    [Validation(Required=false)]
+                    public List<string> SatisfiedItems { get; set; }
+
+                }
+
+                [NameInMap("UnsatisfiedCheckResults")]
+                [Validation(Required=false)]
+                public List<MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> UnsatisfiedCheckResults { get; set; }
+                public class MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults : TeaModel {
+                    [NameInMap("CheckStatus")]
+                    [Validation(Required=false)]
+                    public string CheckStatus { get; set; }
+
+                    [NameInMap("CheckType")]
+                    [Validation(Required=false)]
+                    public string CheckType { get; set; }
+
+                    [NameInMap("CheckName")]
+                    [Validation(Required=false)]
+                    public string CheckName { get; set; }
+
+                    [NameInMap("ExtraUsers")]
+                    [Validation(Required=false)]
+                    public List<MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> ExtraUsers { get; set; }
+                    public class MergeMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers : TeaModel {
+                        [NameInMap("ExternUserId")]
+                        [Validation(Required=false)]
+                        public string ExternUserId { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("AvatarUrl")]
+                        [Validation(Required=false)]
+                        public string AvatarUrl { get; set; }
+
+                        [NameInMap("Id")]
+                        [Validation(Required=false)]
+                        public long? Id { get; set; }
+
+                    }
+
+                    [NameInMap("UnsatisfiedItems")]
+                    [Validation(Required=false)]
+                    public List<string> UnsatisfiedItems { get; set; }
+
+                    [NameInMap("SatisfiedItems")]
+                    [Validation(Required=false)]
+                    public List<string> SatisfiedItems { get; set; }
+
+                }
+
+            }
         };
 
     }

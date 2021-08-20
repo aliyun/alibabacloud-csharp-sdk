@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Codeup20200414.Models
 {
     public class ListGroupsResponseBody : TeaModel {
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
         [Validation(Required=false)]
         public long? Total { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -45,13 +45,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [Validation(Required=false)]
             public long? OwnerId { get; set; }
 
-            [NameInMap("ParentId")]
-            [Validation(Required=false)]
-            public long? ParentId { get; set; }
-
             [NameInMap("WebUrl")]
             [Validation(Required=false)]
             public string WebUrl { get; set; }
+
+            [NameInMap("ParentId")]
+            [Validation(Required=false)]
+            public long? ParentId { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -65,13 +65,13 @@ namespace AlibabaCloud.SDK.Codeup20200414.Models
             [Validation(Required=false)]
             public string PathWithNamespace { get; set; }
 
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-
             [NameInMap("VisibilityLevel")]
             [Validation(Required=false)]
             public string VisibilityLevel { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
 
             [NameInMap("AccessLevel")]
             [Validation(Required=false)]
