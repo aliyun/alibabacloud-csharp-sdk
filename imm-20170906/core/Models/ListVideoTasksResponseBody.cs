@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class ListVideoTasksResponseBody : TeaModel {
+        [NameInMap("NextMarker")]
+        [Validation(Required=false)]
+        public string NextMarker { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListVideoTasksResponseBodyTasks> Tasks { get; set; }
@@ -58,14 +66,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             public string NotifyTopicName { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("NextMarker")]
-        [Validation(Required=false)]
-        public string NextMarker { get; set; }
 
     }
 

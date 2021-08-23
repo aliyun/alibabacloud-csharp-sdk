@@ -9,18 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class DetectImageFacesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ImageUri")]
         [Validation(Required=false)]
         public string ImageUri { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Faces")]
         [Validation(Required=false)]
         public List<DetectImageFacesResponseBodyFaces> Faces { get; set; }
         public class DetectImageFacesResponseBodyFaces : TeaModel {
+            [NameInMap("EmotionConfidence")]
+            [Validation(Required=false)]
+            public float? EmotionConfidence { get; set; }
+
+            [NameInMap("Attractive")]
+            [Validation(Required=false)]
+            public float? Attractive { get; set; }
+
             [NameInMap("AttractiveConfidence")]
             [Validation(Required=false)]
             public float? AttractiveConfidence { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public string Gender { get; set; }
 
+            [NameInMap("AgeConfidence")]
+            [Validation(Required=false)]
+            public float? AgeConfidence { get; set; }
+
             [NameInMap("GenderConfidence")]
             [Validation(Required=false)]
             public float? GenderConfidence { get; set; }
@@ -36,6 +48,22 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [NameInMap("FaceId")]
             [Validation(Required=false)]
             public string FaceId { get; set; }
+
+            [NameInMap("FaceQuality")]
+            [Validation(Required=false)]
+            public float? FaceQuality { get; set; }
+
+            [NameInMap("Emotion")]
+            [Validation(Required=false)]
+            public string Emotion { get; set; }
+
+            [NameInMap("Age")]
+            [Validation(Required=false)]
+            public int? Age { get; set; }
+
+            [NameInMap("FaceConfidence")]
+            [Validation(Required=false)]
+            public float? FaceConfidence { get; set; }
 
             [NameInMap("FaceAttributes")]
             [Validation(Required=false)]
@@ -56,10 +84,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                 [NameInMap("MaskConfidence")]
                 [Validation(Required=false)]
                 public float? MaskConfidence { get; set; }
+                [NameInMap("Beard")]
+                [Validation(Required=false)]
+                public string Beard { get; set; }
                 [NameInMap("FaceBoundary")]
                 [Validation(Required=false)]
                 public DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary FaceBoundary { get; set; }
                 public class DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary : TeaModel {
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public int? Left { get; set; }
+
                     [NameInMap("Top")]
                     [Validation(Required=false)]
                     public int? Top { get; set; }
@@ -71,10 +106,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public int? Height { get; set; }
-
-                    [NameInMap("Left")]
-                    [Validation(Required=false)]
-                    public int? Left { get; set; }
 
                 }
                 [NameInMap("HeadPose")]
@@ -94,38 +125,7 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     public float? Yaw { get; set; }
 
                 }
-                [NameInMap("Beard")]
-                [Validation(Required=false)]
-                public string Beard { get; set; }
             };
-
-            [NameInMap("FaceQuality")]
-            [Validation(Required=false)]
-            public float? FaceQuality { get; set; }
-
-            [NameInMap("Emotion")]
-            [Validation(Required=false)]
-            public string Emotion { get; set; }
-
-            [NameInMap("Age")]
-            [Validation(Required=false)]
-            public int? Age { get; set; }
-
-            [NameInMap("FaceConfidence")]
-            [Validation(Required=false)]
-            public float? FaceConfidence { get; set; }
-
-            [NameInMap("EmotionConfidence")]
-            [Validation(Required=false)]
-            public float? EmotionConfidence { get; set; }
-
-            [NameInMap("Attractive")]
-            [Validation(Required=false)]
-            public float? Attractive { get; set; }
-
-            [NameInMap("AgeConfidence")]
-            [Validation(Required=false)]
-            public float? AgeConfidence { get; set; }
 
             [NameInMap("EmotionDetails")]
             [Validation(Required=false)]

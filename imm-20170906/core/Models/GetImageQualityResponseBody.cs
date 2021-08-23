@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetImageQualityResponseBody : TeaModel {
+        [NameInMap("ImageUri")]
+        [Validation(Required=false)]
+        public string ImageUri { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ImageQuality")]
         [Validation(Required=false)]
         public GetImageQualityResponseBodyImageQuality ImageQuality { get; set; }
@@ -44,14 +52,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public float? CompositionScore { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ImageUri")]
-        [Validation(Required=false)]
-        public string ImageUri { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
-
         [NameInMap("TargetUri")]
         [Validation(Required=false)]
         public string TargetUri { get; set; }
+
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
 
     }
 

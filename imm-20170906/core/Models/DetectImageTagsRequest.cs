@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string ImageUri { get; set; }
 
-        [NameInMap("RealUid")]
-        [Validation(Required=false)]
-        public string RealUid { get; set; }
-
     }
 
 }

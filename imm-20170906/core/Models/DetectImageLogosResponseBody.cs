@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class DetectImageLogosResponseBody : TeaModel {
+        [NameInMap("ImageUri")]
+        [Validation(Required=false)]
+        public string ImageUri { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,10 +25,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public float? LogoConfidence { get; set; }
 
+            [NameInMap("LogoName")]
+            [Validation(Required=false)]
+            public string LogoName { get; set; }
+
             [NameInMap("LogoBoundary")]
             [Validation(Required=false)]
             public DetectImageLogosResponseBodyLogosLogoBoundary LogoBoundary { get; set; }
             public class DetectImageLogosResponseBodyLogosLogoBoundary : TeaModel {
+                [NameInMap("Left")]
+                [Validation(Required=false)]
+                public int? Left { get; set; }
                 [NameInMap("Top")]
                 [Validation(Required=false)]
                 public int? Top { get; set; }
@@ -34,20 +45,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
-                [NameInMap("Left")]
-                [Validation(Required=false)]
-                public int? Left { get; set; }
             };
 
-            [NameInMap("LogoName")]
-            [Validation(Required=false)]
-            public string LogoName { get; set; }
-
         }
-
-        [NameInMap("ImageUri")]
-        [Validation(Required=false)]
-        public string ImageUri { get; set; }
 
     }
 

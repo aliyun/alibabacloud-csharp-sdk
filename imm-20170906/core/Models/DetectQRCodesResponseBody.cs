@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class DetectQRCodesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SuccessDetails")]
         [Validation(Required=false)]
         public List<DetectQRCodesResponseBodySuccessDetails> SuccessDetails { get; set; }
@@ -21,10 +25,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public List<DetectQRCodesResponseBodySuccessDetailsQRCodes> QRCodes { get; set; }
             public class DetectQRCodesResponseBodySuccessDetailsQRCodes : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
                 [NameInMap("QRCodesRectangle")]
                 [Validation(Required=false)]
                 public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle QRCodesRectangle { get; set; }
                 public class DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle : TeaModel {
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public string Left { get; set; }
                     [NameInMap("Top")]
                     [Validation(Required=false)]
                     public string Top { get; set; }
@@ -34,22 +45,11 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public string Height { get; set; }
-                    [NameInMap("Left")]
-                    [Validation(Required=false)]
-                    public string Left { get; set; }
                 };
-
-                [NameInMap("Content")]
-                [Validation(Required=false)]
-                public string Content { get; set; }
 
             }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("FailDetails")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
-    public class IndexImageRequest : TeaModel {
+    public class UpdateImageShrinkRequest : TeaModel {
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
@@ -53,14 +53,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string ExternalId { get; set; }
 
-        [NameInMap("NotifyEndpoint")]
-        [Validation(Required=false)]
-        public string NotifyEndpoint { get; set; }
-
-        [NameInMap("NotifyTopicName")]
-        [Validation(Required=false)]
-        public string NotifyTopicName { get; set; }
-
         [NameInMap("RemarksArrayA")]
         [Validation(Required=false)]
         public string RemarksArrayA { get; set; }
@@ -68,6 +60,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("RemarksArrayB")]
         [Validation(Required=false)]
         public string RemarksArrayB { get; set; }
+
+        [NameInMap("Faces")]
+        [Validation(Required=false)]
+        public string FacesShrink { get; set; }
 
     }
 

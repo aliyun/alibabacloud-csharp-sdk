@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class ListProjectsResponseBody : TeaModel {
+        [NameInMap("NextMarker")]
+        [Validation(Required=false)]
+        public string NextMarker { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -54,10 +58,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             public string ModifyTime { get; set; }
 
         }
-
-        [NameInMap("NextMarker")]
-        [Validation(Required=false)]
-        public string NextMarker { get; set; }
 
     }
 

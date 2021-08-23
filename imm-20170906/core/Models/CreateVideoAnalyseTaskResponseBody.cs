@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class CreateVideoAnalyseTaskResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("TaskType")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string TaskType { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TaskType")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string TaskType { get; set; }
+        public string TaskId { get; set; }
 
     }
 

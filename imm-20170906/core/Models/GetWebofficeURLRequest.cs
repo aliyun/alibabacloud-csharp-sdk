@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
 
+        [NameInMap("Watermark")]
+        [Validation(Required=false)]
+        public string Watermark { get; set; }
+
+        [NameInMap("Hidecmb")]
+        [Validation(Required=false)]
+        public bool? Hidecmb { get; set; }
+
     }
 
 }

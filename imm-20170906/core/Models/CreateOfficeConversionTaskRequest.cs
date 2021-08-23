@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public int? DisplayDpi { get; set; }
 
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
     }
 
 }

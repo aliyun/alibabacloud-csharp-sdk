@@ -329,38 +329,6 @@ namespace AlibabaCloud.SDK.Imm20170906
             return await CreateSetWithOptionsAsync(request, runtime);
         }
 
-        public CreateStreamAnalyseTaskResponse CreateStreamAnalyseTaskWithOptions(CreateStreamAnalyseTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<CreateStreamAnalyseTaskResponse>(DoRPCRequest("CreateStreamAnalyseTask", "2017-09-06", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<CreateStreamAnalyseTaskResponse> CreateStreamAnalyseTaskWithOptionsAsync(CreateStreamAnalyseTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<CreateStreamAnalyseTaskResponse>(await DoRPCRequestAsync("CreateStreamAnalyseTask", "2017-09-06", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public CreateStreamAnalyseTaskResponse CreateStreamAnalyseTask(CreateStreamAnalyseTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateStreamAnalyseTaskWithOptions(request, runtime);
-        }
-
-        public async Task<CreateStreamAnalyseTaskResponse> CreateStreamAnalyseTaskAsync(CreateStreamAnalyseTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateStreamAnalyseTaskWithOptionsAsync(request, runtime);
-        }
-
         public CreateVideoAbstractTaskResponse CreateVideoAbstractTaskWithOptions(CreateVideoAbstractTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2113,9 +2081,15 @@ namespace AlibabaCloud.SDK.Imm20170906
             return await UpdateFaceGroupWithOptionsAsync(request, runtime);
         }
 
-        public UpdateImageResponse UpdateImageWithOptions(UpdateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateImageResponse UpdateImageWithOptions(UpdateImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateImageShrinkRequest request = new UpdateImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Faces))
+            {
+                request.FacesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Faces, "Faces", "json");
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
@@ -2123,9 +2097,15 @@ namespace AlibabaCloud.SDK.Imm20170906
             return TeaModel.ToObject<UpdateImageResponse>(DoRPCRequest("UpdateImage", "2017-09-06", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<UpdateImageResponse> UpdateImageWithOptionsAsync(UpdateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateImageResponse> UpdateImageWithOptionsAsync(UpdateImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateImageShrinkRequest request = new UpdateImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Faces))
+            {
+                request.FacesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Faces, "Faces", "json");
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),

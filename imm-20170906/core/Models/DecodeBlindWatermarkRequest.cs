@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string Model { get; set; }
 
-        [NameInMap("WatermarkType")]
-        [Validation(Required=false)]
-        public string WatermarkType { get; set; }
-
     }
 
 }

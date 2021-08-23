@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class ListOfficeConversionTaskResponseBody : TeaModel {
+        [NameInMap("NextMarker")]
+        [Validation(Required=false)]
+        public string NextMarker { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListOfficeConversionTaskResponseBodyTasks> Tasks { get; set; }
@@ -41,17 +49,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public string NotifyEndpoint { get; set; }
 
-            [NameInMap("TgtUri")]
+            [NameInMap("SrcUri")]
             [Validation(Required=false)]
-            public string TgtUri { get; set; }
+            public string SrcUri { get; set; }
 
             [NameInMap("TgtType")]
             [Validation(Required=false)]
             public string TgtType { get; set; }
 
-            [NameInMap("SrcUri")]
+            [NameInMap("TgtUri")]
             [Validation(Required=false)]
-            public string SrcUri { get; set; }
+            public string TgtUri { get; set; }
 
             [NameInMap("ImageSpec")]
             [Validation(Required=false)]
@@ -66,14 +74,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             public string TaskId { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("NextMarker")]
-        [Validation(Required=false)]
-        public string NextMarker { get; set; }
 
     }
 

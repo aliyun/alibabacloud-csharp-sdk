@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string TargetContainer { get; set; }
 
+        [NameInMap("TargetSegment")]
+        [Validation(Required=false)]
+        public string TargetSegment { get; set; }
+
     }
 
 }

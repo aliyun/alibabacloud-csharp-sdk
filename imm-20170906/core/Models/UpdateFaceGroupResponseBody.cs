@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("SetId")]
-        [Validation(Required=false)]
-        public string SetId { get; set; }
-
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("SetId")]
+        [Validation(Required=false)]
+        public string SetId { get; set; }
 
     }
 

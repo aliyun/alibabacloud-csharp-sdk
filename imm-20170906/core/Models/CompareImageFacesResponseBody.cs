@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                 [Validation(Required=false)]
                 public CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary FaceBoundary { get; set; }
                 public class CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary : TeaModel {
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public int? Left { get; set; }
                     [NameInMap("Top")]
                     [Validation(Required=false)]
                     public int? Top { get; set; }
@@ -45,9 +48,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public int? Height { get; set; }
-                    [NameInMap("Left")]
-                    [Validation(Required=false)]
-                    public int? Left { get; set; }
                 };
 
             }
@@ -68,6 +68,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                 [Validation(Required=false)]
                 public CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary FaceBoundary { get; set; }
                 public class CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary : TeaModel {
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public int? Left { get; set; }
                     [NameInMap("Top")]
                     [Validation(Required=false)]
                     public int? Top { get; set; }
@@ -77,9 +80,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public int? Height { get; set; }
-                    [NameInMap("Left")]
-                    [Validation(Required=false)]
-                    public int? Left { get; set; }
                 };
 
             }

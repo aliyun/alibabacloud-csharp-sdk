@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class DetectImageBodiesResponseBody : TeaModel {
+        [NameInMap("ImageUri")]
+        [Validation(Required=false)]
+        public string ImageUri { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public DetectImageBodiesResponseBodyBodiesBodyBoundary BodyBoundary { get; set; }
             public class DetectImageBodiesResponseBodyBodiesBodyBoundary : TeaModel {
+                [NameInMap("Left")]
+                [Validation(Required=false)]
+                public int? Left { get; set; }
                 [NameInMap("Top")]
                 [Validation(Required=false)]
                 public int? Top { get; set; }
@@ -34,16 +41,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
-                [NameInMap("Left")]
-                [Validation(Required=false)]
-                public int? Left { get; set; }
             };
 
         }
-
-        [NameInMap("ImageUri")]
-        [Validation(Required=false)]
-        public string ImageUri { get; set; }
 
     }
 

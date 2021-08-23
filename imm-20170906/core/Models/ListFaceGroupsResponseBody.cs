@@ -37,12 +37,12 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace GroupCoverFace { get; set; }
             public class ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace : TeaModel {
-                [NameInMap("ImageUri")]
-                [Validation(Required=false)]
-                public string ImageUri { get; set; }
                 [NameInMap("FaceId")]
                 [Validation(Required=false)]
                 public string FaceId { get; set; }
+                [NameInMap("ImageUri")]
+                [Validation(Required=false)]
+                public string ImageUri { get; set; }
                 [NameInMap("FaceBoundary")]
                 [Validation(Required=false)]
                 public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFaceFaceBoundary FaceBoundary { get; set; }
@@ -64,6 +64,15 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     public int? Left { get; set; }
 
                 }
+                [NameInMap("ExternalId")]
+                [Validation(Required=false)]
+                public string ExternalId { get; set; }
+                [NameInMap("ImageHeight")]
+                [Validation(Required=false)]
+                public long? ImageHeight { get; set; }
+                [NameInMap("ImageWidth")]
+                [Validation(Required=false)]
+                public long? ImageWidth { get; set; }
             };
 
             [NameInMap("FaceCount")]

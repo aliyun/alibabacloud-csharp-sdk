@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetSetResponseBody : TeaModel {
-        [NameInMap("ModifyTime")]
-        [Validation(Required=false)]
-        public string ModifyTime { get; set; }
-
         [NameInMap("VideoCount")]
         [Validation(Required=false)]
         public int? VideoCount { get; set; }
-
-        [NameInMap("ImageCount")]
-        [Validation(Required=false)]
-        public int? ImageCount { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -29,21 +21,29 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        [NameInMap("SetName")]
+        [NameInMap("VideoLength")]
         [Validation(Required=false)]
-        public string SetName { get; set; }
+        public int? VideoLength { get; set; }
 
         [NameInMap("SetId")]
         [Validation(Required=false)]
         public string SetId { get; set; }
 
-        [NameInMap("VideoLength")]
+        [NameInMap("ImageCount")]
         [Validation(Required=false)]
-        public int? VideoLength { get; set; }
+        public int? ImageCount { get; set; }
 
         [NameInMap("FaceCount")]
         [Validation(Required=false)]
         public int? FaceCount { get; set; }
+
+        [NameInMap("SetName")]
+        [Validation(Required=false)]
+        public string SetName { get; set; }
+
+        [NameInMap("ModifyTime")]
+        [Validation(Required=false)]
+        public string ModifyTime { get; set; }
 
     }
 

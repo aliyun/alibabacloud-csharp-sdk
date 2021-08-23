@@ -61,6 +61,20 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string RemarksArrayB { get; set; }
 
+        [NameInMap("Faces")]
+        [Validation(Required=false)]
+        public List<UpdateImageRequestFaces> Faces { get; set; }
+        public class UpdateImageRequestFaces : TeaModel {
+            [NameInMap("FaceId")]
+            [Validation(Required=false)]
+            public string FaceId { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+        }
+
     }
 
 }

@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public List<FindSimilarFacesResponseBodyFaces> Faces { get; set; }
         public class FindSimilarFacesResponseBodyFaces : TeaModel {
+            [NameInMap("ExternalId")]
+            [Validation(Required=false)]
+            public string ExternalId { get; set; }
+
+            [NameInMap("Similarity")]
+            [Validation(Required=false)]
+            public float? Similarity { get; set; }
+
             [NameInMap("FaceId")]
             [Validation(Required=false)]
             public string FaceId { get; set; }
@@ -25,45 +33,18 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public string ImageUri { get; set; }
 
-            [NameInMap("ExternalId")]
-            [Validation(Required=false)]
-            public string ExternalId { get; set; }
-
-            [NameInMap("FaceAttributes")]
-            [Validation(Required=false)]
-            public FindSimilarFacesResponseBodyFacesFaceAttributes FaceAttributes { get; set; }
-            public class FindSimilarFacesResponseBodyFacesFaceAttributes : TeaModel {
-                [NameInMap("FaceBoundary")]
-                [Validation(Required=false)]
-                public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary FaceBoundary { get; set; }
-                public class FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary : TeaModel {
-                    [NameInMap("Top")]
-                    [Validation(Required=false)]
-                    public int? Top { get; set; }
-
-                    [NameInMap("Width")]
-                    [Validation(Required=false)]
-                    public int? Width { get; set; }
-
-                    [NameInMap("Height")]
-                    [Validation(Required=false)]
-                    public int? Height { get; set; }
-
-                    [NameInMap("Left")]
-                    [Validation(Required=false)]
-                    public int? Left { get; set; }
-
-                }
-            };
-
-            [NameInMap("Similarity")]
-            [Validation(Required=false)]
-            public float? Similarity { get; set; }
-
             [NameInMap("SimilarFaces")]
             [Validation(Required=false)]
             public List<FindSimilarFacesResponseBodyFacesSimilarFaces> SimilarFaces { get; set; }
             public class FindSimilarFacesResponseBodyFacesSimilarFaces : TeaModel {
+                [NameInMap("ExternalId")]
+                [Validation(Required=false)]
+                public string ExternalId { get; set; }
+
+                [NameInMap("Similarity")]
+                [Validation(Required=false)]
+                public float? Similarity { get; set; }
+
                 [NameInMap("FaceId")]
                 [Validation(Required=false)]
                 public string FaceId { get; set; }
@@ -71,10 +52,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                 [NameInMap("ImageUri")]
                 [Validation(Required=false)]
                 public string ImageUri { get; set; }
-
-                [NameInMap("ExternalId")]
-                [Validation(Required=false)]
-                public string ExternalId { get; set; }
 
                 [NameInMap("FaceAttributes")]
                 [Validation(Required=false)]
@@ -84,6 +61,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     [Validation(Required=false)]
                     public FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary FaceBoundary { get; set; }
                     public class FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary : TeaModel {
+                        [NameInMap("Left")]
+                        [Validation(Required=false)]
+                        public int? Left { get; set; }
+
                         [NameInMap("Top")]
                         [Validation(Required=false)]
                         public int? Top { get; set; }
@@ -96,18 +77,37 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                         [Validation(Required=false)]
                         public int? Height { get; set; }
 
-                        [NameInMap("Left")]
-                        [Validation(Required=false)]
-                        public int? Left { get; set; }
-
                     }
                 };
 
-                [NameInMap("Similarity")]
-                [Validation(Required=false)]
-                public float? Similarity { get; set; }
-
             }
+
+            [NameInMap("FaceAttributes")]
+            [Validation(Required=false)]
+            public FindSimilarFacesResponseBodyFacesFaceAttributes FaceAttributes { get; set; }
+            public class FindSimilarFacesResponseBodyFacesFaceAttributes : TeaModel {
+                [NameInMap("FaceBoundary")]
+                [Validation(Required=false)]
+                public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary FaceBoundary { get; set; }
+                public class FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary : TeaModel {
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public int? Left { get; set; }
+
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public int? Top { get; set; }
+
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
+                    public int? Width { get; set; }
+
+                    [NameInMap("Height")]
+                    [Validation(Required=false)]
+                    public int? Height { get; set; }
+
+                }
+            };
 
         }
 

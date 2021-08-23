@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class UpdateSetResponseBody : TeaModel {
-        [NameInMap("ModifyTime")]
-        [Validation(Required=false)]
-        public string ModifyTime { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("SetName")]
         [Validation(Required=false)]
         public string SetName { get; set; }
+
+        [NameInMap("ModifyTime")]
+        [Validation(Required=false)]
+        public string ModifyTime { get; set; }
 
         [NameInMap("SetId")]
         [Validation(Required=false)]

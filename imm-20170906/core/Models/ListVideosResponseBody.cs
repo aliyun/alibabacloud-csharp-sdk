@@ -45,28 +45,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public float? VideoDuration { get; set; }
 
-            [NameInMap("VideoTags")]
-            [Validation(Required=false)]
-            public List<ListVideosResponseBodyVideosVideoTags> VideoTags { get; set; }
-            public class ListVideosResponseBodyVideosVideoTags : TeaModel {
-                [NameInMap("TagName")]
-                [Validation(Required=false)]
-                public string TagName { get; set; }
-
-                [NameInMap("TagConfidence")]
-                [Validation(Required=false)]
-                public float? TagConfidence { get; set; }
-
-                [NameInMap("TagLevel")]
-                [Validation(Required=false)]
-                public int? TagLevel { get; set; }
-
-                [NameInMap("ParentTagName")]
-                [Validation(Required=false)]
-                public string ParentTagName { get; set; }
-
-            }
-
             [NameInMap("ProcessModifyTime")]
             [Validation(Required=false)]
             public string ProcessModifyTime { get; set; }
@@ -87,13 +65,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public string SourceUri { get; set; }
 
-            [NameInMap("FileSize")]
-            [Validation(Required=false)]
-            public int? FileSize { get; set; }
-
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
+
+            [NameInMap("FileSize")]
+            [Validation(Required=false)]
+            public int? FileSize { get; set; }
 
             [NameInMap("SourcePosition")]
             [Validation(Required=false)]
@@ -103,13 +81,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public int? VideoWidth { get; set; }
 
-            [NameInMap("VideoFormat")]
-            [Validation(Required=false)]
-            public string VideoFormat { get; set; }
-
             [NameInMap("VideoHeight")]
             [Validation(Required=false)]
             public int? VideoHeight { get; set; }
+
+            [NameInMap("VideoFormat")]
+            [Validation(Required=false)]
+            public string VideoFormat { get; set; }
 
             [NameInMap("RemarksD")]
             [Validation(Required=false)]
@@ -119,13 +97,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public string VideoUri { get; set; }
 
-            [NameInMap("ProcessFailReason")]
-            [Validation(Required=false)]
-            public string ProcessFailReason { get; set; }
-
             [NameInMap("VideoTagsModifyTime")]
             [Validation(Required=false)]
             public string VideoTagsModifyTime { get; set; }
+
+            [NameInMap("ProcessFailReason")]
+            [Validation(Required=false)]
+            public string ProcessFailReason { get; set; }
 
             [NameInMap("RemarksA")]
             [Validation(Required=false)]
@@ -138,6 +116,28 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [NameInMap("RemarksB")]
             [Validation(Required=false)]
             public string RemarksB { get; set; }
+
+            [NameInMap("VideoTags")]
+            [Validation(Required=false)]
+            public List<ListVideosResponseBodyVideosVideoTags> VideoTags { get; set; }
+            public class ListVideosResponseBodyVideosVideoTags : TeaModel {
+                [NameInMap("TagLevel")]
+                [Validation(Required=false)]
+                public int? TagLevel { get; set; }
+
+                [NameInMap("ParentTagName")]
+                [Validation(Required=false)]
+                public string ParentTagName { get; set; }
+
+                [NameInMap("TagName")]
+                [Validation(Required=false)]
+                public string TagName { get; set; }
+
+                [NameInMap("TagConfidence")]
+                [Validation(Required=false)]
+                public float? TagConfidence { get; set; }
+
+            }
 
         }
 

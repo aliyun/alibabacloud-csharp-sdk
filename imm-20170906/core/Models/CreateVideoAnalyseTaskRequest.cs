@@ -17,26 +17,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string VideoUri { get; set; }
 
-        [NameInMap("GrabType")]
-        [Validation(Required=false)]
-        public string GrabType { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("SaveType")]
-        [Validation(Required=false)]
-        public bool? SaveType { get; set; }
-
-        [NameInMap("Interval")]
-        [Validation(Required=false)]
-        public string Interval { get; set; }
-
         [NameInMap("TgtUri")]
         [Validation(Required=false)]
         public string TgtUri { get; set; }

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetImageCroppingSuggestionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ImageUri")]
         [Validation(Required=false)]
         public string ImageUri { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("CroppingSuggestions")]
         [Validation(Required=false)]
@@ -25,10 +25,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public float? Score { get; set; }
 
+            [NameInMap("AspectRatio")]
+            [Validation(Required=false)]
+            public string AspectRatio { get; set; }
+
             [NameInMap("CroppingBoundary")]
             [Validation(Required=false)]
             public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary CroppingBoundary { get; set; }
             public class GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary : TeaModel {
+                [NameInMap("Left")]
+                [Validation(Required=false)]
+                public int? Left { get; set; }
                 [NameInMap("Top")]
                 [Validation(Required=false)]
                 public int? Top { get; set; }
@@ -38,14 +45,7 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
-                [NameInMap("Left")]
-                [Validation(Required=false)]
-                public int? Left { get; set; }
             };
-
-            [NameInMap("AspectRatio")]
-            [Validation(Required=false)]
-            public string AspectRatio { get; set; }
 
         }
 
