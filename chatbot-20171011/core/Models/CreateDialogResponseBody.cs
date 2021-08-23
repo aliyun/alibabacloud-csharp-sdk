@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 
         [NameInMap("DialogId")]
         [Validation(Required=false)]
-        public string DialogId { get; set; }
+        public long? DialogId { get; set; }
 
     }
 

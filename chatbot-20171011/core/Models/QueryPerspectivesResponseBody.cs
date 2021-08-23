@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 
             [NameInMap("SelfDefine")]
             [Validation(Required=false)]
-            public string SelfDefine { get; set; }
+            public bool? SelfDefine { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]

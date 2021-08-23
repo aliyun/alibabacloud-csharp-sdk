@@ -49,25 +49,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string IntentName { get; set; }
 
-        [NameInMap("DefaultPerspective")]
-        [Validation(Required=false)]
-        public string DefaultPerspective { get; set; }
-
-        [NameInMap("BusinessScope")]
-        [Validation(Required=false)]
-        public string BusinessScope { get; set; }
-
         [NameInMap("VendorParam")]
         [Validation(Required=false)]
         public string VendorParam { get; set; }
-
-        [NameInMap("Emotion")]
-        [Validation(Required=false)]
-        public bool? Emotion { get; set; }
-
-        [NameInMap("SandBox")]
-        [Validation(Required=false)]
-        public bool? SandBox { get; set; }
 
         [NameInMap("Perspective")]
         [Validation(Required=false)]

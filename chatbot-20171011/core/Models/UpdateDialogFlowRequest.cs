@@ -15,7 +15,15 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 
         [NameInMap("ModuleDefinition")]
         [Validation(Required=false)]
-        public string ModuleDefinition { get; set; }
+        public UpdateDialogFlowRequestModuleDefinition ModuleDefinition { get; set; }
+        public class UpdateDialogFlowRequestModuleDefinition : TeaModel {
+            [NameInMap("GlobalVars")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> GlobalVars { get; set; }
+            [NameInMap("ModuleDefinition")]
+            [Validation(Required=false)]
+            public PaasProcessData ModuleDefinition { get; set; }
+        };
 
     }
 

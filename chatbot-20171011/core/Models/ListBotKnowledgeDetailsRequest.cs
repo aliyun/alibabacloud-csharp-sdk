@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class ListBotKnowledgeDetailsRequest : TeaModel {
-        [NameInMap("CubeId")]
-        [Validation(Required=false)]
-        public string CubeId { get; set; }
-
-        [NameInMap("Measures")]
-        [Validation(Required=false)]
-        public string Measures { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
@@ -32,14 +24,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public string Limit { get; set; }
-
-        [NameInMap("Dimensions")]
-        [Validation(Required=false)]
-        public string Dimensions { get; set; }
-
-        [NameInMap("Orders")]
-        [Validation(Required=false)]
-        public string Orders { get; set; }
 
     }
 

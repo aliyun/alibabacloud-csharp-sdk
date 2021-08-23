@@ -19,7 +19,15 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 
         [NameInMap("Member")]
         [Validation(Required=false)]
-        public string Member { get; set; }
+        public AppendEntityMemberRequestMember Member { get; set; }
+        public class AppendEntityMemberRequestMember : TeaModel {
+            [NameInMap("MemberName")]
+            [Validation(Required=false)]
+            public string MemberName { get; set; }
+            [NameInMap("Synonyms")]
+            [Validation(Required=false)]
+            public List<string> Synonyms { get; set; }
+        };
 
     }
 

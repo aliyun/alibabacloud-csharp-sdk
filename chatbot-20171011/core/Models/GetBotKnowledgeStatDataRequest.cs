@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class GetBotKnowledgeStatDataRequest : TeaModel {
-        [NameInMap("CubeId")]
-        [Validation(Required=false)]
-        public string CubeId { get; set; }
-
-        [NameInMap("Measures")]
-        [Validation(Required=false)]
-        public string Measures { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

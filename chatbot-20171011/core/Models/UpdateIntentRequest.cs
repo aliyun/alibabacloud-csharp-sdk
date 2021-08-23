@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
     public class UpdateIntentRequest : TeaModel {
         [NameInMap("IntentDefinition")]
         [Validation(Required=false)]
-        public string IntentDefinition { get; set; }
+        public IntentCreateDTO IntentDefinition { get; set; }
 
         [NameInMap("IntentId")]
         [Validation(Required=false)]

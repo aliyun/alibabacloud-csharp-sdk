@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Chatbot20171011
+dotnet add package AlibabaCloud.SDK.Chatbot20171011
 ```
 
 ## 问题

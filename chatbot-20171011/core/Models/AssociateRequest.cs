@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
-        [NameInMap("BusinessScope")]
-        [Validation(Required=false)]
-        public string BusinessScope { get; set; }
-
         [NameInMap("RecommendNum")]
         [Validation(Required=false)]
         public int? RecommendNum { get; set; }

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string LanguageCode { get; set; }
 
-        [NameInMap("TimeZone")]
-        [Validation(Required=false)]
-        public string TimeZone { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

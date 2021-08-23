@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 
         [NameInMap("IntentId")]
         [Validation(Required=false)]
-        public string IntentId { get; set; }
+        public long? IntentId { get; set; }
 
     }
 

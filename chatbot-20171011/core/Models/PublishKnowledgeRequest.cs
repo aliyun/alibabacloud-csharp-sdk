@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public long? KnowledgeId { get; set; }
 
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
     }
 
 }

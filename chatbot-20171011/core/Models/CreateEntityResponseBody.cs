@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
     public class CreateEntityResponseBody : TeaModel {
         [NameInMap("EntityId")]
         [Validation(Required=false)]
-        public string EntityId { get; set; }
+        public long? EntityId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
