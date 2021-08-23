@@ -93,6 +93,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public long? GmtModified { get; set; }
 
+        /// <summary>
+        /// 切图路径
+        /// </summary>
+        [NameInMap("CubemapPath")]
+        [Validation(Required=false)]
+        public string CubemapPath { get; set; }
+
     }
 
 }

@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string PreviewToken { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public long? Type { get; set; }
+
+        [NameInMap("Enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
+
     }
 
 }
