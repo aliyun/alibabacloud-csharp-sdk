@@ -9,37 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetHotspotTagResponseBody : TeaModel {
-        /// <summary>
-        /// 请求ID，与入参requestId对应
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// 返回码
-        /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("ObjectString")]
         [Validation(Required=false)]
-        public long? Code { get; set; }
-
-        /// <summary>
-        /// 是否请求成功
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
-        /// 错误消息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
+        public string ObjectString { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
