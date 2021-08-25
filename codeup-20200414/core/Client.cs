@@ -215,6 +215,68 @@ namespace AlibabaCloud.SDK.Codeup20200414
             return TeaModel.ToObject<CreateMergeRequestResponse>(await DoROARequestAsync("CreateMergeRequest", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/merge_requests", "json", req, runtime));
         }
 
+        public DeleteRepositoryMemberWithExternUidResponse DeleteRepositoryMemberWithExternUid(string ProjectId, DeleteRepositoryMemberWithExternUidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteRepositoryMemberWithExternUidWithOptions(ProjectId, request, headers, runtime);
+        }
+
+        public async Task<DeleteRepositoryMemberWithExternUidResponse> DeleteRepositoryMemberWithExternUidAsync(string ProjectId, DeleteRepositoryMemberWithExternUidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteRepositoryMemberWithExternUidWithOptionsAsync(ProjectId, request, headers, runtime);
+        }
+
+        public DeleteRepositoryMemberWithExternUidResponse DeleteRepositoryMemberWithExternUidWithOptions(string ProjectId, DeleteRepositoryMemberWithExternUidRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["AccessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternUserId))
+            {
+                query["ExternUserId"] = request.ExternUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<DeleteRepositoryMemberWithExternUidResponse>(DoROARequest("DeleteRepositoryMemberWithExternUid", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/members/remove", "json", req, runtime));
+        }
+
+        public async Task<DeleteRepositoryMemberWithExternUidResponse> DeleteRepositoryMemberWithExternUidWithOptionsAsync(string ProjectId, DeleteRepositoryMemberWithExternUidRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["AccessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternUserId))
+            {
+                query["ExternUserId"] = request.ExternUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<DeleteRepositoryMemberWithExternUidResponse>(await DoROARequestAsync("DeleteRepositoryMemberWithExternUid", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/members/remove", "json", req, runtime));
+        }
+
         public DeleteRepositoryResponse DeleteRepository(string ProjectId, DeleteRepositoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
