@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class GetDiscoveredResourceCountsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("GroupedResourceCounts")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public GetDiscoveredResourceCountsResponseGroupedResourceCounts GroupedResourceCounts { get; set; }
-        public class GetDiscoveredResourceCountsResponseGroupedResourceCounts : TeaModel {
-            [NameInMap("GroupByKey")]
-            [Validation(Required=true)]
-            public string GroupByKey { get; set; }
-            [NameInMap("GroupedResourceCountList")]
-            [Validation(Required=true)]
-            public List<GetDiscoveredResourceCountsResponseGroupedResourceCountsGroupedResourceCountList> GroupedResourceCountList { get; set; }
-            public class GetDiscoveredResourceCountsResponseGroupedResourceCountsGroupedResourceCountList : TeaModel {
-                public string GroupName { get; set; }
-                public long ResourceCount { get; set; }
-            }
-        };
+        public GetDiscoveredResourceCountsResponseBody Body { get; set; }
 
     }
 

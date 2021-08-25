@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class DescribeConfigRuleRequest : TeaModel {
         [NameInMap("ConfigRuleId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
         [NameInMap("MultiAccount")]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 
         [NameInMap("MemberId")]
         [Validation(Required=false)]
-        public long MemberId { get; set; }
+        public long? MemberId { get; set; }
 
     }
 

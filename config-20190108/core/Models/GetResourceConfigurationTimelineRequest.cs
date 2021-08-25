@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class GetResourceConfigurationTimelineRequest : TeaModel {
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public long StartTime { get; set; }
+        public long? StartTime { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public long EndTime { get; set; }
+        public long? EndTime { get; set; }
 
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("Region")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Region { get; set; }
 
         [NameInMap("MultiAccount")]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 
         [NameInMap("MemberId")]
         [Validation(Required=false)]
-        public long MemberId { get; set; }
+        public long? MemberId { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
-        [NameInMap("MessageType")]
-        [Validation(Required=false)]
-        public string MessageType { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -39,7 +35,15 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 
         [NameInMap("MemberId")]
         [Validation(Required=false)]
-        public long MemberId { get; set; }
+        public long? MemberId { get; set; }
+
+        [NameInMap("ConfigRuleName")]
+        [Validation(Required=false)]
+        public string ConfigRuleName { get; set; }
+
+        [NameInMap("CompliancePackId")]
+        [Validation(Required=false)]
+        public string CompliancePackId { get; set; }
 
     }
 

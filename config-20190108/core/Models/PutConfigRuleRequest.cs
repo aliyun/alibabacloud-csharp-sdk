@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         public string ConfigRuleId { get; set; }
 
         [NameInMap("ConfigRuleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConfigRuleName { get; set; }
 
         [NameInMap("Description")]
@@ -26,15 +26,15 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         public string InputParameters { get; set; }
 
         [NameInMap("SourceOwner")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceOwner { get; set; }
 
         [NameInMap("SourceIdentifier")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceIdentifier { get; set; }
 
         [NameInMap("SourceDetailMessageType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string SourceDetailMessageType { get; set; }
 
         [NameInMap("SourceMaximumExecutionFrequency")]
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         public string ScopeComplianceResourceId { get; set; }
 
         [NameInMap("ScopeComplianceResourceTypes")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ScopeComplianceResourceTypes { get; set; }
 
         [NameInMap("RiskLevel")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
         [NameInMap("ClientToken")]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 
         [NameInMap("MemberId")]
         [Validation(Required=false)]
-        public long MemberId { get; set; }
+        public long? MemberId { get; set; }
 
     }
 

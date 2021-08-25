@@ -9,57 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class DescribeComplianceSummaryResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ComplianceSummary")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeComplianceSummaryResponseComplianceSummary ComplianceSummary { get; set; }
-        public class DescribeComplianceSummaryResponseComplianceSummary : TeaModel {
-            [NameInMap("ComplianceSummaryByConfigRule")]
-            [Validation(Required=true)]
-            public DescribeComplianceSummaryResponseComplianceSummaryComplianceSummaryByConfigRule ComplianceSummaryByConfigRule { get; set; }
-            public class DescribeComplianceSummaryResponseComplianceSummaryComplianceSummaryByConfigRule : TeaModel {
-                [NameInMap("ComplianceSummaryTimestamp")]
-                [Validation(Required=true)]
-                public long ComplianceSummaryTimestamp { get; set; }
-
-                [NameInMap("CompliantCount")]
-                [Validation(Required=true)]
-                public int? CompliantCount { get; set; }
-
-                [NameInMap("NonCompliantCount")]
-                [Validation(Required=true)]
-                public int? NonCompliantCount { get; set; }
-
-                [NameInMap("TotalCount")]
-                [Validation(Required=true)]
-                public long TotalCount { get; set; }
-
-            }
-            [NameInMap("ComplianceSummaryByResource")]
-            [Validation(Required=true)]
-            public DescribeComplianceSummaryResponseComplianceSummaryComplianceSummaryByResource ComplianceSummaryByResource { get; set; }
-            public class DescribeComplianceSummaryResponseComplianceSummaryComplianceSummaryByResource : TeaModel {
-                [NameInMap("ComplianceSummaryTimestamp")]
-                [Validation(Required=true)]
-                public long ComplianceSummaryTimestamp { get; set; }
-
-                [NameInMap("CompliantCount")]
-                [Validation(Required=true)]
-                public int? CompliantCount { get; set; }
-
-                [NameInMap("NonCompliantCount")]
-                [Validation(Required=true)]
-                public int? NonCompliantCount { get; set; }
-
-                [NameInMap("TotalCount")]
-                [Validation(Required=true)]
-                public long TotalCount { get; set; }
-
-            }
-        };
+        public DescribeComplianceSummaryResponseBody Body { get; set; }
 
     }
 

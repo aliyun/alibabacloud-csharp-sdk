@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class StopConfigRulesRequest : TeaModel {
         [NameInMap("ConfigRuleIds")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConfigRuleIds { get; set; }
 
     }

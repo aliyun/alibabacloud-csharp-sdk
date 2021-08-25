@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-config")]
 [assembly: AssemblyDescription("Alibaba Cloud CloudConfig (20190108) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c92f48a0-14fe-11eb-b0d2-d5ec1b6f694a")]
+[assembly: Guid("762542c0-0587-11ec-84fb-f793243d82da")]
 
 // Version information for an assembly consists of the following four values:
 //

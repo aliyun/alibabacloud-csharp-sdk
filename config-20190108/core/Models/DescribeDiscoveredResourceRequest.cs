@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class DescribeDiscoveredResourceRequest : TeaModel {
         [NameInMap("ResourceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         [NameInMap("ResourceType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         [NameInMap("Region")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 
         [NameInMap("MemberId")]
         [Validation(Required=false)]
-        public long MemberId { get; set; }
+        public long? MemberId { get; set; }
 
     }
 

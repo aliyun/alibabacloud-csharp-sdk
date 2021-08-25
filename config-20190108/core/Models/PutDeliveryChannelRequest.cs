@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         public string DeliveryChannelName { get; set; }
 
         [NameInMap("DeliveryChannelType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeliveryChannelType { get; set; }
 
         [NameInMap("DeliveryChannelTargetArn")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeliveryChannelTargetArn { get; set; }
 
         [NameInMap("DeliveryChannelAssumeRoleArn")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeliveryChannelAssumeRoleArn { get; set; }
 
         [NameInMap("DeliveryChannelCondition")]

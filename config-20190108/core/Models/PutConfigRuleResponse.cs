@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class PutConfigRuleResponse : TeaModel {
-        [NameInMap("ConfigRuleId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string ConfigRuleId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public PutConfigRuleResponseBody Body { get; set; }
 
     }
 

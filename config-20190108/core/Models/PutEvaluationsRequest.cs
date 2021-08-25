@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class PutEvaluationsRequest : TeaModel {
         [NameInMap("ResultToken")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResultToken { get; set; }
 
         [NameInMap("Evaluations")]

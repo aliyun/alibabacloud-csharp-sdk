@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class PutConfigurationRecorderRequest : TeaModel {
         [NameInMap("ResourceTypes")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceTypes { get; set; }
 
     }

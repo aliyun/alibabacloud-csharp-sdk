@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,7 +13,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class ActiveConfigRulesRequest : TeaModel {
         [NameInMap("ConfigRuleIds")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ConfigRuleIds { get; set; }
 
     }

@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         public int? ResourceDeleted { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         [NameInMap("ResourceTypes")]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Config20190108.Models
 
         [NameInMap("MemberId")]
         [Validation(Required=false)]
-        public long MemberId { get; set; }
+        public long? MemberId { get; set; }
 
     }
 
