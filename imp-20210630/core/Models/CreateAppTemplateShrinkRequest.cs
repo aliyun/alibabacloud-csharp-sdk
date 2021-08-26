@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         /// <summary>
         /// 应用模板场景，电商business，课堂classroom
         /// </summary>
-        [NameInMap("Sence")]
+        [NameInMap("Scene")]
         [Validation(Required=false)]
-        public string Sence { get; set; }
+        public string Scene { get; set; }
 
         /// <summary>
         /// 组件列表
