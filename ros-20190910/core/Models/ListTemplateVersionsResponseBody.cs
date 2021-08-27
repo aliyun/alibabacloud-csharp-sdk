@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplateVersionsResponseBody : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Versions")]
         [Validation(Required=false)]
         public List<ListTemplateVersionsResponseBodyVersions> Versions { get; set; }
@@ -38,14 +46,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string TemplateVersion { get; set; }
 
         }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

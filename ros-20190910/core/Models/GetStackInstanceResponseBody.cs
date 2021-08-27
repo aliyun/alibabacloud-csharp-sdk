@@ -35,13 +35,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("StatusReason")]
             [Validation(Required=false)]
             public string StatusReason { get; set; }
-            [NameInMap("ParameterOverrides")]
-            [Validation(Required=false)]
-            public List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> ParameterOverrides { get; set; }
-            public class GetStackInstanceResponseBodyStackInstanceParameterOverrides : TeaModel {
-                public string ParameterKey { get; set; }
-                public string ParameterValue { get; set; }
-            }
             [NameInMap("StackGroupName")]
             [Validation(Required=false)]
             public string StackGroupName { get; set; }
@@ -51,6 +44,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+            [NameInMap("ParameterOverrides")]
+            [Validation(Required=false)]
+            public List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> ParameterOverrides { get; set; }
+            public class GetStackInstanceResponseBodyStackInstanceParameterOverrides : TeaModel {
+                public string ParameterKey { get; set; }
+                public string ParameterValue { get; set; }
+            }
         };
 
     }

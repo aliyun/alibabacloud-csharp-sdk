@@ -20,13 +20,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("TemplateDescription")]
             [Validation(Required=false)]
             public string TemplateDescription { get; set; }
-            [NameInMap("Parameters")]
-            [Validation(Required=false)]
-            public List<PreviewStackResponseBodyStackParameters> Parameters { get; set; }
-            public class PreviewStackResponseBodyStackParameters : TeaModel {
-                public string ParameterKey { get; set; }
-                public string ParameterValue { get; set; }
-            }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -42,6 +35,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("StackPolicyBody")]
             [Validation(Required=false)]
             public Dictionary<string, string> StackPolicyBody { get; set; }
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+            [NameInMap("Parameters")]
+            [Validation(Required=false)]
+            public List<PreviewStackResponseBodyStackParameters> Parameters { get; set; }
+            public class PreviewStackResponseBodyStackParameters : TeaModel {
+                public string ParameterKey { get; set; }
+                public string ParameterValue { get; set; }
+            }
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public List<PreviewStackResponseBodyStackResources> Resources { get; set; }
@@ -50,12 +53,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceType { get; set; }
                 public string Description { get; set; }
                 public Dictionary<string, string> Stack { get; set; }
-                public List<string> RequiredBy { get; set; }
                 public Dictionary<string, string> Properties { get; set; }
+                public List<string> RequiredBy { get; set; }
             }
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
         };
 
     }

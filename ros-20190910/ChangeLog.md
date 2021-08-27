@@ -1,3 +1,6 @@
+2021-08-27 Version: 1.0.4
+- Support ClientToken for ValidateTemplate.
+
 2021-07-20 Version: 1.0.3
 - GetStack supports resource progress.
 - ValidateTemplate supports Outputs.

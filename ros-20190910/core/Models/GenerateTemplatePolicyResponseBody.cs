@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GenerateTemplatePolicyResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public GenerateTemplatePolicyResponseBodyPolicy Policy { get; set; }
@@ -25,10 +29,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public List<string> Action { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

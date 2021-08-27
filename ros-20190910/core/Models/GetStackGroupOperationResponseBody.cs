@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
             [NameInMap("StackGroupId")]
             [Validation(Required=false)]
             public string StackGroupId { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+            [NameInMap("ExecutionRoleName")]
+            [Validation(Required=false)]
+            public string ExecutionRoleName { get; set; }
             [NameInMap("RetainStacks")]
             [Validation(Required=false)]
             public bool? RetainStacks { get; set; }
@@ -41,6 +47,34 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("OperationDescription")]
             [Validation(Required=false)]
             public string OperationDescription { get; set; }
+            [NameInMap("AdministratorRoleName")]
+            [Validation(Required=false)]
+            public string AdministratorRoleName { get; set; }
+            [NameInMap("OperationPreferences")]
+            [Validation(Required=false)]
+            public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences OperationPreferences { get; set; }
+            public class GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences : TeaModel {
+                [NameInMap("FailureToleranceCount")]
+                [Validation(Required=false)]
+                public int? FailureToleranceCount { get; set; }
+
+                [NameInMap("MaxConcurrentCount")]
+                [Validation(Required=false)]
+                public int? MaxConcurrentCount { get; set; }
+
+                [NameInMap("MaxConcurrentPercentage")]
+                [Validation(Required=false)]
+                public int? MaxConcurrentPercentage { get; set; }
+
+                [NameInMap("FailureTolerancePercentage")]
+                [Validation(Required=false)]
+                public int? FailureTolerancePercentage { get; set; }
+
+                [NameInMap("RegionIdsOrder")]
+                [Validation(Required=false)]
+                public List<string> RegionIdsOrder { get; set; }
+
+            }
             [NameInMap("StackGroupDriftDetectionDetail")]
             [Validation(Required=false)]
             public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail StackGroupDriftDetectionDetail { get; set; }
@@ -82,40 +116,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public int? DriftedStackInstancesCount { get; set; }
 
             }
-            [NameInMap("OperationPreferences")]
-            [Validation(Required=false)]
-            public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences OperationPreferences { get; set; }
-            public class GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences : TeaModel {
-                [NameInMap("MaxConcurrentCount")]
-                [Validation(Required=false)]
-                public int? MaxConcurrentCount { get; set; }
-
-                [NameInMap("FailureToleranceCount")]
-                [Validation(Required=false)]
-                public int? FailureToleranceCount { get; set; }
-
-                [NameInMap("MaxConcurrentPercentage")]
-                [Validation(Required=false)]
-                public int? MaxConcurrentPercentage { get; set; }
-
-                [NameInMap("RegionIdsOrder")]
-                [Validation(Required=false)]
-                public List<string> RegionIdsOrder { get; set; }
-
-                [NameInMap("FailureTolerancePercentage")]
-                [Validation(Required=false)]
-                public int? FailureTolerancePercentage { get; set; }
-
-            }
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public string EndTime { get; set; }
-            [NameInMap("ExecutionRoleName")]
-            [Validation(Required=false)]
-            public string ExecutionRoleName { get; set; }
-            [NameInMap("AdministratorRoleName")]
-            [Validation(Required=false)]
-            public string AdministratorRoleName { get; set; }
         };
 
     }

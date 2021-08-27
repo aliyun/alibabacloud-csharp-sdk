@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackDriftDetectionStatusResponseBody : TeaModel {
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,29 +21,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string DriftDetectionTime { get; set; }
 
-        [NameInMap("DriftDetectionStatusReason")]
-        [Validation(Required=false)]
-        public string DriftDetectionStatusReason { get; set; }
-
-        [NameInMap("DriftedStackResourceCount")]
-        [Validation(Required=false)]
-        public int? DriftedStackResourceCount { get; set; }
-
         [NameInMap("StackDriftStatus")]
         [Validation(Required=false)]
         public string StackDriftStatus { get; set; }
+
+        [NameInMap("DriftDetectionId")]
+        [Validation(Required=false)]
+        public string DriftDetectionId { get; set; }
 
         [NameInMap("DriftDetectionStatus")]
         [Validation(Required=false)]
         public string DriftDetectionStatus { get; set; }
 
-        [NameInMap("StackId")]
+        [NameInMap("DriftedStackResourceCount")]
         [Validation(Required=false)]
-        public string StackId { get; set; }
+        public int? DriftedStackResourceCount { get; set; }
 
-        [NameInMap("DriftDetectionId")]
+        [NameInMap("DriftDetectionStatusReason")]
         [Validation(Required=false)]
-        public string DriftDetectionId { get; set; }
+        public string DriftDetectionStatusReason { get; set; }
 
     }
 

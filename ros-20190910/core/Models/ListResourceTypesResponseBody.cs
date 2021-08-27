@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListResourceTypesResponseBody : TeaModel {
-        [NameInMap("ResourceTypes")]
-        [Validation(Required=false)]
-        public List<string> ResourceTypes { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ResourceTypes")]
+        [Validation(Required=false)]
+        public List<string> ResourceTypes { get; set; }
 
     }
 

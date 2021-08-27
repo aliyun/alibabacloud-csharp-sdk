@@ -111,13 +111,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<CreateChangeSetRequestResourcesToImport> ResourcesToImport { get; set; }
         public class CreateChangeSetRequestResourcesToImport : TeaModel {
-            [NameInMap("ResourceIdentifier")]
-            [Validation(Required=false)]
-            public string ResourceIdentifier { get; set; }
-
             [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
             public string LogicalResourceId { get; set; }
+
+            [NameInMap("ResourceIdentifier")]
+            [Validation(Required=false)]
+            public string ResourceIdentifier { get; set; }
 
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

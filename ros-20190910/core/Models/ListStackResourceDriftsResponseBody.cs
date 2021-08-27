@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackResourceDriftsResponseBody : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ResourceDrifts")]
         [Validation(Required=false)]
         public List<ListStackResourceDriftsResponseBodyResourceDrifts> ResourceDrifts { get; set; }
@@ -41,6 +49,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string ResourceDriftStatus { get; set; }
 
+            [NameInMap("ActualProperties")]
+            [Validation(Required=false)]
+            public string ActualProperties { get; set; }
+
             [NameInMap("PropertyDifferences")]
             [Validation(Required=false)]
             public List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> PropertyDifferences { get; set; }
@@ -63,19 +75,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
-            [NameInMap("ActualProperties")]
-            [Validation(Required=false)]
-            public string ActualProperties { get; set; }
-
         }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 
