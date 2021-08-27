@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
-
         [NameInMap("PrivatePoolOptionsId")]
         [Validation(Required=false)]
         public string PrivatePoolOptionsId { get; set; }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
 
     }
 

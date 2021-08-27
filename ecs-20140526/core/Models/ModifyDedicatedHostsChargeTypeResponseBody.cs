@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDedicatedHostsChargeTypeResponseBody : TeaModel {
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("FeeOfInstances")]
         [Validation(Required=false)]
         public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances FeeOfInstances { get; set; }
@@ -22,14 +30,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Fee { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
 
     }
 

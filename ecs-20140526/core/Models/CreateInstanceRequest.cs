@@ -30,6 +30,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PerformanceLevel { get; set; }
         };
 
+        [NameInMap("HibernationOptions")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestHibernationOptions HibernationOptions { get; set; }
+        public class CreateInstanceRequestHibernationOptions : TeaModel {
+            [NameInMap("Configured")]
+            [Validation(Required=false)]
+            public bool? Configured { get; set; }
+        };
+
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
         public CreateInstanceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
@@ -294,13 +303,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string Category { get; set; }
 
-            [NameInMap("KMSKeyId")]
-            [Validation(Required=false)]
-            public string KMSKeyId { get; set; }
-
             [NameInMap("DeleteWithInstance")]
             [Validation(Required=false)]
             public bool? DeleteWithInstance { get; set; }
+
+            [NameInMap("KMSKeyId")]
+            [Validation(Required=false)]
+            public string KMSKeyId { get; set; }
 
             [NameInMap("EncryptAlgorithm")]
             [Validation(Required=false)]

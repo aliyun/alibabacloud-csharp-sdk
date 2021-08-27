@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
         public DescribeKeyPairsResponseBodyKeyPairs KeyPairs { get; set; }
@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
                 public string CreationTime { get; set; }
                 public string KeyPairName { get; set; }
+                public string KeyPairFingerPrint { get; set; }
                 public string ResourceGroupId { get; set; }
                 public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags Tags { get; set; }
                 public class DescribeKeyPairsResponseBodyKeyPairsKeyPairTags : TeaModel {
@@ -53,7 +54,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public string KeyPairFingerPrint { get; set; }
             }
         };
 

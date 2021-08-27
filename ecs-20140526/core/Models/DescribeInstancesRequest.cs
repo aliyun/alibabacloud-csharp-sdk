@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? HttpPutResponseHopLimit { get; set; }
 
+        [NameInMap("Ipv6Address")]
+        [Validation(Required=false)]
+        public List<string> Ipv6Address { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeInstancesRequestTag> Tag { get; set; }

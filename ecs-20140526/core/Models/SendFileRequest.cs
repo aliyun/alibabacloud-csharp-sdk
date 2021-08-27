@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -68,10 +72,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Overwrite")]
         [Validation(Required=false)]
         public bool? Overwrite { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
 
     }
 

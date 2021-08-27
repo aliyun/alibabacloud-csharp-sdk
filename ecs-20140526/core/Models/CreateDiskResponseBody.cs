@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiskResponseBody : TeaModel {
+        [NameInMap("DiskId")]
+        [Validation(Required=false)]
+        public string DiskId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
-
-        [NameInMap("DiskId")]
-        [Validation(Required=false)]
-        public string DiskId { get; set; }
 
     }
 

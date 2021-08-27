@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("NetworkInterfaceId")]
-        [Validation(Required=false)]
-        public string NetworkInterfaceId { get; set; }
-
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public List<string> PrivateIpAddress { get; set; }
+
+        [NameInMap("NetworkInterfaceId")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceId { get; set; }
 
     }
 

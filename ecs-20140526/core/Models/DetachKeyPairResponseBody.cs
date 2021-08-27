@@ -13,13 +13,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("FailCount")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string FailCount { get; set; }
 
         [NameInMap("Results")]
         [Validation(Required=false)]
@@ -29,16 +33,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DetachKeyPairResponseBodyResultsResult> Result { get; set; }
             public class DetachKeyPairResponseBodyResultsResult : TeaModel {
-                public string Success { get; set; }
                 public string Code { get; set; }
                 public string Message { get; set; }
                 public string InstanceId { get; set; }
+                public string Success { get; set; }
             }
         };
-
-        [NameInMap("FailCount")]
-        [Validation(Required=false)]
-        public string FailCount { get; set; }
 
     }
 

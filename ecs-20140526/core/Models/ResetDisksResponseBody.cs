@@ -21,26 +21,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<ResetDisksResponseBodyOperationProgressSetOperationProgress> OperationProgress { get; set; }
             public class ResetDisksResponseBodyOperationProgressSetOperationProgress : TeaModel {
-                public string ErrorCode { get; set; }
                 public string ErrorMsg { get; set; }
+                public string ErrorCode { get; set; }
+                public string OperationStatus { get; set; }
                 public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet RelatedItemSet { get; set; }
                 public class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet : TeaModel {
                     [NameInMap("RelatedItem")]
                     [Validation(Required=false)]
                     public List<ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> RelatedItem { get; set; }
                     public class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem : TeaModel {
-                        [NameInMap("Value")]
-                        [Validation(Required=false)]
-                        public string Value { get; set; }
-
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
                     }
 
                 }
-                public string OperationStatus { get; set; }
             }
         };
 

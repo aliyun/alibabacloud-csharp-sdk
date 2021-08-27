@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeVpcsResponseBody : TeaModel {
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
@@ -29,6 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? IsDefault { get; set; }
                 public string CidrBlock { get; set; }
                 public string Description { get; set; }
+                public string RegionId { get; set; }
                 public DescribeVpcsResponseBodyVpcsVpcVSwitchIds VSwitchIds { get; set; }
                 public class DescribeVpcsResponseBodyVpcsVpcVSwitchIds : TeaModel {
                     [NameInMap("VSwitchId")]
@@ -43,21 +56,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> UserCidr { get; set; }
 
                 }
-                public string RegionId { get; set; }
             }
         };
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

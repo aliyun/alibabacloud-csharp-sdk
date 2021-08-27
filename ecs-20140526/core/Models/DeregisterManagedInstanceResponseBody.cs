@@ -29,30 +29,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
-            [NameInMap("IntranetIp")]
-            [Validation(Required=false)]
-            public string IntranetIp { get; set; }
             [NameInMap("ActivationId")]
             [Validation(Required=false)]
             public string ActivationId { get; set; }
-            [NameInMap("RegistrationTime")]
+            [NameInMap("IntranetIp")]
             [Validation(Required=false)]
-            public string RegistrationTime { get; set; }
+            public string IntranetIp { get; set; }
             [NameInMap("AgentVersion")]
             [Validation(Required=false)]
             public string AgentVersion { get; set; }
+            [NameInMap("RegistrationTime")]
+            [Validation(Required=false)]
+            public string RegistrationTime { get; set; }
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
-            [NameInMap("InvocationCount")]
-            [Validation(Required=false)]
-            public long? InvocationCount { get; set; }
             [NameInMap("OsVersion")]
             [Validation(Required=false)]
             public string OsVersion { get; set; }
+            [NameInMap("InvocationCount")]
+            [Validation(Required=false)]
+            public long? InvocationCount { get; set; }
             [NameInMap("MachineId")]
             [Validation(Required=false)]
             public string MachineId { get; set; }

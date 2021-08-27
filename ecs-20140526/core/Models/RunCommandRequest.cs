@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? EnableParameter { get; set; }
 
+        [NameInMap("RepeatMode")]
+        [Validation(Required=false)]
+        public string RepeatMode { get; set; }
+
         [NameInMap("Timed")]
         [Validation(Required=false)]
         public bool? Timed { get; set; }
@@ -84,10 +92,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("WindowsPasswordName")]
         [Validation(Required=false)]
         public string WindowsPasswordName { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
 
     }
 

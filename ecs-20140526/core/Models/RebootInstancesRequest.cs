@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -40,10 +44,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("BatchOptimization")]
         [Validation(Required=false)]
         public string BatchOptimization { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
 
     }
 

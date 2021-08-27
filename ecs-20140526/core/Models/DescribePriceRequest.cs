@@ -142,6 +142,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> InstanceTypeList { get; set; }
 
+        [NameInMap("SpotStrategy")]
+        [Validation(Required=false)]
+        public string SpotStrategy { get; set; }
+
+        [NameInMap("SpotDuration")]
+        [Validation(Required=false)]
+        public int? SpotDuration { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
+
     }
 
 }

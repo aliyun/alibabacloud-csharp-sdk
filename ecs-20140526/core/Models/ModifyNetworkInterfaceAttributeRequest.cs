@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public List<string> SecurityGroupId { get; set; }
+
         [NameInMap("NetworkInterfaceName")]
         [Validation(Required=false)]
         public string NetworkInterfaceName { get; set; }
@@ -44,10 +48,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("SecurityGroupId")]
-        [Validation(Required=false)]
-        public List<string> SecurityGroupId { get; set; }
 
     }
 

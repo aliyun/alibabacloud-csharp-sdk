@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> InstanceTypeFamily { get; set; }
             public class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily : TeaModel {
-                public string InstanceTypeFamilyId { get; set; }
                 public string Generation { get; set; }
+                public string InstanceTypeFamilyId { get; set; }
             }
         };
 

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        [NameInMap("InstanceTypes")]
+        [Validation(Required=false)]
+        public List<string> InstanceTypes { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -64,10 +68,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("GpuAmount")]
         [Validation(Required=false)]
         public int? GpuAmount { get; set; }
-
-        [NameInMap("InstanceTypes")]
-        [Validation(Required=false)]
-        public List<string> InstanceTypes { get; set; }
 
     }
 

@@ -56,6 +56,96 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("DataDisk")]
+        [Validation(Required=false)]
+        public List<CreateLaunchTemplateVersionRequestDataDisk> DataDisk { get; set; }
+        public class CreateLaunchTemplateVersionRequestDataDisk : TeaModel {
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("SnapshotId")]
+            [Validation(Required=false)]
+            public string SnapshotId { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+            [NameInMap("Device")]
+            [Validation(Required=false)]
+            public string Device { get; set; }
+
+            [NameInMap("DiskName")]
+            [Validation(Required=false)]
+            public string DiskName { get; set; }
+
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("DeleteWithInstance")]
+            [Validation(Required=false)]
+            public bool? DeleteWithInstance { get; set; }
+
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public string Encrypted { get; set; }
+
+        }
+
+        [NameInMap("NetworkInterface")]
+        [Validation(Required=false)]
+        public List<CreateLaunchTemplateVersionRequestNetworkInterface> NetworkInterface { get; set; }
+        public class CreateLaunchTemplateVersionRequestNetworkInterface : TeaModel {
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("NetworkInterfaceName")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceName { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            [NameInMap("PrimaryIpAddress")]
+            [Validation(Required=false)]
+            public string PrimaryIpAddress { get; set; }
+
+            [NameInMap("SecurityGroupIds")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupIds { get; set; }
+
+        }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateLaunchTemplateVersionRequestTag> Tag { get; set; }
+        public class CreateLaunchTemplateVersionRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<string> SecurityGroupIds { get; set; }
+
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
@@ -187,96 +277,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("DeploymentSetId")]
         [Validation(Required=false)]
         public string DeploymentSetId { get; set; }
-
-        [NameInMap("DataDisk")]
-        [Validation(Required=false)]
-        public List<CreateLaunchTemplateVersionRequestDataDisk> DataDisk { get; set; }
-        public class CreateLaunchTemplateVersionRequestDataDisk : TeaModel {
-            [NameInMap("PerformanceLevel")]
-            [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("SnapshotId")]
-            [Validation(Required=false)]
-            public string SnapshotId { get; set; }
-
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-
-            [NameInMap("Device")]
-            [Validation(Required=false)]
-            public string Device { get; set; }
-
-            [NameInMap("DiskName")]
-            [Validation(Required=false)]
-            public string DiskName { get; set; }
-
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
-            [NameInMap("DeleteWithInstance")]
-            [Validation(Required=false)]
-            public bool? DeleteWithInstance { get; set; }
-
-            [NameInMap("Encrypted")]
-            [Validation(Required=false)]
-            public string Encrypted { get; set; }
-
-        }
-
-        [NameInMap("NetworkInterface")]
-        [Validation(Required=false)]
-        public List<CreateLaunchTemplateVersionRequestNetworkInterface> NetworkInterface { get; set; }
-        public class CreateLaunchTemplateVersionRequestNetworkInterface : TeaModel {
-            [NameInMap("NetworkInterfaceName")]
-            [Validation(Required=false)]
-            public string NetworkInterfaceName { get; set; }
-
-            [NameInMap("VSwitchId")]
-            [Validation(Required=false)]
-            public string VSwitchId { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("SecurityGroupId")]
-            [Validation(Required=false)]
-            public string SecurityGroupId { get; set; }
-
-            [NameInMap("PrimaryIpAddress")]
-            [Validation(Required=false)]
-            public string PrimaryIpAddress { get; set; }
-
-            [NameInMap("SecurityGroupIds")]
-            [Validation(Required=false)]
-            public List<string> SecurityGroupIds { get; set; }
-
-        }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<CreateLaunchTemplateVersionRequestTag> Tag { get; set; }
-        public class CreateLaunchTemplateVersionRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
-
-        [NameInMap("SecurityGroupIds")]
-        [Validation(Required=false)]
-        public List<string> SecurityGroupIds { get; set; }
 
     }
 

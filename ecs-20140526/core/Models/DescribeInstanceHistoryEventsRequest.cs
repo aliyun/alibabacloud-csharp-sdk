@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public List<string> EventId { get; set; }
@@ -88,6 +92,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("InstanceEventType")]
         [Validation(Required=false)]
         public List<string> InstanceEventType { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeInstanceHistoryEventsRequestTag> Tag { get; set; }
+        public class DescribeInstanceHistoryEventsRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

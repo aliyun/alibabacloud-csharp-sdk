@@ -32,22 +32,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? MaximumQueueNumberPerEni { get; set; }
                 public string InstanceTypeId { get; set; }
                 public int? InstanceBandwidthRx { get; set; }
-                public string GPUSpec { get; set; }
                 public int? SecondaryEniQueueNumber { get; set; }
+                public string GPUSpec { get; set; }
                 public int? InstanceBandwidthTx { get; set; }
+                public int? QueuePairNumber { get; set; }
+                public int? EriQuantity { get; set; }
                 public int? GPUAmount { get; set; }
                 public int? TotalEniQueueQuantity { get; set; }
+                public string NvmeSupport { get; set; }
+                public int? DiskQuantity { get; set; }
                 public int? InitialCredit { get; set; }
                 public int? LocalStorageAmount { get; set; }
                 public int? BaselineCredit { get; set; }
                 public long? InstancePpsTx { get; set; }
                 public int? EniPrivateIpAddressQuantity { get; set; }
-                public string InstanceTypeFamily { get; set; }
                 public int? CpuCoreCount { get; set; }
+                public string InstanceTypeFamily { get; set; }
                 public int? EniQuantity { get; set; }
                 public bool? EniTrunkSupported { get; set; }
             }
         };
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
     }
 

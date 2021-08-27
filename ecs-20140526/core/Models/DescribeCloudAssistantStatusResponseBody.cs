@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCloudAssistantStatusResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
         [NameInMap("InstanceCloudAssistantStatusSet")]
         [Validation(Required=false)]
@@ -39,7 +39,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? ActiveTaskCount { get; set; }
                 public long? InvocationCount { get; set; }
                 public string InstanceId { get; set; }
+                public string LastHeartbeatTime { get; set; }
                 public string OSType { get; set; }
+                public bool? SupportSessionManager { get; set; }
             }
         };
 

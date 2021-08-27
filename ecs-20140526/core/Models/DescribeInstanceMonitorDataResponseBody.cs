@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? CPU { get; set; }
                 public float? CPUCreditUsage { get; set; }
                 public int? IOPSWrite { get; set; }
-                public string InstanceId { get; set; }
                 public int? IntranetTX { get; set; }
+                public string InstanceId { get; set; }
                 public int? BPSWrite { get; set; }
                 public float? CPUNotpaidSurplusCreditUsage { get; set; }
-                public int? IOPSRead { get; set; }
                 public float? CPUAdvanceCreditBalance { get; set; }
+                public int? IOPSRead { get; set; }
                 public int? InternetBandwidth { get; set; }
                 public int? InternetRX { get; set; }
                 public string TimeStamp { get; set; }

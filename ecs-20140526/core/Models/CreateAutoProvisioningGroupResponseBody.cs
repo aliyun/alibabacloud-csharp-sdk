@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateAutoProvisioningGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
         public string AutoProvisioningGroupId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("LaunchResults")]
         [Validation(Required=false)]
@@ -25,9 +25,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult> LaunchResult { get; set; }
             public class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult : TeaModel {
-                public string ErrorCode { get; set; }
                 public string ZoneId { get; set; }
                 public string ErrorMsg { get; set; }
+                public string InstanceType { get; set; }
+                public string ErrorCode { get; set; }
+                public string SpotStrategy { get; set; }
                 public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds InstanceIds { get; set; }
                 public class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds : TeaModel {
                     [NameInMap("InstanceId")]
@@ -35,8 +37,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> InstanceId { get; set; }
 
                 }
-                public string InstanceType { get; set; }
-                public string SpotStrategy { get; set; }
             }
         };
 

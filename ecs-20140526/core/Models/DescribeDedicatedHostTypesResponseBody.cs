@@ -22,23 +22,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType> DedicatedHostType { get; set; }
             public class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType : TeaModel {
                 public int? Cores { get; set; }
-                public string GPUSpec { get; set; }
                 public string LocalStorageCategory { get; set; }
+                public string GPUSpec { get; set; }
                 public int? TotalVcpus { get; set; }
                 public string CpuOverCommitRatioRange { get; set; }
-                public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList SupportedInstanceTypesList { get; set; }
-                public class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList : TeaModel {
-                    [NameInMap("SupportedInstanceTypesList")]
-                    [Validation(Required=false)]
-                    public List<string> SupportedInstanceTypesList { get; set; }
-
-                }
                 public int? PhysicalGpus { get; set; }
                 public float? MemorySize { get; set; }
                 public bool? SupportCpuOverCommitRatio { get; set; }
                 public long? LocalStorageCapacity { get; set; }
-                public int? LocalStorageAmount { get; set; }
                 public string DedicatedHostType { get; set; }
+                public int? LocalStorageAmount { get; set; }
                 public int? TotalVgpus { get; set; }
                 public int? Sockets { get; set; }
                 public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies SupportedInstanceTypeFamilies { get; set; }
@@ -46,6 +39,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [NameInMap("SupportedInstanceTypeFamily")]
                     [Validation(Required=false)]
                     public List<string> SupportedInstanceTypeFamily { get; set; }
+
+                }
+                public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList SupportedInstanceTypesList { get; set; }
+                public class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList : TeaModel {
+                    [NameInMap("SupportedInstanceTypesList")]
+                    [Validation(Required=false)]
+                    public List<string> SupportedInstanceTypesList { get; set; }
 
                 }
             }

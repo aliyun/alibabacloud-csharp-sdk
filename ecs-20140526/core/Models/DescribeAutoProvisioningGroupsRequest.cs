@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("AutoProvisioningGroupName")]
-        [Validation(Required=false)]
-        public string AutoProvisioningGroupName { get; set; }
-
         [NameInMap("AutoProvisioningGroupId")]
         [Validation(Required=false)]
         public List<string> AutoProvisioningGroupId { get; set; }
@@ -48,6 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("AutoProvisioningGroupStatus")]
         [Validation(Required=false)]
         public List<string> AutoProvisioningGroupStatus { get; set; }
+
+        [NameInMap("AutoProvisioningGroupName")]
+        [Validation(Required=false)]
+        public string AutoProvisioningGroupName { get; set; }
 
     }
 

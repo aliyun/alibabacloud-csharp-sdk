@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("NetworkInterfacePermissionId")]
+        [Validation(Required=false)]
+        public List<string> NetworkInterfacePermissionId { get; set; }
+
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }
@@ -40,10 +44,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("NetworkInterfacePermissionId")]
-        [Validation(Required=false)]
-        public List<string> NetworkInterfacePermissionId { get; set; }
 
     }
 

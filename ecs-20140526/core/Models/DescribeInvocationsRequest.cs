@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("RepeatMode")]
+        [Validation(Required=false)]
+        public string RepeatMode { get; set; }
+
     }
 
 }

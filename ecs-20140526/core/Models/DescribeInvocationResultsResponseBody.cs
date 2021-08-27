@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
             [NameInMap("InvocationResults")]
             [Validation(Required=false)]
             public DescribeInvocationResultsResponseBodyInvocationInvocationResults InvocationResults { get; set; }
@@ -39,17 +42,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public int? Repeats { get; set; }
 
-                    [NameInMap("Output")]
+                    [NameInMap("CommandId")]
                     [Validation(Required=false)]
-                    public string Output { get; set; }
+                    public string CommandId { get; set; }
 
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
-                    [NameInMap("CommandId")]
+                    [NameInMap("Output")]
                     [Validation(Required=false)]
-                    public string CommandId { get; set; }
+                    public string Output { get; set; }
 
                     [NameInMap("Dropped")]
                     [Validation(Required=false)]
@@ -94,9 +97,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
         };
 
     }

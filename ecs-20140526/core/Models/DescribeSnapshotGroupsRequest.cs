@@ -29,6 +29,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SnapshotGroupId")]
+        [Validation(Required=false)]
+        public List<string> SnapshotGroupId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public List<string> Status { get; set; }
+
+        [NameInMap("AdditionalAttributes")]
+        [Validation(Required=false)]
+        public List<string> AdditionalAttributes { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -44,14 +56,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
-
-        [NameInMap("SnapshotGroupId")]
-        [Validation(Required=false)]
-        public List<string> SnapshotGroupId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public List<string> Status { get; set; }
 
     }
 

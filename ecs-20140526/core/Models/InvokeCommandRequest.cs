@@ -29,9 +29,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
+
+        [NameInMap("RepeatMode")]
+        [Validation(Required=false)]
+        public string RepeatMode { get; set; }
 
         [NameInMap("Timed")]
         [Validation(Required=false)]
@@ -52,10 +60,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("WindowsPasswordName")]
         [Validation(Required=false)]
         public string WindowsPasswordName { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
 
     }
 

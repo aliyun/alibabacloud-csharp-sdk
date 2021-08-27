@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public long? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
     }
 
 }

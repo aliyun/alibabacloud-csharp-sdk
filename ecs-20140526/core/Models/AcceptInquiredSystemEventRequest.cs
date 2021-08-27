@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string EventId { get; set; }
 
+        [NameInMap("Choice")]
+        [Validation(Required=false)]
+        public string Choice { get; set; }
+
     }
 
 }

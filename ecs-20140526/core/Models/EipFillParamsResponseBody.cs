@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
-
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

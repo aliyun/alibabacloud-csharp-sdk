@@ -17,27 +17,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeInstanceModificationPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeInstanceModificationPriceResponseBodyPriceInfo : TeaModel {
-            [NameInMap("Price")]
-            [Validation(Required=false)]
-            public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice Price { get; set; }
-            public class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice : TeaModel {
-                [NameInMap("DiscountPrice")]
-                [Validation(Required=false)]
-                public float? DiscountPrice { get; set; }
-
-                [NameInMap("TradePrice")]
-                [Validation(Required=false)]
-                public float? TradePrice { get; set; }
-
-                [NameInMap("OriginalPrice")]
-                [Validation(Required=false)]
-                public float? OriginalPrice { get; set; }
-
-                [NameInMap("Currency")]
-                [Validation(Required=false)]
-                public string Currency { get; set; }
-
-            }
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public DescribeInstanceModificationPriceResponseBodyPriceInfoRules Rules { get; set; }
@@ -55,6 +34,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public long? RuleId { get; set; }
 
                 }
+
+            }
+            [NameInMap("Price")]
+            [Validation(Required=false)]
+            public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice Price { get; set; }
+            public class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice : TeaModel {
+                [NameInMap("OriginalPrice")]
+                [Validation(Required=false)]
+                public float? OriginalPrice { get; set; }
+
+                [NameInMap("DiscountPrice")]
+                [Validation(Required=false)]
+                public float? DiscountPrice { get; set; }
+
+                [NameInMap("Currency")]
+                [Validation(Required=false)]
+                public string Currency { get; set; }
+
+                [NameInMap("TradePrice")]
+                [Validation(Required=false)]
+                public float? TradePrice { get; set; }
 
             }
         };

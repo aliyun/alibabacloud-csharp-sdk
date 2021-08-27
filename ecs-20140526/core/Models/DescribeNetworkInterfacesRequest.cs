@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeNetworkInterfacesRequestTag> Tag { get; set; }
@@ -46,6 +42,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceId { get; set; }
+
+        [NameInMap("Ipv6Address")]
+        [Validation(Required=false)]
+        public List<string> Ipv6Address { get; set; }
 
     }
 

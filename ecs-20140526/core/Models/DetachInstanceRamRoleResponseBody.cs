@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachInstanceRamRoleResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
         [NameInMap("FailCount")]
         [Validation(Required=false)]
@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult> DetachInstanceRamRoleResult { get; set; }
             public class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult : TeaModel {
+                public string Code { get; set; }
+                public string Message { get; set; }
+                public string InstanceId { get; set; }
+                public bool? Success { get; set; }
                 public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSets InstanceRamRoleSets { get; set; }
                 public class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSets : TeaModel {
                     [NameInMap("InstanceRamRoleSet")]
@@ -50,10 +54,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public bool? Success { get; set; }
-                public string Code { get; set; }
-                public string Message { get; set; }
-                public string InstanceId { get; set; }
             }
         };
 

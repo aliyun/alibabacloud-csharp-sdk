@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRouterInterfacesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("RouterInterfaceSet")]
         [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RouterId { get; set; }
                 public string OppositeInterfaceBusinessStatus { get; set; }
                 public string ConnectedTime { get; set; }
-                public string HealthCheckSourceIp { get; set; }
                 public string OppositeInterfaceStatus { get; set; }
+                public string HealthCheckSourceIp { get; set; }
                 public string EndTime { get; set; }
                 public string OppositeRegionId { get; set; }
                 public string OppositeAccessPointId { get; set; }
                 public string BusinessStatus { get; set; }
-                public string RouterType { get; set; }
                 public string Role { get; set; }
+                public string RouterType { get; set; }
                 public string AccessPointId { get; set; }
             }
         };

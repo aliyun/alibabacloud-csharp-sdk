@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteImagePipelineRequest : TeaModel {
+        [NameInMap("TemplateTag")]
+        [Validation(Required=false)]
+        public List<DeleteImagePipelineRequestTemplateTag> TemplateTag { get; set; }
+        public class DeleteImagePipelineRequestTemplateTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -28,20 +42,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("TemplateTag")]
-        [Validation(Required=false)]
-        public List<DeleteImagePipelineRequestTemplateTag> TemplateTag { get; set; }
-        public class DeleteImagePipelineRequestTemplateTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
 
         [NameInMap("ImagePipelineId")]
         [Validation(Required=false)]

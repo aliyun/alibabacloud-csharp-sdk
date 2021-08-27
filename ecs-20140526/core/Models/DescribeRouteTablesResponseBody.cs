@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRouteTablesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("RouteTables")]
         [Validation(Required=false)]
         public DescribeRouteTablesResponseBodyRouteTables RouteTables { get; set; }
@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribeRouteTablesResponseBodyRouteTablesRouteTable : TeaModel {
                 public string CreationTime { get; set; }
                 public string VRouterId { get; set; }
+                public string RouteTableId { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string RouteTableType { get; set; }
                 public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys RouteEntrys { get; set; }
                 public class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys : TeaModel {
                     [NameInMap("RouteEntry")]
@@ -57,6 +60,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string DestinationCidrBlock { get; set; }
 
+                        [NameInMap("InstanceId")]
+                        [Validation(Required=false)]
+                        public string InstanceId { get; set; }
+
+                        [NameInMap("RouteTableId")]
+                        [Validation(Required=false)]
+                        public string RouteTableId { get; set; }
+
                         [NameInMap("NextHops")]
                         [Validation(Required=false)]
                         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops NextHops { get; set; }
@@ -72,20 +83,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             }
                         };
 
-                        [NameInMap("InstanceId")]
-                        [Validation(Required=false)]
-                        public string InstanceId { get; set; }
-
-                        [NameInMap("RouteTableId")]
-                        [Validation(Required=false)]
-                        public string RouteTableId { get; set; }
-
                     }
 
                 }
-                public string ResourceGroupId { get; set; }
-                public string RouteTableType { get; set; }
-                public string RouteTableId { get; set; }
             }
         };
 

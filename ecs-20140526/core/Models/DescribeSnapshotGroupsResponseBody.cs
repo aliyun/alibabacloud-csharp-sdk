@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
+                public string ProgressStatus { get; set; }
                 public string SnapshotGroupId { get; set; }
                 public string InstanceId { get; set; }
                 public string Name { get; set; }

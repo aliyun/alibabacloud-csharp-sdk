@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDemandsRequest : TeaModel {
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeDemandsRequestTag> Tag { get; set; }
+        public class DescribeDemandsRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -41,19 +55,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("DemandStatus")]
         [Validation(Required=false)]
-        public List<DescribeDemandsRequestTag> Tag { get; set; }
-        public class DescribeDemandsRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public List<string> DemandStatus { get; set; }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
@@ -78,10 +82,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("DemandType")]
         [Validation(Required=false)]
         public string DemandType { get; set; }
-
-        [NameInMap("DemandStatus")]
-        [Validation(Required=false)]
-        public List<string> DemandStatus { get; set; }
 
     }
 

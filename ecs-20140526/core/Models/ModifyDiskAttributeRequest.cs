@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("DiskIds")]
         [Validation(Required=false)]
         public List<string> DiskIds { get; set; }

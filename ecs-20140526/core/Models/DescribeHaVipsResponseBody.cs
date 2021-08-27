@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeHaVipsResponseBody : TeaModel {
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
@@ -28,14 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
                 public string HaVipId { get; set; }
                 public string CreateTime { get; set; }
-                public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances AssociatedInstances { get; set; }
-                public class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances : TeaModel {
-                    [NameInMap("associatedInstance")]
-                    [Validation(Required=false)]
-                    public List<string> AssociatedInstance { get; set; }
-
-                }
                 public string MasterInstanceId { get; set; }
+                public string RegionId { get; set; }
                 public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses AssociatedEipAddresses { get; set; }
                 public class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses : TeaModel {
                     [NameInMap("associatedEipAddresse")]
@@ -43,21 +49,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> AssociatedEipAddresse { get; set; }
 
                 }
-                public string RegionId { get; set; }
+                public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances AssociatedInstances { get; set; }
+                public class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances : TeaModel {
+                    [NameInMap("associatedInstance")]
+                    [Validation(Required=false)]
+                    public List<string> AssociatedInstance { get; set; }
+
+                }
             }
         };
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

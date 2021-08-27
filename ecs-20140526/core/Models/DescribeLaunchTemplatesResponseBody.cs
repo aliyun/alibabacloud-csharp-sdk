@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplatesResponseBody : TeaModel {
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
@@ -28,6 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreateTime { get; set; }
                 public string ResourceGroupId { get; set; }
                 public string CreatedBy { get; set; }
+                public long? LatestVersionNumber { get; set; }
                 public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags Tags { get; set; }
                 public class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags : TeaModel {
                     [NameInMap("Tag")]
@@ -45,21 +58,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public long? LatestVersionNumber { get; set; }
             }
         };
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportKeyPairResponseBody : TeaModel {
-        [NameInMap("KeyPairFingerPrint")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string KeyPairFingerPrint { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("KeyPairFingerPrint")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string KeyPairFingerPrint { get; set; }
 
     }
 

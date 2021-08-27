@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Ipv6DestCidrIp { get; set; }
 
+        [NameInMap("DestPrefixListId")]
+        [Validation(Required=false)]
+        public string DestPrefixListId { get; set; }
+
         [NameInMap("SourceCidrIp")]
         [Validation(Required=false)]
         public string SourceCidrIp { get; set; }

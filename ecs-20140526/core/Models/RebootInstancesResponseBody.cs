@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<RebootInstancesResponseBodyInstanceResponsesInstanceResponse> InstanceResponse { get; set; }
             public class RebootInstancesResponseBodyInstanceResponsesInstanceResponse : TeaModel {
-                public string CurrentStatus { get; set; }
-                public string PreviousStatus { get; set; }
                 public string Code { get; set; }
                 public string Message { get; set; }
                 public string InstanceId { get; set; }
+                public string CurrentStatus { get; set; }
+                public string PreviousStatus { get; set; }
             }
         };
 

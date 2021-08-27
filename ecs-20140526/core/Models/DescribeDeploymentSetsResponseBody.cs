@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("DeploymentSets")]
         [Validation(Required=false)]
@@ -41,6 +45,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Domain { get; set; }
                 public int? GroupCount { get; set; }
                 public string Granularity { get; set; }
+                public string DeploymentSetName { get; set; }
+                public int? InstanceAmount { get; set; }
                 public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds InstanceIds { get; set; }
                 public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds : TeaModel {
                     [NameInMap("InstanceId")]
@@ -48,14 +54,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<string> InstanceId { get; set; }
 
                 }
-                public string DeploymentSetName { get; set; }
-                public int? InstanceAmount { get; set; }
             }
         };
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
     }
 

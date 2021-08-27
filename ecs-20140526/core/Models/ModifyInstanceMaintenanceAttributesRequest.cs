@@ -25,18 +25,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ActionOnMaintenance")]
-        [Validation(Required=false)]
-        public string ActionOnMaintenance { get; set; }
-
-        [NameInMap("NotifyOnMaintenance")]
-        [Validation(Required=false)]
-        public bool? NotifyOnMaintenance { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
@@ -54,6 +42,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string StartTime { get; set; }
 
         }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ActionOnMaintenance")]
+        [Validation(Required=false)]
+        public string ActionOnMaintenance { get; set; }
+
+        [NameInMap("NotifyOnMaintenance")]
+        [Validation(Required=false)]
+        public bool? NotifyOnMaintenance { get; set; }
 
     }
 

@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("Hibernate")]
+        [Validation(Required=false)]
+        public bool? Hibernate { get; set; }
+
     }
 
 }

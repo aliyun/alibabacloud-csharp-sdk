@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplatesRequest : TeaModel {
+        [NameInMap("TemplateTag")]
+        [Validation(Required=false)]
+        public List<DescribeLaunchTemplatesRequestTemplateTag> TemplateTag { get; set; }
+        public class DescribeLaunchTemplatesRequestTemplateTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -29,19 +43,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("TemplateTag")]
+        [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
-        public List<DescribeLaunchTemplatesRequestTemplateTag> TemplateTag { get; set; }
-        public class DescribeLaunchTemplatesRequestTemplateTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
+        public List<string> LaunchTemplateId { get; set; }
 
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        [NameInMap("LaunchTemplateName")]
+        [Validation(Required=false)]
+        public List<string> LaunchTemplateName { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -54,14 +62,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("TemplateResourceGroupId")]
         [Validation(Required=false)]
         public string TemplateResourceGroupId { get; set; }
-
-        [NameInMap("LaunchTemplateId")]
-        [Validation(Required=false)]
-        public List<string> LaunchTemplateId { get; set; }
-
-        [NameInMap("LaunchTemplateName")]
-        [Validation(Required=false)]
-        public List<string> LaunchTemplateName { get; set; }
 
     }
 

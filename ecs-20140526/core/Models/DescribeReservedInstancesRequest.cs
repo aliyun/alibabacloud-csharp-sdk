@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesRequest : TeaModel {
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
+        public class DescribeReservedInstancesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -37,19 +51,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]
-        public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
-        public class DescribeReservedInstancesRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
+        public List<string> ReservedInstanceId { get; set; }
 
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public List<string> Status { get; set; }
 
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
@@ -82,14 +90,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("AllocationType")]
         [Validation(Required=false)]
         public string AllocationType { get; set; }
-
-        [NameInMap("ReservedInstanceId")]
-        [Validation(Required=false)]
-        public List<string> ReservedInstanceId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public List<string> Status { get; set; }
 
     }
 

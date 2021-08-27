@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceHistoryEventsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("InstanceSystemEventSet")]
         [Validation(Required=false)]
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet InstanceSystemEventSet { get; set; }
@@ -36,16 +36,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EventId { get; set; }
                 public string EventPublishTime { get; set; }
                 public string EventFinishTime { get; set; }
+                public string ResourceType { get; set; }
                 public string ImpactLevel { get; set; }
+                public string NotBefore { get; set; }
+                public string InstanceId { get; set; }
+                public string Reason { get; set; }
                 public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType EventType { get; set; }
                 public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public int? Code { get; set; }
 
+                }
+                public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus EventCycleStatus { get; set; }
+                public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus : TeaModel {
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public int? Code { get; set; }
 
                 }
                 public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute ExtendedAttribute { get; set; }
@@ -67,26 +82,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk> InactiveDisk { get; set; }
                         public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk : TeaModel {
                             public string CreationTime { get; set; }
+                            public string DeviceSize { get; set; }
                             public string DeviceCategory { get; set; }
                             public string DeviceType { get; set; }
                             public string ReleaseTime { get; set; }
-                            public string DeviceSize { get; set; }
                         }
                     };
 
-                }
-                public string NotBefore { get; set; }
-                public string InstanceId { get; set; }
-                public string Reason { get; set; }
-                public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus EventCycleStatus { get; set; }
-                public class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus : TeaModel {
-                    [NameInMap("Code")]
+                    [NameInMap("HostType")]
                     [Validation(Required=false)]
-                    public int? Code { get; set; }
+                    public string HostType { get; set; }
 
-                    [NameInMap("Name")]
+                    [NameInMap("HostId")]
                     [Validation(Required=false)]
-                    public string Name { get; set; }
+                    public string HostId { get; set; }
 
                 }
             }

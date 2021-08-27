@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("NetworkInterfaceTrafficMode")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceTrafficMode { get; set; }
+
+        [NameInMap("QueuePairNumber")]
+        [Validation(Required=false)]
+        public int? QueuePairNumber { get; set; }
+
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
@@ -98,6 +106,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public List<string> PrivateIpAddress { get; set; }
+
+        [NameInMap("Ipv6Address")]
+        [Validation(Required=false)]
+        public List<string> Ipv6Address { get; set; }
+
+        [NameInMap("Ipv6AddressCount")]
+        [Validation(Required=false)]
+        public int? Ipv6AddressCount { get; set; }
 
     }
 

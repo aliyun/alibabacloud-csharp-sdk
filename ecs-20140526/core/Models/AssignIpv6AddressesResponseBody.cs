@@ -13,6 +13,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("NetworkInterfaceId")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceId { get; set; }
+
+        [NameInMap("Ipv6Sets")]
+        [Validation(Required=false)]
+        public AssignIpv6AddressesResponseBodyIpv6Sets Ipv6Sets { get; set; }
+        public class AssignIpv6AddressesResponseBodyIpv6Sets : TeaModel {
+            [NameInMap("Ipv6Address")]
+            [Validation(Required=false)]
+            public List<string> Ipv6Address { get; set; }
+        };
+
     }
 
 }

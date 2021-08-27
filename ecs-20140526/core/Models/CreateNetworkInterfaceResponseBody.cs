@@ -13,33 +13,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Type { get; set; }
 
-        [NameInMap("PrivateIpAddress")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public string PrivateIpAddress { get; set; }
-
-        [NameInMap("ServiceManaged")]
-        [Validation(Required=false)]
-        public bool? ServiceManaged { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
+        public string VpcId { get; set; }
 
         [NameInMap("NetworkInterfaceName")]
         [Validation(Required=false)]
@@ -53,6 +33,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }
 
+        [NameInMap("ServiceID")]
+        [Validation(Required=false)]
+        public long? ServiceID { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
+
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
+
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
@@ -62,21 +78,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<string> SecurityGroupId { get; set; }
         };
 
-        [NameInMap("ServiceID")]
+        [NameInMap("PrivateIpSets")]
         [Validation(Required=false)]
-        public long? ServiceID { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
+        public CreateNetworkInterfaceResponseBodyPrivateIpSets PrivateIpSets { get; set; }
+        public class CreateNetworkInterfaceResponseBodyPrivateIpSets : TeaModel {
+            [NameInMap("PrivateIpSet")]
+            [Validation(Required=false)]
+            public List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
+            public class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
+                public string PrivateIpAddress { get; set; }
+                public bool? Primary { get; set; }
+            }
+        };
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -91,16 +104,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
         };
 
-        [NameInMap("PrivateIpSets")]
+        [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
-        public CreateNetworkInterfaceResponseBodyPrivateIpSets PrivateIpSets { get; set; }
-        public class CreateNetworkInterfaceResponseBodyPrivateIpSets : TeaModel {
-            [NameInMap("PrivateIpSet")]
+        public CreateNetworkInterfaceResponseBodyIpv6Sets Ipv6Sets { get; set; }
+        public class CreateNetworkInterfaceResponseBodyIpv6Sets : TeaModel {
+            [NameInMap("Ipv6Set")]
             [Validation(Required=false)]
-            public List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
-            public class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
-                public bool? Primary { get; set; }
-                public string PrivateIpAddress { get; set; }
+            public List<CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set> Ipv6Set { get; set; }
+            public class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set : TeaModel {
+                public string Ipv6Address { get; set; }
             }
         };
 

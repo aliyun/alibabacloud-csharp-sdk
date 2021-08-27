@@ -53,6 +53,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
+        [NameInMap("EventId")]
+        [Validation(Required=false)]
+        public List<string> EventId { get; set; }
+
+        [NameInMap("InstanceEventType")]
+        [Validation(Required=false)]
+        public List<string> InstanceEventType { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
@@ -72,18 +84,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
-
-        [NameInMap("EventId")]
-        [Validation(Required=false)]
-        public List<string> EventId { get; set; }
-
-        [NameInMap("InstanceEventType")]
-        [Validation(Required=false)]
-        public List<string> InstanceEventType { get; set; }
 
     }
 

@@ -129,6 +129,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("IsPublic")]
+        [Validation(Required=false)]
+        public bool? IsPublic { get; set; }
+
+        [NameInMap("ImageOwnerId")]
+        [Validation(Required=false)]
+        public long? ImageOwnerId { get; set; }
+
     }
 
 }

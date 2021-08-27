@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
+        [NameInMap("TradePrice")]
+        [Validation(Required=false)]
+        public float? TradePrice { get; set; }
+
         [NameInMap("InstanceIdSets")]
         [Validation(Required=false)]
         public RunInstancesResponseBodyInstanceIdSets InstanceIdSets { get; set; }
@@ -21,14 +29,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> InstanceIdSet { get; set; }
         };
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
-
-        [NameInMap("TradePrice")]
-        [Validation(Required=false)]
-        public float? TradePrice { get; set; }
 
     }
 

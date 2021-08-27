@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string KMSKeyId { get; set; }
 
+        [NameInMap("MultiAttach")]
+        [Validation(Required=false)]
+        public string MultiAttach { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDisksRequestTag> Tag { get; set; }

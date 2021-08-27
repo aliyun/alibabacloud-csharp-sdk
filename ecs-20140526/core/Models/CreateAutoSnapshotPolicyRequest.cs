@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
     }
 
 }

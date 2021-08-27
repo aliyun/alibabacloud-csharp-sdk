@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone : TeaModel {
-                public string Status { get; set; }
                 public string ZoneId { get; set; }
+                public string Status { get; set; }
                 public string StatusCategory { get; set; }
                 public string RegionId { get; set; }
                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources AvailableResources { get; set; }

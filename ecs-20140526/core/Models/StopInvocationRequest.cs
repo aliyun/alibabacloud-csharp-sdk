@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("InvokeId")]
-        [Validation(Required=false)]
-        public string InvokeId { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
+
+        [NameInMap("InvokeId")]
+        [Validation(Required=false)]
+        public string InvokeId { get; set; }
 
     }
 

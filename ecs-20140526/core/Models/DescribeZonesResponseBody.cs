@@ -21,50 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
-                public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation AvailableResourceCreation { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableResourceCreation : TeaModel {
-                    [NameInMap("ResourceTypes")]
-                    [Validation(Required=false)]
-                    public List<string> ResourceTypes { get; set; }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations DedicatedHostGenerations { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations : TeaModel {
-                    [NameInMap("DedicatedHostGeneration")]
-                    [Validation(Required=false)]
-                    public List<string> DedicatedHostGeneration { get; set; }
-
-                }
-                public string LocalName { get; set; }
-                public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes AvailableInstanceTypes { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes : TeaModel {
-                    [NameInMap("InstanceTypes")]
-                    [Validation(Required=false)]
-                    public List<string> InstanceTypes { get; set; }
-
-                }
                 public string ZoneId { get; set; }
-                public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories AvailableDiskCategories { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableDiskCategories : TeaModel {
-                    [NameInMap("DiskCategories")]
-                    [Validation(Required=false)]
-                    public List<string> DiskCategories { get; set; }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes AvailableDedicatedHostTypes { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes : TeaModel {
-                    [NameInMap("DedicatedHostType")]
-                    [Validation(Required=false)]
-                    public List<string> DedicatedHostType { get; set; }
-
-                }
-                public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories AvailableVolumeCategories { get; set; }
-                public class DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories : TeaModel {
-                    [NameInMap("VolumeCategories")]
-                    [Validation(Required=false)]
-                    public List<string> VolumeCategories { get; set; }
-
-                }
+                public string LocalName { get; set; }
                 public DescribeZonesResponseBodyZonesZoneAvailableResources AvailableResources { get; set; }
                 public class DescribeZonesResponseBodyZonesZoneAvailableResources : TeaModel {
                     [NameInMap("ResourcesInfo")]
@@ -130,6 +88,48 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         };
 
                     }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation AvailableResourceCreation { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableResourceCreation : TeaModel {
+                    [NameInMap("ResourceTypes")]
+                    [Validation(Required=false)]
+                    public List<string> ResourceTypes { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations DedicatedHostGenerations { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations : TeaModel {
+                    [NameInMap("DedicatedHostGeneration")]
+                    [Validation(Required=false)]
+                    public List<string> DedicatedHostGeneration { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes AvailableInstanceTypes { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes : TeaModel {
+                    [NameInMap("InstanceTypes")]
+                    [Validation(Required=false)]
+                    public List<string> InstanceTypes { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories AvailableDiskCategories { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableDiskCategories : TeaModel {
+                    [NameInMap("DiskCategories")]
+                    [Validation(Required=false)]
+                    public List<string> DiskCategories { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes AvailableDedicatedHostTypes { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes : TeaModel {
+                    [NameInMap("DedicatedHostType")]
+                    [Validation(Required=false)]
+                    public List<string> DedicatedHostType { get; set; }
+
+                }
+                public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories AvailableVolumeCategories { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories : TeaModel {
+                    [NameInMap("VolumeCategories")]
+                    [Validation(Required=false)]
+                    public List<string> VolumeCategories { get; set; }
 
                 }
             }

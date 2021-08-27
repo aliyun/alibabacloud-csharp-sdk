@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public List<string> InstanceId { get; set; }
+
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("NotBefore")]
         [Validation(Required=false)]
         public string NotBefore { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public List<string> InstanceId { get; set; }
 
     }
 

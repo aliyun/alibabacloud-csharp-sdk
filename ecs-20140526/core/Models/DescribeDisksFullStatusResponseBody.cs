@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDisksFullStatusResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("DiskFullStatusSet")]
         [Validation(Required=false)]
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSet DiskFullStatusSet { get; set; }
@@ -33,17 +33,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType> DiskFullStatusType { get; set; }
             public class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType : TeaModel {
-                public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus Status { get; set; }
-                public class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus : TeaModel {
-                    [NameInMap("Code")]
-                    [Validation(Required=false)]
-                    public int? Code { get; set; }
-
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                }
+                public string DiskId { get; set; }
+                public string InstanceId { get; set; }
+                public string Device { get; set; }
                 public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet DiskEventSet { get; set; }
                 public class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet : TeaModel {
                     [NameInMap("DiskEventType")]
@@ -70,29 +62,37 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType EventType { get; set; }
                         public class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType : TeaModel {
-                            [NameInMap("Code")]
-                            [Validation(Required=false)]
-                            public int? Code { get; set; }
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
+                            [NameInMap("Code")]
+                            [Validation(Required=false)]
+                            public int? Code { get; set; }
                         };
 
                     }
 
                 }
-                public string Device { get; set; }
-                public string DiskId { get; set; }
-                public string InstanceId { get; set; }
-                public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus HealthStatus { get; set; }
-                public class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus : TeaModel {
+                public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus Status { get; set; }
+                public class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus : TeaModel {
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public int? Code { get; set; }
 
+                }
+                public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus HealthStatus { get; set; }
+                public class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus : TeaModel {
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
+
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public int? Code { get; set; }
 
                 }
             }

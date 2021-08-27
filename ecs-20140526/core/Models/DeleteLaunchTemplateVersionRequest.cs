@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("DeleteVersion")]
+        [Validation(Required=false)]
+        public List<int?> DeleteVersion { get; set; }
+
         [NameInMap("LaunchTemplateId")]
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("LaunchTemplateName")]
         [Validation(Required=false)]
         public string LaunchTemplateName { get; set; }
-
-        [NameInMap("DeleteVersion")]
-        [Validation(Required=false)]
-        public List<int?> DeleteVersion { get; set; }
 
     }
 

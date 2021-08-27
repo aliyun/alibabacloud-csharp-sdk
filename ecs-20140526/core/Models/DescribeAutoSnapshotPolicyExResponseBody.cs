@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoSnapshotPolicyExResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("AutoSnapshotPolicies")]
         [Validation(Required=false)]
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies AutoSnapshotPolicies { get; set; }
@@ -33,13 +33,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy> AutoSnapshotPolicy { get; set; }
             public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy : TeaModel {
-                public string Status { get; set; }
-                public string CreationTime { get; set; }
                 public string TimePoints { get; set; }
+                public string CreationTime { get; set; }
+                public string Status { get; set; }
                 public string AutoSnapshotPolicyName { get; set; }
                 public string TargetCopyRegions { get; set; }
                 public int? CopiedSnapshotsRetentionDays { get; set; }
                 public string AutoSnapshotPolicyId { get; set; }
+                public int? RetentionDays { get; set; }
+                public string RegionId { get; set; }
+                public int? DiskNums { get; set; }
+                public bool? EnableCrossRegionCopy { get; set; }
+                public string RepeatWeekdays { get; set; }
+                public int? VolumeNums { get; set; }
                 public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags Tags { get; set; }
                 public class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags : TeaModel {
                     [NameInMap("Tag")]
@@ -57,12 +63,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public int? RetentionDays { get; set; }
-                public string RegionId { get; set; }
-                public int? DiskNums { get; set; }
-                public bool? EnableCrossRegionCopy { get; set; }
-                public string RepeatWeekdays { get; set; }
-                public int? VolumeNums { get; set; }
             }
         };
 

@@ -33,6 +33,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string AutoSnapshotPolicyId { get; set; }
         };
 
+        [NameInMap("HibernationOptions")]
+        [Validation(Required=false)]
+        public RunInstancesRequestHibernationOptions HibernationOptions { get; set; }
+        public class RunInstancesRequestHibernationOptions : TeaModel {
+            [NameInMap("Configured")]
+            [Validation(Required=false)]
+            public bool? Configured { get; set; }
+        };
+
         [NameInMap("CpuOptions")]
         [Validation(Required=false)]
         public RunInstancesRequestCpuOptions CpuOptions { get; set; }
@@ -46,6 +55,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Numa")]
             [Validation(Required=false)]
             public string Numa { get; set; }
+        };
+
+        [NameInMap("SecurityOptions")]
+        [Validation(Required=false)]
+        public RunInstancesRequestSecurityOptions SecurityOptions { get; set; }
+        public class RunInstancesRequestSecurityOptions : TeaModel {
+            [NameInMap("TrustedSystemMode")]
+            [Validation(Required=false)]
+            public string TrustedSystemMode { get; set; }
+            [NameInMap("ConfidentialComputingMode")]
+            [Validation(Required=false)]
+            public string ConfidentialComputingMode { get; set; }
         };
 
         [NameInMap("PrivatePoolOptions")]
@@ -313,6 +334,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
 
+        [NameInMap("HostNames")]
+        [Validation(Required=false)]
+        public List<string> HostNames { get; set; }
+
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<RunInstancesRequestDataDisk> DataDisk { get; set; }
@@ -389,13 +414,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<RunInstancesRequestNetworkInterface> NetworkInterface { get; set; }
         public class RunInstancesRequestNetworkInterface : TeaModel {
-            [NameInMap("NetworkInterfaceName")]
-            [Validation(Required=false)]
-            public string NetworkInterfaceName { get; set; }
-
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
+
+            [NameInMap("NetworkInterfaceName")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceName { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]

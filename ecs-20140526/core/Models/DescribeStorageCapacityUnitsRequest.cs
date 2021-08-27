@@ -57,6 +57,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeStorageCapacityUnitsRequestTag> Tag { get; set; }
+        public class DescribeStorageCapacityUnitsRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

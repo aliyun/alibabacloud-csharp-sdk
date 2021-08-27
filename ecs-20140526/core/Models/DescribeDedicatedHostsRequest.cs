@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("DedicatedHostClusterId")]
+        [Validation(Required=false)]
+        public string DedicatedHostClusterId { get; set; }
+
     }
 
 }

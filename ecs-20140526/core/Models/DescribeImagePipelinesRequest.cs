@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesRequest : TeaModel {
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeImagePipelinesRequestTag> Tag { get; set; }
+        public class DescribeImagePipelinesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -33,19 +47,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("ImagePipelineId")]
         [Validation(Required=false)]
-        public List<DescribeImagePipelinesRequestTag> Tag { get; set; }
-        public class DescribeImagePipelinesRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public List<string> ImagePipelineId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -58,10 +62,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
-
-        [NameInMap("ImagePipelineId")]
-        [Validation(Required=false)]
-        public List<string> ImagePipelineId { get; set; }
 
     }
 

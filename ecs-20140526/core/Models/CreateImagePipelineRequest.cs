@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateImagePipelineRequest : TeaModel {
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateImagePipelineRequestTag> Tag { get; set; }
+        public class CreateImagePipelineRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -33,19 +47,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("AddAccount")]
         [Validation(Required=false)]
-        public List<CreateImagePipelineRequestTag> Tag { get; set; }
-        public class CreateImagePipelineRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
+        public List<int?> AddAccount { get; set; }
 
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        [NameInMap("ToRegionId")]
+        [Validation(Required=false)]
+        public List<string> ToRegionId { get; set; }
 
         [NameInMap("BaseImageType")]
         [Validation(Required=false)]
@@ -94,14 +102,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
-
-        [NameInMap("AddAccount")]
-        [Validation(Required=false)]
-        public List<int?> AddAccount { get; set; }
-
-        [NameInMap("ToRegionId")]
-        [Validation(Required=false)]
-        public List<string> ToRegionId { get; set; }
 
     }
 

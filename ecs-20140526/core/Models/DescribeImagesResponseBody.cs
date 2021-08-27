@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -33,39 +37,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeImagesResponseBodyImagesImage> Image { get; set; }
             public class DescribeImagesResponseBodyImagesImage : TeaModel {
-                public string Status { get; set; }
                 public string CreationTime { get; set; }
-                public bool? IsSupportIoOptimized { get; set; }
-                public DescribeImagesResponseBodyImagesImageTags Tags { get; set; }
-                public class DescribeImagesResponseBodyImagesImageTags : TeaModel {
-                    [NameInMap("Tag")]
-                    [Validation(Required=false)]
-                    public List<DescribeImagesResponseBodyImagesImageTagsTag> Tag { get; set; }
-                    public class DescribeImagesResponseBodyImagesImageTagsTag : TeaModel {
-                        [NameInMap("TagValue")]
-                        [Validation(Required=false)]
-                        public string TagValue { get; set; }
-
-                        [NameInMap("TagKey")]
-                        [Validation(Required=false)]
-                        public string TagKey { get; set; }
-
-                    }
-
-                }
-                public string ImageVersion { get; set; }
-                public string IsSelfShared { get; set; }
-                public string Description { get; set; }
-                public string OSNameEn { get; set; }
-                public string Platform { get; set; }
-                public string OSName { get; set; }
-                public string ImageId { get; set; }
-                public bool? IsSubscribed { get; set; }
+                public string Status { get; set; }
                 public string ImageFamily { get; set; }
                 public string Progress { get; set; }
                 public bool? IsCopied { get; set; }
+                public bool? IsSupportIoOptimized { get; set; }
                 public string ImageOwnerAlias { get; set; }
                 public bool? IsSupportCloudinit { get; set; }
+                public string ImageVersion { get; set; }
+                public string Usage { get; set; }
+                public string IsSelfShared { get; set; }
+                public string Description { get; set; }
+                public int? Size { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string Platform { get; set; }
+                public string OSNameEn { get; set; }
+                public string ImageName { get; set; }
+                public string OSName { get; set; }
+                public string ImageId { get; set; }
+                public string OSType { get; set; }
+                public bool? IsSubscribed { get; set; }
+                public string ProductCode { get; set; }
+                public string Architecture { get; set; }
                 public DescribeImagesResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }
                 public class DescribeImagesResponseBodyImagesImageDiskDeviceMappings : TeaModel {
                     [NameInMap("DiskDeviceMapping")]
@@ -111,19 +105,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public string Usage { get; set; }
-                public int? Size { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string ImageName { get; set; }
-                public string OSType { get; set; }
-                public string Architecture { get; set; }
-                public string ProductCode { get; set; }
+                public DescribeImagesResponseBodyImagesImageTags Tags { get; set; }
+                public class DescribeImagesResponseBodyImagesImageTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeImagesResponseBodyImagesImageTagsTag> Tag { get; set; }
+                    public class DescribeImagesResponseBodyImagesImageTagsTag : TeaModel {
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                    }
+
+                }
+                public bool? IsPublic { get; set; }
+                public long? ImageOwnerId { get; set; }
             }
         };
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
     }
 

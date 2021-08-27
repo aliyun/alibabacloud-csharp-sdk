@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth> Bandwidth { get; set; }
             public class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth : TeaModel {
-                public int? Max { get; set; }
-                public string Unit { get; set; }
                 public string InternetChargeType { get; set; }
+                public int? Max { get; set; }
                 public int? Min { get; set; }
+                public string Unit { get; set; }
             }
         };
 

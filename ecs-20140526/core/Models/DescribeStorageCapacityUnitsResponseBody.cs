@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeStorageCapacityUnitsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
         [NameInMap("StorageCapacityUnits")]
         [Validation(Required=false)]
@@ -43,6 +43,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string StorageCapacityUnitId { get; set; }
                 public string Name { get; set; }
                 public string RegionId { get; set; }
+                public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags Tags { get; set; }
+                public class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag> Tag { get; set; }
+                    public class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag : TeaModel {
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                    }
+
+                }
             }
         };
 

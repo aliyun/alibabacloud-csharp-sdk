@@ -17,10 +17,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
+            [NameInMap("Rules")]
+            [Validation(Required=false)]
+            public DescribePriceResponseBodyPriceInfoRules Rules { get; set; }
+            public class DescribePriceResponseBodyPriceInfoRules : TeaModel {
+                [NameInMap("Rule")]
+                [Validation(Required=false)]
+                public List<DescribePriceResponseBodyPriceInfoRulesRule> Rule { get; set; }
+                public class DescribePriceResponseBodyPriceInfoRulesRule : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("RuleId")]
+                    [Validation(Required=false)]
+                    public long? RuleId { get; set; }
+
+                }
+
+            }
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribePriceResponseBodyPriceInfoPrice : TeaModel {
+                [NameInMap("OriginalPrice")]
+                [Validation(Required=false)]
+                public float? OriginalPrice { get; set; }
+
                 [NameInMap("ReservedInstanceHourPrice")]
                 [Validation(Required=false)]
                 public float? ReservedInstanceHourPrice { get; set; }
@@ -29,13 +52,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public float? DiscountPrice { get; set; }
 
+                [NameInMap("Currency")]
+                [Validation(Required=false)]
+                public string Currency { get; set; }
+
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
                 public float? TradePrice { get; set; }
-
-                [NameInMap("OriginalPrice")]
-                [Validation(Required=false)]
-                public float? OriginalPrice { get; set; }
 
                 [NameInMap("DetailInfos")]
                 [Validation(Required=false)]
@@ -46,9 +69,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> ResourcePriceModel { get; set; }
                     public class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel : TeaModel {
                         public string Resource { get; set; }
+                        public float? OriginalPrice { get; set; }
                         public float? DiscountPrice { get; set; }
                         public float? TradePrice { get; set; }
-                        public float? OriginalPrice { get; set; }
                         public DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules SubRules { get; set; }
                         public class DescribePriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules : TeaModel {
                             [NameInMap("Rule")]
@@ -68,29 +91,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
                     }
                 };
-
-                [NameInMap("Currency")]
-                [Validation(Required=false)]
-                public string Currency { get; set; }
-
-            }
-            [NameInMap("Rules")]
-            [Validation(Required=false)]
-            public DescribePriceResponseBodyPriceInfoRules Rules { get; set; }
-            public class DescribePriceResponseBodyPriceInfoRules : TeaModel {
-                [NameInMap("Rule")]
-                [Validation(Required=false)]
-                public List<DescribePriceResponseBodyPriceInfoRulesRule> Rule { get; set; }
-                public class DescribePriceResponseBodyPriceInfoRulesRule : TeaModel {
-                    [NameInMap("Description")]
-                    [Validation(Required=false)]
-                    public string Description { get; set; }
-
-                    [NameInMap("RuleId")]
-                    [Validation(Required=false)]
-                    public long? RuleId { get; set; }
-
-                }
 
             }
         };

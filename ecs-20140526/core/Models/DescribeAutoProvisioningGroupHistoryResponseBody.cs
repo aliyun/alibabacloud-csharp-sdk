@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupHistoryResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("AutoProvisioningGroupHistories")]
         [Validation(Required=false)]
         public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories AutoProvisioningGroupHistories { get; set; }
@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory : TeaModel {
                 public string Status { get; set; }
                 public string StartTime { get; set; }
+                public string TaskId { get; set; }
+                public string LastEventTime { get; set; }
                 public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails ActivityDetails { get; set; }
                 public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails : TeaModel {
                     [NameInMap("ActivityDetail")]
@@ -52,8 +54,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public string TaskId { get; set; }
-                public string LastEventTime { get; set; }
             }
         };
 

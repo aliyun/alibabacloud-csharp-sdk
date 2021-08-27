@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageComponentsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -20,6 +16,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
 
         [NameInMap("ImageComponent")]
         [Validation(Required=false)]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImageComponentId { get; set; }
                 public string ComponentType { get; set; }
                 public string ResourceGroupId { get; set; }
+                public string Name { get; set; }
+                public string Content { get; set; }
                 public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags Tags { get; set; }
                 public class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags : TeaModel {
                     [NameInMap("Tag")]
@@ -52,14 +58,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public string Name { get; set; }
-                public string Content { get; set; }
             }
         };
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
     }
 

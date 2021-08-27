@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType> RecommendInstanceType { get; set; }
             public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType : TeaModel {
+                public string CommodityCode { get; set; }
+                public string ZoneId { get; set; }
+                public int? Priority { get; set; }
+                public string NetworkType { get; set; }
+                public string Scene { get; set; }
+                public string SpotStrategy { get; set; }
+                public string RegionId { get; set; }
+                public string InstanceChargeType { get; set; }
                 public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones Zones { get; set; }
                 public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones : TeaModel {
                     [NameInMap("zone")]
@@ -43,10 +51,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                 }
-                public string CommodityCode { get; set; }
-                public string ZoneId { get; set; }
-                public int? Priority { get; set; }
-                public string NetworkType { get; set; }
                 public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType InstanceType { get; set; }
                 public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType : TeaModel {
                     [NameInMap("SupportIoOptimized")]
@@ -74,10 +78,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Generation { get; set; }
 
                 }
-                public string Scene { get; set; }
-                public string SpotStrategy { get; set; }
-                public string RegionId { get; set; }
-                public string InstanceChargeType { get; set; }
             }
         };
 

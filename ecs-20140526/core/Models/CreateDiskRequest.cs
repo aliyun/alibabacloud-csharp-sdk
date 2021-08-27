@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? StorageSetPartitionNumber { get; set; }
 
+        [NameInMap("DedicatedBlockStorageClusterId")]
+        [Validation(Required=false)]
+        public string DedicatedBlockStorageClusterId { get; set; }
+
+        [NameInMap("MultiAttach")]
+        [Validation(Required=false)]
+        public string MultiAttach { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDiskRequestTag> Tag { get; set; }

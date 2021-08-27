@@ -9,25 +9,69 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfaceAttributeResponseBody : TeaModel {
+        [NameInMap("CreationTime")]
+        [Validation(Required=false)]
+        public string CreationTime { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("NetworkInterfaceTrafficMode")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string NetworkInterfaceTrafficMode { get; set; }
 
-        [NameInMap("PrivateIpAddress")]
+        [NameInMap("NetworkInterfaceName")]
         [Validation(Required=false)]
-        public string PrivateIpAddress { get; set; }
+        public string NetworkInterfaceName { get; set; }
+
+        [NameInMap("MacAddress")]
+        [Validation(Required=false)]
+        public string MacAddress { get; set; }
+
+        [NameInMap("QueuePairNumber")]
+        [Validation(Required=false)]
+        public int? QueuePairNumber { get; set; }
+
+        [NameInMap("NetworkInterfaceId")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceId { get; set; }
+
+        [NameInMap("ServiceID")]
+        [Validation(Required=false)]
+        public long? ServiceID { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public string OwnerId { get; set; }
 
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -37,17 +81,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string PrivateIpAddress { get; set; }
 
-        [NameInMap("VSwitchId")]
+        [NameInMap("QueueNumber")]
         [Validation(Required=false)]
-        public string VSwitchId { get; set; }
+        public int? QueueNumber { get; set; }
 
-        [NameInMap("NetworkInterfaceName")]
+        [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
-        public string NetworkInterfaceName { get; set; }
+        public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
+        public class DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds : TeaModel {
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupId { get; set; }
+        };
+
+        [NameInMap("AssociatedPublicIp")]
+        [Validation(Required=false)]
+        public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp AssociatedPublicIp { get; set; }
+        public class DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp : TeaModel {
+            [NameInMap("PublicIpAddress")]
+            [Validation(Required=false)]
+            public string PublicIpAddress { get; set; }
+            [NameInMap("AllocationId")]
+            [Validation(Required=false)]
+            public string AllocationId { get; set; }
+        };
 
         [NameInMap("Attachment")]
         [Validation(Required=false)]
@@ -59,6 +120,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+            [NameInMap("TrunkNetworkInterfaceId")]
+            [Validation(Required=false)]
+            public string TrunkNetworkInterfaceId { get; set; }
             [NameInMap("MemberNetworkInterfaceIds")]
             [Validation(Required=false)]
             public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds MemberNetworkInterfaceIds { get; set; }
@@ -68,39 +132,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public List<string> MemberNetworkInterfaceId { get; set; }
 
             }
-            [NameInMap("TrunkNetworkInterfaceId")]
-            [Validation(Required=false)]
-            public string TrunkNetworkInterfaceId { get; set; }
         };
 
-        [NameInMap("MacAddress")]
+        [NameInMap("PrivateIpSets")]
         [Validation(Required=false)]
-        public string MacAddress { get; set; }
-
-        [NameInMap("NetworkInterfaceId")]
-        [Validation(Required=false)]
-        public string NetworkInterfaceId { get; set; }
-
-        [NameInMap("SecurityGroupIds")]
-        [Validation(Required=false)]
-        public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
-        public class DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds : TeaModel {
-            [NameInMap("SecurityGroupId")]
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets PrivateIpSets { get; set; }
+        public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets : TeaModel {
+            [NameInMap("PrivateIpSet")]
             [Validation(Required=false)]
-            public List<string> SecurityGroupId { get; set; }
+            public List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
+            public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
+                public string PrivateIpAddress { get; set; }
+                public bool? Primary { get; set; }
+                public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp AssociatedPublicIp { get; set; }
+                public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp : TeaModel {
+                    [NameInMap("PublicIpAddress")]
+                    [Validation(Required=false)]
+                    public string PublicIpAddress { get; set; }
+
+                    [NameInMap("AllocationId")]
+                    [Validation(Required=false)]
+                    public string AllocationId { get; set; }
+
+                }
+            }
         };
-
-        [NameInMap("ServiceID")]
-        [Validation(Required=false)]
-        public long? ServiceID { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("QueueNumber")]
-        [Validation(Required=false)]
-        public int? QueueNumber { get; set; }
 
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
@@ -114,30 +170,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
         };
 
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
-        [NameInMap("AssociatedPublicIp")]
-        [Validation(Required=false)]
-        public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp AssociatedPublicIp { get; set; }
-        public class DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp : TeaModel {
-            [NameInMap("AllocationId")]
-            [Validation(Required=false)]
-            public string AllocationId { get; set; }
-            [NameInMap("PublicIpAddress")]
-            [Validation(Required=false)]
-            public string PublicIpAddress { get; set; }
-        };
-
-        [NameInMap("CreationTime")]
-        [Validation(Required=false)]
-        public string CreationTime { get; set; }
-
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyTags Tags { get; set; }
@@ -148,30 +180,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribeNetworkInterfaceAttributeResponseBodyTagsTag : TeaModel {
                 public string TagValue { get; set; }
                 public string TagKey { get; set; }
-            }
-        };
-
-        [NameInMap("PrivateIpSets")]
-        [Validation(Required=false)]
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets PrivateIpSets { get; set; }
-        public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets : TeaModel {
-            [NameInMap("PrivateIpSet")]
-            [Validation(Required=false)]
-            public List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
-            public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet : TeaModel {
-                public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp AssociatedPublicIp { get; set; }
-                public class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp : TeaModel {
-                    [NameInMap("AllocationId")]
-                    [Validation(Required=false)]
-                    public string AllocationId { get; set; }
-
-                    [NameInMap("PublicIpAddress")]
-                    [Validation(Required=false)]
-                    public string PublicIpAddress { get; set; }
-
-                }
-                public bool? Primary { get; set; }
-                public string PrivateIpAddress { get; set; }
             }
         };
 

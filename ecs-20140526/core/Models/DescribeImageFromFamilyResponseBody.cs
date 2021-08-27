@@ -17,52 +17,69 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeImageFromFamilyResponseBodyImage Image { get; set; }
         public class DescribeImageFromFamilyResponseBodyImage : TeaModel {
-            [NameInMap("ImageFamily")]
-            [Validation(Required=false)]
-            public string ImageFamily { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("ImageFamily")]
+            [Validation(Required=false)]
+            public string ImageFamily { get; set; }
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
             [NameInMap("IsCopied")]
             [Validation(Required=false)]
             public bool? IsCopied { get; set; }
-            [NameInMap("ImageOwnerAlias")]
-            [Validation(Required=false)]
-            public string ImageOwnerAlias { get; set; }
             [NameInMap("IsSupportIoOptimized")]
             [Validation(Required=false)]
             public bool? IsSupportIoOptimized { get; set; }
-            [NameInMap("Tags")]
+            [NameInMap("ImageOwnerAlias")]
             [Validation(Required=false)]
-            public DescribeImageFromFamilyResponseBodyImageTags Tags { get; set; }
-            public class DescribeImageFromFamilyResponseBodyImageTags : TeaModel {
-                [NameInMap("Tag")]
-                [Validation(Required=false)]
-                public List<DescribeImageFromFamilyResponseBodyImageTagsTag> Tag { get; set; }
-                public class DescribeImageFromFamilyResponseBodyImageTagsTag : TeaModel {
-                    [NameInMap("TagValue")]
-                    [Validation(Required=false)]
-                    public string TagValue { get; set; }
-
-                    [NameInMap("TagKey")]
-                    [Validation(Required=false)]
-                    public string TagKey { get; set; }
-
-                }
-
-            }
+            public string ImageOwnerAlias { get; set; }
             [NameInMap("IsSupportCloudinit")]
             [Validation(Required=false)]
             public bool? IsSupportCloudinit { get; set; }
             [NameInMap("ImageVersion")]
             [Validation(Required=false)]
             public string ImageVersion { get; set; }
+            [NameInMap("Usage")]
+            [Validation(Required=false)]
+            public string Usage { get; set; }
+            [NameInMap("IsSelfShared")]
+            [Validation(Required=false)]
+            public string IsSelfShared { get; set; }
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
+            [NameInMap("ImageName")]
+            [Validation(Required=false)]
+            public string ImageName { get; set; }
+            [NameInMap("OSName")]
+            [Validation(Required=false)]
+            public string OSName { get; set; }
+            [NameInMap("ImageId")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+            [NameInMap("OSType")]
+            [Validation(Required=false)]
+            public string OSType { get; set; }
+            [NameInMap("IsSubscribed")]
+            [Validation(Required=false)]
+            public bool? IsSubscribed { get; set; }
+            [NameInMap("ProductCode")]
+            [Validation(Required=false)]
+            public string ProductCode { get; set; }
+            [NameInMap("Architecture")]
+            [Validation(Required=false)]
+            public string Architecture { get; set; }
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
             public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings DiskDeviceMappings { get; set; }
@@ -102,42 +119,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
             }
-            [NameInMap("Usage")]
+            [NameInMap("Tags")]
             [Validation(Required=false)]
-            public string Usage { get; set; }
-            [NameInMap("IsSelfShared")]
-            [Validation(Required=false)]
-            public string IsSelfShared { get; set; }
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-            [NameInMap("Platform")]
-            [Validation(Required=false)]
-            public string Platform { get; set; }
-            [NameInMap("ImageName")]
-            [Validation(Required=false)]
-            public string ImageName { get; set; }
-            [NameInMap("OSName")]
-            [Validation(Required=false)]
-            public string OSName { get; set; }
-            [NameInMap("ImageId")]
-            [Validation(Required=false)]
-            public string ImageId { get; set; }
-            [NameInMap("OSType")]
-            [Validation(Required=false)]
-            public string OSType { get; set; }
-            [NameInMap("IsSubscribed")]
-            [Validation(Required=false)]
-            public bool? IsSubscribed { get; set; }
-            [NameInMap("ProductCode")]
-            [Validation(Required=false)]
-            public string ProductCode { get; set; }
-            [NameInMap("Architecture")]
-            [Validation(Required=false)]
-            public string Architecture { get; set; }
+            public DescribeImageFromFamilyResponseBodyImageTags Tags { get; set; }
+            public class DescribeImageFromFamilyResponseBodyImageTags : TeaModel {
+                [NameInMap("Tag")]
+                [Validation(Required=false)]
+                public List<DescribeImageFromFamilyResponseBodyImageTagsTag> Tag { get; set; }
+                public class DescribeImageFromFamilyResponseBodyImageTagsTag : TeaModel {
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                }
+
+            }
         };
 
     }

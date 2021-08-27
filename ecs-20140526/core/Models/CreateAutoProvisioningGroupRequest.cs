@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk : TeaModel {
                 public string PerformanceLevel { get; set; }
-                public string Description { get; set; }
                 public string KmsKeyId { get; set; }
+                public string Description { get; set; }
                 public string SnapshotId { get; set; }
                 public int? Size { get; set; }
                 public string Device { get; set; }
@@ -101,6 +101,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Key { get; set; }
                 public string Value { get; set; }
             }
+            [NameInMap("HostNames")]
+            [Validation(Required=false)]
+            public List<string> HostNames { get; set; }
         };
 
         [NameInMap("OwnerId")]
@@ -223,13 +226,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
-            [NameInMap("WeightedCapacity")]
-            [Validation(Required=false)]
-            public double? WeightedCapacity { get; set; }
-
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
+
+            [NameInMap("WeightedCapacity")]
+            [Validation(Required=false)]
+            public double? WeightedCapacity { get; set; }
 
         }
 
@@ -252,6 +255,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskCategory { get; set; }
 
         }
+
+        [NameInMap("MinTargetCapacity")]
+        [Validation(Required=false)]
+        public string MinTargetCapacity { get; set; }
 
     }
 

@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeManagedInstancesResponseBody : TeaModel {
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeManagedInstancesResponseBodyInstances> Instances { get; set; }
@@ -33,21 +49,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("IntranetIp")]
-            [Validation(Required=false)]
-            public string IntranetIp { get; set; }
-
             [NameInMap("ActivationId")]
             [Validation(Required=false)]
             public string ActivationId { get; set; }
 
-            [NameInMap("RegistrationTime")]
+            [NameInMap("IntranetIp")]
             [Validation(Required=false)]
-            public string RegistrationTime { get; set; }
+            public string IntranetIp { get; set; }
 
             [NameInMap("AgentVersion")]
             [Validation(Required=false)]
             public string AgentVersion { get; set; }
+
+            [NameInMap("RegistrationTime")]
+            [Validation(Required=false)]
+            public string RegistrationTime { get; set; }
 
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -70,22 +86,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MachineId { get; set; }
 
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
 
     }
 

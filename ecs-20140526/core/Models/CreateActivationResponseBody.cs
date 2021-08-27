@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ActivationId")]
-        [Validation(Required=false)]
-        public string ActivationId { get; set; }
-
         [NameInMap("ActivationCode")]
         [Validation(Required=false)]
         public string ActivationCode { get; set; }
+
+        [NameInMap("ActivationId")]
+        [Validation(Required=false)]
+        public string ActivationId { get; set; }
 
     }
 
