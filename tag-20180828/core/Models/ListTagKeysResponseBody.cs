@@ -27,6 +27,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public class ListTagKeysResponseBodyKeysKey : TeaModel {
                 public string Key { get; set; }
                 public string Category { get; set; }
+                public string Description { get; set; }
             }
         };
 

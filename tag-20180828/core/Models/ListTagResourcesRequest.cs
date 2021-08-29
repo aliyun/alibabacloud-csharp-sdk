@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceARN")]
+        [Validation(Required=false)]
+        public List<string> ResourceARN { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -40,10 +44,6 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
-
-        [NameInMap("ResourceARN")]
-        [Validation(Required=false)]
-        public List<string> ResourceARN { get; set; }
 
     }
 
