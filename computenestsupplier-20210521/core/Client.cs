@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("computenestsupplier", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
