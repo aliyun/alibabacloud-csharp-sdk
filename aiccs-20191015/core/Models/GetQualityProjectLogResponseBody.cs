@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetQualityProjectLogResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,13 +21,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetQualityProjectLogResponseBodyData> Data { get; set; }
         public class GetQualityProjectLogResponseBodyData : TeaModel {
+            [NameInMap("ProjectCreateTime")]
+            [Validation(Required=false)]
+            public string ProjectCreateTime { get; set; }
+
             [NameInMap("ActionType")]
             [Validation(Required=false)]
             public string ActionType { get; set; }
+
+            [NameInMap("ActionTime")]
+            [Validation(Required=false)]
+            public string ActionTime { get; set; }
 
             [NameInMap("ActionData")]
             [Validation(Required=false)]
@@ -33,23 +49,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
-            [NameInMap("ProjectCreateTime")]
-            [Validation(Required=false)]
-            public string ProjectCreateTime { get; set; }
-
-            [NameInMap("ActionTime")]
-            [Validation(Required=false)]
-            public string ActionTime { get; set; }
-
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

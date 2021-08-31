@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListOuterOrderedNumbersResponseBody : TeaModel {
-        [NameInMap("Numbers")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public List<string> Numbers { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Numbers")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public List<string> Numbers { get; set; }
 
     }
 

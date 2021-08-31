@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryTaskDetailResponseBody : TeaModel {
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public string HttpStatusCode { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,9 +25,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string HttpStatusCode { get; set; }
+        public string Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,13 +39,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public string CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public string PageSize { get; set; }
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<QueryTaskDetailResponseBodyDataList> List { get; set; }
             public class QueryTaskDetailResponseBodyDataList : TeaModel {
                 public int? Status { get; set; }
-                public string MemberName { get; set; }
                 public string ServicerName { get; set; }
+                public string MemberName { get; set; }
                 public int? OutboundNum { get; set; }
                 public string RetryTime { get; set; }
                 public int? Priority { get; set; }
@@ -55,18 +66,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ExtAttrs { get; set; }
                 public int? Id { get; set; }
             }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public string PageSize { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetQualityRuleListResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -35,21 +43,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public List<GetQualityRuleListResponseBodyDataQualityRuleList> QualityRuleList { get; set; }
             public class GetQualityRuleListResponseBodyDataQualityRuleList : TeaModel {
                 public int? RuleTag { get; set; }
-                public List<string> KeyWords { get; set; }
                 public int? MatchType { get; set; }
                 public string Name { get; set; }
                 public string RuleCreateTime { get; set; }
                 public long? RuleId { get; set; }
+                public List<string> KeyWords { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

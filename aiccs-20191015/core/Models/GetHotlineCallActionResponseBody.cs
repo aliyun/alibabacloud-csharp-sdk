@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineCallActionResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,24 +35,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [NameInMap("DepId")]
             [Validation(Required=false)]
             public long? DepId { get; set; }
-            [NameInMap("MemberName")]
-            [Validation(Required=false)]
-            public string MemberName { get; set; }
             [NameInMap("ServicerName")]
             [Validation(Required=false)]
             public string ServicerName { get; set; }
+            [NameInMap("MemberName")]
+            [Validation(Required=false)]
+            public string MemberName { get; set; }
             [NameInMap("ChannelType")]
             [Validation(Required=false)]
             public long? ChannelType { get; set; }
-            [NameInMap("ActionId")]
-            [Validation(Required=false)]
-            public long? ActionId { get; set; }
-            [NameInMap("CalloutName")]
-            [Validation(Required=false)]
-            public string CalloutName { get; set; }
             [NameInMap("SubTouchId")]
             [Validation(Required=false)]
             public long? SubTouchId { get; set; }
+            [NameInMap("CalloutName")]
+            [Validation(Required=false)]
+            public string CalloutName { get; set; }
+            [NameInMap("ActionId")]
+            [Validation(Required=false)]
+            public long? ActionId { get; set; }
             [NameInMap("ServicerId")]
             [Validation(Required=false)]
             public long? ServicerId { get; set; }
@@ -73,14 +81,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public string MemberList { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

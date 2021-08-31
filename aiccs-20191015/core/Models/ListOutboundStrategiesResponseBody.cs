@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListOutboundStrategiesResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -41,21 +45,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public string OutboundNum { get; set; }
 
-            [NameInMap("ModifierId")]
-            [Validation(Required=false)]
-            public long? ModifierId { get; set; }
-
             [NameInMap("OutboundStrategyName")]
             [Validation(Required=false)]
             public string OutboundStrategyName { get; set; }
 
-            [NameInMap("OutboundStrategyId")]
+            [NameInMap("ModifierId")]
             [Validation(Required=false)]
-            public long? OutboundStrategyId { get; set; }
+            public long? ModifierId { get; set; }
 
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }
+
+            [NameInMap("OutboundStrategyId")]
+            [Validation(Required=false)]
+            public long? OutboundStrategyId { get; set; }
 
             [NameInMap("CreatorId")]
             [Validation(Required=false)]
@@ -110,10 +114,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string GmtCreateStr { get; set; }
 
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

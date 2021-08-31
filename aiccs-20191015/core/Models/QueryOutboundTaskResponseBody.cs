@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryOutboundTaskResponseBody : TeaModel {
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public string HttpStatusCode { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,9 +25,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string HttpStatusCode { get; set; }
+        public string Success { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,22 +39,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public string CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public string PageSize { get; set; }
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<QueryOutboundTaskResponseBodyDataList> List { get; set; }
             public class QueryOutboundTaskResponseBodyDataList : TeaModel {
-                public int? Status { get; set; }
                 public int? Type { get; set; }
+                public int? Status { get; set; }
                 public string EndDate { get; set; }
-                public int? RetryTime { get; set; }
                 public int? RetryInterval { get; set; }
+                public int? RetryTime { get; set; }
                 public string StartDate { get; set; }
                 public long? GmtModified { get; set; }
                 public string Creator { get; set; }
                 public string EndTime { get; set; }
-                public string StartTime { get; set; }
-                public int? Model { get; set; }
                 public long? BuId { get; set; }
+                public int? Model { get; set; }
+                public string StartTime { get; set; }
                 public string Modifier { get; set; }
                 public string GroupName { get; set; }
                 public string Description { get; set; }
@@ -58,18 +69,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CallerNum { get; set; }
                 public long? Id { get; set; }
             }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public string PageSize { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
 
     }
 
