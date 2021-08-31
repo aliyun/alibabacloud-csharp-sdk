@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
@@ -46,6 +50,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
+            [NameInMap("DeployMetadata")]
+            [Validation(Required=false)]
+            public string DeployMetadata { get; set; }
             [NameInMap("DeployType")]
             [Validation(Required=false)]
             public string DeployType { get; set; }
@@ -70,26 +77,43 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string Name { get; set; }
                 public string ShortDescription { get; set; }
             }
-            [NameInMap("DeployMetadata")]
-            [Validation(Required=false)]
-            public string DeployMetadata { get; set; }
         };
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
-        [NameInMap("StatusDetail")]
-        [Validation(Required=false)]
-        public string StatusDetail { get; set; }
-
         [NameInMap("Progress")]
         [Validation(Required=false)]
         public long? Progress { get; set; }
 
-        [NameInMap("TemplateName")]
+        [NameInMap("StatusDetail")]
         [Validation(Required=false)]
-        public string TemplateName { get; set; }
+        public string StatusDetail { get; set; }
+
+        [NameInMap("OperationStartTime")]
+        [Validation(Required=false)]
+        public string OperationStartTime { get; set; }
+
+        [NameInMap("OperationEndTime")]
+        [Validation(Required=false)]
+        public string OperationEndTime { get; set; }
+
+        [NameInMap("OperatedServiceInstanceId")]
+        [Validation(Required=false)]
+        public string OperatedServiceInstanceId { get; set; }
+
+        [NameInMap("IsOperated")]
+        [Validation(Required=false)]
+        public bool? IsOperated { get; set; }
+
+        [NameInMap("EnableInstanceOps")]
+        [Validation(Required=false)]
+        public bool? EnableInstanceOps { get; set; }
+
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public string Resources { get; set; }
 
     }
 

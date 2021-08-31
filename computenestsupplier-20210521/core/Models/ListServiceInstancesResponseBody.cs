@@ -92,17 +92,33 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string Parameters { get; set; }
 
-            [NameInMap("StatusDetail")]
-            [Validation(Required=false)]
-            public string StatusDetail { get; set; }
-
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public long? Progress { get; set; }
 
+            [NameInMap("StatusDetail")]
+            [Validation(Required=false)]
+            public string StatusDetail { get; set; }
+
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
+
+            [NameInMap("OperatedServiceInstanceId")]
+            [Validation(Required=false)]
+            public string OperatedServiceInstanceId { get; set; }
+
+            [NameInMap("OperationStartTime")]
+            [Validation(Required=false)]
+            public string OperationStartTime { get; set; }
+
+            [NameInMap("OperationEndTime")]
+            [Validation(Required=false)]
+            public string OperationEndTime { get; set; }
+
+            [NameInMap("EnableInstanceOps")]
+            [Validation(Required=false)]
+            public bool? EnableInstanceOps { get; set; }
 
         }
 

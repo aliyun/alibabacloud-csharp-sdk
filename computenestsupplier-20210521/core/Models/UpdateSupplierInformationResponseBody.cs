@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class GetSupplierInformationResponseBody : TeaModel {
+    public class UpdateSupplierInformationResponseBody : TeaModel {
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -27,14 +27,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [NameInMap("SupplierDesc")]
         [Validation(Required=false)]
         public string SupplierDesc { get; set; }
-
-        [NameInMap("OperationIp")]
-        [Validation(Required=false)]
-        public string OperationIp { get; set; }
-
-        [NameInMap("OperationMfaPresent")]
-        [Validation(Required=false)]
-        public bool? OperationMfaPresent { get; set; }
 
     }
 
