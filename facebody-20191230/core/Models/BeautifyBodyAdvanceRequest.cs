@@ -127,6 +127,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         }
 
+        [NameInMap("IsPregnant")]
+        [Validation(Required=false)]
+        public bool? IsPregnant { get; set; }
+
     }
 
 }

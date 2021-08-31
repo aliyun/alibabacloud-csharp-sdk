@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string PoseListShrink { get; set; }
 
+        [NameInMap("IsPregnant")]
+        [Validation(Required=false)]
+        public bool? IsPregnant { get; set; }
+
     }
 
 }
