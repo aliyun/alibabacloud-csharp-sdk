@@ -9,21 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListChartReleaseResponseBody : TeaModel {
-        [NameInMap("IsSuccess")]
-        [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        [NameInMap("IsSuccess")]
+        [Validation(Required=false)]
+        public bool? IsSuccess { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
         [NameInMap("ChartReleases")]
         [Validation(Required=false)]
@@ -58,14 +66,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Chart { get; set; }
 
         }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

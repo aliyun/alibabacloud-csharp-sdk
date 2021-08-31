@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string BuildRuleId { get; set; }
 
+        [NameInMap("Platforms")]
+        [Validation(Required=false)]
+        public List<string> Platforms { get; set; }
+
     }
 
 }

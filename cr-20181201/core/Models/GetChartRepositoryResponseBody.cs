@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetChartRepositoryResponseBody : TeaModel {
+        [NameInMap("Summary")]
+        [Validation(Required=false)]
+        public string Summary { get; set; }
+
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public long? CreateTime { get; set; }
+
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
-        [NameInMap("RepoNamespaceName")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string RepoNamespaceName { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("RepoStatus")]
         [Validation(Required=false)]
@@ -29,33 +33,29 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoType { get; set; }
 
-        [NameInMap("ModifiedTime")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? ModifiedTime { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public long? CreateTime { get; set; }
-
-        [NameInMap("RepoName")]
-        [Validation(Required=false)]
-        public string RepoName { get; set; }
-
-        [NameInMap("Summary")]
-        [Validation(Required=false)]
-        public string Summary { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("RepoId")]
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
+        [NameInMap("ModifiedTime")]
+        [Validation(Required=false)]
+        public long? ModifiedTime { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("RepoNamespaceName")]
+        [Validation(Required=false)]
+        public string RepoNamespaceName { get; set; }
+
+        [NameInMap("RepoName")]
+        [Validation(Required=false)]
+        public string RepoName { get; set; }
 
     }
 

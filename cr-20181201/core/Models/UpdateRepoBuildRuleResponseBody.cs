@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoBuildRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
-
-        [NameInMap("BuildRuleId")]
-        [Validation(Required=false)]
-        public string BuildRuleId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("BuildRuleId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string BuildRuleId { get; set; }
 
     }
 

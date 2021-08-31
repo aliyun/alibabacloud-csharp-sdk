@@ -9,21 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoSyncRuleResponseBody : TeaModel {
-        [NameInMap("IsSuccess")]
-        [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        [NameInMap("IsSuccess")]
+        [Validation(Required=false)]
+        public bool? IsSuccess { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
         [NameInMap("SyncRules")]
         [Validation(Required=false)]
@@ -53,13 +61,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string TargetNamespaceName { get; set; }
 
-            [NameInMap("TargetRepoName")]
-            [Validation(Required=false)]
-            public string TargetRepoName { get; set; }
-
             [NameInMap("TargetInstanceId")]
             [Validation(Required=false)]
             public string TargetInstanceId { get; set; }
+
+            [NameInMap("TargetRepoName")]
+            [Validation(Required=false)]
+            public string TargetRepoName { get; set; }
 
             [NameInMap("SyncRuleId")]
             [Validation(Required=false)]
@@ -94,14 +102,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SyncDirection { get; set; }
 
         }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

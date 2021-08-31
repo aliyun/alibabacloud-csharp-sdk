@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceVpcEndpointResponseBody : TeaModel {
-        [NameInMap("Domains")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public List<string> Domains { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Domains")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public List<string> Domains { get; set; }
 
         [NameInMap("LinkedVpcs")]
         [Validation(Required=false)]
@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
+
             [NameInMap("DefaultAccess")]
             [Validation(Required=false)]
             public bool? DefaultAccess { get; set; }
@@ -48,10 +52,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
-
-            [NameInMap("Ip")]
-            [Validation(Required=false)]
-            public string Ip { get; set; }
 
         }
 

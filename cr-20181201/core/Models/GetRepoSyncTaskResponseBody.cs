@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoSyncTaskResponseBody : TeaModel {
-        [NameInMap("IsSuccess")]
+        [NameInMap("SyncRuleId")]
         [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
+        public string SyncRuleId { get; set; }
 
         [NameInMap("Progress")]
         [Validation(Required=false)]
@@ -21,31 +21,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("LayerTasks")]
+        [NameInMap("SyncedSize")]
         [Validation(Required=false)]
-        public List<GetRepoSyncTaskResponseBodyLayerTasks> LayerTasks { get; set; }
-        public class GetRepoSyncTaskResponseBodyLayerTasks : TeaModel {
-            [NameInMap("SyncedSize")]
-            [Validation(Required=false)]
-            public long? SyncedSize { get; set; }
-
-            [NameInMap("Digest")]
-            [Validation(Required=false)]
-            public string Digest { get; set; }
-
-            [NameInMap("TaskStatus")]
-            [Validation(Required=false)]
-            public string TaskStatus { get; set; }
-
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public long? Size { get; set; }
-
-            [NameInMap("SyncLayerTaskId")]
-            [Validation(Required=false)]
-            public string SyncLayerTaskId { get; set; }
-
-        }
+        public long? SyncedSize { get; set; }
 
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]
@@ -55,17 +33,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string SyncTaskId { get; set; }
 
+        [NameInMap("SyncBatchTaskId")]
+        [Validation(Required=false)]
+        public string SyncBatchTaskId { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("SyncedSize")]
+        [NameInMap("IsSuccess")]
         [Validation(Required=false)]
-        public long? SyncedSize { get; set; }
+        public bool? IsSuccess { get; set; }
 
-        [NameInMap("SyncRuleId")]
+        [NameInMap("TaskTrigger")]
         [Validation(Required=false)]
-        public string SyncRuleId { get; set; }
+        public string TaskTrigger { get; set; }
 
         [NameInMap("ImageFrom")]
         [Validation(Required=false)]
@@ -88,10 +70,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RegionId { get; set; }
         };
 
-        [NameInMap("TaskTrigger")]
-        [Validation(Required=false)]
-        public string TaskTrigger { get; set; }
-
         [NameInMap("ImageTo")]
         [Validation(Required=false)]
         public GetRepoSyncTaskResponseBodyImageTo ImageTo { get; set; }
@@ -113,9 +91,35 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RegionId { get; set; }
         };
 
-        [NameInMap("SyncBatchTaskId")]
+        [NameInMap("LayerTasks")]
         [Validation(Required=false)]
-        public string SyncBatchTaskId { get; set; }
+        public List<GetRepoSyncTaskResponseBodyLayerTasks> LayerTasks { get; set; }
+        public class GetRepoSyncTaskResponseBodyLayerTasks : TeaModel {
+            [NameInMap("TaskStatus")]
+            [Validation(Required=false)]
+            public string TaskStatus { get; set; }
+
+            [NameInMap("Digest")]
+            [Validation(Required=false)]
+            public string Digest { get; set; }
+
+            [NameInMap("SyncedSize")]
+            [Validation(Required=false)]
+            public long? SyncedSize { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public long? Size { get; set; }
+
+            [NameInMap("SyncLayerTaskId")]
+            [Validation(Required=false)]
+            public string SyncLayerTaskId { get; set; }
+
+            [NameInMap("ArtifactDigest")]
+            [Validation(Required=false)]
+            public string ArtifactDigest { get; set; }
+
+        }
 
     }
 

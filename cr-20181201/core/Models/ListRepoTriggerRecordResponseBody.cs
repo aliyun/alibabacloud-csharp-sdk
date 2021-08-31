@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoTriggerRecordResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
@@ -25,37 +29,37 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string RequestHeaders { get; set; }
 
-            [NameInMap("ResponseHeaders")]
-            [Validation(Required=false)]
-            public string ResponseHeaders { get; set; }
-
             [NameInMap("TriggerName")]
             [Validation(Required=false)]
             public string TriggerName { get; set; }
+
+            [NameInMap("ResponseHeaders")]
+            [Validation(Required=false)]
+            public string ResponseHeaders { get; set; }
 
             [NameInMap("TriggerLogId")]
             [Validation(Required=false)]
             public string TriggerLogId { get; set; }
 
-            [NameInMap("RequestBody")]
+            [NameInMap("ResponseBody")]
             [Validation(Required=false)]
-            public string RequestBody { get; set; }
+            public string ResponseBody { get; set; }
 
             [NameInMap("TriggerUrl")]
             [Validation(Required=false)]
             public string TriggerUrl { get; set; }
 
-            [NameInMap("ResponseBody")]
+            [NameInMap("RequestBody")]
             [Validation(Required=false)]
-            public string ResponseBody { get; set; }
-
-            [NameInMap("TriggerTag")]
-            [Validation(Required=false)]
-            public string TriggerTag { get; set; }
+            public string RequestBody { get; set; }
 
             [NameInMap("TriggerType")]
             [Validation(Required=false)]
             public string TriggerType { get; set; }
+
+            [NameInMap("TriggerTag")]
+            [Validation(Required=false)]
+            public string TriggerTag { get; set; }
 
             [NameInMap("StatusCode")]
             [Validation(Required=false)]
@@ -74,10 +78,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? RequestTime { get; set; }
 
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

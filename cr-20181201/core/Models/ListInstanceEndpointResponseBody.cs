@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListInstanceEndpointResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("IsSuccess")]
+        [Validation(Required=false)]
+        public bool? IsSuccess { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public List<ListInstanceEndpointResponseBodyEndpoints> Endpoints { get; set; }
@@ -16,6 +28,18 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("EndpointType")]
+            [Validation(Required=false)]
+            public string EndpointType { get; set; }
+
+            [NameInMap("AclEnable")]
+            [Validation(Required=false)]
+            public bool? AclEnable { get; set; }
+
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
 
             [NameInMap("Domains")]
             [Validation(Required=false)]
@@ -31,10 +55,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             }
 
-            [NameInMap("EndpointType")]
-            [Validation(Required=false)]
-            public string EndpointType { get; set; }
-
             [NameInMap("LinkedVpcs")]
             [Validation(Required=false)]
             public List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> LinkedVpcs { get; set; }
@@ -44,10 +64,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string VpcId { get; set; }
 
             }
-
-            [NameInMap("AclEnable")]
-            [Validation(Required=false)]
-            public bool? AclEnable { get; set; }
 
             [NameInMap("AclEntries")]
             [Validation(Required=false)]
@@ -59,23 +75,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             }
 
-            [NameInMap("Enable")]
-            [Validation(Required=false)]
-            public bool? Enable { get; set; }
-
         }
-
-        [NameInMap("IsSuccess")]
-        [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

@@ -37,6 +37,38 @@ namespace AlibabaCloud.SDK.Cr20181201
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CancelArtifactBuildTaskResponse CancelArtifactBuildTaskWithOptions(CancelArtifactBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CancelArtifactBuildTaskResponse>(DoRPCRequest("CancelArtifactBuildTask", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CancelArtifactBuildTaskResponse> CancelArtifactBuildTaskWithOptionsAsync(CancelArtifactBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CancelArtifactBuildTaskResponse>(await DoRPCRequestAsync("CancelArtifactBuildTask", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CancelArtifactBuildTaskResponse CancelArtifactBuildTask(CancelArtifactBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelArtifactBuildTaskWithOptions(request, runtime);
+        }
+
+        public async Task<CancelArtifactBuildTaskResponse> CancelArtifactBuildTaskAsync(CancelArtifactBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelArtifactBuildTaskWithOptionsAsync(request, runtime);
+        }
+
         public CancelRepoBuildRecordResponse CancelRepoBuildRecordWithOptions(CancelRepoBuildRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -325,6 +357,38 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await CreateRepositoryWithOptionsAsync(request, runtime);
         }
 
+        public CreateRepoSourceCodeRepoResponse CreateRepoSourceCodeRepoWithOptions(CreateRepoSourceCodeRepoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateRepoSourceCodeRepoResponse>(DoRPCRequest("CreateRepoSourceCodeRepo", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CreateRepoSourceCodeRepoResponse> CreateRepoSourceCodeRepoWithOptionsAsync(CreateRepoSourceCodeRepoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateRepoSourceCodeRepoResponse>(await DoRPCRequestAsync("CreateRepoSourceCodeRepo", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CreateRepoSourceCodeRepoResponse CreateRepoSourceCodeRepo(CreateRepoSourceCodeRepoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRepoSourceCodeRepoWithOptions(request, runtime);
+        }
+
+        public async Task<CreateRepoSourceCodeRepoResponse> CreateRepoSourceCodeRepoAsync(CreateRepoSourceCodeRepoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRepoSourceCodeRepoWithOptionsAsync(request, runtime);
+        }
+
         public CreateRepoSyncRuleResponse CreateRepoSyncRuleWithOptions(CreateRepoSyncRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -387,6 +451,38 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRepoSyncTaskByRuleWithOptionsAsync(request, runtime);
+        }
+
+        public CreateRepoTagResponse CreateRepoTagWithOptions(CreateRepoTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateRepoTagResponse>(DoRPCRequest("CreateRepoTag", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CreateRepoTagResponse> CreateRepoTagWithOptionsAsync(CreateRepoTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateRepoTagResponse>(await DoRPCRequestAsync("CreateRepoTag", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CreateRepoTagResponse CreateRepoTag(CreateRepoTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRepoTagWithOptions(request, runtime);
+        }
+
+        public async Task<CreateRepoTagResponse> CreateRepoTagAsync(CreateRepoTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRepoTagWithOptionsAsync(request, runtime);
         }
 
         public CreateRepoTagScanTaskResponse CreateRepoTagScanTaskWithOptions(CreateRepoTagScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -805,6 +901,40 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await DeleteRepoTriggerWithOptionsAsync(request, runtime);
         }
 
+        public GetArtifactBuildTaskResponse GetArtifactBuildTaskWithOptions(GetArtifactBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<GetArtifactBuildTaskResponse>(DoRPCRequest("GetArtifactBuildTask", "2018-12-01", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetArtifactBuildTaskResponse> GetArtifactBuildTaskWithOptionsAsync(GetArtifactBuildTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<GetArtifactBuildTaskResponse>(await DoRPCRequestAsync("GetArtifactBuildTask", "2018-12-01", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public GetArtifactBuildTaskResponse GetArtifactBuildTask(GetArtifactBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetArtifactBuildTaskWithOptions(request, runtime);
+        }
+
+        public async Task<GetArtifactBuildTaskResponse> GetArtifactBuildTaskAsync(GetArtifactBuildTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetArtifactBuildTaskWithOptionsAsync(request, runtime);
+        }
+
         public GetAuthorizationTokenResponse GetAuthorizationTokenWithOptions(GetAuthorizationTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1181,6 +1311,38 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await GetRepositoryWithOptionsAsync(request, runtime);
         }
 
+        public GetRepoSourceCodeRepoResponse GetRepoSourceCodeRepoWithOptions(GetRepoSourceCodeRepoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRepoSourceCodeRepoResponse>(DoRPCRequest("GetRepoSourceCodeRepo", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetRepoSourceCodeRepoResponse> GetRepoSourceCodeRepoWithOptionsAsync(GetRepoSourceCodeRepoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetRepoSourceCodeRepoResponse>(await DoRPCRequestAsync("GetRepoSourceCodeRepo", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetRepoSourceCodeRepoResponse GetRepoSourceCodeRepo(GetRepoSourceCodeRepoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRepoSourceCodeRepoWithOptions(request, runtime);
+        }
+
+        public async Task<GetRepoSourceCodeRepoResponse> GetRepoSourceCodeRepoAsync(GetRepoSourceCodeRepoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRepoSourceCodeRepoWithOptionsAsync(request, runtime);
+        }
+
         public GetRepoSyncTaskResponse GetRepoSyncTaskWithOptions(GetRepoSyncTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1339,6 +1501,40 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRepoTagScanSummaryWithOptionsAsync(request, runtime);
+        }
+
+        public ListArtifactBuildTaskLogResponse ListArtifactBuildTaskLogWithOptions(ListArtifactBuildTaskLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListArtifactBuildTaskLogResponse>(DoRPCRequest("ListArtifactBuildTaskLog", "2018-12-01", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListArtifactBuildTaskLogResponse> ListArtifactBuildTaskLogWithOptionsAsync(ListArtifactBuildTaskLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListArtifactBuildTaskLogResponse>(await DoRPCRequestAsync("ListArtifactBuildTaskLog", "2018-12-01", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public ListArtifactBuildTaskLogResponse ListArtifactBuildTaskLog(ListArtifactBuildTaskLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListArtifactBuildTaskLogWithOptions(request, runtime);
+        }
+
+        public async Task<ListArtifactBuildTaskLogResponse> ListArtifactBuildTaskLogAsync(ListArtifactBuildTaskLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListArtifactBuildTaskLogWithOptionsAsync(request, runtime);
         }
 
         public ListChartNamespaceResponse ListChartNamespaceWithOptions(ListChartNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2107,6 +2303,38 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRepositoryWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateRepoSourceCodeRepoResponse UpdateRepoSourceCodeRepoWithOptions(UpdateRepoSourceCodeRepoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateRepoSourceCodeRepoResponse>(DoRPCRequest("UpdateRepoSourceCodeRepo", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<UpdateRepoSourceCodeRepoResponse> UpdateRepoSourceCodeRepoWithOptionsAsync(UpdateRepoSourceCodeRepoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateRepoSourceCodeRepoResponse>(await DoRPCRequestAsync("UpdateRepoSourceCodeRepo", "2018-12-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public UpdateRepoSourceCodeRepoResponse UpdateRepoSourceCodeRepo(UpdateRepoSourceCodeRepoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRepoSourceCodeRepoWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateRepoSourceCodeRepoResponse> UpdateRepoSourceCodeRepoAsync(UpdateRepoSourceCodeRepoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRepoSourceCodeRepoWithOptionsAsync(request, runtime);
         }
 
         public UpdateRepoTriggerResponse UpdateRepoTriggerWithOptions(UpdateRepoTriggerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

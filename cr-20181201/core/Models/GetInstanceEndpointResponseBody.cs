@@ -13,6 +13,26 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("IsSuccess")]
+        [Validation(Required=false)]
+        public bool? IsSuccess { get; set; }
+
+        [NameInMap("AclEnable")]
+        [Validation(Required=false)]
+        public bool? AclEnable { get; set; }
+
+        [NameInMap("Enable")]
+        [Validation(Required=false)]
+        public bool? Enable { get; set; }
+
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<GetInstanceEndpointResponseBodyDomains> Domains { get; set; }
@@ -40,26 +60,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Entry { get; set; }
 
         }
-
-        [NameInMap("IsSuccess")]
-        [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
-
-        [NameInMap("AclEnable")]
-        [Validation(Required=false)]
-        public bool? AclEnable { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Enable")]
-        [Validation(Required=false)]
-        public bool? Enable { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

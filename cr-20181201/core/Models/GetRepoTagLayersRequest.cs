@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Tag { get; set; }
 
+        [NameInMap("Digest")]
+        [Validation(Required=false)]
+        public string Digest { get; set; }
+
     }
 
 }
