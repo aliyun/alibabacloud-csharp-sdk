@@ -210,6 +210,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["Output"] = request.Output;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -237,6 +241,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
             {
                 body["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -564,6 +572,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["UserData"] = request.UserData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -595,6 +607,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 body["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -658,6 +674,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             {
                 body["UserData"] = request.UserData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -705,6 +725,10 @@ namespace AlibabaCloud.SDK.Mts20210728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 body["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

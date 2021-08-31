@@ -72,6 +72,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         [Validation(Required=false)]
         public string UserData { get; set; }
 
+        /// <summary>
+        /// 外部url链接(Input和url二选一)
+        /// </summary>
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
+
     }
 
 }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
 {
     public class SubmitImageCopyrightRequest : TeaModel {
         /// <summary>
-        /// 需要加水印的图片oss地址
+        /// 需要加水印的图片oss地址(Input和url二选一)
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         [NameInMap("Output")]
         [Validation(Required=false)]
         public string Output { get; set; }
+
+        /// <summary>
+        /// 外部url链接(Input和url二选一)
+        /// </summary>
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 
