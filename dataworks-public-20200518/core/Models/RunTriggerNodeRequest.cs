@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunTriggerNodeRequest : TeaModel {
         [NameInMap("NodeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? NodeId { get; set; }
 
         [NameInMap("CycleTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? CycleTime { get; set; }
 
         [NameInMap("BizDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? BizDate { get; set; }
 
         [NameInMap("AppId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? AppId { get; set; }
 
     }

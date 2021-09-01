@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicRequest : TeaModel {
         [NameInMap("TopicId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? TopicId { get; set; }
 
     }

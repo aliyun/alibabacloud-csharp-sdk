@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ResumeInstanceRequest : TeaModel {
         [NameInMap("InstanceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? InstanceId { get; set; }
 
         [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectEnv { get; set; }
 
     }

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityRuleRequest : TeaModel {
         [NameInMap("RuleId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? RuleId { get; set; }
 
         [NameInMap("ProjectName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectName { get; set; }
 
     }

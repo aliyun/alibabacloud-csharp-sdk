@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDIProjectConfigRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("DestinationType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DestinationType { get; set; }
 
         [NameInMap("SourceType")]

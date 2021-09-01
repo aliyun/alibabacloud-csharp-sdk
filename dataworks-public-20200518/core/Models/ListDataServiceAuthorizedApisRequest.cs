@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceAuthorizedApisRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("PageNumber")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         [NameInMap("TenantId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? TenantId { get; set; }
 
         [NameInMap("ApiNameKeyword")]

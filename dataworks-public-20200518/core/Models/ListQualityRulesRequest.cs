@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityRulesRequest : TeaModel {
         [NameInMap("ProjectName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectName { get; set; }
 
         [NameInMap("EntityId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? EntityId { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
     }

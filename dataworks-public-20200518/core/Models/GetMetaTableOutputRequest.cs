@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         [NameInMap("TableGuid")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableGuid { get; set; }
 
         [NameInMap("StartDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StartDate { get; set; }
 
         [NameInMap("EndDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EndDate { get; set; }
 
     }

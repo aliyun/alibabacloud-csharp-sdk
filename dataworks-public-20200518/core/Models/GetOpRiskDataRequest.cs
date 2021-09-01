@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOpRiskDataRequest : TeaModel {
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("PageNo")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNo { get; set; }
 
         [NameInMap("Name")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         [NameInMap("Date")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Date { get; set; }
 
         [NameInMap("RiskType")]

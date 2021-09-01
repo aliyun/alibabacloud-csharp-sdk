@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? LevelId { get; set; }
 
         [NameInMap("TableGuid")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableGuid { get; set; }
 
         [NameInMap("LevelType")]

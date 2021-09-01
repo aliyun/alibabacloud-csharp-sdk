@@ -9,13 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDDLJobStatusResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Data")]
         [Validation(Required=true)]
-        public GetDDLJobStatusResponseBody Body { get; set; }
+        public GetDDLJobStatusResponseData Data { get; set; }
+        public class GetDDLJobStatusResponseData : TeaModel {
+            [NameInMap("NextTaskId")]
+            [Validation(Required=true)]
+            public string NextTaskId { get; set; }
+            [NameInMap("Content")]
+            [Validation(Required=true)]
+            public string Content { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=true)]
+            public string Status { get; set; }
+            [NameInMap("TaskId")]
+            [Validation(Required=true)]
+            public string TaskId { get; set; }
+        };
 
     }
 

@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunSmokeTestRequest : TeaModel {
         [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("Bizdate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Bizdate { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Name { get; set; }
 
         [NameInMap("NodeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? NodeId { get; set; }
 
         [NameInMap("NodeParams")]

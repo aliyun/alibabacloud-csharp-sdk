@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         [NameInMap("FunctionType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FunctionType { get; set; }
 
         [NameInMap("ClassName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ClassName { get; set; }
 
         [NameInMap("Resources")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Resources { get; set; }
 
         [NameInMap("UdfDescription")]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         [NameInMap("FileId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FileId { get; set; }
 
     }

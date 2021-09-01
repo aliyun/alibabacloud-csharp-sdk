@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetPermissionApplyOrderDetailRequest : TeaModel {
         [NameInMap("FlowId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FlowId { get; set; }
 
     }

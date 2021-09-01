@@ -9,13 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SearchMetaTablesResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=true)]
-        public SearchMetaTablesResponseBody Body { get; set; }
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=true)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public SearchMetaTablesResponseData Data { get; set; }
+        public class SearchMetaTablesResponseData : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=true)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=true)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=true)]
+            public long? TotalCount { get; set; }
+            [NameInMap("DataEntityList")]
+            [Validation(Required=true)]
+            public List<SearchMetaTablesResponseDataDataEntityList> DataEntityList { get; set; }
+            public class SearchMetaTablesResponseDataDataEntityList : TeaModel {
+                public string TableName { get; set; }
+                public string TableGuid { get; set; }
+                public string OwnerId { get; set; }
+                public long? TenantId { get; set; }
+                public int? EnvType { get; set; }
+                public int? EntityType { get; set; }
+                public long? ProjectId { get; set; }
+                public string ProjectName { get; set; }
+                public string ClusterId { get; set; }
+                public string DatabaseName { get; set; }
+            }
+        };
 
     }
 

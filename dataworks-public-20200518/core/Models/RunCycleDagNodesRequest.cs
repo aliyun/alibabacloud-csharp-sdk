@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunCycleDagNodesRequest : TeaModel {
         [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("StartBizDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StartBizDate { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Name { get; set; }
 
         [NameInMap("RootNodeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? RootNodeId { get; set; }
 
         [NameInMap("ExcludeNodeIds")]
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizEndTime { get; set; }
 
         [NameInMap("Parallelism")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public bool? Parallelism { get; set; }
 
         [NameInMap("EndBizDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EndBizDate { get; set; }
 
         [NameInMap("NodeParams")]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParams { get; set; }
 
         [NameInMap("IncludeNodeIds")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IncludeNodeIds { get; set; }
 
     }

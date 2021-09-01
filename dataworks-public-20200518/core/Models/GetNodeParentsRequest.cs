@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeParentsRequest : TeaModel {
         [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("NodeId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? NodeId { get; set; }
 
     }

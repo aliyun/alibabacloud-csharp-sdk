@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         [NameInMap("FileName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FileName { get; set; }
 
         [NameInMap("FileDescription")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileDescription { get; set; }
 
         [NameInMap("FileType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? FileType { get; set; }
 
         [NameInMap("Owner")]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DependentNodeIdList { get; set; }
 
         [NameInMap("InputList")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string InputList { get; set; }
 
         [NameInMap("ProjectIdentifier")]

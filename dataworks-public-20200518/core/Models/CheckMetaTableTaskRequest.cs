@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class AddProjectMemberToRoleResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+    public class CheckMetaTableTaskRequest : TeaModel {
     }
 
 }

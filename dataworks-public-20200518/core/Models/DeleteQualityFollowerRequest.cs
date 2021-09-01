@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityFollowerRequest : TeaModel {
         [NameInMap("ProjectName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectName { get; set; }
 
         [NameInMap("FollowerId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? FollowerId { get; set; }
 
     }

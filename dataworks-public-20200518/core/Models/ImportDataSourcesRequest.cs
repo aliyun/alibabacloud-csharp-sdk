@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ImportDataSourcesRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("DataSources")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DataSources { get; set; }
 
     }

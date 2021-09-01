@@ -9,13 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceFoldersResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("FolderPagingResult")]
         [Validation(Required=true)]
-        public ListDataServiceFoldersResponseBody Body { get; set; }
+        public ListDataServiceFoldersResponseFolderPagingResult FolderPagingResult { get; set; }
+        public class ListDataServiceFoldersResponseFolderPagingResult : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=true)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=true)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=true)]
+            public int? TotalCount { get; set; }
+            [NameInMap("Folders")]
+            [Validation(Required=true)]
+            public List<ListDataServiceFoldersResponseFolderPagingResultFolders> Folders { get; set; }
+            public class ListDataServiceFoldersResponseFolderPagingResultFolders : TeaModel {
+                public long? FolderId { get; set; }
+                public string FolderName { get; set; }
+                public long? ProjectId { get; set; }
+                public long? TenantId { get; set; }
+                public string CreatedTime { get; set; }
+                public string ModifiedTime { get; set; }
+                public string GroupId { get; set; }
+                public long? ParentId { get; set; }
+            }
+        };
 
     }
 
