@@ -61,17 +61,21 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string LmItemId { get; set; }
 
+        [NameInMap("BuyerMessageMap")]
+        [Validation(Required=false)]
+        public string BuyerMessageMap { get; set; }
+
         [NameInMap("ItemList")]
         [Validation(Required=false)]
         public List<CreateOrderRequestItemList> ItemList { get; set; }
         public class CreateOrderRequestItemList : TeaModel {
-            [NameInMap("LmItemId")]
-            [Validation(Required=false)]
-            public string LmItemId { get; set; }
-
             [NameInMap("SkuId")]
             [Validation(Required=false)]
             public long? SkuId { get; set; }
+
+            [NameInMap("LmItemId")]
+            [Validation(Required=false)]
+            public string LmItemId { get; set; }
 
             [NameInMap("ItemId")]
             [Validation(Required=false)]

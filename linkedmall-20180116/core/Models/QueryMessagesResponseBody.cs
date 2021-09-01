@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("SubMessage")]
+        [Validation(Required=false)]
+        public string SubMessage { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("SubCode")]
+        [Validation(Required=false)]
+        public string SubCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,22 +36,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("LogsId")]
         [Validation(Required=false)]
         public string LogsId { get; set; }
-
-        [NameInMap("SubMessage")]
-        [Validation(Required=false)]
-        public string SubMessage { get; set; }
-
-        [NameInMap("SubCode")]
-        [Validation(Required=false)]
-        public string SubCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
         [NameInMap("BizMessages")]
         [Validation(Required=false)]
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<QueryMessagesResponseBodyBizMessagesBizMessage> BizMessage { get; set; }
             public class QueryMessagesResponseBodyBizMessagesBizMessage : TeaModel {
-                public string PubTime { get; set; }
-                public string Topic { get; set; }
                 public string ContentMapJson { get; set; }
+                public string PubTime { get; set; }
                 public long? DataId { get; set; }
+                public string Topic { get; set; }
             }
         };
 

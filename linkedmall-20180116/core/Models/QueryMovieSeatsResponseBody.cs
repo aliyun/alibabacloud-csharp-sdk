@@ -13,21 +13,29 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("LogsId")]
-        [Validation(Required=false)]
-        public string LogsId { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("SubMessage")]
         [Validation(Required=false)]
         public string SubMessage { get; set; }
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("SubCode")]
         [Validation(Required=false)]
         public string SubCode { get; set; }
+
+        [NameInMap("LogsId")]
+        [Validation(Required=false)]
+        public string LogsId { get; set; }
 
         [NameInMap("SeatMap")]
         [Validation(Required=false)]
@@ -36,21 +44,21 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("MaxCanBuy")]
             [Validation(Required=false)]
             public long? MaxCanBuy { get; set; }
-            [NameInMap("MaxRow")]
-            [Validation(Required=false)]
-            public long? MaxRow { get; set; }
             [NameInMap("TipMessage")]
             [Validation(Required=false)]
             public string TipMessage { get; set; }
-            [NameInMap("Notice")]
+            [NameInMap("MaxRow")]
             [Validation(Required=false)]
-            public string Notice { get; set; }
-            [NameInMap("MinTopPx")]
-            [Validation(Required=false)]
-            public long? MinTopPx { get; set; }
+            public long? MaxRow { get; set; }
             [NameInMap("MinColumn")]
             [Validation(Required=false)]
             public long? MinColumn { get; set; }
+            [NameInMap("MinTopPx")]
+            [Validation(Required=false)]
+            public long? MinTopPx { get; set; }
+            [NameInMap("Notice")]
+            [Validation(Required=false)]
+            public string Notice { get; set; }
             [NameInMap("MaxColumn")]
             [Validation(Required=false)]
             public long? MaxColumn { get; set; }
@@ -63,6 +71,18 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("MaxLeftPx")]
             [Validation(Required=false)]
             public long? MaxLeftPx { get; set; }
+            [NameInMap("SoldCount")]
+            [Validation(Required=false)]
+            public long? SoldCount { get; set; }
+            [NameInMap("MinRow")]
+            [Validation(Required=false)]
+            public long? MinRow { get; set; }
+            [NameInMap("SeatCount")]
+            [Validation(Required=false)]
+            public long? SeatCount { get; set; }
+            [NameInMap("MinLeftPx")]
+            [Validation(Required=false)]
+            public long? MinLeftPx { get; set; }
             [NameInMap("Seats")]
             [Validation(Required=false)]
             public QueryMovieSeatsResponseBodySeatMapSeats Seats { get; set; }
@@ -114,27 +134,7 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 }
 
             }
-            [NameInMap("SoldCount")]
-            [Validation(Required=false)]
-            public long? SoldCount { get; set; }
-            [NameInMap("MinRow")]
-            [Validation(Required=false)]
-            public long? MinRow { get; set; }
-            [NameInMap("SeatCount")]
-            [Validation(Required=false)]
-            public long? SeatCount { get; set; }
-            [NameInMap("MinLeftPx")]
-            [Validation(Required=false)]
-            public long? MinLeftPx { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

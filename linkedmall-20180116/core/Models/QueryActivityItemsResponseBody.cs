@@ -9,25 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryActivityItemsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public long? TotalCount { get; set; }
 
         [NameInMap("LmActivityItemModelList")]
         [Validation(Required=false)]
@@ -37,19 +41,20 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public List<QueryActivityItemsResponseBodyLmActivityItemModelListLmActivityItemModel> LmActivityItemModel { get; set; }
             public class QueryActivityItemsResponseBodyLmActivityItemModelListLmActivityItemModel : TeaModel {
-                public long? TbSellerId { get; set; }
                 public string ItemTitle { get; set; }
+                public long? TbSellerId { get; set; }
                 public int? SellableQuantity { get; set; }
                 public long? TbShopId { get; set; }
-                public int? ItemActivityQuantity { get; set; }
-                public string TbShopName { get; set; }
                 public string LmItemId { get; set; }
+                public string TbShopName { get; set; }
+                public int? ItemActivityQuantity { get; set; }
                 public long? LmActivityId { get; set; }
-                public long? ItemId { get; set; }
                 public bool? CanSell { get; set; }
+                public long? ItemId { get; set; }
                 public string MainPicUrl { get; set; }
                 public string Tips { get; set; }
                 public string LmShopId { get; set; }
+                public string ItemActivityStatus { get; set; }
                 public QueryActivityItemsResponseBodyLmActivityItemModelListLmActivityItemModelSkuModelList SkuModelList { get; set; }
                 public class QueryActivityItemsResponseBodyLmActivityItemModelListLmActivityItemModelSkuModelList : TeaModel {
                     [NameInMap("LmActivityItemSkuModel")]
@@ -103,13 +108,8 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                     }
 
                 }
-                public string ItemActivityStatus { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

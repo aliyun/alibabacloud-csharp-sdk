@@ -13,17 +13,29 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("LogsId")]
-        [Validation(Required=false)]
-        public string LogsId { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("SubMessage")]
         [Validation(Required=false)]
         public string SubMessage { get; set; }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("SubCode")]
+        [Validation(Required=false)]
+        public string SubCode { get; set; }
+
+        [NameInMap("LogsId")]
+        [Validation(Required=false)]
+        public string LogsId { get; set; }
 
         [NameInMap("ReservedSeat")]
         [Validation(Required=false)]
@@ -35,25 +47,13 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("ReservedTime")]
             [Validation(Required=false)]
             public long? ReservedTime { get; set; }
-            [NameInMap("DefaultLockSecond")]
-            [Validation(Required=false)]
-            public long? DefaultLockSecond { get; set; }
             [NameInMap("ApplyKey")]
             [Validation(Required=false)]
             public string ApplyKey { get; set; }
+            [NameInMap("DefaultLockSecond")]
+            [Validation(Required=false)]
+            public long? DefaultLockSecond { get; set; }
         };
-
-        [NameInMap("SubCode")]
-        [Validation(Required=false)]
-        public string SubCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

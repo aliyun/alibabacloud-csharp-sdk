@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("BatchId")]
         [Validation(Required=false)]
         public string BatchId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         [NameInMap("FailIds")]
         [Validation(Required=false)]

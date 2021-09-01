@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryRefundApplicationDetailResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -21,18 +25,36 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public QueryRefundApplicationDetailResponseBodyRefundApplicationDetail RefundApplicationDetail { get; set; }
         public class QueryRefundApplicationDetailResponseBodyRefundApplicationDetail : TeaModel {
+            [NameInMap("DisputeType")]
+            [Validation(Required=false)]
+            public int? DisputeType { get; set; }
+            [NameInMap("LmOrderId")]
+            [Validation(Required=false)]
+            public string LmOrderId { get; set; }
             [NameInMap("RefunderName")]
             [Validation(Required=false)]
             public string RefunderName { get; set; }
+            [NameInMap("SellerAgreeMsg")]
+            [Validation(Required=false)]
+            public string SellerAgreeMsg { get; set; }
             [NameInMap("ReturnGoodLogisticsStatus")]
             [Validation(Required=false)]
             public int? ReturnGoodLogisticsStatus { get; set; }
+            [NameInMap("DisputeDesc")]
+            [Validation(Required=false)]
+            public string DisputeDesc { get; set; }
             [NameInMap("RefunderAddress")]
             [Validation(Required=false)]
             public string RefunderAddress { get; set; }
             [NameInMap("ReturnGoodCount")]
             [Validation(Required=false)]
             public int? ReturnGoodCount { get; set; }
+            [NameInMap("DisputeId")]
+            [Validation(Required=false)]
+            public long? DisputeId { get; set; }
+            [NameInMap("DisputeEndTime")]
+            [Validation(Required=false)]
+            public string DisputeEndTime { get; set; }
             [NameInMap("OrderLogisticsStatus")]
             [Validation(Required=false)]
             public int? OrderLogisticsStatus { get; set; }
@@ -48,27 +70,27 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("SellerRefuseAgreementMessage")]
             [Validation(Required=false)]
             public string SellerRefuseAgreementMessage { get; set; }
+            [NameInMap("DisputeCreateTime")]
+            [Validation(Required=false)]
+            public string DisputeCreateTime { get; set; }
             [NameInMap("RefunderTel")]
             [Validation(Required=false)]
             public string RefunderTel { get; set; }
-            [NameInMap("SubLmOrderId")]
-            [Validation(Required=false)]
-            public string SubLmOrderId { get; set; }
             [NameInMap("SellerRefuseReason")]
             [Validation(Required=false)]
             public string SellerRefuseReason { get; set; }
+            [NameInMap("SubLmOrderId")]
+            [Validation(Required=false)]
+            public string SubLmOrderId { get; set; }
             [NameInMap("ApplyDisputeDesc")]
             [Validation(Required=false)]
             public string ApplyDisputeDesc { get; set; }
             [NameInMap("DisputeStatus")]
             [Validation(Required=false)]
             public int? DisputeStatus { get; set; }
-            [NameInMap("DisputeType")]
+            [NameInMap("RefunderZipCode")]
             [Validation(Required=false)]
-            public int? DisputeType { get; set; }
-            [NameInMap("LmOrderId")]
-            [Validation(Required=false)]
-            public string LmOrderId { get; set; }
+            public string RefunderZipCode { get; set; }
             [NameInMap("MaxRefundFeeData")]
             [Validation(Required=false)]
             public QueryRefundApplicationDetailResponseBodyRefundApplicationDetailMaxRefundFeeData MaxRefundFeeData { get; set; }
@@ -95,29 +117,7 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 public long? ReasonTextId { get; set; }
 
             }
-            [NameInMap("SellerAgreeMsg")]
-            [Validation(Required=false)]
-            public string SellerAgreeMsg { get; set; }
-            [NameInMap("DisputeDesc")]
-            [Validation(Required=false)]
-            public string DisputeDesc { get; set; }
-            [NameInMap("DisputeId")]
-            [Validation(Required=false)]
-            public long? DisputeId { get; set; }
-            [NameInMap("DisputeEndTime")]
-            [Validation(Required=false)]
-            public string DisputeEndTime { get; set; }
-            [NameInMap("DisputeCreateTime")]
-            [Validation(Required=false)]
-            public string DisputeCreateTime { get; set; }
-            [NameInMap("RefunderZipCode")]
-            [Validation(Required=false)]
-            public string RefunderZipCode { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

@@ -9,18 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class GetCategoryListResponseBody : TeaModel {
-        [NameInMap("CategoryList")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public GetCategoryListResponseBodyCategoryList CategoryList { get; set; }
-        public class GetCategoryListResponseBodyCategoryList : TeaModel {
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public List<GetCategoryListResponseBodyCategoryListCategory> Category { get; set; }
-            public class GetCategoryListResponseBodyCategoryListCategory : TeaModel {
-                public long? CategoryId { get; set; }
-                public string Name { get; set; }
-            }
-        };
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -30,9 +21,18 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("CategoryList")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public GetCategoryListResponseBodyCategoryList CategoryList { get; set; }
+        public class GetCategoryListResponseBodyCategoryList : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public List<GetCategoryListResponseBodyCategoryListCategory> Category { get; set; }
+            public class GetCategoryListResponseBodyCategoryListCategory : TeaModel {
+                public string Name { get; set; }
+                public long? CategoryId { get; set; }
+            }
+        };
 
     }
 

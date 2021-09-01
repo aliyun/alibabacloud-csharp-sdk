@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class AddItemLimitRuleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public long? Model { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
-
-        [NameInMap("Model")]
-        [Validation(Required=false)]
-        public long? Model { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

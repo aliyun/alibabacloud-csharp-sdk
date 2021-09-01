@@ -21,28 +21,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [Validation(Required=false)]
         public string ExtJson { get; set; }
 
-        [NameInMap("ItemList")]
-        [Validation(Required=false)]
-        public List<RenderOrderRequestItemList> ItemList { get; set; }
-        public class RenderOrderRequestItemList : TeaModel {
-            [NameInMap("ItemId")]
-            [Validation(Required=false)]
-            public long? ItemId { get; set; }
-
-            [NameInMap("SkuId")]
-            [Validation(Required=false)]
-            public long? SkuId { get; set; }
-
-            [NameInMap("Quantity")]
-            [Validation(Required=false)]
-            public int? Quantity { get; set; }
-
-            [NameInMap("LmItemId")]
-            [Validation(Required=false)]
-            public string LmItemId { get; set; }
-
-        }
-
         [NameInMap("DeliveryAddress")]
         [Validation(Required=false)]
         public string DeliveryAddress { get; set; }
@@ -62,6 +40,28 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }
+
+        [NameInMap("ItemList")]
+        [Validation(Required=false)]
+        public List<RenderOrderRequestItemList> ItemList { get; set; }
+        public class RenderOrderRequestItemList : TeaModel {
+            [NameInMap("SkuId")]
+            [Validation(Required=false)]
+            public long? SkuId { get; set; }
+
+            [NameInMap("LmItemId")]
+            [Validation(Required=false)]
+            public string LmItemId { get; set; }
+
+            [NameInMap("ItemId")]
+            [Validation(Required=false)]
+            public long? ItemId { get; set; }
+
+            [NameInMap("Quantity")]
+            [Validation(Required=false)]
+            public int? Quantity { get; set; }
+
+        }
 
     }
 

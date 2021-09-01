@@ -9,29 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class InitApplyRefundResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("SubLmOrderId")]
+        [Validation(Required=false)]
+        public string SubLmOrderId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("InitApplyRefundData")]
         [Validation(Required=false)]
         public InitApplyRefundResponseBodyInitApplyRefundData InitApplyRefundData { get; set; }
         public class InitApplyRefundResponseBodyInitApplyRefundData : TeaModel {
-            [NameInMap("MaxRefundFeeData")]
-            [Validation(Required=false)]
-            public InitApplyRefundResponseBodyInitApplyRefundDataMaxRefundFeeData MaxRefundFeeData { get; set; }
-            public class InitApplyRefundResponseBodyInitApplyRefundDataMaxRefundFeeData : TeaModel {
-                [NameInMap("MaxRefundFee")]
-                [Validation(Required=false)]
-                public int? MaxRefundFee { get; set; }
-
-                [NameInMap("MinRefundFee")]
-                [Validation(Required=false)]
-                public int? MinRefundFee { get; set; }
-
-            }
-            [NameInMap("BizClaimType")]
-            [Validation(Required=false)]
-            public int? BizClaimType { get; set; }
             [NameInMap("MainOrderRefund")]
             [Validation(Required=false)]
             public bool? MainOrderRefund { get; set; }
+            [NameInMap("BizClaimType")]
+            [Validation(Required=false)]
+            public int? BizClaimType { get; set; }
             [NameInMap("RefundReasonList")]
             [Validation(Required=false)]
             public InitApplyRefundResponseBodyInitApplyRefundDataRefundReasonList RefundReasonList { get; set; }
@@ -59,23 +62,20 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 }
 
             }
+            [NameInMap("MaxRefundFeeData")]
+            [Validation(Required=false)]
+            public InitApplyRefundResponseBodyInitApplyRefundDataMaxRefundFeeData MaxRefundFeeData { get; set; }
+            public class InitApplyRefundResponseBodyInitApplyRefundDataMaxRefundFeeData : TeaModel {
+                [NameInMap("MaxRefundFee")]
+                [Validation(Required=false)]
+                public int? MaxRefundFee { get; set; }
+
+                [NameInMap("MinRefundFee")]
+                [Validation(Required=false)]
+                public int? MinRefundFee { get; set; }
+
+            }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("SubLmOrderId")]
-        [Validation(Required=false)]
-        public string SubLmOrderId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

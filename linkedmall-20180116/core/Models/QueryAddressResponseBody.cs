@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryAddressResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -27,14 +31,10 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             public class QueryAddressResponseBodyDivisionAddressDivisionAddress : TeaModel {
                 public long? ParentId { get; set; }
                 public long? DivisionCode { get; set; }
-                public string DivisionName { get; set; }
                 public int? DivisionLevel { get; set; }
+                public string DivisionName { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

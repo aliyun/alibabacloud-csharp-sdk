@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryOrderCommissionRateResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -29,6 +33,9 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfo CommissionInfo { get; set; }
             public class QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfo : TeaModel {
+                [NameInMap("RateType")]
+                [Validation(Required=false)]
+                public string RateType { get; set; }
                 [NameInMap("RateConfig")]
                 [Validation(Required=false)]
                 public QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfig RateConfig { get; set; }
@@ -37,27 +44,20 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                     [Validation(Required=false)]
                     public List<QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfigConfigs> Configs { get; set; }
                     public class QueryOrderCommissionRateResponseBodyCommissionModelsCommissionInfoRateConfigConfigs : TeaModel {
-                        [NameInMap("Value")]
-                        [Validation(Required=false)]
-                        public long? Value { get; set; }
-
                         [NameInMap("ValueUnit")]
                         [Validation(Required=false)]
                         public string ValueUnit { get; set; }
 
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public long? Value { get; set; }
+
                     }
 
                 }
-                [NameInMap("RateType")]
-                [Validation(Required=false)]
-                public string RateType { get; set; }
             };
 
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

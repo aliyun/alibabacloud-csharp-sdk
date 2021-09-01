@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryOrderInfoAfterSaleResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -27,39 +31,12 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("ShopServiceTelephone")]
             [Validation(Required=false)]
             public string ShopServiceTelephone { get; set; }
-            [NameInMap("LogisticsList")]
-            [Validation(Required=false)]
-            public QueryOrderInfoAfterSaleResponseBodyModelLogisticsList LogisticsList { get; set; }
-            public class QueryOrderInfoAfterSaleResponseBodyModelLogisticsList : TeaModel {
-                [NameInMap("Logistics")]
-                [Validation(Required=false)]
-                public List<QueryOrderInfoAfterSaleResponseBodyModelLogisticsListLogistics> Logistics { get; set; }
-                public class QueryOrderInfoAfterSaleResponseBodyModelLogisticsListLogistics : TeaModel {
-                    [NameInMap("LogisticsNo")]
-                    [Validation(Required=false)]
-                    public string LogisticsNo { get; set; }
-
-                    [NameInMap("LogisticsCompanyCode")]
-                    [Validation(Required=false)]
-                    public string LogisticsCompanyCode { get; set; }
-
-                    [NameInMap("LogisticsStatus")]
-                    [Validation(Required=false)]
-                    public string LogisticsStatus { get; set; }
-
-                    [NameInMap("LogisticsCompanyName")]
-                    [Validation(Required=false)]
-                    public string LogisticsCompanyName { get; set; }
-
-                }
-
-            }
-            [NameInMap("XiaomiCode")]
-            [Validation(Required=false)]
-            public string XiaomiCode { get; set; }
             [NameInMap("RefundAmount")]
             [Validation(Required=false)]
             public long? RefundAmount { get; set; }
+            [NameInMap("XiaomiCode")]
+            [Validation(Required=false)]
+            public string XiaomiCode { get; set; }
             [NameInMap("ShopName")]
             [Validation(Required=false)]
             public string ShopName { get; set; }
@@ -93,11 +70,34 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("CashAmount")]
             [Validation(Required=false)]
             public string CashAmount { get; set; }
-        };
+            [NameInMap("LogisticsList")]
+            [Validation(Required=false)]
+            public QueryOrderInfoAfterSaleResponseBodyModelLogisticsList LogisticsList { get; set; }
+            public class QueryOrderInfoAfterSaleResponseBodyModelLogisticsList : TeaModel {
+                [NameInMap("Logistics")]
+                [Validation(Required=false)]
+                public List<QueryOrderInfoAfterSaleResponseBodyModelLogisticsListLogistics> Logistics { get; set; }
+                public class QueryOrderInfoAfterSaleResponseBodyModelLogisticsListLogistics : TeaModel {
+                    [NameInMap("LogisticsCompanyCode")]
+                    [Validation(Required=false)]
+                    public string LogisticsCompanyCode { get; set; }
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+                    [NameInMap("LogisticsNo")]
+                    [Validation(Required=false)]
+                    public string LogisticsNo { get; set; }
+
+                    [NameInMap("LogisticsStatus")]
+                    [Validation(Required=false)]
+                    public string LogisticsStatus { get; set; }
+
+                    [NameInMap("LogisticsCompanyName")]
+                    [Validation(Required=false)]
+                    public string LogisticsCompanyName { get; set; }
+
+                }
+
+            }
+        };
 
     }
 

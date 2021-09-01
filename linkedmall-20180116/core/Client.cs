@@ -158,6 +158,50 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
             return await AddItemLimitRuleWithOptionsAsync(request, runtime);
         }
 
+        public AddItemToSubBizsResponse AddItemToSubBizsWithOptions(AddItemToSubBizsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddItemToSubBizsShrinkRequest request = new AddItemToSubBizsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubBizIds))
+            {
+                request.SubBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubBizIds, "SubBizIds", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AddItemToSubBizsResponse>(DoRPCRequest("AddItemToSubBizs", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<AddItemToSubBizsResponse> AddItemToSubBizsWithOptionsAsync(AddItemToSubBizsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddItemToSubBizsShrinkRequest request = new AddItemToSubBizsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubBizIds))
+            {
+                request.SubBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubBizIds, "SubBizIds", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AddItemToSubBizsResponse>(await DoRPCRequestAsync("AddItemToSubBizs", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public AddItemToSubBizsResponse AddItemToSubBizs(AddItemToSubBizsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddItemToSubBizsWithOptions(request, runtime);
+        }
+
+        public async Task<AddItemToSubBizsResponse> AddItemToSubBizsAsync(AddItemToSubBizsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddItemToSubBizsWithOptionsAsync(request, runtime);
+        }
+
         public AddSupplierNewItemsResponse AddSupplierNewItemsWithOptions(AddSupplierNewItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -638,6 +682,38 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableOrderWithOptionsAsync(request, runtime);
+        }
+
+        public ExecuteNodeResponse ExecuteNodeWithOptions(ExecuteNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExecuteNodeResponse>(DoRPCRequest("ExecuteNode", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ExecuteNodeResponse> ExecuteNodeWithOptionsAsync(ExecuteNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ExecuteNodeResponse>(await DoRPCRequestAsync("ExecuteNode", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ExecuteNodeResponse ExecuteNode(ExecuteNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExecuteNodeWithOptions(request, runtime);
+        }
+
+        public async Task<ExecuteNodeResponse> ExecuteNodeAsync(ExecuteNodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExecuteNodeWithOptionsAsync(request, runtime);
         }
 
         public GetCategoryChainResponse GetCategoryChainWithOptions(GetCategoryChainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1302,6 +1378,38 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
             return await QueryAddressListWithOptionsAsync(request, runtime);
         }
 
+        public QueryAdvertisementSettleInfoResponse QueryAdvertisementSettleInfoWithOptions(QueryAdvertisementSettleInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryAdvertisementSettleInfoResponse>(DoRPCRequest("QueryAdvertisementSettleInfo", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryAdvertisementSettleInfoResponse> QueryAdvertisementSettleInfoWithOptionsAsync(QueryAdvertisementSettleInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryAdvertisementSettleInfoResponse>(await DoRPCRequestAsync("QueryAdvertisementSettleInfo", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryAdvertisementSettleInfoResponse QueryAdvertisementSettleInfo(QueryAdvertisementSettleInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAdvertisementSettleInfoWithOptions(request, runtime);
+        }
+
+        public async Task<QueryAdvertisementSettleInfoResponse> QueryAdvertisementSettleInfoAsync(QueryAdvertisementSettleInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAdvertisementSettleInfoWithOptionsAsync(request, runtime);
+        }
+
         public QueryAgreementResponse QueryAgreementWithOptions(QueryAgreementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1664,6 +1772,40 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
             return await QueryGuideItemGroupWithOptionsAsync(request, runtime);
         }
 
+        public QueryGuideItemGroupWithOutInventoryResponse QueryGuideItemGroupWithOutInventoryWithOptions(QueryGuideItemGroupWithOutInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<QueryGuideItemGroupWithOutInventoryResponse>(DoRPCRequest("QueryGuideItemGroupWithOutInventory", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryGuideItemGroupWithOutInventoryResponse> QueryGuideItemGroupWithOutInventoryWithOptionsAsync(QueryGuideItemGroupWithOutInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<QueryGuideItemGroupWithOutInventoryResponse>(await DoRPCRequestAsync("QueryGuideItemGroupWithOutInventory", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public QueryGuideItemGroupWithOutInventoryResponse QueryGuideItemGroupWithOutInventory(QueryGuideItemGroupWithOutInventoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryGuideItemGroupWithOutInventoryWithOptions(request, runtime);
+        }
+
+        public async Task<QueryGuideItemGroupWithOutInventoryResponse> QueryGuideItemGroupWithOutInventoryAsync(QueryGuideItemGroupWithOutInventoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryGuideItemGroupWithOutInventoryWithOptionsAsync(request, runtime);
+        }
+
         public QueryHotMoviesResponse QueryHotMoviesWithOptions(QueryHotMoviesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1694,6 +1836,60 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryHotMoviesWithOptionsAsync(request, runtime);
+        }
+
+        public QueryInventoryOfItemsInBizItemGroupResponse QueryInventoryOfItemsInBizItemGroupWithOptions(QueryInventoryOfItemsInBizItemGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInventoryOfItemsInBizItemGroupShrinkRequest request = new QueryInventoryOfItemsInBizItemGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItemIds))
+            {
+                request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "ItemIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LmItemIds))
+            {
+                request.LmItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LmItemIds, "LmItemIds", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<QueryInventoryOfItemsInBizItemGroupResponse>(DoRPCRequest("QueryInventoryOfItemsInBizItemGroup", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryInventoryOfItemsInBizItemGroupResponse> QueryInventoryOfItemsInBizItemGroupWithOptionsAsync(QueryInventoryOfItemsInBizItemGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInventoryOfItemsInBizItemGroupShrinkRequest request = new QueryInventoryOfItemsInBizItemGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItemIds))
+            {
+                request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "ItemIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LmItemIds))
+            {
+                request.LmItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LmItemIds, "LmItemIds", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<QueryInventoryOfItemsInBizItemGroupResponse>(await DoRPCRequestAsync("QueryInventoryOfItemsInBizItemGroup", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public QueryInventoryOfItemsInBizItemGroupResponse QueryInventoryOfItemsInBizItemGroup(QueryInventoryOfItemsInBizItemGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryInventoryOfItemsInBizItemGroupWithOptions(request, runtime);
+        }
+
+        public async Task<QueryInventoryOfItemsInBizItemGroupResponse> QueryInventoryOfItemsInBizItemGroupAsync(QueryInventoryOfItemsInBizItemGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryInventoryOfItemsInBizItemGroupWithOptionsAsync(request, runtime);
         }
 
         public QueryItemDetailResponse QueryItemDetailWithOptions(QueryItemDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1760,6 +1956,52 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
             return await QueryItemDetailInnerWithOptionsAsync(request, runtime);
         }
 
+        public QueryItemInSubBizsResponse QueryItemInSubBizsWithOptions(QueryItemInSubBizsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryItemInSubBizsShrinkRequest request = new QueryItemInSubBizsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubBizIds))
+            {
+                request.SubBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubBizIds, "SubBizIds", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<QueryItemInSubBizsResponse>(DoRPCRequest("QueryItemInSubBizs", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryItemInSubBizsResponse> QueryItemInSubBizsWithOptionsAsync(QueryItemInSubBizsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryItemInSubBizsShrinkRequest request = new QueryItemInSubBizsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubBizIds))
+            {
+                request.SubBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubBizIds, "SubBizIds", "json");
+            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<QueryItemInSubBizsResponse>(await DoRPCRequestAsync("QueryItemInSubBizs", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public QueryItemInSubBizsResponse QueryItemInSubBizs(QueryItemInSubBizsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryItemInSubBizsWithOptions(request, runtime);
+        }
+
+        public async Task<QueryItemInSubBizsResponse> QueryItemInSubBizsAsync(QueryItemInSubBizsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryItemInSubBizsWithOptionsAsync(request, runtime);
+        }
+
         public QueryItemInventoryResponse QueryItemInventoryWithOptions(QueryItemInventoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1822,6 +2064,38 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryLogisticsWithOptionsAsync(request, runtime);
+        }
+
+        public QueryMediaSettleInfoResponse QueryMediaSettleInfoWithOptions(QueryMediaSettleInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMediaSettleInfoResponse>(DoRPCRequest("QueryMediaSettleInfo", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryMediaSettleInfoResponse> QueryMediaSettleInfoWithOptionsAsync(QueryMediaSettleInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryMediaSettleInfoResponse>(await DoRPCRequestAsync("QueryMediaSettleInfo", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryMediaSettleInfoResponse QueryMediaSettleInfo(QueryMediaSettleInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMediaSettleInfoWithOptions(request, runtime);
+        }
+
+        public async Task<QueryMediaSettleInfoResponse> QueryMediaSettleInfoAsync(QueryMediaSettleInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMediaSettleInfoWithOptionsAsync(request, runtime);
         }
 
         public QueryMessagesResponse QueryMessagesWithOptions(QueryMessagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2274,6 +2548,38 @@ namespace AlibabaCloud.SDK.Linkedmall20180116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryRefundApplicationDetailWithOptionsAsync(request, runtime);
+        }
+
+        public QueryStatementsResponse QueryStatementsWithOptions(QueryStatementsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryStatementsResponse>(DoRPCRequest("QueryStatements", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryStatementsResponse> QueryStatementsWithOptionsAsync(QueryStatementsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryStatementsResponse>(await DoRPCRequestAsync("QueryStatements", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryStatementsResponse QueryStatements(QueryStatementsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryStatementsWithOptions(request, runtime);
+        }
+
+        public async Task<QueryStatementsResponse> QueryStatementsAsync(QueryStatementsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryStatementsWithOptionsAsync(request, runtime);
         }
 
         public QueryUnfinishedActivitiesResponse QueryUnfinishedActivitiesWithOptions(QueryUnfinishedActivitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

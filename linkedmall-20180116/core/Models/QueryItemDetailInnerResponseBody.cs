@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryItemDetailInnerResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Item")]
         [Validation(Required=false)]
         public QueryItemDetailInnerResponseBodyItem Item { get; set; }
@@ -25,21 +37,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("DescOption")]
             [Validation(Required=false)]
             public string DescOption { get; set; }
-            [NameInMap("ItemImages")]
-            [Validation(Required=false)]
-            public List<string> ItemImages { get; set; }
-            [NameInMap("SkuPropertys")]
-            [Validation(Required=false)]
-            public List<QueryItemDetailInnerResponseBodyItemSkuPropertys> SkuPropertys { get; set; }
-            public class QueryItemDetailInnerResponseBodyItemSkuPropertys : TeaModel {
-                public List<QueryItemDetailInnerResponseBodyItemSkuPropertysValues> Values { get; set; }
-                public class QueryItemDetailInnerResponseBodyItemSkuPropertysValues : TeaModel {
-                    public string Text { get; set; }
-                    public long? Id { get; set; }
-                }
-                public string Text { get; set; }
-                public long? Id { get; set; }
-            }
             [NameInMap("IsSellerPayPostfee")]
             [Validation(Required=false)]
             public bool? IsSellerPayPostfee { get; set; }
@@ -55,24 +52,18 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("Quantity")]
             [Validation(Required=false)]
             public int? Quantity { get; set; }
-            [NameInMap("IforestProps")]
-            [Validation(Required=false)]
-            public List<string> IforestProps { get; set; }
-            [NameInMap("CategoryIds")]
-            [Validation(Required=false)]
-            public List<string> CategoryIds { get; set; }
-            [NameInMap("TbShopName")]
-            [Validation(Required=false)]
-            public string TbShopName { get; set; }
             [NameInMap("SellerId")]
             [Validation(Required=false)]
             public long? SellerId { get; set; }
-            [NameInMap("CanSell")]
+            [NameInMap("TbShopName")]
             [Validation(Required=false)]
-            public bool? CanSell { get; set; }
+            public string TbShopName { get; set; }
             [NameInMap("ItemId")]
             [Validation(Required=false)]
             public long? ItemId { get; set; }
+            [NameInMap("CanSell")]
+            [Validation(Required=false)]
+            public bool? CanSell { get; set; }
             [NameInMap("CenterInventory")]
             [Validation(Required=false)]
             public bool? CenterInventory { get; set; }
@@ -85,15 +76,27 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("MinPrice")]
             [Validation(Required=false)]
             public long? MinPrice { get; set; }
-            [NameInMap("LmShopId")]
-            [Validation(Required=false)]
-            public long? LmShopId { get; set; }
             [NameInMap("IsCanSell")]
             [Validation(Required=false)]
             public bool? IsCanSell { get; set; }
+            [NameInMap("LmShopId")]
+            [Validation(Required=false)]
+            public long? LmShopId { get; set; }
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public long? CategoryId { get; set; }
+            [NameInMap("SellerNick")]
+            [Validation(Required=false)]
+            public string SellerNick { get; set; }
+            [NameInMap("DescPath")]
+            [Validation(Required=false)]
+            public string DescPath { get; set; }
+            [NameInMap("Properties")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Properties { get; set; }
+            [NameInMap("Province")]
+            [Validation(Required=false)]
+            public string Province { get; set; }
             [NameInMap("Skus")]
             [Validation(Required=false)]
             public List<QueryItemDetailInnerResponseBodyItemSkus> Skus { get; set; }
@@ -114,31 +117,28 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
                 public string SkuDesc { get; set; }
                 public int? Quantity { get; set; }
             }
-            [NameInMap("SellerNick")]
+            [NameInMap("SkuPropertys")]
             [Validation(Required=false)]
-            public string SellerNick { get; set; }
-            [NameInMap("DescPath")]
+            public List<QueryItemDetailInnerResponseBodyItemSkuPropertys> SkuPropertys { get; set; }
+            public class QueryItemDetailInnerResponseBodyItemSkuPropertys : TeaModel {
+                public string Text { get; set; }
+                public long? Id { get; set; }
+                public List<QueryItemDetailInnerResponseBodyItemSkuPropertysValues> Values { get; set; }
+                public class QueryItemDetailInnerResponseBodyItemSkuPropertysValues : TeaModel {
+                    public string Text { get; set; }
+                    public long? Id { get; set; }
+                }
+            }
+            [NameInMap("CategoryIds")]
             [Validation(Required=false)]
-            public string DescPath { get; set; }
-            [NameInMap("Properties")]
+            public List<string> CategoryIds { get; set; }
+            [NameInMap("IforestProps")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Properties { get; set; }
-            [NameInMap("Province")]
+            public List<string> IforestProps { get; set; }
+            [NameInMap("ItemImages")]
             [Validation(Required=false)]
-            public string Province { get; set; }
+            public List<string> ItemImages { get; set; }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

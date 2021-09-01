@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20180116.Models
 {
     public class QueryAddressDetailResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -48,12 +52,12 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
-            [NameInMap("TownDivisionCode")]
-            [Validation(Required=false)]
-            public string TownDivisionCode { get; set; }
             [NameInMap("Area")]
             [Validation(Required=false)]
             public string Area { get; set; }
+            [NameInMap("TownDivisionCode")]
+            [Validation(Required=false)]
+            public string TownDivisionCode { get; set; }
             [NameInMap("Town")]
             [Validation(Required=false)]
             public string Town { get; set; }
@@ -61,10 +65,6 @@ namespace AlibabaCloud.SDK.Linkedmall20180116.Models
             [Validation(Required=false)]
             public string Province { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 
