@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class AddShortUrlResponse : TeaModel {
+    public class SendMessageToGlobeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public AddShortUrlResponseBody Body { get; set; }
+        public SendMessageToGlobeResponseBody Body { get; set; }
 
     }
 

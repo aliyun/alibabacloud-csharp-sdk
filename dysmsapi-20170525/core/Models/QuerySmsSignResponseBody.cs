@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
         [NameInMap("SignStatus")]
         [Validation(Required=false)]
         public int? SignStatus { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("CreateDate")]
         [Validation(Required=false)]

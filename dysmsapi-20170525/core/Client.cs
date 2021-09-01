@@ -21,21 +21,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             this._endpointRule = "central";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"ap-northeast-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2-pop", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
                 {"ap-southeast-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-2", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-5", "dysmsapi.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-5", "dysmsapi-xman.ap-southeast-5.aliyuncs.com"},
                 {"cn-beijing", "dysmsapi-proxy.cn-beijing.aliyuncs.com"},
-                {"eu-central-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"eu-west-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"eu-west-1-oxs", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"me-east-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"rus-west-1-pop", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"us-east-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
-                {"us-west-1", "dysmsapi.ap-southeast-1.aliyuncs.com"},
+                {"cn-hongkong", "dysmsapi-xman.cn-hongkong.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dysmsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -53,38 +42,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 return endpointMap.Get(regionId);
             }
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
-        }
-
-        public AddShortUrlResponse AddShortUrlWithOptions(AddShortUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<AddShortUrlResponse>(DoRPCRequest("AddShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<AddShortUrlResponse> AddShortUrlWithOptionsAsync(AddShortUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<AddShortUrlResponse>(await DoRPCRequestAsync("AddShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public AddShortUrlResponse AddShortUrl(AddShortUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AddShortUrlWithOptions(request, runtime);
-        }
-
-        public async Task<AddShortUrlResponse> AddShortUrlAsync(AddShortUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AddShortUrlWithOptionsAsync(request, runtime);
         }
 
         public AddSmsSignResponse AddSmsSignWithOptions(AddSmsSignRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -149,70 +106,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddSmsTemplateWithOptionsAsync(request, runtime);
-        }
-
-        public CreateShortParamResponse CreateShortParamWithOptions(CreateShortParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<CreateShortParamResponse>(DoRPCRequest("CreateShortParam", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<CreateShortParamResponse> CreateShortParamWithOptionsAsync(CreateShortParamRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<CreateShortParamResponse>(await DoRPCRequestAsync("CreateShortParam", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public CreateShortParamResponse CreateShortParam(CreateShortParamRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateShortParamWithOptions(request, runtime);
-        }
-
-        public async Task<CreateShortParamResponse> CreateShortParamAsync(CreateShortParamRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateShortParamWithOptionsAsync(request, runtime);
-        }
-
-        public DeleteShortUrlResponse DeleteShortUrlWithOptions(DeleteShortUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DeleteShortUrlResponse>(DoRPCRequest("DeleteShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DeleteShortUrlResponse> DeleteShortUrlWithOptionsAsync(DeleteShortUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DeleteShortUrlResponse>(await DoRPCRequestAsync("DeleteShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DeleteShortUrlResponse DeleteShortUrl(DeleteShortUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteShortUrlWithOptions(request, runtime);
-        }
-
-        public async Task<DeleteShortUrlResponse> DeleteShortUrlAsync(DeleteShortUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteShortUrlWithOptionsAsync(request, runtime);
         }
 
         public DeleteSmsSignResponse DeleteSmsSignWithOptions(DeleteSmsSignRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -375,38 +268,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             return await QuerySendDetailsWithOptionsAsync(request, runtime);
         }
 
-        public QueryShortUrlResponse QueryShortUrlWithOptions(QueryShortUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<QueryShortUrlResponse>(DoRPCRequest("QueryShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<QueryShortUrlResponse> QueryShortUrlWithOptionsAsync(QueryShortUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<QueryShortUrlResponse>(await DoRPCRequestAsync("QueryShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public QueryShortUrlResponse QueryShortUrl(QueryShortUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QueryShortUrlWithOptions(request, runtime);
-        }
-
-        public async Task<QueryShortUrlResponse> QueryShortUrlAsync(QueryShortUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QueryShortUrlWithOptionsAsync(request, runtime);
-        }
-
         public QuerySmsSignResponse QuerySmsSignWithOptions(QuerySmsSignRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -501,6 +362,38 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendBatchSmsWithOptionsAsync(request, runtime);
+        }
+
+        public SendMessageToGlobeResponse SendMessageToGlobeWithOptions(SendMessageToGlobeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SendMessageToGlobeResponse>(DoRPCRequest("SendMessageToGlobe", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<SendMessageToGlobeResponse> SendMessageToGlobeWithOptionsAsync(SendMessageToGlobeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<SendMessageToGlobeResponse>(await DoRPCRequestAsync("SendMessageToGlobe", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public SendMessageToGlobeResponse SendMessageToGlobe(SendMessageToGlobeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendMessageToGlobeWithOptions(request, runtime);
+        }
+
+        public async Task<SendMessageToGlobeResponse> SendMessageToGlobeAsync(SendMessageToGlobeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendMessageToGlobeWithOptionsAsync(request, runtime);
         }
 
         public SendSmsResponse SendSmsWithOptions(SendSmsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

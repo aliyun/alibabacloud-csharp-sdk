@@ -9,33 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsTemplateResponseBody : TeaModel {
-        [NameInMap("TemplateCode")]
+        [NameInMap("TemplateContent")]
         [Validation(Required=false)]
-        public string TemplateCode { get; set; }
+        public string TemplateContent { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("TemplateCode")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string TemplateCode { get; set; }
 
-        [NameInMap("TemplateContent")]
+        [NameInMap("TemplateStatus")]
         [Validation(Required=false)]
-        public string TemplateContent { get; set; }
+        public int? TemplateStatus { get; set; }
 
-        [NameInMap("TemplateName")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string TemplateName { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public int? TemplateType { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
 
         [NameInMap("CreateDate")]
         [Validation(Required=false)]
@@ -44,10 +48,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
-
-        [NameInMap("TemplateStatus")]
-        [Validation(Required=false)]
-        public int? TemplateStatus { get; set; }
 
     }
 

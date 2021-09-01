@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySendDetailsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string TotalCount { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string TotalCount { get; set; }
 
         [NameInMap("SmsSendDetailDTOs")]
         [Validation(Required=false)]

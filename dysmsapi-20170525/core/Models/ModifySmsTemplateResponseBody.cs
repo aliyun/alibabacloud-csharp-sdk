@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class ModifySmsTemplateResponseBody : TeaModel {
-        [NameInMap("TemplateCode")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string TemplateCode { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("TemplateCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string TemplateCode { get; set; }
 
     }
 

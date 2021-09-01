@@ -1,3 +1,6 @@
+2021-09-01 Version: 1.0.3
+- Generated csharp 2017-05-25 for Dysmsapi.
+
 2021-01-20 Version: 1.0.2
 -  Fixed Util Sign.
 

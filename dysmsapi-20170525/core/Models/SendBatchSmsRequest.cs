@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
-        [NameInMap("templateParamJson")]
+        [NameInMap("TemplateParamJson")]
         [Validation(Required=false)]
         public string TemplateParamJson { get; set; }
 

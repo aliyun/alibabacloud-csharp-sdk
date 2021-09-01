@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class AddShortUrlRequest : TeaModel {
+    public class SendMessageToGlobeRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -24,21 +21,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SourceUrl")]
+        [NameInMap("To")]
         [Validation(Required=false)]
-        public string SourceUrl { get; set; }
+        public string To { get; set; }
 
-        [NameInMap("ShortUrlName")]
+        [NameInMap("From")]
         [Validation(Required=false)]
-        public string ShortUrlName { get; set; }
+        public string From { get; set; }
 
-        [NameInMap("EffectiveDays")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string EffectiveDays { get; set; }
+        public string Message { get; set; }
 
-        [NameInMap("ProdCode")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string ProdCode { get; set; }
+        public string Type { get; set; }
 
     }
 
