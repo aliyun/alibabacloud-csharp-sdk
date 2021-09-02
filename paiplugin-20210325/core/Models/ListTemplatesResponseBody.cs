@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiPlugin20210325.Models
 {
     public class ListTemplatesResponseBody : TeaModel {
+        /// <summary>
+        /// 返回数据
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTemplatesResponseBodyData Data { get; set; }
@@ -36,10 +39,16 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325.Models
             public int? TotalCount { get; set; }
         };
 
+        /// <summary>
+        /// 错误码
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public int? ErrorCode { get; set; }
 
+        /// <summary>
+        /// 错误信息
+        /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }

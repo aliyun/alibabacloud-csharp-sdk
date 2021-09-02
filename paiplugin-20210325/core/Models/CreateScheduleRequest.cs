@@ -11,8 +11,9 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325.Models
     public class CreateScheduleRequest : TeaModel {
         /// <summary>
         /// 数据源地址
-        /// - 0: endpoint/project/table:column
-        /// - 1: oss地址
+        /// - 0: project/table
+        /// MaxCompute项目名和表名，使用前需要授权
+        /// - 1: oss地址 https://bucket.endpoint/path/to/file
         /// OSS地址，必须以https开头，使用前需要授权，如 https://bucket.endpoint/path/to/file
         /// </summary>
         [NameInMap("DataAddress")]

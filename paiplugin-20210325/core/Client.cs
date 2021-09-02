@@ -181,6 +181,14 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
             {
                 body["ProcessInstanceID"] = request.ProcessInstanceID;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureID))
+            {
+                body["SignatureID"] = request.SignatureID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -208,6 +216,14 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessInstanceID))
             {
                 body["ProcessInstanceID"] = request.ProcessInstanceID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureID))
+            {
+                body["SignatureID"] = request.SignatureID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
