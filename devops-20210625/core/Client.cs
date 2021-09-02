@@ -565,6 +565,108 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<ResetSshKeyResponse>(await DoROARequestAsync("ResetSshKey", "2021-06-25", "HTTPS", "PUT", "AK", "/organization/" + organizationId + "/sshKey", "json", req, runtime));
         }
 
+        public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateWorkspaceWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceAsync(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateWorkspaceWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateWorkspaceResponse CreateWorkspaceWithOptions(CreateWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceTemplate))
+            {
+                body["workspaceTemplate"] = request.WorkspaceTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeUrl))
+            {
+                body["codeUrl"] = request.CodeUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersion))
+            {
+                body["codeVersion"] = request.CodeVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["filePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reuse))
+            {
+                body["reuse"] = request.Reuse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdentifier))
+            {
+                body["resourceIdentifier"] = request.ResourceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestFrom))
+            {
+                body["requestFrom"] = request.RequestFrom;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(DoROARequestWithForm("CreateWorkspace", "2021-06-25", "HTTPS", "POST", "AK", "/api/workspaces", "json", req, runtime));
+        }
+
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceWithOptionsAsync(CreateWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceTemplate))
+            {
+                body["workspaceTemplate"] = request.WorkspaceTemplate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeUrl))
+            {
+                body["codeUrl"] = request.CodeUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersion))
+            {
+                body["codeVersion"] = request.CodeVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["filePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reuse))
+            {
+                body["reuse"] = request.Reuse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdentifier))
+            {
+                body["resourceIdentifier"] = request.ResourceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestFrom))
+            {
+                body["requestFrom"] = request.RequestFrom;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(await DoROARequestWithFormAsync("CreateWorkspace", "2021-06-25", "HTTPS", "POST", "AK", "/api/workspaces", "json", req, runtime));
+        }
+
         public ListServiceConnectionsResponse ListServiceConnections(string organizationId, ListServiceConnectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1043,6 +1145,96 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<StartPipelineRunResponse>(await DoROARequestWithFormAsync("StartPipelineRun", "2021-06-25", "HTTPS", "POST", "AK", "/organizations/" + organizationId + "/pipelines/" + pipelineId + "/run", "json", req, runtime));
         }
 
+        public ListWorkspacesResponse ListWorkspaces(ListWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWorkspacesWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListWorkspacesResponse> ListWorkspacesAsync(ListWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWorkspacesWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListWorkspacesResponse ListWorkspacesWithOptions(ListWorkspacesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "statusList", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkspaceTemplateList))
+            {
+                request.WorkspaceTemplateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkspaceTemplateList, "workspaceTemplateList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["statusList"] = request.StatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceTemplateListShrink))
+            {
+                query["workspaceTemplateList"] = request.WorkspaceTemplateListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<ListWorkspacesResponse>(DoROARequest("ListWorkspaces", "2021-06-25", "HTTPS", "GET", "AK", "/api/workspaces", "json", req, runtime));
+        }
+
+        public async Task<ListWorkspacesResponse> ListWorkspacesWithOptionsAsync(ListWorkspacesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "statusList", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkspaceTemplateList))
+            {
+                request.WorkspaceTemplateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkspaceTemplateList, "workspaceTemplateList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["statusList"] = request.StatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceTemplateListShrink))
+            {
+                query["workspaceTemplateList"] = request.WorkspaceTemplateListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<ListWorkspacesResponse>(await DoROARequestAsync("ListWorkspaces", "2021-06-25", "HTTPS", "GET", "AK", "/api/workspaces", "json", req, runtime));
+        }
+
         public GetPipelineRunResponse GetPipelineRun(string organizationId, string pipelineId, string pipelineRunId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1201,6 +1393,38 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<DeleteVariableGroupResponse>(await DoROARequestAsync("DeleteVariableGroup", "2021-06-25", "HTTPS", "DELETE", "AK", "/organization/" + organizationId + "/variableGroups/" + id, "json", req, runtime));
         }
 
+        public GetWorkspaceResponse GetWorkspace(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetWorkspaceWithOptions(workspaceId, headers, runtime);
+        }
+
+        public async Task<GetWorkspaceResponse> GetWorkspaceAsync(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetWorkspaceWithOptionsAsync(workspaceId, headers, runtime);
+        }
+
+        public GetWorkspaceResponse GetWorkspaceWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<GetWorkspaceResponse>(DoROARequest("GetWorkspace", "2021-06-25", "HTTPS", "GET", "AK", "/api/workspaces/" + workspaceId, "json", req, runtime));
+        }
+
+        public async Task<GetWorkspaceResponse> GetWorkspaceWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<GetWorkspaceResponse>(await DoROARequestAsync("GetWorkspace", "2021-06-25", "HTTPS", "GET", "AK", "/api/workspaces/" + workspaceId, "json", req, runtime));
+        }
+
         public CreateSshKeyResponse CreateSshKey(string organizationId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1263,6 +1487,38 @@ namespace AlibabaCloud.SDK.Devops20210625
                 Headers = headers,
             };
             return TeaModel.ToObject<DeleteHostGroupResponse>(await DoROARequestAsync("DeleteHostGroup", "2021-06-25", "HTTPS", "DELETE", "AK", "/organization/" + organizationId + "/hostGroups/" + id, "json", req, runtime));
+        }
+
+        public ReleaseWorkspaceResponse ReleaseWorkspace(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReleaseWorkspaceWithOptions(workspaceId, headers, runtime);
+        }
+
+        public async Task<ReleaseWorkspaceResponse> ReleaseWorkspaceAsync(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReleaseWorkspaceWithOptionsAsync(workspaceId, headers, runtime);
+        }
+
+        public ReleaseWorkspaceResponse ReleaseWorkspaceWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<ReleaseWorkspaceResponse>(DoROARequest("ReleaseWorkspace", "2021-06-25", "HTTPS", "DELETE", "AK", "/api/workspaces/" + workspaceId + "/release", "json", req, runtime));
+        }
+
+        public async Task<ReleaseWorkspaceResponse> ReleaseWorkspaceWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<ReleaseWorkspaceResponse>(await DoROARequestAsync("ReleaseWorkspace", "2021-06-25", "HTTPS", "DELETE", "AK", "/api/workspaces/" + workspaceId + "/release", "json", req, runtime));
         }
 
         public ListVariableGroupsResponse ListVariableGroups(string organizationId, ListVariableGroupsRequest request)
@@ -1365,6 +1621,38 @@ namespace AlibabaCloud.SDK.Devops20210625
                 Headers = headers,
             };
             return TeaModel.ToObject<DeletePipelineResponse>(await DoROARequestAsync("DeletePipeline", "2021-06-25", "HTTPS", "DELETE", "AK", "/organization/" + organizationId + "/pipelines/" + pipelineId, "json", req, runtime));
+        }
+
+        public FrozenWorkspaceResponse FrozenWorkspace(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return FrozenWorkspaceWithOptions(workspaceId, headers, runtime);
+        }
+
+        public async Task<FrozenWorkspaceResponse> FrozenWorkspaceAsync(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await FrozenWorkspaceWithOptionsAsync(workspaceId, headers, runtime);
+        }
+
+        public FrozenWorkspaceResponse FrozenWorkspaceWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<FrozenWorkspaceResponse>(DoROARequest("FrozenWorkspace", "2021-06-25", "HTTPS", "PUT", "AK", "/api/workspaces/" + workspaceId + "/frozen", "json", req, runtime));
+        }
+
+        public async Task<FrozenWorkspaceResponse> FrozenWorkspaceWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<FrozenWorkspaceResponse>(await DoROARequestAsync("FrozenWorkspace", "2021-06-25", "HTTPS", "PUT", "AK", "/api/workspaces/" + workspaceId + "/frozen", "json", req, runtime));
         }
 
         public ListPipelineRunsResponse ListPipelineRuns(string organizationId, string pipelineId, ListPipelineRunsRequest request)
