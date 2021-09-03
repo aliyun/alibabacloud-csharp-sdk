@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
-    public class UpdateStackGroupRequest : TeaModel {
+    public class CreateStackGroupShrinkRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("AccountIds")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> AccountIds { get; set; }
-
-        [NameInMap("RegionIds")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> RegionIds { get; set; }
-
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
@@ -40,14 +32,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
-
-        [NameInMap("OperationDescription")]
-        [Validation(Required=false)]
-        public string OperationDescription { get; set; }
-
-        [NameInMap("OperationPreferences")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> OperationPreferences { get; set; }
 
         [NameInMap("AdministrationRoleName")]
         [Validation(Required=false)]
@@ -67,8 +51,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public List<UpdateStackGroupRequestParameters> Parameters { get; set; }
-        public class UpdateStackGroupRequestParameters : TeaModel {
+        public List<CreateStackGroupShrinkRequestParameters> Parameters { get; set; }
+        public class CreateStackGroupShrinkRequestParameters : TeaModel {
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
@@ -79,17 +63,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("PermissionModel")]
         [Validation(Required=false)]
         public string PermissionModel { get; set; }
 
         [NameInMap("AutoDeployment")]
         [Validation(Required=false)]
-        public Dictionary<string, object> AutoDeployment { get; set; }
-
-        [NameInMap("DeploymentTargets")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> DeploymentTargets { get; set; }
+        public string AutoDeploymentShrink { get; set; }
 
     }
 

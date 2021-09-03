@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateEstimateCostResponseBody : TeaModel {
-        [NameInMap("Resources")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Resources { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Resources { get; set; }
 
     }
 

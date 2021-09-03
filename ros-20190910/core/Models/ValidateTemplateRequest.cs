@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ValidationOption")]
+        [Validation(Required=false)]
+        public string ValidationOption { get; set; }
+
     }
 
 }

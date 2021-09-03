@@ -79,6 +79,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("PermissionModel")]
+        [Validation(Required=false)]
+        public string PermissionModel { get; set; }
+
+        [NameInMap("AutoDeployment")]
+        [Validation(Required=false)]
+        public string AutoDeploymentShrink { get; set; }
+
+        [NameInMap("DeploymentTargets")]
+        [Validation(Required=false)]
+        public string DeploymentTargetsShrink { get; set; }
+
     }
 
 }

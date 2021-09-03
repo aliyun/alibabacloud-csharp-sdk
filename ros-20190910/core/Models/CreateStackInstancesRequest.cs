@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("DeploymentTargets")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> DeploymentTargets { get; set; }
+
     }
 
 }

@@ -41,6 +41,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("PermissionModel")]
+            [Validation(Required=false)]
+            public string PermissionModel { get; set; }
+
+            [NameInMap("AutoDeployment")]
+            [Validation(Required=false)]
+            public ListStackGroupsResponseBodyStackGroupsAutoDeployment AutoDeployment { get; set; }
+            public class ListStackGroupsResponseBodyStackGroupsAutoDeployment : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+                [NameInMap("RetainStacksOnAccountRemoval")]
+                [Validation(Required=false)]
+                public bool? RetainStacksOnAccountRemoval { get; set; }
+            };
+
         }
 
         [NameInMap("TotalCount")]

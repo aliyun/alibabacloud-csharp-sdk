@@ -67,6 +67,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("PermissionModel")]
+        [Validation(Required=false)]
+        public string PermissionModel { get; set; }
+
+        [NameInMap("AutoDeployment")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> AutoDeployment { get; set; }
+
     }
 
 }
