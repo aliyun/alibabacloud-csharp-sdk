@@ -555,6 +555,76 @@ namespace AlibabaCloud.SDK.Codeup20200414
             return TeaModel.ToObject<UpdateMergeRequestCommentResponse>(await DoROARequestAsync("UpdateMergeRequestComment", "2020-04-14", "HTTPS", "PUT", "AK", "/api/v3/projects/" + ProjectId + "/merge_requests/" + MergeRequestId + "/notes/" + NoteId, "json", req, runtime));
         }
 
+        public TriggerRepositoryMirrorSyncResponse TriggerRepositoryMirrorSync(string ProjectId, TriggerRepositoryMirrorSyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TriggerRepositoryMirrorSyncWithOptions(ProjectId, request, headers, runtime);
+        }
+
+        public async Task<TriggerRepositoryMirrorSyncResponse> TriggerRepositoryMirrorSyncAsync(string ProjectId, TriggerRepositoryMirrorSyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TriggerRepositoryMirrorSyncWithOptionsAsync(ProjectId, request, headers, runtime);
+        }
+
+        public TriggerRepositoryMirrorSyncResponse TriggerRepositoryMirrorSyncWithOptions(string ProjectId, TriggerRepositoryMirrorSyncRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["AccessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Account))
+            {
+                query["Account"] = request.Account;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<TriggerRepositoryMirrorSyncResponse>(DoROARequest("TriggerRepositoryMirrorSync", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/mirror", "json", req, runtime));
+        }
+
+        public async Task<TriggerRepositoryMirrorSyncResponse> TriggerRepositoryMirrorSyncWithOptionsAsync(string ProjectId, TriggerRepositoryMirrorSyncRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["AccessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Account))
+            {
+                query["Account"] = request.Account;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<TriggerRepositoryMirrorSyncResponse>(await DoROARequestAsync("TriggerRepositoryMirrorSync", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/mirror", "json", req, runtime));
+        }
+
         public DeleteBranchResponse DeleteBranch(string ProjectId, DeleteBranchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4189,6 +4259,60 @@ namespace AlibabaCloud.SDK.Codeup20200414
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             return TeaModel.ToObject<CreateBranchResponse>(await DoROARequestAsync("CreateBranch", "2020-04-14", "HTTPS", "POST", "AK", "/api/v3/projects/" + ProjectId + "/repository/branches", "json", req, runtime));
+        }
+
+        public GetOrganizationRepositorySettingResponse GetOrganizationRepositorySetting(GetOrganizationRepositorySettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetOrganizationRepositorySettingWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetOrganizationRepositorySettingResponse> GetOrganizationRepositorySettingAsync(GetOrganizationRepositorySettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetOrganizationRepositorySettingWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GetOrganizationRepositorySettingResponse GetOrganizationRepositorySettingWithOptions(GetOrganizationRepositorySettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["AccessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<GetOrganizationRepositorySettingResponse>(DoROARequest("GetOrganizationRepositorySetting", "2020-04-14", "HTTPS", "GET", "AK", "/api/v4/organization/settings/repo", "json", req, runtime));
+        }
+
+        public async Task<GetOrganizationRepositorySettingResponse> GetOrganizationRepositorySettingWithOptionsAsync(GetOrganizationRepositorySettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessToken))
+            {
+                query["AccessToken"] = request.AccessToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<GetOrganizationRepositorySettingResponse>(await DoROARequestAsync("GetOrganizationRepositorySetting", "2020-04-14", "HTTPS", "GET", "AK", "/api/v4/organization/settings/repo", "json", req, runtime));
         }
 
         public ListGroupRepositoriesResponse ListGroupRepositories(string Identity, ListGroupRepositoriesRequest request)
