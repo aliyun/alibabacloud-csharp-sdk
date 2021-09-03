@@ -73,7 +73,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("AutoDeployment")]
         [Validation(Required=false)]
-        public Dictionary<string, object> AutoDeployment { get; set; }
+        public CreateStackGroupRequestAutoDeployment AutoDeployment { get; set; }
+        public class CreateStackGroupRequestAutoDeployment : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+            [NameInMap("RetainStacksOnAccountRemoval")]
+            [Validation(Required=false)]
+            public bool? RetainStacksOnAccountRemoval { get; set; }
+        };
 
     }
 

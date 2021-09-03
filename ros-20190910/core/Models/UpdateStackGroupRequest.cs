@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> AccountIds { get; set; }
+        public List<string> AccountIds { get; set; }
 
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> RegionIds { get; set; }
+        public List<string> RegionIds { get; set; }
 
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
@@ -85,11 +85,27 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("AutoDeployment")]
         [Validation(Required=false)]
-        public Dictionary<string, object> AutoDeployment { get; set; }
+        public UpdateStackGroupRequestAutoDeployment AutoDeployment { get; set; }
+        public class UpdateStackGroupRequestAutoDeployment : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+            [NameInMap("RetainStacksOnAccountRemoval")]
+            [Validation(Required=false)]
+            public bool? RetainStacksOnAccountRemoval { get; set; }
+        };
 
         [NameInMap("DeploymentTargets")]
         [Validation(Required=false)]
-        public Dictionary<string, object> DeploymentTargets { get; set; }
+        public UpdateStackGroupRequestDeploymentTargets DeploymentTargets { get; set; }
+        public class UpdateStackGroupRequestDeploymentTargets : TeaModel {
+            [NameInMap("RdFolderIds")]
+            [Validation(Required=false)]
+            public List<string> RdFolderIds { get; set; }
+            [NameInMap("AccountIds")]
+            [Validation(Required=false)]
+            public List<string> AccountIds { get; set; }
+        };
 
     }
 

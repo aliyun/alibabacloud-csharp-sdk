@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> AccountIds { get; set; }
+        public List<string> AccountIds { get; set; }
 
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
-        public Dictionary<string, object> RegionIds { get; set; }
+        public List<string> RegionIds { get; set; }
 
         [NameInMap("RetainStacks")]
         [Validation(Required=false)]
@@ -43,7 +43,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         [NameInMap("DeploymentTargets")]
         [Validation(Required=false)]
-        public Dictionary<string, object> DeploymentTargets { get; set; }
+        public DeleteStackInstancesRequestDeploymentTargets DeploymentTargets { get; set; }
+        public class DeleteStackInstancesRequestDeploymentTargets : TeaModel {
+            [NameInMap("RdFolderIds")]
+            [Validation(Required=false)]
+            public List<string> RdFolderIds { get; set; }
+        };
 
     }
 

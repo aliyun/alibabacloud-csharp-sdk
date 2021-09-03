@@ -170,9 +170,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateStackGroupShrinkRequest request = new CreateStackGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment.ToMap()))
             {
-                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment, "AutoDeployment", "json");
+                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment.ToMap(), "AutoDeployment", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -186,9 +186,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateStackGroupShrinkRequest request = new CreateStackGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment.ToMap()))
             {
-                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment, "AutoDeployment", "json");
+                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment.ToMap(), "AutoDeployment", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -226,9 +226,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -254,9 +254,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -422,9 +422,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -450,9 +450,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1966,13 +1966,13 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment.ToMap()))
             {
-                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment, "AutoDeployment", "json");
+                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment.ToMap(), "AutoDeployment", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1998,13 +1998,13 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDeployment.ToMap()))
             {
-                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment, "AutoDeployment", "json");
+                request.AutoDeploymentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDeployment.ToMap(), "AutoDeployment", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2042,9 +2042,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2070,9 +2070,9 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 request.OperationPreferencesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationPreferences, "OperationPreferences", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentTargets.ToMap()))
             {
-                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets, "DeploymentTargets", "json");
+                request.DeploymentTargetsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentTargets.ToMap(), "DeploymentTargets", "json");
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
