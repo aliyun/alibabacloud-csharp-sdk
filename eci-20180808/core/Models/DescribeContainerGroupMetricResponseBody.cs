@@ -30,10 +30,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 public List<DescribeContainerGroupMetricResponseBodyRecordsNetworkInterfaces> Interfaces { get; set; }
                 public class DescribeContainerGroupMetricResponseBodyRecordsNetworkInterfaces : TeaModel {
                     public long? RxErrors { get; set; }
+                    public long? TxDrops { get; set; }
                     public long? TxBytes { get; set; }
+                    public long? RxPackets { get; set; }
+                    public long? TxPackets { get; set; }
                     public string Name { get; set; }
                     public long? TxErrors { get; set; }
                     public long? RxBytes { get; set; }
+                    public long? RxDrops { get; set; }
                 }
             };
 
@@ -54,6 +58,32 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 [Validation(Required=false)]
                 public long? Load { get; set; }
             };
+
+            [NameInMap("Disk")]
+            [Validation(Required=false)]
+            public List<DescribeContainerGroupMetricResponseBodyRecordsDisk> Disk { get; set; }
+            public class DescribeContainerGroupMetricResponseBodyRecordsDisk : TeaModel {
+                [NameInMap("WriteBytes")]
+                [Validation(Required=false)]
+                public long? WriteBytes { get; set; }
+
+                [NameInMap("WriteIO")]
+                [Validation(Required=false)]
+                public long? WriteIO { get; set; }
+
+                [NameInMap("Device")]
+                [Validation(Required=false)]
+                public string Device { get; set; }
+
+                [NameInMap("ReadIO")]
+                [Validation(Required=false)]
+                public long? ReadIO { get; set; }
+
+                [NameInMap("ReadBytes")]
+                [Validation(Required=false)]
+                public long? ReadBytes { get; set; }
+
+            }
 
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
@@ -79,6 +109,32 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 [Validation(Required=false)]
                 public long? Cache { get; set; }
             };
+
+            [NameInMap("Filesystem")]
+            [Validation(Required=false)]
+            public List<DescribeContainerGroupMetricResponseBodyRecordsFilesystem> Filesystem { get; set; }
+            public class DescribeContainerGroupMetricResponseBodyRecordsFilesystem : TeaModel {
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
+                public long? Capacity { get; set; }
+
+                [NameInMap("Available")]
+                [Validation(Required=false)]
+                public long? Available { get; set; }
+
+                [NameInMap("FsName")]
+                [Validation(Required=false)]
+                public string FsName { get; set; }
+
+                [NameInMap("Usage")]
+                [Validation(Required=false)]
+                public long? Usage { get; set; }
+
+                [NameInMap("Category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
+            }
 
             [NameInMap("Containers")]
             [Validation(Required=false)]

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public string ExpireDateTime { get; set; }
 
+            [NameInMap("LastMatchedTime")]
+            [Validation(Required=false)]
+            public string LastMatchedTime { get; set; }
+
             [NameInMap("ContainerGroupId")]
             [Validation(Required=false)]
             public string ContainerGroupId { get; set; }
@@ -97,9 +101,17 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public string SnapshotId { get; set; }
 
+            [NameInMap("FlashSnapshotId")]
+            [Validation(Required=false)]
+            public string FlashSnapshotId { get; set; }
+
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
+            [NameInMap("ImageCacheSize")]
+            [Validation(Required=false)]
+            public int? ImageCacheSize { get; set; }
 
             [NameInMap("ImageCacheName")]
             [Validation(Required=false)]

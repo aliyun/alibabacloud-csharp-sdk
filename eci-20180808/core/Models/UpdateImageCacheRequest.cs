@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eci20180808.Models
 {
-    public class CreateImageCacheRequest : TeaModel {
+    public class UpdateImageCacheRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("ImageCacheId")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string ImageCacheId { get; set; }
 
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         [NameInMap("ImageRegistryCredential")]
         [Validation(Required=false)]
-        public List<CreateImageCacheRequestImageRegistryCredential> ImageRegistryCredential { get; set; }
-        public class CreateImageCacheRequestImageRegistryCredential : TeaModel {
+        public List<UpdateImageCacheRequestImageRegistryCredential> ImageRegistryCredential { get; set; }
+        public class UpdateImageCacheRequestImageRegistryCredential : TeaModel {
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateImageCacheRequestTag> Tag { get; set; }
-        public class CreateImageCacheRequestTag : TeaModel {
+        public List<UpdateImageCacheRequestTag> Tag { get; set; }
+        public class UpdateImageCacheRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
         [NameInMap("AcrRegistryInfo")]
         [Validation(Required=false)]
-        public List<CreateImageCacheRequestAcrRegistryInfo> AcrRegistryInfo { get; set; }
-        public class CreateImageCacheRequestAcrRegistryInfo : TeaModel {
+        public List<UpdateImageCacheRequestAcrRegistryInfo> AcrRegistryInfo { get; set; }
+        public class UpdateImageCacheRequestAcrRegistryInfo : TeaModel {
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public List<string> Domain { get; set; }

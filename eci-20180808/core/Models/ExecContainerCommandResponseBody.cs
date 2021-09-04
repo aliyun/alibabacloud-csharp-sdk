@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public string WebSocketUri { get; set; }
 
+        [NameInMap("HttpUrl")]
+        [Validation(Required=false)]
+        public string HttpUrl { get; set; }
+
+        [NameInMap("SyncResponse")]
+        [Validation(Required=false)]
+        public string SyncResponse { get; set; }
+
     }
 
 }

@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
 
+            [NameInMap("SpotPriceLimit")]
+            [Validation(Required=false)]
+            public double? SpotPriceLimit { get; set; }
+
             [NameInMap("EphemeralStorage")]
             [Validation(Required=false)]
             public int? EphemeralStorage { get; set; }
@@ -209,6 +213,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 [Validation(Required=false)]
                 public List<DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts> VolumeMounts { get; set; }
                 public class DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts : TeaModel {
+                    [NameInMap("MountPropagation")]
+                    [Validation(Required=false)]
+                    public string MountPropagation { get; set; }
+
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
@@ -467,6 +475,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
                 [Validation(Required=false)]
                 public List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts> VolumeMounts { get; set; }
                 public class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts : TeaModel {
+                    [NameInMap("MountPropagation")]
+                    [Validation(Required=false)]
+                    public string MountPropagation { get; set; }
+
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
@@ -655,17 +667,21 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public string ContainerGroupId { get; set; }
 
+            [NameInMap("TenantEniIp")]
+            [Validation(Required=false)]
+            public string TenantEniIp { get; set; }
+
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
-            [NameInMap("Ipv6Address")]
-            [Validation(Required=false)]
-            public string Ipv6Address { get; set; }
-
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
+
+            [NameInMap("Ipv6Address")]
+            [Validation(Required=false)]
+            public string Ipv6Address { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]

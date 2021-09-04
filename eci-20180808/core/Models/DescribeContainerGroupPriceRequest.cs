@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public float? SpotPriceLimit { get; set; }
 
+        [NameInMap("EphemeralStorage")]
+        [Validation(Required=false)]
+        public int? EphemeralStorage { get; set; }
+
     }
 
 }

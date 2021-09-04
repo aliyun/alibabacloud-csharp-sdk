@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public bool? Stdin { get; set; }
 
+        [NameInMap("Sync")]
+        [Validation(Required=false)]
+        public bool? Sync { get; set; }
+
     }
 
 }

@@ -57,10 +57,6 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("VkClientVersion")]
-        [Validation(Required=false)]
-        public string VkClientVersion { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

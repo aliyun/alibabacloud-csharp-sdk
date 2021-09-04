@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
-        [NameInMap("VkClientVersion")]
-        [Validation(Required=false)]
-        public string VkClientVersion { get; set; }
-
     }
 
 }

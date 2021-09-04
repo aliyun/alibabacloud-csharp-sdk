@@ -317,6 +317,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestContainerVolumeMount> VolumeMount { get; set; }
             public class UpdateContainerGroupRequestContainerVolumeMount : TeaModel {
+                [NameInMap("MountPropagation")]
+                [Validation(Required=false)]
+                public string MountPropagation { get; set; }
+
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
@@ -500,6 +504,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public List<UpdateContainerGroupRequestInitContainerVolumeMount> VolumeMount { get; set; }
             public class UpdateContainerGroupRequestInitContainerVolumeMount : TeaModel {
+                [NameInMap("MountPropagation")]
+                [Validation(Required=false)]
+                public string MountPropagation { get; set; }
+
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-eci")]
 [assembly: AssemblyDescription("Alibaba Cloud Elastic Container Instance (20180808) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("03740ac0-5314-11eb-b4aa-e1ce8491f402")]
+[assembly: Guid("d24f1ad0-0d7f-11ec-a183-49dccf4b4308")]
 
 // Version information for an assembly consists of the following four values:
 //

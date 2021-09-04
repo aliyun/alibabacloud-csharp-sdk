@@ -132,10 +132,6 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public bool? AutoMatchImageCache { get; set; }
 
-        [NameInMap("VkClientVersion")]
-        [Validation(Required=false)]
-        public string VkClientVersion { get; set; }
-
         [NameInMap("Ipv6AddressCount")]
         [Validation(Required=false)]
         public int? Ipv6AddressCount { get; set; }
@@ -436,6 +432,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public List<CreateContainerGroupRequestContainerVolumeMount> VolumeMount { get; set; }
             public class CreateContainerGroupRequestContainerVolumeMount : TeaModel {
+                [NameInMap("MountPropagation")]
+                [Validation(Required=false)]
+                public string MountPropagation { get; set; }
+
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
@@ -724,6 +724,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public List<CreateContainerGroupRequestInitContainerVolumeMount> VolumeMount { get; set; }
             public class CreateContainerGroupRequestInitContainerVolumeMount : TeaModel {
+                [NameInMap("MountPropagation")]
+                [Validation(Required=false)]
+                public string MountPropagation { get; set; }
+
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
@@ -878,6 +882,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             public string RegionId { get; set; }
 
         }
+
+        [NameInMap("SpotDuration")]
+        [Validation(Required=false)]
+        public long? SpotDuration { get; set; }
 
     }
 
