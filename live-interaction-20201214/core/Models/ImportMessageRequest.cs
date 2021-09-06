@@ -28,11 +28,7 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
                 public string AppCid { get; set; }
                 public long? ConversationType { get; set; }
                 public string SenderId { get; set; }
-                public List<ImportMessageRequestRequestParamsMessagesReceiverUsers> ReceiverUsers { get; set; }
-                public class ImportMessageRequestRequestParamsMessagesReceiverUsers : TeaModel {
-                    public string ReceiverId { get; set; }
-                    public bool? ReadFlag { get; set; }
-                }
+                public List<string> ReceiverIds { get; set; }
                 public long? ContentType { get; set; }
                 public string Content { get; set; }
                 public long? CreateTime { get; set; }
