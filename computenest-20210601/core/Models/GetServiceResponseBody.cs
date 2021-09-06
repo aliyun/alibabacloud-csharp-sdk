@@ -75,6 +75,18 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
+        [NameInMap("IsSupportOperated")]
+        [Validation(Required=false)]
+        public bool? IsSupportOperated { get; set; }
+
+        [NameInMap("PolicyNames")]
+        [Validation(Required=false)]
+        public string PolicyNames { get; set; }
+
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public long? Duration { get; set; }
+
     }
 
 }

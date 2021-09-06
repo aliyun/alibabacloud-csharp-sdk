@@ -41,6 +41,24 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        [NameInMap("OperationMetadata")]
+        [Validation(Required=false)]
+        public CreateServiceInstanceShrinkRequestOperationMetadata OperationMetadata { get; set; }
+        public class CreateServiceInstanceShrinkRequestOperationMetadata : TeaModel {
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+            [NameInMap("Resources")]
+            [Validation(Required=false)]
+            public string Resources { get; set; }
+            [NameInMap("ServiceInstanceId")]
+            [Validation(Required=false)]
+            public string ServiceInstanceId { get; set; }
+        };
+
     }
 
 }

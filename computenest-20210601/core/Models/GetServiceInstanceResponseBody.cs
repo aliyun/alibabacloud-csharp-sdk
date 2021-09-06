@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
+
+        [NameInMap("Progress")]
+        [Validation(Required=false)]
+        public long? Progress { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -58,6 +66,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
+            [NameInMap("DeployMetadata")]
+            [Validation(Required=false)]
+            public string DeployMetadata { get; set; }
             [NameInMap("DeployType")]
             [Validation(Required=false)]
             public string DeployType { get; set; }
@@ -82,18 +93,27 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public string Name { get; set; }
                 public string ShortDescription { get; set; }
             }
-            [NameInMap("DeployMetadata")]
-            [Validation(Required=false)]
-            public string DeployMetadata { get; set; }
         };
 
-        [NameInMap("Progress")]
+        [NameInMap("OperationStartTime")]
         [Validation(Required=false)]
-        public long? Progress { get; set; }
+        public string OperationStartTime { get; set; }
 
-        [NameInMap("TemplateName")]
+        [NameInMap("OperationEndTime")]
         [Validation(Required=false)]
-        public string TemplateName { get; set; }
+        public string OperationEndTime { get; set; }
+
+        [NameInMap("OperatedServiceInstanceId")]
+        [Validation(Required=false)]
+        public string OperatedServiceInstanceId { get; set; }
+
+        [NameInMap("EnableInstanceOps")]
+        [Validation(Required=false)]
+        public bool? EnableInstanceOps { get; set; }
+
+        [NameInMap("IsOperated")]
+        [Validation(Required=false)]
+        public bool? IsOperated { get; set; }
 
     }
 

@@ -57,9 +57,21 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string StatusDetail { get; set; }
 
+            [NameInMap("Progress")]
+            [Validation(Required=false)]
+            public long? Progress { get; set; }
+
             [NameInMap("Resources")]
             [Validation(Required=false)]
             public string Resources { get; set; }
+
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
+
+            [NameInMap("OperatedServiceInstanceId")]
+            [Validation(Required=false)]
+            public string OperatedServiceInstanceId { get; set; }
 
             [NameInMap("Service")]
             [Validation(Required=false)]
@@ -100,13 +112,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 }
             };
 
-            [NameInMap("Progress")]
+            [NameInMap("OperationStartTime")]
             [Validation(Required=false)]
-            public long? Progress { get; set; }
+            public string OperationStartTime { get; set; }
 
-            [NameInMap("TemplateName")]
+            [NameInMap("OperationEndTime")]
             [Validation(Required=false)]
-            public string TemplateName { get; set; }
+            public string OperationEndTime { get; set; }
+
+            [NameInMap("EnableInstanceOps")]
+            [Validation(Required=false)]
+            public bool? EnableInstanceOps { get; set; }
 
         }
 

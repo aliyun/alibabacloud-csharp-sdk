@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class ContinueDeployServiceInstanceRequest : TeaModel {
-        [NameInMap("ClientToken")]
+    public class ListPoliciesRequest : TeaModel {
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string MaxResults { get; set; }
 
-        [NameInMap("ServiceInstanceId")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string ServiceInstanceId { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public string Parameters { get; set; }
 
     }
 
