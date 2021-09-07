@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class ReadMessageResponseBody : TeaModel {
+    public class SetMessageReadResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

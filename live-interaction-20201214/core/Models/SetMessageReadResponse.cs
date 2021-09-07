@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class ReadMessageResponse : TeaModel {
+    public class SetMessageReadResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ReadMessageResponseBody Body { get; set; }
+        public SetMessageReadResponseBody Body { get; set; }
 
     }
 

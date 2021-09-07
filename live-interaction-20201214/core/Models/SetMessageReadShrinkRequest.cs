@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class ReadMessageShrinkRequest : TeaModel {
+    public class SetMessageReadShrinkRequest : TeaModel {
         /// <summary>
         /// AppId
         /// </summary>

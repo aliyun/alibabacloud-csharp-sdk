@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 {
-    public class ReadMessageRequest : TeaModel {
+    public class SetMessageReadRequest : TeaModel {
         /// <summary>
         /// AppId
         /// </summary>
@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Live_interaction20201214.Models
 
         [NameInMap("RequestParams")]
         [Validation(Required=false)]
-        public ReadMessageRequestRequestParams RequestParams { get; set; }
-        public class ReadMessageRequestRequestParams : TeaModel {
+        public SetMessageReadRequestRequestParams RequestParams { get; set; }
+        public class SetMessageReadRequestRequestParams : TeaModel {
             [NameInMap("AppUid")]
             [Validation(Required=false)]
             public string AppUid { get; set; }
