@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                     public string Key { get; set; }
                     public string Value { get; set; }
                 }
+                public string Scene { get; set; }
+                public string IntegrationMode { get; set; }
+                public string StandardRoomInfo { get; set; }
             }
         };
 

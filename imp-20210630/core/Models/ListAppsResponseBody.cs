@@ -39,7 +39,10 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string AppTemplateName { get; set; }
                 public string AppKey { get; set; }
                 public string AppStatus { get; set; }
+                public string AppConfigStatus { get; set; }
                 public string CreateTime { get; set; }
+                public string IntegrationMode { get; set; }
+                public string StandardRoomInfo { get; set; }
                 public List<string> ComponentList { get; set; }
             }
         };

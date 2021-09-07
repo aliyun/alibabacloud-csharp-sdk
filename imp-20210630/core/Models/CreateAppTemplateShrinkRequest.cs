@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// 集成方式（一体化SDK：paasSDK，样板间：standardRoom）
+        /// </summary>
+        [NameInMap("IntegrationMode")]
+        [Validation(Required=false)]
+        public string IntegrationMode { get; set; }
+
+        /// <summary>
         /// 组件列表
         /// </summary>
         [NameInMap("ComponentList")]

@@ -23,6 +23,20 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// 应用状态
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
+        /// </summary>
+        [NameInMap("IntegrationMode")]
+        [Validation(Required=false)]
+        public string IntegrationMode { get; set; }
+
     }
 
 }
