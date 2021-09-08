@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeSdkUrlRequest : TeaModel {
         [NameInMap("Id")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? Id { get; set; }
 
         [NameInMap("Debug")]

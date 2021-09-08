@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyDeviceInfoRequest : TeaModel {
         [NameInMap("DeviceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DeviceId { get; set; }
 
         [NameInMap("UserDeviceId")]

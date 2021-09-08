@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Valid { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
     }

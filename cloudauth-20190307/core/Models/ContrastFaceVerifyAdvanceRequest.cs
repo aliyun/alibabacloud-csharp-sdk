@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string Model { get; set; }
 
+        [NameInMap("Crop")]
+        [Validation(Required=false)]
+        public string Crop { get; set; }
+
     }
 
 }

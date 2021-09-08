@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardBackImageUrl { get; set; }
 
         [NameInMap("BizType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizType { get; set; }
 
         [NameInMap("FailedRedirectUrl")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string UserId { get; set; }
 
         [NameInMap("BizId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizId { get; set; }
 
         [NameInMap("Name")]

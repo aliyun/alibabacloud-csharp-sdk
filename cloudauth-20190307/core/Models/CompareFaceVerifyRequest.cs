@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string TargetOssObjectName { get; set; }
 
+        [NameInMap("Crop")]
+        [Validation(Required=false)]
+        public string Crop { get; set; }
+
     }
 
 }

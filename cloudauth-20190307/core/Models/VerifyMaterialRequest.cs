@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -14,23 +17,23 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardBackImageUrl { get; set; }
 
         [NameInMap("FaceImageUrl")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FaceImageUrl { get; set; }
 
         [NameInMap("BizType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizType { get; set; }
 
         [NameInMap("BizId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BizId { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Name { get; set; }
 
         [NameInMap("IdCardNumber")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string IdCardNumber { get; set; }
 
         [NameInMap("IdCardFrontImageUrl")]
