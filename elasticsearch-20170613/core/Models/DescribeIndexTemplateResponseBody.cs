@@ -1,0 +1,56 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
+{
+    public class DescribeIndexTemplateResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public DescribeIndexTemplateResponseBodyResult Result { get; set; }
+        public class DescribeIndexTemplateResponseBodyResult : TeaModel {
+            [NameInMap("dataStream")]
+            [Validation(Required=false)]
+            public bool? DataStream { get; set; }
+            [NameInMap("indexTemplate")]
+            [Validation(Required=false)]
+            public string IndexTemplate { get; set; }
+            [NameInMap("ilmPolicy")]
+            [Validation(Required=false)]
+            public string IlmPolicy { get; set; }
+            [NameInMap("priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+            [NameInMap("indexPatterns")]
+            [Validation(Required=false)]
+            public List<string> IndexPatterns { get; set; }
+            [NameInMap("template")]
+            [Validation(Required=false)]
+            public DescribeIndexTemplateResponseBodyResultTemplate Template { get; set; }
+            public class DescribeIndexTemplateResponseBodyResultTemplate : TeaModel {
+                [NameInMap("settings")]
+                [Validation(Required=false)]
+                public string Settings { get; set; }
+
+                [NameInMap("mappings")]
+                [Validation(Required=false)]
+                public string Mappings { get; set; }
+
+                [NameInMap("aliases")]
+                [Validation(Required=false)]
+                public string Aliases { get; set; }
+
+            }
+        };
+
+    }
+
+}
