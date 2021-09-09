@@ -9,13 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeFaceConfigResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Items")]
         [Validation(Required=true)]
-        public DescribeFaceConfigResponseBody Body { get; set; }
+        public List<DescribeFaceConfigResponseItems> Items { get; set; }
+        public class DescribeFaceConfigResponseItems : TeaModel {
+            [NameInMap("BizType")]
+            [Validation(Required=true)]
+            public string BizType { get; set; }
+
+            [NameInMap("BizName")]
+            [Validation(Required=true)]
+            public string BizName { get; set; }
+
+            [NameInMap("GmtUpdated")]
+            [Validation(Required=true)]
+            public long? GmtUpdated { get; set; }
+
+        }
 
     }
 

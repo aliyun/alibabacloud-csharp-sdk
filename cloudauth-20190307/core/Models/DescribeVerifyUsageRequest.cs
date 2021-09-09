@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizType { get; set; }
 
         [NameInMap("StartDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string StartDate { get; set; }
 
         [NameInMap("EndDate")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EndDate { get; set; }
 
     }

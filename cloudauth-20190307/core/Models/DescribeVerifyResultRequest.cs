@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyResultRequest : TeaModel {
         [NameInMap("BizId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizId { get; set; }
 
         [NameInMap("BizType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizType { get; set; }
 
     }

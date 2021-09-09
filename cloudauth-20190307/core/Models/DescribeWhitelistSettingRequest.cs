@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Lang { get; set; }
 
         [NameInMap("ServiceCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceCode { get; set; }
 
         [NameInMap("SceneId")]
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Status { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? CurrentPage { get; set; }
 
     }

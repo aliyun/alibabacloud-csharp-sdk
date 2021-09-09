@@ -9,13 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VerifyDeviceResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public VerifyDeviceResponseBody Body { get; set; }
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=true)]
+        public string Message { get; set; }
+
+        [NameInMap("ResultObject")]
+        [Validation(Required=true)]
+        public VerifyDeviceResponseResultObject ResultObject { get; set; }
+        public class VerifyDeviceResponseResultObject : TeaModel {
+            [NameInMap("ValidationRetCode")]
+            [Validation(Required=true)]
+            public string ValidationRetCode { get; set; }
+            [NameInMap("ProductRetCode")]
+            [Validation(Required=true)]
+            public string ProductRetCode { get; set; }
+            [NameInMap("RetCodeSub")]
+            [Validation(Required=true)]
+            public string RetCodeSub { get; set; }
+            [NameInMap("RetMessageSub")]
+            [Validation(Required=true)]
+            public string RetMessageSub { get; set; }
+            [NameInMap("HasNext")]
+            [Validation(Required=true)]
+            public string HasNext { get; set; }
+            [NameInMap("ExtParams")]
+            [Validation(Required=true)]
+            public string ExtParams { get; set; }
+        };
 
     }
 

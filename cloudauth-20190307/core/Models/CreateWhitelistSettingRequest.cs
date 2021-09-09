@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Lang { get; set; }
 
         [NameInMap("ServiceCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ServiceCode { get; set; }
 
         [NameInMap("SceneId")]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNo { get; set; }
 
         [NameInMap("ValidDay")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? ValidDay { get; set; }
 
     }

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Lang { get; set; }
 
         [NameInMap("TaskId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TaskId { get; set; }
 
     }

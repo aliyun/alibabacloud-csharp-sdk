@@ -22,15 +22,15 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizType { get; set; }
 
         [NameInMap("BizId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizId { get; set; }
 
         [NameInMap("IdCardNum")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string IdCardNum { get; set; }
 
         [NameInMap("ValidDay")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ValidDay { get; set; }
 
     }

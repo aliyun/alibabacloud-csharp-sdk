@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class UpdateVerifySettingRequest : TeaModel {
         [NameInMap("BizType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BizType { get; set; }
 
         [NameInMap("BizName")]

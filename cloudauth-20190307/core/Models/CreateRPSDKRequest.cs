@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Lang { get; set; }
 
         [NameInMap("AppUrl")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string AppUrl { get; set; }
 
         [NameInMap("Platform")]

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateWhitelistSettingResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ResultObject")]
         [Validation(Required=true)]
-        public CreateWhitelistSettingResponseBody Body { get; set; }
+        public bool? ResultObject { get; set; }
 
     }
 

@@ -9,13 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CompareFaceVerifyResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Code")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Message")]
         [Validation(Required=true)]
-        public CompareFaceVerifyResponseBody Body { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResultObject")]
+        [Validation(Required=true)]
+        public CompareFaceVerifyResponseResultObject ResultObject { get; set; }
+        public class CompareFaceVerifyResponseResultObject : TeaModel {
+            [NameInMap("CertifyId")]
+            [Validation(Required=true)]
+            public string CertifyId { get; set; }
+            [NameInMap("VerifyScore")]
+            [Validation(Required=true)]
+            public float? VerifyScore { get; set; }
+            [NameInMap("Passed")]
+            [Validation(Required=true)]
+            public string Passed { get; set; }
+        };
 
     }
 
