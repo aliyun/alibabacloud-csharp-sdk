@@ -693,6 +693,38 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDBInstanceSQLPatternsResponse DescribeDBInstanceSQLPatternsWithOptions(DescribeDBInstanceSQLPatternsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeDBInstanceSQLPatternsResponse>(DoRPCRequest("DescribeDBInstanceSQLPatterns", "2016-05-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeDBInstanceSQLPatternsResponse> DescribeDBInstanceSQLPatternsWithOptionsAsync(DescribeDBInstanceSQLPatternsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeDBInstanceSQLPatternsResponse>(await DoRPCRequestAsync("DescribeDBInstanceSQLPatterns", "2016-05-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeDBInstanceSQLPatternsResponse DescribeDBInstanceSQLPatterns(DescribeDBInstanceSQLPatternsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDBInstanceSQLPatternsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDBInstanceSQLPatternsResponse> DescribeDBInstanceSQLPatternsAsync(DescribeDBInstanceSQLPatternsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDBInstanceSQLPatternsWithOptionsAsync(request, runtime);
+        }
+
         public DescribeDBInstanceSSLResponse DescribeDBInstanceSSLWithOptions(DescribeDBInstanceSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1235,6 +1267,38 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSQLLogsWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeSQLLogsOnSliceResponse DescribeSQLLogsOnSliceWithOptions(DescribeSQLLogsOnSliceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeSQLLogsOnSliceResponse>(DoRPCRequest("DescribeSQLLogsOnSlice", "2016-05-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeSQLLogsOnSliceResponse> DescribeSQLLogsOnSliceWithOptionsAsync(DescribeSQLLogsOnSliceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeSQLLogsOnSliceResponse>(await DoRPCRequestAsync("DescribeSQLLogsOnSlice", "2016-05-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeSQLLogsOnSliceResponse DescribeSQLLogsOnSlice(DescribeSQLLogsOnSliceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSQLLogsOnSliceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeSQLLogsOnSliceResponse> DescribeSQLLogsOnSliceAsync(DescribeSQLLogsOnSliceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSQLLogsOnSliceWithOptionsAsync(request, runtime);
         }
 
         public DescribeTagsResponse DescribeTagsWithOptions(DescribeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

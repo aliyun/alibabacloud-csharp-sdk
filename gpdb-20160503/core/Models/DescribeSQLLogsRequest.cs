@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string OperationType { get; set; }
 
+        [NameInMap("MaxExecuteCost")]
+        [Validation(Required=false)]
+        public string MaxExecuteCost { get; set; }
+
+        [NameInMap("MinExecuteCost")]
+        [Validation(Required=false)]
+        public string MinExecuteCost { get; set; }
+
     }
 
 }

@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string QueryId { get; set; }
 
+            [NameInMap("SliceIds")]
+            [Validation(Required=false)]
+            public List<string> SliceIds { get; set; }
+
         }
 
     }

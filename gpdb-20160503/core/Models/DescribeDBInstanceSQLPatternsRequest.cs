@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class DescribeSQLLogCountRequest : TeaModel {
+    public class DescribeDBInstanceSQLPatternsRequest : TeaModel {
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -33,33 +33,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("ExecuteCost")]
-        [Validation(Required=false)]
-        public string ExecuteCost { get; set; }
-
         [NameInMap("SourceIP")]
         [Validation(Required=false)]
         public string SourceIP { get; set; }
-
-        [NameInMap("ExecuteState")]
-        [Validation(Required=false)]
-        public string ExecuteState { get; set; }
-
-        [NameInMap("OperationClass")]
-        [Validation(Required=false)]
-        public string OperationClass { get; set; }
-
-        [NameInMap("OperationType")]
-        [Validation(Required=false)]
-        public string OperationType { get; set; }
-
-        [NameInMap("MaxExecuteCost")]
-        [Validation(Required=false)]
-        public string MaxExecuteCost { get; set; }
-
-        [NameInMap("MinExecuteCost")]
-        [Validation(Required=false)]
-        public string MinExecuteCost { get; set; }
 
     }
 
