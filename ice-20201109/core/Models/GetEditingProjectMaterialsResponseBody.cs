@@ -150,6 +150,32 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        [NameInMap("LiveMaterials")]
+        [Validation(Required=false)]
+        public List<GetEditingProjectMaterialsResponseBodyLiveMaterials> LiveMaterials { get; set; }
+        public class GetEditingProjectMaterialsResponseBodyLiveMaterials : TeaModel {
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
+            [NameInMap("StreamName")]
+            [Validation(Required=false)]
+            public string StreamName { get; set; }
+
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+
+            [NameInMap("LiveUrl")]
+            [Validation(Required=false)]
+            public string LiveUrl { get; set; }
+
+        }
+
+        [NameInMap("ProjectMaterials")]
+        [Validation(Required=false)]
+        public string ProjectMaterials { get; set; }
+
     }
 
 }

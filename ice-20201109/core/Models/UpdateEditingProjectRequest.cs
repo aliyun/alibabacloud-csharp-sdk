@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
+        [NameInMap("BusinessStatus")]
+        [Validation(Required=false)]
+        public string BusinessStatus { get; set; }
+
     }
 
 }

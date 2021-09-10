@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class DeleteEditingProjectsResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
+    public class GetLiveEditingJobRequest : TeaModel {
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string JobId { get; set; }
 
     }
 

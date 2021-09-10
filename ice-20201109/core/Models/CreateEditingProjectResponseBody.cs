@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateEditingProjectResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// 请求ID
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -59,6 +59,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
+            [NameInMap("BusinessConfig")]
+            [Validation(Required=false)]
+            public string BusinessConfig { get; set; }
+            [NameInMap("ProjectType")]
+            [Validation(Required=false)]
+            public string ProjectType { get; set; }
+            [NameInMap("BusinessStatus")]
+            [Validation(Required=false)]
+            public string BusinessStatus { get; set; }
         };
 
     }

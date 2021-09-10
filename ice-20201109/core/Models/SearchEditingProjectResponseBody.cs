@@ -121,6 +121,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string TemplateType { get; set; }
 
+            [NameInMap("ProjectType")]
+            [Validation(Required=false)]
+            public string ProjectType { get; set; }
+
+            [NameInMap("BusinessConfig")]
+            [Validation(Required=false)]
+            public string BusinessConfig { get; set; }
+
+            [NameInMap("BusinessStatus")]
+            [Validation(Required=false)]
+            public string BusinessStatus { get; set; }
+
         }
 
         /// <summary>

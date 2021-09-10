@@ -56,6 +56,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("ModifiedSource")]
             [Validation(Required=false)]
             public string ModifiedSource { get; set; }
+            [NameInMap("ProjectType")]
+            [Validation(Required=false)]
+            public string ProjectType { get; set; }
+            [NameInMap("BusinessConfig")]
+            [Validation(Required=false)]
+            public string BusinessConfig { get; set; }
+            [NameInMap("BusinessStatus")]
+            [Validation(Required=false)]
+            public string BusinessStatus { get; set; }
         };
 
     }
