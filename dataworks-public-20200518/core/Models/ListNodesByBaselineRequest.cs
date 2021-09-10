@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByBaselineRequest : TeaModel {
         [NameInMap("BaselineId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? BaselineId { get; set; }
 
     }

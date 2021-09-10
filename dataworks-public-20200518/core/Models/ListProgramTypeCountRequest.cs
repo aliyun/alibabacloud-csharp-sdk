@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProgramTypeCountRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         [NameInMap("ProjectEnv")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
     }

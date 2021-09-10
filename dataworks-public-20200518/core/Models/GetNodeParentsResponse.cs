@@ -9,46 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeParentsResponse : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=true)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public GetNodeParentsResponseData Data { get; set; }
-        public class GetNodeParentsResponseData : TeaModel {
-            [NameInMap("Nodes")]
-            [Validation(Required=true)]
-            public List<GetNodeParentsResponseDataNodes> Nodes { get; set; }
-            public class GetNodeParentsResponseDataNodes : TeaModel {
-                public long? NodeId { get; set; }
-                public string NodeName { get; set; }
-                public string CronExpress { get; set; }
-                public string SchedulerType { get; set; }
-                public string ProgramType { get; set; }
-                public string OwnerId { get; set; }
-                public long? ProjectId { get; set; }
-                public bool? Repeatability { get; set; }
-                public int? Priority { get; set; }
-                public long? BaselineId { get; set; }
-            }
-        };
+        public GetNodeParentsResponseBody Body { get; set; }
 
     }
 

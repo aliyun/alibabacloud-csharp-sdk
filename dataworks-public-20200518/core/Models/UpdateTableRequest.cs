@@ -9,40 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableRequest : TeaModel {
-        [NameInMap("Columns")]
-        [Validation(Required=false)]
-        public List<UpdateTableRequestColumns> Columns { get; set; }
-        public class UpdateTableRequestColumns : TeaModel {
-            [NameInMap("ColumnName")]
-            [Validation(Required=true)]
-            public string ColumnName { get; set; }
-
-            [NameInMap("ColumnNameCn")]
-            [Validation(Required=false)]
-            public string ColumnNameCn { get; set; }
-
-            [NameInMap("ColumnType")]
-            [Validation(Required=true)]
-            public string ColumnType { get; set; }
-
-            [NameInMap("SeqNumber")]
-            [Validation(Required=false)]
-            public int? SeqNumber { get; set; }
-
-            [NameInMap("Length")]
-            [Validation(Required=false)]
-            public int? Length { get; set; }
-
-            [NameInMap("IsPartitionCol")]
-            [Validation(Required=false)]
-            public bool? IsPartitionCol { get; set; }
-
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public string Comment { get; set; }
-
-        }
-
         [NameInMap("IsView")]
         [Validation(Required=false)]
         public int? IsView { get; set; }
@@ -80,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TableName { get; set; }
 
         [NameInMap("Endpoint")]
@@ -90,20 +56,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public int? EnvType { get; set; }
-
-        [NameInMap("Themes")]
-        [Validation(Required=false)]
-        public List<UpdateTableRequestThemes> Themes { get; set; }
-        public class UpdateTableRequestThemes : TeaModel {
-            [NameInMap("ThemeId")]
-            [Validation(Required=false)]
-            public long? ThemeId { get; set; }
-
-            [NameInMap("ThemeLevel")]
-            [Validation(Required=false)]
-            public int? ThemeLevel { get; set; }
-
-        }
 
         [NameInMap("AppGuid")]
         [Validation(Required=false)]
@@ -124,6 +76,54 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
+
+        [NameInMap("Columns")]
+        [Validation(Required=false)]
+        public List<UpdateTableRequestColumns> Columns { get; set; }
+        public class UpdateTableRequestColumns : TeaModel {
+            [NameInMap("ColumnNameCn")]
+            [Validation(Required=false)]
+            public string ColumnNameCn { get; set; }
+
+            [NameInMap("ColumnName")]
+            [Validation(Required=false)]
+            public string ColumnName { get; set; }
+
+            [NameInMap("Comment")]
+            [Validation(Required=false)]
+            public string Comment { get; set; }
+
+            [NameInMap("ColumnType")]
+            [Validation(Required=false)]
+            public string ColumnType { get; set; }
+
+            [NameInMap("SeqNumber")]
+            [Validation(Required=false)]
+            public int? SeqNumber { get; set; }
+
+            [NameInMap("Length")]
+            [Validation(Required=false)]
+            public int? Length { get; set; }
+
+            [NameInMap("IsPartitionCol")]
+            [Validation(Required=false)]
+            public bool? IsPartitionCol { get; set; }
+
+        }
+
+        [NameInMap("Themes")]
+        [Validation(Required=false)]
+        public List<UpdateTableRequestThemes> Themes { get; set; }
+        public class UpdateTableRequestThemes : TeaModel {
+            [NameInMap("ThemeId")]
+            [Validation(Required=false)]
+            public long? ThemeId { get; set; }
+
+            [NameInMap("ThemeLevel")]
+            [Validation(Required=false)]
+            public int? ThemeLevel { get; set; }
+
+        }
 
     }
 

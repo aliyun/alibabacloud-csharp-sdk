@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         [NameInMap("FolderId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FolderId { get; set; }
 
         [NameInMap("FolderName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FolderName { get; set; }
 
     }

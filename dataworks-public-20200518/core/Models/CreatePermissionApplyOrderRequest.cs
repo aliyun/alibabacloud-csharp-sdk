@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreatePermissionApplyOrderRequest : TeaModel {
         [NameInMap("ApplyUserIds")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApplyUserIds { get; set; }
 
         [NameInMap("Deadline")]
@@ -18,15 +18,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? Deadline { get; set; }
 
         [NameInMap("ApplyReason")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ApplyReason { get; set; }
 
         [NameInMap("MaxComputeProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string MaxComputeProjectName { get; set; }
 
         [NameInMap("WorkspaceId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? WorkspaceId { get; set; }
 
         [NameInMap("OrderType")]
@@ -38,26 +38,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EngineType { get; set; }
 
         [NameInMap("ApplyObject")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public List<CreatePermissionApplyOrderRequestApplyObject> ApplyObject { get; set; }
         public class CreatePermissionApplyOrderRequestApplyObject : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=true)]
-            public string Name { get; set; }
+            [NameInMap("Actions")]
+            [Validation(Required=false)]
+            public string Actions { get; set; }
 
             [NameInMap("ColumnMetaList")]
-            [Validation(Required=true)]
+            [Validation(Required=false)]
             public List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> ColumnMetaList { get; set; }
             public class CreatePermissionApplyOrderRequestApplyObjectColumnMetaList : TeaModel {
                 [NameInMap("Name")]
-                [Validation(Required=true)]
+                [Validation(Required=false)]
                 public string Name { get; set; }
 
             }
 
-            [NameInMap("Actions")]
-            [Validation(Required=true)]
-            public string Actions { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
         }
 

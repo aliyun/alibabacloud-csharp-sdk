@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityRuleRequest : TeaModel {
         [NameInMap("BlockType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? BlockType { get; set; }
 
         [NameInMap("EntityId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? EntityId { get; set; }
 
         [NameInMap("Comment")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Operator { get; set; }
 
         [NameInMap("ProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         [NameInMap("Property")]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string PropertyType { get; set; }
 
         [NameInMap("RuleType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? RuleType { get; set; }
 
         [NameInMap("WhereCondition")]
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? TemplateId { get; set; }
 
         [NameInMap("RuleName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RuleName { get; set; }
 
         [NameInMap("PredictType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PredictType { get; set; }
 
     }

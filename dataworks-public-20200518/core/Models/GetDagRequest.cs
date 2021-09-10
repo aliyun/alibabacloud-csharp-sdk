@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDagRequest : TeaModel {
         [NameInMap("DagId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? DagId { get; set; }
 
         [NameInMap("ProjectEnv")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
     }

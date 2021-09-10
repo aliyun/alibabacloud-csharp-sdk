@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListResourceGroupsRequest : TeaModel {
         [NameInMap("ResourceGroupType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? ResourceGroupType { get; set; }
 
         [NameInMap("Keyword")]

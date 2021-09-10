@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceCountTrendRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         [NameInMap("BeginDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string BeginDate { get; set; }
 
         [NameInMap("EndDate")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EndDate { get; set; }
 
     }

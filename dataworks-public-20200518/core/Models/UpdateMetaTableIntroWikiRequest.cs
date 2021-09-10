@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaTableIntroWikiRequest : TeaModel {
         [NameInMap("TableGuid")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TableGuid { get; set; }
 
         [NameInMap("Content")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Content { get; set; }
 
     }

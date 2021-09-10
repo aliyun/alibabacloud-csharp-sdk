@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOpRiskDataResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("RiskData")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string RiskData { get; set; }
+        public GetOpRiskDataResponseBody Body { get; set; }
 
     }
 

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExpectValue { get; set; }
 
         [NameInMap("Id")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? Id { get; set; }
 
         [NameInMap("Trend")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Operator { get; set; }
 
         [NameInMap("ProjectName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         [NameInMap("Property")]

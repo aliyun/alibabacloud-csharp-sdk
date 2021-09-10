@@ -18,19 +18,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         [NameInMap("FileName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FileName { get; set; }
 
         [NameInMap("FunctionType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string FunctionType { get; set; }
 
         [NameInMap("ClassName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ClassName { get; set; }
 
         [NameInMap("Resources")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Resources { get; set; }
 
         [NameInMap("UdfDescription")]

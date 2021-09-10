@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableThemeRequest : TeaModel {
         [NameInMap("ThemeId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ThemeId { get; set; }
 
         [NameInMap("ProjectId")]

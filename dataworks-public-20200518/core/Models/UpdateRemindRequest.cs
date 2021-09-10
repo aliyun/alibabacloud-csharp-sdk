@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateRemindRequest : TeaModel {
         [NameInMap("RemindId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? RemindId { get; set; }
 
         [NameInMap("RemindName")]
