@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public Dictionary<string, string> Extension { get; set; }
                 public string LiveId { get; set; }
                 public int? Status { get; set; }
+                public long? Pv { get; set; }
+                public long? OnlineCount { get; set; }
             }
             [NameInMap("NextQueryTimestamp")]
             [Validation(Required=false)]

@@ -134,6 +134,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 [Validation(Required=false)]
                 public Dictionary<string, string> Extension { get; set; }
 
+                /// <summary>
+                /// 访问用户人次。
+                /// </summary>
+                [NameInMap("Pv")]
+                [Validation(Required=false)]
+                public long? Pv { get; set; }
+
             }
         };
 
