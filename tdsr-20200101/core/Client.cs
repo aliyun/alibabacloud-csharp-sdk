@@ -1609,38 +1609,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101
             return await PredictionWallLineWithOptionsAsync(request, runtime);
         }
 
-        public GetPolicyResponse GetPolicyWithOptions(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetPolicyResponse>(DoRPCRequest("GetPolicy", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<GetPolicyResponse> GetPolicyWithOptionsAsync(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetPolicyResponse>(await DoRPCRequestAsync("GetPolicy", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public GetPolicyResponse GetPolicy(GetPolicyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetPolicyWithOptions(request, runtime);
-        }
-
-        public async Task<GetPolicyResponse> GetPolicyAsync(GetPolicyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetPolicyWithOptionsAsync(request, runtime);
-        }
-
         public GetScenePreviewInfoResponse GetScenePreviewInfoWithOptions(GetScenePreviewInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1671,6 +1639,38 @@ namespace AlibabaCloud.SDK.Tdsr20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetScenePreviewInfoWithOptionsAsync(request, runtime);
+        }
+
+        public GetPolicyResponse GetPolicyWithOptions(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetPolicyResponse>(DoRPCRequest("GetPolicy", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetPolicyResponse> GetPolicyWithOptionsAsync(GetPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetPolicyResponse>(await DoRPCRequestAsync("GetPolicy", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetPolicyResponse GetPolicy(GetPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPolicyWithOptions(request, runtime);
+        }
+
+        public async Task<GetPolicyResponse> GetPolicyAsync(GetPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPolicyWithOptionsAsync(request, runtime);
         }
 
         public AddSubSceneResponse AddSubSceneWithOptions(AddSubSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
