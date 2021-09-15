@@ -1748,6 +1748,98 @@ namespace AlibabaCloud.SDK.Green20180509
             return TeaModel.ToObject<LiveStreamCancelScanResponse>(await DoROARequestAsync("LiveStreamCancelScan", "2018-05-09", "HTTPS", "POST", "AK", "/green/livestream/cancelscan", "none", req, runtime));
         }
 
+        public PostAsyncScanResponse PostAsyncScan(PostAsyncScanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PostAsyncScanWithOptions(request, headers, runtime);
+        }
+
+        public async Task<PostAsyncScanResponse> PostAsyncScanAsync(PostAsyncScanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PostAsyncScanWithOptionsAsync(request, headers, runtime);
+        }
+
+        public PostAsyncScanResponse PostAsyncScanWithOptions(PostAsyncScanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientInfo))
+            {
+                query["ClientInfo"] = request.ClientInfo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<PostAsyncScanResponse>(DoROARequest("PostAsyncScan", "2018-05-09", "HTTPS", "POST", "AK", "/green/post/asyncscan", "none", req, runtime));
+        }
+
+        public async Task<PostAsyncScanResponse> PostAsyncScanWithOptionsAsync(PostAsyncScanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientInfo))
+            {
+                query["ClientInfo"] = request.ClientInfo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<PostAsyncScanResponse>(await DoROARequestAsync("PostAsyncScan", "2018-05-09", "HTTPS", "POST", "AK", "/green/post/asyncscan", "none", req, runtime));
+        }
+
+        public PostAsyncScanResultsResponse PostAsyncScanResults(PostAsyncScanResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PostAsyncScanResultsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<PostAsyncScanResultsResponse> PostAsyncScanResultsAsync(PostAsyncScanResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PostAsyncScanResultsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public PostAsyncScanResultsResponse PostAsyncScanResultsWithOptions(PostAsyncScanResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientInfo))
+            {
+                query["ClientInfo"] = request.ClientInfo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<PostAsyncScanResultsResponse>(DoROARequest("PostAsyncScanResults", "2018-05-09", "HTTPS", "POST", "AK", "/green/post/results", "none", req, runtime));
+        }
+
+        public async Task<PostAsyncScanResultsResponse> PostAsyncScanResultsWithOptionsAsync(PostAsyncScanResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientInfo))
+            {
+                query["ClientInfo"] = request.ClientInfo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<PostAsyncScanResultsResponse>(await DoROARequestAsync("PostAsyncScanResults", "2018-05-09", "HTTPS", "POST", "AK", "/green/post/results", "none", req, runtime));
+        }
+
         public SearchPersonResponse SearchPerson(SearchPersonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
