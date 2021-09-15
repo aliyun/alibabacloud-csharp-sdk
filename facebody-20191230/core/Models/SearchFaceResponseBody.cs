@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     public float? Score { get; set; }
                     public string ExtraData { get; set; }
                     public string DbName { get; set; }
+                    public float? Confidence { get; set; }
                 }
                 public SearchFaceResponseBodyDataMatchListLocation Location { get; set; }
                 public class SearchFaceResponseBodyDataMatchListLocation : TeaModel {

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string DbNames { get; set; }
 
+        [NameInMap("QualityScoreThreshold")]
+        [Validation(Required=false)]
+        public float? QualityScoreThreshold { get; set; }
+
     }
 
 }
