@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Flag { get; set; }
 
+            [NameInMap("LastLoginTimestamp")]
+            [Validation(Required=false)]
+            public long? LastLoginTimestamp { get; set; }
+
             [NameInMap("AuthVersion")]
             [Validation(Required=false)]
             public int? AuthVersion { get; set; }

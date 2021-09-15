@@ -20,39 +20,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-            [NameInMap("VaultId")]
-            [Validation(Required=false)]
-            public string VaultId { get; set; }
-            [NameInMap("Jobs")]
-            [Validation(Required=false)]
-            public string Jobs { get; set; }
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-            [NameInMap("ClientStatus")]
-            [Validation(Required=false)]
-            public string ClientStatus { get; set; }
-            [NameInMap("ClientId")]
-            [Validation(Required=false)]
-            public string ClientId { get; set; }
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
+            [NameInMap("VaultId")]
+            [Validation(Required=false)]
+            public string VaultId { get; set; }
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
             [NameInMap("SavedBackupCount")]
             [Validation(Required=false)]
             public int? SavedBackupCount { get; set; }
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+            [NameInMap("ClientStatus")]
+            [Validation(Required=false)]
+            public string ClientStatus { get; set; }
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
             [NameInMap("ClientVersion")]
             [Validation(Required=false)]
             public string ClientVersion { get; set; }
+            [NameInMap("ClientId")]
+            [Validation(Required=false)]
+            public string ClientId { get; set; }
             [NameInMap("ErrorList")]
             [Validation(Required=false)]
             public List<DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList> ErrorList { get; set; }

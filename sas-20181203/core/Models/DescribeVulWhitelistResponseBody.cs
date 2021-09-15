@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("TargetInfo")]
+            [Validation(Required=false)]
+            public string TargetInfo { get; set; }
+
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
 
         }
 

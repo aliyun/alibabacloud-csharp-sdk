@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperateType { get; set; }
 
-        [NameInMap("Reason")]
-        [Validation(Required=false)]
-        public string Reason { get; set; }
-
-        [NameInMap("Precondition")]
-        [Validation(Required=false)]
-        public int? Precondition { get; set; }
-
         [NameInMap("VulNames")]
         [Validation(Required=false)]
         public List<string> VulNames { get; set; }

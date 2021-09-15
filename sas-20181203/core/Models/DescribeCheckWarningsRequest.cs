@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("CheckId")]
+        [Validation(Required=false)]
+        public long? CheckId { get; set; }
+
     }
 
 }

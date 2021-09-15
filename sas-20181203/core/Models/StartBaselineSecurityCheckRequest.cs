@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         [NameInMap("ItemIds")]
         [Validation(Required=false)]
-        public List<int?> ItemIds { get; set; }
+        public List<long?> ItemIds { get; set; }
 
     }
 

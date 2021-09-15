@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Value { get; set; }
 
+        [NameInMap("SupportAutoTag")]
+        [Validation(Required=false)]
+        public bool? SupportAutoTag { get; set; }
+
     }
 
 }

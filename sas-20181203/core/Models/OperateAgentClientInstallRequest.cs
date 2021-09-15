@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeBackupRestoreCountRequest : TeaModel {
-        [NameInMap("SourceIp")]
+    public class OperateAgentClientInstallRequest : TeaModel {
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string InstanceIds { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("Uuids")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Uuids { get; set; }
 
     }
 

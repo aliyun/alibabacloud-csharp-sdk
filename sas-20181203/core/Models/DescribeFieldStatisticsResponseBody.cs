@@ -56,6 +56,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public int? InstanceCount { get; set; }
+            [NameInMap("PauseInstanceCount")]
+            [Validation(Required=false)]
+            public int? PauseInstanceCount { get; set; }
             [NameInMap("IdcInstanceCount")]
             [Validation(Required=false)]
             public int? IdcInstanceCount { get; set; }

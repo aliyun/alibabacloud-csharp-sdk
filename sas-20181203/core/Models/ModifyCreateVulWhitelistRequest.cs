@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        [NameInMap("TargetInfo")]
+        [Validation(Required=false)]
+        public string TargetInfo { get; set; }
+
     }
 
 }

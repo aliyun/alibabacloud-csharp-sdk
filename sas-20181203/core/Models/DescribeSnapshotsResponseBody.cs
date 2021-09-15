@@ -62,33 +62,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string VaultId { get; set; }
 
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-
-            [NameInMap("BackupType")]
-            [Validation(Required=false)]
-            public string BackupType { get; set; }
-
             [NameInMap("ActualBytes")]
             [Validation(Required=false)]
             public long? ActualBytes { get; set; }
 
-            [NameInMap("Prefix")]
-            [Validation(Required=false)]
-            public string Prefix { get; set; }
-
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
-
-            [NameInMap("Extra")]
-            [Validation(Required=false)]
-            public string Extra { get; set; }
-
-            [NameInMap("ServerId")]
-            [Validation(Required=false)]
-            public string ServerId { get; set; }
 
             [NameInMap("ExitCode")]
             [Validation(Required=false)]
@@ -106,10 +86,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? BytesTotal { get; set; }
 
-            [NameInMap("CompleteTime")]
-            [Validation(Required=false)]
-            public long? CompleteTime { get; set; }
-
             [NameInMap("Retention")]
             [Validation(Required=false)]
             public long? Retention { get; set; }
@@ -122,17 +98,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreatedTime { get; set; }
 
-            [NameInMap("Bucket")]
-            [Validation(Required=false)]
-            public string Bucket { get; set; }
-
             [NameInMap("ParentSnapshotHash")]
             [Validation(Required=false)]
             public string ParentSnapshotHash { get; set; }
-
-            [NameInMap("MachineInfoJson")]
-            [Validation(Required=false)]
-            public string MachineInfoJson { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -150,17 +118,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
-            [NameInMap("FileSystemId")]
-            [Validation(Required=false)]
-            public string FileSystemId { get; set; }
-
             [NameInMap("ParentHash")]
             [Validation(Required=false)]
             public string ParentHash { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public long? StartTime { get; set; }
 
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -181,10 +141,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("SnapshotOption")]
             [Validation(Required=false)]
             public string SnapshotOption { get; set; }
-
-            [NameInMap("UpdatedTime")]
-            [Validation(Required=false)]
-            public long? UpdatedTime { get; set; }
 
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]

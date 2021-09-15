@@ -43,10 +43,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Os { get; set; }
 
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public long? Id { get; set; }
-
         }
 
     }

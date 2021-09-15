@@ -81,15 +81,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
-            public long? GmtModified { get; set; }
+            public string GmtModified { get; set; }
 
             [NameInMap("RestoreType")]
             [Validation(Required=false)]
             public string RestoreType { get; set; }
-
-            [NameInMap("Extra")]
-            [Validation(Required=false)]
-            public string Extra { get; set; }
 
             [NameInMap("ExitCode")]
             [Validation(Required=false)]
@@ -194,10 +190,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ItemsTotal")]
             [Validation(Required=false)]
             public long? ItemsTotal { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public long? Id { get; set; }
 
             [NameInMap("BytesDone")]
             [Validation(Required=false)]
