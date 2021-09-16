@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class DescribeAvailableResourceResponse : TeaModel {
+    public class DescribeDownloadLinkDetailsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeAvailableResourceResponseBody Body { get; set; }
+        public DescribeDownloadLinkDetailsResponseBody Body { get; set; }
 
     }
 

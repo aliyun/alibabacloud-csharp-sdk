@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ConnectionString { get; set; }
 
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
         [NameInMap("DryRun")]
         [Validation(Required=false)]

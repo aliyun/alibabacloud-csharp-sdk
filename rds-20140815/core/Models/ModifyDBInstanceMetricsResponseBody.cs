@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CreateGdnInstanceResponseBody : TeaModel {
-        [NameInMap("GdnInstanceId")]
+    public class ModifyDBInstanceMetricsResponseBody : TeaModel {
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public long? GdnInstanceId { get; set; }
-
-        [NameInMap("GdnInstanceName")]
-        [Validation(Required=false)]
-        public string GdnInstanceName { get; set; }
+        public string DBInstanceId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
 
     }
 

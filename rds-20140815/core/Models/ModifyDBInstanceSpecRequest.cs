@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ZoneId { get; set; }
 
+        [NameInMap("SwitchTime")]
+        [Validation(Required=false)]
+        public string SwitchTime { get; set; }
+
     }
 
 }

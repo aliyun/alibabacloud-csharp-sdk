@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        [NameInMap("GeneralGroupName")]
+        [Validation(Required=false)]
+        public string GeneralGroupName { get; set; }
+
     }
 
 }

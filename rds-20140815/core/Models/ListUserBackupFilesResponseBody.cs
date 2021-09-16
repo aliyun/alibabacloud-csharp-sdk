@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("FinishTime")]
+            [Validation(Required=false)]
+            public string FinishTime { get; set; }
+
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }

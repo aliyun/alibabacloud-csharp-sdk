@@ -177,6 +177,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string UserBackupId { get; set; }
 
+        [NameInMap("Amount")]
+        [Validation(Required=false)]
+        public int? Amount { get; set; }
+
+        [NameInMap("CreateStrategy")]
+        [Validation(Required=false)]
+        public string CreateStrategy { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDBInstanceRequestTag> Tag { get; set; }

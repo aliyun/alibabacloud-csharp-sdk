@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class ModifyDBInstanceTDERequest : TeaModel {
+    public class DescribeVSwitchesRequest : TeaModel {
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,41 +25,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("TDEStatus")]
-        [Validation(Required=false)]
-        public string TDEStatus { get; set; }
-
-        [NameInMap("DBName")]
-        [Validation(Required=false)]
-        public string DBName { get; set; }
-
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("EncryptionKey")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string EncryptionKey { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("RoleArn")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public string RoleArn { get; set; }
+        public string VpcId { get; set; }
 
-        [NameInMap("Certificate")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string Certificate { get; set; }
+        public string ZoneId { get; set; }
 
-        [NameInMap("PrivateKey")]
+        [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
-        public string PrivateKey { get; set; }
+        public string DedicatedHostGroupId { get; set; }
 
-        [NameInMap("PassWord")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string PassWord { get; set; }
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
     }
 

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CreateGdnInstanceResponse : TeaModel {
+    public class DescribeAvailableMetricsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateGdnInstanceResponseBody Body { get; set; }
+        public DescribeAvailableMetricsResponseBody Body { get; set; }
 
     }
 

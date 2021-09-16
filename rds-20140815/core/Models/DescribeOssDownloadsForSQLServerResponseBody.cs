@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeOssDownloadsForSQLServerResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("MigrateIaskId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string MigrateIaskId { get; set; }
 
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("MigrateIaskId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string MigrateIaskId { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeOssDownloadsForSQLServerResponseBodyItemsOssDownload> OssDownload { get; set; }
             public class DescribeOssDownloadsForSQLServerResponseBodyItemsOssDownload : TeaModel {
-                public string FileName { get; set; }
-                public string CreateTime { get; set; }
-                public string BakType { get; set; }
-                public string FileSize { get; set; }
                 public string Status { get; set; }
+                public string CreateTime { get; set; }
                 public string IsAvail { get; set; }
+                public string FileName { get; set; }
+                public string BakType { get; set; }
                 public string Desc { get; set; }
+                public string FileSize { get; set; }
             }
         };
 

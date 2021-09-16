@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class DescribeRegionsRequest : TeaModel {
+    public class DescribeDBInstanceMetricsRequest : TeaModel {
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("AcceptLanguage")]
+        [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string DBInstanceName { get; set; }
 
     }
 
