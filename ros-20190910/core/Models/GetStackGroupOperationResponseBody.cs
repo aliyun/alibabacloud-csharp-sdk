@@ -113,9 +113,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("ExecutionRoleName")]
             [Validation(Required=false)]
             public string ExecutionRoleName { get; set; }
-            [NameInMap("AdministratorRoleName")]
+            [NameInMap("AdministrationRoleName")]
             [Validation(Required=false)]
-            public string AdministratorRoleName { get; set; }
+            public string AdministrationRoleName { get; set; }
             [NameInMap("DeploymentTargets")]
             [Validation(Required=false)]
             public GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets DeploymentTargets { get; set; }
