@@ -53,12 +53,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("replayDutyUserId")]
             [Validation(Required=false)]
             public long? ReplayDutyUserId { get; set; }
+            [NameInMap("replayDutyUserPhone")]
+            [Validation(Required=false)]
+            public string ReplayDutyUserPhone { get; set; }
             [NameInMap("dutyDepartmentId")]
             [Validation(Required=false)]
             public string DutyDepartmentId { get; set; }
             [NameInMap("dutyUserName")]
             [Validation(Required=false)]
             public string DutyUserName { get; set; }
+            [NameInMap("dutyUserPhone")]
+            [Validation(Required=false)]
+            public string DutyUserPhone { get; set; }
             [NameInMap("replayDutyUserName")]
             [Validation(Required=false)]
             public string ReplayDutyUserName { get; set; }

@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         /// <summary>
         /// 页大小
         /// </summary>
-        [NameInMap("pageSIze")]
+        [NameInMap("pageSize")]
         [Validation(Required=false)]
-        public long? PageSIze { get; set; }
+        public long? PageSize { get; set; }
 
         /// <summary>
         /// 总条数

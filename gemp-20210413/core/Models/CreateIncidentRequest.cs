@@ -65,6 +65,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<string> Channels { get; set; }
 
+        /// <summary>
+        /// 服务组Id
+        /// </summary>
+        [NameInMap("serviceGroupId")]
+        [Validation(Required=false)]
+        public long? ServiceGroupId { get; set; }
+
     }
 
 }

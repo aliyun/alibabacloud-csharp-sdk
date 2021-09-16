@@ -118,6 +118,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     [Validation(Required=false)]
                     public string Level { get; set; }
 
+                    /// <summary>
+                    /// 时间动作
+                    /// </summary>
+                    [NameInMap("action")]
+                    [Validation(Required=false)]
+                    public string Action { get; set; }
+
                 }
 
             }

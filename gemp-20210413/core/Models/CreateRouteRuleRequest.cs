@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public byte[] RuleName { get; set; }
 
         /// <summary>
+        /// 启用状态
+        /// </summary>
+        [NameInMap("enableStatus")]
+        [Validation(Required=false)]
+        public string EnableStatus { get; set; }
+
+        /// <summary>
         /// 关联服务ID
         /// </summary>
         [NameInMap("relatedServiceId")]

@@ -73,6 +73,7 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                         public string Effection { get; set; }
                         public string ProblemNotifyType { get; set; }
                         public string Level { get; set; }
+                        public string Action { get; set; }
                     }
                 }
             }

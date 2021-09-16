@@ -41,6 +41,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string CreateRamName { get; set; }
 
+            /// <summary>
+            /// 操作人手机号
+            /// </summary>
+            [NameInMap("createUserPhone")]
+            [Validation(Required=false)]
+            public string CreateUserPhone { get; set; }
+
         }
 
     }

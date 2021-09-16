@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("mainHandlerId")]
             [Validation(Required=false)]
             public long? MainHandlerId { get; set; }
+            [NameInMap("mainHandlerPhone")]
+            [Validation(Required=false)]
+            public string MainHandlerPhone { get; set; }
             [NameInMap("feedback")]
             [Validation(Required=false)]
             public string Feedback { get; set; }

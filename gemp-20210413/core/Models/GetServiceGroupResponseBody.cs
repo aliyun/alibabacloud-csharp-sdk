@@ -50,6 +50,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("serviceGroupId")]
             [Validation(Required=false)]
             public long? ServiceGroupId { get; set; }
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
         };
 
     }

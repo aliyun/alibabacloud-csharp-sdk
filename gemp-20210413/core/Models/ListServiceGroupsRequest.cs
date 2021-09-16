@@ -44,6 +44,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// 是否已经排班
+        /// </summary>
+        [NameInMap("isScheduled")]
+        [Validation(Required=false)]
+        public bool? IsScheduled { get; set; }
+
     }
 
 }

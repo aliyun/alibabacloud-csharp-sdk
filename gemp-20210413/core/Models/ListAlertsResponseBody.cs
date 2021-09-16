@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListAlertsResponseBody : TeaModel {
+        /// <summary>
+        /// 请求ID
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 报警列表
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAlertsResponseBodyData> Data { get; set; }
@@ -59,16 +65,39 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public long? SourceEventCount { get; set; }
 
+            /// <summary>
+            /// 报警源
+            /// </summary>
+            [NameInMap("alertSourceName")]
+            [Validation(Required=false)]
+            public string AlertSourceName { get; set; }
+
+            /// <summary>
+            /// 关联流转规则ID
+            /// </summary>
+            [NameInMap("routeRuleId")]
+            [Validation(Required=false)]
+            public long? RouteRuleId { get; set; }
+
         }
 
+        /// <summary>
+        /// 总条数
+        /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        /// <summary>
+        /// 当前页
+        /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// 页的大小
+        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

@@ -153,6 +153,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     [Validation(Required=false)]
                     public string ProblemNotifyType { get; set; }
 
+                    /// <summary>
+                    /// 事件动作
+                    /// </summary>
+                    [NameInMap("action")]
+                    [Validation(Required=false)]
+                    public string Action { get; set; }
+
                 }
 
             }

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class DataValue : TeaModel {
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// 配置描述
         /// </summary>
@@ -50,14 +58,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("requirement")]
         [Validation(Required=false)]
         public bool? Requirement { get; set; }
-
-        [NameInMap("code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
 
     }
 
