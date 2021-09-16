@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceType { get; set; }
         };
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("SourceRegion")]
         [Validation(Required=false)]
         public string SourceRegion { get; set; }

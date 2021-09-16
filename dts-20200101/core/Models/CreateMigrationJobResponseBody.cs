@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
-
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
         public string MigrationJobId { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("ErrCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
+
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
 
     }
 

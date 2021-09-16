@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -104,6 +101,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public bool? DataSynchronization { get; set; }
         };
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]

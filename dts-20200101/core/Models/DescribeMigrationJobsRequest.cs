@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMigrationJobsRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

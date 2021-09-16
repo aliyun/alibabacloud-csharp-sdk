@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public bool? ModifyTimeMinute { get; set; }
         };
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("SynchronizationJobName")]
         [Validation(Required=false)]
         public string SynchronizationJobName { get; set; }

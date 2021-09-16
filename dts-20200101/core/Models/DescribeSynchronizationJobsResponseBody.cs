@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSynchronizationJobsResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public long? TotalRecordCount { get; set; }
@@ -17,72 +29,21 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public List<DescribeSynchronizationJobsResponseBodySynchronizationInstances> SynchronizationInstances { get; set; }
         public class DescribeSynchronizationJobsResponseBodySynchronizationInstances : TeaModel {
-            [NameInMap("SynchronizationJobName")]
+            [NameInMap("DataInitialization")]
             [Validation(Required=false)]
-            public string SynchronizationJobName { get; set; }
+            public string DataInitialization { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            [NameInMap("DataInitialization")]
+            [NameInMap("SynchronizationJobName")]
             [Validation(Required=false)]
-            public string DataInitialization { get; set; }
-
-            [NameInMap("Performance")]
-            [Validation(Required=false)]
-            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesPerformance Performance { get; set; }
-            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPerformance : TeaModel {
-                [NameInMap("FLOW")]
-                [Validation(Required=false)]
-                public string FLOW { get; set; }
-                [NameInMap("RPS")]
-                [Validation(Required=false)]
-                public string RPS { get; set; }
-            };
+            public string SynchronizationJobName { get; set; }
 
             [NameInMap("Delay")]
             [Validation(Required=false)]
             public string Delay { get; set; }
-
-            [NameInMap("PrecheckStatus")]
-            [Validation(Required=false)]
-            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatus PrecheckStatus { get; set; }
-            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatus : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-                [NameInMap("Percent")]
-                [Validation(Required=false)]
-                public string Percent { get; set; }
-                [NameInMap("Detail")]
-                [Validation(Required=false)]
-                public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatusDetail> Detail { get; set; }
-                public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatusDetail : TeaModel {
-                    public string CheckStatus { get; set; }
-                    public string ErrorMessage { get; set; }
-                    public string ItemName { get; set; }
-                    public string RepairMethod { get; set; }
-                }
-            };
-
-            [NameInMap("StructureInitializationStatus")]
-            [Validation(Required=false)]
-            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesStructureInitializationStatus StructureInitializationStatus { get; set; }
-            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesStructureInitializationStatus : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-                [NameInMap("Percent")]
-                [Validation(Required=false)]
-                public string Percent { get; set; }
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
-                [NameInMap("Progress")]
-                [Validation(Required=false)]
-                public string Progress { get; set; }
-            };
 
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
@@ -91,40 +52,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
-
-            [NameInMap("SynchronizationObjects")]
-            [Validation(Required=false)]
-            public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjects> SynchronizationObjects { get; set; }
-            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjects : TeaModel {
-                [NameInMap("NewSchemaName")]
-                [Validation(Required=false)]
-                public string NewSchemaName { get; set; }
-
-                [NameInMap("TableIncludes")]
-                [Validation(Required=false)]
-                public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableIncludes> TableIncludes { get; set; }
-                public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableIncludes : TeaModel {
-                    [NameInMap("TableName")]
-                    [Validation(Required=false)]
-                    public string TableName { get; set; }
-
-                }
-
-                [NameInMap("TableExcludes")]
-                [Validation(Required=false)]
-                public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableExcludes> TableExcludes { get; set; }
-                public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableExcludes : TeaModel {
-                    [NameInMap("TableName")]
-                    [Validation(Required=false)]
-                    public string TableName { get; set; }
-
-                }
-
-                [NameInMap("SchemaName")]
-                [Validation(Required=false)]
-                public string SchemaName { get; set; }
-
-            }
 
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -142,6 +69,22 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string SynchronizationJobClass { get; set; }
 
+            [NameInMap("InstanceCreateTime")]
+            [Validation(Required=false)]
+            public string InstanceCreateTime { get; set; }
+
+            [NameInMap("SynchronizationJobId")]
+            [Validation(Required=false)]
+            public string SynchronizationJobId { get; set; }
+
+            [NameInMap("SynchronizationDirection")]
+            [Validation(Required=false)]
+            public string SynchronizationDirection { get; set; }
+
+            [NameInMap("JobCreateTime")]
+            [Validation(Required=false)]
+            public string JobCreateTime { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesTags> Tags { get; set; }
@@ -153,6 +96,40 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
+
+            }
+
+            [NameInMap("SynchronizationObjects")]
+            [Validation(Required=false)]
+            public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjects> SynchronizationObjects { get; set; }
+            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjects : TeaModel {
+                [NameInMap("NewSchemaName")]
+                [Validation(Required=false)]
+                public string NewSchemaName { get; set; }
+
+                [NameInMap("SchemaName")]
+                [Validation(Required=false)]
+                public string SchemaName { get; set; }
+
+                [NameInMap("TableExcludes")]
+                [Validation(Required=false)]
+                public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableExcludes> TableExcludes { get; set; }
+                public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableExcludes : TeaModel {
+                    [NameInMap("TableName")]
+                    [Validation(Required=false)]
+                    public string TableName { get; set; }
+
+                }
+
+                [NameInMap("TableIncludes")]
+                [Validation(Required=false)]
+                public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableIncludes> TableIncludes { get; set; }
+                public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableIncludes : TeaModel {
+                    [NameInMap("TableName")]
+                    [Validation(Required=false)]
+                    public string TableName { get; set; }
+
+                }
 
             }
 
@@ -172,6 +149,24 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
                 public string Progress { get; set; }
+            };
+
+            [NameInMap("DataSynchronizationStatus")]
+            [Validation(Required=false)]
+            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesDataSynchronizationStatus DataSynchronizationStatus { get; set; }
+            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesDataSynchronizationStatus : TeaModel {
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+                [NameInMap("Delay")]
+                [Validation(Required=false)]
+                public string Delay { get; set; }
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
             };
 
             [NameInMap("DestinationEndpoint")]
@@ -198,22 +193,37 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public string EngineName { get; set; }
             };
 
-            [NameInMap("DataSynchronizationStatus")]
+            [NameInMap("Performance")]
             [Validation(Required=false)]
-            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesDataSynchronizationStatus DataSynchronizationStatus { get; set; }
-            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesDataSynchronizationStatus : TeaModel {
+            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesPerformance Performance { get; set; }
+            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPerformance : TeaModel {
+                [NameInMap("RPS")]
+                [Validation(Required=false)]
+                public string RPS { get; set; }
+                [NameInMap("FLOW")]
+                [Validation(Required=false)]
+                public string FLOW { get; set; }
+            };
+
+            [NameInMap("PrecheckStatus")]
+            [Validation(Required=false)]
+            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatus PrecheckStatus { get; set; }
+            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatus : TeaModel {
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
-                [NameInMap("Delay")]
-                [Validation(Required=false)]
-                public string Delay { get; set; }
                 [NameInMap("Percent")]
                 [Validation(Required=false)]
                 public string Percent { get; set; }
-                [NameInMap("ErrorMessage")]
+                [NameInMap("Detail")]
                 [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
+                public List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatusDetail> Detail { get; set; }
+                public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatusDetail : TeaModel {
+                    public string CheckStatus { get; set; }
+                    public string ErrorMessage { get; set; }
+                    public string ItemName { get; set; }
+                    public string RepairMethod { get; set; }
+                }
             };
 
             [NameInMap("SourceEndpoint")]
@@ -240,27 +250,25 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public string EngineName { get; set; }
             };
 
-            [NameInMap("SynchronizationJobId")]
+            [NameInMap("StructureInitializationStatus")]
             [Validation(Required=false)]
-            public string SynchronizationJobId { get; set; }
-
-            [NameInMap("SynchronizationDirection")]
-            [Validation(Required=false)]
-            public string SynchronizationDirection { get; set; }
+            public DescribeSynchronizationJobsResponseBodySynchronizationInstancesStructureInitializationStatus StructureInitializationStatus { get; set; }
+            public class DescribeSynchronizationJobsResponseBodySynchronizationInstancesStructureInitializationStatus : TeaModel {
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+            };
 
         }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

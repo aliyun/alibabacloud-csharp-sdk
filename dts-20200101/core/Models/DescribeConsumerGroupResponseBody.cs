@@ -9,25 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeConsumerGroupResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
 
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("ConsumerChannels")]
         [Validation(Required=false)]
@@ -45,14 +53,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 public long? UnconsumedData { get; set; }
             }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
 
     }
 

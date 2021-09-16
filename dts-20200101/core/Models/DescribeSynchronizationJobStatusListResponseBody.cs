@@ -9,25 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeSynchronizationJobStatusListResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? TotalRecordCount { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
 
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Success { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public long? TotalRecordCount { get; set; }
 
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("SynchronizationJobListStatusList")]
         [Validation(Required=false)]
@@ -56,14 +64,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             }
 
         }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
 
     }
 

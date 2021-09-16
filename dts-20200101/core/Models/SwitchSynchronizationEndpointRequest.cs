@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Role { get; set; }
         };
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("SynchronizationJobId")]
         [Validation(Required=false)]
         public string SynchronizationJobId { get; set; }

@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DynamicCode")]
+        [NameInMap("ErrCode")]
         [Validation(Required=false)]
-        public string DynamicCode { get; set; }
-
-        [NameInMap("DynamicMessage")]
-        [Validation(Required=false)]
-        public string DynamicMessage { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
+        public string ErrCode { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
-        [NameInMap("ErrCode")]
+        [NameInMap("ErrMessage")]
         [Validation(Required=false)]
-        public string ErrCode { get; set; }
+        public string ErrMessage { get; set; }
+
+        [NameInMap("DynamicMessage")]
+        [Validation(Required=false)]
+        public string DynamicMessage { get; set; }
+
+        [NameInMap("DynamicCode")]
+        [Validation(Required=false)]
+        public string DynamicCode { get; set; }
 
     }
 

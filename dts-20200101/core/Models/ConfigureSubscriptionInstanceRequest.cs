@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string VSwitchId { get; set; }
         };
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("SubscriptionInstanceId")]
         [Validation(Required=false)]
         public string SubscriptionInstanceId { get; set; }

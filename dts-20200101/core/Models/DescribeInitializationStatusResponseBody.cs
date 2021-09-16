@@ -9,77 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeInitializationStatusResponseBody : TeaModel {
-        [NameInMap("StructureInitializationDetails")]
-        [Validation(Required=false)]
-        public List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> StructureInitializationDetails { get; set; }
-        public class DescribeInitializationStatusResponseBodyStructureInitializationDetails : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("SourceOwnerDBName")]
-            [Validation(Required=false)]
-            public string SourceOwnerDBName { get; set; }
-
-            [NameInMap("ObjectDefinition")]
-            [Validation(Required=false)]
-            public string ObjectDefinition { get; set; }
-
-            [NameInMap("ObjectType")]
-            [Validation(Required=false)]
-            public string ObjectType { get; set; }
-
-            [NameInMap("ErrorMessage")]
-            [Validation(Required=false)]
-            public string ErrorMessage { get; set; }
-
-            [NameInMap("Constraints")]
-            [Validation(Required=false)]
-            public List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> Constraints { get; set; }
-            public class DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints : TeaModel {
-                [NameInMap("Status")]
-                [Validation(Required=false)]
-                public string Status { get; set; }
-
-                [NameInMap("SourceOwnerDBName")]
-                [Validation(Required=false)]
-                public string SourceOwnerDBName { get; set; }
-
-                [NameInMap("ObjectDefinition")]
-                [Validation(Required=false)]
-                public string ObjectDefinition { get; set; }
-
-                [NameInMap("ObjectType")]
-                [Validation(Required=false)]
-                public string ObjectType { get; set; }
-
-                [NameInMap("ErrorMessage")]
-                [Validation(Required=false)]
-                public string ErrorMessage { get; set; }
-
-                [NameInMap("DestinationOwnerDBName")]
-                [Validation(Required=false)]
-                public string DestinationOwnerDBName { get; set; }
-
-                [NameInMap("ObjectName")]
-                [Validation(Required=false)]
-                public string ObjectName { get; set; }
-
-            }
-
-            [NameInMap("DestinationOwnerDBName")]
-            [Validation(Required=false)]
-            public string DestinationOwnerDBName { get; set; }
-
-            [NameInMap("ObjectName")]
-            [Validation(Required=false)]
-            public string ObjectName { get; set; }
-
-        }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public string Success { get; set; }
+
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
 
         [NameInMap("DataInitializationDetails")]
         [Validation(Required=false)]
@@ -119,18 +63,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         }
 
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
-
         [NameInMap("DataSynchronizationDetails")]
         [Validation(Required=false)]
         public List<DescribeInitializationStatusResponseBodyDataSynchronizationDetails> DataSynchronizationDetails { get; set; }
@@ -154,6 +86,74 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [NameInMap("DestinationOwnerDBName")]
             [Validation(Required=false)]
             public string DestinationOwnerDBName { get; set; }
+
+        }
+
+        [NameInMap("StructureInitializationDetails")]
+        [Validation(Required=false)]
+        public List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> StructureInitializationDetails { get; set; }
+        public class DescribeInitializationStatusResponseBodyStructureInitializationDetails : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("SourceOwnerDBName")]
+            [Validation(Required=false)]
+            public string SourceOwnerDBName { get; set; }
+
+            [NameInMap("ObjectDefinition")]
+            [Validation(Required=false)]
+            public string ObjectDefinition { get; set; }
+
+            [NameInMap("ObjectType")]
+            [Validation(Required=false)]
+            public string ObjectType { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("DestinationOwnerDBName")]
+            [Validation(Required=false)]
+            public string DestinationOwnerDBName { get; set; }
+
+            [NameInMap("ObjectName")]
+            [Validation(Required=false)]
+            public string ObjectName { get; set; }
+
+            [NameInMap("Constraints")]
+            [Validation(Required=false)]
+            public List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> Constraints { get; set; }
+            public class DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints : TeaModel {
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("SourceOwnerDBName")]
+                [Validation(Required=false)]
+                public string SourceOwnerDBName { get; set; }
+
+                [NameInMap("ObjectDefinition")]
+                [Validation(Required=false)]
+                public string ObjectDefinition { get; set; }
+
+                [NameInMap("ObjectType")]
+                [Validation(Required=false)]
+                public string ObjectType { get; set; }
+
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("DestinationOwnerDBName")]
+                [Validation(Required=false)]
+                public string DestinationOwnerDBName { get; set; }
+
+                [NameInMap("ObjectName")]
+                [Validation(Required=false)]
+                public string ObjectName { get; set; }
+
+            }
 
         }
 

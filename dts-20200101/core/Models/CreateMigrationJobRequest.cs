@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateMigrationJobRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }

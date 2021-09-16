@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMigrationJobDetailResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? TotalRecordCount { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("ErrCode")]
+        [Validation(Required=false)]
+        public string ErrCode { get; set; }
 
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
-        [NameInMap("DataSynchronizationDetailList")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList DataSynchronizationDetailList { get; set; }
-        public class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList : TeaModel {
-            [NameInMap("DataSynchronizationDetail")]
-            [Validation(Required=false)]
-            public List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> DataSynchronizationDetail { get; set; }
-            public class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail : TeaModel {
-                public string Status { get; set; }
-                public string SourceOwnerDBName { get; set; }
-                public string TableName { get; set; }
-                public string ErrorMessage { get; set; }
-                public string DestinationOwnerDBName { get; set; }
-            }
-        };
+        public string Success { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? TotalRecordCount { get; set; }
+
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -60,13 +56,21 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             }
         };
 
-        [NameInMap("ErrMessage")]
+        [NameInMap("DataSynchronizationDetailList")]
         [Validation(Required=false)]
-        public string ErrMessage { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public string Success { get; set; }
+        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList DataSynchronizationDetailList { get; set; }
+        public class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList : TeaModel {
+            [NameInMap("DataSynchronizationDetail")]
+            [Validation(Required=false)]
+            public List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> DataSynchronizationDetail { get; set; }
+            public class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail : TeaModel {
+                public string Status { get; set; }
+                public string SourceOwnerDBName { get; set; }
+                public string TableName { get; set; }
+                public string ErrorMessage { get; set; }
+                public string DestinationOwnerDBName { get; set; }
+            }
+        };
 
         [NameInMap("StructureInitializationDetailList")]
         [Validation(Required=false)]
@@ -78,6 +82,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail : TeaModel {
                 public string Status { get; set; }
                 public string SourceOwnerDBName { get; set; }
+                public string ObjectDefinition { get; set; }
+                public string ObjectType { get; set; }
+                public string ErrorMessage { get; set; }
+                public string DestinationOwnerDBName { get; set; }
+                public string ObjectName { get; set; }
                 public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList ConstraintList { get; set; }
                 public class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList : TeaModel {
                     [NameInMap("StructureInitializationDetail")]
@@ -115,17 +124,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     }
 
                 }
-                public string ObjectDefinition { get; set; }
-                public string ObjectType { get; set; }
-                public string ErrorMessage { get; set; }
-                public string DestinationOwnerDBName { get; set; }
-                public string ObjectName { get; set; }
             }
         };
-
-        [NameInMap("ErrCode")]
-        [Validation(Required=false)]
-        public string ErrCode { get; set; }
 
     }
 

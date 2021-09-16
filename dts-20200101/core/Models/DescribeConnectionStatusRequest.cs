@@ -91,11 +91,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         [NameInMap("DestinationEndpointOracleSID")]
         [Validation(Required=false)]
-        public bool? DestinationEndpointOracleSID { get; set; }
+        public string DestinationEndpointOracleSID { get; set; }
 
         [NameInMap("DestinationEndpointArchitecture")]
         [Validation(Required=false)]
-        public bool? DestinationEndpointArchitecture { get; set; }
+        public string DestinationEndpointArchitecture { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 
