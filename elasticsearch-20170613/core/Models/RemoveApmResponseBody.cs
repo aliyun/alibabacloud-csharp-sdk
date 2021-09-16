@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class ActivateZonesRequest : TeaModel {
-        [NameInMap("clientToken")]
+    public class RemoveApmResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string RequestId { get; set; }
 
     }
 

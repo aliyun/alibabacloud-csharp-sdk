@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("X-Managed-Count")]
             [Validation(Required=false)]
             public int? XManagedCount { get; set; }
+            [NameInMap("X-OSS-StorageSize")]
+            [Validation(Required=false)]
+            public long? XOSSStorageSize { get; set; }
+            [NameInMap("X-OSS-Count")]
+            [Validation(Required=false)]
+            public int? XOSSCount { get; set; }
         };
 
         [NameInMap("Result")]
@@ -52,6 +58,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("health")]
             [Validation(Required=false)]
             public string Health { get; set; }
+
+            [NameInMap("phase")]
+            [Validation(Required=false)]
+            public string Phase { get; set; }
+
+            [NameInMap("ilmExplain")]
+            [Validation(Required=false)]
+            public string IlmExplain { get; set; }
 
         }
 

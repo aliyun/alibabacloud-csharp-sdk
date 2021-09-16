@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class ActivateZonesRequest : TeaModel {
-        [NameInMap("clientToken")]
+    public class ListAllNodeRequest : TeaModel {
+        [NameInMap("extended")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public bool? Extended { get; set; }
 
     }
 

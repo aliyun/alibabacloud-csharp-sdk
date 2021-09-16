@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
-    public class ListDictInformationRequest : TeaModel {
-        [NameInMap("bucketName")]
+    public class ListApmRequest : TeaModel {
+        [NameInMap("description")]
         [Validation(Required=false)]
-        public string BucketName { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("key")]
+        [NameInMap("instanceId")]
         [Validation(Required=false)]
-        public string Key { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("analyzerType")]
+        [NameInMap("esInstanceId")]
         [Validation(Required=false)]
-        public string AnalyzerType { get; set; }
+        public string EsInstanceId { get; set; }
 
     }
 

@@ -21,6 +21,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public bool? IsManaged { get; set; }
 
+        [NameInMap("isOpenstore")]
+        [Validation(Required=false)]
+        public bool? IsOpenstore { get; set; }
+
+        [NameInMap("page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
+        [NameInMap("size")]
+        [Validation(Required=false)]
+        public int? Size { get; set; }
+
     }
 
 }
