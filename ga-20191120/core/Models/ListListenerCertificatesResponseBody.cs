@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string CertificateId { get; set; }
 
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
+
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
 
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
