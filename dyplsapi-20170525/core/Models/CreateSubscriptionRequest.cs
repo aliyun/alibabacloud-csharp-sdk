@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string BindToken { get; set; }
 
-        [NameInMap("ProdCode")]
-        [Validation(Required=false)]
-        public string ProdCode { get; set; }
-
     }
 
 }

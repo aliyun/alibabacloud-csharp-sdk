@@ -21,13 +21,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("PhoneNoX")]
-        [Validation(Required=false)]
-        public string PhoneNoX { get; set; }
-
         [NameInMap("trackNo")]
         [Validation(Required=false)]
         public string TrackNo { get; set; }
+
+        [NameInMap("CabinetNo")]
+        [Validation(Required=false)]
+        public string CabinetNo { get; set; }
+
+        [NameInMap("PhoneNoX")]
+        [Validation(Required=false)]
+        public string PhoneNoX { get; set; }
 
     }
 

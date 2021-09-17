@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
-    public class UpdatePhoneSwitchRequest : TeaModel {
+    public class ConfirmSendSmsRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -25,17 +25,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string PoolKey { get; set; }
 
-        [NameInMap("SubsId")]
-        [Validation(Required=false)]
-        public long? SubsId { get; set; }
-
         [NameInMap("SecretNo")]
         [Validation(Required=false)]
         public string SecretNo { get; set; }
 
-        [NameInMap("SwitchStatus")]
+        [NameInMap("CallId")]
         [Validation(Required=false)]
-        public int? SwitchStatus { get; set; }
+        public string CallId { get; set; }
 
     }
 

@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ProdCode")]
-        [Validation(Required=false)]
-        public string ProdCode { get; set; }
-
         [NameInMap("PoolKey")]
         [Validation(Required=false)]
         public string PoolKey { get; set; }

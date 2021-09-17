@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string ASRModelId { get; set; }
 
+        [NameInMap("CallTimeout")]
+        [Validation(Required=false)]
+        public int? CallTimeout { get; set; }
+
     }
 
 }

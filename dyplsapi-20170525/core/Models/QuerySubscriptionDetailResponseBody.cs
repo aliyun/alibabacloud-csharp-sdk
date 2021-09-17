@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QuerySubscriptionDetailResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SecretBindDetailDTO")]
         [Validation(Required=false)]
         public QuerySubscriptionDetailResponseBodySecretBindDetailDTO SecretBindDetailDTO { get; set; }
@@ -19,18 +31,18 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("Extension")]
             [Validation(Required=false)]
             public string Extension { get; set; }
-            [NameInMap("GroupId")]
-            [Validation(Required=false)]
-            public long? GroupId { get; set; }
             [NameInMap("PhoneNoB")]
             [Validation(Required=false)]
             public string PhoneNoB { get; set; }
-            [NameInMap("ASRStatus")]
+            [NameInMap("GroupId")]
             [Validation(Required=false)]
-            public bool? ASRStatus { get; set; }
+            public long? GroupId { get; set; }
             [NameInMap("NeedRecord")]
             [Validation(Required=false)]
             public bool? NeedRecord { get; set; }
+            [NameInMap("ASRStatus")]
+            [Validation(Required=false)]
+            public bool? ASRStatus { get; set; }
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
@@ -40,12 +52,12 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("SubsId")]
             [Validation(Required=false)]
             public string SubsId { get; set; }
-            [NameInMap("CallRestrict")]
-            [Validation(Required=false)]
-            public string CallRestrict { get; set; }
             [NameInMap("PhoneNoX")]
             [Validation(Required=false)]
             public string PhoneNoX { get; set; }
+            [NameInMap("CallRestrict")]
+            [Validation(Required=false)]
+            public string CallRestrict { get; set; }
             [NameInMap("ASRModelId")]
             [Validation(Required=false)]
             public string ASRModelId { get; set; }
@@ -53,18 +65,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [Validation(Required=false)]
             public string PhoneNoA { get; set; }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 
