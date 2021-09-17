@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("RiskCustomParams")]
+        [Validation(Required=false)]
+        public string RiskCustomParams { get; set; }
+
+        [NameInMap("CustomType")]
+        [Validation(Required=false)]
+        public string CustomType { get; set; }
+
     }
 
 }

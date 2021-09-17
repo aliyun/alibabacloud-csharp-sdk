@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            [NameInMap("Pid")]
+            [Validation(Required=false)]
+            public string Pid { get; set; }
+
             [NameInMap("BindIp")]
             [Validation(Required=false)]
             public string BindIp { get; set; }

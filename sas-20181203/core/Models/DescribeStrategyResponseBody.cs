@@ -17,17 +17,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeStrategyResponseBodyStrategies> Strategies { get; set; }
         public class DescribeStrategyResponseBodyStrategies : TeaModel {
-            [NameInMap("ExecStatus")]
-            [Validation(Required=false)]
-            public int? ExecStatus { get; set; }
-
             [NameInMap("Type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
 
+            [NameInMap("ExecStatus")]
+            [Validation(Required=false)]
+            public int? ExecStatus { get; set; }
+
+            [NameInMap("PassRate")]
+            [Validation(Required=false)]
+            public int? PassRate { get; set; }
+
             [NameInMap("CycleStartTime")]
             [Validation(Required=false)]
             public int? CycleStartTime { get; set; }
+
+            [NameInMap("CustomType")]
+            [Validation(Required=false)]
+            public string CustomType { get; set; }
 
             [NameInMap("EcsCount")]
             [Validation(Required=false)]
@@ -48,10 +56,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-
-            [NameInMap("PassRate")]
-            [Validation(Required=false)]
-            public int? PassRate { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]

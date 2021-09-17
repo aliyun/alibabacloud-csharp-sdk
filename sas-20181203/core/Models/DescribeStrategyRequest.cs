@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string StrategyIds { get; set; }
 
+        [NameInMap("CustomType")]
+        [Validation(Required=false)]
+        public string CustomType { get; set; }
+
     }
 
 }

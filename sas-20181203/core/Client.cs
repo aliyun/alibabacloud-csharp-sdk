@@ -6785,6 +6785,38 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await UninstallUniBackupAgentWithOptionsAsync(request, runtime);
         }
 
+        public UpgradeBackupPolicyVersionResponse UpgradeBackupPolicyVersionWithOptions(UpgradeBackupPolicyVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpgradeBackupPolicyVersionResponse>(DoRPCRequest("UpgradeBackupPolicyVersion", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<UpgradeBackupPolicyVersionResponse> UpgradeBackupPolicyVersionWithOptionsAsync(UpgradeBackupPolicyVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpgradeBackupPolicyVersionResponse>(await DoRPCRequestAsync("UpgradeBackupPolicyVersion", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public UpgradeBackupPolicyVersionResponse UpgradeBackupPolicyVersion(UpgradeBackupPolicyVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpgradeBackupPolicyVersionWithOptions(request, runtime);
+        }
+
+        public async Task<UpgradeBackupPolicyVersionResponse> UpgradeBackupPolicyVersionAsync(UpgradeBackupPolicyVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpgradeBackupPolicyVersionWithOptionsAsync(request, runtime);
+        }
+
         public ValidateHcWarningsResponse ValidateHcWarningsWithOptions(ValidateHcWarningsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Policy { get; set; }
 
+            [NameInMap("UpgradeStatus")]
+            [Validation(Required=false)]
+            public string UpgradeStatus { get; set; }
+
             [NameInMap("ServiceErrorCount")]
             [Validation(Required=false)]
             public int? ServiceErrorCount { get; set; }
