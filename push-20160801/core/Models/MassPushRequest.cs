@@ -25,14 +25,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public bool? IOSSilentNotification { get; set; }
 
-            [NameInMap("iOSNotificationCollapseId")]
-            [Validation(Required=false)]
-            public string IOSNotificationCollapseId { get; set; }
-
-            [NameInMap("AndroidRenderStyle")]
-            [Validation(Required=false)]
-            public string AndroidRenderStyle { get; set; }
-
             [NameInMap("StoreOffline")]
             [Validation(Required=false)]
             public bool? StoreOffline { get; set; }
@@ -41,17 +33,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string IOSSubtitle { get; set; }
 
-            [NameInMap("iOSNotificationCategory")]
+            [NameInMap("AndroidNotificationHuaweiChannel")]
             [Validation(Required=false)]
-            public string IOSNotificationCategory { get; set; }
+            public string AndroidNotificationHuaweiChannel { get; set; }
 
             [NameInMap("AndroidNotificationChannel")]
             [Validation(Required=false)]
             public string AndroidNotificationChannel { get; set; }
-
-            [NameInMap("AndroidNotificationHuaweiChannel")]
-            [Validation(Required=false)]
-            public string AndroidNotificationHuaweiChannel { get; set; }
 
             [NameInMap("iOSApnsEnv")]
             [Validation(Required=false)]
@@ -81,25 +69,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string IOSRemindBody { get; set; }
 
-            [NameInMap("AndroidActivity")]
-            [Validation(Required=false)]
-            public string AndroidActivity { get; set; }
-
             [NameInMap("AndroidNotifyType")]
             [Validation(Required=false)]
             public string AndroidNotifyType { get; set; }
-
-            [NameInMap("AndroidBigBody")]
-            [Validation(Required=false)]
-            public string AndroidBigBody { get; set; }
-
-            [NameInMap("iOSMutableContent")]
-            [Validation(Required=false)]
-            public bool? IOSMutableContent { get; set; }
-
-            [NameInMap("Target")]
-            [Validation(Required=false)]
-            public string Target { get; set; }
 
             [NameInMap("AndroidOpenUrl")]
             [Validation(Required=false)]
@@ -109,61 +81,21 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidBigTitle { get; set; }
 
-            [NameInMap("AndroidNotificationNotifyId")]
-            [Validation(Required=false)]
-            public int? AndroidNotificationNotifyId { get; set; }
-
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
-
-            [NameInMap("AndroidNotificationVivoChannel")]
-            [Validation(Required=false)]
-            public string AndroidNotificationVivoChannel { get; set; }
-
-            [NameInMap("DeviceType")]
-            [Validation(Required=false)]
-            public string DeviceType { get; set; }
 
             [NameInMap("AndroidOpenType")]
             [Validation(Required=false)]
             public string AndroidOpenType { get; set; }
 
-            [NameInMap("AndroidPopupActivity")]
-            [Validation(Required=false)]
-            public string AndroidPopupActivity { get; set; }
-
-            [NameInMap("AndroidRemind")]
-            [Validation(Required=false)]
-            public bool? AndroidRemind { get; set; }
-
-            [NameInMap("AndroidPopupBody")]
-            [Validation(Required=false)]
-            public string AndroidPopupBody { get; set; }
-
             [NameInMap("AndroidExtParameters")]
             [Validation(Required=false)]
             public string AndroidExtParameters { get; set; }
 
-            [NameInMap("iOSExtParameters")]
-            [Validation(Required=false)]
-            public string IOSExtParameters { get; set; }
-
             [NameInMap("AndroidXiaoMiNotifyBody")]
             [Validation(Required=false)]
             public string AndroidXiaoMiNotifyBody { get; set; }
-
-            [NameInMap("Body")]
-            [Validation(Required=false)]
-            public string Body { get; set; }
-
-            [NameInMap("AndroidNotificationBarType")]
-            [Validation(Required=false)]
-            public int? AndroidNotificationBarType { get; set; }
-
-            [NameInMap("AndroidNotificationBarPriority")]
-            [Validation(Required=false)]
-            public int? AndroidNotificationBarPriority { get; set; }
 
             [NameInMap("AndroidXiaomiBigPictureUrl")]
             [Validation(Required=false)]
@@ -181,14 +113,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public bool? IOSRemind { get; set; }
 
-            [NameInMap("PushType")]
-            [Validation(Required=false)]
-            public string PushType { get; set; }
-
-            [NameInMap("SendSpeed")]
-            [Validation(Required=false)]
-            public int? SendSpeed { get; set; }
-
             [NameInMap("iOSBadge")]
             [Validation(Required=false)]
             public int? IOSBadge { get; set; }
@@ -197,13 +121,121 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string Title { get; set; }
 
+            [NameInMap("AndroidMusic")]
+            [Validation(Required=false)]
+            public string AndroidMusic { get; set; }
+
+            [NameInMap("iOSNotificationCollapseId")]
+            [Validation(Required=false)]
+            public string IOSNotificationCollapseId { get; set; }
+
+            [NameInMap("AndroidRenderStyle")]
+            [Validation(Required=false)]
+            public string AndroidRenderStyle { get; set; }
+
+            [NameInMap("iOSNotificationCategory")]
+            [Validation(Required=false)]
+            public string IOSNotificationCategory { get; set; }
+
+            [NameInMap("iOSNotificationThreadId")]
+            [Validation(Required=false)]
+            public string IOSNotificationThreadId { get; set; }
+
+            [NameInMap("AndroidActivity")]
+            [Validation(Required=false)]
+            public string AndroidActivity { get; set; }
+
+            [NameInMap("AndroidBigBody")]
+            [Validation(Required=false)]
+            public string AndroidBigBody { get; set; }
+
+            [NameInMap("iOSMutableContent")]
+            [Validation(Required=false)]
+            public bool? IOSMutableContent { get; set; }
+
+            [NameInMap("Target")]
+            [Validation(Required=false)]
+            public string Target { get; set; }
+
+            [NameInMap("AndroidNotificationNotifyId")]
+            [Validation(Required=false)]
+            public int? AndroidNotificationNotifyId { get; set; }
+
+            [NameInMap("AndroidNotificationVivoChannel")]
+            [Validation(Required=false)]
+            public string AndroidNotificationVivoChannel { get; set; }
+
+            [NameInMap("AndroidPopupActivity")]
+            [Validation(Required=false)]
+            public string AndroidPopupActivity { get; set; }
+
+            [NameInMap("DeviceType")]
+            [Validation(Required=false)]
+            public string DeviceType { get; set; }
+
+            [NameInMap("AndroidRemind")]
+            [Validation(Required=false)]
+            public bool? AndroidRemind { get; set; }
+
+            [NameInMap("AndroidPopupBody")]
+            [Validation(Required=false)]
+            public string AndroidPopupBody { get; set; }
+
+            [NameInMap("iOSExtParameters")]
+            [Validation(Required=false)]
+            public string IOSExtParameters { get; set; }
+
+            [NameInMap("Body")]
+            [Validation(Required=false)]
+            public string Body { get; set; }
+
+            [NameInMap("AndroidNotificationBarPriority")]
+            [Validation(Required=false)]
+            public int? AndroidNotificationBarPriority { get; set; }
+
+            [NameInMap("AndroidNotificationBarType")]
+            [Validation(Required=false)]
+            public int? AndroidNotificationBarType { get; set; }
+
+            [NameInMap("PushType")]
+            [Validation(Required=false)]
+            public string PushType { get; set; }
+
+            [NameInMap("SendSpeed")]
+            [Validation(Required=false)]
+            public int? SendSpeed { get; set; }
+
             [NameInMap("PushTime")]
             [Validation(Required=false)]
             public string PushTime { get; set; }
 
-            [NameInMap("AndroidMusic")]
+            [NameInMap("AndroidBigPictureUrl")]
             [Validation(Required=false)]
-            public string AndroidMusic { get; set; }
+            public string AndroidBigPictureUrl { get; set; }
+
+            [NameInMap("AndroidInboxBody")]
+            [Validation(Required=false)]
+            public string AndroidInboxBody { get; set; }
+
+            [NameInMap("AndroidImageUrl")]
+            [Validation(Required=false)]
+            public string AndroidImageUrl { get; set; }
+
+            [NameInMap("AndroidXiaomiImageUrl")]
+            [Validation(Required=false)]
+            public string AndroidXiaomiImageUrl { get; set; }
+
+            [NameInMap("AndroidMessageHuaweiUrgency")]
+            [Validation(Required=false)]
+            public string AndroidMessageHuaweiUrgency { get; set; }
+
+            [NameInMap("AndroidMessageHuaweiCategory")]
+            [Validation(Required=false)]
+            public string AndroidMessageHuaweiCategory { get; set; }
+
+            [NameInMap("SendChannels")]
+            [Validation(Required=false)]
+            public string SendChannels { get; set; }
 
         }
 

@@ -221,6 +221,38 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string AndroidXiaomiBigPictureUrl { get; set; }
 
+        [NameInMap("iOSNotificationThreadId")]
+        [Validation(Required=false)]
+        public string IOSNotificationThreadId { get; set; }
+
+        [NameInMap("AndroidBigPictureUrl")]
+        [Validation(Required=false)]
+        public string AndroidBigPictureUrl { get; set; }
+
+        [NameInMap("AndroidInboxBody")]
+        [Validation(Required=false)]
+        public string AndroidInboxBody { get; set; }
+
+        [NameInMap("AndroidImageUrl")]
+        [Validation(Required=false)]
+        public string AndroidImageUrl { get; set; }
+
+        [NameInMap("AndroidXiaomiImageUrl")]
+        [Validation(Required=false)]
+        public string AndroidXiaomiImageUrl { get; set; }
+
+        [NameInMap("AndroidMessageHuaweiUrgency")]
+        [Validation(Required=false)]
+        public string AndroidMessageHuaweiUrgency { get; set; }
+
+        [NameInMap("AndroidMessageHuaweiCategory")]
+        [Validation(Required=false)]
+        public string AndroidMessageHuaweiCategory { get; set; }
+
+        [NameInMap("SendChannels")]
+        [Validation(Required=false)]
+        public string SendChannels { get; set; }
+
     }
 
 }
