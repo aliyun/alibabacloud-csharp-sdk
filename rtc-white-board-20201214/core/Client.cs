@@ -517,6 +517,38 @@ namespace AlibabaCloud.SDK.Rtc_white_board20201214
             return await SetAppStatusWithOptionsAsync(request, runtime);
         }
 
+        public DescribeWhiteBoardRecordingsResponse DescribeWhiteBoardRecordingsWithOptions(DescribeWhiteBoardRecordingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeWhiteBoardRecordingsResponse>(DoRPCRequest("DescribeWhiteBoardRecordings", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeWhiteBoardRecordingsResponse> DescribeWhiteBoardRecordingsWithOptionsAsync(DescribeWhiteBoardRecordingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeWhiteBoardRecordingsResponse>(await DoRPCRequestAsync("DescribeWhiteBoardRecordings", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeWhiteBoardRecordingsResponse DescribeWhiteBoardRecordings(DescribeWhiteBoardRecordingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeWhiteBoardRecordingsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeWhiteBoardRecordingsResponse> DescribeWhiteBoardRecordingsAsync(DescribeWhiteBoardRecordingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeWhiteBoardRecordingsWithOptionsAsync(request, runtime);
+        }
+
         public StopWhiteBoardRecordingResponse StopWhiteBoardRecordingWithOptions(StopWhiteBoardRecordingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
