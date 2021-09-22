@@ -59,6 +59,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ServiceInstanceId { get; set; }
         };
 
+        [NameInMap("RequestTags")]
+        [Validation(Required=false)]
+        public List<CreateServiceInstanceRequestRequestTags> RequestTags { get; set; }
+        public class CreateServiceInstanceRequestRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }
