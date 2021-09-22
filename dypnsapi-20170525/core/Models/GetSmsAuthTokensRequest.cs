@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
-    public class CreateVerifySchemeRequest : TeaModel {
+    public class GetSmsAuthTokensRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,29 +21,37 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SchemeName")]
+        [NameInMap("PackageName")]
         [Validation(Required=false)]
-        public string SchemeName { get; set; }
+        public string PackageName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("SignName")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string SignName { get; set; }
+
+        [NameInMap("SceneCode")]
+        [Validation(Required=false)]
+        public string SceneCode { get; set; }
 
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }
 
-        [NameInMap("PackName")]
-        [Validation(Required=false)]
-        public string PackName { get; set; }
-
-        [NameInMap("PackSign")]
-        [Validation(Required=false)]
-        public string PackSign { get; set; }
-
         [NameInMap("BundleId")]
         [Validation(Required=false)]
         public string BundleId { get; set; }
+
+        [NameInMap("Expire")]
+        [Validation(Required=false)]
+        public long? Expire { get; set; }
+
+        [NameInMap("SmsTemplateCode")]
+        [Validation(Required=false)]
+        public string SmsTemplateCode { get; set; }
+
+        [NameInMap("SmsCodeExpire")]
+        [Validation(Required=false)]
+        public int? SmsCodeExpire { get; set; }
 
     }
 

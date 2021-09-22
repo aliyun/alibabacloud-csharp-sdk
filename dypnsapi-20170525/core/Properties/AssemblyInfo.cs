@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-dypnsapi")]
 [assembly: AssemblyDescription("Alibaba Cloud Dypnsapi (20170525) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4c745910-4a4e-11eb-934a-e7d000ede64a")]
+[assembly: Guid("0199c780-1b7d-11ec-a78b-e773d6d1a884")]
 
 // Version information for an assembly consists of the following four values:
 //

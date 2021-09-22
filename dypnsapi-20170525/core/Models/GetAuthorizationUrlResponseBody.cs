@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthorizationUrlResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -25,10 +29,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [Validation(Required=false)]
             public string AuthorizationUrl { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

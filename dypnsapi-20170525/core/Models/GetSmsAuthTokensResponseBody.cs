@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
-    public class GetCertifyResultResponseBody : TeaModel {
+    public class GetSmsAuthTokensResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -23,29 +23,24 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<GetCertifyResultResponseBodyData> Data { get; set; }
-        public class GetCertifyResultResponseBodyData : TeaModel {
-            [NameInMap("MaterialInfo")]
+        public GetSmsAuthTokensResponseBodyData Data { get; set; }
+        public class GetSmsAuthTokensResponseBodyData : TeaModel {
+            [NameInMap("BizToken")]
             [Validation(Required=false)]
-            public string MaterialInfo { get; set; }
-
-            [NameInMap("IdentityInfo")]
+            public string BizToken { get; set; }
+            [NameInMap("StsAccessKeySecret")]
             [Validation(Required=false)]
-            public string IdentityInfo { get; set; }
-
-            [NameInMap("VerifyDesc")]
+            public string StsAccessKeySecret { get; set; }
+            [NameInMap("StsAccessKeyId")]
             [Validation(Required=false)]
-            public string VerifyDesc { get; set; }
-
-            [NameInMap("VerifyResult")]
+            public string StsAccessKeyId { get; set; }
+            [NameInMap("ExpireTime")]
             [Validation(Required=false)]
-            public string VerifyResult { get; set; }
-
-            [NameInMap("DeviceToken")]
+            public long? ExpireTime { get; set; }
+            [NameInMap("StsToken")]
             [Validation(Required=false)]
-            public string DeviceToken { get; set; }
-
-        }
+            public string StsToken { get; set; }
+        };
 
     }
 

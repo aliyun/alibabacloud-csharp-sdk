@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
-    public class CreateVerifySchemeRequest : TeaModel {
+    public class CheckServiceLinkedRoleForDeletingRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,29 +21,25 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SchemeName")]
+        [NameInMap("RoleArn")]
         [Validation(Required=false)]
-        public string SchemeName { get; set; }
+        public string RoleArn { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("ServiceName")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string ServiceName { get; set; }
 
-        [NameInMap("OsType")]
+        [NameInMap("SPIRegionId")]
         [Validation(Required=false)]
-        public string OsType { get; set; }
+        public string SPIRegionId { get; set; }
 
-        [NameInMap("PackName")]
+        [NameInMap("DeletionTaskId")]
         [Validation(Required=false)]
-        public string PackName { get; set; }
+        public string DeletionTaskId { get; set; }
 
-        [NameInMap("PackSign")]
+        [NameInMap("AccountId")]
         [Validation(Required=false)]
-        public string PackSign { get; set; }
-
-        [NameInMap("BundleId")]
-        [Validation(Required=false)]
-        public string BundleId { get; set; }
+        public string AccountId { get; set; }
 
     }
 

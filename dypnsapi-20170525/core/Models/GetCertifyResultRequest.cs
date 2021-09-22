@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
-
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
