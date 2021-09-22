@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DetailMessage")]
-        [Validation(Required=false)]
-        public string DetailMessage { get; set; }
-
         [NameInMap("DownloadUrl")]
         [Validation(Required=false)]
         public string DownloadUrl { get; set; }
+
+        [NameInMap("DetailMessage")]
+        [Validation(Required=false)]
+        public string DetailMessage { get; set; }
 
     }
 

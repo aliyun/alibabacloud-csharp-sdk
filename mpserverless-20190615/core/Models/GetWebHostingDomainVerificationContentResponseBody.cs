@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public GetWebHostingDomainVerificationContentResponseBodyData Data { get; set; }
         public class GetWebHostingDomainVerificationContentResponseBodyData : TeaModel {
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
         };
 
     }

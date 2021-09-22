@@ -13,20 +13,20 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("RuntimeList")]
+        [NameInMap("MemoryList")]
         [Validation(Required=false)]
-        public List<ListFunctionSpecResponseBodyRuntimeList> RuntimeList { get; set; }
-        public class ListFunctionSpecResponseBodyRuntimeList : TeaModel {
+        public List<ListFunctionSpecResponseBodyMemoryList> MemoryList { get; set; }
+        public class ListFunctionSpecResponseBodyMemoryList : TeaModel {
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
         }
 
-        [NameInMap("MemoryList")]
+        [NameInMap("RuntimeList")]
         [Validation(Required=false)]
-        public List<ListFunctionSpecResponseBodyMemoryList> MemoryList { get; set; }
-        public class ListFunctionSpecResponseBodyMemoryList : TeaModel {
+        public List<ListFunctionSpecResponseBodyRuntimeList> RuntimeList { get; set; }
+        public class ListFunctionSpecResponseBodyRuntimeList : TeaModel {
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }

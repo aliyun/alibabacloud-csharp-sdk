@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public string Cname { get; set; }
 
+            [NameInMap("EnableCors")]
+            [Validation(Required=false)]
+            public bool? EnableCors { get; set; }
+
+            [NameInMap("AccessControlAllowOrigin")]
+            [Validation(Required=false)]
+            public string AccessControlAllowOrigin { get; set; }
+
         }
 
     }

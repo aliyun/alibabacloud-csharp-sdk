@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public long? Size { get; set; }
 
-        [NameInMap("TargetPath")]
-        [Validation(Required=false)]
-        public string TargetPath { get; set; }
-
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }

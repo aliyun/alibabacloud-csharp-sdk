@@ -17,6 +17,12 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public ListWebHostingFilesResponseBodyData Data { get; set; }
         public class ListWebHostingFilesResponseBodyData : TeaModel {
+            [NameInMap("NextMarker")]
+            [Validation(Required=false)]
+            public string NextMarker { get; set; }
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("WebHostingFiles")]
             [Validation(Required=false)]
             public List<ListWebHostingFilesResponseBodyDataWebHostingFiles> WebHostingFiles { get; set; }
@@ -28,12 +34,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
                 public long? LastModifiedTime { get; set; }
                 public string SignedUrl { get; set; }
             }
-            [NameInMap("NextMarker")]
-            [Validation(Required=false)]
-            public string NextMarker { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
     }

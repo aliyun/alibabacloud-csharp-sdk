@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListSpaceResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("GmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Count")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Count { get; set; }
 
         [NameInMap("Spaces")]
         [Validation(Required=false)]
@@ -25,13 +29,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            [NameInMap("SpaceId")]
-            [Validation(Required=false)]
-            public string SpaceId { get; set; }
-
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
+
+            [NameInMap("SpaceId")]
+            [Validation(Required=false)]
+            public string SpaceId { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -42,10 +46,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             public string Desc { get; set; }
 
         }
-
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
 
     }
 

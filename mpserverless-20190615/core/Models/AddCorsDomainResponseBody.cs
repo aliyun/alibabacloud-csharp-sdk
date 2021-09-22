@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class AddCorsDomainResponseBody : TeaModel {
-        [NameInMap("DomainId")]
-        [Validation(Required=false)]
-        public string DomainId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("DomainId")]
+        [Validation(Required=false)]
+        public string DomainId { get; set; }
 
     }
 

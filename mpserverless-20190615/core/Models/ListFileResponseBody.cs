@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListFileResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Paginator")]
+        [Validation(Required=false)]
+        public ListFileResponseBodyPaginator Paginator { get; set; }
+        public class ListFileResponseBodyPaginator : TeaModel {
+            [NameInMap("PageNum")]
+            [Validation(Required=false)]
+            public int? PageNum { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
+            [NameInMap("PageCount")]
+            [Validation(Required=false)]
+            public int? PageCount { get; set; }
+        };
+
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<ListFileResponseBodyDataList> DataList { get; set; }
@@ -42,28 +64,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             public string Id { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Paginator")]
-        [Validation(Required=false)]
-        public ListFileResponseBodyPaginator Paginator { get; set; }
-        public class ListFileResponseBodyPaginator : TeaModel {
-            [NameInMap("PageNum")]
-            [Validation(Required=false)]
-            public int? PageNum { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public int? Total { get; set; }
-            [NameInMap("PageCount")]
-            [Validation(Required=false)]
-            public int? PageCount { get; set; }
-        };
 
     }
 

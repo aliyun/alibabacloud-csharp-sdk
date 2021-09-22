@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
-    public class ModifyWebHostingConfigRequest : TeaModel {
+    public class SaveWebHostingCustomDomainCorsConfigRequest : TeaModel {
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }
 
-        [NameInMap("IndexPath")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string IndexPath { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("ErrorPath")]
+        [NameInMap("EnableCors")]
         [Validation(Required=false)]
-        public string ErrorPath { get; set; }
+        public bool? EnableCors { get; set; }
 
-        [NameInMap("AllowedIps")]
+        [NameInMap("AccessControlAllowOrigin")]
         [Validation(Required=false)]
-        public string AllowedIps { get; set; }
+        public string AccessControlAllowOrigin { get; set; }
 
     }
 

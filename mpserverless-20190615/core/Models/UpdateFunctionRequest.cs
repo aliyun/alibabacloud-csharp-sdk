@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string TimingTriggerConfig { get; set; }
 
+        [NameInMap("InstanceConcurrency")]
+        [Validation(Required=false)]
+        public int? InstanceConcurrency { get; set; }
+
+        [NameInMap("Runtime")]
+        [Validation(Required=false)]
+        public string Runtime { get; set; }
+
     }
 
 }

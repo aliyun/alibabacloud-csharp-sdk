@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class CreateDBImportTaskResponseBody : TeaModel {
-        [NameInMap("Policy")]
+        [NameInMap("Host")]
         [Validation(Required=false)]
-        public string Policy { get; set; }
+        public string Host { get; set; }
+
+        [NameInMap("ExpireTime")]
+        [Validation(Required=false)]
+        public string ExpireTime { get; set; }
 
         [NameInMap("FileKey")]
         [Validation(Required=false)]
         public string FileKey { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("AccessKeyId")]
         [Validation(Required=false)]
@@ -33,13 +29,17 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string Signature { get; set; }
 
-        [NameInMap("Host")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Host { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("ExpireTime")]
+        [NameInMap("Policy")]
         [Validation(Required=false)]
-        public string ExpireTime { get; set; }
+        public string Policy { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

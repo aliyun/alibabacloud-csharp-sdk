@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class CreateFunctionDeploymentResponseBody : TeaModel {
+        [NameInMap("UploadSignedUrl")]
+        [Validation(Required=false)]
+        public string UploadSignedUrl { get; set; }
+
         [NameInMap("DeploymentId")]
         [Validation(Required=false)]
         public string DeploymentId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("UploadSignedUrl")]
-        [Validation(Required=false)]
-        public string UploadSignedUrl { get; set; }
 
     }
 

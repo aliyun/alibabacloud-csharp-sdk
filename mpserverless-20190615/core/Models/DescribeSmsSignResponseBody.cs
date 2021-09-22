@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class DescribeSmsSignResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }
@@ -25,13 +17,21 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
-        [NameInMap("SignName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string SignName { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
+
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
+        [NameInMap("SignName")]
+        [Validation(Required=false)]
+        public string SignName { get; set; }
 
     }
 

@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string SpaceId { get; set; }
 
+        [NameInMap("CustomDomain")]
+        [Validation(Required=false)]
+        public string CustomDomain { get; set; }
+
+        [NameInMap("CustomDomainCertificate")]
+        [Validation(Required=false)]
+        public string CustomDomainCertificate { get; set; }
+
+        [NameInMap("CustomDomainPrivateKey")]
+        [Validation(Required=false)]
+        public string CustomDomainPrivateKey { get; set; }
+
     }
 
 }

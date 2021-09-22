@@ -6,10 +6,10 @@ English | [简体中文](README-CN.md)
 
 ## Installation
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.MPServerless20190615
+dotnet add package AlibabaCloud.SDK.MPServerless20190615
 ```
 
 ## Issues

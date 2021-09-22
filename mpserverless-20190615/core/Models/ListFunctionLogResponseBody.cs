@@ -9,40 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListFunctionLogResponseBody : TeaModel {
-        [NameInMap("DataList")]
-        [Validation(Required=false)]
-        public List<ListFunctionLogResponseBodyDataList> DataList { get; set; }
-        public class ListFunctionLogResponseBodyDataList : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("Timestamps")]
-            [Validation(Required=false)]
-            public List<string> Timestamps { get; set; }
-
-            [NameInMap("SpaceId")]
-            [Validation(Required=false)]
-            public string SpaceId { get; set; }
-
-            [NameInMap("RequestId")]
-            [Validation(Required=false)]
-            public string RequestId { get; set; }
-
-            [NameInMap("FunctionName")]
-            [Validation(Required=false)]
-            public string FunctionName { get; set; }
-
-            [NameInMap("Contents")]
-            [Validation(Required=false)]
-            public List<string> Contents { get; set; }
-
-            [NameInMap("Levels")]
-            [Validation(Required=false)]
-            public List<string> Levels { get; set; }
-
-        }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -64,6 +30,40 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public int? PageCount { get; set; }
         };
+
+        [NameInMap("DataList")]
+        [Validation(Required=false)]
+        public List<ListFunctionLogResponseBodyDataList> DataList { get; set; }
+        public class ListFunctionLogResponseBodyDataList : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("SpaceId")]
+            [Validation(Required=false)]
+            public string SpaceId { get; set; }
+
+            [NameInMap("RequestId")]
+            [Validation(Required=false)]
+            public string RequestId { get; set; }
+
+            [NameInMap("FunctionName")]
+            [Validation(Required=false)]
+            public string FunctionName { get; set; }
+
+            [NameInMap("Timestamps")]
+            [Validation(Required=false)]
+            public List<string> Timestamps { get; set; }
+
+            [NameInMap("Contents")]
+            [Validation(Required=false)]
+            public List<string> Contents { get; set; }
+
+            [NameInMap("Levels")]
+            [Validation(Required=false)]
+            public List<string> Levels { get; set; }
+
+        }
 
     }
 

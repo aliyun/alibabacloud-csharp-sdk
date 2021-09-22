@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class DescribeSmsSignStatusResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SignStatuses")]
         [Validation(Required=false)]
         public List<DescribeSmsSignStatusResponseBodySignStatuses> SignStatuses { get; set; }
         public class DescribeSmsSignStatusResponseBodySignStatuses : TeaModel {
-            [NameInMap("SignStatus")]
-            [Validation(Required=false)]
-            public int? SignStatus { get; set; }
-
             [NameInMap("SignId")]
             [Validation(Required=false)]
             public string SignId { get; set; }
+
+            [NameInMap("SignStatus")]
+            [Validation(Required=false)]
+            public int? SignStatus { get; set; }
 
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -30,10 +34,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             public string SignName { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

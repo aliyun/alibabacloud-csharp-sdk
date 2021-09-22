@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class UpdateHttpTriggerConfigResponseBody : TeaModel {
+        [NameInMap("EnableService")]
+        [Validation(Required=false)]
+        public bool? EnableService { get; set; }
+
+        [NameInMap("CustomDomainCname")]
+        [Validation(Required=false)]
+        public string CustomDomainCname { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -17,9 +25,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string DefaultEndpoint { get; set; }
 
-        [NameInMap("EnableService")]
+        [NameInMap("CustomDomainCertificateInfo")]
         [Validation(Required=false)]
-        public bool? EnableService { get; set; }
+        public string CustomDomainCertificateInfo { get; set; }
+
+        [NameInMap("CustomDomain")]
+        [Validation(Required=false)]
+        public string CustomDomain { get; set; }
 
     }
 

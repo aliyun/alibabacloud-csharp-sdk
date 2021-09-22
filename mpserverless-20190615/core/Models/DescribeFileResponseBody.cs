@@ -13,9 +13,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        [NameInMap("GmtCreate")]
+        [NameInMap("Url")]
         [Validation(Required=false)]
-        public string GmtCreate { get; set; }
+        public string Url { get; set; }
+
+        [NameInMap("GmtModified")]
+        [Validation(Required=false)]
+        public string GmtModified { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -25,21 +29,17 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public float? Size { get; set; }
 
-        [NameInMap("GmtModified")]
+        [NameInMap("GmtCreate")]
         [Validation(Required=false)]
-        public string GmtModified { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
+        public string GmtCreate { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
     }
 

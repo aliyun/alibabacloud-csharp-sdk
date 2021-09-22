@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListCorsDomainsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<ListCorsDomainsResponseBodyDomains> Domains { get; set; }
@@ -22,10 +26,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             public string DomainId { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

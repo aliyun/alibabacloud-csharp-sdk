@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.MPServerless20190615
+dotnet add package AlibabaCloud.SDK.MPServerless20190615
 ```
 
 ## 问题

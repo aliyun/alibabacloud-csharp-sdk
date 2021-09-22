@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public string TemplateCode { get; set; }
 
-            [NameInMap("TemplateStatus")]
-            [Validation(Required=false)]
-            public string TemplateStatus { get; set; }
-
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
+
+            [NameInMap("TemplateStatus")]
+            [Validation(Required=false)]
+            public string TemplateStatus { get; set; }
 
         }
 

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string SpaceId { get; set; }
 
+        [NameInMap("Runtime")]
+        [Validation(Required=false)]
+        public string Runtime { get; set; }
+
     }
 
 }

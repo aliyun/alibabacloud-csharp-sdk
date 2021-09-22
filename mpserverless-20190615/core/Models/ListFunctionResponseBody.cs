@@ -9,51 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListFunctionResponseBody : TeaModel {
-        [NameInMap("DataList")]
-        [Validation(Required=false)]
-        public List<ListFunctionResponseBodyDataList> DataList { get; set; }
-        public class ListFunctionResponseBodyDataList : TeaModel {
-            [NameInMap("TimingTriggerConfig")]
-            [Validation(Required=false)]
-            public string TimingTriggerConfig { get; set; }
-
-            [NameInMap("Spec")]
-            [Validation(Required=false)]
-            public ListFunctionResponseBodyDataListSpec Spec { get; set; }
-            public class ListFunctionResponseBodyDataListSpec : TeaModel {
-                [NameInMap("Timeout")]
-                [Validation(Required=false)]
-                public string Timeout { get; set; }
-                [NameInMap("Runtime")]
-                [Validation(Required=false)]
-                public string Runtime { get; set; }
-                [NameInMap("Memory")]
-                [Validation(Required=false)]
-                public string Memory { get; set; }
-            };
-
-            [NameInMap("HttpTriggerPath")]
-            [Validation(Required=false)]
-            public string HttpTriggerPath { get; set; }
-
-            [NameInMap("CreatedAt")]
-            [Validation(Required=false)]
-            public string CreatedAt { get; set; }
-
-            [NameInMap("ModifiedAt")]
-            [Validation(Required=false)]
-            public string ModifiedAt { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Desc")]
-            [Validation(Required=false)]
-            public string Desc { get; set; }
-
-        }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -75,6 +30,54 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public int? PageCount { get; set; }
         };
+
+        [NameInMap("DataList")]
+        [Validation(Required=false)]
+        public List<ListFunctionResponseBodyDataList> DataList { get; set; }
+        public class ListFunctionResponseBodyDataList : TeaModel {
+            [NameInMap("TimingTriggerConfig")]
+            [Validation(Required=false)]
+            public string TimingTriggerConfig { get; set; }
+
+            [NameInMap("HttpTriggerPath")]
+            [Validation(Required=false)]
+            public string HttpTriggerPath { get; set; }
+
+            [NameInMap("CreatedAt")]
+            [Validation(Required=false)]
+            public string CreatedAt { get; set; }
+
+            [NameInMap("ModifiedAt")]
+            [Validation(Required=false)]
+            public string ModifiedAt { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Desc")]
+            [Validation(Required=false)]
+            public string Desc { get; set; }
+
+            [NameInMap("Spec")]
+            [Validation(Required=false)]
+            public ListFunctionResponseBodyDataListSpec Spec { get; set; }
+            public class ListFunctionResponseBodyDataListSpec : TeaModel {
+                [NameInMap("Timeout")]
+                [Validation(Required=false)]
+                public string Timeout { get; set; }
+                [NameInMap("Runtime")]
+                [Validation(Required=false)]
+                public string Runtime { get; set; }
+                [NameInMap("InstanceConcurrency")]
+                [Validation(Required=false)]
+                public int? InstanceConcurrency { get; set; }
+                [NameInMap("Memory")]
+                [Validation(Required=false)]
+                public string Memory { get; set; }
+            };
+
+        }
 
     }
 

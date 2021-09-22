@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("Desc")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string Desc { get; set; }
-
-        [NameInMap("GmtCreate")]
-        [Validation(Required=false)]
-        public string GmtCreate { get; set; }
+        public string SpaceId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("SpaceId")]
+        [NameInMap("GmtCreate")]
         [Validation(Required=false)]
-        public string SpaceId { get; set; }
+        public string GmtCreate { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Desc")]
+        [Validation(Required=false)]
+        public string Desc { get; set; }
 
     }
 

@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class DescribeServicePolicyResponseBody : TeaModel {
-        [NameInMap("Policy")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string Policy { get; set; }
+        public string SpaceId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Policy")]
+        [Validation(Required=false)]
+        public string Policy { get; set; }
+
+        [NameInMap("PolicyName")]
+        [Validation(Required=false)]
+        public string PolicyName { get; set; }
 
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("CollectionName")]
         [Validation(Required=false)]
         public string CollectionName { get; set; }
-
-        [NameInMap("PolicyName")]
-        [Validation(Required=false)]
-        public string PolicyName { get; set; }
-
-        [NameInMap("SpaceId")]
-        [Validation(Required=false)]
-        public string SpaceId { get; set; }
 
     }
 
