@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLogAnalysisResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string Code { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,9 +25,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("Analyses")]
         [Validation(Required=false)]
@@ -36,29 +40,25 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string MetaKey { get; set; }
                 public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue MetaValue { get; set; }
                 public class DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue : TeaModel {
-                    [NameInMap("RoleArn")]
-                    [Validation(Required=false)]
-                    public string RoleArn { get; set; }
-
-                    [NameInMap("Region")]
-                    [Validation(Required=false)]
-                    public string Region { get; set; }
-
                     [NameInMap("Logstore")]
                     [Validation(Required=false)]
                     public string Logstore { get; set; }
+
+                    [NameInMap("RoleArn")]
+                    [Validation(Required=false)]
+                    public string RoleArn { get; set; }
 
                     [NameInMap("Project")]
                     [Validation(Required=false)]
                     public string Project { get; set; }
 
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
                 }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 

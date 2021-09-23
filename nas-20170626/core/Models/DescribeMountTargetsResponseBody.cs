@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountTargetsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("MountTargets")]
         [Validation(Required=false)]
@@ -35,12 +35,21 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public class DescribeMountTargetsResponseBodyMountTargetsMountTarget : TeaModel {
                 public string VpcId { get; set; }
                 public string Status { get; set; }
+                public string MountTargetDomain { get; set; }
+                public string AccessGroup { get; set; }
+                public string DualStackMountTargetDomain { get; set; }
+                public string VswId { get; set; }
+                public string NetworkType { get; set; }
                 public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes ClientMasterNodes { get; set; }
                 public class DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes : TeaModel {
                     [NameInMap("ClientMasterNode")]
                     [Validation(Required=false)]
                     public List<DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode> ClientMasterNode { get; set; }
                     public class DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode : TeaModel {
+                        [NameInMap("EcsIp")]
+                        [Validation(Required=false)]
+                        public string EcsIp { get; set; }
+
                         [NameInMap("EcsId")]
                         [Validation(Required=false)]
                         public string EcsId { get; set; }
@@ -49,18 +58,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         [Validation(Required=false)]
                         public string DefaultPasswd { get; set; }
 
-                        [NameInMap("EcsIp")]
-                        [Validation(Required=false)]
-                        public string EcsIp { get; set; }
-
                     }
 
                 }
-                public string MountTargetDomain { get; set; }
-                public string AccessGroup { get; set; }
-                public string DualStackMountTargetDomain { get; set; }
-                public string VswId { get; set; }
-                public string NetworkType { get; set; }
             }
         };
 

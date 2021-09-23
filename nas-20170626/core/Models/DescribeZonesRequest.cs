@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("FileSystemType")]
+        [Validation(Required=false)]
+        public string FileSystemType { get; set; }
+
     }
 
 }

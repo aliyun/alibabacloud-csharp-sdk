@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeDirQuotasResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
@@ -17,13 +29,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public List<DescribeDirQuotasResponseBodyDirQuotaInfos> DirQuotaInfos { get; set; }
         public class DescribeDirQuotasResponseBodyDirQuotaInfos : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
             [NameInMap("Path")]
             [Validation(Required=false)]
             public string Path { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("DirInode")]
             [Validation(Required=false)]
@@ -64,18 +76,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

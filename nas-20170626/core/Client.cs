@@ -203,6 +203,72 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await CancelDirQuotaWithOptionsAsync(request, runtime);
         }
 
+        public CancelLifecycleRetrieveJobResponse CancelLifecycleRetrieveJobWithOptions(CancelLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CancelLifecycleRetrieveJobResponse>(DoRPCRequest("CancelLifecycleRetrieveJob", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CancelLifecycleRetrieveJobResponse> CancelLifecycleRetrieveJobWithOptionsAsync(CancelLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CancelLifecycleRetrieveJobResponse>(await DoRPCRequestAsync("CancelLifecycleRetrieveJob", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CancelLifecycleRetrieveJobResponse CancelLifecycleRetrieveJob(CancelLifecycleRetrieveJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelLifecycleRetrieveJobWithOptions(request, runtime);
+        }
+
+        public async Task<CancelLifecycleRetrieveJobResponse> CancelLifecycleRetrieveJobAsync(CancelLifecycleRetrieveJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelLifecycleRetrieveJobWithOptionsAsync(request, runtime);
+        }
+
+        public CancelRecycleBinJobResponse CancelRecycleBinJobWithOptions(CancelRecycleBinJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<CancelRecycleBinJobResponse>(DoRPCRequest("CancelRecycleBinJob", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<CancelRecycleBinJobResponse> CancelRecycleBinJobWithOptionsAsync(CancelRecycleBinJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<CancelRecycleBinJobResponse>(await DoRPCRequestAsync("CancelRecycleBinJob", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public CancelRecycleBinJobResponse CancelRecycleBinJob(CancelRecycleBinJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelRecycleBinJobWithOptions(request, runtime);
+        }
+
+        public async Task<CancelRecycleBinJobResponse> CancelRecycleBinJobAsync(CancelRecycleBinJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelRecycleBinJobWithOptionsAsync(request, runtime);
+        }
+
         public CreateAccessGroupResponse CreateAccessGroupWithOptions(CreateAccessGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -395,6 +461,38 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await CreateLifecyclePolicyWithOptionsAsync(request, runtime);
         }
 
+        public CreateLifecycleRetrieveJobResponse CreateLifecycleRetrieveJobWithOptions(CreateLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateLifecycleRetrieveJobResponse>(DoRPCRequest("CreateLifecycleRetrieveJob", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<CreateLifecycleRetrieveJobResponse> CreateLifecycleRetrieveJobWithOptionsAsync(CreateLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<CreateLifecycleRetrieveJobResponse>(await DoRPCRequestAsync("CreateLifecycleRetrieveJob", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public CreateLifecycleRetrieveJobResponse CreateLifecycleRetrieveJob(CreateLifecycleRetrieveJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLifecycleRetrieveJobWithOptions(request, runtime);
+        }
+
+        public async Task<CreateLifecycleRetrieveJobResponse> CreateLifecycleRetrieveJobAsync(CreateLifecycleRetrieveJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLifecycleRetrieveJobWithOptionsAsync(request, runtime);
+        }
+
         public CreateMountTargetResponse CreateMountTargetWithOptions(CreateMountTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -425,6 +523,74 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMountTargetWithOptionsAsync(request, runtime);
+        }
+
+        public CreateRecycleBinDeleteJobResponse CreateRecycleBinDeleteJobWithOptions(CreateRecycleBinDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<CreateRecycleBinDeleteJobResponse>(DoRPCRequest("CreateRecycleBinDeleteJob", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<CreateRecycleBinDeleteJobResponse> CreateRecycleBinDeleteJobWithOptionsAsync(CreateRecycleBinDeleteJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<CreateRecycleBinDeleteJobResponse>(await DoRPCRequestAsync("CreateRecycleBinDeleteJob", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public CreateRecycleBinDeleteJobResponse CreateRecycleBinDeleteJob(CreateRecycleBinDeleteJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRecycleBinDeleteJobWithOptions(request, runtime);
+        }
+
+        public async Task<CreateRecycleBinDeleteJobResponse> CreateRecycleBinDeleteJobAsync(CreateRecycleBinDeleteJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRecycleBinDeleteJobWithOptionsAsync(request, runtime);
+        }
+
+        public CreateRecycleBinRestoreJobResponse CreateRecycleBinRestoreJobWithOptions(CreateRecycleBinRestoreJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<CreateRecycleBinRestoreJobResponse>(DoRPCRequest("CreateRecycleBinRestoreJob", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<CreateRecycleBinRestoreJobResponse> CreateRecycleBinRestoreJobWithOptionsAsync(CreateRecycleBinRestoreJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<CreateRecycleBinRestoreJobResponse>(await DoRPCRequestAsync("CreateRecycleBinRestoreJob", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public CreateRecycleBinRestoreJobResponse CreateRecycleBinRestoreJob(CreateRecycleBinRestoreJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRecycleBinRestoreJobWithOptions(request, runtime);
+        }
+
+        public async Task<CreateRecycleBinRestoreJobResponse> CreateRecycleBinRestoreJobAsync(CreateRecycleBinRestoreJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRecycleBinRestoreJobWithOptionsAsync(request, runtime);
         }
 
         public CreateSnapshotResponse CreateSnapshotWithOptions(CreateSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1293,6 +1459,304 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await DescribeZonesWithOptionsAsync(request, runtime);
         }
 
+        public DisableAndCleanRecycleBinResponse DisableAndCleanRecycleBinWithOptions(DisableAndCleanRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<DisableAndCleanRecycleBinResponse>(DoRPCRequest("DisableAndCleanRecycleBin", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<DisableAndCleanRecycleBinResponse> DisableAndCleanRecycleBinWithOptionsAsync(DisableAndCleanRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<DisableAndCleanRecycleBinResponse>(await DoRPCRequestAsync("DisableAndCleanRecycleBin", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public DisableAndCleanRecycleBinResponse DisableAndCleanRecycleBin(DisableAndCleanRecycleBinRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableAndCleanRecycleBinWithOptions(request, runtime);
+        }
+
+        public async Task<DisableAndCleanRecycleBinResponse> DisableAndCleanRecycleBinAsync(DisableAndCleanRecycleBinRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableAndCleanRecycleBinWithOptionsAsync(request, runtime);
+        }
+
+        public EnableRecycleBinResponse EnableRecycleBinWithOptions(EnableRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<EnableRecycleBinResponse>(DoRPCRequest("EnableRecycleBin", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<EnableRecycleBinResponse> EnableRecycleBinWithOptionsAsync(EnableRecycleBinRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<EnableRecycleBinResponse>(await DoRPCRequestAsync("EnableRecycleBin", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public EnableRecycleBinResponse EnableRecycleBin(EnableRecycleBinRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableRecycleBinWithOptions(request, runtime);
+        }
+
+        public async Task<EnableRecycleBinResponse> EnableRecycleBinAsync(EnableRecycleBinRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableRecycleBinWithOptionsAsync(request, runtime);
+        }
+
+        public GetDirectoryOrFilePropertiesResponse GetDirectoryOrFilePropertiesWithOptions(GetDirectoryOrFilePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetDirectoryOrFilePropertiesResponse>(DoRPCRequest("GetDirectoryOrFileProperties", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetDirectoryOrFilePropertiesResponse> GetDirectoryOrFilePropertiesWithOptionsAsync(GetDirectoryOrFilePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetDirectoryOrFilePropertiesResponse>(await DoRPCRequestAsync("GetDirectoryOrFileProperties", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetDirectoryOrFilePropertiesResponse GetDirectoryOrFileProperties(GetDirectoryOrFilePropertiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDirectoryOrFilePropertiesWithOptions(request, runtime);
+        }
+
+        public async Task<GetDirectoryOrFilePropertiesResponse> GetDirectoryOrFilePropertiesAsync(GetDirectoryOrFilePropertiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDirectoryOrFilePropertiesWithOptionsAsync(request, runtime);
+        }
+
+        public GetRecycleBinAttributeResponse GetRecycleBinAttributeWithOptions(GetRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<GetRecycleBinAttributeResponse>(DoRPCRequest("GetRecycleBinAttribute", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetRecycleBinAttributeResponse> GetRecycleBinAttributeWithOptionsAsync(GetRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<GetRecycleBinAttributeResponse>(await DoRPCRequestAsync("GetRecycleBinAttribute", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public GetRecycleBinAttributeResponse GetRecycleBinAttribute(GetRecycleBinAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRecycleBinAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<GetRecycleBinAttributeResponse> GetRecycleBinAttributeAsync(GetRecycleBinAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRecycleBinAttributeWithOptionsAsync(request, runtime);
+        }
+
+        public ListDirectoriesAndFilesResponse ListDirectoriesAndFilesWithOptions(ListDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDirectoriesAndFilesResponse>(DoRPCRequest("ListDirectoriesAndFiles", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListDirectoriesAndFilesResponse> ListDirectoriesAndFilesWithOptionsAsync(ListDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDirectoriesAndFilesResponse>(await DoRPCRequestAsync("ListDirectoriesAndFiles", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListDirectoriesAndFilesResponse ListDirectoriesAndFiles(ListDirectoriesAndFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDirectoriesAndFilesWithOptions(request, runtime);
+        }
+
+        public async Task<ListDirectoriesAndFilesResponse> ListDirectoriesAndFilesAsync(ListDirectoriesAndFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDirectoriesAndFilesWithOptionsAsync(request, runtime);
+        }
+
+        public ListLifecycleRetrieveJobsResponse ListLifecycleRetrieveJobsWithOptions(ListLifecycleRetrieveJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListLifecycleRetrieveJobsResponse>(DoRPCRequest("ListLifecycleRetrieveJobs", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListLifecycleRetrieveJobsResponse> ListLifecycleRetrieveJobsWithOptionsAsync(ListLifecycleRetrieveJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListLifecycleRetrieveJobsResponse>(await DoRPCRequestAsync("ListLifecycleRetrieveJobs", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListLifecycleRetrieveJobsResponse ListLifecycleRetrieveJobs(ListLifecycleRetrieveJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListLifecycleRetrieveJobsWithOptions(request, runtime);
+        }
+
+        public async Task<ListLifecycleRetrieveJobsResponse> ListLifecycleRetrieveJobsAsync(ListLifecycleRetrieveJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListLifecycleRetrieveJobsWithOptionsAsync(request, runtime);
+        }
+
+        public ListRecentlyRecycledDirectoriesResponse ListRecentlyRecycledDirectoriesWithOptions(ListRecentlyRecycledDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListRecentlyRecycledDirectoriesResponse>(DoRPCRequest("ListRecentlyRecycledDirectories", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListRecentlyRecycledDirectoriesResponse> ListRecentlyRecycledDirectoriesWithOptionsAsync(ListRecentlyRecycledDirectoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListRecentlyRecycledDirectoriesResponse>(await DoRPCRequestAsync("ListRecentlyRecycledDirectories", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public ListRecentlyRecycledDirectoriesResponse ListRecentlyRecycledDirectories(ListRecentlyRecycledDirectoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRecentlyRecycledDirectoriesWithOptions(request, runtime);
+        }
+
+        public async Task<ListRecentlyRecycledDirectoriesResponse> ListRecentlyRecycledDirectoriesAsync(ListRecentlyRecycledDirectoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRecentlyRecycledDirectoriesWithOptionsAsync(request, runtime);
+        }
+
+        public ListRecycleBinJobsResponse ListRecycleBinJobsWithOptions(ListRecycleBinJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListRecycleBinJobsResponse>(DoRPCRequest("ListRecycleBinJobs", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListRecycleBinJobsResponse> ListRecycleBinJobsWithOptionsAsync(ListRecycleBinJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListRecycleBinJobsResponse>(await DoRPCRequestAsync("ListRecycleBinJobs", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public ListRecycleBinJobsResponse ListRecycleBinJobs(ListRecycleBinJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRecycleBinJobsWithOptions(request, runtime);
+        }
+
+        public async Task<ListRecycleBinJobsResponse> ListRecycleBinJobsAsync(ListRecycleBinJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRecycleBinJobsWithOptionsAsync(request, runtime);
+        }
+
+        public ListRecycledDirectoriesAndFilesResponse ListRecycledDirectoriesAndFilesWithOptions(ListRecycledDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListRecycledDirectoriesAndFilesResponse>(DoRPCRequest("ListRecycledDirectoriesAndFiles", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListRecycledDirectoriesAndFilesResponse> ListRecycledDirectoriesAndFilesWithOptionsAsync(ListRecycledDirectoriesAndFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<ListRecycledDirectoriesAndFilesResponse>(await DoRPCRequestAsync("ListRecycledDirectoriesAndFiles", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public ListRecycledDirectoriesAndFilesResponse ListRecycledDirectoriesAndFiles(ListRecycledDirectoriesAndFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRecycledDirectoriesAndFilesWithOptions(request, runtime);
+        }
+
+        public async Task<ListRecycledDirectoriesAndFilesResponse> ListRecycledDirectoriesAndFilesAsync(ListRecycledDirectoriesAndFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRecycledDirectoriesAndFilesWithOptionsAsync(request, runtime);
+        }
+
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1669,6 +2133,38 @@ namespace AlibabaCloud.SDK.NAS20170626
             return await ResetFileSystemWithOptionsAsync(request, runtime);
         }
 
+        public RetryLifecycleRetrieveJobResponse RetryLifecycleRetrieveJobWithOptions(RetryLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<RetryLifecycleRetrieveJobResponse>(DoRPCRequest("RetryLifecycleRetrieveJob", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<RetryLifecycleRetrieveJobResponse> RetryLifecycleRetrieveJobWithOptionsAsync(RetryLifecycleRetrieveJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<RetryLifecycleRetrieveJobResponse>(await DoRPCRequestAsync("RetryLifecycleRetrieveJob", "2017-06-26", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public RetryLifecycleRetrieveJobResponse RetryLifecycleRetrieveJob(RetryLifecycleRetrieveJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetryLifecycleRetrieveJobWithOptions(request, runtime);
+        }
+
+        public async Task<RetryLifecycleRetrieveJobResponse> RetryLifecycleRetrieveJobAsync(RetryLifecycleRetrieveJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetryLifecycleRetrieveJobWithOptionsAsync(request, runtime);
+        }
+
         public SetDirQuotaResponse SetDirQuotaWithOptions(SetDirQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1763,6 +2259,40 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateRecycleBinAttributeResponse UpdateRecycleBinAttributeWithOptions(UpdateRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<UpdateRecycleBinAttributeResponse>(DoRPCRequest("UpdateRecycleBinAttribute", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<UpdateRecycleBinAttributeResponse> UpdateRecycleBinAttributeWithOptionsAsync(UpdateRecycleBinAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<UpdateRecycleBinAttributeResponse>(await DoRPCRequestAsync("UpdateRecycleBinAttribute", "2017-06-26", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public UpdateRecycleBinAttributeResponse UpdateRecycleBinAttribute(UpdateRecycleBinAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRecycleBinAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateRecycleBinAttributeResponse> UpdateRecycleBinAttributeAsync(UpdateRecycleBinAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRecycleBinAttributeWithOptionsAsync(request, runtime);
         }
 
         public UpgradeFileSystemResponse UpgradeFileSystemWithOptions(UpgradeFileSystemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

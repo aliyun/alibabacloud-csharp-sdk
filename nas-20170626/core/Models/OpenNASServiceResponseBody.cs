@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class OpenNASServiceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

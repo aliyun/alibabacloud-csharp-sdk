@@ -21,10 +21,38 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
-                [NameInMap("Protocol")]
-                [Validation(Required=false)]
-                public List<string> Protocol { get; set; }
+                public DescribeZonesResponseBodyZonesZonePerformance Performance { get; set; }
+                public class DescribeZonesResponseBodyZonesZonePerformance : TeaModel {
+                    [NameInMap("Protocol")]
+                    [Validation(Required=false)]
+                    public List<string> Protocol { get; set; }
 
+                }
+                public DescribeZonesResponseBodyZonesZoneCapacity Capacity { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneCapacity : TeaModel {
+                    [NameInMap("Protocol")]
+                    [Validation(Required=false)]
+                    public List<string> Protocol { get; set; }
+
+                }
+                public string ZoneId { get; set; }
+                public DescribeZonesResponseBodyZonesZoneInstanceTypes InstanceTypes { get; set; }
+                public class DescribeZonesResponseBodyZonesZoneInstanceTypes : TeaModel {
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public List<DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType> InstanceType { get; set; }
+                    public class DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType : TeaModel {
+                        [NameInMap("StorageType")]
+                        [Validation(Required=false)]
+                        public string StorageType { get; set; }
+
+                        [NameInMap("ProtocolType")]
+                        [Validation(Required=false)]
+                        public string ProtocolType { get; set; }
+
+                    }
+
+                }
             }
         };
 

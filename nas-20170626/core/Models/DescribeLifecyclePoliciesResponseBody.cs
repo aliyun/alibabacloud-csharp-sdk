@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string LifecyclePolicyName { get; set; }
 
+            [NameInMap("Paths")]
+            [Validation(Required=false)]
+            public List<string> Paths { get; set; }
+
         }
 
     }

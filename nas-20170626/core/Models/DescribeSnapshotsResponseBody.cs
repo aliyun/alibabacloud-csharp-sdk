@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Progress { get; set; }
                 public string CreateTime { get; set; }
                 public string SourceFileSystemId { get; set; }
-                public int? RetentionDays { get; set; }
                 public int? RemainTime { get; set; }
+                public int? RetentionDays { get; set; }
                 public long? SourceFileSystemSize { get; set; }
-                public string SourceFileSystemVersion { get; set; }
                 public string SnapshotName { get; set; }
+                public string SourceFileSystemVersion { get; set; }
                 public int? EncryptType { get; set; }
                 public string Description { get; set; }
                 public string SnapshotId { get; set; }

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]
         public string FileSystemType { get; set; }
@@ -32,34 +28,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
-
-        [NameInMap("UseUTCDateTime")]
-        [Validation(Required=false)]
-        public bool? UseUTCDateTime { get; set; }
-
-        [NameInMap("StorageType")]
-        [Validation(Required=false)]
-        public string StorageType { get; set; }
-
-        [NameInMap("PackageIds")]
-        [Validation(Required=false)]
-        public string PackageIds { get; set; }
-
-        [NameInMap("FileSystemIds")]
-        [Validation(Required=false)]
-        public string FileSystemIds { get; set; }
-
-        [NameInMap("OrderByField")]
-        [Validation(Required=false)]
-        public string OrderByField { get; set; }
-
-        [NameInMap("SortOrder")]
-        [Validation(Required=false)]
-        public string SortOrder { get; set; }
-
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAccessGroupsResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("AccessGroups")]
         [Validation(Required=false)]
         public DescribeAccessGroupsResponseBodyAccessGroups AccessGroups { get; set; }
@@ -24,22 +40,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? MountTargetCount { get; set; }
             }
         };
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

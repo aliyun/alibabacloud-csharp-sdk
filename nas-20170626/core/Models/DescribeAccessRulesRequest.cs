@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string AccessRuleId { get; set; }
 
-        [NameInMap("SourceCidrIp")]
-        [Validation(Required=false)]
-        public string SourceCidrIp { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -32,10 +28,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("FileSystemType")]
         [Validation(Required=false)]
         public string FileSystemType { get; set; }
-
-        [NameInMap("SourceCidrIpFilter")]
-        [Validation(Required=false)]
-        public string SourceCidrIpFilter { get; set; }
 
     }
 
