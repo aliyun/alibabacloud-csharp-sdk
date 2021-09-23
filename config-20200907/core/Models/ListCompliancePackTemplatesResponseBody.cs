@@ -39,6 +39,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         public string ParameterName { get; set; }
                         public string ParameterValue { get; set; }
                     }
+                    public int? RiskLevel { get; set; }
                 }
                 public string CompliancePackTemplateName { get; set; }
                 public string CompliancePackTemplateId { get; set; }
