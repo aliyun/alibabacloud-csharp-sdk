@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Binding")]
+        [Validation(Required=false)]
+        public Binding Binding { get; set; }
+
     }
 
 }

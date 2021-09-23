@@ -8,21 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ListBindingsResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+    public class ListOfficeConversionTaskResponseBody : TeaModel {
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("Bindings")]
+        [NameInMap("OfficeConversionTasks")]
         [Validation(Required=false)]
-        public List<Binding> Bindings { get; set; }
+        public List<OfficeConversionTask> OfficeConversionTasks { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

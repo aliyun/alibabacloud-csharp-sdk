@@ -16,16 +16,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
-        /// <summary>
-        /// 项目描述
-        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// 服务角色
-        /// </summary>
         [NameInMap("ServiceRole")]
         [Validation(Required=false)]
         public string ServiceRole { get; set; }
@@ -34,21 +28,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
-        [NameInMap("ProjectQPS")]
+        [NameInMap("ProjectQueriesPerSecond")]
         [Validation(Required=false)]
-        public long? ProjectQPS { get; set; }
+        public long? ProjectQueriesPerSecond { get; set; }
 
-        [NameInMap("ProjectTPS")]
+        [NameInMap("EngineConcurrency")]
         [Validation(Required=false)]
-        public long? ProjectTPS { get; set; }
+        public long? EngineConcurrency { get; set; }
 
         [NameInMap("ProjectMaxDatasetCount")]
         [Validation(Required=false)]
         public long? ProjectMaxDatasetCount { get; set; }
 
-        [NameInMap("DatasetMaxOSSBindCount")]
+        [NameInMap("DatasetMaxBindCount")]
         [Validation(Required=false)]
-        public long? DatasetMaxOSSBindCount { get; set; }
+        public long? DatasetMaxBindCount { get; set; }
 
         [NameInMap("DatasetMaxFileCount")]
         [Validation(Required=false)]

@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("Prefix")]
+        [Validation(Required=false)]
+        public string Prefix { get; set; }
+
     }
 
 }

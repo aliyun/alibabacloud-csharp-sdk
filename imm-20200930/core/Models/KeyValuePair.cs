@@ -8,17 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class UpdateDatasetResponseBody : TeaModel {
+    public class KeyValuePair : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// 键
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Key { get; set; }
 
-        [NameInMap("Dataset")]
+        /// <summary>
+        /// 值
+        /// </summary>
+        [NameInMap("Value")]
         [Validation(Required=false)]
-        public Dataset Dataset { get; set; }
+        public string Value { get; set; }
 
     }
 

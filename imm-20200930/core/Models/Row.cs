@@ -8,17 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class UpdateDatasetResponseBody : TeaModel {
+    public class Row : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// URI
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("URI")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string URI { get; set; }
 
-        [NameInMap("Dataset")]
+        /// <summary>
+        /// CustomLabels
+        /// </summary>
+        [NameInMap("CustomLabels")]
         [Validation(Required=false)]
-        public Dataset Dataset { get; set; }
+        public List<KeyValuePair> CustomLabels { get; set; }
 
     }
 

@@ -8,17 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class UpdateDatasetResponseBody : TeaModel {
+    public class CreateOfficeConversionTaskResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// 请求 id
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Dataset")]
+        /// <summary>
+        /// 任务 id
+        /// </summary>
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public Dataset Dataset { get; set; }
+        public string TaskId { get; set; }
 
     }
 

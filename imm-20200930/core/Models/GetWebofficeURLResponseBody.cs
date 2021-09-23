@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class GetWebofficeUrlResponseBody : TeaModel {
+    public class GetWebofficeURLResponseBody : TeaModel {
         /// <summary>
         /// 请求 id
         /// </summary>
@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// 预览编辑地址
         /// </summary>
-        [NameInMap("WebofficeUrl")]
+        [NameInMap("WebofficeURL")]
         [Validation(Required=false)]
-        public string WebofficeUrl { get; set; }
+        public string WebofficeURL { get; set; }
 
         /// <summary>
         /// access token

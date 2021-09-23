@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ListProjectsRequest : TeaModel {
+    public class FileForReq : TeaModel {
         /// <summary>
-        /// 返回结果的最大个数
+        /// URI
         /// </summary>
-        [NameInMap("MaxResults")]
+        [NameInMap("URI")]
         [Validation(Required=false)]
-        public long? MaxResults { get; set; }
+        public string URI { get; set; }
 
         /// <summary>
-        /// 当总结果个数大于MaxResults时，用于翻页的token
+        /// CustomId
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("CustomId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string CustomId { get; set; }
 
         /// <summary>
-        /// 列出包含某前缀的project
+        /// CustomLabels
         /// </summary>
-        [NameInMap("Prefix")]
+        [NameInMap("CustomLabels")]
         [Validation(Required=false)]
-        public string Prefix { get; set; }
+        public Dictionary<string, object> CustomLabels { get; set; }
 
     }
 

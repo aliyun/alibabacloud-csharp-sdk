@@ -19,17 +19,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("Files")]
         [Validation(Required=false)]
-        public List<BatchIndexFileMetaRequestFiles> Files { get; set; }
-        public class BatchIndexFileMetaRequestFiles : TeaModel {
-            [NameInMap("URI")]
-            [Validation(Required=false)]
-            public string URI { get; set; }
-
-            [NameInMap("CustomLabels")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> CustomLabels { get; set; }
-
-        }
+        public List<FileForReq> Files { get; set; }
 
     }
 

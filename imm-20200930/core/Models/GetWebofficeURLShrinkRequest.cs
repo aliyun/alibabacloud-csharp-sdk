@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class GetWebofficeUrlShrinkRequest : TeaModel {
+    public class GetWebofficeURLShrinkRequest : TeaModel {
         /// <summary>
         /// 项目名称
         /// </summary>
@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// 预览编辑地址
         /// </summary>
-        [NameInMap("SourceUri")]
+        [NameInMap("SourceURI")]
         [Validation(Required=false)]
-        public string SourceUri { get; set; }
+        public string SourceURI { get; set; }
 
         /// <summary>
         /// 文件名，必须带文件名后缀，默认是 SourceUri 的最后一级

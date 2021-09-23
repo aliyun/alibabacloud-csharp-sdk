@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class GetProjectRequest : TeaModel {
+    public class DetectImageLabelsResponseBody : TeaModel {
         /// <summary>
-        /// 项目名称
+        /// 内容标签列表
         /// </summary>
-        [NameInMap("ProjectName")]
+        [NameInMap("Labels")]
         [Validation(Required=false)]
-        public string ProjectName { get; set; }
+        public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// 是否获取详细信息
+        /// 请求唯一ID
         /// </summary>
-        [NameInMap("WithStatistics")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? WithStatistics { get; set; }
+        public string RequestId { get; set; }
 
     }
 

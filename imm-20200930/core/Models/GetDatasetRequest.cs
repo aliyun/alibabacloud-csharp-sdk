@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
+        [NameInMap("WithStatistics")]
+        [Validation(Required=false)]
+        public bool? WithStatistics { get; set; }
+
     }
 
 }
