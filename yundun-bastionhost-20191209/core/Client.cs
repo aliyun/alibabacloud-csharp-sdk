@@ -997,6 +997,38 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await GetHostGroupWithOptionsAsync(request, runtime);
         }
 
+        public GetInstanceUpgradeInfoResponse GetInstanceUpgradeInfoWithOptions(GetInstanceUpgradeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetInstanceUpgradeInfoResponse>(DoRPCRequest("GetInstanceUpgradeInfo", "2019-12-09", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetInstanceUpgradeInfoResponse> GetInstanceUpgradeInfoWithOptionsAsync(GetInstanceUpgradeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetInstanceUpgradeInfoResponse>(await DoRPCRequestAsync("GetInstanceUpgradeInfo", "2019-12-09", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetInstanceUpgradeInfoResponse GetInstanceUpgradeInfo(GetInstanceUpgradeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInstanceUpgradeInfoWithOptions(request, runtime);
+        }
+
+        public async Task<GetInstanceUpgradeInfoResponse> GetInstanceUpgradeInfoAsync(GetInstanceUpgradeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInstanceUpgradeInfoWithOptionsAsync(request, runtime);
+        }
+
         public GetUserResponse GetUserWithOptions(GetUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1765,6 +1797,38 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             return await ModifyInstanceAttributeWithOptionsAsync(request, runtime);
         }
 
+        public ModifyInstanceUpgradePeriodResponse ModifyInstanceUpgradePeriodWithOptions(ModifyInstanceUpgradePeriodRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ModifyInstanceUpgradePeriodResponse>(DoRPCRequest("ModifyInstanceUpgradePeriod", "2019-12-09", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ModifyInstanceUpgradePeriodResponse> ModifyInstanceUpgradePeriodWithOptionsAsync(ModifyInstanceUpgradePeriodRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ModifyInstanceUpgradePeriodResponse>(await DoRPCRequestAsync("ModifyInstanceUpgradePeriod", "2019-12-09", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ModifyInstanceUpgradePeriodResponse ModifyInstanceUpgradePeriod(ModifyInstanceUpgradePeriodRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceUpgradePeriodWithOptions(request, runtime);
+        }
+
+        public async Task<ModifyInstanceUpgradePeriodResponse> ModifyInstanceUpgradePeriodAsync(ModifyInstanceUpgradePeriodRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceUpgradePeriodWithOptionsAsync(request, runtime);
+        }
+
         public ModifyUserResponse ModifyUserWithOptions(ModifyUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2083,6 +2147,38 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        public UpgradeInstanceImageVersionResponse UpgradeInstanceImageVersionWithOptions(UpgradeInstanceImageVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpgradeInstanceImageVersionResponse>(DoRPCRequest("UpgradeInstanceImageVersion", "2019-12-09", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<UpgradeInstanceImageVersionResponse> UpgradeInstanceImageVersionWithOptionsAsync(UpgradeInstanceImageVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpgradeInstanceImageVersionResponse>(await DoRPCRequestAsync("UpgradeInstanceImageVersion", "2019-12-09", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public UpgradeInstanceImageVersionResponse UpgradeInstanceImageVersion(UpgradeInstanceImageVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpgradeInstanceImageVersionWithOptions(request, runtime);
+        }
+
+        public async Task<UpgradeInstanceImageVersionResponse> UpgradeInstanceImageVersionAsync(UpgradeInstanceImageVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpgradeInstanceImageVersionWithOptionsAsync(request, runtime);
         }
 
     }

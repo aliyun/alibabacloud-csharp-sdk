@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
@@ -41,13 +49,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public bool? Legacy { get; set; }
 
-            [NameInMap("InternetEndpoint")]
-            [Validation(Required=false)]
-            public string InternetEndpoint { get; set; }
-
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            [NameInMap("InternetEndpoint")]
+            [Validation(Required=false)]
+            public string InternetEndpoint { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
+
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
 
             [NameInMap("InstanceStatus")]
             [Validation(Required=false)]
@@ -74,14 +86,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? PublicNetworkAccess { get; set; }
 
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

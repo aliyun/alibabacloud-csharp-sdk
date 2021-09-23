@@ -53,13 +53,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string UserName { get; set; }
 
-            [NameInMap("UserState")]
-            [Validation(Required=false)]
-            public List<string> UserState { get; set; }
-
             [NameInMap("SourceUserId")]
             [Validation(Required=false)]
             public string SourceUserId { get; set; }
+
+            [NameInMap("UserState")]
+            [Validation(Required=false)]
+            public List<string> UserState { get; set; }
 
         }
 

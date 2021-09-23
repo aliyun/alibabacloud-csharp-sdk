@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ConfigInstanceSecurityGroupsRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        [NameInMap("AuthorizedSecurityGroups")]
-        [Validation(Required=false)]
-        public List<string> AuthorizedSecurityGroups { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -28,6 +20,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("AuthorizedSecurityGroups")]
+        [Validation(Required=false)]
+        public List<string> AuthorizedSecurityGroups { get; set; }
 
     }
 

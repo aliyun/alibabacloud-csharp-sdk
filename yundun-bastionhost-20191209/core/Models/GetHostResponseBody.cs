@@ -26,14 +26,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("HostPublicAddress")]
             [Validation(Required=false)]
             public string HostPublicAddress { get; set; }
-            [NameInMap("Protocols")]
-            [Validation(Required=false)]
-            public List<GetHostResponseBodyHostProtocols> Protocols { get; set; }
-            public class GetHostResponseBodyHostProtocols : TeaModel {
-                public string ProtocolName { get; set; }
-                public string HostFingerPrint { get; set; }
-                public int? Port { get; set; }
-            }
             [NameInMap("HostName")]
             [Validation(Required=false)]
             public string HostName { get; set; }
@@ -55,6 +47,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("SourceInstanceId")]
             [Validation(Required=false)]
             public string SourceInstanceId { get; set; }
+            [NameInMap("Protocols")]
+            [Validation(Required=false)]
+            public List<GetHostResponseBodyHostProtocols> Protocols { get; set; }
+            public class GetHostResponseBodyHostProtocols : TeaModel {
+                public string HostFingerPrint { get; set; }
+                public int? Port { get; set; }
+                public string ProtocolName { get; set; }
+            }
         };
 
     }

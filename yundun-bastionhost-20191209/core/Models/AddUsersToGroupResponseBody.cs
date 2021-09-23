@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<AddUsersToGroupResponseBodyResults> Results { get; set; }
         public class AddUsersToGroupResponseBodyResults : TeaModel {
-            [NameInMap("UserGroupId")]
-            [Validation(Required=false)]
-            public string UserGroupId { get; set; }
-
-            [NameInMap("UserId")]
-            [Validation(Required=false)]
-            public string UserId { get; set; }
-
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
+            [NameInMap("UserGroupId")]
+            [Validation(Required=false)]
+            public string UserGroupId { get; set; }
+
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
 
         }
 

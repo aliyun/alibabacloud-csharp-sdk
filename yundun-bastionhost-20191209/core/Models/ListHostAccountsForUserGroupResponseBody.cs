@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<ListHostAccountsForUserGroupResponseBodyHostAccounts> HostAccounts { get; set; }
         public class ListHostAccountsForUserGroupResponseBodyHostAccounts : TeaModel {
-            [NameInMap("IsAuthorized")]
-            [Validation(Required=false)]
-            public bool? IsAuthorized { get; set; }
-
-            [NameInMap("ProtocolName")]
-            [Validation(Required=false)]
-            public string ProtocolName { get; set; }
-
             [NameInMap("HostAccountName")]
             [Validation(Required=false)]
             public string HostAccountName { get; set; }
@@ -36,6 +28,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("HostAccountId")]
             [Validation(Required=false)]
             public string HostAccountId { get; set; }
+
+            [NameInMap("IsAuthorized")]
+            [Validation(Required=false)]
+            public bool? IsAuthorized { get; set; }
+
+            [NameInMap("ProtocolName")]
+            [Validation(Required=false)]
+            public string ProtocolName { get; set; }
 
             [NameInMap("HostId")]
             [Validation(Required=false)]

@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Yundun-bastionhost20191209
+dotnet add package AlibabaCloud.SDK.Yundun-bastionhost20191209
 ```
 
 ## 问题

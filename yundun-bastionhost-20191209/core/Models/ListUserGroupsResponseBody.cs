@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<ListUserGroupsResponseBodyUserGroups> UserGroups { get; set; }
         public class ListUserGroupsResponseBodyUserGroups : TeaModel {
+            [NameInMap("UserGroupName")]
+            [Validation(Required=false)]
+            public string UserGroupName { get; set; }
+
             [NameInMap("MemberCount")]
             [Validation(Required=false)]
             public int? MemberCount { get; set; }
@@ -32,10 +36,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("UserGroupId")]
             [Validation(Required=false)]
             public string UserGroupId { get; set; }
-
-            [NameInMap("UserGroupName")]
-            [Validation(Required=false)]
-            public string UserGroupName { get; set; }
 
         }
 

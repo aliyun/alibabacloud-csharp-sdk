@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
-    public class CreateUserGroupRequest : TeaModel {
+    public class ModifyInstanceUpgradePeriodRequest : TeaModel {
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -17,13 +21,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("UserGroupName")]
+        [NameInMap("UpgradeStartTime")]
         [Validation(Required=false)]
-        public string UserGroupName { get; set; }
+        public string UpgradeStartTime { get; set; }
 
-        [NameInMap("Comment")]
+        [NameInMap("UpgradeMode")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public string UpgradeMode { get; set; }
 
     }
 

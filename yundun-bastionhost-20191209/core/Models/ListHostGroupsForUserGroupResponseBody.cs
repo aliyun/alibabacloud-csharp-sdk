@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<ListHostGroupsForUserGroupResponseBodyHostGroups> HostGroups { get; set; }
         public class ListHostGroupsForUserGroupResponseBodyHostGroups : TeaModel {
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public string Comment { get; set; }
-
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
+
+            [NameInMap("Comment")]
+            [Validation(Required=false)]
+            public string Comment { get; set; }
 
             [NameInMap("HostGroupName")]
             [Validation(Required=false)]

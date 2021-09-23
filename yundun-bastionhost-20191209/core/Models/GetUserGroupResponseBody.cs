@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public GetUserGroupResponseBodyUserGroup UserGroup { get; set; }
         public class GetUserGroupResponseBodyUserGroup : TeaModel {
+            [NameInMap("UserGroupName")]
+            [Validation(Required=false)]
+            public string UserGroupName { get; set; }
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
             [NameInMap("UserGroupId")]
             [Validation(Required=false)]
             public string UserGroupId { get; set; }
-            [NameInMap("UserGroupName")]
-            [Validation(Required=false)]
-            public string UserGroupName { get; set; }
         };
 
     }

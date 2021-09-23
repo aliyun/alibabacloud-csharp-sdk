@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsForUserGroupResponseBody : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Hosts")]
         [Validation(Required=false)]
         public List<ListHostsForUserGroupResponseBodyHosts> Hosts { get; set; }
@@ -42,14 +50,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostId { get; set; }
 
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

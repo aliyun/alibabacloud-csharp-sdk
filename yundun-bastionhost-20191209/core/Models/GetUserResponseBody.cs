@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetUserResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("User")]
         [Validation(Required=false)]
         public GetUserResponseBodyUser User { get; set; }
@@ -37,17 +41,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }
-            [NameInMap("UserState")]
-            [Validation(Required=false)]
-            public List<string> UserState { get; set; }
             [NameInMap("SourceUserId")]
             [Validation(Required=false)]
             public string SourceUserId { get; set; }
+            [NameInMap("UserState")]
+            [Validation(Required=false)]
+            public List<string> UserState { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

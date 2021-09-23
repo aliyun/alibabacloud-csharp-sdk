@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<AttachHostAccountsToUserGroupResponseBodyResults> Results { get; set; }
         public class AttachHostAccountsToUserGroupResponseBodyResults : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("HostId")]
+            [Validation(Required=false)]
+            public string HostId { get; set; }
+
             [NameInMap("UserGroupId")]
             [Validation(Required=false)]
             public string UserGroupId { get; set; }
@@ -38,18 +50,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string HostAccountId { get; set; }
 
             }
-
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("HostId")]
-            [Validation(Required=false)]
-            public string HostId { get; set; }
 
         }
 

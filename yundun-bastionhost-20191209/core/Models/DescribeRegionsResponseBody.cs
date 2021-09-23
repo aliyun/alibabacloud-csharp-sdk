@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
-            [NameInMap("LocalName")]
-            [Validation(Required=false)]
-            public string LocalName { get; set; }
-
             [NameInMap("RegionEndpoint")]
             [Validation(Required=false)]
             public string RegionEndpoint { get; set; }
+
+            [NameInMap("LocalName")]
+            [Validation(Required=false)]
+            public string LocalName { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]

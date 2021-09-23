@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
-    public class CreateHostResponseBody : TeaModel {
-        [NameInMap("HostId")]
-        [Validation(Required=false)]
-        public string HostId { get; set; }
-
+    public class ModifyInstanceUpgradePeriodResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
