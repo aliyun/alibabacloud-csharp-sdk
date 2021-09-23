@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("Parallelism")]
+        [Validation(Required=false)]
+        public long? Parallelism { get; set; }
+
     }
 
 }
