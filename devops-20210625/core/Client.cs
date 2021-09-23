@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public RetryPipelineJobRunResponse RetryPipelineJobRunWithOptions(string organizationId, string pipelineId, string pipelineRunId, string jobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
+            jobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(jobId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -62,6 +66,10 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<RetryPipelineJobRunResponse> RetryPipelineJobRunWithOptionsAsync(string organizationId, string pipelineId, string pipelineRunId, string jobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
+            jobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(jobId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -85,6 +93,9 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public ListResourceMembersResponse ListResourceMembersWithOptions(string organizationId, string resourceType, string resourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -94,6 +105,9 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<ListResourceMembersResponse> ListResourceMembersWithOptionsAsync(string organizationId, string resourceType, string resourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -117,6 +131,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public GetHostGroupResponse GetHostGroupWithOptions(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -126,6 +142,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<GetHostGroupResponse> GetHostGroupWithOptionsAsync(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -149,6 +167,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public GetVariableGroupResponse GetVariableGroupWithOptions(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -158,6 +178,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<GetVariableGroupResponse> GetVariableGroupWithOptionsAsync(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -182,6 +204,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public ListPipelinesResponse ListPipelinesWithOptions(string organizationId, ListPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
             {
@@ -234,6 +257,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<ListPipelinesResponse> ListPipelinesWithOptionsAsync(string organizationId, ListPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
             {
@@ -300,6 +324,10 @@ namespace AlibabaCloud.SDK.Devops20210625
         public UpdateResourceMemberResponse UpdateResourceMemberWithOptions(string organizationId, string resourceType, string resourceId, string accountId, UpdateResourceMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
+            accountId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(accountId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
@@ -316,6 +344,10 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<UpdateResourceMemberResponse> UpdateResourceMemberWithOptionsAsync(string organizationId, string resourceType, string resourceId, string accountId, UpdateResourceMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
+            accountId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(accountId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
@@ -346,6 +378,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public UpdateVariableGroupResponse UpdateVariableGroupWithOptions(string organizationId, string id, UpdateVariableGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -370,6 +404,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<UpdateVariableGroupResponse> UpdateVariableGroupWithOptionsAsync(string organizationId, string id, UpdateVariableGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -407,6 +443,10 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public DeleteResourceMemberResponse DeleteResourceMemberWithOptions(string organizationId, string resourceType, string resourceId, string accountId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
+            accountId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(accountId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -416,6 +456,10 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<DeleteResourceMemberResponse> DeleteResourceMemberWithOptionsAsync(string organizationId, string resourceType, string resourceId, string accountId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
+            accountId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(accountId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -440,6 +484,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public ListHostGroupsResponse ListHostGroupsWithOptions(string organizationId, ListHostGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
@@ -488,6 +533,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<ListHostGroupsResponse> ListHostGroupsWithOptionsAsync(string organizationId, ListHostGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
@@ -549,6 +595,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public ResetSshKeyResponse ResetSshKeyWithOptions(string organizationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -558,6 +605,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<ResetSshKeyResponse> ResetSshKeyWithOptionsAsync(string organizationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -684,6 +732,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public ListServiceConnectionsResponse ListServiceConnectionsWithOptions(string organizationId, ListServiceConnectionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SericeConnectionType))
             {
@@ -700,6 +749,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<ListServiceConnectionsResponse> ListServiceConnectionsWithOptionsAsync(string organizationId, ListServiceConnectionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SericeConnectionType))
             {
@@ -730,6 +780,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public CreateHostGroupResponse CreateHostGroupWithOptions(string organizationId, CreateHostGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -782,6 +833,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<CreateHostGroupResponse> CreateHostGroupWithOptionsAsync(string organizationId, CreateHostGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -847,6 +899,9 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public StopPipelineRunResponse StopPipelineRunWithOptions(string organizationId, string pipelineId, string pipelineRunId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -856,6 +911,9 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<StopPipelineRunResponse> StopPipelineRunWithOptionsAsync(string organizationId, string pipelineId, string pipelineRunId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -880,6 +938,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public UpdateHostGroupResponse UpdateHostGroupWithOptions(string organizationId, string id, UpdateHostGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -932,6 +992,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<UpdateHostGroupResponse> UpdateHostGroupWithOptionsAsync(string organizationId, string id, UpdateHostGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -998,6 +1060,9 @@ namespace AlibabaCloud.SDK.Devops20210625
         public CreateResourceMemberResponse CreateResourceMemberWithOptions(string organizationId, string resourceType, string resourceId, CreateResourceMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
@@ -1018,6 +1083,9 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<CreateResourceMemberResponse> CreateResourceMemberWithOptionsAsync(string organizationId, string resourceType, string resourceId, CreateResourceMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            resourceType = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceType);
+            resourceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(resourceId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
@@ -1051,6 +1119,10 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public SkipPipelineJobRunResponse SkipPipelineJobRunWithOptions(string organizationId, string pipelineId, string pipelineRunId, string jobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
+            jobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(jobId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1060,11 +1132,51 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<SkipPipelineJobRunResponse> SkipPipelineJobRunWithOptionsAsync(string organizationId, string pipelineId, string pipelineRunId, string jobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
+            jobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(jobId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
             return TeaModel.ToObject<SkipPipelineJobRunResponse>(await DoROARequestAsync("SkipPipelineJobRun", "2021-06-25", "HTTPS", "PUT", "AK", "/organization/" + organizationId + "/pipelines/" + pipelineId + "/pipelineRuns/" + pipelineRunId + "/jobs/" + jobId + "/skip", "json", req, runtime));
+        }
+
+        public GetOrganizationMemberResponse GetOrganizationMember(string organizationId, string accountId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetOrganizationMemberWithOptions(organizationId, accountId, headers, runtime);
+        }
+
+        public async Task<GetOrganizationMemberResponse> GetOrganizationMemberAsync(string organizationId, string accountId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetOrganizationMemberWithOptionsAsync(organizationId, accountId, headers, runtime);
+        }
+
+        public GetOrganizationMemberResponse GetOrganizationMemberWithOptions(string organizationId, string accountId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            accountId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(accountId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<GetOrganizationMemberResponse>(DoROARequest("GetOrganizationMember", "2021-06-25", "HTTPS", "GET", "AK", "/organization/" + organizationId + "/members/" + accountId, "json", req, runtime));
+        }
+
+        public async Task<GetOrganizationMemberResponse> GetOrganizationMemberWithOptionsAsync(string organizationId, string accountId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            accountId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(accountId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            return TeaModel.ToObject<GetOrganizationMemberResponse>(await DoROARequestAsync("GetOrganizationMember", "2021-06-25", "HTTPS", "GET", "AK", "/organization/" + organizationId + "/members/" + accountId, "json", req, runtime));
         }
 
         public StopPipelineJobRunResponse StopPipelineJobRun(string organizationId, string pipelineId, string pipelineRunId, string jobId)
@@ -1083,6 +1195,10 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public StopPipelineJobRunResponse StopPipelineJobRunWithOptions(string organizationId, string pipelineId, string pipelineRunId, string jobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
+            jobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(jobId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1092,6 +1208,10 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<StopPipelineJobRunResponse> StopPipelineJobRunWithOptionsAsync(string organizationId, string pipelineId, string pipelineRunId, string jobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
+            jobId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(jobId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1116,6 +1236,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public StartPipelineRunResponse StartPipelineRunWithOptions(string organizationId, string pipelineId, StartPipelineRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
             {
@@ -1132,6 +1254,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<StartPipelineRunResponse> StartPipelineRunWithOptionsAsync(string organizationId, string pipelineId, StartPipelineRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
             {
@@ -1251,6 +1375,9 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public GetPipelineRunResponse GetPipelineRunWithOptions(string organizationId, string pipelineId, string pipelineRunId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1260,6 +1387,9 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<GetPipelineRunResponse> GetPipelineRunWithOptionsAsync(string organizationId, string pipelineId, string pipelineRunId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            pipelineRunId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineRunId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1283,6 +1413,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public GetPipelineResponse GetPipelineWithOptions(string organizationId, string pipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1292,6 +1424,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<GetPipelineResponse> GetPipelineWithOptionsAsync(string organizationId, string pipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1316,6 +1450,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public CreateVariableGroupResponse CreateVariableGroupWithOptions(string organizationId, CreateVariableGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1340,6 +1475,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<CreateVariableGroupResponse> CreateVariableGroupWithOptionsAsync(string organizationId, CreateVariableGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1377,6 +1513,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public DeleteVariableGroupResponse DeleteVariableGroupWithOptions(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1386,6 +1524,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<DeleteVariableGroupResponse> DeleteVariableGroupWithOptionsAsync(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1409,6 +1549,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public GetWorkspaceResponse GetWorkspaceWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            workspaceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1418,6 +1559,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<GetWorkspaceResponse> GetWorkspaceWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            workspaceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1441,6 +1583,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public CreateSshKeyResponse CreateSshKeyWithOptions(string organizationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1450,6 +1593,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<CreateSshKeyResponse> CreateSshKeyWithOptionsAsync(string organizationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1473,6 +1617,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public DeleteHostGroupResponse DeleteHostGroupWithOptions(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1482,6 +1628,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<DeleteHostGroupResponse> DeleteHostGroupWithOptionsAsync(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1505,6 +1653,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public ReleaseWorkspaceResponse ReleaseWorkspaceWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            workspaceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1514,11 +1663,116 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<ReleaseWorkspaceResponse> ReleaseWorkspaceWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            workspaceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
             return TeaModel.ToObject<ReleaseWorkspaceResponse>(await DoROARequestAsync("ReleaseWorkspace", "2021-06-25", "HTTPS", "DELETE", "AK", "/api/workspaces/" + workspaceId + "/release", "json", req, runtime));
+        }
+
+        public ListOrganizationMembersResponse ListOrganizationMembers(string organizationId, ListOrganizationMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListOrganizationMembersWithOptions(organizationId, request, headers, runtime);
+        }
+
+        public async Task<ListOrganizationMembersResponse> ListOrganizationMembersAsync(string organizationId, ListOrganizationMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListOrganizationMembersWithOptionsAsync(organizationId, request, headers, runtime);
+        }
+
+        public ListOrganizationMembersResponse ListOrganizationMembersWithOptions(string organizationId, ListOrganizationMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationMemberName))
+            {
+                query["organizationMemberName"] = request.OrganizationMemberName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternUid))
+            {
+                query["externUid"] = request.ExternUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinTimeFrom))
+            {
+                query["joinTimeFrom"] = request.JoinTimeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinTimeTo))
+            {
+                query["joinTimeTo"] = request.JoinTimeTo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<ListOrganizationMembersResponse>(DoROARequest("ListOrganizationMembers", "2021-06-25", "HTTPS", "GET", "AK", "/organization/" + organizationId + "/members", "json", req, runtime));
+        }
+
+        public async Task<ListOrganizationMembersResponse> ListOrganizationMembersWithOptionsAsync(string organizationId, ListOrganizationMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationMemberName))
+            {
+                query["organizationMemberName"] = request.OrganizationMemberName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternUid))
+            {
+                query["externUid"] = request.ExternUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinTimeFrom))
+            {
+                query["joinTimeFrom"] = request.JoinTimeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinTimeTo))
+            {
+                query["joinTimeTo"] = request.JoinTimeTo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<ListOrganizationMembersResponse>(await DoROARequestAsync("ListOrganizationMembers", "2021-06-25", "HTTPS", "GET", "AK", "/organization/" + organizationId + "/members", "json", req, runtime));
         }
 
         public ListVariableGroupsResponse ListVariableGroups(string organizationId, ListVariableGroupsRequest request)
@@ -1538,6 +1792,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public ListVariableGroupsResponse ListVariableGroupsWithOptions(string organizationId, ListVariableGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSort))
             {
@@ -1566,6 +1821,7 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<ListVariableGroupsResponse> ListVariableGroupsWithOptionsAsync(string organizationId, ListVariableGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSort))
             {
@@ -1607,6 +1863,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public DeletePipelineResponse DeletePipelineWithOptions(string organizationId, string pipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1616,6 +1874,8 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<DeletePipelineResponse> DeletePipelineWithOptionsAsync(string organizationId, string pipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1639,6 +1899,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public FrozenWorkspaceResponse FrozenWorkspaceWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            workspaceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1648,6 +1909,7 @@ namespace AlibabaCloud.SDK.Devops20210625
 
         public async Task<FrozenWorkspaceResponse> FrozenWorkspaceWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            workspaceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1672,6 +1934,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public ListPipelineRunsResponse ListPipelineRunsWithOptions(string organizationId, string pipelineId, ListPipelineRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -1708,6 +1972,8 @@ namespace AlibabaCloud.SDK.Devops20210625
         public async Task<ListPipelineRunsResponse> ListPipelineRunsWithOptionsAsync(string organizationId, string pipelineId, ListPipelineRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
