@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+            [NameInMap("PlaybackUrl")]
+            [Validation(Required=false)]
+            public string PlaybackUrl { get; set; }
         };
 
     }
