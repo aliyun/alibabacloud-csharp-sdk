@@ -37,38 +37,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public DescribePhoneNumberResaleResponse DescribePhoneNumberResaleWithOptions(DescribePhoneNumberResaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(DoRPCRequest("DescribePhoneNumberResale", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribePhoneNumberResaleResponse> DescribePhoneNumberResaleWithOptionsAsync(DescribePhoneNumberResaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(await DoRPCRequestAsync("DescribePhoneNumberResale", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribePhoneNumberResaleResponse DescribePhoneNumberResale(DescribePhoneNumberResaleRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribePhoneNumberResaleWithOptions(request, runtime);
-        }
-
-        public async Task<DescribePhoneNumberResaleResponse> DescribePhoneNumberResaleAsync(DescribePhoneNumberResaleRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribePhoneNumberResaleWithOptionsAsync(request, runtime);
-        }
-
         public DescribePhoneNumberStatusResponse DescribePhoneNumberStatusWithOptions(DescribePhoneNumberStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -101,60 +69,68 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             return await DescribePhoneNumberStatusWithOptionsAsync(request, runtime);
         }
 
-        public PvrCallbackFCUResponse PvrCallbackFCUWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<PvrCallbackFCUResponse>(DoRPCRequest("PvrCallbackFCU", "2020-02-17", "HTTPS", "POST", "AK", "none", req, runtime));
-        }
-
-        public async Task<PvrCallbackFCUResponse> PvrCallbackFCUWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<PvrCallbackFCUResponse>(await DoRPCRequestAsync("PvrCallbackFCU", "2020-02-17", "HTTPS", "POST", "AK", "none", req, runtime));
-        }
-
-        public PvrCallbackFCUResponse PvrCallbackFCU()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return PvrCallbackFCUWithOptions(runtime);
-        }
-
-        public async Task<PvrCallbackFCUResponse> PvrCallbackFCUAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await PvrCallbackFCUWithOptionsAsync(runtime);
-        }
-
-        public QueryPhoneNumberAttributeResponse QueryPhoneNumberAttributeWithOptions(QueryPhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribePhoneNumberAttributeResponse DescribePhoneNumberAttributeWithOptions(DescribePhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<QueryPhoneNumberAttributeResponse>(DoRPCRequest("QueryPhoneNumberAttribute", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<DescribePhoneNumberAttributeResponse>(DoRPCRequest("DescribePhoneNumberAttribute", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<QueryPhoneNumberAttributeResponse> QueryPhoneNumberAttributeWithOptionsAsync(QueryPhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribePhoneNumberAttributeResponse> DescribePhoneNumberAttributeWithOptionsAsync(DescribePhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<QueryPhoneNumberAttributeResponse>(await DoRPCRequestAsync("QueryPhoneNumberAttribute", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<DescribePhoneNumberAttributeResponse>(await DoRPCRequestAsync("DescribePhoneNumberAttribute", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public QueryPhoneNumberAttributeResponse QueryPhoneNumberAttribute(QueryPhoneNumberAttributeRequest request)
+        public DescribePhoneNumberAttributeResponse DescribePhoneNumberAttribute(DescribePhoneNumberAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QueryPhoneNumberAttributeWithOptions(request, runtime);
+            return DescribePhoneNumberAttributeWithOptions(request, runtime);
         }
 
-        public async Task<QueryPhoneNumberAttributeResponse> QueryPhoneNumberAttributeAsync(QueryPhoneNumberAttributeRequest request)
+        public async Task<DescribePhoneNumberAttributeResponse> DescribePhoneNumberAttributeAsync(DescribePhoneNumberAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QueryPhoneNumberAttributeWithOptionsAsync(request, runtime);
+            return await DescribePhoneNumberAttributeWithOptionsAsync(request, runtime);
+        }
+
+        public DescribePhoneNumberResaleResponse DescribePhoneNumberResaleWithOptions(DescribePhoneNumberResaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(DoRPCRequest("DescribePhoneNumberResale", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribePhoneNumberResaleResponse> DescribePhoneNumberResaleWithOptionsAsync(DescribePhoneNumberResaleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(await DoRPCRequestAsync("DescribePhoneNumberResale", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribePhoneNumberResaleResponse DescribePhoneNumberResale(DescribePhoneNumberResaleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePhoneNumberResaleWithOptions(request, runtime);
+        }
+
+        public async Task<DescribePhoneNumberResaleResponse> DescribePhoneNumberResaleAsync(DescribePhoneNumberResaleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePhoneNumberResaleWithOptionsAsync(request, runtime);
         }
 
     }

@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class QueryPhoneNumberAttributeResponseBody : TeaModel {
+    public class DescribePhoneNumberAttributeResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -19,8 +23,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         [NameInMap("PhoneNumberAttribute")]
         [Validation(Required=false)]
-        public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute PhoneNumberAttribute { get; set; }
-        public class QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute : TeaModel {
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute PhoneNumberAttribute { get; set; }
+        public class DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute : TeaModel {
             [NameInMap("BasicCarrier")]
             [Validation(Required=false)]
             public string BasicCarrier { get; set; }
@@ -40,10 +44,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [Validation(Required=false)]
             public string Province { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
     }
 
