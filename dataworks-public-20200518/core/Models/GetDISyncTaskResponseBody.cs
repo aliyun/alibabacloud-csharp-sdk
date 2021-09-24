@@ -30,6 +30,55 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+            [NameInMap("SolutionDetail")]
+            [Validation(Required=false)]
+            public GetDISyncTaskResponseBodyDataSolutionDetail SolutionDetail { get; set; }
+            public class GetDISyncTaskResponseBodyDataSolutionDetail : TeaModel {
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
+
+                [NameInMap("CreatorName")]
+                [Validation(Required=false)]
+                public string CreatorName { get; set; }
+
+                [NameInMap("ProjectId")]
+                [Validation(Required=false)]
+                public long? ProjectId { get; set; }
+
+                [NameInMap("SourceType")]
+                [Validation(Required=false)]
+                public string SourceType { get; set; }
+
+                [NameInMap("ProcessContent")]
+                [Validation(Required=false)]
+                public string ProcessContent { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("ProcessExtra")]
+                [Validation(Required=false)]
+                public string ProcessExtra { get; set; }
+
+                [NameInMap("SubmitTime")]
+                [Validation(Required=false)]
+                public string SubmitTime { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+            }
         };
 
     }
