@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         [NameInMap("FolderPath")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FolderPath { get; set; }
 
     }

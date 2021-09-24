@@ -9,13 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaDBTableListResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Data")]
         [Validation(Required=true)]
-        public GetMetaDBTableListResponseBody Body { get; set; }
+        public GetMetaDBTableListResponseData Data { get; set; }
+        public class GetMetaDBTableListResponseData : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=true)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=true)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=true)]
+            public long? TotalCount { get; set; }
+            [NameInMap("TableEntityList")]
+            [Validation(Required=true)]
+            public List<GetMetaDBTableListResponseDataTableEntityList> TableEntityList { get; set; }
+            public class GetMetaDBTableListResponseDataTableEntityList : TeaModel {
+                public string TableName { get; set; }
+                public string TableGuid { get; set; }
+                public string DatabaseName { get; set; }
+            }
+        };
 
     }
 

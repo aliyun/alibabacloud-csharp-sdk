@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListRemindsRequest : TeaModel {
         [NameInMap("PageNumber")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("Founder")]

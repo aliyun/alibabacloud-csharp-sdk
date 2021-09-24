@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListTopicsRequest : TeaModel {
         [NameInMap("BeginTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BeginTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EndTime { get; set; }
 
         [NameInMap("TopicTypes")]
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         [NameInMap("PageNumber")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
     }

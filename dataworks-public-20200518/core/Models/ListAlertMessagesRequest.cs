@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListAlertMessagesRequest : TeaModel {
         [NameInMap("PageNumber")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? PageSize { get; set; }
 
         [NameInMap("BeginTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string BeginTime { get; set; }
 
         [NameInMap("EndTime")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string EndTime { get; set; }
 
         [NameInMap("RemindId")]

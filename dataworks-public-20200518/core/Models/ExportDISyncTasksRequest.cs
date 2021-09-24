@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ExportDISyncTasksRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("TaskType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TaskType { get; set; }
 
         [NameInMap("TaskParam")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TaskParam { get; set; }
 
     }

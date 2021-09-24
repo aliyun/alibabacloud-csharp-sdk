@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RevokeColumnPermissionRequest : TeaModel {
         [NameInMap("WorkspaceId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? WorkspaceId { get; set; }
 
         [NameInMap("MaxComputeProjectName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string MaxComputeProjectName { get; set; }
 
         [NameInMap("TableName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableName { get; set; }
 
         [NameInMap("Columns")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Columns { get; set; }
 
         [NameInMap("RevokeUserName")]

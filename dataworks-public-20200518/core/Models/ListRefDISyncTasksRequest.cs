@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListRefDISyncTasksRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("DatasourceName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DatasourceName { get; set; }
 
         [NameInMap("TaskType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TaskType { get; set; }
 
         [NameInMap("RefType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string RefType { get; set; }
 
         [NameInMap("PageNumber")]

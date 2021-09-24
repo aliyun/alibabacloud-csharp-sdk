@@ -9,13 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListProjectsResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("PageResult")]
         [Validation(Required=true)]
-        public ListProjectsResponseBody Body { get; set; }
+        public ListProjectsResponsePageResult PageResult { get; set; }
+        public class ListProjectsResponsePageResult : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=true)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=true)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=true)]
+            public int? TotalCount { get; set; }
+            [NameInMap("ProjectList")]
+            [Validation(Required=true)]
+            public List<ListProjectsResponsePageResultProjectList> ProjectList { get; set; }
+            public class ListProjectsResponsePageResultProjectList : TeaModel {
+                public string ProjectName { get; set; }
+                public string ProjectIdentifier { get; set; }
+                public string ProjectDescription { get; set; }
+                public int? ProjectStatus { get; set; }
+                public long? ProjectId { get; set; }
+                public string ProjectOwnerBaseId { get; set; }
+                public string ProjectStatusCode { get; set; }
+            }
+        };
 
     }
 

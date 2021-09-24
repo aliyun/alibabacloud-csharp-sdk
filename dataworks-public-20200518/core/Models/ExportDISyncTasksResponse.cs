@@ -9,13 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ExportDISyncTasksResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public ExportDISyncTasksResponseBody Body { get; set; }
+        public bool? Success { get; set; }
+
+        [NameInMap("TaskDetail")]
+        [Validation(Required=true)]
+        public ExportDISyncTasksResponseTaskDetail TaskDetail { get; set; }
+        public class ExportDISyncTasksResponseTaskDetail : TeaModel {
+            [NameInMap("RealTimeSolution")]
+            [Validation(Required=true)]
+            public string RealTimeSolution { get; set; }
+        };
 
     }
 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DesensitizeDataRequest : TeaModel {
         [NameInMap("Data")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Data { get; set; }
 
         [NameInMap("SceneCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string SceneCode { get; set; }
 
     }

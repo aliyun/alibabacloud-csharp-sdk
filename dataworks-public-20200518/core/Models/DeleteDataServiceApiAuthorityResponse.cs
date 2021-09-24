@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDataServiceApiAuthorityResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("Success")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public bool? Success { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public DeleteDataServiceApiAuthorityResponseBody Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

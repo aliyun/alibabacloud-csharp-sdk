@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckEngineMetaPartitionRequest : TeaModel {
         [NameInMap("TableGuid")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableGuid { get; set; }
 
         [NameInMap("Partition")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Partition { get; set; }
 
         [NameInMap("DataSourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DataSourceType { get; set; }
 
     }

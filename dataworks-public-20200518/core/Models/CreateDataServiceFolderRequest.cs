@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataServiceFolderRequest : TeaModel {
         [NameInMap("TenantId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? TenantId { get; set; }
 
         [NameInMap("ProjectId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ProjectId { get; set; }
 
         [NameInMap("FolderName")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string FolderName { get; set; }
 
         [NameInMap("ParentId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public long? ParentId { get; set; }
 
         [NameInMap("GroupId")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string GroupId { get; set; }
 
     }

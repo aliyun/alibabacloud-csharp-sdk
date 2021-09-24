@@ -9,13 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableListByCategoryResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=true)]
-        public GetMetaTableListByCategoryResponseBody Body { get; set; }
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=true)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=true)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=true)]
+        public bool? Success { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=true)]
+        public GetMetaTableListByCategoryResponseData Data { get; set; }
+        public class GetMetaTableListByCategoryResponseData : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=true)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=true)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=true)]
+            public long? TotalCount { get; set; }
+            [NameInMap("TableGuidList")]
+            [Validation(Required=true)]
+            public List<string> TableGuidList { get; set; }
+        };
 
     }
 

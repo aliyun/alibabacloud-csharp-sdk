@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SearchNodesByOutputRequest : TeaModel {
         [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string ProjectEnv { get; set; }
 
         [NameInMap("Outputs")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Outputs { get; set; }
 
     }

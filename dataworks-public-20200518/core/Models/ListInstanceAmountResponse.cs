@@ -9,13 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListInstanceAmountResponse : TeaModel {
-        [NameInMap("headers")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("InstanceCounts")]
         [Validation(Required=true)]
-        public ListInstanceAmountResponseBody Body { get; set; }
+        public List<ListInstanceAmountResponseInstanceCounts> InstanceCounts { get; set; }
+        public class ListInstanceAmountResponseInstanceCounts : TeaModel {
+            [NameInMap("Date")]
+            [Validation(Required=true)]
+            public long? Date { get; set; }
+
+            [NameInMap("Count")]
+            [Validation(Required=true)]
+            public int? Count { get; set; }
+
+        }
 
     }
 

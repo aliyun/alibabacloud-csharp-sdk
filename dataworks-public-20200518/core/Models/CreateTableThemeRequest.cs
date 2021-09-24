@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         [NameInMap("Level")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public int? Level { get; set; }
 
         [NameInMap("Name")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Name { get; set; }
 
         [NameInMap("ParentId")]

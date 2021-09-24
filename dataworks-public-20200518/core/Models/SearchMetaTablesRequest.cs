@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AppGuid { get; set; }
 
         [NameInMap("Keyword")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Keyword { get; set; }
 
         [NameInMap("EntityType")]

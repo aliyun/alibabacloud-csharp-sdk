@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckEngineMetaTableRequest : TeaModel {
         [NameInMap("TableGuid")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TableGuid { get; set; }
 
         [NameInMap("DataSourceType")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string DataSourceType { get; set; }
 
     }
