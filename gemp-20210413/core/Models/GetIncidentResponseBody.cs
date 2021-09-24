@@ -77,6 +77,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("problemNumber")]
             [Validation(Required=false)]
             public string ProblemNumber { get; set; }
+            [NameInMap("durationTime")]
+            [Validation(Required=false)]
+            public long? DurationTime { get; set; }
         };
 
     }

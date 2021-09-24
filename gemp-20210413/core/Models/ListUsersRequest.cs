@@ -58,6 +58,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// 移动应用协同渠道
+        /// </summary>
+        [NameInMap("synergyChannel")]
+        [Validation(Required=false)]
+        public string SynergyChannel { get; set; }
+
     }
 
 }

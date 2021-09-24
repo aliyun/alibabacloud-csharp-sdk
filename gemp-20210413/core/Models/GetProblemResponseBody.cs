@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("cancelReason")]
             [Validation(Required=false)]
             public long? CancelReason { get; set; }
+            [NameInMap("durationTime")]
+            [Validation(Required=false)]
+            public long? DurationTime { get; set; }
             [NameInMap("handingProblemOperateLogs")]
             [Validation(Required=false)]
             public List<GetProblemResponseBodyDataHandingProblemOperateLogs> HandingProblemOperateLogs { get; set; }

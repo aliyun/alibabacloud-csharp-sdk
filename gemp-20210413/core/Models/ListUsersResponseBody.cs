@@ -72,6 +72,27 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public long? AccountType { get; set; }
 
+            /// <summary>
+            /// 移动应用账户
+            /// </summary>
+            [NameInMap("appAccount")]
+            [Validation(Required=false)]
+            public string AppAccount { get; set; }
+
+            /// <summary>
+            /// 移动应用协同渠道
+            /// </summary>
+            [NameInMap("synergyChannel")]
+            [Validation(Required=false)]
+            public string SynergyChannel { get; set; }
+
+            /// <summary>
+            /// 是否关联
+            /// </summary>
+            [NameInMap("isRelated")]
+            [Validation(Required=false)]
+            public string IsRelated { get; set; }
+
         }
 
         /// <summary>
