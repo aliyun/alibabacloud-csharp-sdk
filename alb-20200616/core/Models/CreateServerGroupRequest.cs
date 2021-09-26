@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateServerGroupRequest : TeaModel {
         /// <summary>
-        /// Acl名称
+        /// 服务器组名称
         /// </summary>
         [NameInMap("ServerGroupName")]
         [Validation(Required=false)]
         public string ServerGroupName { get; set; }
+
+        /// <summary>
+        /// 服务器组类型
+        /// </summary>
+        [NameInMap("ServerGroupType")]
+        [Validation(Required=false)]
+        public string ServerGroupType { get; set; }
 
         /// <summary>
         /// VpcId

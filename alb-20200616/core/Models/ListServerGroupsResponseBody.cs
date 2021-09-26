@@ -125,6 +125,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerGroupStatus { get; set; }
 
             /// <summary>
+            /// 服务器组类型
+            /// </summary>
+            [NameInMap("ServerGroupType")]
+            [Validation(Required=false)]
+            public string ServerGroupType { get; set; }
+
+            /// <summary>
             /// 会话保持配置
             /// </summary>
             [NameInMap("StickySessionConfig")]
