@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=false)]
         public string Degree { get; set; }
 
-        [NameInMap("Async")]
-        [Validation(Required=false)]
-        public bool? Async { get; set; }
-
         [NameInMap("ColorTemplate")]
         [Validation(Required=false)]
         public List<RecolorHDImageRequestColorTemplate> ColorTemplate { get; set; }

@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Imageenhan20190930
+dotnet add package AlibabaCloud.SDK.Imageenhan20190930
 ```
 
 ## 问题
