@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryDISyncTaskConfigProcessResultRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         [NameInMap("TaskType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string TaskType { get; set; }
 
         [NameInMap("AsyncProcessId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? AsyncProcessId { get; set; }
 
     }

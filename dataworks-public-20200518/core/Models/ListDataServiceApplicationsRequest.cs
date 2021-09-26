@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         [NameInMap("ProjectIdList")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ProjectIdList { get; set; }
 
         [NameInMap("TenantId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? TenantId { get; set; }
 
     }

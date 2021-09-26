@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityFollowerResponse : TeaModel {
-        [NameInMap("ErrorCode")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string ErrorCode { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Data { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public DeleteQualityFollowerResponseBody Body { get; set; }
 
     }
 

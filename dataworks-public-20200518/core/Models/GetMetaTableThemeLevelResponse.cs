@@ -9,49 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableThemeLevelResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ErrorCode")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=true)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=true)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Entity")]
-        [Validation(Required=true)]
-        public GetMetaTableThemeLevelResponseEntity Entity { get; set; }
-        public class GetMetaTableThemeLevelResponseEntity : TeaModel {
-            [NameInMap("Theme")]
-            [Validation(Required=true)]
-            public List<GetMetaTableThemeLevelResponseEntityTheme> Theme { get; set; }
-            public class GetMetaTableThemeLevelResponseEntityTheme : TeaModel {
-                public long? ThemeId { get; set; }
-                public string Name { get; set; }
-                public int? Level { get; set; }
-                public long? ParentId { get; set; }
-            }
-            [NameInMap("Level")]
-            [Validation(Required=true)]
-            public List<GetMetaTableThemeLevelResponseEntityLevel> Level { get; set; }
-            public class GetMetaTableThemeLevelResponseEntityLevel : TeaModel {
-                public long? LevelId { get; set; }
-                public string Name { get; set; }
-                public int? Type { get; set; }
-                public string Description { get; set; }
-            }
-        };
+        public GetMetaTableThemeLevelResponseBody Body { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreatePermissionApplyOrderResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("FlowId")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<string> FlowId { get; set; }
+        public CreatePermissionApplyOrderResponseBody Body { get; set; }
 
     }
 

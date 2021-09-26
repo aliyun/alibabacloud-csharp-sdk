@@ -9,23 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFileTypeStatisticResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ProgramTypeAndCounts")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public List<GetFileTypeStatisticResponseProgramTypeAndCounts> ProgramTypeAndCounts { get; set; }
-        public class GetFileTypeStatisticResponseProgramTypeAndCounts : TeaModel {
-            [NameInMap("ProgramType")]
-            [Validation(Required=true)]
-            public string ProgramType { get; set; }
-
-            [NameInMap("Count")]
-            [Validation(Required=true)]
-            public int? Count { get; set; }
-
-        }
+        public GetFileTypeStatisticResponseBody Body { get; set; }
 
     }
 

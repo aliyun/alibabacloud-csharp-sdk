@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         [NameInMap("CategoryId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? CategoryId { get; set; }
 
     }

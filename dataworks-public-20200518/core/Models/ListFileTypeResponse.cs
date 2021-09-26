@@ -9,31 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFileTypeResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("NodeTypeInfoList")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public ListFileTypeResponseNodeTypeInfoList NodeTypeInfoList { get; set; }
-        public class ListFileTypeResponseNodeTypeInfoList : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=true)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=true)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=true)]
-            public int? TotalCount { get; set; }
-            [NameInMap("NodeTypeInfo")]
-            [Validation(Required=true)]
-            public List<ListFileTypeResponseNodeTypeInfoListNodeTypeInfo> NodeTypeInfo { get; set; }
-            public class ListFileTypeResponseNodeTypeInfoListNodeTypeInfo : TeaModel {
-                public int? NodeType { get; set; }
-                public string NodeTypeName { get; set; }
-            }
-        };
+        public ListFileTypeResponseBody Body { get; set; }
 
     }
 

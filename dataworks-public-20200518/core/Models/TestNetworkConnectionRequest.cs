@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestNetworkConnectionRequest : TeaModel {
         [NameInMap("ProjectId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         [NameInMap("DatasourceName")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string DatasourceName { get; set; }
 
         [NameInMap("EnvType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EnvType { get; set; }
 
         [NameInMap("ResourceGroup")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string ResourceGroup { get; set; }
 
     }

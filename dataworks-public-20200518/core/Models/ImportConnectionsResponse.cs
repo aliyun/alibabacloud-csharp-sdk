@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ImportConnectionsResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=true)]
-        public ImportConnectionsResponseData Data { get; set; }
-        public class ImportConnectionsResponseData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=true)]
-            public bool? Status { get; set; }
-            [NameInMap("Message")]
-            [Validation(Required=true)]
-            public string Message { get; set; }
-        };
+        public ImportConnectionsResponseBody Body { get; set; }
 
     }
 

@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TopTenErrorTimesInstanceResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("InstanceErrorRank")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public TopTenErrorTimesInstanceResponseInstanceErrorRank InstanceErrorRank { get; set; }
-        public class TopTenErrorTimesInstanceResponseInstanceErrorRank : TeaModel {
-            [NameInMap("UpdateTime")]
-            [Validation(Required=true)]
-            public long? UpdateTime { get; set; }
-            [NameInMap("ErrorRank")]
-            [Validation(Required=true)]
-            public List<TopTenErrorTimesInstanceResponseInstanceErrorRankErrorRank> ErrorRank { get; set; }
-            public class TopTenErrorTimesInstanceResponseInstanceErrorRankErrorRank : TeaModel {
-                public long? NodeId { get; set; }
-                public string NodeName { get; set; }
-                public string Owner { get; set; }
-                public int? Count { get; set; }
-                public long? ProjectId { get; set; }
-                public int? ProgramType { get; set; }
-            }
-        };
+        public TopTenErrorTimesInstanceResponseBody Body { get; set; }
 
     }
 

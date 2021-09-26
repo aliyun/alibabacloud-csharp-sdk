@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? WorkspaceId { get; set; }
 
         [NameInMap("OrderType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? OrderType { get; set; }
 
         [NameInMap("MaxComputeProjectName")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EndTime { get; set; }
 
         [NameInMap("EngineType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string EngineType { get; set; }
 
         [NameInMap("PageNum")]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         [NameInMap("QueryType")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? QueryType { get; set; }
 
     }

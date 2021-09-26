@@ -9,36 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusStatisticResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("StatusCount")]
+        [NameInMap("body")]
         [Validation(Required=true)]
-        public GetInstanceStatusStatisticResponseStatusCount StatusCount { get; set; }
-        public class GetInstanceStatusStatisticResponseStatusCount : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=true)]
-            public int? TotalCount { get; set; }
-            [NameInMap("NotRunCount")]
-            [Validation(Required=true)]
-            public int? NotRunCount { get; set; }
-            [NameInMap("WaitTimeCount")]
-            [Validation(Required=true)]
-            public int? WaitTimeCount { get; set; }
-            [NameInMap("WaitResCount")]
-            [Validation(Required=true)]
-            public int? WaitResCount { get; set; }
-            [NameInMap("RunningCount")]
-            [Validation(Required=true)]
-            public int? RunningCount { get; set; }
-            [NameInMap("FailureCount")]
-            [Validation(Required=true)]
-            public int? FailureCount { get; set; }
-            [NameInMap("SuccessCount")]
-            [Validation(Required=true)]
-            public int? SuccessCount { get; set; }
-        };
+        public GetInstanceStatusStatisticResponseBody Body { get; set; }
 
     }
 
