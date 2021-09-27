@@ -708,7 +708,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UploadMediaByURLResponse>(DoROARequest("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/api/v1/media/api/v1/video/upload", "json", req, runtime));
+            return TeaModel.ToObject<UploadMediaByURLResponse>(DoROARequest("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/media/api/v1/video/upload", "json", req, runtime));
         }
 
         public async Task<UploadMediaByURLResponse> UploadMediaByURLWithOptionsAsync(UploadMediaByURLRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -732,7 +732,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UploadMediaByURLResponse>(await DoROARequestAsync("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/api/v1/media/api/v1/video/upload", "json", req, runtime));
+            return TeaModel.ToObject<UploadMediaByURLResponse>(await DoROARequestAsync("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/media/api/v1/video/upload", "json", req, runtime));
         }
 
         public DeleteSignatureResponse DeleteSignature(string ID)
