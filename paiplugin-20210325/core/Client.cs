@@ -131,6 +131,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public DeleteTemplateResponse DeleteTemplateWithOptions(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -140,6 +141,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public async Task<DeleteTemplateResponse> DeleteTemplateWithOptionsAsync(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -319,6 +321,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public DeleteScheduleResponse DeleteScheduleWithOptions(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -328,6 +331,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public async Task<DeleteScheduleResponse> DeleteScheduleWithOptionsAsync(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -351,6 +355,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public GetTemplateResponse GetTemplateWithOptions(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -360,6 +365,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public async Task<GetTemplateResponse> GetTemplateWithOptionsAsync(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -453,6 +459,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public GetSignatureResponse GetSignatureWithOptions(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -462,6 +469,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public async Task<GetSignatureResponse> GetSignatureWithOptionsAsync(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -665,6 +673,68 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
             return TeaModel.ToObject<ListSchedulesResponse>(await DoROARequestAsync("ListSchedules", "2021-03-25", "HTTPS", "GET", "AK", "/api/v1/schedules", "json", req, runtime));
         }
 
+        public UploadMediaByURLResponse UploadMediaByURL(UploadMediaByURLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UploadMediaByURLWithOptions(request, headers, runtime);
+        }
+
+        public async Task<UploadMediaByURLResponse> UploadMediaByURLAsync(UploadMediaByURLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UploadMediaByURLWithOptionsAsync(request, headers, runtime);
+        }
+
+        public UploadMediaByURLResponse UploadMediaByURLWithOptions(UploadMediaByURLRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadMetadatas))
+            {
+                body["UploadMetadatas"] = request.UploadMetadatas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadURLs))
+            {
+                body["UploadURLs"] = request.UploadURLs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData.ToMap()))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            return TeaModel.ToObject<UploadMediaByURLResponse>(DoROARequest("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/api/v1/media/api/v1/video/upload", "json", req, runtime));
+        }
+
+        public async Task<UploadMediaByURLResponse> UploadMediaByURLWithOptionsAsync(UploadMediaByURLRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadMetadatas))
+            {
+                body["UploadMetadatas"] = request.UploadMetadatas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadURLs))
+            {
+                body["UploadURLs"] = request.UploadURLs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData.ToMap()))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            return TeaModel.ToObject<UploadMediaByURLResponse>(await DoROARequestAsync("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/api/v1/media/api/v1/video/upload", "json", req, runtime));
+        }
+
         public DeleteSignatureResponse DeleteSignature(string ID)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -681,6 +751,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public DeleteSignatureResponse DeleteSignatureWithOptions(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -690,6 +761,7 @@ namespace AlibabaCloud.SDK.PaiPlugin20210325
 
         public async Task<DeleteSignatureResponse> DeleteSignatureWithOptionsAsync(string ID, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            ID = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ID);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
