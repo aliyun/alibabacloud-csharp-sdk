@@ -76,9 +76,12 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("organizationMemberName")]
             [Validation(Required=false)]
             public string OrganizationMemberName { get; set; }
-            [NameInMap("organizationRole")]
+            [NameInMap("organizationRoleName")]
             [Validation(Required=false)]
-            public string OrganizationRole { get; set; }
+            public string OrganizationRoleName { get; set; }
+            [NameInMap("organizationRoleId")]
+            [Validation(Required=false)]
+            public string OrganizationRoleId { get; set; }
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }

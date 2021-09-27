@@ -137,11 +137,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             public string OrganizationMemberName { get; set; }
 
             /// <summary>
-            /// 企业角色
+            /// 企业角色名字
             /// </summary>
-            [NameInMap("organizationRole")]
+            [NameInMap("organizationRoleName")]
             [Validation(Required=false)]
-            public string OrganizationRole { get; set; }
+            public string OrganizationRoleName { get; set; }
+
+            /// <summary>
+            /// 企业角色Id
+            /// </summary>
+            [NameInMap("organizationRoleId")]
+            [Validation(Required=false)]
+            public string OrganizationRoleId { get; set; }
 
             /// <summary>
             /// 用户状态
