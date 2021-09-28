@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ResourceIds")]
-        [Validation(Required=false)]
-        public string ResourceIds { get; set; }
-
     }
 
 }

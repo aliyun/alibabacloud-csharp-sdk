@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("AccountName")]
             [Validation(Required=false)]
             public string AccountName { get; set; }
+            [NameInMap("ResourceDirectoryPath")]
+            [Validation(Required=false)]
+            public string ResourceDirectoryPath { get; set; }
         };
 
         [NameInMap("RequestId")]

@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("ControlPolicyStatus")]
             [Validation(Required=false)]
             public string ControlPolicyStatus { get; set; }
+            [NameInMap("MemberDeletionStatus")]
+            [Validation(Required=false)]
+            public string MemberDeletionStatus { get; set; }
         };
 
     }

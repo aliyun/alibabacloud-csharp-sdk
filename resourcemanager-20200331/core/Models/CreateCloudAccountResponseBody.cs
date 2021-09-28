@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateCloudAccountResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Account")]
         [Validation(Required=false)]
         public CreateCloudAccountResponseBodyAccount Account { get; set; }
@@ -48,6 +44,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public string AccountName { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

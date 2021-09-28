@@ -549,6 +549,38 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await DeclineHandshakeWithOptionsAsync(request, runtime);
         }
 
+        public DeleteAccountResponse DeleteAccountWithOptions(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteAccountResponse>(DoRPCRequest("DeleteAccount", "2020-03-31", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DeleteAccountResponse> DeleteAccountWithOptionsAsync(DeleteAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DeleteAccountResponse>(await DoRPCRequestAsync("DeleteAccount", "2020-03-31", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DeleteAccountResponse DeleteAccount(DeleteAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAccountWithOptions(request, runtime);
+        }
+
+        public async Task<DeleteAccountResponse> DeleteAccountAsync(DeleteAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAccountWithOptionsAsync(request, runtime);
+        }
+
         public DeleteControlPolicyResponse DeleteControlPolicyWithOptions(DeleteControlPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1971,6 +2003,38 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MoveAccountWithOptionsAsync(request, runtime);
+        }
+
+        public MoveResourcesResponse MoveResourcesWithOptions(MoveResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<MoveResourcesResponse>(DoRPCRequest("MoveResources", "2020-03-31", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<MoveResourcesResponse> MoveResourcesWithOptionsAsync(MoveResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<MoveResourcesResponse>(await DoRPCRequestAsync("MoveResources", "2020-03-31", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public MoveResourcesResponse MoveResources(MoveResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MoveResourcesWithOptions(request, runtime);
+        }
+
+        public async Task<MoveResourcesResponse> MoveResourcesAsync(MoveResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MoveResourcesWithOptionsAsync(request, runtime);
         }
 
         public PromoteResourceAccountResponse PromoteResourceAccountWithOptions(PromoteResourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

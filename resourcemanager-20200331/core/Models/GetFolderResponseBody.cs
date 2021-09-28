@@ -23,12 +23,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
-            [NameInMap("FolderName")]
-            [Validation(Required=false)]
-            public string FolderName { get; set; }
             [NameInMap("ParentFolderId")]
             [Validation(Required=false)]
             public string ParentFolderId { get; set; }
+            [NameInMap("FolderName")]
+            [Validation(Required=false)]
+            public string FolderName { get; set; }
+            [NameInMap("ResourceDirectoryPath")]
+            [Validation(Required=false)]
+            public string ResourceDirectoryPath { get; set; }
         };
 
     }
