@@ -1,3 +1,6 @@
+2021-09-28 Version: 1.0.4
+- Supported Java for ResourceManager.
+
 2021-09-28 Version: 1.0.3
 - Generated csharp 2020-03-31 for ResourceManager.
 
