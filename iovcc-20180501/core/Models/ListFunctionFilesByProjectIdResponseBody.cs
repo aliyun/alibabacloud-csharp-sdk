@@ -17,21 +17,9 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<ListFunctionFilesByProjectIdResponseBodyFiles> Files { get; set; }
         public class ListFunctionFilesByProjectIdResponseBodyFiles : TeaModel {
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public long? Id { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("Type")]
             [Validation(Required=false)]
             public int? Type { get; set; }
-
-            [NameInMap("ContentId")]
-            [Validation(Required=false)]
-            public long? ContentId { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -44,6 +32,18 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("ContentId")]
+            [Validation(Required=false)]
+            public long? ContentId { get; set; }
 
         }
 

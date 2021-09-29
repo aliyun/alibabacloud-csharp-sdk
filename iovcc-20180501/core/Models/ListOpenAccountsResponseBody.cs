@@ -17,25 +17,21 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<ListOpenAccountsResponseBodyOpenAccounts> OpenAccounts { get; set; }
         public class ListOpenAccountsResponseBodyOpenAccounts : TeaModel {
-            [NameInMap("IdentityId")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string IdentityId { get; set; }
+            public int? Status { get; set; }
 
-            [NameInMap("AliyunId")]
+            [NameInMap("Type")]
             [Validation(Required=false)]
-            public string AliyunId { get; set; }
+            public int? Type { get; set; }
 
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
-            [NameInMap("LoginId")]
+            [NameInMap("CreateAccessKey")]
             [Validation(Required=false)]
-            public string LoginId { get; set; }
-
-            [NameInMap("Idp")]
-            [Validation(Required=false)]
-            public string Idp { get; set; }
+            public string CreateAccessKey { get; set; }
 
             [NameInMap("OpenId")]
             [Validation(Required=false)]
@@ -45,21 +41,25 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public int? Type { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
-            [NameInMap("CreateAccessKey")]
+            [NameInMap("IdentityId")]
             [Validation(Required=false)]
-            public string CreateAccessKey { get; set; }
+            public string IdentityId { get; set; }
+
+            [NameInMap("LoginId")]
+            [Validation(Required=false)]
+            public string LoginId { get; set; }
+
+            [NameInMap("Idp")]
+            [Validation(Required=false)]
+            public string Idp { get; set; }
+
+            [NameInMap("AliyunId")]
+            [Validation(Required=false)]
+            public string AliyunId { get; set; }
 
         }
 

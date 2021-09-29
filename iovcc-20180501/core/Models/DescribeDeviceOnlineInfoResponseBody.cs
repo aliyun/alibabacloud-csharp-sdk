@@ -17,37 +17,37 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<DescribeDeviceOnlineInfoResponseBodyDevices> Devices { get; set; }
         public class DescribeDeviceOnlineInfoResponseBodyDevices : TeaModel {
-            [NameInMap("ProjectId")]
+            [NameInMap("LoginTime")]
             [Validation(Required=false)]
-            public string ProjectId { get; set; }
-
-            [NameInMap("Terminal")]
-            [Validation(Required=false)]
-            public string Terminal { get; set; }
-
-            [NameInMap("IasId")]
-            [Validation(Required=false)]
-            public string IasId { get; set; }
+            public long? LoginTime { get; set; }
 
             [NameInMap("DeviceId")]
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
-            [NameInMap("ClientVersion")]
+            [NameInMap("Online")]
             [Validation(Required=false)]
-            public string ClientVersion { get; set; }
+            public int? Online { get; set; }
+
+            [NameInMap("ProjectId")]
+            [Validation(Required=false)]
+            public string ProjectId { get; set; }
+
+            [NameInMap("IasId")]
+            [Validation(Required=false)]
+            public string IasId { get; set; }
 
             [NameInMap("SystemVersion")]
             [Validation(Required=false)]
             public string SystemVersion { get; set; }
 
-            [NameInMap("Online")]
+            [NameInMap("Terminal")]
             [Validation(Required=false)]
-            public int? Online { get; set; }
+            public string Terminal { get; set; }
 
-            [NameInMap("LoginTime")]
+            [NameInMap("ClientVersion")]
             [Validation(Required=false)]
-            public long? LoginTime { get; set; }
+            public string ClientVersion { get; set; }
 
         }
 

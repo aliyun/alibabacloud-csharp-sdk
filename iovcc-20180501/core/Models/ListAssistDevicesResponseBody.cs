@@ -9,34 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Iovcc20180501.Models
 {
     public class ListAssistDevicesResponseBody : TeaModel {
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageIndex")]
-        [Validation(Required=false)]
-        public int? PageIndex { get; set; }
 
         [NameInMap("PerPage")]
         [Validation(Required=false)]
         public int? PerPage { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageIndex")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageIndex { get; set; }
 
         [NameInMap("Devices")]
         [Validation(Required=false)]
         public List<ListAssistDevicesResponseBodyDevices> Devices { get; set; }
         public class ListAssistDevicesResponseBodyDevices : TeaModel {
-            [NameInMap("DeviceId")]
-            [Validation(Required=false)]
-            public string DeviceId { get; set; }
-
-            [NameInMap("DeviceName")]
-            [Validation(Required=false)]
-            public string DeviceName { get; set; }
-
             [NameInMap("SerialNumber")]
             [Validation(Required=false)]
             public string SerialNumber { get; set; }
@@ -45,6 +37,18 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public string HardwareId { get; set; }
 
+            [NameInMap("DeviceName")]
+            [Validation(Required=false)]
+            public string DeviceName { get; set; }
+
+            [NameInMap("AccessTime")]
+            [Validation(Required=false)]
+            public long? AccessTime { get; set; }
+
+            [NameInMap("DeviceId")]
+            [Validation(Required=false)]
+            public string DeviceId { get; set; }
+
             [NameInMap("UUID")]
             [Validation(Required=false)]
             public string UUID { get; set; }
@@ -52,10 +56,6 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [NameInMap("VIN")]
             [Validation(Required=false)]
             public string VIN { get; set; }
-
-            [NameInMap("AccessTime")]
-            [Validation(Required=false)]
-            public long? AccessTime { get; set; }
 
         }
 

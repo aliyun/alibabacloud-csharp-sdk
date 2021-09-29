@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public GenerateOssUploadMetaResponseBodyOssUploadMeta OssUploadMeta { get; set; }
         public class GenerateOssUploadMetaResponseBodyOssUploadMeta : TeaModel {
-            [NameInMap("AccessKeyId")]
-            [Validation(Required=false)]
-            public string AccessKeyId { get; set; }
-            [NameInMap("AccessKeySecret")]
-            [Validation(Required=false)]
-            public string AccessKeySecret { get; set; }
             [NameInMap("SecurityToken")]
             [Validation(Required=false)]
             public string SecurityToken { get; set; }
-            [NameInMap("Bucket")]
-            [Validation(Required=false)]
-            public string Bucket { get; set; }
             [NameInMap("ObjectKey")]
             [Validation(Required=false)]
             public string ObjectKey { get; set; }
+            [NameInMap("AccessKeySecret")]
+            [Validation(Required=false)]
+            public string AccessKeySecret { get; set; }
+            [NameInMap("AccessKeyId")]
+            [Validation(Required=false)]
+            public string AccessKeyId { get; set; }
+            [NameInMap("Bucket")]
+            [Validation(Required=false)]
+            public string Bucket { get; set; }
         };
 
     }

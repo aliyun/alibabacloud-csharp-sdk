@@ -17,17 +17,21 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<FindPrepublishesByVersionIdResponseBodyPrepublishList> PrepublishList { get; set; }
         public class FindPrepublishesByVersionIdResponseBodyPrepublishList : TeaModel {
-            [NameInMap("Id")]
+            [NameInMap("GmtCreateTimestamp")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public long? GmtCreateTimestamp { get; set; }
 
-            [NameInMap("Name")]
+            [NameInMap("DeviceModelId")]
             [Validation(Required=false)]
-            public string Name { get; set; }
+            public string DeviceModelId { get; set; }
 
-            [NameInMap("VersionType")]
+            [NameInMap("GmtModify")]
             [Validation(Required=false)]
-            public string VersionType { get; set; }
+            public string GmtModify { get; set; }
+
+            [NameInMap("IsActive")]
+            [Validation(Required=false)]
+            public string IsActive { get; set; }
 
             [NameInMap("VersionId")]
             [Validation(Required=false)]
@@ -37,45 +41,41 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public string BarrierCount { get; set; }
 
-            [NameInMap("DeviceModelId")]
+            [NameInMap("DeviceModelName")]
             [Validation(Required=false)]
-            public string DeviceModelId { get; set; }
-
-            [NameInMap("ParentId")]
-            [Validation(Required=false)]
-            public string ParentId { get; set; }
-
-            [NameInMap("IsActive")]
-            [Validation(Required=false)]
-            public string IsActive { get; set; }
+            public string DeviceModelName { get; set; }
 
             [NameInMap("IsTotalPrepublish")]
             [Validation(Required=false)]
             public string IsTotalPrepublish { get; set; }
 
+            [NameInMap("GmtModifyTimestamp")]
+            [Validation(Required=false)]
+            public long? GmtModifyTimestamp { get; set; }
+
+            [NameInMap("ParentId")]
+            [Validation(Required=false)]
+            public string ParentId { get; set; }
+
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
-            [NameInMap("GmtModify")]
+            [NameInMap("Name")]
             [Validation(Required=false)]
-            public string GmtModify { get; set; }
+            public string Name { get; set; }
 
-            [NameInMap("DeviceModelName")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public string DeviceModelName { get; set; }
+            public string Id { get; set; }
+
+            [NameInMap("VersionType")]
+            [Validation(Required=false)]
+            public string VersionType { get; set; }
 
             [NameInMap("PassedCount")]
             [Validation(Required=false)]
             public string PassedCount { get; set; }
-
-            [NameInMap("GmtCreateTimestamp")]
-            [Validation(Required=false)]
-            public long? GmtCreateTimestamp { get; set; }
-
-            [NameInMap("GmtModifyTimestamp")]
-            [Validation(Required=false)]
-            public long? GmtModifyTimestamp { get; set; }
 
         }
 

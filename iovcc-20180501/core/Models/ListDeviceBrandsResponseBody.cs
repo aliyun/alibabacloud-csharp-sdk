@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iovcc20180501.Models
 {
     public class ListDeviceBrandsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DeviceBrands")]
         [Validation(Required=false)]
         public List<ListDeviceBrandsResponseBodyDeviceBrands> DeviceBrands { get; set; }
@@ -21,9 +17,9 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public long? DeviceBrandId { get; set; }
 
-            [NameInMap("DeviceBrand")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string DeviceBrand { get; set; }
+            public string Description { get; set; }
 
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
@@ -33,11 +29,15 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public string Manufacture { get; set; }
 
-            [NameInMap("Description")]
+            [NameInMap("DeviceBrand")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public string DeviceBrand { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

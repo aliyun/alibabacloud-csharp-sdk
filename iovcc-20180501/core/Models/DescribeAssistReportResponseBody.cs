@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("AssistId")]
-        [Validation(Required=false)]
-        public string AssistId { get; set; }
-
-        [NameInMap("AssistDescription")]
-        [Validation(Required=false)]
-        public string AssistDescription { get; set; }
-
         [NameInMap("AssistResult")]
         [Validation(Required=false)]
         public string AssistResult { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [NameInMap("AssistReason")]
         [Validation(Required=false)]
         public string AssistReason { get; set; }
+
+        [NameInMap("AssistId")]
+        [Validation(Required=false)]
+        public string AssistId { get; set; }
+
+        [NameInMap("AssistDescription")]
+        [Validation(Required=false)]
+        public string AssistDescription { get; set; }
 
         [NameInMap("AssistTag")]
         [Validation(Required=false)]

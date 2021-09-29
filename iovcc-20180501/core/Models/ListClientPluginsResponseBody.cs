@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<ListClientPluginsResponseBodyClientPlugins> ClientPlugins { get; set; }
         public class ListClientPluginsResponseBodyClientPlugins : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("PkgName")]
             [Validation(Required=false)]
             public string PkgName { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
         }
 

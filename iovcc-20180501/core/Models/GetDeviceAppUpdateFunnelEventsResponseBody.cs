@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<GetDeviceAppUpdateFunnelEventsResponseBodyEventList> EventList { get; set; }
         public class GetDeviceAppUpdateFunnelEventsResponseBodyEventList : TeaModel {
-            [NameInMap("TenantId")]
+            [NameInMap("PackageName")]
             [Validation(Required=false)]
-            public string TenantId { get; set; }
+            public string PackageName { get; set; }
 
             [NameInMap("DeviceId")]
             [Validation(Required=false)]
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public string Event { get; set; }
 
+            [NameInMap("ReportTimestamp")]
+            [Validation(Required=false)]
+            public long? ReportTimestamp { get; set; }
+
             [NameInMap("ReportTime")]
             [Validation(Required=false)]
             public string ReportTime { get; set; }
 
-            [NameInMap("PackageName")]
+            [NameInMap("TenantId")]
             [Validation(Required=false)]
-            public string PackageName { get; set; }
-
-            [NameInMap("ReportTimestamp")]
-            [Validation(Required=false)]
-            public long? ReportTimestamp { get; set; }
+            public string TenantId { get; set; }
 
         }
 

@@ -20,18 +20,18 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [NameInMap("DeviceBrandId")]
             [Validation(Required=false)]
             public long? DeviceBrandId { get; set; }
-            [NameInMap("DeviceBrand")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string DeviceBrand { get; set; }
+            public string Description { get; set; }
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
             [NameInMap("Manufacture")]
             [Validation(Required=false)]
             public string Manufacture { get; set; }
-            [NameInMap("Description")]
+            [NameInMap("DeviceBrand")]
             [Validation(Required=false)]
-            public string Description { get; set; }
+            public string DeviceBrand { get; set; }
         };
 
     }

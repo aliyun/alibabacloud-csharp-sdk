@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public DescribeDeviceShadowResponseBodyDeviceShadow DeviceShadow { get; set; }
         public class DescribeDeviceShadowResponseBodyDeviceShadow : TeaModel {
-            [NameInMap("DeviceInfo")]
-            [Validation(Required=false)]
-            public string DeviceInfo { get; set; }
             [NameInMap("DeviceShadow")]
             [Validation(Required=false)]
             public string DeviceShadow { get; set; }
+            [NameInMap("DeviceInfo")]
+            [Validation(Required=false)]
+            public string DeviceInfo { get; set; }
         };
 
     }

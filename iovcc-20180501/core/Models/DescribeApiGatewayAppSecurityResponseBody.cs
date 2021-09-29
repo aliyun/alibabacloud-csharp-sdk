@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity ApiGatewayAppSecurity { get; set; }
         public class DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity : TeaModel {
-            [NameInMap("GatewayAppId")]
-            [Validation(Required=false)]
-            public string GatewayAppId { get; set; }
             [NameInMap("GatewayAppKey")]
             [Validation(Required=false)]
             public string GatewayAppKey { get; set; }
             [NameInMap("GatewayAppSecret")]
             [Validation(Required=false)]
             public string GatewayAppSecret { get; set; }
+            [NameInMap("GatewayAppId")]
+            [Validation(Required=false)]
+            public string GatewayAppId { get; set; }
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }

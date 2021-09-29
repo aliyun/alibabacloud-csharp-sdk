@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public FindPrepublishPassedDevicesResponseBodyDeviceList DeviceList { get; set; }
         public class FindPrepublishPassedDevicesResponseBodyDeviceList : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<FindPrepublishPassedDevicesResponseBodyDeviceListItems> Items { get; set; }
             public class FindPrepublishPassedDevicesResponseBodyDeviceListItems : TeaModel {
+                public long? GmtCreateTimestamp { get; set; }
                 public string DeviceId { get; set; }
                 public string GmtCreate { get; set; }
-                public long? GmtCreateTimestamp { get; set; }
             }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
         };
 
     }

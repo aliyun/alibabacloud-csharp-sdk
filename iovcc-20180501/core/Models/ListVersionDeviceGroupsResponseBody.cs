@@ -17,13 +17,9 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
         [Validation(Required=false)]
         public List<ListVersionDeviceGroupsResponseBodyDeviceGroupList> DeviceGroupList { get; set; }
         public class ListVersionDeviceGroupsResponseBodyDeviceGroupList : TeaModel {
-            [NameInMap("Id")]
+            [NameInMap("GmtModify")]
             [Validation(Required=false)]
-            public string Id { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+            public string GmtModify { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -33,9 +29,13 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public string GmtCreate { get; set; }
 
-            [NameInMap("GmtModify")]
+            [NameInMap("Name")]
             [Validation(Required=false)]
-            public string GmtModify { get; set; }
+            public string Name { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
 
         }
 

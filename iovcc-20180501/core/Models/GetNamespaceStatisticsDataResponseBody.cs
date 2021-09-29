@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public List<GetNamespaceStatisticsDataResponseBodyStatisticsSeries> Series { get; set; }
             public class GetNamespaceStatisticsDataResponseBodyStatisticsSeries : TeaModel {
-                public string Name { get; set; }
                 public List<string> Data { get; set; }
+                public string Name { get; set; }
             }
         };
 

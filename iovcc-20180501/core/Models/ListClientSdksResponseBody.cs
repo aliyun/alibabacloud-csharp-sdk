@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iovcc20180501.Models
 {
     public class ListClientSdksResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ClientSdks")]
         [Validation(Required=false)]
         public List<ListClientSdksResponseBodyClientSdks> ClientSdks { get; set; }
         public class ListClientSdksResponseBodyClientSdks : TeaModel {
-            [NameInMap("Id")]
+            [NameInMap("OsType")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public int? OsType { get; set; }
 
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -41,11 +37,15 @@ namespace AlibabaCloud.SDK.Iovcc20180501.Models
             [Validation(Required=false)]
             public int? PkgType { get; set; }
 
-            [NameInMap("OsType")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public int? OsType { get; set; }
+            public long? Id { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
