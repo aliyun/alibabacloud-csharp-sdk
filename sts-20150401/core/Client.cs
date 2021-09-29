@@ -44,12 +44,13 @@ namespace AlibabaCloud.SDK.Sts20150401
                 {"cn-shanghai-et2-b01", "sts.aliyuncs.com"},
                 {"cn-shanghai-inner", "sts.aliyuncs.com"},
                 {"cn-shanghai-internal-test-1", "sts.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "sts.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "sts-vpc.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-shenzhen-inner", "sts.aliyuncs.com"},
                 {"cn-shenzhen-st4-d01", "sts.aliyuncs.com"},
                 {"cn-shenzhen-su18-b01", "sts.aliyuncs.com"},
                 {"cn-wuhan", "sts.aliyuncs.com"},
                 {"cn-yushanfang", "sts.aliyuncs.com"},
+                {"cn-zhangbei", "sts.aliyuncs.com"},
                 {"cn-zhangbei-na61-b01", "sts.aliyuncs.com"},
                 {"cn-zhangjiakou-na62-a01", "sts.aliyuncs.com"},
                 {"cn-zhengzhou-nebula-1", "sts.aliyuncs.com"},
@@ -104,6 +105,38 @@ namespace AlibabaCloud.SDK.Sts20150401
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssumeRoleWithOptionsAsync(request, runtime);
+        }
+
+        public AssumeRoleWithOIDCResponse AssumeRoleWithOIDCWithOptions(AssumeRoleWithOIDCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(DoRPCRequest("AssumeRoleWithOIDC", "2015-04-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<AssumeRoleWithOIDCResponse> AssumeRoleWithOIDCWithOptionsAsync(AssumeRoleWithOIDCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(await DoRPCRequestAsync("AssumeRoleWithOIDC", "2015-04-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public AssumeRoleWithOIDCResponse AssumeRoleWithOIDC(AssumeRoleWithOIDCRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssumeRoleWithOIDCWithOptions(request, runtime);
+        }
+
+        public async Task<AssumeRoleWithOIDCResponse> AssumeRoleWithOIDCAsync(AssumeRoleWithOIDCRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssumeRoleWithOIDCWithOptionsAsync(request, runtime);
         }
 
         public AssumeRoleWithSAMLResponse AssumeRoleWithSAMLWithOptions(AssumeRoleWithSAMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
