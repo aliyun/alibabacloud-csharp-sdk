@@ -142,6 +142,20 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             [Validation(Required=false)]
             public string CubemapPath { get; set; }
 
+            /// <summary>
+            /// 是否删除
+            /// </summary>
+            [NameInMap("Deleted")]
+            [Validation(Required=false)]
+            public bool? Deleted { get; set; }
+
+            /// <summary>
+            /// 原图地址
+            /// </summary>
+            [NameInMap("OriginUrl")]
+            [Validation(Required=false)]
+            public string OriginUrl { get; set; }
+
         }
 
     }

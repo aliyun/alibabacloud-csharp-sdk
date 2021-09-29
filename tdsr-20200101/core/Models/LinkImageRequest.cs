@@ -30,6 +30,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public int? CameraHeight { get; set; }
 
+        /// <summary>
+        /// 平台标识，默认PC
+        /// </summary>
+        [NameInMap("Platform")]
+        [Validation(Required=false)]
+        public string Platform { get; set; }
+
     }
 
 }

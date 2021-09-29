@@ -1193,6 +1193,38 @@ namespace AlibabaCloud.SDK.Tdsr20200101
             return await TempPreviewWithOptionsAsync(request, runtime);
         }
 
+        public PublishSceneResponse PublishSceneWithOptions(PublishSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<PublishSceneResponse>(DoRPCRequest("PublishScene", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<PublishSceneResponse> PublishSceneWithOptionsAsync(PublishSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<PublishSceneResponse>(await DoRPCRequestAsync("PublishScene", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public PublishSceneResponse PublishScene(PublishSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PublishSceneWithOptions(request, runtime);
+        }
+
+        public async Task<PublishSceneResponse> PublishSceneAsync(PublishSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PublishSceneWithOptionsAsync(request, runtime);
+        }
+
         public DetailProjectResponse DetailProjectWithOptions(DetailProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
