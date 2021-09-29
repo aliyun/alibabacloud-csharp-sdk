@@ -51,6 +51,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             }
 
+            [NameInMap("ConfigRuleId")]
+            [Validation(Required=false)]
+            public string ConfigRuleId { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public int? RiskLevel { get; set; }
+
         }
 
         [NameInMap("ClientToken")]

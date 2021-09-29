@@ -49,28 +49,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
-                [NameInMap("SourceConditions")]
-                [Validation(Required=false)]
-                public List<GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions> SourceConditions { get; set; }
-                public class GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions : TeaModel {
-                    [NameInMap("DesiredValue")]
-                    [Validation(Required=false)]
-                    public string DesiredValue { get; set; }
-
-                    [NameInMap("Tips")]
-                    [Validation(Required=false)]
-                    public string Tips { get; set; }
-
-                    [NameInMap("Operator")]
-                    [Validation(Required=false)]
-                    public string Operator { get; set; }
-
-                    [NameInMap("Name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                }
-
                 [NameInMap("Identifier")]
                 [Validation(Required=false)]
                 public string Identifier { get; set; }

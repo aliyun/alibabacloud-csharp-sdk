@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public string ParameterName { get; set; }
                     public string ParameterValue { get; set; }
                 }
+                public string Description { get; set; }
+                public int? RiskLevel { get; set; }
             }
             [NameInMap("CompliancePackName")]
             [Validation(Required=false)]

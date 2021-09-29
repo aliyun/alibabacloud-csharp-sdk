@@ -1709,23 +1709,21 @@ namespace AlibabaCloud.SDK.Config20200907
         public GetConfigRuleResponse GetConfigRuleWithOptions(GetConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = query,
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<GetConfigRuleResponse>(DoRPCRequest("GetConfigRule", "2020-09-07", "HTTPS", "GET", "AK", "json", req, runtime));
+            return TeaModel.ToObject<GetConfigRuleResponse>(DoRPCRequest("GetConfigRule", "2020-09-07", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<GetConfigRuleResponse> GetConfigRuleWithOptionsAsync(GetConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = query,
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<GetConfigRuleResponse>(await DoRPCRequestAsync("GetConfigRule", "2020-09-07", "HTTPS", "GET", "AK", "json", req, runtime));
+            return TeaModel.ToObject<GetConfigRuleResponse>(await DoRPCRequestAsync("GetConfigRule", "2020-09-07", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public GetConfigRuleResponse GetConfigRule(GetConfigRuleRequest request)
@@ -2237,23 +2235,21 @@ namespace AlibabaCloud.SDK.Config20200907
         public GetAggregateConfigRuleResponse GetAggregateConfigRuleWithOptions(GetAggregateConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = query,
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<GetAggregateConfigRuleResponse>(DoRPCRequest("GetAggregateConfigRule", "2020-09-07", "HTTPS", "GET", "AK", "json", req, runtime));
+            return TeaModel.ToObject<GetAggregateConfigRuleResponse>(DoRPCRequest("GetAggregateConfigRule", "2020-09-07", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<GetAggregateConfigRuleResponse> GetAggregateConfigRuleWithOptionsAsync(GetAggregateConfigRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = query,
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<GetAggregateConfigRuleResponse>(await DoRPCRequestAsync("GetAggregateConfigRule", "2020-09-07", "HTTPS", "GET", "AK", "json", req, runtime));
+            return TeaModel.ToObject<GetAggregateConfigRuleResponse>(await DoRPCRequestAsync("GetAggregateConfigRule", "2020-09-07", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public GetAggregateConfigRuleResponse GetAggregateConfigRule(GetAggregateConfigRuleRequest request)
