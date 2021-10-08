@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
-            [NameInMap("hostName")]
-            [Validation(Required=false)]
-            public string HostName { get; set; }
-
             [NameInMap("cpuPercent")]
             [Validation(Required=false)]
             public string CpuPercent { get; set; }
