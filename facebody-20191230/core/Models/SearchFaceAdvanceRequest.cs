@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public float? QualityScoreThreshold { get; set; }
 
+        [NameInMap("MaxFaceNum")]
+        [Validation(Required=false)]
+        public long? MaxFaceNum { get; set; }
+
     }
 
 }

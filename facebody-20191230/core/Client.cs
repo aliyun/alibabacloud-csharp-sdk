@@ -7827,5 +7827,49 @@ namespace AlibabaCloud.SDK.Facebody20191230
             return await CreateBodyDbWithOptionsAsync(request, runtime);
         }
 
+        public BatchAddFacesResponse BatchAddFacesWithOptions(BatchAddFacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchAddFacesShrinkRequest request = new BatchAddFacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Faces))
+            {
+                request.FacesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Faces, "Faces", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<BatchAddFacesResponse>(DoRPCRequest("BatchAddFaces", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<BatchAddFacesResponse> BatchAddFacesWithOptionsAsync(BatchAddFacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchAddFacesShrinkRequest request = new BatchAddFacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Faces))
+            {
+                request.FacesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Faces, "Faces", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<BatchAddFacesResponse>(await DoRPCRequestAsync("BatchAddFaces", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public BatchAddFacesResponse BatchAddFaces(BatchAddFacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchAddFacesWithOptions(request, runtime);
+        }
+
+        public async Task<BatchAddFacesResponse> BatchAddFacesAsync(BatchAddFacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchAddFacesWithOptionsAsync(request, runtime);
+        }
+
     }
 }
