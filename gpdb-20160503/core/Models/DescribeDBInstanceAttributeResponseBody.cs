@@ -29,12 +29,29 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? DBInstanceMemory { get; set; }
                 public string HostType { get; set; }
                 public string PayType { get; set; }
+                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags Tags { get; set; }
+                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag> Tag { get; set; }
+                    public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
                 public string StorageType { get; set; }
-                public int? CpuCoresPerNode { get; set; }
                 public string AvailabilityValue { get; set; }
                 public string ReadDelayTime { get; set; }
-                public string ConnectionMode { get; set; }
+                public int? CpuCoresPerNode { get; set; }
                 public string Port { get; set; }
+                public string ConnectionMode { get; set; }
                 public string LockMode { get; set; }
                 public string EngineVersion { get; set; }
                 public string StorageUnit { get; set; }
@@ -60,23 +77,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DBInstanceId { get; set; }
                 public string DBInstanceClass { get; set; }
                 public string Engine { get; set; }
-                public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags Tags { get; set; }
-                public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags : TeaModel {
-                    [NameInMap("Tag")]
-                    [Validation(Required=false)]
-                    public List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag> Tag { get; set; }
-                    public class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag : TeaModel {
-                        [NameInMap("Key")]
-                        [Validation(Required=false)]
-                        public string Key { get; set; }
-
-                        [NameInMap("Value")]
-                        [Validation(Required=false)]
-                        public string Value { get; set; }
-
-                    }
-
-                }
+                public string DBInstanceCategory { get; set; }
             }
         };
 

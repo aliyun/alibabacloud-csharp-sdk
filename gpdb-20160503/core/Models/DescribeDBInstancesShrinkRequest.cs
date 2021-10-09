@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class DescribeDBInstancesRequest : TeaModel {
+    public class DescribeDBInstancesShrinkRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<DescribeDBInstancesRequestTag> Tag { get; set; }
-        public class DescribeDBInstancesRequestTag : TeaModel {
+        public List<DescribeDBInstancesShrinkRequestTag> Tag { get; set; }
+        public class DescribeDBInstancesShrinkRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -53,15 +53,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("InstanceDeployTypes")]
         [Validation(Required=false)]
-        public List<string> InstanceDeployTypes { get; set; }
+        public string InstanceDeployTypesShrink { get; set; }
 
         [NameInMap("DBInstanceStatuses")]
         [Validation(Required=false)]
-        public List<string> DBInstanceStatuses { get; set; }
+        public string DBInstanceStatusesShrink { get; set; }
 
         [NameInMap("DBInstanceCategories")]
         [Validation(Required=false)]
-        public List<string> DBInstanceCategories { get; set; }
+        public string DBInstanceCategoriesShrink { get; set; }
 
     }
 

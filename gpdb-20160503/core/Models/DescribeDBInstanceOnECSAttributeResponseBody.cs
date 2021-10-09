@@ -67,6 +67,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public bool? SupportRestore { get; set; }
                 public string MinorVersion { get; set; }
                 public int? MasterNodeNum { get; set; }
+                public string DBInstanceCategory { get; set; }
             }
         };
 

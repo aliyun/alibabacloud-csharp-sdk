@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
+        [NameInMap("DBInstanceCategory")]
+        [Validation(Required=false)]
+        public string DBInstanceCategory { get; set; }
+
     }
 
 }

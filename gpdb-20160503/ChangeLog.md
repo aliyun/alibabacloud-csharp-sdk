@@ -1,3 +1,6 @@
+2021-10-09 Version: 1.0.6
+- ADB for PG sdk.
+
 2021-09-23 Version: 1.0.5
 - ADB for PG sdk.
 
