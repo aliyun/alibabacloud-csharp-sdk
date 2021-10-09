@@ -17,15 +17,6 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public DescribeEvaluationResultsResponseBodyEvaluationResults EvaluationResults { get; set; }
         public class DescribeEvaluationResultsResponseBodyEvaluationResults : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
             [NameInMap("EvaluationResultList")]
             [Validation(Required=false)]
             public List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> EvaluationResultList { get; set; }
@@ -36,7 +27,6 @@ namespace AlibabaCloud.SDK.Config20190108.Models
                 public string Annotation { get; set; }
                 public long? ConfigRuleInvokedTimestamp { get; set; }
                 public string InvokingEventMessageType { get; set; }
-                public bool? RemediationEnabled { get; set; }
                 public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier EvaluationResultIdentifier { get; set; }
                 public class DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier : TeaModel {
                     [NameInMap("OrderingTimestamp")]
@@ -71,7 +61,17 @@ namespace AlibabaCloud.SDK.Config20190108.Models
                     };
 
                 }
+                public bool? RemediationEnabled { get; set; }
             }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
         };
 
     }

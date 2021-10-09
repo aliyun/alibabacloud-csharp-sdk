@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public DescribeConfigurationRecorderResponseBodyConfigurationRecorder ConfigurationRecorder { get; set; }
         public class DescribeConfigurationRecorderResponseBodyConfigurationRecorder : TeaModel {
-            [NameInMap("AccountId")]
-            [Validation(Required=false)]
-            public long? AccountId { get; set; }
             [NameInMap("ConfigurationRecorderStatus")]
             [Validation(Required=false)]
             public string ConfigurationRecorderStatus { get; set; }
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public long? AccountId { get; set; }
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]
             public List<string> ResourceTypes { get; set; }

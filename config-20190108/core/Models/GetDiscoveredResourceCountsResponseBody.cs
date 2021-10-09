@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts GroupedResourceCounts { get; set; }
         public class GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts : TeaModel {
-            [NameInMap("GroupByKey")]
-            [Validation(Required=false)]
-            public string GroupByKey { get; set; }
             [NameInMap("GroupedResourceCountList")]
             [Validation(Required=false)]
             public List<GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList> GroupedResourceCountList { get; set; }
             public class GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList : TeaModel {
-                public string GroupName { get; set; }
                 public long? ResourceCount { get; set; }
+                public string GroupName { get; set; }
             }
+            [NameInMap("GroupByKey")]
+            [Validation(Required=false)]
+            public string GroupByKey { get; set; }
         };
 
     }

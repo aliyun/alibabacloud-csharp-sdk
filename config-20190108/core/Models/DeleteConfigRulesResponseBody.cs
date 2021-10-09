@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public List<DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
-                public string ConfigRuleId { get; set; }
                 public string ErrorCode { get; set; }
                 public bool? Success { get; set; }
+                public string ConfigRuleId { get; set; }
             }
         };
 

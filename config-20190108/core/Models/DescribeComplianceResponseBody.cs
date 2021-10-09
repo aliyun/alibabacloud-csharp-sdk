@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class DescribeComplianceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ComplianceResult")]
         [Validation(Required=false)]
         public DescribeComplianceResponseBodyComplianceResult ComplianceResult { get; set; }
@@ -24,10 +20,14 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public List<DescribeComplianceResponseBodyComplianceResultCompliances> Compliances { get; set; }
             public class DescribeComplianceResponseBodyComplianceResultCompliances : TeaModel {
-                public int? Count { get; set; }
                 public string ComplianceType { get; set; }
+                public int? Count { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

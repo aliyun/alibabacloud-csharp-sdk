@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public List<ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
-                public string ConfigRuleId { get; set; }
                 public string ErrorCode { get; set; }
                 public bool? Success { get; set; }
+                public string ConfigRuleId { get; set; }
             }
         };
 

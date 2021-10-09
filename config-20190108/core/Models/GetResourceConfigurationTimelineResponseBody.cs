@@ -20,9 +20,6 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
             [NameInMap("Limit")]
             [Validation(Required=false)]
             public int? Limit { get; set; }
@@ -30,9 +27,9 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> ConfigurationList { get; set; }
             public class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList : TeaModel {
-                public string ResourceEventType { get; set; }
-                public long? AccountId { get; set; }
                 public string Tags { get; set; }
+                public long? AccountId { get; set; }
+                public string ResourceEventType { get; set; }
                 public string AvailabilityZone { get; set; }
                 public string ResourceType { get; set; }
                 public string ResourceCreateTime { get; set; }
@@ -42,6 +39,9 @@ namespace AlibabaCloud.SDK.Config20190108.Models
                 public string ResourceId { get; set; }
                 public string ResourceName { get; set; }
             }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
         };
 
     }
