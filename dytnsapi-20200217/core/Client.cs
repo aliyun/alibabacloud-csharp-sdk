@@ -133,5 +133,37 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             return await DescribePhoneNumberResaleWithOptionsAsync(request, runtime);
         }
 
+        public DescribeEmptyNumberDetectResponse DescribeEmptyNumberDetectWithOptions(DescribeEmptyNumberDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeEmptyNumberDetectResponse>(DoRPCRequest("DescribeEmptyNumberDetect", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeEmptyNumberDetectResponse> DescribeEmptyNumberDetectWithOptionsAsync(DescribeEmptyNumberDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeEmptyNumberDetectResponse>(await DoRPCRequestAsync("DescribeEmptyNumberDetect", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeEmptyNumberDetectResponse DescribeEmptyNumberDetect(DescribeEmptyNumberDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEmptyNumberDetectWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeEmptyNumberDetectResponse> DescribeEmptyNumberDetectAsync(DescribeEmptyNumberDetectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEmptyNumberDetectWithOptionsAsync(request, runtime);
+        }
+
     }
 }
