@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.ImageSearch20210501</AssemblyName>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud image search (20210501) SDK Library for .NET</Description>
@@ -46,8 +46,8 @@
     <PackageReference Include="AlibabaCloud.SDK.OpenPlatform20191219" Version="1.1.2"/>
     <PackageReference Include="AlibabaCloud.OSSUtil" Version="0.0.3"/>
     <PackageReference Include="AlibabaCloud.SDK.TeaFileform" Version="0.0.2"/>
-    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.13"/>
-    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.10"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.15"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.11"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.0.11"/>
   </ItemGroup>

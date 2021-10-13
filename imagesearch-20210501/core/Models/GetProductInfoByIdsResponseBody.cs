@@ -8,21 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20210501.Models
 {
-    public class SearchByPicResponseBody : TeaModel {
+    public class GetProductInfoByIdsResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public SearchByPicResponseBodyData Data { get; set; }
-        public class SearchByPicResponseBodyData : TeaModel {
+        public GetProductInfoByIdsResponseBodyData Data { get; set; }
+        public class GetProductInfoByIdsResponseBodyData : TeaModel {
             [NameInMap("Auctions")]
             [Validation(Required=false)]
-            public List<SearchByPicResponseBodyDataAuctions> Auctions { get; set; }
-            public class SearchByPicResponseBodyDataAuctions : TeaModel {
-                public SearchByPicResponseBodyDataAuctionsResult Result { get; set; }
-                public class SearchByPicResponseBodyDataAuctionsResult : TeaModel {
+            public List<GetProductInfoByIdsResponseBodyDataAuctions> Auctions { get; set; }
+            public class GetProductInfoByIdsResponseBodyDataAuctions : TeaModel {
+                public GetProductInfoByIdsResponseBodyDataAuctionsResult Result { get; set; }
+                public class GetProductInfoByIdsResponseBodyDataAuctionsResult : TeaModel {
                     [NameInMap("ItemId")]
                     [Validation(Required=false)]
                     public string ItemId { get; set; }
@@ -137,8 +137,8 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
 
                     [NameInMap("MaxCommission")]
                     [Validation(Required=false)]
-                    public SearchByPicResponseBodyDataAuctionsResultMaxCommission MaxCommission { get; set; }
-                    public class SearchByPicResponseBodyDataAuctionsResultMaxCommission : TeaModel {
+                    public GetProductInfoByIdsResponseBodyDataAuctionsResultMaxCommission MaxCommission { get; set; }
+                    public class GetProductInfoByIdsResponseBodyDataAuctionsResultMaxCommission : TeaModel {
                         [NameInMap("MaxCommissionRate")]
                         [Validation(Required=false)]
                         public string MaxCommissionRate { get; set; }
@@ -158,41 +158,6 @@ namespace AlibabaCloud.SDK.ImageSearch20210501.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("PicInfo")]
-        [Validation(Required=false)]
-        public SearchByPicResponseBodyPicInfo PicInfo { get; set; }
-        public class SearchByPicResponseBodyPicInfo : TeaModel {
-            [NameInMap("MainRegion")]
-            [Validation(Required=false)]
-            public SearchByPicResponseBodyPicInfoMainRegion MainRegion { get; set; }
-            public class SearchByPicResponseBodyPicInfoMainRegion : TeaModel {
-                [NameInMap("MultiCategoryId")]
-                [Validation(Required=false)]
-                public List<SearchByPicResponseBodyPicInfoMainRegionMultiCategoryId> MultiCategoryId { get; set; }
-                public class SearchByPicResponseBodyPicInfoMainRegionMultiCategoryId : TeaModel {
-                    [NameInMap("CategoryId")]
-                    [Validation(Required=false)]
-                    public int? CategoryId { get; set; }
-
-                    [NameInMap("Score")]
-                    [Validation(Required=false)]
-                    public float? Score { get; set; }
-
-                }
-
-                [NameInMap("Region")]
-                [Validation(Required=false)]
-                public string Region { get; set; }
-
-            }
-            [NameInMap("MultiRegion")]
-            [Validation(Required=false)]
-            public List<SearchByPicResponseBodyPicInfoMultiRegion> MultiRegion { get; set; }
-            public class SearchByPicResponseBodyPicInfoMultiRegion : TeaModel {
-                public string Region { get; set; }
-            }
-        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
