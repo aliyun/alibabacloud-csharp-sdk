@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeColumnsRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("TableId")]
-        [Validation(Required=false)]
-        public long? TableId { get; set; }
-
-        [NameInMap("RuleId")]
-        [Validation(Required=false)]
-        public long? RuleId { get; set; }
-
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -37,9 +21,29 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("TableName")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string TableName { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ProductCode")]
+        [Validation(Required=false)]
+        public string ProductCode { get; set; }
+
+        [NameInMap("RiskLevelId")]
+        [Validation(Required=false)]
+        public long? RiskLevelId { get; set; }
+
+        [NameInMap("RuleId")]
+        [Validation(Required=false)]
+        public long? RuleId { get; set; }
 
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -49,17 +53,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string SensLevelName { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("TableId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public long? TableId { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("TableName")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("RiskLevelId")]
-        [Validation(Required=false)]
-        public long? RiskLevelId { get; set; }
+        public string TableName { get; set; }
 
     }
 

@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeInstanceSourcesResponseBodyItems> Items { get; set; }
@@ -52,10 +40,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
             public string InstanceDescription { get; set; }
-
-            [NameInMap("DataLimitId")]
-            [Validation(Required=false)]
-            public long? DataLimitId { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -118,6 +102,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Enable { get; set; }
 
         }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class StopMaskingProcessRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
-        [NameInMap("FeatureType")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public int? FeatureType { get; set; }
+        public string Lang { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public int? ResourceType { get; set; }
-
         [NameInMap("ParentId")]
         [Validation(Required=false)]
         public string ParentId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public int? ResourceType { get; set; }
 
     }
 

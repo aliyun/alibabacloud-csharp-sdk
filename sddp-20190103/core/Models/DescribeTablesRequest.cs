@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeTablesRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public long? InstanceId { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -16,38 +24,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        [NameInMap("ProductId")]
-        [Validation(Required=false)]
-        public long? ProductId { get; set; }
-
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
-
-        [NameInMap("RiskLevelId")]
-        [Validation(Required=false)]
-        public long? RiskLevelId { get; set; }
-
-        [NameInMap("RuleId")]
-        [Validation(Required=false)]
-        public long? RuleId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public long? InstanceId { get; set; }
-
-        [NameInMap("InstanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
-
-        [NameInMap("RuleName")]
-        [Validation(Required=false)]
-        public string RuleName { get; set; }
-
-        [NameInMap("SensLevelName")]
-        [Validation(Required=false)]
-        public string SensLevelName { get; set; }
 
         [NameInMap("PackageId")]
         [Validation(Required=false)]
@@ -57,29 +33,25 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("ProductCode")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string ProductCode { get; set; }
 
-        [NameInMap("LastScanTimeStart")]
+        [NameInMap("ProductId")]
         [Validation(Required=false)]
-        public long? LastScanTimeStart { get; set; }
+        public long? ProductId { get; set; }
 
-        [NameInMap("LastScanTimeEnd")]
+        [NameInMap("RiskLevelId")]
         [Validation(Required=false)]
-        public long? LastScanTimeEnd { get; set; }
+        public long? RiskLevelId { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("RuleId")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public long? RuleId { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        [NameInMap("InstanceDescription")]
-        [Validation(Required=false)]
-        public string InstanceDescription { get; set; }
+        public string ServiceRegionId { get; set; }
 
     }
 

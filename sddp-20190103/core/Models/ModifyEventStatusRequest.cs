@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyEventStatusRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public long? Id { get; set; }
-
         [NameInMap("Backed")]
         [Validation(Required=false)]
         public bool? Backed { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("DealReason")]
         [Validation(Required=false)]
         public string DealReason { get; set; }
+
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

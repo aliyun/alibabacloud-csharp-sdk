@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("Alias")]
-            [Validation(Required=false)]
-            public string Alias { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }

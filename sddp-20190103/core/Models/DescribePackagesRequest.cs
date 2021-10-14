@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribePackagesRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public long? InstanceId { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -16,6 +24,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ProductId")]
         [Validation(Required=false)]
@@ -28,18 +40,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public long? RuleId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public long? InstanceId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

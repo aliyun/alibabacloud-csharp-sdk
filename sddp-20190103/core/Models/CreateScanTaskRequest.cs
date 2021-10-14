@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? IntervalDay { get; set; }
 
+        [NameInMap("OssScanPath")]
+        [Validation(Required=false)]
+        public string OssScanPath { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public long? ResourceType { get; set; }
+
         [NameInMap("RunHour")]
         [Validation(Required=false)]
         public int? RunHour { get; set; }
@@ -24,18 +32,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("RunMinute")]
         [Validation(Required=false)]
         public int? RunMinute { get; set; }
-
-        [NameInMap("TaskName")]
-        [Validation(Required=false)]
-        public string TaskName { get; set; }
-
-        [NameInMap("TaskUserName")]
-        [Validation(Required=false)]
-        public string TaskUserName { get; set; }
-
-        [NameInMap("OssScanPath")]
-        [Validation(Required=false)]
-        public string OssScanPath { get; set; }
 
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
@@ -45,9 +41,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string ScanRangeContent { get; set; }
 
-        [NameInMap("ResourceType")]
+        [NameInMap("TaskName")]
         [Validation(Required=false)]
-        public long? ResourceType { get; set; }
+        public string TaskName { get; set; }
+
+        [NameInMap("TaskUserName")]
+        [Validation(Required=false)]
+        public string TaskUserName { get; set; }
 
     }
 

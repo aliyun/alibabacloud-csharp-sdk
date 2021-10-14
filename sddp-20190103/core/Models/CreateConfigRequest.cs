@@ -12,10 +12,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateConfigRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -23,6 +19,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("Value")]
         [Validation(Required=false)]

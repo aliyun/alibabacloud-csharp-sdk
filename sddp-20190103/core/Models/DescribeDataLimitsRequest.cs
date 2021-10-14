@@ -9,41 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataLimitsRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("AuditStatus")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public int? ResourceType { get; set; }
-
-        [NameInMap("ParentId")]
-        [Validation(Required=false)]
-        public string ParentId { get; set; }
-
-        [NameInMap("ServiceRegionId")]
-        [Validation(Required=false)]
-        public string ServiceRegionId { get; set; }
+        public int? AuditStatus { get; set; }
 
         [NameInMap("CheckStatus")]
         [Validation(Required=false)]
         public int? CheckStatus { get; set; }
 
-        [NameInMap("AuditStatus")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? AuditStatus { get; set; }
-
-        [NameInMap("EngineType")]
-        [Validation(Required=false)]
-        public string EngineType { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("DatamaskStatus")]
         [Validation(Required=false)]
@@ -53,13 +29,37 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? Enable { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
+
+        [NameInMap("EngineType")]
+        [Validation(Required=false)]
+        public string EngineType { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ParentId")]
+        [Validation(Required=false)]
+        public string ParentId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public int? ResourceType { get; set; }
+
+        [NameInMap("ServiceRegionId")]
+        [Validation(Required=false)]
+        public string ServiceRegionId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

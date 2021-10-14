@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateRuleRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
         [NameInMap("Category")]
         [Validation(Required=false)]
         public int? Category { get; set; }
@@ -25,17 +17,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
-        [NameInMap("StatExpress")]
+        [NameInMap("ContentCategory")]
         [Validation(Required=false)]
-        public string StatExpress { get; set; }
+        public int? ContentCategory { get; set; }
 
-        [NameInMap("RiskLevelId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public long? RiskLevelId { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("RuleType")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public int? RuleType { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -45,17 +41,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public long? ProductId { get; set; }
 
-        [NameInMap("WarnLevel")]
+        [NameInMap("RiskLevelId")]
         [Validation(Required=false)]
-        public int? WarnLevel { get; set; }
+        public long? RiskLevelId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("RuleType")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public int? RuleType { get; set; }
 
-        [NameInMap("ContentCategory")]
+        [NameInMap("StatExpress")]
         [Validation(Required=false)]
-        public int? ContentCategory { get; set; }
+        public string StatExpress { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -64,6 +60,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }
+
+        [NameInMap("WarnLevel")]
+        [Validation(Required=false)]
+        public int? WarnLevel { get; set; }
 
     }
 

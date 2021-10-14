@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeConfigsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
         public List<DescribeConfigsResponseBodyConfigList> ConfigList { get; set; }
         public class DescribeConfigsResponseBodyConfigList : TeaModel {
             [NameInMap("Code")]
             [Validation(Required=false)]
-            public int? Code { get; set; }
+            public string Code { get; set; }
 
             [NameInMap("Value")]
             [Validation(Required=false)]
-            public long? Value { get; set; }
+            public string Value { get; set; }
 
             [NameInMap("DefaultValue")]
             [Validation(Required=false)]
@@ -38,6 +34,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

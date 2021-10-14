@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ManualTriggerMaskingProcessRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
     }
 

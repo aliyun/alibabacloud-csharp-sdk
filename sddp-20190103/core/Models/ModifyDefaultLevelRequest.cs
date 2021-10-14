@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyDefaultLevelRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("DefaultId")]
         [Validation(Required=false)]
         public long? DefaultId { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("SensitiveIds")]
         [Validation(Required=false)]

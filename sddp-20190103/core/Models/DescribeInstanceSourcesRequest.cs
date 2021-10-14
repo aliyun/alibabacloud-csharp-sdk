@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeInstanceSourcesRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
-
-        [NameInMap("ServiceRegionId")]
-        [Validation(Required=false)]
-        public string ServiceRegionId { get; set; }
 
         [NameInMap("EngineType")]
         [Validation(Required=false)]
@@ -33,17 +21,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("DbName")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string DbName { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public long? ProductId { get; set; }
 
-        [NameInMap("Authed")]
+        [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]
-        public bool? Authed { get; set; }
+        public string ServiceRegionId { get; set; }
 
     }
 

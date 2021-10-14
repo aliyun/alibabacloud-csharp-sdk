@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeRulesRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public int? Category { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("ContentCategory")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public int? ContentCategory { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -25,21 +25,25 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CustomType { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public int? Category { get; set; }
+        public string GroupId { get; set; }
+
+        [NameInMap("KeywordCompatible")]
+        [Validation(Required=false)]
+        public bool? KeywordCompatible { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("RiskLevelId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? RiskLevelId { get; set; }
-
-        [NameInMap("RuleType")]
-        [Validation(Required=false)]
-        public int? RuleType { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
@@ -49,25 +53,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public long? ProductId { get; set; }
 
-        [NameInMap("WarnLevel")]
+        [NameInMap("RiskLevelId")]
         [Validation(Required=false)]
-        public int? WarnLevel { get; set; }
+        public long? RiskLevelId { get; set; }
 
-        [NameInMap("ContentCategory")]
+        [NameInMap("RuleType")]
         [Validation(Required=false)]
-        public int? ContentCategory { get; set; }
+        public int? RuleType { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
-        [NameInMap("KeywordCompatible")]
+        [NameInMap("WarnLevel")]
         [Validation(Required=false)]
-        public bool? KeywordCompatible { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public int? WarnLevel { get; set; }
 
     }
 

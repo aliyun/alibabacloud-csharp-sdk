@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeEventTypesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("EventTypeList")]
         [Validation(Required=false)]
         public List<DescribeEventTypesResponseBodyEventTypeList> EventTypeList { get; set; }
@@ -84,6 +80,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

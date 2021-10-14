@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyRuleStatusRequest : TeaModel {
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
