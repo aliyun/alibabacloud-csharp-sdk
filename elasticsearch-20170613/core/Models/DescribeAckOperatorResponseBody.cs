@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public DescribeAckOperatorResponseBodyResult Result { get; set; }
         public class DescribeAckOperatorResponseBodyResult : TeaModel {
-            [NameInMap("version")]
-            [Validation(Required=false)]
-            public string Version { get; set; }
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+            [NameInMap("version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
         };
 
     }

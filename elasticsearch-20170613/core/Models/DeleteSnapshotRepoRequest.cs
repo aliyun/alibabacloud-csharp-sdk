@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DeleteSnapshotRepoRequest : TeaModel {
-        [NameInMap("repoPath")]
-        [Validation(Required=false)]
-        public string RepoPath { get; set; }
-
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("repoPath")]
+        [Validation(Required=false)]
+        public string RepoPath { get; set; }
 
     }
 

@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public CreateVpcEndpointResponseBodyResult Result { get; set; }
         public class CreateVpcEndpointResponseBodyResult : TeaModel {
-            [NameInMap("serviceId")]
-            [Validation(Required=false)]
-            public string ServiceId { get; set; }
             [NameInMap("endpointDomain")]
             [Validation(Required=false)]
             public string EndpointDomain { get; set; }
@@ -29,6 +26,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("endpointName")]
             [Validation(Required=false)]
             public string EndpointName { get; set; }
+            [NameInMap("serviceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
         };
 
     }

@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
-            [NameInMap("reportId")]
-            [Validation(Required=false)]
-            public string ReportId { get; set; }
-            [NameInMap("state")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-            [NameInMap("instanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
             [NameInMap("diagnoseItems")]
             [Validation(Required=false)]
             public List<DiagnoseInstanceResponseBodyResultDiagnoseItems> DiagnoseItems { get; set; }
             public class DiagnoseInstanceResponseBodyResultDiagnoseItems : TeaModel {
                 public string Item { get; set; }
             }
+            [NameInMap("instanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+            [NameInMap("reportId")]
+            [Validation(Required=false)]
+            public string ReportId { get; set; }
+            [NameInMap("state")]
+            [Validation(Required=false)]
+            public string State { get; set; }
         };
 
     }

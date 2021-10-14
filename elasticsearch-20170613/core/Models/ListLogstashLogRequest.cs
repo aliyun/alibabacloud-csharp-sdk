@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashLogRequest : TeaModel {
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("query")]
-        [Validation(Required=false)]
-        public string Query { get; set; }
-
         [NameInMap("beginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
@@ -29,9 +21,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public int? Page { get; set; }
 
+        [NameInMap("query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

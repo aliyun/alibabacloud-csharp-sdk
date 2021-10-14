@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UntagResourcesRequest : TeaModel {
+        [NameInMap("All")]
+        [Validation(Required=false)]
+        public bool? All { get; set; }
+
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public string ResourceIds { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public string TagKeys { get; set; }
-
-        [NameInMap("All")]
-        [Validation(Required=false)]
-        public bool? All { get; set; }
 
     }
 

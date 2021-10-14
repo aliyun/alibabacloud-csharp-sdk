@@ -17,36 +17,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public DescribeCollectorResponseBodyResult Result { get; set; }
         public class DescribeCollectorResponseBodyResult : TeaModel {
-            [NameInMap("resId")]
+            [NameInMap("collectorPaths")]
             [Validation(Required=false)]
-            public string ResId { get; set; }
-            [NameInMap("gmtUpdateTime")]
-            [Validation(Required=false)]
-            public string GmtUpdateTime { get; set; }
-            [NameInMap("dryRun")]
-            [Validation(Required=false)]
-            public bool? DryRun { get; set; }
-            [NameInMap("ownerId")]
-            [Validation(Required=false)]
-            public string OwnerId { get; set; }
-            [NameInMap("vpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-            [NameInMap("resType")]
-            [Validation(Required=false)]
-            public string ResType { get; set; }
-            [NameInMap("resVersion")]
-            [Validation(Required=false)]
-            public string ResVersion { get; set; }
-            [NameInMap("gmtCreatedTime")]
-            [Validation(Required=false)]
-            public string GmtCreatedTime { get; set; }
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+            public List<string> CollectorPaths { get; set; }
             [NameInMap("configs")]
             [Validation(Required=false)]
             public List<DescribeCollectorResponseBodyResultConfigs> Configs { get; set; }
@@ -54,6 +27,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Content { get; set; }
                 public string FileName { get; set; }
             }
+            [NameInMap("dryRun")]
+            [Validation(Required=false)]
+            public bool? DryRun { get; set; }
             [NameInMap("extendConfigs")]
             [Validation(Required=false)]
             public List<DescribeCollectorResponseBodyResultExtendConfigs> ExtendConfigs { get; set; }
@@ -77,9 +53,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 }
                 public List<string> Hosts { get; set; }
             }
-            [NameInMap("collectorPaths")]
+            [NameInMap("gmtCreatedTime")]
             [Validation(Required=false)]
-            public List<string> CollectorPaths { get; set; }
+            public string GmtCreatedTime { get; set; }
+            [NameInMap("gmtUpdateTime")]
+            [Validation(Required=false)]
+            public string GmtUpdateTime { get; set; }
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("ownerId")]
+            [Validation(Required=false)]
+            public string OwnerId { get; set; }
+            [NameInMap("resId")]
+            [Validation(Required=false)]
+            public string ResId { get; set; }
+            [NameInMap("resType")]
+            [Validation(Required=false)]
+            public string ResType { get; set; }
+            [NameInMap("resVersion")]
+            [Validation(Required=false)]
+            public string ResVersion { get; set; }
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("vpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
         };
 
     }

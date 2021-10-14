@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListNodesRequest : TeaModel {
-        [NameInMap("page")]
-        [Validation(Required=false)]
-        public int? Page { get; set; }
-
-        [NameInMap("size")]
-        [Validation(Required=false)]
-        public int? Size { get; set; }
-
         [NameInMap("ecsInstanceIds")]
         [Validation(Required=false)]
         public string EcsInstanceIds { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("ecsInstanceName")]
         [Validation(Required=false)]
         public string EcsInstanceName { get; set; }
+
+        [NameInMap("page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
+        [NameInMap("size")]
+        [Validation(Required=false)]
+        public int? Size { get; set; }
 
         [NameInMap("tags")]
         [Validation(Required=false)]

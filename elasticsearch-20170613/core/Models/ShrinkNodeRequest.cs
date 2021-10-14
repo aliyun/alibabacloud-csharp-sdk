@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ShrinkNodeRequest : TeaModel {
-        [NameInMap("nodeType")]
-        [Validation(Required=false)]
-        public string NodeType { get; set; }
-
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("ignoreStatus")]
         [Validation(Required=false)]
         public bool? IgnoreStatus { get; set; }
+
+        [NameInMap("nodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
 
     }
 
