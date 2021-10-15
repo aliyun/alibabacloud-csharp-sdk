@@ -131,5 +131,99 @@ namespace AlibabaCloud.SDK.Aliyunape20210908
             return await ExecuteWithOptionsAsync(request, runtime);
         }
 
+        public WeathermonitorProvinceHourResponse WeathermonitorProvinceHourWithOptions(WeathermonitorProvinceHourRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            WeathermonitorProvinceHourShrinkRequest request = new WeathermonitorProvinceHourShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtendParam))
+            {
+                request.ExtendParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtendParam, "ExtendParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServiceParam))
+            {
+                request.ServiceParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServiceParam, "ServiceParam", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppName"] = request.AppName;
+            query["Channel"] = request.Channel;
+            query["ExtendParam"] = request.ExtendParamShrink;
+            query["OrderId"] = request.OrderId;
+            query["RequestId"] = request.RequestId;
+            query["ServiceParam"] = request.ServiceParamShrink;
+            query["UserId"] = request.UserId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WeathermonitorProvinceHour",
+                Version = "2021-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WeathermonitorProvinceHourResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<WeathermonitorProvinceHourResponse> WeathermonitorProvinceHourWithOptionsAsync(WeathermonitorProvinceHourRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            WeathermonitorProvinceHourShrinkRequest request = new WeathermonitorProvinceHourShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExtendParam))
+            {
+                request.ExtendParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtendParam, "ExtendParam", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServiceParam))
+            {
+                request.ServiceParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServiceParam, "ServiceParam", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppName"] = request.AppName;
+            query["Channel"] = request.Channel;
+            query["ExtendParam"] = request.ExtendParamShrink;
+            query["OrderId"] = request.OrderId;
+            query["RequestId"] = request.RequestId;
+            query["ServiceParam"] = request.ServiceParamShrink;
+            query["UserId"] = request.UserId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WeathermonitorProvinceHour",
+                Version = "2021-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WeathermonitorProvinceHourResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public WeathermonitorProvinceHourResponse WeathermonitorProvinceHour(WeathermonitorProvinceHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WeathermonitorProvinceHourWithOptions(request, runtime);
+        }
+
+        public async Task<WeathermonitorProvinceHourResponse> WeathermonitorProvinceHourAsync(WeathermonitorProvinceHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WeathermonitorProvinceHourWithOptionsAsync(request, runtime);
+        }
+
     }
 }

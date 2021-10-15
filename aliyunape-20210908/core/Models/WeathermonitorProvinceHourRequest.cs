@@ -8,27 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
-    public class ExecuteResponseBody : TeaModel {
+    public class WeathermonitorProvinceHourRequest : TeaModel {
         /// <summary>
-        /// code
+        /// appName
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string AppName { get; set; }
 
         /// <summary>
-        /// data
+        /// 渠道名称
         /// </summary>
-        [NameInMap("Data")]
+        [NameInMap("Channel")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Data { get; set; }
+        public string Channel { get; set; }
 
         /// <summary>
-        /// message
+        /// 扩展参数
         /// </summary>
-        [NameInMap("Message")]
+        [NameInMap("ExtendParam")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public Dictionary<string, string> ExtendParam { get; set; }
+
+        /// <summary>
+        /// orderId
+        /// </summary>
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
 
         /// <summary>
         /// requestId
@@ -38,18 +45,18 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// rt
+        /// 请求参数
         /// </summary>
-        [NameInMap("Rt")]
+        [NameInMap("ServiceParam")]
         [Validation(Required=false)]
-        public long? Rt { get; set; }
+        public Dictionary<string, string> ServiceParam { get; set; }
 
         /// <summary>
-        /// success
+        /// UserId
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public long? UserId { get; set; }
 
     }
 
