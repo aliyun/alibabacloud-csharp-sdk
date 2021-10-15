@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListCollectorsRequest : TeaModel {
-        [NameInMap("instanceId")]
+        [NameInMap("resId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string ResId { get; set; }
 
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("instanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
-
-        [NameInMap("resId")]
-        [Validation(Required=false)]
-        public string ResId { get; set; }
 
         [NameInMap("size")]
         [Validation(Required=false)]

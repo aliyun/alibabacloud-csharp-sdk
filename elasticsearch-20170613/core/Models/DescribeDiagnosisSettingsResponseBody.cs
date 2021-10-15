@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public DescribeDiagnosisSettingsResponseBodyResult Result { get; set; }
         public class DescribeDiagnosisSettingsResponseBodyResult : TeaModel {
-            [NameInMap("scene")]
-            [Validation(Required=false)]
-            public string Scene { get; set; }
             [NameInMap("updateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
+            [NameInMap("scene")]
+            [Validation(Required=false)]
+            public string Scene { get; set; }
         };
 
     }

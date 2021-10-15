@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public ListDictInformationResponseBodyResult Result { get; set; }
         public class ListDictInformationResponseBodyResult : TeaModel {
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
             [NameInMap("fileSize")]
             [Validation(Required=false)]
             public long? FileSize { get; set; }
@@ -24,6 +27,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public ListDictInformationResponseBodyResultOssObject OssObject { get; set; }
             public class ListDictInformationResponseBodyResultOssObject : TeaModel {
+                [NameInMap("key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
                 [NameInMap("bucketName")]
                 [Validation(Required=false)]
                 public string BucketName { get; set; }
@@ -32,14 +39,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public string Etag { get; set; }
 
-                [NameInMap("key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
             }
-            [NameInMap("type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
         };
 
     }

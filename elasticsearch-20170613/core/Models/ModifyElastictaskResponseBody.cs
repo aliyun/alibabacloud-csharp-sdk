@@ -21,50 +21,50 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public ModifyElastictaskResponseBodyResultElasticExpansionTask ElasticExpansionTask { get; set; }
             public class ModifyElastictaskResponseBodyResultElasticExpansionTask : TeaModel {
-                [NameInMap("cronExpression")]
+                [NameInMap("triggerType")]
                 [Validation(Required=false)]
-                public string CronExpression { get; set; }
-
-                [NameInMap("elasticNodeCount")]
-                [Validation(Required=false)]
-                public int? ElasticNodeCount { get; set; }
+                public string TriggerType { get; set; }
 
                 [NameInMap("replicaCount")]
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
 
+                [NameInMap("elasticNodeCount")]
+                [Validation(Required=false)]
+                public int? ElasticNodeCount { get; set; }
+
+                [NameInMap("cronExpression")]
+                [Validation(Required=false)]
+                public string CronExpression { get; set; }
+
                 [NameInMap("targetIndices")]
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
-
-                [NameInMap("triggerType")]
-                [Validation(Required=false)]
-                public string TriggerType { get; set; }
 
             }
             [NameInMap("elasticShrinkTask")]
             [Validation(Required=false)]
             public ModifyElastictaskResponseBodyResultElasticShrinkTask ElasticShrinkTask { get; set; }
             public class ModifyElastictaskResponseBodyResultElasticShrinkTask : TeaModel {
-                [NameInMap("cronExpression")]
+                [NameInMap("triggerType")]
                 [Validation(Required=false)]
-                public string CronExpression { get; set; }
-
-                [NameInMap("elasticNodeCount")]
-                [Validation(Required=false)]
-                public int? ElasticNodeCount { get; set; }
+                public string TriggerType { get; set; }
 
                 [NameInMap("replicaCount")]
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
 
+                [NameInMap("elasticNodeCount")]
+                [Validation(Required=false)]
+                public int? ElasticNodeCount { get; set; }
+
+                [NameInMap("cronExpression")]
+                [Validation(Required=false)]
+                public string CronExpression { get; set; }
+
                 [NameInMap("targetIndices")]
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
-
-                [NameInMap("triggerType")]
-                [Validation(Required=false)]
-                public string TriggerType { get; set; }
 
             }
         };

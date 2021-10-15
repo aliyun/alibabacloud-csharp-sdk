@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

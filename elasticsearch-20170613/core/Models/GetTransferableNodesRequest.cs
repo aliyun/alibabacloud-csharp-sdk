@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetTransferableNodesRequest : TeaModel {
-        [NameInMap("count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
-
         [NameInMap("nodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
+
+        [NameInMap("count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
 
     }
 

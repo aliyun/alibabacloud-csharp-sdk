@@ -9,37 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceRequest : TeaModel {
+        [NameInMap("page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
+        [NameInMap("size")]
+        [Validation(Required=false)]
+        public int? Size { get; set; }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("esVersion")]
-        [Validation(Required=false)]
-        public string EsVersion { get; set; }
-
-        [NameInMap("instanceCategory")]
-        [Validation(Required=false)]
-        public string InstanceCategory { get; set; }
 
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("page")]
+        [NameInMap("esVersion")]
         [Validation(Required=false)]
-        public int? Page { get; set; }
-
-        [NameInMap("paymentType")]
-        [Validation(Required=false)]
-        public string PaymentType { get; set; }
+        public string EsVersion { get; set; }
 
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("size")]
-        [Validation(Required=false)]
-        public int? Size { get; set; }
 
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -52,6 +44,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("zoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
+
+        [NameInMap("paymentType")]
+        [Validation(Required=false)]
+        public string PaymentType { get; set; }
+
+        [NameInMap("instanceCategory")]
+        [Validation(Required=false)]
+        public string InstanceCategory { get; set; }
 
     }
 

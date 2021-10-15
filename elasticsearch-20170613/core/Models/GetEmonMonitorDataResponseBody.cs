@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<GetEmonMonitorDataResponseBodyResult> Result { get; set; }
@@ -50,10 +54,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Metric { get; set; }
 
         }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

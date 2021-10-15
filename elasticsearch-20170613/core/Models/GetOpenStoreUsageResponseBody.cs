@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public GetOpenStoreUsageResponseBodyResult Result { get; set; }
         public class GetOpenStoreUsageResponseBodyResult : TeaModel {
-            [NameInMap("currentUsage")]
-            [Validation(Required=false)]
-            public long? CurrentUsage { get; set; }
             [NameInMap("lastDayUsage")]
             [Validation(Required=false)]
             public long? LastDayUsage { get; set; }
+            [NameInMap("currentUsage")]
+            [Validation(Required=false)]
+            public long? CurrentUsage { get; set; }
         };
 
     }

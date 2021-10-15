@@ -17,9 +17,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public DescribeDiagnoseReportResponseBodyResult Result { get; set; }
         public class DescribeDiagnoseReportResponseBodyResult : TeaModel {
+            [NameInMap("trigger")]
+            [Validation(Required=false)]
+            public string Trigger { get; set; }
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+            [NameInMap("reportId")]
+            [Validation(Required=false)]
+            public string ReportId { get; set; }
+            [NameInMap("state")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+            [NameInMap("instanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+            [NameInMap("health")]
+            [Validation(Required=false)]
+            public string Health { get; set; }
             [NameInMap("diagnoseItems")]
             [Validation(Required=false)]
             public List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> DiagnoseItems { get; set; }
@@ -50,21 +65,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
                 }
             }
-            [NameInMap("health")]
-            [Validation(Required=false)]
-            public string Health { get; set; }
-            [NameInMap("instanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-            [NameInMap("reportId")]
-            [Validation(Required=false)]
-            public string ReportId { get; set; }
-            [NameInMap("state")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-            [NameInMap("trigger")]
-            [Validation(Required=false)]
-            public string Trigger { get; set; }
         };
 
     }

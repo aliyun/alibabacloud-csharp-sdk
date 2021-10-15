@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RestartInstanceRequest : TeaModel {
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
+
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 

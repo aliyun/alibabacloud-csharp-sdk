@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseReportIdsRequest : TeaModel {
-        [NameInMap("endTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
         [NameInMap("lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("endTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
 
         [NameInMap("page")]
         [Validation(Required=false)]
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
-
-        [NameInMap("startTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
 
         [NameInMap("trigger")]
         [Validation(Required=false)]

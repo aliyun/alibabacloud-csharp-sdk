@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreatePipelinesRequest : TeaModel {
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("trigger")]
         [Validation(Required=false)]
         public bool? Trigger { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 

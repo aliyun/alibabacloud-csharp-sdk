@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public UpdateSnapshotSettingResponseBodyResult Result { get; set; }
         public class UpdateSnapshotSettingResponseBodyResult : TeaModel {
-            [NameInMap("enable")]
-            [Validation(Required=false)]
-            public bool? Enable { get; set; }
             [NameInMap("quartzRegex")]
             [Validation(Required=false)]
             public string QuartzRegex { get; set; }
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
         };
 
     }

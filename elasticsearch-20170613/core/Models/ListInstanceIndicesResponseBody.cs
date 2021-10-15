@@ -9,27 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceIndicesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListInstanceIndicesResponseBodyHeaders Headers { get; set; }
         public class ListInstanceIndicesResponseBodyHeaders : TeaModel {
-            [NameInMap("X-Managed-Count")]
-            [Validation(Required=false)]
-            public int? XManagedCount { get; set; }
             [NameInMap("X-Managed-StorageSize")]
             [Validation(Required=false)]
             public long? XManagedStorageSize { get; set; }
-            [NameInMap("X-OSS-Count")]
+            [NameInMap("X-Managed-Count")]
             [Validation(Required=false)]
-            public int? XOSSCount { get; set; }
+            public int? XManagedCount { get; set; }
             [NameInMap("X-OSS-StorageSize")]
             [Validation(Required=false)]
             public long? XOSSStorageSize { get; set; }
+            [NameInMap("X-OSS-Count")]
+            [Validation(Required=false)]
+            public int? XOSSCount { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]

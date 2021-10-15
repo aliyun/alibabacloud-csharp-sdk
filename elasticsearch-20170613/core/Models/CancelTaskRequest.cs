@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CancelTaskRequest : TeaModel {
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("taskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
+
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 

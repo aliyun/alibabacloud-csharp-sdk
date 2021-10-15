@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListTagResourcesRequest : TeaModel {
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
-        [NameInMap("ResourceIds")]
+        [NameInMap("Size")]
         [Validation(Required=false)]
-        public string ResourceIds { get; set; }
+        public int? Size { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("Size")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public int? Size { get; set; }
+        public string NextToken { get; set; }
+
+        [NameInMap("ResourceIds")]
+        [Validation(Required=false)]
+        public string ResourceIds { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]

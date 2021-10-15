@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public bool? All { get; set; }
 
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("isManaged")]
         [Validation(Required=false)]
         public bool? IsManaged { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("isOpenstore")]
         [Validation(Required=false)]
         public bool? IsOpenstore { get; set; }
-
-        [NameInMap("name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
 
         [NameInMap("page")]
         [Validation(Required=false)]

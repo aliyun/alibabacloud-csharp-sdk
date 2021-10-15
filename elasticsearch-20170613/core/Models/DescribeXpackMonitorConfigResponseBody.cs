@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public DescribeXpackMonitorConfigResponseBodyResult Result { get; set; }
         public class DescribeXpackMonitorConfigResponseBodyResult : TeaModel {
+            [NameInMap("userName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+            [NameInMap("esInstanceId")]
+            [Validation(Required=false)]
+            public string EsInstanceId { get; set; }
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
             [NameInMap("endpoints")]
             [Validation(Required=false)]
             public List<string> Endpoints { get; set; }
-            [NameInMap("esInstanceId")]
-            [Validation(Required=false)]
-            public string EsInstanceId { get; set; }
             [NameInMap("pipelineIds")]
             [Validation(Required=false)]
             public List<string> PipelineIds { get; set; }
-            [NameInMap("userName")]
-            [Validation(Required=false)]
-            public string UserName { get; set; }
         };
 
     }

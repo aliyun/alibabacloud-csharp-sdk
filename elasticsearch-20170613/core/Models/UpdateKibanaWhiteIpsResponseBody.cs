@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public UpdateKibanaWhiteIpsResponseBodyResult Result { get; set; }
         public class UpdateKibanaWhiteIpsResponseBodyResult : TeaModel {
-            [NameInMap("kibanaIPWhitelist")]
-            [Validation(Required=false)]
-            public List<string> KibanaIPWhitelist { get; set; }
             [NameInMap("kibanaPrivateIPWhitelist")]
             [Validation(Required=false)]
             public List<string> KibanaPrivateIPWhitelist { get; set; }
+            [NameInMap("kibanaIPWhitelist")]
+            [Validation(Required=false)]
+            public List<string> KibanaIPWhitelist { get; set; }
         };
 
     }

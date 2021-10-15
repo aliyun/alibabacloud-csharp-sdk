@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ValidateShrinkNodesRequest : TeaModel {
-        [NameInMap("ignoreStatus")]
-        [Validation(Required=false)]
-        public bool? IgnoreStatus { get; set; }
-
         [NameInMap("nodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
+
+        [NameInMap("ignoreStatus")]
+        [Validation(Required=false)]
+        public bool? IgnoreStatus { get; set; }
 
     }
 
