@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class OCRContents : TeaModel {
         /// <summary>
-        /// Language
+        /// Boundary
         /// </summary>
-        [NameInMap("Language")]
+        [NameInMap("Boundary")]
         [Validation(Required=false)]
-        public string Language { get; set; }
-
-        /// <summary>
-        /// Contents
-        /// </summary>
-        [NameInMap("Contents")]
-        [Validation(Required=false)]
-        public string Contents { get; set; }
+        public Boundary Boundary { get; set; }
 
         /// <summary>
         /// Confidence
@@ -31,11 +24,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? Confidence { get; set; }
 
         /// <summary>
-        /// Boundary
+        /// Contents
         /// </summary>
-        [NameInMap("Boundary")]
+        [NameInMap("Contents")]
         [Validation(Required=false)]
-        public Boundary Boundary { get; set; }
+        public string Contents { get; set; }
+
+        /// <summary>
+        /// Language
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
 
     }
 

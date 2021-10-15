@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class WebofficeUser : TeaModel {
         /// <summary>
+        /// 头像
+        /// </summary>
+        [NameInMap("Avatar")]
+        [Validation(Required=false)]
+        public string Avatar { get; set; }
+
+        /// <summary>
         /// Id
         /// </summary>
         [NameInMap("Id")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        /// <summary>
-        /// 头像
-        /// </summary>
-        [NameInMap("Avatar")]
-        [Validation(Required=false)]
-        public string Avatar { get; set; }
 
     }
 

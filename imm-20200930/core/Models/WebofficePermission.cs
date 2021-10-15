@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class WebofficePermission : TeaModel {
         /// <summary>
-        /// 重命名
+        /// 拷贝
         /// </summary>
-        [NameInMap("Rename")]
+        [NameInMap("Copy")]
         [Validation(Required=false)]
-        public bool? Rename { get; set; }
+        public bool? Copy { get; set; }
 
         /// <summary>
-        /// 只读模式
+        /// 导出
         /// </summary>
-        [NameInMap("Readonly")]
+        [NameInMap("Export")]
         [Validation(Required=false)]
-        public bool? Readonly { get; set; }
+        public bool? Export { get; set; }
 
         /// <summary>
         /// 查看历史版本
@@ -38,18 +38,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? Print { get; set; }
 
         /// <summary>
-        /// 导出
+        /// 只读模式
         /// </summary>
-        [NameInMap("Export")]
+        [NameInMap("Readonly")]
         [Validation(Required=false)]
-        public bool? Export { get; set; }
+        public bool? Readonly { get; set; }
 
         /// <summary>
-        /// 拷贝
+        /// 重命名
         /// </summary>
-        [NameInMap("Copy")]
+        [NameInMap("Rename")]
         [Validation(Required=false)]
-        public bool? Copy { get; set; }
+        public bool? Rename { get; set; }
 
     }
 

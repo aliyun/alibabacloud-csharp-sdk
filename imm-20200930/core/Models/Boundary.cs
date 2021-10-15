@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Boundary : TeaModel {
         /// <summary>
-        /// Width
-        /// </summary>
-        [NameInMap("Width")]
-        [Validation(Required=false)]
-        public long? Width { get; set; }
-
-        /// <summary>
         /// Height
         /// </summary>
         [NameInMap("Height")]
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Top")]
         [Validation(Required=false)]
         public long? Top { get; set; }
+
+        /// <summary>
+        /// Width
+        /// </summary>
+        [NameInMap("Width")]
+        [Validation(Required=false)]
+        public long? Width { get; set; }
 
     }
 

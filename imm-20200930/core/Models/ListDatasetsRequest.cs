@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListDatasetsRequest : TeaModel {
         /// <summary>
-        /// 项目名称
-        /// </summary>
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
-
-        /// <summary>
         /// 返回最大个数
         /// </summary>
         [NameInMap("MaxResults")]
@@ -33,6 +26,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Prefix")]
         [Validation(Required=false)]
         public string Prefix { get; set; }
+
+        /// <summary>
+        /// 项目名称
+        /// </summary>
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
 
     }
 

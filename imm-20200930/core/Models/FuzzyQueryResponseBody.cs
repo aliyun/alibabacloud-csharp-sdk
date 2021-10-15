@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class FuzzyQueryResponseBody : TeaModel {
+        [NameInMap("Files")]
+        [Validation(Required=false)]
+        public List<File> Files { get; set; }
+
         /// <summary>
         /// 表示当前调用返回读取到的位置，空代表数据已经读取完毕
         /// </summary>
@@ -22,10 +26,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Files")]
-        [Validation(Required=false)]
-        public List<File> Files { get; set; }
 
     }
 

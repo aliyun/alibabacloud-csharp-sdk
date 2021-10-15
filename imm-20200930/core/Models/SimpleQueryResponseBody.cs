@@ -10,27 +10,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class SimpleQueryResponseBody : TeaModel {
         /// <summary>
-        /// 表示当前调用返回读取到的位置，空代表数据已经读取完毕
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
-        /// 本次请求的唯一 Id
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 文件列表
-        /// </summary>
-        [NameInMap("Files")]
-        [Validation(Required=false)]
-        public List<File> Files { get; set; }
-
-        /// <summary>
         /// 聚合字段的字段名
         /// </summary>
         [NameInMap("Aggregations")]
@@ -82,6 +61,27 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             }
 
         }
+
+        /// <summary>
+        /// 文件列表
+        /// </summary>
+        [NameInMap("Files")]
+        [Validation(Required=false)]
+        public List<File> Files { get; set; }
+
+        /// <summary>
+        /// 表示当前调用返回读取到的位置，空代表数据已经读取完毕
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 本次请求的唯一 Id
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

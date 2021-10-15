@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class AssumeRoleChainNode : TeaModel {
         /// <summary>
-        /// 账号类型，普通账号填 user，服务账号填 service
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        /// <summary>
         /// 账号id
         /// </summary>
         [NameInMap("OwnerId")]
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
+
+        /// <summary>
+        /// 账号类型，普通账号填 user，服务账号填 service
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

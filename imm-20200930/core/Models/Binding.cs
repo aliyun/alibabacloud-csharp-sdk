@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Binding : TeaModel {
         /// <summary>
-        /// ProjectName
+        /// CreateTime
         /// </summary>
-        [NameInMap("ProjectName")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string ProjectName { get; set; }
+        public string CreateTime { get; set; }
 
         /// <summary>
         /// DatasetName
@@ -24,18 +24,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// URI
+        /// Detail
         /// </summary>
-        [NameInMap("URI")]
+        [NameInMap("Detail")]
         [Validation(Required=false)]
-        public string URI { get; set; }
-
-        /// <summary>
-        /// State
-        /// </summary>
-        [NameInMap("State")]
-        [Validation(Required=false)]
-        public string State { get; set; }
+        public string Detail { get; set; }
 
         /// <summary>
         /// Phase
@@ -45,18 +38,25 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// Detail
+        /// ProjectName
         /// </summary>
-        [NameInMap("Detail")]
+        [NameInMap("ProjectName")]
         [Validation(Required=false)]
-        public string Detail { get; set; }
+        public string ProjectName { get; set; }
 
         /// <summary>
-        /// CreateTime
+        /// State
         /// </summary>
-        [NameInMap("CreateTime")]
+        [NameInMap("State")]
         [Validation(Required=false)]
-        public string CreateTime { get; set; }
+        public string State { get; set; }
+
+        /// <summary>
+        /// URI
+        /// </summary>
+        [NameInMap("URI")]
+        [Validation(Required=false)]
+        public string URI { get; set; }
 
         /// <summary>
         /// UpdateTime

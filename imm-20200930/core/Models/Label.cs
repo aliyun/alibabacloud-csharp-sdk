@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Label : TeaModel {
         /// <summary>
-        /// Language
+        /// LabelConfidence
         /// </summary>
-        [NameInMap("Language")]
+        [NameInMap("LabelConfidence")]
         [Validation(Required=false)]
-        public string Language { get; set; }
-
-        /// <summary>
-        /// LabelName
-        /// </summary>
-        [NameInMap("LabelName")]
-        [Validation(Required=false)]
-        public string LabelName { get; set; }
+        public float? LabelConfidence { get; set; }
 
         /// <summary>
         /// LabelLevel
@@ -31,11 +24,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? LabelLevel { get; set; }
 
         /// <summary>
-        /// LabelConfidence
+        /// LabelName
         /// </summary>
-        [NameInMap("LabelConfidence")]
+        [NameInMap("LabelName")]
         [Validation(Required=false)]
-        public float? LabelConfidence { get; set; }
+        public string LabelName { get; set; }
+
+        /// <summary>
+        /// Language
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
 
     }
 

@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Image : TeaModel {
         /// <summary>
-        /// ImageWidth
+        /// CroppingSuggestions
         /// </summary>
-        [NameInMap("ImageWidth")]
+        [NameInMap("CroppingSuggestions")]
         [Validation(Required=false)]
-        public long? ImageWidth { get; set; }
-
-        /// <summary>
-        /// ImageHeight
-        /// </summary>
-        [NameInMap("ImageHeight")]
-        [Validation(Required=false)]
-        public long? ImageHeight { get; set; }
+        public List<CroppingSuggestion> CroppingSuggestions { get; set; }
 
         /// <summary>
         /// EXIF
@@ -30,16 +23,23 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string EXIF { get; set; }
 
+        /// <summary>
+        /// ImageHeight
+        /// </summary>
+        [NameInMap("ImageHeight")]
+        [Validation(Required=false)]
+        public long? ImageHeight { get; set; }
+
         [NameInMap("ImageScore")]
         [Validation(Required=false)]
         public ImageScore ImageScore { get; set; }
 
         /// <summary>
-        /// CroppingSuggestions
+        /// ImageWidth
         /// </summary>
-        [NameInMap("CroppingSuggestions")]
+        [NameInMap("ImageWidth")]
         [Validation(Required=false)]
-        public List<CroppingSuggestion> CroppingSuggestions { get; set; }
+        public long? ImageWidth { get; set; }
 
         /// <summary>
         /// OCRContents

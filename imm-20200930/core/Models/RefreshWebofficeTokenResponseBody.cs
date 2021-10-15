@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class RefreshWebofficeTokenResponseBody : TeaModel {
         /// <summary>
-        /// 请求 Id
+        /// access token
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("AccessToken")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AccessToken { get; set; }
+
+        /// <summary>
+        /// access token 过期时间
+        /// </summary>
+        [NameInMap("AccessTokenExpiredTime")]
+        [Validation(Required=false)]
+        public string AccessTokenExpiredTime { get; set; }
 
         /// <summary>
         /// refresh token
@@ -24,13 +31,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RefreshToken { get; set; }
 
         /// <summary>
-        /// access token
-        /// </summary>
-        [NameInMap("AccessToken")]
-        [Validation(Required=false)]
-        public string AccessToken { get; set; }
-
-        /// <summary>
         /// refresh token 过期时间
         /// </summary>
         [NameInMap("RefreshTokenExpiredTime")]
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RefreshTokenExpiredTime { get; set; }
 
         /// <summary>
-        /// access token 过期时间
+        /// 请求 Id
         /// </summary>
-        [NameInMap("AccessTokenExpiredTime")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AccessTokenExpiredTime { get; set; }
+        public string RequestId { get; set; }
 
     }
 

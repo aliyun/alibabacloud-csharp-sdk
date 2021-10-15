@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -20,13 +17,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Field { get; set; }
 
         /// <summary>
-        /// 需要查询的字段值
-        /// </summary>
-        [NameInMap("Value")]
-        [Validation(Required=false)]
-        public string Value { get; set; }
-
-        /// <summary>
         /// 运算符
         /// </summary>
         [NameInMap("Operation")]
@@ -39,6 +29,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("SubQueries")]
         [Validation(Required=false)]
         public List<SimpleQuery> SubQueries { get; set; }
+
+        /// <summary>
+        /// 需要查询的字段值
+        /// </summary>
+        [NameInMap("Value")]
+        [Validation(Required=false)]
+        public string Value { get; set; }
 
     }
 

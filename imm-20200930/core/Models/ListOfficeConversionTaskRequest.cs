@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListOfficeConversionTaskRequest : TeaModel {
         /// <summary>
-        /// 项目名称
-        /// </summary>
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
-
-        /// <summary>
         /// 最大结果数
         /// </summary>
         [NameInMap("MaxResults")]
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// 项目名称
+        /// </summary>
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
 
     }
 

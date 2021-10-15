@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateBindingRequest : TeaModel {
         /// <summary>
-        /// ProjectName
-        /// </summary>
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
-
-        /// <summary>
         /// DatasetName
         /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
+
+        /// <summary>
+        /// ProjectName
+        /// </summary>
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
 
         /// <summary>
         /// URI

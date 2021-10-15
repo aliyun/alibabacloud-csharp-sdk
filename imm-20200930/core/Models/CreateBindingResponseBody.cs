@@ -9,16 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateBindingResponseBody : TeaModel {
+        [NameInMap("Binding")]
+        [Validation(Required=false)]
+        public Binding Binding { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Binding")]
-        [Validation(Required=false)]
-        public Binding Binding { get; set; }
 
     }
 

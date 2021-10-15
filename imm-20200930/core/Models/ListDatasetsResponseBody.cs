@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListDatasetsResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// Datasets
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Datasets")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<Dataset> Datasets { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// Datasets
+        /// Id of the request
         /// </summary>
-        [NameInMap("Datasets")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<Dataset> Datasets { get; set; }
+        public string RequestId { get; set; }
 
     }
 

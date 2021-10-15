@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Face : TeaModel {
         /// <summary>
-        /// FaceId
-        /// </summary>
-        [NameInMap("FaceId")]
-        [Validation(Required=false)]
-        public string FaceId { get; set; }
-
-        /// <summary>
-        /// FaceConfidence
-        /// </summary>
-        [NameInMap("FaceConfidence")]
-        [Validation(Required=false)]
-        public float? FaceConfidence { get; set; }
-
-        /// <summary>
         /// Age
         /// </summary>
         [NameInMap("Age")]
@@ -38,18 +24,36 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? AgeConfidence { get; set; }
 
         /// <summary>
-        /// Gender
+        /// Beard
         /// </summary>
-        [NameInMap("Gender")]
+        [NameInMap("Beard")]
         [Validation(Required=false)]
-        public string Gender { get; set; }
+        public string Beard { get; set; }
 
         /// <summary>
-        /// GenderConfidence
+        /// BeardConfidence
         /// </summary>
-        [NameInMap("GenderConfidence")]
+        [NameInMap("BeardConfidence")]
         [Validation(Required=false)]
-        public float? GenderConfidence { get; set; }
+        public float? BeardConfidence { get; set; }
+
+        [NameInMap("Boundary")]
+        [Validation(Required=false)]
+        public Boundary Boundary { get; set; }
+
+        /// <summary>
+        /// EmbeddingsFloat32
+        /// </summary>
+        [NameInMap("EmbeddingsFloat32")]
+        [Validation(Required=false)]
+        public List<float?> EmbeddingsFloat32 { get; set; }
+
+        /// <summary>
+        /// EmbeddingsInt8
+        /// </summary>
+        [NameInMap("EmbeddingsInt8")]
+        [Validation(Required=false)]
+        public List<int?> EmbeddingsInt8 { get; set; }
 
         /// <summary>
         /// Emotion
@@ -73,74 +77,32 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FaceClusterId { get; set; }
 
         /// <summary>
-        /// Mouth
+        /// FaceConfidence
         /// </summary>
-        [NameInMap("Mouth")]
+        [NameInMap("FaceConfidence")]
         [Validation(Required=false)]
-        public string Mouth { get; set; }
+        public float? FaceConfidence { get; set; }
 
         /// <summary>
-        /// MouthConfidence
+        /// FaceId
         /// </summary>
-        [NameInMap("MouthConfidence")]
+        [NameInMap("FaceId")]
         [Validation(Required=false)]
-        public float? MouthConfidence { get; set; }
+        public string FaceId { get; set; }
 
         /// <summary>
-        /// Beard
+        /// Gender
         /// </summary>
-        [NameInMap("Beard")]
+        [NameInMap("Gender")]
         [Validation(Required=false)]
-        public string Beard { get; set; }
+        public string Gender { get; set; }
 
         /// <summary>
-        /// BeardConfidence
+        /// GenderConfidence
         /// </summary>
-        [NameInMap("BeardConfidence")]
+        [NameInMap("GenderConfidence")]
         [Validation(Required=false)]
-        public float? BeardConfidence { get; set; }
-
-        /// <summary>
-        /// Hat
-        /// </summary>
-        [NameInMap("Hat")]
-        [Validation(Required=false)]
-        public string Hat { get; set; }
-
-        /// <summary>
-        /// HatConfidence
-        /// </summary>
-        [NameInMap("HatConfidence")]
-        [Validation(Required=false)]
-        public float? HatConfidence { get; set; }
-
-        /// <summary>
-        /// Race
-        /// </summary>
-        [NameInMap("Race")]
-        [Validation(Required=false)]
-        public string Race { get; set; }
-
-        /// <summary>
-        /// RaceConfidence
-        /// </summary>
-        [NameInMap("RaceConfidence")]
-        [Validation(Required=false)]
-        public float? RaceConfidence { get; set; }
-
-        /// <summary>
-        /// Mask
-        /// </summary>
-        [NameInMap("Mask")]
-        [Validation(Required=false)]
-        public string Mask { get; set; }
-
-        /// <summary>
-        /// MaskConfidence
-        /// </summary>
-        [NameInMap("MaskConfidence")]
-        [Validation(Required=false)]
-        public float? MaskConfidence { get; set; }
+        public float? GenderConfidence { get; set; }
 
         /// <summary>
         /// Glasses
@@ -157,6 +119,24 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? GlassesConfidence { get; set; }
 
         /// <summary>
+        /// Hat
+        /// </summary>
+        [NameInMap("Hat")]
+        [Validation(Required=false)]
+        public string Hat { get; set; }
+
+        /// <summary>
+        /// HatConfidence
+        /// </summary>
+        [NameInMap("HatConfidence")]
+        [Validation(Required=false)]
+        public float? HatConfidence { get; set; }
+
+        [NameInMap("HeadPose")]
+        [Validation(Required=false)]
+        public HeadPose HeadPose { get; set; }
+
+        /// <summary>
         /// LeftEye
         /// </summary>
         [NameInMap("LeftEye")]
@@ -171,6 +151,48 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? LeftEyeConfidence { get; set; }
 
         /// <summary>
+        /// Mask
+        /// </summary>
+        [NameInMap("Mask")]
+        [Validation(Required=false)]
+        public string Mask { get; set; }
+
+        /// <summary>
+        /// MaskConfidence
+        /// </summary>
+        [NameInMap("MaskConfidence")]
+        [Validation(Required=false)]
+        public float? MaskConfidence { get; set; }
+
+        /// <summary>
+        /// Mouth
+        /// </summary>
+        [NameInMap("Mouth")]
+        [Validation(Required=false)]
+        public string Mouth { get; set; }
+
+        /// <summary>
+        /// MouthConfidence
+        /// </summary>
+        [NameInMap("MouthConfidence")]
+        [Validation(Required=false)]
+        public float? MouthConfidence { get; set; }
+
+        /// <summary>
+        /// Race
+        /// </summary>
+        [NameInMap("Race")]
+        [Validation(Required=false)]
+        public string Race { get; set; }
+
+        /// <summary>
+        /// RaceConfidence
+        /// </summary>
+        [NameInMap("RaceConfidence")]
+        [Validation(Required=false)]
+        public float? RaceConfidence { get; set; }
+
+        /// <summary>
         /// RightEye
         /// </summary>
         [NameInMap("RightEye")]
@@ -183,28 +205,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("RightEyeConfidence")]
         [Validation(Required=false)]
         public float? RightEyeConfidence { get; set; }
-
-        [NameInMap("HeadPose")]
-        [Validation(Required=false)]
-        public HeadPose HeadPose { get; set; }
-
-        [NameInMap("Boundary")]
-        [Validation(Required=false)]
-        public Boundary Boundary { get; set; }
-
-        /// <summary>
-        /// EmbeddingsFloat32
-        /// </summary>
-        [NameInMap("EmbeddingsFloat32")]
-        [Validation(Required=false)]
-        public List<float?> EmbeddingsFloat32 { get; set; }
-
-        /// <summary>
-        /// EmbeddingsInt8
-        /// </summary>
-        [NameInMap("EmbeddingsInt8")]
-        [Validation(Required=false)]
-        public List<int?> EmbeddingsInt8 { get; set; }
 
     }
 

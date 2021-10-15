@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class SubtitleStream : TeaModel {
         /// <summary>
+        /// Content
+        /// </summary>
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
+        /// <summary>
         /// Index
         /// </summary>
         [NameInMap("Index")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
-
-        /// <summary>
-        /// Content
-        /// </summary>
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
 
     }
 

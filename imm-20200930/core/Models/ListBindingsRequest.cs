@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListBindingsRequest : TeaModel {
-        /// <summary>
-        /// A short description of struct
-        /// </summary>
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
-
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
@@ -27,6 +20,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// A short description of struct
+        /// </summary>
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
 
     }
 
