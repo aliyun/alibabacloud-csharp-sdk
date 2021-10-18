@@ -31,35 +31,35 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// station全国（入参单一站点）
+        /// 全国（入参单一站点）
         /// </summary>
         [NameInMap("Station")]
         [Validation(Required=false)]
         public string Station { get; set; }
 
         /// <summary>
-        /// pageSize是	页面条数
+        /// pageSize
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// startTimeyyyymmddhh0000（当startTime为空时无数据产出，确认是否入参）
+        /// startTime
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public int? StartTime { get; set; }
+        public string StartTime { get; set; }
 
         /// <summary>
-        /// endTimeyyyymmddhh0000 （当endTime为空时无数据产出，确认是否入参）
+        /// endTime
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public int? EndTime { get; set; }
+        public string EndTime { get; set; }
 
         /// <summary>
-        /// pageNum页码数
+        /// pageNum
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
