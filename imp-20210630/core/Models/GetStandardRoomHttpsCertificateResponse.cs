@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class CreateIceProjectResponse : TeaModel {
+    public class GetStandardRoomHttpsCertificateResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateIceProjectResponseBody Body { get; set; }
+        public GetStandardRoomHttpsCertificateResponseBody Body { get; set; }
 
     }
 

@@ -8,21 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class CreateIceProjectResponseBody : TeaModel {
+    public class DeleteCommentResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
+        /// 请求ID。
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 调用删除直播间弹幕的返回结果。
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public CreateIceProjectResponseBodyResult Result { get; set; }
-        public class CreateIceProjectResponseBodyResult : TeaModel {
-            [NameInMap("ProjectId")]
+        public DeleteCommentResponseBodyResult Result { get; set; }
+        public class DeleteCommentResponseBodyResult : TeaModel {
+            [NameInMap("DeleteResult")]
             [Validation(Required=false)]
-            public string ProjectId { get; set; }
+            public bool? DeleteResult { get; set; }
         };
 
     }

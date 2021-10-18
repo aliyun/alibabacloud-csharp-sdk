@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class GetClassDetailResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// 请求ID。
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -44,6 +44,21 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
+            [NameInMap("RoomId")]
+            [Validation(Required=false)]
+            public string RoomId { get; set; }
+            [NameInMap("LiveId")]
+            [Validation(Required=false)]
+            public string LiveId { get; set; }
+            [NameInMap("ConfId")]
+            [Validation(Required=false)]
+            public string ConfId { get; set; }
+            [NameInMap("WhiteboardId")]
+            [Validation(Required=false)]
+            public string WhiteboardId { get; set; }
+            [NameInMap("WhiteboardRecordId")]
+            [Validation(Required=false)]
+            public string WhiteboardRecordId { get; set; }
         };
 
     }

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class RegisterIceOssMediaResponse : TeaModel {
+    public class DeleteCommentResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public RegisterIceOssMediaResponseBody Body { get; set; }
+        public DeleteCommentResponseBody Body { get; set; }
 
     }
 
