@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
-    public class ExecuteResponseBody : TeaModel {
+    public class StationDayRequest : TeaModel {
         /// <summary>
-        /// rt
+        /// UserId
         /// </summary>
-        [NameInMap("Rt")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public long? Rt { get; set; }
+        public long? UserId { get; set; }
 
         /// <summary>
-        /// message
+        /// 用户中心--我的订单--订单请求--实例名称：aliyunape_meteor12_public_cn-0ju2d2hh90b
         /// </summary>
-        [NameInMap("Message")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string OrderId { get; set; }
 
         /// <summary>
         /// requestId
@@ -31,25 +31,18 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// data
+        /// 气象预测开始时间
         /// </summary>
-        [NameInMap("Data")]
+        [NameInMap("StartForecast")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Data { get; set; }
+        public string StartForecast { get; set; }
 
         /// <summary>
-        /// code
+        /// 全国站点（入参单一站点）
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("Station")]
         [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// success
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Station { get; set; }
 
     }
 

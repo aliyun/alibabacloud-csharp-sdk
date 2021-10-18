@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
-    public class ExecuteResponseBody : TeaModel {
+    public class WeathermonitorRequest : TeaModel {
         /// <summary>
-        /// rt
+        /// UserId
         /// </summary>
-        [NameInMap("Rt")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public long? Rt { get; set; }
+        public long? UserId { get; set; }
 
         /// <summary>
-        /// message
+        /// 用户中心--我的订单--订单请求--实例名称：aliyunape_meteor12_public_cn-0ju2d2hh90b
         /// </summary>
-        [NameInMap("Message")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string OrderId { get; set; }
 
         /// <summary>
         /// requestId
@@ -31,25 +31,25 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// data
+        /// 页面条数
         /// </summary>
-        [NameInMap("Data")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Data { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
-        /// code
+        /// 气象实况时间 yyyymmddhh0000 （数据最小时间2021-08-16）（小时）	20210817120000
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("CurHour")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string CurHour { get; set; }
 
         /// <summary>
-        /// success
+        /// 页码
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public int? PageNum { get; set; }
 
     }
 

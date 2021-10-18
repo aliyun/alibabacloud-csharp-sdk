@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
     public class WeathermonitorProvinceHourResponseBody : TeaModel {
         /// <summary>
-        /// code
+        /// rt
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("Rt")]
         [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// data
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> Data { get; set; }
+        public long? Rt { get; set; }
 
         /// <summary>
         /// message
@@ -38,11 +31,18 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// rt
+        /// data
         /// </summary>
-        [NameInMap("Rt")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public long? Rt { get; set; }
+        public List<Dictionary<string, object>> Data { get; set; }
+
+        /// <summary>
+        /// code
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
 
         /// <summary>
         /// success

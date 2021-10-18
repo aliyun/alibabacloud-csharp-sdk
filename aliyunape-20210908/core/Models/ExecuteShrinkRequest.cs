@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
     public class ExecuteShrinkRequest : TeaModel {
         /// <summary>
-        /// appName
+        /// aliyunPk
         /// </summary>
-        [NameInMap("AppName")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public long? UserId { get; set; }
 
         /// <summary>
-        /// source
+        /// serviceParam
         /// </summary>
-        [NameInMap("Channel")]
+        [NameInMap("ServiceParam")]
         [Validation(Required=false)]
-        public string Channel { get; set; }
+        public string ServiceParamShrink { get; set; }
 
         /// <summary>
         /// extendParam
@@ -38,6 +38,13 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// appName
+        /// </summary>
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
+        /// <summary>
         /// requestId
         /// </summary>
         [NameInMap("RequestId")]
@@ -45,18 +52,11 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// serviceParam
+        /// source
         /// </summary>
-        [NameInMap("ServiceParam")]
+        [NameInMap("Channel")]
         [Validation(Required=false)]
-        public string ServiceParamShrink { get; set; }
-
-        /// <summary>
-        /// aliyunPk
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public string Channel { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
-    public class ExecuteResponseBody : TeaModel {
+    public class WeathermonitorResponseBody : TeaModel {
         /// <summary>
         /// rt
         /// </summary>

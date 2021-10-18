@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
     public class WeathermonitorProvinceHourShrinkRequest : TeaModel {
         /// <summary>
-        /// appName
+        /// UserId
         /// </summary>
-        [NameInMap("AppName")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public long? UserId { get; set; }
 
         /// <summary>
-        /// 渠道名称
+        /// 请求参数
         /// </summary>
-        [NameInMap("Channel")]
+        [NameInMap("ServiceParam")]
         [Validation(Required=false)]
-        public string Channel { get; set; }
+        public string ServiceParamShrink { get; set; }
 
         /// <summary>
         /// 扩展参数
@@ -38,6 +38,13 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// appName
+        /// </summary>
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
+        /// <summary>
         /// requestId
         /// </summary>
         [NameInMap("RequestId")]
@@ -45,18 +52,11 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 请求参数
+        /// 渠道名称
         /// </summary>
-        [NameInMap("ServiceParam")]
+        [NameInMap("Channel")]
         [Validation(Required=false)]
-        public string ServiceParamShrink { get; set; }
-
-        /// <summary>
-        /// UserId
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public string Channel { get; set; }
 
     }
 
