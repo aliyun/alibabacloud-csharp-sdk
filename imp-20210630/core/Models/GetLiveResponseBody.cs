@@ -80,6 +80,28 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("UserDefineField")]
             [Validation(Required=false)]
             public string UserDefineField { get; set; }
+            [NameInMap("HlsUrl")]
+            [Validation(Required=false)]
+            public string HlsUrl { get; set; }
+            [NameInMap("ArtcInfo")]
+            [Validation(Required=false)]
+            public GetLiveResponseBodyResultArtcInfo ArtcInfo { get; set; }
+            public class GetLiveResponseBodyResultArtcInfo : TeaModel {
+                /// <summary>
+                /// 源码地址
+                /// </summary>
+                [NameInMap("ArtcUrl")]
+                [Validation(Required=false)]
+                public string ArtcUrl { get; set; }
+
+                /// <summary>
+                /// 原画转码地址
+                /// </summary>
+                [NameInMap("ArtcH5Url")]
+                [Validation(Required=false)]
+                public string ArtcH5Url { get; set; }
+
+            }
         };
 
     }
