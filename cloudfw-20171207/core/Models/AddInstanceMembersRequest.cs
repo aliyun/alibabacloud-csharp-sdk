@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddInstanceMembersRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<AddInstanceMembersRequestMembers> Members { get; set; }

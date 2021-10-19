@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public List<DescribeAssetListResponseBodyAssets> Assets { get; set; }
         public class DescribeAssetListResponseBodyAssets : TeaModel {
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public string RiskLevel { get; set; }
+
             [NameInMap("BindInstanceName")]
             [Validation(Required=false)]
             public string BindInstanceName { get; set; }

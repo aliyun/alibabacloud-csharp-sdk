@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? MemberUid { get; set; }
 
+        [NameInMap("UserType")]
+        [Validation(Required=false)]
+        public string UserType { get; set; }
+
     }
 
 }

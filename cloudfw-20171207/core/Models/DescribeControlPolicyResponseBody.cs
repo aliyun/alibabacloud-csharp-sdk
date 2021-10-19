@@ -33,33 +33,57 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string Direction { get; set; }
 
-            [NameInMap("DestinationGroupType")]
-            [Validation(Required=false)]
-            public string DestinationGroupType { get; set; }
-
-            [NameInMap("HitLastTime")]
-            [Validation(Required=false)]
-            public long? HitLastTime { get; set; }
-
-            [NameInMap("Destination")]
-            [Validation(Required=false)]
-            public string Destination { get; set; }
-
             [NameInMap("Order")]
             [Validation(Required=false)]
             public int? Order { get; set; }
 
-            [NameInMap("DestPortGroup")]
+            [NameInMap("SourceType")]
             [Validation(Required=false)]
-            public string DestPortGroup { get; set; }
+            public string SourceType { get; set; }
 
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
-            [NameInMap("SourceType")]
+            [NameInMap("HitTimes")]
             [Validation(Required=false)]
-            public string SourceType { get; set; }
+            public long? HitTimes { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("SourceGroupType")]
+            [Validation(Required=false)]
+            public string SourceGroupType { get; set; }
+
+            [NameInMap("DnsResultTime")]
+            [Validation(Required=false)]
+            public long? DnsResultTime { get; set; }
+
+            [NameInMap("DnsResult")]
+            [Validation(Required=false)]
+            public string DnsResult { get; set; }
+
+            [NameInMap("Proto")]
+            [Validation(Required=false)]
+            public string Proto { get; set; }
+
+            [NameInMap("DestinationGroupType")]
+            [Validation(Required=false)]
+            public string DestinationGroupType { get; set; }
+
+            [NameInMap("Destination")]
+            [Validation(Required=false)]
+            public string Destination { get; set; }
+
+            [NameInMap("HitLastTime")]
+            [Validation(Required=false)]
+            public long? HitLastTime { get; set; }
+
+            [NameInMap("DestPortGroup")]
+            [Validation(Required=false)]
+            public string DestPortGroup { get; set; }
 
             [NameInMap("AclUuid")]
             [Validation(Required=false)]
@@ -77,10 +101,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string DestinationType { get; set; }
 
-            [NameInMap("HitTimes")]
-            [Validation(Required=false)]
-            public long? HitTimes { get; set; }
-
             [NameInMap("DestPort")]
             [Validation(Required=false)]
             public string DestPort { get; set; }
@@ -88,18 +108,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public int? IpVersion { get; set; }
-
-            [NameInMap("SourceGroupType")]
-            [Validation(Required=false)]
-            public string SourceGroupType { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("DnsResultTime")]
-            [Validation(Required=false)]
-            public long? DnsResultTime { get; set; }
 
             [NameInMap("AclAction")]
             [Validation(Required=false)]
@@ -109,17 +117,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string Release { get; set; }
 
-            [NameInMap("DnsResult")]
-            [Validation(Required=false)]
-            public string DnsResult { get; set; }
-
             [NameInMap("ApplicationId")]
             [Validation(Required=false)]
             public string ApplicationId { get; set; }
-
-            [NameInMap("Proto")]
-            [Validation(Required=false)]
-            public string Proto { get; set; }
 
             [NameInMap("DestinationGroupCidrs")]
             [Validation(Required=false)]

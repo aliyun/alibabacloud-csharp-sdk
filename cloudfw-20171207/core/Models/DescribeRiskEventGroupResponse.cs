@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DescribeInstanceRdAccountsResponse : TeaModel {
+    public class DescribeRiskEventGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeInstanceRdAccountsResponseBody Body { get; set; }
+        public DescribeRiskEventGroupResponseBody Body { get; set; }
 
     }
 
