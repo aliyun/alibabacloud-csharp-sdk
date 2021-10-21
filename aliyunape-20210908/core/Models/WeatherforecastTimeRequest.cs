@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string Lon { get; set; }
 
         /// <summary>
-        /// 20210809090000
+        /// yyyymmddhh0000
         /// </summary>
         [NameInMap("CurHour")]
         [Validation(Required=false)]
         public string CurHour { get; set; }
 
         /// <summary>
-        /// 纬度，范围为（15°N~59.95°N
+        /// 纬度，范围为（15°N~59.95°N）
         /// </summary>
         [NameInMap("Lat")]
         [Validation(Required=false)]
