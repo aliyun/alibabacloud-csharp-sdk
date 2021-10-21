@@ -9,19 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ExportDISyncTasksResponseBody : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TaskDetail")]
+        [NameInMap("data")]
         [Validation(Required=false)]
-        public ExportDISyncTasksResponseBodyTaskDetail TaskDetail { get; set; }
-        public class ExportDISyncTasksResponseBodyTaskDetail : TeaModel {
-            [NameInMap("RealTimeSolution")]
+        public ExportDISyncTasksResponseBodyData Data { get; set; }
+        public class ExportDISyncTasksResponseBodyData : TeaModel {
+            [NameInMap("realTimeSolution")]
             [Validation(Required=false)]
             public string RealTimeSolution { get; set; }
         };

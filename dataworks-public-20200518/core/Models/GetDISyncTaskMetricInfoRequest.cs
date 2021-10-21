@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class ImportDISyncTasksRequest : TeaModel {
+    public class GetDISyncTaskMetricInfoRequest : TeaModel {
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("TaskType")]
+        [NameInMap("FileId")]
         [Validation(Required=false)]
-        public string TaskType { get; set; }
+        public long? FileId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("StartDate")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public long? StartDate { get; set; }
 
-        [NameInMap("TaskParam")]
+        [NameInMap("EndDate")]
         [Validation(Required=false)]
-        public string TaskParam { get; set; }
+        public long? EndDate { get; set; }
 
     }
 
