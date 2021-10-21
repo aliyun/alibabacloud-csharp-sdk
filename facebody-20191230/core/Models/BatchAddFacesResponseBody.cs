@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             public class BatchAddFacesResponseBodyDataInsertedFaces : TeaModel {
                 public string ImageURL { get; set; }
                 public string FaceId { get; set; }
+                public float? QualitieScore { get; set; }
             }
             [NameInMap("FailedFaces")]
             [Validation(Required=false)]

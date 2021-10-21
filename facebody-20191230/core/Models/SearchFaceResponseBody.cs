@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     public int? X { get; set; }
 
                 }
+                public float? QualitieScore { get; set; }
             }
         };
 
