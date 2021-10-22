@@ -169,6 +169,50 @@ namespace AlibabaCloud.SDK.Live_interaction20201214
             return await ImportMessageWithOptionsAsync(request, runtime);
         }
 
+        public UnbindInterconnectionUidResponse UnbindInterconnectionUidWithOptions(UnbindInterconnectionUidRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UnbindInterconnectionUidShrinkRequest request = new UnbindInterconnectionUidShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UnbindInterconnectionUidResponse>(DoRPCRequest("UnbindInterconnectionUid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<UnbindInterconnectionUidResponse> UnbindInterconnectionUidWithOptionsAsync(UnbindInterconnectionUidRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UnbindInterconnectionUidShrinkRequest request = new UnbindInterconnectionUidShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UnbindInterconnectionUidResponse>(await DoRPCRequestAsync("UnbindInterconnectionUid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public UnbindInterconnectionUidResponse UnbindInterconnectionUid(UnbindInterconnectionUidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnbindInterconnectionUidWithOptions(request, runtime);
+        }
+
+        public async Task<UnbindInterconnectionUidResponse> UnbindInterconnectionUidAsync(UnbindInterconnectionUidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnbindInterconnectionUidWithOptionsAsync(request, runtime);
+        }
+
         public SilenceAllGroupMembersResponse SilenceAllGroupMembersWithOptions(SilenceAllGroupMembersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1613,6 +1657,50 @@ namespace AlibabaCloud.SDK.Live_interaction20201214
             return await GetMediaUploadUrlWithOptionsAsync(request, runtime);
         }
 
+        public BindInterconnectionUidResponse BindInterconnectionUidWithOptions(BindInterconnectionUidRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BindInterconnectionUidShrinkRequest request = new BindInterconnectionUidShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<BindInterconnectionUidResponse>(DoRPCRequest("BindInterconnectionUid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<BindInterconnectionUidResponse> BindInterconnectionUidWithOptionsAsync(BindInterconnectionUidRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BindInterconnectionUidShrinkRequest request = new BindInterconnectionUidShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<BindInterconnectionUidResponse>(await DoRPCRequestAsync("BindInterconnectionUid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public BindInterconnectionUidResponse BindInterconnectionUid(BindInterconnectionUidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BindInterconnectionUidWithOptions(request, runtime);
+        }
+
+        public async Task<BindInterconnectionUidResponse> BindInterconnectionUidAsync(BindInterconnectionUidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BindInterconnectionUidWithOptionsAsync(request, runtime);
+        }
+
         public GetMediaUrlResponse GetMediaUrlWithOptions(GetMediaUrlRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1743,6 +1831,50 @@ namespace AlibabaCloud.SDK.Live_interaction20201214
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCallbackConfigWithOptionsAsync(request, runtime);
+        }
+
+        public BindInterconnectionCidResponse BindInterconnectionCidWithOptions(BindInterconnectionCidRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BindInterconnectionCidShrinkRequest request = new BindInterconnectionCidShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<BindInterconnectionCidResponse>(DoRPCRequest("BindInterconnectionCid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<BindInterconnectionCidResponse> BindInterconnectionCidWithOptionsAsync(BindInterconnectionCidRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BindInterconnectionCidShrinkRequest request = new BindInterconnectionCidShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<BindInterconnectionCidResponse>(await DoRPCRequestAsync("BindInterconnectionCid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public BindInterconnectionCidResponse BindInterconnectionCid(BindInterconnectionCidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BindInterconnectionCidWithOptions(request, runtime);
+        }
+
+        public async Task<BindInterconnectionCidResponse> BindInterconnectionCidAsync(BindInterconnectionCidRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BindInterconnectionCidWithOptionsAsync(request, runtime);
         }
 
         public InitTenantResponse InitTenantWithOptions(InitTenantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2347,6 +2479,50 @@ namespace AlibabaCloud.SDK.Live_interaction20201214
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLoginTokenWithOptionsAsync(request, runtime);
+        }
+
+        public QueryInterconnectionCidMappingResponse QueryInterconnectionCidMappingWithOptions(QueryInterconnectionCidMappingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInterconnectionCidMappingShrinkRequest request = new QueryInterconnectionCidMappingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryInterconnectionCidMappingResponse>(DoRPCRequest("QueryInterconnectionCidMapping", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<QueryInterconnectionCidMappingResponse> QueryInterconnectionCidMappingWithOptionsAsync(QueryInterconnectionCidMappingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryInterconnectionCidMappingShrinkRequest request = new QueryInterconnectionCidMappingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestParams.ToMap()))
+            {
+                request.RequestParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestParams.ToMap(), "RequestParams", "json");
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<QueryInterconnectionCidMappingResponse>(await DoRPCRequestAsync("QueryInterconnectionCidMapping", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public QueryInterconnectionCidMappingResponse QueryInterconnectionCidMapping(QueryInterconnectionCidMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryInterconnectionCidMappingWithOptions(request, runtime);
+        }
+
+        public async Task<QueryInterconnectionCidMappingResponse> QueryInterconnectionCidMappingAsync(QueryInterconnectionCidMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryInterconnectionCidMappingWithOptionsAsync(request, runtime);
         }
 
         public DismissGroupResponse DismissGroupWithOptions(DismissGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
