@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListCommandsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,27 +21,24 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("Commands")]
         [Validation(Required=false)]
-        public List<ListCommandsResponseBodyCommands> Commands { get; set; }
+        public ListCommandsResponseBodyCommands Commands { get; set; }
         public class ListCommandsResponseBodyCommands : TeaModel {
-            [NameInMap("Timeout")]
+            [NameInMap("Command")]
             [Validation(Required=false)]
-            public string Timeout { get; set; }
-
-            [NameInMap("WorkingDir")]
-            [Validation(Required=false)]
-            public string WorkingDir { get; set; }
-
-            [NameInMap("CommandContent")]
-            [Validation(Required=false)]
-            public string CommandContent { get; set; }
-
-            [NameInMap("CommandId")]
-            [Validation(Required=false)]
-            public string CommandId { get; set; }
-
-        }
+            public List<ListCommandsResponseBodyCommandsCommand> Command { get; set; }
+            public class ListCommandsResponseBodyCommandsCommand : TeaModel {
+                public string Timeout { get; set; }
+                public string CommandId { get; set; }
+                public string WorkingDir { get; set; }
+                public string CommandContent { get; set; }
+            }
+        };
 
     }
 

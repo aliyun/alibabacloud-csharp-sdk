@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
-    public class ListAvailableFileSystemTypesResponse : TeaModel {
+    public class AddExistedNodesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListAvailableFileSystemTypesResponseBody Body { get; set; }
+        public AddExistedNodesResponseBody Body { get; set; }
 
     }
 

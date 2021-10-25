@@ -113,6 +113,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("SystemDiskLevel")]
+        [Validation(Required=false)]
+        public string SystemDiskLevel { get; set; }
+
+        [NameInMap("MinCount")]
+        [Validation(Required=false)]
+        public int? MinCount { get; set; }
+
+        [NameInMap("Sync")]
+        [Validation(Required=false)]
+        public bool? Sync { get; set; }
+
     }
 
 }

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
-    public class BindAccountToClusterUserResponse : TeaModel {
+    public class SetSchedulerInfoResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public BindAccountToClusterUserResponseBody Body { get; set; }
+        public SetSchedulerInfoResponseBody Body { get; set; }
 
     }
 

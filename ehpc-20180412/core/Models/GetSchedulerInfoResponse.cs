@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
-    public class SetJobUserResponse : TeaModel {
+    public class GetSchedulerInfoResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public SetJobUserResponseBody Body { get; set; }
+        public GetSchedulerInfoResponseBody Body { get; set; }
 
     }
 

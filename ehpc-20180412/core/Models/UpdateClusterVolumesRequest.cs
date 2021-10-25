@@ -35,21 +35,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
             }
 
-            [NameInMap("RemoteDirectory")]
-            [Validation(Required=false)]
-            public string RemoteDirectory { get; set; }
-
             [NameInMap("VolumeMountpoint")]
             [Validation(Required=false)]
             public string VolumeMountpoint { get; set; }
 
-            [NameInMap("LocalDirectory")]
+            [NameInMap("RemoteDirectory")]
             [Validation(Required=false)]
-            public string LocalDirectory { get; set; }
+            public string RemoteDirectory { get; set; }
 
             [NameInMap("VolumeType")]
             [Validation(Required=false)]
             public string VolumeType { get; set; }
+
+            [NameInMap("LocalDirectory")]
+            [Validation(Required=false)]
+            public string LocalDirectory { get; set; }
 
             [NameInMap("VolumeProtocol")]
             [Validation(Required=false)]

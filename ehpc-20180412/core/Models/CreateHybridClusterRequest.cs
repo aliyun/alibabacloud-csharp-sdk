@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("MultiOs")]
+        [Validation(Required=false)]
+        public bool? MultiOs { get; set; }
+
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public List<CreateHybridClusterRequestNodes> Nodes { get; set; }

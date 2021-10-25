@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public string TemplateId { get; set; }
-
     }
 
 }

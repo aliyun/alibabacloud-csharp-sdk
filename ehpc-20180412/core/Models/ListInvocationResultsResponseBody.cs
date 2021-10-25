@@ -9,44 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListInvocationResultsResponseBody : TeaModel {
-        [NameInMap("InvocationResults")]
-        [Validation(Required=false)]
-        public List<ListInvocationResultsResponseBodyInvocationResults> InvocationResults { get; set; }
-        public class ListInvocationResultsResponseBodyInvocationResults : TeaModel {
-            [NameInMap("Success")]
-            [Validation(Required=false)]
-            public bool? Success { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("FinishedTime")]
-            [Validation(Required=false)]
-            public string FinishedTime { get; set; }
-
-            [NameInMap("CommandId")]
-            [Validation(Required=false)]
-            public string CommandId { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("InvokeRecordStatus")]
-            [Validation(Required=false)]
-            public string InvokeRecordStatus { get; set; }
-
-            [NameInMap("ExitCode")]
-            [Validation(Required=false)]
-            public int? ExitCode { get; set; }
-
-        }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -58,6 +20,28 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("InvocationResults")]
+        [Validation(Required=false)]
+        public ListInvocationResultsResponseBodyInvocationResults InvocationResults { get; set; }
+        public class ListInvocationResultsResponseBodyInvocationResults : TeaModel {
+            [NameInMap("InvocationResult")]
+            [Validation(Required=false)]
+            public List<ListInvocationResultsResponseBodyInvocationResultsInvocationResult> InvocationResult { get; set; }
+            public class ListInvocationResultsResponseBodyInvocationResultsInvocationResult : TeaModel {
+                public bool? Success { get; set; }
+                public string Message { get; set; }
+                public string FinishedTime { get; set; }
+                public string CommandId { get; set; }
+                public string InstanceId { get; set; }
+                public string InvokeRecordStatus { get; set; }
+                public int? ExitCode { get; set; }
+            }
+        };
 
     }
 

@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
-    public class BindAccountToClusterUserResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class EcdDeleteDesktopsRequest : TeaModel {
+        [NameInMap("DesktopId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<string> DesktopId { get; set; }
 
     }
 

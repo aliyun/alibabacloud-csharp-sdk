@@ -15,7 +15,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         [NameInMap("ContainerId")]
         [Validation(Required=false)]
-        public List<string> ContainerId { get; set; }
+        public AddContainerAppResponseBodyContainerId ContainerId { get; set; }
+        public class AddContainerAppResponseBodyContainerId : TeaModel {
+            [NameInMap("ContainerId")]
+            [Validation(Required=false)]
+            public List<string> ContainerId { get; set; }
+        };
 
     }
 

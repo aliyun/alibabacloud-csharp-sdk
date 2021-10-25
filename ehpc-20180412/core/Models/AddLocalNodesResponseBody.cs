@@ -15,7 +15,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public AddLocalNodesResponseBodyInstanceIds InstanceIds { get; set; }
+        public class AddLocalNodesResponseBodyInstanceIds : TeaModel {
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public List<string> InstanceId { get; set; }
+        };
 
     }
 

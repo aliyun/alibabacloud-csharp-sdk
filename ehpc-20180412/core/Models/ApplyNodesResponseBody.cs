@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ApplyNodesResponseBody : TeaModel {
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,13 +17,22 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? SatisfiedAmount { get; set; }
 
-        [NameInMap("InstanceIds")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string TaskId { get; set; }
 
         [NameInMap("Detail")]
         [Validation(Required=false)]
         public string Detail { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public ApplyNodesResponseBodyInstanceIds InstanceIds { get; set; }
+        public class ApplyNodesResponseBodyInstanceIds : TeaModel {
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public List<string> InstanceId { get; set; }
+        };
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListClusterLogsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -31,25 +31,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         [NameInMap("Logs")]
         [Validation(Required=false)]
-        public List<ListClusterLogsResponseBodyLogs> Logs { get; set; }
+        public ListClusterLogsResponseBodyLogs Logs { get; set; }
         public class ListClusterLogsResponseBodyLogs : TeaModel {
-            [NameInMap("Operation")]
+            [NameInMap("LogInfo")]
             [Validation(Required=false)]
-            public string Operation { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("Level")]
-            [Validation(Required=false)]
-            public string Level { get; set; }
-
-        }
+            public List<ListClusterLogsResponseBodyLogsLogInfo> LogInfo { get; set; }
+            public class ListClusterLogsResponseBodyLogsLogInfo : TeaModel {
+                public string Operation { get; set; }
+                public string Message { get; set; }
+                public string CreateTime { get; set; }
+                public string Level { get; set; }
+            }
+        };
 
     }
 

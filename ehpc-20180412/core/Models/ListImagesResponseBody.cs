@@ -15,33 +15,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         [NameInMap("OsTags")]
         [Validation(Required=false)]
-        public List<ListImagesResponseBodyOsTags> OsTags { get; set; }
+        public ListImagesResponseBodyOsTags OsTags { get; set; }
         public class ListImagesResponseBodyOsTags : TeaModel {
-            [NameInMap("Version")]
+            [NameInMap("OsInfo")]
             [Validation(Required=false)]
-            public string Version { get; set; }
-
-            [NameInMap("BaseOsTag")]
-            [Validation(Required=false)]
-            public string BaseOsTag { get; set; }
-
-            [NameInMap("Platform")]
-            [Validation(Required=false)]
-            public string Platform { get; set; }
-
-            [NameInMap("OsTag")]
-            [Validation(Required=false)]
-            public string OsTag { get; set; }
-
-            [NameInMap("ImageId")]
-            [Validation(Required=false)]
-            public string ImageId { get; set; }
-
-            [NameInMap("Architecture")]
-            [Validation(Required=false)]
-            public string Architecture { get; set; }
-
-        }
+            public List<ListImagesResponseBodyOsTagsOsInfo> OsInfo { get; set; }
+            public class ListImagesResponseBodyOsTagsOsInfo : TeaModel {
+                public string Version { get; set; }
+                public string BaseOsTag { get; set; }
+                public string Platform { get; set; }
+                public string OsTag { get; set; }
+                public string ImageId { get; set; }
+                public string Architecture { get; set; }
+            }
+        };
 
     }
 

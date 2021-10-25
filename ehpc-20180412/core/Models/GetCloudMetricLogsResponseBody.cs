@@ -15,33 +15,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         [NameInMap("MetricLogs")]
         [Validation(Required=false)]
-        public List<GetCloudMetricLogsResponseBodyMetricLogs> MetricLogs { get; set; }
+        public GetCloudMetricLogsResponseBodyMetricLogs MetricLogs { get; set; }
         public class GetCloudMetricLogsResponseBodyMetricLogs : TeaModel {
-            [NameInMap("Time")]
+            [NameInMap("MetricLog")]
             [Validation(Required=false)]
-            public int? Time { get; set; }
-
-            [NameInMap("DiskDevice")]
-            [Validation(Required=false)]
-            public string DiskDevice { get; set; }
-
-            [NameInMap("NetworkInterface")]
-            [Validation(Required=false)]
-            public string NetworkInterface { get; set; }
-
-            [NameInMap("MetricData")]
-            [Validation(Required=false)]
-            public string MetricData { get; set; }
-
-            [NameInMap("Hostname")]
-            [Validation(Required=false)]
-            public string Hostname { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-        }
+            public List<GetCloudMetricLogsResponseBodyMetricLogsMetricLog> MetricLog { get; set; }
+            public class GetCloudMetricLogsResponseBodyMetricLogsMetricLog : TeaModel {
+                public int? Time { get; set; }
+                public string DiskDevice { get; set; }
+                public string NetworkInterface { get; set; }
+                public string MetricData { get; set; }
+                public string Hostname { get; set; }
+                public string InstanceId { get; set; }
+            }
+        };
 
     }
 

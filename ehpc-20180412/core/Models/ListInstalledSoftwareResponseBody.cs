@@ -15,25 +15,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         [NameInMap("SoftwareList")]
         [Validation(Required=false)]
-        public List<ListInstalledSoftwareResponseBodySoftwareList> SoftwareList { get; set; }
+        public ListInstalledSoftwareResponseBodySoftwareList SoftwareList { get; set; }
         public class ListInstalledSoftwareResponseBodySoftwareList : TeaModel {
-            [NameInMap("SoftwareVersion")]
+            [NameInMap("SoftwareList")]
             [Validation(Required=false)]
-            public string SoftwareVersion { get; set; }
-
-            [NameInMap("SoftwareName")]
-            [Validation(Required=false)]
-            public string SoftwareName { get; set; }
-
-            [NameInMap("SoftwareId")]
-            [Validation(Required=false)]
-            public string SoftwareId { get; set; }
-
-            [NameInMap("SoftwareStatus")]
-            [Validation(Required=false)]
-            public string SoftwareStatus { get; set; }
-
-        }
+            public List<ListInstalledSoftwareResponseBodySoftwareListSoftwareList> SoftwareList { get; set; }
+            public class ListInstalledSoftwareResponseBodySoftwareListSoftwareList : TeaModel {
+                public string SoftwareId { get; set; }
+                public string SoftwareStatus { get; set; }
+                public string SoftwareVersion { get; set; }
+                public string SoftwareName { get; set; }
+            }
+        };
 
     }
 

@@ -9,65 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetClusterVolumesResponseBody : TeaModel {
-        [NameInMap("Volumes")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<GetClusterVolumesResponseBodyVolumes> Volumes { get; set; }
-        public class GetClusterVolumesResponseBodyVolumes : TeaModel {
-            [NameInMap("JobQueue")]
-            [Validation(Required=false)]
-            public string JobQueue { get; set; }
-
-            [NameInMap("VolumeId")]
-            [Validation(Required=false)]
-            public string VolumeId { get; set; }
-
-            [NameInMap("Roles")]
-            [Validation(Required=false)]
-            public List<GetClusterVolumesResponseBodyVolumesRoles> Roles { get; set; }
-            public class GetClusterVolumesResponseBodyVolumesRoles : TeaModel {
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-            }
-
-            [NameInMap("RemoteDirectory")]
-            [Validation(Required=false)]
-            public string RemoteDirectory { get; set; }
-
-            [NameInMap("VolumeMountpoint")]
-            [Validation(Required=false)]
-            public string VolumeMountpoint { get; set; }
-
-            [NameInMap("LocalDirectory")]
-            [Validation(Required=false)]
-            public string LocalDirectory { get; set; }
-
-            [NameInMap("VolumeType")]
-            [Validation(Required=false)]
-            public string VolumeType { get; set; }
-
-            [NameInMap("MustKeep")]
-            [Validation(Required=false)]
-            public bool? MustKeep { get; set; }
-
-            [NameInMap("Location")]
-            [Validation(Required=false)]
-            public string Location { get; set; }
-
-            [NameInMap("VolumeProtocol")]
-            [Validation(Required=false)]
-            public string VolumeProtocol { get; set; }
-
-        }
+        public string RegionId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Volumes")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public GetClusterVolumesResponseBodyVolumes Volumes { get; set; }
+        public class GetClusterVolumesResponseBodyVolumes : TeaModel {
+            [NameInMap("VolumeInfo")]
+            [Validation(Required=false)]
+            public List<GetClusterVolumesResponseBodyVolumesVolumeInfo> VolumeInfo { get; set; }
+            public class GetClusterVolumesResponseBodyVolumesVolumeInfo : TeaModel {
+                public string JobQueue { get; set; }
+                public string VolumeId { get; set; }
+                public string RemoteDirectory { get; set; }
+                public string VolumeMountpoint { get; set; }
+                public string LocalDirectory { get; set; }
+                public string VolumeType { get; set; }
+                public bool? MustKeep { get; set; }
+                public string Location { get; set; }
+                public string VolumeProtocol { get; set; }
+                public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles Roles { get; set; }
+                public class GetClusterVolumesResponseBodyVolumesVolumeInfoRoles : TeaModel {
+                    [NameInMap("RoleInfo")]
+                    [Validation(Required=false)]
+                    public List<GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo> RoleInfo { get; set; }
+                    public class GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo : TeaModel {
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                }
+            }
+        };
 
     }
 

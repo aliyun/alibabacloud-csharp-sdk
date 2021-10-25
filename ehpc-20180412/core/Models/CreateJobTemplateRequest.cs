@@ -49,6 +49,34 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string Variables { get; set; }
 
+        [NameInMap("Queue")]
+        [Validation(Required=false)]
+        public string Queue { get; set; }
+
+        [NameInMap("ClockTime")]
+        [Validation(Required=false)]
+        public string ClockTime { get; set; }
+
+        [NameInMap("Node")]
+        [Validation(Required=false)]
+        public int? Node { get; set; }
+
+        [NameInMap("Task")]
+        [Validation(Required=false)]
+        public int? Task { get; set; }
+
+        [NameInMap("Thread")]
+        [Validation(Required=false)]
+        public int? Thread { get; set; }
+
+        [NameInMap("Mem")]
+        [Validation(Required=false)]
+        public string Mem { get; set; }
+
+        [NameInMap("Gpu")]
+        [Validation(Required=false)]
+        public int? Gpu { get; set; }
+
     }
 
 }

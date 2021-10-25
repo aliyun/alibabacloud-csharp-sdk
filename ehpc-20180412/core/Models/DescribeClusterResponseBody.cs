@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeClusterResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ClusterInfo")]
         [Validation(Required=false)]
         public DescribeClusterResponseBodyClusterInfo ClusterInfo { get; set; }
@@ -58,13 +62,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
-            [NameInMap("PostInstallScripts")]
-            [Validation(Required=false)]
-            public List<DescribeClusterResponseBodyClusterInfoPostInstallScripts> PostInstallScripts { get; set; }
-            public class DescribeClusterResponseBodyClusterInfoPostInstallScripts : TeaModel {
-                public string Args { get; set; }
-                public string Url { get; set; }
-            }
             [NameInMap("SchedulerType")]
             [Validation(Required=false)]
             public string SchedulerType { get; set; }
@@ -74,21 +71,78 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("ImageOwnerAlias")]
             [Validation(Required=false)]
             public string ImageOwnerAlias { get; set; }
-            [NameInMap("RemoteDirectory")]
-            [Validation(Required=false)]
-            public string RemoteDirectory { get; set; }
-            [NameInMap("VolumeMountpoint")]
-            [Validation(Required=false)]
-            public string VolumeMountpoint { get; set; }
             [NameInMap("OsTag")]
             [Validation(Required=false)]
             public string OsTag { get; set; }
+            [NameInMap("VolumeMountpoint")]
+            [Validation(Required=false)]
+            public string VolumeMountpoint { get; set; }
+            [NameInMap("RemoteDirectory")]
+            [Validation(Required=false)]
+            public string RemoteDirectory { get; set; }
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
+            [NameInMap("ImageName")]
+            [Validation(Required=false)]
+            public string ImageName { get; set; }
+            [NameInMap("VolumeType")]
+            [Validation(Required=false)]
+            public string VolumeType { get; set; }
+            [NameInMap("Location")]
+            [Validation(Required=false)]
+            public string Location { get; set; }
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+            [NameInMap("ClientVersion")]
+            [Validation(Required=false)]
+            public string ClientVersion { get; set; }
+            [NameInMap("Applications")]
+            [Validation(Required=false)]
+            public DescribeClusterResponseBodyClusterInfoApplications Applications { get; set; }
+            public class DescribeClusterResponseBodyClusterInfoApplications : TeaModel {
+                [NameInMap("ApplicationInfo")]
+                [Validation(Required=false)]
+                public List<DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo> ApplicationInfo { get; set; }
+                public class DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public string Tag { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Version")]
+                    [Validation(Required=false)]
+                    public string Version { get; set; }
+
+                }
+
+            }
+            [NameInMap("PostInstallScripts")]
+            [Validation(Required=false)]
+            public DescribeClusterResponseBodyClusterInfoPostInstallScripts PostInstallScripts { get; set; }
+            public class DescribeClusterResponseBodyClusterInfoPostInstallScripts : TeaModel {
+                [NameInMap("PostInstallScriptInfo")]
+                [Validation(Required=false)]
+                public List<DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo> PostInstallScriptInfo { get; set; }
+                public class DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo : TeaModel {
+                    [NameInMap("Url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                    [NameInMap("Args")]
+                    [Validation(Required=false)]
+                    public string Args { get; set; }
+
+                }
+
+            }
             [NameInMap("EcsInfo")]
             [Validation(Required=false)]
             public DescribeClusterResponseBodyClusterInfoEcsInfo EcsInfo { get; set; }
@@ -130,34 +184,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 };
 
             }
-            [NameInMap("ImageName")]
-            [Validation(Required=false)]
-            public string ImageName { get; set; }
-            [NameInMap("Applications")]
-            [Validation(Required=false)]
-            public List<DescribeClusterResponseBodyClusterInfoApplications> Applications { get; set; }
-            public class DescribeClusterResponseBodyClusterInfoApplications : TeaModel {
-                public string Version { get; set; }
-                public string Tag { get; set; }
-                public string Name { get; set; }
-            }
-            [NameInMap("VolumeType")]
-            [Validation(Required=false)]
-            public string VolumeType { get; set; }
-            [NameInMap("Location")]
-            [Validation(Required=false)]
-            public string Location { get; set; }
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-            [NameInMap("ClientVersion")]
-            [Validation(Required=false)]
-            public string ClientVersion { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

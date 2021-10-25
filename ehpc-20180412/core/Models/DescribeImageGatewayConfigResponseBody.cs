@@ -17,15 +17,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public DescribeImageGatewayConfigResponseBodyImagegw Imagegw { get; set; }
         public class DescribeImageGatewayConfigResponseBodyImagegw : TeaModel {
-            [NameInMap("Locations")]
-            [Validation(Required=false)]
-            public List<DescribeImageGatewayConfigResponseBodyImagegwLocations> Locations { get; set; }
-            public class DescribeImageGatewayConfigResponseBodyImagegwLocations : TeaModel {
-                public string RemoteType { get; set; }
-                public string URL { get; set; }
-                public string Location { get; set; }
-                public string Authentication { get; set; }
-            }
             [NameInMap("UpdateDateTime")]
             [Validation(Required=false)]
             public string UpdateDateTime { get; set; }
@@ -41,6 +32,33 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("PullUpdateTimeout")]
             [Validation(Required=false)]
             public long? PullUpdateTimeout { get; set; }
+            [NameInMap("Locations")]
+            [Validation(Required=false)]
+            public DescribeImageGatewayConfigResponseBodyImagegwLocations Locations { get; set; }
+            public class DescribeImageGatewayConfigResponseBodyImagegwLocations : TeaModel {
+                [NameInMap("LocationInfo")]
+                [Validation(Required=false)]
+                public List<DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo> LocationInfo { get; set; }
+                public class DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo : TeaModel {
+                    [NameInMap("URL")]
+                    [Validation(Required=false)]
+                    public string URL { get; set; }
+
+                    [NameInMap("RemoteType")]
+                    [Validation(Required=false)]
+                    public string RemoteType { get; set; }
+
+                    [NameInMap("Location")]
+                    [Validation(Required=false)]
+                    public string Location { get; set; }
+
+                    [NameInMap("Authentication")]
+                    [Validation(Required=false)]
+                    public string Authentication { get; set; }
+
+                }
+
+            }
         };
 
     }

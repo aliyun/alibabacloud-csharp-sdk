@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
 
+            [NameInMap("SystemDiskPerformanceLevel")]
+            [Validation(Required=false)]
+            public string SystemDiskPerformanceLevel { get; set; }
+
             [NameInMap("NodeType")]
             [Validation(Required=false)]
             public string NodeType { get; set; }

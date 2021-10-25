@@ -41,6 +41,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
+        [NameInMap("HostNamePrefix")]
+        [Validation(Required=false)]
+        public string HostNamePrefix { get; set; }
+
+        [NameInMap("HostNameSuffix")]
+        [Validation(Required=false)]
+        public string HostNameSuffix { get; set; }
+
     }
 
 }

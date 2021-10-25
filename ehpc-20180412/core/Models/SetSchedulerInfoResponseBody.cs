@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
-    public class SetJobUserResponseBody : TeaModel {
+    public class SetSchedulerInfoResponseBody : TeaModel {
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

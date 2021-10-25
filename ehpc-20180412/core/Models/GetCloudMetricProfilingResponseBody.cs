@@ -15,25 +15,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         [NameInMap("SvgUrls")]
         [Validation(Required=false)]
-        public List<GetCloudMetricProfilingResponseBodySvgUrls> SvgUrls { get; set; }
+        public GetCloudMetricProfilingResponseBodySvgUrls SvgUrls { get; set; }
         public class GetCloudMetricProfilingResponseBodySvgUrls : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("SvgInfo")]
             [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-
-            [NameInMap("Url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-        }
+            public List<GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo> SvgInfo { get; set; }
+            public class GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo : TeaModel {
+                public string Type { get; set; }
+                public string Url { get; set; }
+                public string Name { get; set; }
+                public int? Size { get; set; }
+            }
+        };
 
     }
 

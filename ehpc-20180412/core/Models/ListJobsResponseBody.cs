@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListJobsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,79 +21,45 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("Jobs")]
         [Validation(Required=false)]
-        public List<ListJobsResponseBodyJobs> Jobs { get; set; }
+        public ListJobsResponseBodyJobs Jobs { get; set; }
         public class ListJobsResponseBodyJobs : TeaModel {
-            [NameInMap("Owner")]
+            [NameInMap("JobInfo")]
             [Validation(Required=false)]
-            public string Owner { get; set; }
+            public List<ListJobsResponseBodyJobsJobInfo> JobInfo { get; set; }
+            public class ListJobsResponseBodyJobsJobInfo : TeaModel {
+                public string Owner { get; set; }
+                public string Comment { get; set; }
+                public string State { get; set; }
+                public string Stderr { get; set; }
+                public string Priority { get; set; }
+                public string ShellPath { get; set; }
+                public string Stdout { get; set; }
+                public string ArrayRequest { get; set; }
+                public string StartTime { get; set; }
+                public string LastModifyTime { get; set; }
+                public string NodeList { get; set; }
+                public string Name { get; set; }
+                public string Id { get; set; }
+                public string SubmitTime { get; set; }
+                public ListJobsResponseBodyJobsJobInfoResources Resources { get; set; }
+                public class ListJobsResponseBodyJobsJobInfoResources : TeaModel {
+                    [NameInMap("Nodes")]
+                    [Validation(Required=false)]
+                    public int? Nodes { get; set; }
 
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public string Comment { get; set; }
+                    [NameInMap("Cores")]
+                    [Validation(Required=false)]
+                    public int? Cores { get; set; }
 
-            [NameInMap("Stderr")]
-            [Validation(Required=false)]
-            public string Stderr { get; set; }
-
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-
-            [NameInMap("Priority")]
-            [Validation(Required=false)]
-            public string Priority { get; set; }
-
-            [NameInMap("ShellPath")]
-            [Validation(Required=false)]
-            public string ShellPath { get; set; }
-
-            [NameInMap("Stdout")]
-            [Validation(Required=false)]
-            public string Stdout { get; set; }
-
-            [NameInMap("ArrayRequest")]
-            [Validation(Required=false)]
-            public string ArrayRequest { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
-            [NameInMap("LastModifyTime")]
-            [Validation(Required=false)]
-            public string LastModifyTime { get; set; }
-
-            [NameInMap("NodeList")]
-            [Validation(Required=false)]
-            public string NodeList { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
-            [NameInMap("SubmitTime")]
-            [Validation(Required=false)]
-            public string SubmitTime { get; set; }
-
-            [NameInMap("Resources")]
-            [Validation(Required=false)]
-            public ListJobsResponseBodyJobsResources Resources { get; set; }
-            public class ListJobsResponseBodyJobsResources : TeaModel {
-                [NameInMap("Nodes")]
-                [Validation(Required=false)]
-                public int? Nodes { get; set; }
-                [NameInMap("Cores")]
-                [Validation(Required=false)]
-                public int? Cores { get; set; }
-            };
-
-        }
+                }
+            }
+        };
 
     }
 

@@ -9,29 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeAutoScaleConfigResponseBody : TeaModel {
-        [NameInMap("ExtraNodesGrowRatio")]
-        [Validation(Required=false)]
-        public int? ExtraNodesGrowRatio { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("EnableAutoGrow")]
-        [Validation(Required=false)]
-        public bool? EnableAutoGrow { get; set; }
-
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
         [NameInMap("MaxNodesInCluster")]
         [Validation(Required=false)]
         public int? MaxNodesInCluster { get; set; }
 
-        [NameInMap("ShrinkIdleTimes")]
+        [NameInMap("GrowTimeoutInMinutes")]
         [Validation(Required=false)]
-        public int? ShrinkIdleTimes { get; set; }
+        public int? GrowTimeoutInMinutes { get; set; }
+
+        [NameInMap("SpotStrategy")]
+        [Validation(Required=false)]
+        public string SpotStrategy { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("EnableAutoShrink")]
         [Validation(Required=false)]
@@ -41,21 +33,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
-        [NameInMap("GrowRatio")]
+        [NameInMap("EnableAutoGrow")]
         [Validation(Required=false)]
-        public int? GrowRatio { get; set; }
+        public bool? EnableAutoGrow { get; set; }
+
+        [NameInMap("ExcludeNodes")]
+        [Validation(Required=false)]
+        public string ExcludeNodes { get; set; }
 
         [NameInMap("GrowIntervalInMinutes")]
         [Validation(Required=false)]
         public int? GrowIntervalInMinutes { get; set; }
-
-        [NameInMap("Uid")]
-        [Validation(Required=false)]
-        public string Uid { get; set; }
-
-        [NameInMap("GrowTimeoutInMinutes")]
-        [Validation(Required=false)]
-        public int? GrowTimeoutInMinutes { get; set; }
 
         [NameInMap("ShrinkIntervalInMinutes")]
         [Validation(Required=false)]
@@ -65,13 +53,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string SpotPriceLimit { get; set; }
 
-        [NameInMap("ExcludeNodes")]
+        [NameInMap("ShrinkIdleTimes")]
         [Validation(Required=false)]
-        public string ExcludeNodes { get; set; }
+        public int? ShrinkIdleTimes { get; set; }
 
-        [NameInMap("SpotStrategy")]
+        [NameInMap("ExtraNodesGrowRatio")]
         [Validation(Required=false)]
-        public string SpotStrategy { get; set; }
+        public int? ExtraNodesGrowRatio { get; set; }
+
+        [NameInMap("GrowRatio")]
+        [Validation(Required=false)]
+        public int? GrowRatio { get; set; }
+
+        [NameInMap("Uid")]
+        [Validation(Required=false)]
+        public string Uid { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
 
     }
 

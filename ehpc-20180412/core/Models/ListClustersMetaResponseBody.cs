@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListClustersMetaResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -25,55 +21,32 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("Clusters")]
         [Validation(Required=false)]
-        public List<ListClustersMetaResponseBodyClusters> Clusters { get; set; }
+        public ListClustersMetaResponseBodyClusters Clusters { get; set; }
         public class ListClustersMetaResponseBodyClusters : TeaModel {
-            [NameInMap("VpcId")]
+            [NameInMap("ClusterInfoSimple")]
             [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("SchedulerType")]
-            [Validation(Required=false)]
-            public string SchedulerType { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("DeployMode")]
-            [Validation(Required=false)]
-            public string DeployMode { get; set; }
-
-            [NameInMap("OsTag")]
-            [Validation(Required=false)]
-            public string OsTag { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("AccountType")]
-            [Validation(Required=false)]
-            public string AccountType { get; set; }
-
-            [NameInMap("Location")]
-            [Validation(Required=false)]
-            public string Location { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
-            [NameInMap("ClientVersion")]
-            [Validation(Required=false)]
-            public string ClientVersion { get; set; }
-
-        }
+            public List<ListClustersMetaResponseBodyClustersClusterInfoSimple> ClusterInfoSimple { get; set; }
+            public class ListClustersMetaResponseBodyClustersClusterInfoSimple : TeaModel {
+                public string Status { get; set; }
+                public string VpcId { get; set; }
+                public string SchedulerType { get; set; }
+                public string DeployMode { get; set; }
+                public bool? IsComputeEss { get; set; }
+                public string OsTag { get; set; }
+                public string AccountType { get; set; }
+                public string Description { get; set; }
+                public string Name { get; set; }
+                public string Id { get; set; }
+                public string Location { get; set; }
+                public string ClientVersion { get; set; }
+            }
+        };
 
     }
 

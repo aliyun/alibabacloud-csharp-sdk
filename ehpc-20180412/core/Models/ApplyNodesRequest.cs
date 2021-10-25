@@ -85,6 +85,22 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public bool? StrictSatisfiedTargetCapacity { get; set; }
 
+        [NameInMap("SystemDiskLevel")]
+        [Validation(Required=false)]
+        public string SystemDiskLevel { get; set; }
+
+        [NameInMap("StrictResourceProvision")]
+        [Validation(Required=false)]
+        public bool? StrictResourceProvision { get; set; }
+
+        [NameInMap("Round")]
+        [Validation(Required=false)]
+        public int? Round { get; set; }
+
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public int? Interval { get; set; }
+
         [NameInMap("ZoneInfos")]
         [Validation(Required=false)]
         public List<ApplyNodesRequestZoneInfos> ZoneInfos { get; set; }
@@ -114,6 +130,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
+
+        }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ApplyNodesRequestTag> Tag { get; set; }
+        public class ApplyNodesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
         }
 

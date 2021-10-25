@@ -69,9 +69,37 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public List<SetAutoScaleConfigRequestQueues> Queues { get; set; }
         public class SetAutoScaleConfigRequestQueues : TeaModel {
+            [NameInMap("QueueImageId")]
+            [Validation(Required=false)]
+            public string QueueImageId { get; set; }
+
+            [NameInMap("SystemDiskCategory")]
+            [Validation(Required=false)]
+            public string SystemDiskCategory { get; set; }
+
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            [NameInMap("HostNameSuffix")]
+            [Validation(Required=false)]
+            public string HostNameSuffix { get; set; }
+
+            [NameInMap("SpotStrategy")]
+            [Validation(Required=false)]
+            public string SpotStrategy { get; set; }
+
+            [NameInMap("HostNamePrefix")]
+            [Validation(Required=false)]
+            public string HostNamePrefix { get; set; }
+
             [NameInMap("MinNodesInQueue")]
             [Validation(Required=false)]
             public int? MinNodesInQueue { get; set; }
+
+            [NameInMap("SystemDiskSize")]
+            [Validation(Required=false)]
+            public int? SystemDiskSize { get; set; }
 
             [NameInMap("MaxNodesInQueue")]
             [Validation(Required=false)]
@@ -89,9 +117,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public bool? EnableAutoGrow { get; set; }
 
-            [NameInMap("QueueImageId")]
+            [NameInMap("SystemDiskLevel")]
             [Validation(Required=false)]
-            public string QueueImageId { get; set; }
+            public string SystemDiskLevel { get; set; }
 
             [NameInMap("SpotPriceLimit")]
             [Validation(Required=false)]
@@ -101,10 +129,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<SetAutoScaleConfigRequestQueuesInstanceTypes> InstanceTypes { get; set; }
             public class SetAutoScaleConfigRequestQueuesInstanceTypes : TeaModel {
-                [NameInMap("HostNamePrefix")]
-                [Validation(Required=false)]
-                public string HostNamePrefix { get; set; }
-
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
@@ -126,14 +150,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string SpotStrategy { get; set; }
 
             }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-            [NameInMap("SpotStrategy")]
-            [Validation(Required=false)]
-            public string SpotStrategy { get; set; }
 
         }
 

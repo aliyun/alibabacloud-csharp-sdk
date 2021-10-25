@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
-    public class ListAccountMappingResponse : TeaModel {
+    public class EcdDeleteDesktopsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListAccountMappingResponseBody Body { get; set; }
+        public EcdDeleteDesktopsResponseBody Body { get; set; }
 
     }
 
