@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeInclinedTablesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
+
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeInclinedTablesResponseBodyItems Items { get; set; }
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeInclinedTablesResponseBodyItemsTable> Table { get; set; }
             public class DescribeInclinedTablesResponseBodyItemsTable : TeaModel {
                 public string Type { get; set; }
-                public string Schema { get; set; }
-                public long? Size { get; set; }
                 public string Name { get; set; }
+                public string Schema { get; set; }
                 public bool? IsIncline { get; set; }
+                public long? Size { get; set; }
             }
         };
 

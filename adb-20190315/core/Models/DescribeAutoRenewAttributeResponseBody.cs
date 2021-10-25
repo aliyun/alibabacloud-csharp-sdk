@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAutoRenewAttributeResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]

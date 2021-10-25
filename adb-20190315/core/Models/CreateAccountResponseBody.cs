@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class CreateAccountResponseBody : TeaModel {
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public int? TaskId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public int? TaskId { get; set; }
 
     }
 

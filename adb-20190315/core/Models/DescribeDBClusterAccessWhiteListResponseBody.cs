@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterAccessWhiteListResponseBodyItemsIPArray> IPArray { get; set; }
             public class DescribeDBClusterAccessWhiteListResponseBodyItemsIPArray : TeaModel {
+                public string DBClusterIPArrayName { get; set; }
                 public string DBClusterIPArrayAttribute { get; set; }
                 public string SecurityIPList { get; set; }
-                public string DBClusterIPArrayName { get; set; }
             }
         };
 

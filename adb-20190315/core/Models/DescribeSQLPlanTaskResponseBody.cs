@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public List<DescribeSQLPlanTaskResponseBodyTaskList> TaskList { get; set; }
         public class DescribeSQLPlanTaskResponseBodyTaskList : TeaModel {
-            [NameInMap("ScanCost")]
-            [Validation(Required=false)]
-            public long? ScanCost { get; set; }
-
             [NameInMap("OutputSize")]
             [Validation(Required=false)]
             public long? OutputSize { get; set; }
+
+            [NameInMap("ScanCost")]
+            [Validation(Required=false)]
+            public long? ScanCost { get; set; }
 
             [NameInMap("InputSize")]
             [Validation(Required=false)]

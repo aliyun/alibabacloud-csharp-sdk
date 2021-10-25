@@ -53,10 +53,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string Order { get; set; }
 
-        [NameInMap("Range")]
-        [Validation(Required=false)]
-        public string Range { get; set; }
-
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }

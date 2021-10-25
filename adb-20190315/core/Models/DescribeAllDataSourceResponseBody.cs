@@ -13,6 +13,19 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Schemas")]
+        [Validation(Required=false)]
+        public DescribeAllDataSourceResponseBodySchemas Schemas { get; set; }
+        public class DescribeAllDataSourceResponseBodySchemas : TeaModel {
+            [NameInMap("Schema")]
+            [Validation(Required=false)]
+            public List<DescribeAllDataSourceResponseBodySchemasSchema> Schema { get; set; }
+            public class DescribeAllDataSourceResponseBodySchemasSchema : TeaModel {
+                public string SchemaName { get; set; }
+                public string DBClusterId { get; set; }
+            }
+        };
+
         [NameInMap("Tables")]
         [Validation(Required=false)]
         public DescribeAllDataSourceResponseBodyTables Tables { get; set; }
@@ -21,9 +34,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeAllDataSourceResponseBodyTablesTable> Table { get; set; }
             public class DescribeAllDataSourceResponseBodyTablesTable : TeaModel {
+                public string SchemaName { get; set; }
                 public string TableName { get; set; }
                 public string DBClusterId { get; set; }
-                public string SchemaName { get; set; }
             }
         };
 
@@ -41,19 +54,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public bool? AutoIncrementColumn { get; set; }
                 public string DBClusterId { get; set; }
                 public bool? PrimaryKey { get; set; }
-                public string SchemaName { get; set; }
-            }
-        };
-
-        [NameInMap("Schemas")]
-        [Validation(Required=false)]
-        public DescribeAllDataSourceResponseBodySchemas Schemas { get; set; }
-        public class DescribeAllDataSourceResponseBodySchemas : TeaModel {
-            [NameInMap("Schema")]
-            [Validation(Required=false)]
-            public List<DescribeAllDataSourceResponseBodySchemasSchema> Schema { get; set; }
-            public class DescribeAllDataSourceResponseBodySchemasSchema : TeaModel {
-                public string DBClusterId { get; set; }
                 public string SchemaName { get; set; }
             }
         };

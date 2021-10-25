@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeOperatorPermissionResponseBody : TeaModel {
-        [NameInMap("CreatedTime")]
+        [NameInMap("Privileges")]
         [Validation(Required=false)]
-        public string CreatedTime { get; set; }
+        public string Privileges { get; set; }
+
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Privileges")]
-        [Validation(Required=false)]
-        public string Privileges { get; set; }
-
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("CreatedTime")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string CreatedTime { get; set; }
 
     }
 

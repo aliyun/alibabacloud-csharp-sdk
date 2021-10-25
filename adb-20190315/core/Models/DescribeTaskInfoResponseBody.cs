@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTaskInfoResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
         public DescribeTaskInfoResponseBodyTaskInfo TaskInfo { get; set; }
@@ -22,17 +26,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
-            [NameInMap("BeginTime")]
-            [Validation(Required=false)]
-            public string BeginTime { get; set; }
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public int? TaskId { get; set; }
+            [NameInMap("BeginTime")]
+            [Validation(Required=false)]
+            public string BeginTime { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

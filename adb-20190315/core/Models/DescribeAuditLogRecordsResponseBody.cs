@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAuditLogRecordsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public string TotalCount { get; set; }
+        public string DBClusterId { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]

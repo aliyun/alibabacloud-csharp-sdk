@@ -77,6 +77,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string ZoneId { get; set; }
                 public string Category { get; set; }
                 public string Engine { get; set; }
+                public string KmsId { get; set; }
             }
         };
 

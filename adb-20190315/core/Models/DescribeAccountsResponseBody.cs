@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeAccountsResponseBodyAccountListDBAccount> DBAccount { get; set; }
             public class DescribeAccountsResponseBodyAccountListDBAccount : TeaModel {
-                public string AccountStatus { get; set; }
                 public string AccountDescription { get; set; }
                 public string AccountType { get; set; }
+                public string AccountStatus { get; set; }
                 public string AccountName { get; set; }
             }
         };
