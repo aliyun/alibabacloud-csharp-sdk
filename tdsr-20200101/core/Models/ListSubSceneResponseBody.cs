@@ -156,6 +156,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             [Validation(Required=false)]
             public string OriginUrl { get; set; }
 
+            /// <summary>
+            /// 2k基准图路径
+            /// </summary>
+            [NameInMap("BaseImageUrl")]
+            [Validation(Required=false)]
+            public string BaseImageUrl { get; set; }
+
         }
 
     }

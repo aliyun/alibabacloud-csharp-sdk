@@ -649,6 +649,38 @@ namespace AlibabaCloud.SDK.Tdsr20200101
             return await SaveHotspotTagWithOptionsAsync(request, runtime);
         }
 
+        public RecoveryOriginImageResponse RecoveryOriginImageWithOptions(RecoveryOriginImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<RecoveryOriginImageResponse>(DoRPCRequest("RecoveryOriginImage", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<RecoveryOriginImageResponse> RecoveryOriginImageWithOptionsAsync(RecoveryOriginImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<RecoveryOriginImageResponse>(await DoRPCRequestAsync("RecoveryOriginImage", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public RecoveryOriginImageResponse RecoveryOriginImage(RecoveryOriginImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RecoveryOriginImageWithOptions(request, runtime);
+        }
+
+        public async Task<RecoveryOriginImageResponse> RecoveryOriginImageAsync(RecoveryOriginImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RecoveryOriginImageWithOptionsAsync(request, runtime);
+        }
+
         public DeleteProjectResponse DeleteProjectWithOptions(DeleteProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -807,6 +839,38 @@ namespace AlibabaCloud.SDK.Tdsr20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConnDataWithOptionsAsync(request, runtime);
+        }
+
+        public RollbackSubSceneResponse RollbackSubSceneWithOptions(RollbackSubSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<RollbackSubSceneResponse>(DoRPCRequest("RollbackSubScene", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<RollbackSubSceneResponse> RollbackSubSceneWithOptionsAsync(RollbackSubSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<RollbackSubSceneResponse>(await DoRPCRequestAsync("RollbackSubScene", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public RollbackSubSceneResponse RollbackSubScene(RollbackSubSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RollbackSubSceneWithOptions(request, runtime);
+        }
+
+        public async Task<RollbackSubSceneResponse> RollbackSubSceneAsync(RollbackSubSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RollbackSubSceneWithOptionsAsync(request, runtime);
         }
 
         public TempPreviewStatusResponse TempPreviewStatusWithOptions(TempPreviewStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1479,6 +1543,38 @@ namespace AlibabaCloud.SDK.Tdsr20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetHotspotSceneDataWithOptionsAsync(request, runtime);
+        }
+
+        public AddMosaicsResponse AddMosaicsWithOptions(AddMosaicsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AddMosaicsResponse>(DoRPCRequest("AddMosaics", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<AddMosaicsResponse> AddMosaicsWithOptionsAsync(AddMosaicsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<AddMosaicsResponse>(await DoRPCRequestAsync("AddMosaics", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public AddMosaicsResponse AddMosaics(AddMosaicsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddMosaicsWithOptions(request, runtime);
+        }
+
+        public async Task<AddMosaicsResponse> AddMosaicsAsync(AddMosaicsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddMosaicsWithOptionsAsync(request, runtime);
         }
 
         public ScenePublishResponse ScenePublishWithOptions(ScenePublishRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
