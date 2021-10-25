@@ -69,6 +69,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string InstanceAlias { get; set; }
                 public int? DdlOnline { get; set; }
                 public string EcsRegion { get; set; }
+                public ListInstancesResponseBodyInstanceListInstanceStandardGroup StandardGroup { get; set; }
+                public class ListInstancesResponseBodyInstanceListInstanceStandardGroup : TeaModel {
+                    [NameInMap("GroupName")]
+                    [Validation(Required=false)]
+                    public string GroupName { get; set; }
+
+                    [NameInMap("GroupMode")]
+                    [Validation(Required=false)]
+                    public string GroupMode { get; set; }
+
+                }
             }
         };
 

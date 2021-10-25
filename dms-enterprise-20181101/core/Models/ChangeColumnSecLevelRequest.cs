@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ListSensitiveColumnsRequest : TeaModel {
+    public class ChangeColumnSecLevelRequest : TeaModel {
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
+
+        [NameInMap("DbId")]
+        [Validation(Required=false)]
+        public long? DbId { get; set; }
+
+        [NameInMap("IsLogic")]
+        [Validation(Required=false)]
+        public bool? IsLogic { get; set; }
 
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
@@ -25,25 +33,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ColumnName { get; set; }
 
-        [NameInMap("SecurityLevel")]
+        /// <summary>
+        /// 新的敏感等级
+        /// </summary>
+        [NameInMap("NewLevel")]
         [Validation(Required=false)]
-        public string SecurityLevel { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("DbId")]
-        [Validation(Required=false)]
-        public long? DbId { get; set; }
-
-        [NameInMap("Logic")]
-        [Validation(Required=false)]
-        public bool? Logic { get; set; }
+        public string NewLevel { get; set; }
 
     }
 

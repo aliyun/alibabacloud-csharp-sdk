@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public class GetOpLogResponseBodyOpLogDetailsOpLogDetail : TeaModel {
                 public string Module { get; set; }
                 public string Database { get; set; }
-                public long? UserId { get; set; }
+                public string UserId { get; set; }
                 public string OpContent { get; set; }
                 public string UserNick { get; set; }
                 public long? OrderId { get; set; }

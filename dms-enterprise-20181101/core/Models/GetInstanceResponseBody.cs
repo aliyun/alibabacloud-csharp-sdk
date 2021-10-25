@@ -101,6 +101,19 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("EcsRegion")]
             [Validation(Required=false)]
             public string EcsRegion { get; set; }
+            [NameInMap("StandardGroup")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyInstanceStandardGroup StandardGroup { get; set; }
+            public class GetInstanceResponseBodyInstanceStandardGroup : TeaModel {
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+                [NameInMap("GroupMode")]
+                [Validation(Required=false)]
+                public string GroupMode { get; set; }
+
+            }
         };
 
         [NameInMap("ErrorCode")]

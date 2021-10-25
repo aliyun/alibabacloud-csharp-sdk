@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ColumnName { get; set; }
 
+        [NameInMap("DbId")]
+        [Validation(Required=false)]
+        public long? DbId { get; set; }
+
+        [NameInMap("Logic")]
+        [Validation(Required=false)]
+        public bool? Logic { get; set; }
+
     }
 
 }

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
+        [NameInMap("SearchKey")]
+        [Validation(Required=false)]
+        public string SearchKey { get; set; }
+
         [NameInMap("Logic")]
         [Validation(Required=false)]
         public bool? Logic { get; set; }

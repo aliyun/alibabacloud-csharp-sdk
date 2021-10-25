@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string DsType { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public long? InstanceId { get; set; }
+
         [NameInMap("DbId")]
         [Validation(Required=false)]
         public string DbId { get; set; }

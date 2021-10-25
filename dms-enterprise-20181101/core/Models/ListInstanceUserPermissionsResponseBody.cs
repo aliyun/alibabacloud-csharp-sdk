@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ListUserPermissionsResponseBody : TeaModel {
+    public class ListInstanceUserPermissionsResponseBody : TeaModel {
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
@@ -27,25 +27,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         [NameInMap("UserPermissions")]
         [Validation(Required=false)]
-        public ListUserPermissionsResponseBodyUserPermissions UserPermissions { get; set; }
-        public class ListUserPermissionsResponseBodyUserPermissions : TeaModel {
+        public ListInstanceUserPermissionsResponseBodyUserPermissions UserPermissions { get; set; }
+        public class ListInstanceUserPermissionsResponseBodyUserPermissions : TeaModel {
             [NameInMap("UserPermission")]
             [Validation(Required=false)]
-            public List<ListUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
-            public class ListUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
-                public string DbId { get; set; }
-                public string TableName { get; set; }
+            public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
+            public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
                 public string UserId { get; set; }
-                public string SchemaName { get; set; }
-                public bool? Logic { get; set; }
                 public string UserNickName { get; set; }
                 public string InstanceId { get; set; }
-                public ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails PermDetails { get; set; }
-                public class ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails : TeaModel {
+                public ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails PermDetails { get; set; }
+                public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails : TeaModel {
                     [NameInMap("PermDetail")]
                     [Validation(Required=false)]
-                    public List<ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail> PermDetail { get; set; }
-                    public class ListUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail : TeaModel {
+                    public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail> PermDetail { get; set; }
+                    public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail : TeaModel {
                         [NameInMap("OriginFrom")]
                         [Validation(Required=false)]
                         public string OriginFrom { get; set; }
@@ -73,15 +69,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     }
 
                 }
-                public string EnvType { get; set; }
-                public string ColumnName { get; set; }
-                public string DbType { get; set; }
-                public string DsType { get; set; }
-                public string TableId { get; set; }
-                public string SearchName { get; set; }
-                public string Alias { get; set; }
-                public string Host { get; set; }
-                public long? Port { get; set; }
             }
         };
 
