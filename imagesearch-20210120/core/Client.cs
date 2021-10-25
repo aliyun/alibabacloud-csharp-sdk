@@ -37,6 +37,38 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public ImageCategoryResponse ImageCategoryWithOptions(ImageCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ImageCategoryResponse>(DoRPCRequest("ImageCategory", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ImageCategoryResponse> ImageCategoryWithOptionsAsync(ImageCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ImageCategoryResponse>(await DoRPCRequestAsync("ImageCategory", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ImageCategoryResponse ImageCategory(ImageCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageCategoryWithOptions(request, runtime);
+        }
+
+        public async Task<ImageCategoryResponse> ImageCategoryAsync(ImageCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageCategoryWithOptionsAsync(request, runtime);
+        }
+
         public GeneralRecognitionResponse GeneralRecognitionWithOptions(GeneralRecognitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -229,6 +261,38 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             }
             GeneralRecognitionResponse generalRecognitionResp = await GeneralRecognitionWithOptionsAsync(generalRecognitionReq, runtime);
             return generalRecognitionResp;
+        }
+
+        public ImagePropertyResponse ImagePropertyWithOptions(ImagePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ImagePropertyResponse>(DoRPCRequest("ImageProperty", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ImagePropertyResponse> ImagePropertyWithOptionsAsync(ImagePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ImagePropertyResponse>(await DoRPCRequestAsync("ImageProperty", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ImagePropertyResponse ImageProperty(ImagePropertyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImagePropertyWithOptions(request, runtime);
+        }
+
+        public async Task<ImagePropertyResponse> ImagePropertyAsync(ImagePropertyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImagePropertyWithOptionsAsync(request, runtime);
         }
 
         public ImageDuplicationResponse ImageDuplicationWithOptions(ImageDuplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

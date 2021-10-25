@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,14 +11,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20210120.Models
 {
-    public class GeneralRecognitionRequest : TeaModel {
+    public class ImageCategoryRequest : TeaModel {
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("PicContent")]
+        [NameInMap("PicUrl")]
         [Validation(Required=false)]
-        public string PicContent { get; set; }
+        public string PicUrl { get; set; }
 
     }
 
