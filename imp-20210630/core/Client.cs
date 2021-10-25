@@ -669,6 +669,38 @@ namespace AlibabaCloud.SDK.Imp20210630
             return await DeleteLiveWithOptionsAsync(request, runtime);
         }
 
+        public ListCommentsResponse ListCommentsWithOptions(ListCommentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListCommentsResponse>(DoRPCRequest("ListComments", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListCommentsResponse> ListCommentsWithOptionsAsync(ListCommentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListCommentsResponse>(await DoRPCRequestAsync("ListComments", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListCommentsResponse ListComments(ListCommentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCommentsWithOptions(request, runtime);
+        }
+
+        public async Task<ListCommentsResponse> ListCommentsAsync(ListCommentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCommentsWithOptionsAsync(request, runtime);
+        }
+
         public GetLiveDomainStatusResponse GetLiveDomainStatusWithOptions(GetLiveDomainStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
