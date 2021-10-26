@@ -65,6 +65,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
+        [NameInMap("XForwardedForConfig")]
+        [Validation(Required=false)]
+        public CreateListenerRequestXForwardedForConfig XForwardedForConfig { get; set; }
+        public class CreateListenerRequestXForwardedForConfig : TeaModel {
+            [NameInMap("XForwardedForGaIdEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForGaIdEnabled { get; set; }
+            [NameInMap("XForwardedForGaApEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForGaApEnabled { get; set; }
+            [NameInMap("XForwardedForProtoEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForProtoEnabled { get; set; }
+            [NameInMap("XForwardedForPortEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForPortEnabled { get; set; }
+            [NameInMap("XRealIpEnabled")]
+            [Validation(Required=false)]
+            public bool? XRealIpEnabled { get; set; }
+        };
+
+        [NameInMap("SecurityPolicyId")]
+        [Validation(Required=false)]
+        public string SecurityPolicyId { get; set; }
+
     }
 
 }

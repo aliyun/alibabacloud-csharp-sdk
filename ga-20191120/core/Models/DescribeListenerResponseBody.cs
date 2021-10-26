@@ -109,6 +109,31 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? ProxyProtocol { get; set; }
 
+        [NameInMap("XForwardedForConfig")]
+        [Validation(Required=false)]
+        public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig { get; set; }
+        public class DescribeListenerResponseBodyXForwardedForConfig : TeaModel {
+            [NameInMap("XForwardedForGaIdEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForGaIdEnabled { get; set; }
+            [NameInMap("XForwardedForGaApEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForGaApEnabled { get; set; }
+            [NameInMap("XForwardedForProtoEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForProtoEnabled { get; set; }
+            [NameInMap("XForwardedForPortEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForPortEnabled { get; set; }
+            [NameInMap("XRealIpEnabled")]
+            [Validation(Required=false)]
+            public bool? XRealIpEnabled { get; set; }
+        };
+
+        [NameInMap("SecurityPolicyId")]
+        [Validation(Required=false)]
+        public string SecurityPolicyId { get; set; }
+
     }
 
 }
