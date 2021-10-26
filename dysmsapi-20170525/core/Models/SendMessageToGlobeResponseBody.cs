@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendMessageToGlobeResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
@@ -16,6 +20,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
+
+        [NameInMap("NumberDetail")]
+        [Validation(Required=false)]
+        public SendMessageToGlobeResponseBodyNumberDetail NumberDetail { get; set; }
+        public class SendMessageToGlobeResponseBodyNumberDetail : TeaModel {
+            [NameInMap("Carrier")]
+            [Validation(Required=false)]
+            public string Carrier { get; set; }
+            [NameInMap("Country")]
+            [Validation(Required=false)]
+            public string Country { get; set; }
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -25,28 +44,9 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string Segments { get; set; }
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("To")]
         [Validation(Required=false)]
         public string To { get; set; }
-
-        [NameInMap("NumberDetail")]
-        [Validation(Required=false)]
-        public SendMessageToGlobeResponseBodyNumberDetail NumberDetail { get; set; }
-        public class SendMessageToGlobeResponseBodyNumberDetail : TeaModel {
-            [NameInMap("Country")]
-            [Validation(Required=false)]
-            public string Country { get; set; }
-            [NameInMap("Carrier")]
-            [Validation(Required=false)]
-            public string Carrier { get; set; }
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
-        };
 
     }
 

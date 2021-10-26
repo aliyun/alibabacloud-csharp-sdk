@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,14 +11,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class SendMessageToGlobeRequest : TeaModel {
-        [NameInMap("From")]
+    public class AddShortUrlRequest : TeaModel {
+        [NameInMap("EffectiveDays")]
         [Validation(Required=false)]
-        public string From { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
+        public string EffectiveDays { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -29,13 +28,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("To")]
+        [NameInMap("ShortUrlName")]
         [Validation(Required=false)]
-        public string To { get; set; }
+        public string ShortUrlName { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("SourceUrl")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string SourceUrl { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PhoneNumberJson")]
+        [Validation(Required=false)]
+        public string PhoneNumberJson { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -21,13 +25,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("PhoneNumberJson")]
-        [Validation(Required=false)]
-        public string PhoneNumberJson { get; set; }
-
         [NameInMap("SignNameJson")]
         [Validation(Required=false)]
         public string SignNameJson { get; set; }
+
+        [NameInMap("SmsUpExtendCodeJson")]
+        [Validation(Required=false)]
+        public string SmsUpExtendCodeJson { get; set; }
 
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("TemplateParamJson")]
         [Validation(Required=false)]
         public string TemplateParamJson { get; set; }
-
-        [NameInMap("SmsUpExtendCodeJson")]
-        [Validation(Required=false)]
-        public string SmsUpExtendCodeJson { get; set; }
 
     }
 

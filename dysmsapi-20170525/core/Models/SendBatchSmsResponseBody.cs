@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class SendBatchSmsResponseBody : TeaModel {
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("BizId")]
-        [Validation(Required=false)]
-        public string BizId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

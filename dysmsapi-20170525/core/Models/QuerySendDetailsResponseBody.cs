@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
         [NameInMap("SmsSendDetailDTOs")]
         [Validation(Required=false)]
         public QuerySendDetailsResponseBodySmsSendDetailDTOs SmsSendDetailDTOs { get; set; }
@@ -33,16 +29,20 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public List<QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO> SmsSendDetailDTO { get; set; }
             public class QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO : TeaModel {
+                public string Content { get; set; }
                 public string ErrCode { get; set; }
-                public string TemplateCode { get; set; }
                 public string OutId { get; set; }
+                public string PhoneNum { get; set; }
                 public string ReceiveDate { get; set; }
                 public string SendDate { get; set; }
-                public string PhoneNum { get; set; }
-                public string Content { get; set; }
                 public long? SendStatus { get; set; }
+                public string TemplateCode { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

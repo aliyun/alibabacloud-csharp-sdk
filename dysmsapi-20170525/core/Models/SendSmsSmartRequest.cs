@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class SendSmsRequest : TeaModel {
-        [NameInMap("OutId")]
+    public class SendSmsSmartRequest : TeaModel {
+        [NameInMap("ExtendCode")]
         [Validation(Required=false)]
-        public string OutId { get; set; }
+        public string ExtendCode { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("ModelCode")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string ModelCode { get; set; }
+
+        [NameInMap("NumberType")]
+        [Validation(Required=false)]
+        public string NumberType { get; set; }
 
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
         public string PhoneNumbers { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("SignName")]
         [Validation(Required=false)]

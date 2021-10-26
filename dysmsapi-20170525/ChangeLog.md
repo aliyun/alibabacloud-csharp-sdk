@@ -1,3 +1,6 @@
+2021-10-26 Version: 2.0.6
+- Support Short Url for SMS.
+
 2021-09-01 Version: 1.0.3
 - Generated csharp 2017-05-25 for Dysmsapi.
 

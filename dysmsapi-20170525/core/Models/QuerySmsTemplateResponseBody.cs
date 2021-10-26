@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QuerySmsTemplateResponseBody : TeaModel {
-        [NameInMap("TemplateContent")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string TemplateContent { get; set; }
+        public string Code { get; set; }
+
+        [NameInMap("CreateDate")]
+        [Validation(Required=false)]
+        public string CreateDate { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,33 +33,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
-        [NameInMap("TemplateStatus")]
+        [NameInMap("TemplateContent")]
         [Validation(Required=false)]
-        public int? TemplateStatus { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("TemplateType")]
-        [Validation(Required=false)]
-        public int? TemplateType { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
+        public string TemplateContent { get; set; }
 
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
-        [NameInMap("CreateDate")]
+        [NameInMap("TemplateStatus")]
         [Validation(Required=false)]
-        public string CreateDate { get; set; }
+        public int? TemplateStatus { get; set; }
 
-        [NameInMap("Reason")]
+        [NameInMap("TemplateType")]
         [Validation(Required=false)]
-        public string Reason { get; set; }
+        public int? TemplateType { get; set; }
 
     }
 

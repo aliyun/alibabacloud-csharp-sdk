@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -20,14 +24,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("TemplateType")]
-        [Validation(Required=false)]
-        public int? TemplateType { get; set; }
-
-        [NameInMap("TemplateName")]
-        [Validation(Required=false)]
-        public string TemplateName { get; set; }
 
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
@@ -37,9 +33,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string TemplateContent { get; set; }
 
-        [NameInMap("Remark")]
+        [NameInMap("TemplateName")]
         [Validation(Required=false)]
-        public string Remark { get; set; }
+        public string TemplateName { get; set; }
+
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public int? TemplateType { get; set; }
 
     }
 

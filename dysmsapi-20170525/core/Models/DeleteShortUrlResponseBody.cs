@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class SendSmsResponseBody : TeaModel {
-        [NameInMap("BizId")]
-        [Validation(Required=false)]
-        public string BizId { get; set; }
-
+    public class DeleteShortUrlResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }

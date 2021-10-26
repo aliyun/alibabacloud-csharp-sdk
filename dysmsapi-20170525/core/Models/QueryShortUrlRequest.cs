@@ -8,15 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class SendMessageToGlobeRequest : TeaModel {
-        [NameInMap("From")]
-        [Validation(Required=false)]
-        public string From { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
+    public class QueryShortUrlRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -29,13 +21,9 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("To")]
+        [NameInMap("ShortUrl")]
         [Validation(Required=false)]
-        public string To { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public string ShortUrl { get; set; }
 
     }
 
