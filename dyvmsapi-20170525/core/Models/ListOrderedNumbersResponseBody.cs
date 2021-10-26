@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Numbers")]
         [Validation(Required=false)]
         public List<string> Numbers { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListHotlineTransferNumberResponseBodyData Data { get; set; }
@@ -38,14 +30,22 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
             [Validation(Required=false)]
             public List<ListHotlineTransferNumberResponseBodyDataValues> Values { get; set; }
             public class ListHotlineTransferNumberResponseBodyDataValues : TeaModel {
-                public string PhoneNumber { get; set; }
-                public string NumberOwnerName { get; set; }
-                public string QualificationId { get; set; }
                 public string HotlineNumber { get; set; }
                 public string IdentityCard { get; set; }
+                public string NumberOwnerName { get; set; }
+                public string PhoneNumber { get; set; }
+                public string QualificationId { get; set; }
                 public string ResUniqueCode { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

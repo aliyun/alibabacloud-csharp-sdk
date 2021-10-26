@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSipAccountResponseBodyData Data { get; set; }
@@ -35,6 +27,14 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
             [Validation(Required=false)]
             public string VoipPassword { get; set; }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

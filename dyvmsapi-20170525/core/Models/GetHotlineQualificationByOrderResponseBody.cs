@@ -13,6 +13,21 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetHotlineQualificationByOrderResponseBodyData Data { get; set; }
+        public class GetHotlineQualificationByOrderResponseBodyData : TeaModel {
+            [NameInMap("OrderId")]
+            [Validation(Required=false)]
+            public string OrderId { get; set; }
+            [NameInMap("QualificationId")]
+            [Validation(Required=false)]
+            public string QualificationId { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,21 +35,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetHotlineQualificationByOrderResponseBodyData Data { get; set; }
-        public class GetHotlineQualificationByOrderResponseBodyData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("QualificationId")]
-            [Validation(Required=false)]
-            public string QualificationId { get; set; }
-            [NameInMap("OrderId")]
-            [Validation(Required=false)]
-            public string OrderId { get; set; }
-        };
 
     }
 

@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ListOutboundStrategiesRequest : TeaModel {
+        [NameInMap("BuId")]
+        [Validation(Required=false)]
+        public long? BuId { get; set; }
+
+        [NameInMap("Keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("ProdCode")]
+        [Validation(Required=false)]
+        public string ProdCode { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ProdCode")]
-        [Validation(Required=false)]
-        public string ProdCode { get; set; }
-
-        [NameInMap("BuId")]
-        [Validation(Required=false)]
-        public long? BuId { get; set; }
-
-        [NameInMap("Keyword")]
-        [Validation(Required=false)]
-        public string Keyword { get; set; }
 
     }
 

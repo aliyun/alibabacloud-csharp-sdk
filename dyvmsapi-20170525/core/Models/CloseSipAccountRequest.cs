@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PartnerId")]
+        [Validation(Required=false)]
+        public long? PartnerId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("PartnerId")]
-        [Validation(Required=false)]
-        public long? PartnerId { get; set; }
 
         [NameInMap("SipAccountID")]
         [Validation(Required=false)]

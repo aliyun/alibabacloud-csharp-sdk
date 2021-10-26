@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListHotlineTransferRegisterFileResponseBodyData Data { get; set; }
@@ -38,17 +30,25 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
             [Validation(Required=false)]
             public List<ListHotlineTransferRegisterFileResponseBodyDataValues> Values { get; set; }
             public class ListHotlineTransferRegisterFileResponseBodyDataValues : TeaModel {
-                public string MngOpMail { get; set; }
-                public string MngOpName { get; set; }
-                public string CorpName { get; set; }
                 public string Agree { get; set; }
-                public string MngOpMobile { get; set; }
-                public string MngOpIdentityCard { get; set; }
+                public string CorpName { get; set; }
                 public string HotlineNumber { get; set; }
+                public string MngOpIdentityCard { get; set; }
+                public string MngOpMail { get; set; }
+                public string MngOpMobile { get; set; }
+                public string MngOpName { get; set; }
                 public string QualificationId { get; set; }
                 public long? ResUniqueCode { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

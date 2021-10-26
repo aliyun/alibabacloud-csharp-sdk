@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SmartCallOperateResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public bool? Status { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public bool? Status { get; set; }
 
     }
 

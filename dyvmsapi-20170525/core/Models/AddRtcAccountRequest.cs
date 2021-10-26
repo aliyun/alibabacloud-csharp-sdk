@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class AddRtcAccountRequest : TeaModel {
+        [NameInMap("DeviceId")]
+        [Validation(Required=false)]
+        public string DeviceId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -23,10 +27,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("DeviceId")]
-        [Validation(Required=false)]
-        public string DeviceId { get; set; }
 
     }
 

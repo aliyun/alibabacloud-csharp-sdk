@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class ExecuteCallTaskRequest : TeaModel {
+        [NameInMap("FireTime")]
+        [Validation(Required=false)]
+        public string FireTime { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public long? TaskId { get; set; }
-
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("FireTime")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string FireTime { get; set; }
+        public long? TaskId { get; set; }
 
     }
 

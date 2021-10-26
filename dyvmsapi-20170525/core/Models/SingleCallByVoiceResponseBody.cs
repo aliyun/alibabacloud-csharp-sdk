@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SingleCallByVoiceResponseBody : TeaModel {
+        [NameInMap("CallId")]
+        [Validation(Required=false)]
+        public string CallId { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("CallId")]
-        [Validation(Required=false)]
-        public string CallId { get; set; }
 
     }
 

@@ -8,26 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class ListHotlineTransferRegisterFileRequest : TeaModel {
-        [NameInMap("HotlineNumber")]
-        [Validation(Required=false)]
-        public string HotlineNumber { get; set; }
-
+    public class GetCallInfoRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("QualificationId")]
-        [Validation(Required=false)]
-        public string QualificationId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -36,6 +20,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RtcId")]
+        [Validation(Required=false)]
+        public string RtcId { get; set; }
 
     }
 

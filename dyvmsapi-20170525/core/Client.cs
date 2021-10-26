@@ -581,6 +581,38 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
             return await ExecuteCallTaskWithOptionsAsync(request, runtime);
         }
 
+        public GetCallInfoResponse GetCallInfoWithOptions(GetCallInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetCallInfoResponse>(DoRPCRequest("GetCallInfo", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetCallInfoResponse> GetCallInfoWithOptionsAsync(GetCallInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetCallInfoResponse>(await DoRPCRequestAsync("GetCallInfo", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetCallInfoResponse GetCallInfo(GetCallInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCallInfoWithOptions(request, runtime);
+        }
+
+        public async Task<GetCallInfoResponse> GetCallInfoAsync(GetCallInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCallInfoWithOptionsAsync(request, runtime);
+        }
+
         public GetHotlineQualificationByOrderResponse GetHotlineQualificationByOrderWithOptions(GetHotlineQualificationByOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

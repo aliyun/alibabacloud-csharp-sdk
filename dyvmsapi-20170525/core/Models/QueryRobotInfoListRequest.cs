@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class QueryRobotInfoListRequest : TeaModel {
+        [NameInMap("AuditStatus")]
+        [Validation(Required=false)]
+        public string AuditStatus { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("AuditStatus")]
-        [Validation(Required=false)]
-        public string AuditStatus { get; set; }
 
     }
 

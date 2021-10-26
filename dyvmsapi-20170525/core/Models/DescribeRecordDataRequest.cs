@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class DescribeRecordDataRequest : TeaModel {
+        [NameInMap("AccountId")]
+        [Validation(Required=false)]
+        public string AccountId { get; set; }
+
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
+        [NameInMap("Acid")]
+        [Validation(Required=false)]
+        public string Acid { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("ProdCode")]
+        [Validation(Required=false)]
+        public string ProdCode { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,22 +36,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ProdCode")]
-        [Validation(Required=false)]
-        public string ProdCode { get; set; }
-
-        [NameInMap("AccountType")]
-        [Validation(Required=false)]
-        public string AccountType { get; set; }
-
-        [NameInMap("AccountId")]
-        [Validation(Required=false)]
-        public string AccountId { get; set; }
-
-        [NameInMap("Acid")]
-        [Validation(Required=false)]
-        public string Acid { get; set; }
 
         [NameInMap("SecLevel")]
         [Validation(Required=false)]

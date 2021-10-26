@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class QueryCallDetailByCallIdResponseBody : TeaModel {
+    public class GetCallInfoResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public GetCallInfoResponseBodyData Data { get; set; }
+        public class GetCallInfoResponseBodyData : TeaModel {
+            [NameInMap("ChannelId")]
+            [Validation(Required=false)]
+            public string ChannelId { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+        };
 
         [NameInMap("Message")]
         [Validation(Required=false)]

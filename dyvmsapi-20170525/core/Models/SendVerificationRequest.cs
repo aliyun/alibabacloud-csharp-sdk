@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SendVerificationRequest : TeaModel {
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public string BizType { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("VerifyType")]
-        [Validation(Required=false)]
-        public string VerifyType { get; set; }
-
-        [NameInMap("BizType")]
-        [Validation(Required=false)]
-        public string BizType { get; set; }
-
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string Target { get; set; }
+
+        [NameInMap("VerifyType")]
+        [Validation(Required=false)]
+        public string VerifyType { get; set; }
 
     }
 

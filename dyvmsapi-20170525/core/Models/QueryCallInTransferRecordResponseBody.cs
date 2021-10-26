@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryCallInTransferRecordResponseBodyData Data { get; set; }
@@ -39,13 +31,21 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
             public List<QueryCallInTransferRecordResponseBodyDataValues> Values { get; set; }
             public class QueryCallInTransferRecordResponseBodyDataValues : TeaModel {
                 public string CallInCalled { get; set; }
-                public string TransferCalled { get; set; }
-                public string RecordUrl { get; set; }
-                public string TransferCaller { get; set; }
-                public long? GmtCreate { get; set; }
                 public string CallInCaller { get; set; }
+                public long? GmtCreate { get; set; }
+                public string RecordUrl { get; set; }
+                public string TransferCalled { get; set; }
+                public string TransferCaller { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

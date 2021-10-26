@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -21,25 +29,17 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("TaskName")]
-        [Validation(Required=false)]
-        public string TaskName { get; set; }
-
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
+
         [NameInMap("Time")]
         [Validation(Required=false)]
         public string Time { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
 
     }
 

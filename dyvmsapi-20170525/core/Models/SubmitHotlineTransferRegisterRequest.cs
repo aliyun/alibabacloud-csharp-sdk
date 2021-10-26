@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class SubmitHotlineTransferRegisterRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Agreement")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Agreement { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("HotlineNumber")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string HotlineNumber { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("OperatorIdentityCard")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("QualificationId")]
-        [Validation(Required=false)]
-        public string QualificationId { get; set; }
-
-        [NameInMap("OperatorName")]
-        [Validation(Required=false)]
-        public string OperatorName { get; set; }
+        public string OperatorIdentityCard { get; set; }
 
         [NameInMap("OperatorMail")]
         [Validation(Required=false)]
@@ -45,22 +37,34 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string OperatorMobileVerifyCode { get; set; }
 
-        [NameInMap("OperatorIdentityCard")]
+        [NameInMap("OperatorName")]
         [Validation(Required=false)]
-        public string OperatorIdentityCard { get; set; }
+        public string OperatorName { get; set; }
 
-        [NameInMap("Agreement")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Agreement { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("HotlineNumber")]
+        [NameInMap("QualificationId")]
         [Validation(Required=false)]
-        public string HotlineNumber { get; set; }
+        public string QualificationId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("TransferPhoneNumberInfos")]
         [Validation(Required=false)]
         public List<SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos> TransferPhoneNumberInfos { get; set; }
         public class SubmitHotlineTransferRegisterRequestTransferPhoneNumberInfos : TeaModel {
+            [NameInMap("IdentityCard")]
+            [Validation(Required=false)]
+            public string IdentityCard { get; set; }
+
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
@@ -68,10 +72,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
             [NameInMap("PhoneNumberOwnerName")]
             [Validation(Required=false)]
             public string PhoneNumberOwnerName { get; set; }
-
-            [NameInMap("IdentityCard")]
-            [Validation(Required=false)]
-            public string IdentityCard { get; set; }
 
         }
 

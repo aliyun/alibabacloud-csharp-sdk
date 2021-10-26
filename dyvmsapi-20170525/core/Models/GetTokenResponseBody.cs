@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("Token")]
-        [Validation(Required=false)]
-        public string Token { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("Token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
 
     }
 

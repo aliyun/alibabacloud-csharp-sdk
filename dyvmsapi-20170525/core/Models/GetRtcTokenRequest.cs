@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
     public class GetRtcTokenRequest : TeaModel {
+        [NameInMap("DeviceId")]
+        [Validation(Required=false)]
+        public string DeviceId { get; set; }
+
+        [NameInMap("IsCustomAccount")]
+        [Validation(Required=false)]
+        public bool? IsCustomAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
-
-        [NameInMap("DeviceId")]
-        [Validation(Required=false)]
-        public string DeviceId { get; set; }
-
-        [NameInMap("IsCustomAccount")]
-        [Validation(Required=false)]
-        public bool? IsCustomAccount { get; set; }
 
     }
 
