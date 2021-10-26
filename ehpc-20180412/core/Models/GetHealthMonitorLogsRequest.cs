@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("EnableReverse")]
         [Validation(Required=false)]
-        public int? StartTime { get; set; }
+        public bool? EnableReverse { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public int? EndTime { get; set; }
 
-        [NameInMap("EnableReverse")]
-        [Validation(Required=false)]
-        public bool? EnableReverse { get; set; }
-
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public int? StartTime { get; set; }
 
     }
 

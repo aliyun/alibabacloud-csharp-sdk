@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SubmitJobRequest : TeaModel {
+        [NameInMap("ArrayRequest")]
+        [Validation(Required=false)]
+        public string ArrayRequest { get; set; }
+
+        [NameInMap("ClockTime")]
+        [Validation(Required=false)]
+        public string ClockTime { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -16,6 +24,50 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("CommandLine")]
         [Validation(Required=false)]
         public string CommandLine { get; set; }
+
+        [NameInMap("ContainerId")]
+        [Validation(Required=false)]
+        public string ContainerId { get; set; }
+
+        [NameInMap("Gpu")]
+        [Validation(Required=false)]
+        public int? Gpu { get; set; }
+
+        [NameInMap("InputFileUrl")]
+        [Validation(Required=false)]
+        public string InputFileUrl { get; set; }
+
+        [NameInMap("JobQueue")]
+        [Validation(Required=false)]
+        public string JobQueue { get; set; }
+
+        [NameInMap("Mem")]
+        [Validation(Required=false)]
+        public string Mem { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("Node")]
+        [Validation(Required=false)]
+        public int? Node { get; set; }
+
+        [NameInMap("PackagePath")]
+        [Validation(Required=false)]
+        public string PackagePath { get; set; }
+
+        [NameInMap("PostCmdLine")]
+        [Validation(Required=false)]
+        public string PostCmdLine { get; set; }
+
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
+        [NameInMap("ReRunable")]
+        [Validation(Required=false)]
+        public bool? ReRunable { get; set; }
 
         [NameInMap("RunasUser")]
         [Validation(Required=false)]
@@ -25,61 +77,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string RunasUserPassword { get; set; }
 
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Priority")]
-        [Validation(Required=false)]
-        public int? Priority { get; set; }
-
-        [NameInMap("PackagePath")]
-        [Validation(Required=false)]
-        public string PackagePath { get; set; }
-
-        [NameInMap("StdoutRedirectPath")]
-        [Validation(Required=false)]
-        public string StdoutRedirectPath { get; set; }
-
         [NameInMap("StderrRedirectPath")]
         [Validation(Required=false)]
         public string StderrRedirectPath { get; set; }
 
-        [NameInMap("ReRunable")]
+        [NameInMap("StdoutRedirectPath")]
         [Validation(Required=false)]
-        public bool? ReRunable { get; set; }
-
-        [NameInMap("ArrayRequest")]
-        [Validation(Required=false)]
-        public string ArrayRequest { get; set; }
-
-        [NameInMap("Variables")]
-        [Validation(Required=false)]
-        public string Variables { get; set; }
-
-        [NameInMap("InputFileUrl")]
-        [Validation(Required=false)]
-        public string InputFileUrl { get; set; }
-
-        [NameInMap("UnzipCmd")]
-        [Validation(Required=false)]
-        public string UnzipCmd { get; set; }
-
-        [NameInMap("PostCmdLine")]
-        [Validation(Required=false)]
-        public string PostCmdLine { get; set; }
-
-        [NameInMap("ContainerId")]
-        [Validation(Required=false)]
-        public string ContainerId { get; set; }
-
-        [NameInMap("JobQueue")]
-        [Validation(Required=false)]
-        public string JobQueue { get; set; }
-
-        [NameInMap("Node")]
-        [Validation(Required=false)]
-        public int? Node { get; set; }
+        public string StdoutRedirectPath { get; set; }
 
         [NameInMap("Task")]
         [Validation(Required=false)]
@@ -89,17 +93,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? Thread { get; set; }
 
-        [NameInMap("Mem")]
+        [NameInMap("UnzipCmd")]
         [Validation(Required=false)]
-        public string Mem { get; set; }
+        public string UnzipCmd { get; set; }
 
-        [NameInMap("Gpu")]
+        [NameInMap("Variables")]
         [Validation(Required=false)]
-        public int? Gpu { get; set; }
-
-        [NameInMap("ClockTime")]
-        [Validation(Required=false)]
-        public string ClockTime { get; set; }
+        public string Variables { get; set; }
 
     }
 

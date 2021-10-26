@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListTasksResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -17,21 +21,37 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListTasksResponseBodyTasks> Tasks { get; set; }
         public class ListTasksResponseBodyTasks : TeaModel {
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            [NameInMap("CurrentStep")]
+            [Validation(Required=false)]
+            public int? CurrentStep { get; set; }
+
+            [NameInMap("Errors")]
+            [Validation(Required=false)]
+            public string Errors { get; set; }
+
+            [NameInMap("Request")]
+            [Validation(Required=false)]
+            public string Request { get; set; }
+
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public string Result { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
 
             [NameInMap("TaskType")]
             [Validation(Required=false)]
@@ -41,31 +61,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public int? TotalSteps { get; set; }
 
-            [NameInMap("CurrentStep")]
-            [Validation(Required=false)]
-            public int? CurrentStep { get; set; }
-
-            [NameInMap("Result")]
-            [Validation(Required=false)]
-            public string Result { get; set; }
-
-            [NameInMap("Errors")]
-            [Validation(Required=false)]
-            public string Errors { get; set; }
-
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public string TaskId { get; set; }
-
-            [NameInMap("Request")]
-            [Validation(Required=false)]
-            public string Request { get; set; }
-
-            [NameInMap("ClusterId")]
-            [Validation(Required=false)]
-            public string ClusterId { get; set; }
-
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

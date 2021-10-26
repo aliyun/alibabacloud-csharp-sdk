@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListCloudMetricProfilingsRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

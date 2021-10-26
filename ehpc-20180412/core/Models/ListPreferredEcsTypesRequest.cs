@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListPreferredEcsTypesRequest : TeaModel {
-        [NameInMap("ZoneId")]
+        [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string InstanceChargeType { get; set; }
 
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
 
-        [NameInMap("InstanceChargeType")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string InstanceChargeType { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("ReleaseInstance")]
-        [Validation(Required=false)]
-        public bool? ReleaseInstance { get; set; }
-
-        [NameInMap("Sync")]
-        [Validation(Required=false)]
-        public bool? Sync { get; set; }
-
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public List<DeleteNodesRequestInstance> Instance { get; set; }
@@ -30,6 +22,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string Id { get; set; }
 
         }
+
+        [NameInMap("ReleaseInstance")]
+        [Validation(Required=false)]
+        public bool? ReleaseInstance { get; set; }
+
+        [NameInMap("Sync")]
+        [Validation(Required=false)]
+        public bool? Sync { get; set; }
 
     }
 

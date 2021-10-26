@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class AddExistedNodesRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -16,14 +20,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
-
-        [NameInMap("JobQueue")]
-        [Validation(Required=false)]
-        public string JobQueue { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
         [NameInMap("ImageOwnerAlias")]
         [Validation(Required=false)]
@@ -38,6 +34,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string Id { get; set; }
 
         }
+
+        [NameInMap("JobQueue")]
+        [Validation(Required=false)]
+        public string JobQueue { get; set; }
 
     }
 

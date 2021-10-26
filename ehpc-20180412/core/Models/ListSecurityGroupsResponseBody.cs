@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListSecurityGroupsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<string> SecurityGroup { get; set; }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListAvailableEcsTypesResponseBody : TeaModel {
-        [NameInMap("SupportSpotInstance")]
-        [Validation(Required=false)]
-        public bool? SupportSpotInstance { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
         public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies InstanceTypeFamilies { get; set; }
@@ -33,21 +25,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     [Validation(Required=false)]
                     public List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo> TypesInfo { get; set; }
                     public class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo : TeaModel {
-                        [NameInMap("Status")]
+                        [NameInMap("CpuCoreCount")]
                         [Validation(Required=false)]
-                        public string Status { get; set; }
+                        public int? CpuCoreCount { get; set; }
 
-                        [NameInMap("InstanceTypeId")]
+                        [NameInMap("EniQuantity")]
                         [Validation(Required=false)]
-                        public string InstanceTypeId { get; set; }
+                        public int? EniQuantity { get; set; }
 
-                        [NameInMap("InstanceBandwidthRx")]
+                        [NameInMap("GPUAmount")]
                         [Validation(Required=false)]
-                        public int? InstanceBandwidthRx { get; set; }
+                        public int? GPUAmount { get; set; }
 
                         [NameInMap("GPUSpec")]
                         [Validation(Required=false)]
                         public string GPUSpec { get; set; }
+
+                        [NameInMap("InstanceBandwidthRx")]
+                        [Validation(Required=false)]
+                        public int? InstanceBandwidthRx { get; set; }
 
                         [NameInMap("InstanceBandwidthTx")]
                         [Validation(Required=false)]
@@ -61,21 +57,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         [Validation(Required=false)]
                         public int? InstancePpsTx { get; set; }
 
-                        [NameInMap("GPUAmount")]
+                        [NameInMap("InstanceTypeId")]
                         [Validation(Required=false)]
-                        public int? GPUAmount { get; set; }
-
-                        [NameInMap("CpuCoreCount")]
-                        [Validation(Required=false)]
-                        public int? CpuCoreCount { get; set; }
+                        public string InstanceTypeId { get; set; }
 
                         [NameInMap("MemorySize")]
                         [Validation(Required=false)]
                         public int? MemorySize { get; set; }
 
-                        [NameInMap("EniQuantity")]
+                        [NameInMap("Status")]
                         [Validation(Required=false)]
-                        public int? EniQuantity { get; set; }
+                        public string Status { get; set; }
 
                         [NameInMap("ZoneIds")]
                         [Validation(Required=false)]
@@ -91,6 +83,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SupportSpotInstance")]
+        [Validation(Required=false)]
+        public bool? SupportSpotInstance { get; set; }
 
     }
 

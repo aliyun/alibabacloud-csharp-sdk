@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("Role")]
-        [Validation(Required=false)]
-        public string Role { get; set; }
-
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public List<StartNodesRequestInstance> Instance { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string Id { get; set; }
 
         }
+
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
 
     }
 

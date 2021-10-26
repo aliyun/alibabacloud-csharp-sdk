@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class CreateGWSInstanceRequest : TeaModel {
+        [NameInMap("AllocatePublicAddress")]
+        [Validation(Required=false)]
+        public bool? AllocatePublicAddress { get; set; }
+
+        [NameInMap("AppList")]
+        [Validation(Required=false)]
+        public string AppList { get; set; }
+
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -17,29 +29,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        [NameInMap("SystemDiskSize")]
-        [Validation(Required=false)]
-        public int? SystemDiskSize { get; set; }
-
-        [NameInMap("SystemDiskCategory")]
-        [Validation(Required=false)]
-        public string SystemDiskCategory { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
-        [NameInMap("WorkMode")]
+        [NameInMap("InstanceType")]
         [Validation(Required=false)]
-        public string WorkMode { get; set; }
-
-        [NameInMap("AllocatePublicAddress")]
-        [Validation(Required=false)]
-        public bool? AllocatePublicAddress { get; set; }
+        public string InstanceType { get; set; }
 
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -65,17 +61,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
-        [NameInMap("AutoRenew")]
+        [NameInMap("SystemDiskCategory")]
         [Validation(Required=false)]
-        public bool? AutoRenew { get; set; }
+        public string SystemDiskCategory { get; set; }
 
-        [NameInMap("AppList")]
+        [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]
-        public string AppList { get; set; }
+        public int? SystemDiskSize { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        [NameInMap("WorkMode")]
+        [Validation(Required=false)]
+        public string WorkMode { get; set; }
 
     }
 

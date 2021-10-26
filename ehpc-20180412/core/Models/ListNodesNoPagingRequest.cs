@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("Role")]
-        [Validation(Required=false)]
-        public string Role { get; set; }
-
         [NameInMap("HostName")]
         [Validation(Required=false)]
         public string HostName { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("OnlyDetached")]
         [Validation(Required=false)]
         public bool? OnlyDetached { get; set; }
+
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
 
         [NameInMap("Sequence")]
         [Validation(Required=false)]

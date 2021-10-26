@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetGWSConnectTicketResponseBody : TeaModel {
-        [NameInMap("Ticket")]
-        [Validation(Required=false)]
-        public string Ticket { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Ticket")]
+        [Validation(Required=false)]
+        public string Ticket { get; set; }
 
     }
 

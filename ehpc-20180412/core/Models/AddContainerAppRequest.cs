@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -9,13 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class AddContainerAppRequest : TeaModel {
-        [NameInMap("Name")]
+        [NameInMap("ContainerType")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Repository")]
-        [Validation(Required=false)]
-        public string Repository { get; set; }
+        public string ContainerType { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -25,9 +24,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ImageTag { get; set; }
 
-        [NameInMap("ContainerType")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string ContainerType { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("Repository")]
+        [Validation(Required=false)]
+        public string Repository { get; set; }
 
     }
 

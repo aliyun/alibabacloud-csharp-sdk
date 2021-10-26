@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public List<AddUsersRequestUser> User { get; set; }
         public class AddUsersRequestUser : TeaModel {
-            [NameInMap("Password")]
+            [NameInMap("Group")]
             [Validation(Required=false)]
-            public string Password { get; set; }
+            public string Group { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Group")]
+            [NameInMap("Password")]
             [Validation(Required=false)]
-            public string Group { get; set; }
+            public string Password { get; set; }
 
         }
 

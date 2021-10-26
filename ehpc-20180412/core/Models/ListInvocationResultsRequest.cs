@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
+        [NameInMap("Instance")]
+        [Validation(Required=false)]
+        public List<ListInvocationResultsRequestInstance> Instance { get; set; }
+        public class ListInvocationResultsRequestInstance : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+        }
+
         [NameInMap("InvokeRecordStatus")]
         [Validation(Required=false)]
         public string InvokeRecordStatus { get; set; }
@@ -28,16 +38,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("Instance")]
-        [Validation(Required=false)]
-        public List<ListInvocationResultsRequestInstance> Instance { get; set; }
-        public class ListInvocationResultsRequestInstance : TeaModel {
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
-        }
 
     }
 

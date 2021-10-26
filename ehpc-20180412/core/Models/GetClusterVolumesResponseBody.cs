@@ -26,14 +26,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<GetClusterVolumesResponseBodyVolumesVolumeInfo> VolumeInfo { get; set; }
             public class GetClusterVolumesResponseBodyVolumesVolumeInfo : TeaModel {
                 public string JobQueue { get; set; }
-                public string VolumeId { get; set; }
-                public string RemoteDirectory { get; set; }
-                public string VolumeMountpoint { get; set; }
                 public string LocalDirectory { get; set; }
-                public string VolumeType { get; set; }
-                public bool? MustKeep { get; set; }
                 public string Location { get; set; }
-                public string VolumeProtocol { get; set; }
+                public bool? MustKeep { get; set; }
+                public string RemoteDirectory { get; set; }
                 public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles Roles { get; set; }
                 public class GetClusterVolumesResponseBodyVolumesVolumeInfoRoles : TeaModel {
                     [NameInMap("RoleInfo")]
@@ -47,6 +43,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                 }
+                public string VolumeId { get; set; }
+                public string VolumeMountpoint { get; set; }
+                public string VolumeProtocol { get; set; }
+                public string VolumeType { get; set; }
             }
         };
 

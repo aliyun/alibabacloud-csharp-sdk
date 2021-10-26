@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetIfEcsTypeSupportHtConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DefaultHtEnabled")]
         [Validation(Required=false)]
         public bool? DefaultHtEnabled { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("SupportHtConfig")]
         [Validation(Required=false)]

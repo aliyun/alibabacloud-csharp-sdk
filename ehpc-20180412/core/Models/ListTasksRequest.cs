@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListTasksRequest : TeaModel {
+        [NameInMap("Archived")]
+        [Validation(Required=false)]
+        public bool? Archived { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
-
-        [NameInMap("Archived")]
-        [Validation(Required=false)]
-        public bool? Archived { get; set; }
 
     }
 

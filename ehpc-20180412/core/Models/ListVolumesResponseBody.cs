@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListVolumesResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -33,14 +33,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListVolumesResponseBodyVolumesVolumeInfo> VolumeInfo { get; set; }
             public class ListVolumesResponseBodyVolumesVolumeInfo : TeaModel {
-                public string VolumeId { get; set; }
-                public string ClusterName { get; set; }
-                public string RemoteDirectory { get; set; }
-                public string VolumeMountpoint { get; set; }
-                public string VolumeType { get; set; }
-                public string VolumeProtocol { get; set; }
-                public string RegionId { get; set; }
-                public string ClusterId { get; set; }
                 public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes AdditionalVolumes { get; set; }
                 public class ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes : TeaModel {
                     [NameInMap("VolumeInfo")]
@@ -51,41 +43,49 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                         [Validation(Required=false)]
                         public string JobQueue { get; set; }
 
-                        [NameInMap("VolumeId")]
-                        [Validation(Required=false)]
-                        public string VolumeId { get; set; }
-
-                        [NameInMap("RemoteDirectory")]
-                        [Validation(Required=false)]
-                        public string RemoteDirectory { get; set; }
-
-                        [NameInMap("VolumeMountpoint")]
-                        [Validation(Required=false)]
-                        public string VolumeMountpoint { get; set; }
-
-                        [NameInMap("Role")]
-                        [Validation(Required=false)]
-                        public string Role { get; set; }
-
                         [NameInMap("LocalDirectory")]
                         [Validation(Required=false)]
                         public string LocalDirectory { get; set; }
-
-                        [NameInMap("VolumeType")]
-                        [Validation(Required=false)]
-                        public string VolumeType { get; set; }
 
                         [NameInMap("Location")]
                         [Validation(Required=false)]
                         public string Location { get; set; }
 
+                        [NameInMap("RemoteDirectory")]
+                        [Validation(Required=false)]
+                        public string RemoteDirectory { get; set; }
+
+                        [NameInMap("Role")]
+                        [Validation(Required=false)]
+                        public string Role { get; set; }
+
+                        [NameInMap("VolumeId")]
+                        [Validation(Required=false)]
+                        public string VolumeId { get; set; }
+
+                        [NameInMap("VolumeMountpoint")]
+                        [Validation(Required=false)]
+                        public string VolumeMountpoint { get; set; }
+
                         [NameInMap("VolumeProtocol")]
                         [Validation(Required=false)]
                         public string VolumeProtocol { get; set; }
 
+                        [NameInMap("VolumeType")]
+                        [Validation(Required=false)]
+                        public string VolumeType { get; set; }
+
                     }
 
                 }
+                public string ClusterId { get; set; }
+                public string ClusterName { get; set; }
+                public string RegionId { get; set; }
+                public string RemoteDirectory { get; set; }
+                public string VolumeId { get; set; }
+                public string VolumeMountpoint { get; set; }
+                public string VolumeProtocol { get; set; }
+                public string VolumeType { get; set; }
             }
         };
 

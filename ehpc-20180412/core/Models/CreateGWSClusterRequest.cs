@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class CreateGWSClusterRequest : TeaModel {
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
         [NameInMap("ClusterType")]
         [Validation(Required=false)]
         public string ClusterType { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

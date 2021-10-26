@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListInstalledSoftwareResponseBodySoftwareListSoftwareList> SoftwareList { get; set; }
             public class ListInstalledSoftwareResponseBodySoftwareListSoftwareList : TeaModel {
                 public string SoftwareId { get; set; }
+                public string SoftwareName { get; set; }
                 public string SoftwareStatus { get; set; }
                 public string SoftwareVersion { get; set; }
-                public string SoftwareName { get; set; }
             }
         };
 

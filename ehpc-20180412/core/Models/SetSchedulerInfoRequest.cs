@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SetSchedulerInfoRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -25,39 +21,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<SetSchedulerInfoRequestPbsInfoAclLimit> AclLimit { get; set; }
             public class SetSchedulerInfoRequestPbsInfoAclLimit : TeaModel {
-                [NameInMap("Queue")]
-                [Validation(Required=false)]
-                public string Queue { get; set; }
-
                 [NameInMap("AclUsers")]
                 [Validation(Required=false)]
                 public string AclUsers { get; set; }
 
-            }
-
-            [NameInMap("ResourceLimit")]
-            [Validation(Required=false)]
-            public List<SetSchedulerInfoRequestPbsInfoResourceLimit> ResourceLimit { get; set; }
-            public class SetSchedulerInfoRequestPbsInfoResourceLimit : TeaModel {
-                [NameInMap("Nodes")]
-                [Validation(Required=false)]
-                public int? Nodes { get; set; }
-
-                [NameInMap("Cpus")]
-                [Validation(Required=false)]
-                public int? Cpus { get; set; }
-
-                [NameInMap("User")]
-                [Validation(Required=false)]
-                public string User { get; set; }
-
                 [NameInMap("Queue")]
                 [Validation(Required=false)]
                 public string Queue { get; set; }
-
-                [NameInMap("Mem")]
-                [Validation(Required=false)]
-                public string Mem { get; set; }
 
             }
 
@@ -65,9 +35,49 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public int? JobHistoryDuration { get; set; }
 
+            [NameInMap("ResourceLimit")]
+            [Validation(Required=false)]
+            public List<SetSchedulerInfoRequestPbsInfoResourceLimit> ResourceLimit { get; set; }
+            public class SetSchedulerInfoRequestPbsInfoResourceLimit : TeaModel {
+                [NameInMap("Cpus")]
+                [Validation(Required=false)]
+                public int? Cpus { get; set; }
+
+                [NameInMap("Mem")]
+                [Validation(Required=false)]
+                public string Mem { get; set; }
+
+                [NameInMap("Nodes")]
+                [Validation(Required=false)]
+                public int? Nodes { get; set; }
+
+                [NameInMap("Queue")]
+                [Validation(Required=false)]
+                public string Queue { get; set; }
+
+                [NameInMap("User")]
+                [Validation(Required=false)]
+                public string User { get; set; }
+
+            }
+
             [NameInMap("SchedInterval")]
             [Validation(Required=false)]
             public int? SchedInterval { get; set; }
+
+        }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public List<SetSchedulerInfoRequestScheduler> Scheduler { get; set; }
+        public class SetSchedulerInfoRequestScheduler : TeaModel {
+            [NameInMap("SchedName")]
+            [Validation(Required=false)]
+            public string SchedName { get; set; }
 
         }
 
@@ -82,16 +92,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("SchedInterval")]
             [Validation(Required=false)]
             public int? SchedInterval { get; set; }
-
-        }
-
-        [NameInMap("Scheduler")]
-        [Validation(Required=false)]
-        public List<SetSchedulerInfoRequestScheduler> Scheduler { get; set; }
-        public class SetSchedulerInfoRequestScheduler : TeaModel {
-            [NameInMap("SchedName")]
-            [Validation(Required=false)]
-            public string SchedName { get; set; }
 
         }
 

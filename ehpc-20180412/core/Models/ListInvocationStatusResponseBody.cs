@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListInvocationStatusResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
-
-        [NameInMap("InvokeStatus")]
-        [Validation(Required=false)]
-        public string InvokeStatus { get; set; }
 
         [NameInMap("InvokeInstances")]
         [Validation(Required=false)]
@@ -29,10 +21,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance> InvokeInstance { get; set; }
             public class ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance : TeaModel {
-                public string InstanceInvokeStatus { get; set; }
                 public string InstanceId { get; set; }
+                public string InstanceInvokeStatus { get; set; }
             }
         };
+
+        [NameInMap("InvokeStatus")]
+        [Validation(Required=false)]
+        public string InvokeStatus { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

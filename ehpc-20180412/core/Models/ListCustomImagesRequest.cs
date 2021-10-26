@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListCustomImagesRequest : TeaModel {
-        [NameInMap("ImageOwnerAlias")]
-        [Validation(Required=false)]
-        public string ImageOwnerAlias { get; set; }
-
         [NameInMap("BaseOsTag")]
         [Validation(Required=false)]
         public string BaseOsTag { get; set; }
 
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        [NameInMap("ImageOwnerAlias")]
+        [Validation(Required=false)]
+        public string ImageOwnerAlias { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
 
     }
 

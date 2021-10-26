@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? Amount { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DiscountPrice")]
         [Validation(Required=false)]
         public float? DiscountPrice { get; set; }
 
-        [NameInMap("TradePrice")]
+        [NameInMap("ImageId")]
         [Validation(Required=false)]
-        public float? TradePrice { get; set; }
+        public string ImageId { get; set; }
 
         [NameInMap("OriginalPrice")]
         [Validation(Required=false)]
         public float? OriginalPrice { get; set; }
 
-        [NameInMap("ImageId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ImageId { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TradePrice")]
+        [Validation(Required=false)]
+        public float? TradePrice { get; set; }
 
     }
 

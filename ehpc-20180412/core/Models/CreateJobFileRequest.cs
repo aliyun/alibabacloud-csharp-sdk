@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
         [NameInMap("RunasUser")]
         [Validation(Required=false)]
         public string RunasUser { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("RunasUserPassword")]
         [Validation(Required=false)]
         public string RunasUserPassword { get; set; }
-
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
 
         [NameInMap("TargetFile")]
         [Validation(Required=false)]

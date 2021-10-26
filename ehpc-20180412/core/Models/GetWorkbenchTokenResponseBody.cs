@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public GetWorkbenchTokenResponseBodyRootInstanceLoginView InstanceLoginView { get; set; }
             public class GetWorkbenchTokenResponseBodyRootInstanceLoginView : TeaModel {
-                [NameInMap("defaultViewUrl")]
-                [Validation(Required=false)]
-                public string DefaultViewUrl { get; set; }
-
-                [NameInMap("rdpViewUrl")]
-                [Validation(Required=false)]
-                public string RdpViewUrl { get; set; }
-
                 [NameInMap("baseViewUrl")]
                 [Validation(Required=false)]
                 public string BaseViewUrl { get; set; }
 
+                [NameInMap("defaultViewUrl")]
+                [Validation(Required=false)]
+                public string DefaultViewUrl { get; set; }
+
                 [NameInMap("fileTreeViewUrl")]
                 [Validation(Required=false)]
                 public string FileTreeViewUrl { get; set; }
+
+                [NameInMap("rdpViewUrl")]
+                [Validation(Required=false)]
+                public string RdpViewUrl { get; set; }
 
                 [NameInMap("terminalViewUrl")]
                 [Validation(Required=false)]

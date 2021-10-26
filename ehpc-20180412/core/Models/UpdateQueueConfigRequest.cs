@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("ComputeInstanceType")]
+        [Validation(Required=false)]
+        public string ComputeInstanceType { get; set; }
+
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("ComputeInstanceType")]
-        [Validation(Required=false)]
-        public string ComputeInstanceType { get; set; }
 
     }
 

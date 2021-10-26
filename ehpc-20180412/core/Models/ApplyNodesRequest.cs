@@ -9,29 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ApplyNodesRequest : TeaModel {
+        [NameInMap("AllocatePublicAddress")]
+        [Validation(Required=false)]
+        public bool? AllocatePublicAddress { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
-
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
-        [NameInMap("ComputeSpotStrategy")]
-        [Validation(Required=false)]
-        public string ComputeSpotStrategy { get; set; }
 
         [NameInMap("ComputeSpotPriceLimit")]
         [Validation(Required=false)]
         public float? ComputeSpotPriceLimit { get; set; }
 
-        [NameInMap("SystemDiskType")]
+        [NameInMap("ComputeSpotStrategy")]
         [Validation(Required=false)]
-        public string SystemDiskType { get; set; }
+        public string ComputeSpotStrategy { get; set; }
 
-        [NameInMap("SystemDiskSize")]
+        [NameInMap("Cores")]
         [Validation(Required=false)]
-        public int? SystemDiskSize { get; set; }
+        public int? Cores { get; set; }
 
         [NameInMap("HostNamePrefix")]
         [Validation(Required=false)]
@@ -41,9 +37,31 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string HostNameSuffix { get; set; }
 
-        [NameInMap("AllocatePublicAddress")]
+        [NameInMap("ImageId")]
         [Validation(Required=false)]
-        public bool? AllocatePublicAddress { get; set; }
+        public string ImageId { get; set; }
+
+        [NameInMap("InstanceFamilyLevel")]
+        [Validation(Required=false)]
+        public string InstanceFamilyLevel { get; set; }
+
+        [NameInMap("InstanceTypeModel")]
+        [Validation(Required=false)]
+        public List<ApplyNodesRequestInstanceTypeModel> InstanceTypeModel { get; set; }
+        public class ApplyNodesRequestInstanceTypeModel : TeaModel {
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            [NameInMap("MaxPrice")]
+            [Validation(Required=false)]
+            public float? MaxPrice { get; set; }
+
+            [NameInMap("TargetImageId")]
+            [Validation(Required=false)]
+            public string TargetImageId { get; set; }
+
+        }
 
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -57,29 +75,29 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? InternetMaxBandWidthOut { get; set; }
 
-        [NameInMap("Cores")]
+        [NameInMap("Interval")]
         [Validation(Required=false)]
-        public int? Cores { get; set; }
+        public int? Interval { get; set; }
 
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
-        [NameInMap("InstanceFamilyLevel")]
+        [NameInMap("PriorityStrategy")]
         [Validation(Required=false)]
-        public string InstanceFamilyLevel { get; set; }
-
-        [NameInMap("TargetCapacity")]
-        [Validation(Required=false)]
-        public int? TargetCapacity { get; set; }
+        public string PriorityStrategy { get; set; }
 
         [NameInMap("ResourceAmountType")]
         [Validation(Required=false)]
         public string ResourceAmountType { get; set; }
 
-        [NameInMap("PriorityStrategy")]
+        [NameInMap("Round")]
         [Validation(Required=false)]
-        public string PriorityStrategy { get; set; }
+        public int? Round { get; set; }
+
+        [NameInMap("StrictResourceProvision")]
+        [Validation(Required=false)]
+        public bool? StrictResourceProvision { get; set; }
 
         [NameInMap("StrictSatisfiedTargetCapacity")]
         [Validation(Required=false)]
@@ -89,49 +107,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string SystemDiskLevel { get; set; }
 
-        [NameInMap("StrictResourceProvision")]
+        [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]
-        public bool? StrictResourceProvision { get; set; }
+        public int? SystemDiskSize { get; set; }
 
-        [NameInMap("Round")]
+        [NameInMap("SystemDiskType")]
         [Validation(Required=false)]
-        public int? Round { get; set; }
-
-        [NameInMap("Interval")]
-        [Validation(Required=false)]
-        public int? Interval { get; set; }
-
-        [NameInMap("ZoneInfos")]
-        [Validation(Required=false)]
-        public List<ApplyNodesRequestZoneInfos> ZoneInfos { get; set; }
-        public class ApplyNodesRequestZoneInfos : TeaModel {
-            [NameInMap("VSwitchId")]
-            [Validation(Required=false)]
-            public string VSwitchId { get; set; }
-
-            [NameInMap("ZoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
-        }
-
-        [NameInMap("InstanceTypeModel")]
-        [Validation(Required=false)]
-        public List<ApplyNodesRequestInstanceTypeModel> InstanceTypeModel { get; set; }
-        public class ApplyNodesRequestInstanceTypeModel : TeaModel {
-            [NameInMap("MaxPrice")]
-            [Validation(Required=false)]
-            public float? MaxPrice { get; set; }
-
-            [NameInMap("TargetImageId")]
-            [Validation(Required=false)]
-            public string TargetImageId { get; set; }
-
-            [NameInMap("InstanceType")]
-            [Validation(Required=false)]
-            public string InstanceType { get; set; }
-
-        }
+        public string SystemDiskType { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -144,6 +126,24 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
+
+        }
+
+        [NameInMap("TargetCapacity")]
+        [Validation(Required=false)]
+        public int? TargetCapacity { get; set; }
+
+        [NameInMap("ZoneInfos")]
+        [Validation(Required=false)]
+        public List<ApplyNodesRequestZoneInfos> ZoneInfos { get; set; }
+        public class ApplyNodesRequestZoneInfos : TeaModel {
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
 
         }
 

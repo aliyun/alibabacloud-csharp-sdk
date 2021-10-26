@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("UserUid")]
-        [Validation(Required=false)]
-        public string UserUid { get; set; }
-
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }
+
+        [NameInMap("UserUid")]
+        [Validation(Required=false)]
+        public string UserUid { get; set; }
 
     }
 

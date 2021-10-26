@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeGWSClusterPolicyRequest : TeaModel {
+        [NameInMap("AsyncMode")]
+        [Validation(Required=false)]
+        public bool? AsyncMode { get; set; }
+
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
-
-        [NameInMap("AsyncMode")]
-        [Validation(Required=false)]
-        public bool? AsyncMode { get; set; }
 
     }
 

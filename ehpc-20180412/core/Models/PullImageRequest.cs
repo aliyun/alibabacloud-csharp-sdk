@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("Repository")]
+        [NameInMap("ContainerType")]
         [Validation(Required=false)]
-        public string Repository { get; set; }
+        public string ContainerType { get; set; }
 
         [NameInMap("ImageTag")]
         [Validation(Required=false)]
         public string ImageTag { get; set; }
 
-        [NameInMap("ContainerType")]
+        [NameInMap("Repository")]
         [Validation(Required=false)]
-        public string ContainerType { get; set; }
+        public string Repository { get; set; }
 
     }
 

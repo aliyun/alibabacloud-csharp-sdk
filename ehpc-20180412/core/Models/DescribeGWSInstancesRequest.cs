@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("UserUid")]
-        [Validation(Required=false)]
-        public long? UserUid { get; set; }
-
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }
+
+        [NameInMap("UserUid")]
+        [Validation(Required=false)]
+        public long? UserUid { get; set; }
 
     }
 

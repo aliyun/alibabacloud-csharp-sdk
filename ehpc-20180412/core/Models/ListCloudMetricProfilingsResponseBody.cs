@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListCloudMetricProfilingsResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("Profilings")]
         [Validation(Required=false)]
@@ -33,15 +25,23 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo> ProfilingInfo { get; set; }
             public class ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo : TeaModel {
+                public int? Duration { get; set; }
+                public int? Freq { get; set; }
+                public string HostName { get; set; }
+                public string InstanceId { get; set; }
+                public int? Pid { get; set; }
                 public string ProfilingId { get; set; }
                 public string TriggerTime { get; set; }
-                public int? Pid { get; set; }
-                public string HostName { get; set; }
-                public int? Duration { get; set; }
-                public string InstanceId { get; set; }
-                public int? Freq { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class UpgradeClientRequest : TeaModel {
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
         [NameInMap("ClientVersion")]
         [Validation(Required=false)]
         public string ClientVersion { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
 
     }
 

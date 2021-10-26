@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class StartVisualServiceRequest : TeaModel {
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
         [NameInMap("CidrIp")]
         [Validation(Required=false)]
         public string CidrIp { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
 
         [NameInMap("Port")]
         [Validation(Required=false)]

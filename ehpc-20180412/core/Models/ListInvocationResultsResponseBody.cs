@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListInvocationResultsResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("InvocationResults")]
         [Validation(Required=false)]
         public ListInvocationResultsResponseBodyInvocationResults InvocationResults { get; set; }
@@ -33,15 +17,31 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<ListInvocationResultsResponseBodyInvocationResultsInvocationResult> InvocationResult { get; set; }
             public class ListInvocationResultsResponseBodyInvocationResultsInvocationResult : TeaModel {
-                public bool? Success { get; set; }
-                public string Message { get; set; }
-                public string FinishedTime { get; set; }
                 public string CommandId { get; set; }
+                public int? ExitCode { get; set; }
+                public string FinishedTime { get; set; }
                 public string InstanceId { get; set; }
                 public string InvokeRecordStatus { get; set; }
-                public int? ExitCode { get; set; }
+                public string Message { get; set; }
+                public bool? Success { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

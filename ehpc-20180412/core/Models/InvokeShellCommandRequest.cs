@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string Command { get; set; }
 
-        [NameInMap("WorkingDir")]
-        [Validation(Required=false)]
-        public string WorkingDir { get; set; }
-
-        [NameInMap("Timeout")]
-        [Validation(Required=false)]
-        public int? Timeout { get; set; }
-
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public List<InvokeShellCommandRequestInstance> Instance { get; set; }
@@ -34,6 +26,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public string Id { get; set; }
 
         }
+
+        [NameInMap("Timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
+
+        [NameInMap("WorkingDir")]
+        [Validation(Required=false)]
+        public string WorkingDir { get; set; }
 
     }
 

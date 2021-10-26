@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("QueueName")]
-        [Validation(Required=false)]
-        public string QueueName { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("QueueName")]
+        [Validation(Required=false)]
+        public string QueueName { get; set; }
 
     }
 

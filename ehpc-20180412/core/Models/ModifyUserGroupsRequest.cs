@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public List<ModifyUserGroupsRequestUser> User { get; set; }
         public class ModifyUserGroupsRequestUser : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("Group")]
             [Validation(Required=false)]
             public string Group { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
         }
 

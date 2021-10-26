@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetCloudMetricLogsRequest : TeaModel {
-        [NameInMap("ClusterId")]
+        [NameInMap("AggregationInterval")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        [NameInMap("From")]
-        [Validation(Required=false)]
-        public int? From { get; set; }
-
-        [NameInMap("To")]
-        [Validation(Required=false)]
-        public int? To { get; set; }
-
-        [NameInMap("Reverse")]
-        [Validation(Required=false)]
-        public bool? Reverse { get; set; }
+        public int? AggregationInterval { get; set; }
 
         [NameInMap("AggregationType")]
         [Validation(Required=false)]
         public string AggregationType { get; set; }
 
-        [NameInMap("AggregationInterval")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public int? AggregationInterval { get; set; }
-
-        [NameInMap("MetricScope")]
-        [Validation(Required=false)]
-        public string MetricScope { get; set; }
+        public string ClusterId { get; set; }
 
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("From")]
+        [Validation(Required=false)]
+        public int? From { get; set; }
+
         [NameInMap("MetricCategories")]
         [Validation(Required=false)]
         public string MetricCategories { get; set; }
+
+        [NameInMap("MetricScope")]
+        [Validation(Required=false)]
+        public string MetricScope { get; set; }
+
+        [NameInMap("Reverse")]
+        [Validation(Required=false)]
+        public bool? Reverse { get; set; }
+
+        [NameInMap("To")]
+        [Validation(Required=false)]
+        public int? To { get; set; }
 
     }
 
