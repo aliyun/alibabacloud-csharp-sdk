@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeAdvancedResponseBody : TeaModel {
         /// <summary>
-        /// 请求唯一 ID
+        /// 错误码
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// 返回数据
@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
         /// 错误提示
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// 请求唯一 ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

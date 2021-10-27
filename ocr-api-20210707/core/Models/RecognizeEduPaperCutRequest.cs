@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeEduPaperCutRequest : TeaModel {
         /// <summary>
-        /// 图片链接（长度不超 1014，不支持 base64）
-        /// </summary>
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
-
-        /// <summary>
         /// 切题类型
         /// </summary>
         [NameInMap("CutType")]
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }
+
+        /// <summary>
+        /// 图片链接（长度不超 1014，不支持 base64）
+        /// </summary>
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 
