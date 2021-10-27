@@ -23,27 +23,27 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public GetLiveRoomStatisticsResponseBodyResult Result { get; set; }
         public class GetLiveRoomStatisticsResponseBodyResult : TeaModel {
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }
+            [NameInMap("MessageCount")]
+            [Validation(Required=false)]
+            public long? MessageCount { get; set; }
+            [NameInMap("Pv")]
+            [Validation(Required=false)]
+            public long? Pv { get; set; }
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
             [NameInMap("Uv")]
             [Validation(Required=false)]
             public long? Uv { get; set; }
-            [NameInMap("Pv")]
-            [Validation(Required=false)]
-            public long? Pv { get; set; }
-            [NameInMap("MessageCount")]
-            [Validation(Required=false)]
-            public long? MessageCount { get; set; }
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public long? StartTime { get; set; }
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public long? EndTime { get; set; }
             [NameInMap("WatchLiveTime")]
             [Validation(Required=false)]
             public long? WatchLiveTime { get; set; }

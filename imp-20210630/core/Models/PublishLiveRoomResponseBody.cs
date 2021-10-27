@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class GetAuthTokenResponseBody : TeaModel {
+    public class PublishLiveRoomResponseBody : TeaModel {
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -16,19 +16,22 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 创建场景化直播返回的结果。
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public GetAuthTokenResponseBodyResult Result { get; set; }
-        public class GetAuthTokenResponseBodyResult : TeaModel {
-            [NameInMap("AccessToken")]
+        public PublishLiveRoomResponseBodyResult Result { get; set; }
+        public class PublishLiveRoomResponseBodyResult : TeaModel {
+            [NameInMap("LiveId")]
             [Validation(Required=false)]
-            public string AccessToken { get; set; }
-            [NameInMap("AccessTokenExpiredTime")]
+            public string LiveId { get; set; }
+            [NameInMap("LiveUrl")]
             [Validation(Required=false)]
-            public long? AccessTokenExpiredTime { get; set; }
-            [NameInMap("RefreshToken")]
+            public string LiveUrl { get; set; }
+            [NameInMap("PushUrl")]
             [Validation(Required=false)]
-            public string RefreshToken { get; set; }
+            public string PushUrl { get; set; }
         };
 
     }

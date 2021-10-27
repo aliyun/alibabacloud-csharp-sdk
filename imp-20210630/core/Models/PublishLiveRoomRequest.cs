@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class SendCustomMessageToAllRequest : TeaModel {
+    public class PublishLiveRoomRequest : TeaModel {
         /// <summary>
         /// 应用唯一标识，由6位小写字母、数字组成。
         /// </summary>
@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 消息体内容。
+        /// 直播ID。
         /// </summary>
-        [NameInMap("Body")]
+        [NameInMap("LiveId")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public string LiveId { get; set; }
 
         /// <summary>
-        /// 房间唯一标识，由调用CreateRoom返回。
+        /// 操作人ID。
         /// </summary>
-        [NameInMap("RoomId")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string RoomId { get; set; }
+        public string UserId { get; set; }
 
     }
 

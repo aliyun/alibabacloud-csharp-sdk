@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string RoomId { get; set; }
 
         /// <summary>
-        /// 创建会议用户。
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        /// <summary>
         /// 会议标题，支持中英文，最大长度256位。
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
+
+        /// <summary>
+        /// 创建会议用户。
+        /// </summary>
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

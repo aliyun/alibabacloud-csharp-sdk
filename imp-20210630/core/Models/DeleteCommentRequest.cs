@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// 需要删除的弹幕id列表
+        /// </summary>
+        [NameInMap("CommentIdList")]
+        [Validation(Required=false)]
+        public List<string> CommentIdList { get; set; }
+
+        /// <summary>
         /// 直播间唯一标识，在调用CreateRoom返回。
         /// </summary>
         [NameInMap("RoomId")]
@@ -29,13 +36,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
-
-        /// <summary>
-        /// 需要删除的弹幕id列表
-        /// </summary>
-        [NameInMap("CommentIdList")]
-        [Validation(Required=false)]
-        public List<string> CommentIdList { get; set; }
 
     }
 

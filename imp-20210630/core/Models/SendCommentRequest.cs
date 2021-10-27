@@ -17,20 +17,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 直播间唯一标识，在调用CreateRoom返回。
-        /// </summary>
-        [NameInMap("RoomId")]
-        [Validation(Required=false)]
-        public string RoomId { get; set; }
-
-        /// <summary>
-        /// 弹幕发送者的用户ID，最大长度不超过32个字节。
-        /// </summary>
-        [NameInMap("SenderId")]
-        [Validation(Required=false)]
-        public string SenderId { get; set; }
-
-        /// <summary>
         /// 发送的文本内容。最大的长度不超过256个字节。
         /// </summary>
         [NameInMap("Content")]
@@ -43,6 +29,20 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("Extension")]
         [Validation(Required=false)]
         public Dictionary<string, string> Extension { get; set; }
+
+        /// <summary>
+        /// 直播间唯一标识，在调用CreateRoom返回。
+        /// </summary>
+        [NameInMap("RoomId")]
+        [Validation(Required=false)]
+        public string RoomId { get; set; }
+
+        /// <summary>
+        /// 弹幕发送者的用户ID，最大长度不超过32个字节。
+        /// </summary>
+        [NameInMap("SenderId")]
+        [Validation(Required=false)]
+        public string SenderId { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class CreateLiveRoomShrinkRequest : TeaModel {
+    public class UpdateLiveRoomRequest : TeaModel {
         /// <summary>
         /// 主播id，仅支持英文和数字，最大长度36位。
         /// </summary>
@@ -42,7 +42,14 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         /// </summary>
         [NameInMap("Extension")]
         [Validation(Required=false)]
-        public string ExtensionShrink { get; set; }
+        public Dictionary<string, string> Extension { get; set; }
+
+        /// <summary>
+        /// 直播ID。
+        /// </summary>
+        [NameInMap("LiveId")]
+        [Validation(Required=false)]
+        public string LiveId { get; set; }
 
         /// <summary>
         /// 公告，支持中英文，最大长度256位。

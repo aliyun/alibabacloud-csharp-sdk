@@ -28,23 +28,23 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             public List<ListCommentsResponseBodyResultCommentVOList> CommentVOList { get; set; }
             public class ListCommentsResponseBodyResultCommentVOList : TeaModel {
                 public string AppId { get; set; }
-                public string RoomId { get; set; }
                 public string CommentId { get; set; }
+                public string Content { get; set; }
+                public long? CreateAt { get; set; }
+                public Dictionary<string, string> Extension { get; set; }
+                public string RoomId { get; set; }
                 public string SenderId { get; set; }
                 public string SenderNick { get; set; }
-                public long? CreateAt { get; set; }
-                public string Content { get; set; }
-                public Dictionary<string, string> Extension { get; set; }
             }
             [NameInMap("HasMore")]
             [Validation(Required=false)]
             public bool? HasMore { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
             [NameInMap("PageTotal")]
             [Validation(Required=false)]
             public int? PageTotal { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
         };
 
     }

@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("CertificateName")]
             [Validation(Required=false)]
             public string CertificateName { get; set; }
-            [NameInMap("DomainName")]
-            [Validation(Required=false)]
-            public string DomainName { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }

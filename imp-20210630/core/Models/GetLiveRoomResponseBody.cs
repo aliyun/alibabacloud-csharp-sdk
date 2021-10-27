@@ -23,72 +23,97 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public GetLiveRoomResponseBodyResult Result { get; set; }
         public class GetLiveRoomResponseBodyResult : TeaModel {
-            [NameInMap("AppId")]
-            [Validation(Required=false)]
-            public string AppId { get; set; }
-            [NameInMap("LiveId")]
-            [Validation(Required=false)]
-            public string LiveId { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-            [NameInMap("RoomId")]
-            [Validation(Required=false)]
-            public string RoomId { get; set; }
-            [NameInMap("ChatId")]
-            [Validation(Required=false)]
-            public string ChatId { get; set; }
-            [NameInMap("Title")]
-            [Validation(Required=false)]
-            public string Title { get; set; }
-            [NameInMap("Notice")]
-            [Validation(Required=false)]
-            public string Notice { get; set; }
-            [NameInMap("CoverUrl")]
-            [Validation(Required=false)]
-            public string CoverUrl { get; set; }
             [NameInMap("AnchorId")]
             [Validation(Required=false)]
             public string AnchorId { get; set; }
-            [NameInMap("Uv")]
+            [NameInMap("AnchorNick")]
             [Validation(Required=false)]
-            public long? Uv { get; set; }
-            [NameInMap("OnlineCount")]
+            public string AnchorNick { get; set; }
+            [NameInMap("AppId")]
             [Validation(Required=false)]
-            public long? OnlineCount { get; set; }
-            [NameInMap("PlaybackUrl")]
+            public string AppId { get; set; }
+            [NameInMap("ArtcInfo")]
             [Validation(Required=false)]
-            public string PlaybackUrl { get; set; }
+            public GetLiveRoomResponseBodyResultArtcInfo ArtcInfo { get; set; }
+            public class GetLiveRoomResponseBodyResultArtcInfo : TeaModel {
+                /// <summary>
+                /// RTS转码流地址，推荐web端使用。
+                /// </summary>
+                [NameInMap("ArtcH5Url")]
+                [Validation(Required=false)]
+                public string ArtcH5Url { get; set; }
+
+                /// <summary>
+                /// RTS原码流地址，推荐移动端使用。
+                /// </summary>
+                [NameInMap("ArtcUrl")]
+                [Validation(Required=false)]
+                public string ArtcUrl { get; set; }
+
+            }
+            [NameInMap("ChatId")]
+            [Validation(Required=false)]
+            public string ChatId { get; set; }
+            [NameInMap("CoverUrl")]
+            [Validation(Required=false)]
+            public string CoverUrl { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
-            [NameInMap("PushUrl")]
+            [NameInMap("Extension")]
             [Validation(Required=false)]
-            public string PushUrl { get; set; }
+            public Dictionary<string, string> Extension { get; set; }
+            [NameInMap("HlsUrl")]
+            [Validation(Required=false)]
+            public string HlsUrl { get; set; }
+            [NameInMap("LiveId")]
+            [Validation(Required=false)]
+            public string LiveId { get; set; }
             [NameInMap("LiveUrl")]
             [Validation(Required=false)]
             public string LiveUrl { get; set; }
+            [NameInMap("Notice")]
+            [Validation(Required=false)]
+            public string Notice { get; set; }
+            [NameInMap("OnlineCount")]
+            [Validation(Required=false)]
+            public long? OnlineCount { get; set; }
+            [NameInMap("PlaybackUrl")]
+            [Validation(Required=false)]
+            public string PlaybackUrl { get; set; }
             [NameInMap("PluginInstanceInfoList")]
             [Validation(Required=false)]
             public List<GetLiveRoomResponseBodyResultPluginInstanceInfoList> PluginInstanceInfoList { get; set; }
             public class GetLiveRoomResponseBodyResultPluginInstanceInfoList : TeaModel {
-                public string PluginType { get; set; }
-                public string PluginId { get; set; }
                 public long? CreateTime { get; set; }
                 public Dictionary<string, string> Extension { get; set; }
+                public string PluginId { get; set; }
+                public string PluginType { get; set; }
             }
-            [NameInMap("Extension")]
+            [NameInMap("PushUrl")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Extension { get; set; }
+            public string PushUrl { get; set; }
             [NameInMap("Pv")]
             [Validation(Required=false)]
             public long? Pv { get; set; }
-            [NameInMap("AnchorNick")]
+            [NameInMap("RoomId")]
             [Validation(Required=false)]
-            public string AnchorNick { get; set; }
+            public string RoomId { get; set; }
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
+            [NameInMap("Uv")]
+            [Validation(Required=false)]
+            public long? Uv { get; set; }
         };
 
     }

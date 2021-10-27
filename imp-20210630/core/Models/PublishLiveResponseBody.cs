@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public PublishLiveResponseBodyResult Result { get; set; }
         public class PublishLiveResponseBodyResult : TeaModel {
-            [NameInMap("LiveId")]
-            [Validation(Required=false)]
-            public string LiveId { get; set; }
             [NameInMap("AnchorId")]
             [Validation(Required=false)]
             public string AnchorId { get; set; }
-            [NameInMap("Status")]
+            [NameInMap("LiveId")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("PushUrl")]
-            [Validation(Required=false)]
-            public string PushUrl { get; set; }
+            public string LiveId { get; set; }
             [NameInMap("LiveUrl")]
             [Validation(Required=false)]
             public string LiveUrl { get; set; }
+            [NameInMap("PushUrl")]
+            [Validation(Required=false)]
+            public string PushUrl { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
         };
 
     }

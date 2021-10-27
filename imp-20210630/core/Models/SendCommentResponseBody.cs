@@ -35,6 +35,27 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string CommentId { get; set; }
 
                 /// <summary>
+                /// 弹幕的内容。
+                /// </summary>
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                /// <summary>
+                /// 弹幕的创建时间，Unix时间戳，单位：毫秒。
+                /// </summary>
+                [NameInMap("CreateAt")]
+                [Validation(Required=false)]
+                public long? CreateAt { get; set; }
+
+                /// <summary>
+                /// 扩展字段。
+                /// </summary>
+                [NameInMap("Extension")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Extension { get; set; }
+
+                /// <summary>
                 /// 弹幕的发送者ID标识。
                 /// </summary>
                 [NameInMap("SenderId")]
@@ -47,27 +68,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 [NameInMap("SenderNick")]
                 [Validation(Required=false)]
                 public string SenderNick { get; set; }
-
-                /// <summary>
-                /// 弹幕的创建时间，Unix时间戳，单位：毫秒。
-                /// </summary>
-                [NameInMap("CreateAt")]
-                [Validation(Required=false)]
-                public long? CreateAt { get; set; }
-
-                /// <summary>
-                /// 弹幕的内容。
-                /// </summary>
-                [NameInMap("Content")]
-                [Validation(Required=false)]
-                public string Content { get; set; }
-
-                /// <summary>
-                /// 扩展字段。
-                /// </summary>
-                [NameInMap("Extension")]
-                [Validation(Required=false)]
-                public Dictionary<string, string> Extension { get; set; }
 
             }
         };

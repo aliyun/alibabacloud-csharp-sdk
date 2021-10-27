@@ -27,18 +27,18 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [Validation(Required=false)]
             public List<ListConferenceUsersResponseBodyResultConferenceUserList> ConferenceUserList { get; set; }
             public class ListConferenceUsersResponseBodyResultConferenceUserList : TeaModel {
-                public string UserId { get; set; }
                 public string Status { get; set; }
+                public string UserId { get; set; }
             }
             [NameInMap("HasMore")]
             [Validation(Required=false)]
             public bool? HasMore { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
             [NameInMap("PageTotal")]
             [Validation(Required=false)]
             public int? PageTotal { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
         };
 
     }

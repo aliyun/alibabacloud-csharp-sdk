@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 用户UserId,在AppId下单独唯一
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        /// <summary>
         /// 终端设备类型,通过控制台创建和查询
         /// </summary>
         [NameInMap("AppKey")]
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
+
+        /// <summary>
+        /// 用户UserId,在AppId下单独唯一
+        /// </summary>
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

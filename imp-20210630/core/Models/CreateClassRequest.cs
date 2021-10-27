@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 课堂标题
+        /// 创建人用户昵称。
         /// </summary>
-        [NameInMap("Title")]
+        [NameInMap("CreateNickname")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string CreateNickname { get; set; }
 
         /// <summary>
         /// 创建人用户ID。
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string CreateUserId { get; set; }
 
         /// <summary>
-        /// 创建人用户昵称。
+        /// 课堂标题
         /// </summary>
-        [NameInMap("CreateNickname")]
+        [NameInMap("Title")]
         [Validation(Required=false)]
-        public string CreateNickname { get; set; }
+        public string Title { get; set; }
 
     }
 

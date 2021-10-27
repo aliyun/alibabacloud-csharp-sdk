@@ -23,24 +23,15 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public GetAppTemplateResponseBodyResult Result { get; set; }
         public class GetAppTemplateResponseBodyResult : TeaModel {
-            [NameInMap("AppTemplateName")]
-            [Validation(Required=false)]
-            public string AppTemplateName { get; set; }
             [NameInMap("AppTemplateCreator")]
             [Validation(Required=false)]
             public string AppTemplateCreator { get; set; }
-            [NameInMap("Status")]
+            [NameInMap("AppTemplateName")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string AppTemplateName { get; set; }
             [NameInMap("ComponentList")]
             [Validation(Required=false)]
             public List<string> ComponentList { get; set; }
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-            [NameInMap("SdkInfo")]
-            [Validation(Required=false)]
-            public string SdkInfo { get; set; }
             [NameInMap("ConfigList")]
             [Validation(Required=false)]
             public List<GetAppTemplateResponseBodyResultConfigList> ConfigList { get; set; }
@@ -48,15 +39,24 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string Key { get; set; }
                 public string Value { get; set; }
             }
-            [NameInMap("Scene")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string Scene { get; set; }
+            public string CreateTime { get; set; }
             [NameInMap("IntegrationMode")]
             [Validation(Required=false)]
             public string IntegrationMode { get; set; }
+            [NameInMap("Scene")]
+            [Validation(Required=false)]
+            public string Scene { get; set; }
+            [NameInMap("SdkInfo")]
+            [Validation(Required=false)]
+            public string SdkInfo { get; set; }
             [NameInMap("StandardRoomInfo")]
             [Validation(Required=false)]
             public string StandardRoomInfo { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
         };
 
     }

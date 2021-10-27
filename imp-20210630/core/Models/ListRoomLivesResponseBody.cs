@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [Validation(Required=false)]
             public List<ListRoomLivesResponseBodyResultLiveList> LiveList { get; set; }
             public class ListRoomLivesResponseBodyResultLiveList : TeaModel {
-                public string RoomId { get; set; }
-                public string Title { get; set; }
-                public string RoomOwnerId { get; set; }
-                public string Notice { get; set; }
-                public long? Uv { get; set; }
                 public string AppId { get; set; }
                 public Dictionary<string, string> Extension { get; set; }
                 public string LiveId { get; set; }
-                public int? Status { get; set; }
-                public long? Pv { get; set; }
+                public string Notice { get; set; }
                 public long? OnlineCount { get; set; }
+                public long? Pv { get; set; }
+                public string RoomId { get; set; }
+                public string RoomOwnerId { get; set; }
+                public int? Status { get; set; }
+                public string Title { get; set; }
+                public long? Uv { get; set; }
             }
             [NameInMap("NextQueryTimestamp")]
             [Validation(Required=false)]

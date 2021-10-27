@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 使用证书的确切域名
+        /// NGINX格式证书私钥
         /// </summary>
-        [NameInMap("DomainName")]
+        [NameInMap("CertificatePrivateKey")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string CertificatePrivateKey { get; set; }
 
         /// <summary>
         /// NGINX格式证书公钥
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string CertificatePublicKey { get; set; }
 
         /// <summary>
-        /// NGINX格式证书私钥
+        /// 使用证书的确切域名
         /// </summary>
-        [NameInMap("CertificatePrivateKey")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string CertificatePrivateKey { get; set; }
+        public string DomainName { get; set; }
 
     }
 

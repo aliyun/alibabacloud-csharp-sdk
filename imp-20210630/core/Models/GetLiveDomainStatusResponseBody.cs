@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [Validation(Required=false)]
             public List<GetLiveDomainStatusResponseBodyResultLiveDomainInfoList> LiveDomainInfoList { get; set; }
             public class GetLiveDomainStatusResponseBodyResultLiveDomainInfoList : TeaModel {
-                public string Domain { get; set; }
                 public string Cname { get; set; }
+                public string Domain { get; set; }
                 public string Status { get; set; }
             }
         };

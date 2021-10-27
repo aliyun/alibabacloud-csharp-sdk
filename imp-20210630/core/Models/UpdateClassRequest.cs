@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string ClassId { get; set; }
 
         /// <summary>
-        /// 课堂标题，1~32个字符。
+        /// 创建人用户昵称，1~32个字符。
         /// </summary>
-        [NameInMap("Title")]
+        [NameInMap("CreateNickname")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string CreateNickname { get; set; }
 
         /// <summary>
         /// 创建人用户ID，仅支持中英文数字，下划线，中划线，1~36个字符。
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string CreateUserId { get; set; }
 
         /// <summary>
-        /// 创建人用户昵称，1~32个字符。
+        /// 课堂标题，1~32个字符。
         /// </summary>
-        [NameInMap("CreateNickname")]
+        [NameInMap("Title")]
         [Validation(Required=false)]
-        public string CreateNickname { get; set; }
+        public string Title { get; set; }
 
     }
 

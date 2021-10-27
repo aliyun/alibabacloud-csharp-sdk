@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 直播状态，0-在播 1-下播，不传则返回所有直播。
-        /// </summary>
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        /// <summary>
         /// 查询页码，从1开始，传空默认查询第1页。
         /// </summary>
         [NameInMap("PageNumber")]
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// 直播状态，0-在播 1-下播，不传则返回所有直播。
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

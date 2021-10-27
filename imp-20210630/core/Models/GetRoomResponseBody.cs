@@ -28,18 +28,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             public GetRoomResponseBodyResultRoomInfo RoomInfo { get; set; }
             public class GetRoomResponseBodyResultRoomInfo : TeaModel {
                 /// <summary>
-                /// 房间唯一标识。
+                /// 应用唯一标识，由6位小写字母、数字组成。
                 /// </summary>
-                [NameInMap("RoomId")]
+                [NameInMap("AppId")]
                 [Validation(Required=false)]
-                public string RoomId { get; set; }
-
-                /// <summary>
-                /// 房间标题。
-                /// </summary>
-                [NameInMap("Title")]
-                [Validation(Required=false)]
-                public string Title { get; set; }
+                public string AppId { get; set; }
 
                 /// <summary>
                 /// 房间创建时间戳，单位：毫秒。
@@ -49,25 +42,18 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
+                /// 房间拓展字段。
+                /// </summary>
+                [NameInMap("Extension")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Extension { get; set; }
+
+                /// <summary>
                 /// 房间公告。
                 /// </summary>
                 [NameInMap("Notice")]
                 [Validation(Required=false)]
                 public string Notice { get; set; }
-
-                /// <summary>
-                /// 房主用户id。
-                /// </summary>
-                [NameInMap("RoomOwnerId")]
-                [Validation(Required=false)]
-                public string RoomOwnerId { get; set; }
-
-                /// <summary>
-                /// 访问用户数。
-                /// </summary>
-                [NameInMap("Uv")]
-                [Validation(Required=false)]
-                public long? Uv { get; set; }
 
                 /// <summary>
                 /// 在线用户数。
@@ -84,20 +70,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public List<GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList> PluginInstanceInfoList { get; set; }
                 public class GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList : TeaModel {
                     /// <summary>
-                    /// 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
-                    /// </summary>
-                    [NameInMap("PluginType")]
-                    [Validation(Required=false)]
-                    public string PluginType { get; set; }
-
-                    /// <summary>
-                    /// 插件实例唯一标识。
-                    /// </summary>
-                    [NameInMap("PluginId")]
-                    [Validation(Required=false)]
-                    public string PluginId { get; set; }
-
-                    /// <summary>
                     /// 插件实例创建时间戳，单位：毫秒。
                     /// </summary>
                     [NameInMap("CreateTime")]
@@ -111,14 +83,42 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                     [Validation(Required=false)]
                     public Dictionary<string, string> Extension { get; set; }
 
+                    /// <summary>
+                    /// 插件实例唯一标识。
+                    /// </summary>
+                    [NameInMap("PluginId")]
+                    [Validation(Required=false)]
+                    public string PluginId { get; set; }
+
+                    /// <summary>
+                    /// 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
+                    /// </summary>
+                    [NameInMap("PluginType")]
+                    [Validation(Required=false)]
+                    public string PluginType { get; set; }
+
                 }
 
                 /// <summary>
-                /// 应用唯一标识，由6位小写字母、数字组成。
+                /// 访问用户人次。
                 /// </summary>
-                [NameInMap("AppId")]
+                [NameInMap("Pv")]
                 [Validation(Required=false)]
-                public string AppId { get; set; }
+                public long? Pv { get; set; }
+
+                /// <summary>
+                /// 房间唯一标识。
+                /// </summary>
+                [NameInMap("RoomId")]
+                [Validation(Required=false)]
+                public string RoomId { get; set; }
+
+                /// <summary>
+                /// 房主用户id。
+                /// </summary>
+                [NameInMap("RoomOwnerId")]
+                [Validation(Required=false)]
+                public string RoomOwnerId { get; set; }
 
                 /// <summary>
                 /// 创建房间使用的模板id。
@@ -128,18 +128,18 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string TemplateId { get; set; }
 
                 /// <summary>
-                /// 房间拓展字段。
+                /// 房间标题。
                 /// </summary>
-                [NameInMap("Extension")]
+                [NameInMap("Title")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> Extension { get; set; }
+                public string Title { get; set; }
 
                 /// <summary>
-                /// 访问用户人次。
+                /// 访问用户数。
                 /// </summary>
-                [NameInMap("Pv")]
+                [NameInMap("Uv")]
                 [Validation(Required=false)]
-                public long? Pv { get; set; }
+                public long? Uv { get; set; }
 
             }
         };

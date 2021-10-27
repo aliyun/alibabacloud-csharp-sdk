@@ -23,48 +23,55 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("AnchorId")]
             [Validation(Required=false)]
             public string AnchorId { get; set; }
-            [NameInMap("LiveId")]
-            [Validation(Required=false)]
-            public string LiveId { get; set; }
-            [NameInMap("Title")]
-            [Validation(Required=false)]
-            public string Title { get; set; }
-            [NameInMap("PlaybackUrl")]
-            [Validation(Required=false)]
-            public string PlaybackUrl { get; set; }
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public long? EndTime { get; set; }
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public long? Duration { get; set; }
-            [NameInMap("PushUrl")]
-            [Validation(Required=false)]
-            public string PushUrl { get; set; }
-            [NameInMap("LiveUrl")]
-            [Validation(Required=false)]
-            public string LiveUrl { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("Introduction")]
-            [Validation(Required=false)]
-            public string Introduction { get; set; }
-            [NameInMap("RoomId")]
-            [Validation(Required=false)]
-            public string RoomId { get; set; }
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
-            [NameInMap("UserId")]
+            [NameInMap("ArtcInfo")]
             [Validation(Required=false)]
-            public string UserId { get; set; }
+            public GetLiveResponseBodyResultArtcInfo ArtcInfo { get; set; }
+            public class GetLiveResponseBodyResultArtcInfo : TeaModel {
+                /// <summary>
+                /// 原画转码地址
+                /// </summary>
+                [NameInMap("ArtcH5Url")]
+                [Validation(Required=false)]
+                public string ArtcH5Url { get; set; }
+
+                /// <summary>
+                /// 源码地址
+                /// </summary>
+                [NameInMap("ArtcUrl")]
+                [Validation(Required=false)]
+                public string ArtcUrl { get; set; }
+
+            }
             [NameInMap("CodeLevel")]
             [Validation(Required=false)]
             public int? CodeLevel { get; set; }
+            [NameInMap("CoverUrl")]
+            [Validation(Required=false)]
+            public string CoverUrl { get; set; }
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public long? Duration { get; set; }
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+            [NameInMap("HlsUrl")]
+            [Validation(Required=false)]
+            public string HlsUrl { get; set; }
+            [NameInMap("Introduction")]
+            [Validation(Required=false)]
+            public string Introduction { get; set; }
+            [NameInMap("LiveId")]
+            [Validation(Required=false)]
+            public string LiveId { get; set; }
+            [NameInMap("LiveUrl")]
+            [Validation(Required=false)]
+            public string LiveUrl { get; set; }
             [NameInMap("PlayUrlInfoList")]
             [Validation(Required=false)]
             public List<GetLiveResponseBodyResultPlayUrlInfoList> PlayUrlInfoList { get; set; }
@@ -74,34 +81,27 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
                 public string HlsUrl { get; set; }
                 public string RtmpUrl { get; set; }
             }
-            [NameInMap("CoverUrl")]
+            [NameInMap("PlaybackUrl")]
             [Validation(Required=false)]
-            public string CoverUrl { get; set; }
+            public string PlaybackUrl { get; set; }
+            [NameInMap("PushUrl")]
+            [Validation(Required=false)]
+            public string PushUrl { get; set; }
+            [NameInMap("RoomId")]
+            [Validation(Required=false)]
+            public string RoomId { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
             [NameInMap("UserDefineField")]
             [Validation(Required=false)]
             public string UserDefineField { get; set; }
-            [NameInMap("HlsUrl")]
+            [NameInMap("UserId")]
             [Validation(Required=false)]
-            public string HlsUrl { get; set; }
-            [NameInMap("ArtcInfo")]
-            [Validation(Required=false)]
-            public GetLiveResponseBodyResultArtcInfo ArtcInfo { get; set; }
-            public class GetLiveResponseBodyResultArtcInfo : TeaModel {
-                /// <summary>
-                /// 源码地址
-                /// </summary>
-                [NameInMap("ArtcUrl")]
-                [Validation(Required=false)]
-                public string ArtcUrl { get; set; }
-
-                /// <summary>
-                /// 原画转码地址
-                /// </summary>
-                [NameInMap("ArtcH5Url")]
-                [Validation(Required=false)]
-                public string ArtcH5Url { get; set; }
-
-            }
+            public string UserId { get; set; }
         };
 
     }

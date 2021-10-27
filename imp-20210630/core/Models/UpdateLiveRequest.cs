@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class UpdateLiveRequest : TeaModel {
         /// <summary>
+        /// 直播简介，支持中英文，最大长度2048位
+        /// </summary>
+        [NameInMap("Introduction")]
+        [Validation(Required=false)]
+        public string Introduction { get; set; }
+
+        /// <summary>
         /// 直播资源的唯一标识ID
         /// </summary>
         [NameInMap("LiveId")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
-
-        /// <summary>
-        /// 直播简介，支持中英文，最大长度2048位
-        /// </summary>
-        [NameInMap("Introduction")]
-        [Validation(Required=false)]
-        public string Introduction { get; set; }
 
     }
 

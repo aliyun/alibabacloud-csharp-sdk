@@ -23,28 +23,28 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public ListAppsResponseBodyResult Result { get; set; }
         public class ListAppsResponseBodyResult : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("PageTotal")]
-            [Validation(Required=false)]
-            public int? PageTotal { get; set; }
             [NameInMap("AppInfoList")]
             [Validation(Required=false)]
             public List<ListAppsResponseBodyResultAppInfoList> AppInfoList { get; set; }
             public class ListAppsResponseBodyResultAppInfoList : TeaModel {
+                public string AppConfigStatus { get; set; }
                 public string AppId { get; set; }
+                public string AppKey { get; set; }
                 public string AppName { get; set; }
+                public string AppStatus { get; set; }
                 public string AppTemplateId { get; set; }
                 public string AppTemplateName { get; set; }
-                public string AppKey { get; set; }
-                public string AppStatus { get; set; }
-                public string AppConfigStatus { get; set; }
+                public List<string> ComponentList { get; set; }
                 public string CreateTime { get; set; }
                 public string IntegrationMode { get; set; }
                 public string StandardRoomInfo { get; set; }
-                public List<string> ComponentList { get; set; }
             }
+            [NameInMap("PageTotal")]
+            [Validation(Required=false)]
+            public int? PageTotal { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
         };
 
     }

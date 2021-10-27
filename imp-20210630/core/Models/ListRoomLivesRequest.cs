@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// 拉取在这个时间戳之前创建的直播，单位毫秒，不传则默认拉取最新创建的。
+        /// </summary>
+        [NameInMap("QueryTimestamp")]
+        [Validation(Required=false)]
+        public long? QueryTimestamp { get; set; }
+
+        /// <summary>
         /// 房间ID，最大长度36个字符。
         /// </summary>
         [NameInMap("RoomId")]
@@ -24,18 +31,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string RoomId { get; set; }
 
         /// <summary>
-        /// 直播状态筛选条件，0-直播 1-下播，不传则返回全部状态
+        /// 房间ID列表，可指定多个房间id，过滤优先级高于RoomId。
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("RoomIdList")]
         [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        /// <summary>
-        /// 拉取在这个时间戳之前创建的直播，单位毫秒，不传则默认拉取最新创建的。
-        /// </summary>
-        [NameInMap("QueryTimestamp")]
-        [Validation(Required=false)]
-        public long? QueryTimestamp { get; set; }
+        public List<string> RoomIdList { get; set; }
 
         /// <summary>
         /// 拉取直播数量。
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// 房间ID列表，可指定多个房间id，过滤优先级高于RoomId。
+        /// 直播状态筛选条件，0-直播 1-下播，不传则返回全部状态
         /// </summary>
-        [NameInMap("RoomIdList")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public List<string> RoomIdList { get; set; }
+        public int? Status { get; set; }
 
     }
 

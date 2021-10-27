@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string AppTemplateName { get; set; }
 
+        /// <summary>
+        /// 组件列表
+        /// </summary>
+        [NameInMap("ComponentList")]
+        [Validation(Required=false)]
+        public List<string> ComponentList { get; set; }
+
     }
 
 }

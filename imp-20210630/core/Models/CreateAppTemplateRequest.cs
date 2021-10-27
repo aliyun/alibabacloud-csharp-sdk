@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppTemplateName { get; set; }
 
         /// <summary>
-        /// 应用模板场景，电商business，课堂classroom
+        /// 组件列表
         /// </summary>
-        [NameInMap("Scene")]
+        [NameInMap("ComponentList")]
         [Validation(Required=false)]
-        public string Scene { get; set; }
+        public List<string> ComponentList { get; set; }
 
         /// <summary>
         /// 集成方式（一体化SDK：paasSDK，样板间：standardRoom）
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string IntegrationMode { get; set; }
 
         /// <summary>
-        /// 组件列表
+        /// 应用模板场景，电商business，课堂classroom
         /// </summary>
-        [NameInMap("ComponentList")]
+        [NameInMap("Scene")]
         [Validation(Required=false)]
-        public List<string> ComponentList { get; set; }
+        public string Scene { get; set; }
 
     }
 

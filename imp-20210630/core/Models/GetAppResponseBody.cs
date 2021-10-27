@@ -23,24 +23,27 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public GetAppResponseBodyResult Result { get; set; }
         public class GetAppResponseBodyResult : TeaModel {
-            [NameInMap("AppName")]
-            [Validation(Required=false)]
-            public string AppName { get; set; }
-            [NameInMap("AppTemplateId")]
-            [Validation(Required=false)]
-            public string AppTemplateId { get; set; }
-            [NameInMap("AppTemplateName")]
-            [Validation(Required=false)]
-            public string AppTemplateName { get; set; }
-            [NameInMap("AppStatus")]
-            [Validation(Required=false)]
-            public string AppStatus { get; set; }
             [NameInMap("AppConfigStatus")]
             [Validation(Required=false)]
             public string AppConfigStatus { get; set; }
             [NameInMap("AppKey")]
             [Validation(Required=false)]
             public string AppKey { get; set; }
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+            [NameInMap("AppStatus")]
+            [Validation(Required=false)]
+            public string AppStatus { get; set; }
+            [NameInMap("AppTemplateId")]
+            [Validation(Required=false)]
+            public string AppTemplateId { get; set; }
+            [NameInMap("AppTemplateName")]
+            [Validation(Required=false)]
+            public string AppTemplateName { get; set; }
+            [NameInMap("ComponentList")]
+            [Validation(Required=false)]
+            public List<string> ComponentList { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -50,9 +53,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("StandardRoomInfo")]
             [Validation(Required=false)]
             public string StandardRoomInfo { get; set; }
-            [NameInMap("ComponentList")]
-            [Validation(Required=false)]
-            public List<string> ComponentList { get; set; }
         };
 
     }

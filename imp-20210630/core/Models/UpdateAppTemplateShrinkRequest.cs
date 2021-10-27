@@ -8,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class SendCustomMessageToAllRequest : TeaModel {
+    public class UpdateAppTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// 应用唯一标识，由6位小写字母、数字组成。
+        /// 应用模板唯一标识
         /// </summary>
-        [NameInMap("AppId")]
+        [NameInMap("AppTemplateId")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public string AppTemplateId { get; set; }
 
         /// <summary>
-        /// 消息体内容。
+        /// 应用模板名称
         /// </summary>
-        [NameInMap("Body")]
+        [NameInMap("AppTemplateName")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public string AppTemplateName { get; set; }
 
         /// <summary>
-        /// 房间唯一标识，由调用CreateRoom返回。
+        /// 组件列表
         /// </summary>
-        [NameInMap("RoomId")]
+        [NameInMap("ComponentList")]
         [Validation(Required=false)]
-        public string RoomId { get; set; }
+        public string ComponentListShrink { get; set; }
 
     }
 

@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 房间唯一标识，由调用CreateRoom返回。
-        /// </summary>
-        [NameInMap("RoomId")]
-        [Validation(Required=false)]
-        public string RoomId { get; set; }
-
-        /// <summary>
         /// 消息体内容。
         /// </summary>
         [NameInMap("Body")]
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("ReceiverList")]
         [Validation(Required=false)]
         public List<string> ReceiverList { get; set; }
+
+        /// <summary>
+        /// 房间唯一标识，由调用CreateRoom返回。
+        /// </summary>
+        [NameInMap("RoomId")]
+        [Validation(Required=false)]
+        public string RoomId { get; set; }
 
     }
 

@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// 取消禁言的用户唯一标识
+        /// </summary>
+        [NameInMap("BanCommentUser")]
+        [Validation(Required=false)]
+        public string BanCommentUser { get; set; }
+
+        /// <summary>
         /// 房间唯一标识，由调用CreateRoom返回。
         /// </summary>
         [NameInMap("RoomId")]
@@ -29,13 +36,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
-
-        /// <summary>
-        /// 取消禁言的用户唯一标识
-        /// </summary>
-        [NameInMap("BanCommentUser")]
-        [Validation(Required=false)]
-        public string BanCommentUser { get; set; }
 
     }
 

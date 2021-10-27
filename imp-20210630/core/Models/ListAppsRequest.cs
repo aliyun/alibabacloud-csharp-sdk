@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
 {
     public class ListAppsRequest : TeaModel {
         /// <summary>
+        /// 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
+        /// </summary>
+        [NameInMap("IntegrationMode")]
+        [Validation(Required=false)]
+        public string IntegrationMode { get; set; }
+
+        /// <summary>
         /// 查询页码，参数为空默认查询第1页。
         /// </summary>
         [NameInMap("PageNumber")]
@@ -29,13 +36,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        /// <summary>
-        /// 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
-        /// </summary>
-        [NameInMap("IntegrationMode")]
-        [Validation(Required=false)]
-        public string IntegrationMode { get; set; }
 
     }
 
