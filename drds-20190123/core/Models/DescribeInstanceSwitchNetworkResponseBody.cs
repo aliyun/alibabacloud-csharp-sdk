@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeInstanceSwitchNetworkResponseBody : TeaModel {
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("VpcInfos")]
         [Validation(Required=false)]
@@ -25,30 +25,30 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public List<DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo> VpcInfo { get; set; }
             public class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo : TeaModel {
+                public string RegionId { get; set; }
                 public string VpcId { get; set; }
                 public string VpcName { get; set; }
-                public string RegionId { get; set; }
                 public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfos VswitchInfos { get; set; }
                 public class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfos : TeaModel {
                     [NameInMap("VswitchInfo")]
                     [Validation(Required=false)]
                     public List<DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo> VswitchInfo { get; set; }
                     public class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo : TeaModel {
-                        [NameInMap("VpcId")]
+                        [NameInMap("AzoneId")]
                         [Validation(Required=false)]
-                        public string VpcId { get; set; }
+                        public string AzoneId { get; set; }
 
                         [NameInMap("DrdsSupported")]
                         [Validation(Required=false)]
                         public bool? DrdsSupported { get; set; }
 
+                        [NameInMap("VpcId")]
+                        [Validation(Required=false)]
+                        public string VpcId { get; set; }
+
                         [NameInMap("VswitchId")]
                         [Validation(Required=false)]
                         public string VswitchId { get; set; }
-
-                        [NameInMap("AzoneId")]
-                        [Validation(Required=false)]
-                        public string AzoneId { get; set; }
 
                         [NameInMap("VswitchName")]
                         [Validation(Required=false)]

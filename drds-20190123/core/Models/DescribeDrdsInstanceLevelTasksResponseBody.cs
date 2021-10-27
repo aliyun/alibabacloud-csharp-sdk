@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsInstanceLevelTasksResponseBody : TeaModel {
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -25,17 +25,17 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public List<DescribeDrdsInstanceLevelTasksResponseBodyTasksTask> Task { get; set; }
             public class DescribeDrdsInstanceLevelTasksResponseBodyTasksTask : TeaModel {
-                public int? TaskType { get; set; }
-                public string TaskPhase { get; set; }
-                public int? Progress { get; set; }
                 public bool? AllowCancel { get; set; }
-                public int? TaskStatus { get; set; }
-                public bool? ShowProgress { get; set; }
-                public string TaskName { get; set; }
-                public string ProgressDescription { get; set; }
-                public long? GmtCreate { get; set; }
-                public long? TargetId { get; set; }
                 public string ErrMsg { get; set; }
+                public long? GmtCreate { get; set; }
+                public int? Progress { get; set; }
+                public string ProgressDescription { get; set; }
+                public bool? ShowProgress { get; set; }
+                public long? TargetId { get; set; }
+                public string TaskName { get; set; }
+                public string TaskPhase { get; set; }
+                public int? TaskStatus { get; set; }
+                public int? TaskType { get; set; }
             }
         };
 

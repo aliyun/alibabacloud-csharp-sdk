@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDbInstanceDbsResponseBody : TeaModel {
+        [NameInMap("Databases")]
+        [Validation(Required=false)]
+        public DescribeDbInstanceDbsResponseBodyDatabases Databases { get; set; }
+        public class DescribeDbInstanceDbsResponseBodyDatabases : TeaModel {
+            [NameInMap("Database")]
+            [Validation(Required=false)]
+            public List<DescribeDbInstanceDbsResponseBodyDatabasesDatabase> Database { get; set; }
+            public class DescribeDbInstanceDbsResponseBodyDatabasesDatabase : TeaModel {
+                public string DbName { get; set; }
+                public string Description { get; set; }
+                public int? Status { get; set; }
+            }
+        };
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,20 +34,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [NameInMap("Total")]
         [Validation(Required=false)]
         public string Total { get; set; }
-
-        [NameInMap("Databases")]
-        [Validation(Required=false)]
-        public DescribeDbInstanceDbsResponseBodyDatabases Databases { get; set; }
-        public class DescribeDbInstanceDbsResponseBodyDatabases : TeaModel {
-            [NameInMap("Database")]
-            [Validation(Required=false)]
-            public List<DescribeDbInstanceDbsResponseBodyDatabasesDatabase> Database { get; set; }
-            public class DescribeDbInstanceDbsResponseBodyDatabasesDatabase : TeaModel {
-                public int? Status { get; set; }
-                public string DbName { get; set; }
-                public string Description { get; set; }
-            }
-        };
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class RemoveBackupsSetRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
-        [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
-
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
+
+        [NameInMap("DrdsInstanceId")]
+        [Validation(Required=false)]
+        public string DrdsInstanceId { get; set; }
 
     }
 

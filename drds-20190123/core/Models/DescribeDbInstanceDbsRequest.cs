@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDbInstanceDbsRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
+        [NameInMap("AccountName")]
         [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
+        public string AccountName { get; set; }
+
+        [NameInMap("DbInstType")]
+        [Validation(Required=false)]
+        public string DbInstType { get; set; }
 
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
-        [NameInMap("AccountName")]
+        [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
-        public string AccountName { get; set; }
+        public string DrdsInstanceId { get; set; }
 
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
-
-        [NameInMap("DbInstType")]
-        [Validation(Required=false)]
-        public string DbInstType { get; set; }
 
     }
 

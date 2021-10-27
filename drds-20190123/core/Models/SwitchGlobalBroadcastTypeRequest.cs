@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SwitchGlobalBroadcastTypeRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DbName")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DbName { get; set; }
 
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
-        [NameInMap("DbName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DbName { get; set; }
+        public string RegionId { get; set; }
 
     }
 

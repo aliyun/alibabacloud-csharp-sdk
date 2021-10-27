@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeInstDbSlsInfoResponseBody : TeaModel {
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AuditInfo")]
         [Validation(Required=false)]
         public DescribeInstDbSlsInfoResponseBodyAuditInfo AuditInfo { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public string Project { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

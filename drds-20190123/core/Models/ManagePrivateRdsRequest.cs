@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class ManagePrivateRdsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DBInstanceId { get; set; }
 
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("Params")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string Params { get; set; }
 
         [NameInMap("RdsAction")]
         [Validation(Required=false)]
         public string RdsAction { get; set; }
 
-        [NameInMap("Params")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Params { get; set; }
+        public string RegionId { get; set; }
 
     }
 

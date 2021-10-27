@@ -9,34 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeHiStoreInstanceInfoResponseBody : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("HiStoreInstanceInfo")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public DescribeHiStoreInstanceInfoResponseBodyHiStoreInstanceInfo HiStoreInstanceInfo { get; set; }
+        public class DescribeHiStoreInstanceInfoResponseBodyHiStoreInstanceInfo : TeaModel {
+            [NameInMap("DiskSize")]
+            [Validation(Required=false)]
+            public int? DiskSize { get; set; }
+            [NameInMap("GmtCreate")]
+            [Validation(Required=false)]
+            public long? GmtCreate { get; set; }
+            [NameInMap("HistoreInstanceId")]
+            [Validation(Required=false)]
+            public string HistoreInstanceId { get; set; }
+            [NameInMap("MachineSpec")]
+            [Validation(Required=false)]
+            public string MachineSpec { get; set; }
+            [NameInMap("RpmVersion")]
+            [Validation(Required=false)]
+            public string RpmVersion { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HiStoreInstanceInfo")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public DescribeHiStoreInstanceInfoResponseBodyHiStoreInstanceInfo HiStoreInstanceInfo { get; set; }
-        public class DescribeHiStoreInstanceInfoResponseBodyHiStoreInstanceInfo : TeaModel {
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
-            [NameInMap("MachineSpec")]
-            [Validation(Required=false)]
-            public string MachineSpec { get; set; }
-            [NameInMap("DiskSize")]
-            [Validation(Required=false)]
-            public int? DiskSize { get; set; }
-            [NameInMap("RpmVersion")]
-            [Validation(Required=false)]
-            public string RpmVersion { get; set; }
-            [NameInMap("HistoreInstanceId")]
-            [Validation(Required=false)]
-            public string HistoreInstanceId { get; set; }
-        };
+        public bool? Success { get; set; }
 
     }
 

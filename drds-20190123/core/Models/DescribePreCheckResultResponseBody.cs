@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribePreCheckResultResponseBody : TeaModel {
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PreCheckResult")]
         [Validation(Required=false)]
         public DescribePreCheckResultResponseBodyPreCheckResult PreCheckResult { get; set; }
@@ -32,11 +24,19 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             public List<DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems> SubCheckItems { get; set; }
             public class DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems : TeaModel {
                 public string ErrorMsgCode { get; set; }
+                public List<string> ErrorMsgParams { get; set; }
                 public string PreCheckItemName { get; set; }
                 public string State { get; set; }
-                public List<string> ErrorMsgParams { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

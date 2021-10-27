@@ -13,17 +13,13 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
-        [NameInMap("Key")]
-        [Validation(Required=false)]
-        public string Key { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
+
+        [NameInMap("Key")]
+        [Validation(Required=false)]
+        public string Key { get; set; }
 
         [NameInMap("PeriodMultiple")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

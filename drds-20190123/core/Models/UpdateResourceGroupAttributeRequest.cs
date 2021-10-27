@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class UpdateResourceGroupAttributeRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SetupBroadcastTablesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Active")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DrdsInstanceId")]
-        [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
+        public bool? Active { get; set; }
 
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
-        [NameInMap("Active")]
+        [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
-        public bool? Active { get; set; }
+        public string DrdsInstanceId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("TableName")]
         [Validation(Required=false)]

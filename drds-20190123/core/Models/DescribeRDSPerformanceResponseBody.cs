@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeRDSPerformanceResponseBody : TeaModel {
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeRDSPerformanceResponseBodyData> Data { get; set; }
@@ -29,13 +21,13 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
-            [NameInMap("Unit")]
-            [Validation(Required=false)]
-            public string Unit { get; set; }
-
             [NameInMap("NodeNum")]
             [Validation(Required=false)]
             public int? NodeNum { get; set; }
+
+            [NameInMap("Unit")]
+            [Validation(Required=false)]
+            public string Unit { get; set; }
 
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -52,6 +44,14 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

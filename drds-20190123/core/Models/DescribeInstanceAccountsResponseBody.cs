@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeInstanceAccountsResponseBody : TeaModel {
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("InstanceAccounts")]
         [Validation(Required=false)]
         public DescribeInstanceAccountsResponseBodyInstanceAccounts InstanceAccounts { get; set; }
@@ -25,10 +17,8 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public List<DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount> InstanceAccount { get; set; }
             public class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount : TeaModel {
-                public string Host { get; set; }
-                public string Description { get; set; }
-                public int? AccountType { get; set; }
                 public string AccountName { get; set; }
+                public int? AccountType { get; set; }
                 public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges DbPrivileges { get; set; }
                 public class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges : TeaModel {
                     [NameInMap("DbPrivilege")]
@@ -46,8 +36,18 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                     }
 
                 }
+                public string Description { get; set; }
+                public string Host { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

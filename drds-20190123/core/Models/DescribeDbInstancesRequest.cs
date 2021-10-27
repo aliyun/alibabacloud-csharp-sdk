@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDbInstancesRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
-        [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
-
-        [NameInMap("Search")]
-        [Validation(Required=false)]
-        public string Search { get; set; }
-
         [NameInMap("DbInstType")]
         [Validation(Required=false)]
         public string DbInstType { get; set; }
+
+        [NameInMap("DrdsInstanceId")]
+        [Validation(Required=false)]
+        public string DrdsInstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Search")]
+        [Validation(Required=false)]
+        public string Search { get; set; }
 
     }
 

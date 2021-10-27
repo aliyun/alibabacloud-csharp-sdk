@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackupDbsRequest : TeaModel {
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
+
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [NameInMap("PreferredRestoreTime")]
         [Validation(Required=false)]
         public string PreferredRestoreTime { get; set; }
-
-        [NameInMap("BackupId")]
-        [Validation(Required=false)]
-        public string BackupId { get; set; }
 
     }
 

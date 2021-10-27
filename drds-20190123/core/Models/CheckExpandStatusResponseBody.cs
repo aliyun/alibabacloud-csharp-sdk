@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class CheckExpandStatusResponseBody : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public CheckExpandStatusResponseBodyData Data { get; set; }
+        public class CheckExpandStatusResponseBodyData : TeaModel {
+            [NameInMap("IsActive")]
+            [Validation(Required=false)]
+            public bool? IsActive { get; set; }
+            [NameInMap("Msg")]
+            [Validation(Required=false)]
+            public string Msg { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public CheckExpandStatusResponseBodyData Data { get; set; }
-        public class CheckExpandStatusResponseBodyData : TeaModel {
-            [NameInMap("Msg")]
-            [Validation(Required=false)]
-            public string Msg { get; set; }
-            [NameInMap("IsActive")]
-            [Validation(Required=false)]
-            public bool? IsActive { get; set; }
-        };
+        public bool? Success { get; set; }
 
     }
 

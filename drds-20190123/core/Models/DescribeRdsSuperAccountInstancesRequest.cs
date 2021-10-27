@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeRdsSuperAccountInstancesRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
-        [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
-
         [NameInMap("DbInstType")]
         [Validation(Required=false)]
         public string DbInstType { get; set; }
+
+        [NameInMap("DrdsInstanceId")]
+        [Validation(Required=false)]
+        public string DrdsInstanceId { get; set; }
 
         [NameInMap("RdsInstance")]
         [Validation(Required=false)]

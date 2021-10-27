@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
+        [NameInMap("HighSpaceUsageProtection")]
+        [Validation(Required=false)]
+        public string HighSpaceUsageProtection { get; set; }
+
         [NameInMap("LocalLogRetentionHours")]
         [Validation(Required=false)]
         public string LocalLogRetentionHours { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [NameInMap("LocalLogRetentionSpace")]
         [Validation(Required=false)]
         public string LocalLogRetentionSpace { get; set; }
-
-        [NameInMap("HighSpaceUsageProtection")]
-        [Validation(Required=false)]
-        public string HighSpaceUsageProtection { get; set; }
 
     }
 

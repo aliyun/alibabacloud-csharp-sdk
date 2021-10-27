@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsShardingDbsRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
-        [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
-
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         [NameInMap("DbNamePattern")]
         [Validation(Required=false)]
         public string DbNamePattern { get; set; }
+
+        [NameInMap("DrdsInstanceId")]
+        [Validation(Required=false)]
+        public string DrdsInstanceId { get; set; }
 
     }
 

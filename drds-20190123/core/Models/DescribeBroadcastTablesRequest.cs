@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBroadcastTablesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DrdsInstanceId")]
-        [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
-        [NameInMap("Query")]
+        [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
-        public string Query { get; set; }
+        public string DrdsInstanceId { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("Query")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string Query { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsInstanceVersionResponseBody : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public DescribeDrdsInstanceVersionResponseBodyData Data { get; set; }
+        public class DescribeDrdsInstanceVersionResponseBodyData : TeaModel {
+            [NameInMap("InstanceVersion")]
+            [Validation(Required=false)]
+            public string InstanceVersion { get; set; }
+            [NameInMap("NewestVersion")]
+            [Validation(Required=false)]
+            public string NewestVersion { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public DescribeDrdsInstanceVersionResponseBodyData Data { get; set; }
-        public class DescribeDrdsInstanceVersionResponseBodyData : TeaModel {
-            [NameInMap("NewestVersion")]
-            [Validation(Required=false)]
-            public string NewestVersion { get; set; }
-            [NameInMap("InstanceVersion")]
-            [Validation(Required=false)]
-            public string InstanceVersion { get; set; }
-        };
+        public bool? Success { get; set; }
 
     }
 

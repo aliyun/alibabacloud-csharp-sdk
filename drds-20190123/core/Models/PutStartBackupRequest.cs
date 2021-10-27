@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class PutStartBackupRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
+        [NameInMap("BackupDbNames")]
         [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
-
-        [NameInMap("BackupMode")]
-        [Validation(Required=false)]
-        public string BackupMode { get; set; }
+        public string BackupDbNames { get; set; }
 
         [NameInMap("BackupLevel")]
         [Validation(Required=false)]
         public string BackupLevel { get; set; }
 
-        [NameInMap("BackupDbNames")]
+        [NameInMap("BackupMode")]
         [Validation(Required=false)]
-        public string BackupDbNames { get; set; }
+        public string BackupMode { get; set; }
+
+        [NameInMap("DrdsInstanceId")]
+        [Validation(Required=false)]
+        public string DrdsInstanceId { get; set; }
 
     }
 

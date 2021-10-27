@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDbInstancesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDbInstancesResponseBodyItems Items { get; set; }
@@ -21,15 +17,13 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             [Validation(Required=false)]
             public List<DescribeDbInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDbInstancesResponseBodyItemsDBInstance : TeaModel {
-                public string InstanceNetworkType { get; set; }
-                public string DBInstanceType { get; set; }
-                public string ZoneId { get; set; }
-                public int? DBInstanceStatus { get; set; }
-                public string DBInstanceId { get; set; }
-                public string Engine { get; set; }
                 public string DBInstanceDescription { get; set; }
+                public string DBInstanceId { get; set; }
+                public int? DBInstanceStatus { get; set; }
+                public string DBInstanceType { get; set; }
+                public string Engine { get; set; }
                 public string EngineVersion { get; set; }
-                public string RegionId { get; set; }
+                public string InstanceNetworkType { get; set; }
                 public DescribeDbInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceId ReadOnlyDBInstanceId { get; set; }
                 public class DescribeDbInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceId : TeaModel {
                     [NameInMap("ReadOnlyDBInstanceId")]
@@ -37,8 +31,14 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                     public List<string> ReadOnlyDBInstanceId { get; set; }
 
                 }
+                public string RegionId { get; set; }
+                public string ZoneId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

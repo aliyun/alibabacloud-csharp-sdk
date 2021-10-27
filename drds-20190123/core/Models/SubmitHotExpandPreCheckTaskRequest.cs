@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SubmitHotExpandPreCheckTaskRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
+        [NameInMap("DbInstType")]
         [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
+        public string DbInstType { get; set; }
 
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
-        [NameInMap("DbInstType")]
+        [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
-        public string DbInstType { get; set; }
+        public string DrdsInstanceId { get; set; }
 
         [NameInMap("TableList")]
         [Validation(Required=false)]
