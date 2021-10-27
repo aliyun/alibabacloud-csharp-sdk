@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class UpdateVerifySettingResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BizName")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public string BizName { get; set; }
 
         [NameInMap("BizType")]
         [Validation(Required=true)]
         public string BizType { get; set; }
 
-        [NameInMap("BizName")]
+        [NameInMap("RequestId")]
         [Validation(Required=true)]
-        public string BizName { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Solution")]
         [Validation(Required=true)]

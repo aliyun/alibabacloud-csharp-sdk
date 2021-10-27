@@ -9,45 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class LivenessFaceVerifyRequest : TeaModel {
-        [NameInMap("SceneId")]
+        [NameInMap("CertifyId")]
         [Validation(Required=false)]
-        public long? SceneId { get; set; }
+        public string CertifyId { get; set; }
 
-        [NameInMap("OuterOrderNo")]
+        [NameInMap("Crop")]
         [Validation(Required=false)]
-        public string OuterOrderNo { get; set; }
-
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
-
-        [NameInMap("FaceContrastPicture")]
-        [Validation(Required=false)]
-        public string FaceContrastPicture { get; set; }
+        public string Crop { get; set; }
 
         [NameInMap("DeviceToken")]
         [Validation(Required=false)]
         public string DeviceToken { get; set; }
 
-        [NameInMap("Mobile")]
+        [NameInMap("FaceContrastPicture")]
         [Validation(Required=false)]
-        public string Mobile { get; set; }
-
-        [NameInMap("Ip")]
-        [Validation(Required=false)]
-        public string Ip { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string FaceContrastPicture { get; set; }
 
         [NameInMap("FaceContrastPictureUrl")]
         [Validation(Required=false)]
         public string FaceContrastPictureUrl { get; set; }
 
-        [NameInMap("CertifyId")]
+        [NameInMap("Ip")]
         [Validation(Required=false)]
-        public string CertifyId { get; set; }
+        public string Ip { get; set; }
+
+        [NameInMap("Mobile")]
+        [Validation(Required=false)]
+        public string Mobile { get; set; }
+
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public string Model { get; set; }
 
         [NameInMap("OssBucketName")]
         [Validation(Required=false)]
@@ -57,13 +49,21 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string OssObjectName { get; set; }
 
-        [NameInMap("Model")]
+        [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]
-        public string Model { get; set; }
+        public string OuterOrderNo { get; set; }
 
-        [NameInMap("Crop")]
+        [NameInMap("ProductCode")]
         [Validation(Required=false)]
-        public string Crop { get; set; }
+        public string ProductCode { get; set; }
+
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public long? SceneId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

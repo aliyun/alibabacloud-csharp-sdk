@@ -17,6 +17,12 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=true)]
         public DescribeUpdatePackageResultResponseAppInfo AppInfo { get; set; }
         public class DescribeUpdatePackageResultResponseAppInfo : TeaModel {
+            [NameInMap("EndDate")]
+            [Validation(Required=true)]
+            public string EndDate { get; set; }
+            [NameInMap("Icon")]
+            [Validation(Required=true)]
+            public string Icon { get; set; }
             [NameInMap("Id")]
             [Validation(Required=true)]
             public long? Id { get; set; }
@@ -26,31 +32,25 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("PackageName")]
             [Validation(Required=true)]
             public string PackageName { get; set; }
-            [NameInMap("Icon")]
-            [Validation(Required=true)]
-            public string Icon { get; set; }
             [NameInMap("StartDate")]
             [Validation(Required=true)]
             public string StartDate { get; set; }
-            [NameInMap("EndDate")]
-            [Validation(Required=true)]
-            public string EndDate { get; set; }
             [NameInMap("Type")]
             [Validation(Required=true)]
             public int? Type { get; set; }
-            [NameInMap("PackageInfo")]
+            [NameInMap("DebugPackageInfo")]
             [Validation(Required=true)]
-            public DescribeUpdatePackageResultResponseAppInfoPackageInfo PackageInfo { get; set; }
-            public class DescribeUpdatePackageResultResponseAppInfoPackageInfo : TeaModel {
+            public DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo DebugPackageInfo { get; set; }
+            public class DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo : TeaModel {
                 [NameInMap("Version")]
                 [Validation(Required=true)]
                 public string Version { get; set; }
 
             }
-            [NameInMap("DebugPackageInfo")]
+            [NameInMap("PackageInfo")]
             [Validation(Required=true)]
-            public DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo DebugPackageInfo { get; set; }
-            public class DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo : TeaModel {
+            public DescribeUpdatePackageResultResponseAppInfoPackageInfo PackageInfo { get; set; }
+            public class DescribeUpdatePackageResultResponseAppInfoPackageInfo : TeaModel {
                 [NameInMap("Version")]
                 [Validation(Required=true)]
                 public string Version { get; set; }

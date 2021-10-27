@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateWhitelistSettingRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CertNo")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("ServiceCode")]
-        [Validation(Required=true)]
-        public string ServiceCode { get; set; }
-
-        [NameInMap("SceneId")]
-        [Validation(Required=false)]
-        public long? SceneId { get; set; }
+        public string CertNo { get; set; }
 
         [NameInMap("CertifyId")]
         [Validation(Required=false)]
         public string CertifyId { get; set; }
 
-        [NameInMap("CertNo")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string CertNo { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public long? SceneId { get; set; }
+
+        [NameInMap("ServiceCode")]
+        [Validation(Required=true)]
+        public string ServiceCode { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
         [NameInMap("ValidDay")]
         [Validation(Required=true)]

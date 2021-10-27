@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeUploadInfoResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
         [NameInMap("Accessid")]
         [Validation(Required=true)]
         public string Accessid { get; set; }
 
-        [NameInMap("Policy")]
+        [NameInMap("Expire")]
         [Validation(Required=true)]
-        public string Policy { get; set; }
-
-        [NameInMap("Signature")]
-        [Validation(Required=true)]
-        public string Signature { get; set; }
+        public long? Expire { get; set; }
 
         [NameInMap("Folder")]
         [Validation(Required=true)]
@@ -33,9 +25,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=true)]
         public string Host { get; set; }
 
-        [NameInMap("Expire")]
+        [NameInMap("Policy")]
         [Validation(Required=true)]
-        public long? Expire { get; set; }
+        public string Policy { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Signature")]
+        [Validation(Required=true)]
+        public string Signature { get; set; }
 
     }
 

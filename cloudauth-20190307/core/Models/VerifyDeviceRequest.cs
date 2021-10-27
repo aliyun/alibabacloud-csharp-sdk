@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VerifyDeviceRequest : TeaModel {
-        [NameInMap("CertifyId")]
+        [NameInMap("AppVersion")]
         [Validation(Required=false)]
-        public string CertifyId { get; set; }
+        public string AppVersion { get; set; }
 
         [NameInMap("CertifyData")]
         [Validation(Required=false)]
         public string CertifyData { get; set; }
 
-        [NameInMap("AppVersion")]
+        [NameInMap("CertifyId")]
         [Validation(Required=false)]
-        public string AppVersion { get; set; }
-
-        [NameInMap("ExtInfo")]
-        [Validation(Required=false)]
-        public string ExtInfo { get; set; }
+        public string CertifyId { get; set; }
 
         [NameInMap("DeviceToken")]
         [Validation(Required=false)]
         public string DeviceToken { get; set; }
+
+        [NameInMap("ExtInfo")]
+        [Validation(Required=false)]
+        public string ExtInfo { get; set; }
 
     }
 

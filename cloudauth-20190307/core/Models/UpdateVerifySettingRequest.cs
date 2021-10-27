@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class UpdateVerifySettingRequest : TeaModel {
-        [NameInMap("BizType")]
-        [Validation(Required=true)]
-        public string BizType { get; set; }
-
         [NameInMap("BizName")]
         [Validation(Required=false)]
         public string BizName { get; set; }
 
-        [NameInMap("Solution")]
-        [Validation(Required=false)]
-        public string Solution { get; set; }
+        [NameInMap("BizType")]
+        [Validation(Required=true)]
+        public string BizType { get; set; }
 
         [NameInMap("GuideStep")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("ResultStep")]
         [Validation(Required=false)]
         public bool? ResultStep { get; set; }
+
+        [NameInMap("Solution")]
+        [Validation(Required=false)]
+        public string Solution { get; set; }
 
     }
 

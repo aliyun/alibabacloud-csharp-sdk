@@ -29,17 +29,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=true)]
             public string Date { get; set; }
 
-            [NameInMap("TotalCount")]
+            [NameInMap("FailCount")]
             [Validation(Required=true)]
-            public long? TotalCount { get; set; }
+            public long? FailCount { get; set; }
 
             [NameInMap("PassCount")]
             [Validation(Required=true)]
             public long? PassCount { get; set; }
 
-            [NameInMap("FailCount")]
+            [NameInMap("TotalCount")]
             [Validation(Required=true)]
-            public long? FailCount { get; set; }
+            public long? TotalCount { get; set; }
 
         }
 

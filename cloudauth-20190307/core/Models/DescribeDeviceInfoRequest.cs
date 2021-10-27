@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeDeviceInfoRequest : TeaModel {
-        [NameInMap("PageSize")]
+        [NameInMap("BizType")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string BizType { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
-        [NameInMap("BizType")]
+        [NameInMap("ExpiredEndDay")]
         [Validation(Required=false)]
-        public string BizType { get; set; }
-
-        [NameInMap("UserDeviceId")]
-        [Validation(Required=false)]
-        public string UserDeviceId { get; set; }
+        public string ExpiredEndDay { get; set; }
 
         [NameInMap("ExpiredStartDay")]
         [Validation(Required=false)]
         public string ExpiredStartDay { get; set; }
 
-        [NameInMap("ExpiredEndDay")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string ExpiredEndDay { get; set; }
+        public int? PageSize { get; set; }
+
+        [NameInMap("UserDeviceId")]
+        [Validation(Required=false)]
+        public string UserDeviceId { get; set; }
 
     }
 

@@ -9,45 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyRecordsRequest : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("BizId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=true)]
-        public int? CurrentPage { get; set; }
+        public string BizId { get; set; }
 
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
-        [NameInMap("StartDate")]
-        [Validation(Required=false)]
-        public string StartDate { get; set; }
+        [NameInMap("CurrentPage")]
+        [Validation(Required=true)]
+        public int? CurrentPage { get; set; }
 
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
-        [NameInMap("BizId")]
-        [Validation(Required=false)]
-        public string BizId { get; set; }
-
         [NameInMap("IdCardNum")]
         [Validation(Required=false)]
         public string IdCardNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("QueryId")]
+        [Validation(Required=false)]
+        public string QueryId { get; set; }
+
+        [NameInMap("StartDate")]
+        [Validation(Required=false)]
+        public string StartDate { get; set; }
 
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public string StatusList { get; set; }
 
-        [NameInMap("QueryId")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string QueryId { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VerifyMaterialResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("VerifyToken")]
-        [Validation(Required=true)]
-        public string VerifyToken { get; set; }
-
-        [NameInMap("VerifyStatus")]
-        [Validation(Required=true)]
-        public int? VerifyStatus { get; set; }
-
         [NameInMap("AuthorityComparisionScore")]
         [Validation(Required=true)]
         public float? AuthorityComparisionScore { get; set; }
@@ -29,43 +17,59 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=true)]
         public float? IdCardFaceComparisonScore { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("VerifyStatus")]
+        [Validation(Required=true)]
+        public int? VerifyStatus { get; set; }
+
+        [NameInMap("VerifyToken")]
+        [Validation(Required=true)]
+        public string VerifyToken { get; set; }
+
         [NameInMap("Material")]
         [Validation(Required=true)]
         public VerifyMaterialResponseMaterial Material { get; set; }
         public class VerifyMaterialResponseMaterial : TeaModel {
+            [NameInMap("FaceGlobalUrl")]
+            [Validation(Required=true)]
+            public string FaceGlobalUrl { get; set; }
             [NameInMap("FaceImageUrl")]
             [Validation(Required=true)]
             public string FaceImageUrl { get; set; }
+            [NameInMap("FaceMask")]
+            [Validation(Required=true)]
+            public string FaceMask { get; set; }
+            [NameInMap("FaceQuality")]
+            [Validation(Required=true)]
+            public string FaceQuality { get; set; }
             [NameInMap("IdCardName")]
             [Validation(Required=true)]
             public string IdCardName { get; set; }
             [NameInMap("IdCardNumber")]
             [Validation(Required=true)]
             public string IdCardNumber { get; set; }
-            [NameInMap("FaceQuality")]
-            [Validation(Required=true)]
-            public string FaceQuality { get; set; }
-            [NameInMap("FaceGlobalUrl")]
-            [Validation(Required=true)]
-            public string FaceGlobalUrl { get; set; }
-            [NameInMap("FaceMask")]
-            [Validation(Required=true)]
-            public string FaceMask { get; set; }
             [NameInMap("IdCardInfo")]
             [Validation(Required=true)]
             public VerifyMaterialResponseMaterialIdCardInfo IdCardInfo { get; set; }
             public class VerifyMaterialResponseMaterialIdCardInfo : TeaModel {
-                [NameInMap("Number")]
-                [Validation(Required=true)]
-                public string Number { get; set; }
-
                 [NameInMap("Address")]
                 [Validation(Required=true)]
                 public string Address { get; set; }
 
-                [NameInMap("Nationality")]
+                [NameInMap("Authority")]
                 [Validation(Required=true)]
-                public string Nationality { get; set; }
+                public string Authority { get; set; }
+
+                [NameInMap("BackImageUrl")]
+                [Validation(Required=true)]
+                public string BackImageUrl { get; set; }
+
+                [NameInMap("Birth")]
+                [Validation(Required=true)]
+                public string Birth { get; set; }
 
                 [NameInMap("EndDate")]
                 [Validation(Required=true)]
@@ -75,21 +79,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 [Validation(Required=true)]
                 public string FrontImageUrl { get; set; }
 
-                [NameInMap("Authority")]
-                [Validation(Required=true)]
-                public string Authority { get; set; }
-
                 [NameInMap("Name")]
                 [Validation(Required=true)]
                 public string Name { get; set; }
 
-                [NameInMap("Birth")]
+                [NameInMap("Nationality")]
                 [Validation(Required=true)]
-                public string Birth { get; set; }
+                public string Nationality { get; set; }
 
-                [NameInMap("BackImageUrl")]
+                [NameInMap("Number")]
                 [Validation(Required=true)]
-                public string BackImageUrl { get; set; }
+                public string Number { get; set; }
 
                 [NameInMap("StartDate")]
                 [Validation(Required=true)]

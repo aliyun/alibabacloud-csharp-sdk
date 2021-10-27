@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VerifyDeviceResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=true)]
         public string Code { get; set; }
@@ -21,13 +17,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=true)]
         public string Message { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
         [NameInMap("ResultObject")]
         [Validation(Required=true)]
         public VerifyDeviceResponseResultObject ResultObject { get; set; }
         public class VerifyDeviceResponseResultObject : TeaModel {
-            [NameInMap("ValidationRetCode")]
+            [NameInMap("ExtParams")]
             [Validation(Required=true)]
-            public string ValidationRetCode { get; set; }
+            public string ExtParams { get; set; }
+            [NameInMap("HasNext")]
+            [Validation(Required=true)]
+            public string HasNext { get; set; }
             [NameInMap("ProductRetCode")]
             [Validation(Required=true)]
             public string ProductRetCode { get; set; }
@@ -37,12 +40,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("RetMessageSub")]
             [Validation(Required=true)]
             public string RetMessageSub { get; set; }
-            [NameInMap("HasNext")]
+            [NameInMap("ValidationRetCode")]
             [Validation(Required=true)]
-            public string HasNext { get; set; }
-            [NameInMap("ExtParams")]
-            [Validation(Required=true)]
-            public string ExtParams { get; set; }
+            public string ValidationRetCode { get; set; }
         };
 
     }

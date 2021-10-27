@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeUserStatusResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
-
         [NameInMap("Enabled")]
         [Validation(Required=true)]
         public bool? Enabled { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
 
     }
 

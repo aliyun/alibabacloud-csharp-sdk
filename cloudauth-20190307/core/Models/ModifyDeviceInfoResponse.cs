@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyDeviceInfoResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BeginDay")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DeviceId")]
-        [Validation(Required=true)]
-        public string DeviceId { get; set; }
-
-        [NameInMap("UserDeviceId")]
-        [Validation(Required=true)]
-        public string UserDeviceId { get; set; }
+        public string BeginDay { get; set; }
 
         [NameInMap("BizType")]
         [Validation(Required=true)]
         public string BizType { get; set; }
 
-        [NameInMap("BeginDay")]
+        [NameInMap("DeviceId")]
         [Validation(Required=true)]
-        public string BeginDay { get; set; }
+        public string DeviceId { get; set; }
 
         [NameInMap("ExpiredDay")]
         [Validation(Required=true)]
         public string ExpiredDay { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=true)]
+        public string RequestId { get; set; }
+
+        [NameInMap("UserDeviceId")]
+        [Validation(Required=true)]
+        public string UserDeviceId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class UpdateAppPackageRequest : TeaModel {
+        [NameInMap("Debug")]
+        [Validation(Required=false)]
+        public bool? Debug { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
-
-        [NameInMap("Debug")]
-        [Validation(Required=false)]
-        public bool? Debug { get; set; }
 
     }
 

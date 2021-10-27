@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DetectFaceAttributesRequest : TeaModel {
-        [NameInMap("MaterialValue")]
-        [Validation(Required=true)]
-        public string MaterialValue { get; set; }
-
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
+
+        [NameInMap("MaterialValue")]
+        [Validation(Required=true)]
+        public string MaterialValue { get; set; }
 
     }
 

@@ -23,18 +23,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [NameInMap("EndPoint")]
             [Validation(Required=true)]
             public string EndPoint { get; set; }
-            [NameInMap("Path")]
-            [Validation(Required=true)]
-            public string Path { get; set; }
             [NameInMap("Expired")]
             [Validation(Required=true)]
             public long? Expired { get; set; }
-            [NameInMap("Secret")]
-            [Validation(Required=true)]
-            public string Secret { get; set; }
             [NameInMap("Key")]
             [Validation(Required=true)]
             public string Key { get; set; }
+            [NameInMap("Path")]
+            [Validation(Required=true)]
+            public string Path { get; set; }
+            [NameInMap("Secret")]
+            [Validation(Required=true)]
+            public string Secret { get; set; }
             [NameInMap("Token")]
             [Validation(Required=true)]
             public string Token { get; set; }

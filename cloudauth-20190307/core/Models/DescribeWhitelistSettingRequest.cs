@@ -9,49 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeWhitelistSettingRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CertNo")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("ServiceCode")]
-        [Validation(Required=true)]
-        public string ServiceCode { get; set; }
-
-        [NameInMap("SceneId")]
-        [Validation(Required=false)]
-        public long? SceneId { get; set; }
+        public string CertNo { get; set; }
 
         [NameInMap("CertifyId")]
         [Validation(Required=false)]
         public string CertifyId { get; set; }
 
-        [NameInMap("CertNo")]
-        [Validation(Required=false)]
-        public string CertNo { get; set; }
+        [NameInMap("CurrentPage")]
+        [Validation(Required=true)]
+        public int? CurrentPage { get; set; }
 
-        [NameInMap("ValidStartDate")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public long? ValidStartDate { get; set; }
-
-        [NameInMap("ValidEndDate")]
-        [Validation(Required=false)]
-        public long? ValidEndDate { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=true)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public long? SceneId { get; set; }
+
+        [NameInMap("ServiceCode")]
         [Validation(Required=true)]
-        public int? CurrentPage { get; set; }
+        public string ServiceCode { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("ValidEndDate")]
+        [Validation(Required=false)]
+        public long? ValidEndDate { get; set; }
+
+        [NameInMap("ValidStartDate")]
+        [Validation(Required=false)]
+        public long? ValidStartDate { get; set; }
 
     }
 

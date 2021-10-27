@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CompareFaceVerifyRequest : TeaModel {
-        [NameInMap("SceneId")]
+        [NameInMap("Crop")]
         [Validation(Required=false)]
-        public long? SceneId { get; set; }
+        public string Crop { get; set; }
 
         [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]
@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public long? SceneId { get; set; }
+
+        [NameInMap("SourceCertifyId")]
+        [Validation(Required=false)]
+        public string SourceCertifyId { get; set; }
+
         [NameInMap("SourceFaceContrastPicture")]
         [Validation(Required=false)]
         public string SourceFaceContrastPicture { get; set; }
@@ -28,10 +36,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("SourceFaceContrastPictureUrl")]
         [Validation(Required=false)]
         public string SourceFaceContrastPictureUrl { get; set; }
-
-        [NameInMap("SourceCertifyId")]
-        [Validation(Required=false)]
-        public string SourceCertifyId { get; set; }
 
         [NameInMap("SourceOssBucketName")]
         [Validation(Required=false)]
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string SourceOssObjectName { get; set; }
 
+        [NameInMap("TargetCertifyId")]
+        [Validation(Required=false)]
+        public string TargetCertifyId { get; set; }
+
         [NameInMap("TargetFaceContrastPicture")]
         [Validation(Required=false)]
         public string TargetFaceContrastPicture { get; set; }
@@ -49,10 +57,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string TargetFaceContrastPictureUrl { get; set; }
 
-        [NameInMap("TargetCertifyId")]
-        [Validation(Required=false)]
-        public string TargetCertifyId { get; set; }
-
         [NameInMap("TargetOssBucketName")]
         [Validation(Required=false)]
         public string TargetOssBucketName { get; set; }
@@ -60,10 +64,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("TargetOssObjectName")]
         [Validation(Required=false)]
         public string TargetOssObjectName { get; set; }
-
-        [NameInMap("Crop")]
-        [Validation(Required=false)]
-        public string Crop { get; set; }
 
     }
 

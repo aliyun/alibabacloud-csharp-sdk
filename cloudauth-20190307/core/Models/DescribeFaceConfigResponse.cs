@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=true)]
         public List<DescribeFaceConfigResponseItems> Items { get; set; }
         public class DescribeFaceConfigResponseItems : TeaModel {
-            [NameInMap("BizType")]
-            [Validation(Required=true)]
-            public string BizType { get; set; }
-
             [NameInMap("BizName")]
             [Validation(Required=true)]
             public string BizName { get; set; }
+
+            [NameInMap("BizType")]
+            [Validation(Required=true)]
+            public string BizType { get; set; }
 
             [NameInMap("GmtUpdated")]
             [Validation(Required=true)]

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeleteWhitelistSettingRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        [NameInMap("Ids")]
+        [Validation(Required=true)]
+        public string Ids { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=true)]
         public string ServiceCode { get; set; }
 
-        [NameInMap("Ids")]
-        [Validation(Required=true)]
-        public string Ids { get; set; }
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class InitFaceVerifyRequest : TeaModel {
-        [NameInMap("SceneId")]
+        [NameInMap("CallbackToken")]
         [Validation(Required=false)]
-        public long? SceneId { get; set; }
+        public string CallbackToken { get; set; }
 
-        [NameInMap("OuterOrderNo")]
+        [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
-        public string OuterOrderNo { get; set; }
-
-        [NameInMap("ProductCode")]
-        [Validation(Required=false)]
-        public string ProductCode { get; set; }
-
-        [NameInMap("CertType")]
-        [Validation(Required=false)]
-        public string CertType { get; set; }
+        public string CallbackUrl { get; set; }
 
         [NameInMap("CertName")]
         [Validation(Required=false)]
@@ -33,13 +25,33 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string CertNo { get; set; }
 
-        [NameInMap("ReturnUrl")]
+        [NameInMap("CertType")]
         [Validation(Required=false)]
-        public string ReturnUrl { get; set; }
+        public string CertType { get; set; }
+
+        [NameInMap("CertifyId")]
+        [Validation(Required=false)]
+        public string CertifyId { get; set; }
+
+        [NameInMap("CertifyUrlType")]
+        [Validation(Required=false)]
+        public string CertifyUrlType { get; set; }
+
+        [NameInMap("Crop")]
+        [Validation(Required=false)]
+        public string Crop { get; set; }
 
         [NameInMap("FaceContrastPicture")]
         [Validation(Required=false)]
         public string FaceContrastPicture { get; set; }
+
+        [NameInMap("FaceContrastPictureUrl")]
+        [Validation(Required=false)]
+        public string FaceContrastPictureUrl { get; set; }
+
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
 
         [NameInMap("MetaInfo")]
         [Validation(Required=false)]
@@ -49,21 +61,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string Mobile { get; set; }
 
-        [NameInMap("Ip")]
+        [NameInMap("Model")]
         [Validation(Required=false)]
-        public string Ip { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        [NameInMap("FaceContrastPictureUrl")]
-        [Validation(Required=false)]
-        public string FaceContrastPictureUrl { get; set; }
-
-        [NameInMap("CertifyId")]
-        [Validation(Required=false)]
-        public string CertifyId { get; set; }
+        public string Model { get; set; }
 
         [NameInMap("OssBucketName")]
         [Validation(Required=false)]
@@ -73,21 +73,25 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string OssObjectName { get; set; }
 
-        [NameInMap("Model")]
+        [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]
-        public string Model { get; set; }
+        public string OuterOrderNo { get; set; }
 
-        [NameInMap("CallbackUrl")]
+        [NameInMap("ProductCode")]
         [Validation(Required=false)]
-        public string CallbackUrl { get; set; }
+        public string ProductCode { get; set; }
 
-        [NameInMap("CallbackToken")]
+        [NameInMap("ReturnUrl")]
         [Validation(Required=false)]
-        public string CallbackToken { get; set; }
+        public string ReturnUrl { get; set; }
 
-        [NameInMap("Crop")]
+        [NameInMap("SceneId")]
         [Validation(Required=false)]
-        public string Crop { get; set; }
+        public long? SceneId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 
