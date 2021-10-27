@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetControlPolicyRequest : TeaModel {
-        [NameInMap("PolicyId")]
-        [Validation(Required=false)]
-        public string PolicyId { get; set; }
-
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
+
+        [NameInMap("PolicyId")]
+        [Validation(Required=false)]
+        public string PolicyId { get; set; }
 
     }
 

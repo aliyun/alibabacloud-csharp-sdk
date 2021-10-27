@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public UpdateResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class UpdateResourceGroupResponseBodyResourceGroup : TeaModel {
-            [NameInMap("DisplayName")]
-            [Validation(Required=false)]
-            public string DisplayName { get; set; }
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+            [NameInMap("DisplayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
         };
 
     }

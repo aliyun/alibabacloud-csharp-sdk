@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupsRequest : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

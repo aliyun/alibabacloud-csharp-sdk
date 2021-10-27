@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAncestorsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Folders")]
         [Validation(Required=false)]
         public ListAncestorsResponseBodyFolders Folders { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListAncestorsResponseBodyFoldersFolder> Folder { get; set; }
             public class ListAncestorsResponseBodyFoldersFolder : TeaModel {
-                public string FolderId { get; set; }
                 public string CreateTime { get; set; }
+                public string FolderId { get; set; }
                 public string FolderName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

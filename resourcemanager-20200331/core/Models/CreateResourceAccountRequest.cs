@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateResourceAccountRequest : TeaModel {
+        [NameInMap("AccountNamePrefix")]
+        [Validation(Required=false)]
+        public string AccountNamePrefix { get; set; }
+
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("PayerAccountId")]
         [Validation(Required=false)]
         public string PayerAccountId { get; set; }
-
-        [NameInMap("AccountNamePrefix")]
-        [Validation(Required=false)]
-        public string AccountNamePrefix { get; set; }
 
     }
 

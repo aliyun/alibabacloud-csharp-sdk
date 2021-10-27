@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListControlPoliciesRequest : TeaModel {
-        [NameInMap("PolicyType")]
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public string PolicyType { get; set; }
+        public string Language { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Language")]
+        [NameInMap("PolicyType")]
         [Validation(Required=false)]
-        public string Language { get; set; }
+        public string PolicyType { get; set; }
 
     }
 

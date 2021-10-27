@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListRolesRequest : TeaModel {
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("Language")]
-        [Validation(Required=false)]
-        public string Language { get; set; }
 
     }
 

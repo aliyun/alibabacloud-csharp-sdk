@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetRoleRequest : TeaModel {
-        [NameInMap("RoleName")]
-        [Validation(Required=false)]
-        public string RoleName { get; set; }
-
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
+
+        [NameInMap("RoleName")]
+        [Validation(Required=false)]
+        public string RoleName { get; set; }
 
     }
 

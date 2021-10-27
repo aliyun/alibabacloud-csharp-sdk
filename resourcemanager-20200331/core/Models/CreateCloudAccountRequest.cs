@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
-        [NameInMap("ParentFolderId")]
-        [Validation(Required=false)]
-        public string ParentFolderId { get; set; }
-
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
+
+        [NameInMap("ParentFolderId")]
+        [Validation(Required=false)]
+        public string ParentFolderId { get; set; }
 
         [NameInMap("PayerAccountId")]
         [Validation(Required=false)]

@@ -17,12 +17,21 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public DeleteResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class DeleteResourceGroupResponseBodyResourceGroup : TeaModel {
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public string AccountId { get; set; }
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
-            [NameInMap("Status")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string Id { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
             [NameInMap("RegionStatuses")]
             [Validation(Required=false)]
             public DeleteResourceGroupResponseBodyResourceGroupRegionStatuses RegionStatuses { get; set; }
@@ -31,29 +40,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 [Validation(Required=false)]
                 public List<DeleteResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus> RegionStatus { get; set; }
                 public class DeleteResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus : TeaModel {
-                    [NameInMap("Status")]
-                    [Validation(Required=false)]
-                    public string Status { get; set; }
-
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
                 }
 
             }
-            [NameInMap("AccountId")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string AccountId { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
+            public string Status { get; set; }
         };
 
     }

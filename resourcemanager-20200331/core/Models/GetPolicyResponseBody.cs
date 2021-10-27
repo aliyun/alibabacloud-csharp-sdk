@@ -13,30 +13,30 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public GetPolicyResponseBodyPolicy Policy { get; set; }
         public class GetPolicyResponseBodyPolicy : TeaModel {
+            [NameInMap("AttachmentCount")]
+            [Validation(Required=false)]
+            public int? AttachmentCount { get; set; }
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
             [NameInMap("DefaultVersion")]
             [Validation(Required=false)]
             public string DefaultVersion { get; set; }
-            [NameInMap("UpdateDate")]
-            [Validation(Required=false)]
-            public string UpdateDate { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
             [NameInMap("PolicyDocument")]
             [Validation(Required=false)]
             public string PolicyDocument { get; set; }
-            [NameInMap("AttachmentCount")]
-            [Validation(Required=false)]
-            public int? AttachmentCount { get; set; }
             [NameInMap("PolicyName")]
             [Validation(Required=false)]
             public string PolicyName { get; set; }
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=false)]
+            public string UpdateDate { get; set; }
         };
 
         [NameInMap("RequestId")]

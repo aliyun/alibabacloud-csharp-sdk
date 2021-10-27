@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAccountsForParentRequest : TeaModel {
-        [NameInMap("ParentFolderId")]
-        [Validation(Required=false)]
-        public string ParentFolderId { get; set; }
-
-        [NameInMap("QueryKeyword")]
-        [Validation(Required=false)]
-        public string QueryKeyword { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ParentFolderId")]
+        [Validation(Required=false)]
+        public string ParentFolderId { get; set; }
+
+        [NameInMap("QueryKeyword")]
+        [Validation(Required=false)]
+        public string QueryKeyword { get; set; }
 
     }
 

@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListRolesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Roles")]
         [Validation(Required=false)]
@@ -33,28 +29,32 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListRolesResponseBodyRolesRole> Role { get; set; }
             public class ListRolesResponseBodyRolesRole : TeaModel {
-                public string RolePrincipalName { get; set; }
-                public string UpdateDate { get; set; }
+                public string Arn { get; set; }
+                public string CreateDate { get; set; }
                 public string Description { get; set; }
-                public long? MaxSessionDuration { get; set; }
+                public bool? IsServiceLinkedRole { get; set; }
                 public ListRolesResponseBodyRolesRoleLatestDeletionTask LatestDeletionTask { get; set; }
                 public class ListRolesResponseBodyRolesRoleLatestDeletionTask : TeaModel {
-                    [NameInMap("DeletionTaskId")]
-                    [Validation(Required=false)]
-                    public string DeletionTaskId { get; set; }
-
                     [NameInMap("CreateDate")]
                     [Validation(Required=false)]
                     public string CreateDate { get; set; }
 
+                    [NameInMap("DeletionTaskId")]
+                    [Validation(Required=false)]
+                    public string DeletionTaskId { get; set; }
+
                 }
-                public string RoleName { get; set; }
-                public string CreateDate { get; set; }
+                public long? MaxSessionDuration { get; set; }
                 public string RoleId { get; set; }
-                public string Arn { get; set; }
-                public bool? IsServiceLinkedRole { get; set; }
+                public string RoleName { get; set; }
+                public string RolePrincipalName { get; set; }
+                public string UpdateDate { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

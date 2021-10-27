@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyAttachmentsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("PolicyAttachments")]
         [Validation(Required=false)]
@@ -21,13 +25,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment> PolicyAttachment { get; set; }
             public class ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment : TeaModel {
-                public string Description { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string PolicyName { get; set; }
-                public string PrincipalName { get; set; }
                 public string AttachDate { get; set; }
+                public string Description { get; set; }
+                public string PolicyName { get; set; }
                 public string PolicyType { get; set; }
+                public string PrincipalName { get; set; }
                 public string PrincipalType { get; set; }
+                public string ResourceGroupId { get; set; }
             }
         };
 
@@ -35,13 +39,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

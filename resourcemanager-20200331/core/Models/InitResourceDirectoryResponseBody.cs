@@ -17,12 +17,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public InitResourceDirectoryResponseBodyResourceDirectory ResourceDirectory { get; set; }
         public class InitResourceDirectoryResponseBodyResourceDirectory : TeaModel {
-            [NameInMap("RootFolderId")]
-            [Validation(Required=false)]
-            public string RootFolderId { get; set; }
-            [NameInMap("ResourceDirectoryId")]
-            [Validation(Required=false)]
-            public string ResourceDirectoryId { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -32,6 +26,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("MasterAccountName")]
             [Validation(Required=false)]
             public string MasterAccountName { get; set; }
+            [NameInMap("ResourceDirectoryId")]
+            [Validation(Required=false)]
+            public string ResourceDirectoryId { get; set; }
+            [NameInMap("RootFolderId")]
+            [Validation(Required=false)]
+            public string RootFolderId { get; set; }
         };
 
     }

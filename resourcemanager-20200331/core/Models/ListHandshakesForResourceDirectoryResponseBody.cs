@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListHandshakesForResourceDirectoryResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Handshakes")]
         [Validation(Required=false)]
         public ListHandshakesForResourceDirectoryResponseBodyHandshakes Handshakes { get; set; }
@@ -33,19 +17,35 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public List<ListHandshakesForResourceDirectoryResponseBodyHandshakesHandshake> Handshake { get; set; }
             public class ListHandshakesForResourceDirectoryResponseBodyHandshakesHandshake : TeaModel {
-                public string Status { get; set; }
-                public string ExpireTime { get; set; }
-                public string ResourceDirectoryId { get; set; }
                 public string CreateTime { get; set; }
-                public string Note { get; set; }
-                public string TargetEntity { get; set; }
+                public string ExpireTime { get; set; }
+                public string HandshakeId { get; set; }
                 public string MasterAccountId { get; set; }
                 public string MasterAccountName { get; set; }
                 public string ModifyTime { get; set; }
+                public string Note { get; set; }
+                public string ResourceDirectoryId { get; set; }
+                public string Status { get; set; }
+                public string TargetEntity { get; set; }
                 public string TargetType { get; set; }
-                public string HandshakeId { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

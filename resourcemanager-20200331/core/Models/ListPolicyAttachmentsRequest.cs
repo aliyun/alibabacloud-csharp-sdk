@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyAttachmentsRequest : TeaModel {
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("PolicyType")]
-        [Validation(Required=false)]
-        public string PolicyType { get; set; }
-
-        [NameInMap("PolicyName")]
-        [Validation(Required=false)]
-        public string PolicyName { get; set; }
-
-        [NameInMap("PrincipalType")]
-        [Validation(Required=false)]
-        public string PrincipalType { get; set; }
-
-        [NameInMap("PrincipalName")]
-        [Validation(Required=false)]
-        public string PrincipalName { get; set; }
+        public string Language { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -37,9 +21,25 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Language")]
+        [NameInMap("PolicyName")]
         [Validation(Required=false)]
-        public string Language { get; set; }
+        public string PolicyName { get; set; }
+
+        [NameInMap("PolicyType")]
+        [Validation(Required=false)]
+        public string PolicyType { get; set; }
+
+        [NameInMap("PrincipalName")]
+        [Validation(Required=false)]
+        public string PrincipalName { get; set; }
+
+        [NameInMap("PrincipalType")]
+        [Validation(Required=false)]
+        public string PrincipalType { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

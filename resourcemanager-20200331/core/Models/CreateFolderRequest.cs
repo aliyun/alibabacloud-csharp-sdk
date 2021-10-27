@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateFolderRequest : TeaModel {
-        [NameInMap("ParentFolderId")]
-        [Validation(Required=false)]
-        public string ParentFolderId { get; set; }
-
         [NameInMap("FolderName")]
         [Validation(Required=false)]
         public string FolderName { get; set; }
+
+        [NameInMap("ParentFolderId")]
+        [Validation(Required=false)]
+        public string ParentFolderId { get; set; }
 
     }
 

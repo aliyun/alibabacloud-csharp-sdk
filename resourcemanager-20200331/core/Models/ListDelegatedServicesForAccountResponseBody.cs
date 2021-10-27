@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListDelegatedServicesForAccountResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DelegatedServices")]
         [Validation(Required=false)]
         public ListDelegatedServicesForAccountResponseBodyDelegatedServices DelegatedServices { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string ServicePrincipal { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

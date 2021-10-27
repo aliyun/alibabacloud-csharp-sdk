@@ -20,26 +20,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public List<MoveResourcesResponseBodyResponses> Responses { get; set; }
         public class MoveResourcesResponseBodyResponses : TeaModel {
-            [NameInMap("Service")]
-            [Validation(Required=false)]
-            public string Service { get; set; }
-
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
-
-            [NameInMap("ResourceType")]
-            [Validation(Required=false)]
-            public string ResourceType { get; set; }
-
-            [NameInMap("RequestId")]
-            [Validation(Required=false)]
-            public string RequestId { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
@@ -51,6 +31,26 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("RequestId")]
+            [Validation(Required=false)]
+            public string RequestId { get; set; }
+
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
+
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+            [NameInMap("Service")]
+            [Validation(Required=false)]
+            public string Service { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
         }
 

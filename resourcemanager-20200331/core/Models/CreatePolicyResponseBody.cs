@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public CreatePolicyResponseBodyPolicy Policy { get; set; }
         public class CreatePolicyResponseBodyPolicy : TeaModel {
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
             [NameInMap("DefaultVersion")]
             [Validation(Required=false)]
             public string DefaultVersion { get; set; }
@@ -22,9 +25,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("PolicyName")]
             [Validation(Required=false)]
             public string PolicyName { get; set; }
-            [NameInMap("CreateDate")]
-            [Validation(Required=false)]
-            public string CreateDate { get; set; }
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }

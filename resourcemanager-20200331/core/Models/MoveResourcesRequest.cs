@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public List<MoveResourcesRequestResources> Resources { get; set; }
         public class MoveResourcesRequestResources : TeaModel {
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
 
             [NameInMap("Service")]
             [Validation(Required=false)]

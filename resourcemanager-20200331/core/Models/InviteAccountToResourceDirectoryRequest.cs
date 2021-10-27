@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class InviteAccountToResourceDirectoryRequest : TeaModel {
+        [NameInMap("Note")]
+        [Validation(Required=false)]
+        public string Note { get; set; }
+
         [NameInMap("TargetEntity")]
         [Validation(Required=false)]
         public string TargetEntity { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
-
-        [NameInMap("Note")]
-        [Validation(Required=false)]
-        public string Note { get; set; }
 
     }
 

@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DetachPolicyRequest : TeaModel {
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("PolicyName")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string PolicyName { get; set; }
 
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
-        [NameInMap("PolicyName")]
+        [NameInMap("PrincipalName")]
         [Validation(Required=false)]
-        public string PolicyName { get; set; }
+        public string PrincipalName { get; set; }
 
         [NameInMap("PrincipalType")]
         [Validation(Required=false)]
         public string PrincipalType { get; set; }
 
-        [NameInMap("PrincipalName")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string PrincipalName { get; set; }
+        public string ResourceGroupId { get; set; }
 
     }
 

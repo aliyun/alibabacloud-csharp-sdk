@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateControlPolicyRequest : TeaModel {
-        [NameInMap("PolicyId")]
-        [Validation(Required=false)]
-        public string PolicyId { get; set; }
-
-        [NameInMap("NewPolicyName")]
-        [Validation(Required=false)]
-        public string NewPolicyName { get; set; }
-
         [NameInMap("NewDescription")]
         [Validation(Required=false)]
         public string NewDescription { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [NameInMap("NewPolicyDocument")]
         [Validation(Required=false)]
         public string NewPolicyDocument { get; set; }
+
+        [NameInMap("NewPolicyName")]
+        [Validation(Required=false)]
+        public string NewPolicyName { get; set; }
+
+        [NameInMap("PolicyId")]
+        [Validation(Required=false)]
+        public string PolicyId { get; set; }
 
     }
 
