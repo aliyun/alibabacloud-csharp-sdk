@@ -21,13 +21,21 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
         [Validation(Required=false)]
         public List<ListVersionsResponseBodyVersions> Versions { get; set; }
         public class ListVersionsResponseBodyVersions : TeaModel {
-            [NameInMap("VersionId")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string VersionId { get; set; }
+            public string CreateTime { get; set; }
 
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
+
+            [NameInMap("VersionId")]
+            [Validation(Required=false)]
+            public string VersionId { get; set; }
 
             [NameInMap("VersionName")]
             [Validation(Required=false)]
@@ -36,14 +44,6 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
             [NameInMap("VersionStatus")]
             [Validation(Required=false)]
             public int? VersionStatus { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=false)]
-            public string UpdateTime { get; set; }
 
         }
 

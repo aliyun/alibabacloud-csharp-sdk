@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class CreateFlowResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public string FlowId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class ListTemplatesRequest : TeaModel {
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -17,17 +25,9 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
 
     }
 

@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class CreateFlowRequest : TeaModel {
-        [NameInMap("FlowName")]
+        [NameInMap("Definition")]
         [Validation(Required=false)]
-        public string FlowName { get; set; }
+        public string Definition { get; set; }
 
         [NameInMap("FlowDescription")]
         [Validation(Required=false)]
         public string FlowDescription { get; set; }
 
-        [NameInMap("Definition")]
+        [NameInMap("FlowName")]
         [Validation(Required=false)]
-        public string Definition { get; set; }
-
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public string TemplateId { get; set; }
+        public string FlowName { get; set; }
 
         [NameInMap("FlowSource")]
         [Validation(Required=false)]
         public string FlowSource { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
 
     }
 

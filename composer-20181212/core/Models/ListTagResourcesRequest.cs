@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class ListTagResourcesRequest : TeaModel {
-        [NameInMap("ResourceType")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -30,14 +38,6 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class UpdateFlowRequest : TeaModel {
+        [NameInMap("Definition")]
+        [Validation(Required=false)]
+        public string Definition { get; set; }
+
+        [NameInMap("FlowDescription")]
+        [Validation(Required=false)]
+        public string FlowDescription { get; set; }
+
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public string FlowId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
-
-        [NameInMap("FlowDescription")]
-        [Validation(Required=false)]
-        public string FlowDescription { get; set; }
-
-        [NameInMap("Definition")]
-        [Validation(Required=false)]
-        public string Definition { get; set; }
 
     }
 

@@ -13,41 +13,41 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public List<ListTemplatesResponseBodyTemplates> Templates { get; set; }
         public class ListTemplatesResponseBodyTemplates : TeaModel {
-            [NameInMap("TemplateId")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string TemplateId { get; set; }
+            public string CreateTime { get; set; }
 
-            [NameInMap("TemplateName")]
+            [NameInMap("TemplateConnector")]
             [Validation(Required=false)]
-            public string TemplateName { get; set; }
+            public string TemplateConnector { get; set; }
+
+            [NameInMap("TemplateCreator")]
+            [Validation(Required=false)]
+            public string TemplateCreator { get; set; }
 
             [NameInMap("TemplateDescription")]
             [Validation(Required=false)]
             public string TemplateDescription { get; set; }
 
-            [NameInMap("TemplateTag")]
+            [NameInMap("TemplateId")]
             [Validation(Required=false)]
-            public string TemplateTag { get; set; }
+            public string TemplateId { get; set; }
 
-            [NameInMap("CreateTime")]
+            [NameInMap("TemplateLocale")]
             [Validation(Required=false)]
-            public string CreateTime { get; set; }
+            public string TemplateLocale { get; set; }
 
-            [NameInMap("UpdateTime")]
+            [NameInMap("TemplateName")]
             [Validation(Required=false)]
-            public string UpdateTime { get; set; }
+            public string TemplateName { get; set; }
 
-            [NameInMap("TemplateConnector")]
+            [NameInMap("TemplateOverview")]
             [Validation(Required=false)]
-            public string TemplateConnector { get; set; }
+            public string TemplateOverview { get; set; }
 
             [NameInMap("TemplateSummary")]
             [Validation(Required=false)]
@@ -57,23 +57,23 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
             [Validation(Required=false)]
             public string TemplateSummaryEn { get; set; }
 
-            [NameInMap("TemplateLocale")]
+            [NameInMap("TemplateTag")]
             [Validation(Required=false)]
-            public string TemplateLocale { get; set; }
+            public string TemplateTag { get; set; }
 
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public int? TemplateVersion { get; set; }
 
-            [NameInMap("TemplateCreator")]
+            [NameInMap("UpdateTime")]
             [Validation(Required=false)]
-            public string TemplateCreator { get; set; }
-
-            [NameInMap("TemplateOverview")]
-            [Validation(Required=false)]
-            public string TemplateOverview { get; set; }
+            public string UpdateTime { get; set; }
 
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

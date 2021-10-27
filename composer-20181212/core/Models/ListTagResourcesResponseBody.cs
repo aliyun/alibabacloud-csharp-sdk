@@ -9,30 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
-            [NameInMap("TagKey")]
-            [Validation(Required=false)]
-            public string TagKey { get; set; }
-
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
@@ -41,7 +29,19 @@ namespace AlibabaCloud.SDK.Composer20181212.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

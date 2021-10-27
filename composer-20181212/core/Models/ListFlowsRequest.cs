@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Composer20181212.Models
 {
     public class ListFlowsRequest : TeaModel {
-        [NameInMap("PageSize")]
+        [NameInMap("Filter")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string Filter { get; set; }
 
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
-        [NameInMap("Filter")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Filter { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 
