@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribePolarxDbInstancesRequest : TeaModel {
-        [NameInMap("DrdsInstanceId")]
-        [Validation(Required=false)]
-        public string DrdsInstanceId { get; set; }
-
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
+
+        [NameInMap("DrdsInstanceId")]
+        [Validation(Required=false)]
+        public string DrdsInstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

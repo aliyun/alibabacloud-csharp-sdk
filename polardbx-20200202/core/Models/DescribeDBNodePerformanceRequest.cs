@@ -8,22 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DescribeBackupSetListRequest : TeaModel {
+    public class DescribeDBNodePerformanceRequest : TeaModel {
+        [NameInMap("CharacterType")]
+        [Validation(Required=false)]
+        public string CharacterType { get; set; }
+
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("DBNodeIds")]
+        [Validation(Required=false)]
+        public string DBNodeIds { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public string EndTime { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string Key { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string StartTime { get; set; }
 
     }
 

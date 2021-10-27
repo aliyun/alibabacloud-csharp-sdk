@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DescribeParametersRequest : TeaModel {
-        [NameInMap("DBInstanceId")]
+    public class DescribePolarxPgInstancesRequest : TeaModel {
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public int? PageNumber { get; set; }
 
-        [NameInMap("ParamLevel")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string ParamLevel { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

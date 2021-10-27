@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class GetPolarXPriceRequest : TeaModel {
-        [NameInMap("RegionId")]
+    public class DescribeDBInstanceConfigRequest : TeaModel {
+        [NameInMap("ConfigName")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ConfigName { get; set; }
 
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("NodeCount")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string NodeCount { get; set; }
+        public string RegionId { get; set; }
 
     }
 

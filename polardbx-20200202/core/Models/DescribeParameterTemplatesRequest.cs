@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class RetryPolarxOrderRequest : TeaModel {
+    public class DescribeParameterTemplatesRequest : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("ParamLevel")]
+        [Validation(Required=false)]
+        public string ParamLevel { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
-
-        [NameInMap("ScaleOutToken")]
-        [Validation(Required=false)]
-        public string ScaleOutToken { get; set; }
 
     }
 

@@ -9,33 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBinaryLogListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalNumber")]
-        [Validation(Required=false)]
-        public int? TotalNumber { get; set; }
-
         [NameInMap("LogList")]
         [Validation(Required=false)]
         public List<DescribeBinaryLogListResponseBodyLogList> LogList { get; set; }
         public class DescribeBinaryLogListResponseBodyLogList : TeaModel {
+            [NameInMap("BeginTime")]
+            [Validation(Required=false)]
+            public string BeginTime { get; set; }
+
+            [NameInMap("CreatedTime")]
+            [Validation(Required=false)]
+            public string CreatedTime { get; set; }
+
+            [NameInMap("DownloadLink")]
+            [Validation(Required=false)]
+            public string DownloadLink { get; set; }
+
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("FileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("LogSize")]
+            [Validation(Required=false)]
+            public long? LogSize { get; set; }
+
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
+
+            [NameInMap("PurgeStatus")]
+            [Validation(Required=false)]
+            public int? PurgeStatus { get; set; }
 
             [NameInMap("UploadHost")]
             [Validation(Required=false)]
@@ -45,35 +57,23 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public int? UploadStatus { get; set; }
 
-            [NameInMap("DownloadLink")]
-            [Validation(Required=false)]
-            public string DownloadLink { get; set; }
-
-            [NameInMap("BeginTime")]
-            [Validation(Required=false)]
-            public string BeginTime { get; set; }
-
-            [NameInMap("LogSize")]
-            [Validation(Required=false)]
-            public long? LogSize { get; set; }
-
-            [NameInMap("FileName")]
-            [Validation(Required=false)]
-            public string FileName { get; set; }
-
-            [NameInMap("CreatedTime")]
-            [Validation(Required=false)]
-            public string CreatedTime { get; set; }
-
-            [NameInMap("PurgeStatus")]
-            [Validation(Required=false)]
-            public int? PurgeStatus { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public long? Id { get; set; }
-
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalNumber")]
+        [Validation(Required=false)]
+        public int? TotalNumber { get; set; }
 
     }
 

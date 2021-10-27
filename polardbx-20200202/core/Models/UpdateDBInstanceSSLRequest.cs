@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdateDBInstanceSSLRequest : TeaModel {
-        [NameInMap("EnableSSL")]
-        [Validation(Required=false)]
-        public bool? EnableSSL { get; set; }
-
         [NameInMap("CertCommonName")]
         [Validation(Required=false)]
         public string CertCommonName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
+
+        [NameInMap("EnableSSL")]
+        [Validation(Required=false)]
+        public bool? EnableSSL { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

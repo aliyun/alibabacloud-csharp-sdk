@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteAccountRequest : TeaModel {
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
-
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
+
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

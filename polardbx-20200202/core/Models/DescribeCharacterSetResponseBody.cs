@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class CreateBackupResponseBody : TeaModel {
+    public class DescribeCharacterSetResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<CreateBackupResponseBodyData> Data { get; set; }
-        public class CreateBackupResponseBodyData : TeaModel {
-            [NameInMap("BackupSetId")]
+        public DescribeCharacterSetResponseBodyData Data { get; set; }
+        public class DescribeCharacterSetResponseBodyData : TeaModel {
+            [NameInMap("CharacterSet")]
             [Validation(Required=false)]
-            public long? BackupSetId { get; set; }
-
-        }
+            public List<string> CharacterSet { get; set; }
+            [NameInMap("Engine")]
+            [Validation(Required=false)]
+            public string Engine { get; set; }
+        };
 
         [NameInMap("Message")]
         [Validation(Required=false)]

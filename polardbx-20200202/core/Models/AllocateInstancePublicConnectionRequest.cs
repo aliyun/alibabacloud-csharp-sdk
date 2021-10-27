@@ -12,9 +12,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class AllocateInstancePublicConnectionRequest : TeaModel {
+        [NameInMap("ConnectionStringPrefix")]
+        [Validation(Required=false)]
+        public string ConnectionStringPrefix { get; set; }
+
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public string Port { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -23,26 +43,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
-
-        [NameInMap("ConnectionStringPrefix")]
-        [Validation(Required=false)]
-        public string ConnectionStringPrefix { get; set; }
-
-        [NameInMap("Port")]
-        [Validation(Required=false)]
-        public string Port { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
     }
 

@@ -9,6 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeAccountListResponseBody : TeaModel {
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<DescribeAccountListResponseBodyData> Data { get; set; }
+        public class DescribeAccountListResponseBodyData : TeaModel {
+            [NameInMap("AccountDescription")]
+            [Validation(Required=false)]
+            public string AccountDescription { get; set; }
+
+            [NameInMap("AccountName")]
+            [Validation(Required=false)]
+            public string AccountName { get; set; }
+
+            [NameInMap("AccountPrivilege")]
+            [Validation(Required=false)]
+            public string AccountPrivilege { get; set; }
+
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+
+            [NameInMap("DBInstanceName")]
+            [Validation(Required=false)]
+            public string DBInstanceName { get; set; }
+
+            [NameInMap("DBName")]
+            [Validation(Required=false)]
+            public string DBName { get; set; }
+
+            [NameInMap("GmtCreated")]
+            [Validation(Required=false)]
+            public string GmtCreated { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,40 +54,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<DescribeAccountListResponseBodyData> Data { get; set; }
-        public class DescribeAccountListResponseBodyData : TeaModel {
-            [NameInMap("GmtCreated")]
-            [Validation(Required=false)]
-            public string GmtCreated { get; set; }
-
-            [NameInMap("DBInstanceName")]
-            [Validation(Required=false)]
-            public string DBInstanceName { get; set; }
-
-            [NameInMap("AccountDescription")]
-            [Validation(Required=false)]
-            public string AccountDescription { get; set; }
-
-            [NameInMap("DBName")]
-            [Validation(Required=false)]
-            public string DBName { get; set; }
-
-            [NameInMap("AccountPrivilege")]
-            [Validation(Required=false)]
-            public string AccountPrivilege { get; set; }
-
-            [NameInMap("AccountType")]
-            [Validation(Required=false)]
-            public string AccountType { get; set; }
-
-            [NameInMap("AccountName")]
-            [Validation(Required=false)]
-            public string AccountName { get; set; }
-
-        }
 
     }
 

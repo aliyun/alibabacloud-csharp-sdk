@@ -8,20 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DescribeDBInstanceSSLResponseBody : TeaModel {
+    public class DescribeDBInstanceConfigResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DescribeDBInstanceSSLResponseBodyData Data { get; set; }
-        public class DescribeDBInstanceSSLResponseBodyData : TeaModel {
-            [NameInMap("CertCommonName")]
+        public DescribeDBInstanceConfigResponseBodyData Data { get; set; }
+        public class DescribeDBInstanceConfigResponseBodyData : TeaModel {
+            [NameInMap("ConfigName")]
             [Validation(Required=false)]
-            public string CertCommonName { get; set; }
-            [NameInMap("SSLEnabled")]
+            public string ConfigName { get; set; }
+            [NameInMap("ConfigValue")]
             [Validation(Required=false)]
-            public bool? SSLEnabled { get; set; }
-            [NameInMap("SSLExpiredTime")]
+            public string ConfigValue { get; set; }
+            [NameInMap("DbInstanceName")]
             [Validation(Required=false)]
-            public string SSLExpiredTime { get; set; }
+            public string DbInstanceName { get; set; }
         };
 
         [NameInMap("RequestId")]

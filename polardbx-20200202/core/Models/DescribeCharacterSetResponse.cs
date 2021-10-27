@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DescribeSqlAuditInfoResponse : TeaModel {
+    public class DescribeCharacterSetResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeSqlAuditInfoResponseBody Body { get; set; }
+        public DescribeCharacterSetResponseBody Body { get; set; }
 
     }
 

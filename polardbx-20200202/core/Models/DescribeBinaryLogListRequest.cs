@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBinaryLogListRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DBInstanceName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("DBInstanceName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
 
     }
 

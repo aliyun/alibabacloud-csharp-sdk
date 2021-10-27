@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateBackupRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("BackupType")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string BackupType { get; set; }
 
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("BackupType")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string BackupType { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class GetPolarxCommodityRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

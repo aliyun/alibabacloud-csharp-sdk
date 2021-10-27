@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpdateBackupPolicyRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DBInstanceName")]
-        [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
-
         [NameInMap("BackupPeriod")]
         [Validation(Required=false)]
         public string BackupPeriod { get; set; }
@@ -37,6 +29,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string BackupWay { get; set; }
 
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
+
         [NameInMap("ForceCleanOnHighSpaceUsage")]
         [Validation(Required=false)]
         public int? ForceCleanOnHighSpaceUsage { get; set; }
@@ -49,13 +45,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public int? LocalLogRetention { get; set; }
 
-        [NameInMap("RemoveLogRetention")]
-        [Validation(Required=false)]
-        public int? RemoveLogRetention { get; set; }
-
         [NameInMap("LogLocalRetentionSpace")]
         [Validation(Required=false)]
         public int? LogLocalRetentionSpace { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RemoveLogRetention")]
+        [Validation(Required=false)]
+        public int? RemoveLogRetention { get; set; }
 
     }
 

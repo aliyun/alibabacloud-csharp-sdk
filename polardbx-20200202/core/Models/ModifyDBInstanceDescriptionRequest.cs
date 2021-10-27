@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDBInstanceDescriptionRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DBInstanceDescription { get; set; }
 
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("DBInstanceDescription")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DBInstanceDescription { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -9,6 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBackupSetListResponseBody : TeaModel {
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<DescribeBackupSetListResponseBodyData> Data { get; set; }
+        public class DescribeBackupSetListResponseBodyData : TeaModel {
+            [NameInMap("BackupModel")]
+            [Validation(Required=false)]
+            public int? BackupModel { get; set; }
+
+            [NameInMap("BackupSetId")]
+            [Validation(Required=false)]
+            public long? BackupSetId { get; set; }
+
+            [NameInMap("BackupSetSize")]
+            [Validation(Required=false)]
+            public long? BackupSetSize { get; set; }
+
+            [NameInMap("BackupType")]
+            [Validation(Required=false)]
+            public int? BackupType { get; set; }
+
+            [NameInMap("BeginTime")]
+            [Validation(Required=false)]
+            public long? BeginTime { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public long? EndTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+        }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,40 +54,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<DescribeBackupSetListResponseBodyData> Data { get; set; }
-        public class DescribeBackupSetListResponseBodyData : TeaModel {
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public long? EndTime { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("BackupSetSize")]
-            [Validation(Required=false)]
-            public long? BackupSetSize { get; set; }
-
-            [NameInMap("BackupSetId")]
-            [Validation(Required=false)]
-            public long? BackupSetId { get; set; }
-
-            [NameInMap("BackupType")]
-            [Validation(Required=false)]
-            public int? BackupType { get; set; }
-
-            [NameInMap("BeginTime")]
-            [Validation(Required=false)]
-            public long? BeginTime { get; set; }
-
-            [NameInMap("BackupModel")]
-            [Validation(Required=false)]
-            public int? BackupModel { get; set; }
-
-        }
 
     }
 
