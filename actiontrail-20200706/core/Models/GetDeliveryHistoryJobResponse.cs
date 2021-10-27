@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
-    public class LookupEventsResponse : TeaModel {
+    public class GetDeliveryHistoryJobResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public LookupEventsResponseBody Body { get; set; }
+        public GetDeliveryHistoryJobResponseBody Body { get; set; }
 
     }
 

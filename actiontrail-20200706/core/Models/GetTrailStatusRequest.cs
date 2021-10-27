@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
-    public class CreateDeliveryHistoryJobRequest : TeaModel {
-        [NameInMap("ClientToken")]
+    public class GetTrailStatusRequest : TeaModel {
+        [NameInMap("IsOrganizationTrail")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public bool? IsOrganizationTrail { get; set; }
 
-        [NameInMap("TrailName")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string TrailName { get; set; }
+        public string Name { get; set; }
 
     }
 

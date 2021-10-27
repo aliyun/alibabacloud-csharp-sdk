@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class CreateDeliveryHistoryJobResponse : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("headers")]
         [Validation(Required=true)]
-        public string RequestId { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=true)]
+        public CreateDeliveryHistoryJobResponseBody Body { get; set; }
 
     }
 

@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class LookupEventsRequest : TeaModel {
-        [NameInMap("NextToken")]
+        [NameInMap("Direction")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public string MaxResults { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string Direction { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -39,9 +31,17 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 
         }
 
-        [NameInMap("Direction")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string Direction { get; set; }
+        public string MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

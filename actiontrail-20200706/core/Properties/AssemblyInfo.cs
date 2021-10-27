@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-actiontrail")]
 [assembly: AssemblyDescription("Alibaba Cloud ActionTrail (20200706) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2ac54b90-2487-11eb-acd7-83e8b2dd52a4")]
+[assembly: Guid("9f3bd2d0-36f8-11ec-b3ea-b1ab5e79b23e")]
 
 // Version information for an assembly consists of the following four values:
 //
