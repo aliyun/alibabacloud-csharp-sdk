@@ -8,25 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20210120.Models
 {
-    public class GeneralRecognitionResponseBody : TeaModel {
+    public class ImageAmazonResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GeneralRecognitionResponseBodyData Data { get; set; }
-        public class GeneralRecognitionResponseBodyData : TeaModel {
-            [NameInMap("Regions")]
+        public ImageAmazonResponseBodyData Data { get; set; }
+        public class ImageAmazonResponseBodyData : TeaModel {
+            [NameInMap("VideoUrl")]
             [Validation(Required=false)]
-            public List<string> Regions { get; set; }
-            [NameInMap("Result")]
-            [Validation(Required=false)]
-            public List<GeneralRecognitionResponseBodyDataResult> Result { get; set; }
-            public class GeneralRecognitionResponseBodyDataResult : TeaModel {
-                public string Score { get; set; }
-                public string Tag { get; set; }
-            }
+            public string VideoUrl { get; set; }
         };
 
         [NameInMap("Message")]
