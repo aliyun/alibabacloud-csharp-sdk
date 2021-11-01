@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// 所有项目Id
-        /// </summary>
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public string ProjectId { get; set; }
-
-        /// <summary>
         /// 当前页
         /// </summary>
         [NameInMap("PageNum")]
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// 所有项目Id
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
 
     }
 

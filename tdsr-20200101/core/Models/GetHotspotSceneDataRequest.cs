@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetHotspotSceneDataRequest : TeaModel {
         /// <summary>
-        /// 预览token
-        /// </summary>
-        [NameInMap("PreviewToken")]
-        [Validation(Required=false)]
-        public string PreviewToken { get; set; }
-
-        /// <summary>
-        /// 0 未发布， 1 已发布
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public long? Type { get; set; }
-
-        /// <summary>
         /// 自定义oss域名（可为cdn域名）
         /// </summary>
         [NameInMap("Domain")]
@@ -36,6 +22,20 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
+
+        /// <summary>
+        /// 预览token
+        /// </summary>
+        [NameInMap("PreviewToken")]
+        [Validation(Required=false)]
+        public string PreviewToken { get; set; }
+
+        /// <summary>
+        /// 0 未发布， 1 已发布
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public long? Type { get; set; }
 
     }
 

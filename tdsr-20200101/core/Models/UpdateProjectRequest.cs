@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class UpdateProjectRequest : TeaModel {
         /// <summary>
+        /// 业务Id
+        /// </summary>
+        [NameInMap("BusinessId")]
+        [Validation(Required=false)]
+        public string BusinessId { get; set; }
+
+        /// <summary>
         /// 项目id
         /// </summary>
         [NameInMap("Id")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        /// <summary>
-        /// 业务Id
-        /// </summary>
-        [NameInMap("BusinessId")]
-        [Validation(Required=false)]
-        public string BusinessId { get; set; }
 
     }
 

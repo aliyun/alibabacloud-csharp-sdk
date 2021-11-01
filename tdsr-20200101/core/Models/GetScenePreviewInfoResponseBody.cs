@@ -10,25 +10,29 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetScenePreviewInfoResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 返回码
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
-        /// <summary>
-        /// 是否请求成功
-        /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public GetScenePreviewInfoResponseBodyData Data { get; set; }
+        public class GetScenePreviewInfoResponseBodyData : TeaModel {
+            [NameInMap("ModelPath")]
+            [Validation(Required=false)]
+            public string ModelPath { get; set; }
+            [NameInMap("PanoList")]
+            [Validation(Required=false)]
+            public string PanoList { get; set; }
+            [NameInMap("TextureModelPath")]
+            [Validation(Required=false)]
+            public string TextureModelPath { get; set; }
+            [NameInMap("TexturePanoPath")]
+            [Validation(Required=false)]
+            public string TexturePanoPath { get; set; }
+        };
 
         /// <summary>
         /// 错误消息
@@ -37,23 +41,19 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("Data")]
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public GetScenePreviewInfoResponseBodyData Data { get; set; }
-        public class GetScenePreviewInfoResponseBodyData : TeaModel {
-            [NameInMap("PanoList")]
-            [Validation(Required=false)]
-            public string PanoList { get; set; }
-            [NameInMap("ModelPath")]
-            [Validation(Required=false)]
-            public string ModelPath { get; set; }
-            [NameInMap("TextureModelPath")]
-            [Validation(Required=false)]
-            public string TextureModelPath { get; set; }
-            [NameInMap("TexturePanoPath")]
-            [Validation(Required=false)]
-            public string TexturePanoPath { get; set; }
-        };
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 是否请求成功
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetSceneBuildTaskStatusResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID，与入参requestId对应
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 返回码
         /// </summary>
         [NameInMap("Code")]
@@ -24,11 +17,25 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// 是否请求成功
+        /// 任务失败错误码
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string ErrorCode { get; set; }
+
+        /// <summary>
+        /// 任务失败错误消息
+        /// </summary>
+        [NameInMap("ErrorMsg")]
+        [Validation(Required=false)]
+        public string ErrorMsg { get; set; }
+
+        /// <summary>
+        /// 任务ID
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         /// <summary>
         /// 错误消息
@@ -38,11 +45,11 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 请求ID，与入参requestId对应
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 场景ID
@@ -59,25 +66,18 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// 是否请求成功
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        /// <summary>
         /// 墙线预测: wall_line  切图: cut_image  重建: build  直角优化：right_angle_optimization 其他：other
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        /// <summary>
-        /// 任务失败错误码
-        /// </summary>
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// 任务失败错误消息
-        /// </summary>
-        [NameInMap("ErrorMsg")]
-        [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
 
     }
 

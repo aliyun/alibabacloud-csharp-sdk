@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class AddRelativePositionRequest : TeaModel {
         /// <summary>
-        /// 场景ID
-        /// </summary>
-        [NameInMap("SceneId")]
-        [Validation(Required=false)]
-        public string SceneId { get; set; }
-
-        /// <summary>
         /// 相对位置信息
         /// </summary>
         [NameInMap("RelativePosition")]
         [Validation(Required=false)]
         public string RelativePosition { get; set; }
+
+        /// <summary>
+        /// 场景ID
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
 
     }
 

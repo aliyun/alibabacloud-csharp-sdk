@@ -10,60 +10,11 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class DetailSubSceneResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID，与入参requestId对应
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 返回码
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
-
-        /// <summary>
-        /// 是否请求成功
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
-        /// 错误消息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// 子场景id
-        /// </summary>
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        /// <summary>
-        /// 子场景名称
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 图片ID/视频ID
-        /// </summary>
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        /// <summary>
-        /// 图片路径/视频路径
-        /// </summary>
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
 
         /// <summary>
         /// 图片路径/视频封面路径
@@ -73,11 +24,11 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string CoverUrl { get; set; }
 
         /// <summary>
-        /// 子场景状态
+        /// 切图路径
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("CubemapPath")]
         [Validation(Required=false)]
-        public long? Status { get; set; }
+        public string CubemapPath { get; set; }
 
         /// <summary>
         /// 创建时间
@@ -94,11 +45,60 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// 切图路径
+        /// 子场景id
         /// </summary>
-        [NameInMap("CubemapPath")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string CubemapPath { get; set; }
+        public string Id { get; set; }
+
+        /// <summary>
+        /// 错误消息
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// 子场景名称
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// 请求ID，与入参requestId对应
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 图片ID/视频ID
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
+        /// <summary>
+        /// 子场景状态
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public long? Status { get; set; }
+
+        /// <summary>
+        /// 是否请求成功
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        /// <summary>
+        /// 图片路径/视频路径
+        /// </summary>
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 

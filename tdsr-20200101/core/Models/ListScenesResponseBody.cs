@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class ListScenesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListScenesResponseBodyData> Data { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

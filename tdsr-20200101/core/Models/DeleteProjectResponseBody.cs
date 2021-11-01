@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class DeleteProjectResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class CreateProjectRequest : TeaModel {
-        [NameInMap("Name")]
+        [NameInMap("BuilderUserIdList")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string BuilderUserIdList { get; set; }
 
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string GatherUserIdList { get; set; }
 
-        [NameInMap("BuilderUserIdList")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string BuilderUserIdList { get; set; }
+        public string Name { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class SaveHotspotTagResponseBody : TeaModel {
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
 
     }
 

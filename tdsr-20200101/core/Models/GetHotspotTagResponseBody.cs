@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetHotspotTagResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ObjectString")]
-        [Validation(Required=false)]
-        public string ObjectString { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("ErrMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
+
+        [NameInMap("ObjectString")]
+        [Validation(Required=false)]
+        public string ObjectString { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

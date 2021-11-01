@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class ListScenesRequest : TeaModel {
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public string ProjectId { get; set; }
-
         [NameInMap("IsPublishQuery")]
         [Validation(Required=false)]
         public bool? IsPublishQuery { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
 
     }
 

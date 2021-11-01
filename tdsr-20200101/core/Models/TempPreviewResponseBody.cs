@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class TempPreviewResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID，与入参requestId对应
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 返回码
         /// </summary>
         [NameInMap("Code")]
@@ -24,11 +17,11 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// 是否请求成功
+        /// 任务ID
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Key { get; set; }
 
         /// <summary>
         /// 错误消息
@@ -45,11 +38,18 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string PreviewUrl { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 请求ID，与入参requestId对应
         /// </summary>
-        [NameInMap("Key")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Key { get; set; }
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 是否请求成功
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

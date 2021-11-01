@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class PredImageRequest : TeaModel {
         /// <summary>
-        /// 子场景ID
+        /// 是否垂直矫正
         /// </summary>
-        [NameInMap("SubSceneId")]
+        [NameInMap("CorrectVertical")]
         [Validation(Required=false)]
-        public string SubSceneId { get; set; }
-
-        /// <summary>
-        /// 是否门预测
-        /// </summary>
-        [NameInMap("DetectDoor")]
-        [Validation(Required=false)]
-        public bool? DetectDoor { get; set; }
+        public bool? CorrectVertical { get; set; }
 
         /// <summary>
         /// 门数量(DetectDoor为false时，可为0)
@@ -31,11 +24,18 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public long? CountDetectDoor { get; set; }
 
         /// <summary>
-        /// 是否垂直矫正
+        /// 是否门预测
         /// </summary>
-        [NameInMap("CorrectVertical")]
+        [NameInMap("DetectDoor")]
         [Validation(Required=false)]
-        public bool? CorrectVertical { get; set; }
+        public bool? DetectDoor { get; set; }
+
+        /// <summary>
+        /// 子场景ID
+        /// </summary>
+        [NameInMap("SubSceneId")]
+        [Validation(Required=false)]
+        public string SubSceneId { get; set; }
 
     }
 

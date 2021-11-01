@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class LinkImageRequest : TeaModel {
         /// <summary>
-        /// 子场景ID
+        /// 相机高度 单位 cm
         /// </summary>
-        [NameInMap("SubSceneId")]
+        [NameInMap("CameraHeight")]
         [Validation(Required=false)]
-        public string SubSceneId { get; set; }
+        public int? CameraHeight { get; set; }
 
         /// <summary>
         /// 图片或者视频名称xxx.jpg
@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// 相机高度 单位 cm
-        /// </summary>
-        [NameInMap("CameraHeight")]
-        [Validation(Required=false)]
-        public int? CameraHeight { get; set; }
-
-        /// <summary>
         /// 平台标识，默认PC
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
+
+        /// <summary>
+        /// 子场景ID
+        /// </summary>
+        [NameInMap("SubSceneId")]
+        [Validation(Required=false)]
+        public string SubSceneId { get; set; }
 
     }
 

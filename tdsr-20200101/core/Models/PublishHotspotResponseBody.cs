@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Data { get; set; }
 
+        [NameInMap("ErrMessage")]
+        [Validation(Required=false)]
+        public string ErrMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ErrMessage")]
-        [Validation(Required=false)]
-        public string ErrMessage { get; set; }
 
     }
 

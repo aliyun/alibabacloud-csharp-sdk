@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class CheckResourceRequest : TeaModel {
+        [NameInMap("Bid")]
+        [Validation(Required=false)]
+        public string Bid { get; set; }
+
         [NameInMap("Country")]
         [Validation(Required=false)]
         public string Country { get; set; }
+
+        [NameInMap("GmtWakeup")]
+        [Validation(Required=false)]
+        public string GmtWakeup { get; set; }
+
+        [NameInMap("Hid")]
+        [Validation(Required=false)]
+        public long? Hid { get; set; }
 
         [NameInMap("Interrupt")]
         [Validation(Required=false)]
@@ -21,49 +33,37 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string Invoker { get; set; }
 
-        [NameInMap("Pk")]
+        [NameInMap("Level")]
         [Validation(Required=false)]
-        public string Pk { get; set; }
-
-        [NameInMap("Bid")]
-        [Validation(Required=false)]
-        public string Bid { get; set; }
-
-        [NameInMap("Hid")]
-        [Validation(Required=false)]
-        public long? Hid { get; set; }
-
-        [NameInMap("TaskIdentifier")]
-        [Validation(Required=false)]
-        public string TaskIdentifier { get; set; }
-
-        [NameInMap("TaskExtraData")]
-        [Validation(Required=false)]
-        public string TaskExtraData { get; set; }
-
-        [NameInMap("GmtWakeup")]
-        [Validation(Required=false)]
-        public string GmtWakeup { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public long? Level { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("Level")]
+        [NameInMap("Pk")]
         [Validation(Required=false)]
-        public long? Level { get; set; }
-
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
+        public string Pk { get; set; }
 
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("TaskExtraData")]
+        [Validation(Required=false)]
+        public string TaskExtraData { get; set; }
+
+        [NameInMap("TaskIdentifier")]
+        [Validation(Required=false)]
+        public string TaskIdentifier { get; set; }
+
+        [NameInMap("Url")]
+        [Validation(Required=false)]
+        public string Url { get; set; }
 
     }
 
