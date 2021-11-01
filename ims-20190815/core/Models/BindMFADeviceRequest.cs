@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class BindMFADeviceRequest : TeaModel {
-        [NameInMap("SerialNumber")]
-        [Validation(Required=false)]
-        public string SerialNumber { get; set; }
-
-        [NameInMap("UserPrincipalName")]
-        [Validation(Required=false)]
-        public string UserPrincipalName { get; set; }
-
         [NameInMap("AuthenticationCode1")]
         [Validation(Required=false)]
         public string AuthenticationCode1 { get; set; }
@@ -25,9 +17,13 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string AuthenticationCode2 { get; set; }
 
-        [NameInMap("AkProxySuffix")]
+        [NameInMap("SerialNumber")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public string SerialNumber { get; set; }
+
+        [NameInMap("UserPrincipalName")]
+        [Validation(Required=false)]
+        public string UserPrincipalName { get; set; }
 
     }
 

@@ -13,37 +13,33 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("NewDisplayName")]
-        [Validation(Required=false)]
-        public string NewDisplayName { get; set; }
-
-        [NameInMap("NewRedirectUris")]
-        [Validation(Required=false)]
-        public string NewRedirectUris { get; set; }
-
-        [NameInMap("NewPredefinedScopes")]
-        [Validation(Required=false)]
-        public string NewPredefinedScopes { get; set; }
-
-        [NameInMap("NewSecretRequired")]
-        [Validation(Required=false)]
-        public bool? NewSecretRequired { get; set; }
-
         [NameInMap("NewAccessTokenValidity")]
         [Validation(Required=false)]
         public int? NewAccessTokenValidity { get; set; }
 
-        [NameInMap("NewRefreshTokenValidity")]
+        [NameInMap("NewDisplayName")]
         [Validation(Required=false)]
-        public int? NewRefreshTokenValidity { get; set; }
+        public string NewDisplayName { get; set; }
 
         [NameInMap("NewIsMultiTenant")]
         [Validation(Required=false)]
         public bool? NewIsMultiTenant { get; set; }
 
-        [NameInMap("AkProxySuffix")]
+        [NameInMap("NewPredefinedScopes")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public string NewPredefinedScopes { get; set; }
+
+        [NameInMap("NewRedirectUris")]
+        [Validation(Required=false)]
+        public string NewRedirectUris { get; set; }
+
+        [NameInMap("NewRefreshTokenValidity")]
+        [Validation(Required=false)]
+        public int? NewRefreshTokenValidity { get; set; }
+
+        [NameInMap("NewSecretRequired")]
+        [Validation(Required=false)]
+        public bool? NewSecretRequired { get; set; }
 
     }
 

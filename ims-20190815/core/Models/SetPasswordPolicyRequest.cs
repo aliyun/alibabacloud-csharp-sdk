@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetPasswordPolicyRequest : TeaModel {
-        [NameInMap("MinimumPasswordLength")]
-        [Validation(Required=false)]
-        public int? MinimumPasswordLength { get; set; }
-
-        [NameInMap("RequireLowercaseCharacters")]
-        [Validation(Required=false)]
-        public bool? RequireLowercaseCharacters { get; set; }
-
-        [NameInMap("RequireUppercaseCharacters")]
-        [Validation(Required=false)]
-        public bool? RequireUppercaseCharacters { get; set; }
-
-        [NameInMap("RequireNumbers")]
-        [Validation(Required=false)]
-        public bool? RequireNumbers { get; set; }
-
-        [NameInMap("RequireSymbols")]
-        [Validation(Required=false)]
-        public bool? RequireSymbols { get; set; }
-
         [NameInMap("HardExpire")]
         [Validation(Required=false)]
         public bool? HardExpire { get; set; }
@@ -36,10 +16,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [NameInMap("MaxLoginAttemps")]
         [Validation(Required=false)]
         public int? MaxLoginAttemps { get; set; }
-
-        [NameInMap("PasswordReusePrevention")]
-        [Validation(Required=false)]
-        public int? PasswordReusePrevention { get; set; }
 
         [NameInMap("MaxPasswordAge")]
         [Validation(Required=false)]
@@ -49,13 +25,33 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public int? MinimumPasswordDifferentCharacter { get; set; }
 
+        [NameInMap("MinimumPasswordLength")]
+        [Validation(Required=false)]
+        public int? MinimumPasswordLength { get; set; }
+
         [NameInMap("PasswordNotContainUserName")]
         [Validation(Required=false)]
         public bool? PasswordNotContainUserName { get; set; }
 
-        [NameInMap("AkProxySuffix")]
+        [NameInMap("PasswordReusePrevention")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public int? PasswordReusePrevention { get; set; }
+
+        [NameInMap("RequireLowercaseCharacters")]
+        [Validation(Required=false)]
+        public bool? RequireLowercaseCharacters { get; set; }
+
+        [NameInMap("RequireNumbers")]
+        [Validation(Required=false)]
+        public bool? RequireNumbers { get; set; }
+
+        [NameInMap("RequireSymbols")]
+        [Validation(Required=false)]
+        public bool? RequireSymbols { get; set; }
+
+        [NameInMap("RequireUppercaseCharacters")]
+        [Validation(Required=false)]
+        public bool? RequireUppercaseCharacters { get; set; }
 
     }
 

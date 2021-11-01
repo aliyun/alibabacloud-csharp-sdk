@@ -9,30 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateLoginProfileResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public UpdateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class UpdateLoginProfileResponseBodyLoginProfile : TeaModel {
-            [NameInMap("UserPrincipalName")]
+            [NameInMap("MFABindRequired")]
             [Validation(Required=false)]
-            public string UserPrincipalName { get; set; }
+            public bool? MFABindRequired { get; set; }
+            [NameInMap("PasswordResetRequired")]
+            [Validation(Required=false)]
+            public bool? PasswordResetRequired { get; set; }
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
             [NameInMap("UpdateDate")]
             [Validation(Required=false)]
             public string UpdateDate { get; set; }
-            [NameInMap("PasswordResetRequired")]
+            [NameInMap("UserPrincipalName")]
             [Validation(Required=false)]
-            public bool? PasswordResetRequired { get; set; }
-            [NameInMap("MFABindRequired")]
-            [Validation(Required=false)]
-            public bool? MFABindRequired { get; set; }
+            public string UserPrincipalName { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

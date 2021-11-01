@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateLoginProfileRequest : TeaModel {
-        [NameInMap("UserPrincipalName")]
+        [NameInMap("MFABindRequired")]
         [Validation(Required=false)]
-        public string UserPrincipalName { get; set; }
+        public bool? MFABindRequired { get; set; }
 
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -21,21 +21,13 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public bool? PasswordResetRequired { get; set; }
 
-        [NameInMap("MFABindRequired")]
-        [Validation(Required=false)]
-        public bool? MFABindRequired { get; set; }
-
-        [NameInMap("GenerateRandomPassword")]
-        [Validation(Required=false)]
-        public bool? GenerateRandomPassword { get; set; }
-
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("AkProxySuffix")]
+        [NameInMap("UserPrincipalName")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public string UserPrincipalName { get; set; }
 
     }
 

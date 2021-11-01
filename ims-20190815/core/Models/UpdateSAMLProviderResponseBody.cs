@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public UpdateSAMLProviderResponseBodySAMLProvider SAMLProvider { get; set; }
         public class UpdateSAMLProviderResponseBodySAMLProvider : TeaModel {
-            [NameInMap("UpdateDate")]
+            [NameInMap("Arn")]
             [Validation(Required=false)]
-            public string UpdateDate { get; set; }
+            public string Arn { get; set; }
+            [NameInMap("CreateDate")]
+            [Validation(Required=false)]
+            public string CreateDate { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
             [NameInMap("SAMLProviderName")]
             [Validation(Required=false)]
             public string SAMLProviderName { get; set; }
-            [NameInMap("CreateDate")]
+            [NameInMap("UpdateDate")]
             [Validation(Required=false)]
-            public string CreateDate { get; set; }
-            [NameInMap("Arn")]
-            [Validation(Required=false)]
-            public string Arn { get; set; }
+            public string UpdateDate { get; set; }
         };
 
     }

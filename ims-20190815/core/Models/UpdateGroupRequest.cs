@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateGroupRequest : TeaModel {
-        [NameInMap("GroupPrincipalName")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public string GroupPrincipalName { get; set; }
-
-        [NameInMap("NewGroupPrincipalName")]
-        [Validation(Required=false)]
-        public string NewGroupPrincipalName { get; set; }
+        public string GroupName { get; set; }
 
         [NameInMap("NewComments")]
         [Validation(Required=false)]
@@ -25,17 +21,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string NewDisplayName { get; set; }
 
-        [NameInMap("AkProxySuffix")]
-        [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
-
         [NameInMap("NewGroupName")]
         [Validation(Required=false)]
         public string NewGroupName { get; set; }
-
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
 
     }
 

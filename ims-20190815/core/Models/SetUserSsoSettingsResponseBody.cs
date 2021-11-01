@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetUserSsoSettingsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("UserSsoSettings")]
         [Validation(Required=false)]
         public SetUserSsoSettingsResponseBodyUserSsoSettings UserSsoSettings { get; set; }
@@ -23,10 +27,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? SsoEnabled { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

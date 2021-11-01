@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListUserBasicInfosResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
+
+        [NameInMap("Marker")]
+        [Validation(Required=false)]
+        public string Marker { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("UserBasicInfos")]
         [Validation(Required=false)]
@@ -25,15 +29,11 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo> UserBasicInfo { get; set; }
             public class ListUserBasicInfosResponseBodyUserBasicInfosUserBasicInfo : TeaModel {
-                public string UserPrincipalName { get; set; }
                 public string DisplayName { get; set; }
                 public string UserId { get; set; }
+                public string UserPrincipalName { get; set; }
             }
         };
-
-        [NameInMap("Marker")]
-        [Validation(Required=false)]
-        public string Marker { get; set; }
 
     }
 

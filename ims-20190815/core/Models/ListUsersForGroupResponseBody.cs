@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListUsersForGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("IsTruncated")]
         [Validation(Required=false)]
         public bool? IsTruncated { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public List<ListUsersForGroupResponseBodyUsersUser> User { get; set; }
             public class ListUsersForGroupResponseBodyUsersUser : TeaModel {
-                public string UserPrincipalName { get; set; }
                 public string DisplayName { get; set; }
-                public string UserId { get; set; }
                 public string JoinDate { get; set; }
+                public string UserId { get; set; }
+                public string UserPrincipalName { get; set; }
             }
         };
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetSecurityPreferenceResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SecurityPreference")]
         [Validation(Required=false)]
         public SetSecurityPreferenceResponseBodySecurityPreference SecurityPreference { get; set; }
@@ -26,21 +30,25 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference LoginProfilePreference { get; set; }
             public class SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference : TeaModel {
+                [NameInMap("AllowUserToChangePassword")]
+                [Validation(Required=false)]
+                public bool? AllowUserToChangePassword { get; set; }
+
                 [NameInMap("EnableSaveMFATicket")]
                 [Validation(Required=false)]
                 public bool? EnableSaveMFATicket { get; set; }
 
-                [NameInMap("LoginSessionDuration")]
+                [NameInMap("EnforceMFAForLogin")]
                 [Validation(Required=false)]
-                public int? LoginSessionDuration { get; set; }
+                public bool? EnforceMFAForLogin { get; set; }
 
                 [NameInMap("LoginNetworkMasks")]
                 [Validation(Required=false)]
                 public string LoginNetworkMasks { get; set; }
 
-                [NameInMap("AllowUserToChangePassword")]
+                [NameInMap("LoginSessionDuration")]
                 [Validation(Required=false)]
-                public bool? AllowUserToChangePassword { get; set; }
+                public int? LoginSessionDuration { get; set; }
 
             }
             [NameInMap("MFAPreference")]
@@ -52,11 +60,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public bool? AllowUserToManageMFADevices { get; set; }
 
             }
-        };
+            [NameInMap("VerificationPreference")]
+            [Validation(Required=false)]
+            public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference VerificationPreference { get; set; }
+            public class SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference : TeaModel {
+                [NameInMap("VerificationTypes")]
+                [Validation(Required=false)]
+                public string VerificationTypes { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+            }
+        };
 
     }
 

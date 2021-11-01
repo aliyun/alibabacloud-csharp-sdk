@@ -9,24 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateVirtualMFADeviceResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("VirtualMFADevice")]
         [Validation(Required=false)]
         public CreateVirtualMFADeviceResponseBodyVirtualMFADevice VirtualMFADevice { get; set; }
         public class CreateVirtualMFADeviceResponseBodyVirtualMFADevice : TeaModel {
-            [NameInMap("SerialNumber")]
-            [Validation(Required=false)]
-            public string SerialNumber { get; set; }
-            [NameInMap("QRCodePNG")]
-            [Validation(Required=false)]
-            public string QRCodePNG { get; set; }
             [NameInMap("Base32StringSeed")]
             [Validation(Required=false)]
             public string Base32StringSeed { get; set; }
+            [NameInMap("QRCodePNG")]
+            [Validation(Required=false)]
+            public string QRCodePNG { get; set; }
+            [NameInMap("SerialNumber")]
+            [Validation(Required=false)]
+            public string SerialNumber { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

@@ -9,37 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateUserRequest : TeaModel {
-        [NameInMap("UserPrincipalName")]
+        [NameInMap("NewComments")]
         [Validation(Required=false)]
-        public string UserPrincipalName { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        [NameInMap("NewUserPrincipalName")]
-        [Validation(Required=false)]
-        public string NewUserPrincipalName { get; set; }
+        public string NewComments { get; set; }
 
         [NameInMap("NewDisplayName")]
         [Validation(Required=false)]
         public string NewDisplayName { get; set; }
 
-        [NameInMap("NewMobilePhone")]
-        [Validation(Required=false)]
-        public string NewMobilePhone { get; set; }
-
         [NameInMap("NewEmail")]
         [Validation(Required=false)]
         public string NewEmail { get; set; }
 
-        [NameInMap("NewComments")]
+        [NameInMap("NewMobilePhone")]
         [Validation(Required=false)]
-        public string NewComments { get; set; }
+        public string NewMobilePhone { get; set; }
 
-        [NameInMap("AkProxySuffix")]
+        [NameInMap("NewUserPrincipalName")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public string NewUserPrincipalName { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
+
+        [NameInMap("UserPrincipalName")]
+        [Validation(Required=false)]
+        public string UserPrincipalName { get; set; }
 
     }
 

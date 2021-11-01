@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
-    public class GenerateCredentialReportRequest : TeaModel {
-        [NameInMap("AkProxySuffix")]
+    public class DeleteOIDCProviderResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public string RequestId { get; set; }
 
     }
 

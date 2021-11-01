@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
-    public class GetPasswordPolicyRequest : TeaModel {
-        [NameInMap("AkProxySuffix")]
+    public class GetOIDCProviderRequest : TeaModel {
+        [NameInMap("OIDCProviderName")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public string OIDCProviderName { get; set; }
 
     }
 

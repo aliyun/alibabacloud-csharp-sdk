@@ -13,24 +13,24 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public UpdateGroupResponseBodyGroup Group { get; set; }
         public class UpdateGroupResponseBodyGroup : TeaModel {
-            [NameInMap("DisplayName")]
-            [Validation(Required=false)]
-            public string DisplayName { get; set; }
-            [NameInMap("GroupId")]
-            [Validation(Required=false)]
-            public string GroupId { get; set; }
-            [NameInMap("UpdateDate")]
-            [Validation(Required=false)]
-            public string UpdateDate { get; set; }
-            [NameInMap("GroupName")]
-            [Validation(Required=false)]
-            public string GroupName { get; set; }
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
+            [NameInMap("DisplayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=false)]
+            public string UpdateDate { get; set; }
         };
 
         [NameInMap("RequestId")]

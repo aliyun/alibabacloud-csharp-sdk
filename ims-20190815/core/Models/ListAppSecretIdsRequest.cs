@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("AkProxySuffix")]
-        [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
-
     }
 
 }

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ChangePasswordRequest : TeaModel {
-        [NameInMap("OldPassword")]
-        [Validation(Required=false)]
-        public string OldPassword { get; set; }
-
         [NameInMap("NewPassword")]
         [Validation(Required=false)]
         public string NewPassword { get; set; }
 
-        [NameInMap("AkProxySuffix")]
+        [NameInMap("OldPassword")]
         [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
+        public string OldPassword { get; set; }
 
     }
 

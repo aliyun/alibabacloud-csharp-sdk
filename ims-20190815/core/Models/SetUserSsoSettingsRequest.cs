@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class SetUserSsoSettingsRequest : TeaModel {
+        [NameInMap("AuxiliaryDomain")]
+        [Validation(Required=false)]
+        public string AuxiliaryDomain { get; set; }
+
         [NameInMap("MetadataDocument")]
         [Validation(Required=false)]
         public string MetadataDocument { get; set; }
@@ -16,14 +20,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [NameInMap("SsoEnabled")]
         [Validation(Required=false)]
         public bool? SsoEnabled { get; set; }
-
-        [NameInMap("AuxiliaryDomain")]
-        [Validation(Required=false)]
-        public string AuxiliaryDomain { get; set; }
-
-        [NameInMap("AkProxySuffix")]
-        [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
 
     }
 

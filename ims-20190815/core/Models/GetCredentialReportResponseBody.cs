@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetCredentialReportResponseBody : TeaModel {
+        [NameInMap("Content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
         [NameInMap("GeneratedTime")]
         [Validation(Required=false)]
         public string GeneratedTime { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
 
     }
 

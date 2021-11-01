@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class RemoveUserFromGroupRequest : TeaModel {
-        [NameInMap("UserPrincipalName")]
-        [Validation(Required=false)]
-        public string UserPrincipalName { get; set; }
-
-        [NameInMap("GroupPrincipalName")]
-        [Validation(Required=false)]
-        public string GroupPrincipalName { get; set; }
-
-        [NameInMap("AkProxySuffix")]
-        [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
-
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
+
+        [NameInMap("UserPrincipalName")]
+        [Validation(Required=false)]
+        public string UserPrincipalName { get; set; }
 
     }
 

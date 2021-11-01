@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class DeleteGroupRequest : TeaModel {
-        [NameInMap("GroupPrincipalName")]
-        [Validation(Required=false)]
-        public string GroupPrincipalName { get; set; }
-
-        [NameInMap("AkProxySuffix")]
-        [Validation(Required=false)]
-        public string AkProxySuffix { get; set; }
-
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }

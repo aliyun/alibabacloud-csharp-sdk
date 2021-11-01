@@ -9,44 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetApplicationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Application")]
         [Validation(Required=false)]
         public GetApplicationResponseBodyApplication Application { get; set; }
         public class GetApplicationResponseBodyApplication : TeaModel {
-            [NameInMap("DisplayName")]
-            [Validation(Required=false)]
-            public string DisplayName { get; set; }
             [NameInMap("AccessTokenValidity")]
             [Validation(Required=false)]
             public int? AccessTokenValidity { get; set; }
-            [NameInMap("SecretRequired")]
-            [Validation(Required=false)]
-            public bool? SecretRequired { get; set; }
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
-            [NameInMap("CreateDate")]
+            [NameInMap("AppId")]
             [Validation(Required=false)]
-            public string CreateDate { get; set; }
+            public string AppId { get; set; }
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
-            [NameInMap("RedirectUris")]
+            [NameInMap("AppType")]
             [Validation(Required=false)]
-            public GetApplicationResponseBodyApplicationRedirectUris RedirectUris { get; set; }
-            public class GetApplicationResponseBodyApplicationRedirectUris : TeaModel {
-                [NameInMap("RedirectUri")]
-                [Validation(Required=false)]
-                public List<string> RedirectUri { get; set; }
-
-            }
-            [NameInMap("UpdateDate")]
+            public string AppType { get; set; }
+            [NameInMap("CreateDate")]
             [Validation(Required=false)]
-            public string UpdateDate { get; set; }
+            public string CreateDate { get; set; }
             [NameInMap("DelegatedScope")]
             [Validation(Required=false)]
             public GetApplicationResponseBodyApplicationDelegatedScope DelegatedScope { get; set; }
@@ -65,19 +49,35 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 };
 
             }
-            [NameInMap("AppId")]
+            [NameInMap("DisplayName")]
             [Validation(Required=false)]
-            public string AppId { get; set; }
-            [NameInMap("RefreshTokenValidity")]
-            [Validation(Required=false)]
-            public int? RefreshTokenValidity { get; set; }
+            public string DisplayName { get; set; }
             [NameInMap("IsMultiTenant")]
             [Validation(Required=false)]
             public bool? IsMultiTenant { get; set; }
-            [NameInMap("AppType")]
+            [NameInMap("RedirectUris")]
             [Validation(Required=false)]
-            public string AppType { get; set; }
+            public GetApplicationResponseBodyApplicationRedirectUris RedirectUris { get; set; }
+            public class GetApplicationResponseBodyApplicationRedirectUris : TeaModel {
+                [NameInMap("RedirectUri")]
+                [Validation(Required=false)]
+                public List<string> RedirectUri { get; set; }
+
+            }
+            [NameInMap("RefreshTokenValidity")]
+            [Validation(Required=false)]
+            public int? RefreshTokenValidity { get; set; }
+            [NameInMap("SecretRequired")]
+            [Validation(Required=false)]
+            public bool? SecretRequired { get; set; }
+            [NameInMap("UpdateDate")]
+            [Validation(Required=false)]
+            public string UpdateDate { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
