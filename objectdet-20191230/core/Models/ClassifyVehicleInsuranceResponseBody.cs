@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class ClassifyVehicleInsuranceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ClassifyVehicleInsuranceResponseBodyData Data { get; set; }
@@ -21,13 +17,17 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<ClassifyVehicleInsuranceResponseBodyDataLabels> Labels { get; set; }
             public class ClassifyVehicleInsuranceResponseBodyDataLabels : TeaModel {
-                public float? Score { get; set; }
                 public string Name { get; set; }
+                public float? Score { get; set; }
             }
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public float? Threshold { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

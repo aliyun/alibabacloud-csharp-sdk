@@ -16,6 +16,20 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
         [Validation(Required=false)]
         public string ImageURL { get; set; }
 
+        [NameInMap("OriginRequestId")]
+        [Validation(Required=false)]
+        public string OriginRequestId { get; set; }
+
+        [NameInMap("PreRegionIntersectFeatures")]
+        [Validation(Required=false)]
+        public List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> PreRegionIntersectFeatures { get; set; }
+        public class DetectVehicleICongestionRequestPreRegionIntersectFeatures : TeaModel {
+            [NameInMap("Features")]
+            [Validation(Required=false)]
+            public List<string> Features { get; set; }
+
+        }
+
         [NameInMap("RoadRegions")]
         [Validation(Required=false)]
         public List<DetectVehicleICongestionRequestRoadRegions> RoadRegions { get; set; }
@@ -40,15 +54,9 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
 
         }
 
-        [NameInMap("PreRegionIntersectFeatures")]
+        [NameInMap("StreamArn")]
         [Validation(Required=false)]
-        public List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> PreRegionIntersectFeatures { get; set; }
-        public class DetectVehicleICongestionRequestPreRegionIntersectFeatures : TeaModel {
-            [NameInMap("Features")]
-            [Validation(Required=false)]
-            public List<string> Features { get; set; }
-
-        }
+        public string StreamArn { get; set; }
 
     }
 

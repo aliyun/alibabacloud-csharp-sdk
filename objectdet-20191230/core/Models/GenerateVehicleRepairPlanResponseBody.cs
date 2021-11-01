@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class GenerateVehicleRepairPlanResponseBody : TeaModel {
-        [NameInMap("HttpCode")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? HttpCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,9 +26,13 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("HttpCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? HttpCode { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

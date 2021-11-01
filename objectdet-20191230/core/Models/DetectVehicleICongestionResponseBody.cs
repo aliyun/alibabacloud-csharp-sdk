@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class DetectVehicleICongestionResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectVehicleICongestionResponseBodyData Data { get; set; }
@@ -26,10 +19,10 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             public class DetectVehicleICongestionResponseBodyDataElements : TeaModel {
                 public List<DetectVehicleICongestionResponseBodyDataElementsBoxes> Boxes { get; set; }
                 public class DetectVehicleICongestionResponseBodyDataElementsBoxes : TeaModel {
-                    public long? Left { get; set; }
-                    public long? Top { get; set; }
-                    public long? Right { get; set; }
                     public long? Bottom { get; set; }
+                    public long? Left { get; set; }
+                    public long? Right { get; set; }
+                    public long? Top { get; set; }
                 }
                 public float? Score { get; set; }
                 public string TypeName { get; set; }
@@ -53,6 +46,13 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                 public List<string> Ids { get; set; }
             }
         };
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

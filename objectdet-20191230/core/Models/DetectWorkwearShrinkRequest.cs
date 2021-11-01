@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
-    public class GetVehicleRepairPlanRequest : TeaModel {
-        [NameInMap("CarNumberImage")]
+    public class DetectWorkwearShrinkRequest : TeaModel {
+        [NameInMap("Clothes")]
         [Validation(Required=false)]
-        public string CarNumberImage { get; set; }
+        public string ClothesShrink { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("ImageUrl")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string ImageUrl { get; set; }
 
-        [NameInMap("VinCodeImage")]
+        [NameInMap("Labels")]
         [Validation(Required=false)]
-        public string VinCodeImage { get; set; }
+        public List<string> Labels { get; set; }
 
     }
 

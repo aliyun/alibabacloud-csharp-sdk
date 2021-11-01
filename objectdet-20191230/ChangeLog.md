@@ -1,3 +1,6 @@
+2021-11-01 Version: 2.0.4
+- Release DetectKitchenAnimals DetectWorkwear.
+
 2021-04-08 Version: 2.0.3
 - Add DetectIPCVideoObject.
 

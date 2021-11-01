@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-objectdet")]
 [assembly: AssemblyDescription("Alibaba Cloud objectdet (20191230) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("563afd80-9834-11eb-8129-8388d87ee2c6")]
+[assembly: Guid("84e602e0-3ade-11ec-8cf9-cb2dba6c2715")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class DetectVehicleResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectVehicleResponseBodyData Data { get; set; }
@@ -21,18 +17,22 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectVehicleResponseBodyDataDetectObjectInfoList> DetectObjectInfoList { get; set; }
             public class DetectVehicleResponseBodyDataDetectObjectInfoList : TeaModel {
-                public string Type { get; set; }
                 public List<string> Boxes { get; set; }
-                public float? Score { get; set; }
                 public int? Id { get; set; }
+                public float? Score { get; set; }
+                public string Type { get; set; }
             }
-            [NameInMap("Width")]
-            [Validation(Required=false)]
-            public int? Width { get; set; }
             [NameInMap("Height")]
             [Validation(Required=false)]
             public int? Height { get; set; }
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public int? Width { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
