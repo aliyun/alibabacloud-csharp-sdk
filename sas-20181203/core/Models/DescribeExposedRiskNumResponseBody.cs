@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedRiskNumResponseBody : TeaModel {
+        [NameInMap("ExposedInstanceCount")]
+        [Validation(Required=false)]
+        public int? ExposedInstanceCount { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("RiskExposedInstanceCount")]
         [Validation(Required=false)]
         public int? RiskExposedInstanceCount { get; set; }
-
-        [NameInMap("ExposedInstanceCount")]
-        [Validation(Required=false)]
-        public int? ExposedInstanceCount { get; set; }
 
     }
 

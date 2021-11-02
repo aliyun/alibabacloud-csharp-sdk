@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSimilarSecurityEventsQueryTaskRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SimilarEventScenarioCode")]
         [Validation(Required=false)]
         public string SimilarEventScenarioCode { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

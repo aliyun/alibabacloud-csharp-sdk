@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockStartRequest : TeaModel {
-        [NameInMap("Mode")]
+        [NameInMap("DefenceMode")]
         [Validation(Required=false)]
-        public string Mode { get; set; }
-
-        [NameInMap("LocalBackupDir")]
-        [Validation(Required=false)]
-        public string LocalBackupDir { get; set; }
-
-        [NameInMap("ExclusiveFile")]
-        [Validation(Required=false)]
-        public string ExclusiveFile { get; set; }
+        public string DefenceMode { get; set; }
 
         [NameInMap("Dir")]
         [Validation(Required=false)]
         public string Dir { get; set; }
 
-        [NameInMap("InclusiveFileType")]
+        [NameInMap("ExclusiveDir")]
         [Validation(Required=false)]
-        public string InclusiveFileType { get; set; }
+        public string ExclusiveDir { get; set; }
 
-        [NameInMap("Uuid")]
+        [NameInMap("ExclusiveFile")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
+        public string ExclusiveFile { get; set; }
 
         [NameInMap("ExclusiveFileType")]
         [Validation(Required=false)]
         public string ExclusiveFileType { get; set; }
 
-        [NameInMap("ExclusiveDir")]
+        [NameInMap("InclusiveFileType")]
         [Validation(Required=false)]
-        public string ExclusiveDir { get; set; }
+        public string InclusiveFileType { get; set; }
 
-        [NameInMap("DefenceMode")]
+        [NameInMap("LocalBackupDir")]
         [Validation(Required=false)]
-        public string DefenceMode { get; set; }
+        public string LocalBackupDir { get; set; }
+
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

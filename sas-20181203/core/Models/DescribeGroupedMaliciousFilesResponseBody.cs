@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedMaliciousFilesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageInfo")]
-        [Validation(Required=false)]
-        public DescribeGroupedMaliciousFilesResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeGroupedMaliciousFilesResponseBodyPageInfo : TeaModel {
-            [NameInMap("CurrentPage")]
-            [Validation(Required=false)]
-            public int? CurrentPage { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-        };
-
         [NameInMap("GroupedMaliciousFileResponse")]
         [Validation(Required=false)]
         public List<DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse> GroupedMaliciousFileResponse { get; set; }
         public class DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("FirstScanTimestamp")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public long? FirstScanTimestamp { get; set; }
 
             [NameInMap("ImageCount")]
             [Validation(Required=false)]
@@ -47,23 +25,45 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LatestScanTimestamp { get; set; }
 
-            [NameInMap("MaliciousName")]
+            [NameInMap("Level")]
             [Validation(Required=false)]
-            public string MaliciousName { get; set; }
+            public string Level { get; set; }
 
             [NameInMap("MaliciousMd5")]
             [Validation(Required=false)]
             public string MaliciousMd5 { get; set; }
 
-            [NameInMap("FirstScanTimestamp")]
+            [NameInMap("MaliciousName")]
             [Validation(Required=false)]
-            public long? FirstScanTimestamp { get; set; }
+            public string MaliciousName { get; set; }
 
-            [NameInMap("Level")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string Level { get; set; }
+            public int? Status { get; set; }
 
         }
+
+        [NameInMap("PageInfo")]
+        [Validation(Required=false)]
+        public DescribeGroupedMaliciousFilesResponseBodyPageInfo PageInfo { get; set; }
+        public class DescribeGroupedMaliciousFilesResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

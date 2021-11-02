@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAccesskeyLeakListRequest : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("Query")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? StartTs { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string Status { get; set; }
 
     }
 

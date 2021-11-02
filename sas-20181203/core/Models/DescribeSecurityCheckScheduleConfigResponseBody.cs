@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig RiskCheckJobConfig { get; set; }
         public class DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig : TeaModel {
+            [NameInMap("DaysOfWeek")]
+            [Validation(Required=false)]
+            public string DaysOfWeek { get; set; }
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public int? EndTime { get; set; }
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public int? StartTime { get; set; }
-            [NameInMap("DaysOfWeek")]
-            [Validation(Required=false)]
-            public string DaysOfWeek { get; set; }
         };
 
     }

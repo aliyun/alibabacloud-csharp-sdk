@@ -9,33 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedMaliciousFileImagesRequest : TeaModel {
-        [NameInMap("MaliciousMd5")]
-        [Validation(Required=false)]
-        public string MaliciousMd5 { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("ImageDigest")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public string ImageDigest { get; set; }
+
+        [NameInMap("ImageLayer")]
+        [Validation(Required=false)]
+        public string ImageLayer { get; set; }
+
+        [NameInMap("ImageTag")]
+        [Validation(Required=false)]
+        public string ImageTag { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("RepoRegionId")]
+        [NameInMap("MaliciousMd5")]
         [Validation(Required=false)]
-        public string RepoRegionId { get; set; }
+        public string MaliciousMd5 { get; set; }
 
-        [NameInMap("RepoInstanceId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string RepoInstanceId { get; set; }
+        public string PageSize { get; set; }
 
         [NameInMap("RepoId")]
         [Validation(Required=false)]
         public string RepoId { get; set; }
+
+        [NameInMap("RepoInstanceId")]
+        [Validation(Required=false)]
+        public string RepoInstanceId { get; set; }
 
         [NameInMap("RepoName")]
         [Validation(Required=false)]
@@ -45,17 +53,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RepoNamespace { get; set; }
 
-        [NameInMap("ImageTag")]
+        [NameInMap("RepoRegionId")]
         [Validation(Required=false)]
-        public string ImageTag { get; set; }
-
-        [NameInMap("ImageDigest")]
-        [Validation(Required=false)]
-        public string ImageDigest { get; set; }
-
-        [NameInMap("ImageLayer")]
-        [Validation(Required=false)]
-        public string ImageLayer { get; set; }
+        public string RepoRegionId { get; set; }
 
     }
 

@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAllRegionsStatisticsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Action1")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? Action1 { get; set; }
+
+        [NameInMap("AllRegion")]
+        [Validation(Required=false)]
+        public bool? AllRegion { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("Dealed")]
+        [Validation(Required=false)]
+        public string Dealed { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("Flow")]
+        [Validation(Required=false)]
+        public int? Flow { get; set; }
 
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -21,17 +41,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("RuleType")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public int? RuleType { get; set; }
 
-        [NameInMap("Uuid")]
+        [NameInMap("SaleId")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
+        public string SaleId { get; set; }
+
+        [NameInMap("SecureToken")]
+        [Validation(Required=false)]
+        public string SecureToken { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -41,57 +77,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string StatusList { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("WebGroupId")]
-        [Validation(Required=false)]
-        public long? WebGroupId { get; set; }
-
-        [NameInMap("RuleType")]
-        [Validation(Required=false)]
-        public int? RuleType { get; set; }
-
-        [NameInMap("Action1")]
-        [Validation(Required=false)]
-        public int? Action1 { get; set; }
-
-        [NameInMap("Flow")]
-        [Validation(Required=false)]
-        public int? Flow { get; set; }
-
-        [NameInMap("SaleId")]
-        [Validation(Required=false)]
-        public string SaleId { get; set; }
-
-        [NameInMap("Dealed")]
-        [Validation(Required=false)]
-        public string Dealed { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string Type { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Uuid")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string Uuid { get; set; }
 
-        [NameInMap("SecureToken")]
+        [NameInMap("WebGroupId")]
         [Validation(Required=false)]
-        public string SecureToken { get; set; }
-
-        [NameInMap("AllRegion")]
-        [Validation(Required=false)]
-        public bool? AllRegion { get; set; }
+        public long? WebGroupId { get; set; }
 
     }
 

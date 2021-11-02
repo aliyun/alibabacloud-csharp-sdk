@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateOrUpdateAssetGroupRequest : TeaModel {
-        [NameInMap("Uuids")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string Uuids { get; set; }
+        public long? GroupId { get; set; }
 
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("Uuids")]
         [Validation(Required=false)]
-        public long? GroupId { get; set; }
+        public string Uuids { get; set; }
 
     }
 

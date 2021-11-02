@@ -9,14 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVpcHoneyPotListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeVpcHoneyPotListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeVpcHoneyPotListResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,63 +25,68 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("VpcHoneyPotDTOList")]
         [Validation(Required=false)]
         public List<DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOList> VpcHoneyPotDTOList { get; set; }
         public class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOList : TeaModel {
-            [NameInMap("VpcName")]
-            [Validation(Required=false)]
-            public string VpcName { get; set; }
-
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("HoneyPotEniInstanceId")]
-            [Validation(Required=false)]
-            public string HoneyPotEniInstanceId { get; set; }
-
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
-
-            [NameInMap("VpcStatus")]
-            [Validation(Required=false)]
-            public string VpcStatus { get; set; }
 
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
-            [NameInMap("HoneyPotVpcSwitchId")]
+            [NameInMap("HoneyPotEcsInstanceStatus")]
             [Validation(Required=false)]
-            public string HoneyPotVpcSwitchId { get; set; }
+            public string HoneyPotEcsInstanceStatus { get; set; }
+
+            [NameInMap("HoneyPotEniInstanceId")]
+            [Validation(Required=false)]
+            public string HoneyPotEniInstanceId { get; set; }
 
             [NameInMap("HoneyPotExistence")]
             [Validation(Required=false)]
             public bool? HoneyPotExistence { get; set; }
 
+            [NameInMap("HoneyPotInstanceStatus")]
+            [Validation(Required=false)]
+            public string HoneyPotInstanceStatus { get; set; }
+
+            [NameInMap("HoneyPotVpcSwitchId")]
+            [Validation(Required=false)]
+            public string HoneyPotVpcSwitchId { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+            [NameInMap("VpcName")]
+            [Validation(Required=false)]
+            public string VpcName { get; set; }
+
             [NameInMap("VpcRegionId")]
             [Validation(Required=false)]
             public string VpcRegionId { get; set; }
 
-            [NameInMap("HoneyPotEcsInstanceStatus")]
+            [NameInMap("VpcStatus")]
             [Validation(Required=false)]
-            public string HoneyPotEcsInstanceStatus { get; set; }
-
-            [NameInMap("HoneyPotInstanceStatus")]
-            [Validation(Required=false)]
-            public string HoneyPotInstanceStatus { get; set; }
+            public string VpcStatus { get; set; }
 
             [NameInMap("VpcSwitchIdList")]
             [Validation(Required=false)]
             public List<DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOListVpcSwitchIdList> VpcSwitchIdList { get; set; }
             public class DescribeVpcHoneyPotListResponseBodyVpcHoneyPotDTOListVpcSwitchIdList : TeaModel {
+                [NameInMap("VpcSwitchId")]
+                [Validation(Required=false)]
+                public string VpcSwitchId { get; set; }
+
                 [NameInMap("VpcSwitchName")]
                 [Validation(Required=false)]
                 public string VpcSwitchName { get; set; }
@@ -90,10 +94,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
-
-                [NameInMap("VpcSwitchId")]
-                [Validation(Required=false)]
-                public string VpcSwitchId { get; set; }
 
             }
 

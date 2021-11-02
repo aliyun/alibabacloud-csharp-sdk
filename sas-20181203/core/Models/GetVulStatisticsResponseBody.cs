@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("VulAsapSum")]
+        [Validation(Required=false)]
+        public int? VulAsapSum { get; set; }
+
         [NameInMap("VulLaterSum")]
         [Validation(Required=false)]
         public int? VulLaterSum { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("VulNntfSum")]
         [Validation(Required=false)]
         public int? VulNntfSum { get; set; }
-
-        [NameInMap("VulAsapSum")]
-        [Validation(Required=false)]
-        public int? VulAsapSum { get; set; }
 
     }
 

@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyRiskSingleResultStatusRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public List<string> Ids { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Lang")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string SourceIp { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }
-
-        [NameInMap("Ids")]
-        [Validation(Required=false)]
-        public List<string> Ids { get; set; }
 
     }
 

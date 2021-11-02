@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class InstallBackupClientRequest : TeaModel {
-        [NameInMap("Uuid")]
-        [Validation(Required=false)]
-        public string Uuid { get; set; }
-
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public string PolicyVersion { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
         [NameInMap("UuidList")]
         [Validation(Required=false)]

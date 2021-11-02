@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedInstancesRequest : TeaModel {
-        [NameInMap("Lang")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public int? CurrentPage { get; set; }
 
-        [NameInMap("Criteria")]
+        [NameInMap("FieldValue")]
         [Validation(Required=false)]
-        public string Criteria { get; set; }
-
-        [NameInMap("MachineTypes")]
-        [Validation(Required=false)]
-        public string MachineTypes { get; set; }
+        public string FieldValue { get; set; }
 
         [NameInMap("GroupField")]
         [Validation(Required=false)]
         public string GroupField { get; set; }
 
-        [NameInMap("FieldValue")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string FieldValue { get; set; }
+        public string Lang { get; set; }
+
+        [NameInMap("MachineTypes")]
+        [Validation(Required=false)]
+        public string MachineTypes { get; set; }
 
         [NameInMap("NoPage")]
         [Validation(Required=false)]
@@ -36,10 +36,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

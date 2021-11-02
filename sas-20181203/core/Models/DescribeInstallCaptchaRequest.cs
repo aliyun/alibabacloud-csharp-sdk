@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstallCaptchaRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Deadline")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Deadline { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("Deadline")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string Deadline { get; set; }
+        public string SourceIp { get; set; }
 
     }
 

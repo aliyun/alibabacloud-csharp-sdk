@@ -9,29 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAllEntityResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("EntityList")]
         [Validation(Required=false)]
         public List<DescribeAllEntityResponseBodyEntityList> EntityList { get; set; }
         public class DescribeAllEntityResponseBodyEntityList : TeaModel {
-            [NameInMap("Uuid")]
-            [Validation(Required=false)]
-            public string Uuid { get; set; }
-
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public int? GroupId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
 
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
-            [NameInMap("InstanceName")]
+            [NameInMap("IntranetIp")]
             [Validation(Required=false)]
-            public string InstanceName { get; set; }
+            public string IntranetIp { get; set; }
 
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -41,11 +37,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Os { get; set; }
 
-            [NameInMap("IntranetIp")]
+            [NameInMap("Uuid")]
             [Validation(Required=false)]
-            public string IntranetIp { get; set; }
+            public string Uuid { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

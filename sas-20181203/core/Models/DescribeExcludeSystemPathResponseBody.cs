@@ -9,14 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExcludeSystemPathResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ExcludePaths")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<DescribeExcludeSystemPathResponseBodyExcludePaths> ExcludePaths { get; set; }
+        public class DescribeExcludeSystemPathResponseBodyExcludePaths : TeaModel {
+            [NameInMap("Os")]
+            [Validation(Required=false)]
+            public string Os { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+        }
 
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeExcludeSystemPathResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeExcludeSystemPathResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,24 +39,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
-        [NameInMap("ExcludePaths")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<DescribeExcludeSystemPathResponseBodyExcludePaths> ExcludePaths { get; set; }
-        public class DescribeExcludeSystemPathResponseBodyExcludePaths : TeaModel {
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-
-            [NameInMap("Os")]
-            [Validation(Required=false)]
-            public string Os { get; set; }
-
-        }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventQuaraFilesResponseBody : TeaModel {
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
@@ -17,33 +21,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
-
         [NameInMap("QuaraFiles")]
         [Validation(Required=false)]
         public List<DescribeSuspEventQuaraFilesResponseBodyQuaraFiles> QuaraFiles { get; set; }
         public class DescribeSuspEventQuaraFilesResponseBodyQuaraFiles : TeaModel {
-            [NameInMap("Link")]
-            [Validation(Required=false)]
-            public string Link { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
             [NameInMap("EventName")]
             [Validation(Required=false)]
             public string EventName { get; set; }
+
+            [NameInMap("EventType")]
+            [Validation(Required=false)]
+            public string EventType { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public int? Id { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
 
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -53,43 +53,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
-            [NameInMap("Tag")]
+            [NameInMap("Link")]
             [Validation(Required=false)]
-            public string Tag { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("Uuid")]
-            [Validation(Required=false)]
-            public string Uuid { get; set; }
-
-            [NameInMap("EventType")]
-            [Validation(Required=false)]
-            public string EventType { get; set; }
-
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
+            public string Link { get; set; }
 
             [NameInMap("Md5")]
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public int? Id { get; set; }
-
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public string Tag { get; set; }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockDeleteConfigRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? Id { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("Id")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public int? Id { get; set; }
+        public string SourceIp { get; set; }
 
         [NameInMap("Uuid")]
         [Validation(Required=false)]

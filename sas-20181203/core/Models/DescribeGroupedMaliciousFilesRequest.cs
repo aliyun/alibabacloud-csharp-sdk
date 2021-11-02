@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedMaliciousFilesRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("FuzzyMaliciousName")]
+        [Validation(Required=false)]
+        public string FuzzyMaliciousName { get; set; }
+
+        [NameInMap("ImageDigest")]
+        [Validation(Required=false)]
+        public string ImageDigest { get; set; }
+
+        [NameInMap("ImageLayer")]
+        [Validation(Required=false)]
+        public string ImageLayer { get; set; }
+
+        [NameInMap("ImageTag")]
+        [Validation(Required=false)]
+        public string ImageTag { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -17,29 +37,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Levels { get; set; }
 
-        [NameInMap("FuzzyMaliciousName")]
-        [Validation(Required=false)]
-        public string FuzzyMaliciousName { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        [NameInMap("RepoRegionId")]
+        [NameInMap("RepoId")]
         [Validation(Required=false)]
-        public string RepoRegionId { get; set; }
+        public string RepoId { get; set; }
 
         [NameInMap("RepoInstanceId")]
         [Validation(Required=false)]
         public string RepoInstanceId { get; set; }
-
-        [NameInMap("RepoId")]
-        [Validation(Required=false)]
-        public string RepoId { get; set; }
 
         [NameInMap("RepoName")]
         [Validation(Required=false)]
@@ -49,17 +57,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RepoNamespace { get; set; }
 
-        [NameInMap("ImageTag")]
+        [NameInMap("RepoRegionId")]
         [Validation(Required=false)]
-        public string ImageTag { get; set; }
-
-        [NameInMap("ImageDigest")]
-        [Validation(Required=false)]
-        public string ImageDigest { get; set; }
-
-        [NameInMap("ImageLayer")]
-        [Validation(Required=false)]
-        public string ImageLayer { get; set; }
+        public string RepoRegionId { get; set; }
 
     }
 

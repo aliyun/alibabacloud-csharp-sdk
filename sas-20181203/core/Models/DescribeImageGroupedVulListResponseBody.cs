@@ -13,33 +13,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
         public List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> GroupedVulItems { get; set; }
         public class DescribeImageGroupedVulListResponseBodyGroupedVulItems : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AliasName")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string AliasName { get; set; }
 
-            [NameInMap("Type")]
+            [NameInMap("AsapCount")]
             [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("NntfCount")]
-            [Validation(Required=false)]
-            public int? NntfCount { get; set; }
+            public int? AsapCount { get; set; }
 
             [NameInMap("GmtLast")]
             [Validation(Required=false)]
@@ -49,27 +33,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
 
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public string Tags { get; set; }
-
             [NameInMap("LaterCount")]
             [Validation(Required=false)]
             public int? LaterCount { get; set; }
-
-            [NameInMap("AliasName")]
-            [Validation(Required=false)]
-            public string AliasName { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("AsapCount")]
+            [NameInMap("NntfCount")]
             [Validation(Required=false)]
-            public int? AsapCount { get; set; }
+            public int? NntfCount { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public string Tags { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
         }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

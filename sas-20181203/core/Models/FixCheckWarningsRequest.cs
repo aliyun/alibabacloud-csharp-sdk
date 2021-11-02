@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FixCheckWarningsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CheckParams")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string CheckParams { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
-        [NameInMap("CheckParams")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string CheckParams { get; set; }
+        public string SourceIp { get; set; }
 
         [NameInMap("Uuids")]
         [Validation(Required=false)]

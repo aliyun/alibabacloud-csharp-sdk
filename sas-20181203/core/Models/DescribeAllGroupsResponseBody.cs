@@ -13,27 +13,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<DescribeAllGroupsResponseBodyGroups> Groups { get; set; }
         public class DescribeAllGroupsResponseBodyGroups : TeaModel {
-            [NameInMap("GroupName")]
+            [NameInMap("GroupFlag")]
             [Validation(Required=false)]
-            public string GroupName { get; set; }
+            public int? GroupFlag { get; set; }
 
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public int? GroupId { get; set; }
 
-            [NameInMap("GroupFlag")]
+            [NameInMap("GroupName")]
             [Validation(Required=false)]
-            public int? GroupFlag { get; set; }
+            public string GroupName { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

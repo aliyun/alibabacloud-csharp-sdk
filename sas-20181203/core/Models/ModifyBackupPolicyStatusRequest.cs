@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public string PolicyVersion { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

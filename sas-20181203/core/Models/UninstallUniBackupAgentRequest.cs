@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UninstallUniBackupAgentRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("PolicyId")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public long? PolicyId { get; set; }
 
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("PolicyId")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public long? PolicyId { get; set; }
+        public string SourceIp { get; set; }
 
     }
 

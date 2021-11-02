@@ -9,37 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeRiskCheckResultRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("AssetType")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public long? GroupId { get; set; }
+        public string AssetType { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("RiskLevel")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string RiskLevel { get; set; }
+        public long? GroupId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("ItemIds")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public List<string> ItemIds { get; set; }
 
-        [NameInMap("AssetType")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string AssetType { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -53,9 +41,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string QueryFlag { get; set; }
 
-        [NameInMap("ItemIds")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public List<string> ItemIds { get; set; }
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RiskLevel")]
+        [Validation(Required=false)]
+        public string RiskLevel { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

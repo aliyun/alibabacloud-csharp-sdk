@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventDetailRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("From")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string From { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("SuspiciousEventId")]
         [Validation(Required=false)]
         public int? SuspiciousEventId { get; set; }
-
-        [NameInMap("From")]
-        [Validation(Required=false)]
-        public string From { get; set; }
 
     }
 

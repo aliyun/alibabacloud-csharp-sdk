@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDingTalkRequest : TeaModel {
-        [NameInMap("RuleActionName")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string RuleActionName { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("RuleActionName")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string RuleActionName { get; set; }
 
     }
 

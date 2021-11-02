@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? PolicyId { get; set; }
 
-        [NameInMap("Uuid")]
-        [Validation(Required=false)]
-        public string Uuid { get; set; }
-
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public string PolicyVersion { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

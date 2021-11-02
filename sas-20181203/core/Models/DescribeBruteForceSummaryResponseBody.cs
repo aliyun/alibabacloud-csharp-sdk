@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBruteForceSummaryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("BruteForceSummary")]
         [Validation(Required=false)]
         public DescribeBruteForceSummaryResponseBodyBruteForceSummary BruteForceSummary { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? EffectiveCount { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

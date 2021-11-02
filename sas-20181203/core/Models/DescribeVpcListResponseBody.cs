@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeVpcListResponseBodyVpcList> VpcList { get; set; }
         public class DescribeVpcListResponseBodyVpcList : TeaModel {
-            [NameInMap("InstanceDesc")]
-            [Validation(Required=false)]
-            public string InstanceDesc { get; set; }
-
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
             [NameInMap("EcsCount")]
             [Validation(Required=false)]
             public int? EcsCount { get; set; }
 
+            [NameInMap("InstanceDesc")]
+            [Validation(Required=false)]
+            public string InstanceDesc { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]

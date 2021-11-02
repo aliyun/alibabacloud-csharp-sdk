@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeRestorePlansRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -25,9 +21,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

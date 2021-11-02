@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWarningMachinesRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
@@ -21,25 +21,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MachineName { get; set; }
 
-        [NameInMap("Uuids")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Uuids { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("RiskId")]
         [Validation(Required=false)]
         public long? RiskId { get; set; }
 
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public long? StrategyId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Uuids")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string Uuids { get; set; }
 
     }
 

@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? ExecStatus { get; set; }
 
+        [NameInMap("PassRate")]
+        [Validation(Required=false)]
+        public string PassRate { get; set; }
+
         [NameInMap("ProcessRate")]
         [Validation(Required=false)]
         public int? ProcessRate { get; set; }
-
-        [NameInMap("StrategyId")]
-        [Validation(Required=false)]
-        public long? StrategyId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PassRate")]
+        [NameInMap("StrategyId")]
         [Validation(Required=false)]
-        public string PassRate { get; set; }
+        public long? StrategyId { get; set; }
 
     }
 

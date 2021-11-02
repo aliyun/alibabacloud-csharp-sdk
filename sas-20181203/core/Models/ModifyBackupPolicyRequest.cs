@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Policy { get; set; }
 
-        [NameInMap("PolicyVersion")]
-        [Validation(Required=false)]
-        public string PolicyVersion { get; set; }
-
         [NameInMap("PolicyRegionId")]
         [Validation(Required=false)]
         public string PolicyRegionId { get; set; }
+
+        [NameInMap("PolicyVersion")]
+        [Validation(Required=false)]
+        public string PolicyVersion { get; set; }
 
         [NameInMap("UuidList")]
         [Validation(Required=false)]

@@ -9,55 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainDetailResponseBody : TeaModel {
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("VulCount")]
-        [Validation(Required=false)]
-        public int? VulCount { get; set; }
-
         [NameInMap("AlarmCount")]
         [Validation(Required=false)]
         public int? AlarmCount { get; set; }
 
-        [NameInMap("RootDomain")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string RootDomain { get; set; }
+        public string Domain { get; set; }
 
         [NameInMap("DomainDetailItems")]
         [Validation(Required=false)]
         public List<DescribeDomainDetailResponseBodyDomainDetailItems> DomainDetailItems { get; set; }
         public class DescribeDomainDetailResponseBodyDomainDetailItems : TeaModel {
-            [NameInMap("Uuid")]
+            [NameInMap("AssetType")]
             [Validation(Required=false)]
-            public string Uuid { get; set; }
-
-            [NameInMap("InternetIp")]
-            [Validation(Required=false)]
-            public string InternetIp { get; set; }
-
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
+            public string AssetType { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
-            [NameInMap("AssetType")]
+            [NameInMap("Uuid")]
             [Validation(Required=false)]
-            public string AssetType { get; set; }
+            public string Uuid { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("RootDomain")]
+        [Validation(Required=false)]
+        public string RootDomain { get; set; }
+
+        [NameInMap("VulCount")]
+        [Validation(Required=false)]
+        public int? VulCount { get; set; }
 
     }
 

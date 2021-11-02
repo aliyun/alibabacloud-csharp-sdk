@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLocalUninstallScriptRequest : TeaModel {
+        [NameInMap("InternalNetwork")]
+        [Validation(Required=false)]
+        public bool? InternalNetwork { get; set; }
+
         [NameInMap("PlatformType")]
         [Validation(Required=false)]
         public string PlatformType { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
-
-        [NameInMap("InternalNetwork")]
-        [Validation(Required=false)]
-        public bool? InternalNetwork { get; set; }
 
     }
 

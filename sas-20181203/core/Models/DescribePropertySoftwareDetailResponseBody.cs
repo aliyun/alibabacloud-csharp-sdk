@@ -9,14 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertySoftwareDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertySoftwareDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertySoftwareDetailResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,9 +25,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
         [NameInMap("Propertys")]
@@ -39,25 +35,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? Create { get; set; }
 
-            [NameInMap("InternetIp")]
+            [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
-            public string InternetIp { get; set; }
+            public long? CreateTimestamp { get; set; }
 
-            [NameInMap("Ip")]
+            [NameInMap("InstallTime")]
             [Validation(Required=false)]
-            public string Ip { get; set; }
+            public string InstallTime { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
-            [NameInMap("InstallTime")]
+            [NameInMap("Ip")]
             [Validation(Required=false)]
-            public string InstallTime { get; set; }
+            public string Ip { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
 
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -67,23 +79,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Version { get; set; }
 
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("CreateTimestamp")]
-            [Validation(Required=false)]
-            public long? CreateTimestamp { get; set; }
-
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

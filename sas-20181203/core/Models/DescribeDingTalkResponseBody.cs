@@ -9,9 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDingTalkResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ActionList")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<DescribeDingTalkResponseBodyActionList> ActionList { get; set; }
+        public class DescribeDingTalkResponseBodyActionList : TeaModel {
+            [NameInMap("ActionName")]
+            [Validation(Required=false)]
+            public string ActionName { get; set; }
+
+            [NameInMap("AliUid")]
+            [Validation(Required=false)]
+            public long? AliUid { get; set; }
+
+            [NameInMap("ConfigList")]
+            [Validation(Required=false)]
+            public string ConfigList { get; set; }
+
+            [NameInMap("DingTalkLang")]
+            [Validation(Required=false)]
+            public string DingTalkLang { get; set; }
+
+            [NameInMap("GmtCreate")]
+            [Validation(Required=false)]
+            public long? GmtCreate { get; set; }
+
+            [NameInMap("GmtModified")]
+            [Validation(Required=false)]
+            public long? GmtModified { get; set; }
+
+            [NameInMap("GroupIdList")]
+            [Validation(Required=false)]
+            public string GroupIdList { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public int? Id { get; set; }
+
+            [NameInMap("IntervalTime")]
+            [Validation(Required=false)]
+            public int? IntervalTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
 
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -28,55 +74,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
         };
 
-        [NameInMap("ActionList")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<DescribeDingTalkResponseBodyActionList> ActionList { get; set; }
-        public class DescribeDingTalkResponseBodyActionList : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("ConfigList")]
-            [Validation(Required=false)]
-            public string ConfigList { get; set; }
-
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
-
-            [NameInMap("ActionName")]
-            [Validation(Required=false)]
-            public string ActionName { get; set; }
-
-            [NameInMap("Url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
-
-            [NameInMap("AliUid")]
-            [Validation(Required=false)]
-            public long? AliUid { get; set; }
-
-            [NameInMap("DingTalkLang")]
-            [Validation(Required=false)]
-            public string DingTalkLang { get; set; }
-
-            [NameInMap("IntervalTime")]
-            [Validation(Required=false)]
-            public int? IntervalTime { get; set; }
-
-            [NameInMap("GmtModified")]
-            [Validation(Required=false)]
-            public long? GmtModified { get; set; }
-
-            [NameInMap("GroupIdList")]
-            [Validation(Required=false)]
-            public string GroupIdList { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public int? Id { get; set; }
-
-        }
+        public string RequestId { get; set; }
 
     }
 

@@ -9,14 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScaDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyScaDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyScaDetailResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,62 +25,71 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyScaDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyScaDetailResponseBodyPropertys : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("BizType")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public string BizType { get; set; }
 
             [NameInMap("BizTypeDispaly")]
             [Validation(Required=false)]
             public string BizTypeDispaly { get; set; }
 
-            [NameInMap("ProcessStarted")]
+            [NameInMap("Cmdline")]
             [Validation(Required=false)]
-            public long? ProcessStarted { get; set; }
-
-            [NameInMap("InternetIp")]
-            [Validation(Required=false)]
-            public string InternetIp { get; set; }
+            public string Cmdline { get; set; }
 
             [NameInMap("ConfigPath")]
             [Validation(Required=false)]
             public string ConfigPath { get; set; }
 
-            [NameInMap("Pid")]
+            [NameInMap("ContainerName")]
             [Validation(Required=false)]
-            public string Pid { get; set; }
+            public string ContainerName { get; set; }
 
-            [NameInMap("Port")]
+            [NameInMap("Create")]
             [Validation(Required=false)]
-            public string Port { get; set; }
+            public string Create { get; set; }
 
-            [NameInMap("Cmdline")]
+            [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
-            public string Cmdline { get; set; }
+            public long? CreateTimestamp { get; set; }
 
-            [NameInMap("BizType")]
+            [NameInMap("ImageName")]
             [Validation(Required=false)]
-            public string BizType { get; set; }
+            public string ImageName { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
 
             [NameInMap("ListenIp")]
             [Validation(Required=false)]
             public string ListenIp { get; set; }
 
-            [NameInMap("Version")]
+            [NameInMap("ListenProtocol")]
             [Validation(Required=false)]
-            public string Version { get; set; }
-
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
+            public string ListenProtocol { get; set; }
 
             [NameInMap("ListenStatus")]
             [Validation(Required=false)]
@@ -91,63 +99,55 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Create")]
+            [NameInMap("Path")]
             [Validation(Required=false)]
-            public string Create { get; set; }
+            public string Path { get; set; }
 
-            [NameInMap("Ip")]
+            [NameInMap("Pid")]
             [Validation(Required=false)]
-            public string Ip { get; set; }
+            public string Pid { get; set; }
 
-            [NameInMap("ProcessUser")]
+            [NameInMap("Port")]
             [Validation(Required=false)]
-            public string ProcessUser { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("WebPath")]
-            [Validation(Required=false)]
-            public string WebPath { get; set; }
+            public string Port { get; set; }
 
             [NameInMap("Ppid")]
             [Validation(Required=false)]
             public string Ppid { get; set; }
 
-            [NameInMap("IntranetIp")]
+            [NameInMap("ProcessStarted")]
             [Validation(Required=false)]
-            public string IntranetIp { get; set; }
+            public long? ProcessStarted { get; set; }
 
-            [NameInMap("Uuid")]
+            [NameInMap("ProcessUser")]
             [Validation(Required=false)]
-            public string Uuid { get; set; }
-
-            [NameInMap("ListenProtocol")]
-            [Validation(Required=false)]
-            public string ListenProtocol { get; set; }
-
-            [NameInMap("ImageName")]
-            [Validation(Required=false)]
-            public string ImageName { get; set; }
-
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-
-            [NameInMap("ContainerName")]
-            [Validation(Required=false)]
-            public string ContainerName { get; set; }
+            public string ProcessUser { get; set; }
 
             [NameInMap("Proof")]
             [Validation(Required=false)]
             public string Proof { get; set; }
 
-            [NameInMap("CreateTimestamp")]
+            [NameInMap("Type")]
             [Validation(Required=false)]
-            public long? CreateTimestamp { get; set; }
+            public string Type { get; set; }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
+
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
+
+            [NameInMap("WebPath")]
+            [Validation(Required=false)]
+            public string WebPath { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

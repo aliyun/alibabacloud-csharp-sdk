@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSuspiciousStatisticsResponseBody : TeaModel {
-        [NameInMap("SuspiciousCount")]
-        [Validation(Required=false)]
-        public int? SuspiciousCount { get; set; }
-
         [NameInMap("RemindCount")]
         [Validation(Required=false)]
         public int? RemindCount { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SeriousCount")]
         [Validation(Required=false)]
         public int? SeriousCount { get; set; }
+
+        [NameInMap("SuspiciousCount")]
+        [Validation(Required=false)]
+        public int? SuspiciousCount { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

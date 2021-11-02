@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupFilesRequest : TeaModel {
-        [NameInMap("Uuid")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
+        public string CurrentPage { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
         [NameInMap("Path")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SnapshotHash { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("Uuid")]
         [Validation(Required=false)]
-        public string CurrentPage { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public string Uuid { get; set; }
 
     }
 

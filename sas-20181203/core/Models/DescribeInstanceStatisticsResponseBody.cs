@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstanceStatisticsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeInstanceStatisticsResponseBodyData> Data { get; set; }
@@ -25,13 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? AppNum { get; set; }
 
-            [NameInMap("ScaNum")]
+            [NameInMap("CmsNum")]
             [Validation(Required=false)]
-            public int? ScaNum { get; set; }
-
-            [NameInMap("Trojan")]
-            [Validation(Required=false)]
-            public int? Trojan { get; set; }
+            public int? CmsNum { get; set; }
 
             [NameInMap("CveNum")]
             [Validation(Required=false)]
@@ -41,13 +33,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? EmgNum { get; set; }
 
+            [NameInMap("Health")]
+            [Validation(Required=false)]
+            public int? Health { get; set; }
+
+            [NameInMap("ScaNum")]
+            [Validation(Required=false)]
+            public int? ScaNum { get; set; }
+
             [NameInMap("Suspicious")]
             [Validation(Required=false)]
             public int? Suspicious { get; set; }
 
-            [NameInMap("CmsNum")]
+            [NameInMap("SysNum")]
             [Validation(Required=false)]
-            public int? CmsNum { get; set; }
+            public int? SysNum { get; set; }
+
+            [NameInMap("Trojan")]
+            [Validation(Required=false)]
+            public int? Trojan { get; set; }
 
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -57,15 +61,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Vul { get; set; }
 
-            [NameInMap("Health")]
-            [Validation(Required=false)]
-            public int? Health { get; set; }
-
-            [NameInMap("SysNum")]
-            [Validation(Required=false)]
-            public int? SysNum { get; set; }
-
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeEmgVulItemRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("RiskStatus")]
         [Validation(Required=false)]
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("VulName")]
         [Validation(Required=false)]
         public string VulName { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
     }
 

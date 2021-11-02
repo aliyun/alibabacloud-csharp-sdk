@@ -17,50 +17,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeStrategyResponseBodyStrategies> Strategies { get; set; }
         public class DescribeStrategyResponseBodyStrategies : TeaModel {
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public int? Type { get; set; }
-
-            [NameInMap("ExecStatus")]
-            [Validation(Required=false)]
-            public int? ExecStatus { get; set; }
-
-            [NameInMap("PassRate")]
-            [Validation(Required=false)]
-            public int? PassRate { get; set; }
-
-            [NameInMap("CycleStartTime")]
-            [Validation(Required=false)]
-            public int? CycleStartTime { get; set; }
-
-            [NameInMap("CustomType")]
-            [Validation(Required=false)]
-            public string CustomType { get; set; }
-
-            [NameInMap("EcsCount")]
-            [Validation(Required=false)]
-            public int? EcsCount { get; set; }
-
-            [NameInMap("ProcessRate")]
-            [Validation(Required=false)]
-            public int? ProcessRate { get; set; }
-
-            [NameInMap("CycleDays")]
-            [Validation(Required=false)]
-            public int? CycleDays { get; set; }
-
-            [NameInMap("RiskCount")]
-            [Validation(Required=false)]
-            public int? RiskCount { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public int? Id { get; set; }
-
             [NameInMap("ConfigTargets")]
             [Validation(Required=false)]
             public List<DescribeStrategyResponseBodyStrategiesConfigTargets> ConfigTargets { get; set; }
@@ -78,6 +34,50 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string TargetType { get; set; }
 
             }
+
+            [NameInMap("CustomType")]
+            [Validation(Required=false)]
+            public string CustomType { get; set; }
+
+            [NameInMap("CycleDays")]
+            [Validation(Required=false)]
+            public int? CycleDays { get; set; }
+
+            [NameInMap("CycleStartTime")]
+            [Validation(Required=false)]
+            public int? CycleStartTime { get; set; }
+
+            [NameInMap("EcsCount")]
+            [Validation(Required=false)]
+            public int? EcsCount { get; set; }
+
+            [NameInMap("ExecStatus")]
+            [Validation(Required=false)]
+            public int? ExecStatus { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public int? Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("PassRate")]
+            [Validation(Required=false)]
+            public int? PassRate { get; set; }
+
+            [NameInMap("ProcessRate")]
+            [Validation(Required=false)]
+            public int? ProcessRate { get; set; }
+
+            [NameInMap("RiskCount")]
+            [Validation(Required=false)]
+            public int? RiskCount { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
 
         }
 

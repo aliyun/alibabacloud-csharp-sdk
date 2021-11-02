@@ -13,13 +13,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Advice { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("CheckId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? CheckId { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -29,10 +25,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Item { get; set; }
 
-        [NameInMap("CheckId")]
-        [Validation(Required=false)]
-        public long? CheckId { get; set; }
-
         [NameInMap("Level")]
         [Validation(Required=false)]
         public string Level { get; set; }
@@ -40,6 +32,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SasInstallCodeResponseBody : TeaModel {
-        [NameInMap("data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
 
     }
 

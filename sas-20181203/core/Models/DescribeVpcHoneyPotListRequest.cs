@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVpcHoneyPotListRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("HoneyPotExistence")]
+        [Validation(Required=false)]
+        public bool? HoneyPotExistence { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("VpcRegionId")]
         [Validation(Required=false)]
         public string VpcRegionId { get; set; }
-
-        [NameInMap("HoneyPotExistence")]
-        [Validation(Required=false)]
-        public bool? HoneyPotExistence { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

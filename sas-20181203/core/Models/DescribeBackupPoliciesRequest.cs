@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupPoliciesRequest : TeaModel {
-        [NameInMap("Name")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("MachineRemark")]
         [Validation(Required=false)]
         public string MachineRemark { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string Status { get; set; }
 
     }
 

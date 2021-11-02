@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -29,17 +29,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeVulWhitelistResponseBodyVulWhitelists> VulWhitelists { get; set; }
         public class DescribeVulWhitelistResponseBodyVulWhitelists : TeaModel {
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("TargetInfo")]
-            [Validation(Required=false)]
-            public string TargetInfo { get; set; }
-
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -49,9 +45,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Reason { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("TargetInfo")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public string TargetInfo { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
         }
 

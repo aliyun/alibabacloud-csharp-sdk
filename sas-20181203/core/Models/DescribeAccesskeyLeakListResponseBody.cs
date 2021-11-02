@@ -9,37 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAccesskeyLeakListResponseBody : TeaModel {
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("GmtLast")]
-        [Validation(Required=false)]
-        public long? GmtLast { get; set; }
-
-        [NameInMap("AkLeakCount")]
-        [Validation(Required=false)]
-        public int? AkLeakCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("AccessKeyLeakList")]
         [Validation(Required=false)]
         public List<DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList> AccessKeyLeakList { get; set; }
         public class DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList : TeaModel {
+            [NameInMap("AccesskeyId")]
+            [Validation(Required=false)]
+            public string AccesskeyId { get; set; }
+
+            [NameInMap("AliUserName")]
+            [Validation(Required=false)]
+            public string AliUserName { get; set; }
+
+            [NameInMap("Asset")]
+            [Validation(Required=false)]
+            public string Asset { get; set; }
+
             [NameInMap("DealTime")]
             [Validation(Required=false)]
             public string DealTime { get; set; }
+
+            [NameInMap("DealType")]
+            [Validation(Required=false)]
+            public string DealType { get; set; }
+
+            [NameInMap("GmtModified")]
+            [Validation(Required=false)]
+            public long? GmtModified { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -49,39 +49,39 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
-            [NameInMap("UserType")]
-            [Validation(Required=false)]
-            public string UserType { get; set; }
-
-            [NameInMap("AccesskeyId")]
-            [Validation(Required=false)]
-            public string AccesskeyId { get; set; }
-
-            [NameInMap("AliUserName")]
-            [Validation(Required=false)]
-            public string AliUserName { get; set; }
-
-            [NameInMap("DealType")]
-            [Validation(Required=false)]
-            public string DealType { get; set; }
-
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
 
-            [NameInMap("GmtModified")]
+            [NameInMap("UserType")]
             [Validation(Required=false)]
-            public long? GmtModified { get; set; }
-
-            [NameInMap("Asset")]
-            [Validation(Required=false)]
-            public string Asset { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public long? Id { get; set; }
+            public string UserType { get; set; }
 
         }
+
+        [NameInMap("AkLeakCount")]
+        [Validation(Required=false)]
+        public int? AkLeakCount { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("GmtLast")]
+        [Validation(Required=false)]
+        public long? GmtLast { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

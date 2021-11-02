@@ -9,31 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupClientsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Clients")]
         [Validation(Required=false)]
         public List<DescribeBackupClientsResponseBodyClients> Clients { get; set; }
         public class DescribeBackupClientsResponseBodyClients : TeaModel {
-            [NameInMap("Uuid")]
+            [NameInMap("ClientId")]
             [Validation(Required=false)]
-            public string Uuid { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
+            public string ClientId { get; set; }
 
             [NameInMap("ClientStatus")]
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
 
-            [NameInMap("ClientId")]
+            [NameInMap("InstanceId")]
             [Validation(Required=false)]
-            public string ClientId { get; set; }
+            public string InstanceId { get; set; }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

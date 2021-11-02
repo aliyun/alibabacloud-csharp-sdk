@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
-        [NameInMap("Uuids")]
-        [Validation(Required=false)]
-        public string Uuids { get; set; }
-
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public string Tasks { get; set; }
+
+        [NameInMap("Uuids")]
+        [Validation(Required=false)]
+        public string Uuids { get; set; }
 
     }
 

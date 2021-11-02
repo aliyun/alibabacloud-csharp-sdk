@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportRecordResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

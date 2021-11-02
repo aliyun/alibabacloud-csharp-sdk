@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudCenterInstancesRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public string Criteria { get; set; }
-
-        [NameInMap("MachineTypes")]
-        [Validation(Required=false)]
-        public string MachineTypes { get; set; }
-
-        [NameInMap("LogicalExp")]
-        [Validation(Required=false)]
-        public string LogicalExp { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -36,6 +20,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Importance")]
         [Validation(Required=false)]
         public int? Importance { get; set; }
+
+        [NameInMap("LogicalExp")]
+        [Validation(Required=false)]
+        public string LogicalExp { get; set; }
+
+        [NameInMap("MachineTypes")]
+        [Validation(Required=false)]
+        public string MachineTypes { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

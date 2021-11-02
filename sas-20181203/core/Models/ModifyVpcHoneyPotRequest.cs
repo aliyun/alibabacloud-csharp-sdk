@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyVpcHoneyPotRequest : TeaModel {
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
         [NameInMap("HoneyPotAction")]
         [Validation(Required=false)]
         public string HoneyPotAction { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

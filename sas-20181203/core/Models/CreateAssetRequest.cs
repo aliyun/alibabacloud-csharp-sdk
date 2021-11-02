@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Os { get; set; }
 
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
         [NameInMap("OsName")]
         [Validation(Required=false)]
         public string OsName { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

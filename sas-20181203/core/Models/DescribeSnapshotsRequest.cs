@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSnapshotsRequest : TeaModel {
-        [NameInMap("Uuid")]
+        [NameInMap("ApiVersion")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
+        public string ApiVersion { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("IsAliYunEcs")]
+        [Validation(Required=false)]
+        public string IsAliYunEcs { get; set; }
 
         [NameInMap("MachineRegion")]
         [Validation(Required=false)]
@@ -21,29 +29,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MachineRemark { get; set; }
 
-        [NameInMap("StatusList")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string StatusList { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("StatusList")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string StatusList { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("Uuid")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("ApiVersion")]
-        [Validation(Required=false)]
-        public string ApiVersion { get; set; }
-
-        [NameInMap("IsAliYunEcs")]
-        [Validation(Required=false)]
-        public string IsAliYunEcs { get; set; }
+        public string Uuid { get; set; }
 
     }
 

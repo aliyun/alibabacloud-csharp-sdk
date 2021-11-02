@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAlarmEventStackInfoRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("EventName")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string EventName { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("Uuid")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
-
-        [NameInMap("EventName")]
-        [Validation(Required=false)]
-        public string EventName { get; set; }
+        public string SourceIp { get; set; }
 
         [NameInMap("UniqueInfo")]
         [Validation(Required=false)]
         public string UniqueInfo { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupDirsRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public long? PolicyId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

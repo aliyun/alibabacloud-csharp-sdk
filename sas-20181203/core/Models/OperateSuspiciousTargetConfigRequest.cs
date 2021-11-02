@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateSuspiciousTargetConfigRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string SourceIp { get; set; }
+
+        [NameInMap("TargetOperations")]
+        [Validation(Required=false)]
+        public string TargetOperations { get; set; }
 
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
-        [NameInMap("TargetOperations")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string TargetOperations { get; set; }
+        public string Type { get; set; }
 
     }
 

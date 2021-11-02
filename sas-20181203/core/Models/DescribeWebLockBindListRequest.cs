@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebLockBindListRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
     }
 

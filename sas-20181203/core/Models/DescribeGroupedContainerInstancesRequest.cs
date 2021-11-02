@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Criteria { get; set; }
 
-        [NameInMap("LogicalExp")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string LogicalExp { get; set; }
-
-        [NameInMap("GroupField")]
-        [Validation(Required=false)]
-        public string GroupField { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("FieldValue")]
         [Validation(Required=false)]
         public string FieldValue { get; set; }
 
+        [NameInMap("GroupField")]
+        [Validation(Required=false)]
+        public string GroupField { get; set; }
+
+        [NameInMap("LogicalExp")]
+        [Validation(Required=false)]
+        public string LogicalExp { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

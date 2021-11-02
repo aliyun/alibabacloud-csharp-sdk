@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeQuaraFileDownloadInfoResponseBody : TeaModel {
-        [NameInMap("Uuid")]
+        [NameInMap("DownloadUrl")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
+        public string DownloadUrl { get; set; }
+
+        [NameInMap("Md5")]
+        [Validation(Required=false)]
+        public string Md5 { get; set; }
+
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
 
         [NameInMap("QuaraFileId")]
         [Validation(Required=false)]
@@ -21,21 +29,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DownloadUrl")]
-        [Validation(Required=false)]
-        public string DownloadUrl { get; set; }
-
-        [NameInMap("Path")]
-        [Validation(Required=false)]
-        public string Path { get; set; }
-
-        [NameInMap("Md5")]
-        [Validation(Required=false)]
-        public string Md5 { get; set; }
-
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

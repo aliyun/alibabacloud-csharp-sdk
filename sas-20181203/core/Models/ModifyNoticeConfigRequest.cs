@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyNoticeConfigRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Project")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Project { get; set; }
 
         [NameInMap("Route")]
         [Validation(Required=false)]
         public int? Route { get; set; }
 
-        [NameInMap("Project")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string Project { get; set; }
+        public string SourceIp { get; set; }
 
         [NameInMap("TimeLimit")]
         [Validation(Required=false)]

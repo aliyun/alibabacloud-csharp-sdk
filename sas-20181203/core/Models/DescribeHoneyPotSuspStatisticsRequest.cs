@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
-        [NameInMap("StatisticsKeyType")]
-        [Validation(Required=false)]
-        public string StatisticsKeyType { get; set; }
-
         [NameInMap("StatisticsDays")]
         [Validation(Required=false)]
         public int? StatisticsDays { get; set; }
+
+        [NameInMap("StatisticsKeyType")]
+        [Validation(Required=false)]
+        public string StatisticsKeyType { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyPortItemRequest : TeaModel {
-        [NameInMap("ForceFlush")]
-        [Validation(Required=false)]
-        public bool? ForceFlush { get; set; }
-
-        [NameInMap("Port")]
-        [Validation(Required=false)]
-        public string Port { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("ForceFlush")]
+        [Validation(Required=false)]
+        public bool? ForceFlush { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public string Port { get; set; }
 
     }
 

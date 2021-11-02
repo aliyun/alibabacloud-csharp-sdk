@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyVulTargetConfigRequest : TeaModel {
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
-
-        [NameInMap("Config")]
-        [Validation(Required=false)]
-        public string Config { get; set; }
 
     }
 

@@ -1193,6 +1193,38 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeAssetSummaryWithOptionsAsync(runtime);
         }
 
+        public DescribeAttackAnalysisDataResponse DescribeAttackAnalysisDataWithOptions(DescribeAttackAnalysisDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeAttackAnalysisDataResponse>(DoRPCRequest("DescribeAttackAnalysisData", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeAttackAnalysisDataResponse> DescribeAttackAnalysisDataWithOptionsAsync(DescribeAttackAnalysisDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeAttackAnalysisDataResponse>(await DoRPCRequestAsync("DescribeAttackAnalysisData", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeAttackAnalysisDataResponse DescribeAttackAnalysisData(DescribeAttackAnalysisDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAttackAnalysisDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeAttackAnalysisDataResponse> DescribeAttackAnalysisDataAsync(DescribeAttackAnalysisDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAttackAnalysisDataWithOptionsAsync(request, runtime);
+        }
+
         public DescribeAutoDelConfigResponse DescribeAutoDelConfigWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -1529,38 +1561,6 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeCheckWarningDetailWithOptionsAsync(request, runtime);
         }
 
-        public DescribeCheckWarningsResponse DescribeCheckWarningsWithOptions(DescribeCheckWarningsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeCheckWarningsResponse>(DoRPCRequest("DescribeCheckWarnings", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribeCheckWarningsResponse> DescribeCheckWarningsWithOptionsAsync(DescribeCheckWarningsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeCheckWarningsResponse>(await DoRPCRequestAsync("DescribeCheckWarnings", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribeCheckWarningsResponse DescribeCheckWarnings(DescribeCheckWarningsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeCheckWarningsWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeCheckWarningsResponse> DescribeCheckWarningsAsync(DescribeCheckWarningsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeCheckWarningsWithOptionsAsync(request, runtime);
-        }
-
         public DescribeCheckWarningSummaryResponse DescribeCheckWarningSummaryWithOptions(DescribeCheckWarningSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1591,6 +1591,38 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCheckWarningSummaryWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeCheckWarningsResponse DescribeCheckWarningsWithOptions(DescribeCheckWarningsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeCheckWarningsResponse>(DoRPCRequest("DescribeCheckWarnings", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeCheckWarningsResponse> DescribeCheckWarningsWithOptionsAsync(DescribeCheckWarningsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeCheckWarningsResponse>(await DoRPCRequestAsync("DescribeCheckWarnings", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeCheckWarningsResponse DescribeCheckWarnings(DescribeCheckWarningsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCheckWarningsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeCheckWarningsResponse> DescribeCheckWarningsAsync(DescribeCheckWarningsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCheckWarningsWithOptionsAsync(request, runtime);
         }
 
         public DescribeCloudCenterInstancesResponse DescribeCloudCenterInstancesWithOptions(DescribeCloudCenterInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2489,6 +2521,38 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeHoneyPotSuspStatisticsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeImageFixTaskResponse DescribeImageFixTaskWithOptions(DescribeImageFixTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeImageFixTaskResponse>(DoRPCRequest("DescribeImageFixTask", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeImageFixTaskResponse> DescribeImageFixTaskWithOptionsAsync(DescribeImageFixTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeImageFixTaskResponse>(await DoRPCRequestAsync("DescribeImageFixTask", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeImageFixTaskResponse DescribeImageFixTask(DescribeImageFixTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeImageFixTaskWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeImageFixTaskResponse> DescribeImageFixTaskAsync(DescribeImageFixTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeImageFixTaskWithOptionsAsync(request, runtime);
+        }
+
         public DescribeImageGroupedVulListResponse DescribeImageGroupedVulListWithOptions(DescribeImageGroupedVulListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2519,6 +2583,38 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeImageGroupedVulListWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeImageInstancesResponse DescribeImageInstancesWithOptions(DescribeImageInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeImageInstancesResponse>(DoRPCRequest("DescribeImageInstances", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeImageInstancesResponse> DescribeImageInstancesWithOptionsAsync(DescribeImageInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeImageInstancesResponse>(await DoRPCRequestAsync("DescribeImageInstances", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeImageInstancesResponse DescribeImageInstances(DescribeImageInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeImageInstancesWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeImageInstancesResponse> DescribeImageInstancesAsync(DescribeImageInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeImageInstancesWithOptionsAsync(request, runtime);
         }
 
         public DescribeImageScanAuthCountResponse DescribeImageScanAuthCountWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2631,6 +2727,38 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstallCaptchaWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeInstallCodesResponse DescribeInstallCodesWithOptions(DescribeInstallCodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeInstallCodesResponse>(DoRPCRequest("DescribeInstallCodes", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeInstallCodesResponse> DescribeInstallCodesWithOptionsAsync(DescribeInstallCodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeInstallCodesResponse>(await DoRPCRequestAsync("DescribeInstallCodes", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeInstallCodesResponse DescribeInstallCodes(DescribeInstallCodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstallCodesWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeInstallCodesResponse> DescribeInstallCodesAsync(DescribeInstallCodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstallCodesWithOptionsAsync(request, runtime);
         }
 
         public DescribeInstanceAntiBruteForceRulesResponse DescribeInstanceAntiBruteForceRulesWithOptions(DescribeInstanceAntiBruteForceRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3585,38 +3713,6 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeSecurityCheckScheduleConfigWithOptionsAsync(request, runtime);
         }
 
-        public DescribeSecurityEventOperationsResponse DescribeSecurityEventOperationsWithOptions(DescribeSecurityEventOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeSecurityEventOperationsResponse>(DoRPCRequest("DescribeSecurityEventOperations", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribeSecurityEventOperationsResponse> DescribeSecurityEventOperationsWithOptionsAsync(DescribeSecurityEventOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeSecurityEventOperationsResponse>(await DoRPCRequestAsync("DescribeSecurityEventOperations", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribeSecurityEventOperationsResponse DescribeSecurityEventOperations(DescribeSecurityEventOperationsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeSecurityEventOperationsWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeSecurityEventOperationsResponse> DescribeSecurityEventOperationsAsync(DescribeSecurityEventOperationsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeSecurityEventOperationsWithOptionsAsync(request, runtime);
-        }
-
         public DescribeSecurityEventOperationStatusResponse DescribeSecurityEventOperationStatusWithOptions(DescribeSecurityEventOperationStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3647,6 +3743,38 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSecurityEventOperationStatusWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeSecurityEventOperationsResponse DescribeSecurityEventOperationsWithOptions(DescribeSecurityEventOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeSecurityEventOperationsResponse>(DoRPCRequest("DescribeSecurityEventOperations", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeSecurityEventOperationsResponse> DescribeSecurityEventOperationsWithOptionsAsync(DescribeSecurityEventOperationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeSecurityEventOperationsResponse>(await DoRPCRequestAsync("DescribeSecurityEventOperations", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeSecurityEventOperationsResponse DescribeSecurityEventOperations(DescribeSecurityEventOperationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSecurityEventOperationsWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeSecurityEventOperationsResponse> DescribeSecurityEventOperationsAsync(DescribeSecurityEventOperationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSecurityEventOperationsWithOptionsAsync(request, runtime);
         }
 
         public DescribeSecurityStatInfoResponse DescribeSecurityStatInfoWithOptions(DescribeSecurityStatInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4079,6 +4207,38 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSuspEventsWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeTaskErrorLogResponse DescribeTaskErrorLogWithOptions(DescribeTaskErrorLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeTaskErrorLogResponse>(DoRPCRequest("DescribeTaskErrorLog", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeTaskErrorLogResponse> DescribeTaskErrorLogWithOptionsAsync(DescribeTaskErrorLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeTaskErrorLogResponse>(await DoRPCRequestAsync("DescribeTaskErrorLog", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeTaskErrorLogResponse DescribeTaskErrorLog(DescribeTaskErrorLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTaskErrorLogWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeTaskErrorLogResponse> DescribeTaskErrorLogAsync(DescribeTaskErrorLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTaskErrorLogWithOptionsAsync(request, runtime);
         }
 
         public DescribeUniBackupDatabaseResponse DescribeUniBackupDatabaseWithOptions(DescribeUniBackupDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4553,6 +4713,38 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await DescribeVulDetailsWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVulExportInfoResponse DescribeVulExportInfoWithOptions(DescribeVulExportInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeVulExportInfoResponse>(DoRPCRequest("DescribeVulExportInfo", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeVulExportInfoResponse> DescribeVulExportInfoWithOptionsAsync(DescribeVulExportInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeVulExportInfoResponse>(await DoRPCRequestAsync("DescribeVulExportInfo", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeVulExportInfoResponse DescribeVulExportInfo(DescribeVulExportInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVulExportInfoWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVulExportInfoResponse> DescribeVulExportInfoAsync(DescribeVulExportInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVulExportInfoWithOptionsAsync(request, runtime);
+        }
+
         public DescribeVulListResponse DescribeVulListWithOptions(DescribeVulListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4833,38 +5025,6 @@ namespace AlibabaCloud.SDK.Sas20181203
             return await GetBackupStorageCountWithOptionsAsync(runtime);
         }
 
-        public GetIncIOCsResponse GetIncIOCsWithOptions(GetIncIOCsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetIncIOCsResponse>(DoRPCRequest("GetIncIOCs", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<GetIncIOCsResponse> GetIncIOCsWithOptionsAsync(GetIncIOCsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<GetIncIOCsResponse>(await DoRPCRequestAsync("GetIncIOCs", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public GetIncIOCsResponse GetIncIOCs(GetIncIOCsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetIncIOCsWithOptions(request, runtime);
-        }
-
-        public async Task<GetIncIOCsResponse> GetIncIOCsAsync(GetIncIOCsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetIncIOCsWithOptionsAsync(request, runtime);
-        }
-
         public GetIOCsResponse GetIOCsWithOptions(GetIOCsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4895,6 +5055,38 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetIOCsWithOptionsAsync(request, runtime);
+        }
+
+        public GetIncIOCsResponse GetIncIOCsWithOptions(GetIncIOCsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetIncIOCsResponse>(DoRPCRequest("GetIncIOCs", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetIncIOCsResponse> GetIncIOCsWithOptionsAsync(GetIncIOCsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<GetIncIOCsResponse>(await DoRPCRequestAsync("GetIncIOCs", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public GetIncIOCsResponse GetIncIOCs(GetIncIOCsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetIncIOCsWithOptions(request, runtime);
+        }
+
+        public async Task<GetIncIOCsResponse> GetIncIOCsAsync(GetIncIOCsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetIncIOCsWithOptionsAsync(request, runtime);
         }
 
         public GetLocalInstallScriptResponse GetLocalInstallScriptWithOptions(GetLocalInstallScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

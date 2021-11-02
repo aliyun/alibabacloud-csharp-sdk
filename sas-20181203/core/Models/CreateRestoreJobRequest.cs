@@ -9,37 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateRestoreJobRequest : TeaModel {
-        [NameInMap("Uuid")]
+        [NameInMap("Includes")]
         [Validation(Required=false)]
-        public string Uuid { get; set; }
-
-        [NameInMap("SnapshotId")]
-        [Validation(Required=false)]
-        public string SnapshotId { get; set; }
+        public string Includes { get; set; }
 
         [NameInMap("SnapshotHash")]
         [Validation(Required=false)]
         public string SnapshotHash { get; set; }
 
-        [NameInMap("Target")]
+        [NameInMap("SnapshotId")]
         [Validation(Required=false)]
-        public string Target { get; set; }
-
-        [NameInMap("SourceType")]
-        [Validation(Required=false)]
-        public string SourceType { get; set; }
-
-        [NameInMap("VaultId")]
-        [Validation(Required=false)]
-        public string VaultId { get; set; }
+        public string SnapshotId { get; set; }
 
         [NameInMap("SnapshotVersion")]
         [Validation(Required=false)]
         public string SnapshotVersion { get; set; }
 
-        [NameInMap("Includes")]
+        [NameInMap("SourceType")]
         [Validation(Required=false)]
-        public string Includes { get; set; }
+        public string SourceType { get; set; }
+
+        [NameInMap("Target")]
+        [Validation(Required=false)]
+        public string Target { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
+
+        [NameInMap("VaultId")]
+        [Validation(Required=false)]
+        public string VaultId { get; set; }
 
     }
 

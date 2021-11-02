@@ -9,14 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupDirsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BackupDirs")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<DescribeBackupDirsResponseBodyBackupDirs> BackupDirs { get; set; }
+        public class DescribeBackupDirsResponseBodyBackupDirs : TeaModel {
+            [NameInMap("BackupJobId")]
+            [Validation(Required=false)]
+            public long? BackupJobId { get; set; }
+
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+        }
 
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeBackupDirsResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeBackupDirsResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,24 +39,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
-        [NameInMap("BackupDirs")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<DescribeBackupDirsResponseBodyBackupDirs> BackupDirs { get; set; }
-        public class DescribeBackupDirsResponseBodyBackupDirs : TeaModel {
-            [NameInMap("Source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
-
-            [NameInMap("BackupJobId")]
-            [Validation(Required=false)]
-            public long? BackupJobId { get; set; }
-
-        }
+        public string RequestId { get; set; }
 
     }
 

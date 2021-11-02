@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class HandleSecurityEventsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("MarkBatch")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string MarkBatch { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("MarkMissParam")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string MarkMissParam { get; set; }
 
         [NameInMap("OperationCode")]
         [Validation(Required=false)]
@@ -25,17 +25,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperationParams { get; set; }
 
-        [NameInMap("MarkMissParam")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string MarkMissParam { get; set; }
-
-        [NameInMap("MarkBatch")]
-        [Validation(Required=false)]
-        public string MarkBatch { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]
         public List<string> SecurityEventIds { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

@@ -9,14 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyUserDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyUserDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyUserDetailResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,74 +25,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyUserDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyUserDetailResponseBodyPropertys : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AccountsExpirationDate")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string AccountsExpirationDate { get; set; }
 
             [NameInMap("Create")]
             [Validation(Required=false)]
             public string Create { get; set; }
-
-            [NameInMap("LastLoginIp")]
-            [Validation(Required=false)]
-            public string LastLoginIp { get; set; }
-
-            [NameInMap("InternetIp")]
-            [Validation(Required=false)]
-            public string InternetIp { get; set; }
-
-            [NameInMap("LastLoginTime")]
-            [Validation(Required=false)]
-            public string LastLoginTime { get; set; }
-
-            [NameInMap("IsRoot")]
-            [Validation(Required=false)]
-            public string IsRoot { get; set; }
-
-            [NameInMap("Ip")]
-            [Validation(Required=false)]
-            public string Ip { get; set; }
-
-            [NameInMap("User")]
-            [Validation(Required=false)]
-            public string User { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("IntranetIp")]
-            [Validation(Required=false)]
-            public string IntranetIp { get; set; }
-
-            [NameInMap("PasswordExpirationDate")]
-            [Validation(Required=false)]
-            public string PasswordExpirationDate { get; set; }
-
-            [NameInMap("Uuid")]
-            [Validation(Required=false)]
-            public string Uuid { get; set; }
-
-            [NameInMap("LastLoginTimestamp")]
-            [Validation(Required=false)]
-            public long? LastLoginTimestamp { get; set; }
-
-            [NameInMap("InstanceName")]
-            [Validation(Required=false)]
-            public string InstanceName { get; set; }
-
-            [NameInMap("AccountsExpirationDate")]
-            [Validation(Required=false)]
-            public string AccountsExpirationDate { get; set; }
 
             [NameInMap("CreateTimestamp")]
             [Validation(Required=false)]
@@ -103,7 +47,63 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> GroupNames { get; set; }
 
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
+
+            [NameInMap("IsRoot")]
+            [Validation(Required=false)]
+            public string IsRoot { get; set; }
+
+            [NameInMap("LastLoginIp")]
+            [Validation(Required=false)]
+            public string LastLoginIp { get; set; }
+
+            [NameInMap("LastLoginTime")]
+            [Validation(Required=false)]
+            public string LastLoginTime { get; set; }
+
+            [NameInMap("LastLoginTimestamp")]
+            [Validation(Required=false)]
+            public long? LastLoginTimestamp { get; set; }
+
+            [NameInMap("PasswordExpirationDate")]
+            [Validation(Required=false)]
+            public string PasswordExpirationDate { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("User")]
+            [Validation(Required=false)]
+            public string User { get; set; }
+
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

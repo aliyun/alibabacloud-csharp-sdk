@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeRiskListCheckResultRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public int? CurrentPage { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public List<string> InstanceIds { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("InstanceIds")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

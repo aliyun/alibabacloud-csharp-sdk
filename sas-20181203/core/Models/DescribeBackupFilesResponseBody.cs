@@ -9,14 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupFilesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BackupFiles")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<DescribeBackupFilesResponseBodyBackupFiles> BackupFiles { get; set; }
+        public class DescribeBackupFilesResponseBodyBackupFiles : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public long? Size { get; set; }
+
+            [NameInMap("Subtree")]
+            [Validation(Required=false)]
+            public string Subtree { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
 
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeBackupFilesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeBackupFilesResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,32 +47,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
 
-        [NameInMap("BackupFiles")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<DescribeBackupFilesResponseBodyBackupFiles> BackupFiles { get; set; }
-        public class DescribeBackupFilesResponseBodyBackupFiles : TeaModel {
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Subtree")]
-            [Validation(Required=false)]
-            public string Subtree { get; set; }
-
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public long? Size { get; set; }
-
-        }
+        public string RequestId { get; set; }
 
     }
 

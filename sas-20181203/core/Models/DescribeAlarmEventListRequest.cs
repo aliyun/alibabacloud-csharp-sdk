@@ -9,34 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAlarmEventListRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("Dealed")]
-        [Validation(Required=false)]
-        public string Dealed { get; set; }
-
-        [NameInMap("From")]
-        [Validation(Required=false)]
-        public string From { get; set; }
-
-        [NameInMap("Levels")]
-        [Validation(Required=false)]
-        public string Levels { get; set; }
-
-        [NameInMap("Remark")]
-        [Validation(Required=false)]
-        public string Remark { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
         [NameInMap("AlarmEventName")]
         [Validation(Required=false)]
         public string AlarmEventName { get; set; }
@@ -49,29 +21,41 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Dealed")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public string Dealed { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("From")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string From { get; set; }
 
-        [NameInMap("ContainerFieldName")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string ContainerFieldName { get; set; }
+        public string GroupId { get; set; }
 
-        [NameInMap("ContainerFieldValue")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string ContainerFieldValue { get; set; }
+        public string Lang { get; set; }
 
-        [NameInMap("TargetType")]
+        [NameInMap("Levels")]
         [Validation(Required=false)]
-        public string TargetType { get; set; }
+        public string Levels { get; set; }
 
         [NameInMap("OperateErrorCodeList")]
         [Validation(Required=false)]
         public List<string> OperateErrorCodeList { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

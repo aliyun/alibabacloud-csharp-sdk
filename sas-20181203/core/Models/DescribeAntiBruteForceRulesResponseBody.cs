@@ -9,14 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAntiBruteForceRulesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeAntiBruteForceRulesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeAntiBruteForceRulesResponseBodyPageInfo : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
             [NameInMap("CurrentPage")]
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
@@ -26,18 +25,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<DescribeAntiBruteForceRulesResponseBodyRules> Rules { get; set; }
         public class DescribeAntiBruteForceRulesResponseBodyRules : TeaModel {
-            [NameInMap("MachineCount")]
+            [NameInMap("DefaultRule")]
             [Validation(Required=false)]
-            public int? MachineCount { get; set; }
+            public bool? DefaultRule { get; set; }
 
             [NameInMap("EnableSmartRule")]
             [Validation(Required=false)]
@@ -51,21 +51,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ForbiddenTime { get; set; }
 
-            [NameInMap("Span")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public int? Span { get; set; }
+            public long? Id { get; set; }
 
-            [NameInMap("DefaultRule")]
+            [NameInMap("MachineCount")]
             [Validation(Required=false)]
-            public bool? DefaultRule { get; set; }
+            public int? MachineCount { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("Span")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public int? Span { get; set; }
 
             [NameInMap("UuidList")]
             [Validation(Required=false)]

@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse SecurityEventOperationStatusResponse { get; set; }
         public class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse : TeaModel {
-            [NameInMap("TaskStatus")]
-            [Validation(Required=false)]
-            public string TaskStatus { get; set; }
             [NameInMap("SecurityEventOperationStatuses")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> SecurityEventOperationStatuses { get; set; }
             public class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses : TeaModel {
-                public string Status { get; set; }
-                public string SecurityEventId { get; set; }
                 public string ErrorCode { get; set; }
+                public string SecurityEventId { get; set; }
+                public string Status { get; set; }
             }
+            [NameInMap("TaskStatus")]
+            [Validation(Required=false)]
+            public string TaskStatus { get; set; }
         };
 
     }

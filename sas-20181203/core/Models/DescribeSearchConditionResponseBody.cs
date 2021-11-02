@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSearchConditionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ConditionList")]
         [Validation(Required=false)]
         public List<DescribeSearchConditionResponseBodyConditionList> ConditionList { get; set; }
@@ -21,19 +17,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ConditionType { get; set; }
 
-            [NameInMap("NameKey")]
+            [NameInMap("FilterConditions")]
             [Validation(Required=false)]
-            public string NameKey { get; set; }
+            public string FilterConditions { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("FilterConditions")]
+            [NameInMap("NameKey")]
             [Validation(Required=false)]
-            public string FilterConditions { get; set; }
+            public string NameKey { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

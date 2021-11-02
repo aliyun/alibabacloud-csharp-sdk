@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryDiscoverDatabaseRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("CreateMark")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string CreateMark { get; set; }
 
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("CreateMark")]
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public string CreateMark { get; set; }
+        public string SourceIp { get; set; }
 
     }
 

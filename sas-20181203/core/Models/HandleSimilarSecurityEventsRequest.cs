@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class HandleSimilarSecurityEventsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("MarkMissParam")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public long? TaskId { get; set; }
+        public string MarkMissParam { get; set; }
 
         [NameInMap("OperationCode")]
         [Validation(Required=false)]
@@ -29,9 +21,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperationParams { get; set; }
 
-        [NameInMap("MarkMissParam")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string MarkMissParam { get; set; }
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public long? TaskId { get; set; }
 
     }
 
