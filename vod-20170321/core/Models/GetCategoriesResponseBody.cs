@@ -13,30 +13,26 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public GetCategoriesResponseBodyCategory Category { get; set; }
         public class GetCategoriesResponseBodyCategory : TeaModel {
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-            [NameInMap("ParentId")]
-            [Validation(Required=false)]
-            public long? ParentId { get; set; }
-            [NameInMap("CateName")]
-            [Validation(Required=false)]
-            public string CateName { get; set; }
             [NameInMap("CateId")]
             [Validation(Required=false)]
             public long? CateId { get; set; }
+            [NameInMap("CateName")]
+            [Validation(Required=false)]
+            public string CateName { get; set; }
             [NameInMap("Level")]
             [Validation(Required=false)]
             public long? Level { get; set; }
+            [NameInMap("ParentId")]
+            [Validation(Required=false)]
+            public long? ParentId { get; set; }
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
         };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("SubTotal")]
-        [Validation(Required=false)]
-        public long? SubTotal { get; set; }
 
         [NameInMap("SubCategories")]
         [Validation(Required=false)]
@@ -46,14 +42,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<GetCategoriesResponseBodySubCategoriesCategory> Category { get; set; }
             public class GetCategoriesResponseBodySubCategoriesCategory : TeaModel {
-                public string Type { get; set; }
-                public string CateName { get; set; }
-                public long? ParentId { get; set; }
                 public long? CateId { get; set; }
-                public long? SubTotal { get; set; }
+                public string CateName { get; set; }
                 public long? Level { get; set; }
+                public long? ParentId { get; set; }
+                public long? SubTotal { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("SubTotal")]
+        [Validation(Required=false)]
+        public long? SubTotal { get; set; }
 
     }
 

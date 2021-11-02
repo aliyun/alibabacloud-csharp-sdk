@@ -9,45 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadImageRequest : TeaModel {
-        [NameInMap("Title")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string Title { get; set; }
-
-        [NameInMap("ImageType")]
-        [Validation(Required=false)]
-        public string ImageType { get; set; }
-
-        [NameInMap("ImageExt")]
-        [Validation(Required=false)]
-        public string ImageExt { get; set; }
-
-        [NameInMap("OriginalFileName")]
-        [Validation(Required=false)]
-        public string OriginalFileName { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
-
-        [NameInMap("StorageLocation")]
-        [Validation(Required=false)]
-        public string StorageLocation { get; set; }
+        public string AppId { get; set; }
 
         [NameInMap("CateId")]
         [Validation(Required=false)]
         public long? CateId { get; set; }
 
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("AppId")]
+        [NameInMap("ImageExt")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public string ImageExt { get; set; }
+
+        [NameInMap("ImageType")]
+        [Validation(Required=false)]
+        public string ImageType { get; set; }
+
+        [NameInMap("StorageLocation")]
+        [Validation(Required=false)]
+        public string StorageLocation { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
+
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadVideoRequest : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        [NameInMap("CateId")]
+        [Validation(Required=false)]
+        public long? CateId { get; set; }
+
         [NameInMap("CoverURL")]
         [Validation(Required=false)]
         public string CoverURL { get; set; }
@@ -25,49 +33,29 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public long? FileSize { get; set; }
 
-        [NameInMap("IP")]
+        [NameInMap("StorageLocation")]
         [Validation(Required=false)]
-        public string IP { get; set; }
-
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
-
-        [NameInMap("CateId")]
-        [Validation(Required=false)]
-        public long? CateId { get; set; }
+        public string StorageLocation { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
-        [NameInMap("TranscodeMode")]
+        [NameInMap("TemplateGroupId")]
         [Validation(Required=false)]
-        public string TranscodeMode { get; set; }
+        public string TemplateGroupId { get; set; }
+
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
-        [NameInMap("TemplateGroupId")]
-        [Validation(Required=false)]
-        public string TemplateGroupId { get; set; }
-
         [NameInMap("WorkflowId")]
         [Validation(Required=false)]
         public string WorkflowId { get; set; }
-
-        [NameInMap("StorageLocation")]
-        [Validation(Required=false)]
-        public string StorageLocation { get; set; }
-
-        [NameInMap("CustomMediaInfo")]
-        [Validation(Required=false)]
-        public string CustomMediaInfo { get; set; }
-
-        [NameInMap("AppId")]
-        [Validation(Required=false)]
-        public string AppId { get; set; }
 
     }
 

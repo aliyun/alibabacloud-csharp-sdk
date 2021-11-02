@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AttachAppPolicyToIdentityRequest : TeaModel {
-        [NameInMap("IdentityType")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string IdentityType { get; set; }
+        public string AppId { get; set; }
 
         [NameInMap("IdentityName")]
         [Validation(Required=false)]
         public string IdentityName { get; set; }
 
-        [NameInMap("AppId")]
+        [NameInMap("IdentityType")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public string IdentityType { get; set; }
 
         [NameInMap("PolicyNames")]
         [Validation(Required=false)]
         public string PolicyNames { get; set; }
-
-        [NameInMap("ResourceRealOwnerId")]
-        [Validation(Required=false)]
-        public string ResourceRealOwnerId { get; set; }
 
     }
 

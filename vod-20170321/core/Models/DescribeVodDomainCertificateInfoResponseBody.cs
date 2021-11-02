@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo : TeaModel {
-                public string Status { get; set; }
-                public string CertLife { get; set; }
-                public string CertExpireTime { get; set; }
-                public string CertType { get; set; }
-                public string ServerCertificateStatus { get; set; }
                 public string CertDomainName { get; set; }
+                public string CertExpireTime { get; set; }
+                public string CertLife { get; set; }
                 public string CertName { get; set; }
                 public string CertOrg { get; set; }
+                public string CertType { get; set; }
                 public string DomainName { get; set; }
+                public string ServerCertificateStatus { get; set; }
+                public string Status { get; set; }
             }
         };
 

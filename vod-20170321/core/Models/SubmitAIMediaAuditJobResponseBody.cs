@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIMediaAuditJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string JobId { get; set; }
 
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

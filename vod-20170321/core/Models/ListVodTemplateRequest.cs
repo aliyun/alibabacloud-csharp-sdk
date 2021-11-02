@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListVodTemplateRequest : TeaModel {
-        [NameInMap("TemplateType")]
-        [Validation(Required=false)]
-        public string TemplateType { get; set; }
-
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
+
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
 
     }
 

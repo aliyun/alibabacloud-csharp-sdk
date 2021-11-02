@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetUploadDetailsRequest : TeaModel {
-        [NameInMap("ResourceRealOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceRealOwnerId { get; set; }
-
         [NameInMap("MediaIds")]
         [Validation(Required=false)]
         public string MediaIds { get; set; }

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetVodDomainCertificateRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CertName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string CertName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("CertName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string CertName { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SSLPri")]
+        [Validation(Required=false)]
+        public string SSLPri { get; set; }
 
         [NameInMap("SSLProtocol")]
         [Validation(Required=false)]
@@ -33,13 +33,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string SSLPub { get; set; }
 
-        [NameInMap("SSLPri")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string SSLPri { get; set; }
-
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

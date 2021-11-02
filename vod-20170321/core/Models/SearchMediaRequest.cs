@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SearchMediaRequest : TeaModel {
-        [NameInMap("SearchType")]
-        [Validation(Required=false)]
-        public string SearchType { get; set; }
-
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public string Fields { get; set; }
@@ -20,10 +16,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("Match")]
         [Validation(Required=false)]
         public string Match { get; set; }
-
-        [NameInMap("SortBy")]
-        [Validation(Required=false)]
-        public string SortBy { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -37,13 +29,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string ScrollToken { get; set; }
 
-        [NameInMap("SessionId")]
+        [NameInMap("SearchType")]
         [Validation(Required=false)]
-        public string SessionId { get; set; }
+        public string SearchType { get; set; }
 
-        [NameInMap("ResultTypes")]
+        [NameInMap("SortBy")]
         [Validation(Required=false)]
-        public string ResultTypes { get; set; }
+        public string SortBy { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaDNAResultResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DNAResult")]
         [Validation(Required=false)]
         public GetMediaDNAResultResponseBodyDNAResult DNAResult { get; set; }
@@ -21,35 +17,39 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<GetMediaDNAResultResponseBodyDNAResultVideoDNA> VideoDNA { get; set; }
             public class GetMediaDNAResultResponseBodyDNAResultVideoDNA : TeaModel {
-                public string PrimaryKey { get; set; }
-                public string Similarity { get; set; }
                 public List<GetMediaDNAResultResponseBodyDNAResultVideoDNADetail> Detail { get; set; }
                 public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetail : TeaModel {
                     public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication Duplication { get; set; }
                     public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication : TeaModel {
-                        [NameInMap("Start")]
-                        [Validation(Required=false)]
-                        public string Start { get; set; }
-
                         [NameInMap("Duration")]
                         [Validation(Required=false)]
                         public string Duration { get; set; }
+
+                        [NameInMap("Start")]
+                        [Validation(Required=false)]
+                        public string Start { get; set; }
 
                     }
                     public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput Input { get; set; }
                     public class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput : TeaModel {
-                        [NameInMap("Start")]
-                        [Validation(Required=false)]
-                        public string Start { get; set; }
-
                         [NameInMap("Duration")]
                         [Validation(Required=false)]
                         public string Duration { get; set; }
 
+                        [NameInMap("Start")]
+                        [Validation(Required=false)]
+                        public string Start { get; set; }
+
                     }
                 }
+                public string PrimaryKey { get; set; }
+                public string Similarity { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

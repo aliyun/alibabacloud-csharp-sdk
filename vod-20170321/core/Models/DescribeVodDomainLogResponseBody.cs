@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainLogResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainLogDetails")]
         [Validation(Required=false)]
         public DescribeVodDomainLogResponseBodyDomainLogDetails DomainLogDetails { get; set; }
@@ -21,6 +17,37 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail> DomainLogDetail { get; set; }
             public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail : TeaModel {
+                public string DomainName { get; set; }
+                public long? LogCount { get; set; }
+                public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos LogInfos { get; set; }
+                public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos : TeaModel {
+                    [NameInMap("LogInfoDetail")]
+                    [Validation(Required=false)]
+                    public List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> LogInfoDetail { get; set; }
+                    public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail : TeaModel {
+                        [NameInMap("EndTime")]
+                        [Validation(Required=false)]
+                        public string EndTime { get; set; }
+
+                        [NameInMap("LogName")]
+                        [Validation(Required=false)]
+                        public string LogName { get; set; }
+
+                        [NameInMap("LogPath")]
+                        [Validation(Required=false)]
+                        public string LogPath { get; set; }
+
+                        [NameInMap("LogSize")]
+                        [Validation(Required=false)]
+                        public long? LogSize { get; set; }
+
+                        [NameInMap("StartTime")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
+
+                    }
+
+                }
                 public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos PageInfos { get; set; }
                 public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos : TeaModel {
                     [NameInMap("PageNumber")]
@@ -36,39 +63,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public long? Total { get; set; }
 
                 }
-                public long? LogCount { get; set; }
-                public string DomainName { get; set; }
-                public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos LogInfos { get; set; }
-                public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos : TeaModel {
-                    [NameInMap("LogInfoDetail")]
-                    [Validation(Required=false)]
-                    public List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> LogInfoDetail { get; set; }
-                    public class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail : TeaModel {
-                        [NameInMap("EndTime")]
-                        [Validation(Required=false)]
-                        public string EndTime { get; set; }
-
-                        [NameInMap("StartTime")]
-                        [Validation(Required=false)]
-                        public string StartTime { get; set; }
-
-                        [NameInMap("LogPath")]
-                        [Validation(Required=false)]
-                        public string LogPath { get; set; }
-
-                        [NameInMap("LogSize")]
-                        [Validation(Required=false)]
-                        public long? LogSize { get; set; }
-
-                        [NameInMap("LogName")]
-                        [Validation(Required=false)]
-                        public string LogName { get; set; }
-
-                    }
-
-                }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

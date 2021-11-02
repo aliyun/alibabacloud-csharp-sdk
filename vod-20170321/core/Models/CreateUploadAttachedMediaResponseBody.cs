@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string FileURL { get; set; }
 
+        [NameInMap("MediaId")]
+        [Validation(Required=false)]
+        public string MediaId { get; set; }
+
         [NameInMap("MediaURL")]
         [Validation(Required=false)]
         public string MediaURL { get; set; }
-
-        [NameInMap("UploadAddress")]
-        [Validation(Required=false)]
-        public string UploadAddress { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("MediaId")]
+        [NameInMap("UploadAddress")]
         [Validation(Required=false)]
-        public string MediaId { get; set; }
+        public string UploadAddress { get; set; }
 
         [NameInMap("UploadAuth")]
         [Validation(Required=false)]

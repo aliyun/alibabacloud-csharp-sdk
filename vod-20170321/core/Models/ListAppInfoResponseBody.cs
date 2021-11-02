@@ -9,6 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListAppInfoResponseBody : TeaModel {
+        [NameInMap("AppInfoList")]
+        [Validation(Required=false)]
+        public List<ListAppInfoResponseBodyAppInfoList> AppInfoList { get; set; }
+        public class ListAppInfoResponseBodyAppInfoList : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("ModificationTime")]
+            [Validation(Required=false)]
+            public string ModificationTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,40 +50,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }
-
-        [NameInMap("AppInfoList")]
-        [Validation(Required=false)]
-        public List<ListAppInfoResponseBodyAppInfoList> AppInfoList { get; set; }
-        public class ListAppInfoResponseBodyAppInfoList : TeaModel {
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
-
-            [NameInMap("AppName")]
-            [Validation(Required=false)]
-            public string AppName { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("AppId")]
-            [Validation(Required=false)]
-            public string AppId { get; set; }
-
-            [NameInMap("ModificationTime")]
-            [Validation(Required=false)]
-            public string ModificationTime { get; set; }
-
-        }
 
     }
 

@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditAudioResultDetailRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("MediaId")]
         [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public string ResourceOwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string MediaId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("MediaId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string MediaId { get; set; }
+        public string OwnerId { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public string ResourceOwnerId { get; set; }
 
     }
 

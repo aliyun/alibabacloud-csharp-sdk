@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class VerifyVodDomainOwnerRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("VerifyType")]
         [Validation(Required=false)]

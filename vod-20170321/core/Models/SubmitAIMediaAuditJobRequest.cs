@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIMediaAuditJobRequest : TeaModel {
+        [NameInMap("MediaAuditConfiguration")]
+        [Validation(Required=false)]
+        public string MediaAuditConfiguration { get; set; }
+
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
+
+        [NameInMap("MediaType")]
+        [Validation(Required=false)]
+        public string MediaType { get; set; }
 
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
-
-        [NameInMap("MediaType")]
-        [Validation(Required=false)]
-        public string MediaType { get; set; }
-
-        [NameInMap("MediaAuditConfiguration")]
-        [Validation(Required=false)]
-        public string MediaAuditConfiguration { get; set; }
 
     }
 

@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg> UserPlayStatisAvg { get; set; }
             public class DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg : TeaModel {
-                public string AvgPlayDuration { get; set; }
                 public string AvgPlayCount { get; set; }
+                public string AvgPlayDuration { get; set; }
                 public string Date { get; set; }
             }
         };

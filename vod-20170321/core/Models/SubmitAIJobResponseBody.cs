@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AIJobList")]
         [Validation(Required=false)]
         public SubmitAIJobResponseBodyAIJobList AIJobList { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<SubmitAIJobResponseBodyAIJobListAIJob> AIJob { get; set; }
             public class SubmitAIJobResponseBodyAIJobListAIJob : TeaModel {
-                public string Type { get; set; }
                 public string JobId { get; set; }
                 public string MediaId { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

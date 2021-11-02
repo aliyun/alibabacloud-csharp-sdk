@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddAITemplateRequest : TeaModel {
+        [NameInMap("TemplateConfig")]
+        [Validation(Required=false)]
+        public string TemplateConfig { get; set; }
+
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
@@ -19,10 +23,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
-
-        [NameInMap("TemplateConfig")]
-        [Validation(Required=false)]
-        public string TemplateConfig { get; set; }
 
     }
 

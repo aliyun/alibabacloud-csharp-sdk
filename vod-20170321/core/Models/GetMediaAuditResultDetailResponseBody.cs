@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MediaAuditResultDetail")]
         [Validation(Required=false)]
         public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail MediaAuditResultDetail { get; set; }
@@ -21,23 +17,27 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> List { get; set; }
             public class GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList : TeaModel {
-                public string TerrorismScore { get; set; }
                 public string AdLabel { get; set; }
-                public string PornScore { get; set; }
-                public string PornLabel { get; set; }
-                public string LiveLabel { get; set; }
-                public string Url { get; set; }
-                public string Timestamp { get; set; }
-                public string LiveScore { get; set; }
                 public string AdScore { get; set; }
-                public string LogoScore { get; set; }
+                public string LiveLabel { get; set; }
+                public string LiveScore { get; set; }
                 public string LogoLabel { get; set; }
+                public string LogoScore { get; set; }
+                public string PornLabel { get; set; }
+                public string PornScore { get; set; }
                 public string TerrorismLabel { get; set; }
+                public string TerrorismScore { get; set; }
+                public string Timestamp { get; set; }
+                public string Url { get; set; }
             }
             [NameInMap("Total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

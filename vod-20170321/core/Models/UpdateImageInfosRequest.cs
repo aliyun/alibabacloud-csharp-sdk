@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateImageInfosRequest : TeaModel {
-        [NameInMap("ResourceRealOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceRealOwnerId { get; set; }
-
         [NameInMap("UpdateContent")]
         [Validation(Required=false)]
         public string UpdateContent { get; set; }

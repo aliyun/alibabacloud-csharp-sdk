@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddVodTemplateRequest : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        [NameInMap("TemplateType")]
-        [Validation(Required=false)]
-        public string TemplateType { get; set; }
-
-        [NameInMap("SubTemplateType")]
-        [Validation(Required=false)]
-        public string SubTemplateType { get; set; }
 
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfig { get; set; }
 
-        [NameInMap("AppId")]
+        [NameInMap("TemplateType")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public string TemplateType { get; set; }
 
     }
 

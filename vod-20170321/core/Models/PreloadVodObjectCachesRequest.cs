@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class PreloadVodObjectCachesRequest : TeaModel {
+        [NameInMap("ObjectPath")]
+        [Validation(Required=false)]
+        public string ObjectPath { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("ObjectPath")]
-        [Validation(Required=false)]
-        public string ObjectPath { get; set; }
 
     }
 

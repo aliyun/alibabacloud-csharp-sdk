@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string DeleteImageType { get; set; }
 
-        [NameInMap("ImageURLs")]
-        [Validation(Required=false)]
-        public string ImageURLs { get; set; }
-
         [NameInMap("ImageIds")]
         [Validation(Required=false)]
         public string ImageIds { get; set; }
 
-        [NameInMap("VideoId")]
-        [Validation(Required=false)]
-        public string VideoId { get; set; }
-
         [NameInMap("ImageType")]
         [Validation(Required=false)]
         public string ImageType { get; set; }
+
+        [NameInMap("ImageURLs")]
+        [Validation(Required=false)]
+        public string ImageURLs { get; set; }
+
+        [NameInMap("VideoId")]
+        [Validation(Required=false)]
+        public string VideoId { get; set; }
 
     }
 

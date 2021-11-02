@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class BatchStartVodDomainRequest : TeaModel {
+        [NameInMap("DomainNames")]
+        [Validation(Required=false)]
+        public string DomainNames { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("DomainNames")]
-        [Validation(Required=false)]
-        public string DomainNames { get; set; }
 
     }
 

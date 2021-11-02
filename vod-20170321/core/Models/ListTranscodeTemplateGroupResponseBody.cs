@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public List<ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList> TranscodeTemplateGroupList { get; set; }
         public class ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
@@ -25,25 +29,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string IsDefault { get; set; }
 
-            [NameInMap("AppId")]
+            [NameInMap("Locked")]
             [Validation(Required=false)]
-            public string AppId { get; set; }
-
-            [NameInMap("TranscodeTemplateGroupId")]
-            [Validation(Required=false)]
-            public string TranscodeTemplateGroupId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+            public string Locked { get; set; }
 
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
-            [NameInMap("Locked")]
+            [NameInMap("Name")]
             [Validation(Required=false)]
-            public string Locked { get; set; }
+            public string Name { get; set; }
+
+            [NameInMap("TranscodeTemplateGroupId")]
+            [Validation(Required=false)]
+            public string TranscodeTemplateGroupId { get; set; }
 
         }
 

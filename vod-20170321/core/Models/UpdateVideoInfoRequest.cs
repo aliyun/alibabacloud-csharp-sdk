@@ -9,41 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVideoInfoRequest : TeaModel {
-        [NameInMap("VideoId")]
+        [NameInMap("CateId")]
         [Validation(Required=false)]
-        public string VideoId { get; set; }
-
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public long? CateId { get; set; }
 
         [NameInMap("CoverURL")]
         [Validation(Required=false)]
         public string CoverURL { get; set; }
 
-        [NameInMap("CateId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public long? CateId { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("DownloadSwitch")]
+        [NameInMap("Tags")]
         [Validation(Required=false)]
-        public string DownloadSwitch { get; set; }
+        public string Tags { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("Title")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Title { get; set; }
 
-        [NameInMap("CustomMediaInfo")]
+        [NameInMap("VideoId")]
         [Validation(Required=false)]
-        public string CustomMediaInfo { get; set; }
+        public string VideoId { get; set; }
 
     }
 

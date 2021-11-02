@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteVodDomainRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
 
     }
 

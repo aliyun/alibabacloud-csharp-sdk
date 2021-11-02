@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAuditHistoryRequest : TeaModel {
-        [NameInMap("VideoId")]
-        [Validation(Required=false)]
-        public string VideoId { get; set; }
-
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
+
+        [NameInMap("VideoId")]
+        [Validation(Required=false)]
+        public string VideoId { get; set; }
 
     }
 

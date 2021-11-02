@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodAIDataRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AIType")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string AIType { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("AIType")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string AIType { get; set; }
+        public string StartTime { get; set; }
 
     }
 

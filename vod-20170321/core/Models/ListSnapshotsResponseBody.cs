@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListSnapshotsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MediaSnapshot")]
         [Validation(Required=false)]
         public ListSnapshotsResponseBodyMediaSnapshot MediaSnapshot { get; set; }
@@ -26,9 +22,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("Regular")]
             [Validation(Required=false)]
             public string Regular { get; set; }
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public long? Total { get; set; }
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public ListSnapshotsResponseBodyMediaSnapshotSnapshots Snapshots { get; set; }
@@ -48,7 +41,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 }
 
             }
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public long? Total { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

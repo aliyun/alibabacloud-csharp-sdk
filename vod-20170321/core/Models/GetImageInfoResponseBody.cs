@@ -9,25 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetImageInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ImageInfo")]
         [Validation(Required=false)]
         public GetImageInfoResponseBodyImageInfo ImageInfo { get; set; }
         public class GetImageInfoResponseBodyImageInfo : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+            [NameInMap("CateId")]
+            [Validation(Required=false)]
+            public long? CateId { get; set; }
+            [NameInMap("CateName")]
+            [Validation(Required=false)]
+            public string CateName { get; set; }
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+            [NameInMap("ImageId")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+            [NameInMap("ImageType")]
+            [Validation(Required=false)]
+            public string ImageType { get; set; }
             [NameInMap("Mezzanine")]
             [Validation(Required=false)]
             public GetImageInfoResponseBodyImageInfoMezzanine Mezzanine { get; set; }
             public class GetImageInfoResponseBodyImageInfoMezzanine : TeaModel {
+                [NameInMap("FileSize")]
+                [Validation(Required=false)]
+                public string FileSize { get; set; }
+
                 [NameInMap("FileURL")]
                 [Validation(Required=false)]
                 public string FileURL { get; set; }
-
-                [NameInMap("Width")]
-                [Validation(Required=false)]
-                public int? Width { get; set; }
 
                 [NameInMap("Height")]
                 [Validation(Required=false)]
@@ -37,9 +54,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string OriginalFileName { get; set; }
 
-                [NameInMap("FileSize")]
+                [NameInMap("Width")]
                 [Validation(Required=false)]
-                public string FileSize { get; set; }
+                public int? Width { get; set; }
 
             }
             [NameInMap("Status")]
@@ -48,37 +65,20 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("StorageLocation")]
             [Validation(Required=false)]
             public string StorageLocation { get; set; }
-            [NameInMap("CreationTime")]
-            [Validation(Required=false)]
-            public string CreationTime { get; set; }
-            [NameInMap("CateId")]
-            [Validation(Required=false)]
-            public long? CateId { get; set; }
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public string Tags { get; set; }
-            [NameInMap("CateName")]
-            [Validation(Required=false)]
-            public string CateName { get; set; }
-            [NameInMap("ImageType")]
-            [Validation(Required=false)]
-            public string ImageType { get; set; }
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-            [NameInMap("AppId")]
-            [Validation(Required=false)]
-            public string AppId { get; set; }
-            [NameInMap("URL")]
-            [Validation(Required=false)]
-            public string URL { get; set; }
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
-            [NameInMap("ImageId")]
+            [NameInMap("URL")]
             [Validation(Required=false)]
-            public string ImageId { get; set; }
+            public string URL { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

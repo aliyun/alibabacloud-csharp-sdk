@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListLiveRecordVideoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
-
         [NameInMap("LiveRecordVideoList")]
         [Validation(Required=false)]
         public ListLiveRecordVideoResponseBodyLiveRecordVideoList LiveRecordVideoList { get; set; }
@@ -25,27 +17,45 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo> LiveRecordVideo { get; set; }
             public class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo : TeaModel {
+                public string AppName { get; set; }
+                public string DomainName { get; set; }
+                public string PlaylistId { get; set; }
+                public string RecordEndTime { get; set; }
+                public string RecordStartTime { get; set; }
+                public string StreamName { get; set; }
                 public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo Video { get; set; }
                 public class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo : TeaModel {
-                    [NameInMap("Status")]
+                    [NameInMap("CateId")]
                     [Validation(Required=false)]
-                    public string Status { get; set; }
+                    public int? CateId { get; set; }
+
+                    [NameInMap("CateName")]
+                    [Validation(Required=false)]
+                    public string CateName { get; set; }
+
+                    [NameInMap("CoverURL")]
+                    [Validation(Required=false)]
+                    public string CoverURL { get; set; }
 
                     [NameInMap("CreationTime")]
                     [Validation(Required=false)]
                     public string CreationTime { get; set; }
 
-                    [NameInMap("CateId")]
+                    [NameInMap("Description")]
                     [Validation(Required=false)]
-                    public int? CateId { get; set; }
+                    public string Description { get; set; }
 
-                    [NameInMap("VideoId")]
+                    [NameInMap("Duration")]
                     [Validation(Required=false)]
-                    public string VideoId { get; set; }
+                    public float? Duration { get; set; }
 
-                    [NameInMap("Tags")]
+                    [NameInMap("ModifyTime")]
                     [Validation(Required=false)]
-                    public string Tags { get; set; }
+                    public string ModifyTime { get; set; }
+
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public long? Size { get; set; }
 
                     [NameInMap("Snapshots")]
                     [Validation(Required=false)]
@@ -56,47 +66,37 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public List<string> Snapshot { get; set; }
                     };
 
-                    [NameInMap("CateName")]
+                    [NameInMap("Status")]
                     [Validation(Required=false)]
-                    public string CateName { get; set; }
+                    public string Status { get; set; }
 
-                    [NameInMap("Description")]
+                    [NameInMap("Tags")]
                     [Validation(Required=false)]
-                    public string Description { get; set; }
-
-                    [NameInMap("Size")]
-                    [Validation(Required=false)]
-                    public long? Size { get; set; }
-
-                    [NameInMap("CoverURL")]
-                    [Validation(Required=false)]
-                    public string CoverURL { get; set; }
+                    public string Tags { get; set; }
 
                     [NameInMap("TemplateGroupId")]
                     [Validation(Required=false)]
                     public string TemplateGroupId { get; set; }
 
-                    [NameInMap("Duration")]
-                    [Validation(Required=false)]
-                    public float? Duration { get; set; }
-
                     [NameInMap("Title")]
                     [Validation(Required=false)]
                     public string Title { get; set; }
 
-                    [NameInMap("ModifyTime")]
+                    [NameInMap("VideoId")]
                     [Validation(Required=false)]
-                    public string ModifyTime { get; set; }
+                    public string VideoId { get; set; }
 
                 }
-                public string AppName { get; set; }
-                public string PlaylistId { get; set; }
-                public string StreamName { get; set; }
-                public string RecordEndTime { get; set; }
-                public string RecordStartTime { get; set; }
-                public string DomainName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

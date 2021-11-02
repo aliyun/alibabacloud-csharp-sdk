@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DetachAppPolicyFromIdentityResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("FailedPolicyNames")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<string> FailedPolicyNames { get; set; }
 
         [NameInMap("NonExistPolicyNames")]
         [Validation(Required=false)]
         public List<string> NonExistPolicyNames { get; set; }
 
-        [NameInMap("FailedPolicyNames")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<string> FailedPolicyNames { get; set; }
+        public string RequestId { get; set; }
 
     }
 

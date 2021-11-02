@@ -9,55 +9,61 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIMediaAuditJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MediaAuditJob")]
         [Validation(Required=false)]
         public GetAIMediaAuditJobResponseBodyMediaAuditJob MediaAuditJob { get; set; }
         public class GetAIMediaAuditJobResponseBodyMediaAuditJob : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+            [NameInMap("CompleteTime")]
+            [Validation(Required=false)]
+            public string CompleteTime { get; set; }
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
             [NameInMap("Data")]
             [Validation(Required=false)]
             public GetAIMediaAuditJobResponseBodyMediaAuditJobData Data { get; set; }
             public class GetAIMediaAuditJobResponseBodyMediaAuditJobData : TeaModel {
-                [NameInMap("Suggestion")]
+                [NameInMap("AbnormalModules")]
                 [Validation(Required=false)]
-                public string Suggestion { get; set; }
+                public string AbnormalModules { get; set; }
 
-                [NameInMap("ImageResult")]
+                [NameInMap("AudioResult")]
                 [Validation(Required=false)]
-                public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> ImageResult { get; set; }
-                public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult : TeaModel {
-                    [NameInMap("Type")]
+                public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> AudioResult { get; set; }
+                public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult : TeaModel {
+                    [NameInMap("Label")]
                     [Validation(Required=false)]
-                    public string Type { get; set; }
+                    public string Label { get; set; }
+
+                    [NameInMap("Scene")]
+                    [Validation(Required=false)]
+                    public string Scene { get; set; }
+
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public string Score { get; set; }
 
                     [NameInMap("Suggestion")]
                     [Validation(Required=false)]
                     public string Suggestion { get; set; }
 
+                }
+
+                [NameInMap("ImageResult")]
+                [Validation(Required=false)]
+                public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> ImageResult { get; set; }
+                public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult : TeaModel {
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
+                    public string Label { get; set; }
+
                     [NameInMap("Result")]
                     [Validation(Required=false)]
                     public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> Result { get; set; }
                     public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult : TeaModel {
-                        [NameInMap("Suggestion")]
-                        [Validation(Required=false)]
-                        public string Suggestion { get; set; }
-
-                        [NameInMap("Score")]
-                        [Validation(Required=false)]
-                        public string Score { get; set; }
-
                         [NameInMap("Label")]
                         [Validation(Required=false)]
                         public string Label { get; set; }
@@ -66,29 +72,45 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         [Validation(Required=false)]
                         public string Scene { get; set; }
 
+                        [NameInMap("Score")]
+                        [Validation(Required=false)]
+                        public string Score { get; set; }
+
+                        [NameInMap("Suggestion")]
+                        [Validation(Required=false)]
+                        public string Suggestion { get; set; }
+
                     }
+
+                    [NameInMap("Suggestion")]
+                    [Validation(Required=false)]
+                    public string Suggestion { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
 
                     [NameInMap("Url")]
                     [Validation(Required=false)]
                     public string Url { get; set; }
 
-                    [NameInMap("Label")]
-                    [Validation(Required=false)]
-                    public string Label { get; set; }
-
                 }
 
-                [NameInMap("AudioResult")]
+                [NameInMap("Label")]
                 [Validation(Required=false)]
-                public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> AudioResult { get; set; }
-                public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult : TeaModel {
-                    [NameInMap("Suggestion")]
-                    [Validation(Required=false)]
-                    public string Suggestion { get; set; }
+                public string Label { get; set; }
 
-                    [NameInMap("Score")]
+                [NameInMap("Suggestion")]
+                [Validation(Required=false)]
+                public string Suggestion { get; set; }
+
+                [NameInMap("TextResult")]
+                [Validation(Required=false)]
+                public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult> TextResult { get; set; }
+                public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult : TeaModel {
+                    [NameInMap("Content")]
                     [Validation(Required=false)]
-                    public string Score { get; set; }
+                    public string Content { get; set; }
 
                     [NameInMap("Label")]
                     [Validation(Required=false)]
@@ -98,216 +120,28 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     [Validation(Required=false)]
                     public string Scene { get; set; }
 
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public string Score { get; set; }
+
+                    [NameInMap("Suggestion")]
+                    [Validation(Required=false)]
+                    public string Suggestion { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
                 }
 
                 [NameInMap("VideoResult")]
                 [Validation(Required=false)]
                 public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult VideoResult { get; set; }
                 public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult : TeaModel {
-                    [NameInMap("LogoResult")]
-                    [Validation(Required=false)]
-                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult LogoResult { get; set; }
-                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult : TeaModel {
-                        [NameInMap("Suggestion")]
-                        [Validation(Required=false)]
-                        public string Suggestion { get; set; }
-
-                        [NameInMap("TopList")]
-                        [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> TopList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList : TeaModel {
-                            [NameInMap("Url")]
-                            [Validation(Required=false)]
-                            public string Url { get; set; }
-
-                            [NameInMap("Score")]
-                            [Validation(Required=false)]
-                            public string Score { get; set; }
-
-                            [NameInMap("Timestamp")]
-                            [Validation(Required=false)]
-                            public string Timestamp { get; set; }
-
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
-                        }
-
-                        [NameInMap("AverageScore")]
-                        [Validation(Required=false)]
-                        public string AverageScore { get; set; }
-
-                        [NameInMap("CounterList")]
-                        [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> CounterList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList : TeaModel {
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
-                            [NameInMap("Count")]
-                            [Validation(Required=false)]
-                            public int? Count { get; set; }
-
-                        }
-
-                        [NameInMap("Label")]
-                        [Validation(Required=false)]
-                        public string Label { get; set; }
-
-                        [NameInMap("MaxScore")]
-                        [Validation(Required=false)]
-                        public string MaxScore { get; set; }
-
-                    }
-                    [NameInMap("Suggestion")]
-                    [Validation(Required=false)]
-                    public string Suggestion { get; set; }
-                    [NameInMap("LiveResult")]
-                    [Validation(Required=false)]
-                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult LiveResult { get; set; }
-                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult : TeaModel {
-                        [NameInMap("Suggestion")]
-                        [Validation(Required=false)]
-                        public string Suggestion { get; set; }
-
-                        [NameInMap("TopList")]
-                        [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> TopList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList : TeaModel {
-                            [NameInMap("Url")]
-                            [Validation(Required=false)]
-                            public string Url { get; set; }
-
-                            [NameInMap("Score")]
-                            [Validation(Required=false)]
-                            public string Score { get; set; }
-
-                            [NameInMap("Timestamp")]
-                            [Validation(Required=false)]
-                            public string Timestamp { get; set; }
-
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
-                        }
-
-                        [NameInMap("AverageScore")]
-                        [Validation(Required=false)]
-                        public string AverageScore { get; set; }
-
-                        [NameInMap("CounterList")]
-                        [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> CounterList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList : TeaModel {
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
-                            [NameInMap("Count")]
-                            [Validation(Required=false)]
-                            public int? Count { get; set; }
-
-                        }
-
-                        [NameInMap("Label")]
-                        [Validation(Required=false)]
-                        public string Label { get; set; }
-
-                        [NameInMap("MaxScore")]
-                        [Validation(Required=false)]
-                        public string MaxScore { get; set; }
-
-                    }
-                    [NameInMap("PornResult")]
-                    [Validation(Required=false)]
-                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult PornResult { get; set; }
-                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult : TeaModel {
-                        [NameInMap("Suggestion")]
-                        [Validation(Required=false)]
-                        public string Suggestion { get; set; }
-
-                        [NameInMap("TopList")]
-                        [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> TopList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList : TeaModel {
-                            [NameInMap("Url")]
-                            [Validation(Required=false)]
-                            public string Url { get; set; }
-
-                            [NameInMap("Score")]
-                            [Validation(Required=false)]
-                            public string Score { get; set; }
-
-                            [NameInMap("Timestamp")]
-                            [Validation(Required=false)]
-                            public string Timestamp { get; set; }
-
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
-                        }
-
-                        [NameInMap("AverageScore")]
-                        [Validation(Required=false)]
-                        public string AverageScore { get; set; }
-
-                        [NameInMap("CounterList")]
-                        [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> CounterList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList : TeaModel {
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
-                            [NameInMap("Count")]
-                            [Validation(Required=false)]
-                            public int? Count { get; set; }
-
-                        }
-
-                        [NameInMap("Label")]
-                        [Validation(Required=false)]
-                        public string Label { get; set; }
-
-                        [NameInMap("MaxScore")]
-                        [Validation(Required=false)]
-                        public string MaxScore { get; set; }
-
-                    }
                     [NameInMap("AdResult")]
                     [Validation(Required=false)]
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult AdResult { get; set; }
                     public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult : TeaModel {
-                        [NameInMap("Suggestion")]
-                        [Validation(Required=false)]
-                        public string Suggestion { get; set; }
-
-                        [NameInMap("TopList")]
-                        [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> TopList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList : TeaModel {
-                            [NameInMap("Url")]
-                            [Validation(Required=false)]
-                            public string Url { get; set; }
-
-                            [NameInMap("Score")]
-                            [Validation(Required=false)]
-                            public string Score { get; set; }
-
-                            [NameInMap("Timestamp")]
-                            [Validation(Required=false)]
-                            public string Timestamp { get; set; }
-
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
-                        }
-
                         [NameInMap("AverageScore")]
                         [Validation(Required=false)]
                         public string AverageScore { get; set; }
@@ -316,13 +150,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         [Validation(Required=false)]
                         public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> CounterList { get; set; }
                         public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList : TeaModel {
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
                             [NameInMap("Count")]
                             [Validation(Required=false)]
                             public int? Count { get; set; }
+
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
 
                         }
 
@@ -334,25 +168,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         [Validation(Required=false)]
                         public string MaxScore { get; set; }
 
-                    }
-                    [NameInMap("Label")]
-                    [Validation(Required=false)]
-                    public string Label { get; set; }
-                    [NameInMap("TerrorismResult")]
-                    [Validation(Required=false)]
-                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult TerrorismResult { get; set; }
-                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult : TeaModel {
                         [NameInMap("Suggestion")]
                         [Validation(Required=false)]
                         public string Suggestion { get; set; }
 
                         [NameInMap("TopList")]
                         [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> TopList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList : TeaModel {
-                            [NameInMap("Url")]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> TopList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList : TeaModel {
+                            [NameInMap("Label")]
                             [Validation(Required=false)]
-                            public string Url { get; set; }
+                            public string Label { get; set; }
 
                             [NameInMap("Score")]
                             [Validation(Required=false)]
@@ -362,27 +188,35 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             [Validation(Required=false)]
                             public string Timestamp { get; set; }
 
-                            [NameInMap("Label")]
+                            [NameInMap("Url")]
                             [Validation(Required=false)]
-                            public string Label { get; set; }
+                            public string Url { get; set; }
 
                         }
 
+                    }
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
+                    public string Label { get; set; }
+                    [NameInMap("LiveResult")]
+                    [Validation(Required=false)]
+                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult LiveResult { get; set; }
+                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult : TeaModel {
                         [NameInMap("AverageScore")]
                         [Validation(Required=false)]
                         public string AverageScore { get; set; }
 
                         [NameInMap("CounterList")]
                         [Validation(Required=false)]
-                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> CounterList { get; set; }
-                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList : TeaModel {
-                            [NameInMap("Label")]
-                            [Validation(Required=false)]
-                            public string Label { get; set; }
-
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> CounterList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList : TeaModel {
                             [NameInMap("Count")]
                             [Validation(Required=false)]
                             public int? Count { get; set; }
+
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
 
                         }
 
@@ -394,64 +228,230 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         [Validation(Required=false)]
                         public string MaxScore { get; set; }
 
+                        [NameInMap("Suggestion")]
+                        [Validation(Required=false)]
+                        public string Suggestion { get; set; }
+
+                        [NameInMap("TopList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> TopList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList : TeaModel {
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                            [NameInMap("Score")]
+                            [Validation(Required=false)]
+                            public string Score { get; set; }
+
+                            [NameInMap("Timestamp")]
+                            [Validation(Required=false)]
+                            public string Timestamp { get; set; }
+
+                            [NameInMap("Url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
                     }
-                };
-
-                [NameInMap("AbnormalModules")]
-                [Validation(Required=false)]
-                public string AbnormalModules { get; set; }
-
-                [NameInMap("Label")]
-                [Validation(Required=false)]
-                public string Label { get; set; }
-
-                [NameInMap("TextResult")]
-                [Validation(Required=false)]
-                public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult> TextResult { get; set; }
-                public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult : TeaModel {
-                    [NameInMap("Type")]
+                    [NameInMap("LogoResult")]
                     [Validation(Required=false)]
-                    public string Type { get; set; }
+                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult LogoResult { get; set; }
+                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult : TeaModel {
+                        [NameInMap("AverageScore")]
+                        [Validation(Required=false)]
+                        public string AverageScore { get; set; }
 
+                        [NameInMap("CounterList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> CounterList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList : TeaModel {
+                            [NameInMap("Count")]
+                            [Validation(Required=false)]
+                            public int? Count { get; set; }
+
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                        }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("MaxScore")]
+                        [Validation(Required=false)]
+                        public string MaxScore { get; set; }
+
+                        [NameInMap("Suggestion")]
+                        [Validation(Required=false)]
+                        public string Suggestion { get; set; }
+
+                        [NameInMap("TopList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> TopList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList : TeaModel {
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                            [NameInMap("Score")]
+                            [Validation(Required=false)]
+                            public string Score { get; set; }
+
+                            [NameInMap("Timestamp")]
+                            [Validation(Required=false)]
+                            public string Timestamp { get; set; }
+
+                            [NameInMap("Url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
+                    [NameInMap("PornResult")]
+                    [Validation(Required=false)]
+                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult PornResult { get; set; }
+                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult : TeaModel {
+                        [NameInMap("AverageScore")]
+                        [Validation(Required=false)]
+                        public string AverageScore { get; set; }
+
+                        [NameInMap("CounterList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> CounterList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList : TeaModel {
+                            [NameInMap("Count")]
+                            [Validation(Required=false)]
+                            public int? Count { get; set; }
+
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                        }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("MaxScore")]
+                        [Validation(Required=false)]
+                        public string MaxScore { get; set; }
+
+                        [NameInMap("Suggestion")]
+                        [Validation(Required=false)]
+                        public string Suggestion { get; set; }
+
+                        [NameInMap("TopList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> TopList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList : TeaModel {
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                            [NameInMap("Score")]
+                            [Validation(Required=false)]
+                            public string Score { get; set; }
+
+                            [NameInMap("Timestamp")]
+                            [Validation(Required=false)]
+                            public string Timestamp { get; set; }
+
+                            [NameInMap("Url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
                     [NameInMap("Suggestion")]
                     [Validation(Required=false)]
                     public string Suggestion { get; set; }
-
-                    [NameInMap("Score")]
+                    [NameInMap("TerrorismResult")]
                     [Validation(Required=false)]
-                    public string Score { get; set; }
+                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult TerrorismResult { get; set; }
+                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult : TeaModel {
+                        [NameInMap("AverageScore")]
+                        [Validation(Required=false)]
+                        public string AverageScore { get; set; }
 
-                    [NameInMap("Label")]
-                    [Validation(Required=false)]
-                    public string Label { get; set; }
+                        [NameInMap("CounterList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> CounterList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList : TeaModel {
+                            [NameInMap("Count")]
+                            [Validation(Required=false)]
+                            public int? Count { get; set; }
 
-                    [NameInMap("Content")]
-                    [Validation(Required=false)]
-                    public string Content { get; set; }
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
 
-                    [NameInMap("Scene")]
-                    [Validation(Required=false)]
-                    public string Scene { get; set; }
+                        }
 
-                }
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("MaxScore")]
+                        [Validation(Required=false)]
+                        public string MaxScore { get; set; }
+
+                        [NameInMap("Suggestion")]
+                        [Validation(Required=false)]
+                        public string Suggestion { get; set; }
+
+                        [NameInMap("TopList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> TopList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList : TeaModel {
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                            [NameInMap("Score")]
+                            [Validation(Required=false)]
+                            public string Score { get; set; }
+
+                            [NameInMap("Timestamp")]
+                            [Validation(Required=false)]
+                            public string Timestamp { get; set; }
+
+                            [NameInMap("Url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
+                };
 
             }
-            [NameInMap("CompleteTime")]
-            [Validation(Required=false)]
-            public string CompleteTime { get; set; }
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
             [NameInMap("MediaId")]
             [Validation(Required=false)]
             public string MediaId { get; set; }
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

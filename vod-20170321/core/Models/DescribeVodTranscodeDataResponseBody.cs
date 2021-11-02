@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodTranscodeDataResponseBody : TeaModel {
+        [NameInMap("DataInterval")]
+        [Validation(Required=false)]
+        public string DataInterval { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -27,13 +31,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     [Validation(Required=false)]
                     public List<DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem> DataItem { get; set; }
                     public class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem : TeaModel {
-                        [NameInMap("Value")]
-                        [Validation(Required=false)]
-                        public string Value { get; set; }
-
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
                     }
 
@@ -41,10 +45,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string TimeStamp { get; set; }
             }
         };
-
-        [NameInMap("DataInterval")]
-        [Validation(Required=false)]
-        public string DataInterval { get; set; }
 
     }
 

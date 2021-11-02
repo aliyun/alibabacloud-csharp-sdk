@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
-            [NameInMap("SecurityGroupName")]
-            [Validation(Required=false)]
-            public string SecurityGroupName { get; set; }
-
             [NameInMap("Ips")]
             [Validation(Required=false)]
             public string Ips { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
+
+            [NameInMap("SecurityGroupName")]
+            [Validation(Required=false)]
+            public string SecurityGroupName { get; set; }
 
         }
 

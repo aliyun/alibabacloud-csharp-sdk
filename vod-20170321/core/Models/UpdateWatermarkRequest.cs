@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("WatermarkId")]
-        [Validation(Required=false)]
-        public string WatermarkId { get; set; }
-
         [NameInMap("WatermarkConfig")]
         [Validation(Required=false)]
         public string WatermarkConfig { get; set; }
+
+        [NameInMap("WatermarkId")]
+        [Validation(Required=false)]
+        public string WatermarkId { get; set; }
 
     }
 

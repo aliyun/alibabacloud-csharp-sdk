@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public List<DescribeVodTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class DescribeVodTagResourcesResponseBodyTagResources : TeaModel {
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
+
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<DescribeVodTagResourcesResponseBodyTagResourcesTag> Tag { get; set; }
@@ -30,10 +34,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Value { get; set; }
 
             }
-
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
 
         }
 

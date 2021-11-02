@@ -17,33 +17,33 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public List<ListTranscodeTaskResponseBodyTranscodeTaskList> TranscodeTaskList { get; set; }
         public class ListTranscodeTaskResponseBodyTranscodeTaskList : TeaModel {
+            [NameInMap("CompleteTime")]
+            [Validation(Required=false)]
+            public string CompleteTime { get; set; }
+
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
-
-            [NameInMap("Trigger")]
-            [Validation(Required=false)]
-            public string Trigger { get; set; }
 
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
 
-            [NameInMap("VideoId")]
+            [NameInMap("TranscodeTaskId")]
             [Validation(Required=false)]
-            public string VideoId { get; set; }
-
-            [NameInMap("CompleteTime")]
-            [Validation(Required=false)]
-            public string CompleteTime { get; set; }
+            public string TranscodeTaskId { get; set; }
 
             [NameInMap("TranscodeTemplateGroupId")]
             [Validation(Required=false)]
             public string TranscodeTemplateGroupId { get; set; }
 
-            [NameInMap("TranscodeTaskId")]
+            [NameInMap("Trigger")]
             [Validation(Required=false)]
-            public string TranscodeTaskId { get; set; }
+            public string Trigger { get; set; }
+
+            [NameInMap("VideoId")]
+            [Validation(Required=false)]
+            public string VideoId { get; set; }
 
         }
 

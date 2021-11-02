@@ -1,3 +1,6 @@
+2021-11-02 Version: 2.16.0
+- Add API UploadStreamByURL.
+
 2021-03-08 Version: 2.0.1
 - Generated csharp 2017-03-21 for vod.
 

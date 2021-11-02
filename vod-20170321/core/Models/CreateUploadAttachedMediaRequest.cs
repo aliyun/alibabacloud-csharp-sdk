@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateUploadAttachedMediaRequest : TeaModel {
-        [NameInMap("Title")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string AppId { get; set; }
 
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public string BusinessType { get; set; }
 
-        [NameInMap("MediaExt")]
+        [NameInMap("CateIds")]
         [Validation(Required=false)]
-        public string MediaExt { get; set; }
+        public string CateIds { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -29,37 +33,25 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string FileSize { get; set; }
 
-        [NameInMap("Tags")]
+        [NameInMap("MediaExt")]
         [Validation(Required=false)]
-        public string Tags { get; set; }
-
-        [NameInMap("CateId")]
-        [Validation(Required=false)]
-        public long? CateId { get; set; }
+        public string MediaExt { get; set; }
 
         [NameInMap("StorageLocation")]
         [Validation(Required=false)]
         public string StorageLocation { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("Tags")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Tags { get; set; }
+
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
-
-        [NameInMap("CateIds")]
-        [Validation(Required=false)]
-        public string CateIds { get; set; }
-
-        [NameInMap("AppId")]
-        [Validation(Required=false)]
-        public string AppId { get; set; }
-
-        [NameInMap("Icon")]
-        [Validation(Required=false)]
-        public string Icon { get; set; }
 
     }
 

@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class MoveAppResourceRequest : TeaModel {
-        [NameInMap("ResourceRealOwnerId")]
+        [NameInMap("ResourceIds")]
         [Validation(Required=false)]
-        public long? ResourceRealOwnerId { get; set; }
-
-        [NameInMap("TargetAppId")]
-        [Validation(Required=false)]
-        public string TargetAppId { get; set; }
+        public string ResourceIds { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("ResourceIds")]
+        [NameInMap("TargetAppId")]
         [Validation(Required=false)]
-        public string ResourceIds { get; set; }
+        public string TargetAppId { get; set; }
 
     }
 

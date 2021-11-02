@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> List { get; set; }
             public class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList : TeaModel {
                 public long? EndTime { get; set; }
+                public string Label { get; set; }
                 public long? StartTime { get; set; }
                 public string Text { get; set; }
-                public string Label { get; set; }
             }
             [NameInMap("PageTotal")]
             [Validation(Required=false)]

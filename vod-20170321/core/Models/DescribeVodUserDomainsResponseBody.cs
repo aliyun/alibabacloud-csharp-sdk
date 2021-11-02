@@ -17,57 +17,57 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodUserDomainsResponseBodyDomainsPageData> PageData { get; set; }
             public class DescribeVodUserDomainsResponseBodyDomainsPageData : TeaModel {
-                public string GmtCreated { get; set; }
-                public string SslProtocol { get; set; }
-                public string Description { get; set; }
-                public string Sandbox { get; set; }
                 public string Cname { get; set; }
+                public string Description { get; set; }
+                public string DomainName { get; set; }
                 public string DomainStatus { get; set; }
+                public string GmtCreated { get; set; }
+                public string GmtModified { get; set; }
+                public string Sandbox { get; set; }
                 public DescribeVodUserDomainsResponseBodyDomainsPageDataSources Sources { get; set; }
                 public class DescribeVodUserDomainsResponseBodyDomainsPageDataSources : TeaModel {
                     [NameInMap("Source")]
                     [Validation(Required=false)]
                     public List<DescribeVodUserDomainsResponseBodyDomainsPageDataSourcesSource> Source { get; set; }
                     public class DescribeVodUserDomainsResponseBodyDomainsPageDataSourcesSource : TeaModel {
-                        [NameInMap("Type")]
+                        [NameInMap("Content")]
                         [Validation(Required=false)]
-                        public string Type { get; set; }
-
-                        [NameInMap("Priority")]
-                        [Validation(Required=false)]
-                        public string Priority { get; set; }
+                        public string Content { get; set; }
 
                         [NameInMap("Port")]
                         [Validation(Required=false)]
                         public int? Port { get; set; }
 
-                        [NameInMap("Content")]
+                        [NameInMap("Priority")]
                         [Validation(Required=false)]
-                        public string Content { get; set; }
+                        public string Priority { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
 
                     }
 
                 }
-                public string GmtModified { get; set; }
-                public string DomainName { get; set; }
+                public string SslProtocol { get; set; }
             }
         };
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitPreprocessJobsRequest : TeaModel {
-        [NameInMap("VideoId")]
-        [Validation(Required=false)]
-        public string VideoId { get; set; }
-
         [NameInMap("PreprocessType")]
         [Validation(Required=false)]
         public string PreprocessType { get; set; }
+
+        [NameInMap("VideoId")]
+        [Validation(Required=false)]
+        public string VideoId { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class CreateAppInfoRequest : TeaModel {
-        [NameInMap("ResourceRealOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceRealOwnerId { get; set; }
-
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }

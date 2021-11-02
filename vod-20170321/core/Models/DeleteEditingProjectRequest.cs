@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteEditingProjectRequest : TeaModel {
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ProjectIds")]
         [Validation(Required=false)]
-        public string ResourceOwnerId { get; set; }
+        public string ProjectIds { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("ProjectIds")]
-        [Validation(Required=false)]
-        public string ProjectIds { get; set; }
+        public string ResourceOwnerId { get; set; }
 
     }
 

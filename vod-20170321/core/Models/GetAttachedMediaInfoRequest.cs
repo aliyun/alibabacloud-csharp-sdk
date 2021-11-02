@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAttachedMediaInfoRequest : TeaModel {
-        [NameInMap("MediaIds")]
-        [Validation(Required=false)]
-        public string MediaIds { get; set; }
-
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
-        [NameInMap("ResourceRealOwnerId")]
+        [NameInMap("MediaIds")]
         [Validation(Required=false)]
-        public long? ResourceRealOwnerId { get; set; }
+        public string MediaIds { get; set; }
 
         [NameInMap("OutputType")]
         [Validation(Required=false)]

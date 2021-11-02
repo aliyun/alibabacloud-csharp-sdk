@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitWorkflowJobRequest : TeaModel {
-        [NameInMap("WorkflowId")]
-        [Validation(Required=false)]
-        public string WorkflowId { get; set; }
-
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
-        [NameInMap("FileUrl")]
+        [NameInMap("WorkflowId")]
         [Validation(Required=false)]
-        public string FileUrl { get; set; }
+        public string WorkflowId { get; set; }
 
     }
 

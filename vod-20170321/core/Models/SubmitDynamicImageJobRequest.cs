@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitDynamicImageJobRequest : TeaModel {
-        [NameInMap("VideoId")]
-        [Validation(Required=false)]
-        public string VideoId { get; set; }
-
         [NameInMap("DynamicImageTemplateId")]
         [Validation(Required=false)]
         public string DynamicImageTemplateId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("OverrideParams")]
         [Validation(Required=false)]
         public string OverrideParams { get; set; }
+
+        [NameInMap("VideoId")]
+        [Validation(Required=false)]
+        public string VideoId { get; set; }
 
     }
 

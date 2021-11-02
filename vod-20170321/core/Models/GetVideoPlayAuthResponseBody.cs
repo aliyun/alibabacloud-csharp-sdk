@@ -13,30 +13,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string PlayAuth { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("VideoMeta")]
         [Validation(Required=false)]
         public GetVideoPlayAuthResponseBodyVideoMeta VideoMeta { get; set; }
         public class GetVideoPlayAuthResponseBodyVideoMeta : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("VideoId")]
-            [Validation(Required=false)]
-            public string VideoId { get; set; }
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public float? Duration { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
+            [NameInMap("VideoId")]
+            [Validation(Required=false)]
+            public string VideoId { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

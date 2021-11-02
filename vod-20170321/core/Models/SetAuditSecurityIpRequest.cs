@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetAuditSecurityIpRequest : TeaModel {
-        [NameInMap("SecurityGroupName")]
-        [Validation(Required=false)]
-        public string SecurityGroupName { get; set; }
-
         [NameInMap("Ips")]
         [Validation(Required=false)]
         public string Ips { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("OperateMode")]
         [Validation(Required=false)]
         public string OperateMode { get; set; }
+
+        [NameInMap("SecurityGroupName")]
+        [Validation(Required=false)]
+        public string SecurityGroupName { get; set; }
 
     }
 

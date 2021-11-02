@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SetMessageCallbackRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string AppId { get; set; }
 
-        [NameInMap("CallbackSwitch")]
+        [NameInMap("AuthKey")]
         [Validation(Required=false)]
-        public string CallbackSwitch { get; set; }
+        public string AuthKey { get; set; }
+
+        [NameInMap("AuthSwitch")]
+        [Validation(Required=false)]
+        public string AuthSwitch { get; set; }
 
         [NameInMap("CallbackType")]
         [Validation(Required=false)]
@@ -29,18 +33,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string EventTypeList { get; set; }
 
-        [NameInMap("AuthSwitch")]
-        [Validation(Required=false)]
-        public string AuthSwitch { get; set; }
-
-        [NameInMap("AuthKey")]
-        [Validation(Required=false)]
-        public string AuthKey { get; set; }
-
-        [NameInMap("ResourceRealOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceRealOwnerId { get; set; }
-
         [NameInMap("MnsEndpoint")]
         [Validation(Required=false)]
         public string MnsEndpoint { get; set; }
@@ -49,9 +41,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string MnsQueueName { get; set; }
 
-        [NameInMap("AppId")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public string OwnerAccount { get; set; }
 
     }
 

@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodRefreshTasksResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public long? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -21,27 +29,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodRefreshTasksResponseBodyTasksTask> Task { get; set; }
             public class DescribeVodRefreshTasksResponseBodyTasksTask : TeaModel {
-                public string Status { get; set; }
                 public string CreationTime { get; set; }
-                public string ObjectType { get; set; }
-                public string Process { get; set; }
                 public string Description { get; set; }
                 public string ObjectPath { get; set; }
+                public string ObjectType { get; set; }
+                public string Process { get; set; }
+                public string Status { get; set; }
                 public string TaskId { get; set; }
             }
         };
 
-        [NameInMap("RequestId")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

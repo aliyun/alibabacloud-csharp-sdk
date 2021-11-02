@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitTranscodeJobsRequest : TeaModel {
-        [NameInMap("VideoId")]
-        [Validation(Required=false)]
-        public string VideoId { get; set; }
-
-        [NameInMap("TemplateGroupId")]
-        [Validation(Required=false)]
-        public string TemplateGroupId { get; set; }
-
-        [NameInMap("PipelineId")]
-        [Validation(Required=false)]
-        public string PipelineId { get; set; }
-
         [NameInMap("EncryptConfig")]
         [Validation(Required=false)]
         public string EncryptConfig { get; set; }
@@ -29,17 +17,25 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string OverrideParams { get; set; }
 
+        [NameInMap("PipelineId")]
+        [Validation(Required=false)]
+        public string PipelineId { get; set; }
+
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public string Priority { get; set; }
+
+        [NameInMap("TemplateGroupId")]
+        [Validation(Required=false)]
+        public string TemplateGroupId { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
-        [NameInMap("FileUrl")]
+        [NameInMap("VideoId")]
         [Validation(Required=false)]
-        public string FileUrl { get; set; }
+        public string VideoId { get; set; }
 
     }
 

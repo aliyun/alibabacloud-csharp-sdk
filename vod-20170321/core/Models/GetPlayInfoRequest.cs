@@ -9,57 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetPlayInfoRequest : TeaModel {
-        [NameInMap("VideoId")]
+        [NameInMap("AdditionType")]
         [Validation(Required=false)]
-        public string VideoId { get; set; }
-
-        [NameInMap("Formats")]
-        [Validation(Required=false)]
-        public string Formats { get; set; }
+        public string AdditionType { get; set; }
 
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
-        [NameInMap("Rand")]
+        [NameInMap("Definition")]
         [Validation(Required=false)]
-        public string Rand { get; set; }
+        public string Definition { get; set; }
 
-        [NameInMap("AuthInfo")]
+        [NameInMap("Formats")]
         [Validation(Required=false)]
-        public string AuthInfo { get; set; }
-
-        [NameInMap("Channel")]
-        [Validation(Required=false)]
-        public string Channel { get; set; }
-
-        [NameInMap("PlayerVersion")]
-        [Validation(Required=false)]
-        public string PlayerVersion { get; set; }
+        public string Formats { get; set; }
 
         [NameInMap("OutputType")]
         [Validation(Required=false)]
         public string OutputType { get; set; }
 
-        [NameInMap("StreamType")]
+        [NameInMap("PlayConfig")]
         [Validation(Required=false)]
-        public string StreamType { get; set; }
+        public string PlayConfig { get; set; }
 
         [NameInMap("ReAuthInfo")]
         [Validation(Required=false)]
         public string ReAuthInfo { get; set; }
 
-        [NameInMap("Definition")]
-        [Validation(Required=false)]
-        public string Definition { get; set; }
-
         [NameInMap("ResultType")]
         [Validation(Required=false)]
         public string ResultType { get; set; }
 
-        [NameInMap("PlayConfig")]
+        [NameInMap("StreamType")]
         [Validation(Required=false)]
-        public string PlayConfig { get; set; }
+        public string StreamType { get; set; }
+
+        [NameInMap("VideoId")]
+        [Validation(Required=false)]
+        public string VideoId { get; set; }
 
     }
 

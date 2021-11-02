@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoPlayAuthRequest : TeaModel {
-        [NameInMap("VideoId")]
-        [Validation(Required=false)]
-        public string VideoId { get; set; }
-
         [NameInMap("AuthInfoTimeout")]
         [Validation(Required=false)]
         public long? AuthInfoTimeout { get; set; }
 
-        [NameInMap("ReAuthInfo")]
+        [NameInMap("VideoId")]
         [Validation(Required=false)]
-        public string ReAuthInfo { get; set; }
-
-        [NameInMap("PlayConfig")]
-        [Validation(Required=false)]
-        public string PlayConfig { get; set; }
+        public string VideoId { get; set; }
 
     }
 

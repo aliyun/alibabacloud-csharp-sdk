@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteTranscodeTemplateGroupRequest : TeaModel {
+        [NameInMap("ForceDelGroup")]
+        [Validation(Required=false)]
+        public string ForceDelGroup { get; set; }
+
         [NameInMap("TranscodeTemplateGroupId")]
         [Validation(Required=false)]
         public string TranscodeTemplateGroupId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("TranscodeTemplateIds")]
         [Validation(Required=false)]
         public string TranscodeTemplateIds { get; set; }
-
-        [NameInMap("ForceDelGroup")]
-        [Validation(Required=false)]
-        public string ForceDelGroup { get; set; }
 
     }
 

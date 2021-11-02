@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListMediaDNADeleteJobRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("JobIds")]
         [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public string ResourceOwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string JobIds { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("JobIds")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string JobIds { get; set; }
+        public string OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public string ResourceOwnerId { get; set; }
 
     }
 

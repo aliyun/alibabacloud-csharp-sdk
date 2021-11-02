@@ -9,49 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateEditingProjectRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CoverURL")]
         [Validation(Required=false)]
-        public string OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public string ResourceOwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public string ProjectId { get; set; }
-
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
-
-        [NameInMap("Timeline")]
-        [Validation(Required=false)]
-        public string Timeline { get; set; }
+        public string CoverURL { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("CoverURL")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string CoverURL { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("FEExtend")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string FEExtend { get; set; }
+        public string OwnerId { get; set; }
 
-        [NameInMap("Duration")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public float? Duration { get; set; }
+        public string ProjectId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public string ResourceOwnerId { get; set; }
+
+        [NameInMap("Timeline")]
+        [Validation(Required=false)]
+        public string Timeline { get; set; }
+
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
 
     }
 

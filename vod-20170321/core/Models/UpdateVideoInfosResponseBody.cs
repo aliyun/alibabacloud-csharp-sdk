@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateVideoInfosResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ForbiddenVideoIds")]
         [Validation(Required=false)]
         public List<string> ForbiddenVideoIds { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("NonExistVideoIds")]
         [Validation(Required=false)]
         public List<string> NonExistVideoIds { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMezzanineInfoRequest : TeaModel {
-        [NameInMap("VideoId")]
+        [NameInMap("AdditionType")]
         [Validation(Required=false)]
-        public string VideoId { get; set; }
+        public string AdditionType { get; set; }
 
         [NameInMap("AuthTimeout")]
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
-        [NameInMap("PreviewSegment")]
-        [Validation(Required=false)]
-        public bool? PreviewSegment { get; set; }
-
         [NameInMap("OutputType")]
         [Validation(Required=false)]
         public string OutputType { get; set; }
 
-        [NameInMap("AdditionType")]
+        [NameInMap("VideoId")]
         [Validation(Required=false)]
-        public string AdditionType { get; set; }
+        public string VideoId { get; set; }
 
     }
 

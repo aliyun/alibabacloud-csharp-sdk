@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitPreprocessJobsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PreprocessJobs")]
         [Validation(Required=false)]
         public SubmitPreprocessJobsResponseBodyPreprocessJobs PreprocessJobs { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string JobId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

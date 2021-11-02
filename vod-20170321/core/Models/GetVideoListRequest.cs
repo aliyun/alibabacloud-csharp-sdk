@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public long? CateId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string Status { get; set; }
 
         [NameInMap("StorageLocation")]
         [Validation(Required=false)]

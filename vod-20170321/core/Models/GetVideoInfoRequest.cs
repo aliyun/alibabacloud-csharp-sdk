@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string VideoId { get; set; }
 
-        [NameInMap("ResultTypes")]
-        [Validation(Required=false)]
-        public string ResultTypes { get; set; }
-
-        [NameInMap("AdditionType")]
-        [Validation(Required=false)]
-        public string AdditionType { get; set; }
-
     }
 
 }

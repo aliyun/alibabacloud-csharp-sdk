@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class ListLiveRecordVideoRequest : TeaModel {
-        [NameInMap("StreamName")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string StreamName { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        [NameInMap("QueryType")]
-        [Validation(Required=false)]
-        public string QueryType { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -41,9 +37,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("StreamName")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string StreamName { get; set; }
 
     }
 
