@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
     public class WeatherforecastTimeResponseBody : TeaModel {
         /// <summary>
-        /// rt
+        /// code
         /// </summary>
-        [NameInMap("Rt")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? Rt { get; set; }
+        public string Code { get; set; }
+
+        /// <summary>
+        /// data
+        /// </summary>
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, object>> Data { get; set; }
 
         /// <summary>
         /// message
@@ -31,18 +38,11 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// data
+        /// rt
         /// </summary>
-        [NameInMap("Data")]
+        [NameInMap("Rt")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Data { get; set; }
-
-        /// <summary>
-        /// code
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
+        public long? Rt { get; set; }
 
         /// <summary>
         /// success

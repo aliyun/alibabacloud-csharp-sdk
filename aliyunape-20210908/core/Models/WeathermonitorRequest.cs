@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,11 +10,11 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
     public class WeathermonitorRequest : TeaModel {
         /// <summary>
-        /// UserId
+        /// 气象实况时间 yyyymmddhh0000 （数据最小时间2021-08-16）（小时）	20210817120000
         /// </summary>
-        [NameInMap("UserId")]
+        [NameInMap("CurHour")]
         [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public string CurHour { get; set; }
 
         /// <summary>
         /// 用户中心--我的订单--订单请求--实例名称：aliyunape_meteor12_public_cn-0ju2d2hh90b
@@ -27,11 +24,11 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// requestId
+        /// 页码
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageNum { get; set; }
 
         /// <summary>
         /// 页面条数
@@ -39,20 +36,6 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        /// <summary>
-        /// 气象实况时间 yyyymmddhh0000 （数据最小时间2021-08-16）（小时）	20210817120000
-        /// </summary>
-        [NameInMap("CurHour")]
-        [Validation(Required=false)]
-        public string CurHour { get; set; }
-
-        /// <summary>
-        /// 页码
-        /// </summary>
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public int? PageNum { get; set; }
 
     }
 

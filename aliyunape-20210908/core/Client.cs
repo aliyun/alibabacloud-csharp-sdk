@@ -37,68 +37,36 @@ namespace AlibabaCloud.SDK.Aliyunape20210908
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public WeathermonitorResponse WeathermonitorWithOptions(WeathermonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public HistoricalResponse HistoricalWithOptions(HistoricalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<WeathermonitorResponse>(DoRPCRequest("Weathermonitor", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<HistoricalResponse>(DoRPCRequest("Historical", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<WeathermonitorResponse> WeathermonitorWithOptionsAsync(WeathermonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<HistoricalResponse> HistoricalWithOptionsAsync(HistoricalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<WeathermonitorResponse>(await DoRPCRequestAsync("Weathermonitor", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<HistoricalResponse>(await DoRPCRequestAsync("Historical", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public WeathermonitorResponse Weathermonitor(WeathermonitorRequest request)
+        public HistoricalResponse Historical(HistoricalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return WeathermonitorWithOptions(request, runtime);
+            return HistoricalWithOptions(request, runtime);
         }
 
-        public async Task<WeathermonitorResponse> WeathermonitorAsync(WeathermonitorRequest request)
+        public async Task<HistoricalResponse> HistoricalAsync(HistoricalRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await WeathermonitorWithOptionsAsync(request, runtime);
-        }
-
-        public WeatherforecastTimeResponse WeatherforecastTimeWithOptions(WeatherforecastTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<WeatherforecastTimeResponse>(DoRPCRequest("WeatherforecastTime", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<WeatherforecastTimeResponse> WeatherforecastTimeWithOptionsAsync(WeatherforecastTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<WeatherforecastTimeResponse>(await DoRPCRequestAsync("WeatherforecastTime", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public WeatherforecastTimeResponse WeatherforecastTime(WeatherforecastTimeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return WeatherforecastTimeWithOptions(request, runtime);
-        }
-
-        public async Task<WeatherforecastTimeResponse> WeatherforecastTimeAsync(WeatherforecastTimeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await WeatherforecastTimeWithOptionsAsync(request, runtime);
+            return await HistoricalWithOptionsAsync(request, runtime);
         }
 
         public StationDayResponse StationDayWithOptions(StationDayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -165,36 +133,68 @@ namespace AlibabaCloud.SDK.Aliyunape20210908
             return await WeatherforecastWithOptionsAsync(request, runtime);
         }
 
-        public HistoricalResponse HistoricalWithOptions(HistoricalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public WeatherforecastTimeResponse WeatherforecastTimeWithOptions(WeatherforecastTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<HistoricalResponse>(DoRPCRequest("Historical", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<WeatherforecastTimeResponse>(DoRPCRequest("WeatherforecastTime", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public async Task<HistoricalResponse> HistoricalWithOptionsAsync(HistoricalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<WeatherforecastTimeResponse> WeatherforecastTimeWithOptionsAsync(WeatherforecastTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<HistoricalResponse>(await DoRPCRequestAsync("Historical", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
+            return TeaModel.ToObject<WeatherforecastTimeResponse>(await DoRPCRequestAsync("WeatherforecastTime", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
-        public HistoricalResponse Historical(HistoricalRequest request)
+        public WeatherforecastTimeResponse WeatherforecastTime(WeatherforecastTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return HistoricalWithOptions(request, runtime);
+            return WeatherforecastTimeWithOptions(request, runtime);
         }
 
-        public async Task<HistoricalResponse> HistoricalAsync(HistoricalRequest request)
+        public async Task<WeatherforecastTimeResponse> WeatherforecastTimeAsync(WeatherforecastTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await HistoricalWithOptionsAsync(request, runtime);
+            return await WeatherforecastTimeWithOptionsAsync(request, runtime);
+        }
+
+        public WeathermonitorResponse WeathermonitorWithOptions(WeathermonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<WeathermonitorResponse>(DoRPCRequest("Weathermonitor", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<WeathermonitorResponse> WeathermonitorWithOptionsAsync(WeathermonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<WeathermonitorResponse>(await DoRPCRequestAsync("Weathermonitor", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public WeathermonitorResponse Weathermonitor(WeathermonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WeathermonitorWithOptions(request, runtime);
+        }
+
+        public async Task<WeathermonitorResponse> WeathermonitorAsync(WeathermonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WeathermonitorWithOptionsAsync(request, runtime);
         }
 
     }
