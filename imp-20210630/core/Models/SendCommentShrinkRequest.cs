@@ -44,6 +44,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string SenderId { get; set; }
 
+        /// <summary>
+        /// 弹幕消息发送者的昵称。
+        /// </summary>
+        [NameInMap("SenderNick")]
+        [Validation(Required=false)]
+        public string SenderNick { get; set; }
+
     }
 
 }
