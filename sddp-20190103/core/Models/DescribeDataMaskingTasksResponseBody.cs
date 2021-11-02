@@ -17,69 +17,69 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public List<DescribeDataMaskingTasksResponseBodyItems> Items { get; set; }
         public class DescribeDataMaskingTasksResponseBodyItems : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("DstPath")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("Owner")]
-            [Validation(Required=false)]
-            public string Owner { get; set; }
-
-            [NameInMap("TaskName")]
-            [Validation(Required=false)]
-            public string TaskName { get; set; }
-
-            [NameInMap("SrcType")]
-            [Validation(Required=false)]
-            public int? SrcType { get; set; }
+            public string DstPath { get; set; }
 
             [NameInMap("DstType")]
             [Validation(Required=false)]
             public int? DstType { get; set; }
 
-            [NameInMap("HasUnfinishProcess")]
-            [Validation(Required=false)]
-            public bool? HasUnfinishProcess { get; set; }
-
-            [NameInMap("OriginalTable")]
-            [Validation(Required=false)]
-            public bool? OriginalTable { get; set; }
-
-            [NameInMap("TriggerType")]
-            [Validation(Required=false)]
-            public int? TriggerType { get; set; }
-
             [NameInMap("DstTypeCode")]
             [Validation(Required=false)]
             public string DstTypeCode { get; set; }
-
-            [NameInMap("RunCount")]
-            [Validation(Required=false)]
-            public int? RunCount { get; set; }
 
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
-            [NameInMap("TaskId")]
+            [NameInMap("HasUnfinishProcess")]
             [Validation(Required=false)]
-            public string TaskId { get; set; }
-
-            [NameInMap("DstPath")]
-            [Validation(Required=false)]
-            public string DstPath { get; set; }
-
-            [NameInMap("SrcTypeCode")]
-            [Validation(Required=false)]
-            public string SrcTypeCode { get; set; }
+            public bool? HasUnfinishProcess { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("OriginalTable")]
+            [Validation(Required=false)]
+            public bool? OriginalTable { get; set; }
+
+            [NameInMap("Owner")]
+            [Validation(Required=false)]
+            public string Owner { get; set; }
+
+            [NameInMap("RunCount")]
+            [Validation(Required=false)]
+            public int? RunCount { get; set; }
+
             [NameInMap("SrcPath")]
             [Validation(Required=false)]
             public string SrcPath { get; set; }
+
+            [NameInMap("SrcType")]
+            [Validation(Required=false)]
+            public int? SrcType { get; set; }
+
+            [NameInMap("SrcTypeCode")]
+            [Validation(Required=false)]
+            public string SrcTypeCode { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
+            [NameInMap("TaskName")]
+            [Validation(Required=false)]
+            public string TaskName { get; set; }
+
+            [NameInMap("TriggerType")]
+            [Validation(Required=false)]
+            public int? TriggerType { get; set; }
 
         }
 

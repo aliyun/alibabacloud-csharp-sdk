@@ -29,29 +29,49 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string DataType { get; set; }
 
-            [NameInMap("Owner")]
+            [NameInMap("Id")]
             [Validation(Required=false)]
-            public string Owner { get; set; }
-
-            [NameInMap("SensitiveRatio")]
-            [Validation(Required=false)]
-            public string SensitiveRatio { get; set; }
-
-            [NameInMap("Protection")]
-            [Validation(Required=false)]
-            public bool? Protection { get; set; }
+            public string Id { get; set; }
 
             [NameInMap("Labelsec")]
             [Validation(Required=false)]
             public bool? Labelsec { get; set; }
 
-            [NameInMap("TotalCount")]
+            [NameInMap("Name")]
             [Validation(Required=false)]
-            public int? TotalCount { get; set; }
+            public string Name { get; set; }
+
+            [NameInMap("ObjectKey")]
+            [Validation(Required=false)]
+            public string ObjectKey { get; set; }
+
+            [NameInMap("OdpsRiskLevelName")]
+            [Validation(Required=false)]
+            public string OdpsRiskLevelName { get; set; }
+
+            [NameInMap("Owner")]
+            [Validation(Required=false)]
+            public string Owner { get; set; }
+
+            [NameInMap("ProductCode")]
+            [Validation(Required=false)]
+            public string ProductCode { get; set; }
+
+            [NameInMap("ProductId")]
+            [Validation(Required=false)]
+            public string ProductId { get; set; }
+
+            [NameInMap("Protection")]
+            [Validation(Required=false)]
+            public bool? Protection { get; set; }
 
             [NameInMap("RiskLevelId")]
             [Validation(Required=false)]
             public long? RiskLevelId { get; set; }
+
+            [NameInMap("RiskLevelName")]
+            [Validation(Required=false)]
+            public string RiskLevelName { get; set; }
 
             [NameInMap("RuleName")]
             [Validation(Required=false)]
@@ -61,37 +81,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public bool? Sensitive { get; set; }
 
-            [NameInMap("ObjectKey")]
-            [Validation(Required=false)]
-            public string ObjectKey { get; set; }
-
-            [NameInMap("RiskLevelName")]
-            [Validation(Required=false)]
-            public string RiskLevelName { get; set; }
-
-            [NameInMap("OdpsRiskLevelName")]
-            [Validation(Required=false)]
-            public string OdpsRiskLevelName { get; set; }
-
-            [NameInMap("ProductId")]
-            [Validation(Required=false)]
-            public string ProductId { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("SensitiveCount")]
             [Validation(Required=false)]
             public int? SensitiveCount { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("SensitiveRatio")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public string SensitiveRatio { get; set; }
 
-            [NameInMap("ProductCode")]
+            [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public string ProductCode { get; set; }
+            public int? TotalCount { get; set; }
 
         }
 

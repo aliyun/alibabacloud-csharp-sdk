@@ -8,54 +8,50 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
-    public class DescribePackagesResponseBody : TeaModel {
+    public class DescribeCategoryTemplateRuleListResponseBody : TeaModel {
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
-        public List<DescribePackagesResponseBodyItems> Items { get; set; }
-        public class DescribePackagesResponseBodyItems : TeaModel {
-            [NameInMap("CreationTime")]
+        public List<DescribeCategoryTemplateRuleListResponseBodyItems> Items { get; set; }
+        public class DescribeCategoryTemplateRuleListResponseBodyItems : TeaModel {
+            [NameInMap("CustomType")]
             [Validation(Required=false)]
-            public long? CreationTime { get; set; }
+            public int? CustomType { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
 
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
-            [NameInMap("InstanceId")]
+            [NameInMap("IdentificationRuleIds")]
             [Validation(Required=false)]
-            public long? InstanceId { get; set; }
+            public string IdentificationRuleIds { get; set; }
+
+            [NameInMap("IdentificationScope")]
+            [Validation(Required=false)]
+            public string IdentificationScope { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Owner")]
-            [Validation(Required=false)]
-            public string Owner { get; set; }
-
             [NameInMap("RiskLevelId")]
             [Validation(Required=false)]
             public long? RiskLevelId { get; set; }
 
-            [NameInMap("RiskLevelName")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string RiskLevelName { get; set; }
+            public int? Status { get; set; }
 
-            [NameInMap("Sensitive")]
+            [NameInMap("TemplateId")]
             [Validation(Required=false)]
-            public bool? Sensitive { get; set; }
-
-            [NameInMap("SensitiveCount")]
-            [Validation(Required=false)]
-            public int? SensitiveCount { get; set; }
-
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
+            public long? TemplateId { get; set; }
 
         }
 

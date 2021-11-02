@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
             [NameInMap("DefaultValue")]
             [Validation(Required=false)]
             public string DefaultValue { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
         }
 

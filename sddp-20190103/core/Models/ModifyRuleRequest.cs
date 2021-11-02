@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
-        [NameInMap("CustomType")]
-        [Validation(Required=false)]
-        public int? CustomType { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
@@ -48,10 +44,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("RuleType")]
         [Validation(Required=false)]
         public int? RuleType { get; set; }
-
-        [NameInMap("StatExpress")]
-        [Validation(Required=false)]
-        public string StatExpress { get; set; }
 
         [NameInMap("WarnLevel")]
         [Validation(Required=false)]

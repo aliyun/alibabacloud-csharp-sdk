@@ -21,61 +21,61 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("SubTypeList")]
             [Validation(Required=false)]
             public List<DescribeEventTypesResponseBodyEventTypeListSubTypeList> SubTypeList { get; set; }
             public class DescribeEventTypesResponseBodyEventTypeListSubTypeList : TeaModel {
-                [NameInMap("Status")]
+                [NameInMap("AdaptedProduct")]
                 [Validation(Required=false)]
-                public int? Status { get; set; }
-
-                [NameInMap("Description")]
-                [Validation(Required=false)]
-                public string Description { get; set; }
-
-                [NameInMap("ConfigContentType")]
-                [Validation(Required=false)]
-                public int? ConfigContentType { get; set; }
-
-                [NameInMap("EventHitCount")]
-                [Validation(Required=false)]
-                public int? EventHitCount { get; set; }
-
-                [NameInMap("ConfigValue")]
-                [Validation(Required=false)]
-                public string ConfigValue { get; set; }
-
-                [NameInMap("ConfigCode")]
-                [Validation(Required=false)]
-                public string ConfigCode { get; set; }
+                public string AdaptedProduct { get; set; }
 
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                [NameInMap("ConfigCode")]
+                [Validation(Required=false)]
+                public string ConfigCode { get; set; }
+
+                [NameInMap("ConfigContentType")]
+                [Validation(Required=false)]
+                public int? ConfigContentType { get; set; }
+
                 [NameInMap("ConfigDescription")]
                 [Validation(Required=false)]
                 public string ConfigDescription { get; set; }
+
+                [NameInMap("ConfigValue")]
+                [Validation(Required=false)]
+                public string ConfigValue { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("EventHitCount")]
+                [Validation(Required=false)]
+                public int? EventHitCount { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
 
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                [NameInMap("AdaptedProduct")]
+                [NameInMap("Status")]
                 [Validation(Required=false)]
-                public string AdaptedProduct { get; set; }
-
-                [NameInMap("Id")]
-                [Validation(Required=false)]
-                public long? Id { get; set; }
+                public int? Status { get; set; }
 
             }
 

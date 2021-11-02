@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList> RuleList { get; set; }
             public class DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList : TeaModel {
-                public string RiskLevelName { get; set; }
                 public string CategoryName { get; set; }
-                public long? RiskLevelId { get; set; }
                 public long? Count { get; set; }
+                public long? RiskLevelId { get; set; }
+                public string RiskLevelName { get; set; }
                 public string RuleName { get; set; }
             }
         };

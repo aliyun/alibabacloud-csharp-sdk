@@ -21,53 +21,57 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? CreationTime { get; set; }
 
-            [NameInMap("Acl")]
-            [Validation(Required=false)]
-            public string Acl { get; set; }
-
-            [NameInMap("LastFinishTime")]
-            [Validation(Required=false)]
-            public long? LastFinishTime { get; set; }
-
-            [NameInMap("Owner")]
-            [Validation(Required=false)]
-            public string Owner { get; set; }
-
-            [NameInMap("TenantName")]
-            [Validation(Required=false)]
-            public string TenantName { get; set; }
-
-            [NameInMap("Protection")]
-            [Validation(Required=false)]
-            public bool? Protection { get; set; }
-
             [NameInMap("DepartName")]
             [Validation(Required=false)]
             public string DepartName { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("InstanceDescription")]
+            [Validation(Required=false)]
+            public string InstanceDescription { get; set; }
 
             [NameInMap("Labelsec")]
             [Validation(Required=false)]
             public bool? Labelsec { get; set; }
 
-            [NameInMap("RiskLevelId")]
+            [NameInMap("LastFinishTime")]
             [Validation(Required=false)]
-            public long? RiskLevelId { get; set; }
-
-            [NameInMap("ProductId")]
-            [Validation(Required=false)]
-            public string ProductId { get; set; }
+            public long? LastFinishTime { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("TotalCount")]
+            [NameInMap("OdpsRiskLevelName")]
             [Validation(Required=false)]
-            public int? TotalCount { get; set; }
+            public string OdpsRiskLevelName { get; set; }
 
-            [NameInMap("InstanceDescription")]
+            [NameInMap("Owner")]
             [Validation(Required=false)]
-            public string InstanceDescription { get; set; }
+            public string Owner { get; set; }
+
+            [NameInMap("ProductCode")]
+            [Validation(Required=false)]
+            public string ProductCode { get; set; }
+
+            [NameInMap("ProductId")]
+            [Validation(Required=false)]
+            public string ProductId { get; set; }
+
+            [NameInMap("Protection")]
+            [Validation(Required=false)]
+            public bool? Protection { get; set; }
+
+            [NameInMap("RiskLevelId")]
+            [Validation(Required=false)]
+            public long? RiskLevelId { get; set; }
+
+            [NameInMap("RiskLevelName")]
+            [Validation(Required=false)]
+            public string RiskLevelName { get; set; }
 
             [NameInMap("RuleName")]
             [Validation(Required=false)]
@@ -77,25 +81,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public bool? Sensitive { get; set; }
 
-            [NameInMap("RiskLevelName")]
-            [Validation(Required=false)]
-            public string RiskLevelName { get; set; }
-
-            [NameInMap("OdpsRiskLevelName")]
-            [Validation(Required=false)]
-            public string OdpsRiskLevelName { get; set; }
-
             [NameInMap("SensitiveCount")]
             [Validation(Required=false)]
             public int? SensitiveCount { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("TenantName")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public string TenantName { get; set; }
 
-            [NameInMap("ProductCode")]
+            [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public string ProductCode { get; set; }
+            public int? TotalCount { get; set; }
 
         }
 

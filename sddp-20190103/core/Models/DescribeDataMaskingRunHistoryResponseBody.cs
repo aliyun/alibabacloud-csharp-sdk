@@ -17,45 +17,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public List<DescribeDataMaskingRunHistoryResponseBodyItems> Items { get; set; }
         public class DescribeDataMaskingRunHistoryResponseBodyItems : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("ConflictCount")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public int? Type { get; set; }
-
-            [NameInMap("SrcType")]
-            [Validation(Required=false)]
-            public int? SrcType { get; set; }
-
-            [NameInMap("SrcTableName")]
-            [Validation(Required=false)]
-            public string SrcTableName { get; set; }
-
-            [NameInMap("MaskingCount")]
-            [Validation(Required=false)]
-            public long? MaskingCount { get; set; }
-
-            [NameInMap("Percentage")]
-            [Validation(Required=false)]
-            public int? Percentage { get; set; }
+            public long? ConflictCount { get; set; }
 
             [NameInMap("DstType")]
             [Validation(Required=false)]
             public int? DstType { get; set; }
-
-            [NameInMap("FailMsg")]
-            [Validation(Required=false)]
-            public string FailMsg { get; set; }
-
-            [NameInMap("FailCode")]
-            [Validation(Required=false)]
-            public string FailCode { get; set; }
-
-            [NameInMap("ConflictCount")]
-            [Validation(Required=false)]
-            public long? ConflictCount { get; set; }
 
             [NameInMap("DstTypeCode")]
             [Validation(Required=false)]
@@ -65,33 +33,65 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
-            [NameInMap("RunIndex")]
+            [NameInMap("FailCode")]
             [Validation(Required=false)]
-            public int? RunIndex { get; set; }
+            public string FailCode { get; set; }
 
-            [NameInMap("StartTime")]
+            [NameInMap("FailMsg")]
             [Validation(Required=false)]
-            public long? StartTime { get; set; }
-
-            [NameInMap("HasSubProcess")]
-            [Validation(Required=false)]
-            public int? HasSubProcess { get; set; }
+            public string FailMsg { get; set; }
 
             [NameInMap("HasDownloadFile")]
             [Validation(Required=false)]
             public int? HasDownloadFile { get; set; }
 
-            [NameInMap("TaskId")]
+            [NameInMap("HasSubProcess")]
             [Validation(Required=false)]
-            public string TaskId { get; set; }
+            public int? HasSubProcess { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("MaskingCount")]
+            [Validation(Required=false)]
+            public long? MaskingCount { get; set; }
+
+            [NameInMap("Percentage")]
+            [Validation(Required=false)]
+            public int? Percentage { get; set; }
+
+            [NameInMap("RunIndex")]
+            [Validation(Required=false)]
+            public int? RunIndex { get; set; }
+
+            [NameInMap("SrcTableName")]
+            [Validation(Required=false)]
+            public string SrcTableName { get; set; }
+
+            [NameInMap("SrcType")]
+            [Validation(Required=false)]
+            public int? SrcType { get; set; }
 
             [NameInMap("SrcTypeCode")]
             [Validation(Required=false)]
             public string SrcTypeCode { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("StartTime")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public long? StartTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
 
         }
 

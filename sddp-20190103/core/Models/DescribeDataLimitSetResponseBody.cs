@@ -17,31 +17,31 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public List<DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList> DataLimitList { get; set; }
             public class DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList : TeaModel {
-                public string LocalName { get; set; }
                 public int? CheckStatus { get; set; }
-                public string Connector { get; set; }
                 public string CheckStatusName { get; set; }
-                public string RegionId { get; set; }
-                public string ParentId { get; set; }
-                public long? ResourceType { get; set; }
+                public string Connector { get; set; }
                 public long? GmtCreate { get; set; }
+                public long? Id { get; set; }
+                public string LocalName { get; set; }
+                public string ParentId { get; set; }
+                public string RegionId { get; set; }
+                public long? ResourceType { get; set; }
                 public string ResourceTypeCode { get; set; }
                 public string UserName { get; set; }
-                public long? Id { get; set; }
             }
             [NameInMap("OssBucketList")]
             [Validation(Required=false)]
             public List<DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList> OssBucketList { get; set; }
             public class DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList : TeaModel {
-                public string RegionId { get; set; }
                 public string BucketName { get; set; }
+                public string RegionId { get; set; }
             }
             [NameInMap("RegionList")]
             [Validation(Required=false)]
             public List<DescribeDataLimitSetResponseBodyDataLimitSetRegionList> RegionList { get; set; }
             public class DescribeDataLimitSetResponseBodyDataLimitSetRegionList : TeaModel {
-                public string RegionId { get; set; }
                 public string LocalName { get; set; }
+                public string RegionId { get; set; }
             }
             [NameInMap("ResourceType")]
             [Validation(Required=false)]

@@ -45,13 +45,25 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 [Validation(Required=false)]
                 public List<DescribeEventDetailResponseBodyEventDetailChart> Chart { get; set; }
                 public class DescribeEventDetailResponseBodyEventDetailChart : TeaModel {
-                    [NameInMap("Type")]
+                    [NameInMap("Data")]
                     [Validation(Required=false)]
-                    public string Type { get; set; }
+                    public DescribeEventDetailResponseBodyEventDetailChartData Data { get; set; }
+                    public class DescribeEventDetailResponseBodyEventDetailChartData : TeaModel {
+                        [NameInMap("X")]
+                        [Validation(Required=false)]
+                        public string X { get; set; }
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
+                        public string Y { get; set; }
+                    };
 
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
 
                     [NameInMap("XLabel")]
                     [Validation(Required=false)]
@@ -60,18 +72,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                     [NameInMap("YLabel")]
                     [Validation(Required=false)]
                     public string YLabel { get; set; }
-
-                    [NameInMap("Data")]
-                    [Validation(Required=false)]
-                    public DescribeEventDetailResponseBodyEventDetailChartData Data { get; set; }
-                    public class DescribeEventDetailResponseBodyEventDetailChartData : TeaModel {
-                        [NameInMap("Y")]
-                        [Validation(Required=false)]
-                        public string Y { get; set; }
-                        [NameInMap("X")]
-                        [Validation(Required=false)]
-                        public string X { get; set; }
-                    };
 
                 }
 
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public List<DescribeEventDetailResponseBodyEventHandleInfoList> HandleInfoList { get; set; }
             public class DescribeEventDetailResponseBodyEventHandleInfoList : TeaModel {
-                public int? Status { get; set; }
-                public long? EnableTime { get; set; }
-                public int? HandlerValue { get; set; }
+                public string CurrentValue { get; set; }
                 public long? DisableTime { get; set; }
+                public long? EnableTime { get; set; }
                 public string HandlerName { get; set; }
                 public string HandlerType { get; set; }
-                public string CurrentValue { get; set; }
+                public int? HandlerValue { get; set; }
                 public long? Id { get; set; }
+                public int? Status { get; set; }
             }
             [NameInMap("Id")]
             [Validation(Required=false)]
