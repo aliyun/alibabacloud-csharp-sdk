@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// 排序字段
-        /// </summary>
-        [NameInMap("OrderBy")]
-        [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        /// <summary>
         /// 排序是否反转
         /// </summary>
         [NameInMap("IsReversed")]
@@ -31,11 +24,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public bool? IsReversed { get; set; }
 
         /// <summary>
-        /// 翻页Token
+        /// 公共数据集所在区域
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("Location")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string Location { get; set; }
 
         /// <summary>
         /// 分页数量
@@ -45,11 +38,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 公共数据集所在区域
+        /// 翻页Token用来标记当前开始读取的位置，置空表示从头开始
         /// </summary>
-        [NameInMap("Region")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
 
     }
 

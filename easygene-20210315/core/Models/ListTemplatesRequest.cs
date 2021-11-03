@@ -10,34 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class ListTemplatesRequest : TeaModel {
         /// <summary>
-        /// 工作空间
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
-        /// Next Token
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
-        /// 最大返回结果数
-        /// </summary>
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        /// <summary>
-        /// 排序依据
-        /// </summary>
-        [NameInMap("OrderBy")]
-        [Validation(Required=false)]
-        public string OrderBy { get; set; }
-
-        /// <summary>
         /// 是否逆序
         /// </summary>
         [NameInMap("IsReversed")]
@@ -52,11 +24,39 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string LabelSelector { get; set; }
 
         /// <summary>
+        /// 最大返回结果数
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// 下次查询起始位置
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 排序依据
+        /// </summary>
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
+        /// <summary>
         /// 查找条件
         /// </summary>
         [NameInMap("Search")]
         [Validation(Required=false)]
         public string Search { get; set; }
+
+        /// <summary>
+        /// 工作空间
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

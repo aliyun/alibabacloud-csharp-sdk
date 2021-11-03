@@ -10,57 +10,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetPublicDatasetResponseBody : TeaModel {
         /// <summary>
-        /// 主机ID
+        /// 关于公共数据集
         /// </summary>
-        [NameInMap("HostId")]
+        [NameInMap("About")]
         [Validation(Required=false)]
-        public string HostId { get; set; }
-
-        /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public int? HttpCode { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// 错误消息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// 是否调用成功
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
-        /// 公共数据集描述
-        /// </summary>
-        [NameInMap("DatasetDescription")]
-        [Validation(Required=false)]
-        public string DatasetDescription { get; set; }
-
-        /// <summary>
-        /// 公共数据集版权信息
-        /// </summary>
-        [NameInMap("Copyright")]
-        [Validation(Required=false)]
-        public string Copyright { get; set; }
+        public string About { get; set; }
 
         /// <summary>
         /// 公共数据集访问要求
@@ -70,18 +24,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string AccessRequirements { get; set; }
 
         /// <summary>
-        /// 关于公共数据集
+        /// 公共数据集版权信息
         /// </summary>
-        [NameInMap("About")]
+        [NameInMap("Copyright")]
         [Validation(Required=false)]
-        public string About { get; set; }
+        public string Copyright { get; set; }
 
         /// <summary>
-        /// 公共数据集标签
+        /// 公共数据集描述
         /// </summary>
-        [NameInMap("Tags")]
+        [NameInMap("DatasetDescription")]
         [Validation(Required=false)]
-        public List<string> Tags { get; set; }
+        public string DatasetDescription { get; set; }
 
         /// <summary>
         /// 公共数据集名称
@@ -91,18 +45,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// 公共数据集更新频率
+        /// 主机ID
         /// </summary>
-        [NameInMap("UpdateFrequency")]
+        [NameInMap("HostId")]
         [Validation(Required=false)]
-        public string UpdateFrequency { get; set; }
-
-        /// <summary>
-        /// 公共数据集可用区域
-        /// </summary>
-        [NameInMap("RegionIds")]
-        [Validation(Required=false)]
-        public List<string> RegionIds { get; set; }
+        public string HostId { get; set; }
 
         /// <summary>
         /// 最后更新时间
@@ -110,6 +57,34 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("LastModified")]
         [Validation(Required=false)]
         public string LastModified { get; set; }
+
+        /// <summary>
+        /// 公共数据集可用区域
+        /// </summary>
+        [NameInMap("Locations")]
+        [Validation(Required=false)]
+        public List<string> Locations { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 公共数据集标签
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<string> Tags { get; set; }
+
+        /// <summary>
+        /// 公共数据集更新频率
+        /// </summary>
+        [NameInMap("UpdateFrequency")]
+        [Validation(Required=false)]
+        public string UpdateFrequency { get; set; }
 
     }
 

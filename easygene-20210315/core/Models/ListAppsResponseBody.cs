@@ -17,11 +17,25 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public List<ListAppsResponseBodyApps> Apps { get; set; }
         public class ListAppsResponseBodyApps : TeaModel {
             /// <summary>
+            /// 默认版本
+            /// </summary>
+            [NameInMap("AppDefaultVersion")]
+            [Validation(Required=false)]
+            public string AppDefaultVersion { get; set; }
+
+            /// <summary>
             /// 应用名称
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
+
+            /// <summary>
+            /// 应用类型
+            /// </summary>
+            [NameInMap("AppType")]
+            [Validation(Required=false)]
+            public string AppType { get; set; }
 
             /// <summary>
             /// 创建时间
@@ -38,11 +52,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// 应用类型
+            /// 标签
             /// </summary>
-            [NameInMap("AppType")]
+            [NameInMap("Labels")]
             [Validation(Required=false)]
-            public string AppType { get; set; }
+            public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
             /// 应用描述语言
@@ -59,13 +73,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// 应用所在工作空间
-            /// </summary>
-            [NameInMap("Workspace")]
-            [Validation(Required=false)]
-            public string Workspace { get; set; }
-
-            /// <summary>
             /// 应用来源
             /// </summary>
             [NameInMap("Source")]
@@ -73,32 +80,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// 命名空间
+            /// 应用所在工作空间
             /// </summary>
-            [NameInMap("Namespace")]
+            [NameInMap("Workspace")]
             [Validation(Required=false)]
-            public string Namespace { get; set; }
-
-            /// <summary>
-            /// 应用原名
-            /// </summary>
-            [NameInMap("AppOrigName")]
-            [Validation(Required=false)]
-            public string AppOrigName { get; set; }
-
-            /// <summary>
-            /// 默认版本
-            /// </summary>
-            [NameInMap("AppDefaultVersion")]
-            [Validation(Required=false)]
-            public string AppDefaultVersion { get; set; }
-
-            /// <summary>
-            /// 标签
-            /// </summary>
-            [NameInMap("Labels")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Labels { get; set; }
+            public string Workspace { get; set; }
 
         }
 

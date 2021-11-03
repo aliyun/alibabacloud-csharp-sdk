@@ -17,53 +17,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public int? HttpCode { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// 错误消息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// 是否调用成功
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("DynamicCode")]
-        [Validation(Required=false)]
-        public string DynamicCode { get; set; }
-
-        [NameInMap("DynamicMessage")]
-        [Validation(Required=false)]
-        public string DynamicMessage { get; set; }
-
-        /// <summary>
-        /// 翻页TOKEN
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
         /// 分页数
         /// </summary>
         [NameInMap("MaxResults")]
@@ -71,11 +24,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 总记录数
+        /// 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
         /// </summary>
-        [NameInMap("TotalCount")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 软件信息
@@ -85,25 +45,32 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public List<ListAuthorizedSoftwareResponseBodySoftwares> Softwares { get; set; }
         public class ListAuthorizedSoftwareResponseBodySoftwares : TeaModel {
             /// <summary>
-            /// 软件名称
+            /// 帮助链接
             /// </summary>
-            [NameInMap("SoftwareName")]
+            [NameInMap("HelpLink")]
             [Validation(Required=false)]
-            public string SoftwareName { get; set; }
+            public string HelpLink { get; set; }
 
             /// <summary>
-            /// 软件长名称
+            /// 最后更新时间
             /// </summary>
-            [NameInMap("SoftwareLongName")]
+            [NameInMap("LastModified")]
             [Validation(Required=false)]
-            public string SoftwareLongName { get; set; }
+            public string LastModified { get; set; }
 
             /// <summary>
-            /// 软件描述
+            /// 软件可用区域
             /// </summary>
-            [NameInMap("SoftwareDescription")]
+            [NameInMap("Locations")]
             [Validation(Required=false)]
-            public string SoftwareDescription { get; set; }
+            public List<string> Locations { get; set; }
+
+            /// <summary>
+            /// 限时免费说明
+            /// </summary>
+            [NameInMap("Promotion")]
+            [Validation(Required=false)]
+            public string Promotion { get; set; }
 
             /// <summary>
             /// 软件默认版本
@@ -113,32 +80,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string SoftwareDefaultVersion { get; set; }
 
             /// <summary>
-            /// 软件所有版本
+            /// 软件描述
             /// </summary>
-            [NameInMap("SoftwareVersions")]
+            [NameInMap("SoftwareDescription")]
             [Validation(Required=false)]
-            public List<string> SoftwareVersions { get; set; }
-
-            /// <summary>
-            /// 软件使用费用
-            /// </summary>
-            [NameInMap("SoftwareLicenseFee")]
-            [Validation(Required=false)]
-            public float? SoftwareLicenseFee { get; set; }
-
-            /// <summary>
-            /// 软件可用区域
-            /// </summary>
-            [NameInMap("RegionIds")]
-            [Validation(Required=false)]
-            public List<string> RegionIds { get; set; }
-
-            /// <summary>
-            /// 帮助链接
-            /// </summary>
-            [NameInMap("HelpLink")]
-            [Validation(Required=false)]
-            public string HelpLink { get; set; }
+            public string SoftwareDescription { get; set; }
 
             /// <summary>
             /// 软件图标链接
@@ -148,13 +94,41 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string SoftwareIcon { get; set; }
 
             /// <summary>
-            /// 最后更新时间
+            /// 软件使用费用
             /// </summary>
-            [NameInMap("LastModified")]
+            [NameInMap("SoftwareLicenseFee")]
             [Validation(Required=false)]
-            public string LastModified { get; set; }
+            public float? SoftwareLicenseFee { get; set; }
+
+            /// <summary>
+            /// 软件长名称
+            /// </summary>
+            [NameInMap("SoftwareLongName")]
+            [Validation(Required=false)]
+            public string SoftwareLongName { get; set; }
+
+            /// <summary>
+            /// 软件名称
+            /// </summary>
+            [NameInMap("SoftwareName")]
+            [Validation(Required=false)]
+            public string SoftwareName { get; set; }
+
+            /// <summary>
+            /// 软件所有版本
+            /// </summary>
+            [NameInMap("SoftwareVersions")]
+            [Validation(Required=false)]
+            public List<string> SoftwareVersions { get; set; }
 
         }
+
+        /// <summary>
+        /// 总记录数
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

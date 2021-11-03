@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
+        /// 工作空间Bucket
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("BucketName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string BucketName { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
 
         /// <summary>
         /// 工作空间简要描述
@@ -45,18 +52,25 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// 工作空间内OSS上的工作路径
+        /// 最后修改时间
         /// </summary>
-        [NameInMap("OssRoot")]
+        [NameInMap("LastModifiedTime")]
         [Validation(Required=false)]
-        public string OssRoot { get; set; }
+        public string LastModifiedTime { get; set; }
 
         /// <summary>
-        /// 工作空间Bucket
+        /// 地域ID
         /// </summary>
-        [NameInMap("BucketName")]
+        [NameInMap("Location")]
         [Validation(Required=false)]
-        public string BucketName { get; set; }
+        public string Location { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 工作空间内默认的RAM服务角色
@@ -66,27 +80,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// 创建时间
-        /// </summary>
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        /// <summary>
-        /// 最后修改时间
-        /// </summary>
-        [NameInMap("LastModifiedTime")]
-        [Validation(Required=false)]
-        public string LastModifiedTime { get; set; }
-
-        /// <summary>
-        /// 工作空间名称
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
         /// 工作空间状态
         /// </summary>
         [NameInMap("Status")]
@@ -94,11 +87,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// 地域ID
+        /// 工作空间内OSS上的工作路径
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("Storage")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Storage { get; set; }
+
+        /// <summary>
+        /// 工作空间名称
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

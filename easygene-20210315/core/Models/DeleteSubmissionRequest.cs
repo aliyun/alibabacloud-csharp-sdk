@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class DeleteSubmissionRequest : TeaModel {
         /// <summary>
-        /// 工作空间名称
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
         /// 投递ID
         /// </summary>
         [NameInMap("SubmissionId")]
         [Validation(Required=false)]
         public string SubmissionId { get; set; }
+
+        /// <summary>
+        /// 工作空间名称
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

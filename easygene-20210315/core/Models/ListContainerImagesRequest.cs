@@ -12,16 +12,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         /// <summary>
         /// 区域
         /// </summary>
-        [NameInMap("Region")]
+        [NameInMap("Location")]
         [Validation(Required=false)]
-        public string Region { get; set; }
-
-        /// <summary>
-        /// 翻页Token
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string Location { get; set; }
 
         /// <summary>
         /// 分页数量
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// 翻页Token用来标记当前开始读取的位置，置空表示从头开始
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
     }
 

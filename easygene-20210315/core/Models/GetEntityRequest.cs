@@ -9,13 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetEntityRequest : TeaModel {
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
+        /// <summary>
+        /// 实体类型
+        /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
+
+        /// <summary>
+        /// 工作空间
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

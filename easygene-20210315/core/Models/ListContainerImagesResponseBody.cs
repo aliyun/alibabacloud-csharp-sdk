@@ -9,42 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class ListContainerImagesResponseBody : TeaModel {
-        [NameInMap("HostId")]
-        [Validation(Required=false)]
-        public string HostId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public int? HttpCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         /// <summary>
         /// 容器镜像
         /// </summary>
@@ -53,11 +17,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public List<ListContainerImagesResponseBodyContainerImages> ContainerImages { get; set; }
         public class ListContainerImagesResponseBodyContainerImages : TeaModel {
             /// <summary>
-            /// 容器镜像名称空间名称
+            /// 容器镜像描述
             /// </summary>
-            [NameInMap("ContainerImageNamespace")]
+            [NameInMap("ContainerImageDescription")]
             [Validation(Required=false)]
-            public string ContainerImageNamespace { get; set; }
+            public string ContainerImageDescription { get; set; }
 
             /// <summary>
             /// 容器镜像名称
@@ -67,11 +31,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string ContainerImageName { get; set; }
 
             /// <summary>
-            /// 容器镜像描述
+            /// 容器镜像名称空间名称
             /// </summary>
-            [NameInMap("ContainerImageDescription")]
+            [NameInMap("ContainerImageNamespace")]
             [Validation(Required=false)]
-            public string ContainerImageDescription { get; set; }
+            public string ContainerImageNamespace { get; set; }
 
             /// <summary>
             /// 容器镜像版本
@@ -79,13 +43,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [NameInMap("ContainerImageVersions")]
             [Validation(Required=false)]
             public List<string> ContainerImageVersions { get; set; }
-
-            /// <summary>
-            /// 容器镜像所在区域
-            /// </summary>
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
 
             /// <summary>
             /// 容器镜像仓库名称
@@ -101,7 +58,49 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public string LastModified { get; set; }
 
+            /// <summary>
+            /// 容器镜像所在区域
+            /// </summary>
+            [NameInMap("Location")]
+            [Validation(Required=false)]
+            public string Location { get; set; }
+
         }
+
+        /// <summary>
+        /// 主机ID
+        /// </summary>
+        [NameInMap("HostId")]
+        [Validation(Required=false)]
+        public string HostId { get; set; }
+
+        /// <summary>
+        /// 分页数
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 主机ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 总记录数
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

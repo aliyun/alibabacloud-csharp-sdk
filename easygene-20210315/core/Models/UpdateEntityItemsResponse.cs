@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
-    public class ParseAppInputsResponse : TeaModel {
+    public class UpdateEntityItemsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ParseAppInputsResponseBody Body { get; set; }
+        public UpdateEntityItemsResponseBody Body { get; set; }
 
     }
 

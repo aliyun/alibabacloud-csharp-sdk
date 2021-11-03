@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// 请求 ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 安装后应用名
         /// </summary>
         [NameInMap("InstalledAppName")]
@@ -31,18 +24,25 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string InstalledAppName { get; set; }
 
         /// <summary>
-        /// 工作空间
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
         /// 区域名
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// 请求 ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 工作空间
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

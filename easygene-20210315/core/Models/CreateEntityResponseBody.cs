@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateEntityResponseBody : TeaModel {
         /// <summary>
+        /// 实体类型
+        /// </summary>
+        [NameInMap("EntityType")]
+        [Validation(Required=false)]
+        public string EntityType { get; set; }
+
+        /// <summary>
         /// 主机ID
         /// </summary>
         [NameInMap("HostId")]
@@ -23,13 +30,12 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 工作空间
+        /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }
-
-        [NameInMap("EntityType")]
-        [Validation(Required=false)]
-        public string EntityType { get; set; }
 
     }
 

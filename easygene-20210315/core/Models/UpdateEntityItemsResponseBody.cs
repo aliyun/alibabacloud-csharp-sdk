@@ -8,34 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
-    public class CreateAppResponseBody : TeaModel {
+    public class UpdateEntityItemsResponseBody : TeaModel {
         /// <summary>
-        /// 应用名称
+        /// 实体类型
         /// </summary>
-        [NameInMap("AppName")]
+        [NameInMap("EntityType")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string EntityType { get; set; }
 
         /// <summary>
-        /// 主机 ID
+        /// 主机ID
         /// </summary>
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
         /// <summary>
-        /// 请求 ID
+        /// 请求ID
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// 应用版本号
-        /// </summary>
-        [NameInMap("Revision")]
-        [Validation(Required=false)]
-        public string Revision { get; set; }
 
         /// <summary>
         /// 工作空间

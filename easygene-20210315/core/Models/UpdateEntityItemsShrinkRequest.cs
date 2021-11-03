@@ -8,13 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
-    public class GetSubmissionRequest : TeaModel {
-        /// <summary>
-        /// 投递ID
-        /// </summary>
-        [NameInMap("SubmissionId")]
+    public class UpdateEntityItemsShrinkRequest : TeaModel {
+        [NameInMap("EntityItems")]
         [Validation(Required=false)]
-        public string SubmissionId { get; set; }
+        public string EntityItemsShrink { get; set; }
+
+        /// <summary>
+        /// 实体类型
+        /// </summary>
+        [NameInMap("EntityType")]
+        [Validation(Required=false)]
+        public string EntityType { get; set; }
 
         /// <summary>
         /// 工作空间

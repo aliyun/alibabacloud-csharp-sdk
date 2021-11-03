@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class ListSubmissionsResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 主机ID
         /// </summary>
         [NameInMap("HostId")]
@@ -38,11 +31,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 返回个数
+        /// 请求ID
         /// </summary>
-        [NameInMap("TotalCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 投递列表
@@ -52,39 +45,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public List<ListSubmissionsResponseBodySubmissions> Submissions { get; set; }
         public class ListSubmissionsResponseBodySubmissions : TeaModel {
             /// <summary>
-            /// 提交ID
-            /// </summary>
-            [NameInMap("Workspace")]
-            [Validation(Required=false)]
-            public string Workspace { get; set; }
-
-            /// <summary>
-            /// 提交ID
-            /// </summary>
-            [NameInMap("SubmissionId")]
-            [Validation(Required=false)]
-            public string SubmissionId { get; set; }
-
-            /// <summary>
-            /// 任务状态
-            /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            /// <summary>
             /// 提交时间
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
-
-            /// <summary>
-            /// 开始时间
-            /// </summary>
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
 
             /// <summary>
             /// 结束时间
@@ -104,30 +69,65 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public ListSubmissionsResponseBodySubmissionsRunStats RunStats { get; set; }
             public class ListSubmissionsResponseBodySubmissionsRunStats : TeaModel {
-                [NameInMap("Submitted")]
+                [NameInMap("Aborted")]
                 [Validation(Required=false)]
-                public long? Submitted { get; set; }
+                public long? Aborted { get; set; }
+                [NameInMap("Aborting")]
+                [Validation(Required=false)]
+                public long? Aborting { get; set; }
+                [NameInMap("Failed")]
+                [Validation(Required=false)]
+                public long? Failed { get; set; }
                 [NameInMap("Pending")]
                 [Validation(Required=false)]
                 public long? Pending { get; set; }
                 [NameInMap("Running")]
                 [Validation(Required=false)]
                 public long? Running { get; set; }
+                [NameInMap("Submitted")]
+                [Validation(Required=false)]
+                public long? Submitted { get; set; }
                 [NameInMap("Succeeded")]
                 [Validation(Required=false)]
                 public long? Succeeded { get; set; }
-                [NameInMap("Failed")]
-                [Validation(Required=false)]
-                public long? Failed { get; set; }
-                [NameInMap("Aborting")]
-                [Validation(Required=false)]
-                public long? Aborting { get; set; }
-                [NameInMap("Aborted")]
-                [Validation(Required=false)]
-                public long? Aborted { get; set; }
             };
 
+            /// <summary>
+            /// 开始时间
+            /// </summary>
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
+            /// <summary>
+            /// 任务状态
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// 提交ID
+            /// </summary>
+            [NameInMap("SubmissionId")]
+            [Validation(Required=false)]
+            public string SubmissionId { get; set; }
+
+            /// <summary>
+            /// 工作空间名字
+            /// </summary>
+            [NameInMap("Workspace")]
+            [Validation(Required=false)]
+            public string Workspace { get; set; }
+
         }
+
+        /// <summary>
+        /// 返回个数
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

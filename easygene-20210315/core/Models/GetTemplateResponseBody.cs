@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetTemplateResponseBody : TeaModel {
         /// <summary>
-        /// 应用模板名称
+        /// 应用的名称
         /// </summary>
-        [NameInMap("TemplateName")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string TemplateName { get; set; }
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// 应用的版本
+        /// </summary>
+        [NameInMap("AppRevision")]
+        [Validation(Required=false)]
+        public string AppRevision { get; set; }
 
         /// <summary>
         /// 创建时间
@@ -31,20 +38,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// 应用的名称
-        /// </summary>
-        [NameInMap("AppName")]
-        [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        /// <summary>
-        /// 应用的版本
-        /// </summary>
-        [NameInMap("Revision")]
-        [Validation(Required=false)]
-        public string Revision { get; set; }
-
-        /// <summary>
         /// 主机ID
         /// </summary>
         [NameInMap("HostId")]
@@ -54,10 +47,31 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         /// <summary>
         /// 应用输入
         /// </summary>
-        [NameInMap("Inputs")]
+        [NameInMap("InputsExpression")]
         [Validation(Required=false)]
-        public List<GetTemplateResponseBodyInputs> Inputs { get; set; }
-        public class GetTemplateResponseBodyInputs : TeaModel {
+        public List<GetTemplateResponseBodyInputsExpression> InputsExpression { get; set; }
+        public class GetTemplateResponseBodyInputsExpression : TeaModel {
+            /// <summary>
+            /// 帮助信息
+            /// </summary>
+            [NameInMap("Help")]
+            [Validation(Required=false)]
+            public string Help { get; set; }
+
+            /// <summary>
+            /// 是否必须参数
+            /// </summary>
+            [NameInMap("Required")]
+            [Validation(Required=false)]
+            public bool? Required { get; set; }
+
+            /// <summary>
+            /// 步骤顺序
+            /// </summary>
+            [NameInMap("StepOrder")]
+            [Validation(Required=false)]
+            public long? StepOrder { get; set; }
+
             /// <summary>
             /// 任务名称
             /// </summary>
@@ -85,27 +99,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [NameInMap("VariableValue")]
             [Validation(Required=false)]
             public string VariableValue { get; set; }
-
-            /// <summary>
-            /// 是否必须参数
-            /// </summary>
-            [NameInMap("Required")]
-            [Validation(Required=false)]
-            public bool? Required { get; set; }
-
-            /// <summary>
-            /// 帮助信息
-            /// </summary>
-            [NameInMap("Help")]
-            [Validation(Required=false)]
-            public string Help { get; set; }
-
-            /// <summary>
-            /// 步骤顺序
-            /// </summary>
-            [NameInMap("StepOrder")]
-            [Validation(Required=false)]
-            public long? StepOrder { get; set; }
 
         }
 
@@ -126,10 +119,31 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         /// <summary>
         /// 应用的输出参数
         /// </summary>
-        [NameInMap("Outputs")]
+        [NameInMap("OutputsExpression")]
         [Validation(Required=false)]
-        public List<GetTemplateResponseBodyOutputs> Outputs { get; set; }
-        public class GetTemplateResponseBodyOutputs : TeaModel {
+        public List<GetTemplateResponseBodyOutputsExpression> OutputsExpression { get; set; }
+        public class GetTemplateResponseBodyOutputsExpression : TeaModel {
+            /// <summary>
+            /// 帮助信息
+            /// </summary>
+            [NameInMap("Help")]
+            [Validation(Required=false)]
+            public string Help { get; set; }
+
+            /// <summary>
+            /// 是否必须参数
+            /// </summary>
+            [NameInMap("Required")]
+            [Validation(Required=false)]
+            public bool? Required { get; set; }
+
+            /// <summary>
+            /// 步骤顺序
+            /// </summary>
+            [NameInMap("StepOrder")]
+            [Validation(Required=false)]
+            public long? StepOrder { get; set; }
+
             /// <summary>
             /// 任务名称
             /// </summary>
@@ -158,27 +172,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public string VariableValue { get; set; }
 
-            /// <summary>
-            /// 是否必须参数
-            /// </summary>
-            [NameInMap("Required")]
-            [Validation(Required=false)]
-            public bool? Required { get; set; }
-
-            /// <summary>
-            /// 帮助信息
-            /// </summary>
-            [NameInMap("Help")]
-            [Validation(Required=false)]
-            public string Help { get; set; }
-
-            /// <summary>
-            /// 步骤顺序
-            /// </summary>
-            [NameInMap("StepOrder")]
-            [Validation(Required=false)]
-            public long? StepOrder { get; set; }
-
         }
 
         /// <summary>
@@ -189,6 +182,13 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// 实体类型
+        /// </summary>
+        [NameInMap("RootEntity")]
+        [Validation(Required=false)]
+        public string RootEntity { get; set; }
+
+        /// <summary>
         /// 应用来源
         /// </summary>
         [NameInMap("Source")]
@@ -196,18 +196,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// 应用模板名称
+        /// </summary>
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
+        /// <summary>
         /// 工作空间名称
         /// </summary>
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }
-
-        /// <summary>
-        /// 实体类型
-        /// </summary>
-        [NameInMap("RootEntity")]
-        [Validation(Required=false)]
-        public string RootEntity { get; set; }
 
     }
 

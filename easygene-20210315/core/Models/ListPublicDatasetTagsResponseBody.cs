@@ -17,45 +17,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public int? HttpCode { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// 错误消息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// 是否调用成功
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
-        /// 翻页Token
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
         /// 分页数
         /// </summary>
         [NameInMap("MaxResults")]
@@ -63,11 +24,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 总记录数
+        /// 翻页Token用来表示当前调用返回读取到的位置，空代表数据已经读取完毕
         /// </summary>
-        [NameInMap("TotalCount")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 公共数据集标签
@@ -75,6 +43,13 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
+
+        /// <summary>
+        /// 总记录数
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

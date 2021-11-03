@@ -10,27 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// 工作空间名称
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
-        /// 应用模板名称
-        /// </summary>
-        [NameInMap("TemplateName")]
-        [Validation(Required=false)]
-        public string TemplateName { get; set; }
-
-        /// <summary>
-        /// 应用模板描述
-        /// </summary>
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        /// <summary>
         /// 应用的名称
         /// </summary>
         [NameInMap("AppName")]
@@ -40,30 +19,30 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         /// <summary>
         /// 应用的版本
         /// </summary>
-        [NameInMap("Revision")]
+        [NameInMap("AppRevision")]
         [Validation(Required=false)]
-        public string Revision { get; set; }
+        public string AppRevision { get; set; }
 
         /// <summary>
-        /// 根实体类型
+        /// 幂等Token
         /// </summary>
-        [NameInMap("RootEntity")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RootEntity { get; set; }
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 应用模板描述
+        /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         /// <summary>
         /// 应用的输入
         /// </summary>
-        [NameInMap("Inputs")]
+        [NameInMap("InputsExpression")]
         [Validation(Required=false)]
-        public string InputsShrink { get; set; }
-
-        /// <summary>
-        /// 应用的输出
-        /// </summary>
-        [NameInMap("Outputs")]
-        [Validation(Required=false)]
-        public string OutputsShrink { get; set; }
+        public string InputsExpressionShrink { get; set; }
 
         /// <summary>
         /// 应用标签
@@ -73,11 +52,32 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// 幂等Token
+        /// 应用的输出
         /// </summary>
-        [NameInMap("ClientToken")]
+        [NameInMap("OutputsExpression")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string OutputsExpressionShrink { get; set; }
+
+        /// <summary>
+        /// 根实体类型
+        /// </summary>
+        [NameInMap("RootEntity")]
+        [Validation(Required=false)]
+        public string RootEntity { get; set; }
+
+        /// <summary>
+        /// 应用模板名称
+        /// </summary>
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
+        /// <summary>
+        /// 工作空间名称
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

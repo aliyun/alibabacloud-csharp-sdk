@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// 工作空间名称
+        /// 幂等Token
         /// </summary>
-        [NameInMap("Workspace")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Workspace { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 工作空间描述
@@ -24,25 +24,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// 幂等Token
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        /// 工作空间的OSS工作路径
-        /// </summary>
-        [NameInMap("OssRoot")]
-        [Validation(Required=false)]
-        public string OssRoot { get; set; }
-
-        /// <summary>
         /// 工作空间任务生命周期
         /// </summary>
         [NameInMap("JobLifecycle")]
         [Validation(Required=false)]
         public int? JobLifecycle { get; set; }
+
+        /// <summary>
+        /// 工作空间标签
+        /// </summary>
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public string Labels { get; set; }
 
         /// <summary>
         /// 工作空间内的ram角色
@@ -52,11 +45,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// 工作空间标签
+        /// 工作空间的OSS工作路径
         /// </summary>
-        [NameInMap("Labels")]
+        [NameInMap("Storage")]
         [Validation(Required=false)]
-        public string Labels { get; set; }
+        public string Storage { get; set; }
+
+        /// <summary>
+        /// 工作空间名称
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetSubmissionResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 主机ID
         /// </summary>
         [NameInMap("HostId")]
@@ -24,27 +17,22 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// 投递列表
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 投递详情
         /// </summary>
         [NameInMap("Submission")]
         [Validation(Required=false)]
         public GetSubmissionResponseBodySubmission Submission { get; set; }
         public class GetSubmissionResponseBodySubmission : TeaModel {
-            [NameInMap("Workspace")]
-            [Validation(Required=false)]
-            public string Workspace { get; set; }
-            [NameInMap("SubmissionId")]
-            [Validation(Required=false)]
-            public string SubmissionId { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
@@ -55,35 +43,68 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public GetSubmissionResponseBodySubmissionRunStats RunStats { get; set; }
             public class GetSubmissionResponseBodySubmissionRunStats : TeaModel {
-                [NameInMap("Submitted")]
-                [Validation(Required=false)]
-                public long? Submitted { get; set; }
-
-                [NameInMap("Pending")]
-                [Validation(Required=false)]
-                public long? Pending { get; set; }
-
-                [NameInMap("Running")]
-                [Validation(Required=false)]
-                public long? Running { get; set; }
-
-                [NameInMap("Succeeded")]
-                [Validation(Required=false)]
-                public long? Succeeded { get; set; }
-
-                [NameInMap("Failed")]
-                [Validation(Required=false)]
-                public long? Failed { get; set; }
-
-                [NameInMap("Aborting")]
-                [Validation(Required=false)]
-                public long? Aborting { get; set; }
-
+                /// <summary>
+                /// 已取消数量
+                /// </summary>
                 [NameInMap("Aborted")]
                 [Validation(Required=false)]
                 public long? Aborted { get; set; }
 
+                /// <summary>
+                /// 取消中数量
+                /// </summary>
+                [NameInMap("Aborting")]
+                [Validation(Required=false)]
+                public long? Aborting { get; set; }
+
+                /// <summary>
+                /// 已失败数量
+                /// </summary>
+                [NameInMap("Failed")]
+                [Validation(Required=false)]
+                public long? Failed { get; set; }
+
+                /// <summary>
+                /// 等待中数量
+                /// </summary>
+                [NameInMap("Pending")]
+                [Validation(Required=false)]
+                public long? Pending { get; set; }
+
+                /// <summary>
+                /// 运行中数量
+                /// </summary>
+                [NameInMap("Running")]
+                [Validation(Required=false)]
+                public long? Running { get; set; }
+
+                /// <summary>
+                /// 已提交数量
+                /// </summary>
+                [NameInMap("Submitted")]
+                [Validation(Required=false)]
+                public long? Submitted { get; set; }
+
+                /// <summary>
+                /// 已成功数量
+                /// </summary>
+                [NameInMap("Succeeded")]
+                [Validation(Required=false)]
+                public long? Succeeded { get; set; }
+
             }
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("SubmissionId")]
+            [Validation(Required=false)]
+            public string SubmissionId { get; set; }
+            [NameInMap("Workspace")]
+            [Validation(Required=false)]
+            public string Workspace { get; set; }
         };
 
     }

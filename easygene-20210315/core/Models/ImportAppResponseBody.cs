@@ -8,41 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
-    public class ParseAppInputsShrinkRequest : TeaModel {
+    public class ImportAppResponseBody : TeaModel {
         /// <summary>
-        /// 工作空间名称
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
-        /// 应用名称
+        /// 安装后应用名
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// 文件路径
+        /// 主机 ID
         /// </summary>
-        [NameInMap("Path")]
+        [NameInMap("HostId")]
         [Validation(Required=false)]
-        public string Path { get; set; }
+        public string HostId { get; set; }
 
         /// <summary>
-        /// 应用定义
+        /// 区域名
         /// </summary>
-        [NameInMap("Definition")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Definition { get; set; }
+        public string RegionId { get; set; }
 
         /// <summary>
-        /// 依赖应用
+        /// 请求 ID
         /// </summary>
-        [NameInMap("Dependencies")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DependenciesShrink { get; set; }
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 工作空间
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

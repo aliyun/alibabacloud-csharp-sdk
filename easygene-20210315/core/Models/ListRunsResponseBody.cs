@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class ListRunsResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 主机ID
         /// </summary>
         [NameInMap("HostId")]
@@ -38,11 +31,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 返回个数
+        /// 请求ID
         /// </summary>
-        [NameInMap("TotalCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 任务列表
@@ -59,60 +52,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// 应用来源
-            /// </summary>
-            [NameInMap("Source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
-
-            /// <summary>
-            /// 应用命名空间
-            /// </summary>
-            [NameInMap("Namespace")]
-            [Validation(Required=false)]
-            public string Namespace { get; set; }
-
-            /// <summary>
-            /// 应用原名
-            /// </summary>
-            [NameInMap("AppOrigName")]
-            [Validation(Required=false)]
-            public string AppOrigName { get; set; }
-
-            /// <summary>
-            /// 任务标签
-            /// </summary>
-            [NameInMap("Labels")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Labels { get; set; }
-
-            /// <summary>
-            /// 任务名称
-            /// </summary>
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            /// <summary>
             /// 应用版本号
             /// </summary>
-            [NameInMap("Revision")]
+            [NameInMap("AppRevision")]
             [Validation(Required=false)]
-            public string Revision { get; set; }
-
-            /// <summary>
-            /// 任务ID
-            /// </summary>
-            [NameInMap("RunId")]
-            [Validation(Required=false)]
-            public string RunId { get; set; }
-
-            /// <summary>
-            /// 任务状态
-            /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
+            public string AppRevision { get; set; }
 
             /// <summary>
             /// 提交时间
@@ -122,11 +66,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// 开始时间
+            /// 默认运行时
             /// </summary>
-            [NameInMap("StartTime")]
+            [NameInMap("DefaultRuntime")]
             [Validation(Required=false)]
-            public string StartTime { get; set; }
+            public string DefaultRuntime { get; set; }
 
             /// <summary>
             /// 结束时间
@@ -134,13 +78,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
-
-            /// <summary>
-            /// 提交ID
-            /// </summary>
-            [NameInMap("SubmissionId")]
-            [Validation(Required=false)]
-            public string SubmissionId { get; set; }
 
             /// <summary>
             /// 实体名称
@@ -176,6 +113,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
                 [NameInMap("FailureMode")]
                 [Validation(Required=false)]
                 public string FailureMode { get; set; }
+                [NameInMap("UseRelativeOutputPaths")]
+                [Validation(Required=false)]
+                public bool? UseRelativeOutputPaths { get; set; }
             };
 
             /// <summary>
@@ -185,19 +125,77 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [Validation(Required=false)]
             public string Inputs { get; set; }
 
-            [NameInMap("DefaultRuntime")]
+            /// <summary>
+            /// 任务标签
+            /// </summary>
+            [NameInMap("Labels")]
             [Validation(Required=false)]
-            public string DefaultRuntime { get; set; }
+            public Dictionary<string, string> Labels { get; set; }
 
-            [NameInMap("Workspace")]
-            [Validation(Required=false)]
-            public string Workspace { get; set; }
-
+            /// <summary>
+            /// 区域
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// 任务ID
+            /// </summary>
+            [NameInMap("RunId")]
+            [Validation(Required=false)]
+            public string RunId { get; set; }
+
+            /// <summary>
+            /// 任务名称
+            /// </summary>
+            [NameInMap("RunName")]
+            [Validation(Required=false)]
+            public string RunName { get; set; }
+
+            /// <summary>
+            /// 应用来源
+            /// </summary>
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            /// <summary>
+            /// 开始时间
+            /// </summary>
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
+            /// <summary>
+            /// 任务状态
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// 提交ID
+            /// </summary>
+            [NameInMap("SubmissionId")]
+            [Validation(Required=false)]
+            public string SubmissionId { get; set; }
+
+            /// <summary>
+            /// 工作空间
+            /// </summary>
+            [NameInMap("Workspace")]
+            [Validation(Required=false)]
+            public string Workspace { get; set; }
+
         }
+
+        /// <summary>
+        /// 返回个数
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

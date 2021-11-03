@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
-    public class CreateAppResponseBody : TeaModel {
+    public class GetGlobalAppShrinkRequest : TeaModel {
         /// <summary>
         /// 应用名称
         /// </summary>
@@ -17,32 +17,32 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// 主机 ID
+        /// 应用版本
         /// </summary>
-        [NameInMap("HostId")]
+        [NameInMap("AppVersion")]
         [Validation(Required=false)]
-        public string HostId { get; set; }
+        public string AppVersion { get; set; }
 
         /// <summary>
-        /// 请求 ID
+        /// 查询字段信息：appVersions，regionIds，dag
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Attributes")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AttributesShrink { get; set; }
 
         /// <summary>
-        /// 应用版本号
+        /// 应用可用区域
         /// </summary>
-        [NameInMap("Revision")]
+        [NameInMap("Location")]
         [Validation(Required=false)]
-        public string Revision { get; set; }
+        public string Location { get; set; }
 
         /// <summary>
-        /// 工作空间
+        /// 命名空间
         /// </summary>
-        [NameInMap("Workspace")]
+        [NameInMap("NamespaceName")]
         [Validation(Required=false)]
-        public string Workspace { get; set; }
+        public string NamespaceName { get; set; }
 
     }
 

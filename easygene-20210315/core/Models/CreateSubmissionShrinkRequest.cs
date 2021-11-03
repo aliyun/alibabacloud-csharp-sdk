@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateSubmissionShrinkRequest : TeaModel {
         /// <summary>
-        /// 工作空间名字
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
         /// 应用名称
         /// </summary>
         [NameInMap("AppName")]
@@ -24,11 +17,22 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// 应用版本号
+        /// 任务幂等token
         /// </summary>
-        [NameInMap("Revision")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Revision { get; set; }
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 默认运行时
+        /// </summary>
+        [NameInMap("DefaultRuntime")]
+        [Validation(Required=false)]
+        public string DefaultRuntime { get; set; }
+
+        [NameInMap("EntityNames")]
+        [Validation(Required=false)]
+        public string EntityNamesShrink { get; set; }
 
         /// <summary>
         /// 实体类型
@@ -36,17 +40,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
-
-        [NameInMap("EntityNames")]
-        [Validation(Required=false)]
-        public string EntityNamesShrink { get; set; }
-
-        /// <summary>
-        /// 任务配置
-        /// </summary>
-        [NameInMap("ExecuteOptions")]
-        [Validation(Required=false)]
-        public string ExecuteOptions { get; set; }
 
         /// <summary>
         /// 任务执行目录
@@ -56,18 +49,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string ExecuteDirectory { get; set; }
 
         /// <summary>
-        /// 任务输出拷贝目录
+        /// 任务配置
         /// </summary>
-        [NameInMap("OutputFolder")]
+        [NameInMap("ExecuteOptions")]
         [Validation(Required=false)]
-        public string OutputFolder { get; set; }
-
-        /// <summary>
-        /// 默认运行时
-        /// </summary>
-        [NameInMap("DefaultRuntime")]
-        [Validation(Required=false)]
-        public string DefaultRuntime { get; set; }
+        public string ExecuteOptions { get; set; }
 
         /// <summary>
         /// 任务输入
@@ -77,6 +63,13 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Inputs { get; set; }
 
         /// <summary>
+        /// 任务输出拷贝目录
+        /// </summary>
+        [NameInMap("OutputFolder")]
+        [Validation(Required=false)]
+        public string OutputFolder { get; set; }
+
+        /// <summary>
         /// 任务输出
         /// </summary>
         [NameInMap("Outputs")]
@@ -84,11 +77,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string Outputs { get; set; }
 
         /// <summary>
-        /// 任务幂等token
+        /// 应用版本号
         /// </summary>
-        [NameInMap("ClientToken")]
+        [NameInMap("Revision")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string Revision { get; set; }
+
+        /// <summary>
+        /// 工作空间名字
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

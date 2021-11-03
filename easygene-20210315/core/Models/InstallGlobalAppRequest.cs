@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class InstallGlobalAppRequest : TeaModel {
         /// <summary>
-        /// 来源
+        /// 应用名称
         /// </summary>
-        [NameInMap("Source")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string Source { get; set; }
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// 安装后应用名
+        /// </summary>
+        [NameInMap("InstalledAppName")]
+        [Validation(Required=false)]
+        public string InstalledAppName { get; set; }
 
         /// <summary>
         /// 命名空间名称
@@ -24,11 +31,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// 应用描述
+        /// 来源
         /// </summary>
-        [NameInMap("AppName")]
+        [NameInMap("Source")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string Source { get; set; }
 
         /// <summary>
         /// 工作空间
@@ -36,13 +43,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("Workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }
-
-        /// <summary>
-        /// 安装后应用名
-        /// </summary>
-        [NameInMap("InstalledAppName")]
-        [Validation(Required=false)]
-        public string InstalledAppName { get; set; }
 
     }
 

@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         /// <summary>
         /// 公共数据集所在区域
         /// </summary>
-        [NameInMap("Region")]
+        [NameInMap("Location")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string Location { get; set; }
 
     }
 

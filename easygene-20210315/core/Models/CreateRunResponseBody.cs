@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class CreateRunResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 主机ID
         /// </summary>
         [NameInMap("HostId")]
@@ -24,11 +17,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string HostId { get; set; }
 
         /// <summary>
-        /// 工作空间
+        /// 请求ID
         /// </summary>
-        [NameInMap("Workspace")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Workspace { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 任务ID
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("RunId")]
         [Validation(Required=false)]
         public string RunId { get; set; }
+
+        /// <summary>
+        /// 工作空间
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetGlobalAppRequest : TeaModel {
         /// <summary>
-        /// 查询字段信息
-        /// </summary>
-        [NameInMap("Attributes")]
-        [Validation(Required=false)]
-        public string Attributes { get; set; }
-
-        /// <summary>
-        /// 命名空间
-        /// </summary>
-        [NameInMap("NamespaceName")]
-        [Validation(Required=false)]
-        public string NamespaceName { get; set; }
-
-        /// <summary>
         /// 应用名称
         /// </summary>
         [NameInMap("AppName")]
@@ -38,11 +24,25 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string AppVersion { get; set; }
 
         /// <summary>
+        /// 查询字段信息：appVersions，regionIds，dag
+        /// </summary>
+        [NameInMap("Attributes")]
+        [Validation(Required=false)]
+        public List<string> Attributes { get; set; }
+
+        /// <summary>
         /// 应用可用区域
         /// </summary>
-        [NameInMap("Region")]
+        [NameInMap("Location")]
         [Validation(Required=false)]
-        public string Region { get; set; }
+        public string Location { get; set; }
+
+        /// <summary>
+        /// 命名空间
+        /// </summary>
+        [NameInMap("NamespaceName")]
+        [Validation(Required=false)]
+        public string NamespaceName { get; set; }
 
     }
 

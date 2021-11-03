@@ -10,22 +10,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetRunRequest : TeaModel {
         /// <summary>
-        /// 工作空间名字
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
         /// 任务ID
         /// </summary>
         [NameInMap("RunId")]
         [Validation(Required=false)]
         public string RunId { get; set; }
 
-        [NameInMap("Attributes")]
+        /// <summary>
+        /// 工作空间名字
+        /// </summary>
+        [NameInMap("Workspace")]
         [Validation(Required=false)]
-        public string Attributes { get; set; }
+        public string Workspace { get; set; }
 
     }
 

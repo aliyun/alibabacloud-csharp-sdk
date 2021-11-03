@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetAppRequest : TeaModel {
         /// <summary>
-        /// 工作空间名称
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
         /// 应用名称
         /// </summary>
         [NameInMap("AppName")]
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("Revision")]
         [Validation(Required=false)]
         public string Revision { get; set; }
+
+        /// <summary>
+        /// 工作空间名称
+        /// </summary>
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

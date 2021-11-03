@@ -9,17 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class UpdateEntityShrinkRequest : TeaModel {
-        [NameInMap("Workspace")]
+        [NameInMap("EntityItems")]
         [Validation(Required=false)]
-        public string Workspace { get; set; }
+        public string EntityItemsShrink { get; set; }
 
+        /// <summary>
+        /// 实体类型
+        /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
-        [NameInMap("EntityItems")]
+        /// <summary>
+        /// 工作空间
+        /// </summary>
+        [NameInMap("Workspace")]
         [Validation(Required=false)]
-        public string EntityItemsShrink { get; set; }
+        public string Workspace { get; set; }
 
     }
 

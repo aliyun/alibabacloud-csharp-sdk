@@ -10,36 +10,11 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetPublicDatasetEntityResponseBody : TeaModel {
         /// <summary>
-        /// 主机ID
+        /// 实体属性名称列表
         /// </summary>
-        [NameInMap("HostId")]
+        [NameInMap("Attributes")]
         [Validation(Required=false)]
-        public string HostId { get; set; }
-
-        /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public int? HttpCode { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// 错误消息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
+        public List<string> Attributes { get; set; }
 
         /// <summary>
         /// 公共数据集名称
@@ -56,11 +31,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// 实体属性名称列表
+        /// 主机ID
         /// </summary>
-        [NameInMap("Attributes")]
+        [NameInMap("HostId")]
         [Validation(Required=false)]
-        public List<string> Attributes { get; set; }
+        public string HostId { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 该类型实体总数

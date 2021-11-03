@@ -10,69 +10,6 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
     public class GetRunResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 主机ID
-        /// </summary>
-        [NameInMap("HostId")]
-        [Validation(Required=false)]
-        public string HostId { get; set; }
-
-        /// <summary>
-        /// 工作空间名字
-        /// </summary>
-        [NameInMap("Workspace")]
-        [Validation(Required=false)]
-        public string Workspace { get; set; }
-
-        /// <summary>
-        /// 任务ID
-        /// </summary>
-        [NameInMap("RunId")]
-        [Validation(Required=false)]
-        public string RunId { get; set; }
-
-        /// <summary>
-        /// 任务名称
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 提交ID
-        /// </summary>
-        [NameInMap("SubmissionId")]
-        [Validation(Required=false)]
-        public string SubmissionId { get; set; }
-
-        /// <summary>
-        /// 应用来源
-        /// </summary>
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
-
-        /// <summary>
-        /// 命名空间
-        /// </summary>
-        [NameInMap("Namespace")]
-        [Validation(Required=false)]
-        public string Namespace { get; set; }
-
-        /// <summary>
-        /// 应用原名
-        /// </summary>
-        [NameInMap("AppOrigName")]
-        [Validation(Required=false)]
-        public string AppOrigName { get; set; }
-
-        /// <summary>
         /// 应用名称
         /// </summary>
         [NameInMap("AppName")]
@@ -82,37 +19,16 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         /// <summary>
         /// 应用版本
         /// </summary>
-        [NameInMap("Revision")]
+        [NameInMap("AppRevision")]
         [Validation(Required=false)]
-        public string Revision { get; set; }
+        public string AppRevision { get; set; }
 
         /// <summary>
-        /// 实体类型
+        /// 作业信息
         /// </summary>
-        [NameInMap("EntityType")]
+        [NameInMap("Calls")]
         [Validation(Required=false)]
-        public string EntityType { get; set; }
-
-        /// <summary>
-        /// 实体对象名称
-        /// </summary>
-        [NameInMap("EntityName")]
-        [Validation(Required=false)]
-        public string EntityName { get; set; }
-
-        /// <summary>
-        /// 用户ID
-        /// </summary>
-        [NameInMap("User")]
-        [Validation(Required=false)]
-        public string User { get; set; }
-
-        /// <summary>
-        /// 任务状态
-        /// </summary>
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Calls { get; set; }
 
         /// <summary>
         /// 提交时间
@@ -122,11 +38,18 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 默认runtime值
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("DefaultRuntime")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string DefaultRuntime { get; set; }
+
+        /// <summary>
+        /// 任务描述
+        /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         /// <summary>
         /// 结束时间
@@ -134,6 +57,27 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        /// <summary>
+        /// 实体对象名称
+        /// </summary>
+        [NameInMap("EntityName")]
+        [Validation(Required=false)]
+        public string EntityName { get; set; }
+
+        /// <summary>
+        /// 实体类型
+        /// </summary>
+        [NameInMap("EntityType")]
+        [Validation(Required=false)]
+        public string EntityType { get; set; }
+
+        /// <summary>
+        /// 任务执行目录
+        /// </summary>
+        [NameInMap("ExecuteDirectory")]
+        [Validation(Required=false)]
+        public string ExecuteDirectory { get; set; }
 
         /// <summary>
         /// 任务配置
@@ -151,15 +95,31 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
             [NameInMap("FailureMode")]
             [Validation(Required=false)]
             public string FailureMode { get; set; }
+            [NameInMap("UseRelativeOutputPaths")]
+            [Validation(Required=false)]
+            public bool? UseRelativeOutputPaths { get; set; }
         };
 
+        /// <summary>
+        /// 错误信息
+        /// </summary>
+        [NameInMap("Failures")]
+        [Validation(Required=false)]
+        public string Failures { get; set; }
+
+        /// <summary>
+        /// 主机ID
+        /// </summary>
+        [NameInMap("HostId")]
+        [Validation(Required=false)]
+        public string HostId { get; set; }
+
+        /// <summary>
+        /// 任务输入
+        /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
         public string Inputs { get; set; }
-
-        [NameInMap("Outputs")]
-        [Validation(Required=false)]
-        public string Outputs { get; set; }
 
         /// <summary>
         /// 任务标签
@@ -176,25 +136,60 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         public string OutputFolder { get; set; }
 
         /// <summary>
-        /// 任务执行目录
+        /// 任务输出
         /// </summary>
-        [NameInMap("ExecuteDirectory")]
+        [NameInMap("Outputs")]
         [Validation(Required=false)]
-        public string ExecuteDirectory { get; set; }
+        public string Outputs { get; set; }
 
         /// <summary>
-        /// 默认runtime值
+        /// 请求ID
         /// </summary>
-        [NameInMap("DefaultRuntime")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DefaultRuntime { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// 任务描述
+        /// 任务ID
         /// </summary>
-        [NameInMap("Description")]
+        [NameInMap("RunId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string RunId { get; set; }
+
+        /// <summary>
+        /// 任务名称
+        /// </summary>
+        [NameInMap("RunName")]
+        [Validation(Required=false)]
+        public string RunName { get; set; }
+
+        /// <summary>
+        /// 应用来源
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        /// <summary>
+        /// 任务状态
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 提交ID
+        /// </summary>
+        [NameInMap("SubmissionId")]
+        [Validation(Required=false)]
+        public string SubmissionId { get; set; }
 
         /// <summary>
         /// 时序信息
@@ -203,13 +198,19 @@ namespace AlibabaCloud.SDK.EasyGene20210315.Models
         [Validation(Required=false)]
         public string Timing { get; set; }
 
-        [NameInMap("Calls")]
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        [NameInMap("User")]
         [Validation(Required=false)]
-        public string Calls { get; set; }
+        public string User { get; set; }
 
-        [NameInMap("Failures")]
+        /// <summary>
+        /// 工作空间名字
+        /// </summary>
+        [NameInMap("Workspace")]
         [Validation(Required=false)]
-        public string Failures { get; set; }
+        public string Workspace { get; set; }
 
     }
 

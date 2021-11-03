@@ -8,24 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EasyGene20210315.Models
 {
-    public class CreateEntityRequest : TeaModel {
-        /// <summary>
-        /// 幂等Token
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
+    public class UpdateEntityItemsRequest : TeaModel {
         [NameInMap("EntityItems")]
         [Validation(Required=false)]
-        public List<CreateEntityRequestEntityItems> EntityItems { get; set; }
-        public class CreateEntityRequestEntityItems : TeaModel {
+        public List<UpdateEntityItemsRequestEntityItems> EntityItems { get; set; }
+        public class UpdateEntityItemsRequestEntityItems : TeaModel {
             [NameInMap("EntityData")]
             [Validation(Required=false)]
             public Dictionary<string, string> EntityData { get; set; }
 
             /// <summary>
-            /// 表格元素名称
+            /// 实体元素名称
             /// </summary>
             [NameInMap("EntityName")]
             [Validation(Required=false)]
