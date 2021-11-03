@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public class GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference : TeaModel {
                 [NameInMap("VerificationTypes")]
                 [Validation(Required=false)]
-                public string VerificationTypes { get; set; }
+                public List<string> VerificationTypes { get; set; }
 
             }
         };
