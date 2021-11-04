@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSysTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+        /// MaxResults本次请求所返回的最大记录条数
         /// </summary>
-        [NameInMap("TotalCount")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
         /// 表示当前调用返回读取到的位置，空代表数据已经读取完毕
@@ -31,33 +24,40 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// MaxResults本次请求所返回的最大记录条数
+        /// Id of the request
         /// </summary>
-        [NameInMap("MaxResults")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public List<ListSysTemplatesResponseBodyTemplates> Templates { get; set; }
         public class ListSysTemplatesResponseBodyTemplates : TeaModel {
-            [NameInMap("TemplateId")]
+            [NameInMap("Config")]
             [Validation(Required=false)]
-            public string TemplateId { get; set; }
+            public string Config { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
-            [NameInMap("Config")]
-            [Validation(Required=false)]
-            public string Config { get; set; }
-
         }
+
+        /// <summary>
+        /// TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -10,39 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListMediaBasicInfosRequest : TeaModel {
         /// <summary>
-        /// 创建时间
-        /// </summary>
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        /// <summary>
-        /// 结束时间
-        /// </summary>
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        /// <summary>
-        /// 媒资媒体类型
-        /// </summary>
-        [NameInMap("MediaType")]
-        [Validation(Required=false)]
-        public string MediaType { get; set; }
-
-        /// <summary>
         /// 媒资业务类型
         /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public string BusinessType { get; set; }
-
-        /// <summary>
-        /// 来源
-        /// </summary>
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
 
         /// <summary>
         /// 分类
@@ -52,18 +24,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// 资源状态
+        /// 结束时间
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string EndTime { get; set; }
 
         /// <summary>
-        /// 页号
+        /// 返回值中是否包含文件基础信息
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("IncludeFileBasicInfo")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public bool? IncludeFileBasicInfo { get; set; }
 
         /// <summary>
         /// 分页大小
@@ -73,6 +45,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// 媒资媒体类型
+        /// </summary>
+        [NameInMap("MediaType")]
+        [Validation(Required=false)]
+        public string MediaType { get; set; }
+
+        /// <summary>
+        /// 页号
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
         /// 排序
         /// </summary>
         [NameInMap("SortBy")]
@@ -80,11 +66,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// 返回值中是否包含文件基础信息
+        /// 来源
         /// </summary>
-        [NameInMap("IncludeFileBasicInfo")]
+        [NameInMap("Source")]
         [Validation(Required=false)]
-        public bool? IncludeFileBasicInfo { get; set; }
+        public string Source { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        /// <summary>
+        /// 资源状态
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

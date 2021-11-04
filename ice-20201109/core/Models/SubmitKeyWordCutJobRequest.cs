@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitKeyWordCutJobRequest : TeaModel {
-        [NameInMap("Keyword")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string Keyword { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("InputFile")]
         [Validation(Required=false)]
         public string InputFile { get; set; }
 
-        [NameInMap("UserData")]
+        [NameInMap("Keyword")]
         [Validation(Required=false)]
-        public string UserData { get; set; }
+        public string Keyword { get; set; }
 
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("UserData")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string UserData { get; set; }
 
     }
 

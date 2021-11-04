@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAllPublicMediaTagsResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 公共素材库标签列表
         /// </summary>
         [NameInMap("MediaTagList")]
@@ -45,6 +38,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string MediaTagNameEnglish { get; set; }
 
         }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

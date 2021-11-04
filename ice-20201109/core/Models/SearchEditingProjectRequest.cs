@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchEditingProjectRequest : TeaModel {
         /// <summary>
-        /// CreateTime（创建时间）的开始时间
+        /// 创建来源
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("CreateSource")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string CreateSource { get; set; }
 
         /// <summary>
         /// CreationTime（创建时间）的结束时间
@@ -24,11 +24,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 云剪辑工程状态。多个用逗号分隔
+        /// 分页参数
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public long? MaxResults { get; set; }
+
+        /// <summary>
+        /// 分页参数
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("ProjectType")]
+        [Validation(Required=false)]
+        public string ProjectType { get; set; }
 
         /// <summary>
         /// 结果排序方式
@@ -38,25 +49,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// CreateTime（创建时间）的开始时间
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string StartTime { get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// 云剪辑工程状态。多个用逗号分隔
         /// </summary>
-        [NameInMap("MaxResults")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? MaxResults { get; set; }
-
-        /// <summary>
-        /// 创建来源
-        /// </summary>
-        [NameInMap("CreateSource")]
-        [Validation(Required=false)]
-        public string CreateSource { get; set; }
+        public string Status { get; set; }
 
         /// <summary>
         /// 模板类型
@@ -64,10 +68,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }
-
-        [NameInMap("ProjectType")]
-        [Validation(Required=false)]
-        public string ProjectType { get; set; }
 
     }
 

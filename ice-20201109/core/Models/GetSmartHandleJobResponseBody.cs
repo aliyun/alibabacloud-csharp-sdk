@@ -9,12 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetSmartHandleJobResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("FEExtend")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string FEExtend { get; set; }
 
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -24,31 +21,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Output { get; set; }
 
-        [NameInMap("State")]
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string State { get; set; }
-
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
-
-        [NameInMap("FEExtend")]
-        [Validation(Required=false)]
-        public string FEExtend { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("SmartJobInfo")]
         [Validation(Required=false)]
         public GetSmartHandleJobResponseBodySmartJobInfo SmartJobInfo { get; set; }
         public class GetSmartHandleJobResponseBodySmartJobInfo : TeaModel {
-            [NameInMap("Title")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string Title { get; set; }
+            public string CreateTime { get; set; }
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-            [NameInMap("UserId")]
-            [Validation(Required=false)]
-            public string UserId { get; set; }
             [NameInMap("EditingConfig")]
             [Validation(Required=false)]
             public string EditingConfig { get; set; }
@@ -65,6 +54,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string JobParameters { get; set; }
 
             }
+            [NameInMap("JobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+            [NameInMap("ModifiedTime")]
+            [Validation(Required=false)]
+            public string ModifiedTime { get; set; }
             [NameInMap("OutputConfig")]
             [Validation(Required=false)]
             public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig OutputConfig { get; set; }
@@ -78,16 +73,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Object { get; set; }
 
             }
-            [NameInMap("CreateTime")]
+            [NameInMap("Title")]
             [Validation(Required=false)]
-            public string CreateTime { get; set; }
-            [NameInMap("ModifiedTime")]
+            public string Title { get; set; }
+            [NameInMap("UserId")]
             [Validation(Required=false)]
-            public string ModifiedTime { get; set; }
-            [NameInMap("JobType")]
-            [Validation(Required=false)]
-            public string JobType { get; set; }
+            public string UserId { get; set; }
         };
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 

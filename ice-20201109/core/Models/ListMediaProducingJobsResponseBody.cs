@@ -9,24 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListMediaProducingJobsResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MediaProducingJobList")]
         [Validation(Required=false)]
         public List<ListMediaProducingJobsResponseBodyMediaProducingJobList> MediaProducingJobList { get; set; }
         public class ListMediaProducingJobsResponseBodyMediaProducingJobList : TeaModel {
+            [NameInMap("ClipsParam")]
+            [Validation(Required=false)]
+            public string ClipsParam { get; set; }
+
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("CompleteTime")]
+            [Validation(Required=false)]
+            public string CompleteTime { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public float? Duration { get; set; }
+
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
-
-            [NameInMap("ProjectId")]
-            [Validation(Required=false)]
-            public string ProjectId { get; set; }
 
             [NameInMap("MediaId")]
             [Validation(Required=false)]
@@ -36,43 +45,34 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string MediaURL { get; set; }
 
-            [NameInMap("TemplateId")]
+            [NameInMap("Message")]
             [Validation(Required=false)]
-            public string TemplateId { get; set; }
-
-            [NameInMap("ClipsParam")]
-            [Validation(Required=false)]
-            public string ClipsParam { get; set; }
-
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public float? Duration { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("CompleteTime")]
-            [Validation(Required=false)]
-            public string CompleteTime { get; set; }
+            public string Message { get; set; }
 
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
+            [NameInMap("ProjectId")]
+            [Validation(Required=false)]
+            public string ProjectId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
-            [NameInMap("Code")]
+            [NameInMap("TemplateId")]
             [Validation(Required=false)]
-            public string Code { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
+            public string TemplateId { get; set; }
 
         }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

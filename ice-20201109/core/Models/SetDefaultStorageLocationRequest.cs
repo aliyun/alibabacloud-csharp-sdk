@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SetDefaultStorageLocationRequest : TeaModel {
-        [NameInMap("StorageType")]
-        [Validation(Required=false)]
-        public string StorageType { get; set; }
-
         [NameInMap("Bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("Path")]
         [Validation(Required=false)]
         public string Path { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
     }
 

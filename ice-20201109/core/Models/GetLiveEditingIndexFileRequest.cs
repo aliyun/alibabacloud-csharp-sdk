@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("StreamName")]
-        [Validation(Required=false)]
-        public string StreamName { get; set; }
-
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
+
+        [NameInMap("StreamName")]
+        [Validation(Required=false)]
+        public string StreamName { get; set; }
 
     }
 

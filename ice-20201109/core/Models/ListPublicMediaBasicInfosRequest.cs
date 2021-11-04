@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListPublicMediaBasicInfosRequest : TeaModel {
         /// <summary>
+        /// 返回值中是否包含文件基础信息
+        /// </summary>
+        [NameInMap("IncludeFileBasicInfo")]
+        [Validation(Required=false)]
+        public bool? IncludeFileBasicInfo { get; set; }
+
+        /// <summary>
+        /// 分页大小
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
         /// 标签
         /// </summary>
         [NameInMap("MediaTagId")]
@@ -22,20 +36,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
-
-        /// <summary>
-        /// 分页大小
-        /// </summary>
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        /// <summary>
-        /// 返回值中是否包含文件基础信息
-        /// </summary>
-        [NameInMap("IncludeFileBasicInfo")]
-        [Validation(Required=false)]
-        public bool? IncludeFileBasicInfo { get; set; }
 
     }
 

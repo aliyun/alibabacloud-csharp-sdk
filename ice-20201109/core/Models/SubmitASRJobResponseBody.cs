@@ -10,27 +10,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitASRJobResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// 智能任务Id
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        /// <summary>
+        /// 请求Id
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
-        [NameInMap("Output")]
-        [Validation(Required=false)]
-        public string Output { get; set; }
-
+        /// <summary>
+        /// 任务状态
+        /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
-
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
 
     }
 

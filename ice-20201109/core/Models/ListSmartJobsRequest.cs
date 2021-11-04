@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSmartJobsRequest : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("JobState")]
         [Validation(Required=false)]
-        public long? Status { get; set; }
+        public string JobState { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("JobType")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string JobType { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -32,17 +33,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("JobType")]
-        [Validation(Required=false)]
-        public string JobType { get; set; }
-
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
-        [NameInMap("JobState")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string JobState { get; set; }
+        public long? Status { get; set; }
 
     }
 

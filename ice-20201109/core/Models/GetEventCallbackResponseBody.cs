@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetEventCallbackResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CallbackQueueName")]
         [Validation(Required=false)]
         public string CallbackQueueName { get; set; }
@@ -23,6 +16,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("EventTypeList")]
         [Validation(Required=false)]
         public string EventTypeList { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitSubtitleProduceJobRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("EditingConfig")]
         [Validation(Required=false)]
         public string EditingConfig { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("OutputConfig")]
-        [Validation(Required=false)]
-        public string OutputConfig { get; set; }
 
         [NameInMap("InputConfig")]
         [Validation(Required=false)]
@@ -29,13 +25,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? IsAsync { get; set; }
 
+        [NameInMap("OutputConfig")]
+        [Validation(Required=false)]
+        public string OutputConfig { get; set; }
+
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Type { get; set; }
 
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -9,16 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLiveEditingIndexFileResponseBody : TeaModel {
+        [NameInMap("IndexFile")]
+        [Validation(Required=false)]
+        public string IndexFile { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("IndexFile")]
-        [Validation(Required=false)]
-        public string IndexFile { get; set; }
 
     }
 

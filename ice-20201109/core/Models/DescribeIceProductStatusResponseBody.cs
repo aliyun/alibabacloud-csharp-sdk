@@ -9,16 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeIceProductStatusResponseBody : TeaModel {
+        [NameInMap("ICEServiceAvaliable")]
+        [Validation(Required=false)]
+        public bool? ICEServiceAvaliable { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ICEServiceAvaliable")]
-        [Validation(Required=false)]
-        public bool? ICEServiceAvaliable { get; set; }
 
     }
 

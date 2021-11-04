@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
-        /// 模板ID
-        /// </summary>
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public string TemplateId { get; set; }
-
-        /// <summary>
-        /// 模板名称
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
         /// 参见Timeline模板Config文档
         /// </summary>
         [NameInMap("Config")]
@@ -38,11 +24,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CoverUrl { get; set; }
 
         /// <summary>
+        /// 模板名称
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 预览视频媒资id
         /// </summary>
         [NameInMap("PreviewMedia")]
         [Validation(Required=false)]
         public string PreviewMedia { get; set; }
+
+        /// <summary>
+        /// 修改来源，默认OpenAPI
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
 
         /// <summary>
         /// 模板状态
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// 修改来源，默认OpenAPI
+        /// 模板ID
         /// </summary>
-        [NameInMap("Source")]
+        [NameInMap("TemplateId")]
         [Validation(Required=false)]
-        public string Source { get; set; }
+        public string TemplateId { get; set; }
 
     }
 

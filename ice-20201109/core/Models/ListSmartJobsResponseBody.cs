@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSmartJobsResponseBody : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public string MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -20,45 +28,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<ListSmartJobsResponseBodySmartJobList> SmartJobList { get; set; }
         public class ListSmartJobsResponseBodySmartJobList : TeaModel {
-            [NameInMap("JobId")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string JobId { get; set; }
-
-            [NameInMap("Title")]
-            [Validation(Required=false)]
-            public string Title { get; set; }
+            public string CreateTime { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("UserId")]
-            [Validation(Required=false)]
-            public long? UserId { get; set; }
-
-            [NameInMap("JobType")]
-            [Validation(Required=false)]
-            public string JobType { get; set; }
-
             [NameInMap("EditingConfig")]
             [Validation(Required=false)]
             public string EditingConfig { get; set; }
-
-            [NameInMap("UserData")]
-            [Validation(Required=false)]
-            public string UserData { get; set; }
-
-            [NameInMap("JobState")]
-            [Validation(Required=false)]
-            public string JobState { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("ModifiedTime")]
-            [Validation(Required=false)]
-            public string ModifiedTime { get; set; }
 
             [NameInMap("InputConfig")]
             [Validation(Required=false)]
@@ -72,6 +52,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Keyword { get; set; }
             };
 
+            [NameInMap("JobId")]
+            [Validation(Required=false)]
+            public string JobId { get; set; }
+
+            [NameInMap("JobState")]
+            [Validation(Required=false)]
+            public string JobState { get; set; }
+
+            [NameInMap("JobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+
+            [NameInMap("ModifiedTime")]
+            [Validation(Required=false)]
+            public string ModifiedTime { get; set; }
+
             [NameInMap("OutputConfig")]
             [Validation(Required=false)]
             public ListSmartJobsResponseBodySmartJobListOutputConfig OutputConfig { get; set; }
@@ -84,15 +80,19 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Object { get; set; }
             };
 
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
+
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
+
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public long? UserId { get; set; }
+
         }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public string MaxResults { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

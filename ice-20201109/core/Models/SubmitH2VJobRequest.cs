@@ -9,31 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitH2VJobRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// 输入文件
         /// </summary>
         [NameInMap("InputFile")]
         [Validation(Required=false)]
         public string InputFile { get; set; }
-
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
-
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// 输出bucket
-        /// </summary>
-        [NameInMap("OutputConfig")]
-        [Validation(Required=false)]
-        public string OutputConfig { get; set; }
 
         /// <summary>
         /// 输入文件类型
@@ -43,11 +28,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputType { get; set; }
 
         /// <summary>
-        /// 是否强制覆盖现有OSS文件
+        /// 输出bucket
         /// </summary>
-        [NameInMap("Overwrite")]
+        [NameInMap("OutputConfig")]
         [Validation(Required=false)]
-        public bool? Overwrite { get; set; }
+        public string OutputConfig { get; set; }
 
         /// <summary>
         /// 输出类型
@@ -55,6 +40,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("OutputMediaTarget")]
         [Validation(Required=false)]
         public string OutputMediaTarget { get; set; }
+
+        /// <summary>
+        /// 是否强制覆盖现有OSS文件
+        /// </summary>
+        [NameInMap("Overwrite")]
+        [Validation(Required=false)]
+        public bool? Overwrite { get; set; }
+
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 

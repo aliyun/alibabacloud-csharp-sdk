@@ -23,33 +23,33 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AddTemplateResponseBodyTemplate Template { get; set; }
         public class AddTemplateResponseBodyTemplate : TeaModel {
-            [NameInMap("TemplateId")]
-            [Validation(Required=false)]
-            public string TemplateId { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
             [NameInMap("CoverUrl")]
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
-            [NameInMap("PreviewMedia")]
-            [Validation(Required=false)]
-            public string PreviewMedia { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
             [NameInMap("CreateSource")]
             [Validation(Required=false)]
             public string CreateSource { get; set; }
             [NameInMap("ModifiedSource")]
             [Validation(Required=false)]
             public string ModifiedSource { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("PreviewMedia")]
+            [Validation(Required=false)]
+            public string PreviewMedia { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
         };
 
     }

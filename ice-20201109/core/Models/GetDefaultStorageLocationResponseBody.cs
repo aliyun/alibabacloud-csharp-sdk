@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetDefaultStorageLocationResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 存储类型
-        /// </summary>
-        [NameInMap("StorageType")]
-        [Validation(Required=false)]
-        public string StorageType { get; set; }
-
-        /// <summary>
         /// oss bucket 名称
         /// </summary>
         [NameInMap("Bucket")]
@@ -38,11 +24,25 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 状态
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 存储类型
+        /// </summary>
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
     }
 

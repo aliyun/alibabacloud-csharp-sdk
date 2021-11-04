@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteSmartJobResponseBody : TeaModel {
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -19,10 +23,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
-
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
 
     }
 

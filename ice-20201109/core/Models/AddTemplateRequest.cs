@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddTemplateRequest : TeaModel {
         /// <summary>
-        /// 模板名称
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 模板类型，取值范围：Timeline
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        /// <summary>
         /// 参见Timeline模板Config文档
         /// </summary>
         [NameInMap("Config")]
@@ -38,6 +24,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CoverUrl { get; set; }
 
         /// <summary>
+        /// 模板名称
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 预览视频媒资id
         /// </summary>
         [NameInMap("PreviewMedia")]
@@ -45,11 +38,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PreviewMedia { get; set; }
 
         /// <summary>
-        /// 模板状态
+        /// 模板相关素材，模板编辑器使用
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("RelatedMediaids")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string RelatedMediaids { get; set; }
 
         /// <summary>
         /// 模板创建来源，默认OpenAPI
@@ -59,11 +52,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// 模板相关素材，模板编辑器使用
+        /// 模板状态
         /// </summary>
-        [NameInMap("RelatedMediaids")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string RelatedMediaids { get; set; }
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 模板类型，取值范围：Timeline
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListTemplatesRequest : TeaModel {
         /// <summary>
-        /// 模板类型
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        /// <summary>
-        /// 模板状态
-        /// </summary>
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        /// <summary>
         /// 创建来源
         /// </summary>
         [NameInMap("CreateSource")]
@@ -43,6 +29,20 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }
+
+        /// <summary>
+        /// 模板状态
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 模板类型
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 
