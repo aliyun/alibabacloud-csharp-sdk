@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ChangeColumnSecLevelRequest : TeaModel {
-        [NameInMap("Tid")]
+        [NameInMap("ColumnName")]
         [Validation(Required=false)]
-        public long? Tid { get; set; }
+        public string ColumnName { get; set; }
 
         [NameInMap("DbId")]
         [Validation(Required=false)]
@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? IsLogic { get; set; }
 
+        /// <summary>
+        /// 新的敏感等级
+        /// </summary>
+        [NameInMap("NewLevel")]
+        [Validation(Required=false)]
+        public string NewLevel { get; set; }
+
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
         public string SchemaName { get; set; }
@@ -29,16 +36,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string TableName { get; set; }
 
-        [NameInMap("ColumnName")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public string ColumnName { get; set; }
-
-        /// <summary>
-        /// 新的敏感等级
-        /// </summary>
-        [NameInMap("NewLevel")]
-        [Validation(Required=false)]
-        public string NewLevel { get; set; }
+        public long? Tid { get; set; }
 
     }
 

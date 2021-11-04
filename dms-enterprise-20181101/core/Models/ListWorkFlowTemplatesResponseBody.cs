@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListWorkFlowTemplatesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -33,7 +33,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate> WorkFlowTemplate { get; set; }
             public class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate : TeaModel {
+                public string Comment { get; set; }
+                public long? CreateUserId { get; set; }
+                public string Enabled { get; set; }
                 public int? IsSystem { get; set; }
+                public long? TemplateId { get; set; }
+                public string TemplateName { get; set; }
                 public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes WorkflowNodes { get; set; }
                 public class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes : TeaModel {
                     [NameInMap("WorkflowNode")]
@@ -44,38 +49,33 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                         [Validation(Required=false)]
                         public string Comment { get; set; }
 
-                        [NameInMap("NodeType")]
-                        [Validation(Required=false)]
-                        public string NodeType { get; set; }
-
-                        [NameInMap("NodeName")]
-                        [Validation(Required=false)]
-                        public string NodeName { get; set; }
-
-                        [NameInMap("Position")]
-                        [Validation(Required=false)]
-                        public int? Position { get; set; }
-
                         [NameInMap("CreateUserId")]
                         [Validation(Required=false)]
                         public long? CreateUserId { get; set; }
-
-                        [NameInMap("TemplateId")]
-                        [Validation(Required=false)]
-                        public long? TemplateId { get; set; }
 
                         [NameInMap("NodeId")]
                         [Validation(Required=false)]
                         public long? NodeId { get; set; }
 
+                        [NameInMap("NodeName")]
+                        [Validation(Required=false)]
+                        public string NodeName { get; set; }
+
+                        [NameInMap("NodeType")]
+                        [Validation(Required=false)]
+                        public string NodeType { get; set; }
+
+                        [NameInMap("Position")]
+                        [Validation(Required=false)]
+                        public int? Position { get; set; }
+
+                        [NameInMap("TemplateId")]
+                        [Validation(Required=false)]
+                        public long? TemplateId { get; set; }
+
                     }
 
                 }
-                public string Comment { get; set; }
-                public string Enabled { get; set; }
-                public string TemplateName { get; set; }
-                public long? TemplateId { get; set; }
-                public long? CreateUserId { get; set; }
             }
         };
 

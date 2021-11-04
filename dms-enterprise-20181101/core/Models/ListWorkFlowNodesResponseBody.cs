@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListWorkFlowNodesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -20,6 +16,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("WorkflowNodes")]
         [Validation(Required=false)]
@@ -29,16 +33,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode> WorkflowNode { get; set; }
             public class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode : TeaModel {
-                public string Comment { get; set; }
-                public string CreateUserNickName { get; set; }
-                public string NodeType { get; set; }
-                public string NodeName { get; set; }
                 public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsers AuditUsers { get; set; }
                 public class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsers : TeaModel {
                     [NameInMap("AuditUser")]
                     [Validation(Required=false)]
                     public List<ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser> AuditUser { get; set; }
                     public class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser : TeaModel {
+                        [NameInMap("NickName")]
+                        [Validation(Required=false)]
+                        public string NickName { get; set; }
+
                         [NameInMap("RealName")]
                         [Validation(Required=false)]
                         public string RealName { get; set; }
@@ -47,21 +51,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                         [Validation(Required=false)]
                         public long? UserId { get; set; }
 
-                        [NameInMap("NickName")]
-                        [Validation(Required=false)]
-                        public string NickName { get; set; }
-
                     }
 
                 }
+                public string Comment { get; set; }
                 public long? CreateUserId { get; set; }
+                public string CreateUserNickName { get; set; }
                 public long? NodeId { get; set; }
+                public string NodeName { get; set; }
+                public string NodeType { get; set; }
             }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

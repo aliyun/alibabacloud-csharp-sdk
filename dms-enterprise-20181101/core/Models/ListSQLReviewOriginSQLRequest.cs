@@ -9,23 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSQLReviewOriginSQLRequest : TeaModel {
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public long? OrderId { get; set; }
-
         [NameInMap("OrderActionDetail")]
         [Validation(Required=false)]
         public ListSQLReviewOriginSQLRequestOrderActionDetail OrderActionDetail { get; set; }
         public class ListSQLReviewOriginSQLRequestOrderActionDetail : TeaModel {
-            [NameInMap("FileId")]
-            [Validation(Required=false)]
-            public long? FileId { get; set; }
-            [NameInMap("SQLReviewResult")]
-            [Validation(Required=false)]
-            public string SQLReviewResult { get; set; }
             [NameInMap("CheckStatusResult")]
             [Validation(Required=false)]
             public string CheckStatusResult { get; set; }
+            [NameInMap("FileId")]
+            [Validation(Required=false)]
+            public long? FileId { get; set; }
             [NameInMap("Page")]
             [Validation(Required=false)]
             public ListSQLReviewOriginSQLRequestOrderActionDetailPage Page { get; set; }
@@ -39,7 +32,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public int? PageSize { get; set; }
 
             }
+            [NameInMap("SQLReviewResult")]
+            [Validation(Required=false)]
+            public string SQLReviewResult { get; set; }
         };
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

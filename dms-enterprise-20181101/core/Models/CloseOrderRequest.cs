@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CloseOrderRequest : TeaModel {
-        [NameInMap("Tid")]
+        [NameInMap("CloseReason")]
         [Validation(Required=false)]
-        public long? Tid { get; set; }
+        public string CloseReason { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
-        [NameInMap("CloseReason")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public string CloseReason { get; set; }
+        public long? Tid { get; set; }
 
     }
 

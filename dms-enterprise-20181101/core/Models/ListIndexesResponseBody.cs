@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListIndexesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -29,13 +25,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListIndexesResponseBodyIndexListIndex> Index { get; set; }
             public class ListIndexesResponseBodyIndexListIndex : TeaModel {
+                public string IndexComment { get; set; }
+                public string IndexId { get; set; }
                 public string IndexName { get; set; }
                 public string IndexType { get; set; }
                 public string TableId { get; set; }
-                public string IndexId { get; set; }
-                public string IndexComment { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

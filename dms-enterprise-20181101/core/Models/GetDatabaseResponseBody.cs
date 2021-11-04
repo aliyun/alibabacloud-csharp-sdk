@@ -9,47 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDatabaseResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Database")]
         [Validation(Required=false)]
         public GetDatabaseResponseBodyDatabase Database { get; set; }
         public class GetDatabaseResponseBodyDatabase : TeaModel {
-            [NameInMap("DatabaseId")]
-            [Validation(Required=false)]
-            public string DatabaseId { get; set; }
-            [NameInMap("Host")]
-            [Validation(Required=false)]
-            public string Host { get; set; }
             [NameInMap("CatalogName")]
             [Validation(Required=false)]
             public string CatalogName { get; set; }
-            [NameInMap("DbaName")]
+            [NameInMap("DatabaseId")]
             [Validation(Required=false)]
-            public string DbaName { get; set; }
-            [NameInMap("State")]
+            public string DatabaseId { get; set; }
+            [NameInMap("DbType")]
             [Validation(Required=false)]
-            public string State { get; set; }
+            public string DbType { get; set; }
             [NameInMap("DbaId")]
             [Validation(Required=false)]
             public string DbaId { get; set; }
-            [NameInMap("SchemaName")]
+            [NameInMap("DbaName")]
             [Validation(Required=false)]
-            public string SchemaName { get; set; }
-            [NameInMap("InstanceId")]
+            public string DbaName { get; set; }
+            [NameInMap("Encoding")]
             [Validation(Required=false)]
-            public string InstanceId { get; set; }
-            [NameInMap("Port")]
-            [Validation(Required=false)]
-            public int? Port { get; set; }
+            public string Encoding { get; set; }
             [NameInMap("EnvType")]
             [Validation(Required=false)]
             public string EnvType { get; set; }
-            [NameInMap("Sid")]
+            [NameInMap("Host")]
             [Validation(Required=false)]
-            public string Sid { get; set; }
+            public string Host { get; set; }
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
             [NameInMap("OwnerIdList")]
             [Validation(Required=false)]
             public GetDatabaseResponseBodyDatabaseOwnerIdList OwnerIdList { get; set; }
@@ -59,12 +49,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<string> OwnerIds { get; set; }
 
             }
-            [NameInMap("Encoding")]
-            [Validation(Required=false)]
-            public string Encoding { get; set; }
-            [NameInMap("DbType")]
-            [Validation(Required=false)]
-            public string DbType { get; set; }
             [NameInMap("OwnerNameList")]
             [Validation(Required=false)]
             public GetDatabaseResponseBodyDatabaseOwnerNameList OwnerNameList { get; set; }
@@ -74,9 +58,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<string> OwnerNames { get; set; }
 
             }
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
+            [NameInMap("SchemaName")]
+            [Validation(Required=false)]
+            public string SchemaName { get; set; }
             [NameInMap("SearchName")]
             [Validation(Required=false)]
             public string SearchName { get; set; }
+            [NameInMap("Sid")]
+            [Validation(Required=false)]
+            public string Sid { get; set; }
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
         };
 
         [NameInMap("ErrorCode")]
@@ -86,6 +82,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

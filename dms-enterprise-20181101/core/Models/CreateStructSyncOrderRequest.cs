@@ -9,18 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateStructSyncOrderRequest : TeaModel {
+        [NameInMap("AttachmentKey")]
+        [Validation(Required=false)]
+        public string AttachmentKey { get; set; }
+
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
-
-        [NameInMap("RelatedUserList")]
-        [Validation(Required=false)]
-        public List<long?> RelatedUserList { get; set; }
 
         [NameInMap("Param")]
         [Validation(Required=false)]
         public CreateStructSyncOrderRequestParam Param { get; set; }
         public class CreateStructSyncOrderRequestParam : TeaModel {
+            [NameInMap("IgnoreError")]
+            [Validation(Required=false)]
+            public bool? IgnoreError { get; set; }
             [NameInMap("Source")]
             [Validation(Required=false)]
             public CreateStructSyncOrderRequestParamSource Source { get; set; }
@@ -41,6 +44,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string VersionId { get; set; }
 
+            }
+            [NameInMap("TableInfoList")]
+            [Validation(Required=false)]
+            public List<CreateStructSyncOrderRequestParamTableInfoList> TableInfoList { get; set; }
+            public class CreateStructSyncOrderRequestParamTableInfoList : TeaModel {
+                public string SourceTableName { get; set; }
+                public string TargetTableName { get; set; }
             }
             [NameInMap("Target")]
             [Validation(Required=false)]
@@ -63,21 +73,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string VersionId { get; set; }
 
             }
-            [NameInMap("IgnoreError")]
-            [Validation(Required=false)]
-            public bool? IgnoreError { get; set; }
-            [NameInMap("TableInfoList")]
-            [Validation(Required=false)]
-            public List<CreateStructSyncOrderRequestParamTableInfoList> TableInfoList { get; set; }
-            public class CreateStructSyncOrderRequestParamTableInfoList : TeaModel {
-                public string SourceTableName { get; set; }
-                public string TargetTableName { get; set; }
-            }
         };
 
-        [NameInMap("AttachmentKey")]
+        [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
-        public string AttachmentKey { get; set; }
+        public List<long?> RelatedUserList { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

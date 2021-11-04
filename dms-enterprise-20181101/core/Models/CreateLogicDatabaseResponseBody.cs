@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateLogicDatabaseResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("LogicDbId")]
+        [Validation(Required=false)]
+        public long? LogicDbId { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -19,18 +31,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("LogicDbId")]
-        [Validation(Required=false)]
-        public long? LogicDbId { get; set; }
 
     }
 

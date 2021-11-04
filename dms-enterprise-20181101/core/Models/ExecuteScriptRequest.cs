@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? DbId { get; set; }
 
-        [NameInMap("Script")]
-        [Validation(Required=false)]
-        public string Script { get; set; }
-
         [NameInMap("Logic")]
         [Validation(Required=false)]
         public bool? Logic { get; set; }
+
+        [NameInMap("Script")]
+        [Validation(Required=false)]
+        public string Script { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

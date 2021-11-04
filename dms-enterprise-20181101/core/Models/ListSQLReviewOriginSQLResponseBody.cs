@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSQLReviewOriginSQLResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -21,21 +17,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("OriginSQLList")]
         [Validation(Required=false)]
         public List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> OriginSQLList { get; set; }
         public class ListSQLReviewOriginSQLResponseBodyOriginSQLList : TeaModel {
-            [NameInMap("SQLId")]
+            [NameInMap("CheckStatus")]
             [Validation(Required=false)]
-            public long? SQLId { get; set; }
+            public string CheckStatus { get; set; }
+
+            [NameInMap("CheckedTime")]
+            [Validation(Required=false)]
+            public string CheckedTime { get; set; }
 
             [NameInMap("FileId")]
             [Validation(Required=false)]
@@ -45,35 +37,43 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string FileName { get; set; }
 
+            [NameInMap("ReviewSummary")]
+            [Validation(Required=false)]
+            public string ReviewSummary { get; set; }
+
             [NameInMap("SQLContent")]
             [Validation(Required=false)]
             public string SQLContent { get; set; }
 
-            [NameInMap("CheckStatus")]
+            [NameInMap("SQLId")]
             [Validation(Required=false)]
-            public string CheckStatus { get; set; }
-
-            [NameInMap("StatusDesc")]
-            [Validation(Required=false)]
-            public string StatusDesc { get; set; }
-
-            [NameInMap("CheckedTime")]
-            [Validation(Required=false)]
-            public string CheckedTime { get; set; }
-
-            [NameInMap("SqlHash")]
-            [Validation(Required=false)]
-            public string SqlHash { get; set; }
-
-            [NameInMap("ReviewSummary")]
-            [Validation(Required=false)]
-            public string ReviewSummary { get; set; }
+            public long? SQLId { get; set; }
 
             [NameInMap("SQLReviewQueryKey")]
             [Validation(Required=false)]
             public string SQLReviewQueryKey { get; set; }
 
+            [NameInMap("SqlHash")]
+            [Validation(Required=false)]
+            public string SqlHash { get; set; }
+
+            [NameInMap("StatusDesc")]
+            [Validation(Required=false)]
+            public string StatusDesc { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

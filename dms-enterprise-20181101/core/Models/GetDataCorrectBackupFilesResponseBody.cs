@@ -9,9 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataCorrectBackupFilesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("DataCorrectBackupFiles")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles DataCorrectBackupFiles { get; set; }
+        public class GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles : TeaModel {
+            [NameInMap("FileUrl")]
+            [Validation(Required=false)]
+            public List<string> FileUrl { get; set; }
+        };
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -21,18 +26,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("DataCorrectBackupFiles")]
-        [Validation(Required=false)]
-        public GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles DataCorrectBackupFiles { get; set; }
-        public class GetDataCorrectBackupFilesResponseBodyDataCorrectBackupFiles : TeaModel {
-            [NameInMap("FileUrl")]
-            [Validation(Required=false)]
-            public List<string> FileUrl { get; set; }
-        };
 
     }
 

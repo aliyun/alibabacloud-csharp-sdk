@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveColumnsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -24,6 +16,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("SensitiveColumnList")]
         [Validation(Required=false)]
@@ -33,18 +29,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn> SensitiveColumn { get; set; }
             public class ListSensitiveColumnsResponseBodySensitiveColumnListSensitiveColumn : TeaModel {
-                public string ColumnName { get; set; }
-                public string TableName { get; set; }
-                public string SecurityLevel { get; set; }
                 public long? ColumnCount { get; set; }
-                public string SchemaName { get; set; }
+                public string ColumnName { get; set; }
                 public string FunctionType { get; set; }
+                public string SchemaName { get; set; }
+                public string SecurityLevel { get; set; }
+                public string TableName { get; set; }
             }
         };
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

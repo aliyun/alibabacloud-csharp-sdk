@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class SyncInstanceMetaRequest : TeaModel {
-        [NameInMap("Tid")]
+        [NameInMap("IgnoreTable")]
         [Validation(Required=false)]
-        public long? Tid { get; set; }
+        public bool? IgnoreTable { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("IgnoreTable")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public bool? IgnoreTable { get; set; }
+        public long? Tid { get; set; }
 
     }
 

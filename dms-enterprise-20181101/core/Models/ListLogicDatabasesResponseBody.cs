@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListLogicDatabasesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
 
         [NameInMap("LogicDatabaseList")]
         [Validation(Required=false)]
@@ -22,6 +26,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase> LogicDatabase { get; set; }
             public class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase : TeaModel {
                 public string DatabaseId { get; set; }
+                public string DbType { get; set; }
+                public string EnvType { get; set; }
+                public bool? Logic { get; set; }
                 public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList OwnerIdList { get; set; }
                 public class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -29,7 +36,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerIds { get; set; }
 
                 }
-                public string DbType { get; set; }
                 public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList OwnerNameList { get; set; }
                 public class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList : TeaModel {
                     [NameInMap("OwnerNames")]
@@ -37,10 +43,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerNames { get; set; }
 
                 }
-                public bool? Logic { get; set; }
                 public string SchemaName { get; set; }
                 public string SearchName { get; set; }
-                public string EnvType { get; set; }
             }
         };
 
@@ -48,17 +52,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

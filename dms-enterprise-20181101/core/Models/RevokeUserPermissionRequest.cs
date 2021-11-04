@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class RevokeUserPermissionRequest : TeaModel {
-        [NameInMap("Tid")]
+        [NameInMap("DbId")]
         [Validation(Required=false)]
-        public long? Tid { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string DbId { get; set; }
 
         [NameInMap("DsType")]
         [Validation(Required=false)]
@@ -25,13 +21,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
-        [NameInMap("DbId")]
-        [Validation(Required=false)]
-        public string DbId { get; set; }
-
         [NameInMap("Logic")]
         [Validation(Required=false)]
         public bool? Logic { get; set; }
+
+        [NameInMap("PermTypes")]
+        [Validation(Required=false)]
+        public string PermTypes { get; set; }
 
         [NameInMap("TableId")]
         [Validation(Required=false)]
@@ -41,13 +37,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string TableName { get; set; }
 
-        [NameInMap("PermTypes")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public string PermTypes { get; set; }
+        public long? Tid { get; set; }
 
         [NameInMap("UserAccessId")]
         [Validation(Required=false)]
         public string UserAccessId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

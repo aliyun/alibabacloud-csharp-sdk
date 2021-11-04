@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListLogicTablesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
 
         [NameInMap("LogicTableList")]
         [Validation(Required=false)]
@@ -22,8 +26,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<ListLogicTablesResponseBodyLogicTableListLogicTable> LogicTable { get; set; }
             public class ListLogicTablesResponseBodyLogicTableListLogicTable : TeaModel {
                 public string DatabaseId { get; set; }
-                public string TableName { get; set; }
-                public string TableCount { get; set; }
+                public bool? Logic { get; set; }
                 public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList OwnerIdList { get; set; }
                 public class ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -39,10 +42,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                 }
                 public string SchemaName { get; set; }
-                public bool? Logic { get; set; }
+                public string TableCount { get; set; }
                 public string TableExpr { get; set; }
                 public string TableGuid { get; set; }
                 public string TableId { get; set; }
+                public string TableName { get; set; }
             }
         };
 
@@ -50,17 +54,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

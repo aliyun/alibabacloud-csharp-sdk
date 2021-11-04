@@ -9,36 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDDLPublishRecordsResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("DDLPublishRecordList")]
         [Validation(Required=false)]
         public List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> DDLPublishRecordList { get; set; }
         public class ListDDLPublishRecordsResponseBodyDDLPublishRecordList : TeaModel {
-            [NameInMap("AuditStatus")]
-            [Validation(Required=false)]
-            public string AuditStatus { get; set; }
-
             [NameInMap("AuditExpireTime")]
             [Validation(Required=false)]
             public string AuditExpireTime { get; set; }
+
+            [NameInMap("AuditStatus")]
+            [Validation(Required=false)]
+            public string AuditStatus { get; set; }
 
             [NameInMap("CreatorId")]
             [Validation(Required=false)]
@@ -56,18 +37,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string PublishStatus { get; set; }
 
-            [NameInMap("RiskLevel")]
-            [Validation(Required=false)]
-            public string RiskLevel { get; set; }
-
-            [NameInMap("StatusDesc")]
-            [Validation(Required=false)]
-            public string StatusDesc { get; set; }
-
-            [NameInMap("WorkflowInstanceId")]
-            [Validation(Required=false)]
-            public long? WorkflowInstanceId { get; set; }
-
             [NameInMap("PublishTaskInfoList")]
             [Validation(Required=false)]
             public List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> PublishTaskInfoList { get; set; }
@@ -84,6 +53,36 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string PlanTime { get; set; }
 
+                [NameInMap("PublishJobList")]
+                [Validation(Required=false)]
+                public List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> PublishJobList { get; set; }
+                public class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList : TeaModel {
+                    [NameInMap("DBTaskGroupId")]
+                    [Validation(Required=false)]
+                    public long? DBTaskGroupId { get; set; }
+
+                    [NameInMap("ExecuteCount")]
+                    [Validation(Required=false)]
+                    public long? ExecuteCount { get; set; }
+
+                    [NameInMap("Scripts")]
+                    [Validation(Required=false)]
+                    public string Scripts { get; set; }
+
+                    [NameInMap("StatusDesc")]
+                    [Validation(Required=false)]
+                    public string StatusDesc { get; set; }
+
+                    [NameInMap("TableName")]
+                    [Validation(Required=false)]
+                    public string TableName { get; set; }
+
+                    [NameInMap("TaskJobStatus")]
+                    [Validation(Required=false)]
+                    public string TaskJobStatus { get; set; }
+
+                }
+
                 [NameInMap("PublishStrategy")]
                 [Validation(Required=false)]
                 public string PublishStrategy { get; set; }
@@ -96,39 +95,40 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string TaskJobStatus { get; set; }
 
-                [NameInMap("PublishJobList")]
-                [Validation(Required=false)]
-                public List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> PublishJobList { get; set; }
-                public class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList : TeaModel {
-                    [NameInMap("ExecuteCount")]
-                    [Validation(Required=false)]
-                    public long? ExecuteCount { get; set; }
-
-                    [NameInMap("Scripts")]
-                    [Validation(Required=false)]
-                    public string Scripts { get; set; }
-
-                    [NameInMap("TableName")]
-                    [Validation(Required=false)]
-                    public string TableName { get; set; }
-
-                    [NameInMap("StatusDesc")]
-                    [Validation(Required=false)]
-                    public string StatusDesc { get; set; }
-
-                    [NameInMap("TaskJobStatus")]
-                    [Validation(Required=false)]
-                    public string TaskJobStatus { get; set; }
-
-                    [NameInMap("DBTaskGroupId")]
-                    [Validation(Required=false)]
-                    public long? DBTaskGroupId { get; set; }
-
-                }
-
             }
 
+            [NameInMap("RiskLevel")]
+            [Validation(Required=false)]
+            public string RiskLevel { get; set; }
+
+            [NameInMap("StatusDesc")]
+            [Validation(Required=false)]
+            public string StatusDesc { get; set; }
+
+            [NameInMap("WorkflowInstanceId")]
+            [Validation(Required=false)]
+            public long? WorkflowInstanceId { get; set; }
+
         }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

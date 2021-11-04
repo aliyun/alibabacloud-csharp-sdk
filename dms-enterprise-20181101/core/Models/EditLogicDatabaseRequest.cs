@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string Alias { get; set; }
 
-        [NameInMap("LogicDbId")]
-        [Validation(Required=false)]
-        public long? LogicDbId { get; set; }
-
         [NameInMap("DatabaseIds")]
         [Validation(Required=false)]
         public List<long?> DatabaseIds { get; set; }
+
+        [NameInMap("LogicDbId")]
+        [Validation(Required=false)]
+        public long? LogicDbId { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

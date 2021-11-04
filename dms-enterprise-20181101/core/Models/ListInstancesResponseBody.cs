@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstancesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -33,14 +25,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstanceListInstance> Instance { get; set; }
             public class ListInstancesResponseBodyInstanceListInstance : TeaModel {
-                public string VpcId { get; set; }
+                public string DataLinkName { get; set; }
+                public string DatabasePassword { get; set; }
                 public string DatabaseUser { get; set; }
                 public string DbaId { get; set; }
-                public int? UseDsql { get; set; }
-                public int? Port { get; set; }
+                public string DbaNickName { get; set; }
+                public int? DdlOnline { get; set; }
                 public string EcsInstanceId { get; set; }
+                public string EcsRegion { get; set; }
                 public string EnvType { get; set; }
-                public string Sid { get; set; }
+                public int? ExportTimeout { get; set; }
+                public string Host { get; set; }
+                public string InstanceAlias { get; set; }
+                public string InstanceId { get; set; }
+                public string InstanceSource { get; set; }
+                public string InstanceType { get; set; }
                 public ListInstancesResponseBodyInstanceListInstanceOwnerIdList OwnerIdList { get; set; }
                 public class ListInstancesResponseBodyInstanceListInstanceOwnerIdList : TeaModel {
                     [NameInMap("OwnerIds")]
@@ -48,7 +47,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerIds { get; set; }
 
                 }
-                public string SafeRuleId { get; set; }
                 public ListInstancesResponseBodyInstanceListInstanceOwnerNameList OwnerNameList { get; set; }
                 public class ListInstancesResponseBodyInstanceListInstanceOwnerNameList : TeaModel {
                     [NameInMap("OwnerNames")]
@@ -56,36 +54,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     public List<string> OwnerNames { get; set; }
 
                 }
-                public string DbaNickName { get; set; }
+                public int? Port { get; set; }
                 public int? QueryTimeout { get; set; }
-                public string InstanceSource { get; set; }
-                public string Host { get; set; }
-                public string State { get; set; }
-                public string DataLinkName { get; set; }
-                public int? ExportTimeout { get; set; }
-                public string InstanceId { get; set; }
-                public string InstanceType { get; set; }
-                public string DatabasePassword { get; set; }
-                public string InstanceAlias { get; set; }
-                public int? DdlOnline { get; set; }
-                public string EcsRegion { get; set; }
+                public string SafeRuleId { get; set; }
+                public string Sid { get; set; }
                 public ListInstancesResponseBodyInstanceListInstanceStandardGroup StandardGroup { get; set; }
                 public class ListInstancesResponseBodyInstanceListInstanceStandardGroup : TeaModel {
-                    [NameInMap("GroupName")]
-                    [Validation(Required=false)]
-                    public string GroupName { get; set; }
-
                     [NameInMap("GroupMode")]
                     [Validation(Required=false)]
                     public string GroupMode { get; set; }
 
+                    [NameInMap("GroupName")]
+                    [Validation(Required=false)]
+                    public string GroupName { get; set; }
+
                 }
+                public string State { get; set; }
+                public int? UseDsql { get; set; }
+                public string VpcId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

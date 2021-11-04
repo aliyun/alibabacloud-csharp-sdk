@@ -9,25 +9,56 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetUserResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("User")]
         [Validation(Required=false)]
         public GetUserResponseBodyUser User { get; set; }
         public class GetUserResponseBodyUser : TeaModel {
-            [NameInMap("State")]
+            [NameInMap("CurExecuteCount")]
             [Validation(Required=false)]
-            public string State { get; set; }
+            public long? CurExecuteCount { get; set; }
             [NameInMap("CurResultCount")]
             [Validation(Required=false)]
             public long? CurResultCount { get; set; }
-            [NameInMap("UserId")]
+            [NameInMap("DingRobot")]
             [Validation(Required=false)]
-            public string UserId { get; set; }
+            public string DingRobot { get; set; }
+            [NameInMap("Email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
             [NameInMap("LastLoginTime")]
             [Validation(Required=false)]
             public string LastLoginTime { get; set; }
+            [NameInMap("MaxExecuteCount")]
+            [Validation(Required=false)]
+            public long? MaxExecuteCount { get; set; }
             [NameInMap("MaxResultCount")]
             [Validation(Required=false)]
             public long? MaxResultCount { get; set; }
+            [NameInMap("Mobile")]
+            [Validation(Required=false)]
+            public string Mobile { get; set; }
+            [NameInMap("NickName")]
+            [Validation(Required=false)]
+            public string NickName { get; set; }
+            [NameInMap("NotificationMode")]
+            [Validation(Required=false)]
+            public string NotificationMode { get; set; }
             [NameInMap("ParentUid")]
             [Validation(Required=false)]
             public long? ParentUid { get; set; }
@@ -49,38 +80,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public List<string> RoleNames { get; set; }
 
             }
-            [NameInMap("NickName")]
+            [NameInMap("SignatureMethod")]
             [Validation(Required=false)]
-            public string NickName { get; set; }
-            [NameInMap("MaxExecuteCount")]
+            public string SignatureMethod { get; set; }
+            [NameInMap("State")]
             [Validation(Required=false)]
-            public long? MaxExecuteCount { get; set; }
-            [NameInMap("CurExecuteCount")]
-            [Validation(Required=false)]
-            public long? CurExecuteCount { get; set; }
-            [NameInMap("Mobile")]
-            [Validation(Required=false)]
-            public string Mobile { get; set; }
+            public string State { get; set; }
             [NameInMap("Uid")]
             [Validation(Required=false)]
             public string Uid { get; set; }
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
+            [NameInMap("Webhook")]
+            [Validation(Required=false)]
+            public string Webhook { get; set; }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

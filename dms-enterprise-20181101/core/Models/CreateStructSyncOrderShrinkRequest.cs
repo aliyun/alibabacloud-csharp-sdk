@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateStructSyncOrderShrinkRequest : TeaModel {
+        [NameInMap("AttachmentKey")]
+        [Validation(Required=false)]
+        public string AttachmentKey { get; set; }
+
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
-
-        [NameInMap("RelatedUserList")]
-        [Validation(Required=false)]
-        public string RelatedUserListShrink { get; set; }
 
         [NameInMap("Param")]
         [Validation(Required=false)]
         public string ParamShrink { get; set; }
 
-        [NameInMap("AttachmentKey")]
+        [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
-        public string AttachmentKey { get; set; }
+        public string RelatedUserListShrink { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

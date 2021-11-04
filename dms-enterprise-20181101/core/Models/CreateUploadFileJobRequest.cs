@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateUploadFileJobRequest : TeaModel {
-        [NameInMap("FileSource")]
-        [Validation(Required=false)]
-        public string FileSource { get; set; }
-
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
-        [NameInMap("UploadURL")]
+        [NameInMap("FileSource")]
         [Validation(Required=false)]
-        public string UploadURL { get; set; }
+        public string FileSource { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
+
+        [NameInMap("UploadURL")]
+        [Validation(Required=false)]
+        public string UploadURL { get; set; }
 
     }
 

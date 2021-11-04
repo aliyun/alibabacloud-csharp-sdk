@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ExecuteDataCorrectRequest : TeaModel {
-        [NameInMap("Tid")]
+        [NameInMap("ActionDetail")]
         [Validation(Required=false)]
-        public string Tid { get; set; }
+        public Dictionary<string, object> ActionDetail { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
-        [NameInMap("ActionDetail")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public Dictionary<string, object> ActionDetail { get; set; }
+        public string Tid { get; set; }
 
     }
 

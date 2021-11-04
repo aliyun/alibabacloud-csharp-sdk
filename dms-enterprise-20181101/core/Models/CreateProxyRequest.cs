@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
-        [NameInMap("Username")]
-        [Validation(Required=false)]
-        public string Username { get; set; }
-
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
+
+        [NameInMap("Username")]
+        [Validation(Required=false)]
+        public string Username { get; set; }
 
     }
 

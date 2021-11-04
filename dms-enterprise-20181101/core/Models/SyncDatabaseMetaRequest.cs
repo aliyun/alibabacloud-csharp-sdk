@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class SyncDatabaseMetaRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
         [NameInMap("DbId")]
         [Validation(Required=false)]
         public string DbId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("Logic")]
         [Validation(Required=false)]
         public bool? Logic { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
 
     }
 

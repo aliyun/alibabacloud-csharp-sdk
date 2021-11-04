@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveColumnsRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
-        [NameInMap("SchemaName")]
-        [Validation(Required=false)]
-        public string SchemaName { get; set; }
-
-        [NameInMap("TableName")]
-        [Validation(Required=false)]
-        public string TableName { get; set; }
-
         [NameInMap("ColumnName")]
         [Validation(Required=false)]
         public string ColumnName { get; set; }
 
-        [NameInMap("SecurityLevel")]
+        [NameInMap("DbId")]
         [Validation(Required=false)]
-        public string SecurityLevel { get; set; }
+        public long? DbId { get; set; }
+
+        [NameInMap("Logic")]
+        [Validation(Required=false)]
+        public bool? Logic { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -37,13 +29,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("DbId")]
+        [NameInMap("SchemaName")]
         [Validation(Required=false)]
-        public long? DbId { get; set; }
+        public string SchemaName { get; set; }
 
-        [NameInMap("Logic")]
+        [NameInMap("SecurityLevel")]
         [Validation(Required=false)]
-        public bool? Logic { get; set; }
+        public string SecurityLevel { get; set; }
+
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
 
     }
 

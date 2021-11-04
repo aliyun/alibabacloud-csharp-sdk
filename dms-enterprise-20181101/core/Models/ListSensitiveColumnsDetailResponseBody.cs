@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListSensitiveColumnsDetailResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,26 +29,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail> SensitiveColumnsDetail { get; set; }
             public class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail : TeaModel {
-                public long? DbId { get; set; }
-                public string ColumnName { get; set; }
                 public string ColumnDescription { get; set; }
-                public string TableName { get; set; }
-                public string DbType { get; set; }
+                public string ColumnName { get; set; }
                 public string ColumnType { get; set; }
+                public long? DbId { get; set; }
+                public string DbType { get; set; }
+                public string EnvType { get; set; }
                 public bool? Logic { get; set; }
                 public string SchemaName { get; set; }
                 public string SearchName { get; set; }
-                public string EnvType { get; set; }
+                public string TableName { get; set; }
             }
         };
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

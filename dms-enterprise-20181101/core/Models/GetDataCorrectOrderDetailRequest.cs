@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataCorrectOrderDetailRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
 
     }
 

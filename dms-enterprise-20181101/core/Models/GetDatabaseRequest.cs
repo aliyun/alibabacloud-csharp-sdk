@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDatabaseRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
@@ -21,13 +17,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? Port { get; set; }
 
+        [NameInMap("SchemaName")]
+        [Validation(Required=false)]
+        public string SchemaName { get; set; }
+
         [NameInMap("Sid")]
         [Validation(Required=false)]
         public string Sid { get; set; }
 
-        [NameInMap("SchemaName")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public string SchemaName { get; set; }
+        public long? Tid { get; set; }
 
     }
 

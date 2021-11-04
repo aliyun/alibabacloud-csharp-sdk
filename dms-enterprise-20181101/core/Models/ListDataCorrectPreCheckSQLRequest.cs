@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDataCorrectPreCheckSQLRequest : TeaModel {
+        [NameInMap("DbId")]
+        [Validation(Required=false)]
+        public long? DbId { get; set; }
+
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
-
-        [NameInMap("DbId")]
-        [Validation(Required=false)]
-        public long? DbId { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

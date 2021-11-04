@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstanceUserPermissionsRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("UserName")]
-        [Validation(Required=false)]
-        public string UserName { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
+
+        [NameInMap("UserName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
 
     }
 

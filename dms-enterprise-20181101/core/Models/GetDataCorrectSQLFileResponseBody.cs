@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataCorrectSQLFileResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("FileUrl")]
+        [Validation(Required=false)]
+        public string FileUrl { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -19,18 +31,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        [NameInMap("FileUrl")]
-        [Validation(Required=false)]
-        public string FileUrl { get; set; }
 
     }
 

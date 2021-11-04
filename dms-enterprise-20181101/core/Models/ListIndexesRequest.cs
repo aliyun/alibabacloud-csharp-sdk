@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListIndexesRequest : TeaModel {
-        [NameInMap("Tid")]
+        [NameInMap("Logic")]
         [Validation(Required=false)]
-        public long? Tid { get; set; }
+        public bool? Logic { get; set; }
 
         [NameInMap("TableId")]
         [Validation(Required=false)]
         public string TableId { get; set; }
 
-        [NameInMap("Logic")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public bool? Logic { get; set; }
+        public long? Tid { get; set; }
 
     }
 

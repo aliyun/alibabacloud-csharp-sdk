@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateProxyAccessRequest : TeaModel {
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public long? UserId { get; set; }
-
-        [NameInMap("ProxyId")]
-        [Validation(Required=false)]
-        public long? ProxyId { get; set; }
-
         [NameInMap("IndepAccount")]
         [Validation(Required=false)]
         public string IndepAccount { get; set; }
@@ -25,9 +17,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string IndepPassword { get; set; }
 
+        [NameInMap("ProxyId")]
+        [Validation(Required=false)]
+        public long? ProxyId { get; set; }
+
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public long? UserId { get; set; }
 
     }
 

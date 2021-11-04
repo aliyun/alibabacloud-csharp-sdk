@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreatePublishGroupTaskRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public long? OrderId { get; set; }
-
         [NameInMap("DbId")]
         [Validation(Required=false)]
         public int? DbId { get; set; }
@@ -25,13 +17,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? Logic { get; set; }
 
-        [NameInMap("PublishStrategy")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string PublishStrategy { get; set; }
+        public long? OrderId { get; set; }
 
         [NameInMap("PlanTime")]
         [Validation(Required=false)]
         public string PlanTime { get; set; }
+
+        [NameInMap("PublishStrategy")]
+        [Validation(Required=false)]
+        public string PublishStrategy { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetStructSyncOrderDetailResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
@@ -16,22 +24,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("StructSyncOrderDetail")]
         [Validation(Required=false)]
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail StructSyncOrderDetail { get; set; }
         public class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail : TeaModel {
+            [NameInMap("IgnoreError")]
+            [Validation(Required=false)]
+            public bool? IgnoreError { get; set; }
             [NameInMap("SourceDatabaseInfo")]
             [Validation(Required=false)]
             public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo SourceDatabaseInfo { get; set; }
@@ -40,10 +39,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public long? DbId { get; set; }
 
-                [NameInMap("SearchName")]
-                [Validation(Required=false)]
-                public string SearchName { get; set; }
-
                 [NameInMap("DbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
@@ -56,30 +51,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public bool? Logic { get; set; }
 
-            }
-            [NameInMap("TargetDatabaseInfo")]
-            [Validation(Required=false)]
-            public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo TargetDatabaseInfo { get; set; }
-            public class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo : TeaModel {
-                [NameInMap("DbId")]
-                [Validation(Required=false)]
-                public long? DbId { get; set; }
-
                 [NameInMap("SearchName")]
                 [Validation(Required=false)]
                 public string SearchName { get; set; }
-
-                [NameInMap("DbType")]
-                [Validation(Required=false)]
-                public string DbType { get; set; }
-
-                [NameInMap("EnvType")]
-                [Validation(Required=false)]
-                public string EnvType { get; set; }
-
-                [NameInMap("Logic")]
-                [Validation(Required=false)]
-                public bool? Logic { get; set; }
 
             }
             [NameInMap("SourceType")]
@@ -94,6 +68,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string VersionId { get; set; }
 
             }
+            [NameInMap("TableInfoList")]
+            [Validation(Required=false)]
+            public List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> TableInfoList { get; set; }
+            public class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList : TeaModel {
+                public string SourceTableName { get; set; }
+                public string TargetTableName { get; set; }
+            }
+            [NameInMap("TargetDatabaseInfo")]
+            [Validation(Required=false)]
+            public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo TargetDatabaseInfo { get; set; }
+            public class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo : TeaModel {
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
+                public long? DbId { get; set; }
+
+                [NameInMap("DbType")]
+                [Validation(Required=false)]
+                public string DbType { get; set; }
+
+                [NameInMap("EnvType")]
+                [Validation(Required=false)]
+                public string EnvType { get; set; }
+
+                [NameInMap("Logic")]
+                [Validation(Required=false)]
+                public bool? Logic { get; set; }
+
+                [NameInMap("SearchName")]
+                [Validation(Required=false)]
+                public string SearchName { get; set; }
+
+            }
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }
@@ -106,17 +112,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string VersionId { get; set; }
 
             }
-            [NameInMap("TableInfoList")]
-            [Validation(Required=false)]
-            public List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> TableInfoList { get; set; }
-            public class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList : TeaModel {
-                public string SourceTableName { get; set; }
-                public string TargetTableName { get; set; }
-            }
-            [NameInMap("IgnoreError")]
-            [Validation(Required=false)]
-            public bool? IgnoreError { get; set; }
         };
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstancesRequest : TeaModel {
-        [NameInMap("Tid")]
-        [Validation(Required=false)]
-        public long? Tid { get; set; }
-
-        [NameInMap("SearchKey")]
-        [Validation(Required=false)]
-        public string SearchKey { get; set; }
-
         [NameInMap("DbType")]
         [Validation(Required=false)]
         public string DbType { get; set; }
@@ -29,13 +21,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string InstanceSource { get; set; }
 
-        [NameInMap("NetType")]
-        [Validation(Required=false)]
-        public string NetType { get; set; }
-
         [NameInMap("InstanceState")]
         [Validation(Required=false)]
         public string InstanceState { get; set; }
+
+        [NameInMap("NetType")]
+        [Validation(Required=false)]
+        public string NetType { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -44,6 +36,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SearchKey")]
+        [Validation(Required=false)]
+        public string SearchKey { get; set; }
+
+        [NameInMap("Tid")]
+        [Validation(Required=false)]
+        public long? Tid { get; set; }
 
     }
 

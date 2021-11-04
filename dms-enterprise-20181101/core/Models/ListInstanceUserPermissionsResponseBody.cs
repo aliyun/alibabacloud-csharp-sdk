@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListInstanceUserPermissionsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -24,6 +16,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
         [NameInMap("UserPermissions")]
         [Validation(Required=false)]
@@ -33,8 +37,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission> UserPermission { get; set; }
             public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission : TeaModel {
-                public string UserId { get; set; }
-                public string UserNickName { get; set; }
                 public string InstanceId { get; set; }
                 public ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails PermDetails { get; set; }
                 public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetails : TeaModel {
@@ -42,6 +44,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                     [Validation(Required=false)]
                     public List<ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail> PermDetail { get; set; }
                     public class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail : TeaModel {
+                        [NameInMap("CreateDate")]
+                        [Validation(Required=false)]
+                        public string CreateDate { get; set; }
+
+                        [NameInMap("ExpireDate")]
+                        [Validation(Required=false)]
+                        public string ExpireDate { get; set; }
+
+                        [NameInMap("ExtraData")]
+                        [Validation(Required=false)]
+                        public string ExtraData { get; set; }
+
                         [NameInMap("OriginFrom")]
                         [Validation(Required=false)]
                         public string OriginFrom { get; set; }
@@ -50,31 +64,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                         [Validation(Required=false)]
                         public string PermType { get; set; }
 
-                        [NameInMap("ExpireDate")]
-                        [Validation(Required=false)]
-                        public string ExpireDate { get; set; }
-
-                        [NameInMap("CreateDate")]
-                        [Validation(Required=false)]
-                        public string CreateDate { get; set; }
-
                         [NameInMap("UserAccessId")]
                         [Validation(Required=false)]
                         public string UserAccessId { get; set; }
 
-                        [NameInMap("ExtraData")]
-                        [Validation(Required=false)]
-                        public string ExtraData { get; set; }
-
                     }
 
                 }
+                public string UserId { get; set; }
+                public string UserNickName { get; set; }
             }
         };
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

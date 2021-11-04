@@ -9,22 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetMetaTableColumnResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("ColumnList")]
         [Validation(Required=false)]
         public List<GetMetaTableColumnResponseBodyColumnList> ColumnList { get; set; }
         public class GetMetaTableColumnResponseBodyColumnList : TeaModel {
-            [NameInMap("ColumnType")]
-            [Validation(Required=false)]
-            public string ColumnType { get; set; }
-
             [NameInMap("AutoIncrement")]
             [Validation(Required=false)]
             public bool? AutoIncrement { get; set; }
@@ -37,17 +25,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string ColumnName { get; set; }
 
-            [NameInMap("SecurityLevel")]
+            [NameInMap("ColumnType")]
             [Validation(Required=false)]
-            public string SecurityLevel { get; set; }
+            public string ColumnType { get; set; }
 
-            [NameInMap("PrimaryKey")]
+            [NameInMap("DataLength")]
             [Validation(Required=false)]
-            public string PrimaryKey { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
+            public long? DataLength { get; set; }
 
             [NameInMap("DataPrecision")]
             [Validation(Required=false)]
@@ -57,23 +41,39 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public int? DataScale { get; set; }
 
-            [NameInMap("Position")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public int? Position { get; set; }
+            public string Description { get; set; }
 
             [NameInMap("Nullable")]
             [Validation(Required=false)]
             public bool? Nullable { get; set; }
 
-            [NameInMap("DataLength")]
+            [NameInMap("Position")]
             [Validation(Required=false)]
-            public long? DataLength { get; set; }
+            public int? Position { get; set; }
+
+            [NameInMap("PrimaryKey")]
+            [Validation(Required=false)]
+            public string PrimaryKey { get; set; }
+
+            [NameInMap("SecurityLevel")]
+            [Validation(Required=false)]
+            public string SecurityLevel { get; set; }
 
         }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ListLogicTablesRequest : TeaModel {
-        [NameInMap("DatabaseId")]
+    public class ListSQLExecAuditLogRequest : TeaModel {
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string DatabaseId { get; set; }
+        public string EndTime { get; set; }
+
+        [NameInMap("ExecState")]
+        [Validation(Required=false)]
+        public string ExecState { get; set; }
+
+        [NameInMap("OpUserName")]
+        [Validation(Required=false)]
+        public string OpUserName { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,13 +29,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ReturnGuid")]
-        [Validation(Required=false)]
-        public bool? ReturnGuid { get; set; }
-
         [NameInMap("SearchName")]
         [Validation(Required=false)]
         public string SearchName { get; set; }
+
+        [NameInMap("SqlType")]
+        [Validation(Required=false)]
+        public string SqlType { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateUploadOSSFileJobShrinkRequest : TeaModel {
-        [NameInMap("FileSource")]
-        [Validation(Required=false)]
-        public string FileSource { get; set; }
-
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
-        [NameInMap("UploadTarget")]
+        [NameInMap("FileSource")]
         [Validation(Required=false)]
-        public string UploadTargetShrink { get; set; }
+        public string FileSource { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
+
+        [NameInMap("UploadTarget")]
+        [Validation(Required=false)]
+        public string UploadTargetShrink { get; set; }
 
     }
 
