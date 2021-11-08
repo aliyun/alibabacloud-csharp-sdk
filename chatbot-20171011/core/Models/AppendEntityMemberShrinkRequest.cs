@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class AppendEntityMemberShrinkRequest : TeaModel {
-        [NameInMap("EntityId")]
-        [Validation(Required=false)]
-        public long? EntityId { get; set; }
-
         [NameInMap("ApplyType")]
         [Validation(Required=false)]
         public string ApplyType { get; set; }
+
+        [NameInMap("EntityId")]
+        [Validation(Required=false)]
+        public long? EntityId { get; set; }
 
         [NameInMap("Member")]
         [Validation(Required=false)]

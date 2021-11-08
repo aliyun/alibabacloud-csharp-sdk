@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public long? CategoryId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("ParentCategoryId")]
         [Validation(Required=false)]
         public long? ParentCategoryId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RequestId { get; set; }
 
     }
 

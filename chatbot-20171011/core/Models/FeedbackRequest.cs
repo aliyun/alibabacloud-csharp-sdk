@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class FeedbackRequest : TeaModel {
+        [NameInMap("Feedback")]
+        [Validation(Required=false)]
+        public string Feedback { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("SessionId")]
-        [Validation(Required=false)]
-        public string SessionId { get; set; }
 
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
 
-        [NameInMap("Feedback")]
+        [NameInMap("SessionId")]
         [Validation(Required=false)]
-        public string Feedback { get; set; }
+        public string SessionId { get; set; }
 
     }
 

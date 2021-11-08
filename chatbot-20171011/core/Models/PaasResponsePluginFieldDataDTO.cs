@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class PaasResponsePluginFieldDataDTO : TeaModel {
         /// <summary>
-        /// Name
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
         /// ContentResponse
         /// </summary>
         [NameInMap("ContentResponse")]
         [Validation(Required=false)]
         public PaasResponseNodeContentDTO ContentResponse { get; set; }
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
     }
 

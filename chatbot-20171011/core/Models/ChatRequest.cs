@@ -13,13 +13,21 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("SessionId")]
+        [NameInMap("IntentName")]
         [Validation(Required=false)]
-        public string SessionId { get; set; }
+        public string IntentName { get; set; }
 
         [NameInMap("KnowledgeId")]
         [Validation(Required=false)]
         public string KnowledgeId { get; set; }
+
+        [NameInMap("Perspective")]
+        [Validation(Required=false)]
+        public List<string> Perspective { get; set; }
+
+        [NameInMap("Recommend")]
+        [Validation(Required=false)]
+        public bool? Recommend { get; set; }
 
         [NameInMap("SenderId")]
         [Validation(Required=false)]
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string SenderNick { get; set; }
 
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
@@ -37,25 +49,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string Utterance { get; set; }
 
-        [NameInMap("Recommend")]
-        [Validation(Required=false)]
-        public bool? Recommend { get; set; }
-
-        [NameInMap("RecommendNum")]
-        [Validation(Required=false)]
-        public int? RecommendNum { get; set; }
-
-        [NameInMap("IntentName")]
-        [Validation(Required=false)]
-        public string IntentName { get; set; }
-
         [NameInMap("VendorParam")]
         [Validation(Required=false)]
         public string VendorParam { get; set; }
-
-        [NameInMap("Perspective")]
-        [Validation(Required=false)]
-        public List<string> Perspective { get; set; }
 
     }
 

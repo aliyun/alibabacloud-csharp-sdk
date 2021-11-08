@@ -24,13 +24,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// UserSay
-        /// </summary>
-        [NameInMap("UserSay")]
-        [Validation(Required=false)]
-        public List<UsersayMtopDTO> UserSay { get; set; }
-
-        /// <summary>
         /// RuleCheck
         /// </summary>
         [NameInMap("RuleCheck")]
@@ -40,6 +33,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Slot")]
         [Validation(Required=false)]
         public List<SlotrecordMtopDTO> Slot { get; set; }
+
+        /// <summary>
+        /// UserSay
+        /// </summary>
+        [NameInMap("UserSay")]
+        [Validation(Required=false)]
+        public List<UsersayMtopDTO> UserSay { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class CreateCategoryRequest : TeaModel {
-        [NameInMap("ParentCategoryId")]
+        [NameInMap("BizCode")]
         [Validation(Required=false)]
-        public long? ParentCategoryId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string BizCode { get; set; }
 
         [NameInMap("KnowledgeType")]
         [Validation(Required=false)]
         public int? KnowledgeType { get; set; }
 
-        [NameInMap("BizCode")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string BizCode { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("ParentCategoryId")]
+        [Validation(Required=false)]
+        public long? ParentCategoryId { get; set; }
 
     }
 

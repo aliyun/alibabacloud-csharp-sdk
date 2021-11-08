@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class PaasSlotPluginFieldDataDTO : TeaModel {
         /// <summary>
-        /// IntentName
+        /// ContentSlot
         /// </summary>
-        [NameInMap("IntentName")]
+        [NameInMap("ContentSlot")]
         [Validation(Required=false)]
-        public string IntentName { get; set; }
+        public List<PaasSlotConfigDTO> ContentSlot { get; set; }
 
         /// <summary>
         /// IntentId
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string IntentId { get; set; }
 
         /// <summary>
-        /// Name
+        /// IntentName
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("IntentName")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string IntentName { get; set; }
 
         /// <summary>
         /// IsSysIntent
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public bool? IsSysIntent { get; set; }
 
         /// <summary>
-        /// ContentSlot
+        /// Name
         /// </summary>
-        [NameInMap("ContentSlot")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public List<PaasSlotConfigDTO> ContentSlot { get; set; }
+        public string Name { get; set; }
 
     }
 

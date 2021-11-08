@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class CreateIntentRequest : TeaModel {
-        [NameInMap("IntentDefinition")]
-        [Validation(Required=false)]
-        public IntentCreateDTO IntentDefinition { get; set; }
-
         [NameInMap("DialogId")]
         [Validation(Required=false)]
         public long? DialogId { get; set; }
+
+        [NameInMap("IntentDefinition")]
+        [Validation(Required=false)]
+        public IntentCreateDTO IntentDefinition { get; set; }
 
     }
 

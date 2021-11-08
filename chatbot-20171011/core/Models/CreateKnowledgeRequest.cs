@@ -16,26 +16,15 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public long? CategoryId { get; set; }
+            [NameInMap("EndDate")]
+            [Validation(Required=false)]
+            public string EndDate { get; set; }
             [NameInMap("KnowledgeTitle")]
             [Validation(Required=false)]
             public string KnowledgeTitle { get; set; }
             [NameInMap("KnowledgeType")]
             [Validation(Required=false)]
             public int? KnowledgeType { get; set; }
-            [NameInMap("Solutions")]
-            [Validation(Required=false)]
-            public List<CreateKnowledgeRequestKnowledgeSolutions> Solutions { get; set; }
-            public class CreateKnowledgeRequestKnowledgeSolutions : TeaModel {
-                public string Content { get; set; }
-                public string PlainText { get; set; }
-                public List<string> PerspectiveIds { get; set; }
-            }
-            [NameInMap("StartDate")]
-            [Validation(Required=false)]
-            public string StartDate { get; set; }
-            [NameInMap("EndDate")]
-            [Validation(Required=false)]
-            public string EndDate { get; set; }
             [NameInMap("Outlines")]
             [Validation(Required=false)]
             public List<CreateKnowledgeRequestKnowledgeOutlines> Outlines { get; set; }
@@ -49,6 +38,17 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             public class CreateKnowledgeRequestKnowledgeSimQuestions : TeaModel {
                 public string Title { get; set; }
             }
+            [NameInMap("Solutions")]
+            [Validation(Required=false)]
+            public List<CreateKnowledgeRequestKnowledgeSolutions> Solutions { get; set; }
+            public class CreateKnowledgeRequestKnowledgeSolutions : TeaModel {
+                public string Content { get; set; }
+                public List<string> PerspectiveIds { get; set; }
+                public string PlainText { get; set; }
+            }
+            [NameInMap("StartDate")]
+            [Validation(Required=false)]
+            public string StartDate { get; set; }
         };
 
     }

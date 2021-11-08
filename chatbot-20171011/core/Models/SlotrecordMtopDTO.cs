@@ -17,11 +17,18 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// Question
+        /// IsArray
         /// </summary>
-        [NameInMap("Question")]
+        [NameInMap("IsArray")]
         [Validation(Required=false)]
-        public List<string> Question { get; set; }
+        public bool? IsArray { get; set; }
+
+        /// <summary>
+        /// IsNecessary
+        /// </summary>
+        [NameInMap("IsNecessary")]
+        [Validation(Required=false)]
+        public bool? IsNecessary { get; set; }
 
         /// <summary>
         /// LifeSpan
@@ -38,25 +45,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// IsArray
+        /// Question
         /// </summary>
-        [NameInMap("IsArray")]
+        [NameInMap("Question")]
         [Validation(Required=false)]
-        public bool? IsArray { get; set; }
-
-        /// <summary>
-        /// Value
-        /// </summary>
-        [NameInMap("Value")]
-        [Validation(Required=false)]
-        public string Value { get; set; }
-
-        /// <summary>
-        /// IsNecessary
-        /// </summary>
-        [NameInMap("IsNecessary")]
-        [Validation(Required=false)]
-        public bool? IsNecessary { get; set; }
+        public List<string> Question { get; set; }
 
         /// <summary>
         /// Tags
@@ -64,6 +57,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<TagMtopDTO> Tags { get; set; }
+
+        /// <summary>
+        /// Value
+        /// </summary>
+        [NameInMap("Value")]
+        [Validation(Required=false)]
+        public string Value { get; set; }
 
     }
 

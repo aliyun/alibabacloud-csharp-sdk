@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public long? EntityId { get; set; }
 
-        [NameInMap("RemoveType")]
-        [Validation(Required=false)]
-        public string RemoveType { get; set; }
-
         [NameInMap("Member")]
         [Validation(Required=false)]
         public RemoveEntityMemberRequestMember Member { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [Validation(Required=false)]
             public List<string> Synonyms { get; set; }
         };
+
+        [NameInMap("RemoveType")]
+        [Validation(Required=false)]
+        public string RemoveType { get; set; }
 
     }
 

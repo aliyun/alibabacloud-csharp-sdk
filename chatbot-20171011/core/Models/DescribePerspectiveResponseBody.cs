@@ -9,17 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class DescribePerspectiveResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public int? Status { get; set; }
+        public string CreateTime { get; set; }
+
+        [NameInMap("CreateUserName")]
+        [Validation(Required=false)]
+        public string CreateUserName { get; set; }
+
+        [NameInMap("ModifyTime")]
+        [Validation(Required=false)]
+        public string ModifyTime { get; set; }
+
+        [NameInMap("ModifyUserName")]
+        [Validation(Required=false)]
+        public string ModifyUserName { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("PerspectiveCode")]
         [Validation(Required=false)]
         public string PerspectiveCode { get; set; }
 
-        [NameInMap("ModifyTime")]
+        [NameInMap("PerspectiveId")]
         [Validation(Required=false)]
-        public string ModifyTime { get; set; }
+        public string PerspectiveId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -29,25 +45,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public bool? SelfDefine { get; set; }
 
-        [NameInMap("CreateTime")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("ModifyUserName")]
-        [Validation(Required=false)]
-        public string ModifyUserName { get; set; }
-
-        [NameInMap("PerspectiveId")]
-        [Validation(Required=false)]
-        public string PerspectiveId { get; set; }
-
-        [NameInMap("CreateUserName")]
-        [Validation(Required=false)]
-        public string CreateUserName { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public int? Status { get; set; }
 
     }
 

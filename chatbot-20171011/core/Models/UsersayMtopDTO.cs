@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class UsersayMtopDTO : TeaModel {
         /// <summary>
-        /// Id
-        /// </summary>
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        /// <summary>
         /// Data
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<SectionMtopDTO> Data { get; set; }
+
+        /// <summary>
+        /// Id
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         /// <summary>
         /// Strict

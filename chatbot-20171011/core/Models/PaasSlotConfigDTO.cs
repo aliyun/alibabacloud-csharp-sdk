@@ -24,13 +24,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public bool? IsNecessary { get; set; }
 
         /// <summary>
-        /// Value
-        /// </summary>
-        [NameInMap("Value")]
-        [Validation(Required=false)]
-        public string Value { get; set; }
-
-        /// <summary>
         /// LifeSpan
         /// </summary>
         [NameInMap("LifeSpan")]
@@ -50,6 +43,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Question")]
         [Validation(Required=false)]
         public List<string> Question { get; set; }
+
+        /// <summary>
+        /// Value
+        /// </summary>
+        [NameInMap("Value")]
+        [Validation(Required=false)]
+        public string Value { get; set; }
 
     }
 

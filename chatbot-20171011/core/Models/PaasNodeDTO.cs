@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string Label { get; set; }
 
         /// <summary>
+        /// PluginData
+        /// </summary>
+        [NameInMap("PluginData")]
+        [Validation(Required=false)]
+        public PaasPluginDataDTO PluginData { get; set; }
+
+        /// <summary>
         /// Xx
         /// </summary>
         [NameInMap("Xx")]
@@ -43,13 +50,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Yy")]
         [Validation(Required=false)]
         public double? Yy { get; set; }
-
-        /// <summary>
-        /// PluginData
-        /// </summary>
-        [NameInMap("PluginData")]
-        [Validation(Required=false)]
-        public PaasPluginDataDTO PluginData { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class UpdatePerspectiveRequest : TeaModel {
-        [NameInMap("PerspectiveId")]
-        [Validation(Required=false)]
-        public string PerspectiveId { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PerspectiveId")]
+        [Validation(Required=false)]
+        public string PerspectiveId { get; set; }
 
     }
 

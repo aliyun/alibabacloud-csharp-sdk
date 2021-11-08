@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class UpdateCoreWordRequest : TeaModel {
-        [NameInMap("CoreWordName")]
-        [Validation(Required=false)]
-        public string CoreWordName { get; set; }
-
         [NameInMap("CoreWordCode")]
         [Validation(Required=false)]
         public string CoreWordCode { get; set; }
+
+        [NameInMap("CoreWordName")]
+        [Validation(Required=false)]
+        public string CoreWordName { get; set; }
 
     }
 

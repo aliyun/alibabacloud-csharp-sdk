@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -10,6 +13,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class Children : TeaModel {
         /// <summary>
+        /// 地区代号
+        /// </summary>
+        [NameInMap("AreaCode")]
+        [Validation(Required=false)]
+        public string AreaCode { get; set; }
+
+        /// <summary>
         /// 分类Id
         /// </summary>
         [NameInMap("CategoryId")]
@@ -17,18 +27,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// 父分类Id
+        /// 子元素
         /// </summary>
-        [NameInMap("ParentCategoryId")]
+        [NameInMap("Childrens")]
         [Validation(Required=false)]
-        public long? ParentCategoryId { get; set; }
-
-        /// <summary>
-        /// 地区代号
-        /// </summary>
-        [NameInMap("AreaCode")]
-        [Validation(Required=false)]
-        public string AreaCode { get; set; }
+        public List<Children> Childrens { get; set; }
 
         /// <summary>
         /// 名称
@@ -38,11 +41,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// 子元素
+        /// 父分类Id
         /// </summary>
-        [NameInMap("Childrens")]
+        [NameInMap("ParentCategoryId")]
         [Validation(Required=false)]
-        public List<Children> Childrens { get; set; }
+        public long? ParentCategoryId { get; set; }
 
     }
 

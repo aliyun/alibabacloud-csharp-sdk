@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class ListBotChatHistorysRequest : TeaModel {
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("Limit")]
+        [Validation(Required=false)]
+        public int? Limit { get; set; }
 
         [NameInMap("RobotInstanceId")]
         [Validation(Required=false)]
         public string RobotInstanceId { get; set; }
 
-        [NameInMap("Limit")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public int? Limit { get; set; }
+        public string StartTime { get; set; }
 
     }
 

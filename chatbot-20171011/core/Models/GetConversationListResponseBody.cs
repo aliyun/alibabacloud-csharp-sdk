@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Messages { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("TotalCounts")]
         [Validation(Required=false)]

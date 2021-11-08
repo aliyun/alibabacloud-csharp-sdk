@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Utterance")]
+        [NameInMap("Perspective")]
         [Validation(Required=false)]
-        public string Utterance { get; set; }
-
-        [NameInMap("SessionId")]
-        [Validation(Required=false)]
-        public string SessionId { get; set; }
+        public List<string> Perspective { get; set; }
 
         [NameInMap("RecommendNum")]
         [Validation(Required=false)]
         public int? RecommendNum { get; set; }
 
-        [NameInMap("Perspective")]
+        [NameInMap("SessionId")]
         [Validation(Required=false)]
-        public List<string> Perspective { get; set; }
+        public string SessionId { get; set; }
+
+        [NameInMap("Utterance")]
+        [Validation(Required=false)]
+        public string Utterance { get; set; }
 
     }
 

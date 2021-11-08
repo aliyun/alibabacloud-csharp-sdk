@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class QuerySystemEntitiesResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SystemEntities")]
         [Validation(Required=false)]
         public List<QuerySystemEntitiesResponseBodySystemEntities> SystemEntities { get; set; }
@@ -26,10 +30,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             public string EntityName { get; set; }
 
         }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

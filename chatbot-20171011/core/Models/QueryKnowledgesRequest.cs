@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class QueryKnowledgesRequest : TeaModel {
-        [NameInMap("KnowledgeTitle")]
+        [NameInMap("CategoryId")]
         [Validation(Required=false)]
-        public string KnowledgeTitle { get; set; }
+        public long? CategoryId { get; set; }
 
         [NameInMap("CoreWordName")]
         [Validation(Required=false)]
         public string CoreWordName { get; set; }
+
+        [NameInMap("KnowledgeTitle")]
+        [Validation(Required=false)]
+        public string KnowledgeTitle { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public long? CategoryId { get; set; }
 
     }
 

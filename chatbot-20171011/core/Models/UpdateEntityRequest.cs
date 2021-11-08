@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
-        [NameInMap("Regex")]
-        [Validation(Required=false)]
-        public string Regex { get; set; }
-
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<UpdateEntityRequestMembers> Members { get; set; }
@@ -38,6 +34,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             public List<string> Synonyms { get; set; }
 
         }
+
+        [NameInMap("Regex")]
+        [Validation(Required=false)]
+        public string Regex { get; set; }
 
     }
 

@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class DescribeBotResponseBody : TeaModel {
-        [NameInMap("LanguageCode")]
+        [NameInMap("Avatar")]
         [Validation(Required=false)]
-        public string LanguageCode { get; set; }
-
-        [NameInMap("TimeZone")]
-        [Validation(Required=false)]
-        public string TimeZone { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Introduction")]
-        [Validation(Required=false)]
-        public string Introduction { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Avatar { get; set; }
 
         [NameInMap("Categories")]
         [Validation(Required=false)]
@@ -51,9 +35,17 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        [NameInMap("Avatar")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Avatar { get; set; }
+        public string InstanceId { get; set; }
+
+        [NameInMap("Introduction")]
+        [Validation(Required=false)]
+        public string Introduction { get; set; }
+
+        [NameInMap("LanguageCode")]
+        [Validation(Required=false)]
+        public string LanguageCode { get; set; }
 
         [NameInMap("Logo")]
         [Validation(Required=false)]
@@ -62,6 +54,14 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TimeZone")]
+        [Validation(Required=false)]
+        public string TimeZone { get; set; }
 
     }
 

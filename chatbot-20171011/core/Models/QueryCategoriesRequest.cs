@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class QueryCategoriesRequest : TeaModel {
+        [NameInMap("KnowledgeType")]
+        [Validation(Required=false)]
+        public long? KnowledgeType { get; set; }
+
         [NameInMap("ParentCategoryId")]
         [Validation(Required=false)]
         public long? ParentCategoryId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("ShowChildrens")]
         [Validation(Required=false)]
         public bool? ShowChildrens { get; set; }
-
-        [NameInMap("KnowledgeType")]
-        [Validation(Required=false)]
-        public long? KnowledgeType { get; set; }
 
     }
 

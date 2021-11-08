@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class GetConversationListRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("SessionId")]
-        [Validation(Required=false)]
-        public string SessionId { get; set; }
-
-        [NameInMap("SenderId")]
-        [Validation(Required=false)]
-        public string SenderId { get; set; }
-
-        [NameInMap("StartDate")]
-        [Validation(Required=false)]
-        public string StartDate { get; set; }
-
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -36,6 +24,18 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("SenderId")]
+        [Validation(Required=false)]
+        public string SenderId { get; set; }
+
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
+
+        [NameInMap("StartDate")]
+        [Validation(Required=false)]
+        public string StartDate { get; set; }
 
     }
 

@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
-        [NameInMap("Regex")]
-        [Validation(Required=false)]
-        public string Regex { get; set; }
-
         [NameInMap("Members")]
         [Validation(Required=false)]
         public string MembersShrink { get; set; }
+
+        [NameInMap("Regex")]
+        [Validation(Required=false)]
+        public string Regex { get; set; }
 
     }
 

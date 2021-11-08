@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class QueryCoreWordsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("CoreWords")]
         [Validation(Required=false)]
         public List<QueryCoreWordsResponseBodyCoreWords> CoreWords { get; set; }
@@ -25,10 +21,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [Validation(Required=false)]
             public string CoreWordName { get; set; }
 
-            [NameInMap("Synonyms")]
-            [Validation(Required=false)]
-            public List<string> Synonyms { get; set; }
-
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -37,19 +29,27 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
+            [NameInMap("Synonyms")]
+            [Validation(Required=false)]
+            public List<string> Synonyms { get; set; }
+
         }
 
-        [NameInMap("RequestId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

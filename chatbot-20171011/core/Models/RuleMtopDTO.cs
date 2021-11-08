@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class RuleMtopDTO : TeaModel {
         /// <summary>
+        /// Error
+        /// </summary>
+        [NameInMap("Error")]
+        [Validation(Required=false)]
+        public List<string> Error { get; set; }
+
+        /// <summary>
         /// Strict
         /// </summary>
         [NameInMap("Strict")]
@@ -29,13 +36,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Warning")]
         [Validation(Required=false)]
         public List<string> Warning { get; set; }
-
-        /// <summary>
-        /// Error
-        /// </summary>
-        [NameInMap("Error")]
-        [Validation(Required=false)]
-        public List<string> Error { get; set; }
 
     }
 

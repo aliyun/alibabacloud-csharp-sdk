@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class PaasResponseNodeContentDTO : TeaModel {
         /// <summary>
-        /// Type
+        /// ButtonList
         /// </summary>
-        [NameInMap("Type")]
+        [NameInMap("ButtonList")]
         [Validation(Required=false)]
-        public string Type { get; set; }
-
-        /// <summary>
-        /// Text
-        /// </summary>
-        [NameInMap("Text")]
-        [Validation(Required=false)]
-        public string Text { get; set; }
+        public PaasButtonListDTO ButtonList { get; set; }
 
         /// <summary>
         /// Image
@@ -31,11 +24,18 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// ButtonList
+        /// Text
         /// </summary>
-        [NameInMap("ButtonList")]
+        [NameInMap("Text")]
         [Validation(Required=false)]
-        public PaasButtonListDTO ButtonList { get; set; }
+        public string Text { get; set; }
+
+        /// <summary>
+        /// Type
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

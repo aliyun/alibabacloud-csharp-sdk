@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class ListBotReceptionDetailDatasRequest : TeaModel {
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("RobotInstanceId")]
         [Validation(Required=false)]
         public string RobotInstanceId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

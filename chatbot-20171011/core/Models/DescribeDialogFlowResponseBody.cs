@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class DescribeDialogFlowResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        [NameInMap("ModifyTime")]
-        [Validation(Required=false)]
-        public string ModifyTime { get; set; }
-
         [NameInMap("AccountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("ModuleName")]
-        [Validation(Required=false)]
-        public string ModuleName { get; set; }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
@@ -41,33 +21,29 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string CreateUserId { get; set; }
 
-        [NameInMap("Templates")]
+        [NameInMap("CreateUserName")]
         [Validation(Required=false)]
-        public string Templates { get; set; }
+        public string CreateUserName { get; set; }
 
         [NameInMap("DialogId")]
         [Validation(Required=false)]
         public long? DialogId { get; set; }
 
+        [NameInMap("DialogName")]
+        [Validation(Required=false)]
+        public string DialogName { get; set; }
+
         [NameInMap("GlobalVars")]
         [Validation(Required=false)]
         public Dictionary<string, object> GlobalVars { get; set; }
 
-        [NameInMap("CreateUserName")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string CreateUserName { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("ModuleId")]
+        [NameInMap("ModifyTime")]
         [Validation(Required=false)]
-        public long? ModuleId { get; set; }
-
-        [NameInMap("ModuleDefinition")]
-        [Validation(Required=false)]
-        public PaasProcessData ModuleDefinition { get; set; }
-
-        [NameInMap("DialogName")]
-        [Validation(Required=false)]
-        public string DialogName { get; set; }
+        public string ModifyTime { get; set; }
 
         [NameInMap("ModifyUserId")]
         [Validation(Required=false)]
@@ -77,9 +53,33 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string ModifyUserName { get; set; }
 
+        [NameInMap("ModuleDefinition")]
+        [Validation(Required=false)]
+        public PaasProcessData ModuleDefinition { get; set; }
+
+        [NameInMap("ModuleId")]
+        [Validation(Required=false)]
+        public long? ModuleId { get; set; }
+
+        [NameInMap("ModuleName")]
+        [Validation(Required=false)]
+        public string ModuleName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
+
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
+
+        [NameInMap("Templates")]
+        [Validation(Required=false)]
+        public string Templates { get; set; }
 
     }
 

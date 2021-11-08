@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class DescribeCoreWordResponseBody : TeaModel {
+        [NameInMap("CoreWordCode")]
+        [Validation(Required=false)]
+        public string CoreWordCode { get; set; }
+
         [NameInMap("CoreWordName")]
         [Validation(Required=false)]
         public string CoreWordName { get; set; }
 
-        [NameInMap("Synonyms")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public List<string> Synonyms { get; set; }
+        public string CreateTime { get; set; }
 
         [NameInMap("ModifyTime")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("CreateTime")]
+        [NameInMap("Synonyms")]
         [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("CoreWordCode")]
-        [Validation(Required=false)]
-        public string CoreWordCode { get; set; }
+        public List<string> Synonyms { get; set; }
 
     }
 

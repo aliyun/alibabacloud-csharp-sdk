@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [Validation(Required=false)]
         public PaasEntryDTO Entry { get; set; }
 
-        [NameInMap("Slot")]
+        [NameInMap("Function")]
         [Validation(Required=false)]
-        public PaasSlotDTO Slot { get; set; }
+        public PaasFunctionDTO Function { get; set; }
 
         [NameInMap("Response")]
         [Validation(Required=false)]
         public PaasResponseDTO Response { get; set; }
 
-        [NameInMap("Function")]
+        [NameInMap("Slot")]
         [Validation(Required=false)]
-        public PaasFunctionDTO Function { get; set; }
+        public PaasSlotDTO Slot { get; set; }
 
     }
 

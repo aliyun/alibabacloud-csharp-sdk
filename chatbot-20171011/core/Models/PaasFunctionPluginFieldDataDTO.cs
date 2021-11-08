@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class PaasFunctionPluginFieldDataDTO : TeaModel {
         /// <summary>
-        /// Function
-        /// </summary>
-        [NameInMap("Function")]
-        [Validation(Required=false)]
-        public string Function { get; set; }
-
-        /// <summary>
         /// AliyunFunction
         /// </summary>
         [NameInMap("AliyunFunction")]
@@ -24,11 +17,18 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string AliyunFunction { get; set; }
 
         /// <summary>
-        /// Type
+        /// AliyunService
         /// </summary>
-        [NameInMap("Type")]
+        [NameInMap("AliyunService")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string AliyunService { get; set; }
+
+        /// <summary>
+        /// Code
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
 
         /// <summary>
         /// Description
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string EndPoint { get; set; }
 
         /// <summary>
-        /// Code
+        /// Function
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("Function")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Function { get; set; }
 
         /// <summary>
         /// Name
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// AliyunService
+        /// Params
         /// </summary>
-        [NameInMap("AliyunService")]
+        [NameInMap("Params")]
         [Validation(Required=false)]
-        public string AliyunService { get; set; }
+        public Dictionary<string, object> Params { get; set; }
 
         /// <summary>
         /// Switch
@@ -73,11 +73,11 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         public List<PaasSwitchCaseDTO> Switch { get; set; }
 
         /// <summary>
-        /// Params
+        /// Type
         /// </summary>
-        [NameInMap("Params")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Params { get; set; }
+        public string Type { get; set; }
 
     }
 

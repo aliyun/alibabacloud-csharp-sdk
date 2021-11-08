@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class CreateDialogRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("DialogName")]
         [Validation(Required=false)]
         public string DialogName { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

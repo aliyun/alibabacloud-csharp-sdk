@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class CreateBotRequest : TeaModel {
-        [NameInMap("LanguageCode")]
-        [Validation(Required=false)]
-        public string LanguageCode { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
         [NameInMap("Avatar")]
         [Validation(Required=false)]
         public string Avatar { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Chatbot20171011.Models
         [NameInMap("Introduction")]
         [Validation(Required=false)]
         public string Introduction { get; set; }
+
+        [NameInMap("LanguageCode")]
+        [Validation(Required=false)]
+        public string LanguageCode { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("RobotType")]
         [Validation(Required=false)]

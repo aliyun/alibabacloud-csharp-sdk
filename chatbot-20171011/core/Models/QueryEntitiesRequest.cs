@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20171011.Models
 {
     public class QueryEntitiesRequest : TeaModel {
-        [NameInMap("EntityName")]
-        [Validation(Required=false)]
-        public string EntityName { get; set; }
-
         [NameInMap("DialogId")]
         [Validation(Required=false)]
         public long? DialogId { get; set; }
+
+        [NameInMap("EntityName")]
+        [Validation(Required=false)]
+        public string EntityName { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
