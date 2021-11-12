@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("AliasName")]
                 [Validation(Required=false)]
                 public string AliasName { get; set; }
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
@@ -166,6 +169,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("PrimaryId")]
             [Validation(Required=false)]
             public long? PrimaryId { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
 
             [NameInMap("Related")]
             [Validation(Required=false)]
