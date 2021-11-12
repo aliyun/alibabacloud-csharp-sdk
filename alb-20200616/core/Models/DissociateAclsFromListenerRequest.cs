@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<string> AclIds { get; set; }
 
         /// <summary>
-        /// 监听Id
+        /// 幂等标识
         /// </summary>
-        [NameInMap("ListenerId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ListenerId { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 预检此次请求
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// 幂等标识
+        /// 监听Id
         /// </summary>
-        [NameInMap("ClientToken")]
+        [NameInMap("ListenerId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string ListenerId { get; set; }
 
     }
 

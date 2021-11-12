@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAclEntriesRequest : TeaModel {
         /// <summary>
-        /// 分页查询标识
+        /// 访问控制策略Id
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("AclId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string AclId { get; set; }
 
         /// <summary>
         /// 查询数量
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// 访问控制策略Id
+        /// 分页查询标识
         /// </summary>
-        [NameInMap("AclId")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string AclId { get; set; }
+        public string NextToken { get; set; }
 
     }
 

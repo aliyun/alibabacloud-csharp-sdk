@@ -10,25 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// 幂等标识
+        /// 地址模式
         /// </summary>
-        [NameInMap("ClientToken")]
+        [NameInMap("AddressAllocatedMode")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        ///  是否只预检此次请求
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
-
-        /// <summary>
-        /// 负载均衡实例的专有网络ID。
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public string AddressAllocatedMode { get; set; }
 
         /// <summary>
         /// 负载均衡的地址类型
@@ -38,11 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// 名称
+        /// 幂等标识
         /// </summary>
-        [NameInMap("LoadBalancerName")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string LoadBalancerName { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 是否开启删除保护
@@ -50,6 +36,39 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("DeletionProtectionEnabled")]
         [Validation(Required=false)]
         public bool? DeletionProtectionEnabled { get; set; }
+
+        /// <summary>
+        ///  是否只预检此次请求
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// 计费相关配置信息
+        /// </summary>
+        [NameInMap("LoadBalancerBillingConfig")]
+        [Validation(Required=false)]
+        public CreateLoadBalancerRequestLoadBalancerBillingConfig LoadBalancerBillingConfig { get; set; }
+        public class CreateLoadBalancerRequestLoadBalancerBillingConfig : TeaModel {
+            [NameInMap("PayType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
+        };
+
+        /// <summary>
+        /// 负载均衡的版本
+        /// </summary>
+        [NameInMap("LoadBalancerEdition")]
+        [Validation(Required=false)]
+        public string LoadBalancerEdition { get; set; }
+
+        /// <summary>
+        /// 名称
+        /// </summary>
+        [NameInMap("LoadBalancerName")]
+        [Validation(Required=false)]
+        public string LoadBalancerName { get; set; }
 
         /// <summary>
         /// 负载均衡修改保护相关信息
@@ -65,6 +84,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string Status { get; set; }
         };
+
+        /// <summary>
+        /// 资源组
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的专有网络ID。
+        /// </summary>
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
         /// <summary>
         /// 可用区及交换机映射列表
@@ -88,39 +121,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ZoneId { get; set; }
 
         }
-
-        /// <summary>
-        /// 地址模式
-        /// </summary>
-        [NameInMap("AddressAllocatedMode")]
-        [Validation(Required=false)]
-        public string AddressAllocatedMode { get; set; }
-
-        /// <summary>
-        /// 资源组
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        /// <summary>
-        /// 负载均衡的版本
-        /// </summary>
-        [NameInMap("LoadBalancerEdition")]
-        [Validation(Required=false)]
-        public string LoadBalancerEdition { get; set; }
-
-        /// <summary>
-        /// 计费相关配置信息
-        /// </summary>
-        [NameInMap("LoadBalancerBillingConfig")]
-        [Validation(Required=false)]
-        public CreateLoadBalancerRequestLoadBalancerBillingConfig LoadBalancerBillingConfig { get; set; }
-        public class CreateLoadBalancerRequestLoadBalancerBillingConfig : TeaModel {
-            [NameInMap("PayType")]
-            [Validation(Required=false)]
-            public string PayType { get; set; }
-        };
 
     }
 

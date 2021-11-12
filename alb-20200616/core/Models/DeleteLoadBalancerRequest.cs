@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DeleteLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// 实例id
-        /// </summary>
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
-
-        /// <summary>
         /// 幂等标识
         /// </summary>
         [NameInMap("ClientToken")]
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
 
     }
 

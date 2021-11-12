@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateServerGroupServersAttributeRequest : TeaModel {
         /// <summary>
+        /// 幂等Token
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// dryRun
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// 后端服务器Id
         /// </summary>
         [NameInMap("ServerGroupId")]
@@ -66,20 +80,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Weight { get; set; }
 
         }
-
-        /// <summary>
-        /// 幂等Token
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        /// dryRun
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
 
     }
 

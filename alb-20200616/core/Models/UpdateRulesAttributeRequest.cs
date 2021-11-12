@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// 是否只预检此次请求
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// 转发规则列表
         /// </summary>
         [NameInMap("Rules")]
@@ -29,13 +36,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
-
-            /// <summary>
-            /// 转发规则名称
-            /// </summary>
-            [NameInMap("RuleName")]
-            [Validation(Required=false)]
-            public string RuleName { get; set; }
 
             /// <summary>
             /// 转发规则动作
@@ -69,13 +69,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfig : TeaModel {
-                    [NameInMap("ServerGroupTuples")]
-                    [Validation(Required=false)]
-                    public List<UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
-                    public class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
-                        public string ServerGroupId { get; set; }
-                        public int? Weight { get; set; }
-                    }
                     [NameInMap("ServerGroupStickySession")]
                     [Validation(Required=false)]
                     public UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession ServerGroupStickySession { get; set; }
@@ -94,6 +87,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         [Validation(Required=false)]
                         public int? Timeout { get; set; }
 
+                    }
+                    [NameInMap("ServerGroupTuples")]
+                    [Validation(Required=false)]
+                    public List<UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
+                    public class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
+                        public string ServerGroupId { get; set; }
+                        public int? Weight { get; set; }
                     }
                 };
 
@@ -153,6 +153,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 };
 
                 /// <summary>
+                /// 去除HTTP标头
+                /// </summary>
+                [NameInMap("RemoveHeaderConfig")]
+                [Validation(Required=false)]
+                public UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig RemoveHeaderConfig { get; set; }
+                public class UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+                };
+
+                /// <summary>
                 /// 内部重定向动作配置
                 /// </summary>
                 [NameInMap("RewriteConfig")]
@@ -169,13 +181,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [Validation(Required=false)]
                     public string Query { get; set; }
                 };
-
-                /// <summary>
-                /// 转发规则动作类型
-                /// </summary>
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
 
                 /// <summary>
                 /// 流量限速
@@ -196,9 +201,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfig : TeaModel {
-                    [NameInMap("TargetType")]
-                    [Validation(Required=false)]
-                    public string TargetType { get; set; }
                     [NameInMap("MirrorGroupConfig")]
                     [Validation(Required=false)]
                     public UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig MirrorGroupConfig { get; set; }
@@ -214,19 +216,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         }
 
                     }
+                    [NameInMap("TargetType")]
+                    [Validation(Required=false)]
+                    public string TargetType { get; set; }
                 };
 
                 /// <summary>
-                /// 去除HTTP标头
+                /// 转发规则动作类型
                 /// </summary>
-                [NameInMap("RemoveHeaderConfig")]
+                [NameInMap("Type")]
                 [Validation(Required=false)]
-                public UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig RemoveHeaderConfig { get; set; }
-                public class UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig : TeaModel {
-                    [NameInMap("Key")]
-                    [Validation(Required=false)]
-                    public string Key { get; set; }
-                };
+                public string Type { get; set; }
 
             }
 
@@ -348,13 +348,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 };
 
                 /// <summary>
-                /// 条件类型
-                /// </summary>
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                /// <summary>
                 /// 基于源IP业务流量匹配
                 /// </summary>
                 [NameInMap("SourceIpConfig")]
@@ -366,6 +359,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> Values { get; set; }
                 };
 
+                /// <summary>
+                /// 条件类型
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
             }
 
             /// <summary>
@@ -375,14 +375,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
-        }
+            /// <summary>
+            /// 转发规则名称
+            /// </summary>
+            [NameInMap("RuleName")]
+            [Validation(Required=false)]
+            public string RuleName { get; set; }
 
-        /// <summary>
-        /// 是否只预检此次请求
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
+        }
 
     }
 

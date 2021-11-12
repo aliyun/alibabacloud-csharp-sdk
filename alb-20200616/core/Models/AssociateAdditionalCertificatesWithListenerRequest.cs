@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class AssociateAdditionalCertificatesWithListenerRequest : TeaModel {
         /// <summary>
-        /// 监听Id
-        /// </summary>
-        [NameInMap("ListenerId")]
-        [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
-        /// <summary>
         /// 证书列表
         /// </summary>
         [NameInMap("Certificates")]
@@ -45,6 +38,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// 监听Id
+        /// </summary>
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
 
     }
 

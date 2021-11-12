@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig HealthCheckConfig { get; set; }
             public class ListServerGroupsResponseBodyServerGroupsHealthCheckConfig : TeaModel {
+                [NameInMap("HealthCheckCodes")]
+                [Validation(Required=false)]
+                public List<string> HealthCheckCodes { get; set; }
                 [NameInMap("HealthCheckConnectPort")]
                 [Validation(Required=false)]
                 public int? HealthCheckConnectPort { get; set; }
@@ -53,9 +56,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("HealthCheckHost")]
                 [Validation(Required=false)]
                 public string HealthCheckHost { get; set; }
-                [NameInMap("HealthCheckCodes")]
-                [Validation(Required=false)]
-                public List<string> HealthCheckCodes { get; set; }
                 [NameInMap("HealthCheckHttpVersion")]
                 [Validation(Required=false)]
                 public string HealthCheckHttpVersion { get; set; }
@@ -102,6 +102,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("Scheduler")]
             [Validation(Required=false)]
             public string Scheduler { get; set; }
+
+            /// <summary>
+            /// 服务器组内服务器数量
+            /// </summary>
+            [NameInMap("ServerCount")]
+            [Validation(Required=false)]
+            public int? ServerCount { get; set; }
 
             /// <summary>
             /// 服务器组Id
@@ -153,13 +160,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             };
 
             /// <summary>
-            /// 服务器组所在VpcId
-            /// </summary>
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            /// <summary>
             /// 标签列表
             /// </summary>
             [NameInMap("Tags")]
@@ -181,6 +181,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Value { get; set; }
 
             }
+
+            /// <summary>
+            /// 服务器组所在VpcId
+            /// </summary>
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
 
         }
 

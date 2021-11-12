@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListListenerCertificatesRequest : TeaModel {
         /// <summary>
-        /// 分页查询标识
+        /// 证书类型
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("CertificateType")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
-        /// 查询数量
-        /// </summary>
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string CertificateType { get; set; }
 
         /// <summary>
         /// 监听Id
@@ -31,11 +24,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// 证书类型
+        /// 查询数量
         /// </summary>
-        [NameInMap("CertificateType")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string CertificateType { get; set; }
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// 分页查询标识
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
     }
 

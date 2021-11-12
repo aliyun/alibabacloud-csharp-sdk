@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class RemoveServersFromServerGroupRequest : TeaModel {
         /// <summary>
+        /// 幂等标识
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        ///  是否只预检此次请求
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// 后端服务器Id
         /// </summary>
         [NameInMap("ServerGroupId")]
@@ -52,20 +66,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerType { get; set; }
 
         }
-
-        /// <summary>
-        /// 幂等标识
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        ///  是否只预检此次请求
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
 
     }
 

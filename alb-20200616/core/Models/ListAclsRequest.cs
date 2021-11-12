@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<string> AclNames { get; set; }
 
         /// <summary>
-        /// 资源组ID
+        /// 查询数量
         /// </summary>
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
         /// 分页查询标识
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// 查询数量
+        /// 资源组ID
         /// </summary>
-        [NameInMap("MaxResults")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string ResourceGroupId { get; set; }
 
     }
 

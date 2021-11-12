@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class RemoveEntriesFromAclRequest : TeaModel {
         /// <summary>
+        /// 访问控制策略Id
+        /// </summary>
+        [NameInMap("AclId")]
+        [Validation(Required=false)]
+        public string AclId { get; set; }
+
+        /// <summary>
         /// 幂等标识
         /// </summary>
         [NameInMap("ClientToken")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
-
-        /// <summary>
-        /// 访问控制策略Id
-        /// </summary>
-        [NameInMap("AclId")]
-        [Validation(Required=false)]
-        public string AclId { get; set; }
 
         /// <summary>
         /// 条目列表

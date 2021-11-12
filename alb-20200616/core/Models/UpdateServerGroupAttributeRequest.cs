@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateServerGroupAttributeRequest : TeaModel {
         /// <summary>
-        /// Acl名称
-        /// </summary>
-        [NameInMap("ServerGroupName")]
-        [Validation(Required=false)]
-        public string ServerGroupName { get; set; }
-
-        /// <summary>
-        /// 调度策略
-        /// </summary>
-        [NameInMap("Scheduler")]
-        [Validation(Required=false)]
-        public string Scheduler { get; set; }
-
-        /// <summary>
         /// 幂等标识
         /// </summary>
         [NameInMap("ClientToken")]
@@ -44,6 +30,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class UpdateServerGroupAttributeRequestHealthCheckConfig : TeaModel {
+            [NameInMap("HealthCheckCodes")]
+            [Validation(Required=false)]
+            public List<string> HealthCheckCodes { get; set; }
             [NameInMap("HealthCheckConnectPort")]
             [Validation(Required=false)]
             public int? HealthCheckConnectPort { get; set; }
@@ -53,9 +42,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
             public string HealthCheckHost { get; set; }
-            [NameInMap("HealthCheckCodes")]
-            [Validation(Required=false)]
-            public List<string> HealthCheckCodes { get; set; }
             [NameInMap("HealthCheckHttpVersion")]
             [Validation(Required=false)]
             public string HealthCheckHttpVersion { get; set; }
@@ -83,6 +69,27 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         };
 
         /// <summary>
+        /// 调度策略
+        /// </summary>
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public string Scheduler { get; set; }
+
+        /// <summary>
+        /// 服务器组Id
+        /// </summary>
+        [NameInMap("ServerGroupId")]
+        [Validation(Required=false)]
+        public string ServerGroupId { get; set; }
+
+        /// <summary>
+        /// Acl名称
+        /// </summary>
+        [NameInMap("ServerGroupName")]
+        [Validation(Required=false)]
+        public string ServerGroupName { get; set; }
+
+        /// <summary>
         /// 会话保持配置
         /// </summary>
         [NameInMap("StickySessionConfig")]
@@ -102,13 +109,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string StickySessionType { get; set; }
         };
-
-        /// <summary>
-        /// 服务器组Id
-        /// </summary>
-        [NameInMap("ServerGroupId")]
-        [Validation(Required=false)]
-        public string ServerGroupId { get; set; }
 
     }
 

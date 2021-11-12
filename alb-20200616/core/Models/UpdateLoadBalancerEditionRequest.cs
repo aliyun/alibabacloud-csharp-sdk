@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// 实例Id
-        /// </summary>
-        [NameInMap("LoadBalancerId")]
-        [Validation(Required=false)]
-        public string LoadBalancerId { get; set; }
-
-        /// <summary>
         /// 实例版本
         /// </summary>
         [NameInMap("LoadBalancerEdition")]
         [Validation(Required=false)]
         public string LoadBalancerEdition { get; set; }
+
+        /// <summary>
+        /// 实例Id
+        /// </summary>
+        [NameInMap("LoadBalancerId")]
+        [Validation(Required=false)]
+        public string LoadBalancerId { get; set; }
 
     }
 

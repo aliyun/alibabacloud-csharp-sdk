@@ -8,34 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
-    public class ApplyHealthCheckTemplateToServerGroupRequest : TeaModel {
+    public class AttachCommonBandwidthPackageToLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// 幂等Token
+        /// 带宽包ID
+        /// </summary>
+        [NameInMap("BandwidthPackageId")]
+        [Validation(Required=false)]
+        public string BandwidthPackageId { get; set; }
+
+        /// <summary>
+        /// 幂等参数
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// dryRun
+        /// 是否只预检此次请求
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// 健康检查模板Id
+        /// 实例ID
         /// </summary>
-        [NameInMap("HealthCheckTemplateId")]
+        [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
-        public string HealthCheckTemplateId { get; set; }
+        public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// 服务器组Id
+        /// 地域ID
         /// </summary>
-        [NameInMap("ServerGroupId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ServerGroupId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

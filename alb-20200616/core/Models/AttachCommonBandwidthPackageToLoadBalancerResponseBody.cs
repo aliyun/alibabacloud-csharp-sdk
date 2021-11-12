@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alb20200616.Models
 {
-    public class UpdateRulesAttributeResponseBody : TeaModel {
+    public class AttachCommonBandwidthPackageToLoadBalancerResponseBody : TeaModel {
         /// <summary>
-        /// 异步任务Id
+        /// 异步任务id
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

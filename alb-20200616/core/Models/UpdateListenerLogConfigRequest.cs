@@ -10,27 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateListenerLogConfigRequest : TeaModel {
         /// <summary>
-        /// 监听标识
-        /// </summary>
-        [NameInMap("ListenerId")]
-        [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
-        /// <summary>
-        /// 幂等标识
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        ///  是否只预检此次请求
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
-
-        /// <summary>
         /// 是否开启携带自定义Header
         /// </summary>
         [NameInMap("AccessLogRecordCustomizedHeadersEnabled")]
@@ -54,6 +33,27 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string TracingType { get; set; }
         };
+
+        /// <summary>
+        /// 幂等标识
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        ///  是否只预检此次请求
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// 监听标识
+        /// </summary>
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
 
     }
 

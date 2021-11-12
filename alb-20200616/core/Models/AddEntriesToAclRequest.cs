@@ -13,13 +13,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class AddEntriesToAclRequest : TeaModel {
         /// <summary>
-        /// AclId
-        /// </summary>
-        [NameInMap("AclId")]
-        [Validation(Required=false)]
-        public string AclId { get; set; }
-
-        /// <summary>
         /// 条目信息列表
         /// </summary>
         [NameInMap("AclEntries")]
@@ -41,6 +34,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Entry { get; set; }
 
         }
+
+        /// <summary>
+        /// AclId
+        /// </summary>
+        [NameInMap("AclId")]
+        [Validation(Required=false)]
+        public string AclId { get; set; }
 
         /// <summary>
         /// 幂等Token

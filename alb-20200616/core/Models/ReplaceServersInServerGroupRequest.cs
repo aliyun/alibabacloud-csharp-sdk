@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ReplaceServersInServerGroupRequest : TeaModel {
         /// <summary>
-        /// 后端服务器Id
-        /// </summary>
-        [NameInMap("ServerGroupId")]
-        [Validation(Required=false)]
-        public string ServerGroupId { get; set; }
-
-        /// <summary>
         /// 待添加后端服务器
         /// </summary>
         [NameInMap("AddedServers")]
@@ -68,12 +61,33 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
+        /// 幂等Token
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// dryRun
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// 待删除后端服务器
         /// </summary>
         [NameInMap("RemovedServers")]
         [Validation(Required=false)]
         public List<ReplaceServersInServerGroupRequestRemovedServers> RemovedServers { get; set; }
         public class ReplaceServersInServerGroupRequestRemovedServers : TeaModel {
+            /// <summary>
+            /// 端口
+            /// </summary>
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
+
             /// <summary>
             /// 后端服务器id
             /// </summary>
@@ -95,28 +109,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string ServerType { get; set; }
 
-            /// <summary>
-            /// 端口
-            /// </summary>
-            [NameInMap("Port")]
-            [Validation(Required=false)]
-            public int? Port { get; set; }
-
         }
 
         /// <summary>
-        /// 幂等Token
+        /// 后端服务器Id
         /// </summary>
-        [NameInMap("ClientToken")]
+        [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        /// dryRun
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
+        public string ServerGroupId { get; set; }
 
     }
 

@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateRuleAttributeRequest : TeaModel {
         /// <summary>
-        /// 转发规则标识
-        /// </summary>
-        [NameInMap("RuleId")]
-        [Validation(Required=false)]
-        public string RuleId { get; set; }
-
-        /// <summary>
         /// 幂等标识
         /// </summary>
         [NameInMap("ClientToken")]
@@ -31,103 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// 转发规则条件
+        /// 转发规则优先级
         /// </summary>
-        [NameInMap("RuleConditions")]
+        [NameInMap("Priority")]
         [Validation(Required=false)]
-        public List<UpdateRuleAttributeRequestRuleConditions> RuleConditions { get; set; }
-        public class UpdateRuleAttributeRequestRuleConditions : TeaModel {
-            /// <summary>
-            /// Cookie条件配置
-            /// </summary>
-            [NameInMap("CookieConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsCookieConfig CookieConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsCookieConfig : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<UpdateRuleAttributeRequestRuleConditionsCookieConfigValues> Values { get; set; }
-                public class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues : TeaModel {
-                    public string Key { get; set; }
-                    public string Value { get; set; }
-                }
-            };
-
-            /// <summary>
-            /// HTTP标头条件配置
-            /// </summary>
-            [NameInMap("HeaderConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsHeaderConfig HeaderConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsHeaderConfig : TeaModel {
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-            };
-
-            /// <summary>
-            /// 主机名条件配置
-            /// </summary>
-            [NameInMap("HostConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsHostConfig HostConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsHostConfig : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-            };
-
-            /// <summary>
-            /// HTTP请求方法条件配置
-            /// </summary>
-            [NameInMap("MethodConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsMethodConfig MethodConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsMethodConfig : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-            };
-
-            /// <summary>
-            /// 路径条件配置
-            /// </summary>
-            [NameInMap("PathConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsPathConfig PathConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsPathConfig : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-            };
-
-            /// <summary>
-            /// 查询字符串条件配置
-            /// </summary>
-            [NameInMap("QueryStringConfig")]
-            [Validation(Required=false)]
-            public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig QueryStringConfig { get; set; }
-            public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfig : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues> Values { get; set; }
-                public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues : TeaModel {
-                    public string Key { get; set; }
-                    public string Value { get; set; }
-                }
-            };
-
-            /// <summary>
-            /// 条件类型
-            /// </summary>
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-        }
+        public int? Priority { get; set; }
 
         /// <summary>
         /// 转发规则动作
@@ -249,18 +150,117 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
+        /// 转发规则条件
+        /// </summary>
+        [NameInMap("RuleConditions")]
+        [Validation(Required=false)]
+        public List<UpdateRuleAttributeRequestRuleConditions> RuleConditions { get; set; }
+        public class UpdateRuleAttributeRequestRuleConditions : TeaModel {
+            /// <summary>
+            /// Cookie条件配置
+            /// </summary>
+            [NameInMap("CookieConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsCookieConfig CookieConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsCookieConfig : TeaModel {
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<UpdateRuleAttributeRequestRuleConditionsCookieConfigValues> Values { get; set; }
+                public class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues : TeaModel {
+                    public string Key { get; set; }
+                    public string Value { get; set; }
+                }
+            };
+
+            /// <summary>
+            /// HTTP标头条件配置
+            /// </summary>
+            [NameInMap("HeaderConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsHeaderConfig HeaderConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsHeaderConfig : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+            };
+
+            /// <summary>
+            /// 主机名条件配置
+            /// </summary>
+            [NameInMap("HostConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsHostConfig HostConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsHostConfig : TeaModel {
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+            };
+
+            /// <summary>
+            /// HTTP请求方法条件配置
+            /// </summary>
+            [NameInMap("MethodConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsMethodConfig MethodConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsMethodConfig : TeaModel {
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+            };
+
+            /// <summary>
+            /// 路径条件配置
+            /// </summary>
+            [NameInMap("PathConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsPathConfig PathConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsPathConfig : TeaModel {
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+            };
+
+            /// <summary>
+            /// 查询字符串条件配置
+            /// </summary>
+            [NameInMap("QueryStringConfig")]
+            [Validation(Required=false)]
+            public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig QueryStringConfig { get; set; }
+            public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfig : TeaModel {
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues> Values { get; set; }
+                public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues : TeaModel {
+                    public string Key { get; set; }
+                    public string Value { get; set; }
+                }
+            };
+
+            /// <summary>
+            /// 条件类型
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+        /// <summary>
+        /// 转发规则标识
+        /// </summary>
+        [NameInMap("RuleId")]
+        [Validation(Required=false)]
+        public string RuleId { get; set; }
+
+        /// <summary>
         /// 转发规则名称
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
-
-        /// <summary>
-        /// 转发规则优先级
-        /// </summary>
-        [NameInMap("Priority")]
-        [Validation(Required=false)]
-        public int? Priority { get; set; }
 
     }
 

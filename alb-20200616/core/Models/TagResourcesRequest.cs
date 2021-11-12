@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// 资源类型
-        /// </summary>
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        /// <summary>
         /// 资源实例Id
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
+
+        /// <summary>
+        /// 资源类型
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         /// <summary>
         /// 标签列表

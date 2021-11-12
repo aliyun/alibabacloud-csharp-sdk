@@ -10,46 +10,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateServerGroupRequest : TeaModel {
         /// <summary>
-        /// 服务器组名称
+        /// 幂等标识
         /// </summary>
-        [NameInMap("ServerGroupName")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ServerGroupName { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
-        /// 服务器组类型
+        ///  是否只预检此次请求
         /// </summary>
-        [NameInMap("ServerGroupType")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string ServerGroupType { get; set; }
-
-        /// <summary>
-        /// VpcId
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        /// <summary>
-        /// 调度策略
-        /// </summary>
-        [NameInMap("Scheduler")]
-        [Validation(Required=false)]
-        public string Scheduler { get; set; }
-
-        /// <summary>
-        /// 后端协议类型
-        /// </summary>
-        [NameInMap("Protocol")]
-        [Validation(Required=false)]
-        public string Protocol { get; set; }
-
-        /// <summary>
-        /// 资源组id
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// 健康检查配置
@@ -58,6 +30,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public CreateServerGroupRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class CreateServerGroupRequestHealthCheckConfig : TeaModel {
+            [NameInMap("HealthCheckCodes")]
+            [Validation(Required=false)]
+            public List<string> HealthCheckCodes { get; set; }
             [NameInMap("HealthCheckConnectPort")]
             [Validation(Required=false)]
             public int? HealthCheckConnectPort { get; set; }
@@ -67,9 +42,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
             public string HealthCheckHost { get; set; }
-            [NameInMap("HealthCheckCodes")]
-            [Validation(Required=false)]
-            public List<string> HealthCheckCodes { get; set; }
             [NameInMap("HealthCheckHttpVersion")]
             [Validation(Required=false)]
             public string HealthCheckHttpVersion { get; set; }
@@ -97,6 +69,41 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         };
 
         /// <summary>
+        /// 后端协议类型
+        /// </summary>
+        [NameInMap("Protocol")]
+        [Validation(Required=false)]
+        public string Protocol { get; set; }
+
+        /// <summary>
+        /// 资源组id
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// 调度策略
+        /// </summary>
+        [NameInMap("Scheduler")]
+        [Validation(Required=false)]
+        public string Scheduler { get; set; }
+
+        /// <summary>
+        /// 服务器组名称
+        /// </summary>
+        [NameInMap("ServerGroupName")]
+        [Validation(Required=false)]
+        public string ServerGroupName { get; set; }
+
+        /// <summary>
+        /// 服务器组类型
+        /// </summary>
+        [NameInMap("ServerGroupType")]
+        [Validation(Required=false)]
+        public string ServerGroupType { get; set; }
+
+        /// <summary>
         /// 会话保持配置
         /// </summary>
         [NameInMap("StickySessionConfig")]
@@ -118,18 +125,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         };
 
         /// <summary>
-        /// 幂等标识
+        /// VpcId
         /// </summary>
-        [NameInMap("ClientToken")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        ///  是否只预检此次请求
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
+        public string VpcId { get; set; }
 
     }
 

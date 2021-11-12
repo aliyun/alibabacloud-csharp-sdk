@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListHealthCheckTemplatesResponseBodyHealthCheckTemplates> HealthCheckTemplates { get; set; }
         public class ListHealthCheckTemplatesResponseBodyHealthCheckTemplates : TeaModel {
             /// <summary>
+            /// 状态码
+            /// </summary>
+            [NameInMap("HealthCheckCodes")]
+            [Validation(Required=false)]
+            public List<string> HealthCheckCodes { get; set; }
+
+            /// <summary>
             /// 端口
             /// </summary>
             [NameInMap("HealthCheckConnectPort")]
@@ -29,13 +36,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("HealthCheckHost")]
             [Validation(Required=false)]
             public string HealthCheckHost { get; set; }
-
-            /// <summary>
-            /// 状态码
-            /// </summary>
-            [NameInMap("HealthCheckCodes")]
-            [Validation(Required=false)]
-            public List<string> HealthCheckCodes { get; set; }
 
             /// <summary>
             /// 版本

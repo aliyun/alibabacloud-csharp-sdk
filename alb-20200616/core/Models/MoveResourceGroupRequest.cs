@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// 资源类型
+        /// 资源组id
         /// </summary>
-        [NameInMap("ResourceType")]
+        [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public string NewResourceGroupId { get; set; }
 
         /// <summary>
         /// 指定资源Id
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// 资源组id
+        /// 资源类型
         /// </summary>
-        [NameInMap("NewResourceGroupId")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string NewResourceGroupId { get; set; }
+        public string ResourceType { get; set; }
 
     }
 

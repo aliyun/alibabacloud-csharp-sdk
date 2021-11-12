@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateAclAttributeRequest : TeaModel {
         /// <summary>
-        /// 幂等参数
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
         /// AclId
         /// </summary>
         [NameInMap("AclId")]
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("AclName")]
         [Validation(Required=false)]
         public string AclName { get; set; }
+
+        /// <summary>
+        /// 幂等参数
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 是否预校验请求

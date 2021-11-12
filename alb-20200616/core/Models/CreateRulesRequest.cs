@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateRulesRequest : TeaModel {
         /// <summary>
-        /// 监听标识
-        /// </summary>
-        [NameInMap("ListenerId")]
-        [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
-        /// <summary>
         /// 幂等标识
         /// </summary>
         [NameInMap("ClientToken")]
@@ -31,12 +24,26 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// 监听标识
+        /// </summary>
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
+
+        /// <summary>
         /// 转发规则列表
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<CreateRulesRequestRules> Rules { get; set; }
         public class CreateRulesRequestRules : TeaModel {
+            /// <summary>
+            /// 转发规则方向
+            /// </summary>
+            [NameInMap("Direction")]
+            [Validation(Required=false)]
+            public string Direction { get; set; }
+
             /// <summary>
             /// 转发规则优先级
             /// </summary>

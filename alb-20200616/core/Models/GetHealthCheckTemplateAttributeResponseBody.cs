@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetHealthCheckTemplateAttributeResponseBody : TeaModel {
         /// <summary>
+        /// 状态码
+        /// </summary>
+        [NameInMap("HealthCheckCodes")]
+        [Validation(Required=false)]
+        public List<string> HealthCheckCodes { get; set; }
+
+        /// <summary>
         /// 端口
         /// </summary>
         [NameInMap("HealthCheckConnectPort")]
@@ -24,25 +31,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string HealthCheckHost { get; set; }
 
         /// <summary>
-        /// 状态码
-        /// </summary>
-        [NameInMap("HealthCheckCodes")]
-        [Validation(Required=false)]
-        public List<string> HealthCheckCodes { get; set; }
-
-        /// <summary>
         /// 版本
         /// </summary>
         [NameInMap("HealthCheckHttpVersion")]
         [Validation(Required=false)]
         public string HealthCheckHttpVersion { get; set; }
-
-        /// <summary>
-        /// 健康检查模板Id
-        /// </summary>
-        [NameInMap("HealthCheckTemplateId")]
-        [Validation(Required=false)]
-        public string HealthCheckTemplateId { get; set; }
 
         /// <summary>
         /// 间隔时间
@@ -71,6 +64,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("HealthCheckProtocol")]
         [Validation(Required=false)]
         public string HealthCheckProtocol { get; set; }
+
+        /// <summary>
+        /// 健康检查模板Id
+        /// </summary>
+        [NameInMap("HealthCheckTemplateId")]
+        [Validation(Required=false)]
+        public string HealthCheckTemplateId { get; set; }
 
         /// <summary>
         /// 名称

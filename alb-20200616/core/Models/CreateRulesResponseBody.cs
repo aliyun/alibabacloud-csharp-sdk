@@ -31,18 +31,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<CreateRulesResponseBodyRuleIds> RuleIds { get; set; }
         public class CreateRulesResponseBodyRuleIds : TeaModel {
             /// <summary>
-            /// 转发规则标识
-            /// </summary>
-            [NameInMap("RuleId")]
-            [Validation(Required=false)]
-            public string RuleId { get; set; }
-
-            /// <summary>
             /// 转发规则优先级
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
+
+            /// <summary>
+            /// 转发规则标识
+            /// </summary>
+            [NameInMap("RuleId")]
+            [Validation(Required=false)]
+            public string RuleId { get; set; }
 
         }
 

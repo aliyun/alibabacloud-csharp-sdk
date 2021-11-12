@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateSecurityPolicyRequest : TeaModel {
         /// <summary>
+        /// 加密套件
+        /// </summary>
+        [NameInMap("Ciphers")]
+        [Validation(Required=false)]
+        public List<string> Ciphers { get; set; }
+
+        /// <summary>
         /// 幂等标识
         /// </summary>
         [NameInMap("ClientToken")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
-
-        /// <summary>
-        /// tls版本
-        /// </summary>
-        [NameInMap("TLSVersions")]
-        [Validation(Required=false)]
-        public List<string> TLSVersions { get; set; }
 
         /// <summary>
         /// 资源组id
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string SecurityPolicyName { get; set; }
 
         /// <summary>
-        /// 加密套件
+        /// tls版本
         /// </summary>
-        [NameInMap("Ciphers")]
+        [NameInMap("TLSVersions")]
         [Validation(Required=false)]
-        public List<string> Ciphers { get; set; }
+        public List<string> TLSVersions { get; set; }
 
     }
 

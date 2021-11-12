@@ -17,11 +17,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 名称
+        /// dryRun
         /// </summary>
-        [NameInMap("HealthCheckTemplateName")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string HealthCheckTemplateName { get; set; }
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// 状态码
+        /// </summary>
+        [NameInMap("HealthCheckCodes")]
+        [Validation(Required=false)]
+        public List<string> HealthCheckCodes { get; set; }
 
         /// <summary>
         /// 端口号
@@ -38,11 +45,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string HealthCheckHost { get; set; }
 
         /// <summary>
-        /// 状态码
+        /// 版本
         /// </summary>
-        [NameInMap("HealthCheckCodes")]
+        [NameInMap("HealthCheckHttpVersion")]
         [Validation(Required=false)]
-        public List<string> HealthCheckCodes { get; set; }
+        public string HealthCheckHttpVersion { get; set; }
 
         /// <summary>
         /// 时间间隔
@@ -52,11 +59,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// 超时时间
+        /// 方法
         /// </summary>
-        [NameInMap("HealthCheckTimeout")]
+        [NameInMap("HealthCheckMethod")]
         [Validation(Required=false)]
-        public int? HealthCheckTimeout { get; set; }
+        public string HealthCheckMethod { get; set; }
 
         /// <summary>
         /// uri
@@ -66,13 +73,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string HealthCheckPath { get; set; }
 
         /// <summary>
-        /// 方法
-        /// </summary>
-        [NameInMap("HealthCheckMethod")]
-        [Validation(Required=false)]
-        public string HealthCheckMethod { get; set; }
-
-        /// <summary>
         /// 协议
         /// </summary>
         [NameInMap("HealthCheckProtocol")]
@@ -80,11 +80,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string HealthCheckProtocol { get; set; }
 
         /// <summary>
-        /// 版本
+        /// 名称
         /// </summary>
-        [NameInMap("HealthCheckHttpVersion")]
+        [NameInMap("HealthCheckTemplateName")]
         [Validation(Required=false)]
-        public string HealthCheckHttpVersion { get; set; }
+        public string HealthCheckTemplateName { get; set; }
+
+        /// <summary>
+        /// 超时时间
+        /// </summary>
+        [NameInMap("HealthCheckTimeout")]
+        [Validation(Required=false)]
+        public int? HealthCheckTimeout { get; set; }
 
         /// <summary>
         /// 健康阈值
@@ -99,13 +106,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("UnhealthyThreshold")]
         [Validation(Required=false)]
         public int? UnhealthyThreshold { get; set; }
-
-        /// <summary>
-        /// dryRun
-        /// </summary>
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
 
     }
 

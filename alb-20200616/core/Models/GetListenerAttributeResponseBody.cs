@@ -29,6 +29,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         };
 
         /// <summary>
+        /// 是否开启双向认证
+        /// </summary>
+        [NameInMap("CaEnabled")]
+        [Validation(Required=false)]
+        public bool? CaEnabled { get; set; }
+
+        /// <summary>
         /// 监听默认服务器证书列表，N当前取值范围为1
         /// </summary>
         [NameInMap("Certificates")]
@@ -43,13 +50,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string CertificateId { get; set; }
 
         }
-
-        /// <summary>
-        /// 是否开启双向认证
-        /// </summary>
-        [NameInMap("CaEnabled")]
-        [Validation(Required=false)]
-        public bool? CaEnabled { get; set; }
 
         /// <summary>
         /// 默认动作

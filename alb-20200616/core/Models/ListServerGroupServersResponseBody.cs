@@ -52,6 +52,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
+            /// 服务器组id
+            /// </summary>
+            [NameInMap("ServerGroupId")]
+            [Validation(Required=false)]
+            public string ServerGroupId { get; set; }
+
+            /// <summary>
             /// 服务器id
             /// </summary>
             [NameInMap("ServerId")]
@@ -85,13 +92,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("Weight")]
             [Validation(Required=false)]
             public int? Weight { get; set; }
-
-            /// <summary>
-            /// 服务器组id
-            /// </summary>
-            [NameInMap("ServerGroupId")]
-            [Validation(Required=false)]
-            public string ServerGroupId { get; set; }
 
         }
 

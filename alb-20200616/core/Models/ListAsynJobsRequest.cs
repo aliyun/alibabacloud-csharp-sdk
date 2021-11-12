@@ -10,27 +10,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListAsynJobsRequest : TeaModel {
         /// <summary>
-        /// 任务ID列表
-        /// </summary>
-        [NameInMap("JobIds")]
-        [Validation(Required=false)]
-        public List<string> JobIds { get; set; }
-
-        /// <summary>
-        /// 资源类型类型
-        /// </summary>
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        /// <summary>
-        /// 资源实例ID列表
-        /// </summary>
-        [NameInMap("ResourceIds")]
-        [Validation(Required=false)]
-        public List<string> ResourceIds { get; set; }
-
-        /// <summary>
         /// 操作接口名
         /// </summary>
         [NameInMap("ApiName")]
@@ -52,11 +31,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// 下一个查询开始Token
+        /// 任务ID列表
         /// </summary>
-        [NameInMap("NextToken")]
+        [NameInMap("JobIds")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public List<string> JobIds { get; set; }
 
         /// <summary>
         /// 本次读取的最大数据记录数量
@@ -64,6 +43,27 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
+
+        /// <summary>
+        /// 下一个查询开始Token
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 资源实例ID列表
+        /// </summary>
+        [NameInMap("ResourceIds")]
+        [Validation(Required=false)]
+        public List<string> ResourceIds { get; set; }
+
+        /// <summary>
+        /// 资源类型类型
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 
