@@ -8,21 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class TranslateGeneralResponseBody : TeaModel {
+    public class TranslateImageResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public TranslateGeneralResponseBodyData Data { get; set; }
-        public class TranslateGeneralResponseBodyData : TeaModel {
-            [NameInMap("Translated")]
+        public TranslateImageResponseBodyData Data { get; set; }
+        public class TranslateImageResponseBodyData : TeaModel {
+            [NameInMap("FinalImageUrl")]
             [Validation(Required=false)]
-            public string Translated { get; set; }
-            [NameInMap("WordCount")]
+            public string FinalImageUrl { get; set; }
+            [NameInMap("InPaintingUrl")]
             [Validation(Required=false)]
-            public string WordCount { get; set; }
+            public string InPaintingUrl { get; set; }
+            [NameInMap("TemplateJson")]
+            [Validation(Required=false)]
+            public string TemplateJson { get; set; }
         };
 
         [NameInMap("Message")]

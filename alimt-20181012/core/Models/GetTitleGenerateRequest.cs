@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTitleGenerateRequest : TeaModel {
-        [NameInMap("Title")]
+        [NameInMap("Attributes")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string Attributes { get; set; }
+
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public string CategoryId { get; set; }
+
+        [NameInMap("Extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
+
+        [NameInMap("HotWords")]
+        [Validation(Required=false)]
+        public string HotWords { get; set; }
 
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -21,21 +33,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
-        [NameInMap("CategoryId")]
+        [NameInMap("Title")]
         [Validation(Required=false)]
-        public string CategoryId { get; set; }
-
-        [NameInMap("HotWords")]
-        [Validation(Required=false)]
-        public string HotWords { get; set; }
-
-        [NameInMap("Attributes")]
-        [Validation(Required=false)]
-        public string Attributes { get; set; }
-
-        [NameInMap("Extra")]
-        [Validation(Required=false)]
-        public string Extra { get; set; }
+        public string Title { get; set; }
 
     }
 

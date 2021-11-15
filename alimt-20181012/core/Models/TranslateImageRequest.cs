@@ -8,18 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class TranslateCertificateRequest : TeaModel {
-        [NameInMap("CertificateType")]
+    public class TranslateImageRequest : TeaModel {
+        [NameInMap("Ext")]
         [Validation(Required=false)]
-        public string CertificateType { get; set; }
+        public string Ext { get; set; }
+
+        [NameInMap("Field")]
+        [Validation(Required=false)]
+        public string Field { get; set; }
+
+        [NameInMap("ImageBase64")]
+        [Validation(Required=false)]
+        public string ImageBase64 { get; set; }
 
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
-
-        [NameInMap("ResultType")]
-        [Validation(Required=false)]
-        public string ResultType { get; set; }
 
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]

@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=true)]
         public Stream ImageUrlObject { get; set; }
 
-        [NameInMap("SourceLanguage")]
-        [Validation(Required=false)]
-        public string SourceLanguage { get; set; }
-
-        [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
-        public string TargetLanguage { get; set; }
-
         [NameInMap("CertificateType")]
         [Validation(Required=false)]
         public string CertificateType { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [NameInMap("ResultType")]
         [Validation(Required=false)]
         public string ResultType { get; set; }
+
+        [NameInMap("SourceLanguage")]
+        [Validation(Required=false)]
+        public string SourceLanguage { get; set; }
+
+        [NameInMap("TargetLanguage")]
+        [Validation(Required=false)]
+        public string TargetLanguage { get; set; }
 
     }
 

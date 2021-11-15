@@ -13,6 +13,42 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetTitleDiagnoseResponseBodyData Data { get; set; }
+        public class GetTitleDiagnoseResponseBodyData : TeaModel {
+            [NameInMap("AllUppercaseWords")]
+            [Validation(Required=false)]
+            public string AllUppercaseWords { get; set; }
+            [NameInMap("ContainCoreClasses")]
+            [Validation(Required=false)]
+            public string ContainCoreClasses { get; set; }
+            [NameInMap("DisableWords")]
+            [Validation(Required=false)]
+            public string DisableWords { get; set; }
+            [NameInMap("DuplicateWords")]
+            [Validation(Required=false)]
+            public string DuplicateWords { get; set; }
+            [NameInMap("LanguageQualityScore")]
+            [Validation(Required=false)]
+            public string LanguageQualityScore { get; set; }
+            [NameInMap("NoFirstUppercaseList")]
+            [Validation(Required=false)]
+            public string NoFirstUppercaseList { get; set; }
+            [NameInMap("OverLengthLimit")]
+            [Validation(Required=false)]
+            public string OverLengthLimit { get; set; }
+            [NameInMap("TotalScore")]
+            [Validation(Required=false)]
+            public string TotalScore { get; set; }
+            [NameInMap("WordCount")]
+            [Validation(Required=false)]
+            public string WordCount { get; set; }
+            [NameInMap("WordSpelledCorrectError")]
+            [Validation(Required=false)]
+            public string WordSpelledCorrectError { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,42 +56,6 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetTitleDiagnoseResponseBodyData Data { get; set; }
-        public class GetTitleDiagnoseResponseBodyData : TeaModel {
-            [NameInMap("DuplicateWords")]
-            [Validation(Required=false)]
-            public string DuplicateWords { get; set; }
-            [NameInMap("ContainCoreClasses")]
-            [Validation(Required=false)]
-            public string ContainCoreClasses { get; set; }
-            [NameInMap("WordCount")]
-            [Validation(Required=false)]
-            public string WordCount { get; set; }
-            [NameInMap("LanguageQualityScore")]
-            [Validation(Required=false)]
-            public string LanguageQualityScore { get; set; }
-            [NameInMap("AllUppercaseWords")]
-            [Validation(Required=false)]
-            public string AllUppercaseWords { get; set; }
-            [NameInMap("OverLengthLimit")]
-            [Validation(Required=false)]
-            public string OverLengthLimit { get; set; }
-            [NameInMap("DisableWords")]
-            [Validation(Required=false)]
-            public string DisableWords { get; set; }
-            [NameInMap("NoFirstUppercaseList")]
-            [Validation(Required=false)]
-            public string NoFirstUppercaseList { get; set; }
-            [NameInMap("TotalScore")]
-            [Validation(Required=false)]
-            public string TotalScore { get; set; }
-            [NameInMap("WordSpelledCorrectError")]
-            [Validation(Required=false)]
-            public string WordSpelledCorrectError { get; set; }
-        };
 
     }
 

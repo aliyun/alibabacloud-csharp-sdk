@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetBatchTranslateRequest : TeaModel {
+        [NameInMap("ApiType")]
+        [Validation(Required=false)]
+        public string ApiType { get; set; }
+
         [NameInMap("FormatType")]
         [Validation(Required=false)]
         public string FormatType { get; set; }
-
-        [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
-        public string TargetLanguage { get; set; }
-
-        [NameInMap("SourceLanguage")]
-        [Validation(Required=false)]
-        public string SourceLanguage { get; set; }
 
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }
 
-        [NameInMap("ApiType")]
+        [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
-        public string ApiType { get; set; }
+        public string SourceLanguage { get; set; }
 
         [NameInMap("SourceText")]
         [Validation(Required=false)]
         public string SourceText { get; set; }
+
+        [NameInMap("TargetLanguage")]
+        [Validation(Required=false)]
+        public string TargetLanguage { get; set; }
 
     }
 

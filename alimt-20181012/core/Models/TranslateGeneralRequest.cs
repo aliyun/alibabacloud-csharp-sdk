@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string FormatType { get; set; }
 
+        [NameInMap("Scene")]
+        [Validation(Required=false)]
+        public string Scene { get; set; }
+
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
         public string SourceLanguage { get; set; }
-
-        [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
-        public string TargetLanguage { get; set; }
 
         [NameInMap("SourceText")]
         [Validation(Required=false)]
         public string SourceText { get; set; }
 
-        [NameInMap("Scene")]
+        [NameInMap("TargetLanguage")]
         [Validation(Required=false)]
-        public string Scene { get; set; }
+        public string TargetLanguage { get; set; }
 
     }
 

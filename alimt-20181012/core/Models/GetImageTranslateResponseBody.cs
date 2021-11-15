@@ -13,6 +13,21 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetImageTranslateResponseBodyData Data { get; set; }
+        public class GetImageTranslateResponseBodyData : TeaModel {
+            [NameInMap("Orc")]
+            [Validation(Required=false)]
+            public string Orc { get; set; }
+            [NameInMap("PictureEditor")]
+            [Validation(Required=false)]
+            public string PictureEditor { get; set; }
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,21 +35,6 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetImageTranslateResponseBodyData Data { get; set; }
-        public class GetImageTranslateResponseBodyData : TeaModel {
-            [NameInMap("Url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
-            [NameInMap("Orc")]
-            [Validation(Required=false)]
-            public string Orc { get; set; }
-            [NameInMap("PictureEditor")]
-            [Validation(Required=false)]
-            public string PictureEditor { get; set; }
-        };
 
     }
 

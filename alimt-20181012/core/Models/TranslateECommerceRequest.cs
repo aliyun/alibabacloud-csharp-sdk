@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string FormatType { get; set; }
 
-        [NameInMap("TargetLanguage")]
+        [NameInMap("Scene")]
         [Validation(Required=false)]
-        public string TargetLanguage { get; set; }
+        public string Scene { get; set; }
 
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string SourceText { get; set; }
 
-        [NameInMap("Scene")]
+        [NameInMap("TargetLanguage")]
         [Validation(Required=false)]
-        public string Scene { get; set; }
+        public string TargetLanguage { get; set; }
 
     }
 

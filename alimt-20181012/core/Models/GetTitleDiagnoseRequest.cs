@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTitleDiagnoseRequest : TeaModel {
-        [NameInMap("Title")]
+        [NameInMap("CategoryId")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string CategoryId { get; set; }
+
+        [NameInMap("Extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
 
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
-        [NameInMap("CategoryId")]
+        [NameInMap("Title")]
         [Validation(Required=false)]
-        public string CategoryId { get; set; }
-
-        [NameInMap("Extra")]
-        [Validation(Required=false)]
-        public string Extra { get; set; }
+        public string Title { get; set; }
 
     }
 

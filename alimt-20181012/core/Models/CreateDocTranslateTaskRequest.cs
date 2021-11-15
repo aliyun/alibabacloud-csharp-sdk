@@ -12,13 +12,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class CreateDocTranslateTaskRequest : TeaModel {
-        [NameInMap("SourceLanguage")]
+        [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
-        public string SourceLanguage { get; set; }
+        public string CallbackUrl { get; set; }
 
-        [NameInMap("TargetLanguage")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string TargetLanguage { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
@@ -28,13 +28,13 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string Scene { get; set; }
 
-        [NameInMap("CallbackUrl")]
+        [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
-        public string CallbackUrl { get; set; }
+        public string SourceLanguage { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("TargetLanguage")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string TargetLanguage { get; set; }
 
     }
 

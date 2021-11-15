@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=true)]
         public Stream FileUrlObject { get; set; }
 
-        [NameInMap("SourceLanguage")]
-        [Validation(Required=false)]
-        public string SourceLanguage { get; set; }
-
-        [NameInMap("TargetLanguage")]
-        [Validation(Required=false)]
-        public string TargetLanguage { get; set; }
-
-        [NameInMap("Scene")]
-        [Validation(Required=false)]
-        public string Scene { get; set; }
-
         [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
@@ -32,6 +20,18 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("Scene")]
+        [Validation(Required=false)]
+        public string Scene { get; set; }
+
+        [NameInMap("SourceLanguage")]
+        [Validation(Required=false)]
+        public string SourceLanguage { get; set; }
+
+        [NameInMap("TargetLanguage")]
+        [Validation(Required=false)]
+        public string TargetLanguage { get; set; }
 
     }
 

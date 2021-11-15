@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetImageTranslateRequest : TeaModel {
-        [NameInMap("Url")]
+        [NameInMap("Extra")]
         [Validation(Required=false)]
-        public string Url { get; set; }
+        public string Extra { get; set; }
 
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         [Validation(Required=false)]
         public string TargetLanguage { get; set; }
 
-        [NameInMap("Extra")]
+        [NameInMap("Url")]
         [Validation(Required=false)]
-        public string Extra { get; set; }
+        public string Url { get; set; }
 
     }
 

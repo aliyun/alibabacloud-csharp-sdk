@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class TranslateCertificateResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TranslateCertificateResponseBodyData Data { get; set; }
@@ -21,12 +17,16 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
             [Validation(Required=false)]
             public List<TranslateCertificateResponseBodyDataTranslatedValues> TranslatedValues { get; set; }
             public class TranslateCertificateResponseBodyDataTranslatedValues : TeaModel {
-                public string KeyTranslation { get; set; }
                 public string Key { get; set; }
+                public string KeyTranslation { get; set; }
                 public string Value { get; set; }
                 public string ValueTranslation { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
