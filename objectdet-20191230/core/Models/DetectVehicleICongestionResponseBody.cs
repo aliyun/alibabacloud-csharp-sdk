@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                     public long? Right { get; set; }
                     public long? Top { get; set; }
                 }
+                public long? Id { get; set; }
                 public float? Score { get; set; }
                 public string TypeName { get; set; }
             }

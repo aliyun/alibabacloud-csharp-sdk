@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
         [Validation(Required=false)]
         public string ImageURL { get; set; }
 
-        [NameInMap("OriginRequestId")]
-        [Validation(Required=false)]
-        public string OriginRequestId { get; set; }
-
         [NameInMap("PreRegionIntersectFeatures")]
         [Validation(Required=false)]
         public string PreRegionIntersectFeaturesShrink { get; set; }
@@ -27,10 +23,6 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
         [NameInMap("RoadRegions")]
         [Validation(Required=false)]
         public string RoadRegionsShrink { get; set; }
-
-        [NameInMap("StreamArn")]
-        [Validation(Required=false)]
-        public string StreamArn { get; set; }
 
     }
 

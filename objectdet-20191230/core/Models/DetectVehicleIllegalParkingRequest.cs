@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
         [Validation(Required=false)]
         public string ImageURL { get; set; }
 
-        [NameInMap("OriginRequestId")]
-        [Validation(Required=false)]
-        public string OriginRequestId { get; set; }
-
         [NameInMap("RoadRegions")]
         [Validation(Required=false)]
         public List<DetectVehicleIllegalParkingRequestRoadRegions> RoadRegions { get; set; }
@@ -43,10 +39,6 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             }
 
         }
-
-        [NameInMap("StreamArn")]
-        [Validation(Required=false)]
-        public string StreamArn { get; set; }
 
     }
 
