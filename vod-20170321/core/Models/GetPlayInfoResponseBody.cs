@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string EncryptType { get; set; }
                 public string Format { get; set; }
                 public string Fps { get; set; }
+                public string HDRType { get; set; }
                 public long? Height { get; set; }
                 public string JobId { get; set; }
                 public string ModificationTime { get; set; }

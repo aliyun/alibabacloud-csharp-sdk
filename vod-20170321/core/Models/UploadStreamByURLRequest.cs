@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string FileExtension { get; set; }
 
+        /// <summary>
+        /// 视频流HDR类型
+        /// </summary>
+        [NameInMap("HDRType")]
+        [Validation(Required=false)]
+        public string HDRType { get; set; }
+
         [NameInMap("MediaId")]
         [Validation(Required=false)]
         public string MediaId { get; set; }

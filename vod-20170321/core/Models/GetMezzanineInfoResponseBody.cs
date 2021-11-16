@@ -81,6 +81,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string Dar { get; set; }
                 public string Duration { get; set; }
                 public string Fps { get; set; }
+                public string HDRType { get; set; }
                 public string HasBFrames { get; set; }
                 public string Height { get; set; }
                 public string Index { get; set; }

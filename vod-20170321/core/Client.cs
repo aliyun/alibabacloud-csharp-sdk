@@ -5138,6 +5138,38 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await UpdateImageInfosWithOptionsAsync(request, runtime);
         }
 
+        public UpdateStreamInfoResponse UpdateStreamInfoWithOptions(UpdateStreamInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateStreamInfoResponse>(DoRPCRequest("UpdateStreamInfo", "2017-03-21", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<UpdateStreamInfoResponse> UpdateStreamInfoWithOptionsAsync(UpdateStreamInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<UpdateStreamInfoResponse>(await DoRPCRequestAsync("UpdateStreamInfo", "2017-03-21", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public UpdateStreamInfoResponse UpdateStreamInfo(UpdateStreamInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateStreamInfoWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateStreamInfoResponse> UpdateStreamInfoAsync(UpdateStreamInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateStreamInfoWithOptionsAsync(request, runtime);
+        }
+
         public UpdateTranscodeTemplateGroupResponse UpdateTranscodeTemplateGroupWithOptions(UpdateTranscodeTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
