@@ -37,10 +37,6 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
     }
 
 }
