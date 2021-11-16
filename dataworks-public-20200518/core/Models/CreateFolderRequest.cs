@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateFolderRequest : TeaModel {
+        [NameInMap("FolderPath")]
+        [Validation(Required=false)]
+        public string FolderPath { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
-
-        [NameInMap("FolderPath")]
-        [Validation(Required=false)]
-        public string FolderPath { get; set; }
 
     }
 

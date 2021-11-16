@@ -9,98 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServicePublishedApisResponseBody : TeaModel {
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataServicePublishedApisResponseBodyData Data { get; set; }
         public class ListDataServicePublishedApisResponseBodyData : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
             [NameInMap("Apis")]
             [Validation(Required=false)]
             public List<ListDataServicePublishedApisResponseBodyDataApis> Apis { get; set; }
             public class ListDataServicePublishedApisResponseBodyDataApis : TeaModel {
-                public int? Timeout { get; set; }
-                public int? Status { get; set; }
                 public long? ApiId { get; set; }
                 public int? ApiMode { get; set; }
-                public long? ProjectId { get; set; }
-                public int? ResponseContentType { get; set; }
+                public string ApiName { get; set; }
+                public string ApiPath { get; set; }
+                public string CreatedTime { get; set; }
                 public string CreatorId { get; set; }
-                public int? VisibleRange { get; set; }
+                public string Description { get; set; }
+                public string GroupId { get; set; }
                 public string ModifiedTime { get; set; }
                 public string OperatorId { get; set; }
-                public string GroupId { get; set; }
-                public string Description { get; set; }
-                public int? RequestMethod { get; set; }
-                public string CreatedTime { get; set; }
-                public string ApiName { get; set; }
-                public long? TenantId { get; set; }
-                public string ApiPath { get; set; }
+                public long? ProjectId { get; set; }
                 public List<string> Protocols { get; set; }
                 public ListDataServicePublishedApisResponseBodyDataApisRegistrationDetails RegistrationDetails { get; set; }
                 public class ListDataServicePublishedApisResponseBodyDataApisRegistrationDetails : TeaModel {
-                    [NameInMap("ServiceHost")]
-                    [Validation(Required=false)]
-                    public string ServiceHost { get; set; }
-
-                    [NameInMap("ServiceContentType")]
-                    [Validation(Required=false)]
-                    public int? ServiceContentType { get; set; }
-
-                    [NameInMap("ServicePath")]
-                    [Validation(Required=false)]
-                    public string ServicePath { get; set; }
-
-                    [NameInMap("SuccessfulResultSample")]
-                    [Validation(Required=false)]
-                    public string SuccessfulResultSample { get; set; }
-
                     [NameInMap("FailedResultSample")]
                     [Validation(Required=false)]
                     public string FailedResultSample { get; set; }
-
-                    [NameInMap("ServiceRequestBodyDescription")]
-                    [Validation(Required=false)]
-                    public string ServiceRequestBodyDescription { get; set; }
 
                     [NameInMap("RegistrationErrorCodes")]
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes> RegistrationErrorCodes { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes : TeaModel {
-                        [NameInMap("ErrorMessage")]
-                        [Validation(Required=false)]
-                        public string ErrorMessage { get; set; }
-
                         [NameInMap("ErrorCode")]
                         [Validation(Required=false)]
                         public string ErrorCode { get; set; }
+
+                        [NameInMap("ErrorMessage")]
+                        [Validation(Required=false)]
+                        public string ErrorMessage { get; set; }
 
                         [NameInMap("ErrorSolution")]
                         [Validation(Required=false)]
@@ -112,70 +57,100 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters> RegistrationRequestParameters { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters : TeaModel {
-                        [NameInMap("ParameterName")]
-                        [Validation(Required=false)]
-                        public string ParameterName { get; set; }
-
-                        [NameInMap("ParameterPosition")]
-                        [Validation(Required=false)]
-                        public int? ParameterPosition { get; set; }
-
-                        [NameInMap("ParameterDescription")]
-                        [Validation(Required=false)]
-                        public string ParameterDescription { get; set; }
-
                         [NameInMap("DefaultValue")]
                         [Validation(Required=false)]
                         public string DefaultValue { get; set; }
-
-                        [NameInMap("ParameterOperator")]
-                        [Validation(Required=false)]
-                        public int? ParameterOperator { get; set; }
 
                         [NameInMap("ExampleValue")]
                         [Validation(Required=false)]
                         public string ExampleValue { get; set; }
 
-                        [NameInMap("ParameterDataType")]
-                        [Validation(Required=false)]
-                        public int? ParameterDataType { get; set; }
-
                         [NameInMap("IsRequiredParameter")]
                         [Validation(Required=false)]
                         public bool? IsRequiredParameter { get; set; }
 
+                        [NameInMap("ParameterDataType")]
+                        [Validation(Required=false)]
+                        public int? ParameterDataType { get; set; }
+
+                        [NameInMap("ParameterDescription")]
+                        [Validation(Required=false)]
+                        public string ParameterDescription { get; set; }
+
+                        [NameInMap("ParameterName")]
+                        [Validation(Required=false)]
+                        public string ParameterName { get; set; }
+
+                        [NameInMap("ParameterOperator")]
+                        [Validation(Required=false)]
+                        public int? ParameterOperator { get; set; }
+
+                        [NameInMap("ParameterPosition")]
+                        [Validation(Required=false)]
+                        public int? ParameterPosition { get; set; }
+
                     }
 
-                }
-                public ListDataServicePublishedApisResponseBodyDataApisScriptDetails ScriptDetails { get; set; }
-                public class ListDataServicePublishedApisResponseBodyDataApisScriptDetails : TeaModel {
-                    [NameInMap("IsPagedResponse")]
+                    [NameInMap("ServiceContentType")]
                     [Validation(Required=false)]
-                    public bool? IsPagedResponse { get; set; }
+                    public int? ServiceContentType { get; set; }
+
+                    [NameInMap("ServiceHost")]
+                    [Validation(Required=false)]
+                    public string ServiceHost { get; set; }
+
+                    [NameInMap("ServicePath")]
+                    [Validation(Required=false)]
+                    public string ServicePath { get; set; }
+
+                    [NameInMap("ServiceRequestBodyDescription")]
+                    [Validation(Required=false)]
+                    public string ServiceRequestBodyDescription { get; set; }
 
                     [NameInMap("SuccessfulResultSample")]
                     [Validation(Required=false)]
                     public string SuccessfulResultSample { get; set; }
 
+                }
+                public int? RequestMethod { get; set; }
+                public int? ResponseContentType { get; set; }
+                public ListDataServicePublishedApisResponseBodyDataApisScriptDetails ScriptDetails { get; set; }
+                public class ListDataServicePublishedApisResponseBodyDataApisScriptDetails : TeaModel {
                     [NameInMap("FailedResultSample")]
                     [Validation(Required=false)]
                     public string FailedResultSample { get; set; }
+
+                    [NameInMap("IsPagedResponse")]
+                    [Validation(Required=false)]
+                    public bool? IsPagedResponse { get; set; }
 
                     [NameInMap("Script")]
                     [Validation(Required=false)]
                     public string Script { get; set; }
 
+                    [NameInMap("ScriptConnection")]
+                    [Validation(Required=false)]
+                    public ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptConnection ScriptConnection { get; set; }
+                    public class ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptConnection : TeaModel {
+                        [NameInMap("ConnectionId")]
+                        [Validation(Required=false)]
+                        public long? ConnectionId { get; set; }
+                        [NameInMap("TableName")]
+                        [Validation(Required=false)]
+                        public string TableName { get; set; }
+                    };
+
                     [NameInMap("ScriptErrorCodes")]
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptErrorCodes> ScriptErrorCodes { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptErrorCodes : TeaModel {
-                        [NameInMap("ErrorMessage")]
-                        [Validation(Required=false)]
-                        public string ErrorMessage { get; set; }
-
                         [NameInMap("ErrorCode")]
                         [Validation(Required=false)]
                         public string ErrorCode { get; set; }
+
+                        [NameInMap("ErrorMessage")]
+                        [Validation(Required=false)]
+                        public string ErrorMessage { get; set; }
 
                         [NameInMap("ErrorSolution")]
                         [Validation(Required=false)]
@@ -187,37 +162,37 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptRequestParameters> ScriptRequestParameters { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptRequestParameters : TeaModel {
-                        [NameInMap("ParameterName")]
-                        [Validation(Required=false)]
-                        public string ParameterName { get; set; }
-
-                        [NameInMap("ParameterPosition")]
-                        [Validation(Required=false)]
-                        public int? ParameterPosition { get; set; }
-
-                        [NameInMap("ParameterDescription")]
-                        [Validation(Required=false)]
-                        public string ParameterDescription { get; set; }
-
                         [NameInMap("DefaultValue")]
                         [Validation(Required=false)]
                         public string DefaultValue { get; set; }
-
-                        [NameInMap("ParameterOperator")]
-                        [Validation(Required=false)]
-                        public int? ParameterOperator { get; set; }
 
                         [NameInMap("ExampleValue")]
                         [Validation(Required=false)]
                         public string ExampleValue { get; set; }
 
+                        [NameInMap("IsRequiredParameter")]
+                        [Validation(Required=false)]
+                        public bool? IsRequiredParameter { get; set; }
+
                         [NameInMap("ParameterDataType")]
                         [Validation(Required=false)]
                         public int? ParameterDataType { get; set; }
 
-                        [NameInMap("IsRequiredParameter")]
+                        [NameInMap("ParameterDescription")]
                         [Validation(Required=false)]
-                        public bool? IsRequiredParameter { get; set; }
+                        public string ParameterDescription { get; set; }
+
+                        [NameInMap("ParameterName")]
+                        [Validation(Required=false)]
+                        public string ParameterName { get; set; }
+
+                        [NameInMap("ParameterOperator")]
+                        [Validation(Required=false)]
+                        public int? ParameterOperator { get; set; }
+
+                        [NameInMap("ParameterPosition")]
+                        [Validation(Required=false)]
+                        public int? ParameterPosition { get; set; }
 
                     }
 
@@ -225,14 +200,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptResponseParameters> ScriptResponseParameters { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptResponseParameters : TeaModel {
-                        [NameInMap("ParameterDescription")]
-                        [Validation(Required=false)]
-                        public string ParameterDescription { get; set; }
-
-                        [NameInMap("ParameterName")]
-                        [Validation(Required=false)]
-                        public string ParameterName { get; set; }
-
                         [NameInMap("ExampleValue")]
                         [Validation(Required=false)]
                         public string ExampleValue { get; set; }
@@ -241,23 +208,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         [Validation(Required=false)]
                         public int? ParameterDataType { get; set; }
 
+                        [NameInMap("ParameterDescription")]
+                        [Validation(Required=false)]
+                        public string ParameterDescription { get; set; }
+
+                        [NameInMap("ParameterName")]
+                        [Validation(Required=false)]
+                        public string ParameterName { get; set; }
+
                     }
 
-                    [NameInMap("ScriptConnection")]
+                    [NameInMap("SuccessfulResultSample")]
                     [Validation(Required=false)]
-                    public ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptConnection ScriptConnection { get; set; }
-                    public class ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptConnection : TeaModel {
-                        [NameInMap("TableName")]
-                        [Validation(Required=false)]
-                        public string TableName { get; set; }
-                        [NameInMap("ConnectionId")]
-                        [Validation(Required=false)]
-                        public long? ConnectionId { get; set; }
-                    };
+                    public string SuccessfulResultSample { get; set; }
 
                 }
+                public int? Status { get; set; }
+                public long? TenantId { get; set; }
+                public int? Timeout { get; set; }
+                public int? VisibleRange { get; set; }
                 public ListDataServicePublishedApisResponseBodyDataApisWizardDetails WizardDetails { get; set; }
                 public class ListDataServicePublishedApisResponseBodyDataApisWizardDetails : TeaModel {
+                    [NameInMap("FailedResultSample")]
+                    [Validation(Required=false)]
+                    public string FailedResultSample { get; set; }
+
                     [NameInMap("IsPagedResponse")]
                     [Validation(Required=false)]
                     public bool? IsPagedResponse { get; set; }
@@ -266,21 +241,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [Validation(Required=false)]
                     public string SuccessfulResultSample { get; set; }
 
-                    [NameInMap("FailedResultSample")]
+                    [NameInMap("WizardConnection")]
                     [Validation(Required=false)]
-                    public string FailedResultSample { get; set; }
+                    public ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection WizardConnection { get; set; }
+                    public class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection : TeaModel {
+                        [NameInMap("ConnectionId")]
+                        [Validation(Required=false)]
+                        public long? ConnectionId { get; set; }
+                        [NameInMap("TableName")]
+                        [Validation(Required=false)]
+                        public string TableName { get; set; }
+                    };
 
                     [NameInMap("WizardErrorCodes")]
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardErrorCodes> WizardErrorCodes { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardErrorCodes : TeaModel {
-                        [NameInMap("ErrorMessage")]
-                        [Validation(Required=false)]
-                        public string ErrorMessage { get; set; }
-
                         [NameInMap("ErrorCode")]
                         [Validation(Required=false)]
                         public string ErrorCode { get; set; }
+
+                        [NameInMap("ErrorMessage")]
+                        [Validation(Required=false)]
+                        public string ErrorMessage { get; set; }
 
                         [NameInMap("ErrorSolution")]
                         [Validation(Required=false)]
@@ -292,37 +275,37 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardRequestParameters> WizardRequestParameters { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardRequestParameters : TeaModel {
-                        [NameInMap("ParameterName")]
-                        [Validation(Required=false)]
-                        public string ParameterName { get; set; }
-
-                        [NameInMap("ParameterPosition")]
-                        [Validation(Required=false)]
-                        public int? ParameterPosition { get; set; }
-
-                        [NameInMap("ParameterDescription")]
-                        [Validation(Required=false)]
-                        public string ParameterDescription { get; set; }
-
                         [NameInMap("DefaultValue")]
                         [Validation(Required=false)]
                         public string DefaultValue { get; set; }
-
-                        [NameInMap("ParameterOperator")]
-                        [Validation(Required=false)]
-                        public int? ParameterOperator { get; set; }
 
                         [NameInMap("ExampleValue")]
                         [Validation(Required=false)]
                         public string ExampleValue { get; set; }
 
+                        [NameInMap("IsRequiredParameter")]
+                        [Validation(Required=false)]
+                        public bool? IsRequiredParameter { get; set; }
+
                         [NameInMap("ParameterDataType")]
                         [Validation(Required=false)]
                         public int? ParameterDataType { get; set; }
 
-                        [NameInMap("IsRequiredParameter")]
+                        [NameInMap("ParameterDescription")]
                         [Validation(Required=false)]
-                        public bool? IsRequiredParameter { get; set; }
+                        public string ParameterDescription { get; set; }
+
+                        [NameInMap("ParameterName")]
+                        [Validation(Required=false)]
+                        public string ParameterName { get; set; }
+
+                        [NameInMap("ParameterOperator")]
+                        [Validation(Required=false)]
+                        public int? ParameterOperator { get; set; }
+
+                        [NameInMap("ParameterPosition")]
+                        [Validation(Required=false)]
+                        public int? ParameterPosition { get; set; }
 
                     }
 
@@ -330,14 +313,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [Validation(Required=false)]
                     public List<ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardResponseParameters> WizardResponseParameters { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardResponseParameters : TeaModel {
-                        [NameInMap("ParameterDescription")]
-                        [Validation(Required=false)]
-                        public string ParameterDescription { get; set; }
-
-                        [NameInMap("ParameterName")]
-                        [Validation(Required=false)]
-                        public string ParameterName { get; set; }
-
                         [NameInMap("ExampleValue")]
                         [Validation(Required=false)]
                         public string ExampleValue { get; set; }
@@ -346,23 +321,48 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         [Validation(Required=false)]
                         public int? ParameterDataType { get; set; }
 
-                    }
+                        [NameInMap("ParameterDescription")]
+                        [Validation(Required=false)]
+                        public string ParameterDescription { get; set; }
 
-                    [NameInMap("WizardConnection")]
-                    [Validation(Required=false)]
-                    public ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection WizardConnection { get; set; }
-                    public class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection : TeaModel {
-                        [NameInMap("TableName")]
+                        [NameInMap("ParameterName")]
                         [Validation(Required=false)]
-                        public string TableName { get; set; }
-                        [NameInMap("ConnectionId")]
-                        [Validation(Required=false)]
-                        public long? ConnectionId { get; set; }
-                    };
+                        public string ParameterName { get; set; }
+
+                    }
 
                 }
             }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
         };
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

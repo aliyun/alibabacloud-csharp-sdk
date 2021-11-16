@@ -17,21 +17,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("TopicTypes")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string TopicTypes { get; set; }
-
-        [NameInMap("TopicStatuses")]
-        [Validation(Required=false)]
-        public string TopicStatuses { get; set; }
+        public long? InstanceId { get; set; }
 
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public long? InstanceId { get; set; }
 
         [NameInMap("Owner")]
         [Validation(Required=false)]
@@ -44,6 +36,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("TopicStatuses")]
+        [Validation(Required=false)]
+        public string TopicStatuses { get; set; }
+
+        [NameInMap("TopicTypes")]
+        [Validation(Required=false)]
+        public string TopicTypes { get; set; }
 
     }
 

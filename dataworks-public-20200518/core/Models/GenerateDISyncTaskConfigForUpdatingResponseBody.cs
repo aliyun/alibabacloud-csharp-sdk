@@ -9,28 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GenerateDISyncTaskConfigForUpdatingResponseBody : TeaModel {
-        [NameInMap("Success")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public GenerateDISyncTaskConfigForUpdatingResponseBodyData Data { get; set; }
+        public class GenerateDISyncTaskConfigForUpdatingResponseBodyData : TeaModel {
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+            [NameInMap("ProcessId")]
+            [Validation(Required=false)]
+            public long? ProcessId { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public GenerateDISyncTaskConfigForUpdatingResponseBodyData Data { get; set; }
-        public class GenerateDISyncTaskConfigForUpdatingResponseBodyData : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("ProcessId")]
-            [Validation(Required=false)]
-            public long? ProcessId { get; set; }
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-        };
+        public bool? Success { get; set; }
 
     }
 

@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineStatusesRequest : TeaModel {
+        [NameInMap("BaselineTypes")]
+        [Validation(Required=false)]
+        public string BaselineTypes { get; set; }
+
+        [NameInMap("Bizdate")]
+        [Validation(Required=false)]
+        public string Bizdate { get; set; }
+
+        [NameInMap("FinishStatus")]
+        [Validation(Required=false)]
+        public string FinishStatus { get; set; }
+
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -16,10 +32,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("Bizdate")]
-        [Validation(Required=false)]
-        public string Bizdate { get; set; }
 
         [NameInMap("Priority")]
         [Validation(Required=false)]
@@ -29,25 +41,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string SearchText { get; set; }
 
-        [NameInMap("Owner")]
-        [Validation(Required=false)]
-        public string Owner { get; set; }
-
-        [NameInMap("TopicId")]
-        [Validation(Required=false)]
-        public long? TopicId { get; set; }
-
-        [NameInMap("FinishStatus")]
-        [Validation(Required=false)]
-        public string FinishStatus { get; set; }
-
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("BaselineTypes")]
+        [NameInMap("TopicId")]
         [Validation(Required=false)]
-        public string BaselineTypes { get; set; }
+        public long? TopicId { get; set; }
 
     }
 

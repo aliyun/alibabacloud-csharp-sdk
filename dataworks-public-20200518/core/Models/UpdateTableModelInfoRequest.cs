@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? FirstLevelThemeId { get; set; }
 
-        [NameInMap("SecondLevelThemeId")]
-        [Validation(Required=false)]
-        public long? SecondLevelThemeId { get; set; }
-
         [NameInMap("LevelId")]
         [Validation(Required=false)]
         public long? LevelId { get; set; }
 
-        [NameInMap("TableGuid")]
-        [Validation(Required=false)]
-        public string TableGuid { get; set; }
-
         [NameInMap("LevelType")]
         [Validation(Required=false)]
         public int? LevelType { get; set; }
+
+        [NameInMap("SecondLevelThemeId")]
+        [Validation(Required=false)]
+        public long? SecondLevelThemeId { get; set; }
+
+        [NameInMap("TableGuid")]
+        [Validation(Required=false)]
+        public string TableGuid { get; set; }
 
     }
 

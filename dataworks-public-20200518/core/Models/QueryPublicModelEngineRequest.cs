@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryPublicModelEngineRequest : TeaModel {
-        [NameInMap("Text")]
-        [Validation(Required=false)]
-        public string Text { get; set; }
-
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
+
+        [NameInMap("Text")]
+        [Validation(Required=false)]
+        public string Text { get; set; }
 
     }
 

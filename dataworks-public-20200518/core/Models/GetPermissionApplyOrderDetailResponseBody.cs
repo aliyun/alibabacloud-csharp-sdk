@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetPermissionApplyOrderDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ApplyOrderDetail")]
         [Validation(Required=false)]
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail ApplyOrderDetail { get; set; }
@@ -23,26 +19,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("ApplyTimestamp")]
             [Validation(Required=false)]
             public long? ApplyTimestamp { get; set; }
-            [NameInMap("FlowId")]
-            [Validation(Required=false)]
-            public string FlowId { get; set; }
-            [NameInMap("FlowStatus")]
-            [Validation(Required=false)]
-            public int? FlowStatus { get; set; }
             [NameInMap("ApproveAccountList")]
             [Validation(Required=false)]
             public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> ApproveAccountList { get; set; }
             public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList : TeaModel {
                 public string BaseId { get; set; }
-            }
-            [NameInMap("GranteeObjectList")]
-            [Validation(Required=false)]
-            public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList> GranteeObjectList { get; set; }
-            public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList : TeaModel {
-                public int? GranteeType { get; set; }
-                public int? GranteeTypeSub { get; set; }
-                public string GranteeName { get; set; }
-                public string GranteeId { get; set; }
             }
             [NameInMap("ApproveContent")]
             [Validation(Required=false)]
@@ -67,24 +48,43 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [NameInMap("MaxComputeProjectName")]
                     [Validation(Required=false)]
                     public string MaxComputeProjectName { get; set; }
-                    [NameInMap("WorkspaceId")]
-                    [Validation(Required=false)]
-                    public int? WorkspaceId { get; set; }
                     [NameInMap("ObjectMetaList")]
                     [Validation(Required=false)]
                     public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList> ObjectMetaList { get; set; }
                     public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList : TeaModel {
-                        public string ObjectName { get; set; }
                         public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList> ColumnMetaList { get; set; }
                         public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList : TeaModel {
-                            public string ColumnName { get; set; }
                             public string ColumnComment { get; set; }
+                            public string ColumnName { get; set; }
                         }
+                        public string ObjectName { get; set; }
                     }
+                    [NameInMap("WorkspaceId")]
+                    [Validation(Required=false)]
+                    public int? WorkspaceId { get; set; }
                 };
 
             }
+            [NameInMap("FlowId")]
+            [Validation(Required=false)]
+            public string FlowId { get; set; }
+            [NameInMap("FlowStatus")]
+            [Validation(Required=false)]
+            public int? FlowStatus { get; set; }
+            [NameInMap("GranteeObjectList")]
+            [Validation(Required=false)]
+            public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList> GranteeObjectList { get; set; }
+            public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList : TeaModel {
+                public string GranteeId { get; set; }
+                public string GranteeName { get; set; }
+                public int? GranteeType { get; set; }
+                public int? GranteeTypeSub { get; set; }
+            }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesRequest : TeaModel {
-        [NameInMap("Owner")]
-        [Validation(Required=false)]
-        public string Owner { get; set; }
-
         [NameInMap("BizName")]
         [Validation(Required=false)]
         public string BizName { get; set; }
 
-        [NameInMap("ProgramType")]
+        [NameInMap("NodeName")]
         [Validation(Required=false)]
-        public string ProgramType { get; set; }
+        public string NodeName { get; set; }
+
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,17 +29,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ProjectId")]
+        [NameInMap("ProgramType")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public string ProgramType { get; set; }
 
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
-        [NameInMap("NodeName")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string NodeName { get; set; }
+        public long? ProjectId { get; set; }
 
     }
 

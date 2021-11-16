@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListRemindsRequest : TeaModel {
-        [NameInMap("PageNumber")]
+        [NameInMap("AlertTarget")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string AlertTarget { get; set; }
 
         [NameInMap("Founder")]
         [Validation(Required=false)]
@@ -25,13 +21,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RemindTypes")]
         [Validation(Required=false)]
         public string RemindTypes { get; set; }
-
-        [NameInMap("AlertTarget")]
-        [Validation(Required=false)]
-        public string AlertTarget { get; set; }
 
         [NameInMap("SearchText")]
         [Validation(Required=false)]

@@ -9,17 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateDataServiceApiRequest : TeaModel {
-        [NameInMap("TenantId")]
+        [NameInMap("ApiDescription")]
         [Validation(Required=false)]
-        public long? TenantId { get; set; }
+        public string ApiDescription { get; set; }
+
+        [NameInMap("ApiId")]
+        [Validation(Required=false)]
+        public long? ApiId { get; set; }
+
+        [NameInMap("ApiPath")]
+        [Validation(Required=false)]
+        public string ApiPath { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("ApiId")]
+        [NameInMap("Protocols")]
         [Validation(Required=false)]
-        public long? ApiId { get; set; }
+        public string Protocols { get; set; }
+
+        [NameInMap("RegistrationDetails")]
+        [Validation(Required=false)]
+        public string RegistrationDetails { get; set; }
 
         [NameInMap("RequestMethod")]
         [Validation(Required=false)]
@@ -29,6 +41,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? ResponseContentType { get; set; }
 
+        [NameInMap("ScriptDetails")]
+        [Validation(Required=false)]
+        public string ScriptDetails { get; set; }
+
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public long? TenantId { get; set; }
+
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public int? Timeout { get; set; }
@@ -37,29 +57,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? VisibleRange { get; set; }
 
-        [NameInMap("Protocols")]
-        [Validation(Required=false)]
-        public string Protocols { get; set; }
-
         [NameInMap("WizardDetails")]
         [Validation(Required=false)]
         public string WizardDetails { get; set; }
-
-        [NameInMap("ScriptDetails")]
-        [Validation(Required=false)]
-        public string ScriptDetails { get; set; }
-
-        [NameInMap("RegistrationDetails")]
-        [Validation(Required=false)]
-        public string RegistrationDetails { get; set; }
-
-        [NameInMap("ApiPath")]
-        [Validation(Required=false)]
-        public string ApiPath { get; set; }
-
-        [NameInMap("ApiDescription")]
-        [Validation(Required=false)]
-        public string ApiDescription { get; set; }
 
     }
 

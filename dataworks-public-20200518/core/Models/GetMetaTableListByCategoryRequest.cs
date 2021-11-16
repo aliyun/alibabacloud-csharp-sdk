@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableListByCategoryRequest : TeaModel {
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public long? CategoryId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public long? CategoryId { get; set; }
 
     }
 

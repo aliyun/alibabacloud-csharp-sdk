@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        [NameInMap("TaskParam")]
+        [Validation(Required=false)]
+        public string TaskParam { get; set; }
+
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }
-
-        [NameInMap("TaskParam")]
-        [Validation(Required=false)]
-        public string TaskParam { get; set; }
 
     }
 

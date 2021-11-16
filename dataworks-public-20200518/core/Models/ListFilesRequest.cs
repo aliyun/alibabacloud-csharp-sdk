@@ -13,17 +13,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string FileFolderPath { get; set; }
 
-        [NameInMap("ProjectId")]
+        [NameInMap("FileTypes")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public string FileTypes { get; set; }
 
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
-        [NameInMap("ProjectIdentifier")]
+        [NameInMap("NodeId")]
         [Validation(Required=false)]
-        public string ProjectIdentifier { get; set; }
+        public long? NodeId { get; set; }
+
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,21 +37,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        [NameInMap("ProjectIdentifier")]
+        [Validation(Required=false)]
+        public string ProjectIdentifier { get; set; }
+
         [NameInMap("UseType")]
         [Validation(Required=false)]
         public string UseType { get; set; }
-
-        [NameInMap("FileTypes")]
-        [Validation(Required=false)]
-        public string FileTypes { get; set; }
-
-        [NameInMap("Owner")]
-        [Validation(Required=false)]
-        public string Owner { get; set; }
-
-        [NameInMap("NodeId")]
-        [Validation(Required=false)]
-        public long? NodeId { get; set; }
 
     }
 

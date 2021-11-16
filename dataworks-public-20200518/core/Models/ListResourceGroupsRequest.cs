@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListResourceGroupsRequest : TeaModel {
-        [NameInMap("ResourceGroupType")]
+        [NameInMap("BizExtKey")]
         [Validation(Required=false)]
-        public int? ResourceGroupType { get; set; }
+        public string BizExtKey { get; set; }
 
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
-        [NameInMap("BizExtKey")]
+        [NameInMap("ResourceGroupType")]
         [Validation(Required=false)]
-        public string BizExtKey { get; set; }
+        public int? ResourceGroupType { get; set; }
 
     }
 

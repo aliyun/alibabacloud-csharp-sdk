@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunSmokeTestRequest : TeaModel {
-        [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
-        public string ProjectEnv { get; set; }
-
         [NameInMap("Bizdate")]
         [Validation(Required=false)]
         public string Bizdate { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("NodeParams")]
         [Validation(Required=false)]
         public string NodeParams { get; set; }
+
+        [NameInMap("ProjectEnv")]
+        [Validation(Required=false)]
+        public string ProjectEnv { get; set; }
 
     }
 

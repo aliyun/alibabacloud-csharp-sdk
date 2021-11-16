@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateMetaCategoryRequest : TeaModel {
-        [NameInMap("Name")]
+        [NameInMap("CategoryId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public long? CategoryId { get; set; }
 
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
-        [NameInMap("CategoryId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public long? CategoryId { get; set; }
+        public string Name { get; set; }
 
     }
 

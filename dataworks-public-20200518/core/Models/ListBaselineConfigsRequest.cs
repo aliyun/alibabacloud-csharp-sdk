@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineConfigsRequest : TeaModel {
+        [NameInMap("BaselineTypes")]
+        [Validation(Required=false)]
+        public string BaselineTypes { get; set; }
+
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -17,29 +25,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Owner")]
+        [NameInMap("Priority")]
         [Validation(Required=false)]
-        public string Owner { get; set; }
+        public string Priority { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("Priority")]
+        [NameInMap("SearchText")]
         [Validation(Required=false)]
-        public string Priority { get; set; }
+        public string SearchText { get; set; }
 
         [NameInMap("Useflag")]
         [Validation(Required=false)]
         public bool? Useflag { get; set; }
-
-        [NameInMap("BaselineTypes")]
-        [Validation(Required=false)]
-        public string BaselineTypes { get; set; }
-
-        [NameInMap("SearchText")]
-        [Validation(Required=false)]
-        public string SearchText { get; set; }
 
     }
 

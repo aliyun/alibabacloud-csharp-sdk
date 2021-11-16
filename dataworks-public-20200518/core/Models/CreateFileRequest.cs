@@ -9,61 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateFileRequest : TeaModel {
-        [NameInMap("FileFolderPath")]
+        [NameInMap("AutoParsing")]
         [Validation(Required=false)]
-        public string FileFolderPath { get; set; }
-
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
-        [NameInMap("FileName")]
-        [Validation(Required=false)]
-        public string FileName { get; set; }
-
-        [NameInMap("FileDescription")]
-        [Validation(Required=false)]
-        public string FileDescription { get; set; }
-
-        [NameInMap("FileType")]
-        [Validation(Required=false)]
-        public int? FileType { get; set; }
-
-        [NameInMap("Owner")]
-        [Validation(Required=false)]
-        public string Owner { get; set; }
-
-        [NameInMap("Content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
-
-        [NameInMap("AutoRerunTimes")]
-        [Validation(Required=false)]
-        public int? AutoRerunTimes { get; set; }
+        public bool? AutoParsing { get; set; }
 
         [NameInMap("AutoRerunIntervalMillis")]
         [Validation(Required=false)]
         public int? AutoRerunIntervalMillis { get; set; }
 
-        [NameInMap("RerunMode")]
+        [NameInMap("AutoRerunTimes")]
         [Validation(Required=false)]
-        public string RerunMode { get; set; }
+        public int? AutoRerunTimes { get; set; }
 
-        [NameInMap("Stop")]
+        [NameInMap("ConnectionName")]
         [Validation(Required=false)]
-        public bool? Stop { get; set; }
+        public string ConnectionName { get; set; }
 
-        [NameInMap("ParaValue")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public string ParaValue { get; set; }
-
-        [NameInMap("StartEffectDate")]
-        [Validation(Required=false)]
-        public long? StartEffectDate { get; set; }
-
-        [NameInMap("EndEffectDate")]
-        [Validation(Required=false)]
-        public long? EndEffectDate { get; set; }
+        public string Content { get; set; }
 
         [NameInMap("CronExpress")]
         [Validation(Required=false)]
@@ -73,41 +37,77 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string CycleType { get; set; }
 
+        [NameInMap("DependentNodeIdList")]
+        [Validation(Required=false)]
+        public string DependentNodeIdList { get; set; }
+
         [NameInMap("DependentType")]
         [Validation(Required=false)]
         public string DependentType { get; set; }
 
-        [NameInMap("DependentNodeIdList")]
+        [NameInMap("EndEffectDate")]
         [Validation(Required=false)]
-        public string DependentNodeIdList { get; set; }
+        public long? EndEffectDate { get; set; }
+
+        [NameInMap("FileDescription")]
+        [Validation(Required=false)]
+        public string FileDescription { get; set; }
+
+        [NameInMap("FileFolderPath")]
+        [Validation(Required=false)]
+        public string FileFolderPath { get; set; }
+
+        [NameInMap("FileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
+
+        [NameInMap("FileType")]
+        [Validation(Required=false)]
+        public int? FileType { get; set; }
 
         [NameInMap("InputList")]
         [Validation(Required=false)]
         public string InputList { get; set; }
 
+        [NameInMap("Owner")]
+        [Validation(Required=false)]
+        public string Owner { get; set; }
+
+        [NameInMap("ParaValue")]
+        [Validation(Required=false)]
+        public string ParaValue { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
 
-        [NameInMap("ResourceGroupIdentifier")]
+        [NameInMap("RerunMode")]
         [Validation(Required=false)]
-        public string ResourceGroupIdentifier { get; set; }
+        public string RerunMode { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public long? ResourceGroupId { get; set; }
 
-        [NameInMap("ConnectionName")]
+        [NameInMap("ResourceGroupIdentifier")]
         [Validation(Required=false)]
-        public string ConnectionName { get; set; }
-
-        [NameInMap("AutoParsing")]
-        [Validation(Required=false)]
-        public bool? AutoParsing { get; set; }
+        public string ResourceGroupIdentifier { get; set; }
 
         [NameInMap("SchedulerType")]
         [Validation(Required=false)]
         public string SchedulerType { get; set; }
+
+        [NameInMap("StartEffectDate")]
+        [Validation(Required=false)]
+        public long? StartEffectDate { get; set; }
+
+        [NameInMap("Stop")]
+        [Validation(Required=false)]
+        public bool? Stop { get; set; }
 
     }
 

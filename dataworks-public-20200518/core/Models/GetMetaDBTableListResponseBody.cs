@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaDBTableListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaDBTableListResponseBodyData Data { get; set; }
@@ -23,18 +19,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
             [NameInMap("TableEntityList")]
             [Validation(Required=false)]
             public List<GetMetaDBTableListResponseBodyDataTableEntityList> TableEntityList { get; set; }
             public class GetMetaDBTableListResponseBodyDataTableEntityList : TeaModel {
-                public string TableName { get; set; }
-                public string TableGuid { get; set; }
                 public string DatabaseName { get; set; }
+                public string TableGuid { get; set; }
+                public string TableName { get; set; }
             }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

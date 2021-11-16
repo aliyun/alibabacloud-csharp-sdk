@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateQualityFollowerRequest : TeaModel {
-        [NameInMap("ProjectName")]
+        [NameInMap("AlarmMode")]
         [Validation(Required=false)]
-        public string ProjectName { get; set; }
-
-        [NameInMap("FollowerId")]
-        [Validation(Required=false)]
-        public long? FollowerId { get; set; }
+        public int? AlarmMode { get; set; }
 
         [NameInMap("Follower")]
         [Validation(Required=false)]
         public string Follower { get; set; }
 
-        [NameInMap("AlarmMode")]
+        [NameInMap("FollowerId")]
         [Validation(Required=false)]
-        public int? AlarmMode { get; set; }
+        public long? FollowerId { get; set; }
+
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
 
     }
 

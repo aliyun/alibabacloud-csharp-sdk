@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("TargetNodeProjectName")]
-        [Validation(Required=false)]
-        public string TargetNodeProjectName { get; set; }
-
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("TargetNodeProjectId")]
         [Validation(Required=false)]
         public long? TargetNodeProjectId { get; set; }
+
+        [NameInMap("TargetNodeProjectName")]
+        [Validation(Required=false)]
+        public string TargetNodeProjectName { get; set; }
 
     }
 

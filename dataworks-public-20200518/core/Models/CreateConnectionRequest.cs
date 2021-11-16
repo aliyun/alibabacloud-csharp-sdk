@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateConnectionRequest : TeaModel {
-        [NameInMap("ProjectId")]
+        [NameInMap("ConnectionType")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public string ConnectionType { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Content { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("ConnectionType")]
-        [Validation(Required=false)]
-        public string ConnectionType { get; set; }
-
-        [NameInMap("SubType")]
-        [Validation(Required=false)]
-        public string SubType { get; set; }
-
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public int? EnvType { get; set; }
 
-        [NameInMap("Content")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        [NameInMap("SubType")]
+        [Validation(Required=false)]
+        public string SubType { get; set; }
 
     }
 

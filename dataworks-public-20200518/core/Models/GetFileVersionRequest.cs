@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? FileId { get; set; }
 
+        [NameInMap("FileVersion")]
+        [Validation(Required=false)]
+        public int? FileVersion { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
-
-        [NameInMap("FileVersion")]
-        [Validation(Required=false)]
-        public int? FileVersion { get; set; }
 
     }
 

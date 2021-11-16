@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeployFileRequest : TeaModel {
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
+
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public long? FileId { get; set; }
+
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public long? NodeId { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -16,18 +28,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
-
-        [NameInMap("FileId")]
-        [Validation(Required=false)]
-        public long? FileId { get; set; }
-
-        [NameInMap("Comment")]
-        [Validation(Required=false)]
-        public string Comment { get; set; }
-
-        [NameInMap("NodeId")]
-        [Validation(Required=false)]
-        public long? NodeId { get; set; }
 
     }
 

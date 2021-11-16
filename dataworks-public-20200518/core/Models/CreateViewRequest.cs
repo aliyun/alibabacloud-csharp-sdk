@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateViewRequest : TeaModel {
-        [NameInMap("ViewName")]
+        [NameInMap("AppGuid")]
         [Validation(Required=false)]
-        public string ViewName { get; set; }
+        public string AppGuid { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
 
         [NameInMap("SelectColumn")]
         [Validation(Required=false)]
         public string SelectColumn { get; set; }
+
+        [NameInMap("SelectSQL")]
+        [Validation(Required=false)]
+        public string SelectSQL { get; set; }
 
         [NameInMap("SelectTableName")]
         [Validation(Required=false)]
@@ -24,22 +36,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("SelectWhere")]
         [Validation(Required=false)]
         public string SelectWhere { get; set; }
-
-        [NameInMap("SelectSQL")]
-        [Validation(Required=false)]
-        public string SelectSQL { get; set; }
-
-        [NameInMap("AppGuid")]
-        [Validation(Required=false)]
-        public string AppGuid { get; set; }
-
-        [NameInMap("Comment")]
-        [Validation(Required=false)]
-        public string Comment { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
         [NameInMap("ViewColumn")]
         [Validation(Required=false)]
@@ -54,6 +50,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Comment { get; set; }
 
         }
+
+        [NameInMap("ViewName")]
+        [Validation(Required=false)]
+        public string ViewName { get; set; }
 
     }
 

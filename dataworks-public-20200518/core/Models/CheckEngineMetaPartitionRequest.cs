@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckEngineMetaPartitionRequest : TeaModel {
-        [NameInMap("TableGuid")]
+        [NameInMap("DataSourceType")]
         [Validation(Required=false)]
-        public string TableGuid { get; set; }
+        public string DataSourceType { get; set; }
 
         [NameInMap("Partition")]
         [Validation(Required=false)]
         public string Partition { get; set; }
 
-        [NameInMap("DataSourceType")]
+        [NameInMap("TableGuid")]
         [Validation(Required=false)]
-        public string DataSourceType { get; set; }
+        public string TableGuid { get; set; }
 
     }
 

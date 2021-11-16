@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListInstancesRequest : TeaModel {
-        [NameInMap("ProjectEnv")]
+        [NameInMap("BeginBizdate")]
         [Validation(Required=false)]
-        public string ProjectEnv { get; set; }
+        public string BeginBizdate { get; set; }
+
+        [NameInMap("BizName")]
+        [Validation(Required=false)]
+        public string BizName { get; set; }
+
+        [NameInMap("Bizdate")]
+        [Validation(Required=false)]
+        public string Bizdate { get; set; }
+
+        [NameInMap("DagId")]
+        [Validation(Required=false)]
+        public long? DagId { get; set; }
+
+        [NameInMap("EndBizdate")]
+        [Validation(Required=false)]
+        public string EndBizdate { get; set; }
 
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -25,18 +41,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
-        [NameInMap("BizName")]
-        [Validation(Required=false)]
-        public string BizName { get; set; }
-
-        [NameInMap("ProgramType")]
-        [Validation(Required=false)]
-        public string ProgramType { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -45,21 +49,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("DagId")]
+        [NameInMap("ProgramType")]
         [Validation(Required=false)]
-        public long? DagId { get; set; }
+        public string ProgramType { get; set; }
 
-        [NameInMap("Bizdate")]
+        [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
-        public string Bizdate { get; set; }
+        public string ProjectEnv { get; set; }
 
-        [NameInMap("BeginBizdate")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string BeginBizdate { get; set; }
-
-        [NameInMap("EndBizdate")]
-        [Validation(Required=false)]
-        public string EndBizdate { get; set; }
+        public long? ProjectId { get; set; }
 
     }
 

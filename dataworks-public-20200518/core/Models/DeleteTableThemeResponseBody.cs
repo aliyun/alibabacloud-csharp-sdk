@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableThemeResponseBody : TeaModel {
+        [NameInMap("DeleteResult")]
+        [Validation(Required=false)]
+        public bool? DeleteResult { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -17,21 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("DeleteResult")]
-        [Validation(Required=false)]
-        public bool? DeleteResult { get; set; }
 
     }
 

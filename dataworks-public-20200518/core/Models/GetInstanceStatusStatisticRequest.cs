@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusStatisticRequest : TeaModel {
-        [NameInMap("ProjectId")]
+        [NameInMap("BizDate")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public string BizDate { get; set; }
 
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
-        [NameInMap("BizDate")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string BizDate { get; set; }
+        public long? ProjectId { get; set; }
 
     }
 

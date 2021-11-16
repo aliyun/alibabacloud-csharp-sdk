@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByOutputRequest : TeaModel {
-        [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
-        public string ProjectEnv { get; set; }
-
         [NameInMap("Outputs")]
         [Validation(Required=false)]
         public string Outputs { get; set; }
+
+        [NameInMap("ProjectEnv")]
+        [Validation(Required=false)]
+        public string ProjectEnv { get; set; }
 
     }
 

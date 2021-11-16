@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListAlertMessagesRequest : TeaModel {
-        [NameInMap("PageNumber")]
+        [NameInMap("AlertMethods")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string AlertMethods { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("AlertRuleTypes")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string AlertRuleTypes { get; set; }
+
+        [NameInMap("AlertUser")]
+        [Validation(Required=false)]
+        public string AlertUser { get; set; }
 
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
@@ -25,21 +29,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RemindId")]
         [Validation(Required=false)]
         public long? RemindId { get; set; }
-
-        [NameInMap("AlertMethods")]
-        [Validation(Required=false)]
-        public string AlertMethods { get; set; }
-
-        [NameInMap("AlertUser")]
-        [Validation(Required=false)]
-        public string AlertUser { get; set; }
-
-        [NameInMap("AlertRuleTypes")]
-        [Validation(Required=false)]
-        public string AlertRuleTypes { get; set; }
 
     }
 

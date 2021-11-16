@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListCalcEnginesRequest : TeaModel {
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
         [NameInMap("CalcEngineType")]
         [Validation(Required=false)]
         public string CalcEngineType { get; set; }
@@ -25,13 +17,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
     }
 

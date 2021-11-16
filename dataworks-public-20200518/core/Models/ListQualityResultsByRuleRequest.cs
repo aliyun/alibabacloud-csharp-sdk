@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityResultsByRuleRequest : TeaModel {
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
+
         [NameInMap("RuleId")]
         [Validation(Required=false)]
         public int? RuleId { get; set; }
@@ -16,22 +32,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
-
-        [NameInMap("EndDate")]
-        [Validation(Required=false)]
-        public string EndDate { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
 
     }
 

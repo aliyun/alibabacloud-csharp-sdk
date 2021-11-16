@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddProjectMemberToRoleRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
 
         [NameInMap("RoleCode")]
         [Validation(Required=false)]
         public string RoleCode { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string UserId { get; set; }
 
     }
 

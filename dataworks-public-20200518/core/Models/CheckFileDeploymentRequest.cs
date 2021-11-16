@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckFileDeploymentRequest : TeaModel {
+        [NameInMap("CheckDetailUrl")]
+        [Validation(Required=false)]
+        public string CheckDetailUrl { get; set; }
+
         [NameInMap("CheckerInstanceId")]
         [Validation(Required=false)]
         public string CheckerInstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("CheckDetailUrl")]
-        [Validation(Required=false)]
-        public string CheckDetailUrl { get; set; }
 
     }
 

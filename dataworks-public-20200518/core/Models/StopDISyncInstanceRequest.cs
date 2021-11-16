@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StopDISyncInstanceRequest : TeaModel {
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public long? FileId { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
-
-        [NameInMap("FileId")]
-        [Validation(Required=false)]
-        public long? FileId { get; set; }
 
     }
 

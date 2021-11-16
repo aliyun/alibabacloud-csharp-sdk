@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ExportDISyncTasksResponseBody : TeaModel {
-        [NameInMap("success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public ExportDISyncTasksResponseBodyData Data { get; set; }
@@ -25,6 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string RealTimeSolution { get; set; }
         };
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

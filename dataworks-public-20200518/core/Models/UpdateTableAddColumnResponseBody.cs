@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public UpdateTableAddColumnResponseBodyTaskInfo TaskInfo { get; set; }
         public class UpdateTableAddColumnResponseBodyTaskInfo : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("NextTaskId")]
-            [Validation(Required=false)]
-            public string NextTaskId { get; set; }
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public string TaskId { get; set; }
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
+            [NameInMap("NextTaskId")]
+            [Validation(Required=false)]
+            public string NextTaskId { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
         };
 
     }

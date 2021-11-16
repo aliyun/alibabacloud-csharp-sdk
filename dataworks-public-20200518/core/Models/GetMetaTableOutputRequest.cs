@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableOutputRequest : TeaModel {
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("TableGuid")]
-        [Validation(Required=false)]
-        public string TableGuid { get; set; }
-
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
-        [NameInMap("EndDate")]
+        [NameInMap("TableGuid")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string TableGuid { get; set; }
 
     }
 

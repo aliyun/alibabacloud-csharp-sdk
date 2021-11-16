@@ -9,53 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateUdfFileRequest : TeaModel {
-        [NameInMap("FileFolderPath")]
-        [Validation(Required=false)]
-        public string FileFolderPath { get; set; }
-
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
-        [NameInMap("FunctionType")]
-        [Validation(Required=false)]
-        public string FunctionType { get; set; }
-
         [NameInMap("ClassName")]
         [Validation(Required=false)]
         public string ClassName { get; set; }
-
-        [NameInMap("Resources")]
-        [Validation(Required=false)]
-        public string Resources { get; set; }
-
-        [NameInMap("UdfDescription")]
-        [Validation(Required=false)]
-        public string UdfDescription { get; set; }
 
         [NameInMap("CmdDescription")]
         [Validation(Required=false)]
         public string CmdDescription { get; set; }
 
+        [NameInMap("Example")]
+        [Validation(Required=false)]
+        public string Example { get; set; }
+
+        [NameInMap("FileFolderPath")]
+        [Validation(Required=false)]
+        public string FileFolderPath { get; set; }
+
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public string FileId { get; set; }
+
+        [NameInMap("FunctionType")]
+        [Validation(Required=false)]
+        public string FunctionType { get; set; }
+
         [NameInMap("ParameterDescription")]
         [Validation(Required=false)]
         public string ParameterDescription { get; set; }
 
-        [NameInMap("ReturnValue")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string ReturnValue { get; set; }
-
-        [NameInMap("Example")]
-        [Validation(Required=false)]
-        public string Example { get; set; }
+        public long? ProjectId { get; set; }
 
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
 
-        [NameInMap("FileId")]
+        [NameInMap("Resources")]
         [Validation(Required=false)]
-        public string FileId { get; set; }
+        public string Resources { get; set; }
+
+        [NameInMap("ReturnValue")]
+        [Validation(Required=false)]
+        public string ReturnValue { get; set; }
+
+        [NameInMap("UdfDescription")]
+        [Validation(Required=false)]
+        public string UdfDescription { get; set; }
 
     }
 

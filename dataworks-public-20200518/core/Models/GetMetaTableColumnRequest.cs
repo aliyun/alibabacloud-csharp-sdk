@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableColumnRequest : TeaModel {
-        [NameInMap("TableGuid")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string TableGuid { get; set; }
+        public string ClusterId { get; set; }
+
+        [NameInMap("DataSourceType")]
+        [Validation(Required=false)]
+        public string DataSourceType { get; set; }
+
+        [NameInMap("DatabaseName")]
+        [Validation(Required=false)]
+        public string DatabaseName { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -21,21 +29,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("TableGuid")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        [NameInMap("DatabaseName")]
-        [Validation(Required=false)]
-        public string DatabaseName { get; set; }
+        public string TableGuid { get; set; }
 
         [NameInMap("TableName")]
         [Validation(Required=false)]
         public string TableName { get; set; }
-
-        [NameInMap("DataSourceType")]
-        [Validation(Required=false)]
-        public string DataSourceType { get; set; }
 
     }
 

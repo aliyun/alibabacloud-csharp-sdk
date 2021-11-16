@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableThemeRequest : TeaModel {
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("ThemeId")]
         [Validation(Required=false)]

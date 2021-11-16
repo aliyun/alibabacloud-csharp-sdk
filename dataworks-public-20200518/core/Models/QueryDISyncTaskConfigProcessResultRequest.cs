@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryDISyncTaskConfigProcessResultRequest : TeaModel {
+        [NameInMap("AsyncProcessId")]
+        [Validation(Required=false)]
+        public long? AsyncProcessId { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
-
-        [NameInMap("AsyncProcessId")]
-        [Validation(Required=false)]
-        public long? AsyncProcessId { get; set; }
 
     }
 

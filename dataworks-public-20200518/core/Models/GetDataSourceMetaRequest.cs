@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataSourceMetaRequest : TeaModel {
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
         [NameInMap("DatasourceName")]
         [Validation(Required=false)]
         public string DatasourceName { get; set; }
+
+        [NameInMap("EnvType")]
+        [Validation(Required=false)]
+        public string EnvType { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("EnvType")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string EnvType { get; set; }
+        public long? ProjectId { get; set; }
 
     }
 

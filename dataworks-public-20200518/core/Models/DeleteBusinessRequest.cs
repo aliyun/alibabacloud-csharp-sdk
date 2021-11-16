@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteBusinessRequest : TeaModel {
+        [NameInMap("BusinessId")]
+        [Validation(Required=false)]
+        public long? BusinessId { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]
         public string ProjectIdentifier { get; set; }
-
-        [NameInMap("BusinessId")]
-        [Validation(Required=false)]
-        public long? BusinessId { get; set; }
 
     }
 

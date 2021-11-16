@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SetConnectionShareRequest : TeaModel {
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
         [NameInMap("DatasourceName")]
         [Validation(Required=false)]
         public string DatasourceName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
 
         [NameInMap("ProjectPermissions")]
         [Validation(Required=false)]

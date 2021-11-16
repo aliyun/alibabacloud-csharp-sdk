@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceFoldersRequest : TeaModel {
+        [NameInMap("FolderNameKeyword")]
+        [Validation(Required=false)]
+        public string FolderNameKeyword { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("FolderNameKeyword")]
-        [Validation(Required=false)]
-        public string FolderNameKeyword { get; set; }
 
     }
 

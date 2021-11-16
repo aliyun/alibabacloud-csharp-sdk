@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateMetaCategoryRequest : TeaModel {
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("ParentId")]
         [Validation(Required=false)]

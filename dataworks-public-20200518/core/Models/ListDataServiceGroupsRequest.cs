@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceGroupsRequest : TeaModel {
+        [NameInMap("GroupNameKeyword")]
+        [Validation(Required=false)]
+        public string GroupNameKeyword { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public long? TenantId { get; set; }
-
-        [NameInMap("GroupNameKeyword")]
-        [Validation(Required=false)]
-        public string GroupNameKeyword { get; set; }
 
     }
 

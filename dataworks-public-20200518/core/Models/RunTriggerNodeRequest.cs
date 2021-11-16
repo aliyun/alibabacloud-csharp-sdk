@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunTriggerNodeRequest : TeaModel {
-        [NameInMap("NodeId")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public long? NodeId { get; set; }
-
-        [NameInMap("CycleTime")]
-        [Validation(Required=false)]
-        public long? CycleTime { get; set; }
+        public long? AppId { get; set; }
 
         [NameInMap("BizDate")]
         [Validation(Required=false)]
         public long? BizDate { get; set; }
 
-        [NameInMap("AppId")]
+        [NameInMap("CycleTime")]
         [Validation(Required=false)]
-        public long? AppId { get; set; }
+        public long? CycleTime { get; set; }
+
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public long? NodeId { get; set; }
 
     }
 

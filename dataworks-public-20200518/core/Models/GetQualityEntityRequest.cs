@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityEntityRequest : TeaModel {
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
-
-        [NameInMap("TableName")]
-        [Validation(Required=false)]
-        public string TableName { get; set; }
-
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("MatchExpression")]
         [Validation(Required=false)]
         public string MatchExpression { get; set; }
+
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
+
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
 
     }
 

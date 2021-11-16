@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateNodeOwnerRequest : TeaModel {
-        [NameInMap("ProjectEnv")]
-        [Validation(Required=false)]
-        public string ProjectEnv { get; set; }
-
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public long? NodeId { get; set; }
+
+        [NameInMap("ProjectEnv")]
+        [Validation(Required=false)]
+        public string ProjectEnv { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]

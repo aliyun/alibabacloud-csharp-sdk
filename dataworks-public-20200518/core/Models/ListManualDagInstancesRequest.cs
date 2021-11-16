@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListManualDagInstancesRequest : TeaModel {
+        [NameInMap("DagId")]
+        [Validation(Required=false)]
+        public string DagId { get; set; }
+
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
-
-        [NameInMap("DagId")]
-        [Validation(Required=false)]
-        public string DagId { get; set; }
 
     }
 

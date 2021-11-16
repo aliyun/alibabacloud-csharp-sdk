@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDISyncTaskMetricInfoRequest : TeaModel {
-        [NameInMap("ProjectId")]
+        [NameInMap("EndDate")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public long? EndDate { get; set; }
 
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public long? FileId { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public long? StartDate { get; set; }
-
-        [NameInMap("EndDate")]
-        [Validation(Required=false)]
-        public long? EndDate { get; set; }
 
     }
 

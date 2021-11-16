@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateTableLevelRequest : TeaModel {
-        [NameInMap("ProjectId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("LevelType")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public long? ProjectId { get; set; }
 
     }
 

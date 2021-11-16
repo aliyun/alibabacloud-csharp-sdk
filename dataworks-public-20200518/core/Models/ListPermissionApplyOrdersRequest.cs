@@ -9,30 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListPermissionApplyOrdersRequest : TeaModel {
-        [NameInMap("FlowStatus")]
-        [Validation(Required=false)]
-        public int? FlowStatus { get; set; }
-
-        [NameInMap("WorkspaceId")]
-        [Validation(Required=false)]
-        public int? WorkspaceId { get; set; }
-
-        [NameInMap("OrderType")]
-        [Validation(Required=false)]
-        public int? OrderType { get; set; }
-
-        [NameInMap("MaxComputeProjectName")]
-        [Validation(Required=false)]
-        public string MaxComputeProjectName { get; set; }
-
-        [NameInMap("TableName")]
-        [Validation(Required=false)]
-        public string TableName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -40,6 +16,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
+
+        [NameInMap("FlowStatus")]
+        [Validation(Required=false)]
+        public int? FlowStatus { get; set; }
+
+        [NameInMap("MaxComputeProjectName")]
+        [Validation(Required=false)]
+        public string MaxComputeProjectName { get; set; }
+
+        [NameInMap("OrderType")]
+        [Validation(Required=false)]
+        public int? OrderType { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -52,6 +40,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("QueryType")]
         [Validation(Required=false)]
         public int? QueryType { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public int? WorkspaceId { get; set; }
 
     }
 

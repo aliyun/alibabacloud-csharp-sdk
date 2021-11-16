@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableChangeLogRequest : TeaModel {
+        [NameInMap("ChangeType")]
+        [Validation(Required=false)]
+        public string ChangeType { get; set; }
+
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
+
+        [NameInMap("ObjectType")]
+        [Validation(Required=false)]
+        public string ObjectType { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -17,25 +29,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("TableGuid")]
-        [Validation(Required=false)]
-        public string TableGuid { get; set; }
-
-        [NameInMap("ChangeType")]
-        [Validation(Required=false)]
-        public string ChangeType { get; set; }
-
-        [NameInMap("ObjectType")]
-        [Validation(Required=false)]
-        public string ObjectType { get; set; }
-
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
-        [NameInMap("EndDate")]
+        [NameInMap("TableGuid")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string TableGuid { get; set; }
 
     }
 

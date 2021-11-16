@@ -12,17 +12,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AbolishDataServiceApiRequest : TeaModel {
-        [NameInMap("TenantId")]
+        [NameInMap("ApiId")]
         [Validation(Required=false)]
-        public long? TenantId { get; set; }
+        public long? ApiId { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("ApiId")]
+        [NameInMap("TenantId")]
         [Validation(Required=false)]
-        public long? ApiId { get; set; }
+        public long? TenantId { get; set; }
 
     }
 

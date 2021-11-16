@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetSensitiveDataRequest : TeaModel {
-        [NameInMap("PageSize")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public int? PageSize { get; set; }
 
     }
 

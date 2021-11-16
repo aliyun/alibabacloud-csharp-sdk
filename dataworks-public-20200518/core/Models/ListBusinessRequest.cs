@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBusinessRequest : TeaModel {
-        [NameInMap("ProjectId")]
+        [NameInMap("Keyword")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
-        [NameInMap("ProjectIdentifier")]
-        [Validation(Required=false)]
-        public string ProjectIdentifier { get; set; }
+        public string Keyword { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,9 +21,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Keyword")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public string Keyword { get; set; }
+        public long? ProjectId { get; set; }
+
+        [NameInMap("ProjectIdentifier")]
+        [Validation(Required=false)]
+        public string ProjectIdentifier { get; set; }
 
     }
 

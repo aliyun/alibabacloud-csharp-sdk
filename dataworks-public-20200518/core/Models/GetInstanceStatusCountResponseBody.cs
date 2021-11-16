@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("FailureCount")]
             [Validation(Required=false)]
             public int? FailureCount { get; set; }
-            [NameInMap("WaitTimeCount")]
+            [NameInMap("NotRunCount")]
             [Validation(Required=false)]
-            public int? WaitTimeCount { get; set; }
+            public int? NotRunCount { get; set; }
             [NameInMap("RunningCount")]
             [Validation(Required=false)]
             public int? RunningCount { get; set; }
@@ -32,12 +32,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("NotRunCount")]
-            [Validation(Required=false)]
-            public int? NotRunCount { get; set; }
             [NameInMap("WaitResCount")]
             [Validation(Required=false)]
             public int? WaitResCount { get; set; }
+            [NameInMap("WaitTimeCount")]
+            [Validation(Required=false)]
+            public int? WaitTimeCount { get; set; }
         };
 
     }

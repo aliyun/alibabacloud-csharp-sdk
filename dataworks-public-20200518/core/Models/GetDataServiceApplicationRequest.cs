@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceApplicationRequest : TeaModel {
-        [NameInMap("TenantId")]
+        [NameInMap("ApplicationId")]
         [Validation(Required=false)]
-        public long? TenantId { get; set; }
+        public long? ApplicationId { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
-        [NameInMap("ApplicationId")]
+        [NameInMap("TenantId")]
         [Validation(Required=false)]
-        public long? ApplicationId { get; set; }
+        public long? TenantId { get; set; }
 
     }
 

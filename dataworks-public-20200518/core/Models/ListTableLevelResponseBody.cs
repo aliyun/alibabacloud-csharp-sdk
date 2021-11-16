@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListTableLevelResponseBody : TeaModel {
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string ErrorCode { get; set; }
 
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -25,27 +29,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("TableLevelInfo")]
         [Validation(Required=false)]
         public ListTableLevelResponseBodyTableLevelInfo TableLevelInfo { get; set; }
         public class ListTableLevelResponseBodyTableLevelInfo : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
             [NameInMap("LevelList")]
             [Validation(Required=false)]
             public List<ListTableLevelResponseBodyTableLevelInfoLevelList> LevelList { get; set; }
             public class ListTableLevelResponseBodyTableLevelInfoLevelList : TeaModel {
-                public int? LevelType { get; set; }
                 public string Description { get; set; }
+                public long? LevelId { get; set; }
+                public int? LevelType { get; set; }
                 public string Name { get; set; }
                 public long? ProjectId { get; set; }
-                public long? LevelId { get; set; }
             }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
         };
 
     }

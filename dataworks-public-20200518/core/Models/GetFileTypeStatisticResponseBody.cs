@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFileTypeStatisticResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ProgramTypeAndCounts")]
         [Validation(Required=false)]
         public List<GetFileTypeStatisticResponseBodyProgramTypeAndCounts> ProgramTypeAndCounts { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProgramType { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
