@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ClipsParam { get; set; }
 
+        [NameInMap("EditingProduceConfig")]
+        [Validation(Required=false)]
+        public string EditingProduceConfig { get; set; }
+
         [NameInMap("OutputMediaConfig")]
         [Validation(Required=false)]
         public string OutputMediaConfig { get; set; }

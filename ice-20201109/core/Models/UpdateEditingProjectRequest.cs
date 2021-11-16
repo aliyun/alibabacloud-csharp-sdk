@@ -14,6 +14,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
+        /// 模板对应的素材参数
+        /// </summary>
+        [NameInMap("ClipsParam")]
+        [Validation(Required=false)]
+        public string ClipsParam { get; set; }
+
+        /// <summary>
         /// 云剪辑工程封面
         /// </summary>
         [NameInMap("CoverURL")]
@@ -33,6 +40,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
+
+        /// <summary>
+        /// 模板Id
+        /// </summary>
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
 
         /// <summary>
         /// 云剪辑工程时间线，Json格式

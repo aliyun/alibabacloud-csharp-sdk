@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("BusinessStatus")]
             [Validation(Required=false)]
             public string BusinessStatus { get; set; }
+            [NameInMap("ClipsParam")]
+            [Validation(Required=false)]
+            public string ClipsParam { get; set; }
             [NameInMap("CoverURL")]
             [Validation(Required=false)]
             public string CoverURL { get; set; }
@@ -52,6 +55,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("StatusName")]
             [Validation(Required=false)]
             public string StatusName { get; set; }
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }

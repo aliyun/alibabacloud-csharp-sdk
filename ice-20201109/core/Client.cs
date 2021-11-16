@@ -752,6 +752,40 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await GetTemplateWithOptionsAsync(request, runtime);
         }
 
+        public GetTemplateMaterialsResponse GetTemplateMaterialsWithOptions(GetTemplateMaterialsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<GetTemplateMaterialsResponse>(DoRPCRequest("GetTemplateMaterials", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public async Task<GetTemplateMaterialsResponse> GetTemplateMaterialsWithOptionsAsync(GetTemplateMaterialsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = query,
+            };
+            return TeaModel.ToObject<GetTemplateMaterialsResponse>(await DoRPCRequestAsync("GetTemplateMaterials", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime));
+        }
+
+        public GetTemplateMaterialsResponse GetTemplateMaterials(GetTemplateMaterialsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTemplateMaterialsWithOptions(request, runtime);
+        }
+
+        public async Task<GetTemplateMaterialsResponse> GetTemplateMaterialsAsync(GetTemplateMaterialsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTemplateMaterialsWithOptionsAsync(request, runtime);
+        }
+
         public ListAllPublicMediaTagsResponse ListAllPublicMediaTagsWithOptions(ListAllPublicMediaTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

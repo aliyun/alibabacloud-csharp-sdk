@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// 合成媒资Id
+        /// 合成ICE媒资Id
         /// </summary>
         [NameInMap("MediaId")]
         [Validation(Required=false)]
@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// vod媒资id
+        /// </summary>
+        [NameInMap("VodMediaId")]
+        [Validation(Required=false)]
+        public string VodMediaId { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
-        /// 参见Timeline模板Config文档
+        /// 参见模板Config文档
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -36,6 +36,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("PreviewMedia")]
         [Validation(Required=false)]
         public string PreviewMedia { get; set; }
+
+        /// <summary>
+        /// 模板相关素材，模板编辑器使用
+        /// </summary>
+        [NameInMap("RelatedMediaids")]
+        [Validation(Required=false)]
+        public string RelatedMediaids { get; set; }
 
         /// <summary>
         /// 修改来源，默认OpenAPI
