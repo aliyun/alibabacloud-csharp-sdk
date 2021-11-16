@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// 结束时间
+        /// </summary>
+        [NameInMap("endTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        /// <summary>
         /// 报警或者事件ID
         /// </summary>
         [NameInMap("instanceId")]
@@ -50,6 +57,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("startRowKey")]
         [Validation(Required=false)]
         public string StartRowKey { get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         /// <summary>
         /// stopRowKey 用来查询上一页的数据

@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string AlertSourceName { get; set; }
 
         /// <summary>
+        /// 结束时间
+        /// </summary>
+        [NameInMap("endTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        /// <summary>
         /// 当前页
         /// </summary>
         [NameInMap("pageNumber")]
@@ -50,6 +57,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("relatedServiceId")]
         [Validation(Required=false)]
         public long? RelatedServiceId { get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 
