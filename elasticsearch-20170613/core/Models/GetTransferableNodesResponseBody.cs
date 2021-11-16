@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<GetTransferableNodesResponseBodyResult> Result { get; set; }
         public class GetTransferableNodesResponseBodyResult : TeaModel {
-            [NameInMap("port")]
-            [Validation(Required=false)]
-            public int? Port { get; set; }
-
             [NameInMap("host")]
             [Validation(Required=false)]
             public string Host { get; set; }
+
+            [NameInMap("port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
 
         }
 

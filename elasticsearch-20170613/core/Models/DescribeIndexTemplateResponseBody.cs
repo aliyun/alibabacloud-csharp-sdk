@@ -20,33 +20,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("dataStream")]
             [Validation(Required=false)]
             public bool? DataStream { get; set; }
-            [NameInMap("indexTemplate")]
-            [Validation(Required=false)]
-            public string IndexTemplate { get; set; }
             [NameInMap("ilmPolicy")]
             [Validation(Required=false)]
             public string IlmPolicy { get; set; }
-            [NameInMap("priority")]
-            [Validation(Required=false)]
-            public int? Priority { get; set; }
             [NameInMap("indexPatterns")]
             [Validation(Required=false)]
             public List<string> IndexPatterns { get; set; }
+            [NameInMap("indexTemplate")]
+            [Validation(Required=false)]
+            public string IndexTemplate { get; set; }
+            [NameInMap("priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
             [NameInMap("template")]
             [Validation(Required=false)]
             public DescribeIndexTemplateResponseBodyResultTemplate Template { get; set; }
             public class DescribeIndexTemplateResponseBodyResultTemplate : TeaModel {
-                [NameInMap("settings")]
+                [NameInMap("aliases")]
                 [Validation(Required=false)]
-                public string Settings { get; set; }
+                public string Aliases { get; set; }
 
                 [NameInMap("mappings")]
                 [Validation(Required=false)]
                 public string Mappings { get; set; }
 
-                [NameInMap("aliases")]
+                [NameInMap("settings")]
                 [Validation(Required=false)]
-                public string Aliases { get; set; }
+                public string Settings { get; set; }
 
             }
         };

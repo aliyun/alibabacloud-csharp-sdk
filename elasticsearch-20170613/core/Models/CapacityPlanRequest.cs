@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public long? Size { get; set; }
 
+            [NameInMap("totalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -33,16 +37,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Unit { get; set; }
 
-            [NameInMap("totalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-
         }
 
         [NameInMap("metric")]
         [Validation(Required=false)]
         public List<CapacityPlanRequestMetric> Metric { get; set; }
         public class CapacityPlanRequestMetric : TeaModel {
+            [NameInMap("averageQps")]
+            [Validation(Required=false)]
+            public int? AverageQps { get; set; }
+
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
@@ -51,6 +55,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public long? Concurrent { get; set; }
 
+            [NameInMap("peakQps")]
+            [Validation(Required=false)]
+            public int? PeakQps { get; set; }
+
+            [NameInMap("responseTime")]
+            [Validation(Required=false)]
+            public int? ResponseTime { get; set; }
+
             [NameInMap("throughput")]
             [Validation(Required=false)]
             public long? Throughput { get; set; }
@@ -58,18 +70,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-
-            [NameInMap("peakQps")]
-            [Validation(Required=false)]
-            public int? PeakQps { get; set; }
-
-            [NameInMap("averageQps")]
-            [Validation(Required=false)]
-            public int? AverageQps { get; set; }
-
-            [NameInMap("responseTime")]
-            [Validation(Required=false)]
-            public int? ResponseTime { get; set; }
 
         }
 

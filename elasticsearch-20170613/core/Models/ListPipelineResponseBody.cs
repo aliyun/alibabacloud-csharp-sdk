@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListPipelineResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListPipelineResponseBodyHeaders Headers { get; set; }
@@ -22,21 +18,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? XTotalCount { get; set; }
         };
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListPipelineResponseBodyResult> Result { get; set; }
         public class ListPipelineResponseBodyResult : TeaModel {
-            [NameInMap("pipelineId")]
+            [NameInMap("gmtCreatedTime")]
             [Validation(Required=false)]
-            public string PipelineId { get; set; }
+            public string GmtCreatedTime { get; set; }
 
             [NameInMap("gmtUpdateTime")]
             [Validation(Required=false)]
             public string GmtUpdateTime { get; set; }
 
-            [NameInMap("gmtCreatedTime")]
+            [NameInMap("pipelineId")]
             [Validation(Required=false)]
-            public string GmtCreatedTime { get; set; }
+            public string PipelineId { get; set; }
 
             [NameInMap("pipelineStatus")]
             [Validation(Required=false)]

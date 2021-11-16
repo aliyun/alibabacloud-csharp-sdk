@@ -13,21 +13,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("nodeType")]
+        [NameInMap("modifyMode")]
         [Validation(Required=false)]
-        public string NodeType { get; set; }
+        public string ModifyMode { get; set; }
 
         [NameInMap("networkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
-        [NameInMap("modifyMode")]
+        [NameInMap("nodeType")]
         [Validation(Required=false)]
-        public string ModifyMode { get; set; }
-
-        [NameInMap("whiteIpList")]
-        [Validation(Required=false)]
-        public List<string> WhiteIpList { get; set; }
+        public string NodeType { get; set; }
 
         [NameInMap("whiteIpGroup")]
         [Validation(Required=false)]
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public List<string> Ips { get; set; }
         };
+
+        [NameInMap("whiteIpList")]
+        [Validation(Required=false)]
+        public List<string> WhiteIpList { get; set; }
 
     }
 

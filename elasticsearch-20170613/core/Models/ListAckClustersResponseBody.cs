@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListAckClustersResponseBodyResult> Result { get; set; }
         public class ListAckClustersResponseBodyResult : TeaModel {
+            [NameInMap("clusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
             [NameInMap("clusterType")]
             [Validation(Required=false)]
             public string ClusterType { get; set; }
-
-            [NameInMap("vpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
 
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("clusterId")]
+            [NameInMap("vpcId")]
             [Validation(Required=false)]
-            public string ClusterId { get; set; }
+            public string VpcId { get; set; }
 
         }
 

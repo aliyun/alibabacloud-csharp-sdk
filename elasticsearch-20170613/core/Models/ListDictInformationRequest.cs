@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDictInformationRequest : TeaModel {
+        [NameInMap("analyzerType")]
+        [Validation(Required=false)]
+        public string AnalyzerType { get; set; }
+
         [NameInMap("bucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
-
-        [NameInMap("analyzerType")]
-        [Validation(Required=false)]
-        public string AnalyzerType { get; set; }
 
     }
 

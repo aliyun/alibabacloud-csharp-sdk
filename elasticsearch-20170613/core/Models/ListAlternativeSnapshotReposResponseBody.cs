@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListAlternativeSnapshotReposResponseBodyResult> Result { get; set; }
         public class ListAlternativeSnapshotReposResponseBodyResult : TeaModel {
-            [NameInMap("repoPath")]
-            [Validation(Required=false)]
-            public string RepoPath { get; set; }
-
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            [NameInMap("repoPath")]
+            [Validation(Required=false)]
+            public string RepoPath { get; set; }
 
         }
 

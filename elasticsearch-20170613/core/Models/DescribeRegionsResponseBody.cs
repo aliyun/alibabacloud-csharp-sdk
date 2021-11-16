@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyResult> Result { get; set; }
         public class DescribeRegionsResponseBodyResult : TeaModel {
+            [NameInMap("consoleEndpoint")]
+            [Validation(Required=false)]
+            public string ConsoleEndpoint { get; set; }
+
+            [NameInMap("localName")]
+            [Validation(Required=false)]
+            public string LocalName { get; set; }
+
+            [NameInMap("regionEndpoint")]
+            [Validation(Required=false)]
+            public string RegionEndpoint { get; set; }
+
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -24,18 +36,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-
-            [NameInMap("regionEndpoint")]
-            [Validation(Required=false)]
-            public string RegionEndpoint { get; set; }
-
-            [NameInMap("localName")]
-            [Validation(Required=false)]
-            public string LocalName { get; set; }
-
-            [NameInMap("consoleEndpoint")]
-            [Validation(Required=false)]
-            public string ConsoleEndpoint { get; set; }
 
         }
 

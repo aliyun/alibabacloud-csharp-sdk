@@ -17,41 +17,41 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListAllNodeResponseBodyResult> Result { get; set; }
         public class ListAllNodeResponseBodyResult : TeaModel {
-            [NameInMap("heapPercent")]
-            [Validation(Required=false)]
-            public string HeapPercent { get; set; }
-
-            [NameInMap("zoneId")]
-            [Validation(Required=false)]
-            public string ZoneId { get; set; }
-
             [NameInMap("cpuPercent")]
             [Validation(Required=false)]
             public string CpuPercent { get; set; }
-
-            [NameInMap("host")]
-            [Validation(Required=false)]
-            public string Host { get; set; }
-
-            [NameInMap("nodeType")]
-            [Validation(Required=false)]
-            public string NodeType { get; set; }
 
             [NameInMap("diskUsedPercent")]
             [Validation(Required=false)]
             public string DiskUsedPercent { get; set; }
 
-            [NameInMap("port")]
+            [NameInMap("health")]
             [Validation(Required=false)]
-            public int? Port { get; set; }
+            public string Health { get; set; }
+
+            [NameInMap("heapPercent")]
+            [Validation(Required=false)]
+            public string HeapPercent { get; set; }
+
+            [NameInMap("host")]
+            [Validation(Required=false)]
+            public string Host { get; set; }
 
             [NameInMap("loadOneM")]
             [Validation(Required=false)]
             public string LoadOneM { get; set; }
 
-            [NameInMap("health")]
+            [NameInMap("nodeType")]
             [Validation(Required=false)]
-            public string Health { get; set; }
+            public string NodeType { get; set; }
+
+            [NameInMap("port")]
+            [Validation(Required=false)]
+            public int? Port { get; set; }
+
+            [NameInMap("zoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
 
         }
 

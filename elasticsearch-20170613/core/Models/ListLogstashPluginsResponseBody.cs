@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
             [NameInMap("specificationUrl")]
             [Validation(Required=false)]
             public string SpecificationUrl { get; set; }
@@ -28,14 +36,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
-
-            [NameInMap("source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
-
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
         }
 

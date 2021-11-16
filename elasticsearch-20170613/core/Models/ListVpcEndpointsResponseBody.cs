@@ -17,41 +17,41 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListVpcEndpointsResponseBodyResult> Result { get; set; }
         public class ListVpcEndpointsResponseBodyResult : TeaModel {
-            [NameInMap("endpointBusinessStatus")]
+            [NameInMap("connectionStatus")]
             [Validation(Required=false)]
-            public string EndpointBusinessStatus { get; set; }
-
-            [NameInMap("serviceId")]
-            [Validation(Required=false)]
-            public string ServiceId { get; set; }
-
-            [NameInMap("endpointName")]
-            [Validation(Required=false)]
-            public string EndpointName { get; set; }
-
-            [NameInMap("endpointId")]
-            [Validation(Required=false)]
-            public string EndpointId { get; set; }
-
-            [NameInMap("serviceName")]
-            [Validation(Required=false)]
-            public string ServiceName { get; set; }
+            public string ConnectionStatus { get; set; }
 
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            [NameInMap("connectionStatus")]
+            [NameInMap("endpointBusinessStatus")]
             [Validation(Required=false)]
-            public string ConnectionStatus { get; set; }
+            public string EndpointBusinessStatus { get; set; }
 
             [NameInMap("endpointDomain")]
             [Validation(Required=false)]
             public string EndpointDomain { get; set; }
 
+            [NameInMap("endpointId")]
+            [Validation(Required=false)]
+            public string EndpointId { get; set; }
+
+            [NameInMap("endpointName")]
+            [Validation(Required=false)]
+            public string EndpointName { get; set; }
+
             [NameInMap("endpointStatus")]
             [Validation(Required=false)]
             public string EndpointStatus { get; set; }
+
+            [NameInMap("serviceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+            [NameInMap("serviceName")]
+            [Validation(Required=false)]
+            public string ServiceName { get; set; }
 
         }
 

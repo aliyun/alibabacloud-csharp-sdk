@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public List<ListConnectedClustersResponseBodyResultResult> Result { get; set; }
             public class ListConnectedClustersResponseBodyResultResult : TeaModel {
-                public string NetworkType { get; set; }
                 public string Instances { get; set; }
+                public string NetworkType { get; set; }
             }
         };
 

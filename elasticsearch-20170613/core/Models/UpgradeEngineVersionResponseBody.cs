@@ -17,9 +17,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public UpgradeEngineVersionResponseBodyResult Result { get; set; }
         public class UpgradeEngineVersionResponseBodyResult : TeaModel {
-            [NameInMap("validateType")]
-            [Validation(Required=false)]
-            public string ValidateType { get; set; }
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -27,10 +24,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public UpgradeEngineVersionResponseBodyResultValidateResult ValidateResult { get; set; }
             public class UpgradeEngineVersionResponseBodyResultValidateResult : TeaModel {
-                [NameInMap("errorType")]
-                [Validation(Required=false)]
-                public string ErrorType { get; set; }
-
                 [NameInMap("errorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
@@ -39,7 +32,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
 
+                [NameInMap("errorType")]
+                [Validation(Required=false)]
+                public string ErrorType { get; set; }
+
             }
+            [NameInMap("validateType")]
+            [Validation(Required=false)]
+            public string ValidateType { get; set; }
         };
 
     }

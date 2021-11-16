@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<DescribeConnectableClustersResponseBodyResult> Result { get; set; }
         public class DescribeConnectableClustersResponseBodyResult : TeaModel {
-            [NameInMap("networkType")]
-            [Validation(Required=false)]
-            public string NetworkType { get; set; }
-
             [NameInMap("instances")]
             [Validation(Required=false)]
             public string Instances { get; set; }
+
+            [NameInMap("networkType")]
+            [Validation(Required=false)]
+            public string NetworkType { get; set; }
 
         }
 

@@ -17,25 +17,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListLogstashLogResponseBodyResult> Result { get; set; }
         public class ListLogstashLogResponseBodyResult : TeaModel {
-            [NameInMap("level")]
-            [Validation(Required=false)]
-            public string Level { get; set; }
-
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
-            [NameInMap("timestamp")]
+            [NameInMap("host")]
             [Validation(Required=false)]
-            public long? Timestamp { get; set; }
+            public string Host { get; set; }
 
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("host")]
+            [NameInMap("level")]
             [Validation(Required=false)]
-            public string Host { get; set; }
+            public string Level { get; set; }
+
+            [NameInMap("timestamp")]
+            [Validation(Required=false)]
+            public long? Timestamp { get; set; }
 
         }
 

@@ -1,3 +1,6 @@
+2021-11-16 Version: 1.0.6
+-  Update apm interface parameter.
+
 2021-10-15 Version: 1.0.5
 - AMP version.
 

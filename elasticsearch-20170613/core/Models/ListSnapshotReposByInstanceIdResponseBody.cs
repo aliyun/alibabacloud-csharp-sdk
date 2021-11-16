@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListSnapshotReposByInstanceIdResponseBodyResult> Result { get; set; }
         public class ListSnapshotReposByInstanceIdResponseBodyResult : TeaModel {
-            [NameInMap("snapWarehouse")]
+            [NameInMap("instanceId")]
             [Validation(Required=false)]
-            public string SnapWarehouse { get; set; }
+            public string InstanceId { get; set; }
 
             [NameInMap("repoPath")]
             [Validation(Required=false)]
             public string RepoPath { get; set; }
 
+            [NameInMap("snapWarehouse")]
+            [Validation(Required=false)]
+            public string SnapWarehouse { get; set; }
+
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-
-            [NameInMap("instanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
 
         }
 

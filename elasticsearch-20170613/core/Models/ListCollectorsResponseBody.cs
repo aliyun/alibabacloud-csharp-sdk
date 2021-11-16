@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListCollectorsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListCollectorsResponseBodyHeaders Headers { get; set; }
@@ -22,49 +18,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? XTotalCount { get; set; }
         };
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListCollectorsResponseBodyResult> Result { get; set; }
         public class ListCollectorsResponseBodyResult : TeaModel {
-            [NameInMap("resId")]
+            [NameInMap("collectorPaths")]
             [Validation(Required=false)]
-            public string ResId { get; set; }
-
-            [NameInMap("gmtUpdateTime")]
-            [Validation(Required=false)]
-            public string GmtUpdateTime { get; set; }
-
-            [NameInMap("dryRun")]
-            [Validation(Required=false)]
-            public bool? DryRun { get; set; }
-
-            [NameInMap("ownerId")]
-            [Validation(Required=false)]
-            public string OwnerId { get; set; }
-
-            [NameInMap("vpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("resType")]
-            [Validation(Required=false)]
-            public string ResType { get; set; }
-
-            [NameInMap("resVersion")]
-            [Validation(Required=false)]
-            public string ResVersion { get; set; }
-
-            [NameInMap("gmtCreatedTime")]
-            [Validation(Required=false)]
-            public string GmtCreatedTime { get; set; }
-
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+            public List<string> CollectorPaths { get; set; }
 
             [NameInMap("configs")]
             [Validation(Required=false)]
@@ -80,45 +44,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            [NameInMap("dryRun")]
+            [Validation(Required=false)]
+            public bool? DryRun { get; set; }
+
             [NameInMap("extendConfigs")]
             [Validation(Required=false)]
             public List<ListCollectorsResponseBodyResultExtendConfigs> ExtendConfigs { get; set; }
             public class ListCollectorsResponseBodyResultExtendConfigs : TeaModel {
-                [NameInMap("successPodsCount")]
-                [Validation(Required=false)]
-                public string SuccessPodsCount { get; set; }
-
-                [NameInMap("protocol")]
-                [Validation(Required=false)]
-                public string Protocol { get; set; }
-
-                [NameInMap("userName")]
-                [Validation(Required=false)]
-                public string UserName { get; set; }
-
-                [NameInMap("totalPodsCount")]
-                [Validation(Required=false)]
-                public string TotalPodsCount { get; set; }
-
-                [NameInMap("type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("kibanaHost")]
-                [Validation(Required=false)]
-                public string KibanaHost { get; set; }
-
-                [NameInMap("enableMonitoring")]
-                [Validation(Required=false)]
-                public bool? EnableMonitoring { get; set; }
-
                 [NameInMap("configType")]
                 [Validation(Required=false)]
                 public string ConfigType { get; set; }
 
-                [NameInMap("instanceType")]
+                [NameInMap("enableMonitoring")]
                 [Validation(Required=false)]
-                public string InstanceType { get; set; }
+                public bool? EnableMonitoring { get; set; }
 
                 [NameInMap("groupId")]
                 [Validation(Required=false)]
@@ -128,9 +68,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public string Host { get; set; }
 
+                [NameInMap("hosts")]
+                [Validation(Required=false)]
+                public List<string> Hosts { get; set; }
+
                 [NameInMap("instanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("instanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("kibanaHost")]
+                [Validation(Required=false)]
+                public string KibanaHost { get; set; }
 
                 [NameInMap("machines")]
                 [Validation(Required=false)]
@@ -146,15 +98,63 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
                 }
 
-                [NameInMap("hosts")]
+                [NameInMap("protocol")]
                 [Validation(Required=false)]
-                public List<string> Hosts { get; set; }
+                public string Protocol { get; set; }
+
+                [NameInMap("successPodsCount")]
+                [Validation(Required=false)]
+                public string SuccessPodsCount { get; set; }
+
+                [NameInMap("totalPodsCount")]
+                [Validation(Required=false)]
+                public string TotalPodsCount { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("userName")]
+                [Validation(Required=false)]
+                public string UserName { get; set; }
 
             }
 
-            [NameInMap("collectorPaths")]
+            [NameInMap("gmtCreatedTime")]
             [Validation(Required=false)]
-            public List<string> CollectorPaths { get; set; }
+            public string GmtCreatedTime { get; set; }
+
+            [NameInMap("gmtUpdateTime")]
+            [Validation(Required=false)]
+            public string GmtUpdateTime { get; set; }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("ownerId")]
+            [Validation(Required=false)]
+            public string OwnerId { get; set; }
+
+            [NameInMap("resId")]
+            [Validation(Required=false)]
+            public string ResId { get; set; }
+
+            [NameInMap("resType")]
+            [Validation(Required=false)]
+            public string ResType { get; set; }
+
+            [NameInMap("resVersion")]
+            [Validation(Required=false)]
+            public string ResVersion { get; set; }
+
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("vpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
 
         }
 

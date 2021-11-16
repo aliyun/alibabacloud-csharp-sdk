@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListNodesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListNodesResponseBodyHeaders Headers { get; set; }
@@ -22,21 +18,43 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? XTotalCount { get; set; }
         };
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListNodesResponseBodyResult> Result { get; set; }
         public class ListNodesResponseBodyResult : TeaModel {
+            [NameInMap("agentStatus")]
+            [Validation(Required=false)]
+            public string AgentStatus { get; set; }
+
             [NameInMap("cloudAssistantStatus")]
             [Validation(Required=false)]
             public string CloudAssistantStatus { get; set; }
+
+            [NameInMap("ecsInstanceId")]
+            [Validation(Required=false)]
+            public string EcsInstanceId { get; set; }
 
             [NameInMap("ecsInstanceName")]
             [Validation(Required=false)]
             public string EcsInstanceName { get; set; }
 
-            [NameInMap("ecsInstanceId")]
+            [NameInMap("ipAddress")]
             [Validation(Required=false)]
-            public string EcsInstanceId { get; set; }
+            public List<ListNodesResponseBodyResultIpAddress> IpAddress { get; set; }
+            public class ListNodesResponseBodyResultIpAddress : TeaModel {
+                [NameInMap("host")]
+                [Validation(Required=false)]
+                public string Host { get; set; }
+
+                [NameInMap("ipType")]
+                [Validation(Required=false)]
+                public string IpType { get; set; }
+
+            }
 
             [NameInMap("osType")]
             [Validation(Required=false)]
@@ -45,10 +63,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
-
-            [NameInMap("agentStatus")]
-            [Validation(Required=false)]
-            public string AgentStatus { get; set; }
 
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -61,20 +75,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [NameInMap("tagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }
-
-            }
-
-            [NameInMap("ipAddress")]
-            [Validation(Required=false)]
-            public List<ListNodesResponseBodyResultIpAddress> IpAddress { get; set; }
-            public class ListNodesResponseBodyResultIpAddress : TeaModel {
-                [NameInMap("ipType")]
-                [Validation(Required=false)]
-                public string IpType { get; set; }
-
-                [NameInMap("host")]
-                [Validation(Required=false)]
-                public string Host { get; set; }
 
             }
 

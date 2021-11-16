@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDictsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListDictsResponseBodyHeaders Headers { get; set; }
@@ -22,17 +18,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? XTotalCount { get; set; }
         };
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDictsResponseBodyResult> Result { get; set; }
         public class ListDictsResponseBodyResult : TeaModel {
+            [NameInMap("downloadUrl")]
+            [Validation(Required=false)]
+            public string DownloadUrl { get; set; }
+
             [NameInMap("fileSize")]
             [Validation(Required=false)]
             public long? FileSize { get; set; }
 
-            [NameInMap("downloadUrl")]
+            [NameInMap("name")]
             [Validation(Required=false)]
-            public string DownloadUrl { get; set; }
+            public string Name { get; set; }
 
             [NameInMap("sourceType")]
             [Validation(Required=false)]
@@ -41,10 +45,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
         }
 

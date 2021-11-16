@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListPipelineIdsResponseBodyResult> Result { get; set; }
         public class ListPipelineIdsResponseBodyResult : TeaModel {
-            [NameInMap("pipelineId")]
-            [Validation(Required=false)]
-            public string PipelineId { get; set; }
-
             [NameInMap("available")]
             [Validation(Required=false)]
             public bool? Available { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+
+            [NameInMap("pipelineId")]
+            [Validation(Required=false)]
+            public string PipelineId { get; set; }
 
         }
 

@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListAvailableEsInstanceIdsResponseBodyResult> Result { get; set; }
         public class ListAvailableEsInstanceIdsResponseBodyResult : TeaModel {
-            [NameInMap("endpoint")]
-            [Validation(Required=false)]
-            public string Endpoint { get; set; }
-
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("kibanaEndpoint")]
+            [NameInMap("endpoint")]
             [Validation(Required=false)]
-            public string KibanaEndpoint { get; set; }
+            public string Endpoint { get; set; }
 
             [NameInMap("esInstanceId")]
             [Validation(Required=false)]
             public string EsInstanceId { get; set; }
+
+            [NameInMap("kibanaEndpoint")]
+            [Validation(Required=false)]
+            public string KibanaEndpoint { get; set; }
 
         }
 

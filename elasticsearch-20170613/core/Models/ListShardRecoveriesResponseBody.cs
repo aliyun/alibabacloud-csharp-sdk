@@ -17,6 +17,22 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListShardRecoveriesResponseBodyResult> Result { get; set; }
         public class ListShardRecoveriesResponseBodyResult : TeaModel {
+            [NameInMap("bytesPercent")]
+            [Validation(Required=false)]
+            public string BytesPercent { get; set; }
+
+            [NameInMap("bytesTotal")]
+            [Validation(Required=false)]
+            public long? BytesTotal { get; set; }
+
+            [NameInMap("filesPercent")]
+            [Validation(Required=false)]
+            public string FilesPercent { get; set; }
+
+            [NameInMap("filesTotal")]
+            [Validation(Required=false)]
+            public long? FilesTotal { get; set; }
+
             [NameInMap("index")]
             [Validation(Required=false)]
             public string Index { get; set; }
@@ -29,25 +45,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string SourceNode { get; set; }
 
-            [NameInMap("filesTotal")]
+            [NameInMap("stage")]
             [Validation(Required=false)]
-            public long? FilesTotal { get; set; }
-
-            [NameInMap("bytesPercent")]
-            [Validation(Required=false)]
-            public string BytesPercent { get; set; }
-
-            [NameInMap("translogOps")]
-            [Validation(Required=false)]
-            public long? TranslogOps { get; set; }
-
-            [NameInMap("translogOpsPercent")]
-            [Validation(Required=false)]
-            public string TranslogOpsPercent { get; set; }
-
-            [NameInMap("bytesTotal")]
-            [Validation(Required=false)]
-            public long? BytesTotal { get; set; }
+            public string Stage { get; set; }
 
             [NameInMap("targetHost")]
             [Validation(Required=false)]
@@ -57,13 +57,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string TargetNode { get; set; }
 
-            [NameInMap("filesPercent")]
+            [NameInMap("translogOps")]
             [Validation(Required=false)]
-            public string FilesPercent { get; set; }
+            public long? TranslogOps { get; set; }
 
-            [NameInMap("stage")]
+            [NameInMap("translogOpsPercent")]
             [Validation(Required=false)]
-            public string Stage { get; set; }
+            public string TranslogOpsPercent { get; set; }
 
         }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListKibanaPluginsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListKibanaPluginsResponseBodyHeaders Headers { get; set; }
@@ -22,6 +18,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? XTotalCount { get; set; }
         };
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListKibanaPluginsResponseBodyResult> Result { get; set; }
@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
             [NameInMap("specificationUrl")]
             [Validation(Required=false)]
             public string SpecificationUrl { get; set; }
@@ -37,14 +45,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
-
-            [NameInMap("source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
-
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
         }
 

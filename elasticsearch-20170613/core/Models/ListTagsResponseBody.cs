@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListTagsResponseBodyResult> Result { get; set; }
         public class ListTagsResponseBodyResult : TeaModel {
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
 
         }
 

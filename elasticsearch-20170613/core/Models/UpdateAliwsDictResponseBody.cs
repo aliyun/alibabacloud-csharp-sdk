@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public long? FileSize { get; set; }
 
-            [NameInMap("sourceType")]
-            [Validation(Required=false)]
-            public string SourceType { get; set; }
-
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("sourceType")]
+            [Validation(Required=false)]
+            public string SourceType { get; set; }
 
             [NameInMap("type")]
             [Validation(Required=false)]
