@@ -16,18 +16,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public GetTenantApplicationResponseBodyData Data { get; set; }
         public class GetTenantApplicationResponseBodyData : TeaModel {
-            [NameInMap("corporationId")]
-            [Validation(Required=false)]
-            public string CorporationId { get; set; }
             [NameInMap("bizId")]
             [Validation(Required=false)]
             public string BizId { get; set; }
-            [NameInMap("progress")]
-            [Validation(Required=false)]
-            public string Progress { get; set; }
             [NameInMap("channel")]
             [Validation(Required=false)]
             public string Channel { get; set; }
+            [NameInMap("corporationId")]
+            [Validation(Required=false)]
+            public string CorporationId { get; set; }
+            [NameInMap("progress")]
+            [Validation(Required=false)]
+            public string Progress { get; set; }
         };
 
         /// <summary>

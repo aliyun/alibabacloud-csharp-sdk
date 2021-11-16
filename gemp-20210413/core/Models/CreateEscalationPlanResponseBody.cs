@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateEscalationPlanResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// data
         /// </summary>
         [NameInMap("data")]
@@ -27,6 +20,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public long? EscalationPlanId { get; set; }
         };
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

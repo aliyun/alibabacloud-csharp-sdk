@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class DeliverIncidentRequest : TeaModel {
         /// <summary>
-        /// 事件ID
-        /// </summary>
-        [NameInMap("incidentId")]
-        [Validation(Required=false)]
-        public long? IncidentId { get; set; }
-
-        /// <summary>
         /// 转交用户ID
         /// </summary>
         [NameInMap("assignUserId")]
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 事件ID
+        /// </summary>
+        [NameInMap("incidentId")]
+        [Validation(Required=false)]
+        public long? IncidentId { get; set; }
 
     }
 

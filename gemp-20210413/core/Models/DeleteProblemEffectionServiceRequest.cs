@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class DeleteProblemEffectionServiceRequest : TeaModel {
         /// <summary>
+        /// clientToken
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// 影响服务ID
         /// </summary>
         [NameInMap("effectionServiceId")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("problemId")]
         [Validation(Required=false)]
         public long? ProblemId { get; set; }
-
-        /// <summary>
-        /// clientToken
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

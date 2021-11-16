@@ -9,16 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListIntegrationConfigsRequest : TeaModel {
-        [NameInMap("monitorSourceName")]
-        [Validation(Required=false)]
-        public string MonitorSourceName { get; set; }
-
         /// <summary>
         /// 幂等id
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("monitorSourceName")]
+        [Validation(Required=false)]
+        public string MonitorSourceName { get; set; }
 
     }
 

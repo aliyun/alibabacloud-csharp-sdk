@@ -10,27 +10,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateProblemMeasureRequest : TeaModel {
         /// <summary>
-        /// 措施类型
-        /// </summary>
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public int? Type { get; set; }
-
-        /// <summary>
-        /// 故障Id
-        /// </summary>
-        [NameInMap("problemId")]
-        [Validation(Required=false)]
-        public long? ProblemId { get; set; }
-
-        /// <summary>
-        /// 措施内容
-        /// </summary>
-        [NameInMap("content")]
-        [Validation(Required=false)]
-        public string Content { get; set; }
-
-        /// <summary>
         /// 验收标准
         /// </summary>
         [NameInMap("checkStandard")]
@@ -45,11 +24,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public long? CheckUserId { get; set; }
 
         /// <summary>
-        /// 计划完成时间
+        /// 幂等校验token
         /// </summary>
-        [NameInMap("planFinishTime")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public string PlanFinishTime { get; set; }
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 措施内容
+        /// </summary>
+        [NameInMap("content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
 
         /// <summary>
         /// 负责人id
@@ -57,6 +43,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("directorId")]
         [Validation(Required=false)]
         public long? DirectorId { get; set; }
+
+        /// <summary>
+        /// 计划完成时间
+        /// </summary>
+        [NameInMap("planFinishTime")]
+        [Validation(Required=false)]
+        public string PlanFinishTime { get; set; }
+
+        /// <summary>
+        /// 故障Id
+        /// </summary>
+        [NameInMap("problemId")]
+        [Validation(Required=false)]
+        public long? ProblemId { get; set; }
 
         /// <summary>
         /// 跟踪人id
@@ -73,11 +73,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// 幂等校验token
+        /// 措施类型
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public int? Type { get; set; }
 
     }
 

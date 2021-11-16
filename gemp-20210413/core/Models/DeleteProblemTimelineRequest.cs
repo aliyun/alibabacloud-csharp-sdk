@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class DeleteProblemTimelineRequest : TeaModel {
         /// <summary>
-        /// ID
+        /// clientToken
         /// </summary>
-        [NameInMap("problemTimelineId")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public long? ProblemTimelineId { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 故障id
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public long? ProblemId { get; set; }
 
         /// <summary>
-        /// clientToken
+        /// ID
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("problemTimelineId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public long? ProblemTimelineId { get; set; }
 
     }
 

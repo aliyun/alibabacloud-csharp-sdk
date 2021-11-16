@@ -9,44 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListIncidentDetailTimelinesResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListIncidentDetailTimelinesResponseBodyData> Data { get; set; }
         public class ListIncidentDetailTimelinesResponseBodyData : TeaModel {
             /// <summary>
-            /// 主题
+            /// 事件action
             /// </summary>
-            [NameInMap("title")]
+            [NameInMap("action")]
             [Validation(Required=false)]
-            public string Title { get; set; }
-
-            /// <summary>
-            /// 描述
-            /// </summary>
-            [NameInMap("description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            /// <summary>
-            /// 备注
-            /// </summary>
-            [NameInMap("remark")]
-            [Validation(Required=false)]
-            public string Remark { get; set; }
-
-            /// <summary>
-            /// 服务名称
-            /// </summary>
-            [NameInMap("relatedServiceName")]
-            [Validation(Required=false)]
-            public string RelatedServiceName { get; set; }
+            public string Action { get; set; }
 
             /// <summary>
             /// 创建时间
@@ -56,6 +28,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// 描述
+            /// </summary>
+            [NameInMap("description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
             /// 事件Id
             /// </summary>
             [NameInMap("incidentId")]
@@ -63,20 +42,34 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public long? IncidentId { get; set; }
 
             /// <summary>
-            /// 事件action
+            /// 服务名称
             /// </summary>
-            [NameInMap("action")]
+            [NameInMap("relatedServiceName")]
             [Validation(Required=false)]
-            public string Action { get; set; }
+            public string RelatedServiceName { get; set; }
+
+            /// <summary>
+            /// 备注
+            /// </summary>
+            [NameInMap("remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
+            /// <summary>
+            /// 快照数据
+            /// </summary>
+            [NameInMap("snapshotData")]
+            [Validation(Required=false)]
+            public string SnapshotData { get; set; }
+
+            /// <summary>
+            /// 主题
+            /// </summary>
+            [NameInMap("title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
 
         }
-
-        /// <summary>
-        /// 总数
-        /// </summary>
-        [NameInMap("totalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
@@ -85,6 +78,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 总数
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

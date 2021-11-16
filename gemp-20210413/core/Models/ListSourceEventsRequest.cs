@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListSourceEventsRequest : TeaModel {
         /// <summary>
+        /// 幂等号
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// 报警或者事件ID
         /// </summary>
         [NameInMap("instanceId")]
@@ -24,6 +31,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// 当前页
+        /// </summary>
+        [NameInMap("pageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        /// <summary>
+        /// 页大小
+        /// </summary>
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        /// <summary>
         /// startRowKey 用来查询下一页的数据
         /// </summary>
         [NameInMap("startRowKey")]
@@ -36,27 +57,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("stopRowKey")]
         [Validation(Required=false)]
         public string StopRowKey { get; set; }
-
-        /// <summary>
-        /// 页大小
-        /// </summary>
-        [NameInMap("pageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        /// <summary>
-        /// 幂等号
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        /// 当前页
-        /// </summary>
-        [NameInMap("pageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
 
     }
 

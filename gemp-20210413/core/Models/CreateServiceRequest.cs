@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateServiceRequest : TeaModel {
         /// <summary>
+        /// 幂等号
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// 服务描述
         /// </summary>
         [NameInMap("serviceDescription")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("serviceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
-
-        /// <summary>
-        /// 幂等号
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

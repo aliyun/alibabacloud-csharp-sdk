@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class RevokeProblemRecoveryRequest : TeaModel {
         /// <summary>
+        /// 幂等校验Id
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// 故障ID
         /// </summary>
         [NameInMap("problemId")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("problemNotifyType")]
         [Validation(Required=false)]
         public string ProblemNotifyType { get; set; }
-
-        /// <summary>
-        /// 幂等校验Id
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

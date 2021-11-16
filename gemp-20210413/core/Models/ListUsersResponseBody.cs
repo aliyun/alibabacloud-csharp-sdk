@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// data
         /// </summary>
         [NameInMap("data")]
@@ -24,32 +17,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public List<ListUsersResponseBodyData> Data { get; set; }
         public class ListUsersResponseBodyData : TeaModel {
             /// <summary>
-            /// 用户id
+            /// 账户类型
             /// </summary>
-            [NameInMap("userId")]
+            [NameInMap("accountType")]
             [Validation(Required=false)]
-            public long? UserId { get; set; }
+            public long? AccountType { get; set; }
 
             /// <summary>
-            /// 子账号ramId
+            /// 移动应用账户
             /// </summary>
-            [NameInMap("ramId")]
+            [NameInMap("appAccount")]
             [Validation(Required=false)]
-            public long? RamId { get; set; }
-
-            /// <summary>
-            /// 用户名
-            /// </summary>
-            [NameInMap("username")]
-            [Validation(Required=false)]
-            public string Username { get; set; }
-
-            /// <summary>
-            /// 手机
-            /// </summary>
-            [NameInMap("phone")]
-            [Validation(Required=false)]
-            public string Phone { get; set; }
+            public string AppAccount { get; set; }
 
             /// <summary>
             /// 邮箱
@@ -66,18 +45,25 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public long? IsEditableUser { get; set; }
 
             /// <summary>
-            /// 账户类型
+            /// 是否关联
             /// </summary>
-            [NameInMap("accountType")]
+            [NameInMap("isRelated")]
             [Validation(Required=false)]
-            public long? AccountType { get; set; }
+            public string IsRelated { get; set; }
 
             /// <summary>
-            /// 移动应用账户
+            /// 手机
             /// </summary>
-            [NameInMap("appAccount")]
+            [NameInMap("phone")]
             [Validation(Required=false)]
-            public string AppAccount { get; set; }
+            public string Phone { get; set; }
+
+            /// <summary>
+            /// 子账号ramId
+            /// </summary>
+            [NameInMap("ramId")]
+            [Validation(Required=false)]
+            public long? RamId { get; set; }
 
             /// <summary>
             /// 移动应用协同渠道
@@ -87,20 +73,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public string SynergyChannel { get; set; }
 
             /// <summary>
-            /// 是否关联
+            /// 用户id
             /// </summary>
-            [NameInMap("isRelated")]
+            [NameInMap("userId")]
             [Validation(Required=false)]
-            public string IsRelated { get; set; }
+            public long? UserId { get; set; }
+
+            /// <summary>
+            /// 用户名
+            /// </summary>
+            [NameInMap("username")]
+            [Validation(Required=false)]
+            public string Username { get; set; }
 
         }
-
-        /// <summary>
-        /// 总条数
-        /// </summary>
-        [NameInMap("totalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
 
         /// <summary>
         /// 分页
@@ -115,6 +101,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 总条数
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

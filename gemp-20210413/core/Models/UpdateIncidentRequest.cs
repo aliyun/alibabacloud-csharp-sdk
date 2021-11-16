@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateIncidentRequest : TeaModel {
         /// <summary>
+        /// 幂等校验Id
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 影响程度
+        /// </summary>
+        [NameInMap("effect")]
+        [Validation(Required=false)]
+        public string Effect { get; set; }
+
+        /// <summary>
         /// 事件Id
         /// </summary>
         [NameInMap("incidentId")]
@@ -24,25 +38,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string IncidentLevel { get; set; }
 
         /// <summary>
-        /// 影响程度
-        /// </summary>
-        [NameInMap("effect")]
-        [Validation(Required=false)]
-        public string Effect { get; set; }
-
-        /// <summary>
         /// 事件标题
         /// </summary>
         [NameInMap("incidentTitle")]
         [Validation(Required=false)]
         public string IncidentTitle { get; set; }
-
-        /// <summary>
-        /// 幂等校验Id
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

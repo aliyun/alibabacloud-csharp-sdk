@@ -9,20 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GetIntegrationConfigResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetIntegrationConfigResponseBodyData Data { get; set; }
         public class GetIntegrationConfigResponseBodyData : TeaModel {
+            [NameInMap("accessKey")]
+            [Validation(Required=false)]
+            public string AccessKey { get; set; }
             [NameInMap("integrationConfigId")]
             [Validation(Required=false)]
             public long? IntegrationConfigId { get; set; }
+            [NameInMap("isReceivedEvent")]
+            [Validation(Required=false)]
+            public bool? IsReceivedEvent { get; set; }
             [NameInMap("monitorSourceId")]
             [Validation(Required=false)]
             public long? MonitorSourceId { get; set; }
@@ -32,16 +31,17 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("monitorSourceShortName")]
             [Validation(Required=false)]
             public string MonitorSourceShortName { get; set; }
-            [NameInMap("accessKey")]
-            [Validation(Required=false)]
-            public string AccessKey { get; set; }
-            [NameInMap("isReceivedEvent")]
-            [Validation(Required=false)]
-            public bool? IsReceivedEvent { get; set; }
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
         };
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

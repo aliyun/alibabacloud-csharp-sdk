@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ReplayProblemRequest : TeaModel {
         /// <summary>
+        /// 幂等校验token
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// 故障ID
         /// </summary>
         [NameInMap("problemId")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("replayDutyUserId")]
         [Validation(Required=false)]
         public long? ReplayDutyUserId { get; set; }
-
-        /// <summary>
-        /// 幂等校验token
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

@@ -10,25 +10,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateSubscriptionRequest : TeaModel {
         /// <summary>
-        /// 通知订阅名称
+        /// 幂等参数
         /// </summary>
-        [NameInMap("subscriptionTitle")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public string SubscriptionTitle { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
-        /// 订阅范围类型
+        /// 结束时间
         /// </summary>
-        [NameInMap("scope")]
+        [NameInMap("endTime")]
         [Validation(Required=false)]
-        public long? Scope { get; set; }
-
-        /// <summary>
-        /// 通知对象类型
-        /// </summary>
-        [NameInMap("notifyObjectType")]
-        [Validation(Required=false)]
-        public long? NotifyObjectType { get; set; }
+        public string EndTime { get; set; }
 
         /// <summary>
         /// 订阅时效
@@ -36,22 +29,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("expiredType")]
         [Validation(Required=false)]
         public long? ExpiredType { get; set; }
-
-        /// <summary>
-        /// 订阅范围列表
-        /// </summary>
-        [NameInMap("scopeObjectList")]
-        [Validation(Required=false)]
-        public List<CreateSubscriptionRequestScopeObjectList> ScopeObjectList { get; set; }
-        public class CreateSubscriptionRequestScopeObjectList : TeaModel {
-            /// <summary>
-            /// 订阅范围对象id
-            /// </summary>
-            [NameInMap("scopeObjectId")]
-            [Validation(Required=false)]
-            public long? ScopeObjectId { get; set; }
-
-        }
 
         /// <summary>
         /// 通知对象列表
@@ -70,6 +47,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         }
 
         /// <summary>
+        /// 通知对象类型
+        /// </summary>
+        [NameInMap("notifyObjectType")]
+        [Validation(Required=false)]
+        public long? NotifyObjectType { get; set; }
+
+        /// <summary>
         /// 通知策略列表
         /// </summary>
         [NameInMap("notifyStrategyList")]
@@ -77,11 +61,33 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public List<CreateSubscriptionRequestNotifyStrategyList> NotifyStrategyList { get; set; }
         public class CreateSubscriptionRequestNotifyStrategyList : TeaModel {
             /// <summary>
+            /// 渠道，多个逗号分隔
+            /// </summary>
+            [NameInMap("channels")]
+            [Validation(Required=false)]
+            public string Channels { get; set; }
+
+            /// <summary>
             /// 订阅实例类型，事件、报警、故障
             /// </summary>
             [NameInMap("instanceType")]
             [Validation(Required=false)]
             public long? InstanceType { get; set; }
+
+            /// <summary>
+            /// 分时段渠道
+            /// </summary>
+            [NameInMap("periodChannel")]
+            [Validation(Required=false)]
+            public CreateSubscriptionRequestNotifyStrategyListPeriodChannel PeriodChannel { get; set; }
+            public class CreateSubscriptionRequestNotifyStrategyListPeriodChannel : TeaModel {
+                [NameInMap("nonWorkday")]
+                [Validation(Required=false)]
+                public string NonWorkday { get; set; }
+                [NameInMap("workday")]
+                [Validation(Required=false)]
+                public string Workday { get; set; }
+            };
 
             /// <summary>
             /// 条件。json格式，包含多个条件，比如级别、影响程度 kv格式
@@ -98,18 +104,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 public List<CreateSubscriptionRequestNotifyStrategyListStrategiesConditions> Conditions { get; set; }
                 public class CreateSubscriptionRequestNotifyStrategyListStrategiesConditions : TeaModel {
                     /// <summary>
+                    /// 时间动作
+                    /// </summary>
+                    [NameInMap("action")]
+                    [Validation(Required=false)]
+                    public string Action { get; set; }
+
+                    /// <summary>
                     /// 影响范围
                     /// </summary>
                     [NameInMap("effection")]
                     [Validation(Required=false)]
                     public string Effection { get; set; }
-
-                    /// <summary>
-                    /// 故障通知类型
-                    /// </summary>
-                    [NameInMap("problemNotifyType")]
-                    [Validation(Required=false)]
-                    public string ProblemNotifyType { get; set; }
 
                     /// <summary>
                     /// 等级
@@ -119,31 +125,47 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     public string Level { get; set; }
 
                     /// <summary>
-                    /// 时间动作
+                    /// 故障通知类型
                     /// </summary>
-                    [NameInMap("action")]
+                    [NameInMap("problemNotifyType")]
                     [Validation(Required=false)]
-                    public string Action { get; set; }
+                    public string ProblemNotifyType { get; set; }
 
                 }
 
             }
 
-            /// <summary>
-            /// 渠道，多个逗号分隔
-            /// </summary>
-            [NameInMap("channels")]
-            [Validation(Required=false)]
-            public string Channels { get; set; }
-
         }
 
         /// <summary>
-        /// 幂等参数
+        /// 时间段
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("period")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string Period { get; set; }
+
+        /// <summary>
+        /// 订阅范围类型
+        /// </summary>
+        [NameInMap("scope")]
+        [Validation(Required=false)]
+        public long? Scope { get; set; }
+
+        /// <summary>
+        /// 订阅范围列表
+        /// </summary>
+        [NameInMap("scopeObjectList")]
+        [Validation(Required=false)]
+        public List<CreateSubscriptionRequestScopeObjectList> ScopeObjectList { get; set; }
+        public class CreateSubscriptionRequestScopeObjectList : TeaModel {
+            /// <summary>
+            /// 订阅范围对象id
+            /// </summary>
+            [NameInMap("scopeObjectId")]
+            [Validation(Required=false)]
+            public long? ScopeObjectId { get; set; }
+
+        }
 
         /// <summary>
         /// 开始时间
@@ -153,11 +175,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 通知订阅名称
         /// </summary>
-        [NameInMap("endTime")]
+        [NameInMap("subscriptionTitle")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string SubscriptionTitle { get; set; }
 
     }
 

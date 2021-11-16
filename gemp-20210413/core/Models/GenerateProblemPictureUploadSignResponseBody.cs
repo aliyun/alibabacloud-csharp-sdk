@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GenerateProblemPictureUploadSignResponseBody : TeaModel {
-        /// <summary>
-        /// requestId
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public GenerateProblemPictureUploadSignResponseBodyData Data { get; set; }
         public class GenerateProblemPictureUploadSignResponseBodyData : TeaModel {
+            [NameInMap("accessKeyId")]
+            [Validation(Required=false)]
+            public string AccessKeyId { get; set; }
             [NameInMap("bucketName")]
             [Validation(Required=false)]
             public string BucketName { get; set; }
@@ -35,10 +31,14 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("url")]
             [Validation(Required=false)]
             public string Url { get; set; }
-            [NameInMap("accessKeyId")]
-            [Validation(Required=false)]
-            public string AccessKeyId { get; set; }
         };
+
+        /// <summary>
+        /// requestId
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GetServiceGroupSpecialPersonSchedulingResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 人员排班信息
         /// </summary>
         [NameInMap("data")]
@@ -24,11 +17,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public List<GetServiceGroupSpecialPersonSchedulingResponseBodyData> Data { get; set; }
         public class GetServiceGroupSpecialPersonSchedulingResponseBodyData : TeaModel {
             /// <summary>
-            /// 排班开始时间
+            /// 排班日期
             /// </summary>
-            [NameInMap("schedulingStartTime")]
+            [NameInMap("schedulingDate")]
             [Validation(Required=false)]
-            public string SchedulingStartTime { get; set; }
+            public string SchedulingDate { get; set; }
 
             /// <summary>
             /// 排班结束时间
@@ -38,11 +31,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public string SchedulingEndTime { get; set; }
 
             /// <summary>
-            /// 排班日期
+            /// 排班开始时间
             /// </summary>
-            [NameInMap("schedulingDate")]
+            [NameInMap("schedulingStartTime")]
             [Validation(Required=false)]
-            public string SchedulingDate { get; set; }
+            public string SchedulingStartTime { get; set; }
+
+            /// <summary>
+            /// 排班用户ID
+            /// </summary>
+            [NameInMap("schedulingUserId")]
+            [Validation(Required=false)]
+            public long? SchedulingUserId { get; set; }
 
             /// <summary>
             /// 服务组id
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string ServiceGroupName { get; set; }
 
-            /// <summary>
-            /// 排班用户ID
-            /// </summary>
-            [NameInMap("schedulingUserId")]
-            [Validation(Required=false)]
-            public long? SchedulingUserId { get; set; }
-
         }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

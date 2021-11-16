@@ -9,16 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateServiceResponseBody : TeaModel {
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public long? Data { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("data")]
-        [Validation(Required=false)]
-        public long? Data { get; set; }
 
     }
 

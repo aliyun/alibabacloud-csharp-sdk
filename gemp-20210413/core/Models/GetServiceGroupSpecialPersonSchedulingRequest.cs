@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GetServiceGroupSpecialPersonSchedulingRequest : TeaModel {
         /// <summary>
-        /// 用户ID
+        /// 幂等号
         /// </summary>
-        [NameInMap("userId")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public long? UserId { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 服务组ID
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public long? ServiceGroupId { get; set; }
 
         /// <summary>
-        /// 幂等号
+        /// 用户ID
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("userId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public long? UserId { get; set; }
 
     }
 

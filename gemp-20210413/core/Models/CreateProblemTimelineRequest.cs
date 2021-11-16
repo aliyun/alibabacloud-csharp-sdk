@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateProblemTimelineRequest : TeaModel {
         /// <summary>
-        /// 故障id
+        /// clientToken
         /// </summary>
-        [NameInMap("problemId")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public long? ProblemId { get; set; }
-
-        /// <summary>
-        /// 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
-        /// </summary>
-        [NameInMap("keyNode")]
-        [Validation(Required=false)]
-        public string KeyNode { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 节点内容
@@ -31,18 +24,25 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
+        /// </summary>
+        [NameInMap("keyNode")]
+        [Validation(Required=false)]
+        public string KeyNode { get; set; }
+
+        /// <summary>
+        /// 故障id
+        /// </summary>
+        [NameInMap("problemId")]
+        [Validation(Required=false)]
+        public long? ProblemId { get; set; }
+
+        /// <summary>
         /// 发生时间
         /// </summary>
         [NameInMap("time")]
         [Validation(Required=false)]
         public string Time { get; set; }
-
-        /// <summary>
-        /// clientToken
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

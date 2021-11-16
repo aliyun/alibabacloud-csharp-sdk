@@ -16,12 +16,12 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public GetIncidentSubtotalCountResponseBodyData Data { get; set; }
         public class GetIncidentSubtotalCountResponseBodyData : TeaModel {
-            [NameInMap("subtotalCount")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> SubtotalCount { get; set; }
             [NameInMap("requestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
+            [NameInMap("subtotalCount")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> SubtotalCount { get; set; }
         };
 
     }

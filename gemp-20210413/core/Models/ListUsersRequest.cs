@@ -10,11 +10,25 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListUsersRequest : TeaModel {
         /// <summary>
-        /// 人员名称
+        /// clientToken
         /// </summary>
-        [NameInMap("username")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public string Username { get; set; }
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 分页参数
+        /// </summary>
+        [NameInMap("pageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        /// <summary>
+        /// 分页参数
+        /// </summary>
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         /// <summary>
         /// 人员手机号
@@ -38,32 +52,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public long? Scene { get; set; }
 
         /// <summary>
-        /// clientToken
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        /// 分页参数
-        /// </summary>
-        [NameInMap("pageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
-        /// <summary>
-        /// 分页参数
-        /// </summary>
-        [NameInMap("pageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
-
-        /// <summary>
         /// 移动应用协同渠道
         /// </summary>
         [NameInMap("synergyChannel")]
         [Validation(Required=false)]
         public string SynergyChannel { get; set; }
+
+        /// <summary>
+        /// 人员名称
+        /// </summary>
+        [NameInMap("username")]
+        [Validation(Required=false)]
+        public string Username { get; set; }
 
     }
 

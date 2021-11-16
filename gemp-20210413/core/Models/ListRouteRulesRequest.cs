@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListRouteRulesRequest : TeaModel {
         /// <summary>
-        /// 规则名称
+        /// 幂等号
         /// </summary>
-        [NameInMap("ruleName")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public byte[] RuleName { get; set; }
-
-        /// <summary>
-        /// 服务名称
-        /// </summary>
-        [NameInMap("serviceName")]
-        [Validation(Required=false)]
-        public byte[] ServiceName { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 第几页
@@ -38,11 +31,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// 幂等号
+        /// 规则名称
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("ruleName")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public byte[] RuleName { get; set; }
+
+        /// <summary>
+        /// 服务名称
+        /// </summary>
+        [NameInMap("serviceName")]
+        [Validation(Required=false)]
+        public byte[] ServiceName { get; set; }
 
     }
 

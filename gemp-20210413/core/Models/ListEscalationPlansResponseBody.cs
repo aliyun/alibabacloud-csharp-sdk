@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListEscalationPlansResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// data
         /// </summary>
         [NameInMap("data")]
@@ -45,6 +38,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public List<ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects> EscalationPlanScopeObjects { get; set; }
             public class ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects : TeaModel {
                 /// <summary>
+                /// 范围对象类型
+                /// </summary>
+                [NameInMap("scope")]
+                [Validation(Required=false)]
+                public string Scope { get; set; }
+
+                /// <summary>
                 /// 范围对象id（服务id）
                 /// </summary>
                 [NameInMap("scopeObjectId")]
@@ -58,21 +58,7 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [Validation(Required=false)]
                 public string ScopeObjectName { get; set; }
 
-                /// <summary>
-                /// 范围对象类型
-                /// </summary>
-                [NameInMap("scope")]
-                [Validation(Required=false)]
-                public string Scope { get; set; }
-
             }
-
-            /// <summary>
-            /// 启用ENABLE 禁用DISABLE
-            /// </summary>
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
 
             /// <summary>
             /// 修改时间
@@ -81,14 +67,14 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
-        }
+            /// <summary>
+            /// 启用ENABLE 禁用DISABLE
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
-        /// <summary>
-        /// 总条数
-        /// </summary>
-        [NameInMap("totalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        }
 
         /// <summary>
         /// 分页参数
@@ -103,6 +89,20 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 总条数
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

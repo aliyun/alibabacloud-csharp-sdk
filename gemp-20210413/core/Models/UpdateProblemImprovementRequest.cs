@@ -10,6 +10,55 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateProblemImprovementRequest : TeaModel {
         /// <summary>
+        /// 幂等校验token
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 发现来源 码表:PROBLEM_DISCOVER_SOURCE
+        /// </summary>
+        [NameInMap("discoverSource")]
+        [Validation(Required=false)]
+        public long? DiscoverSource { get; set; }
+
+        /// <summary>
+        /// 故障责任部门ID
+        /// </summary>
+        [NameInMap("dutyDepartmentId")]
+        [Validation(Required=false)]
+        public long? DutyDepartmentId { get; set; }
+
+        /// <summary>
+        /// 故障责任部门
+        /// </summary>
+        [NameInMap("dutyDepartmentName")]
+        [Validation(Required=false)]
+        public string DutyDepartmentName { get; set; }
+
+        /// <summary>
+        /// 故障责任人id
+        /// </summary>
+        [NameInMap("dutyUserId")]
+        [Validation(Required=false)]
+        public long? DutyUserId { get; set; }
+
+        /// <summary>
+        /// 注入方式 码表:PROBLEM_INJECTION_MODE
+        /// </summary>
+        [NameInMap("injectionMode")]
+        [Validation(Required=false)]
+        public string InjectionMode { get; set; }
+
+        /// <summary>
+        /// 监控源
+        /// </summary>
+        [NameInMap("monitorSourceName")]
+        [Validation(Required=false)]
+        public string MonitorSourceName { get; set; }
+
+        /// <summary>
         /// 故障ID
         /// </summary>
         [NameInMap("problemId")]
@@ -31,39 +80,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string RecentActivity { get; set; }
 
         /// <summary>
-        /// 注入方式 码表:PROBLEM_INJECTION_MODE
-        /// </summary>
-        [NameInMap("injectionMode")]
-        [Validation(Required=false)]
-        public string InjectionMode { get; set; }
-
-        /// <summary>
         /// 恢复方式  码表:PROBLEM_RECOVERY_MODE
         /// </summary>
         [NameInMap("recoveryMode")]
         [Validation(Required=false)]
         public string RecoveryMode { get; set; }
-
-        /// <summary>
-        /// 发现来源 码表:PROBLEM_DISCOVER_SOURCE
-        /// </summary>
-        [NameInMap("discoverSource")]
-        [Validation(Required=false)]
-        public long? DiscoverSource { get; set; }
-
-        /// <summary>
-        /// 用户上报 码表:PROBLEM_USER_REPORT
-        /// </summary>
-        [NameInMap("userReport")]
-        [Validation(Required=false)]
-        public long? UserReport { get; set; }
-
-        /// <summary>
-        /// 监控源
-        /// </summary>
-        [NameInMap("monitorSourceName")]
-        [Validation(Required=false)]
-        public string MonitorSourceName { get; set; }
 
         /// <summary>
         /// 关联变更
@@ -73,11 +94,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string RelationChanges { get; set; }
 
         /// <summary>
-        /// 故障责任人id
+        /// 备注
         /// </summary>
-        [NameInMap("dutyUserId")]
+        [NameInMap("remark")]
         [Validation(Required=false)]
-        public long? DutyUserId { get; set; }
+        public string Remark { get; set; }
 
         /// <summary>
         /// 复盘负责人id
@@ -87,32 +108,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public long? ReplayDutyUserId { get; set; }
 
         /// <summary>
-        /// 故障责任部门
+        /// 用户上报 码表:PROBLEM_USER_REPORT
         /// </summary>
-        [NameInMap("dutyDepartmentName")]
+        [NameInMap("userReport")]
         [Validation(Required=false)]
-        public string DutyDepartmentName { get; set; }
-
-        /// <summary>
-        /// 故障责任部门ID
-        /// </summary>
-        [NameInMap("dutyDepartmentId")]
-        [Validation(Required=false)]
-        public long? DutyDepartmentId { get; set; }
-
-        /// <summary>
-        /// 备注
-        /// </summary>
-        [NameInMap("remark")]
-        [Validation(Required=false)]
-        public string Remark { get; set; }
-
-        /// <summary>
-        /// 幂等校验token
-        /// </summary>
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public long? UserReport { get; set; }
 
     }
 

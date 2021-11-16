@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListServicesResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListServicesResponseBodyData> Data { get; set; }
         public class ListServicesResponseBodyData : TeaModel {
+            /// <summary>
+            /// 服务描述
+            /// </summary>
+            [NameInMap("serviceDescription")]
+            [Validation(Required=false)]
+            public string ServiceDescription { get; set; }
+
             /// <summary>
             /// 服务ID
             /// </summary>
@@ -33,13 +33,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("serviceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
-
-            /// <summary>
-            /// 服务描述
-            /// </summary>
-            [NameInMap("serviceDescription")]
-            [Validation(Required=false)]
-            public string ServiceDescription { get; set; }
 
             /// <summary>
             /// 修改时间
@@ -63,6 +56,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 总条数

@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListIncidentsRequest : TeaModel {
         /// <summary>
-        /// 事件级别 P1 P2 P3 P4
+        /// 幂等校验id
         /// </summary>
-        [NameInMap("incidentLevel")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public string IncidentLevel { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
-        /// 页
+        /// 创建结束时间
         /// </summary>
-        [NameInMap("pageNumber")]
+        [NameInMap("createEndTime")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string CreateEndTime { get; set; }
 
         /// <summary>
-        /// 行
+        /// 创建开始时间
         /// </summary>
-        [NameInMap("pageSize")]
+        [NameInMap("createStartTime")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string CreateStartTime { get; set; }
 
         /// <summary>
         /// 影响等级 高：HIGH 低 LOW
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string Effect { get; set; }
 
         /// <summary>
-        /// 关联服务ID
+        /// 事件级别 P1 P2 P3 P4
         /// </summary>
-        [NameInMap("relationServiceId")]
+        [NameInMap("incidentLevel")]
         [Validation(Required=false)]
-        public long? RelationServiceId { get; set; }
+        public string IncidentLevel { get; set; }
 
         /// <summary>
         /// 事件状态 ASSIGNED已分派 RESPONDED已响应  FINISHED已完结
@@ -59,11 +59,25 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public int? Me { get; set; }
 
         /// <summary>
-        /// 幂等校验id
+        /// 页
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("pageNumber")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// 行
+        /// </summary>
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// 关联服务ID
+        /// </summary>
+        [NameInMap("relationServiceId")]
+        [Validation(Required=false)]
+        public long? RelationServiceId { get; set; }
 
     }
 

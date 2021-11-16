@@ -9,16 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class DisableIntegrationConfigRequest : TeaModel {
-        [NameInMap("integrationConfigId")]
-        [Validation(Required=false)]
-        public long? IntegrationConfigId { get; set; }
-
         /// <summary>
         /// 幂等id
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("integrationConfigId")]
+        [Validation(Required=false)]
+        public long? IntegrationConfigId { get; set; }
 
     }
 

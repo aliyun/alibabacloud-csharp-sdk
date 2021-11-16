@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GenerateProblemPictureLinkResponseBody : TeaModel {
-        /// <summary>
-        /// requestId
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public GenerateProblemPictureLinkResponseBodyData Data { get; set; }
@@ -28,6 +21,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 public string Link { get; set; }
             }
         };
+
+        /// <summary>
+        /// requestId
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

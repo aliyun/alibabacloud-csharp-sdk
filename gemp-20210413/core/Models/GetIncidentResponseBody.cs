@@ -9,41 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class GetIncidentResponseBody : TeaModel {
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetIncidentResponseBodyData Data { get; set; }
         public class GetIncidentResponseBodyData : TeaModel {
-            [NameInMap("incidentId")]
-            [Validation(Required=false)]
-            public long? IncidentId { get; set; }
-            [NameInMap("routeRuleId")]
-            [Validation(Required=false)]
-            public long? RouteRuleId { get; set; }
-            [NameInMap("routeRuleName")]
-            [Validation(Required=false)]
-            public string RouteRuleName { get; set; }
-            [NameInMap("relatedServiceId")]
-            [Validation(Required=false)]
-            public long? RelatedServiceId { get; set; }
-            [NameInMap("relatedServiceName")]
-            [Validation(Required=false)]
-            public string RelatedServiceName { get; set; }
-            [NameInMap("relatedServiceDescription")]
-            [Validation(Required=false)]
-            public string RelatedServiceDescription { get; set; }
-            [NameInMap("incidentStatus")]
-            [Validation(Required=false)]
-            public string IncidentStatus { get; set; }
-            [NameInMap("incidentLevel")]
-            [Validation(Required=false)]
-            public string IncidentLevel { get; set; }
-            [NameInMap("effect")]
-            [Validation(Required=false)]
-            public string Effect { get; set; }
             [NameInMap("assignUserId")]
             [Validation(Required=false)]
             public long? AssignUserId { get; set; }
@@ -53,34 +22,65 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("assignUserPhone")]
             [Validation(Required=false)]
             public string AssignUserPhone { get; set; }
-            [NameInMap("incidentNumber")]
-            [Validation(Required=false)]
-            public string IncidentNumber { get; set; }
-            [NameInMap("incidentTitle")]
-            [Validation(Required=false)]
-            public string IncidentTitle { get; set; }
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+            [NameInMap("durationTime")]
+            [Validation(Required=false)]
+            public long? DurationTime { get; set; }
+            [NameInMap("effect")]
+            [Validation(Required=false)]
+            public string Effect { get; set; }
+            [NameInMap("incidentDescription")]
+            [Validation(Required=false)]
+            public string IncidentDescription { get; set; }
+            [NameInMap("incidentId")]
+            [Validation(Required=false)]
+            public long? IncidentId { get; set; }
+            [NameInMap("incidentLevel")]
+            [Validation(Required=false)]
+            public string IncidentLevel { get; set; }
+            [NameInMap("incidentNumber")]
+            [Validation(Required=false)]
+            public string IncidentNumber { get; set; }
+            [NameInMap("incidentStatus")]
+            [Validation(Required=false)]
+            public string IncidentStatus { get; set; }
+            [NameInMap("incidentTitle")]
+            [Validation(Required=false)]
+            public string IncidentTitle { get; set; }
             [NameInMap("isManual")]
             [Validation(Required=false)]
             public bool? IsManual { get; set; }
             [NameInMap("isUpgrade")]
             [Validation(Required=false)]
             public bool? IsUpgrade { get; set; }
-            [NameInMap("incidentDescription")]
-            [Validation(Required=false)]
-            public string IncidentDescription { get; set; }
             [NameInMap("problemId")]
             [Validation(Required=false)]
             public long? ProblemId { get; set; }
             [NameInMap("problemNumber")]
             [Validation(Required=false)]
             public string ProblemNumber { get; set; }
-            [NameInMap("durationTime")]
+            [NameInMap("relatedServiceDescription")]
             [Validation(Required=false)]
-            public long? DurationTime { get; set; }
+            public string RelatedServiceDescription { get; set; }
+            [NameInMap("relatedServiceId")]
+            [Validation(Required=false)]
+            public long? RelatedServiceId { get; set; }
+            [NameInMap("relatedServiceName")]
+            [Validation(Required=false)]
+            public string RelatedServiceName { get; set; }
+            [NameInMap("routeRuleId")]
+            [Validation(Required=false)]
+            public long? RouteRuleId { get; set; }
+            [NameInMap("routeRuleName")]
+            [Validation(Required=false)]
+            public string RouteRuleName { get; set; }
         };
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

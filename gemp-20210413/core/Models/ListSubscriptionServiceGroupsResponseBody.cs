@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListSubscriptionServiceGroupsResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListSubscriptionServiceGroupsResponseBodyData> Data { get; set; }
         public class ListSubscriptionServiceGroupsResponseBodyData : TeaModel {
+            /// <summary>
+            /// 服务组描述
+            /// </summary>
+            [NameInMap("serviceGroupDescription")]
+            [Validation(Required=false)]
+            public string ServiceGroupDescription { get; set; }
+
             /// <summary>
             /// 主键
             /// </summary>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
-            /// <summary>
-            /// 服务组描述
-            /// </summary>
-            [NameInMap("serviceGroupDescription")]
-            [Validation(Required=false)]
-            public string ServiceGroupDescription { get; set; }
-
         }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

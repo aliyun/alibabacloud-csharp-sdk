@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListServicesRequest : TeaModel {
         /// <summary>
-        /// 服务名称
+        /// 幂等号
         /// </summary>
-        [NameInMap("serviceName")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public string ServiceName { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 当前页
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// 幂等号
+        /// 服务名称
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("serviceName")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string ServiceName { get; set; }
 
     }
 

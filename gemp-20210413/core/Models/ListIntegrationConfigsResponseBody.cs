@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class ListIntegrationConfigsResponseBody : TeaModel {
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListIntegrationConfigsResponseBodyData> Data { get; set; }
@@ -23,6 +19,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("integrationConfigId")]
             [Validation(Required=false)]
             public long? IntegrationConfigId { get; set; }
+
+            /// <summary>
+            /// 是否已接受报警
+            /// </summary>
+            [NameInMap("isReceivedEvent")]
+            [Validation(Required=false)]
+            public bool? IsReceivedEvent { get; set; }
 
             /// <summary>
             /// 监控源id
@@ -46,13 +49,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public string MonitorSourceShortName { get; set; }
 
             /// <summary>
-            /// 是否已接受报警
-            /// </summary>
-            [NameInMap("isReceivedEvent")]
-            [Validation(Required=false)]
-            public bool? IsReceivedEvent { get; set; }
-
-            /// <summary>
             /// 集成配置状态
             /// </summary>
             [NameInMap("status")]
@@ -60,6 +56,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public string Status { get; set; }
 
         }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

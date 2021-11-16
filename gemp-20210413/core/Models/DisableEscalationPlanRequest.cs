@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class DisableEscalationPlanRequest : TeaModel {
         /// <summary>
-        /// 升级计划ID
-        /// </summary>
-        [NameInMap("escalationPlanId")]
-        [Validation(Required=false)]
-        public long? EscalationPlanId { get; set; }
-
-        /// <summary>
         /// clientToken
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        /// <summary>
+        /// 升级计划ID
+        /// </summary>
+        [NameInMap("escalationPlanId")]
+        [Validation(Required=false)]
+        public long? EscalationPlanId { get; set; }
 
     }
 

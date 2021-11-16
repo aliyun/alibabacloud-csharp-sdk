@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateServiceGroupSpecialDaySchedulingRequest : TeaModel {
         /// <summary>
-        /// 服务组ID
+        /// 幂等号
         /// </summary>
-        [NameInMap("serviceGroupId")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public long? ServiceGroupId { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 排班日期
@@ -31,25 +31,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public List<UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays> SchedulingSpecialDays { get; set; }
         public class UpdateServiceGroupSpecialDaySchedulingRequestSchedulingSpecialDays : TeaModel {
             /// <summary>
-            /// 排班开始时间
-            /// </summary>
-            [NameInMap("schedulingStartTime")]
-            [Validation(Required=false)]
-            public string SchedulingStartTime { get; set; }
-
-            /// <summary>
             /// 排班结束时间
             /// </summary>
             [NameInMap("schedulingEndTime")]
             [Validation(Required=false)]
             public string SchedulingEndTime { get; set; }
-
-            /// <summary>
-            /// 排班用户ID
-            /// </summary>
-            [NameInMap("schedulingUserId")]
-            [Validation(Required=false)]
-            public long? SchedulingUserId { get; set; }
 
             /// <summary>
             /// 班次顺序
@@ -58,14 +44,28 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public int? SchedulingOrder { get; set; }
 
+            /// <summary>
+            /// 排班开始时间
+            /// </summary>
+            [NameInMap("schedulingStartTime")]
+            [Validation(Required=false)]
+            public string SchedulingStartTime { get; set; }
+
+            /// <summary>
+            /// 排班用户ID
+            /// </summary>
+            [NameInMap("schedulingUserId")]
+            [Validation(Required=false)]
+            public long? SchedulingUserId { get; set; }
+
         }
 
         /// <summary>
-        /// 幂等号
+        /// 服务组ID
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("serviceGroupId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public long? ServiceGroupId { get; set; }
 
     }
 

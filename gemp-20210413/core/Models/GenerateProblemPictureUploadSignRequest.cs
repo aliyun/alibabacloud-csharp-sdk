@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// 文件类型
-        /// </summary>
-        [NameInMap("fileType")]
-        [Validation(Required=false)]
-        public string FileType { get; set; }
-
-        /// <summary>
         /// 文件大小KB
         /// </summary>
         [NameInMap("fileSize")]
         [Validation(Required=false)]
         public long? FileSize { get; set; }
+
+        /// <summary>
+        /// 文件类型
+        /// </summary>
+        [NameInMap("fileType")]
+        [Validation(Required=false)]
+        public string FileType { get; set; }
 
         /// <summary>
         /// 故障id

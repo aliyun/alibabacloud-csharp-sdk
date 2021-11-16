@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateProblemSubtotalRequest : TeaModel {
         /// <summary>
-        /// 故障Id
+        /// 幂等校验token
         /// </summary>
-        [NameInMap("problemId")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public long? ProblemId { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 小计文本
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// 幂等校验token
+        /// 故障Id
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("problemId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public long? ProblemId { get; set; }
 
     }
 

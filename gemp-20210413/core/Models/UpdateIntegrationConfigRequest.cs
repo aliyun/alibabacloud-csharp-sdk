@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class UpdateIntegrationConfigRequest : TeaModel {
-        [NameInMap("integrationConfigId")]
-        [Validation(Required=false)]
-        public long? IntegrationConfigId { get; set; }
-
         /// <summary>
         /// 集成秘钥
         /// </summary>
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("integrationConfigId")]
+        [Validation(Required=false)]
+        public long? IntegrationConfigId { get; set; }
 
     }
 

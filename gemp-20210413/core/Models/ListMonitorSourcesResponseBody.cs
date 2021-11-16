@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<ListMonitorSourcesResponseBodyData> Data { get; set; }
         public class ListMonitorSourcesResponseBodyData : TeaModel {
+            [NameInMap("fieldKeys")]
+            [Validation(Required=false)]
+            public List<string> FieldKeys { get; set; }
+
             [NameInMap("monitorSourceId")]
             [Validation(Required=false)]
             public long? MonitorSourceId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("monitorSourceName")]
             [Validation(Required=false)]
             public string MonitorSourceName { get; set; }
-
-            [NameInMap("fieldKeys")]
-            [Validation(Required=false)]
-            public List<string> FieldKeys { get; set; }
 
         }
 

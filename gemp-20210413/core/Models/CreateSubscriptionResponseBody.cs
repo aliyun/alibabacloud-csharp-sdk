@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateSubscriptionResponseBody : TeaModel {
-        /// <summary>
-        /// request id
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateSubscriptionResponseBodyData Data { get; set; }
@@ -24,6 +17,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public long? SubscriptionId { get; set; }
         };
+
+        /// <summary>
+        /// request id
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class CreateProblemRequest : TeaModel {
         /// <summary>
-        /// 故障名称
+        /// 影响服务列表
         /// </summary>
-        [NameInMap("problemName")]
+        [NameInMap("affectServiceIds")]
         [Validation(Required=false)]
-        public string ProblemName { get; set; }
+        public List<long?> AffectServiceIds { get; set; }
 
         /// <summary>
         /// 幂等校验Id
@@ -24,32 +24,18 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// 故障状态  HANDLING 处理中 RECOVERED 已恢复  REPLAYING 复盘中  REPLAYED 已复盘 CANCEL 已取消
+        /// 发现时间 (XXXX-XX-XX 00:00:00)
         /// </summary>
-        [NameInMap("problemStatus")]
+        [NameInMap("discoverTime")]
         [Validation(Required=false)]
-        public string ProblemStatus { get; set; }
+        public string DiscoverTime { get; set; }
 
         /// <summary>
-        /// 故障等级 1=P1 2=P2 3=P3 4=P4
+        /// 事件id
         /// </summary>
-        [NameInMap("problemLevel")]
+        [NameInMap("incidentId")]
         [Validation(Required=false)]
-        public string ProblemLevel { get; set; }
-
-        /// <summary>
-        /// 进展摘要
-        /// </summary>
-        [NameInMap("progressSummary")]
-        [Validation(Required=false)]
-        public string ProgressSummary { get; set; }
-
-        /// <summary>
-        /// 所属服务
-        /// </summary>
-        [NameInMap("relatedServiceId")]
-        [Validation(Required=false)]
-        public long? RelatedServiceId { get; set; }
+        public long? IncidentId { get; set; }
 
         /// <summary>
         /// 主要处理人
@@ -66,11 +52,39 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string PreliminaryReason { get; set; }
 
         /// <summary>
-        /// 发现时间 (XXXX-XX-XX 00:00:00)
+        /// 故障等级 1=P1 2=P2 3=P3 4=P4
         /// </summary>
-        [NameInMap("discoverTime")]
+        [NameInMap("problemLevel")]
         [Validation(Required=false)]
-        public string DiscoverTime { get; set; }
+        public string ProblemLevel { get; set; }
+
+        /// <summary>
+        /// 故障名称
+        /// </summary>
+        [NameInMap("problemName")]
+        [Validation(Required=false)]
+        public string ProblemName { get; set; }
+
+        /// <summary>
+        /// 通告类型
+        /// </summary>
+        [NameInMap("problemNotifyType")]
+        [Validation(Required=false)]
+        public string ProblemNotifyType { get; set; }
+
+        /// <summary>
+        /// 故障状态  HANDLING 处理中 RECOVERED 已恢复  REPLAYING 复盘中  REPLAYED 已复盘 CANCEL 已取消
+        /// </summary>
+        [NameInMap("problemStatus")]
+        [Validation(Required=false)]
+        public string ProblemStatus { get; set; }
+
+        /// <summary>
+        /// 进展摘要
+        /// </summary>
+        [NameInMap("progressSummary")]
+        [Validation(Required=false)]
+        public string ProgressSummary { get; set; }
 
         /// <summary>
         /// 恢复时间
@@ -80,11 +94,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string RecoveryTime { get; set; }
 
         /// <summary>
-        /// 影响服务列表
+        /// 所属服务
         /// </summary>
-        [NameInMap("affectServiceIds")]
+        [NameInMap("relatedServiceId")]
         [Validation(Required=false)]
-        public List<long?> AffectServiceIds { get; set; }
+        public long? RelatedServiceId { get; set; }
 
         /// <summary>
         /// 应急协同组
@@ -92,20 +106,6 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [NameInMap("serviceGroupIds")]
         [Validation(Required=false)]
         public List<long?> ServiceGroupIds { get; set; }
-
-        /// <summary>
-        /// 事件id
-        /// </summary>
-        [NameInMap("incidentId")]
-        [Validation(Required=false)]
-        public long? IncidentId { get; set; }
-
-        /// <summary>
-        /// 通告类型
-        /// </summary>
-        [NameInMap("problemNotifyType")]
-        [Validation(Required=false)]
-        public string ProblemNotifyType { get; set; }
 
     }
 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
 {
     public class FinishIncidentRequest : TeaModel {
         /// <summary>
-        /// 事件ID数组
+        /// 幂等校验Id
         /// </summary>
-        [NameInMap("incidentIds")]
+        [NameInMap("clientToken")]
         [Validation(Required=false)]
-        public List<long?> IncidentIds { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// 完结原因
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string IncidentFinishSolutionDescription { get; set; }
 
         /// <summary>
-        /// 幂等校验Id
+        /// 事件ID数组
         /// </summary>
-        [NameInMap("clientToken")]
+        [NameInMap("incidentIds")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public List<long?> IncidentIds { get; set; }
 
     }
 
