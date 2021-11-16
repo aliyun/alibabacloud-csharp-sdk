@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeTemplatesRequest : TeaModel {
         /// <summary>
-        /// 模板类型，部署模板类型，目前一共有2种类型，取值为：kubernetes或compose。
-        /// </summary>
-        [NameInMap("template_type")]
-        [Validation(Required=false)]
-        public string TemplateType { get; set; }
-
-        /// <summary>
         /// 对查询结果进行分页处理，指定返回第几页的数据。  默认值为 1
         /// </summary>
         [NameInMap("page_num")]
@@ -29,6 +22,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// 模板类型，部署模板类型，目前一共有2种类型，取值为：kubernetes或compose。
+        /// </summary>
+        [NameInMap("template_type")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
 
     }
 

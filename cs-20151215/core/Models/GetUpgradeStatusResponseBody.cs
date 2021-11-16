@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public GetUpgradeStatusResponseBodyUpgradeTask UpgradeTask { get; set; }
         public class GetUpgradeStatusResponseBodyUpgradeTask : TeaModel {
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
             [NameInMap("message")]
             [Validation(Required=false)]
             public string Message { get; set; }
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
         };
 
     }

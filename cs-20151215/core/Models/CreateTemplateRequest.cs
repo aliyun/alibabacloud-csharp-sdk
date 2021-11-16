@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateTemplateRequest : TeaModel {
         /// <summary>
+        /// 模板描述。
+        /// </summary>
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        /// <summary>
         /// 模板名称。
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        /// <summary>
-        /// YAML格式的模板内容。
-        /// </summary>
-        [NameInMap("template")]
-        [Validation(Required=false)]
-        public string Template { get; set; }
 
         /// <summary>
         /// 模板标签。
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// 模板描述。
+        /// YAML格式的模板内容。
         /// </summary>
-        [NameInMap("description")]
+        [NameInMap("template")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Template { get; set; }
 
         /// <summary>
         /// 模板类型。默认值：kubernetes

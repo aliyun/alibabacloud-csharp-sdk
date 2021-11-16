@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAttachScriptsRequest : TeaModel {
         /// <summary>
-        /// 节点池ID。将节点加入指定节点池。
+        /// 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
         /// </summary>
-        [NameInMap("nodepool_id")]
+        [NameInMap("arch")]
         [Validation(Required=false)]
-        public string NodepoolId { get; set; }
+        public string Arch { get; set; }
 
         /// <summary>
         /// 数据盘挂载
@@ -31,18 +31,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// RDS白名单
+        /// 节点池ID。将节点加入指定节点池。
         /// </summary>
-        [NameInMap("rds_instances")]
+        [NameInMap("nodepool_id")]
         [Validation(Required=false)]
-        public List<string> RdsInstances { get; set; }
-
-        /// <summary>
-        /// 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
-        /// </summary>
-        [NameInMap("arch")]
-        [Validation(Required=false)]
-        public string Arch { get; set; }
+        public string NodepoolId { get; set; }
 
         /// <summary>
         /// 边缘托管版集群节点的接入配置。
@@ -50,6 +43,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("options")]
         [Validation(Required=false)]
         public string Options { get; set; }
+
+        /// <summary>
+        /// RDS白名单
+        /// </summary>
+        [NameInMap("rds_instances")]
+        [Validation(Required=false)]
+        public List<string> RdsInstances { get; set; }
 
     }
 

@@ -143,18 +143,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// ECS运行状态，例如：Running。
-            /// </summary>
-            [NameInMap("state")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-
-            /// <summary>
             /// 抢占时实例类型
             /// </summary>
             [NameInMap("spot_strategy")]
             [Validation(Required=false)]
             public string SpotStrategy { get; set; }
+
+            /// <summary>
+            /// ECS运行状态，例如：Running。
+            /// </summary>
+            [NameInMap("state")]
+            [Validation(Required=false)]
+            public string State { get; set; }
 
         }
 

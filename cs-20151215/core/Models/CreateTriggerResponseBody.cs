@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateTriggerResponseBody : TeaModel {
         /// <summary>
-        /// 触发器ID。
+        /// 触发器行为。
         /// </summary>
-        [NameInMap("id")]
+        [NameInMap("action")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string Action { get; set; }
 
         /// <summary>
         /// 集群ID。
@@ -22,6 +22,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        /// <summary>
+        /// 触发器ID。
+        /// </summary>
+        [NameInMap("id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         /// <summary>
         /// 触发器项目名称。
@@ -36,13 +43,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        /// <summary>
-        /// 触发器行为。
-        /// </summary>
-        [NameInMap("action")]
-        [Validation(Required=false)]
-        public string Action { get; set; }
 
     }
 

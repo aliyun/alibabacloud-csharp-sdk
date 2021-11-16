@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// 节点状态。默认值：all。
+        /// 分页数量
         /// </summary>
-        [NameInMap("state")]
+        [NameInMap("pageNumber")]
         [Validation(Required=false)]
-        public string State { get; set; }
+        public string PageNumber { get; set; }
 
         /// <summary>
         /// 每页大小。
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// 分页数量
+        /// 节点状态。默认值：all。
         /// </summary>
-        [NameInMap("pageNumber")]
+        [NameInMap("state")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public string State { get; set; }
 
     }
 

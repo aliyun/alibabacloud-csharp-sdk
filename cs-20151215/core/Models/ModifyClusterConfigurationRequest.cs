@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<ModifyClusterConfigurationRequestCustomizeConfig> CustomizeConfig { get; set; }
         public class ModifyClusterConfigurationRequestCustomizeConfig : TeaModel {
             /// <summary>
-            /// 组件名称。
-            /// </summary>
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            /// <summary>
             /// 组件配置。
             /// </summary>
             [NameInMap("configs")]
@@ -45,6 +38,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Value { get; set; }
 
             }
+
+            /// <summary>
+            /// 组件名称。
+            /// </summary>
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
         }
 

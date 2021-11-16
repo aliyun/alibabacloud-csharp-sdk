@@ -70,6 +70,54 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         };
 
         /// <summary>
+        /// 托管版节点池配置。
+        /// </summary>
+        [NameInMap("management")]
+        [Validation(Required=false)]
+        public DescribeClusterNodePoolDetailResponseBodyManagement Management { get; set; }
+        public class DescribeClusterNodePoolDetailResponseBodyManagement : TeaModel {
+            [NameInMap("auto_repair")]
+            [Validation(Required=false)]
+            public bool? AutoRepair { get; set; }
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+            [NameInMap("upgrade_config")]
+            [Validation(Required=false)]
+            public DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig UpgradeConfig { get; set; }
+            public class DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig : TeaModel {
+                /// <summary>
+                /// 是否启用自动升级，自修复。
+                /// </summary>
+                [NameInMap("auto_upgrade")]
+                [Validation(Required=false)]
+                public bool? AutoUpgrade { get; set; }
+
+                /// <summary>
+                /// 最大不可用节点数量。
+                /// </summary>
+                [NameInMap("max_unavailable")]
+                [Validation(Required=false)]
+                public long? MaxUnavailable { get; set; }
+
+                /// <summary>
+                /// 额外节点数量。
+                /// </summary>
+                [NameInMap("surge")]
+                [Validation(Required=false)]
+                public long? Surge { get; set; }
+
+                /// <summary>
+                /// 额外节点比例， 和surge 二选一。
+                /// </summary>
+                [NameInMap("surge_percentage")]
+                [Validation(Required=false)]
+                public long? SurgePercentage { get; set; }
+
+            }
+        };
+
+        /// <summary>
         /// 节点池详情。
         /// </summary>
         [NameInMap("nodepool_info")]
@@ -115,6 +163,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_renew_period")]
             [Validation(Required=false)]
             public long? AutoRenewPeriod { get; set; }
+            [NameInMap("compensate_with_on_demand")]
+            [Validation(Required=false)]
+            public bool? CompensateWithOnDemand { get; set; }
             [NameInMap("data_disks")]
             [Validation(Required=false)]
             public List<string> DataDisks { get; set; }
@@ -127,6 +178,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("instance_types")]
             [Validation(Required=false)]
             public List<string> InstanceTypes { get; set; }
+            [NameInMap("internet_charge_type")]
+            [Validation(Required=false)]
+            public string InternetChargeType { get; set; }
+            [NameInMap("internet_max_bandwidth_out")]
+            [Validation(Required=false)]
+            public long? InternetMaxBandwidthOut { get; set; }
+            [NameInMap("key_pair")]
+            [Validation(Required=false)]
+            public string KeyPair { get; set; }
+            [NameInMap("login_password")]
+            [Validation(Required=false)]
+            public string LoginPassword { get; set; }
             [NameInMap("multi_az_policy")]
             [Validation(Required=false)]
             public string MultiAzPolicy { get; set; }
@@ -136,15 +199,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("on_demand_percentage_above_base_capacity")]
             [Validation(Required=false)]
             public long? OnDemandPercentageAboveBaseCapacity { get; set; }
-            [NameInMap("spot_instance_pools")]
-            [Validation(Required=false)]
-            public long? SpotInstancePools { get; set; }
-            [NameInMap("spot_instance_remedy")]
-            [Validation(Required=false)]
-            public bool? SpotInstanceRemedy { get; set; }
-            [NameInMap("compensate_with_on_demand")]
-            [Validation(Required=false)]
-            public bool? CompensateWithOnDemand { get; set; }
             [NameInMap("period")]
             [Validation(Required=false)]
             public long? Period { get; set; }
@@ -157,16 +211,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("ram_policy")]
             [Validation(Required=false)]
             public string RamPolicy { get; set; }
-            [NameInMap("spot_strategy")]
-            [Validation(Required=false)]
-            public string SpotStrategy { get; set; }
-            [NameInMap("spot_price_limit")]
-            [Validation(Required=false)]
-            public List<DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit> SpotPriceLimit { get; set; }
-            public class DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit : TeaModel {
-                public string InstanceType { get; set; }
-                public string PriceLimit { get; set; }
-            }
             [NameInMap("rds_instances")]
             [Validation(Required=false)]
             public List<string> RdsInstances { get; set; }
@@ -179,9 +223,31 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("security_group_id")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
+            [NameInMap("security_group_ids")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupIds { get; set; }
+            [NameInMap("spot_instance_pools")]
+            [Validation(Required=false)]
+            public long? SpotInstancePools { get; set; }
+            [NameInMap("spot_instance_remedy")]
+            [Validation(Required=false)]
+            public bool? SpotInstanceRemedy { get; set; }
+            [NameInMap("spot_price_limit")]
+            [Validation(Required=false)]
+            public List<DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit> SpotPriceLimit { get; set; }
+            public class DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit : TeaModel {
+                public string InstanceType { get; set; }
+                public string PriceLimit { get; set; }
+            }
+            [NameInMap("spot_strategy")]
+            [Validation(Required=false)]
+            public string SpotStrategy { get; set; }
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
+            [NameInMap("system_disk_performance_level")]
+            [Validation(Required=false)]
+            public string SystemDiskPerformanceLevel { get; set; }
             [NameInMap("system_disk_size")]
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
@@ -191,18 +257,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]
             public List<string> VswitchIds { get; set; }
-            [NameInMap("login_password")]
-            [Validation(Required=false)]
-            public string LoginPassword { get; set; }
-            [NameInMap("key_pair")]
-            [Validation(Required=false)]
-            public string KeyPair { get; set; }
-            [NameInMap("internet_charge_type")]
-            [Validation(Required=false)]
-            public string InternetChargeType { get; set; }
-            [NameInMap("internet_max_bandwidth_out")]
-            [Validation(Required=false)]
-            public long? InternetMaxBandwidthOut { get; set; }
         };
 
         /// <summary>
@@ -248,54 +302,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("tee_enable")]
             [Validation(Required=false)]
             public bool? TeeEnable { get; set; }
-        };
-
-        /// <summary>
-        /// 托管版节点池配置。
-        /// </summary>
-        [NameInMap("management")]
-        [Validation(Required=false)]
-        public DescribeClusterNodePoolDetailResponseBodyManagement Management { get; set; }
-        public class DescribeClusterNodePoolDetailResponseBodyManagement : TeaModel {
-            [NameInMap("enable")]
-            [Validation(Required=false)]
-            public bool? Enable { get; set; }
-            [NameInMap("auto_repair")]
-            [Validation(Required=false)]
-            public bool? AutoRepair { get; set; }
-            [NameInMap("upgrade_config")]
-            [Validation(Required=false)]
-            public DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig UpgradeConfig { get; set; }
-            public class DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig : TeaModel {
-                /// <summary>
-                /// 是否启用自动升级，自修复。
-                /// </summary>
-                [NameInMap("auto_upgrade")]
-                [Validation(Required=false)]
-                public bool? AutoUpgrade { get; set; }
-
-                /// <summary>
-                /// 额外节点数量。
-                /// </summary>
-                [NameInMap("surge")]
-                [Validation(Required=false)]
-                public long? Surge { get; set; }
-
-                /// <summary>
-                /// 额外节点比例， 和surge 二选一。
-                /// </summary>
-                [NameInMap("surge_percentage")]
-                [Validation(Required=false)]
-                public long? SurgePercentage { get; set; }
-
-                /// <summary>
-                /// 最大不可用节点数量。
-                /// </summary>
-                [NameInMap("max_unavailable")]
-                [Validation(Required=false)]
-                public long? MaxUnavailable { get; set; }
-
-            }
         };
 
     }

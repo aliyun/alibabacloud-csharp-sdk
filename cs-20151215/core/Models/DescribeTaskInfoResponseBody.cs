@@ -17,25 +17,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 任务ID。
-        /// </summary>
-        [NameInMap("task_id")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
-        /// <summary>
         /// 任务创建时间。
         /// </summary>
         [NameInMap("created")]
         [Validation(Required=false)]
         public string Created { get; set; }
-
-        /// <summary>
-        /// 任务更新时间。
-        /// </summary>
-        [NameInMap("updated")]
-        [Validation(Required=false)]
-        public string Updated { get; set; }
 
         /// <summary>
         /// 任务当前状态。
@@ -45,11 +31,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// 当前任务类型。
+        /// 任务ID。
         /// </summary>
-        [NameInMap("task_type")]
+        [NameInMap("task_id")]
         [Validation(Required=false)]
-        public string TaskType { get; set; }
+        public string TaskId { get; set; }
 
         /// <summary>
         /// 任务执行详情。
@@ -73,6 +59,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Status { get; set; }
 
         }
+
+        /// <summary>
+        /// 当前任务类型。
+        /// </summary>
+        [NameInMap("task_type")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
+
+        /// <summary>
+        /// 任务更新时间。
+        /// </summary>
+        [NameInMap("updated")]
+        [Validation(Required=false)]
+        public string Updated { get; set; }
 
     }
 

@@ -31,6 +31,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsCustom { get; set; }
 
             /// <summary>
+            /// 是否是 RAM 角色授权
+            /// </summary>
+            [NameInMap("is_ram_role")]
+            [Validation(Required=false)]
+            public bool? IsRamRole { get; set; }
+
+            /// <summary>
+            /// 命名空间名称
+            /// </summary>
+            [NameInMap("namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
+            /// <summary>
             /// 预置的角色名称
             /// </summary>
             [NameInMap("role_name")]
@@ -43,20 +57,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("role_type")]
             [Validation(Required=false)]
             public string RoleType { get; set; }
-
-            /// <summary>
-            /// 命名空间名称
-            /// </summary>
-            [NameInMap("namespace")]
-            [Validation(Required=false)]
-            public string Namespace { get; set; }
-
-            /// <summary>
-            /// 是否是 RAM 角色授权
-            /// </summary>
-            [NameInMap("is_ram_role")]
-            [Validation(Required=false)]
-            public bool? IsRamRole { get; set; }
 
         }
 

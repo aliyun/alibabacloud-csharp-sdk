@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<InstallClusterAddonsRequestBody> Body { get; set; }
         public class InstallClusterAddonsRequestBody : TeaModel {
             /// <summary>
+            /// 组件配置信息。
+            /// </summary>
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+
+            /// <summary>
             /// 组件名称。
             /// </summary>
             [NameInMap("name")]
@@ -29,13 +36,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
-
-            /// <summary>
-            /// 组件配置信息。
-            /// </summary>
-            [NameInMap("config")]
-            [Validation(Required=false)]
-            public string Config { get; set; }
 
         }
 

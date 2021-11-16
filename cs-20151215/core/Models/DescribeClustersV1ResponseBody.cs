@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
+            /// 托管版集群类型，面向托管集群。 • ack.pro.small：专业托管集群。 • ack.standard ：标准托管集群。
+            /// </summary>
+            [NameInMap("cluster_spec")]
+            [Validation(Required=false)]
+            public string ClusterSpec { get; set; }
+
+            /// <summary>
             /// 集群类型。
             /// </summary>
             [NameInMap("cluster_type")]
@@ -38,25 +45,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// 集群初始化版本。
-            /// </summary>
-            [NameInMap("init_version")]
-            [Validation(Required=false)]
-            public string InitVersion { get; set; }
-
-            /// <summary>
             /// 集群当前版本。
             /// </summary>
             [NameInMap("current_version")]
             [Validation(Required=false)]
             public string CurrentVersion { get; set; }
-
-            /// <summary>
-            /// 集群可升级版本。
-            /// </summary>
-            [NameInMap("next_version")]
-            [Validation(Required=false)]
-            public string NextVersion { get; set; }
 
             /// <summary>
             /// 集群是否开启删除保护。
@@ -78,6 +71,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("external_loadbalancer_id")]
             [Validation(Required=false)]
             public string ExternalLoadbalancerId { get; set; }
+
+            /// <summary>
+            /// 集群初始化版本。
+            /// </summary>
+            [NameInMap("init_version")]
+            [Validation(Required=false)]
+            public string InitVersion { get; set; }
+
+            [NameInMap("maintenance_window")]
+            [Validation(Required=false)]
+            public MaintenanceWindow MaintenanceWindow { get; set; }
 
             /// <summary>
             /// 集群访问地址列表。
@@ -106,6 +110,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("network_mode")]
             [Validation(Required=false)]
             public string NetworkMode { get; set; }
+
+            /// <summary>
+            /// 集群可升级版本。
+            /// </summary>
+            [NameInMap("next_version")]
+            [Validation(Required=false)]
+            public string NextVersion { get; set; }
 
             /// <summary>
             /// 集群是否开启Private Zone。
@@ -204,17 +215,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("zone_id")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
-
-            /// <summary>
-            /// 托管版集群类型，面向托管集群。 • ack.pro.small：专业托管集群。 • ack.standard ：标准托管集群。
-            /// </summary>
-            [NameInMap("cluster_spec")]
-            [Validation(Required=false)]
-            public string ClusterSpec { get; set; }
-
-            [NameInMap("maintenance_window")]
-            [Validation(Required=false)]
-            public MaintenanceWindow MaintenanceWindow { get; set; }
 
         }
 

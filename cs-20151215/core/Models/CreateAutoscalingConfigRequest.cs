@@ -17,20 +17,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CoolDownDuration { get; set; }
 
         /// <summary>
-        /// 缩容触发时延，节点缩容时需要连续满足触发时延所设定的时间，方可进行缩容
-        /// </summary>
-        [NameInMap("unneeded_duration")]
-        [Validation(Required=false)]
-        public string UnneededDuration { get; set; }
-
-        /// <summary>
-        /// 缩容阈值，节点上 Request 的资源与总资源量的比值
-        /// </summary>
-        [NameInMap("utilization_threshold")]
-        [Validation(Required=false)]
-        public string UtilizationThreshold { get; set; }
-
-        /// <summary>
         /// GPU缩容阈值，节点上 Request 的资源与总资源量的比值
         /// </summary>
         [NameInMap("gpu_utilization_threshold")]
@@ -43,6 +29,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("scan_interval")]
         [Validation(Required=false)]
         public string ScanInterval { get; set; }
+
+        /// <summary>
+        /// 缩容触发时延，节点缩容时需要连续满足触发时延所设定的时间，方可进行缩容
+        /// </summary>
+        [NameInMap("unneeded_duration")]
+        [Validation(Required=false)]
+        public string UnneededDuration { get; set; }
+
+        /// <summary>
+        /// 缩容阈值，节点上 Request 的资源与总资源量的比值
+        /// </summary>
+        [NameInMap("utilization_threshold")]
+        [Validation(Required=false)]
+        public string UtilizationThreshold { get; set; }
 
     }
 

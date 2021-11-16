@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeTriggerRequest : TeaModel {
         /// <summary>
+        /// 应用名称。
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 应用所属命名空间。
         /// </summary>
         [NameInMap("Namespace")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        /// <summary>
-        /// 应用名称。
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
 
         /// <summary>
         /// 触发器行为。

@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// 事件类型
+        /// 没页记录数量
         /// </summary>
-        [NameInMap("type")]
+        [NameInMap("page_number")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public long? PageNumber { get; set; }
 
         /// <summary>
         /// 页数
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// 没页记录数量
+        /// 事件类型
         /// </summary>
-        [NameInMap("page_number")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public long? PageNumber { get; set; }
+        public string Type { get; set; }
 
     }
 

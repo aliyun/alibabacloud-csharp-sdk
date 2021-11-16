@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeKubernetesVersionMetadataRequest : TeaModel {
         /// <summary>
-        /// 地域ID。
-        /// </summary>
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
-        /// <summary>
         /// 集群类型。
         /// </summary>
         [NameInMap("ClusterType")]
@@ -36,6 +29,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public string Profile { get; set; }
+
+        /// <summary>
+        /// 地域ID。
+        /// </summary>
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
     }
 

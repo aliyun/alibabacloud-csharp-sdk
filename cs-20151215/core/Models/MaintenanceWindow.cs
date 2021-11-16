@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class MaintenanceWindow : TeaModel {
         /// <summary>
+        /// 维护时长。取值范围1～24，单位为小时。 默认值：3h。
+        /// </summary>
+        [NameInMap("duration")]
+        [Validation(Required=false)]
+        public string Duration { get; set; }
+
+        /// <summary>
         /// 是否开启维护窗口。默认值false。
         /// </summary>
         [NameInMap("enable")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("maintenance_time")]
         [Validation(Required=false)]
         public string MaintenanceTime { get; set; }
-
-        /// <summary>
-        /// 维护时长。取值范围1～24，单位为小时。 默认值：3h。
-        /// </summary>
-        [NameInMap("duration")]
-        [Validation(Required=false)]
-        public string Duration { get; set; }
 
         /// <summary>
         /// 维护周期。取值范围为:Monday~Sunday，多个值用逗号分隔。 默认值：Thursday。

@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// 工作流名称。
-            /// </summary>
-            [NameInMap("job_name")]
-            [Validation(Required=false)]
-            public string JobName { get; set; }
-
-            /// <summary>
             /// 工作流创建时间。
             /// </summary>
             [NameInMap("create_time")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            /// <summary>
+            /// 工作流名称。
+            /// </summary>
+            [NameInMap("job_name")]
+            [Validation(Required=false)]
+            public string JobName { get; set; }
 
         }
 

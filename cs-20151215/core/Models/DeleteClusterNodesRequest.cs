@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// 是否同时释放 ECS
-        /// </summary>
-        [NameInMap("release_node")]
-        [Validation(Required=false)]
-        public bool? ReleaseNode { get; set; }
-
-        /// <summary>
         /// 移除节点列表。
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
         public List<string> Nodes { get; set; }
+
+        /// <summary>
+        /// 是否同时释放 ECS
+        /// </summary>
+        [NameInMap("release_node")]
+        [Validation(Required=false)]
+        public bool? ReleaseNode { get; set; }
 
     }
 

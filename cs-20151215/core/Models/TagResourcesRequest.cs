@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// 资源所属的地域ID
+        /// </summary>
+        [NameInMap("region_id")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
         /// 资源ID列表
         /// </summary>
         [NameInMap("resource_ids")]
@@ -22,13 +29,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("resource_type")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        /// <summary>
-        /// 资源所属的地域ID
-        /// </summary>
-        [NameInMap("region_id")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         /// <summary>
         /// 资源的标签键值对。数组长度范围：1~20。一旦传值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
