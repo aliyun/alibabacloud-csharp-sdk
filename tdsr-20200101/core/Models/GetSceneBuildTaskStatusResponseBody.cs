@@ -31,13 +31,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// 任务ID
-        /// </summary>
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        /// <summary>
         /// 错误消息
         /// </summary>
         [NameInMap("Message")]
@@ -59,7 +52,7 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// 未开始  init 处理中 失败     failure   processing  完成     succeed 取消     canceled
+        /// 未开始  init 处理中 失败     failed   processing  完成     succeed 取消     canceled
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -71,13 +64,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        /// <summary>
-        /// 墙线预测: wall_line  切图: cut_image  重建: build  直角优化：right_angle_optimization 其他：other
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
     }
 

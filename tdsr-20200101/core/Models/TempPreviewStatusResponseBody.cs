@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// processing：处理中 success：成功 failed：失败
+        /// 状态标识
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

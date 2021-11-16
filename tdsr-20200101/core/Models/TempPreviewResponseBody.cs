@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// 任务ID
-        /// </summary>
-        [NameInMap("Key")]
-        [Validation(Required=false)]
-        public string Key { get; set; }
-
-        /// <summary>
         /// 错误消息
         /// </summary>
         [NameInMap("Message")]
@@ -43,6 +36,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 场景ID
+        /// </summary>
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public string SceneId { get; set; }
 
         /// <summary>
         /// 是否请求成功

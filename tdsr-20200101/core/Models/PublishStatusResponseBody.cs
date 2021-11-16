@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
-    public class GetJobResponseBody : TeaModel {
+    public class PublishStatusResponseBody : TeaModel {
         /// <summary>
         /// 返回码
         /// </summary>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? Status { get; set; }
+        public string Status { get; set; }
 
         /// <summary>
         /// 是否请求成功
