@@ -3367,6 +3367,84 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAlternativeSnapshotReposResponse>(await DoROARequestAsync("ListAlternativeSnapshotRepos", "2017-06-13", "HTTPS", "GET", "AK", "/openapi/instances/" + InstanceId + "/alternative-snapshot-repos", "json", req, runtime));
         }
 
+        public ListApmResponse ListApm(ListApmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListApmWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListApmResponse> ListApmAsync(ListApmRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListApmWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListApmResponse ListApmWithOptions(ListApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<ListApmResponse>(DoROARequest("ListApm", "2017-06-13", "HTTPS", "GET", "AK", "/openapi/apm", "json", req, runtime));
+        }
+
+        public async Task<ListApmResponse> ListApmWithOptionsAsync(ListApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                query["output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            return TeaModel.ToObject<ListApmResponse>(await DoROARequestAsync("ListApm", "2017-06-13", "HTTPS", "GET", "AK", "/openapi/apm", "json", req, runtime));
+        }
+
         public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIds(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7235,31 +7313,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputES))
             {
-                query["outputES"] = request.OutputES;
+                body["outputES"] = request.OutputES;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputESPassword))
             {
-                query["outputESPassword"] = request.OutputESPassword;
+                body["outputESPassword"] = request.OutputESPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputESUserName))
             {
-                query["outputESUserName"] = request.OutputESUserName;
+                body["outputESUserName"] = request.OutputESUserName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
-                query["token"] = request.Token;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Yml))
-            {
-                query["yml"] = request.Yml;
+                body["token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateApmResponse>(DoROARequest("UpdateApm", "2017-06-13", "HTTPS", "PUT", "AK", "/openapi/apm/" + instanceId, "json", req, runtime));
         }
@@ -7268,31 +7346,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             instanceId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputES))
             {
-                query["outputES"] = request.OutputES;
+                body["outputES"] = request.OutputES;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputESPassword))
             {
-                query["outputESPassword"] = request.OutputESPassword;
+                body["outputESPassword"] = request.OutputESPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputESUserName))
             {
-                query["outputESUserName"] = request.OutputESUserName;
+                body["outputESUserName"] = request.OutputESUserName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
-                query["token"] = request.Token;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Yml))
-            {
-                query["yml"] = request.Yml;
+                body["token"] = request.Token;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             return TeaModel.ToObject<UpdateApmResponse>(await DoROARequestAsync("UpdateApm", "2017-06-13", "HTTPS", "PUT", "AK", "/openapi/apm/" + instanceId, "json", req, runtime));
         }
