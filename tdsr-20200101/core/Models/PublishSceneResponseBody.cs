@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// 任务实例id
-        /// </summary>
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        /// <summary>
         /// 错误消息
         /// </summary>
         [NameInMap("Message")]
