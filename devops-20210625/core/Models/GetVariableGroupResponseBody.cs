@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetVariableGroupResponseBody : TeaModel {
         /// <summary>
-        /// 请求id，每次请求都是唯一值，便于后续排查问题
+        /// 错误码
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ErrorCode { get; set; }
 
         /// <summary>
         /// 错误信息
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 错误码
+        /// 请求id，每次请求都是唯一值，便于后续排查问题
         /// </summary>
-        [NameInMap("errorCode")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// true 接口调用成功，false 接口调用失败
@@ -47,12 +47,12 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("ccreatorAccountId")]
             [Validation(Required=false)]
             public string CcreatorAccountId { get; set; }
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-            [NameInMap("updateTime")]
-            [Validation(Required=false)]
-            public long? UpdateTime { get; set; }
             [NameInMap("id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -69,17 +69,17 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 public long? Id { get; set; }
                 public string Name { get; set; }
             }
+            [NameInMap("updateTime")]
+            [Validation(Required=false)]
+            public long? UpdateTime { get; set; }
             [NameInMap("variables")]
             [Validation(Required=false)]
             public List<GetVariableGroupResponseBodyVariableGroupVariables> Variables { get; set; }
             public class GetVariableGroupResponseBodyVariableGroupVariables : TeaModel {
-                public string Value { get; set; }
-                public string Name { get; set; }
                 public bool? IsEncrypted { get; set; }
+                public string Name { get; set; }
+                public string Value { get; set; }
             }
-            [NameInMap("createTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
         };
 
     }

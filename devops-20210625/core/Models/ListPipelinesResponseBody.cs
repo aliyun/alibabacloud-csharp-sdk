@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListPipelinesResponseBody : TeaModel {
         /// <summary>
-        /// 请求id，每次请求都是唯一值，便于后续排查问题
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 错误信息
-        /// </summary>
-        [NameInMap("errorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        /// <summary>
         /// 错误码
         /// </summary>
         [NameInMap("errorCode")]
@@ -31,18 +17,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// true 接口调用成功，false 接口调用失败
+        /// 错误信息
         /// </summary>
-        [NameInMap("success")]
+        [NameInMap("errorMessage")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
-        /// 总数
-        /// </summary>
-        [NameInMap("totalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public string ErrorMessage { get; set; }
 
         /// <summary>
         /// 分页Token
@@ -59,20 +38,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public List<ListPipelinesResponseBodyPipelines> Pipelines { get; set; }
         public class ListPipelinesResponseBodyPipelines : TeaModel {
             /// <summary>
-            /// 流水线名称
-            /// </summary>
-            [NameInMap("pipelineName")]
-            [Validation(Required=false)]
-            public string PipelineName { get; set; }
-
-            /// <summary>
-            /// 流水线id
-            /// </summary>
-            [NameInMap("pipelineId")]
-            [Validation(Required=false)]
-            public long? PipelineId { get; set; }
-
-            /// <summary>
             /// 创建时间
             /// </summary>
             [NameInMap("createTime")]
@@ -86,7 +51,42 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [Validation(Required=false)]
             public string CreatorAccountId { get; set; }
 
+            /// <summary>
+            /// 流水线id
+            /// </summary>
+            [NameInMap("pipelineId")]
+            [Validation(Required=false)]
+            public long? PipelineId { get; set; }
+
+            /// <summary>
+            /// 流水线名称
+            /// </summary>
+            [NameInMap("pipelineName")]
+            [Validation(Required=false)]
+            public string PipelineName { get; set; }
+
         }
+
+        /// <summary>
+        /// 请求id，每次请求都是唯一值，便于后续排查问题
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// true 接口调用成功，false 接口调用失败
+        /// </summary>
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        /// <summary>
+        /// 总数
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

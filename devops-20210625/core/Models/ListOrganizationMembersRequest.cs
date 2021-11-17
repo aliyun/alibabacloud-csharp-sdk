@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListOrganizationMembersRequest : TeaModel {
-        [NameInMap("organizationMemberName")]
-        [Validation(Required=false)]
-        public string OrganizationMemberName { get; set; }
-
-        [NameInMap("provider")]
-        [Validation(Required=false)]
-        public string Provider { get; set; }
-
         [NameInMap("externUid")]
         [Validation(Required=false)]
         public string ExternUid { get; set; }
-
-        [NameInMap("state")]
-        [Validation(Required=false)]
-        public string State { get; set; }
-
-        [NameInMap("nextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("maxResults")]
-        [Validation(Required=false)]
-        public long? MaxResults { get; set; }
 
         [NameInMap("joinTimeFrom")]
         [Validation(Required=false)]
@@ -40,6 +20,26 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [NameInMap("joinTimeTo")]
         [Validation(Required=false)]
         public long? JoinTimeTo { get; set; }
+
+        [NameInMap("maxResults")]
+        [Validation(Required=false)]
+        public long? MaxResults { get; set; }
+
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("organizationMemberName")]
+        [Validation(Required=false)]
+        public string OrganizationMemberName { get; set; }
+
+        [NameInMap("provider")]
+        [Validation(Required=false)]
+        public string Provider { get; set; }
+
+        [NameInMap("state")]
+        [Validation(Required=false)]
+        public string State { get; set; }
 
     }
 

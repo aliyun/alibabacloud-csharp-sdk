@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class RetryPipelineJobRunResponseBody : TeaModel {
-        [NameInMap("requestId")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ErrorCode { get; set; }
 
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("errorCode")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("success")]
         [Validation(Required=false)]

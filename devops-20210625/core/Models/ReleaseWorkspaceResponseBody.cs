@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ReleaseWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 请求是否成功
-        /// </summary>
-        [NameInMap("success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
         /// 错误码
         /// </summary>
         [NameInMap("errorCode")]
@@ -36,6 +22,20 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 请求是否成功
+        /// </summary>
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

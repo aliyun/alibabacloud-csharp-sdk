@@ -10,27 +10,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListOrganizationMembersResponseBody : TeaModel {
         /// <summary>
-        /// 请求id，每次请求都是唯一值，便于后续排查问题
-        /// </summary>
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 错误信息
-        /// </summary>
-        [NameInMap("errorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        /// <summary>
-        /// true 接口调用成功，false 接口调用失败
-        /// </summary>
-        [NameInMap("success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
-        /// <summary>
         /// 错误码
         /// </summary>
         [NameInMap("errorCode")]
@@ -38,18 +17,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// 分页Token
+        /// 错误信息
         /// </summary>
-        [NameInMap("nextToken")]
+        [NameInMap("errorMessage")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
-        /// 总数
-        /// </summary>
-        [NameInMap("totalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public string ErrorMessage { get; set; }
 
         /// <summary>
         /// 成员列表
@@ -137,18 +109,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             public string OrganizationMemberName { get; set; }
 
             /// <summary>
-            /// 企业角色名字
-            /// </summary>
-            [NameInMap("organizationRoleName")]
-            [Validation(Required=false)]
-            public string OrganizationRoleName { get; set; }
-
-            /// <summary>
             /// 企业角色Id
             /// </summary>
             [NameInMap("organizationRoleId")]
             [Validation(Required=false)]
             public string OrganizationRoleId { get; set; }
+
+            /// <summary>
+            /// 企业角色名字
+            /// </summary>
+            [NameInMap("organizationRoleName")]
+            [Validation(Required=false)]
+            public string OrganizationRoleName { get; set; }
 
             /// <summary>
             /// 用户状态
@@ -158,6 +130,34 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             public string State { get; set; }
 
         }
+
+        /// <summary>
+        /// 分页Token
+        /// </summary>
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// 请求id，每次请求都是唯一值，便于后续排查问题
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// true 接口调用成功，false 接口调用失败
+        /// </summary>
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        /// <summary>
+        /// 总数
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

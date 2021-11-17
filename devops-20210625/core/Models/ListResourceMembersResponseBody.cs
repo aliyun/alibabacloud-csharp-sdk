@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class ListResourceMembersResponseBody : TeaModel {
         /// <summary>
-        /// 请求id，每次请求都是唯一值，便于后续排查问题
+        /// 错误码
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ErrorCode { get; set; }
 
         /// <summary>
         /// 错误信息
@@ -24,18 +24,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        /// <summary>
         /// 请求id，每次请求都是唯一值，便于后续排查问题
         /// </summary>
-        [NameInMap("success")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 成员
@@ -66,6 +59,13 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             public string Username { get; set; }
 
         }
+
+        /// <summary>
+        /// 请求id，每次请求都是唯一值，便于后续排查问题
+        /// </summary>
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

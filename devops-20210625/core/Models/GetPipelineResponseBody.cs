@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class GetPipelineResponseBody : TeaModel {
         /// <summary>
-        /// 请求id，每次请求都是唯一值，便于后续排查问题
+        /// 错误码
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ErrorCode { get; set; }
 
         /// <summary>
         /// 错误信息
@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public GetPipelineResponseBodyPipeline Pipeline { get; set; }
         public class GetPipelineResponseBodyPipeline : TeaModel {
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
             [NameInMap("creatorAccountId")]
             [Validation(Required=false)]
             public string CreatorAccountId { get; set; }
@@ -39,12 +42,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("envName")]
             [Validation(Required=false)]
             public string EnvName { get; set; }
-            [NameInMap("createTime")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-            [NameInMap("updateTime")]
-            [Validation(Required=false)]
-            public long? UpdateTime { get; set; }
             [NameInMap("groupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
@@ -54,13 +51,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-            [NameInMap("tagList")]
-            [Validation(Required=false)]
-            public List<GetPipelineResponseBodyPipelineTagList> TagList { get; set; }
-            public class GetPipelineResponseBodyPipelineTagList : TeaModel {
-                public long? Id { get; set; }
-                public string Name { get; set; }
-            }
             [NameInMap("pipelineConfig")]
             [Validation(Required=false)]
             public GetPipelineResponseBodyPipelinePipelineConfig PipelineConfig { get; set; }
@@ -87,6 +77,63 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                 public List<GetPipelineResponseBodyPipelinePipelineConfigSources> Sources { get; set; }
                 public class GetPipelineResponseBodyPipelinePipelineConfigSources : TeaModel {
                     /// <summary>
+                    /// 代码数据
+                    /// </summary>
+                    [NameInMap("data")]
+                    [Validation(Required=false)]
+                    public GetPipelineResponseBodyPipelinePipelineConfigSourcesData Data { get; set; }
+                    public class GetPipelineResponseBodyPipelinePipelineConfigSourcesData : TeaModel {
+                        [NameInMap("branch")]
+                        [Validation(Required=false)]
+                        public string Branch { get; set; }
+                        [NameInMap("cloneDepth")]
+                        [Validation(Required=false)]
+                        public long? CloneDepth { get; set; }
+                        [NameInMap("credentialId")]
+                        [Validation(Required=false)]
+                        public long? CredentialId { get; set; }
+                        [NameInMap("credentialLabel")]
+                        [Validation(Required=false)]
+                        public string CredentialLabel { get; set; }
+                        [NameInMap("credentialType")]
+                        [Validation(Required=false)]
+                        public string CredentialType { get; set; }
+                        [NameInMap("events")]
+                        [Validation(Required=false)]
+                        public List<string> Events { get; set; }
+                        [NameInMap("isBranchMode")]
+                        [Validation(Required=false)]
+                        public bool? IsBranchMode { get; set; }
+                        [NameInMap("isCloneDepth")]
+                        [Validation(Required=false)]
+                        public bool? IsCloneDepth { get; set; }
+                        [NameInMap("isSubmodule")]
+                        [Validation(Required=false)]
+                        public bool? IsSubmodule { get; set; }
+                        [NameInMap("isTrigger")]
+                        [Validation(Required=false)]
+                        public bool? IsTrigger { get; set; }
+                        [NameInMap("label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+                        [NameInMap("namespace")]
+                        [Validation(Required=false)]
+                        public string Namespace { get; set; }
+                        [NameInMap("repo")]
+                        [Validation(Required=false)]
+                        public string Repo { get; set; }
+                        [NameInMap("serviceConnectionId")]
+                        [Validation(Required=false)]
+                        public long? ServiceConnectionId { get; set; }
+                        [NameInMap("triggerFilter")]
+                        [Validation(Required=false)]
+                        public string TriggerFilter { get; set; }
+                        [NameInMap("webhook")]
+                        [Validation(Required=false)]
+                        public string Webhook { get; set; }
+                    };
+
+                    /// <summary>
                     /// 代码源唯一标识
                     /// </summary>
                     [NameInMap("sign")]
@@ -100,67 +147,27 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
-                    /// <summary>
-                    /// 代码数据
-                    /// </summary>
-                    [NameInMap("data")]
-                    [Validation(Required=false)]
-                    public GetPipelineResponseBodyPipelinePipelineConfigSourcesData Data { get; set; }
-                    public class GetPipelineResponseBodyPipelinePipelineConfigSourcesData : TeaModel {
-                        [NameInMap("branch")]
-                        [Validation(Required=false)]
-                        public string Branch { get; set; }
-                        [NameInMap("serviceConnectionId")]
-                        [Validation(Required=false)]
-                        public long? ServiceConnectionId { get; set; }
-                        [NameInMap("label")]
-                        [Validation(Required=false)]
-                        public string Label { get; set; }
-                        [NameInMap("isTrigger")]
-                        [Validation(Required=false)]
-                        public bool? IsTrigger { get; set; }
-                        [NameInMap("repo")]
-                        [Validation(Required=false)]
-                        public string Repo { get; set; }
-                        [NameInMap("triggerFilter")]
-                        [Validation(Required=false)]
-                        public string TriggerFilter { get; set; }
-                        [NameInMap("webhook")]
-                        [Validation(Required=false)]
-                        public string Webhook { get; set; }
-                        [NameInMap("events")]
-                        [Validation(Required=false)]
-                        public List<string> Events { get; set; }
-                        [NameInMap("isBranchMode")]
-                        [Validation(Required=false)]
-                        public bool? IsBranchMode { get; set; }
-                        [NameInMap("isSubmodule")]
-                        [Validation(Required=false)]
-                        public bool? IsSubmodule { get; set; }
-                        [NameInMap("isCloneDepth")]
-                        [Validation(Required=false)]
-                        public bool? IsCloneDepth { get; set; }
-                        [NameInMap("cloneDepth")]
-                        [Validation(Required=false)]
-                        public long? CloneDepth { get; set; }
-                        [NameInMap("credentialId")]
-                        [Validation(Required=false)]
-                        public long? CredentialId { get; set; }
-                        [NameInMap("credentialType")]
-                        [Validation(Required=false)]
-                        public string CredentialType { get; set; }
-                        [NameInMap("credentialLabel")]
-                        [Validation(Required=false)]
-                        public string CredentialLabel { get; set; }
-                        [NameInMap("namespace")]
-                        [Validation(Required=false)]
-                        public string Namespace { get; set; }
-                    };
-
                 }
 
             }
+            [NameInMap("tagList")]
+            [Validation(Required=false)]
+            public List<GetPipelineResponseBodyPipelineTagList> TagList { get; set; }
+            public class GetPipelineResponseBodyPipelineTagList : TeaModel {
+                public long? Id { get; set; }
+                public string Name { get; set; }
+            }
+            [NameInMap("updateTime")]
+            [Validation(Required=false)]
+            public long? UpdateTime { get; set; }
         };
+
+        /// <summary>
+        /// 请求id，每次请求都是唯一值，便于后续排查问题
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// true 接口调用成功，false 接口调用失败
@@ -168,13 +175,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        /// <summary>
-        /// 错误码
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
 
     }
 

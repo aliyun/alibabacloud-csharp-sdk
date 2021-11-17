@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -9,13 +12,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateHostGroupRequest : TeaModel {
-        [NameInMap("type")]
+        [NameInMap("aliyunRegion")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string AliyunRegion { get; set; }
+
+        [NameInMap("ecsLabelKey")]
+        [Validation(Required=false)]
+        public string EcsLabelKey { get; set; }
+
+        [NameInMap("ecsLabelValue")]
+        [Validation(Required=false)]
+        public string EcsLabelValue { get; set; }
+
+        [NameInMap("ecsType")]
+        [Validation(Required=false)]
+        public string EcsType { get; set; }
 
         [NameInMap("envId")]
         [Validation(Required=false)]
         public string EnvId { get; set; }
+
+        [NameInMap("machineInfos")]
+        [Validation(Required=false)]
+        public string MachineInfos { get; set; }
 
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -29,25 +48,9 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string TagIds { get; set; }
 
-        [NameInMap("ecsType")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public string EcsType { get; set; }
-
-        [NameInMap("ecsLabelKey")]
-        [Validation(Required=false)]
-        public string EcsLabelKey { get; set; }
-
-        [NameInMap("ecsLabelValue")]
-        [Validation(Required=false)]
-        public string EcsLabelValue { get; set; }
-
-        [NameInMap("aliyunRegion")]
-        [Validation(Required=false)]
-        public string AliyunRegion { get; set; }
-
-        [NameInMap("machineInfos")]
-        [Validation(Required=false)]
-        public string MachineInfos { get; set; }
+        public string Type { get; set; }
 
     }
 

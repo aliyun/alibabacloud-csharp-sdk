@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// 工作空间名称
-        /// </summary>
-        [NameInMap("name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 技术栈
-        /// </summary>
-        [NameInMap("workspaceTemplate")]
-        [Validation(Required=false)]
-        public string WorkspaceTemplate { get; set; }
-
-        /// <summary>
         /// 代码来源URL（当前仅支持云效 Codeup 来源）
         /// </summary>
         [NameInMap("codeUrl")]
@@ -45,11 +31,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// 工作空间复用标识，按照"用户+技术栈+代码地址+版本"进行复用 true - 复用 false - 不复用，每次均为新创建
+        /// 工作空间名称
         /// </summary>
-        [NameInMap("reuse")]
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public bool? Reuse { get; set; }
+        public string Name { get; set; }
+
+        /// <summary>
+        /// 请求来源（用于统计，云产品集成时需要传入）
+        /// </summary>
+        [NameInMap("requestFrom")]
+        [Validation(Required=false)]
+        public string RequestFrom { get; set; }
 
         /// <summary>
         /// 资源标识，提供给非标代码源作为空间复用的唯一标识
@@ -59,11 +52,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public string ResourceIdentifier { get; set; }
 
         /// <summary>
-        /// 请求来源（用于统计，云产品集成时需要传入）
+        /// 工作空间复用标识，按照"用户+技术栈+代码地址+版本"进行复用 true - 复用 false - 不复用，每次均为新创建
         /// </summary>
-        [NameInMap("requestFrom")]
+        [NameInMap("reuse")]
         [Validation(Required=false)]
-        public string RequestFrom { get; set; }
+        public bool? Reuse { get; set; }
+
+        /// <summary>
+        /// 技术栈
+        /// </summary>
+        [NameInMap("workspaceTemplate")]
+        [Validation(Required=false)]
+        public string WorkspaceTemplate { get; set; }
 
     }
 

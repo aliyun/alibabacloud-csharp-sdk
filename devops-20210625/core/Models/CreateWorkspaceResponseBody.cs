@@ -10,31 +10,18 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 {
     public class CreateWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// 工作空间信息
+        /// 错误码
         /// </summary>
-        [NameInMap("workspace")]
+        [NameInMap("errorCode")]
         [Validation(Required=false)]
-        public CreateWorkspaceResponseBodyWorkspace Workspace { get; set; }
-        public class CreateWorkspaceResponseBodyWorkspace : TeaModel {
-            [NameInMap("id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("template")]
-            [Validation(Required=false)]
-            public string Template { get; set; }
-            [NameInMap("creator")]
-            [Validation(Required=false)]
-            public string Creator { get; set; }
-            [NameInMap("createTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-        };
+        public string ErrorCode { get; set; }
+
+        /// <summary>
+        /// 错误信息
+        /// </summary>
+        [NameInMap("errorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
 
         /// <summary>
         /// 请求ID
@@ -51,18 +38,31 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// 错误码
+        /// 工作空间信息
         /// </summary>
-        [NameInMap("errorCode")]
+        [NameInMap("workspace")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// 错误信息
-        /// </summary>
-        [NameInMap("errorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
+        public CreateWorkspaceResponseBodyWorkspace Workspace { get; set; }
+        public class CreateWorkspaceResponseBodyWorkspace : TeaModel {
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+            [NameInMap("creator")]
+            [Validation(Required=false)]
+            public string Creator { get; set; }
+            [NameInMap("id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("template")]
+            [Validation(Required=false)]
+            public string Template { get; set; }
+        };
 
     }
 
