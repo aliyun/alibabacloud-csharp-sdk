@@ -25,7 +25,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Type { get; set; }
                 public string VPCId { get; set; }
                 public string VSwitchId { get; set; }
-                public string VpcInstanceId { get; set; }
             }
             [NameInMap("ConnectionString")]
             [Validation(Required=false)]

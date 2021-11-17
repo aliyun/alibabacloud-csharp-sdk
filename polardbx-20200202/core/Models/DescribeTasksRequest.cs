@@ -49,14 +49,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("TaskAction")]
-        [Validation(Required=false)]
-        public string TaskAction { get; set; }
-
     }
 
 }

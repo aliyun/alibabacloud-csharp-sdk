@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBNodeIds { get; set; }
 
+        [NameInMap("DBNodeRole")]
+        [Validation(Required=false)]
+        public string DBNodeRole { get; set; }
+
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }

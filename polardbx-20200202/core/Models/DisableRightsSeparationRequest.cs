@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class UpgradeDBInstanceKernelVersionRequest : TeaModel {
+    public class DisableRightsSeparationRequest : TeaModel {
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
+
+        [NameInMap("DbaAccountName")]
+        [Validation(Required=false)]
+        public string DbaAccountName { get; set; }
+
+        [NameInMap("DbaAccountPassword")]
+        [Validation(Required=false)]
+        public string DbaAccountPassword { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

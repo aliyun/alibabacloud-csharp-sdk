@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class UpgradeDBInstanceKernelVersionRequest : TeaModel {
+    public class ModifyDBInstanceMaintainTimeRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
+
+        [NameInMap("MaintainTime")]
+        [Validation(Required=false)]
+        public string MaintainTime { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
