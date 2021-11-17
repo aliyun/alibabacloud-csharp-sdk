@@ -1885,6 +1885,38 @@ namespace AlibabaCloud.SDK.Drds20190123
             return await DescribeDrdsDbRdsNameListWithOptionsAsync(request, runtime);
         }
 
+        public DescribeDrdsDbSpecAndPriceResponse DescribeDrdsDbSpecAndPriceWithOptions(DescribeDrdsDbSpecAndPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeDrdsDbSpecAndPriceResponse>(DoRPCRequest("DescribeDrdsDbSpecAndPrice", "2019-01-23", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<DescribeDrdsDbSpecAndPriceResponse> DescribeDrdsDbSpecAndPriceWithOptionsAsync(DescribeDrdsDbSpecAndPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<DescribeDrdsDbSpecAndPriceResponse>(await DoRPCRequestAsync("DescribeDrdsDbSpecAndPrice", "2019-01-23", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public DescribeDrdsDbSpecAndPriceResponse DescribeDrdsDbSpecAndPrice(DescribeDrdsDbSpecAndPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDrdsDbSpecAndPriceWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeDrdsDbSpecAndPriceResponse> DescribeDrdsDbSpecAndPriceAsync(DescribeDrdsDbSpecAndPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDrdsDbSpecAndPriceWithOptionsAsync(request, runtime);
+        }
+
         public DescribeDrdsDbTasksResponse DescribeDrdsDbTasksWithOptions(DescribeDrdsDbTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
