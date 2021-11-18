@@ -8,18 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class EnableRightsSeparationResponseBody : TeaModel {
-        [NameInMap("Message")]
+    public class ModifyActiveOperationTasksResponseBody : TeaModel {
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string Ids { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

@@ -8,18 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class ResetAccountPasswordResponseBody : TeaModel {
-        [NameInMap("Message")]
+    public class DescribeActiveOperationTaskCountResponseBody : TeaModel {
+        [NameInMap("NeedPop")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public long? NeedPop { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("TaskCount")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public long? TaskCount { get; set; }
 
     }
 

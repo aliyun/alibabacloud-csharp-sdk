@@ -8,7 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class ModifyDBInstanceMaintainTimeResponseBody : TeaModel {
+    public class CancelActiveOperationTasksResponseBody : TeaModel {
+        [NameInMap("Ids")]
+        [Validation(Required=false)]
+        public string Ids { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

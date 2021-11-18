@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DisableRightsSeparationResponseBody : TeaModel {
-        [NameInMap("Message")]
+    public class DescribeActiveOperationTaskCountRequest : TeaModel {
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string Category { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Product")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Product { get; set; }
 
-        [NameInMap("Success")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RegionId { get; set; }
 
     }
 

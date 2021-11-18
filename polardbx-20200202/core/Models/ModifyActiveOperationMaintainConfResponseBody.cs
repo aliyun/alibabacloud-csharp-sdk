@@ -8,18 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class ModifyAccountPrivilegeResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
+    public class ModifyActiveOperationMaintainConfResponseBody : TeaModel {
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 
