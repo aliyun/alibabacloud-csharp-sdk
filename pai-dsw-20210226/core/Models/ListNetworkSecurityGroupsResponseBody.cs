@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20210226.Models
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
-        public List<List<SecurityGroup>> SecurityGroups { get; set; }
+        public List<SecurityGroup> SecurityGroups { get; set; }
 
     }
 
