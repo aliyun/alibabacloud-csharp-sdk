@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class DialogueRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("ActionKey")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string ActionKey { get; set; }
+
+        [NameInMap("ActionParams")]
+        [Validation(Required=false)]
+        public string ActionParams { get; set; }
 
         [NameInMap("CallId")]
         [Validation(Required=false)]
@@ -20,6 +24,18 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("CallType")]
         [Validation(Required=false)]
         public string CallType { get; set; }
+
+        [NameInMap("CalledNumber")]
+        [Validation(Required=false)]
+        public string CalledNumber { get; set; }
+
+        [NameInMap("CallingNumber")]
+        [Validation(Required=false)]
+        public string CallingNumber { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("ScenarioId")]
         [Validation(Required=false)]
@@ -32,26 +48,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("Utterance")]
         [Validation(Required=false)]
         public string Utterance { get; set; }
-
-        [NameInMap("ActionKey")]
-        [Validation(Required=false)]
-        public string ActionKey { get; set; }
-
-        [NameInMap("ActionParams")]
-        [Validation(Required=false)]
-        public string ActionParams { get; set; }
-
-        [NameInMap("CallingNumber")]
-        [Validation(Required=false)]
-        public string CallingNumber { get; set; }
-
-        [NameInMap("CalledNumber")]
-        [Validation(Required=false)]
-        public string CalledNumber { get; set; }
-
-        [NameInMap("InstanceOwnerId")]
-        [Validation(Required=false)]
-        public long? InstanceOwnerId { get; set; }
 
     }
 

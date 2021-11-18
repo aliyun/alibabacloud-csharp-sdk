@@ -13,21 +13,17 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
         [NameInMap("Phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
-
-        [NameInMap("Email")]
-        [Validation(Required=false)]
-        public string Email { get; set; }
 
         [NameInMap("PrivateOutboundNumberId")]
         [Validation(Required=false)]
@@ -44,6 +40,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("SkillLevel")]
         [Validation(Required=false)]
         public List<int?> SkillLevel { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

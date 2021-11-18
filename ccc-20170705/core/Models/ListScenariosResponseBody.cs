@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListScenariosResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,108 +25,108 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
         [NameInMap("Scenarios")]
         [Validation(Required=false)]
         public List<ListScenariosResponseBodyScenarios> Scenarios { get; set; }
         public class ListScenariosResponseBodyScenarios : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("Description")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public string Description { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("IsTemplate")]
+            [Validation(Required=false)]
+            public bool? IsTemplate { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("Strategy")]
             [Validation(Required=false)]
             public ListScenariosResponseBodyScenariosStrategy Strategy { get; set; }
             public class ListScenariosResponseBodyScenariosStrategy : TeaModel {
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-                [NameInMap("MaxAttemptsPerDay")]
-                [Validation(Required=false)]
-                public int? MaxAttemptsPerDay { get; set; }
-                [NameInMap("WorkingTime")]
-                [Validation(Required=false)]
-                public List<ListScenariosResponseBodyScenariosStrategyWorkingTime> WorkingTime { get; set; }
-                public class ListScenariosResponseBodyScenariosStrategyWorkingTime : TeaModel {
-                    public string EndTime { get; set; }
-                    public string BeginTime { get; set; }
-                }
-                [NameInMap("FollowUpStrategy")]
-                [Validation(Required=false)]
-                public string FollowUpStrategy { get; set; }
-                [NameInMap("EndTime")]
-                [Validation(Required=false)]
-                public long? EndTime { get; set; }
                 [NameInMap("Customized")]
                 [Validation(Required=false)]
                 public string Customized { get; set; }
-                [NameInMap("StartTime")]
+                [NameInMap("Description")]
                 [Validation(Required=false)]
-                public long? StartTime { get; set; }
+                public string Description { get; set; }
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public long? EndTime { get; set; }
+                [NameInMap("FollowUpStrategy")]
+                [Validation(Required=false)]
+                public string FollowUpStrategy { get; set; }
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
                 [NameInMap("IsTemplate")]
                 [Validation(Required=false)]
                 public bool? IsTemplate { get; set; }
+                [NameInMap("MaxAttemptsPerDay")]
+                [Validation(Required=false)]
+                public int? MaxAttemptsPerDay { get; set; }
+                [NameInMap("MinAttemptInterval")]
+                [Validation(Required=false)]
+                public int? MinAttemptInterval { get; set; }
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+                [NameInMap("RepeatBy")]
+                [Validation(Required=false)]
+                public string RepeatBy { get; set; }
                 [NameInMap("RepeatDays")]
                 [Validation(Required=false)]
                 public List<string> RepeatDays { get; set; }
                 [NameInMap("RoutingStrategy")]
                 [Validation(Required=false)]
                 public string RoutingStrategy { get; set; }
-                [NameInMap("Description")]
+                [NameInMap("StartTime")]
                 [Validation(Required=false)]
-                public string Description { get; set; }
-                [NameInMap("MinAttemptInterval")]
+                public long? StartTime { get; set; }
+                [NameInMap("Type")]
                 [Validation(Required=false)]
-                public int? MinAttemptInterval { get; set; }
-                [NameInMap("RepeatBy")]
+                public string Type { get; set; }
+                [NameInMap("WorkingTime")]
                 [Validation(Required=false)]
-                public string RepeatBy { get; set; }
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-                [NameInMap("Id")]
-                [Validation(Required=false)]
-                public string Id { get; set; }
+                public List<ListScenariosResponseBodyScenariosStrategyWorkingTime> WorkingTime { get; set; }
+                public class ListScenariosResponseBodyScenariosStrategyWorkingTime : TeaModel {
+                    public string BeginTime { get; set; }
+                    public string EndTime { get; set; }
+                }
             };
-
-            [NameInMap("IsTemplate")]
-            [Validation(Required=false)]
-            public bool? IsTemplate { get; set; }
-
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
 
             [NameInMap("Surveys")]
             [Validation(Required=false)]
             public List<ListScenariosResponseBodyScenariosSurveys> Surveys { get; set; }
             public class ListScenariosResponseBodyScenariosSurveys : TeaModel {
-                [NameInMap("Round")]
+                [NameInMap("BeebotId")]
                 [Validation(Required=false)]
-                public int? Round { get; set; }
+                public string BeebotId { get; set; }
 
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                [NameInMap("BeebotId")]
+                [NameInMap("Id")]
                 [Validation(Required=false)]
-                public string BeebotId { get; set; }
+                public string Id { get; set; }
 
                 [NameInMap("Intents")]
                 [Validation(Required=false)]
                 public List<ListScenariosResponseBodyScenariosSurveysIntents> Intents { get; set; }
                 public class ListScenariosResponseBodyScenariosSurveysIntents : TeaModel {
-                    [NameInMap("NodeId")]
-                    [Validation(Required=false)]
-                    public string NodeId { get; set; }
-
                     [NameInMap("IntentId")]
                     [Validation(Required=false)]
                     public string IntentId { get; set; }
+
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
+                    public string NodeId { get; set; }
 
                 }
 
@@ -130,11 +138,15 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
-                [NameInMap("Id")]
+                [NameInMap("Round")]
                 [Validation(Required=false)]
-                public string Id { get; set; }
+                public int? Round { get; set; }
 
             }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
             [NameInMap("Variables")]
             [Validation(Required=false)]
@@ -150,19 +162,7 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
 
             }
 
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class GetCallMeasureSummaryReportResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("NumberReports")]
         [Validation(Required=false)]
         public GetCallMeasureSummaryReportResponseBodyNumberReports NumberReports { get; set; }
@@ -25,13 +37,21 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                     [Validation(Required=false)]
                     public int? Day { get; set; }
 
-                    [NameInMap("Year")]
+                    [NameInMap("InboundCount")]
                     [Validation(Required=false)]
-                    public int? Year { get; set; }
+                    public long? InboundCount { get; set; }
 
                     [NameInMap("InboundDurationByMinute")]
                     [Validation(Required=false)]
                     public long? InboundDurationByMinute { get; set; }
+
+                    [NameInMap("Month")]
+                    [Validation(Required=false)]
+                    public int? Month { get; set; }
+
+                    [NameInMap("Number")]
+                    [Validation(Required=false)]
+                    public string Number { get; set; }
 
                     [NameInMap("OutboundCount")]
                     [Validation(Required=false)]
@@ -41,17 +61,9 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                     [Validation(Required=false)]
                     public long? OutboundDurationByMinute { get; set; }
 
-                    [NameInMap("Number")]
+                    [NameInMap("Year")]
                     [Validation(Required=false)]
-                    public string Number { get; set; }
-
-                    [NameInMap("InboundCount")]
-                    [Validation(Required=false)]
-                    public long? InboundCount { get; set; }
-
-                    [NameInMap("Month")]
-                    [Validation(Required=false)]
-                    public int? Month { get; set; }
+                    public int? Year { get; set; }
 
                 }
 
@@ -67,6 +79,14 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public int? TotalCount { get; set; }
         };
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("SummaryReport")]
         [Validation(Required=false)]
         public GetCallMeasureSummaryReportResponseBodySummaryReport SummaryReport { get; set; }
@@ -74,45 +94,25 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             [NameInMap("Day")]
             [Validation(Required=false)]
             public int? Day { get; set; }
-            [NameInMap("Year")]
+            [NameInMap("InboundCount")]
             [Validation(Required=false)]
-            public int? Year { get; set; }
+            public long? InboundCount { get; set; }
             [NameInMap("InboundDurationByMinute")]
             [Validation(Required=false)]
             public long? InboundDurationByMinute { get; set; }
+            [NameInMap("Month")]
+            [Validation(Required=false)]
+            public int? Month { get; set; }
             [NameInMap("OutboundCount")]
             [Validation(Required=false)]
             public long? OutboundCount { get; set; }
             [NameInMap("OutboundDurationByMinute")]
             [Validation(Required=false)]
             public long? OutboundDurationByMinute { get; set; }
-            [NameInMap("InboundCount")]
+            [NameInMap("Year")]
             [Validation(Required=false)]
-            public long? InboundCount { get; set; }
-            [NameInMap("Month")]
-            [Validation(Required=false)]
-            public int? Month { get; set; }
+            public int? Year { get; set; }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

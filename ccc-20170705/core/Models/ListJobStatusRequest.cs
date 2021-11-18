@@ -9,37 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListJobStatusRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("ContactName")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("ScenarioId")]
-        [Validation(Required=false)]
-        public string ScenarioId { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string ContactName { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        [NameInMap("TimeAlignment")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string TimeAlignment { get; set; }
+        public string GroupId { get; set; }
 
-        [NameInMap("ContactName")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ContactName { get; set; }
-
-        [NameInMap("PhoneNumber")]
-        [Validation(Required=false)]
-        public string PhoneNumber { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -48,6 +32,22 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PhoneNumber")]
+        [Validation(Required=false)]
+        public string PhoneNumber { get; set; }
+
+        [NameInMap("ScenarioId")]
+        [Validation(Required=false)]
+        public string ScenarioId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("TimeAlignment")]
+        [Validation(Required=false)]
+        public string TimeAlignment { get; set; }
 
     }
 

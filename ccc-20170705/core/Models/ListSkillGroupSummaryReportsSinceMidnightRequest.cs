@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("SkillGroups")]
-        [Validation(Required=false)]
-        public string SkillGroups { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SkillGroups")]
+        [Validation(Required=false)]
+        public string SkillGroups { get; set; }
 
     }
 

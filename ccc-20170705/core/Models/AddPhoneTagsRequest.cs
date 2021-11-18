@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class AddPhoneTagsRequest : TeaModel {
-        [NameInMap("ServiceTag")]
-        [Validation(Required=false)]
-        public string ServiceTag { get; set; }
-
-        [NameInMap("RegionNameProvince")]
-        [Validation(Required=false)]
-        public string RegionNameProvince { get; set; }
-
-        [NameInMap("RegionNameCity")]
-        [Validation(Required=false)]
-        public string RegionNameCity { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public int? Type { get; set; }
-
         [NameInMap("Concurrency")]
         [Validation(Required=false)]
         public int? Concurrency { get; set; }
@@ -33,17 +17,33 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("PhoneNumberList")]
+        [Validation(Required=false)]
+        public List<string> PhoneNumberList { get; set; }
+
         [NameInMap("Provider")]
         [Validation(Required=false)]
         public string Provider { get; set; }
+
+        [NameInMap("RegionNameCity")]
+        [Validation(Required=false)]
+        public string RegionNameCity { get; set; }
+
+        [NameInMap("RegionNameProvince")]
+        [Validation(Required=false)]
+        public string RegionNameProvince { get; set; }
+
+        [NameInMap("ServiceTag")]
+        [Validation(Required=false)]
+        public string ServiceTag { get; set; }
 
         [NameInMap("SipTag")]
         [Validation(Required=false)]
         public string SipTag { get; set; }
 
-        [NameInMap("PhoneNumberList")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public List<string> PhoneNumberList { get; set; }
+        public int? Type { get; set; }
 
     }
 

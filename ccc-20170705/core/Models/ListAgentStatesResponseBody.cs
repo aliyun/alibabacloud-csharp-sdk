@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListAgentStatesResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -33,22 +25,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public List<ListAgentStatesResponseBodyDataListRealTimeAgentState> RealTimeAgentState { get; set; }
                 public class ListAgentStatesResponseBodyDataListRealTimeAgentState : TeaModel {
-                    [NameInMap("LoginName")]
-                    [Validation(Required=false)]
-                    public string LoginName { get; set; }
-
-                    [NameInMap("Dn")]
-                    [Validation(Required=false)]
-                    public string Dn { get; set; }
-
-                    [NameInMap("StateDuration")]
-                    [Validation(Required=false)]
-                    public string StateDuration { get; set; }
-
-                    [NameInMap("State")]
-                    [Validation(Required=false)]
-                    public string State { get; set; }
-
                     [NameInMap("AgentId")]
                     [Validation(Required=false)]
                     public string AgentId { get; set; }
@@ -57,9 +33,25 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                     [Validation(Required=false)]
                     public string AgentName { get; set; }
 
+                    [NameInMap("Dn")]
+                    [Validation(Required=false)]
+                    public string Dn { get; set; }
+
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
+
+                    [NameInMap("LoginName")]
+                    [Validation(Required=false)]
+                    public string LoginName { get; set; }
+
+                    [NameInMap("State")]
+                    [Validation(Required=false)]
+                    public string State { get; set; }
+
+                    [NameInMap("StateDuration")]
+                    [Validation(Required=false)]
+                    public string StateDuration { get; set; }
 
                 }
 
@@ -75,9 +67,17 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public int? TotalCount { get; set; }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class AddPhoneNumberRequest : TeaModel {
+        [NameInMap("ContactFlowId")]
+        [Validation(Required=false)]
+        public string ContactFlowId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("Usage")]
         [Validation(Required=false)]
         public string Usage { get; set; }
-
-        [NameInMap("ContactFlowId")]
-        [Validation(Required=false)]
-        public string ContactFlowId { get; set; }
 
     }
 

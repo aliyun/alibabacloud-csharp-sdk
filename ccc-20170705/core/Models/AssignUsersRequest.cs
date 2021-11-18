@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("UserRamId")]
-        [Validation(Required=false)]
-        public List<string> UserRamId { get; set; }
-
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public List<string> RoleId { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("SkillLevel")]
         [Validation(Required=false)]
         public List<int?> SkillLevel { get; set; }
+
+        [NameInMap("UserRamId")]
+        [Validation(Required=false)]
+        public List<string> UserRamId { get; set; }
 
     }
 

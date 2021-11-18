@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CreateMediaRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Content { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -25,13 +21,13 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string FileName { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("Content")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("OssFileName")]
         [Validation(Required=false)]
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("OssFilePath")]
         [Validation(Required=false)]
         public string OssFilePath { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         [NameInMap("UploadResult")]
         [Validation(Required=false)]

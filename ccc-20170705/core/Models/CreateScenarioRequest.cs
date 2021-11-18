@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CreateScenarioRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -17,21 +21,17 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
         [NameInMap("StrategyJson")]
         [Validation(Required=false)]
         public string StrategyJson { get; set; }
 
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
         [NameInMap("SurveysJson")]
         [Validation(Required=false)]
         public List<string> SurveysJson { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

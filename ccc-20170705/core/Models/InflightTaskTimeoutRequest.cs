@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
         [NameInMap("InstanceOwnerId")]
         [Validation(Required=false)]
         public long? InstanceOwnerId { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

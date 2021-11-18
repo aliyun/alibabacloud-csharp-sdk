@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string JobGroupId { get; set; }
 
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        [NameInMap("QueryAll")]
-        [Validation(Required=false)]
-        public bool? QueryAll { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("QueryAll")]
+        [Validation(Required=false)]
+        public bool? QueryAll { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

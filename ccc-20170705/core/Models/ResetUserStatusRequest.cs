@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
 
         [NameInMap("RamIdList")]
         [Validation(Required=false)]
-        public List<int?> RamIdList { get; set; }
+        public List<long?> RamIdList { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CreateCabInstanceRequest : TeaModel {
-        [NameInMap("InstanceName")]
+        [NameInMap("CallCenterInstanceId")]
         [Validation(Required=false)]
-        public string InstanceName { get; set; }
+        public string CallCenterInstanceId { get; set; }
 
         [NameInMap("InstanceDescription")]
         [Validation(Required=false)]
         public string InstanceDescription { get; set; }
 
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         [NameInMap("MaxConcurrentConversation")]
         [Validation(Required=false)]
         public int? MaxConcurrentConversation { get; set; }
-
-        [NameInMap("CallCenterInstanceId")]
-        [Validation(Required=false)]
-        public string CallCenterInstanceId { get; set; }
 
     }
 

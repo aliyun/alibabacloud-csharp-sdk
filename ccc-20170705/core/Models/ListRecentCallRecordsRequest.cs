@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListRecentCallRecordsRequest : TeaModel {
+        [NameInMap("Criteria")]
+        [Validation(Required=false)]
+        public string Criteria { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("StopTime")]
-        [Validation(Required=false)]
-        public long? StopTime { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,9 +25,13 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Criteria")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string Criteria { get; set; }
+        public long? StartTime { get; set; }
+
+        [NameInMap("StopTime")]
+        [Validation(Required=false)]
+        public long? StopTime { get; set; }
 
     }
 

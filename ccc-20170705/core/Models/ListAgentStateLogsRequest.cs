@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListAgentStateLogsRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("RamId")]
-        [Validation(Required=false)]
-        public long? RamId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RamId")]
+        [Validation(Required=false)]
+        public long? RamId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

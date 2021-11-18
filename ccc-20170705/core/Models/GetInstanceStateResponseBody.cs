@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class GetInstanceStateResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Message { get; set; }
 
         [NameInMap("RealTimeInstanceState")]
         [Validation(Required=false)]
@@ -41,18 +33,26 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public List<GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount> AgentStateCount { get; set; }
                 public class GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount : TeaModel {
-                    [NameInMap("State")]
-                    [Validation(Required=false)]
-                    public string State { get; set; }
-
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
+
+                    [NameInMap("State")]
+                    [Validation(Required=false)]
+                    public string State { get; set; }
 
                 }
 
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class GetJobStatusByCallIdRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

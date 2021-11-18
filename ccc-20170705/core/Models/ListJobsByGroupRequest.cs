@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("JobFailureReason")]
+        [Validation(Required=false)]
+        public string JobFailureReason { get; set; }
+
         [NameInMap("JobGroupId")]
         [Validation(Required=false)]
         public string JobGroupId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("JobStatus")]
         [Validation(Required=false)]
         public string JobStatus { get; set; }
-
-        [NameInMap("JobFailureReason")]
-        [Validation(Required=false)]
-        public string JobFailureReason { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

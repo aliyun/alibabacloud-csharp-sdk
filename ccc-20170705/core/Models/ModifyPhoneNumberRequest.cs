@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ModifyPhoneNumberRequest : TeaModel {
+        [NameInMap("ContactFlowId")]
+        [Validation(Required=false)]
+        public string ContactFlowId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string PhoneNumberId { get; set; }
 
-        [NameInMap("Usage")]
-        [Validation(Required=false)]
-        public string Usage { get; set; }
-
-        [NameInMap("ContactFlowId")]
-        [Validation(Required=false)]
-        public string ContactFlowId { get; set; }
-
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
         public List<string> SkillGroupId { get; set; }
+
+        [NameInMap("Usage")]
+        [Validation(Required=false)]
+        public string Usage { get; set; }
 
     }
 

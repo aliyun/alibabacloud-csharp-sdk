@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListAgentEventsRequest : TeaModel {
+        [NameInMap("Event")]
+        [Validation(Required=false)]
+        public List<string> Event { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("RamId")]
+        [Validation(Required=false)]
+        public List<string> RamId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("StopTime")]
         [Validation(Required=false)]
         public long? StopTime { get; set; }
-
-        [NameInMap("RamId")]
-        [Validation(Required=false)]
-        public List<string> RamId { get; set; }
-
-        [NameInMap("Event")]
-        [Validation(Required=false)]
-        public List<string> Event { get; set; }
 
     }
 

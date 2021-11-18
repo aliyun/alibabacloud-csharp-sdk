@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListTrunksOfSkillGroupResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,31 +25,23 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("TrunkConfigs")]
         [Validation(Required=false)]
         public List<ListTrunksOfSkillGroupResponseBodyTrunkConfigs> TrunkConfigs { get; set; }
         public class ListTrunksOfSkillGroupResponseBodyTrunkConfigs : TeaModel {
-            [NameInMap("ProviderName")]
-            [Validation(Required=false)]
-            public string ProviderName { get; set; }
-
             [NameInMap("Primary")]
             [Validation(Required=false)]
             public bool? Primary { get; set; }
 
+            [NameInMap("ProviderName")]
+            [Validation(Required=false)]
+            public string ProviderName { get; set; }
+
         }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

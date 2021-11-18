@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CheckNumberAvaliableRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("Callee")]
         [Validation(Required=false)]
         public string Callee { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("Caller")]
         [Validation(Required=false)]
         public string Caller { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

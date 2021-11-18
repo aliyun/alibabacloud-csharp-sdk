@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CreateVoiceAppraiseRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("ContactFlowVersionId")]
         [Validation(Required=false)]
         public string ContactFlowVersionId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("IsAppraise")]
         [Validation(Required=false)]

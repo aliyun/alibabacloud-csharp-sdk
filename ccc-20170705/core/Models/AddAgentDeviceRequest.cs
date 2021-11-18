@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class AddAgentDeviceRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("BrowserVersion")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string BrowserVersion { get; set; }
 
         [NameInMap("ClientIp")]
         [Validation(Required=false)]
@@ -24,9 +21,9 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string ClientPort { get; set; }
 
-        [NameInMap("BrowserVersion")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string BrowserVersion { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("Remark")]
         [Validation(Required=false)]

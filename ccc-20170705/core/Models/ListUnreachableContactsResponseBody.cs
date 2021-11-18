@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListUnreachableContactsResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
         [NameInMap("UnreachableContacts")]
         [Validation(Required=false)]
         public ListUnreachableContactsResponseBodyUnreachableContacts UnreachableContacts { get; set; }
@@ -19,12 +39,12 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public class ListUnreachableContactsResponseBodyUnreachableContactsList : TeaModel {
                 public List<ListUnreachableContactsResponseBodyUnreachableContactsListContacts> Contacts { get; set; }
                 public class ListUnreachableContactsResponseBodyUnreachableContactsListContacts : TeaModel {
-                    public string PhoneNumber { get; set; }
                     public string ContactId { get; set; }
-                    public string State { get; set; }
                     public string ContactName { get; set; }
-                    public string Role { get; set; }
+                    public string PhoneNumber { get; set; }
                     public string ReferenceId { get; set; }
+                    public string Role { get; set; }
+                    public string State { get; set; }
                 }
                 public int? TotalAttempts { get; set; }
             }
@@ -38,26 +58,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
         };
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

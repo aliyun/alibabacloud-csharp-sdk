@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("SkillGroupId")]
-        [Validation(Required=false)]
-        public string SkillGroupId { get; set; }
-
         [NameInMap("OperationType")]
         [Validation(Required=false)]
         public int? OperationType { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("OutboundPhoneNumberId")]
         [Validation(Required=false)]
         public List<string> OutboundPhoneNumberId { get; set; }
+
+        [NameInMap("SkillGroupId")]
+        [Validation(Required=false)]
+        public string SkillGroupId { get; set; }
 
     }
 

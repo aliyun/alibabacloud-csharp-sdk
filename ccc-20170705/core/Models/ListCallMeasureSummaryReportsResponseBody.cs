@@ -18,14 +18,22 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public List<ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport> CallMeasureSummaryReport { get; set; }
             public class ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport : TeaModel {
                 public string Day { get; set; }
-                public string Year { get; set; }
+                public long? InboundCount { get; set; }
                 public long? InboundDurationByMinute { get; set; }
+                public string Month { get; set; }
                 public long? OutboundCount { get; set; }
                 public long? OutboundDurationByMinute { get; set; }
-                public long? InboundCount { get; set; }
-                public string Month { get; set; }
+                public string Year { get; set; }
             }
         };
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -34,14 +42,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

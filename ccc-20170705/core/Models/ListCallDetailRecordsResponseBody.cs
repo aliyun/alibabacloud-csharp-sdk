@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListCallDetailRecordsResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CallDetailRecords")]
         [Validation(Required=false)]
         public ListCallDetailRecordsResponseBodyCallDetailRecords CallDetailRecords { get; set; }
@@ -29,57 +21,9 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public List<ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecord> CallDetailRecord { get; set; }
                 public class ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecord : TeaModel {
-                    [NameInMap("ContactDisposition")]
-                    [Validation(Required=false)]
-                    public string ContactDisposition { get; set; }
-
-                    [NameInMap("ContactType")]
-                    [Validation(Required=false)]
-                    public string ContactType { get; set; }
-
-                    [NameInMap("InstanceId")]
-                    [Validation(Required=false)]
-                    public string InstanceId { get; set; }
-
-                    [NameInMap("SkillGroupIdList")]
-                    [Validation(Required=false)]
-                    public string SkillGroupIdList { get; set; }
-
-                    [NameInMap("Recordings")]
-                    [Validation(Required=false)]
-                    public ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordings Recordings { get; set; }
-                    public class ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordings : TeaModel {
-                        [NameInMap("Recording")]
-                        [Validation(Required=false)]
-                        public List<ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording> Recording { get; set; }
-                        public class ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording : TeaModel {
-                            public long? StartTime { get; set; }
-                            public string ContactId { get; set; }
-                            public string QualityCheckTaskId { get; set; }
-                            public string AgentId { get; set; }
-                            public string FileDescription { get; set; }
-                            public int? Duration { get; set; }
-                            public string AgentName { get; set; }
-                            public string FileName { get; set; }
-                            public string QualityCheckTid { get; set; }
-                        }
-                    };
-
-                    [NameInMap("CalledNumber")]
-                    [Validation(Required=false)]
-                    public string CalledNumber { get; set; }
-
                     [NameInMap("AgentNames")]
                     [Validation(Required=false)]
                     public string AgentNames { get; set; }
-
-                    [NameInMap("Satisfaction")]
-                    [Validation(Required=false)]
-                    public int? Satisfaction { get; set; }
-
-                    [NameInMap("StartTime")]
-                    [Validation(Required=false)]
-                    public long? StartTime { get; set; }
 
                     [NameInMap("Agents")]
                     [Validation(Required=false)]
@@ -89,35 +33,83 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                         [Validation(Required=false)]
                         public List<ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent> CallDetailAgent { get; set; }
                         public class ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent : TeaModel {
-                            public string Satisfaction { get; set; }
                             public string AgentId { get; set; }
                             public string Feedback { get; set; }
+                            public string Satisfaction { get; set; }
                         }
                     };
 
-                    [NameInMap("SatisfactionDesc")]
+                    [NameInMap("CalledNumber")]
                     [Validation(Required=false)]
-                    public string SatisfactionDesc { get; set; }
-
-                    [NameInMap("ContactId")]
-                    [Validation(Required=false)]
-                    public string ContactId { get; set; }
+                    public string CalledNumber { get; set; }
 
                     [NameInMap("CallingNumber")]
                     [Validation(Required=false)]
                     public string CallingNumber { get; set; }
 
+                    [NameInMap("ContactDisposition")]
+                    [Validation(Required=false)]
+                    public string ContactDisposition { get; set; }
+
+                    [NameInMap("ContactId")]
+                    [Validation(Required=false)]
+                    public string ContactId { get; set; }
+
+                    [NameInMap("ContactType")]
+                    [Validation(Required=false)]
+                    public string ContactType { get; set; }
+
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public int? Duration { get; set; }
+
+                    [NameInMap("Feedback")]
+                    [Validation(Required=false)]
+                    public string Feedback { get; set; }
+
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    [NameInMap("Recordings")]
+                    [Validation(Required=false)]
+                    public ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordings Recordings { get; set; }
+                    public class ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordings : TeaModel {
+                        [NameInMap("Recording")]
+                        [Validation(Required=false)]
+                        public List<ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording> Recording { get; set; }
+                        public class ListCallDetailRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording : TeaModel {
+                            public string AgentId { get; set; }
+                            public string AgentName { get; set; }
+                            public string ContactId { get; set; }
+                            public int? Duration { get; set; }
+                            public string FileDescription { get; set; }
+                            public string FileName { get; set; }
+                            public string QualityCheckTaskId { get; set; }
+                            public string QualityCheckTid { get; set; }
+                            public long? StartTime { get; set; }
+                        }
+                    };
+
+                    [NameInMap("Satisfaction")]
+                    [Validation(Required=false)]
+                    public int? Satisfaction { get; set; }
+
+                    [NameInMap("SatisfactionDesc")]
+                    [Validation(Required=false)]
+                    public string SatisfactionDesc { get; set; }
+
+                    [NameInMap("SkillGroupIdList")]
+                    [Validation(Required=false)]
+                    public string SkillGroupIdList { get; set; }
 
                     [NameInMap("SkillGroupNames")]
                     [Validation(Required=false)]
                     public string SkillGroupNames { get; set; }
 
-                    [NameInMap("Feedback")]
+                    [NameInMap("StartTime")]
                     [Validation(Required=false)]
-                    public string Feedback { get; set; }
+                    public long? StartTime { get; set; }
 
                 }
 
@@ -133,13 +125,21 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public int? TotalCount { get; set; }
         };
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

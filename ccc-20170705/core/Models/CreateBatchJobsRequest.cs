@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CreateBatchJobsRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("CallingNumber")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public List<string> CallingNumber { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("JobFilePath")]
+        [Validation(Required=false)]
+        public string JobFilePath { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("ScenarioId")]
         [Validation(Required=false)]
@@ -29,17 +37,9 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string StrategyJson { get; set; }
 
-        [NameInMap("JobFilePath")]
-        [Validation(Required=false)]
-        public string JobFilePath { get; set; }
-
         [NameInMap("Submitted")]
         [Validation(Required=false)]
         public bool? Submitted { get; set; }
-
-        [NameInMap("CallingNumber")]
-        [Validation(Required=false)]
-        public List<string> CallingNumber { get; set; }
 
     }
 

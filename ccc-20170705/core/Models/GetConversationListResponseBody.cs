@@ -9,30 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class GetConversationListResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Conversations")]
         [Validation(Required=false)]
         public List<GetConversationListResponseBodyConversations> Conversations { get; set; }
         public class GetConversationListResponseBodyConversations : TeaModel {
+            [NameInMap("Script")]
+            [Validation(Required=false)]
+            public string Script { get; set; }
+
+            [NameInMap("Speaker")]
+            [Validation(Required=false)]
+            public string Speaker { get; set; }
+
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public List<GetConversationListResponseBodyConversationsSummary> Summary { get; set; }
             public class GetConversationListResponseBodyConversationsSummary : TeaModel {
-                [NameInMap("SummaryName")]
-                [Validation(Required=false)]
-                public string SummaryName { get; set; }
-
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
@@ -41,25 +37,29 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-            }
+                [NameInMap("SummaryName")]
+                [Validation(Required=false)]
+                public string SummaryName { get; set; }
 
-            [NameInMap("Speaker")]
-            [Validation(Required=false)]
-            public string Speaker { get; set; }
+            }
 
             [NameInMap("Timestamp")]
             [Validation(Required=false)]
             public long? Timestamp { get; set; }
 
-            [NameInMap("Script")]
-            [Validation(Required=false)]
-            public string Script { get; set; }
-
         }
 
-        [NameInMap("Code")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

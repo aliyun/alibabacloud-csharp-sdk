@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListSkillGroupStatesResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -33,45 +25,45 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public List<ListSkillGroupStatesResponseBodyDataListRealTimeSkillGroupState> RealTimeSkillGroupState { get; set; }
                 public class ListSkillGroupStatesResponseBodyDataListRealTimeSkillGroupState : TeaModel {
-                    [NameInMap("WorkingAgents")]
+                    [NameInMap("BreakingAgents")]
                     [Validation(Required=false)]
-                    public long? WorkingAgents { get; set; }
+                    public long? BreakingAgents { get; set; }
+
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
 
                     [NameInMap("LoggedInAgents")]
                     [Validation(Required=false)]
                     public long? LoggedInAgents { get; set; }
 
-                    [NameInMap("BreakingAgents")]
-                    [Validation(Required=false)]
-                    public long? BreakingAgents { get; set; }
-
                     [NameInMap("LongestCall")]
                     [Validation(Required=false)]
                     public long? LongestCall { get; set; }
-
-                    [NameInMap("WaitingCalls")]
-                    [Validation(Required=false)]
-                    public long? WaitingCalls { get; set; }
-
-                    [NameInMap("TalkingAgents")]
-                    [Validation(Required=false)]
-                    public long? TalkingAgents { get; set; }
-
-                    [NameInMap("SkillGroupName")]
-                    [Validation(Required=false)]
-                    public string SkillGroupName { get; set; }
-
-                    [NameInMap("SkillGroupId")]
-                    [Validation(Required=false)]
-                    public string SkillGroupId { get; set; }
 
                     [NameInMap("ReadyAgents")]
                     [Validation(Required=false)]
                     public long? ReadyAgents { get; set; }
 
-                    [NameInMap("InstanceId")]
+                    [NameInMap("SkillGroupId")]
                     [Validation(Required=false)]
-                    public string InstanceId { get; set; }
+                    public string SkillGroupId { get; set; }
+
+                    [NameInMap("SkillGroupName")]
+                    [Validation(Required=false)]
+                    public string SkillGroupName { get; set; }
+
+                    [NameInMap("TalkingAgents")]
+                    [Validation(Required=false)]
+                    public long? TalkingAgents { get; set; }
+
+                    [NameInMap("WaitingCalls")]
+                    [Validation(Required=false)]
+                    public long? WaitingCalls { get; set; }
+
+                    [NameInMap("WorkingAgents")]
+                    [Validation(Required=false)]
+                    public long? WorkingAgents { get; set; }
 
                 }
 
@@ -87,9 +79,17 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public int? TotalCount { get; set; }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

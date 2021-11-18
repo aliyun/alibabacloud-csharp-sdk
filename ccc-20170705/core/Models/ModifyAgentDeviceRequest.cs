@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ModifyAgentDeviceRequest : TeaModel {
-        [NameInMap("IsLogin")]
-        [Validation(Required=false)]
-        public int? IsLogin { get; set; }
-
         [NameInMap("AgentDeviceId")]
         [Validation(Required=false)]
         public long? AgentDeviceId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("IsLogin")]
+        [Validation(Required=false)]
+        public int? IsLogin { get; set; }
 
     }
 

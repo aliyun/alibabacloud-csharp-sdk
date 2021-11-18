@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class RefreshTokenResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,29 +25,21 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("Token")]
         [Validation(Required=false)]
         public RefreshTokenResponseBodyToken Token { get; set; }
         public class RefreshTokenResponseBodyToken : TeaModel {
-            [NameInMap("Signature")]
-            [Validation(Required=false)]
-            public string Signature { get; set; }
             [NameInMap("SignData")]
             [Validation(Required=false)]
             public string SignData { get; set; }
+            [NameInMap("Signature")]
+            [Validation(Required=false)]
+            public string Signature { get; set; }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

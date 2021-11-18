@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class SendPredefinedShortMessageRequest : TeaModel {
+        [NameInMap("ConfigId")]
+        [Validation(Required=false)]
+        public long? ConfigId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
         public string PhoneNumbers { get; set; }
-
-        [NameInMap("ConfigId")]
-        [Validation(Required=false)]
-        public long? ConfigId { get; set; }
 
         [NameInMap("TemplateParam")]
         [Validation(Required=false)]

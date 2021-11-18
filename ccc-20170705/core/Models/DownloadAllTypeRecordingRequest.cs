@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class DownloadAllTypeRecordingRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Channel")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Channel { get; set; }
 
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
-        [NameInMap("Channel")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Channel { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

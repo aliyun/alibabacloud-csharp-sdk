@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class GetCallMeasureSummaryReportRequest : TeaModel {
+        [NameInMap("Day")]
+        [Validation(Required=false)]
+        public int? Day { get; set; }
+
         [NameInMap("IntervalType")]
         [Validation(Required=false)]
         public string IntervalType { get; set; }
 
-        [NameInMap("Year")]
-        [Validation(Required=false)]
-        public int? Year { get; set; }
-
         [NameInMap("Month")]
         [Validation(Required=false)]
         public int? Month { get; set; }
-
-        [NameInMap("Day")]
-        [Validation(Required=false)]
-        public int? Day { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Year")]
+        [Validation(Required=false)]
+        public int? Year { get; set; }
 
     }
 

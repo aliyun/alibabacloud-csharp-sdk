@@ -9,25 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class SubmitCabRecordingRequest : TeaModel {
-        [NameInMap("InstanceOwnerId")]
+        [NameInMap("EarlyMediaRecording")]
         [Validation(Required=false)]
-        public long? InstanceOwnerId { get; set; }
+        public string EarlyMediaRecording { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("InstanceOwnerId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public long? InstanceOwnerId { get; set; }
+
+        [NameInMap("MergedRecording")]
+        [Validation(Required=false)]
+        public string MergedRecording { get; set; }
 
         [NameInMap("ResourceRecording")]
         [Validation(Required=false)]
         public string ResourceRecording { get; set; }
 
-        [NameInMap("MergedRecording")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string MergedRecording { get; set; }
+        public string TaskId { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("Phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
-
-        [NameInMap("Email")]
-        [Validation(Required=false)]
-        public string Email { get; set; }
 
         [NameInMap("PrivateOutboundNumberId")]
         [Validation(Required=false)]

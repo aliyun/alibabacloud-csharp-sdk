@@ -9,16 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class DownloadCabRecordingResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("MediaDownloadParam")]
         [Validation(Required=false)]
         public DownloadCabRecordingResponseBodyMediaDownloadParam MediaDownloadParam { get; set; }
         public class DownloadCabRecordingResponseBodyMediaDownloadParam : TeaModel {
-            [NameInMap("SignatureUrl")]
-            [Validation(Required=false)]
-            public string SignatureUrl { get; set; }
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
+            [NameInMap("SignatureUrl")]
+            [Validation(Required=false)]
+            public string SignatureUrl { get; set; }
         };
 
         [NameInMap("Message")]
@@ -28,14 +36,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class DialogueResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Feedback")]
         [Validation(Required=false)]
@@ -24,24 +20,28 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
-            [NameInMap("Interruptible")]
-            [Validation(Required=false)]
-            public bool? Interruptible { get; set; }
             [NameInMap("ActionParams")]
             [Validation(Required=false)]
             public string ActionParams { get; set; }
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
+            [NameInMap("Interruptible")]
+            [Validation(Required=false)]
+            public bool? Interruptible { get; set; }
         };
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

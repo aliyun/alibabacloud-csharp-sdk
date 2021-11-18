@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListSkillGroupsResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,10 +24,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
         [NameInMap("SkillGroups")]
         [Validation(Required=false)]
@@ -29,54 +33,61 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             [Validation(Required=false)]
             public List<ListSkillGroupsResponseBodySkillGroupsSkillGroup> SkillGroup { get; set; }
             public class ListSkillGroupsResponseBodySkillGroupsSkillGroup : TeaModel {
-                [NameInMap("PhoneNumber")]
-                [Validation(Required=false)]
-                public List<ListSkillGroupsResponseBodySkillGroupsSkillGroupPhoneNumber> PhoneNumber { get; set; }
-                public class ListSkillGroupsResponseBodySkillGroupsSkillGroupPhoneNumber : TeaModel {
-                    [NameInMap("TestOnly")]
+                public string AccQueueName { get; set; }
+                public string AccSkillGroupName { get; set; }
+                public string InstanceId { get; set; }
+                public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbers OutboundPhoneNumbers { get; set; }
+                public class ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbers : TeaModel {
+                    [NameInMap("PhoneNumber")]
                     [Validation(Required=false)]
-                    public bool? TestOnly { get; set; }
+                    public List<ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber> PhoneNumber { get; set; }
+                    public class ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber : TeaModel {
+                        [NameInMap("AllowOutbound")]
+                        [Validation(Required=false)]
+                        public bool? AllowOutbound { get; set; }
 
-                    [NameInMap("Trunks")]
-                    [Validation(Required=false)]
-                    public int? Trunks { get; set; }
+                        [NameInMap("InstanceId")]
+                        [Validation(Required=false)]
+                        public string InstanceId { get; set; }
 
-                    [NameInMap("RemainingTime")]
-                    [Validation(Required=false)]
-                    public int? RemainingTime { get; set; }
+                        [NameInMap("Number")]
+                        [Validation(Required=false)]
+                        public string Number { get; set; }
 
-                    [NameInMap("Number")]
-                    [Validation(Required=false)]
-                    public string Number { get; set; }
+                        [NameInMap("PhoneNumberDescription")]
+                        [Validation(Required=false)]
+                        public string PhoneNumberDescription { get; set; }
 
-                    [NameInMap("InstanceId")]
-                    [Validation(Required=false)]
-                    public string InstanceId { get; set; }
+                        [NameInMap("PhoneNumberId")]
+                        [Validation(Required=false)]
+                        public string PhoneNumberId { get; set; }
 
-                    [NameInMap("Usage")]
-                    [Validation(Required=false)]
-                    public string Usage { get; set; }
+                        [NameInMap("RemainingTime")]
+                        [Validation(Required=false)]
+                        public int? RemainingTime { get; set; }
 
-                    [NameInMap("AllowOutbound")]
-                    [Validation(Required=false)]
-                    public bool? AllowOutbound { get; set; }
+                        [NameInMap("TestOnly")]
+                        [Validation(Required=false)]
+                        public bool? TestOnly { get; set; }
 
-                    [NameInMap("PhoneNumberDescription")]
-                    [Validation(Required=false)]
-                    public string PhoneNumberDescription { get; set; }
+                        [NameInMap("Trunks")]
+                        [Validation(Required=false)]
+                        public int? Trunks { get; set; }
 
-                    [NameInMap("PhoneNumberId")]
-                    [Validation(Required=false)]
-                    public string PhoneNumberId { get; set; }
+                        [NameInMap("Usage")]
+                        [Validation(Required=false)]
+                        public string Usage { get; set; }
+
+                    }
 
                 }
-
+                public string RoutingStrategy { get; set; }
+                public string SkillGroupDescription { get; set; }
+                public string SkillGroupId { get; set; }
+                public string SkillGroupName { get; set; }
+                public int? UserCount { get; set; }
             }
         };
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

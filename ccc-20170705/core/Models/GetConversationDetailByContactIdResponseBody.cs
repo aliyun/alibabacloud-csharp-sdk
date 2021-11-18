@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class GetConversationDetailByContactIdResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public GetConversationDetailByContactIdResponseBodyDataList DataList { get; set; }
@@ -21,25 +25,25 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public List<GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase> QualityCheckPhrase { get; set; }
                 public class GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase : TeaModel {
-                    [NameInMap("Words")]
-                    [Validation(Required=false)]
-                    public string Words { get; set; }
-
                     [NameInMap("Begin")]
                     [Validation(Required=false)]
                     public long? Begin { get; set; }
-
-                    [NameInMap("Identity")]
-                    [Validation(Required=false)]
-                    public string Identity { get; set; }
 
                     [NameInMap("End")]
                     [Validation(Required=false)]
                     public long? End { get; set; }
 
+                    [NameInMap("Identity")]
+                    [Validation(Required=false)]
+                    public string Identity { get; set; }
+
                     [NameInMap("Role")]
                     [Validation(Required=false)]
                     public string Role { get; set; }
+
+                    [NameInMap("Words")]
+                    [Validation(Required=false)]
+                    public string Words { get; set; }
 
                 }
 
@@ -55,6 +59,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public int? TotalCount { get; set; }
         };
 
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -62,14 +70,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

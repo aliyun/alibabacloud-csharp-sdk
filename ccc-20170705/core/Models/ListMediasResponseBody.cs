@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListMediasResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -33,21 +29,9 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                 [Validation(Required=false)]
                 public List<ListMediasResponseBodyMediasListMedia> Media { get; set; }
                 public class ListMediasResponseBodyMediasListMedia : TeaModel {
-                    [NameInMap("Status")]
+                    [NameInMap("Content")]
                     [Validation(Required=false)]
-                    public string Status { get; set; }
-
-                    [NameInMap("Type")]
-                    [Validation(Required=false)]
-                    public string Type { get; set; }
-
-                    [NameInMap("FilePath")]
-                    [Validation(Required=false)]
-                    public string FilePath { get; set; }
-
-                    [NameInMap("Instance")]
-                    [Validation(Required=false)]
-                    public string Instance { get; set; }
+                    public string Content { get; set; }
 
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -57,17 +41,29 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                     [Validation(Required=false)]
                     public string FileName { get; set; }
 
+                    [NameInMap("FilePath")]
+                    [Validation(Required=false)]
+                    public string FilePath { get; set; }
+
+                    [NameInMap("Instance")]
+                    [Validation(Required=false)]
+                    public string Instance { get; set; }
+
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
-                    [NameInMap("Content")]
-                    [Validation(Required=false)]
-                    public string Content { get; set; }
-
                     [NameInMap("OssFileName")]
                     [Validation(Required=false)]
                     public string OssFileName { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
 
                 }
 
@@ -83,9 +79,13 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             public int? TotalCount { get; set; }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,37 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CreateFaultRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("AgentFilePath")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string AgentFilePath { get; set; }
 
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public long? AgentId { get; set; }
 
-        [NameInMap("ConnectId")]
-        [Validation(Required=false)]
-        public string ConnectId { get; set; }
-
         [NameInMap("AgentOssFileName")]
         [Validation(Required=false)]
         public string AgentOssFileName { get; set; }
 
-        [NameInMap("AgentFilePath")]
+        [NameInMap("BrowserVersion")]
         [Validation(Required=false)]
-        public string AgentFilePath { get; set; }
-
-        [NameInMap("CustomOssFileName")]
-        [Validation(Required=false)]
-        public string CustomOssFileName { get; set; }
-
-        [NameInMap("CustomFilePath")]
-        [Validation(Required=false)]
-        public string CustomFilePath { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string BrowserVersion { get; set; }
 
         [NameInMap("ClientIp")]
         [Validation(Required=false)]
@@ -49,37 +33,41 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string ClientPort { get; set; }
 
-        [NameInMap("OperatingSystemVersion")]
+        [NameInMap("ConnectId")]
         [Validation(Required=false)]
-        public string OperatingSystemVersion { get; set; }
+        public string ConnectId { get; set; }
 
-        [NameInMap("BrowserVersion")]
+        [NameInMap("CustomFilePath")]
         [Validation(Required=false)]
-        public string BrowserVersion { get; set; }
+        public string CustomFilePath { get; set; }
 
-        [NameInMap("MicrophoneList")]
+        [NameInMap("CustomOssFileName")]
         [Validation(Required=false)]
-        public string MicrophoneList { get; set; }
+        public string CustomOssFileName { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("MicrophoneEquipment")]
         [Validation(Required=false)]
         public string MicrophoneEquipment { get; set; }
 
-        [NameInMap("SpeakerList")]
+        [NameInMap("MicrophoneList")]
         [Validation(Required=false)]
-        public string SpeakerList { get; set; }
+        public string MicrophoneList { get; set; }
 
-        [NameInMap("SpeakerEquipment")]
+        [NameInMap("OperatingSystemVersion")]
         [Validation(Required=false)]
-        public string SpeakerEquipment { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public string OperatingSystemVersion { get; set; }
 
         [NameInMap("ServiceIp")]
         [Validation(Required=false)]
@@ -88,6 +76,18 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("ServicePort")]
         [Validation(Required=false)]
         public string ServicePort { get; set; }
+
+        [NameInMap("SpeakerEquipment")]
+        [Validation(Required=false)]
+        public string SpeakerEquipment { get; set; }
+
+        [NameInMap("SpeakerList")]
+        [Validation(Required=false)]
+        public string SpeakerList { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

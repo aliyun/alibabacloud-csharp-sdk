@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class PickGlobalOutboundNumbersRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("CalleeNumber")]
         [Validation(Required=false)]
         public string CalleeNumber { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("Count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("IsVirtual")]
         [Validation(Required=false)]

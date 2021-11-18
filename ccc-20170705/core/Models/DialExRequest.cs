@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class DialExRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("AnswerMode")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("Caller")]
-        [Validation(Required=false)]
-        public string Caller { get; set; }
+        public int? AnswerMode { get; set; }
 
         [NameInMap("Callee")]
         [Validation(Required=false)]
         public string Callee { get; set; }
 
-        [NameInMap("RoutPoint")]
+        [NameInMap("Caller")]
         [Validation(Required=false)]
-        public string RoutPoint { get; set; }
+        public string Caller { get; set; }
 
-        [NameInMap("AnswerMode")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public int? AnswerMode { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("Provider")]
         [Validation(Required=false)]
         public string Provider { get; set; }
+
+        [NameInMap("RoutPoint")]
+        [Validation(Required=false)]
+        public string RoutPoint { get; set; }
 
     }
 

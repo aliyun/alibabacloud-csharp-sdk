@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class CreateSkillGroupRequest : TeaModel {
+        [NameInMap("AllowPrivateOutboundNumber")]
+        [Validation(Required=false)]
+        public bool? AllowPrivateOutboundNumber { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -17,29 +25,21 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("OutboundPhoneNumberId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public List<string> OutboundPhoneNumberId { get; set; }
 
         [NameInMap("RoutingStrategy")]
         [Validation(Required=false)]
         public string RoutingStrategy { get; set; }
 
-        [NameInMap("AllowPrivateOutboundNumber")]
+        [NameInMap("SkillLevel")]
         [Validation(Required=false)]
-        public bool? AllowPrivateOutboundNumber { get; set; }
-
-        [NameInMap("OutboundPhoneNumberId")]
-        [Validation(Required=false)]
-        public List<string> OutboundPhoneNumberId { get; set; }
+        public List<int?> SkillLevel { get; set; }
 
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public List<string> UserId { get; set; }
-
-        [NameInMap("SkillLevel")]
-        [Validation(Required=false)]
-        public List<int?> SkillLevel { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ModifyScenarioRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("ScenarioId")]
-        [Validation(Required=false)]
-        public string ScenarioId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("ScenarioId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string ScenarioId { get; set; }
 
         [NameInMap("Variables")]
         [Validation(Required=false)]

@@ -9,29 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListIvrTrackingDetailRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("CalledNumber")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("ContactId")]
-        [Validation(Required=false)]
-        public string ContactId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("StopTime")]
-        [Validation(Required=false)]
-        public long? StopTime { get; set; }
+        public string CalledNumber { get; set; }
 
         [NameInMap("CallingNumber")]
         [Validation(Required=false)]
         public string CallingNumber { get; set; }
 
-        [NameInMap("CalledNumber")]
+        [NameInMap("ContactId")]
         [Validation(Required=false)]
-        public string CalledNumber { get; set; }
+        public string ContactId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -40,6 +32,14 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("StopTime")]
+        [Validation(Required=false)]
+        public long? StopTime { get; set; }
 
     }
 

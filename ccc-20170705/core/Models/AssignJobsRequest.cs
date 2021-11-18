@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class AssignJobsRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("CallingNumber")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public List<string> CallingNumber { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("JobsJson")]
+        [Validation(Required=false)]
+        public List<string> JobsJson { get; set; }
 
         [NameInMap("ScenarioId")]
         [Validation(Required=false)]
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("StrategyJson")]
         [Validation(Required=false)]
         public string StrategyJson { get; set; }
-
-        [NameInMap("CallingNumber")]
-        [Validation(Required=false)]
-        public List<string> CallingNumber { get; set; }
-
-        [NameInMap("JobsJson")]
-        [Validation(Required=false)]
-        public List<string> JobsJson { get; set; }
 
     }
 

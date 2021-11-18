@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class SuspendPredictiveJobsRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("SkillGroupId")]
-        [Validation(Required=false)]
-        public string SkillGroupId { get; set; }
-
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("JobGroupId")]
         [Validation(Required=false)]
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public List<string> JobId { get; set; }
+
+        [NameInMap("SkillGroupId")]
+        [Validation(Required=false)]
+        public string SkillGroupId { get; set; }
 
     }
 

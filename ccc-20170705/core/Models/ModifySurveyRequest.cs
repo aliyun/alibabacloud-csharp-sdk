@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ModifySurveyRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Corpora")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("SurveyId")]
-        [Validation(Required=false)]
-        public string SurveyId { get; set; }
-
-        [NameInMap("ScenarioId")]
-        [Validation(Required=false)]
-        public string ScenarioId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Corpora { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -37,17 +25,17 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string FlowJson { get; set; }
 
-        [NameInMap("Corpora")]
-        [Validation(Required=false)]
-        public string Corpora { get; set; }
-
-        [NameInMap("SpeechOptimizationParam")]
-        [Validation(Required=false)]
-        public string SpeechOptimizationParam { get; set; }
-
         [NameInMap("GlobalQuestions")]
         [Validation(Required=false)]
         public string GlobalQuestions { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("Role")]
         [Validation(Required=false)]
@@ -56,6 +44,18 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("Round")]
         [Validation(Required=false)]
         public int? Round { get; set; }
+
+        [NameInMap("ScenarioId")]
+        [Validation(Required=false)]
+        public string ScenarioId { get; set; }
+
+        [NameInMap("SpeechOptimizationParam")]
+        [Validation(Required=false)]
+        public string SpeechOptimizationParam { get; set; }
+
+        [NameInMap("SurveyId")]
+        [Validation(Required=false)]
+        public string SurveyId { get; set; }
 
     }
 

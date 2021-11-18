@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListRecordingsRequest : TeaModel {
-        [NameInMap("StopTime")]
-        [Validation(Required=false)]
-        public long? StopTime { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("PhoneNumber")]
-        [Validation(Required=false)]
-        public string PhoneNumber { get; set; }
-
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public string AgentId { get; set; }
@@ -33,6 +17,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [Validation(Required=false)]
         public string Criteria { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PhoneNumber")]
+        [Validation(Required=false)]
+        public string PhoneNumber { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("StopTime")]
+        [Validation(Required=false)]
+        public long? StopTime { get; set; }
 
     }
 

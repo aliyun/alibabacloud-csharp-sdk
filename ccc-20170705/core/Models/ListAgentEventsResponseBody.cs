@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20170705.Models
 {
     public class ListAgentEventsResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AgentEventList")]
         [Validation(Required=false)]
         public ListAgentEventsResponseBodyAgentEventList AgentEventList { get; set; }
@@ -25,10 +17,10 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             [Validation(Required=false)]
             public List<ListAgentEventsResponseBodyAgentEventListAgentEvent> AgentEvent { get; set; }
             public class ListAgentEventsResponseBodyAgentEventListAgentEvent : TeaModel {
-                public long? EventTime { get; set; }
-                public string LoginName { get; set; }
                 public string Event { get; set; }
+                public long? EventTime { get; set; }
                 public string InstanceId { get; set; }
+                public string LoginName { get; set; }
                 public long? RamId { get; set; }
                 public ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIds SkillGroupIds { get; set; }
                 public class ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIds : TeaModel {
@@ -36,13 +28,13 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
                     [Validation(Required=false)]
                     public List<ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup> SkillGroup { get; set; }
                     public class ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup : TeaModel {
-                        [NameInMap("SkillGroupName")]
-                        [Validation(Required=false)]
-                        public string SkillGroupName { get; set; }
-
                         [NameInMap("SkillGroupId")]
                         [Validation(Required=false)]
                         public string SkillGroupId { get; set; }
+
+                        [NameInMap("SkillGroupName")]
+                        [Validation(Required=false)]
+                        public string SkillGroupName { get; set; }
 
                     }
 
@@ -50,13 +42,21 @@ namespace AlibabaCloud.SDK.CCC20170705.Models
             }
         };
 
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]
