@@ -29,6 +29,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 public string Module { get; set; }
                 public string OpContent { get; set; }
                 public string OpTime { get; set; }
+                public long? OpUserId { get; set; }
                 public long? OrderId { get; set; }
                 public string UserId { get; set; }
                 public string UserNick { get; set; }

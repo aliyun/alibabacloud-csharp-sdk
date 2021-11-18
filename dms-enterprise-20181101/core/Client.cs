@@ -2481,6 +2481,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             return await ListIndexesWithOptionsAsync(request, runtime);
         }
 
+        public ListInstanceLoginAuditLogResponse ListInstanceLoginAuditLogWithOptions(ListInstanceLoginAuditLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListInstanceLoginAuditLogResponse>(DoRPCRequest("ListInstanceLoginAuditLog", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListInstanceLoginAuditLogResponse> ListInstanceLoginAuditLogWithOptionsAsync(ListInstanceLoginAuditLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListInstanceLoginAuditLogResponse>(await DoRPCRequestAsync("ListInstanceLoginAuditLog", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListInstanceLoginAuditLogResponse ListInstanceLoginAuditLog(ListInstanceLoginAuditLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInstanceLoginAuditLogWithOptions(request, runtime);
+        }
+
+        public async Task<ListInstanceLoginAuditLogResponse> ListInstanceLoginAuditLogAsync(ListInstanceLoginAuditLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInstanceLoginAuditLogWithOptionsAsync(request, runtime);
+        }
+
         public ListInstanceUserPermissionsResponse ListInstanceUserPermissionsWithOptions(ListInstanceUserPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2703,6 +2735,38 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProxyAccessesWithOptionsAsync(request, runtime);
+        }
+
+        public ListProxySQLExecAuditLogResponse ListProxySQLExecAuditLogWithOptions(ListProxySQLExecAuditLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListProxySQLExecAuditLogResponse>(DoRPCRequest("ListProxySQLExecAuditLog", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListProxySQLExecAuditLogResponse> ListProxySQLExecAuditLogWithOptionsAsync(ListProxySQLExecAuditLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListProxySQLExecAuditLogResponse>(await DoRPCRequestAsync("ListProxySQLExecAuditLog", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListProxySQLExecAuditLogResponse ListProxySQLExecAuditLog(ListProxySQLExecAuditLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListProxySQLExecAuditLogWithOptions(request, runtime);
+        }
+
+        public async Task<ListProxySQLExecAuditLogResponse> ListProxySQLExecAuditLogAsync(ListProxySQLExecAuditLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListProxySQLExecAuditLogWithOptionsAsync(request, runtime);
         }
 
         public ListSQLExecAuditLogResponse ListSQLExecAuditLogWithOptions(ListSQLExecAuditLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
