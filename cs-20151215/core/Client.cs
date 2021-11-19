@@ -535,6 +535,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["kubernetes_version"] = request.KubernetesVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerSpec))
+            {
+                body["load_balancer_spec"] = request.LoadBalancerSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingType))
             {
                 body["logging_type"] = request.LoggingType;
@@ -871,6 +875,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["kubernetes_version"] = request.KubernetesVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerSpec))
+            {
+                body["load_balancer_spec"] = request.LoadBalancerSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoggingType))
             {
                 body["logging_type"] = request.LoggingType;
@@ -1130,6 +1138,14 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["count"] = request.Count;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig.ToMap()))
+            {
+                body["interconnect_config"] = request.InterconnectConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectMode))
+            {
+                body["interconnect_mode"] = request.InterconnectMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig.ToMap()))
             {
                 body["kubernetes_config"] = request.KubernetesConfig;
@@ -1137,6 +1153,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management.ToMap()))
             {
                 body["management"] = request.Management;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxNodes))
+            {
+                body["max_nodes"] = request.MaxNodes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
             {
@@ -1171,6 +1191,14 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["count"] = request.Count;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectConfig.ToMap()))
+            {
+                body["interconnect_config"] = request.InterconnectConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterconnectMode))
+            {
+                body["interconnect_mode"] = request.InterconnectMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig.ToMap()))
             {
                 body["kubernetes_config"] = request.KubernetesConfig;
@@ -1178,6 +1206,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Management.ToMap()))
             {
                 body["management"] = request.Management;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxNodes))
+            {
+                body["max_nodes"] = request.MaxNodes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolInfo.ToMap()))
             {

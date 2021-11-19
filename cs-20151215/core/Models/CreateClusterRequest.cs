@@ -185,6 +185,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string KubernetesVersion { get; set; }
 
         /// <summary>
+        /// 负载均衡规格
+        /// </summary>
+        [NameInMap("load_balancer_spec")]
+        [Validation(Required=false)]
+        public string LoadBalancerSpec { get; set; }
+
+        /// <summary>
         /// ASK 集群开启日志服务
         /// </summary>
         [NameInMap("logging_type")]

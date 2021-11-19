@@ -47,6 +47,37 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             };
 
             /// <summary>
+            /// 边缘节点池网络相关的配置。该值只对edge类型的节点池有意义
+            /// </summary>
+            [NameInMap("interconnect_config")]
+            [Validation(Required=false)]
+            public DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig InterconnectConfig { get; set; }
+            public class DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig : TeaModel {
+                [NameInMap("bandwidth")]
+                [Validation(Required=false)]
+                public long? Bandwidth { get; set; }
+                [NameInMap("ccn_id")]
+                [Validation(Required=false)]
+                public string CcnId { get; set; }
+                [NameInMap("ccn_region_id")]
+                [Validation(Required=false)]
+                public string CcnRegionId { get; set; }
+                [NameInMap("cen_id")]
+                [Validation(Required=false)]
+                public string CenId { get; set; }
+                [NameInMap("improved_period")]
+                [Validation(Required=false)]
+                public string ImprovedPeriod { get; set; }
+            };
+
+            /// <summary>
+            /// 边缘节点池的网络类型。basic：基础型；improved：增强型。该值只对edge类型的节点池有意义
+            /// </summary>
+            [NameInMap("interconnect_mode")]
+            [Validation(Required=false)]
+            public string InterconnectMode { get; set; }
+
+            /// <summary>
             /// 集群配置信息
             /// </summary>
             [NameInMap("kubernetes_config")]
@@ -123,6 +154,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
                 }
             };
+
+            /// <summary>
+            /// 边缘节点池允许容纳的最大节点数量. 节点池内可以容纳的最大节点数量，该参数大于等于0。0表示无额外限制(仅受限于集群整体可以容纳的节点数，节点池本身无额外限制)。边缘节点池该参数值往往大于0；ess类型节点池和默认的edge类型节点池该参数值为0
+            /// </summary>
+            [NameInMap("max_nodes")]
+            [Validation(Required=false)]
+            public long? MaxNodes { get; set; }
 
             /// <summary>
             /// 节点池配置详情
