@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteAggregateCompliancePacksRequest : TeaModel {
-        [NameInMap("CompliancePackIds")]
+        [NameInMap("AggregatorId")]
         [Validation(Required=false)]
-        public string CompliancePackIds { get; set; }
+        public string AggregatorId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("AggregatorId")]
+        [NameInMap("CompliancePackIds")]
         [Validation(Required=false)]
-        public string AggregatorId { get; set; }
+        public string CompliancePackIds { get; set; }
 
     }
 

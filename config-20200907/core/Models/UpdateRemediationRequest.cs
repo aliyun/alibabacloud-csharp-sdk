@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateRemediationRequest : TeaModel {
+        [NameInMap("InvokeType")]
+        [Validation(Required=false)]
+        public string InvokeType { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public string Params { get; set; }
+
         [NameInMap("RemediationId")]
         [Validation(Required=false)]
         public string RemediationId { get; set; }
-
-        [NameInMap("RemediationType")]
-        [Validation(Required=false)]
-        public string RemediationType { get; set; }
 
         [NameInMap("RemediationTemplateId")]
         [Validation(Required=false)]
         public string RemediationTemplateId { get; set; }
 
-        [NameInMap("InvokeType")]
+        [NameInMap("RemediationType")]
         [Validation(Required=false)]
-        public string InvokeType { get; set; }
+        public string RemediationType { get; set; }
 
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
-
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public string Params { get; set; }
 
     }
 

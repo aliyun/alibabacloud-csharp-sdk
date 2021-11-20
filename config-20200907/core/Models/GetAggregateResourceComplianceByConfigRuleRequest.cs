@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceByConfigRuleRequest : TeaModel {
+        [NameInMap("AggregatorId")]
+        [Validation(Required=false)]
+        public string AggregatorId { get; set; }
+
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
         public string ComplianceType { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
-
-        [NameInMap("AggregatorId")]
-        [Validation(Required=false)]
-        public string AggregatorId { get; set; }
 
     }
 

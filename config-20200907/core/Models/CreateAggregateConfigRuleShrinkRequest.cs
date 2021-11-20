@@ -9,25 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregateConfigRuleShrinkRequest : TeaModel {
+        [NameInMap("AggregatorId")]
+        [Validation(Required=false)]
+        public string AggregatorId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
         public string ConfigRuleName { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("InputParameters")]
-        [Validation(Required=false)]
-        public string InputParametersShrink { get; set; }
 
         [NameInMap("ConfigRuleTriggerTypes")]
         [Validation(Required=false)]
         public string ConfigRuleTriggerTypes { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("ExcludeResourceIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeResourceIdsScope { get; set; }
+
+        [NameInMap("InputParameters")]
+        [Validation(Required=false)]
+        public string InputParametersShrink { get; set; }
+
         [NameInMap("MaximumExecutionFrequency")]
         [Validation(Required=false)]
         public string MaximumExecutionFrequency { get; set; }
+
+        [NameInMap("RegionIdsScope")]
+        [Validation(Required=false)]
+        public string RegionIdsScope { get; set; }
+
+        [NameInMap("ResourceGroupIdsScope")]
+        [Validation(Required=false)]
+        public string ResourceGroupIdsScope { get; set; }
 
         [NameInMap("ResourceTypesScope")]
         [Validation(Required=false)]
@@ -37,25 +57,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("SourceIdentifier")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string SourceIdentifier { get; set; }
 
-        [NameInMap("RegionIdsScope")]
+        [NameInMap("SourceOwner")]
         [Validation(Required=false)]
-        public string RegionIdsScope { get; set; }
-
-        [NameInMap("ExcludeResourceIdsScope")]
-        [Validation(Required=false)]
-        public string ExcludeResourceIdsScope { get; set; }
-
-        [NameInMap("AggregatorId")]
-        [Validation(Required=false)]
-        public string AggregatorId { get; set; }
-
-        [NameInMap("ResourceGroupIdsScope")]
-        [Validation(Required=false)]
-        public string ResourceGroupIdsScope { get; set; }
+        public string SourceOwner { get; set; }
 
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
@@ -64,14 +72,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]
         public string TagValueScope { get; set; }
-
-        [NameInMap("SourceOwner")]
-        [Validation(Required=false)]
-        public string SourceOwner { get; set; }
-
-        [NameInMap("SourceIdentifier")]
-        [Validation(Required=false)]
-        public string SourceIdentifier { get; set; }
 
     }
 

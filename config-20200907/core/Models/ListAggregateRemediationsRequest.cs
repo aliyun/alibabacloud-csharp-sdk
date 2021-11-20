@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateRemediationsRequest : TeaModel {
-        [NameInMap("ConfigRuleIds")]
-        [Validation(Required=false)]
-        public string ConfigRuleIds { get; set; }
-
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
+
+        [NameInMap("ConfigRuleIds")]
+        [Validation(Required=false)]
+        public string ConfigRuleIds { get; set; }
 
     }
 

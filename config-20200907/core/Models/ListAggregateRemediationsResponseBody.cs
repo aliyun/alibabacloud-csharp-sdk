@@ -9,34 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateRemediationsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Remediations")]
         [Validation(Required=false)]
         public List<ListAggregateRemediationsResponseBodyRemediations> Remediations { get; set; }
         public class ListAggregateRemediationsResponseBodyRemediations : TeaModel {
-            [NameInMap("RemediationTemplateId")]
-            [Validation(Required=false)]
-            public string RemediationTemplateId { get; set; }
-
-            [NameInMap("RemediationDynamicParams")]
-            [Validation(Required=false)]
-            public string RemediationDynamicParams { get; set; }
-
-            [NameInMap("RemediationSourceType")]
-            [Validation(Required=false)]
-            public string RemediationSourceType { get; set; }
-
-            [NameInMap("RemediationType")]
-            [Validation(Required=false)]
-            public string RemediationType { get; set; }
-
-            [NameInMap("LastSuccessfulInvocationId")]
-            [Validation(Required=false)]
-            public string LastSuccessfulInvocationId { get; set; }
-
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public long? AccountId { get; set; }
@@ -45,27 +21,51 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string AggregatorId { get; set; }
 
-            [NameInMap("LastSuccessfulInvocationType")]
+            [NameInMap("ConfigRuleId")]
             [Validation(Required=false)]
-            public string LastSuccessfulInvocationType { get; set; }
-
-            [NameInMap("RemediationId")]
-            [Validation(Required=false)]
-            public string RemediationId { get; set; }
+            public string ConfigRuleId { get; set; }
 
             [NameInMap("InvokeType")]
             [Validation(Required=false)]
             public string InvokeType { get; set; }
 
-            [NameInMap("ConfigRuleId")]
+            [NameInMap("LastSuccessfulInvocationId")]
             [Validation(Required=false)]
-            public string ConfigRuleId { get; set; }
+            public string LastSuccessfulInvocationId { get; set; }
 
             [NameInMap("LastSuccessfulInvocationTime")]
             [Validation(Required=false)]
             public long? LastSuccessfulInvocationTime { get; set; }
 
+            [NameInMap("LastSuccessfulInvocationType")]
+            [Validation(Required=false)]
+            public string LastSuccessfulInvocationType { get; set; }
+
+            [NameInMap("RemediationDynamicParams")]
+            [Validation(Required=false)]
+            public string RemediationDynamicParams { get; set; }
+
+            [NameInMap("RemediationId")]
+            [Validation(Required=false)]
+            public string RemediationId { get; set; }
+
+            [NameInMap("RemediationSourceType")]
+            [Validation(Required=false)]
+            public string RemediationSourceType { get; set; }
+
+            [NameInMap("RemediationTemplateId")]
+            [Validation(Required=false)]
+            public string RemediationTemplateId { get; set; }
+
+            [NameInMap("RemediationType")]
+            [Validation(Required=false)]
+            public string RemediationType { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

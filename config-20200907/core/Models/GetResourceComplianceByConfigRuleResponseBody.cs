@@ -13,9 +13,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public GetResourceComplianceByConfigRuleResponseBodyComplianceResult ComplianceResult { get; set; }
         public class GetResourceComplianceByConfigRuleResponseBodyComplianceResult : TeaModel {
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public long? TotalCount { get; set; }
             [NameInMap("Compliances")]
             [Validation(Required=false)]
             public List<GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> Compliances { get; set; }
@@ -23,6 +20,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ComplianceType { get; set; }
                 public int? Count { get; set; }
             }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
         };
 
         [NameInMap("RequestId")]

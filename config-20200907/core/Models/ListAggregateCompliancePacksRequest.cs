@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateCompliancePacksRequest : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string Status { get; set; }
 
     }
 

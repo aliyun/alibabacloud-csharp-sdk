@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteAggregatorsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OperateAggregatorsResult")]
         [Validation(Required=false)]
         public DeleteAggregatorsResponseBodyOperateAggregatorsResult OperateAggregatorsResult { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public List<DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators> OperateAggregators { get; set; }
             public class DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators : TeaModel {
+                public string AggregatorId { get; set; }
                 public string ErrorCode { get; set; }
                 public bool? Success { get; set; }
-                public string AggregatorId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

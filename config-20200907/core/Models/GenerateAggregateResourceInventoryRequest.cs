@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GenerateAggregateResourceInventoryRequest : TeaModel {
-        [NameInMap("Regions")]
-        [Validation(Required=false)]
-        public string Regions { get; set; }
-
-        [NameInMap("ResourceTypes")]
-        [Validation(Required=false)]
-        public string ResourceTypes { get; set; }
-
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
         public string AccountIds { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
+
+        [NameInMap("Regions")]
+        [Validation(Required=false)]
+        public string Regions { get; set; }
+
+        [NameInMap("ResourceTypes")]
+        [Validation(Required=false)]
+        public string ResourceTypes { get; set; }
 
     }
 

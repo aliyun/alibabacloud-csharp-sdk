@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceConfigurationTimelineRequest : TeaModel {
-        [NameInMap("ResourceId")]
+        [NameInMap("AggregatorId")]
         [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string AggregatorId { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -25,25 +21,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        [NameInMap("ResourceType")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("AggregatorId")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string AggregatorId { get; set; }
+        public string ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string ResourceType { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

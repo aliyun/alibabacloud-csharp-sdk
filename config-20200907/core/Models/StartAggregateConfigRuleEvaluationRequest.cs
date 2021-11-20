@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StartAggregateConfigRuleEvaluationRequest : TeaModel {
+        [NameInMap("AggregatorId")]
+        [Validation(Required=false)]
+        public string AggregatorId { get; set; }
+
+        [NameInMap("CompliancePackId")]
+        [Validation(Required=false)]
+        public string CompliancePackId { get; set; }
+
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
-        [NameInMap("AggregatorId")]
+        [NameInMap("RevertEvaluation")]
         [Validation(Required=false)]
-        public string AggregatorId { get; set; }
+        public bool? RevertEvaluation { get; set; }
 
     }
 

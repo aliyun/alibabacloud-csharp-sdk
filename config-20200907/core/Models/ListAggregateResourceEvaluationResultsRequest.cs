@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateResourceEvaluationResultsRequest : TeaModel {
-        [NameInMap("ResourceType")]
+        [NameInMap("AggregatorId")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public string ResourceId { get; set; }
+        public string AggregatorId { get; set; }
 
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
         public string ComplianceType { get; set; }
 
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("AggregatorId")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string AggregatorId { get; set; }
+        public string ResourceId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 

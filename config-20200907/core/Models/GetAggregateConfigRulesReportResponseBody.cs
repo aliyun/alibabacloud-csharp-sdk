@@ -9,20 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRulesReportResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ConfigRulesReport")]
         [Validation(Required=false)]
         public GetAggregateConfigRulesReportResponseBodyConfigRulesReport ConfigRulesReport { get; set; }
         public class GetAggregateConfigRulesReportResponseBodyConfigRulesReport : TeaModel {
-            [NameInMap("ReportUrl")]
-            [Validation(Required=false)]
-            public string ReportUrl { get; set; }
-            [NameInMap("ReportStatus")]
-            [Validation(Required=false)]
-            public string ReportStatus { get; set; }
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public long? AccountId { get; set; }
@@ -32,7 +22,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [NameInMap("ReportCreateTimestamp")]
             [Validation(Required=false)]
             public long? ReportCreateTimestamp { get; set; }
+            [NameInMap("ReportStatus")]
+            [Validation(Required=false)]
+            public string ReportStatus { get; set; }
+            [NameInMap("ReportUrl")]
+            [Validation(Required=false)]
+            public string ReportUrl { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

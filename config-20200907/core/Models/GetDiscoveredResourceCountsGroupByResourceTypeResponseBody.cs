@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DiscoveredResourceCountsSummary")]
         [Validation(Required=false)]
         public List<GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> DiscoveredResourceCountsSummary { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceType { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

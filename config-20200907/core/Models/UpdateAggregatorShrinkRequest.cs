@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateAggregatorShrinkRequest : TeaModel {
+        [NameInMap("AggregatorAccounts")]
+        [Validation(Required=false)]
+        public string AggregatorAccountsShrink { get; set; }
+
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string AggregatorName { get; set; }
 
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("AggregatorAccounts")]
-        [Validation(Required=false)]
-        public string AggregatorAccountsShrink { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
     }
 

@@ -9,13 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateConfigRuleShrinkRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
 
+        [NameInMap("ConfigRuleName")]
+        [Validation(Required=false)]
+        public string ConfigRuleName { get; set; }
+
+        [NameInMap("ConfigRuleTriggerTypes")]
+        [Validation(Required=false)]
+        public string ConfigRuleTriggerTypes { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("ExcludeResourceIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeResourceIdsScope { get; set; }
 
         [NameInMap("InputParameters")]
         [Validation(Required=false)]
@@ -25,6 +41,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string MaximumExecutionFrequency { get; set; }
 
+        [NameInMap("RegionIdsScope")]
+        [Validation(Required=false)]
+        public string RegionIdsScope { get; set; }
+
+        [NameInMap("ResourceGroupIdsScope")]
+        [Validation(Required=false)]
+        public string ResourceGroupIdsScope { get; set; }
+
         [NameInMap("ResourceTypesScope")]
         [Validation(Required=false)]
         public string ResourceTypesScopeShrink { get; set; }
@@ -32,26 +56,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("RegionIdsScope")]
-        [Validation(Required=false)]
-        public string RegionIdsScope { get; set; }
-
-        [NameInMap("ExcludeResourceIdsScope")]
-        [Validation(Required=false)]
-        public string ExcludeResourceIdsScope { get; set; }
-
-        [NameInMap("ConfigRuleTriggerTypes")]
-        [Validation(Required=false)]
-        public string ConfigRuleTriggerTypes { get; set; }
-
-        [NameInMap("ResourceGroupIdsScope")]
-        [Validation(Required=false)]
-        public string ResourceGroupIdsScope { get; set; }
 
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]

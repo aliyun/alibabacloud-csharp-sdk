@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateConfigRulesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
         public ListAggregateConfigRulesResponseBodyConfigRules ConfigRules { get; set; }
@@ -21,10 +17,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList> ConfigRuleList { get; set; }
             public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList : TeaModel {
-                public int? RiskLevel { get; set; }
-                public string SourceOwner { get; set; }
                 public long? AccountId { get; set; }
-                public string ConfigRuleState { get; set; }
+                public string AutomationType { get; set; }
                 public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance Compliance { get; set; }
                 public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance : TeaModel {
                     [NameInMap("ComplianceType")]
@@ -36,22 +30,31 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     public int? Count { get; set; }
 
                 }
-                public string SourceIdentifier { get; set; }
                 public string ConfigRuleArn { get; set; }
-                public string Description { get; set; }
+                public string ConfigRuleId { get; set; }
+                public string ConfigRuleName { get; set; }
+                public string ConfigRuleState { get; set; }
                 public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy CreateBy { get; set; }
                 public class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy : TeaModel {
-                    [NameInMap("CompliancePackId")]
+                    [NameInMap("AggregatorId")]
                     [Validation(Required=false)]
-                    public string CompliancePackId { get; set; }
+                    public string AggregatorId { get; set; }
 
                     [NameInMap("AggregatorName")]
                     [Validation(Required=false)]
                     public string AggregatorName { get; set; }
 
+                    [NameInMap("CompliancePackId")]
+                    [Validation(Required=false)]
+                    public string CompliancePackId { get; set; }
+
                     [NameInMap("CompliancePackName")]
                     [Validation(Required=false)]
                     public string CompliancePackName { get; set; }
+
+                    [NameInMap("CreatorId")]
+                    [Validation(Required=false)]
+                    public string CreatorId { get; set; }
 
                     [NameInMap("CreatorName")]
                     [Validation(Required=false)]
@@ -61,29 +64,26 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     [Validation(Required=false)]
                     public string CreatorType { get; set; }
 
-                    [NameInMap("CreatorId")]
-                    [Validation(Required=false)]
-                    public string CreatorId { get; set; }
-
-                    [NameInMap("AggregatorId")]
-                    [Validation(Required=false)]
-                    public string AggregatorId { get; set; }
-
                 }
-                public string AutomationType { get; set; }
-                public string ConfigRuleName { get; set; }
-                public string ConfigRuleId { get; set; }
+                public string Description { get; set; }
+                public int? RiskLevel { get; set; }
+                public string SourceIdentifier { get; set; }
+                public string SourceOwner { get; set; }
             }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

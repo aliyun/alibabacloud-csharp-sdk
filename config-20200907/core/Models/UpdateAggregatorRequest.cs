@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateAggregatorRequest : TeaModel {
-        [NameInMap("AggregatorId")]
-        [Validation(Required=false)]
-        public string AggregatorId { get; set; }
-
-        [NameInMap("AggregatorName")]
-        [Validation(Required=false)]
-        public string AggregatorName { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
         [NameInMap("AggregatorAccounts")]
         [Validation(Required=false)]
         public List<UpdateAggregatorRequestAggregatorAccounts> AggregatorAccounts { get; set; }
@@ -39,9 +27,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         }
 
+        [NameInMap("AggregatorId")]
+        [Validation(Required=false)]
+        public string AggregatorId { get; set; }
+
+        [NameInMap("AggregatorName")]
+        [Validation(Required=false)]
+        public string AggregatorName { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
     }
 

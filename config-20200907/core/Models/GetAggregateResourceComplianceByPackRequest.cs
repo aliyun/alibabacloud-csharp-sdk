@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceByPackRequest : TeaModel {
-        [NameInMap("CompliancePackId")]
-        [Validation(Required=false)]
-        public string CompliancePackId { get; set; }
-
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
+
+        [NameInMap("CompliancePackId")]
+        [Validation(Required=false)]
+        public string CompliancePackId { get; set; }
 
     }
 

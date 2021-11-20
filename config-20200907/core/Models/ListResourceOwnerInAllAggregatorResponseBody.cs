@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListResourceOwnerInAllAggregatorResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AccountInAggregator")]
         [Validation(Required=false)]
         public List<ListResourceOwnerInAllAggregatorResponseBodyAccountInAggregator> AccountInAggregator { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string AccountName { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

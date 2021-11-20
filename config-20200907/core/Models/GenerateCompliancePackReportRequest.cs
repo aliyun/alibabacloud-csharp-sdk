@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GenerateCompliancePackReportRequest : TeaModel {
-        [NameInMap("CompliancePackId")]
-        [Validation(Required=false)]
-        public string CompliancePackId { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("CompliancePackId")]
+        [Validation(Required=false)]
+        public string CompliancePackId { get; set; }
 
     }
 

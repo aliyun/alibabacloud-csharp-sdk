@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UpdateCompliancePackShrinkRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }
+
+        [NameInMap("CompliancePackName")]
+        [Validation(Required=false)]
+        public string CompliancePackName { get; set; }
+
+        [NameInMap("ConfigRules")]
+        [Validation(Required=false)]
+        public string ConfigRulesShrink { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -20,14 +32,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
-
-        [NameInMap("ConfigRules")]
-        [Validation(Required=false)]
-        public string ConfigRulesShrink { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

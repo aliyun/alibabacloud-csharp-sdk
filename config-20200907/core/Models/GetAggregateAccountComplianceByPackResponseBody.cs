@@ -9,14 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateAccountComplianceByPackResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AccountComplianceResult")]
         [Validation(Required=false)]
         public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult AccountComplianceResult { get; set; }
         public class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult : TeaModel {
+            [NameInMap("AccountCompliances")]
+            [Validation(Required=false)]
+            public List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> AccountCompliances { get; set; }
+            public class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances : TeaModel {
+                public long? AccountId { get; set; }
+                public string AccountName { get; set; }
+                public string ComplianceType { get; set; }
+            }
             [NameInMap("CompliancePackId")]
             [Validation(Required=false)]
             public string CompliancePackId { get; set; }
@@ -26,15 +30,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("AccountCompliances")]
-            [Validation(Required=false)]
-            public List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> AccountCompliances { get; set; }
-            public class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances : TeaModel {
-                public string ComplianceType { get; set; }
-                public long? AccountId { get; set; }
-                public string AccountName { get; set; }
-            }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

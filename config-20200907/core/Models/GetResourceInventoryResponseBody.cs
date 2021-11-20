@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public GetResourceInventoryResponseBodyResourceInventory ResourceInventory { get; set; }
         public class GetResourceInventoryResponseBodyResourceInventory : TeaModel {
-            [NameInMap("DownloadUrl")]
-            [Validation(Required=false)]
-            public string DownloadUrl { get; set; }
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public long? AccountId { get; set; }
+            [NameInMap("DownloadUrl")]
+            [Validation(Required=false)]
+            public string DownloadUrl { get; set; }
             [NameInMap("ResourceInventoryGenerateTime")]
             [Validation(Required=false)]
             public long? ResourceInventoryGenerateTime { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
         };
 
     }
