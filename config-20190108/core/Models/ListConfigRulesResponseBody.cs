@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class ListConfigRulesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
         public ListConfigRulesResponseBodyConfigRules ConfigRules { get; set; }
@@ -21,11 +17,8 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public List<ListConfigRulesResponseBodyConfigRulesConfigRuleList> ConfigRuleList { get; set; }
             public class ListConfigRulesResponseBodyConfigRulesConfigRuleList : TeaModel {
-                public string CompliancePackId { get; set; }
-                public int? RiskLevel { get; set; }
-                public string SourceOwner { get; set; }
                 public long? AccountId { get; set; }
-                public string ConfigRuleState { get; set; }
+                public string AutomationType { get; set; }
                 public ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance Compliance { get; set; }
                 public class ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance : TeaModel {
                     [NameInMap("ComplianceType")]
@@ -37,9 +30,11 @@ namespace AlibabaCloud.SDK.Config20190108.Models
                     public int? Count { get; set; }
 
                 }
-                public string SourceIdentifier { get; set; }
+                public string CompliancePackId { get; set; }
                 public string ConfigRuleArn { get; set; }
-                public string Description { get; set; }
+                public string ConfigRuleId { get; set; }
+                public string ConfigRuleName { get; set; }
+                public string ConfigRuleState { get; set; }
                 public ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy CreateBy { get; set; }
                 public class ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy : TeaModel {
                     [NameInMap("CompliancePackId")]
@@ -51,9 +46,10 @@ namespace AlibabaCloud.SDK.Config20190108.Models
                     public string CompliancePackName { get; set; }
 
                 }
-                public string AutomationType { get; set; }
-                public string ConfigRuleName { get; set; }
-                public string ConfigRuleId { get; set; }
+                public string Description { get; set; }
+                public int? RiskLevel { get; set; }
+                public string SourceIdentifier { get; set; }
+                public string SourceOwner { get; set; }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -65,6 +61,10 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public long? TotalCount { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

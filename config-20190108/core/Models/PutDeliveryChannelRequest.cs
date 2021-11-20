@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DeliveryChannelAssumeRoleArn")]
+        [Validation(Required=false)]
+        public string DeliveryChannelAssumeRoleArn { get; set; }
+
+        [NameInMap("DeliveryChannelCondition")]
+        [Validation(Required=false)]
+        public string DeliveryChannelCondition { get; set; }
+
         [NameInMap("DeliveryChannelId")]
         [Validation(Required=false)]
         public string DeliveryChannelId { get; set; }
@@ -21,21 +29,13 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public string DeliveryChannelName { get; set; }
 
-        [NameInMap("DeliveryChannelType")]
-        [Validation(Required=false)]
-        public string DeliveryChannelType { get; set; }
-
         [NameInMap("DeliveryChannelTargetArn")]
         [Validation(Required=false)]
         public string DeliveryChannelTargetArn { get; set; }
 
-        [NameInMap("DeliveryChannelAssumeRoleArn")]
+        [NameInMap("DeliveryChannelType")]
         [Validation(Required=false)]
-        public string DeliveryChannelAssumeRoleArn { get; set; }
-
-        [NameInMap("DeliveryChannelCondition")]
-        [Validation(Required=false)]
-        public string DeliveryChannelCondition { get; set; }
+        public string DeliveryChannelType { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]

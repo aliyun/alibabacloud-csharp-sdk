@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class ListRemediationTemplatesRequest : TeaModel {
-        [NameInMap("RemediationType")]
-        [Validation(Required=false)]
-        public string RemediationType { get; set; }
-
         [NameInMap("ManagedRuleIdentifier")]
         [Validation(Required=false)]
         public string ManagedRuleIdentifier { get; set; }
+
+        [NameInMap("RemediationType")]
+        [Validation(Required=false)]
+        public string RemediationType { get; set; }
 
     }
 

@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public List<ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> DiscoveredResourceProfileList { get; set; }
             public class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList : TeaModel {
-                public string ResourceType { get; set; }
+                public long? AccountId { get; set; }
                 public string Region { get; set; }
                 public long? ResourceCreationTime { get; set; }
-                public string Tags { get; set; }
-                public long? AccountId { get; set; }
+                public int? ResourceDeleted { get; set; }
                 public string ResourceId { get; set; }
                 public string ResourceName { get; set; }
-                public int? ResourceDeleted { get; set; }
-                public string ResourceStatus { get; set; }
                 public long? ResourceOwnerId { get; set; }
+                public string ResourceStatus { get; set; }
+                public string ResourceType { get; set; }
+                public string Tags { get; set; }
             }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]

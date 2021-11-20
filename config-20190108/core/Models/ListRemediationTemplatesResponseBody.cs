@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class ListRemediationTemplatesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("RemediationTemplates")]
         [Validation(Required=false)]
         public List<ListRemediationTemplatesResponseBodyRemediationTemplates> RemediationTemplates { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [NameInMap("RemediationType")]
             [Validation(Required=false)]
             public string RemediationType { get; set; }
+
+            [NameInMap("TemplateDefinition")]
+            [Validation(Required=false)]
+            public string TemplateDefinition { get; set; }
 
             [NameInMap("TemplateIdentifier")]
             [Validation(Required=false)]
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
-            [NameInMap("TemplateDefinition")]
-            [Validation(Required=false)]
-            public string TemplateDefinition { get; set; }
-
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

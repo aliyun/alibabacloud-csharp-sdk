@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class GetResourceComplianceTimelineRequest : TeaModel {
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -29,21 +17,33 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
+        [NameInMap("MemberId")]
+        [Validation(Required=false)]
+        public string MemberId { get; set; }
+
         [NameInMap("MultiAccount")]
         [Validation(Required=false)]
         public bool? MultiAccount { get; set; }
 
-        [NameInMap("MemberId")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string MemberId { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
-        [NameInMap("NextToken")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string ResourceId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

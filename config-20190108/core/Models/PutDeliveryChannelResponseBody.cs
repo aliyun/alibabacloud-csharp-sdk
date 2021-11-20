@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class PutDeliveryChannelResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DeliveryChannelId")]
         [Validation(Required=false)]
         public string DeliveryChannelId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

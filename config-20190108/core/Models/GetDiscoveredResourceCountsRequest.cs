@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public string GroupByKey { get; set; }
 
-        [NameInMap("MultiAccount")]
-        [Validation(Required=false)]
-        public bool? MultiAccount { get; set; }
-
         [NameInMap("MemberId")]
         [Validation(Required=false)]
         public long? MemberId { get; set; }
+
+        [NameInMap("MultiAccount")]
+        [Validation(Required=false)]
+        public bool? MultiAccount { get; set; }
 
     }
 

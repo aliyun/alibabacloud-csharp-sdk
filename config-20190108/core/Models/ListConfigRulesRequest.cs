@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,17 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class ListConfigRulesRequest : TeaModel {
-        [NameInMap("ConfigRuleState")]
+        [NameInMap("CompliancePackId")]
         [Validation(Required=false)]
-        public string ConfigRuleState { get; set; }
+        public string CompliancePackId { get; set; }
 
         [NameInMap("ComplianceType")]
         [Validation(Required=false)]
         public string ComplianceType { get; set; }
 
-        [NameInMap("RiskLevel")]
+        [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
-        public int? RiskLevel { get; set; }
+        public string ConfigRuleName { get; set; }
+
+        [NameInMap("ConfigRuleState")]
+        [Validation(Required=false)]
+        public string ConfigRuleState { get; set; }
+
+        [NameInMap("MemberId")]
+        [Validation(Required=false)]
+        public long? MemberId { get; set; }
+
+        [NameInMap("MultiAccount")]
+        [Validation(Required=false)]
+        public bool? MultiAccount { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -32,21 +41,9 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("MultiAccount")]
+        [NameInMap("RiskLevel")]
         [Validation(Required=false)]
-        public bool? MultiAccount { get; set; }
-
-        [NameInMap("MemberId")]
-        [Validation(Required=false)]
-        public long? MemberId { get; set; }
-
-        [NameInMap("ConfigRuleName")]
-        [Validation(Required=false)]
-        public string ConfigRuleName { get; set; }
-
-        [NameInMap("CompliancePackId")]
-        [Validation(Required=false)]
-        public string CompliancePackId { get; set; }
+        public int? RiskLevel { get; set; }
 
     }
 

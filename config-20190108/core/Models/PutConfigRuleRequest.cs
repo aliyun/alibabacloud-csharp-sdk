@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class PutConfigRuleRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
@@ -25,21 +29,17 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public string InputParameters { get; set; }
 
-        [NameInMap("SourceOwner")]
+        [NameInMap("MemberId")]
         [Validation(Required=false)]
-        public string SourceOwner { get; set; }
+        public long? MemberId { get; set; }
 
-        [NameInMap("SourceIdentifier")]
+        [NameInMap("MultiAccount")]
         [Validation(Required=false)]
-        public string SourceIdentifier { get; set; }
+        public bool? MultiAccount { get; set; }
 
-        [NameInMap("SourceDetailMessageType")]
+        [NameInMap("RiskLevel")]
         [Validation(Required=false)]
-        public string SourceDetailMessageType { get; set; }
-
-        [NameInMap("SourceMaximumExecutionFrequency")]
-        [Validation(Required=false)]
-        public string SourceMaximumExecutionFrequency { get; set; }
+        public int? RiskLevel { get; set; }
 
         [NameInMap("ScopeComplianceResourceId")]
         [Validation(Required=false)]
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.Config20190108.Models
         [Validation(Required=false)]
         public string ScopeComplianceResourceTypes { get; set; }
 
-        [NameInMap("RiskLevel")]
+        [NameInMap("SourceDetailMessageType")]
         [Validation(Required=false)]
-        public int? RiskLevel { get; set; }
+        public string SourceDetailMessageType { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("SourceIdentifier")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string SourceIdentifier { get; set; }
 
-        [NameInMap("MultiAccount")]
+        [NameInMap("SourceMaximumExecutionFrequency")]
         [Validation(Required=false)]
-        public bool? MultiAccount { get; set; }
+        public string SourceMaximumExecutionFrequency { get; set; }
 
-        [NameInMap("MemberId")]
+        [NameInMap("SourceOwner")]
         [Validation(Required=false)]
-        public long? MemberId { get; set; }
+        public string SourceOwner { get; set; }
 
     }
 

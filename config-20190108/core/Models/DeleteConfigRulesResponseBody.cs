@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class DeleteConfigRulesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public DeleteConfigRulesResponseBodyOperateRuleResult OperateRuleResult { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [Validation(Required=false)]
             public List<DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> OperateRuleItemList { get; set; }
             public class DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList : TeaModel {
+                public string ConfigRuleId { get; set; }
                 public string ErrorCode { get; set; }
                 public bool? Success { get; set; }
-                public string ConfigRuleId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20190108.Models
 {
     public class PutEvaluationsRequest : TeaModel {
-        [NameInMap("ResultToken")]
-        [Validation(Required=false)]
-        public string ResultToken { get; set; }
-
         [NameInMap("Evaluations")]
         [Validation(Required=false)]
         public string Evaluations { get; set; }
+
+        [NameInMap("ResultToken")]
+        [Validation(Required=false)]
+        public string ResultToken { get; set; }
 
     }
 
