@@ -17,13 +17,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<ListStackOperationRisksResponseBodyRiskResources> RiskResources { get; set; }
         public class ListStackOperationRisksResponseBodyRiskResources : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
             [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
             public string LogicalResourceId { get; set; }
 
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
             [NameInMap("PhysicalResourceId")]
             [Validation(Required=false)]
             public string PhysicalResourceId { get; set; }
+
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
 
             [NameInMap("RequestId")]
             [Validation(Required=false)]
@@ -33,21 +45,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
             [NameInMap("RiskType")]
             [Validation(Required=false)]
             public string RiskType { get; set; }
-
-            [NameInMap("Reason")]
-            [Validation(Required=false)]
-            public string Reason { get; set; }
 
         }
 

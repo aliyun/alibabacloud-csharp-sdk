@@ -17,82 +17,55 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public GetStackGroupOperationResponseBodyStackGroupOperation StackGroupOperation { get; set; }
         public class GetStackGroupOperationResponseBodyStackGroupOperation : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("StackGroupId")]
-            [Validation(Required=false)]
-            public string StackGroupId { get; set; }
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
+            [NameInMap("AdministrationRoleName")]
+            [Validation(Required=false)]
+            public string AdministrationRoleName { get; set; }
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
-            [NameInMap("RetainStacks")]
+            [NameInMap("DeploymentTargets")]
             [Validation(Required=false)]
-            public bool? RetainStacks { get; set; }
-            [NameInMap("StackGroupName")]
+            public GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets DeploymentTargets { get; set; }
+            public class GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets : TeaModel {
+                [NameInMap("AccountIds")]
+                [Validation(Required=false)]
+                public List<string> AccountIds { get; set; }
+
+                [NameInMap("RdFolderIds")]
+                [Validation(Required=false)]
+                public List<string> RdFolderIds { get; set; }
+
+            }
+            [NameInMap("EndTime")]
             [Validation(Required=false)]
-            public string StackGroupName { get; set; }
-            [NameInMap("OperationId")]
+            public string EndTime { get; set; }
+            [NameInMap("ExecutionRoleName")]
             [Validation(Required=false)]
-            public string OperationId { get; set; }
+            public string ExecutionRoleName { get; set; }
             [NameInMap("OperationDescription")]
             [Validation(Required=false)]
             public string OperationDescription { get; set; }
-            [NameInMap("StackGroupDriftDetectionDetail")]
+            [NameInMap("OperationId")]
             [Validation(Required=false)]
-            public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail StackGroupDriftDetectionDetail { get; set; }
-            public class GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail : TeaModel {
-                [NameInMap("DriftDetectionTime")]
-                [Validation(Required=false)]
-                public string DriftDetectionTime { get; set; }
-
-                [NameInMap("TotalStackInstancesCount")]
-                [Validation(Required=false)]
-                public int? TotalStackInstancesCount { get; set; }
-
-                [NameInMap("FailedStackInstancesCount")]
-                [Validation(Required=false)]
-                public int? FailedStackInstancesCount { get; set; }
-
-                [NameInMap("DriftDetectionStatus")]
-                [Validation(Required=false)]
-                public string DriftDetectionStatus { get; set; }
-
-                [NameInMap("StackGroupDriftStatus")]
-                [Validation(Required=false)]
-                public string StackGroupDriftStatus { get; set; }
-
-                [NameInMap("InProgressStackInstancesCount")]
-                [Validation(Required=false)]
-                public int? InProgressStackInstancesCount { get; set; }
-
-                [NameInMap("InSyncStackInstancesCount")]
-                [Validation(Required=false)]
-                public int? InSyncStackInstancesCount { get; set; }
-
-                [NameInMap("CancelledStackInstancesCount")]
-                [Validation(Required=false)]
-                public int? CancelledStackInstancesCount { get; set; }
-
-                [NameInMap("DriftedStackInstancesCount")]
-                [Validation(Required=false)]
-                public int? DriftedStackInstancesCount { get; set; }
-
-            }
+            public string OperationId { get; set; }
             [NameInMap("OperationPreferences")]
             [Validation(Required=false)]
             public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences OperationPreferences { get; set; }
             public class GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences : TeaModel {
-                [NameInMap("MaxConcurrentCount")]
-                [Validation(Required=false)]
-                public int? MaxConcurrentCount { get; set; }
-
                 [NameInMap("FailureToleranceCount")]
                 [Validation(Required=false)]
                 public int? FailureToleranceCount { get; set; }
+
+                [NameInMap("FailureTolerancePercentage")]
+                [Validation(Required=false)]
+                public int? FailureTolerancePercentage { get; set; }
+
+                [NameInMap("MaxConcurrentCount")]
+                [Validation(Required=false)]
+                public int? MaxConcurrentCount { get; set; }
 
                 [NameInMap("MaxConcurrentPercentage")]
                 [Validation(Required=false)]
@@ -102,33 +75,60 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<string> RegionIdsOrder { get; set; }
 
-                [NameInMap("FailureTolerancePercentage")]
+            }
+            [NameInMap("RetainStacks")]
+            [Validation(Required=false)]
+            public bool? RetainStacks { get; set; }
+            [NameInMap("StackGroupDriftDetectionDetail")]
+            [Validation(Required=false)]
+            public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail StackGroupDriftDetectionDetail { get; set; }
+            public class GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail : TeaModel {
+                [NameInMap("CancelledStackInstancesCount")]
                 [Validation(Required=false)]
-                public int? FailureTolerancePercentage { get; set; }
+                public int? CancelledStackInstancesCount { get; set; }
+
+                [NameInMap("DriftDetectionStatus")]
+                [Validation(Required=false)]
+                public string DriftDetectionStatus { get; set; }
+
+                [NameInMap("DriftDetectionTime")]
+                [Validation(Required=false)]
+                public string DriftDetectionTime { get; set; }
+
+                [NameInMap("DriftedStackInstancesCount")]
+                [Validation(Required=false)]
+                public int? DriftedStackInstancesCount { get; set; }
+
+                [NameInMap("FailedStackInstancesCount")]
+                [Validation(Required=false)]
+                public int? FailedStackInstancesCount { get; set; }
+
+                [NameInMap("InProgressStackInstancesCount")]
+                [Validation(Required=false)]
+                public int? InProgressStackInstancesCount { get; set; }
+
+                [NameInMap("InSyncStackInstancesCount")]
+                [Validation(Required=false)]
+                public int? InSyncStackInstancesCount { get; set; }
+
+                [NameInMap("StackGroupDriftStatus")]
+                [Validation(Required=false)]
+                public string StackGroupDriftStatus { get; set; }
+
+                [NameInMap("TotalStackInstancesCount")]
+                [Validation(Required=false)]
+                public int? TotalStackInstancesCount { get; set; }
 
             }
-            [NameInMap("EndTime")]
+            [NameInMap("StackGroupId")]
             [Validation(Required=false)]
-            public string EndTime { get; set; }
-            [NameInMap("ExecutionRoleName")]
+            public string StackGroupId { get; set; }
+            [NameInMap("StackGroupName")]
             [Validation(Required=false)]
-            public string ExecutionRoleName { get; set; }
-            [NameInMap("AdministrationRoleName")]
+            public string StackGroupName { get; set; }
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string AdministrationRoleName { get; set; }
-            [NameInMap("DeploymentTargets")]
-            [Validation(Required=false)]
-            public GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets DeploymentTargets { get; set; }
-            public class GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets : TeaModel {
-                [NameInMap("RdFolderIds")]
-                [Validation(Required=false)]
-                public List<string> RdFolderIds { get; set; }
-
-                [NameInMap("AccountIds")]
-                [Validation(Required=false)]
-                public List<string> AccountIds { get; set; }
-
-            }
+            public string Status { get; set; }
         };
 
     }

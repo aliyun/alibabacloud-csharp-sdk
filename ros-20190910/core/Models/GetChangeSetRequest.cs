@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetChangeSetRequest : TeaModel {
-        [NameInMap("ShowTemplate")]
+        [NameInMap("ChangeSetId")]
         [Validation(Required=false)]
-        public bool? ShowTemplate { get; set; }
+        public string ChangeSetId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ChangeSetId")]
+        [NameInMap("ShowTemplate")]
         [Validation(Required=false)]
-        public string ChangeSetId { get; set; }
+        public bool? ShowTemplate { get; set; }
 
     }
 

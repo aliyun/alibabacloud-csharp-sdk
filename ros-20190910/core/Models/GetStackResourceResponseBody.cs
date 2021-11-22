@@ -9,65 +9,65 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackResourceResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string CreateTime { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DriftDetectionTime")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("StatusReason")]
-        [Validation(Required=false)]
-        public string StatusReason { get; set; }
-
-        [NameInMap("PhysicalResourceId")]
-        [Validation(Required=false)]
-        public string PhysicalResourceId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("Metadata")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Metadata { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("ResourceAttributes")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> ResourceAttributes { get; set; }
+        public string DriftDetectionTime { get; set; }
 
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
         public string LogicalResourceId { get; set; }
 
+        [NameInMap("Metadata")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Metadata { get; set; }
+
+        [NameInMap("PhysicalResourceId")]
+        [Validation(Required=false)]
+        public string PhysicalResourceId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResourceAttributes")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, object>> ResourceAttributes { get; set; }
+
         [NameInMap("ResourceDriftStatus")]
         [Validation(Required=false)]
         public string ResourceDriftStatus { get; set; }
 
-        [NameInMap("UpdateTime")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string UpdateTime { get; set; }
+        public string ResourceType { get; set; }
 
-        [NameInMap("DriftDetectionTime")]
+        [NameInMap("StackId")]
         [Validation(Required=false)]
-        public string DriftDetectionTime { get; set; }
+        public string StackId { get; set; }
 
         [NameInMap("StackName")]
         [Validation(Required=false)]
         public string StackName { get; set; }
 
-        [NameInMap("StackId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string StackId { get; set; }
+        public string Status { get; set; }
+
+        [NameInMap("StatusReason")]
+        [Validation(Required=false)]
+        public string StatusReason { get; set; }
+
+        [NameInMap("UpdateTime")]
+        [Validation(Required=false)]
+        public string UpdateTime { get; set; }
 
     }
 

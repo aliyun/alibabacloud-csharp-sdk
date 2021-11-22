@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackOperationRisksRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("StackId")]
-        [Validation(Required=false)]
-        public string StackId { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("OperationType")]
         [Validation(Required=false)]
         public string OperationType { get; set; }
 
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("RetainAllResources")]
         [Validation(Required=false)]
@@ -36,6 +32,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("RetainResources")]
         [Validation(Required=false)]
         public List<string> RetainResources { get; set; }
+
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
 
     }
 

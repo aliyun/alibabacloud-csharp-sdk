@@ -9,6 +9,48 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackEventsResponseBody : TeaModel {
+        [NameInMap("Events")]
+        [Validation(Required=false)]
+        public List<ListStackEventsResponseBodyEvents> Events { get; set; }
+        public class ListStackEventsResponseBodyEvents : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("EventId")]
+            [Validation(Required=false)]
+            public string EventId { get; set; }
+
+            [NameInMap("LogicalResourceId")]
+            [Validation(Required=false)]
+            public string LogicalResourceId { get; set; }
+
+            [NameInMap("PhysicalResourceId")]
+            [Validation(Required=false)]
+            public string PhysicalResourceId { get; set; }
+
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+            [NameInMap("StackId")]
+            [Validation(Required=false)]
+            public string StackId { get; set; }
+
+            [NameInMap("StackName")]
+            [Validation(Required=false)]
+            public string StackName { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("StatusReason")]
+            [Validation(Required=false)]
+            public string StatusReason { get; set; }
+
+        }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,48 +66,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
-
-        [NameInMap("Events")]
-        [Validation(Required=false)]
-        public List<ListStackEventsResponseBodyEvents> Events { get; set; }
-        public class ListStackEventsResponseBodyEvents : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("EventId")]
-            [Validation(Required=false)]
-            public string EventId { get; set; }
-
-            [NameInMap("LogicalResourceId")]
-            [Validation(Required=false)]
-            public string LogicalResourceId { get; set; }
-
-            [NameInMap("StackId")]
-            [Validation(Required=false)]
-            public string StackId { get; set; }
-
-            [NameInMap("PhysicalResourceId")]
-            [Validation(Required=false)]
-            public string PhysicalResourceId { get; set; }
-
-            [NameInMap("ResourceType")]
-            [Validation(Required=false)]
-            public string ResourceType { get; set; }
-
-            [NameInMap("StatusReason")]
-            [Validation(Required=false)]
-            public string StatusReason { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("StackName")]
-            [Validation(Required=false)]
-            public string StackName { get; set; }
-
-        }
 
     }
 

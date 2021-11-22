@@ -17,49 +17,49 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<ListStackResourcesResponseBodyResources> Resources { get; set; }
         public class ListStackResourcesResponseBodyResources : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("LogicalResourceId")]
-            [Validation(Required=false)]
-            public string LogicalResourceId { get; set; }
-
-            [NameInMap("UpdateTime")]
-            [Validation(Required=false)]
-            public string UpdateTime { get; set; }
-
-            [NameInMap("StackId")]
-            [Validation(Required=false)]
-            public string StackId { get; set; }
-
-            [NameInMap("PhysicalResourceId")]
-            [Validation(Required=false)]
-            public string PhysicalResourceId { get; set; }
+            public string CreateTime { get; set; }
 
             [NameInMap("DriftDetectionTime")]
             [Validation(Required=false)]
             public string DriftDetectionTime { get; set; }
 
-            [NameInMap("ResourceType")]
+            [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
-            public string ResourceType { get; set; }
+            public string LogicalResourceId { get; set; }
+
+            [NameInMap("PhysicalResourceId")]
+            [Validation(Required=false)]
+            public string PhysicalResourceId { get; set; }
 
             [NameInMap("ResourceDriftStatus")]
             [Validation(Required=false)]
             public string ResourceDriftStatus { get; set; }
 
-            [NameInMap("StatusReason")]
+            [NameInMap("ResourceType")]
             [Validation(Required=false)]
-            public string StatusReason { get; set; }
+            public string ResourceType { get; set; }
 
-            [NameInMap("CreateTime")]
+            [NameInMap("StackId")]
             [Validation(Required=false)]
-            public string CreateTime { get; set; }
+            public string StackId { get; set; }
 
             [NameInMap("StackName")]
             [Validation(Required=false)]
             public string StackName { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("StatusReason")]
+            [Validation(Required=false)]
+            public string StatusReason { get; set; }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
         }
 

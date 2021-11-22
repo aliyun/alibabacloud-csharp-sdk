@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetChangeSetResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("ChangeSetId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string ChangeSetId { get; set; }
 
         [NameInMap("ChangeSetName")]
         [Validation(Required=false)]
@@ -21,13 +21,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ChangeSetType { get; set; }
 
-        [NameInMap("StatusReason")]
+        [NameInMap("Changes")]
         [Validation(Required=false)]
-        public string StatusReason { get; set; }
+        public List<Dictionary<string, object>> Changes { get; set; }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("DisableRollback")]
         [Validation(Required=false)]
@@ -36,42 +40,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("ExecutionStatus")]
         [Validation(Required=false)]
         public string ExecutionStatus { get; set; }
-
-        [NameInMap("StackName")]
-        [Validation(Required=false)]
-        public string StackName { get; set; }
-
-        [NameInMap("TimeoutInMinutes")]
-        [Validation(Required=false)]
-        public int? TimeoutInMinutes { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("StackId")]
-        [Validation(Required=false)]
-        public string StackId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("ChangeSetId")]
-        [Validation(Required=false)]
-        public string ChangeSetId { get; set; }
-
-        [NameInMap("TemplateBody")]
-        [Validation(Required=false)]
-        public string TemplateBody { get; set; }
-
-        [NameInMap("Changes")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> Changes { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -86,6 +54,38 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterValue { get; set; }
 
         }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
+
+        [NameInMap("StackName")]
+        [Validation(Required=false)]
+        public string StackName { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("StatusReason")]
+        [Validation(Required=false)]
+        public string StatusReason { get; set; }
+
+        [NameInMap("TemplateBody")]
+        [Validation(Required=false)]
+        public string TemplateBody { get; set; }
+
+        [NameInMap("TimeoutInMinutes")]
+        [Validation(Required=false)]
+        public int? TimeoutInMinutes { get; set; }
 
     }
 

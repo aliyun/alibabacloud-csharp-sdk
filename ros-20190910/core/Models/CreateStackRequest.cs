@@ -9,61 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateStackRequest : TeaModel {
-        [NameInMap("DisableRollback")]
-        [Validation(Required=false)]
-        public bool? DisableRollback { get; set; }
-
-        [NameInMap("TemplateBody")]
-        [Validation(Required=false)]
-        public string TemplateBody { get; set; }
-
-        [NameInMap("StackPolicyURL")]
-        [Validation(Required=false)]
-        public string StackPolicyURL { get; set; }
-
-        [NameInMap("TimeoutInMinutes")]
-        [Validation(Required=false)]
-        public long? TimeoutInMinutes { get; set; }
-
-        [NameInMap("StackPolicyBody")]
-        [Validation(Required=false)]
-        public string StackPolicyBody { get; set; }
-
-        [NameInMap("StackName")]
-        [Validation(Required=false)]
-        public string StackName { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
-
-        [NameInMap("TemplateURL")]
-        [Validation(Required=false)]
-        public string TemplateURL { get; set; }
-
-        [NameInMap("RamRoleName")]
-        [Validation(Required=false)]
-        public string RamRoleName { get; set; }
-
-        [NameInMap("DeletionProtection")]
-        [Validation(Required=false)]
-        public string DeletionProtection { get; set; }
 
         [NameInMap("CreateOption")]
         [Validation(Required=false)]
         public string CreateOption { get; set; }
 
-        [NameInMap("TemplateId")]
+        [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
-        public string TemplateId { get; set; }
+        public string DeletionProtection { get; set; }
 
-        [NameInMap("TemplateVersion")]
+        [NameInMap("DisableRollback")]
         [Validation(Required=false)]
-        public string TemplateVersion { get; set; }
+        public bool? DisableRollback { get; set; }
+
+        [NameInMap("NotificationURLs")]
+        [Validation(Required=false)]
+        public List<string> NotificationURLs { get; set; }
+
+        [NameInMap("Parallelism")]
+        [Validation(Required=false)]
+        public long? Parallelism { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -79,9 +47,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        [NameInMap("NotificationURLs")]
+        [NameInMap("RamRoleName")]
         [Validation(Required=false)]
-        public List<string> NotificationURLs { get; set; }
+        public string RamRoleName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("StackName")]
+        [Validation(Required=false)]
+        public string StackName { get; set; }
+
+        [NameInMap("StackPolicyBody")]
+        [Validation(Required=false)]
+        public string StackPolicyBody { get; set; }
+
+        [NameInMap("StackPolicyURL")]
+        [Validation(Required=false)]
+        public string StackPolicyURL { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -97,13 +85,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("TemplateBody")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string TemplateBody { get; set; }
 
-        [NameInMap("Parallelism")]
+        [NameInMap("TemplateId")]
         [Validation(Required=false)]
-        public long? Parallelism { get; set; }
+        public string TemplateId { get; set; }
+
+        [NameInMap("TemplateScratchId")]
+        [Validation(Required=false)]
+        public string TemplateScratchId { get; set; }
+
+        [NameInMap("TemplateURL")]
+        [Validation(Required=false)]
+        public string TemplateURL { get; set; }
+
+        [NameInMap("TemplateVersion")]
+        [Validation(Required=false)]
+        public string TemplateVersion { get; set; }
+
+        [NameInMap("TimeoutInMinutes")]
+        [Validation(Required=false)]
+        public long? TimeoutInMinutes { get; set; }
 
     }
 

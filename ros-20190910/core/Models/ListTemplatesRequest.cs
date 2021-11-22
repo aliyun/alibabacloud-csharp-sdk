@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("TemplateName")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string TemplateName { get; set; }
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ShareType")]
         [Validation(Required=false)]
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("TemplateName")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string TemplateName { get; set; }
 
     }
 

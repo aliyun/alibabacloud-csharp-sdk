@@ -9,45 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ContinueCreateStackRequest : TeaModel {
-        [NameInMap("StackId")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string StackId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("RamRoleName")]
-        [Validation(Required=false)]
-        public string RamRoleName { get; set; }
+        public bool? DryRun { get; set; }
 
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
-        [NameInMap("TemplateBody")]
+        [NameInMap("Parallelism")]
         [Validation(Required=false)]
-        public string TemplateBody { get; set; }
-
-        [NameInMap("TemplateURL")]
-        [Validation(Required=false)]
-        public string TemplateURL { get; set; }
-
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
-
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public string TemplateId { get; set; }
-
-        [NameInMap("TemplateVersion")]
-        [Validation(Required=false)]
-        public string TemplateVersion { get; set; }
-
-        [NameInMap("RecreatingResources")]
-        [Validation(Required=false)]
-        public List<string> RecreatingResources { get; set; }
+        public long? Parallelism { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -63,9 +35,37 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        [NameInMap("Parallelism")]
+        [NameInMap("RamRoleName")]
         [Validation(Required=false)]
-        public long? Parallelism { get; set; }
+        public string RamRoleName { get; set; }
+
+        [NameInMap("RecreatingResources")]
+        [Validation(Required=false)]
+        public List<string> RecreatingResources { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
+
+        [NameInMap("TemplateBody")]
+        [Validation(Required=false)]
+        public string TemplateBody { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
+        [NameInMap("TemplateURL")]
+        [Validation(Required=false)]
+        public string TemplateURL { get; set; }
+
+        [NameInMap("TemplateVersion")]
+        [Validation(Required=false)]
+        public string TemplateVersion { get; set; }
 
     }
 

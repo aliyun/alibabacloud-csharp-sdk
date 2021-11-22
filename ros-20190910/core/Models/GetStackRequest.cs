@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackRequest : TeaModel {
-        [NameInMap("StackId")]
-        [Validation(Required=false)]
-        public string StackId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,9 +17,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string OutputOption { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ShowResourceProgress")]
         [Validation(Required=false)]
         public string ShowResourceProgress { get; set; }
+
+        [NameInMap("StackId")]
+        [Validation(Required=false)]
+        public string StackId { get; set; }
 
     }
 

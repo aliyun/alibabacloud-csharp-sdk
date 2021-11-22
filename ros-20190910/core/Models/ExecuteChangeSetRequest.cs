@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ExecuteChangeSetRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ChangeSetId")]
         [Validation(Required=false)]
         public string ChangeSetId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

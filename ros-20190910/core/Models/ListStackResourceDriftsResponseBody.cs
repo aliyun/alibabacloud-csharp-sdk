@@ -21,37 +21,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<ListStackResourceDriftsResponseBodyResourceDrifts> ResourceDrifts { get; set; }
         public class ListStackResourceDriftsResponseBodyResourceDrifts : TeaModel {
-            [NameInMap("LogicalResourceId")]
+            [NameInMap("ActualProperties")]
             [Validation(Required=false)]
-            public string LogicalResourceId { get; set; }
-
-            [NameInMap("StackId")]
-            [Validation(Required=false)]
-            public string StackId { get; set; }
-
-            [NameInMap("PhysicalResourceId")]
-            [Validation(Required=false)]
-            public string PhysicalResourceId { get; set; }
+            public string ActualProperties { get; set; }
 
             [NameInMap("DriftDetectionTime")]
             [Validation(Required=false)]
             public string DriftDetectionTime { get; set; }
 
-            [NameInMap("ResourceType")]
-            [Validation(Required=false)]
-            public string ResourceType { get; set; }
-
             [NameInMap("ExpectedProperties")]
             [Validation(Required=false)]
             public string ExpectedProperties { get; set; }
 
-            [NameInMap("ResourceDriftStatus")]
+            [NameInMap("LogicalResourceId")]
             [Validation(Required=false)]
-            public string ResourceDriftStatus { get; set; }
+            public string LogicalResourceId { get; set; }
 
-            [NameInMap("ActualProperties")]
+            [NameInMap("PhysicalResourceId")]
             [Validation(Required=false)]
-            public string ActualProperties { get; set; }
+            public string PhysicalResourceId { get; set; }
 
             [NameInMap("PropertyDifferences")]
             [Validation(Required=false)]
@@ -65,15 +53,27 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public string DifferenceType { get; set; }
 
-                [NameInMap("PropertyPath")]
-                [Validation(Required=false)]
-                public string PropertyPath { get; set; }
-
                 [NameInMap("ExpectedValue")]
                 [Validation(Required=false)]
                 public string ExpectedValue { get; set; }
 
+                [NameInMap("PropertyPath")]
+                [Validation(Required=false)]
+                public string PropertyPath { get; set; }
+
             }
+
+            [NameInMap("ResourceDriftStatus")]
+            [Validation(Required=false)]
+            public string ResourceDriftStatus { get; set; }
+
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+            [NameInMap("StackId")]
+            [Validation(Required=false)]
+            public string StackId { get; set; }
 
         }
 

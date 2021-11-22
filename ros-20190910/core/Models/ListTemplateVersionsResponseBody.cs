@@ -21,29 +21,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<ListTemplateVersionsResponseBodyVersions> Versions { get; set; }
         public class ListTemplateVersionsResponseBodyVersions : TeaModel {
-            [NameInMap("UpdateTime")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string UpdateTime { get; set; }
+            public string CreateTime { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            [NameInMap("CreateTime")]
+            [NameInMap("TemplateId")]
             [Validation(Required=false)]
-            public string CreateTime { get; set; }
+            public string TemplateId { get; set; }
 
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
-            [NameInMap("TemplateId")]
-            [Validation(Required=false)]
-            public string TemplateId { get; set; }
-
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public string TemplateVersion { get; set; }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
         }
 

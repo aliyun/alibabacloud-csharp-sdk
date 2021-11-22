@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetStackResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string CreateTime { get; set; }
+
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public string DeletionProtection { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("DisableRollback")]
+        [Validation(Required=false)]
+        public bool? DisableRollback { get; set; }
+
+        [NameInMap("DriftDetectionTime")]
+        [Validation(Required=false)]
+        public string DriftDetectionTime { get; set; }
+
+        [NameInMap("NotificationURLs")]
+        [Validation(Required=false)]
+        public List<string> NotificationURLs { get; set; }
+
+        [NameInMap("Outputs")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, object>> Outputs { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -31,73 +51,83 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("StatusReason")]
-        [Validation(Required=false)]
-        public string StatusReason { get; set; }
-
         [NameInMap("ParentStackId")]
         [Validation(Required=false)]
         public string ParentStackId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("DeletionProtection")]
-        [Validation(Required=false)]
-        public string DeletionProtection { get; set; }
-
-        [NameInMap("RootStackId")]
-        [Validation(Required=false)]
-        public string RootStackId { get; set; }
-
-        [NameInMap("TemplateDescription")]
-        [Validation(Required=false)]
-        public string TemplateDescription { get; set; }
-
-        [NameInMap("StackType")]
-        [Validation(Required=false)]
-        public string StackType { get; set; }
 
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
 
-        [NameInMap("UpdateTime")]
-        [Validation(Required=false)]
-        public string UpdateTime { get; set; }
-
-        [NameInMap("Outputs")]
-        [Validation(Required=false)]
-        public List<Dictionary<string, object>> Outputs { get; set; }
-
-        [NameInMap("DriftDetectionTime")]
-        [Validation(Required=false)]
-        public string DriftDetectionTime { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceProgress")]
+        [Validation(Required=false)]
+        public GetStackResponseBodyResourceProgress ResourceProgress { get; set; }
+        public class GetStackResponseBodyResourceProgress : TeaModel {
+            [NameInMap("FailedResourceCount")]
+            [Validation(Required=false)]
+            public int? FailedResourceCount { get; set; }
+            [NameInMap("InProgressResourceCount")]
+            [Validation(Required=false)]
+            public int? InProgressResourceCount { get; set; }
+            [NameInMap("InProgressResourceDetails")]
+            [Validation(Required=false)]
+            public List<GetStackResponseBodyResourceProgressInProgressResourceDetails> InProgressResourceDetails { get; set; }
+            public class GetStackResponseBodyResourceProgressInProgressResourceDetails : TeaModel {
+                public float? ProgressTargetValue { get; set; }
+                public float? ProgressValue { get; set; }
+                public string ResourceName { get; set; }
+                public string ResourceType { get; set; }
+            }
+            [NameInMap("PendingResourceCount")]
+            [Validation(Required=false)]
+            public int? PendingResourceCount { get; set; }
+            [NameInMap("SuccessResourceCount")]
+            [Validation(Required=false)]
+            public int? SuccessResourceCount { get; set; }
+            [NameInMap("TotalResourceCount")]
+            [Validation(Required=false)]
+            public int? TotalResourceCount { get; set; }
+        };
+
+        [NameInMap("RootStackId")]
+        [Validation(Required=false)]
+        public string RootStackId { get; set; }
 
         [NameInMap("StackDriftStatus")]
         [Validation(Required=false)]
         public string StackDriftStatus { get; set; }
 
-        [NameInMap("NotificationURLs")]
+        [NameInMap("StackId")]
         [Validation(Required=false)]
-        public List<string> NotificationURLs { get; set; }
-
-        [NameInMap("DisableRollback")]
-        [Validation(Required=false)]
-        public bool? DisableRollback { get; set; }
+        public string StackId { get; set; }
 
         [NameInMap("StackName")]
         [Validation(Required=false)]
         public string StackName { get; set; }
+
+        [NameInMap("StackType")]
+        [Validation(Required=false)]
+        public string StackType { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("StatusReason")]
+        [Validation(Required=false)]
+        public string StatusReason { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -113,47 +143,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("TemplateDescription")]
+        [Validation(Required=false)]
+        public string TemplateDescription { get; set; }
+
         [NameInMap("TimeoutInMinutes")]
         [Validation(Required=false)]
         public int? TimeoutInMinutes { get; set; }
 
-        [NameInMap("StackId")]
+        [NameInMap("UpdateTime")]
         [Validation(Required=false)]
-        public string StackId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("ResourceProgress")]
-        [Validation(Required=false)]
-        public GetStackResponseBodyResourceProgress ResourceProgress { get; set; }
-        public class GetStackResponseBodyResourceProgress : TeaModel {
-            [NameInMap("TotalResourceCount")]
-            [Validation(Required=false)]
-            public int? TotalResourceCount { get; set; }
-            [NameInMap("SuccessResourceCount")]
-            [Validation(Required=false)]
-            public int? SuccessResourceCount { get; set; }
-            [NameInMap("FailedResourceCount")]
-            [Validation(Required=false)]
-            public int? FailedResourceCount { get; set; }
-            [NameInMap("InProgressResourceCount")]
-            [Validation(Required=false)]
-            public int? InProgressResourceCount { get; set; }
-            [NameInMap("PendingResourceCount")]
-            [Validation(Required=false)]
-            public int? PendingResourceCount { get; set; }
-            [NameInMap("InProgressResourceDetails")]
-            [Validation(Required=false)]
-            public List<GetStackResponseBodyResourceProgressInProgressResourceDetails> InProgressResourceDetails { get; set; }
-            public class GetStackResponseBodyResourceProgressInProgressResourceDetails : TeaModel {
-                public string ResourceName { get; set; }
-                public string ResourceType { get; set; }
-                public float? ProgressValue { get; set; }
-                public float? ProgressTargetValue { get; set; }
-            }
-        };
+        public string UpdateTime { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("OperationPreferences")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> OperationPreferences { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("StackGroupName")]
         [Validation(Required=false)]
         public string StackGroupName { get; set; }
-
-        [NameInMap("OperationPreferences")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> OperationPreferences { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateTemplateRequest : TeaModel {
-        [NameInMap("TemplateURL")]
-        [Validation(Required=false)]
-        public string TemplateURL { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("TemplateURL")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string TemplateURL { get; set; }
 
     }
 

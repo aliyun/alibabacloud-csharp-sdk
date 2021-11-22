@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
-            [NameInMap("TagValue")]
+            [NameInMap("ResourceId")]
             [Validation(Required=false)]
-            public string TagValue { get; set; }
+            public string ResourceId { get; set; }
 
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public string ResourceId { get; set; }
-
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
 
         }
 

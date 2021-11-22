@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("StackGroupName")]
-        [Validation(Required=false)]
-        public string StackGroupName { get; set; }
-
         [NameInMap("StackGroupId")]
         [Validation(Required=false)]
         public string StackGroupId { get; set; }
+
+        [NameInMap("StackGroupName")]
+        [Validation(Required=false)]
+        public string StackGroupName { get; set; }
 
     }
 

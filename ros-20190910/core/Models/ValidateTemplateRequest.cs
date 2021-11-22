@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ValidateTemplateRequest : TeaModel {
-        [NameInMap("TemplateURL")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string TemplateURL { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("TemplateURL")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string TemplateURL { get; set; }
 
         [NameInMap("ValidationOption")]
         [Validation(Required=false)]

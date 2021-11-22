@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class SignalResourceRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("LogicalResourceId")]
+        [Validation(Required=false)]
+        public string LogicalResourceId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("StackId")]
         [Validation(Required=false)]
         public string StackId { get; set; }
@@ -17,21 +29,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("UniqueId")]
         [Validation(Required=false)]
         public string UniqueId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("LogicalResourceId")]
-        [Validation(Required=false)]
-        public string LogicalResourceId { get; set; }
 
     }
 

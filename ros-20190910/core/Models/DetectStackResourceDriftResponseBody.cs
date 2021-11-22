@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DetectStackResourceDriftResponseBody : TeaModel {
+        [NameInMap("ActualProperties")]
+        [Validation(Required=false)]
+        public string ActualProperties { get; set; }
+
+        [NameInMap("DriftDetectionTime")]
+        [Validation(Required=false)]
+        public string DriftDetectionTime { get; set; }
+
+        [NameInMap("ExpectedProperties")]
+        [Validation(Required=false)]
+        public string ExpectedProperties { get; set; }
+
         [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
         public string LogicalResourceId { get; set; }
 
-        [NameInMap("ResourceDriftStatus")]
+        [NameInMap("PhysicalResourceId")]
         [Validation(Required=false)]
-        public string ResourceDriftStatus { get; set; }
+        public string PhysicalResourceId { get; set; }
 
         [NameInMap("PropertyDifferences")]
         [Validation(Required=false)]
@@ -29,13 +41,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string DifferenceType { get; set; }
 
-            [NameInMap("PropertyPath")]
-            [Validation(Required=false)]
-            public string PropertyPath { get; set; }
-
             [NameInMap("ExpectedValue")]
             [Validation(Required=false)]
             public string ExpectedValue { get; set; }
+
+            [NameInMap("PropertyPath")]
+            [Validation(Required=false)]
+            public string PropertyPath { get; set; }
 
         }
 
@@ -43,25 +55,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PhysicalResourceId")]
+        [NameInMap("ResourceDriftStatus")]
         [Validation(Required=false)]
-        public string PhysicalResourceId { get; set; }
-
-        [NameInMap("ExpectedProperties")]
-        [Validation(Required=false)]
-        public string ExpectedProperties { get; set; }
-
-        [NameInMap("DriftDetectionTime")]
-        [Validation(Required=false)]
-        public string DriftDetectionTime { get; set; }
+        public string ResourceDriftStatus { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("ActualProperties")]
-        [Validation(Required=false)]
-        public string ActualProperties { get; set; }
 
         [NameInMap("StackId")]
         [Validation(Required=false)]

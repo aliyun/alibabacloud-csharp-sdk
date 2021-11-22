@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackEventsRequest : TeaModel {
-        [NameInMap("StackId")]
+        [NameInMap("LogicalResourceId")]
         [Validation(Required=false)]
-        public string StackId { get; set; }
+        public List<string> LogicalResourceId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,21 +25,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public List<string> Status { get; set; }
-
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public List<string> ResourceType { get; set; }
 
-        [NameInMap("LogicalResourceId")]
+        [NameInMap("StackId")]
         [Validation(Required=false)]
-        public List<string> LogicalResourceId { get; set; }
+        public string StackId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public List<string> Status { get; set; }
 
     }
 

@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackInstancesShrinkRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("StackGroupName")]
-        [Validation(Required=false)]
-        public string StackGroupName { get; set; }
-
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
         public string AccountIdsShrink { get; set; }
 
-        [NameInMap("RegionIds")]
-        [Validation(Required=false)]
-        public string RegionIdsShrink { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("DeploymentTargets")]
+        [Validation(Required=false)]
+        public string DeploymentTargetsShrink { get; set; }
 
         [NameInMap("OperationDescription")]
         [Validation(Required=false)]
@@ -36,10 +28,6 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("OperationPreferences")]
         [Validation(Required=false)]
         public string OperationPreferencesShrink { get; set; }
-
-        [NameInMap("TimeoutInMinutes")]
-        [Validation(Required=false)]
-        public long? TimeoutInMinutes { get; set; }
 
         [NameInMap("ParameterOverrides")]
         [Validation(Required=false)]
@@ -55,9 +43,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
-        [NameInMap("DeploymentTargets")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DeploymentTargetsShrink { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("RegionIds")]
+        [Validation(Required=false)]
+        public string RegionIdsShrink { get; set; }
+
+        [NameInMap("StackGroupName")]
+        [Validation(Required=false)]
+        public string StackGroupName { get; set; }
+
+        [NameInMap("TimeoutInMinutes")]
+        [Validation(Required=false)]
+        public long? TimeoutInMinutes { get; set; }
 
     }
 
