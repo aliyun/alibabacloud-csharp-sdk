@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public List<DescribeCategoryTemplateRuleListResponseBodyItems> Items { get; set; }
         public class DescribeCategoryTemplateRuleListResponseBodyItems : TeaModel {
-            [NameInMap("CustomType")]
-            [Validation(Required=false)]
-            public int? CustomType { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -48,10 +44,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-
-            [NameInMap("TemplateId")]
-            [Validation(Required=false)]
-            public long? TemplateId { get; set; }
 
         }
 

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("CustomType")]
-        [Validation(Required=false)]
-        public int? CustomType { get; set; }
-
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -32,10 +28,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
-
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public long? TemplateId { get; set; }
 
     }
 
