@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetIpControlApisRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("ApiIds")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("IpControlId")]
-        [Validation(Required=false)]
-        public string IpControlId { get; set; }
+        public string ApiIds { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("ApiIds")]
+        [NameInMap("IpControlId")]
         [Validation(Required=false)]
-        public string ApiIds { get; set; }
+        public string IpControlId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("StageName")]
         [Validation(Required=false)]

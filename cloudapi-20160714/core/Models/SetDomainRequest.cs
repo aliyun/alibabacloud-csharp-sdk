@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetDomainRequest : TeaModel {
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("BindStageName")]
         [Validation(Required=false)]
         public string BindStageName { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("CustomDomainType")]
         [Validation(Required=false)]
         public string CustomDomainType { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
 
         [NameInMap("IsForce")]
         [Validation(Required=false)]

@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateApiGroupResponseBody : TeaModel {
-        [NameInMap("TagStatus")]
-        [Validation(Required=false)]
-        public bool? TagStatus { get; set; }
-
         [NameInMap("BasePath")]
         [Validation(Required=false)]
         public string BasePath { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
-
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SubDomain")]
         [Validation(Required=false)]
         public string SubDomain { get; set; }
 
-        [NameInMap("InstanceType")]
+        [NameInMap("TagStatus")]
         [Validation(Required=false)]
-        public string InstanceType { get; set; }
+        public bool? TagStatus { get; set; }
 
     }
 

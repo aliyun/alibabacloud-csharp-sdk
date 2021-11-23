@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class TagResourcesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -30,10 +34,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public List<string> ResourceId { get; set; }
 
     }
 

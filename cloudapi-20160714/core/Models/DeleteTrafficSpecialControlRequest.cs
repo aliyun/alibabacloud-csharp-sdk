@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
-        [NameInMap("TrafficControlId")]
+        [NameInMap("SpecialKey")]
         [Validation(Required=false)]
-        public string TrafficControlId { get; set; }
+        public string SpecialKey { get; set; }
 
         [NameInMap("SpecialType")]
         [Validation(Required=false)]
         public string SpecialType { get; set; }
 
-        [NameInMap("SpecialKey")]
+        [NameInMap("TrafficControlId")]
         [Validation(Required=false)]
-        public string SpecialKey { get; set; }
+        public string TrafficControlId { get; set; }
 
     }
 

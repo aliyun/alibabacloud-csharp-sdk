@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetDomainResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("DomainBindingStatus")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DomainBindingStatus { get; set; }
 
         [NameInMap("DomainLegalStatus")]
         [Validation(Required=false)]
         public string DomainLegalStatus { get; set; }
 
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("SubDomain")]
-        [Validation(Required=false)]
-        public string SubDomain { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("DomainBindingStatus")]
-        [Validation(Required=false)]
-        public string DomainBindingStatus { get; set; }
 
         [NameInMap("DomainRemark")]
         [Validation(Required=false)]
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("DomainWebSocketStatus")]
         [Validation(Required=false)]
         public string DomainWebSocketStatus { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SubDomain")]
+        [Validation(Required=false)]
+        public string SubDomain { get; set; }
 
     }
 

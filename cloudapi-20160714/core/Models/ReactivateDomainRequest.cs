@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ReactivateDomainRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

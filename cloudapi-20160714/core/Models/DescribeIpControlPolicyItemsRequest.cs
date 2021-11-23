@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeIpControlPolicyItemsRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }
-
-        [NameInMap("PolicyItemId")]
-        [Validation(Required=false)]
-        public string PolicyItemId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PolicyItemId")]
+        [Validation(Required=false)]
+        public string PolicyItemId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

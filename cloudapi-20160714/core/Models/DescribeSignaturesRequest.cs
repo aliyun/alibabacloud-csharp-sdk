@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeSignaturesRequest : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("SignatureName")]
         [Validation(Required=false)]
         public string SignatureName { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
     }
 

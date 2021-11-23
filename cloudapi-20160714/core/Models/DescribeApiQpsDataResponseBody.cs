@@ -9,9 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiQpsDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("CallFails")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeApiQpsDataResponseBodyCallFails CallFails { get; set; }
+        public class DescribeApiQpsDataResponseBodyCallFails : TeaModel {
+            [NameInMap("MonitorItem")]
+            [Validation(Required=false)]
+            public List<DescribeApiQpsDataResponseBodyCallFailsMonitorItem> MonitorItem { get; set; }
+            public class DescribeApiQpsDataResponseBodyCallFailsMonitorItem : TeaModel {
+                public string ItemTime { get; set; }
+                public string ItemValue { get; set; }
+            }
+        };
 
         [NameInMap("CallSuccesses")]
         [Validation(Required=false)]
@@ -21,23 +30,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiQpsDataResponseBodyCallSuccessesMonitorItem> MonitorItem { get; set; }
             public class DescribeApiQpsDataResponseBodyCallSuccessesMonitorItem : TeaModel {
-                public string ItemValue { get; set; }
                 public string ItemTime { get; set; }
+                public string ItemValue { get; set; }
             }
         };
 
-        [NameInMap("CallFails")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public DescribeApiQpsDataResponseBodyCallFails CallFails { get; set; }
-        public class DescribeApiQpsDataResponseBodyCallFails : TeaModel {
-            [NameInMap("MonitorItem")]
-            [Validation(Required=false)]
-            public List<DescribeApiQpsDataResponseBodyCallFailsMonitorItem> MonitorItem { get; set; }
-            public class DescribeApiQpsDataResponseBodyCallFailsMonitorItem : TeaModel {
-                public string ItemValue { get; set; }
-                public string ItemTime { get; set; }
-            }
-        };
+        public string RequestId { get; set; }
 
     }
 

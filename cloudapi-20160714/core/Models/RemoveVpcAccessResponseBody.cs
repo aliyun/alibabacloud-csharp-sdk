@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveVpcAccessResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Apis")]
         [Validation(Required=false)]
         public RemoveVpcAccessResponseBodyApis Apis { get; set; }
@@ -22,10 +18,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<RemoveVpcAccessResponseBodyApisApi> Api { get; set; }
             public class RemoveVpcAccessResponseBodyApisApi : TeaModel {
                 public string ApiId { get; set; }
-                public string StageId { get; set; }
                 public string GroupId { get; set; }
+                public string StageId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

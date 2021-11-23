@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateTrafficControlRequest : TeaModel {
+        [NameInMap("ApiDefault")]
+        [Validation(Required=false)]
+        public int? ApiDefault { get; set; }
+
+        [NameInMap("AppDefault")]
+        [Validation(Required=false)]
+        public int? AppDefault { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -21,21 +33,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string TrafficControlUnit { get; set; }
 
-        [NameInMap("ApiDefault")]
-        [Validation(Required=false)]
-        public int? ApiDefault { get; set; }
-
         [NameInMap("UserDefault")]
         [Validation(Required=false)]
         public int? UserDefault { get; set; }
-
-        [NameInMap("AppDefault")]
-        [Validation(Required=false)]
-        public int? AppDefault { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
 
     }
 

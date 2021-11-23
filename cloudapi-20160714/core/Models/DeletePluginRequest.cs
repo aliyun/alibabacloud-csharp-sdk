@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeletePluginRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("PluginId")]
         [Validation(Required=false)]
         public string PluginId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -33,15 +33,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl> TrafficControl { get; set; }
             public class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl : TeaModel {
-                public int? UserDefault { get; set; }
                 public int? ApiDefault { get; set; }
-                public string ModifiedTime { get; set; }
-                public string Description { get; set; }
-                public string TrafficControlUnit { get; set; }
-                public string TrafficControlName { get; set; }
                 public int? AppDefault { get; set; }
-                public string TrafficControlId { get; set; }
                 public string CreatedTime { get; set; }
+                public string Description { get; set; }
+                public string ModifiedTime { get; set; }
                 public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies SpecialPolicies { get; set; }
                 public class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies : TeaModel {
                     [NameInMap("SpecialPolicy")]
@@ -60,14 +56,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                             [Validation(Required=false)]
                             public List<DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial> Special { get; set; }
                             public class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial : TeaModel {
-                                public int? TrafficValue { get; set; }
                                 public string SpecialKey { get; set; }
+                                public int? TrafficValue { get; set; }
                             }
                         };
 
                     }
 
                 }
+                public string TrafficControlId { get; set; }
+                public string TrafficControlName { get; set; }
+                public string TrafficControlUnit { get; set; }
+                public int? UserDefault { get; set; }
             }
         };
 

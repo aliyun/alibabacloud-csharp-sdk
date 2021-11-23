@@ -9,9 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiTrafficDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("CallDownloads")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeApiTrafficDataResponseBodyCallDownloads CallDownloads { get; set; }
+        public class DescribeApiTrafficDataResponseBodyCallDownloads : TeaModel {
+            [NameInMap("MonitorItem")]
+            [Validation(Required=false)]
+            public List<DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem> MonitorItem { get; set; }
+            public class DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem : TeaModel {
+                public string ItemTime { get; set; }
+                public string ItemValue { get; set; }
+            }
+        };
 
         [NameInMap("CallUploads")]
         [Validation(Required=false)]
@@ -21,23 +30,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiTrafficDataResponseBodyCallUploadsMonitorItem> MonitorItem { get; set; }
             public class DescribeApiTrafficDataResponseBodyCallUploadsMonitorItem : TeaModel {
-                public string ItemValue { get; set; }
                 public string ItemTime { get; set; }
+                public string ItemValue { get; set; }
             }
         };
 
-        [NameInMap("CallDownloads")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public DescribeApiTrafficDataResponseBodyCallDownloads CallDownloads { get; set; }
-        public class DescribeApiTrafficDataResponseBodyCallDownloads : TeaModel {
-            [NameInMap("MonitorItem")]
-            [Validation(Required=false)]
-            public List<DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem> MonitorItem { get; set; }
-            public class DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem : TeaModel {
-                public string ItemValue { get; set; }
-                public string ItemTime { get; set; }
-            }
-        };
+        public string RequestId { get; set; }
 
     }
 

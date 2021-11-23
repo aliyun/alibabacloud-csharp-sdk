@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class RemoveIpControlPolicyItemRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
         public string IpControlId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("PolicyItemIds")]
         [Validation(Required=false)]
         public string PolicyItemIds { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

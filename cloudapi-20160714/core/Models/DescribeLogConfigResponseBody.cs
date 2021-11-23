@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeLogConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LogInfos")]
         [Validation(Required=false)]
         public DescribeLogConfigResponseBodyLogInfos LogInfos { get; set; }
@@ -21,12 +17,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeLogConfigResponseBodyLogInfosLogInfo> LogInfo { get; set; }
             public class DescribeLogConfigResponseBodyLogInfosLogInfo : TeaModel {
-                public string SlsLogStore { get; set; }
                 public string LogType { get; set; }
-                public string SlsProject { get; set; }
                 public string RegionId { get; set; }
+                public string SlsLogStore { get; set; }
+                public string SlsProject { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

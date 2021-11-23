@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeVpcAccessesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AccurateQuery")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public bool? AccurateQuery { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("AccurateQuery")]
-        [Validation(Required=false)]
-        public bool? AccurateQuery { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

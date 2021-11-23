@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateIpControlRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("IpControlName")]
         [Validation(Required=false)]
         public string IpControlName { get; set; }
-
-        [NameInMap("IpControlType")]
-        [Validation(Required=false)]
-        public string IpControlType { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
 
         [NameInMap("IpControlPolicys")]
         [Validation(Required=false)]
@@ -38,6 +30,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string CidrIp { get; set; }
 
         }
+
+        [NameInMap("IpControlType")]
+        [Validation(Required=false)]
+        public string IpControlType { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

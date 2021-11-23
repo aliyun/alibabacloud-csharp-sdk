@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppsResponseBody : TeaModel {
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Apps")]
         [Validation(Required=false)]
         public DescribeAppsResponseBodyApps Apps { get; set; }
@@ -33,11 +17,27 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAppsResponseBodyAppsAppItem> AppItem { get; set; }
             public class DescribeAppsResponseBodyAppsAppItem : TeaModel {
+                public long? AppId { get; set; }
                 public string AppName { get; set; }
                 public string Description { get; set; }
-                public long? AppId { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

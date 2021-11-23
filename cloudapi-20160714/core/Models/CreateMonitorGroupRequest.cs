@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateMonitorGroupRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("Auth")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string Auth { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public long? RawMonitorGroupId { get; set; }
 
-        [NameInMap("Auth")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string Auth { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

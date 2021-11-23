@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteApiGroupRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

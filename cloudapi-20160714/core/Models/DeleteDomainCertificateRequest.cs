@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DeleteDomainCertificateRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("CertificateId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public string CertificateId { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("CertificateId")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string CertificateId { get; set; }
+        public string GroupId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

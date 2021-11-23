@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiLatencyDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CallLatencys")]
         [Validation(Required=false)]
         public DescribeApiLatencyDataResponseBodyCallLatencys CallLatencys { get; set; }
@@ -21,10 +17,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiLatencyDataResponseBodyCallLatencysMonitorItem> MonitorItem { get; set; }
             public class DescribeApiLatencyDataResponseBodyCallLatencysMonitorItem : TeaModel {
-                public string ItemValue { get; set; }
                 public string ItemTime { get; set; }
+                public string ItemValue { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

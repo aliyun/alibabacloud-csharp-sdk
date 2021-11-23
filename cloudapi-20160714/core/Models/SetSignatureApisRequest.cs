@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetSignatureApisRequest : TeaModel {
+        [NameInMap("ApiIds")]
+        [Validation(Required=false)]
+        public string ApiIds { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("SignatureId")]
         [Validation(Required=false)]
         public string SignatureId { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("ApiIds")]
-        [Validation(Required=false)]
-        public string ApiIds { get; set; }
 
         [NameInMap("StageName")]
         [Validation(Required=false)]

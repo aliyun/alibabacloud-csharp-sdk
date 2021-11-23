@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateAppResponseBody : TeaModel {
-        [NameInMap("TagStatus")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public bool? TagStatus { get; set; }
+        public long? AppId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("AppId")]
+        [NameInMap("TagStatus")]
         [Validation(Required=false)]
-        public long? AppId { get; set; }
+        public bool? TagStatus { get; set; }
 
     }
 

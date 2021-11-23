@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem> TrafficControlItem { get; set; }
             public class DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem : TeaModel {
-                public string TrafficControlItemId { get; set; }
                 public string BoundTime { get; set; }
+                public string TrafficControlItemId { get; set; }
                 public string TrafficControlItemName { get; set; }
             }
         };

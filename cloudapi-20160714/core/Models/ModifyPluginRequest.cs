@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyPluginRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string Description { get; set; }
+
+        [NameInMap("PluginData")]
+        [Validation(Required=false)]
+        public string PluginData { get; set; }
 
         [NameInMap("PluginId")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string PluginName { get; set; }
 
-        [NameInMap("PluginData")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string PluginData { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

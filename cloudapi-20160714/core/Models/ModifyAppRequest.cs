@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyAppRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public long? AppId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

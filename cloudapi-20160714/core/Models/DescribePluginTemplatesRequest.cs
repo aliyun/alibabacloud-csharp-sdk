@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribePluginTemplatesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string Language { get; set; }
 
         [NameInMap("PluginName")]
         [Validation(Required=false)]
         public string PluginName { get; set; }
 
-        [NameInMap("Language")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string Language { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

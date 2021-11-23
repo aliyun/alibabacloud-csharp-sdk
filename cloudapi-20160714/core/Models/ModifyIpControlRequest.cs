@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyIpControlRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("IpControlId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string IpControlName { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

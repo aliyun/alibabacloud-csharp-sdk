@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute> VpcAccessAttribute { get; set; }
             public class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute : TeaModel {
-                public string VpcId { get; set; }
+                public string CreatedTime { get; set; }
                 public string Description { get; set; }
                 public string InstanceId { get; set; }
-                public int? Port { get; set; }
                 public string Name { get; set; }
-                public string CreatedTime { get; set; }
+                public int? Port { get; set; }
                 public string RegionId { get; set; }
+                public string VpcId { get; set; }
             }
         };
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
-        [NameInMap("SignatureName")]
-        [Validation(Required=false)]
-        public string SignatureName { get; set; }
-
         [NameInMap("SignatureKey")]
         [Validation(Required=false)]
         public string SignatureKey { get; set; }
+
+        [NameInMap("SignatureName")]
+        [Validation(Required=false)]
+        public string SignatureName { get; set; }
 
         [NameInMap("SignatureSecret")]
         [Validation(Required=false)]

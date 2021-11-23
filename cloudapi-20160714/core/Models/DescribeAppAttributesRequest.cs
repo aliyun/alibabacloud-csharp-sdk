@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppAttributesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AppCode")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AppCode { get; set; }
 
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public long? AppId { get; set; }
 
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
+
+        [NameInMap("EnableTagAuth")]
+        [Validation(Required=false)]
+        public bool? EnableTagAuth { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,21 +37,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("AppCode")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string AppCode { get; set; }
-
-        [NameInMap("AppKey")]
-        [Validation(Required=false)]
-        public string AppKey { get; set; }
+        public string SecurityToken { get; set; }
 
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }
-
-        [NameInMap("EnableTagAuth")]
-        [Validation(Required=false)]
-        public bool? EnableTagAuth { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

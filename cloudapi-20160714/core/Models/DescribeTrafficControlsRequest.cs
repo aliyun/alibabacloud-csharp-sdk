@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeTrafficControlsRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("TrafficControlId")]
-        [Validation(Required=false)]
-        public string TrafficControlId { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
-        [NameInMap("StageName")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string StageName { get; set; }
-
-        [NameInMap("TrafficControlName")]
-        [Validation(Required=false)]
-        public string TrafficControlName { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -40,6 +24,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
+        [NameInMap("StageName")]
+        [Validation(Required=false)]
+        public string StageName { get; set; }
+
+        [NameInMap("TrafficControlId")]
+        [Validation(Required=false)]
+        public string TrafficControlId { get; set; }
+
+        [NameInMap("TrafficControlName")]
+        [Validation(Required=false)]
+        public string TrafficControlName { get; set; }
 
     }
 

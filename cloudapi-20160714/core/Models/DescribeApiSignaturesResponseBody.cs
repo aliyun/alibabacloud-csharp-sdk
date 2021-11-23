@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiSignaturesResponseBody : TeaModel {
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("ApiSignatures")]
         [Validation(Required=false)]
         public DescribeApiSignaturesResponseBodyApiSignatures ApiSignatures { get; set; }
@@ -33,13 +17,29 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem> ApiSignatureItem { get; set; }
             public class DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem : TeaModel {
-                public string BoundTime { get; set; }
                 public string ApiId { get; set; }
+                public string ApiName { get; set; }
+                public string BoundTime { get; set; }
                 public string SignatureId { get; set; }
                 public string SignatureName { get; set; }
-                public string ApiName { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

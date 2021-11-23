@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeDeployApiTaskResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DeployedResults")]
         [Validation(Required=false)]
         public DescribeDeployApiTaskResponseBodyDeployedResults DeployedResults { get; set; }
@@ -21,13 +17,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult> DeployedResult { get; set; }
             public class DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult : TeaModel {
-                public string ErrorMsg { get; set; }
-                public string StageName { get; set; }
-                public string GroupId { get; set; }
                 public string ApiUid { get; set; }
                 public string DeployedStatus { get; set; }
+                public string ErrorMsg { get; set; }
+                public string GroupId { get; set; }
+                public string StageName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

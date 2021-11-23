@@ -9,27 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class BatchAbolishApisRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("Api")]
         [Validation(Required=false)]
         public List<BatchAbolishApisRequestApi> Api { get; set; }
         public class BatchAbolishApisRequestApi : TeaModel {
-            [NameInMap("StageId")]
+            [NameInMap("ApiUid")]
             [Validation(Required=false)]
-            public string StageId { get; set; }
+            public string ApiUid { get; set; }
 
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
-            [NameInMap("ApiUid")]
+            [NameInMap("StageId")]
             [Validation(Required=false)]
-            public string ApiUid { get; set; }
+            public string StageId { get; set; }
 
         }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

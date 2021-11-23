@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiIpControlsResponseBody : TeaModel {
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("ApiIpControls")]
         [Validation(Required=false)]
         public DescribeApiIpControlsResponseBodyApiIpControls ApiIpControls { get; set; }
@@ -33,13 +17,29 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem> ApiIpControlItem { get; set; }
             public class DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem : TeaModel {
-                public string BoundTime { get; set; }
                 public string ApiId { get; set; }
+                public string ApiName { get; set; }
+                public string BoundTime { get; set; }
                 public string IpControlId { get; set; }
                 public string IpControlName { get; set; }
-                public string ApiName { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

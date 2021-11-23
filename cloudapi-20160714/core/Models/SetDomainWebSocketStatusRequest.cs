@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class SetDomainWebSocketStatusRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("ActionValue")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public string ActionValue { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("ActionValue")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string ActionValue { get; set; }
+        public string GroupId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

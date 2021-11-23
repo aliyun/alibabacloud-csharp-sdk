@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
         [NameInMap("ApiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
@@ -29,21 +21,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string CatalogId { get; set; }
 
-        [NameInMap("Visibility")]
+        [NameInMap("EnableTagAuth")]
         [Validation(Required=false)]
-        public string Visibility { get; set; }
+        public bool? EnableTagAuth { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("EnableTagAuth")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public bool? EnableTagAuth { get; set; }
+        public int? PageSize { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -58,6 +54,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("Visibility")]
+        [Validation(Required=false)]
+        public string Visibility { get; set; }
 
     }
 

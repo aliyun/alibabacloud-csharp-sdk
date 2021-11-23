@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiGroupsRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("EnableTagAuth")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public bool? EnableTagAuth { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -29,13 +33,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("EnableTagAuth")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public bool? EnableTagAuth { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string SecurityToken { get; set; }
 
         [NameInMap("Sort")]
         [Validation(Required=false)]

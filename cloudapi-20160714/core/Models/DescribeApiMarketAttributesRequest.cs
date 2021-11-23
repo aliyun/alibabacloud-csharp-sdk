@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiMarketAttributesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("ApiId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string ApiId { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("ApiId")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string ApiId { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

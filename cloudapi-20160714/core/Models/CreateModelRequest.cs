@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateModelRequest : TeaModel {
-        [NameInMap("ModelName")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string ModelName { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("ModelName")]
+        [Validation(Required=false)]
+        public string ModelName { get; set; }
+
         [NameInMap("Schema")]
         [Validation(Required=false)]
         public string Schema { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
 
     }
 

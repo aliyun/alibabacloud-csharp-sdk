@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class UntagResourcesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("TagKey")]
         [Validation(Required=false)]

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyApiGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("BasePath")]
         [Validation(Required=false)]
         public string BasePath { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("SubDomain")]
         [Validation(Required=false)]

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApisByTrafficControlRequest : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("TrafficControlId")]
         [Validation(Required=false)]
         public string TrafficControlId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

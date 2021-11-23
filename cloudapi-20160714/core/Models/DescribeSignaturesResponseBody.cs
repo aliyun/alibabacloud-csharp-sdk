@@ -13,17 +13,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("SignatureInfos")]
         [Validation(Required=false)]
@@ -33,15 +29,19 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeSignaturesResponseBodySignatureInfosSignatureInfo> SignatureInfo { get; set; }
             public class DescribeSignaturesResponseBodySignatureInfosSignatureInfo : TeaModel {
-                public string ModifiedTime { get; set; }
-                public string SignatureId { get; set; }
-                public string SignatureSecret { get; set; }
-                public string SignatureName { get; set; }
-                public string SignatureKey { get; set; }
                 public string CreatedTime { get; set; }
+                public string ModifiedTime { get; set; }
                 public string RegionId { get; set; }
+                public string SignatureId { get; set; }
+                public string SignatureKey { get; set; }
+                public string SignatureName { get; set; }
+                public string SignatureSecret { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

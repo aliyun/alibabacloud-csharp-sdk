@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class CreateApiGroupRequest : TeaModel {
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
-
         [NameInMap("BasePath")]
         [Validation(Required=false)]
         public string BasePath { get; set; }
@@ -25,9 +17,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

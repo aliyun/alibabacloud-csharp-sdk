@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribePluginTemplatesResponseBodyTemplatesTemplate> Template { get; set; }
             public class DescribePluginTemplatesResponseBodyTemplatesTemplate : TeaModel {
-                public string Title { get; set; }
-                public string DocumentAnchor { get; set; }
                 public string Description { get; set; }
+                public string DocumentAnchor { get; set; }
                 public string DocumentId { get; set; }
                 public string Sample { get; set; }
+                public string Title { get; set; }
             }
         };
 

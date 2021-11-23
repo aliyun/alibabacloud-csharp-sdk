@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribePluginSchemasResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PluginSchemas")]
         [Validation(Required=false)]
         public DescribePluginSchemasResponseBodyPluginSchemas PluginSchemas { get; set; }
@@ -21,13 +17,17 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribePluginSchemasResponseBodyPluginSchemasPluginSchema> PluginSchema { get; set; }
             public class DescribePluginSchemasResponseBodyPluginSchemasPluginSchema : TeaModel {
-                public string Title { get; set; }
                 public string Description { get; set; }
-                public string Name { get; set; }
                 public string DocumentId { get; set; }
+                public string Name { get; set; }
                 public bool? SupportClassic { get; set; }
+                public string Title { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

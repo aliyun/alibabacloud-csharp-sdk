@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class BatchDeployApisRequest : TeaModel {
+        [NameInMap("Api")]
+        [Validation(Required=false)]
+        public List<BatchDeployApisRequestApi> Api { get; set; }
+        public class BatchDeployApisRequestApi : TeaModel {
+            [NameInMap("ApiUid")]
+            [Validation(Required=false)]
+            public string ApiUid { get; set; }
+
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+        }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -16,24 +34,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("StageName")]
         [Validation(Required=false)]
         public string StageName { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Api")]
-        [Validation(Required=false)]
-        public List<BatchDeployApisRequestApi> Api { get; set; }
-        public class BatchDeployApisRequestApi : TeaModel {
-            [NameInMap("GroupId")]
-            [Validation(Required=false)]
-            public string GroupId { get; set; }
-
-            [NameInMap("ApiUid")]
-            [Validation(Required=false)]
-            public string ApiUid { get; set; }
-
-        }
 
     }
 

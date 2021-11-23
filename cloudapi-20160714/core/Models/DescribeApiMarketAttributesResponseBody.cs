@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("MarketChargingMode")]
         [Validation(Required=false)]
         public string MarketChargingMode { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("NeedCharging")]
         [Validation(Required=false)]
         public string NeedCharging { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

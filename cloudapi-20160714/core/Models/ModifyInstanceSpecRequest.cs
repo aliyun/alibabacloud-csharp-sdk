@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifyInstanceSpecRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
         public string InstanceSpec { get; set; }
-
-        [NameInMap("AutoPay")]
-        [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
 
         [NameInMap("Token")]
         [Validation(Required=false)]

@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
-                public string ZoneId { get; set; }
                 public string LocalName { get; set; }
+                public string ZoneId { get; set; }
             }
         };
 

@@ -9,33 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribePurchasedApiGroupResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("PurchasedTime")]
-        [Validation(Required=false)]
-        public string PurchasedTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -48,6 +24,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string DomainName { get; set; }
             }
         };
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
+        [NameInMap("PurchasedTime")]
+        [Validation(Required=false)]
+        public string PurchasedTime { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 
