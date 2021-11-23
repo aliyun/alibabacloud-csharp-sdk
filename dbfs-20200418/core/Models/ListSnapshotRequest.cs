@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class ListSnapshotRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("SortKey")]
-        [Validation(Required=false)]
-        public string SortKey { get; set; }
-
-        [NameInMap("SortType")]
-        [Validation(Required=false)]
-        public string SortType { get; set; }
-
         [NameInMap("FilterKey")]
         [Validation(Required=false)]
         public string FilterKey { get; set; }
@@ -41,9 +21,21 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public string FsId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("SnapshotIds")]
+        [Validation(Required=false)]
+        public string SnapshotIds { get; set; }
 
         [NameInMap("SnapshotName")]
         [Validation(Required=false)]
@@ -53,9 +45,17 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public string SnapshotType { get; set; }
 
-        [NameInMap("SnapshotIds")]
+        [NameInMap("SortKey")]
         [Validation(Required=false)]
-        public string SnapshotIds { get; set; }
+        public string SortKey { get; set; }
+
+        [NameInMap("SortType")]
+        [Validation(Required=false)]
+        public string SortType { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class DeleteSnapshotRequest : TeaModel {
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
-
-        [NameInMap("Force")]
-        [Validation(Required=false)]
-        public bool? Force { get; set; }
 
     }
 

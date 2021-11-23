@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class AttachDbfsRequest : TeaModel {
+        [NameInMap("AttachMode")]
+        [Validation(Required=false)]
+        public string AttachMode { get; set; }
+
+        [NameInMap("AttachPoint")]
+        [Validation(Required=false)]
+        public string AttachPoint { get; set; }
+
         [NameInMap("ECSInstanceId")]
         [Validation(Required=false)]
         public string ECSInstanceId { get; set; }
-
-        [NameInMap("ServerUrl")]
-        [Validation(Required=false)]
-        public string ServerUrl { get; set; }
 
         [NameInMap("FsId")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("AttachMode")]
+        [NameInMap("ServerUrl")]
         [Validation(Required=false)]
-        public string AttachMode { get; set; }
-
-        [NameInMap("AttachPoint")]
-        [Validation(Required=false)]
-        public string AttachPoint { get; set; }
+        public string ServerUrl { get; set; }
 
     }
 

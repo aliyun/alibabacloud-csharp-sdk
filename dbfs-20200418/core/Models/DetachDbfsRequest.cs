@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class DetachDbfsRequest : TeaModel {
-        [NameInMap("FsId")]
-        [Validation(Required=false)]
-        public string FsId { get; set; }
-
         [NameInMap("ECSInstanceId")]
         [Validation(Required=false)]
         public string ECSInstanceId { get; set; }
+
+        [NameInMap("FsId")]
+        [Validation(Required=false)]
+        public string FsId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

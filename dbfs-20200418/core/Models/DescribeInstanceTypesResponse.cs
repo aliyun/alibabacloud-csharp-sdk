@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
-    public class StopUpgradeTaskResponse : TeaModel {
+    public class DescribeInstanceTypesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public StopUpgradeTaskResponseBody Body { get; set; }
+        public DescribeInstanceTypesResponseBody Body { get; set; }
 
     }
 

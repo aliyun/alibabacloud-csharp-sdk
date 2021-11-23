@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class RenameDbfsRequest : TeaModel {
-        [NameInMap("FsName")]
-        [Validation(Required=false)]
-        public string FsName { get; set; }
-
         [NameInMap("FsId")]
         [Validation(Required=false)]
         public string FsId { get; set; }
+
+        [NameInMap("FsName")]
+        [Validation(Required=false)]
+        public string FsName { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

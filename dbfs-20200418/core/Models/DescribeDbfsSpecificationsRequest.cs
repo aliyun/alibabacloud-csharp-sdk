@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class DescribeDbfsSpecificationsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Category { get; set; }
 
         [NameInMap("EcsInstanceType")]
         [Validation(Required=false)]
         public string EcsInstanceType { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public string RegionId { get; set; }
 
     }
 

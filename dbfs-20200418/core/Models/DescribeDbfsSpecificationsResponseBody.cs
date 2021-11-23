@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class DescribeDbfsSpecificationsResponseBody : TeaModel {
+        [NameInMap("MaxDbfsNumberPerEcs")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> MaxDbfsNumberPerEcs { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [NameInMap("SupportedEcsInstanceTypeFamily")]
         [Validation(Required=false)]
         public List<string> SupportedEcsInstanceTypeFamily { get; set; }
-
-        [NameInMap("MaxDbfsNumberPerEcs")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> MaxDbfsNumberPerEcs { get; set; }
 
     }
 

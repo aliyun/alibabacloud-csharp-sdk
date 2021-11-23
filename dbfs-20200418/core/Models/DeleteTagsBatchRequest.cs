@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class DeleteTagsBatchRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("DbfsList")]
         [Validation(Required=false)]
         public string DbfsList { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]

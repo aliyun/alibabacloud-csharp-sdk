@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
     public class DeleteConstantsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ConstantsData")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ConstantsData { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ConstantsData")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ConstantsData { get; set; }
+        public string RegionId { get; set; }
 
     }
 

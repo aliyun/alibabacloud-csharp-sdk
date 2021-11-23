@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DBFS20200418.Models
 {
-    public class StopUpgradeTaskResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class DescribeInstanceTypesRequest : TeaModel {
+        /// <summary>
+        /// 地域ID
+        /// </summary>
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RegionId { get; set; }
 
     }
 
