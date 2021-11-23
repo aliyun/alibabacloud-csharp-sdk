@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public List<RemoveTerminalsResponseBodyTerminalsTerminal> Terminal { get; set; }
             public class RemoveTerminalsResponseBodyTerminalsTerminal : TeaModel {
                 public int? Code { get; set; }
-                public string Message { get; set; }
                 public string Id { get; set; }
+                public string Message { get; set; }
             }
         };
 

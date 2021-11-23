@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeMPULayoutInfoListResponseBody : TeaModel {
-        [NameInMap("TotalNum")]
-        [Validation(Required=false)]
-        public long? TotalNum { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=false)]
-        public long? TotalPage { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Layouts")]
         [Validation(Required=false)]
         public DescribeMPULayoutInfoListResponseBodyLayouts Layouts { get; set; }
@@ -29,48 +17,60 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public List<DescribeMPULayoutInfoListResponseBodyLayoutsLayout> Layout { get; set; }
             public class DescribeMPULayoutInfoListResponseBodyLayoutsLayout : TeaModel {
+                public int? AudioMixCount { get; set; }
                 public long? LayoutId { get; set; }
+                public string Name { get; set; }
                 public DescribeMPULayoutInfoListResponseBodyLayoutsLayoutPanes Panes { get; set; }
                 public class DescribeMPULayoutInfoListResponseBodyLayoutsLayoutPanes : TeaModel {
                     [NameInMap("Panes")]
                     [Validation(Required=false)]
                     public List<DescribeMPULayoutInfoListResponseBodyLayoutsLayoutPanesPanes> Panes { get; set; }
                     public class DescribeMPULayoutInfoListResponseBodyLayoutsLayoutPanesPanes : TeaModel {
-                        [NameInMap("MajorPane")]
-                        [Validation(Required=false)]
-                        public int? MajorPane { get; set; }
-
-                        [NameInMap("Width")]
-                        [Validation(Required=false)]
-                        public float? Width { get; set; }
-
                         [NameInMap("Height")]
                         [Validation(Required=false)]
                         public float? Height { get; set; }
 
-                        [NameInMap("Y")]
+                        [NameInMap("MajorPane")]
                         [Validation(Required=false)]
-                        public float? Y { get; set; }
+                        public int? MajorPane { get; set; }
 
                         [NameInMap("PaneId")]
                         [Validation(Required=false)]
                         public int? PaneId { get; set; }
 
-                        [NameInMap("ZOrder")]
+                        [NameInMap("Width")]
                         [Validation(Required=false)]
-                        public int? ZOrder { get; set; }
+                        public float? Width { get; set; }
 
                         [NameInMap("X")]
                         [Validation(Required=false)]
                         public float? X { get; set; }
 
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
+                        public float? Y { get; set; }
+
+                        [NameInMap("ZOrder")]
+                        [Validation(Required=false)]
+                        public int? ZOrder { get; set; }
+
                     }
 
                 }
-                public string Name { get; set; }
-                public int? AudioMixCount { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalNum")]
+        [Validation(Required=false)]
+        public long? TotalNum { get; set; }
+
+        [NameInMap("TotalPage")]
+        [Validation(Required=false)]
+        public long? TotalPage { get; set; }
 
     }
 

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
-    public class GetMPUTaskStatusResponseBody : TeaModel {
+    public class UpdateAutoLiveStreamRuleResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("RuleId")]
         [Validation(Required=false)]
-        public int? Status { get; set; }
+        public long? RuleId { get; set; }
 
     }
 

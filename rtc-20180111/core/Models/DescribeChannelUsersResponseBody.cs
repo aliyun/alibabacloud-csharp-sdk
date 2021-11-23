@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeChannelUsersResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ChannelProfile")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? ChannelProfile { get; set; }
+
+        [NameInMap("CommTotalNum")]
+        [Validation(Required=false)]
+        public int? CommTotalNum { get; set; }
 
         [NameInMap("InteractiveUserList")]
         [Validation(Required=false)]
         public List<string> InteractiveUserList { get; set; }
-
-        [NameInMap("LiveUserNum")]
-        [Validation(Required=false)]
-        public int? LiveUserNum { get; set; }
-
-        [NameInMap("ChannelProfile")]
-        [Validation(Required=false)]
-        public int? ChannelProfile { get; set; }
 
         [NameInMap("InteractiveUserNum")]
         [Validation(Required=false)]
@@ -33,6 +29,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public bool? IsChannelExist { get; set; }
 
+        [NameInMap("LiveUserList")]
+        [Validation(Required=false)]
+        public List<string> LiveUserList { get; set; }
+
+        [NameInMap("LiveUserNum")]
+        [Validation(Required=false)]
+        public int? LiveUserNum { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Timestamp")]
         [Validation(Required=false)]
         public int? Timestamp { get; set; }
@@ -40,14 +48,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("UserList")]
         [Validation(Required=false)]
         public List<string> UserList { get; set; }
-
-        [NameInMap("LiveUserList")]
-        [Validation(Required=false)]
-        public List<string> LiveUserList { get; set; }
-
-        [NameInMap("CommTotalNum")]
-        [Validation(Required=false)]
-        public int? CommTotalNum { get; set; }
 
     }
 

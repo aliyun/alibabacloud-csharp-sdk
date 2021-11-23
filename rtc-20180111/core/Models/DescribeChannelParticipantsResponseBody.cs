@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeChannelParticipantsResponseBody : TeaModel {
-        [NameInMap("TotalNum")]
-        [Validation(Required=false)]
-        public int? TotalNum { get; set; }
-
-        [NameInMap("TotalPage")]
-        [Validation(Required=false)]
-        public int? TotalPage { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("Timestamp")]
         [Validation(Required=false)]
         public int? Timestamp { get; set; }
+
+        [NameInMap("TotalNum")]
+        [Validation(Required=false)]
+        public int? TotalNum { get; set; }
+
+        [NameInMap("TotalPage")]
+        [Validation(Required=false)]
+        public int? TotalPage { get; set; }
 
         [NameInMap("UserList")]
         [Validation(Required=false)]

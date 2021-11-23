@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
-    public class CreateAutoLiveStreamRuleRequest : TeaModel {
+    public class UpdateAutoLiveStreamRuleRequest : TeaModel {
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("PlayDomain")]
         [Validation(Required=false)]
         public string PlayDomain { get; set; }
+
+        [NameInMap("RuleId")]
+        [Validation(Required=false)]
+        public int? RuleId { get; set; }
 
         [NameInMap("RuleName")]
         [Validation(Required=false)]
