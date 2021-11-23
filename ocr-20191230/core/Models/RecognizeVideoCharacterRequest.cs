@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
-    public class DetectCardScreenshotRequest : TeaModel {
-        [NameInMap("ImageURL")]
+    public class RecognizeVideoCharacterRequest : TeaModel {
+        /// <summary>
+        /// 视频文件地址
+        /// </summary>
+        [NameInMap("VideoURL")]
         [Validation(Required=false)]
-        public string ImageURL { get; set; }
+        public string VideoURL { get; set; }
 
     }
 

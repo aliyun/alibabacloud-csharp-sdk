@@ -1,3 +1,6 @@
+2021-11-23 Version: 1.0.5
+- Update RecognizeCharacter.
+
 2021-07-02 Version: 1.0.4
 - Release RecognizeQuotaInvoice RecognizeTicketInvoice RecognizePdf.
 

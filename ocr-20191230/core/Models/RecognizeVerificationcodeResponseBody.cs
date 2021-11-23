@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeVerificationcodeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeVerificationcodeResponseBodyData Data { get; set; }
@@ -21,6 +17,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public string Content { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

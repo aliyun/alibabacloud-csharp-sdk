@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeVATInvoiceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeVATInvoiceResponseBodyData Data { get; set; }
@@ -21,9 +17,33 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public RecognizeVATInvoiceResponseBodyDataBox Box { get; set; }
             public class RecognizeVATInvoiceResponseBodyDataBox : TeaModel {
-                [NameInMap("PayerRegisterNoes")]
+                [NameInMap("Checkers")]
                 [Validation(Required=false)]
-                public List<float?> PayerRegisterNoes { get; set; }
+                public List<float?> Checkers { get; set; }
+
+                [NameInMap("Clerks")]
+                [Validation(Required=false)]
+                public List<float?> Clerks { get; set; }
+
+                [NameInMap("InvoiceAmounts")]
+                [Validation(Required=false)]
+                public List<float?> InvoiceAmounts { get; set; }
+
+                [NameInMap("InvoiceCodes")]
+                [Validation(Required=false)]
+                public List<float?> InvoiceCodes { get; set; }
+
+                [NameInMap("InvoiceDates")]
+                [Validation(Required=false)]
+                public List<float?> InvoiceDates { get; set; }
+
+                [NameInMap("InvoiceFakeCodes")]
+                [Validation(Required=false)]
+                public List<float?> InvoiceFakeCodes { get; set; }
+
+                [NameInMap("InvoiceNoes")]
+                [Validation(Required=false)]
+                public List<float?> InvoiceNoes { get; set; }
 
                 [NameInMap("PayeeAddresses")]
                 [Validation(Required=false)]
@@ -33,153 +53,133 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public List<float?> PayeeBankNames { get; set; }
 
-                [NameInMap("Checkers")]
+                [NameInMap("PayeeNames")]
                 [Validation(Required=false)]
-                public List<float?> Checkers { get; set; }
+                public List<float?> PayeeNames { get; set; }
 
-                [NameInMap("TaxAmounts")]
+                [NameInMap("PayeeRegisterNoes")]
                 [Validation(Required=false)]
-                public List<float?> TaxAmounts { get; set; }
-
-                [NameInMap("SumAmounts")]
-                [Validation(Required=false)]
-                public List<float?> SumAmounts { get; set; }
-
-                [NameInMap("Clerks")]
-                [Validation(Required=false)]
-                public List<float?> Clerks { get; set; }
-
-                [NameInMap("InvoiceNoes")]
-                [Validation(Required=false)]
-                public List<float?> InvoiceNoes { get; set; }
-
-                [NameInMap("InvoiceDates")]
-                [Validation(Required=false)]
-                public List<float?> InvoiceDates { get; set; }
-
-                [NameInMap("InvoiceCodes")]
-                [Validation(Required=false)]
-                public List<float?> InvoiceCodes { get; set; }
-
-                [NameInMap("InvoiceFakeCodes")]
-                [Validation(Required=false)]
-                public List<float?> InvoiceFakeCodes { get; set; }
-
-                [NameInMap("PayerNames")]
-                [Validation(Required=false)]
-                public List<float?> PayerNames { get; set; }
-
-                [NameInMap("PayerBankNames")]
-                [Validation(Required=false)]
-                public List<float?> PayerBankNames { get; set; }
+                public List<float?> PayeeRegisterNoes { get; set; }
 
                 [NameInMap("Payees")]
                 [Validation(Required=false)]
                 public List<float?> Payees { get; set; }
 
-                [NameInMap("PayeeNames")]
-                [Validation(Required=false)]
-                public List<float?> PayeeNames { get; set; }
-
-                [NameInMap("InvoiceAmounts")]
-                [Validation(Required=false)]
-                public List<float?> InvoiceAmounts { get; set; }
-
-                [NameInMap("WithoutTaxAmounts")]
-                [Validation(Required=false)]
-                public List<float?> WithoutTaxAmounts { get; set; }
-
                 [NameInMap("PayerAddresses")]
                 [Validation(Required=false)]
                 public List<float?> PayerAddresses { get; set; }
 
-                [NameInMap("PayeeRegisterNoes")]
+                [NameInMap("PayerBankNames")]
                 [Validation(Required=false)]
-                public List<float?> PayeeRegisterNoes { get; set; }
+                public List<float?> PayerBankNames { get; set; }
+
+                [NameInMap("PayerNames")]
+                [Validation(Required=false)]
+                public List<float?> PayerNames { get; set; }
+
+                [NameInMap("PayerRegisterNoes")]
+                [Validation(Required=false)]
+                public List<float?> PayerRegisterNoes { get; set; }
+
+                [NameInMap("SumAmounts")]
+                [Validation(Required=false)]
+                public List<float?> SumAmounts { get; set; }
+
+                [NameInMap("TaxAmounts")]
+                [Validation(Required=false)]
+                public List<float?> TaxAmounts { get; set; }
+
+                [NameInMap("WithoutTaxAmounts")]
+                [Validation(Required=false)]
+                public List<float?> WithoutTaxAmounts { get; set; }
 
             }
             [NameInMap("Content")]
             [Validation(Required=false)]
             public RecognizeVATInvoiceResponseBodyDataContent Content { get; set; }
             public class RecognizeVATInvoiceResponseBodyDataContent : TeaModel {
-                [NameInMap("PayerAddress")]
+                [NameInMap("AntiFakeCode")]
                 [Validation(Required=false)]
-                public string PayerAddress { get; set; }
-
-                [NameInMap("PayeeRegisterNo")]
-                [Validation(Required=false)]
-                public string PayeeRegisterNo { get; set; }
-
-                [NameInMap("PayeeBankName")]
-                [Validation(Required=false)]
-                public string PayeeBankName { get; set; }
-
-                [NameInMap("InvoiceNo")]
-                [Validation(Required=false)]
-                public string InvoiceNo { get; set; }
-
-                [NameInMap("PayerRegisterNo")]
-                [Validation(Required=false)]
-                public string PayerRegisterNo { get; set; }
+                public string AntiFakeCode { get; set; }
 
                 [NameInMap("Checker")]
                 [Validation(Required=false)]
                 public string Checker { get; set; }
 
-                [NameInMap("TaxAmount")]
+                [NameInMap("Clerk")]
                 [Validation(Required=false)]
-                public string TaxAmount { get; set; }
-
-                [NameInMap("InvoiceDate")]
-                [Validation(Required=false)]
-                public string InvoiceDate { get; set; }
-
-                [NameInMap("WithoutTaxAmount")]
-                [Validation(Required=false)]
-                public string WithoutTaxAmount { get; set; }
+                public string Clerk { get; set; }
 
                 [NameInMap("InvoiceAmount")]
                 [Validation(Required=false)]
                 public string InvoiceAmount { get; set; }
 
-                [NameInMap("AntiFakeCode")]
+                [NameInMap("InvoiceCode")]
                 [Validation(Required=false)]
-                public string AntiFakeCode { get; set; }
+                public string InvoiceCode { get; set; }
 
-                [NameInMap("PayerName")]
+                [NameInMap("InvoiceDate")]
                 [Validation(Required=false)]
-                public string PayerName { get; set; }
+                public string InvoiceDate { get; set; }
+
+                [NameInMap("InvoiceNo")]
+                [Validation(Required=false)]
+                public string InvoiceNo { get; set; }
 
                 [NameInMap("Payee")]
                 [Validation(Required=false)]
                 public string Payee { get; set; }
 
-                [NameInMap("SumAmount")]
+                [NameInMap("PayeeAddress")]
                 [Validation(Required=false)]
-                public string SumAmount { get; set; }
+                public string PayeeAddress { get; set; }
 
-                [NameInMap("PayerBankName")]
+                [NameInMap("PayeeBankName")]
                 [Validation(Required=false)]
-                public string PayerBankName { get; set; }
-
-                [NameInMap("Clerk")]
-                [Validation(Required=false)]
-                public string Clerk { get; set; }
+                public string PayeeBankName { get; set; }
 
                 [NameInMap("PayeeName")]
                 [Validation(Required=false)]
                 public string PayeeName { get; set; }
 
-                [NameInMap("PayeeAddress")]
+                [NameInMap("PayeeRegisterNo")]
                 [Validation(Required=false)]
-                public string PayeeAddress { get; set; }
+                public string PayeeRegisterNo { get; set; }
 
-                [NameInMap("InvoiceCode")]
+                [NameInMap("PayerAddress")]
                 [Validation(Required=false)]
-                public string InvoiceCode { get; set; }
+                public string PayerAddress { get; set; }
+
+                [NameInMap("PayerBankName")]
+                [Validation(Required=false)]
+                public string PayerBankName { get; set; }
+
+                [NameInMap("PayerName")]
+                [Validation(Required=false)]
+                public string PayerName { get; set; }
+
+                [NameInMap("PayerRegisterNo")]
+                [Validation(Required=false)]
+                public string PayerRegisterNo { get; set; }
+
+                [NameInMap("SumAmount")]
+                [Validation(Required=false)]
+                public string SumAmount { get; set; }
+
+                [NameInMap("TaxAmount")]
+                [Validation(Required=false)]
+                public string TaxAmount { get; set; }
+
+                [NameInMap("WithoutTaxAmount")]
+                [Validation(Required=false)]
+                public string WithoutTaxAmount { get; set; }
 
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

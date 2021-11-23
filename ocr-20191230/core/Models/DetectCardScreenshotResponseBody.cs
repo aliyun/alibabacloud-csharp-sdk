@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class DetectCardScreenshotResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectCardScreenshotResponseBodyData Data { get; set; }
@@ -35,16 +31,20 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public DetectCardScreenshotResponseBodyDataSpoofResultResultMap ResultMap { get; set; }
                 public class DetectCardScreenshotResponseBodyDataSpoofResultResultMap : TeaModel {
-                    [NameInMap("ScreenThreshold")]
-                    [Validation(Required=false)]
-                    public float? ScreenThreshold { get; set; }
                     [NameInMap("ScreenScore")]
                     [Validation(Required=false)]
                     public float? ScreenScore { get; set; }
+                    [NameInMap("ScreenThreshold")]
+                    [Validation(Required=false)]
+                    public float? ScreenThreshold { get; set; }
                 };
 
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

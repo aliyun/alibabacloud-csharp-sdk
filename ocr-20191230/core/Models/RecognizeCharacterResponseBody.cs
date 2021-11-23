@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeCharacterResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeCharacterResponseBodyData Data { get; set; }
@@ -21,8 +17,22 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeCharacterResponseBodyDataResults> Results { get; set; }
             public class RecognizeCharacterResponseBodyDataResults : TeaModel {
+                public float? Probability { get; set; }
+                public string Text { get; set; }
                 public RecognizeCharacterResponseBodyDataResultsTextRectangles TextRectangles { get; set; }
                 public class RecognizeCharacterResponseBodyDataResultsTextRectangles : TeaModel {
+                    [NameInMap("Angle")]
+                    [Validation(Required=false)]
+                    public int? Angle { get; set; }
+
+                    [NameInMap("Height")]
+                    [Validation(Required=false)]
+                    public int? Height { get; set; }
+
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public int? Left { get; set; }
+
                     [NameInMap("Top")]
                     [Validation(Required=false)]
                     public int? Top { get; set; }
@@ -31,23 +41,13 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     [Validation(Required=false)]
                     public int? Width { get; set; }
 
-                    [NameInMap("Height")]
-                    [Validation(Required=false)]
-                    public int? Height { get; set; }
-
-                    [NameInMap("Angle")]
-                    [Validation(Required=false)]
-                    public int? Angle { get; set; }
-
-                    [NameInMap("Left")]
-                    [Validation(Required=false)]
-                    public int? Left { get; set; }
-
                 }
-                public string Text { get; set; }
-                public float? Probability { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

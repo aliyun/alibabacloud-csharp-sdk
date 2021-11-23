@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class TrimDocumentRequest : TeaModel {
-        [NameInMap("FileURL")]
-        [Validation(Required=false)]
-        public string FileURL { get; set; }
-
         [NameInMap("FileType")]
         [Validation(Required=false)]
         public string FileType { get; set; }
+
+        [NameInMap("FileURL")]
+        [Validation(Required=false)]
+        public string FileURL { get; set; }
 
         [NameInMap("OutputType")]
         [Validation(Required=false)]

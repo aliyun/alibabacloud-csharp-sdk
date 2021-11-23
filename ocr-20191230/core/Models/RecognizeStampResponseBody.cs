@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeStampResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeStampResponseBodyData Data { get; set; }
@@ -21,6 +17,30 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeStampResponseBodyDataResults> Results { get; set; }
             public class RecognizeStampResponseBodyDataResults : TeaModel {
+                public List<RecognizeStampResponseBodyDataResultsGeneralText> GeneralText { get; set; }
+                public class RecognizeStampResponseBodyDataResultsGeneralText : TeaModel {
+                    public float? Confidence { get; set; }
+                    public string Content { get; set; }
+                }
+                public RecognizeStampResponseBodyDataResultsRoi Roi { get; set; }
+                public class RecognizeStampResponseBodyDataResultsRoi : TeaModel {
+                    [NameInMap("Height")]
+                    [Validation(Required=false)]
+                    public int? Height { get; set; }
+
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public int? Left { get; set; }
+
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public int? Top { get; set; }
+
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
+                    public int? Width { get; set; }
+
+                }
                 public RecognizeStampResponseBodyDataResultsText Text { get; set; }
                 public class RecognizeStampResponseBodyDataResultsText : TeaModel {
                     [NameInMap("Confidence")]
@@ -32,32 +52,12 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public string Content { get; set; }
 
                 }
-                public RecognizeStampResponseBodyDataResultsRoi Roi { get; set; }
-                public class RecognizeStampResponseBodyDataResultsRoi : TeaModel {
-                    [NameInMap("Top")]
-                    [Validation(Required=false)]
-                    public int? Top { get; set; }
-
-                    [NameInMap("Width")]
-                    [Validation(Required=false)]
-                    public int? Width { get; set; }
-
-                    [NameInMap("Height")]
-                    [Validation(Required=false)]
-                    public int? Height { get; set; }
-
-                    [NameInMap("Left")]
-                    [Validation(Required=false)]
-                    public int? Left { get; set; }
-
-                }
-                public List<RecognizeStampResponseBodyDataResultsGeneralText> GeneralText { get; set; }
-                public class RecognizeStampResponseBodyDataResultsGeneralText : TeaModel {
-                    public float? Confidence { get; set; }
-                    public string Content { get; set; }
-                }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

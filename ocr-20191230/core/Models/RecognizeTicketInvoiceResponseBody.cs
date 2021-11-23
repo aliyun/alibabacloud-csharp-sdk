@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeTicketInvoiceResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeTicketInvoiceResponseBodyData Data { get; set; }
@@ -26,9 +19,6 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("Height")]
             [Validation(Required=false)]
             public long? Height { get; set; }
-            [NameInMap("Width")]
-            [Validation(Required=false)]
-            public long? Width { get; set; }
             [NameInMap("OrgHeight")]
             [Validation(Required=false)]
             public long? OrgHeight { get; set; }
@@ -39,24 +29,23 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public List<RecognizeTicketInvoiceResponseBodyDataResults> Results { get; set; }
             public class RecognizeTicketInvoiceResponseBodyDataResults : TeaModel {
-                public long? Index { get; set; }
                 public RecognizeTicketInvoiceResponseBodyDataResultsContent Content { get; set; }
                 public class RecognizeTicketInvoiceResponseBodyDataResultsContent : TeaModel {
+                    [NameInMap("AntiFakeCode")]
+                    [Validation(Required=false)]
+                    public string AntiFakeCode { get; set; }
+
                     [NameInMap("InvoiceCode")]
                     [Validation(Required=false)]
                     public string InvoiceCode { get; set; }
-
-                    [NameInMap("InvoiceNumber")]
-                    [Validation(Required=false)]
-                    public string InvoiceNumber { get; set; }
 
                     [NameInMap("InvoiceDate")]
                     [Validation(Required=false)]
                     public string InvoiceDate { get; set; }
 
-                    [NameInMap("AntiFakeCode")]
+                    [NameInMap("InvoiceNumber")]
                     [Validation(Required=false)]
-                    public string AntiFakeCode { get; set; }
+                    public string InvoiceNumber { get; set; }
 
                     [NameInMap("PayeeName")]
                     [Validation(Required=false)]
@@ -79,7 +68,7 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public string SumAmount { get; set; }
 
                 }
-                public string Type { get; set; }
+                public long? Index { get; set; }
                 public List<RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfos> KeyValueInfos { get; set; }
                 public class RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfos : TeaModel {
                     public string Key { get; set; }
@@ -96,8 +85,19 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     public long? X { get; set; }
                     public long? Y { get; set; }
                 }
+                public string Type { get; set; }
             }
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public long? Width { get; set; }
         };
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

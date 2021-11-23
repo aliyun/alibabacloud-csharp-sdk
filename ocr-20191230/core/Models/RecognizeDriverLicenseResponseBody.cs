@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr20191230.Models
 {
     public class RecognizeDriverLicenseResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeDriverLicenseResponseBodyData Data { get; set; }
@@ -25,13 +21,13 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string ArchiveNumber { get; set; }
 
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
                 [NameInMap("CardNumber")]
                 [Validation(Required=false)]
                 public string CardNumber { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
 
                 [NameInMap("Record")]
                 [Validation(Required=false)]
@@ -42,13 +38,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public RecognizeDriverLicenseResponseBodyDataFaceResult FaceResult { get; set; }
             public class RecognizeDriverLicenseResponseBodyDataFaceResult : TeaModel {
-                [NameInMap("VehicleType")]
+                [NameInMap("Address")]
                 [Validation(Required=false)]
-                public string VehicleType { get; set; }
-
-                [NameInMap("IssueDate")]
-                [Validation(Required=false)]
-                public string IssueDate { get; set; }
+                public string Address { get; set; }
 
                 [NameInMap("EndDate")]
                 [Validation(Required=false)]
@@ -58,13 +50,13 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string Gender { get; set; }
 
-                [NameInMap("Address")]
+                [NameInMap("IssueDate")]
                 [Validation(Required=false)]
-                public string Address { get; set; }
+                public string IssueDate { get; set; }
 
-                [NameInMap("StartDate")]
+                [NameInMap("IssueUnit")]
                 [Validation(Required=false)]
-                public string StartDate { get; set; }
+                public string IssueUnit { get; set; }
 
                 [NameInMap("LicenseNumber")]
                 [Validation(Required=false)]
@@ -74,12 +66,20 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                [NameInMap("IssueUnit")]
+                [NameInMap("StartDate")]
                 [Validation(Required=false)]
-                public string IssueUnit { get; set; }
+                public string StartDate { get; set; }
+
+                [NameInMap("VehicleType")]
+                [Validation(Required=false)]
+                public string VehicleType { get; set; }
 
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
