@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public class DescribeRoleZoneInfoResponseBodyZoneInfosZoneInfo : TeaModel {
                 public string InsName { get; set; }
                 public string NodeType { get; set; }
+                public string RoleId { get; set; }
                 public string RoleType { get; set; }
                 public string ZoneId { get; set; }
-                public string RoleId { get; set; }
             }
         };
 

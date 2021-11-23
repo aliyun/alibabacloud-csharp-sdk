@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupDBsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public DescribeBackupDBsResponseBodyDatabases Databases { get; set; }
@@ -25,17 +21,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
         };
 
-        [NameInMap("RequestId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

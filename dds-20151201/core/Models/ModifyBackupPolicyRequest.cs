@@ -9,13 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public long? BackupRetentionPeriod { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("EnableBackupLog")]
+        [Validation(Required=false)]
+        public long? EnableBackupLog { get; set; }
+
+        [NameInMap("LogBackupRetentionPeriod")]
+        [Validation(Required=false)]
+        public long? LogBackupRetentionPeriod { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PreferredBackupPeriod")]
+        [Validation(Required=false)]
+        public string PreferredBackupPeriod { get; set; }
+
+        [NameInMap("PreferredBackupTime")]
+        [Validation(Required=false)]
+        public string PreferredBackupTime { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,21 +49,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("PreferredBackupTime")]
-        [Validation(Required=false)]
-        public string PreferredBackupTime { get; set; }
-
-        [NameInMap("PreferredBackupPeriod")]
-        [Validation(Required=false)]
-        public string PreferredBackupPeriod { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

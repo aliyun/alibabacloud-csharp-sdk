@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceSSLResponseBody : TeaModel {
+        [NameInMap("CertCommonName")]
+        [Validation(Required=false)]
+        public string CertCommonName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SSLExpiredTime")]
         [Validation(Required=false)]
         public string SSLExpiredTime { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("SSLStatus")]
         [Validation(Required=false)]
         public string SSLStatus { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("CertCommonName")]
-        [Validation(Required=false)]
-        public string CertCommonName { get; set; }
 
     }
 

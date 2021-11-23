@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceAvailable { get; set; }
 
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Engine")]
-        [Validation(Required=false)]
-        public string Engine { get; set; }
 
     }
 

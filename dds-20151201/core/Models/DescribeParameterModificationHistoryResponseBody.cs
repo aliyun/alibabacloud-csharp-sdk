@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParameterModificationHistoryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("HistoricalParameters")]
         [Validation(Required=false)]
         public DescribeParameterModificationHistoryResponseBodyHistoricalParameters HistoricalParameters { get; set; }
@@ -21,12 +17,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter> HistoricalParameter { get; set; }
             public class DescribeParameterModificationHistoryResponseBodyHistoricalParametersHistoricalParameter : TeaModel {
-                public string ParameterName { get; set; }
-                public string OldParameterValue { get; set; }
-                public string NewParameterValue { get; set; }
                 public string ModifyTime { get; set; }
+                public string NewParameterValue { get; set; }
+                public string OldParameterValue { get; set; }
+                public string ParameterName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class MigrateAvailableZoneRequest : TeaModel {
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,25 +33,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
         [NameInMap("Vswitch")]
         [Validation(Required=false)]
         public string Vswitch { get; set; }
 
-        [NameInMap("EffectiveTime")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string EffectiveTime { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

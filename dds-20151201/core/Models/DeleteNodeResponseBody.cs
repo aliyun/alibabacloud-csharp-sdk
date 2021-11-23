@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DeleteNodeResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public int? TaskId { get; set; }
+        public string OrderId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("OrderId")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public int? TaskId { get; set; }
 
     }
 

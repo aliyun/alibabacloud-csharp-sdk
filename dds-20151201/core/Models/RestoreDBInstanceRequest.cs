@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class RestoreDBInstanceRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("BackupId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public int? BackupId { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,17 +33,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("BackupId")]
-        [Validation(Required=false)]
-        public int? BackupId { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

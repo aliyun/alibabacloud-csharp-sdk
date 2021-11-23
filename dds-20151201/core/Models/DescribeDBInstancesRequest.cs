@@ -9,53 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("ChargeType")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string ChargeType { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("ConnectionDomain")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string ConnectionDomain { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("ReplicationFactor")]
-        [Validation(Required=false)]
-        public string ReplicationFactor { get; set; }
+        public string DBInstanceClass { get; set; }
 
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
-        [NameInMap("ExpireTime")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string ExpireTime { get; set; }
+        public string DBInstanceId { get; set; }
 
         [NameInMap("DBInstanceStatus")]
         [Validation(Required=false)]
@@ -65,10 +37,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceType { get; set; }
 
-        [NameInMap("DBInstanceClass")]
-        [Validation(Required=false)]
-        public string DBInstanceClass { get; set; }
-
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
@@ -77,37 +45,57 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
-        [NameInMap("NetworkType")]
+        [NameInMap("ExpireTime")]
         [Validation(Required=false)]
-        public string NetworkType { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string ExpireTime { get; set; }
 
         [NameInMap("Expired")]
         [Validation(Required=false)]
         public string Expired { get; set; }
 
-        [NameInMap("ConnectionDomain")]
+        [NameInMap("NetworkType")]
         [Validation(Required=false)]
-        public string ConnectionDomain { get; set; }
+        public string NetworkType { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ReplicationFactor")]
+        [Validation(Required=false)]
+        public string ReplicationFactor { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -122,6 +110,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

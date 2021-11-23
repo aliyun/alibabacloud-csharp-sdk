@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeRegionsResponseBodyRegions Regions { get; set; }
@@ -21,6 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsDdsRegion> DdsRegion { get; set; }
             public class DescribeRegionsResponseBodyRegionsDdsRegion : TeaModel {
+                public string RegionId { get; set; }
                 public DescribeRegionsResponseBodyRegionsDdsRegionZones Zones { get; set; }
                 public class DescribeRegionsResponseBodyRegionsDdsRegionZones : TeaModel {
                     [NameInMap("Zone")]
@@ -38,9 +35,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     }
 
                 }
-                public string RegionId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

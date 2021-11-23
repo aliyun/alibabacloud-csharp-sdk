@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceNetExpireTimeRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("ClassicExpendExpiredDays")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public int? ClassicExpendExpiredDays { get; set; }
+
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,21 +37,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("ConnectionString")]
-        [Validation(Required=false)]
-        public string ConnectionString { get; set; }
-
-        [NameInMap("ClassicExpendExpiredDays")]
-        [Validation(Required=false)]
-        public int? ClassicExpendExpiredDays { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeMongoDBLogConfigResponseBody : TeaModel {
-        [NameInMap("UserProjectName")]
+        [NameInMap("IsEtlMetaExist")]
         [Validation(Required=false)]
-        public string UserProjectName { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? IsEtlMetaExist { get; set; }
 
         [NameInMap("IsUserProjectLogstoreExist")]
         [Validation(Required=false)]
         public int? IsUserProjectLogstoreExist { get; set; }
 
-        [NameInMap("IsEtlMetaExist")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? IsEtlMetaExist { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("UserProjectName")]
+        [Validation(Required=false)]
+        public string UserProjectName { get; set; }
 
     }
 

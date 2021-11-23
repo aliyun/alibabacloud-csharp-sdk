@@ -17,13 +17,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public List<DescribeActiveOperationTaskTypeResponseBodyTypeList> TypeList { get; set; }
         public class DescribeActiveOperationTaskTypeResponseBodyTypeList : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
-            [NameInMap("Count")]
+            [NameInMap("TaskTypeInfoEn")]
             [Validation(Required=false)]
-            public int? Count { get; set; }
+            public string TaskTypeInfoEn { get; set; }
+
+            [NameInMap("TaskTypeInfoZh")]
+            [Validation(Required=false)]
+            public string TaskTypeInfoZh { get; set; }
 
         }
 

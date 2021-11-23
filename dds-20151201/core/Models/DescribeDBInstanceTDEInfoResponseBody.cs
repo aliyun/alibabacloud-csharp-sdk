@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceTDEInfoResponseBody : TeaModel {
-        [NameInMap("TDEStatus")]
-        [Validation(Required=false)]
-        public string TDEStatus { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TDEStatus")]
+        [Validation(Required=false)]
+        public string TDEStatus { get; set; }
 
     }
 

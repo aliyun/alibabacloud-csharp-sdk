@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifySecurityIpsRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("ModifyMode")]
+        [Validation(Required=false)]
+        public string ModifyMode { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,29 +33,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityIpGroupAttribute")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("SecurityIps")]
-        [Validation(Required=false)]
-        public string SecurityIps { get; set; }
-
-        [NameInMap("ModifyMode")]
-        [Validation(Required=false)]
-        public string ModifyMode { get; set; }
+        public string SecurityIpGroupAttribute { get; set; }
 
         [NameInMap("SecurityIpGroupName")]
         [Validation(Required=false)]
         public string SecurityIpGroupName { get; set; }
 
-        [NameInMap("SecurityIpGroupAttribute")]
+        [NameInMap("SecurityIps")]
         [Validation(Required=false)]
-        public string SecurityIpGroupAttribute { get; set; }
+        public string SecurityIps { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

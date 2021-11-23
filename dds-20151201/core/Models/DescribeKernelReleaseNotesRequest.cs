@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeKernelReleaseNotesRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("KernelVersion")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string KernelVersion { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("KernelVersion")]
-        [Validation(Required=false)]
-        public string KernelVersion { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

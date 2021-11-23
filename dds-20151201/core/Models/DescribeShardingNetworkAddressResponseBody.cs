@@ -17,19 +17,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection> CompatibleConnection { get; set; }
             public class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection : TeaModel {
-                public string VswitchId { get; set; }
                 public string ExpiredTime { get; set; }
+                public string IPAddress { get; set; }
+                public string NetworkAddress { get; set; }
                 public string NetworkType { get; set; }
                 public string Port { get; set; }
-                public string NetworkAddress { get; set; }
                 public string VPCId { get; set; }
-                public string IPAddress { get; set; }
+                public string VswitchId { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("NetworkAddresses")]
         [Validation(Required=false)]
@@ -39,18 +35,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress> NetworkAddress { get; set; }
             public class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress : TeaModel {
-                public string NodeType { get; set; }
-                public string VswitchId { get; set; }
                 public string ExpiredTime { get; set; }
-                public string NetworkType { get; set; }
-                public string Role { get; set; }
-                public string Port { get; set; }
-                public string VPCId { get; set; }
-                public string NetworkAddress { get; set; }
-                public string NodeId { get; set; }
                 public string IPAddress { get; set; }
+                public string NetworkAddress { get; set; }
+                public string NetworkType { get; set; }
+                public string NodeId { get; set; }
+                public string NodeType { get; set; }
+                public string Port { get; set; }
+                public string Role { get; set; }
+                public string VPCId { get; set; }
+                public string VswitchId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

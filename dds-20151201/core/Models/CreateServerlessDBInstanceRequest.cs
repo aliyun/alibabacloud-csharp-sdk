@@ -9,37 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateServerlessDBInstanceRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AccountPassword")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AccountPassword { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("AutoRenew")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AutoRenew { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DBInstanceDescription { get; set; }
 
         [NameInMap("DBInstanceStorage")]
         [Validation(Required=false)]
         public int? DBInstanceStorage { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
 
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -49,49 +37,61 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
-        [NameInMap("DBInstanceDescription")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string DBInstanceDescription { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("SecurityIPList")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string SecurityIPList { get; set; }
-
-        [NameInMap("AccountPassword")]
-        [Validation(Required=false)]
-        public string AccountPassword { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
-        [NameInMap("VpcId")]
+        [NameInMap("PeriodPriceType")]
         [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public string PeriodPriceType { get; set; }
 
-        [NameInMap("VSwitchId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("StorageEngine")]
-        [Validation(Required=false)]
-        public string StorageEngine { get; set; }
-
-        [NameInMap("AutoRenew")]
-        [Validation(Required=false)]
-        public string AutoRenew { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("PeriodPriceType")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string PeriodPriceType { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SecurityIPList")]
+        [Validation(Required=false)]
+        public string SecurityIPList { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
+        [NameInMap("StorageEngine")]
+        [Validation(Required=false)]
+        public string StorageEngine { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AutoPay")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public bool? AutoPay { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("BusinessInfo")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string BusinessInfo { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("CouponNo")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string CouponNo { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -45,21 +41,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string NodeType { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("FromApp")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string FromApp { get; set; }
-
-        [NameInMap("AutoPay")]
-        [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("ReadonlyReplicas")]
         [Validation(Required=false)]
         public int? ReadonlyReplicas { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 
