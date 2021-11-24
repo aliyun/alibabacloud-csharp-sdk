@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
+        /// 启用或禁用 RRSA 功能。true: 启用，false: 禁用
+        /// </summary>
+        [NameInMap("enable_rrsa")]
+        [Validation(Required=false)]
+        public bool? EnableRrsa { get; set; }
+
+        /// <summary>
         /// 域名是否重新绑定到Ingress的SLB地址。
         /// </summary>
         [NameInMap("ingress_domain_rebinding")]

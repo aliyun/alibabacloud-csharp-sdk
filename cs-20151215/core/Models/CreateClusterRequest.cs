@@ -115,6 +115,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DisableRollback { get; set; }
 
         /// <summary>
+        /// 启用 RRSA 功能
+        /// </summary>
+        [NameInMap("enable_rrsa")]
+        [Validation(Required=false)]
+        public bool? EnableRrsa { get; set; }
+
+        /// <summary>
         /// Secret落盘加密
         /// </summary>
         [NameInMap("encryption_provider_key")]
