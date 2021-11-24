@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
-    public class GetAICaptionExtractionJobsResponse : TeaModel {
+    public class DescribeVodDomainSrcBpsDataResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetAICaptionExtractionJobsResponseBody Body { get; set; }
+        public DescribeVodDomainSrcBpsDataResponseBody Body { get; set; }
 
     }
 
