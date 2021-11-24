@@ -1421,6 +1421,38 @@ namespace AlibabaCloud.SDK.Imp20210630
             return await ListAppsWithOptionsAsync(request, runtime);
         }
 
+        public ListClassesResponse ListClassesWithOptions(ListClassesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListClassesResponse>(DoRPCRequest("ListClasses", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListClassesResponse> ListClassesWithOptionsAsync(ListClassesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListClassesResponse>(await DoRPCRequestAsync("ListClasses", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListClassesResponse ListClasses(ListClassesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListClassesWithOptions(request, runtime);
+        }
+
+        public async Task<ListClassesResponse> ListClassesAsync(ListClassesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListClassesWithOptionsAsync(request, runtime);
+        }
+
         public ListCommentsResponse ListCommentsWithOptions(ListCommentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
