@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateAcceleratorResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

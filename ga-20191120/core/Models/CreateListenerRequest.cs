@@ -9,37 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateListenerRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("Certificates")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public List<CreateListenerRequestCertificates> Certificates { get; set; }
+        public class CreateListenerRequestCertificates : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
 
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        }
 
         [NameInMap("ClientAffinity")]
         [Validation(Required=false)]
         public string ClientAffinity { get; set; }
 
-        [NameInMap("Protocol")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Protocol { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("ProxyProtocol")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public bool? ProxyProtocol { get; set; }
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
@@ -55,40 +53,42 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
-        [NameInMap("Certificates")]
+        [NameInMap("Protocol")]
         [Validation(Required=false)]
-        public List<CreateListenerRequestCertificates> Certificates { get; set; }
-        public class CreateListenerRequestCertificates : TeaModel {
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
+        public string Protocol { get; set; }
 
-        }
+        [NameInMap("ProxyProtocol")]
+        [Validation(Required=false)]
+        public bool? ProxyProtocol { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("SecurityPolicyId")]
+        [Validation(Required=false)]
+        public string SecurityPolicyId { get; set; }
 
         [NameInMap("XForwardedForConfig")]
         [Validation(Required=false)]
         public CreateListenerRequestXForwardedForConfig XForwardedForConfig { get; set; }
         public class CreateListenerRequestXForwardedForConfig : TeaModel {
-            [NameInMap("XForwardedForGaIdEnabled")]
-            [Validation(Required=false)]
-            public bool? XForwardedForGaIdEnabled { get; set; }
             [NameInMap("XForwardedForGaApEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForGaApEnabled { get; set; }
-            [NameInMap("XForwardedForProtoEnabled")]
+            [NameInMap("XForwardedForGaIdEnabled")]
             [Validation(Required=false)]
-            public bool? XForwardedForProtoEnabled { get; set; }
+            public bool? XForwardedForGaIdEnabled { get; set; }
             [NameInMap("XForwardedForPortEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForPortEnabled { get; set; }
+            [NameInMap("XForwardedForProtoEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForProtoEnabled { get; set; }
             [NameInMap("XRealIpEnabled")]
             [Validation(Required=false)]
             public bool? XRealIpEnabled { get; set; }
         };
-
-        [NameInMap("SecurityPolicyId")]
-        [Validation(Required=false)]
-        public string SecurityPolicyId { get; set; }
 
     }
 

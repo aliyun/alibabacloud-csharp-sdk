@@ -9,25 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetAclResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("AclId")]
-        [Validation(Required=false)]
-        public string AclId { get; set; }
-
-        [NameInMap("AddressIPVersion")]
-        [Validation(Required=false)]
-        public string AddressIPVersion { get; set; }
-
-        [NameInMap("AclStatus")]
-        [Validation(Required=false)]
-        public string AclStatus { get; set; }
-
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<GetAclResponseBodyAclEntries> AclEntries { get; set; }
@@ -42,27 +23,46 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
+        [NameInMap("AclId")]
+        [Validation(Required=false)]
+        public string AclId { get; set; }
+
+        [NameInMap("AclName")]
+        [Validation(Required=false)]
+        public string AclName { get; set; }
+
+        [NameInMap("AclStatus")]
+        [Validation(Required=false)]
+        public string AclStatus { get; set; }
+
+        [NameInMap("AddressIPVersion")]
+        [Validation(Required=false)]
+        public string AddressIPVersion { get; set; }
+
         [NameInMap("RelatedListeners")]
         [Validation(Required=false)]
         public List<GetAclResponseBodyRelatedListeners> RelatedListeners { get; set; }
         public class GetAclResponseBodyRelatedListeners : TeaModel {
-            [NameInMap("ListenerId")]
+            [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
-            public string ListenerId { get; set; }
+            public string AcceleratorId { get; set; }
 
             [NameInMap("AclType")]
             [Validation(Required=false)]
             public string AclType { get; set; }
 
-            [NameInMap("AcceleratorId")]
+            [NameInMap("ListenerId")]
             [Validation(Required=false)]
-            public string AcceleratorId { get; set; }
+            public string ListenerId { get; set; }
 
         }
 
-        [NameInMap("AclName")]
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AclName { get; set; }
+        public string RequestId { get; set; }
 
     }
 

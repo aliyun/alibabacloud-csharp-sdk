@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateEndpointGroupsRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,17 +21,47 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<UpdateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
         public class UpdateEndpointGroupsRequestEndpointGroupConfigurations : TeaModel {
-            [NameInMap("EndpointGroupName")]
+            [NameInMap("EnableClientIPPreservationProxyProtocol")]
             [Validation(Required=false)]
-            public string EndpointGroupName { get; set; }
+            public bool? EnableClientIPPreservationProxyProtocol { get; set; }
+
+            [NameInMap("EnableClientIPPreservationToa")]
+            [Validation(Required=false)]
+            public bool? EnableClientIPPreservationToa { get; set; }
+
+            [NameInMap("EndpointConfigurations")]
+            [Validation(Required=false)]
+            public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
+            public class UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
+                [NameInMap("Endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public long? Weight { get; set; }
+
+            }
 
             [NameInMap("EndpointGroupDescription")]
             [Validation(Required=false)]
             public string EndpointGroupDescription { get; set; }
 
-            [NameInMap("TrafficPercentage")]
+            [NameInMap("EndpointGroupId")]
             [Validation(Required=false)]
-            public long? TrafficPercentage { get; set; }
+            public string EndpointGroupId { get; set; }
+
+            [NameInMap("EndpointGroupName")]
+            [Validation(Required=false)]
+            public string EndpointGroupName { get; set; }
+
+            [NameInMap("EndpointRequestProtocol")]
+            [Validation(Required=false)]
+            public string EndpointRequestProtocol { get; set; }
 
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
@@ -57,63 +83,37 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
-            [NameInMap("ThresholdCount")]
-            [Validation(Required=false)]
-            public long? ThresholdCount { get; set; }
-
-            [NameInMap("EndpointConfigurations")]
-            [Validation(Required=false)]
-            public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
-            public class UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("Weight")]
-                [Validation(Required=false)]
-                public long? Weight { get; set; }
-
-                [NameInMap("Endpoint")]
-                [Validation(Required=false)]
-                public string Endpoint { get; set; }
-
-            }
-
-            [NameInMap("EndpointRequestProtocol")]
-            [Validation(Required=false)]
-            public string EndpointRequestProtocol { get; set; }
-
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> PortOverrides { get; set; }
             public class UpdateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides : TeaModel {
-                [NameInMap("ListenerPort")]
-                [Validation(Required=false)]
-                public long? ListenerPort { get; set; }
-
                 [NameInMap("EndpointPort")]
                 [Validation(Required=false)]
                 public long? EndpointPort { get; set; }
 
+                [NameInMap("ListenerPort")]
+                [Validation(Required=false)]
+                public long? ListenerPort { get; set; }
+
             }
 
-            [NameInMap("EnableClientIPPreservationToa")]
+            [NameInMap("ThresholdCount")]
             [Validation(Required=false)]
-            public bool? EnableClientIPPreservationToa { get; set; }
+            public long? ThresholdCount { get; set; }
 
-            [NameInMap("EnableClientIPPreservationProxyProtocol")]
+            [NameInMap("TrafficPercentage")]
             [Validation(Required=false)]
-            public bool? EnableClientIPPreservationProxyProtocol { get; set; }
-
-            [NameInMap("EndpointGroupId")]
-            [Validation(Required=false)]
-            public string EndpointGroupId { get; set; }
+            public long? TrafficPercentage { get; set; }
 
         }
 
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

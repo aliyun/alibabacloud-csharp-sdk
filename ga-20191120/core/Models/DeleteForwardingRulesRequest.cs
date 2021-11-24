@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteForwardingRulesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<string> ForwardingRuleIds { get; set; }
 
-        [NameInMap("AcceleratorId")]
-        [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
-
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

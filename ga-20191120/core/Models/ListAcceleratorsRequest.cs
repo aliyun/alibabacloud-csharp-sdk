@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAcceleratorsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]

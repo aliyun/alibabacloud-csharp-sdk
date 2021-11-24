@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DeleteEndpointGroupRequest : TeaModel {
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
         public string AcceleratorId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         [NameInMap("EndpointGroupId")]
         [Validation(Required=false)]

@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateIpSetsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("IpSets")]
         [Validation(Required=false)]
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

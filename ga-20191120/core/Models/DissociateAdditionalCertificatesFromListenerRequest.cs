@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DissociateAdditionalCertificatesFromListenerRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("Domains")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
+        public List<string> Domains { get; set; }
 
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
-        [NameInMap("Domains")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> Domains { get; set; }
+        public string RegionId { get; set; }
 
     }
 

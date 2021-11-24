@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateIpSetRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Bandwidth")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? Bandwidth { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string IpSetId { get; set; }
 
-        [NameInMap("Bandwidth")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
+        public string RegionId { get; set; }
 
     }
 

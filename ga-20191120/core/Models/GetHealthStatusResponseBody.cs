@@ -9,21 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class GetHealthStatusResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ListenerId")]
-        [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
-        [NameInMap("HealthStatus")]
-        [Validation(Required=false)]
-        public string HealthStatus { get; set; }
-
         [NameInMap("EndpointGroups")]
         [Validation(Required=false)]
         public List<GetHealthStatusResponseBodyEndpointGroups> EndpointGroups { get; set; }
@@ -36,33 +21,25 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
 
-            [NameInMap("HealthStatus")]
-            [Validation(Required=false)]
-            public string HealthStatus { get; set; }
-
-            [NameInMap("ForwardingRuleIds")]
-            [Validation(Required=false)]
-            public List<string> ForwardingRuleIds { get; set; }
-
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> Endpoints { get; set; }
             public class GetHealthStatusResponseBodyEndpointGroupsEndpoints : TeaModel {
-                [NameInMap("EndpointId")]
-                [Validation(Required=false)]
-                public string EndpointId { get; set; }
-
                 [NameInMap("Address")]
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
-                [NameInMap("HealthStatus")]
+                [NameInMap("EndpointId")]
                 [Validation(Required=false)]
-                public string HealthStatus { get; set; }
+                public string EndpointId { get; set; }
 
                 [NameInMap("HealthDetail")]
                 [Validation(Required=false)]
                 public string HealthDetail { get; set; }
+
+                [NameInMap("HealthStatus")]
+                [Validation(Required=false)]
+                public string HealthStatus { get; set; }
 
                 [NameInMap("Port")]
                 [Validation(Required=false)]
@@ -74,7 +51,30 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
             }
 
+            [NameInMap("ForwardingRuleIds")]
+            [Validation(Required=false)]
+            public List<string> ForwardingRuleIds { get; set; }
+
+            [NameInMap("HealthStatus")]
+            [Validation(Required=false)]
+            public string HealthStatus { get; set; }
+
         }
+
+        [NameInMap("HealthStatus")]
+        [Validation(Required=false)]
+        public string HealthStatus { get; set; }
+
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

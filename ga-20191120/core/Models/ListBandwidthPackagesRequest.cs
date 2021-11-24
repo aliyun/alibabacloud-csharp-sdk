@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBandwidthPackagesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string BandwidthPackageId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("BandwidthPackageId")]
-        [Validation(Required=false)]
-        public string BandwidthPackageId { get; set; }
 
     }
 

@@ -9,30 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateBandwidthPackageRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("BandwidthPackageId")]
-        [Validation(Required=false)]
-        public string BandwidthPackageId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Bandwidth")]
-        [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
-
-        [NameInMap("BandwidthType")]
-        [Validation(Required=false)]
-        public string BandwidthType { get; set; }
-
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -40,6 +16,30 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
+
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
+
+        [NameInMap("BandwidthPackageId")]
+        [Validation(Required=false)]
+        public string BandwidthPackageId { get; set; }
+
+        [NameInMap("BandwidthType")]
+        [Validation(Required=false)]
+        public string BandwidthType { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

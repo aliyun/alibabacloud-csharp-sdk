@@ -9,35 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeListenerResponseBody : TeaModel {
-        [NameInMap("Description")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string AcceleratorId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("State")]
-        [Validation(Required=false)]
-        public string State { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("PortRanges")]
-        [Validation(Required=false)]
-        public List<DescribeListenerResponseBodyPortRanges> PortRanges { get; set; }
-        public class DescribeListenerResponseBodyPortRanges : TeaModel {
-            [NameInMap("FromPort")]
-            [Validation(Required=false)]
-            public int? FromPort { get; set; }
-
-            [NameInMap("ToPort")]
-            [Validation(Required=false)]
-            public int? ToPort { get; set; }
-
-        }
+        public string AclType { get; set; }
 
         [NameInMap("BackendPorts")]
         [Validation(Required=false)]
@@ -57,13 +35,47 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<DescribeListenerResponseBodyCertificates> Certificates { get; set; }
         public class DescribeListenerResponseBodyCertificates : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
-            [NameInMap("Id")]
+        }
+
+        [NameInMap("ClientAffinity")]
+        [Validation(Required=false)]
+        public string ClientAffinity { get; set; }
+
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("PortRanges")]
+        [Validation(Required=false)]
+        public List<DescribeListenerResponseBodyPortRanges> PortRanges { get; set; }
+        public class DescribeListenerResponseBodyPortRanges : TeaModel {
+            [NameInMap("FromPort")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public int? FromPort { get; set; }
+
+            [NameInMap("ToPort")]
+            [Validation(Required=false)]
+            public int? ToPort { get; set; }
 
         }
 
@@ -71,17 +83,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
-        [NameInMap("ListenerId")]
+        [NameInMap("ProxyProtocol")]
         [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
-        [NameInMap("ClientAffinity")]
-        [Validation(Required=false)]
-        public string ClientAffinity { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public bool? ProxyProtocol { get; set; }
 
         [NameInMap("RelatedAcls")]
         [Validation(Required=false)]
@@ -97,42 +101,38 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
-        [NameInMap("AclType")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AclType { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
+        public string SecurityPolicyId { get; set; }
 
-        [NameInMap("ProxyProtocol")]
+        [NameInMap("State")]
         [Validation(Required=false)]
-        public bool? ProxyProtocol { get; set; }
+        public string State { get; set; }
 
         [NameInMap("XForwardedForConfig")]
         [Validation(Required=false)]
         public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig { get; set; }
         public class DescribeListenerResponseBodyXForwardedForConfig : TeaModel {
-            [NameInMap("XForwardedForGaIdEnabled")]
-            [Validation(Required=false)]
-            public bool? XForwardedForGaIdEnabled { get; set; }
             [NameInMap("XForwardedForGaApEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForGaApEnabled { get; set; }
-            [NameInMap("XForwardedForProtoEnabled")]
+            [NameInMap("XForwardedForGaIdEnabled")]
             [Validation(Required=false)]
-            public bool? XForwardedForProtoEnabled { get; set; }
+            public bool? XForwardedForGaIdEnabled { get; set; }
             [NameInMap("XForwardedForPortEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForPortEnabled { get; set; }
+            [NameInMap("XForwardedForProtoEnabled")]
+            [Validation(Required=false)]
+            public bool? XForwardedForProtoEnabled { get; set; }
             [NameInMap("XRealIpEnabled")]
             [Validation(Required=false)]
             public bool? XRealIpEnabled { get; set; }
         };
-
-        [NameInMap("SecurityPolicyId")]
-        [Validation(Required=false)]
-        public string SecurityPolicyId { get; set; }
 
     }
 

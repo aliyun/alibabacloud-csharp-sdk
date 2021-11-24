@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListAvailableAccelerateAreasResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Areas")]
         [Validation(Required=false)]
         public List<ListAvailableAccelerateAreasResponseBodyAreas> Areas { get; set; }
         public class ListAvailableAccelerateAreasResponseBodyAreas : TeaModel {
-            [NameInMap("LocalName")]
-            [Validation(Required=false)]
-            public string LocalName { get; set; }
-
             [NameInMap("AreaId")]
             [Validation(Required=false)]
             public string AreaId { get; set; }
+
+            [NameInMap("LocalName")]
+            [Validation(Required=false)]
+            public string LocalName { get; set; }
 
             [NameInMap("RegionList")]
             [Validation(Required=false)]
@@ -40,6 +36,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

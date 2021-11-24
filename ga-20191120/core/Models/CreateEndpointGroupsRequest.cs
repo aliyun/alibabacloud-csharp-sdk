@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateEndpointGroupsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -21,33 +21,55 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        [NameInMap("AcceleratorId")]
-        [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
-
-        [NameInMap("ListenerId")]
-        [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
         public class CreateEndpointGroupsRequestEndpointGroupConfigurations : TeaModel {
-            [NameInMap("EndpointGroupName")]
+            [NameInMap("EnableClientIPPreservationProxyProtocol")]
             [Validation(Required=false)]
-            public string EndpointGroupName { get; set; }
+            public bool? EnableClientIPPreservationProxyProtocol { get; set; }
+
+            [NameInMap("EnableClientIPPreservationToa")]
+            [Validation(Required=false)]
+            public bool? EnableClientIPPreservationToa { get; set; }
+
+            [NameInMap("EndpointConfigurations")]
+            [Validation(Required=false)]
+            public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
+            public class CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
+                [NameInMap("Endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public long? Weight { get; set; }
+
+            }
 
             [NameInMap("EndpointGroupDescription")]
             [Validation(Required=false)]
             public string EndpointGroupDescription { get; set; }
 
+            [NameInMap("EndpointGroupName")]
+            [Validation(Required=false)]
+            public string EndpointGroupName { get; set; }
+
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
             public string EndpointGroupRegion { get; set; }
 
-            [NameInMap("TrafficPercentage")]
+            [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
-            public long? TrafficPercentage { get; set; }
+            public string EndpointGroupType { get; set; }
+
+            [NameInMap("EndpointRequestProtocol")]
+            [Validation(Required=false)]
+            public string EndpointRequestProtocol { get; set; }
 
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
@@ -69,59 +91,37 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
-            [NameInMap("ThresholdCount")]
-            [Validation(Required=false)]
-            public long? ThresholdCount { get; set; }
-
-            [NameInMap("EndpointConfigurations")]
-            [Validation(Required=false)]
-            public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
-            public class CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("Weight")]
-                [Validation(Required=false)]
-                public long? Weight { get; set; }
-
-                [NameInMap("Endpoint")]
-                [Validation(Required=false)]
-                public string Endpoint { get; set; }
-
-            }
-
-            [NameInMap("EndpointRequestProtocol")]
-            [Validation(Required=false)]
-            public string EndpointRequestProtocol { get; set; }
-
-            [NameInMap("EndpointGroupType")]
-            [Validation(Required=false)]
-            public string EndpointGroupType { get; set; }
-
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> PortOverrides { get; set; }
             public class CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides : TeaModel {
-                [NameInMap("ListenerPort")]
-                [Validation(Required=false)]
-                public long? ListenerPort { get; set; }
-
                 [NameInMap("EndpointPort")]
                 [Validation(Required=false)]
                 public long? EndpointPort { get; set; }
 
+                [NameInMap("ListenerPort")]
+                [Validation(Required=false)]
+                public long? ListenerPort { get; set; }
+
             }
 
-            [NameInMap("EnableClientIPPreservationToa")]
+            [NameInMap("ThresholdCount")]
             [Validation(Required=false)]
-            public bool? EnableClientIPPreservationToa { get; set; }
+            public long? ThresholdCount { get; set; }
 
-            [NameInMap("EnableClientIPPreservationProxyProtocol")]
+            [NameInMap("TrafficPercentage")]
             [Validation(Required=false)]
-            public bool? EnableClientIPPreservationProxyProtocol { get; set; }
+            public long? TrafficPercentage { get; set; }
 
         }
+
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

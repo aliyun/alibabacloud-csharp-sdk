@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListBandwidthackagesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("BandwidthPackages")]
         [Validation(Required=false)]
         public List<ListBandwidthackagesResponseBodyBandwidthPackages> BandwidthPackages { get; set; }
         public class ListBandwidthackagesResponseBodyBandwidthPackages : TeaModel {
-            [NameInMap("BandwidthPackageId")]
+            [NameInMap("Accelerators")]
             [Validation(Required=false)]
-            public string BandwidthPackageId { get; set; }
+            public List<string> Accelerators { get; set; }
 
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
+
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageId { get; set; }
+
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
 
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -45,22 +41,6 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("ChargeType")]
-            [Validation(Required=false)]
-            public string ChargeType { get; set; }
-
-            [NameInMap("Accelerators")]
-            [Validation(Required=false)]
-            public List<string> Accelerators { get; set; }
-
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -69,7 +49,27 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

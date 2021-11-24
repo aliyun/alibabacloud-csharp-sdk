@@ -9,70 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class UpdateForwardingRulesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("AcceleratorId")]
-        [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
-
-        [NameInMap("ListenerId")]
-        [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
         [NameInMap("ForwardingRules")]
         [Validation(Required=false)]
         public List<UpdateForwardingRulesRequestForwardingRules> ForwardingRules { get; set; }
         public class UpdateForwardingRulesRequestForwardingRules : TeaModel {
+            [NameInMap("ForwardingRuleId")]
+            [Validation(Required=false)]
+            public string ForwardingRuleId { get; set; }
+
+            [NameInMap("ForwardingRuleName")]
+            [Validation(Required=false)]
+            public string ForwardingRuleName { get; set; }
+
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
-
-            [NameInMap("RuleConditions")]
-            [Validation(Required=false)]
-            public List<UpdateForwardingRulesRequestForwardingRulesRuleConditions> RuleConditions { get; set; }
-            public class UpdateForwardingRulesRequestForwardingRulesRuleConditions : TeaModel {
-                [NameInMap("RuleConditionType")]
-                [Validation(Required=false)]
-                public string RuleConditionType { get; set; }
-
-                [NameInMap("PathConfig")]
-                [Validation(Required=false)]
-                public UpdateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig PathConfig { get; set; }
-                public class UpdateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig : TeaModel {
-                    [NameInMap("Values")]
-                    [Validation(Required=false)]
-                    public List<string> Values { get; set; }
-                };
-
-                [NameInMap("HostConfig")]
-                [Validation(Required=false)]
-                public UpdateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig HostConfig { get; set; }
-                public class UpdateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig : TeaModel {
-                    [NameInMap("Values")]
-                    [Validation(Required=false)]
-                    public List<string> Values { get; set; }
-                };
-
-            }
 
             [NameInMap("RuleActions")]
             [Validation(Required=false)]
             public List<UpdateForwardingRulesRequestForwardingRulesRuleActions> RuleActions { get; set; }
             public class UpdateForwardingRulesRequestForwardingRulesRuleActions : TeaModel {
-                [NameInMap("Order")]
-                [Validation(Required=false)]
-                public int? Order { get; set; }
-
-                [NameInMap("RuleActionType")]
-                [Validation(Required=false)]
-                public string RuleActionType { get; set; }
-
                 [NameInMap("ForwardGroupConfig")]
                 [Validation(Required=false)]
                 public UpdateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
@@ -85,17 +49,53 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
                     }
                 };
 
+                [NameInMap("Order")]
+                [Validation(Required=false)]
+                public int? Order { get; set; }
+
+                [NameInMap("RuleActionType")]
+                [Validation(Required=false)]
+                public string RuleActionType { get; set; }
+
             }
 
-            [NameInMap("ForwardingRuleId")]
+            [NameInMap("RuleConditions")]
             [Validation(Required=false)]
-            public string ForwardingRuleId { get; set; }
+            public List<UpdateForwardingRulesRequestForwardingRulesRuleConditions> RuleConditions { get; set; }
+            public class UpdateForwardingRulesRequestForwardingRulesRuleConditions : TeaModel {
+                [NameInMap("HostConfig")]
+                [Validation(Required=false)]
+                public UpdateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig HostConfig { get; set; }
+                public class UpdateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig : TeaModel {
+                    [NameInMap("Values")]
+                    [Validation(Required=false)]
+                    public List<string> Values { get; set; }
+                };
 
-            [NameInMap("ForwardingRuleName")]
-            [Validation(Required=false)]
-            public string ForwardingRuleName { get; set; }
+                [NameInMap("PathConfig")]
+                [Validation(Required=false)]
+                public UpdateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig PathConfig { get; set; }
+                public class UpdateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig : TeaModel {
+                    [NameInMap("Values")]
+                    [Validation(Required=false)]
+                    public List<string> Values { get; set; }
+                };
+
+                [NameInMap("RuleConditionType")]
+                [Validation(Required=false)]
+                public string RuleConditionType { get; set; }
+
+            }
 
         }
+
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

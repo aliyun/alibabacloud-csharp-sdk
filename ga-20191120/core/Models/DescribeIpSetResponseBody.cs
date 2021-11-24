@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class DescribeIpSetResponseBody : TeaModel {
-        [NameInMap("IpSetId")]
+        [NameInMap("AccelerateRegionId")]
         [Validation(Required=false)]
-        public string IpSetId { get; set; }
+        public string AccelerateRegionId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("IpVersion")]
-        [Validation(Required=false)]
-        public string IpVersion { get; set; }
-
-        [NameInMap("State")]
-        [Validation(Required=false)]
-        public string State { get; set; }
+        public string AcceleratorId { get; set; }
 
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -33,13 +25,21 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<string> IpAddressList { get; set; }
 
-        [NameInMap("AccelerateRegionId")]
+        [NameInMap("IpSetId")]
         [Validation(Required=false)]
-        public string AccelerateRegionId { get; set; }
+        public string IpSetId { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("IpVersion")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
+        public string IpVersion { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
 
     }
 

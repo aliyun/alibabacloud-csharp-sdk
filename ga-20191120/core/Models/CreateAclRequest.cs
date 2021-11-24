@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class CreateAclRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("AclName")]
-        [Validation(Required=false)]
-        public string AclName { get; set; }
-
-        [NameInMap("AddressIPVersion")]
-        [Validation(Required=false)]
-        public string AddressIPVersion { get; set; }
-
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<CreateAclRequestAclEntries> AclEntries { get; set; }
@@ -35,6 +23,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
 
         }
 
+        [NameInMap("AclName")]
+        [Validation(Required=false)]
+        public string AclName { get; set; }
+
+        [NameInMap("AddressIPVersion")]
+        [Validation(Required=false)]
+        public string AddressIPVersion { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -42,6 +38,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

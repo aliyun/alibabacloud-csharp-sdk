@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ga20191120.Models
 {
     public class ListEndpointGroupsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AcceleratorId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AcceleratorId { get; set; }
+
+        [NameInMap("AccessLogSwitch")]
+        [Validation(Required=false)]
+        public string AccessLogSwitch { get; set; }
+
+        [NameInMap("EndpointGroupId")]
+        [Validation(Required=false)]
+        public string EndpointGroupId { get; set; }
+
+        [NameInMap("EndpointGroupType")]
+        [Validation(Required=false)]
+        public string EndpointGroupType { get; set; }
+
+        [NameInMap("ListenerId")]
+        [Validation(Required=false)]
+        public string ListenerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,25 +37,9 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("AcceleratorId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string AcceleratorId { get; set; }
-
-        [NameInMap("ListenerId")]
-        [Validation(Required=false)]
-        public string ListenerId { get; set; }
-
-        [NameInMap("EndpointGroupType")]
-        [Validation(Required=false)]
-        public string EndpointGroupType { get; set; }
-
-        [NameInMap("AccessLogSwitch")]
-        [Validation(Required=false)]
-        public string AccessLogSwitch { get; set; }
-
-        [NameInMap("EndpointGroupId")]
-        [Validation(Required=false)]
-        public string EndpointGroupId { get; set; }
+        public string RegionId { get; set; }
 
     }
 
