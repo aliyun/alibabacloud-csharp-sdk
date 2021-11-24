@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("RuleId")]
-        [Validation(Required=false)]
-        public long? RuleId { get; set; }
-
     }
 
 }
