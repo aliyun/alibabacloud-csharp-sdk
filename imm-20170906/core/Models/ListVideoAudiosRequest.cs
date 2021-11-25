@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class ListVideoAudiosRequest : TeaModel {
+        [NameInMap("Marker")]
+        [Validation(Required=false)]
+        public string Marker { get; set; }
+
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("VideoUri")]
         [Validation(Required=false)]
         public string VideoUri { get; set; }
-
-        [NameInMap("Marker")]
-        [Validation(Required=false)]
-        public string Marker { get; set; }
 
     }
 

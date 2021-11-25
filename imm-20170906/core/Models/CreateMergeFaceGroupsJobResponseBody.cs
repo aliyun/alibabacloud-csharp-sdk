@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string GroupIdFrom { get; set; }
 
+        [NameInMap("GroupIdTo")]
+        [Validation(Required=false)]
+        public string GroupIdTo { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("SetId")]
         [Validation(Required=false)]
         public string SetId { get; set; }
-
-        [NameInMap("GroupIdTo")]
-        [Validation(Required=false)]
-        public string GroupIdTo { get; set; }
-
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetMediaMetaRequest : TeaModel {
-        [NameInMap("Project")]
-        [Validation(Required=false)]
-        public string Project { get; set; }
-
         [NameInMap("MediaUri")]
         [Validation(Required=false)]
         public string MediaUri { get; set; }
+
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
 
     }
 

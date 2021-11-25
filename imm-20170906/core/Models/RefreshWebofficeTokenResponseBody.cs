@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class RefreshWebofficeTokenResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("AccessToken")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AccessToken { get; set; }
 
         [NameInMap("AccessTokenExpiredTime")]
         [Validation(Required=false)]
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string RefreshToken { get; set; }
 
-        [NameInMap("AccessToken")]
-        [Validation(Required=false)]
-        public string AccessToken { get; set; }
-
         [NameInMap("RefreshTokenExpiredTime")]
         [Validation(Required=false)]
         public string RefreshTokenExpiredTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

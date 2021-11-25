@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string Project { get; set; }
 
-        [NameInMap("TaskType")]
-        [Validation(Required=false)]
-        public string TaskType { get; set; }
-
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("TaskType")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
 
     }
 

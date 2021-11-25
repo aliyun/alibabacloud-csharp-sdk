@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetContentKeyRequest : TeaModel {
-        [NameInMap("Project")]
-        [Validation(Required=false)]
-        public string Project { get; set; }
-
-        [NameInMap("VersionId")]
-        [Validation(Required=false)]
-        public string VersionId { get; set; }
-
         [NameInMap("DRMServerId")]
         [Validation(Required=false)]
         public string DRMServerId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("KeyIds")]
         [Validation(Required=false)]
         public string KeyIds { get; set; }
+
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
+
+        [NameInMap("VersionId")]
+        [Validation(Required=false)]
+        public string VersionId { get; set; }
 
     }
 

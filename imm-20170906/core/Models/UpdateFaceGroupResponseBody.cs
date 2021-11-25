@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class UpdateFaceGroupResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("SetId")]
         [Validation(Required=false)]

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetDRMLicenseResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("DRMData")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DRMData { get; set; }
 
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public string DeviceInfo { get; set; }
 
-        [NameInMap("DRMData")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DRMData { get; set; }
+        public string RequestId { get; set; }
 
     }
 

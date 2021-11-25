@@ -12,13 +12,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class CompareImageFacesRequest : TeaModel {
-        [NameInMap("Project")]
+        [NameInMap("FaceIdA")]
         [Validation(Required=false)]
-        public string Project { get; set; }
+        public string FaceIdA { get; set; }
 
-        [NameInMap("SetId")]
+        [NameInMap("FaceIdB")]
         [Validation(Required=false)]
-        public string SetId { get; set; }
+        public string FaceIdB { get; set; }
 
         [NameInMap("ImageUriA")]
         [Validation(Required=false)]
@@ -28,13 +28,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string ImageUriB { get; set; }
 
-        [NameInMap("FaceIdA")]
+        [NameInMap("Project")]
         [Validation(Required=false)]
-        public string FaceIdA { get; set; }
+        public string Project { get; set; }
 
-        [NameInMap("FaceIdB")]
+        [NameInMap("SetId")]
         [Validation(Required=false)]
-        public string FaceIdB { get; set; }
+        public string SetId { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetImageCroppingSuggestionsRequest : TeaModel {
-        [NameInMap("Project")]
+        [NameInMap("AspectRatios")]
         [Validation(Required=false)]
-        public string Project { get; set; }
+        public string AspectRatios { get; set; }
 
         [NameInMap("ImageUri")]
         [Validation(Required=false)]
         public string ImageUri { get; set; }
 
-        [NameInMap("AspectRatios")]
+        [NameInMap("Project")]
         [Validation(Required=false)]
-        public string AspectRatios { get; set; }
+        public string Project { get; set; }
 
     }
 

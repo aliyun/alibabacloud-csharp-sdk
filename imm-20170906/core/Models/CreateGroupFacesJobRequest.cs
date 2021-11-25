@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class CreateGroupFacesJobRequest : TeaModel {
+        [NameInMap("NotifyEndpoint")]
+        [Validation(Required=false)]
+        public string NotifyEndpoint { get; set; }
+
+        [NameInMap("NotifyTopicName")]
+        [Validation(Required=false)]
+        public string NotifyTopicName { get; set; }
+
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("SetId")]
         [Validation(Required=false)]
         public string SetId { get; set; }
-
-        [NameInMap("NotifyTopicName")]
-        [Validation(Required=false)]
-        public string NotifyTopicName { get; set; }
-
-        [NameInMap("NotifyEndpoint")]
-        [Validation(Required=false)]
-        public string NotifyEndpoint { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class RefreshOfficeEditTokenRequest : TeaModel {
-        [NameInMap("Project")]
-        [Validation(Required=false)]
-        public string Project { get; set; }
-
         [NameInMap("AccessToken")]
         [Validation(Required=false)]
         public string AccessToken { get; set; }
+
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
 
         [NameInMap("RefreshToken")]
         [Validation(Required=false)]

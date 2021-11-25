@@ -9,215 +9,159 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetImageResponseBody : TeaModel {
-        [NameInMap("ImageQuality")]
-        [Validation(Required=false)]
-        public GetImageResponseBodyImageQuality ImageQuality { get; set; }
-        public class GetImageResponseBodyImageQuality : TeaModel {
-            [NameInMap("OverallScore")]
-            [Validation(Required=false)]
-            public float? OverallScore { get; set; }
-            [NameInMap("Color")]
-            [Validation(Required=false)]
-            public float? Color { get; set; }
-            [NameInMap("ColorScore")]
-            [Validation(Required=false)]
-            public float? ColorScore { get; set; }
-            [NameInMap("ContrastScore")]
-            [Validation(Required=false)]
-            public float? ContrastScore { get; set; }
-            [NameInMap("Contrast")]
-            [Validation(Required=false)]
-            public float? Contrast { get; set; }
-            [NameInMap("ExposureScore")]
-            [Validation(Required=false)]
-            public float? ExposureScore { get; set; }
-            [NameInMap("ClarityScore")]
-            [Validation(Required=false)]
-            public float? ClarityScore { get; set; }
-            [NameInMap("Clarity")]
-            [Validation(Required=false)]
-            public float? Clarity { get; set; }
-            [NameInMap("Exposure")]
-            [Validation(Required=false)]
-            public float? Exposure { get; set; }
-            [NameInMap("CompositionScore")]
-            [Validation(Required=false)]
-            public float? CompositionScore { get; set; }
-        };
-
-        [NameInMap("ModifyTime")]
-        [Validation(Required=false)]
-        public string ModifyTime { get; set; }
-
         [NameInMap("Address")]
         [Validation(Required=false)]
         public GetImageResponseBodyAddress Address { get; set; }
         public class GetImageResponseBodyAddress : TeaModel {
-            [NameInMap("Township")]
-            [Validation(Required=false)]
-            public string Township { get; set; }
-            [NameInMap("District")]
-            [Validation(Required=false)]
-            public string District { get; set; }
             [NameInMap("AddressLine")]
             [Validation(Required=false)]
             public string AddressLine { get; set; }
-            [NameInMap("Country")]
-            [Validation(Required=false)]
-            public string Country { get; set; }
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
+            [NameInMap("Country")]
+            [Validation(Required=false)]
+            public string Country { get; set; }
+            [NameInMap("District")]
+            [Validation(Required=false)]
+            public string District { get; set; }
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
+            [NameInMap("Township")]
+            [Validation(Required=false)]
+            public string Township { get; set; }
         };
-
-        [NameInMap("SourceType")]
-        [Validation(Required=false)]
-        public string SourceType { get; set; }
-
-        [NameInMap("SourceUri")]
-        [Validation(Required=false)]
-        public string SourceUri { get; set; }
-
-        [NameInMap("FacesFailReason")]
-        [Validation(Required=false)]
-        public string FacesFailReason { get; set; }
-
-        [NameInMap("CroppingSuggestionStatus")]
-        [Validation(Required=false)]
-        public string CroppingSuggestionStatus { get; set; }
-
-        [NameInMap("CroppingSuggestionFailReason")]
-        [Validation(Required=false)]
-        public string CroppingSuggestionFailReason { get; set; }
 
         [NameInMap("AddressFailReason")]
         [Validation(Required=false)]
         public string AddressFailReason { get; set; }
 
-        [NameInMap("RemarksA")]
-        [Validation(Required=false)]
-        public string RemarksA { get; set; }
-
         [NameInMap("AddressModifyTime")]
         [Validation(Required=false)]
         public string AddressModifyTime { get; set; }
 
-        [NameInMap("RemarksB")]
+        [NameInMap("AddressStatus")]
         [Validation(Required=false)]
-        public string RemarksB { get; set; }
+        public string AddressStatus { get; set; }
 
-        [NameInMap("ImageFormat")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string ImageFormat { get; set; }
+        public string CreateTime { get; set; }
 
-        [NameInMap("TagsFailReason")]
+        [NameInMap("CroppingSuggestion")]
         [Validation(Required=false)]
-        public string TagsFailReason { get; set; }
+        public List<GetImageResponseBodyCroppingSuggestion> CroppingSuggestion { get; set; }
+        public class GetImageResponseBodyCroppingSuggestion : TeaModel {
+            [NameInMap("AspectRatio")]
+            [Validation(Required=false)]
+            public string AspectRatio { get; set; }
 
-        [NameInMap("RemarksArrayB")]
-        [Validation(Required=false)]
-        public string RemarksArrayB { get; set; }
+            [NameInMap("CroppingBoundary")]
+            [Validation(Required=false)]
+            public GetImageResponseBodyCroppingSuggestionCroppingBoundary CroppingBoundary { get; set; }
+            public class GetImageResponseBodyCroppingSuggestionCroppingBoundary : TeaModel {
+                [NameInMap("Height")]
+                [Validation(Required=false)]
+                public int? Height { get; set; }
+                [NameInMap("Left")]
+                [Validation(Required=false)]
+                public int? Left { get; set; }
+                [NameInMap("Top")]
+                [Validation(Required=false)]
+                public int? Top { get; set; }
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public int? Width { get; set; }
+            };
 
-        [NameInMap("FacesModifyTime")]
+            [NameInMap("Score")]
+            [Validation(Required=false)]
+            public float? Score { get; set; }
+
+        }
+
+        [NameInMap("CroppingSuggestionFailReason")]
         [Validation(Required=false)]
-        public string FacesModifyTime { get; set; }
+        public string CroppingSuggestionFailReason { get; set; }
+
+        [NameInMap("CroppingSuggestionModifyTime")]
+        [Validation(Required=false)]
+        public string CroppingSuggestionModifyTime { get; set; }
+
+        [NameInMap("CroppingSuggestionStatus")]
+        [Validation(Required=false)]
+        public string CroppingSuggestionStatus { get; set; }
 
         [NameInMap("Exif")]
         [Validation(Required=false)]
         public string Exif { get; set; }
 
-        [NameInMap("RemarksC")]
+        [NameInMap("ExternalId")]
         [Validation(Required=false)]
-        public string RemarksC { get; set; }
-
-        [NameInMap("RemarksD")]
-        [Validation(Required=false)]
-        public string RemarksD { get; set; }
-
-        [NameInMap("ImageWidth")]
-        [Validation(Required=false)]
-        public int? ImageWidth { get; set; }
-
-        [NameInMap("RemarksArrayA")]
-        [Validation(Required=false)]
-        public string RemarksArrayA { get; set; }
-
-        [NameInMap("SourcePosition")]
-        [Validation(Required=false)]
-        public string SourcePosition { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public List<GetImageResponseBodyTags> Tags { get; set; }
-        public class GetImageResponseBodyTags : TeaModel {
-            [NameInMap("TagName")]
-            [Validation(Required=false)]
-            public string TagName { get; set; }
-
-            [NameInMap("TagConfidence")]
-            [Validation(Required=false)]
-            public float? TagConfidence { get; set; }
-
-            [NameInMap("TagLevel")]
-            [Validation(Required=false)]
-            public int? TagLevel { get; set; }
-
-            [NameInMap("ParentTagName")]
-            [Validation(Required=false)]
-            public string ParentTagName { get; set; }
-
-        }
+        public string ExternalId { get; set; }
 
         [NameInMap("Faces")]
         [Validation(Required=false)]
         public List<GetImageResponseBodyFaces> Faces { get; set; }
         public class GetImageResponseBodyFaces : TeaModel {
-            [NameInMap("Gender")]
+            [NameInMap("Age")]
             [Validation(Required=false)]
-            public string Gender { get; set; }
+            public string Age { get; set; }
 
-            [NameInMap("GenderConfidence")]
+            [NameInMap("Attractive")]
             [Validation(Required=false)]
-            public float? GenderConfidence { get; set; }
+            public float? Attractive { get; set; }
 
-            [NameInMap("FaceId")]
+            [NameInMap("Emotion")]
             [Validation(Required=false)]
-            public string FaceId { get; set; }
+            public string Emotion { get; set; }
+
+            [NameInMap("EmotionConfidence")]
+            [Validation(Required=false)]
+            public float? EmotionConfidence { get; set; }
+
+            [NameInMap("EmotionDetails")]
+            [Validation(Required=false)]
+            public GetImageResponseBodyFacesEmotionDetails EmotionDetails { get; set; }
+            public class GetImageResponseBodyFacesEmotionDetails : TeaModel {
+                [NameInMap("ANGRY")]
+                [Validation(Required=false)]
+                public float? ANGRY { get; set; }
+                [NameInMap("CALM")]
+                [Validation(Required=false)]
+                public float? CALM { get; set; }
+                [NameInMap("DISGUSTED")]
+                [Validation(Required=false)]
+                public float? DISGUSTED { get; set; }
+                [NameInMap("HAPPY")]
+                [Validation(Required=false)]
+                public float? HAPPY { get; set; }
+                [NameInMap("SAD")]
+                [Validation(Required=false)]
+                public float? SAD { get; set; }
+                [NameInMap("SCARED")]
+                [Validation(Required=false)]
+                public float? SCARED { get; set; }
+                [NameInMap("SURPRISED")]
+                [Validation(Required=false)]
+                public float? SURPRISED { get; set; }
+            };
 
             [NameInMap("FaceAttributes")]
             [Validation(Required=false)]
             public GetImageResponseBodyFacesFaceAttributes FaceAttributes { get; set; }
             public class GetImageResponseBodyFacesFaceAttributes : TeaModel {
-                [NameInMap("GlassesConfidence")]
+                [NameInMap("Beard")]
                 [Validation(Required=false)]
-                public float? GlassesConfidence { get; set; }
-                [NameInMap("Glasses")]
-                [Validation(Required=false)]
-                public string Glasses { get; set; }
-                [NameInMap("Mask")]
-                [Validation(Required=false)]
-                public string Mask { get; set; }
+                public string Beard { get; set; }
                 [NameInMap("BeardConfidence")]
                 [Validation(Required=false)]
                 public float? BeardConfidence { get; set; }
-                [NameInMap("MaskConfidence")]
-                [Validation(Required=false)]
-                public float? MaskConfidence { get; set; }
                 [NameInMap("FaceBoundary")]
                 [Validation(Required=false)]
                 public GetImageResponseBodyFacesFaceAttributesFaceBoundary FaceBoundary { get; set; }
                 public class GetImageResponseBodyFacesFaceAttributesFaceBoundary : TeaModel {
-                    [NameInMap("Top")]
-                    [Validation(Required=false)]
-                    public int? Top { get; set; }
-
-                    [NameInMap("Width")]
-                    [Validation(Required=false)]
-                    public int? Width { get; set; }
-
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public int? Height { get; set; }
@@ -226,7 +170,21 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     [Validation(Required=false)]
                     public int? Left { get; set; }
 
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public int? Top { get; set; }
+
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
+                    public int? Width { get; set; }
+
                 }
+                [NameInMap("Glasses")]
+                [Validation(Required=false)]
+                public string Glasses { get; set; }
+                [NameInMap("GlassesConfidence")]
+                [Validation(Required=false)]
+                public float? GlassesConfidence { get; set; }
                 [NameInMap("HeadPose")]
                 [Validation(Required=false)]
                 public GetImageResponseBodyFacesFaceAttributesHeadPose HeadPose { get; set; }
@@ -244,188 +202,154 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
                     public float? Yaw { get; set; }
 
                 }
-                [NameInMap("Beard")]
+                [NameInMap("Mask")]
                 [Validation(Required=false)]
-                public string Beard { get; set; }
+                public string Mask { get; set; }
+                [NameInMap("MaskConfidence")]
+                [Validation(Required=false)]
+                public float? MaskConfidence { get; set; }
             };
-
-            [NameInMap("FaceQuality")]
-            [Validation(Required=false)]
-            public float? FaceQuality { get; set; }
-
-            [NameInMap("Emotion")]
-            [Validation(Required=false)]
-            public string Emotion { get; set; }
-
-            [NameInMap("Age")]
-            [Validation(Required=false)]
-            public string Age { get; set; }
 
             [NameInMap("FaceConfidence")]
             [Validation(Required=false)]
             public float? FaceConfidence { get; set; }
 
-            [NameInMap("EmotionConfidence")]
+            [NameInMap("FaceId")]
             [Validation(Required=false)]
-            public float? EmotionConfidence { get; set; }
+            public string FaceId { get; set; }
 
-            [NameInMap("Attractive")]
+            [NameInMap("FaceQuality")]
             [Validation(Required=false)]
-            public float? Attractive { get; set; }
+            public float? FaceQuality { get; set; }
+
+            [NameInMap("Gender")]
+            [Validation(Required=false)]
+            public string Gender { get; set; }
+
+            [NameInMap("GenderConfidence")]
+            [Validation(Required=false)]
+            public float? GenderConfidence { get; set; }
 
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
-            [NameInMap("EmotionDetails")]
-            [Validation(Required=false)]
-            public GetImageResponseBodyFacesEmotionDetails EmotionDetails { get; set; }
-            public class GetImageResponseBodyFacesEmotionDetails : TeaModel {
-                [NameInMap("HAPPY")]
-                [Validation(Required=false)]
-                public float? HAPPY { get; set; }
-                [NameInMap("CALM")]
-                [Validation(Required=false)]
-                public float? CALM { get; set; }
-                [NameInMap("SURPRISED")]
-                [Validation(Required=false)]
-                public float? SURPRISED { get; set; }
-                [NameInMap("DISGUSTED")]
-                [Validation(Required=false)]
-                public float? DISGUSTED { get; set; }
-                [NameInMap("ANGRY")]
-                [Validation(Required=false)]
-                public float? ANGRY { get; set; }
-                [NameInMap("SAD")]
-                [Validation(Required=false)]
-                public float? SAD { get; set; }
-                [NameInMap("SCARED")]
-                [Validation(Required=false)]
-                public float? SCARED { get; set; }
-            };
-
         }
 
-        [NameInMap("AddressStatus")]
+        [NameInMap("FacesFailReason")]
         [Validation(Required=false)]
-        public string AddressStatus { get; set; }
+        public string FacesFailReason { get; set; }
+
+        [NameInMap("FacesModifyTime")]
+        [Validation(Required=false)]
+        public string FacesModifyTime { get; set; }
 
         [NameInMap("FacesStatus")]
         [Validation(Required=false)]
         public string FacesStatus { get; set; }
 
+        [NameInMap("FileSize")]
+        [Validation(Required=false)]
+        public int? FileSize { get; set; }
+
+        [NameInMap("ImageFormat")]
+        [Validation(Required=false)]
+        public string ImageFormat { get; set; }
+
+        [NameInMap("ImageHeight")]
+        [Validation(Required=false)]
+        public int? ImageHeight { get; set; }
+
+        [NameInMap("ImageQuality")]
+        [Validation(Required=false)]
+        public GetImageResponseBodyImageQuality ImageQuality { get; set; }
+        public class GetImageResponseBodyImageQuality : TeaModel {
+            [NameInMap("Clarity")]
+            [Validation(Required=false)]
+            public float? Clarity { get; set; }
+            [NameInMap("ClarityScore")]
+            [Validation(Required=false)]
+            public float? ClarityScore { get; set; }
+            [NameInMap("Color")]
+            [Validation(Required=false)]
+            public float? Color { get; set; }
+            [NameInMap("ColorScore")]
+            [Validation(Required=false)]
+            public float? ColorScore { get; set; }
+            [NameInMap("CompositionScore")]
+            [Validation(Required=false)]
+            public float? CompositionScore { get; set; }
+            [NameInMap("Contrast")]
+            [Validation(Required=false)]
+            public float? Contrast { get; set; }
+            [NameInMap("ContrastScore")]
+            [Validation(Required=false)]
+            public float? ContrastScore { get; set; }
+            [NameInMap("Exposure")]
+            [Validation(Required=false)]
+            public float? Exposure { get; set; }
+            [NameInMap("ExposureScore")]
+            [Validation(Required=false)]
+            public float? ExposureScore { get; set; }
+            [NameInMap("OverallScore")]
+            [Validation(Required=false)]
+            public float? OverallScore { get; set; }
+        };
+
+        [NameInMap("ImageQualityFailReason")]
+        [Validation(Required=false)]
+        public string ImageQualityFailReason { get; set; }
+
         [NameInMap("ImageQualityModifyTime")]
         [Validation(Required=false)]
         public string ImageQualityModifyTime { get; set; }
 
-        [NameInMap("CroppingSuggestion")]
+        [NameInMap("ImageQualityStatus")]
         [Validation(Required=false)]
-        public List<GetImageResponseBodyCroppingSuggestion> CroppingSuggestion { get; set; }
-        public class GetImageResponseBodyCroppingSuggestion : TeaModel {
-            [NameInMap("Score")]
-            [Validation(Required=false)]
-            public float? Score { get; set; }
+        public string ImageQualityStatus { get; set; }
 
-            [NameInMap("CroppingBoundary")]
+        [NameInMap("ImageTime")]
+        [Validation(Required=false)]
+        public string ImageTime { get; set; }
+
+        [NameInMap("ImageUri")]
+        [Validation(Required=false)]
+        public string ImageUri { get; set; }
+
+        [NameInMap("ImageWidth")]
+        [Validation(Required=false)]
+        public int? ImageWidth { get; set; }
+
+        [NameInMap("Location")]
+        [Validation(Required=false)]
+        public string Location { get; set; }
+
+        [NameInMap("ModifyTime")]
+        [Validation(Required=false)]
+        public string ModifyTime { get; set; }
+
+        [NameInMap("OCR")]
+        [Validation(Required=false)]
+        public List<GetImageResponseBodyOCR> OCR { get; set; }
+        public class GetImageResponseBodyOCR : TeaModel {
+            [NameInMap("OCRBoundary")]
             [Validation(Required=false)]
-            public GetImageResponseBodyCroppingSuggestionCroppingBoundary CroppingBoundary { get; set; }
-            public class GetImageResponseBodyCroppingSuggestionCroppingBoundary : TeaModel {
-                [NameInMap("Top")]
-                [Validation(Required=false)]
-                public int? Top { get; set; }
-                [NameInMap("Width")]
-                [Validation(Required=false)]
-                public int? Width { get; set; }
+            public GetImageResponseBodyOCROCRBoundary OCRBoundary { get; set; }
+            public class GetImageResponseBodyOCROCRBoundary : TeaModel {
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
                 [NameInMap("Left")]
                 [Validation(Required=false)]
                 public int? Left { get; set; }
+                [NameInMap("Top")]
+                [Validation(Required=false)]
+                public int? Top { get; set; }
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public int? Width { get; set; }
             };
 
-            [NameInMap("AspectRatio")]
-            [Validation(Required=false)]
-            public string AspectRatio { get; set; }
-
-        }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public string CreateTime { get; set; }
-
-        [NameInMap("ExternalId")]
-        [Validation(Required=false)]
-        public string ExternalId { get; set; }
-
-        [NameInMap("TagsModifyTime")]
-        [Validation(Required=false)]
-        public string TagsModifyTime { get; set; }
-
-        [NameInMap("ImageQualityFailReason")]
-        [Validation(Required=false)]
-        public string ImageQualityFailReason { get; set; }
-
-        [NameInMap("Orientation")]
-        [Validation(Required=false)]
-        public string Orientation { get; set; }
-
-        [NameInMap("ImageUri")]
-        [Validation(Required=false)]
-        public string ImageUri { get; set; }
-
-        [NameInMap("OCRStatus")]
-        [Validation(Required=false)]
-        public string OCRStatus { get; set; }
-
-        [NameInMap("OCRModifyTime")]
-        [Validation(Required=false)]
-        public string OCRModifyTime { get; set; }
-
-        [NameInMap("ImageTime")]
-        [Validation(Required=false)]
-        public string ImageTime { get; set; }
-
-        [NameInMap("CroppingSuggestionModifyTime")]
-        [Validation(Required=false)]
-        public string CroppingSuggestionModifyTime { get; set; }
-
-        [NameInMap("ImageHeight")]
-        [Validation(Required=false)]
-        public int? ImageHeight { get; set; }
-
-        [NameInMap("ImageQualityStatus")]
-        [Validation(Required=false)]
-        public string ImageQualityStatus { get; set; }
-
-        [NameInMap("TagsStatus")]
-        [Validation(Required=false)]
-        public string TagsStatus { get; set; }
-
-        [NameInMap("OCRFailReason")]
-        [Validation(Required=false)]
-        public string OCRFailReason { get; set; }
-
-        [NameInMap("SetId")]
-        [Validation(Required=false)]
-        public string SetId { get; set; }
-
-        [NameInMap("FileSize")]
-        [Validation(Required=false)]
-        public int? FileSize { get; set; }
-
-        [NameInMap("Location")]
-        [Validation(Required=false)]
-        public string Location { get; set; }
-
-        [NameInMap("OCR")]
-        [Validation(Required=false)]
-        public List<GetImageResponseBodyOCR> OCR { get; set; }
-        public class GetImageResponseBodyOCR : TeaModel {
             [NameInMap("OCRConfidence")]
             [Validation(Required=false)]
             public float? OCRConfidence { get; set; }
@@ -434,25 +358,105 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public string OCRContents { get; set; }
 
-            [NameInMap("OCRBoundary")]
+        }
+
+        [NameInMap("OCRFailReason")]
+        [Validation(Required=false)]
+        public string OCRFailReason { get; set; }
+
+        [NameInMap("OCRModifyTime")]
+        [Validation(Required=false)]
+        public string OCRModifyTime { get; set; }
+
+        [NameInMap("OCRStatus")]
+        [Validation(Required=false)]
+        public string OCRStatus { get; set; }
+
+        [NameInMap("Orientation")]
+        [Validation(Required=false)]
+        public string Orientation { get; set; }
+
+        [NameInMap("RemarksA")]
+        [Validation(Required=false)]
+        public string RemarksA { get; set; }
+
+        [NameInMap("RemarksArrayA")]
+        [Validation(Required=false)]
+        public string RemarksArrayA { get; set; }
+
+        [NameInMap("RemarksArrayB")]
+        [Validation(Required=false)]
+        public string RemarksArrayB { get; set; }
+
+        [NameInMap("RemarksB")]
+        [Validation(Required=false)]
+        public string RemarksB { get; set; }
+
+        [NameInMap("RemarksC")]
+        [Validation(Required=false)]
+        public string RemarksC { get; set; }
+
+        [NameInMap("RemarksD")]
+        [Validation(Required=false)]
+        public string RemarksD { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SetId")]
+        [Validation(Required=false)]
+        public string SetId { get; set; }
+
+        [NameInMap("SourcePosition")]
+        [Validation(Required=false)]
+        public string SourcePosition { get; set; }
+
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
+
+        [NameInMap("SourceUri")]
+        [Validation(Required=false)]
+        public string SourceUri { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<GetImageResponseBodyTags> Tags { get; set; }
+        public class GetImageResponseBodyTags : TeaModel {
+            [NameInMap("CentricScore")]
             [Validation(Required=false)]
-            public GetImageResponseBodyOCROCRBoundary OCRBoundary { get; set; }
-            public class GetImageResponseBodyOCROCRBoundary : TeaModel {
-                [NameInMap("Top")]
-                [Validation(Required=false)]
-                public int? Top { get; set; }
-                [NameInMap("Width")]
-                [Validation(Required=false)]
-                public int? Width { get; set; }
-                [NameInMap("Height")]
-                [Validation(Required=false)]
-                public int? Height { get; set; }
-                [NameInMap("Left")]
-                [Validation(Required=false)]
-                public int? Left { get; set; }
-            };
+            public float? CentricScore { get; set; }
+
+            [NameInMap("ParentTagName")]
+            [Validation(Required=false)]
+            public string ParentTagName { get; set; }
+
+            [NameInMap("TagConfidence")]
+            [Validation(Required=false)]
+            public float? TagConfidence { get; set; }
+
+            [NameInMap("TagLevel")]
+            [Validation(Required=false)]
+            public int? TagLevel { get; set; }
+
+            [NameInMap("TagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
 
         }
+
+        [NameInMap("TagsFailReason")]
+        [Validation(Required=false)]
+        public string TagsFailReason { get; set; }
+
+        [NameInMap("TagsModifyTime")]
+        [Validation(Required=false)]
+        public string TagsModifyTime { get; set; }
+
+        [NameInMap("TagsStatus")]
+        [Validation(Required=false)]
+        public string TagsStatus { get; set; }
 
     }
 

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class IndexVideoResponseBody : TeaModel {
-        [NameInMap("ModifyTime")]
-        [Validation(Required=false)]
-        public string ModifyTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
@@ -25,9 +17,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string ExternalId { get; set; }
 
-        [NameInMap("VideoUri")]
+        [NameInMap("ModifyTime")]
         [Validation(Required=false)]
-        public string VideoUri { get; set; }
+        public string ModifyTime { get; set; }
 
         [NameInMap("RemarksA")]
         [Validation(Required=false)]
@@ -45,9 +37,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string RemarksD { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SetId")]
         [Validation(Required=false)]
         public string SetId { get; set; }
+
+        [NameInMap("VideoUri")]
+        [Validation(Required=false)]
+        public string VideoUri { get; set; }
 
     }
 

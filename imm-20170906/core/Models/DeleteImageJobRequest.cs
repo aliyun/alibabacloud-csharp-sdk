@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class DeleteImageJobRequest : TeaModel {
-        [NameInMap("Project")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string Project { get; set; }
+        public string JobId { get; set; }
 
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("Project")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string Project { get; set; }
 
     }
 

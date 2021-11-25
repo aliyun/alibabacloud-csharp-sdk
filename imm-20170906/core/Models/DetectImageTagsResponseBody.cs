@@ -21,13 +21,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public List<DetectImageTagsResponseBodyTags> Tags { get; set; }
         public class DetectImageTagsResponseBodyTags : TeaModel {
+            [NameInMap("CentricScore")]
+            [Validation(Required=false)]
+            public float? CentricScore { get; set; }
+
             [NameInMap("ParentTagEnName")]
             [Validation(Required=false)]
             public string ParentTagEnName { get; set; }
 
-            [NameInMap("TagName")]
+            [NameInMap("ParentTagName")]
             [Validation(Required=false)]
-            public string TagName { get; set; }
+            public string ParentTagName { get; set; }
 
             [NameInMap("TagConfidence")]
             [Validation(Required=false)]
@@ -41,9 +45,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
             [Validation(Required=false)]
             public int? TagLevel { get; set; }
 
-            [NameInMap("ParentTagName")]
+            [NameInMap("TagName")]
             [Validation(Required=false)]
-            public string ParentTagName { get; set; }
+            public string TagName { get; set; }
 
         }
 

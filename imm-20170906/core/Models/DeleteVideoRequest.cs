@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string Project { get; set; }
 
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public bool? Resources { get; set; }
+
         [NameInMap("SetId")]
         [Validation(Required=false)]
         public string SetId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("VideoUri")]
         [Validation(Required=false)]
         public string VideoUri { get; set; }
-
-        [NameInMap("Resources")]
-        [Validation(Required=false)]
-        public bool? Resources { get; set; }
 
     }
 

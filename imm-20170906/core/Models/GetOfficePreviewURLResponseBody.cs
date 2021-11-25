@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetOfficePreviewURLResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("AccessToken")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PreviewURL")]
-        [Validation(Required=false)]
-        public string PreviewURL { get; set; }
+        public string AccessToken { get; set; }
 
         [NameInMap("AccessTokenExpiredTime")]
         [Validation(Required=false)]
         public string AccessTokenExpiredTime { get; set; }
 
-        [NameInMap("AccessToken")]
+        [NameInMap("PreviewURL")]
         [Validation(Required=false)]
-        public string AccessToken { get; set; }
+        public string PreviewURL { get; set; }
 
         [NameInMap("RefreshToken")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("RefreshTokenExpiredTime")]
         [Validation(Required=false)]
         public string RefreshTokenExpiredTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

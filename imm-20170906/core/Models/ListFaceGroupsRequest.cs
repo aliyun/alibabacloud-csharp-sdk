@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class ListFaceGroupsRequest : TeaModel {
-        [NameInMap("Project")]
+        [NameInMap("ExternalId")]
         [Validation(Required=false)]
-        public string Project { get; set; }
-
-        [NameInMap("SetId")]
-        [Validation(Required=false)]
-        public string SetId { get; set; }
-
-        [NameInMap("Marker")]
-        [Validation(Required=false)]
-        public string Marker { get; set; }
+        public string ExternalId { get; set; }
 
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
+
+        [NameInMap("Marker")]
+        [Validation(Required=false)]
+        public string Marker { get; set; }
 
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -33,9 +29,21 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
+
         [NameInMap("RemarksAQuery")]
         [Validation(Required=false)]
         public string RemarksAQuery { get; set; }
+
+        [NameInMap("RemarksArrayAQuery")]
+        [Validation(Required=false)]
+        public string RemarksArrayAQuery { get; set; }
+
+        [NameInMap("RemarksArrayBQuery")]
+        [Validation(Required=false)]
+        public string RemarksArrayBQuery { get; set; }
 
         [NameInMap("RemarksBQuery")]
         [Validation(Required=false)]
@@ -49,17 +57,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string RemarksDQuery { get; set; }
 
-        [NameInMap("RemarksArrayAQuery")]
+        [NameInMap("SetId")]
         [Validation(Required=false)]
-        public string RemarksArrayAQuery { get; set; }
-
-        [NameInMap("RemarksArrayBQuery")]
-        [Validation(Required=false)]
-        public string RemarksArrayBQuery { get; set; }
-
-        [NameInMap("ExternalId")]
-        [Validation(Required=false)]
-        public string ExternalId { get; set; }
+        public string SetId { get; set; }
 
     }
 

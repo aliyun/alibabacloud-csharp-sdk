@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class FindSimilarFacesRequest : TeaModel {
-        [NameInMap("Project")]
+        [NameInMap("FaceId")]
         [Validation(Required=false)]
-        public string Project { get; set; }
-
-        [NameInMap("SetId")]
-        [Validation(Required=false)]
-        public string SetId { get; set; }
+        public string FaceId { get; set; }
 
         [NameInMap("ImageUri")]
         [Validation(Required=false)]
         public string ImageUri { get; set; }
-
-        [NameInMap("FaceId")]
-        [Validation(Required=false)]
-        public string FaceId { get; set; }
 
         [NameInMap("Limit")]
         [Validation(Required=false)]
@@ -33,9 +25,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public float? MinSimilarity { get; set; }
 
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
+
         [NameInMap("ResponseFormat")]
         [Validation(Required=false)]
         public string ResponseFormat { get; set; }
+
+        [NameInMap("SetId")]
+        [Validation(Required=false)]
+        public string SetId { get; set; }
 
     }
 

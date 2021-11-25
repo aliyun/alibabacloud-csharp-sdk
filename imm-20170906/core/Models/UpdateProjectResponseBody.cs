@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class UpdateProjectResponseBody : TeaModel {
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CU")]
         [Validation(Required=false)]
         public int? CU { get; set; }
@@ -25,9 +17,9 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        [NameInMap("ServiceRole")]
+        [NameInMap("ModifyTime")]
         [Validation(Required=false)]
-        public string ServiceRole { get; set; }
+        public string ModifyTime { get; set; }
 
         [NameInMap("Project")]
         [Validation(Required=false)]
@@ -37,9 +29,17 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ModifyTime")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ModifyTime { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("ServiceRole")]
+        [Validation(Required=false)]
+        public string ServiceRole { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

@@ -13,21 +13,13 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string Project { get; set; }
 
-        [NameInMap("SrcUri")]
-        [Validation(Required=false)]
-        public string SrcUri { get; set; }
-
         [NameInMap("SrcType")]
         [Validation(Required=false)]
         public string SrcType { get; set; }
 
-        [NameInMap("WatermarkType")]
+        [NameInMap("SrcUri")]
         [Validation(Required=false)]
-        public int? WatermarkType { get; set; }
-
-        [NameInMap("WatermarkValue")]
-        [Validation(Required=false)]
-        public string WatermarkValue { get; set; }
+        public string SrcUri { get; set; }
 
         [NameInMap("WatermarkFillStyle")]
         [Validation(Required=false)]
@@ -37,13 +29,21 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string WatermarkFont { get; set; }
 
+        [NameInMap("WatermarkHorizontal")]
+        [Validation(Required=false)]
+        public int? WatermarkHorizontal { get; set; }
+
         [NameInMap("WatermarkRotate")]
         [Validation(Required=false)]
         public float? WatermarkRotate { get; set; }
 
-        [NameInMap("WatermarkHorizontal")]
+        [NameInMap("WatermarkType")]
         [Validation(Required=false)]
-        public int? WatermarkHorizontal { get; set; }
+        public int? WatermarkType { get; set; }
+
+        [NameInMap("WatermarkValue")]
+        [Validation(Required=false)]
+        public string WatermarkValue { get; set; }
 
         [NameInMap("WatermarkVertical")]
         [Validation(Required=false)]

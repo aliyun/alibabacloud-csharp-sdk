@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class CreateVideoAnalyseTaskRequest : TeaModel {
-        [NameInMap("Project")]
+        [NameInMap("NotifyEndpoint")]
         [Validation(Required=false)]
-        public string Project { get; set; }
-
-        [NameInMap("VideoUri")]
-        [Validation(Required=false)]
-        public string VideoUri { get; set; }
-
-        [NameInMap("TgtUri")]
-        [Validation(Required=false)]
-        public string TgtUri { get; set; }
+        public string NotifyEndpoint { get; set; }
 
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
 
-        [NameInMap("NotifyEndpoint")]
+        [NameInMap("Project")]
         [Validation(Required=false)]
-        public string NotifyEndpoint { get; set; }
+        public string Project { get; set; }
+
+        [NameInMap("TgtUri")]
+        [Validation(Required=false)]
+        public string TgtUri { get; set; }
+
+        [NameInMap("VideoUri")]
+        [Validation(Required=false)]
+        public string VideoUri { get; set; }
 
     }
 

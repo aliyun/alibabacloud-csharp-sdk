@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetContentKeyResponseBody : TeaModel {
-        [NameInMap("VersionId")]
+        [NameInMap("KeyInfos")]
         [Validation(Required=false)]
-        public string VersionId { get; set; }
+        public string KeyInfos { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("KeyInfos")]
+        [NameInMap("VersionId")]
         [Validation(Required=false)]
-        public string KeyInfos { get; set; }
+        public string VersionId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class ListProjectAPIsResponseBody : TeaModel {
+        [NameInMap("APIs")]
+        [Validation(Required=false)]
+        public List<string> APIs { get; set; }
+
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("APIs")]
-        [Validation(Required=false)]
-        public List<string> APIs { get; set; }
 
     }
 

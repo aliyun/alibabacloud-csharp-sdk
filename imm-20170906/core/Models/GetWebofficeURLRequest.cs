@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class GetWebofficeURLRequest : TeaModel {
-        [NameInMap("Project")]
+        [NameInMap("File")]
         [Validation(Required=false)]
-        public string Project { get; set; }
-
-        [NameInMap("SrcType")]
-        [Validation(Required=false)]
-        public string SrcType { get; set; }
+        public string File { get; set; }
 
         [NameInMap("FileID")]
         [Validation(Required=false)]
         public string FileID { get; set; }
 
-        [NameInMap("User")]
+        [NameInMap("Hidecmb")]
         [Validation(Required=false)]
-        public string User { get; set; }
-
-        [NameInMap("Permission")]
-        [Validation(Required=false)]
-        public string Permission { get; set; }
-
-        [NameInMap("File")]
-        [Validation(Required=false)]
-        public string File { get; set; }
+        public bool? Hidecmb { get; set; }
 
         [NameInMap("NotifyEndpoint")]
         [Validation(Required=false)]
@@ -41,13 +29,25 @@ namespace AlibabaCloud.SDK.Imm20170906.Models
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
 
+        [NameInMap("Permission")]
+        [Validation(Required=false)]
+        public string Permission { get; set; }
+
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
+
+        [NameInMap("SrcType")]
+        [Validation(Required=false)]
+        public string SrcType { get; set; }
+
+        [NameInMap("User")]
+        [Validation(Required=false)]
+        public string User { get; set; }
+
         [NameInMap("Watermark")]
         [Validation(Required=false)]
         public string Watermark { get; set; }
-
-        [NameInMap("Hidecmb")]
-        [Validation(Required=false)]
-        public bool? Hidecmb { get; set; }
 
     }
 

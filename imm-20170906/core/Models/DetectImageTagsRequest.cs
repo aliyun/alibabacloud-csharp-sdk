@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20170906.Models
 {
     public class DetectImageTagsRequest : TeaModel {
-        [NameInMap("Project")]
-        [Validation(Required=false)]
-        public string Project { get; set; }
-
         [NameInMap("ImageUri")]
         [Validation(Required=false)]
         public string ImageUri { get; set; }
+
+        [NameInMap("Project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
 
     }
 
