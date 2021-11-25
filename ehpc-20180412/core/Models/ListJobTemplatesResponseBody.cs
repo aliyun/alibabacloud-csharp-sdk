@@ -34,6 +34,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string CommandLine { get; set; }
                 public int? Gpu { get; set; }
                 public string Id { get; set; }
+                public string InputFileUrl { get; set; }
                 public string Mem { get; set; }
                 public string Name { get; set; }
                 public int? Node { get; set; }
@@ -46,7 +47,9 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string StdoutRedirectPath { get; set; }
                 public int? Task { get; set; }
                 public int? Thread { get; set; }
+                public string UnzipCmd { get; set; }
                 public string Variables { get; set; }
+                public bool? WithUnzipCmd { get; set; }
             }
         };
 

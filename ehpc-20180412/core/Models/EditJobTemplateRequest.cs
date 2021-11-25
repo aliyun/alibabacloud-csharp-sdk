@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? Gpu { get; set; }
 
+        [NameInMap("InputFileUrl")]
+        [Validation(Required=false)]
+        public string InputFileUrl { get; set; }
+
         [NameInMap("Mem")]
         [Validation(Required=false)]
         public string Mem { get; set; }
@@ -77,9 +81,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? Thread { get; set; }
 
+        [NameInMap("UnzipCmd")]
+        [Validation(Required=false)]
+        public string UnzipCmd { get; set; }
+
         [NameInMap("Variables")]
         [Validation(Required=false)]
         public string Variables { get; set; }
+
+        [NameInMap("WithUnzipCmd")]
+        [Validation(Required=false)]
+        public bool? WithUnzipCmd { get; set; }
 
     }
 

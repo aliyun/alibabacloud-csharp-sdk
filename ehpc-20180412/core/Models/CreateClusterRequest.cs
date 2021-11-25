@@ -212,6 +212,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        [NameInMap("Plugin")]
+        [Validation(Required=false)]
+        public string Plugin { get; set; }
+
         [NameInMap("PostInstallScript")]
         [Validation(Required=false)]
         public List<CreateClusterRequestPostInstallScript> PostInstallScript { get; set; }
@@ -289,6 +293,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
+
+        [NameInMap("WithoutAgent")]
+        [Validation(Required=false)]
+        public bool? WithoutAgent { get; set; }
 
         [NameInMap("WithoutElasticIp")]
         [Validation(Required=false)]
