@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string BusinessType { get; set; }
 
+        [NameInMap("EntityId")]
+        [Validation(Required=false)]
+        public string EntityId { get; set; }
+
     }
 
 }

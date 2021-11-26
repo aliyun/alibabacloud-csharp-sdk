@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         [NameInMap("ProjectMaterials")]
         [Validation(Required=false)]
-        public string ProjectMaterials { get; set; }
+        public List<string> ProjectMaterials { get; set; }
 
         /// <summary>
         /// Id of the request

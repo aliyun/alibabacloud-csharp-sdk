@@ -8,22 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class GetMediaInfoResponseBody : TeaModel {
+    public class GetPublicMediaInfoResponseBody : TeaModel {
         [NameInMap("MediaInfo")]
         [Validation(Required=false)]
-        public GetMediaInfoResponseBodyMediaInfo MediaInfo { get; set; }
-        public class GetMediaInfoResponseBodyMediaInfo : TeaModel {
-            [NameInMap("AiRoughDataList")]
-            [Validation(Required=false)]
-            public List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> AiRoughDataList { get; set; }
-            public class GetMediaInfoResponseBodyMediaInfoAiRoughDataList : TeaModel {
-                public string Result { get; set; }
-                public string Type { get; set; }
-            }
+        public GetPublicMediaInfoResponseBodyMediaInfo MediaInfo { get; set; }
+        public class GetPublicMediaInfoResponseBodyMediaInfo : TeaModel {
             [NameInMap("DynamicMetaData")]
             [Validation(Required=false)]
-            public GetMediaInfoResponseBodyMediaInfoDynamicMetaData DynamicMetaData { get; set; }
-            public class GetMediaInfoResponseBodyMediaInfoDynamicMetaData : TeaModel {
+            public GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData DynamicMetaData { get; set; }
+            public class GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData : TeaModel {
                 /// <summary>
                 /// 元数据json
                 /// </summary>
@@ -41,10 +34,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
-            public List<GetMediaInfoResponseBodyMediaInfoFileInfoList> FileInfoList { get; set; }
-            public class GetMediaInfoResponseBodyMediaInfoFileInfoList : TeaModel {
-                public List<GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> AudioStreamInfoList { get; set; }
-                public class GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList : TeaModel {
+            public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoList> FileInfoList { get; set; }
+            public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoList : TeaModel {
+                public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> AudioStreamInfoList { get; set; }
+                public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList : TeaModel {
                     public string Bitrate { get; set; }
                     public string ChannelLayout { get; set; }
                     public string Channels { get; set; }
@@ -64,8 +57,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string StartTime { get; set; }
                     public string Timebase { get; set; }
                 }
-                public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo FileBasicInfo { get; set; }
-                public class GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo : TeaModel {
+                public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo FileBasicInfo { get; set; }
+                public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo : TeaModel {
                     /// <summary>
                     /// 码率
                     /// </summary>
@@ -144,8 +137,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string Width { get; set; }
 
                 }
-                public List<GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> SubtitleStreamInfoList { get; set; }
-                public class GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList : TeaModel {
+                public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> SubtitleStreamInfoList { get; set; }
+                public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList : TeaModel {
                     public string CodecLongName { get; set; }
                     public string CodecName { get; set; }
                     public string CodecTag { get; set; }
@@ -157,8 +150,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     public string StartTime { get; set; }
                     public string Timebase { get; set; }
                 }
-                public List<GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> VideoStreamInfoList { get; set; }
-                public class GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList : TeaModel {
+                public List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> VideoStreamInfoList { get; set; }
+                public class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList : TeaModel {
                     public string AvgFPS { get; set; }
                     public string Bitrate { get; set; }
                     public string CodecLongName { get; set; }
@@ -187,8 +180,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
-            public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
-            public class GetMediaInfoResponseBodyMediaInfoMediaBasicInfo : TeaModel {
+            public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
+            public class GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo : TeaModel {
                 /// <summary>
                 /// 媒资业务类型
                 /// </summary>
@@ -230,13 +223,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
-
-                /// <summary>
-                /// 待注册的媒资在相应系统中的地址
-                /// </summary>
-                [NameInMap("InputURL")]
-                [Validation(Required=false)]
-                public string InputURL { get; set; }
 
                 /// <summary>
                 /// MediaId

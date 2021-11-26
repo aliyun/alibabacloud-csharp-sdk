@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Timeline")]
             [Validation(Required=false)]
             public string Timeline { get; set; }
+            [NameInMap("VodMediaId")]
+            [Validation(Required=false)]
+            public string VodMediaId { get; set; }
         };
 
         /// <summary>

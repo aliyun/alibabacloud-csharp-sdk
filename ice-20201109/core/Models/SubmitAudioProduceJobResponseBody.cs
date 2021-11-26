@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// 请求Id
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

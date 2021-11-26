@@ -37,6 +37,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string MediaTagNameEnglish { get; set; }
 
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public List<ListAllPublicMediaTagsResponseBodyMediaTagListOptions> Options { get; set; }
+            public class ListAllPublicMediaTagsResponseBodyMediaTagListOptions : TeaModel {
+                [NameInMap("OptionChineseName")]
+                [Validation(Required=false)]
+                public string OptionChineseName { get; set; }
+
+                [NameInMap("OptionEnglishName")]
+                [Validation(Required=false)]
+                public string OptionEnglishName { get; set; }
+
+                [NameInMap("OptionId")]
+                [Validation(Required=false)]
+                public string OptionId { get; set; }
+
+            }
+
         }
 
         /// <summary>

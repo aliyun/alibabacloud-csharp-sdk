@@ -8,13 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class GetSmartHandleJobRequest : TeaModel {
-        /// <summary>
-        /// 任务Id
-        /// </summary>
-        [NameInMap("JobId")]
+    public class DescribeIceProductStatusRequest : TeaModel {
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string CommodityCode { get; set; }
 
     }
 
