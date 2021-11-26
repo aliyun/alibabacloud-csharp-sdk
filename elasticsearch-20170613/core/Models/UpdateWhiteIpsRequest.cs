@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateWhiteIpsRequest : TeaModel {
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("esIPWhitelist")]
         [Validation(Required=false)]
         public List<string> EsIPWhitelist { get; set; }
-
-        [NameInMap("modifyMode")]
-        [Validation(Required=false)]
-        public string ModifyMode { get; set; }
 
         [NameInMap("whiteIpGroup")]
         [Validation(Required=false)]
@@ -35,6 +27,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public string WhiteIpType { get; set; }
         };
+
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("modifyMode")]
+        [Validation(Required=false)]
+        public string ModifyMode { get; set; }
 
     }
 

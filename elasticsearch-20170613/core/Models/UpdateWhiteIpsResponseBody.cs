@@ -20,6 +20,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("esIPWhitelist")]
             [Validation(Required=false)]
             public List<string> EsIPWhitelist { get; set; }
+            [NameInMap("networkConfig")]
+            [Validation(Required=false)]
+            public UpdateWhiteIpsResponseBodyResultNetworkConfig NetworkConfig { get; set; }
+            public class UpdateWhiteIpsResponseBodyResultNetworkConfig : TeaModel {
+                [NameInMap("whiteIpGroupList")]
+                [Validation(Required=false)]
+                public List<UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> WhiteIpGroupList { get; set; }
+                public class UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList : TeaModel {
+                    [NameInMap("groupName")]
+                    [Validation(Required=false)]
+                    public string GroupName { get; set; }
+
+                    [NameInMap("ips")]
+                    [Validation(Required=false)]
+                    public List<string> Ips { get; set; }
+
+                    [NameInMap("whiteIpType")]
+                    [Validation(Required=false)]
+                    public string WhiteIpType { get; set; }
+
+                }
+
+            }
         };
 
     }

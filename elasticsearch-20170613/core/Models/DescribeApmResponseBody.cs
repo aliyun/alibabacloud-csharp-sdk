@@ -44,9 +44,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("outputESUserName")]
             [Validation(Required=false)]
             public string OutputESUserName { get; set; }
-            [NameInMap("outputEsDescription")]
-            [Validation(Required=false)]
-            public string OutputEsDescription { get; set; }
             [NameInMap("ownerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
