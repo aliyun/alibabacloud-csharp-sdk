@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string SceneId { get; set; }
 
+        /// <summary>
+        /// 类型 图片：IMAGE 视频：VIDEO
+        /// </summary>
+        [NameInMap("UploadType")]
+        [Validation(Required=false)]
+        public string UploadType { get; set; }
+
     }
 
 }

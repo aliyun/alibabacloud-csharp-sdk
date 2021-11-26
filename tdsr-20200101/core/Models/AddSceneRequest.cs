@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// 场景类型 3D模型：MODEL_3D  全景图片：PIC  全景视频：VIDEO
+        /// 场景类型 3D模型：MODEL_3D  全景图片：PIC  全景视频：VIDEO 混合：MIX
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

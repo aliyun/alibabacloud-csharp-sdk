@@ -136,6 +136,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
             public long? Status { get; set; }
 
             /// <summary>
+            /// 上传资源类型
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            /// <summary>
             /// 图片路径/视频路径
             /// </summary>
             [NameInMap("Url")]
