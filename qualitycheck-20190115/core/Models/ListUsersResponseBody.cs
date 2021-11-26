@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListUsersResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("Count")]
         [Validation(Required=false)]
@@ -45,17 +25,37 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyDataUser> User { get; set; }
             public class ListUsersResponseBodyDataUser : TeaModel {
-                public string DisplayName { get; set; }
-                public string UpdateTime { get; set; }
-                public string Description { get; set; }
-                public string CreateTime { get; set; }
-                public int? LoginUserType { get; set; }
                 public string AliUid { get; set; }
-                public string RoleName { get; set; }
-                public string UserName { get; set; }
+                public string CreateTime { get; set; }
+                public string Description { get; set; }
+                public string DisplayName { get; set; }
                 public long? Id { get; set; }
+                public int? LoginUserType { get; set; }
+                public string RoleName { get; set; }
+                public string UpdateTime { get; set; }
+                public string UserName { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

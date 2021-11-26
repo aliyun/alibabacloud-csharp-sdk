@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public RestartAsrTaskResponseBodyData Data { get; set; }
+        public class RestartAsrTaskResponseBodyData : TeaModel {
+            [NameInMap("RestartResult")]
+            [Validation(Required=false)]
+            public List<RestartAsrTaskResponseBodyDataRestartResult> RestartResult { get; set; }
+            public class RestartAsrTaskResponseBodyDataRestartResult : TeaModel {
+                public string Data { get; set; }
+                public string Message { get; set; }
+                public bool? Success { get; set; }
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,20 +38,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public RestartAsrTaskResponseBodyData Data { get; set; }
-        public class RestartAsrTaskResponseBodyData : TeaModel {
-            [NameInMap("RestartResult")]
-            [Validation(Required=false)]
-            public List<RestartAsrTaskResponseBodyDataRestartResult> RestartResult { get; set; }
-            public class RestartAsrTaskResponseBodyDataRestartResult : TeaModel {
-                public string Message { get; set; }
-                public string Data { get; set; }
-                public bool? Success { get; set; }
-            }
-        };
 
     }
 

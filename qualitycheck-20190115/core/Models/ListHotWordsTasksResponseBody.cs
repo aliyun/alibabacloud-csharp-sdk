@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListHotWordsTasksResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("Count")]
         [Validation(Required=false)]
@@ -45,22 +25,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListHotWordsTasksResponseBodyDataHotWordsTaskPo> HotWordsTaskPo { get; set; }
             public class ListHotWordsTasksResponseBodyDataHotWordsTaskPo : TeaModel {
-                public string EndTime { get; set; }
-                public int? Type { get; set; }
-                public int? Status { get; set; }
-                public int? TimeInterval { get; set; }
-                public string StartTime { get; set; }
-                public long? TaskConfigId { get; set; }
-                public string Message { get; set; }
-                public int? InstanceStatus { get; set; }
-                public string LastExecutionTime { get; set; }
-                public string Name { get; set; }
-                public int? TimeUnit { get; set; }
                 public ListHotWordsTasksResponseBodyDataHotWordsTaskPoDialogueParam DialogueParam { get; set; }
                 public class ListHotWordsTasksResponseBodyDataHotWordsTaskPoDialogueParam : TeaModel {
-                    [NameInMap("EndTime")]
+                    [NameInMap("DataSetIds")]
                     [Validation(Required=false)]
-                    public string EndTime { get; set; }
+                    public string DataSetIds { get; set; }
 
                     [NameInMap("DialogueId")]
                     [Validation(Required=false)]
@@ -70,9 +39,13 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public int? EndIndex { get; set; }
 
-                    [NameInMap("StartTime")]
+                    [NameInMap("EndTime")]
                     [Validation(Required=false)]
-                    public string StartTime { get; set; }
+                    public string EndTime { get; set; }
+
+                    [NameInMap("Role")]
+                    [Validation(Required=false)]
+                    public int? Role { get; set; }
 
                     [NameInMap("SourceType")]
                     [Validation(Required=false)]
@@ -82,32 +55,59 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public int? StartIndex { get; set; }
 
-                    [NameInMap("Role")]
+                    [NameInMap("StartTime")]
                     [Validation(Required=false)]
-                    public int? Role { get; set; }
-
-                    [NameInMap("DataSetIds")]
-                    [Validation(Required=false)]
-                    public string DataSetIds { get; set; }
+                    public string StartTime { get; set; }
 
                 }
+                public string EndTime { get; set; }
+                public int? InstanceStatus { get; set; }
+                public string LastExecutionTime { get; set; }
+                public string Message { get; set; }
+                public string Name { get; set; }
+                public string StartTime { get; set; }
+                public int? Status { get; set; }
+                public long? TaskConfigId { get; set; }
+                public int? TimeInterval { get; set; }
+                public int? TimeUnit { get; set; }
+                public int? Type { get; set; }
                 public ListHotWordsTasksResponseBodyDataHotWordsTaskPoWordsParam WordsParam { get; set; }
                 public class ListHotWordsTasksResponseBodyDataHotWordsTaskPoWordsParam : TeaModel {
                     [NameInMap("Excludes")]
                     [Validation(Required=false)]
                     public string Excludes { get; set; }
 
-                    [NameInMap("Includes")]
-                    [Validation(Required=false)]
-                    public string Includes { get; set; }
-
                     [NameInMap("ExtraConfigId")]
                     [Validation(Required=false)]
                     public long? ExtraConfigId { get; set; }
 
+                    [NameInMap("Includes")]
+                    [Validation(Required=false)]
+                    public string Includes { get; set; }
+
                 }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

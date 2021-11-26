@@ -13,6 +13,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public SubmitCustomizationConfigResponseBodyData Data { get; set; }
+        public class SubmitCustomizationConfigResponseBodyData : TeaModel {
+            [NameInMap("ModeCustomizationId")]
+            [Validation(Required=false)]
+            public string ModeCustomizationId { get; set; }
+            [NameInMap("ModelId")]
+            [Validation(Required=false)]
+            public long? ModelId { get; set; }
+            [NameInMap("ModelName")]
+            [Validation(Required=false)]
+            public string ModelName { get; set; }
+            [NameInMap("ModelStatus")]
+            [Validation(Required=false)]
+            public int? ModelStatus { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,24 +42,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public SubmitCustomizationConfigResponseBodyData Data { get; set; }
-        public class SubmitCustomizationConfigResponseBodyData : TeaModel {
-            [NameInMap("ModelStatus")]
-            [Validation(Required=false)]
-            public int? ModelStatus { get; set; }
-            [NameInMap("ModelName")]
-            [Validation(Required=false)]
-            public string ModelName { get; set; }
-            [NameInMap("ModelId")]
-            [Validation(Required=false)]
-            public long? ModelId { get; set; }
-            [NameInMap("ModeCustomizationId")]
-            [Validation(Required=false)]
-            public string ModeCustomizationId { get; set; }
-        };
 
     }
 

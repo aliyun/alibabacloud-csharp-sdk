@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetBusinessCategoryListResponseBodyData Data { get; set; }
+        public class GetBusinessCategoryListResponseBodyData : TeaModel {
+            [NameInMap("BusinessCategoryBasicInfo")]
+            [Validation(Required=false)]
+            public List<GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo> BusinessCategoryBasicInfo { get; set; }
+            public class GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo : TeaModel {
+                public int? Bid { get; set; }
+                public string BusinessName { get; set; }
+                public int? ServiceType { get; set; }
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,20 +38,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetBusinessCategoryListResponseBodyData Data { get; set; }
-        public class GetBusinessCategoryListResponseBodyData : TeaModel {
-            [NameInMap("BusinessCategoryBasicInfo")]
-            [Validation(Required=false)]
-            public List<GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo> BusinessCategoryBasicInfo { get; set; }
-            public class GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo : TeaModel {
-                public string BusinessName { get; set; }
-                public int? ServiceType { get; set; }
-                public int? Bid { get; set; }
-            }
-        };
 
     }
 

@@ -13,6 +13,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DelRuleCategoryResponseBodyData Data { get; set; }
+        public class DelRuleCategoryResponseBodyData : TeaModel {
+            [NameInMap("Select")]
+            [Validation(Required=false)]
+            public bool? Select { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,15 +33,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public DelRuleCategoryResponseBodyData Data { get; set; }
-        public class DelRuleCategoryResponseBodyData : TeaModel {
-            [NameInMap("Select")]
-            [Validation(Required=false)]
-            public bool? Select { get; set; }
-        };
 
     }
 

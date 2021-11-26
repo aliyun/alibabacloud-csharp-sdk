@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetRuleDetailResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,6 +25,48 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetRuleDetailResponseBodyDataConditionsConditionBasicInfo> ConditionBasicInfo { get; set; }
                 public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfo : TeaModel {
+                    [NameInMap("CheckRange")]
+                    [Validation(Required=false)]
+                    public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange CheckRange { get; set; }
+                    public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange : TeaModel {
+                        [NameInMap("Absolute")]
+                        [Validation(Required=false)]
+                        public bool? Absolute { get; set; }
+                        [NameInMap("Anchor")]
+                        [Validation(Required=false)]
+                        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor Anchor { get; set; }
+                        public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor : TeaModel {
+                            [NameInMap("AnchorCid")]
+                            [Validation(Required=false)]
+                            public string AnchorCid { get; set; }
+
+                            [NameInMap("HitTime")]
+                            [Validation(Required=false)]
+                            public int? HitTime { get; set; }
+
+                            [NameInMap("Location")]
+                            [Validation(Required=false)]
+                            public string Location { get; set; }
+
+                        }
+                        [NameInMap("Range")]
+                        [Validation(Required=false)]
+                        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange Range { get; set; }
+                        public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange : TeaModel {
+                            [NameInMap("From")]
+                            [Validation(Required=false)]
+                            public int? From { get; set; }
+
+                            [NameInMap("To")]
+                            [Validation(Required=false)]
+                            public int? To { get; set; }
+
+                        }
+                        [NameInMap("Role")]
+                        [Validation(Required=false)]
+                        public string Role { get; set; }
+                    };
+
                     [NameInMap("ConditionInfoCid")]
                     [Validation(Required=false)]
                     public string ConditionInfoCid { get; set; }
@@ -54,109 +84,94 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         public List<GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo> OperatorBasicInfo { get; set; }
                         public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo : TeaModel {
                             public string Oid { get; set; }
-                            public string Type { get; set; }
                             public string OperName { get; set; }
                             public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam Param { get; set; }
                             public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam : TeaModel {
-                                [NameInMap("Regex")]
+                                [NameInMap("AntModelInfo")]
                                 [Validation(Required=false)]
-                                public string Regex { get; set; }
-
-                                [NameInMap("Phrase")]
-                                [Validation(Required=false)]
-                                public string Phrase { get; set; }
-
-                                [NameInMap("Interval")]
-                                [Validation(Required=false)]
-                                public int? Interval { get; set; }
-
-                                [NameInMap("Threshold")]
-                                [Validation(Required=false)]
-                                public float? Threshold { get; set; }
-
-                                [NameInMap("InSentence")]
-                                [Validation(Required=false)]
-                                public bool? InSentence { get; set; }
-
-                                [NameInMap("Target")]
-                                [Validation(Required=false)]
-                                public int? Target { get; set; }
-
-                                [NameInMap("FromEnd")]
-                                [Validation(Required=false)]
-                                public bool? FromEnd { get; set; }
-
-                                [NameInMap("DifferentRole")]
-                                [Validation(Required=false)]
-                                public bool? DifferentRole { get; set; }
-
-                                [NameInMap("TargetRole")]
-                                [Validation(Required=false)]
-                                public string TargetRole { get; set; }
-
-                                [NameInMap("Score")]
-                                [Validation(Required=false)]
-                                public int? Score { get; set; }
-
-                                [NameInMap("ContextChatMatch")]
-                                [Validation(Required=false)]
-                                public bool? ContextChatMatch { get; set; }
-
-                                [NameInMap("KeywordMatchSize")]
-                                [Validation(Required=false)]
-                                public int? KeywordMatchSize { get; set; }
+                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo AntModelInfo { get; set; }
+                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo : TeaModel {
+                                    [NameInMap("AntModelInfo")]
+                                    [Validation(Required=false)]
+                                    public List<string> AntModelInfo { get; set; }
+                                };
 
                                 [NameInMap("Average")]
                                 [Validation(Required=false)]
                                 public bool? Average { get; set; }
 
-                                [NameInMap("VelocityInMint")]
-                                [Validation(Required=false)]
-                                public int? VelocityInMint { get; set; }
-
-                                [NameInMap("MinWordSize")]
-                                [Validation(Required=false)]
-                                public int? MinWordSize { get; set; }
-
-                                [NameInMap("KeywordExtension")]
-                                [Validation(Required=false)]
-                                public bool? KeywordExtension { get; set; }
-
-                                [NameInMap("HitTime")]
-                                [Validation(Required=false)]
-                                public int? HitTime { get; set; }
-
-                                [NameInMap("From")]
-                                [Validation(Required=false)]
-                                public int? From { get; set; }
-
                                 [NameInMap("BeginType")]
                                 [Validation(Required=false)]
                                 public string BeginType { get; set; }
-
-                                [NameInMap("CompareOperator")]
-                                [Validation(Required=false)]
-                                public string CompareOperator { get; set; }
 
                                 [NameInMap("CheckType")]
                                 [Validation(Required=false)]
                                 public int? CheckType { get; set; }
 
-                                [NameInMap("MaxEmotionChangeValue")]
+                                [NameInMap("CompareOperator")]
                                 [Validation(Required=false)]
-                                public int? MaxEmotionChangeValue { get; set; }
+                                public string CompareOperator { get; set; }
 
-                                [NameInMap("NotRegex")]
+                                [NameInMap("ContextChatMatch")]
                                 [Validation(Required=false)]
-                                public string NotRegex { get; set; }
-
-                                [NameInMap("Similarity_threshold")]
-                                [Validation(Required=false)]
-                                public float? SimilarityThreshold { get; set; }
+                                public bool? ContextChatMatch { get; set; }
 
                                 [NameInMap("DelayTime")]
                                 [Validation(Required=false)]
                                 public int? DelayTime { get; set; }
+
+                                [NameInMap("DifferentRole")]
+                                [Validation(Required=false)]
+                                public bool? DifferentRole { get; set; }
+
+                                [NameInMap("Excludes")]
+                                [Validation(Required=false)]
+                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes Excludes { get; set; }
+                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes : TeaModel {
+                                    [NameInMap("Excludes")]
+                                    [Validation(Required=false)]
+                                    public List<string> Excludes { get; set; }
+                                };
+
+                                [NameInMap("From")]
+                                [Validation(Required=false)]
+                                public int? From { get; set; }
+
+                                [NameInMap("FromEnd")]
+                                [Validation(Required=false)]
+                                public bool? FromEnd { get; set; }
+
+                                [NameInMap("HitTime")]
+                                [Validation(Required=false)]
+                                public int? HitTime { get; set; }
+
+                                [NameInMap("InSentence")]
+                                [Validation(Required=false)]
+                                public bool? InSentence { get; set; }
+
+                                [NameInMap("Interval")]
+                                [Validation(Required=false)]
+                                public int? Interval { get; set; }
+
+                                [NameInMap("KeywordExtension")]
+                                [Validation(Required=false)]
+                                public bool? KeywordExtension { get; set; }
+
+                                [NameInMap("KeywordMatchSize")]
+                                [Validation(Required=false)]
+                                public int? KeywordMatchSize { get; set; }
+
+                                [NameInMap("MaxEmotionChangeValue")]
+                                [Validation(Required=false)]
+                                public int? MaxEmotionChangeValue { get; set; }
+
+                                [NameInMap("MinWordSize")]
+                                [Validation(Required=false)]
+                                public int? MinWordSize { get; set; }
+
+                                [NameInMap("NotRegex")]
+                                [Validation(Required=false)]
+                                public string NotRegex { get; set; }
 
                                 [NameInMap("OperKeyWords")]
                                 [Validation(Required=false)]
@@ -165,6 +180,19 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [NameInMap("OperKeyWord")]
                                     [Validation(Required=false)]
                                     public List<string> OperKeyWord { get; set; }
+                                };
+
+                                [NameInMap("Phrase")]
+                                [Validation(Required=false)]
+                                public string Phrase { get; set; }
+
+                                [NameInMap("Pvalues")]
+                                [Validation(Required=false)]
+                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues Pvalues { get; set; }
+                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues : TeaModel {
+                                    [NameInMap("Pvalues")]
+                                    [Validation(Required=false)]
+                                    public List<string> Pvalues { get; set; }
                                 };
 
                                 [NameInMap("References")]
@@ -176,6 +204,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     public List<string> Reference { get; set; }
                                 };
 
+                                [NameInMap("Regex")]
+                                [Validation(Required=false)]
+                                public string Regex { get; set; }
+
+                                [NameInMap("Score")]
+                                [Validation(Required=false)]
+                                public int? Score { get; set; }
+
+                                [NameInMap("Similarity_threshold")]
+                                [Validation(Required=false)]
+                                public float? SimilarityThreshold { get; set; }
+
                                 [NameInMap("SimilarlySentences")]
                                 [Validation(Required=false)]
                                 public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamSimilarlySentences SimilarlySentences { get; set; }
@@ -185,82 +225,39 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     public List<string> SimilarlySentence { get; set; }
                                 };
 
-                                [NameInMap("Excludes")]
+                                [NameInMap("Target")]
                                 [Validation(Required=false)]
-                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes Excludes { get; set; }
-                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes : TeaModel {
-                                    [NameInMap("Excludes")]
-                                    [Validation(Required=false)]
-                                    public List<string> Excludes { get; set; }
-                                };
+                                public int? Target { get; set; }
 
-                                [NameInMap("Pvalues")]
+                                [NameInMap("TargetRole")]
                                 [Validation(Required=false)]
-                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues Pvalues { get; set; }
-                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues : TeaModel {
-                                    [NameInMap("Pvalues")]
-                                    [Validation(Required=false)]
-                                    public List<string> Pvalues { get; set; }
-                                };
+                                public string TargetRole { get; set; }
 
-                                [NameInMap("AntModelInfo")]
+                                [NameInMap("Threshold")]
                                 [Validation(Required=false)]
-                                public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo AntModelInfo { get; set; }
-                                public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo : TeaModel {
-                                    [NameInMap("AntModelInfo")]
-                                    [Validation(Required=false)]
-                                    public List<string> AntModelInfo { get; set; }
-                                };
+                                public float? Threshold { get; set; }
+
+                                [NameInMap("VelocityInMint")]
+                                [Validation(Required=false)]
+                                public int? VelocityInMint { get; set; }
 
                             }
-                        }
-                    };
-
-                    [NameInMap("CheckRange")]
-                    [Validation(Required=false)]
-                    public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange CheckRange { get; set; }
-                    public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange : TeaModel {
-                        [NameInMap("Role")]
-                        [Validation(Required=false)]
-                        public string Role { get; set; }
-                        [NameInMap("Absolute")]
-                        [Validation(Required=false)]
-                        public bool? Absolute { get; set; }
-                        [NameInMap("Anchor")]
-                        [Validation(Required=false)]
-                        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor Anchor { get; set; }
-                        public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor : TeaModel {
-                            [NameInMap("AnchorCid")]
-                            [Validation(Required=false)]
-                            public string AnchorCid { get; set; }
-
-                            [NameInMap("Location")]
-                            [Validation(Required=false)]
-                            public string Location { get; set; }
-
-                            [NameInMap("HitTime")]
-                            [Validation(Required=false)]
-                            public int? HitTime { get; set; }
-
-                        }
-                        [NameInMap("Range")]
-                        [Validation(Required=false)]
-                        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange Range { get; set; }
-                        public class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange : TeaModel {
-                            [NameInMap("From")]
-                            [Validation(Required=false)]
-                            public int? From { get; set; }
-
-                            [NameInMap("To")]
-                            [Validation(Required=false)]
-                            public int? To { get; set; }
-
+                            public string Type { get; set; }
                         }
                     };
 
                 }
 
             }
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public GetRuleDetailResponseBodyDataRules Rules { get; set; }
@@ -269,6 +266,20 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetRuleDetailResponseBodyDataRulesRuleBasicInfo> RuleBasicInfo { get; set; }
                 public class GetRuleDetailResponseBodyDataRulesRuleBasicInfo : TeaModel {
+                    [NameInMap("BusinessCategories")]
+                    [Validation(Required=false)]
+                    public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories BusinessCategories { get; set; }
+                    public class GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories : TeaModel {
+                        [NameInMap("BusinessCategoryBasicInfo")]
+                        [Validation(Required=false)]
+                        public List<GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo> BusinessCategoryBasicInfo { get; set; }
+                        public class GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo : TeaModel {
+                            public int? Bid { get; set; }
+                            public string BusinessName { get; set; }
+                            public int? ServiceType { get; set; }
+                        }
+                    };
+
                     [NameInMap("Rid")]
                     [Validation(Required=false)]
                     public string Rid { get; set; }
@@ -286,24 +297,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         public List<string> Trigger { get; set; }
                     };
 
-                    [NameInMap("BusinessCategories")]
-                    [Validation(Required=false)]
-                    public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories BusinessCategories { get; set; }
-                    public class GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories : TeaModel {
-                        [NameInMap("BusinessCategoryBasicInfo")]
-                        [Validation(Required=false)]
-                        public List<GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo> BusinessCategoryBasicInfo { get; set; }
-                        public class GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo : TeaModel {
-                            public int? Bid { get; set; }
-                            public int? ServiceType { get; set; }
-                            public string BusinessName { get; set; }
-                        }
-                    };
-
                 }
 
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

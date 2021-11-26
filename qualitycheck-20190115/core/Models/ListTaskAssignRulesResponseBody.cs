@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListTaskAssignRulesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("Count")]
         [Validation(Required=false)]
@@ -45,54 +25,33 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo> TaskAssignRuleInfo { get; set; }
             public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo : TeaModel {
-                public string UpdateTime { get; set; }
-                public string SkillGroupsStr { get; set; }
-                public long? CallTimeEnd { get; set; }
-                public int? DurationMax { get; set; }
-                public string CreateTime { get; set; }
-                public int? Priority { get; set; }
-                public int? DurationMin { get; set; }
-                public string AgentsStr { get; set; }
-                public string RuleName { get; set; }
-                public long? RuleId { get; set; }
-                public int? AssignmentType { get; set; }
-                public int? CallType { get; set; }
-                public int? Enabled { get; set; }
-                public long? CallTimeStart { get; set; }
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents Agents { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents : TeaModel {
                     [NameInMap("Agent")]
                     [Validation(Required=false)]
                     public List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent> Agent { get; set; }
                     public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent : TeaModel {
-                        [NameInMap("AgentName")]
-                        [Validation(Required=false)]
-                        public string AgentName { get; set; }
-
                         [NameInMap("AgentId")]
                         [Validation(Required=false)]
                         public string AgentId { get; set; }
 
-                    }
-
-                }
-                public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups SkillGroups { get; set; }
-                public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups : TeaModel {
-                    [NameInMap("SkillGroup")]
-                    [Validation(Required=false)]
-                    public List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroupsSkillGroup> SkillGroup { get; set; }
-                    public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroupsSkillGroup : TeaModel {
-                        [NameInMap("SkillName")]
+                        [NameInMap("AgentName")]
                         [Validation(Required=false)]
-                        public string SkillName { get; set; }
-
-                        [NameInMap("SkillId")]
-                        [Validation(Required=false)]
-                        public string SkillId { get; set; }
+                        public string AgentName { get; set; }
 
                     }
 
                 }
+                public string AgentsStr { get; set; }
+                public int? AssignmentType { get; set; }
+                public long? CallTimeEnd { get; set; }
+                public long? CallTimeStart { get; set; }
+                public int? CallType { get; set; }
+                public string CreateTime { get; set; }
+                public int? DurationMax { get; set; }
+                public int? DurationMin { get; set; }
+                public int? Enabled { get; set; }
+                public int? Priority { get; set; }
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers Reviewers { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers : TeaModel {
                     [NameInMap("Reviewer")]
@@ -110,6 +69,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                 }
+                public long? RuleId { get; set; }
+                public string RuleName { get; set; }
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules Rules { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules : TeaModel {
                     [NameInMap("RuleBasicInfo")]
@@ -129,29 +90,29 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
                 public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode SamplingMode { get; set; }
                 public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode : TeaModel {
-                    [NameInMap("NumberOfDraws")]
-                    [Validation(Required=false)]
-                    public int? NumberOfDraws { get; set; }
-
                     [NameInMap("AnyNumberOfDraws")]
                     [Validation(Required=false)]
                     public int? AnyNumberOfDraws { get; set; }
 
-                    [NameInMap("Limit")]
+                    [NameInMap("Designated")]
                     [Validation(Required=false)]
-                    public int? Limit { get; set; }
-
-                    [NameInMap("Proportion")]
-                    [Validation(Required=false)]
-                    public float? Proportion { get; set; }
+                    public bool? Designated { get; set; }
 
                     [NameInMap("Dimension")]
                     [Validation(Required=false)]
                     public int? Dimension { get; set; }
 
-                    [NameInMap("Designated")]
+                    [NameInMap("Limit")]
                     [Validation(Required=false)]
-                    public bool? Designated { get; set; }
+                    public int? Limit { get; set; }
+
+                    [NameInMap("NumberOfDraws")]
+                    [Validation(Required=false)]
+                    public int? NumberOfDraws { get; set; }
+
+                    [NameInMap("Proportion")]
+                    [Validation(Required=false)]
+                    public float? Proportion { get; set; }
 
                     [NameInMap("RandomInspectionNumber")]
                     [Validation(Required=false)]
@@ -165,14 +126,53 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent> SamplingModeAgent { get; set; }
                         public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent : TeaModel {
-                            public string AgentName { get; set; }
                             public string AgentId { get; set; }
+                            public string AgentName { get; set; }
                         }
                     };
 
                 }
+                public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups SkillGroups { get; set; }
+                public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups : TeaModel {
+                    [NameInMap("SkillGroup")]
+                    [Validation(Required=false)]
+                    public List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroupsSkillGroup> SkillGroup { get; set; }
+                    public class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroupsSkillGroup : TeaModel {
+                        [NameInMap("SkillId")]
+                        [Validation(Required=false)]
+                        public string SkillId { get; set; }
+
+                        [NameInMap("SkillName")]
+                        [Validation(Required=false)]
+                        public string SkillName { get; set; }
+
+                    }
+
+                }
+                public string SkillGroupsStr { get; set; }
+                public string UpdateTime { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

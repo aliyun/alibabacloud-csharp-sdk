@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetRuleCategoryResponseBodyData Data { get; set; }
+        public class GetRuleCategoryResponseBodyData : TeaModel {
+            [NameInMap("RuleCountInfo")]
+            [Validation(Required=false)]
+            public List<GetRuleCategoryResponseBodyDataRuleCountInfo> RuleCountInfo { get; set; }
+            public class GetRuleCategoryResponseBodyDataRuleCountInfo : TeaModel {
+                public bool? Select { get; set; }
+                public int? Type { get; set; }
+                public string TypeName { get; set; }
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,20 +38,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetRuleCategoryResponseBodyData Data { get; set; }
-        public class GetRuleCategoryResponseBodyData : TeaModel {
-            [NameInMap("RuleCountInfo")]
-            [Validation(Required=false)]
-            public List<GetRuleCategoryResponseBodyDataRuleCountInfo> RuleCountInfo { get; set; }
-            public class GetRuleCategoryResponseBodyDataRuleCountInfo : TeaModel {
-                public int? Type { get; set; }
-                public string TypeName { get; set; }
-                public bool? Select { get; set; }
-            }
-        };
 
     }
 

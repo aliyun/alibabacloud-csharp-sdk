@@ -13,6 +13,23 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetCustomizationConfigListResponseBodyData Data { get; set; }
+        public class GetCustomizationConfigListResponseBodyData : TeaModel {
+            [NameInMap("ModelCustomizationDataSetPo")]
+            [Validation(Required=false)]
+            public List<GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo> ModelCustomizationDataSetPo { get; set; }
+            public class GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo : TeaModel {
+                public string CreateTime { get; set; }
+                public string ModeCustomizationId { get; set; }
+                public long? ModelId { get; set; }
+                public string ModelName { get; set; }
+                public int? ModelStatus { get; set; }
+                public int? TaskType { get; set; }
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,23 +41,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetCustomizationConfigListResponseBodyData Data { get; set; }
-        public class GetCustomizationConfigListResponseBodyData : TeaModel {
-            [NameInMap("ModelCustomizationDataSetPo")]
-            [Validation(Required=false)]
-            public List<GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo> ModelCustomizationDataSetPo { get; set; }
-            public class GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo : TeaModel {
-                public int? TaskType { get; set; }
-                public string CreateTime { get; set; }
-                public int? ModelStatus { get; set; }
-                public string ModelName { get; set; }
-                public long? ModelId { get; set; }
-                public string ModeCustomizationId { get; set; }
-            }
-        };
 
     }
 

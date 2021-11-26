@@ -1,3 +1,6 @@
+2021-11-26 Version: 4.1.0
+- Update GetSyncResult.
+
 2021-07-19 Version: 1.0.2
 - Generated csharp 2019-01-15 for Qualitycheck.
 
