@@ -39,10 +39,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
     }
 
 }
