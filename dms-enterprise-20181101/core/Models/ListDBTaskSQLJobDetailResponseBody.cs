@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public long? JobId { get; set; }
 
+            [NameInMap("Log")]
+            [Validation(Required=false)]
+            public string Log { get; set; }
+
             [NameInMap("Logic")]
             [Validation(Required=false)]
             public bool? Logic { get; set; }

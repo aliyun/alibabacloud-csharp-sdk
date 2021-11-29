@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ApproveOrderRequest : TeaModel {
-        [NameInMap("ApprovalType")]
+    public class ModifyDataCorrectExecSQLRequest : TeaModel {
+        [NameInMap("ExecSQL")]
         [Validation(Required=false)]
-        public string ApprovalType { get; set; }
+        public string ExecSQL { get; set; }
 
-        [NameInMap("Comment")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public long? OrderId { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
-
-        [NameInMap("WorkflowInstanceId")]
-        [Validation(Required=false)]
-        public long? WorkflowInstanceId { get; set; }
 
     }
 

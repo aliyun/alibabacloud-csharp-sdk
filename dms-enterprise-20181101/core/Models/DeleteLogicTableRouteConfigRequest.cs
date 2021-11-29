@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class ApproveOrderRequest : TeaModel {
-        [NameInMap("ApprovalType")]
+    public class DeleteLogicTableRouteConfigRequest : TeaModel {
+        [NameInMap("RouteKey")]
         [Validation(Required=false)]
-        public string ApprovalType { get; set; }
+        public string RouteKey { get; set; }
 
-        [NameInMap("Comment")]
+        [NameInMap("TableId")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public long? TableId { get; set; }
 
         [NameInMap("Tid")]
         [Validation(Required=false)]
         public long? Tid { get; set; }
-
-        [NameInMap("WorkflowInstanceId")]
-        [Validation(Required=false)]
-        public long? WorkflowInstanceId { get; set; }
 
     }
 
