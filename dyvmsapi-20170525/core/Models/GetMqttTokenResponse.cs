@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class UndoRtcNumberAuthResponse : TeaModel {
+    public class GetMqttTokenResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public UndoRtcNumberAuthResponseBody Body { get; set; }
+        public GetMqttTokenResponseBody Body { get; set; }
 
     }
 

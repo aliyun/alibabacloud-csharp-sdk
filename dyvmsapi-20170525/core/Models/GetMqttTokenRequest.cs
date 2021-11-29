@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class CreateSipAccountRequest : TeaModel {
-        [NameInMap("BusinessKey")]
-        [Validation(Required=false)]
-        public string BusinessKey { get; set; }
-
+    public class GetMqttTokenRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("PartnerId")]
-        [Validation(Required=false)]
-        public long? PartnerId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class VoipAddAccountResponse : TeaModel {
+    public class RefreshMqttTokenResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public VoipAddAccountResponseBody Body { get; set; }
+        public RefreshMqttTokenResponseBody Body { get; set; }
 
     }
 
