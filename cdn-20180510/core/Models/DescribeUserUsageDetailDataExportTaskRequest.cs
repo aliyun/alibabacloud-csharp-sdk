@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public string PageSize { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
     }
 

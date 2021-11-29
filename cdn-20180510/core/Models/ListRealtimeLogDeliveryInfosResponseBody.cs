@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListRealtimeLogDeliveryInfosResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public ListRealtimeLogDeliveryInfosResponseBodyContent Content { get; set; }
@@ -26,6 +22,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string Region { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

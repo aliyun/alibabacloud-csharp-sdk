@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ModifyDomainCustomLogConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConfigId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string ConfigId { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("ConfigId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string ConfigId { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

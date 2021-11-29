@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeUserVipsByDomainRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Available")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Available { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("Available")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Available { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

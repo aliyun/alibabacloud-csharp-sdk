@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetHttpErrorPageConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConfigId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public long? ConfigId { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageUrl")]
         [Validation(Required=false)]
         public string PageUrl { get; set; }
-
-        [NameInMap("ConfigId")]
-        [Validation(Required=false)]
-        public long? ConfigId { get; set; }
 
     }
 

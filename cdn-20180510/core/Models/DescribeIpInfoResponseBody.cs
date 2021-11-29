@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string CdnIp { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("ISP")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("RegionEname")]
-        [Validation(Required=false)]
-        public string RegionEname { get; set; }
-
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
+        public string ISP { get; set; }
 
         [NameInMap("IspEname")]
         [Validation(Required=false)]
         public string IspEname { get; set; }
 
-        [NameInMap("ISP")]
+        [NameInMap("Region")]
         [Validation(Required=false)]
-        public string ISP { get; set; }
+        public string Region { get; set; }
+
+        [NameInMap("RegionEname")]
+        [Validation(Required=false)]
+        public string RegionEname { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

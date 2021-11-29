@@ -21,9 +21,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeConfigOfVersionResponseBodyVersionConfigsVersionConfig> VersionConfig { get; set; }
             public class DescribeConfigOfVersionResponseBodyVersionConfigsVersionConfig : TeaModel {
-                public string Status { get; set; }
                 public string ConfigId { get; set; }
-                public string FunctionName { get; set; }
                 public DescribeConfigOfVersionResponseBodyVersionConfigsVersionConfigFunctionArgs FunctionArgs { get; set; }
                 public class DescribeConfigOfVersionResponseBodyVersionConfigsVersionConfigFunctionArgs : TeaModel {
                     [NameInMap("FunctionArg")]
@@ -41,6 +39,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     }
 
                 }
+                public string FunctionName { get; set; }
+                public string Status { get; set; }
             }
         };
 

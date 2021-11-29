@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnWafDomainRequest : TeaModel {
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -17,9 +21,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string ResourceGroupId { get; set; }
 
     }
 

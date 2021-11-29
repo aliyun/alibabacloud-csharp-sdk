@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeActiveVersionOfConfigGroupRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("ConfigGroupId")]
         [Validation(Required=false)]
         public string ConfigGroupId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string Env { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

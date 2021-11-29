@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainRealTimeReqHitRateDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDomainRealTimeReqHitRateDataResponseBodyData Data { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 public string TimeStamp { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

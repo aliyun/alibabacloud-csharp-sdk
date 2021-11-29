@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetReqAuthConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AuthRemoteDesc")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string AuthRemoteDesc { get; set; }
 
         [NameInMap("AuthType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         [NameInMap("Key1")]
         [Validation(Required=false)]
@@ -33,13 +29,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Key2 { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         [NameInMap("TimeOut")]
         [Validation(Required=false)]
         public string TimeOut { get; set; }
-
-        [NameInMap("AuthRemoteDesc")]
-        [Validation(Required=false)]
-        public string AuthRemoteDesc { get; set; }
 
     }
 

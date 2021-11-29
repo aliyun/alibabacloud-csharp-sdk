@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainSrcTopUrlVisitResponseBody : TeaModel {
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("AllUrlList")]
         [Validation(Required=false)]
         public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList AllUrlList { get; set; }
@@ -30,12 +18,24 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainSrcTopUrlVisitResponseBodyAllUrlListUrlList> UrlList { get; set; }
             public class DescribeDomainSrcTopUrlVisitResponseBodyAllUrlListUrlList : TeaModel {
                 public string Flow { get; set; }
-                public string UrlDetail { get; set; }
                 public float? FlowProportion { get; set; }
+                public string UrlDetail { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
             }
         };
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("Url200List")]
         [Validation(Required=false)]
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainSrcTopUrlVisitResponseBodyUrl200ListUrlList> UrlList { get; set; }
             public class DescribeDomainSrcTopUrlVisitResponseBodyUrl200ListUrlList : TeaModel {
                 public string Flow { get; set; }
-                public string UrlDetail { get; set; }
                 public float? FlowProportion { get; set; }
+                public string UrlDetail { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
             }
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainSrcTopUrlVisitResponseBodyUrl300ListUrlList> UrlList { get; set; }
             public class DescribeDomainSrcTopUrlVisitResponseBodyUrl300ListUrlList : TeaModel {
                 public string Flow { get; set; }
-                public string UrlDetail { get; set; }
                 public float? FlowProportion { get; set; }
+                public string UrlDetail { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
             }
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainSrcTopUrlVisitResponseBodyUrl400ListUrlList> UrlList { get; set; }
             public class DescribeDomainSrcTopUrlVisitResponseBodyUrl400ListUrlList : TeaModel {
                 public string Flow { get; set; }
-                public string UrlDetail { get; set; }
                 public float? FlowProportion { get; set; }
+                public string UrlDetail { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
             }
@@ -94,8 +94,8 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             public List<DescribeDomainSrcTopUrlVisitResponseBodyUrl500ListUrlList> UrlList { get; set; }
             public class DescribeDomainSrcTopUrlVisitResponseBodyUrl500ListUrlList : TeaModel {
                 public string Flow { get; set; }
-                public string UrlDetail { get; set; }
                 public float? FlowProportion { get; set; }
+                public string UrlDetail { get; set; }
                 public string VisitData { get; set; }
                 public float? VisitProportion { get; set; }
             }

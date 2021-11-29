@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetDomainServerCertificateRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
@@ -29,21 +17,33 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string CertType { get; set; }
 
-        [NameInMap("ServerCertificateStatus")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string ServerCertificateStatus { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("ServerCertificate")]
+        [NameInMap("ForceSet")]
         [Validation(Required=false)]
-        public string ServerCertificate { get; set; }
+        public string ForceSet { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
 
-        [NameInMap("ForceSet")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string ForceSet { get; set; }
+        public string SecurityToken { get; set; }
+
+        [NameInMap("ServerCertificate")]
+        [Validation(Required=false)]
+        public string ServerCertificate { get; set; }
+
+        [NameInMap("ServerCertificateStatus")]
+        [Validation(Required=false)]
+        public string ServerCertificateStatus { get; set; }
 
     }
 

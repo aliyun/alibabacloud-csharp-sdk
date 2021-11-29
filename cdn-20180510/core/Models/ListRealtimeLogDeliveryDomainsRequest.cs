@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListRealtimeLogDeliveryDomainsRequest : TeaModel {
+        [NameInMap("Logstore")]
+        [Validation(Required=false)]
+        public string Logstore { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
-
-        [NameInMap("Logstore")]
-        [Validation(Required=false)]
-        public string Logstore { get; set; }
 
         [NameInMap("Region")]
         [Validation(Required=false)]

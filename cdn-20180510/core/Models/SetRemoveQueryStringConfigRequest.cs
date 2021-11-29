@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetRemoveQueryStringConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AliRemoveArgs")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string AliRemoveArgs { get; set; }
 
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public long? ConfigId { get; set; }
 
-        [NameInMap("AliRemoveArgs")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string AliRemoveArgs { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("KeepOssArgs")]
         [Validation(Required=false)]
         public string KeepOssArgs { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

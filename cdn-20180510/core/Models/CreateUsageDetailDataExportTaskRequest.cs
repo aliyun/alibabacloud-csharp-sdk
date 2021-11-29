@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class CreateUsageDetailDataExportTaskRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DomainNames")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string DomainNames { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -25,21 +21,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Group { get; set; }
 
-        [NameInMap("DomainNames")]
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public string DomainNames { get; set; }
+        public string Language { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
-        [NameInMap("Language")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string Language { get; set; }
+        public string Type { get; set; }
 
     }
 

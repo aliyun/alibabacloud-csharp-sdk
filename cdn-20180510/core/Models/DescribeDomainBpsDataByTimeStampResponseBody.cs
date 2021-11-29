@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainBpsDataByTimeStampResponseBody : TeaModel {
-        [NameInMap("TimeStamp")]
-        [Validation(Required=false)]
-        public string TimeStamp { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
         [NameInMap("BpsDataList")]
         [Validation(Required=false)]
         public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataList BpsDataList { get; set; }
@@ -29,12 +17,24 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel> BpsDataModel { get; set; }
             public class DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel : TeaModel {
+                public long? Bps { get; set; }
+                public string IspName { get; set; }
                 public string LocationName { get; set; }
                 public string TimeStamp { get; set; }
-                public string IspName { get; set; }
-                public long? Bps { get; set; }
             }
         };
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TimeStamp")]
+        [Validation(Required=false)]
+        public string TimeStamp { get; set; }
 
     }
 

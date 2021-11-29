@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetErrorPageConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CustomPageUrl")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string CustomPageUrl { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("PageType")]
         [Validation(Required=false)]
         public string PageType { get; set; }
 
-        [NameInMap("CustomPageUrl")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string CustomPageUrl { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

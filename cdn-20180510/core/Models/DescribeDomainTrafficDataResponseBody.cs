@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainTrafficDataResponseBody : TeaModel {
-        [NameInMap("EndTime")]
+        [NameInMap("DataInterval")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DataInterval { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("DataInterval")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string DataInterval { get; set; }
+        public string EndTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
-                public string HttpsDomesticValue { get; set; }
-                public string Value { get; set; }
-                public string OverseasValue { get; set; }
-                public string HttpsValue { get; set; }
-                public string HttpsOverseasValue { get; set; }
-                public string TimeStamp { get; set; }
                 public string DomesticValue { get; set; }
+                public string HttpsDomesticValue { get; set; }
+                public string HttpsOverseasValue { get; set; }
+                public string HttpsValue { get; set; }
+                public string OverseasValue { get; set; }
+                public string TimeStamp { get; set; }
+                public string Value { get; set; }
             }
         };
 

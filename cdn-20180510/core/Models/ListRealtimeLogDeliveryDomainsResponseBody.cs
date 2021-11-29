@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListRealtimeLogDeliveryDomainsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Content")]
         [Validation(Required=false)]
         public ListRealtimeLogDeliveryDomainsResponseBodyContent Content { get; set; }
@@ -21,10 +17,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<ListRealtimeLogDeliveryDomainsResponseBodyContentDomains> Domains { get; set; }
             public class ListRealtimeLogDeliveryDomainsResponseBodyContentDomains : TeaModel {
-                public string Status { get; set; }
                 public string DomainName { get; set; }
+                public string Status { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

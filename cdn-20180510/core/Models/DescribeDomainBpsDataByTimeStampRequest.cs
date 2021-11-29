@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainBpsDataByTimeStampRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("TimePoint")]
-        [Validation(Required=false)]
-        public string TimePoint { get; set; }
 
         [NameInMap("IspNames")]
         [Validation(Required=false)]
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("LocationNames")]
         [Validation(Required=false)]
         public string LocationNames { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("TimePoint")]
+        [Validation(Required=false)]
+        public string TimePoint { get; set; }
 
     }
 

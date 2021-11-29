@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("Remark")]
         [Validation(Required=false)]
-        public string Tag { get; set; }
+        public string Remark { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Remark")]
-        [Validation(Required=false)]
-        public string Remark { get; set; }
-
         [NameInMap("Sample")]
         [Validation(Required=false)]
         public string Sample { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
 
     }
 

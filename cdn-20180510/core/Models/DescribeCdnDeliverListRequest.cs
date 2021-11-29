@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnDeliverListRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DeliverId")]
         [Validation(Required=false)]
         public long? DeliverId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeTopDomainsByFlowResponseBody : TeaModel {
+        [NameInMap("DomainCount")]
+        [Validation(Required=false)]
+        public long? DomainCount { get; set; }
+
         [NameInMap("DomainOnlineCount")]
         [Validation(Required=false)]
         public long? DomainOnlineCount { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DomainCount")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public long? DomainCount { get; set; }
+        public string StartTime { get; set; }
 
         [NameInMap("TopDomains")]
         [Validation(Required=false)]
@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeTopDomainsByFlowResponseBodyTopDomainsTopDomain> TopDomain { get; set; }
             public class DescribeTopDomainsByFlowResponseBodyTopDomainsTopDomain : TeaModel {
+                public string DomainName { get; set; }
                 public float? MaxBps { get; set; }
+                public string MaxBpsTime { get; set; }
                 public long? Rank { get; set; }
                 public long? TotalAccess { get; set; }
-                public string TrafficPercent { get; set; }
-                public string DomainName { get; set; }
                 public string TotalTraffic { get; set; }
-                public string MaxBpsTime { get; set; }
+                public string TrafficPercent { get; set; }
             }
         };
 

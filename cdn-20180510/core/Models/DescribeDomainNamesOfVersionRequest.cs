@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("VersionId")]
-        [Validation(Required=false)]
-        public string VersionId { get; set; }
-
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("VersionId")]
+        [Validation(Required=false)]
+        public string VersionId { get; set; }
 
     }
 

@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListFCTriggerResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FCTriggers")]
         [Validation(Required=false)]
         public List<ListFCTriggerResponseBodyFCTriggers> FCTriggers { get; set; }
         public class ListFCTriggerResponseBodyFCTriggers : TeaModel {
-            [NameInMap("TriggerARN")]
+            [NameInMap("EventMetaName")]
             [Validation(Required=false)]
-            public string TriggerARN { get; set; }
+            public string EventMetaName { get; set; }
+
+            [NameInMap("EventMetaVersion")]
+            [Validation(Required=false)]
+            public string EventMetaVersion { get; set; }
+
+            [NameInMap("Notes")]
+            [Validation(Required=false)]
+            public string Notes { get; set; }
 
             [NameInMap("RoleARN")]
             [Validation(Required=false)]
@@ -29,19 +33,15 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public string SourceArn { get; set; }
 
-            [NameInMap("Notes")]
+            [NameInMap("TriggerARN")]
             [Validation(Required=false)]
-            public string Notes { get; set; }
-
-            [NameInMap("EventMetaName")]
-            [Validation(Required=false)]
-            public string EventMetaName { get; set; }
-
-            [NameInMap("EventMetaVersion")]
-            [Validation(Required=false)]
-            public string EventMetaVersion { get; set; }
+            public string TriggerARN { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetSourceHostConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("BackSrcDomain")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string BackSrcDomain { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -25,9 +21,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Enable { get; set; }
 
-        [NameInMap("BackSrcDomain")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string BackSrcDomain { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

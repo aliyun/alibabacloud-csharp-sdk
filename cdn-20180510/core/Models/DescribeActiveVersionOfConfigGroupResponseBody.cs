@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeActiveVersionOfConfigGroupResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("BaseVersionId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string BaseVersionId { get; set; }
 
-        [NameInMap("UpdateTime")]
+        [NameInMap("ConfigGroupId")]
         [Validation(Required=false)]
-        public string UpdateTime { get; set; }
+        public string ConfigGroupId { get; set; }
+
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Operator")]
+        [Validation(Required=false)]
+        public string Operator { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -25,29 +37,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? SeqId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string Status { get; set; }
 
-        [NameInMap("CreateTime")]
+        [NameInMap("UpdateTime")]
         [Validation(Required=false)]
-        public string CreateTime { get; set; }
+        public string UpdateTime { get; set; }
 
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
-
-        [NameInMap("ConfigGroupId")]
-        [Validation(Required=false)]
-        public string ConfigGroupId { get; set; }
-
-        [NameInMap("Operator")]
-        [Validation(Required=false)]
-        public string Operator { get; set; }
-
-        [NameInMap("BaseVersionId")]
-        [Validation(Required=false)]
-        public string BaseVersionId { get; set; }
 
     }
 

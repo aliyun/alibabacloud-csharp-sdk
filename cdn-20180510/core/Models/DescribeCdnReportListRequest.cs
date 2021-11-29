@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? ReportId { get; set; }
 
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("Permission")]
-        [Validation(Required=false)]
-        public string Permission { get; set; }
-
     }
 
 }

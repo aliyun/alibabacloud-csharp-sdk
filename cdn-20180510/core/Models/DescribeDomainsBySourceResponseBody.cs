@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainsBySourceResponseBody : TeaModel {
-        [NameInMap("Sources")]
-        [Validation(Required=false)]
-        public string Sources { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainsList")]
         [Validation(Required=false)]
         public DescribeDomainsBySourceResponseBodyDomainsList DomainsList { get; set; }
@@ -25,20 +17,19 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainsBySourceResponseBodyDomainsListDomainsData> DomainsData { get; set; }
             public class DescribeDomainsBySourceResponseBodyDomainsListDomainsData : TeaModel {
-                public string Source { get; set; }
                 public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos DomainInfos { get; set; }
                 public class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos : TeaModel {
                     [NameInMap("domainInfo")]
                     [Validation(Required=false)]
                     public List<DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo> DomainInfo { get; set; }
                     public class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo : TeaModel {
-                        [NameInMap("Status")]
+                        [NameInMap("CdnType")]
                         [Validation(Required=false)]
-                        public string Status { get; set; }
+                        public string CdnType { get; set; }
 
-                        [NameInMap("UpdateTime")]
+                        [NameInMap("CreateTime")]
                         [Validation(Required=false)]
-                        public string UpdateTime { get; set; }
+                        public string CreateTime { get; set; }
 
                         [NameInMap("DomainCname")]
                         [Validation(Required=false)]
@@ -48,9 +39,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                         [Validation(Required=false)]
                         public string DomainName { get; set; }
 
-                        [NameInMap("CreateTime")]
+                        [NameInMap("Status")]
                         [Validation(Required=false)]
-                        public string CreateTime { get; set; }
+                        public string Status { get; set; }
+
+                        [NameInMap("UpdateTime")]
+                        [Validation(Required=false)]
+                        public string UpdateTime { get; set; }
 
                     }
 
@@ -62,8 +57,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                     public List<string> DomainNames { get; set; }
 
                 }
+                public string Source { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Sources")]
+        [Validation(Required=false)]
+        public string Sources { get; set; }
 
     }
 

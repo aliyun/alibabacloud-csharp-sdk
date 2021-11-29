@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("TimePoint")]
-        [Validation(Required=false)]
-        public string TimePoint { get; set; }
-
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
+
+        [NameInMap("TimePoint")]
+        [Validation(Required=false)]
+        public string TimePoint { get; set; }
 
     }
 

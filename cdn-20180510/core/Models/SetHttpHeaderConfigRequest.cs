@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetHttpHeaderConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConfigId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public long? ConfigId { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -29,9 +25,13 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string HeaderValue { get; set; }
 
-        [NameInMap("ConfigId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public long? ConfigId { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

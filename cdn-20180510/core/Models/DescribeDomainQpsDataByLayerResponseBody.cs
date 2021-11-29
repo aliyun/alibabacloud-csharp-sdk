@@ -9,29 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainQpsDataByLayerResponseBody : TeaModel {
-        [NameInMap("EndTime")]
+        [NameInMap("DataInterval")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Layer")]
-        [Validation(Required=false)]
-        public string Layer { get; set; }
+        public string DataInterval { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("DataInterval")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string DataInterval { get; set; }
+        public string EndTime { get; set; }
+
+        [NameInMap("Layer")]
+        [Validation(Required=false)]
+        public string Layer { get; set; }
 
         [NameInMap("QpsDataInterval")]
         [Validation(Required=false)]
@@ -41,15 +33,23 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule : TeaModel {
-                public string Value { get; set; }
-                public string AccValue { get; set; }
                 public string AccDomesticValue { get; set; }
-                public string OverseasValue { get; set; }
                 public string AccOverseasValue { get; set; }
-                public string TimeStamp { get; set; }
+                public string AccValue { get; set; }
                 public string DomesticValue { get; set; }
+                public string OverseasValue { get; set; }
+                public string TimeStamp { get; set; }
+                public string Value { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

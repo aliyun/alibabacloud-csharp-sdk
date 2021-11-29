@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class ListFCTriggerRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("EventMetaName")]
         [Validation(Required=false)]
         public string EventMetaName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("EventMetaVersion")]
         [Validation(Required=false)]
         public string EventMetaVersion { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

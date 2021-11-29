@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class PushObjectCacheRequest : TeaModel {
+        [NameInMap("Area")]
+        [Validation(Required=false)]
+        public string Area { get; set; }
+
+        [NameInMap("ObjectPath")]
+        [Validation(Required=false)]
+        public string ObjectPath { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("ObjectPath")]
-        [Validation(Required=false)]
-        public string ObjectPath { get; set; }
-
-        [NameInMap("Area")]
-        [Validation(Required=false)]
-        public string Area { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeCdnCertificateDetailRequest : TeaModel {
+        [NameInMap("CertName")]
+        [Validation(Required=false)]
+        public string CertName { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("CertName")]
-        [Validation(Required=false)]
-        public string CertName { get; set; }
 
     }
 

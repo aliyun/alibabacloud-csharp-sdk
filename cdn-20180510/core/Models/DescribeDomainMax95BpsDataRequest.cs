@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainMax95BpsDataRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Cycle")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string Cycle { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
         [NameInMap("TimePoint")]
         [Validation(Required=false)]
         public string TimePoint { get; set; }
-
-        [NameInMap("Cycle")]
-        [Validation(Required=false)]
-        public string Cycle { get; set; }
 
     }
 

@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetConfigOfVersionRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConfigId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string ConfigId { get; set; }
+
+        [NameInMap("FunctionArgs")]
+        [Validation(Required=false)]
+        public string FunctionArgs { get; set; }
+
+        [NameInMap("FunctionId")]
+        [Validation(Required=false)]
+        public long? FunctionId { get; set; }
+
+        [NameInMap("FunctionMatches")]
+        [Validation(Required=false)]
+        public string FunctionMatches { get; set; }
+
+        [NameInMap("FunctionName")]
+        [Validation(Required=false)]
+        public string FunctionName { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
@@ -24,26 +44,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
-
-        [NameInMap("ConfigId")]
-        [Validation(Required=false)]
-        public string ConfigId { get; set; }
-
-        [NameInMap("FunctionId")]
-        [Validation(Required=false)]
-        public long? FunctionId { get; set; }
-
-        [NameInMap("FunctionName")]
-        [Validation(Required=false)]
-        public string FunctionName { get; set; }
-
-        [NameInMap("FunctionArgs")]
-        [Validation(Required=false)]
-        public string FunctionArgs { get; set; }
-
-        [NameInMap("FunctionMatches")]
-        [Validation(Required=false)]
-        public string FunctionMatches { get; set; }
 
     }
 

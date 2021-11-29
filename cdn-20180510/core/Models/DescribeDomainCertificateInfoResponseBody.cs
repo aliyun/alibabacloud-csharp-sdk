@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainCertificateInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
         public DescribeDomainCertificateInfoResponseBodyCertInfos CertInfos { get; set; }
@@ -21,21 +17,25 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo : TeaModel {
+                public string CertDomainName { get; set; }
                 public string CertExpireTime { get; set; }
                 public string CertLife { get; set; }
-                public string Status { get; set; }
-                public string CertUpdateTime { get; set; }
-                public string CertDomainName { get; set; }
-                public string ServerCertificateStatus { get; set; }
+                public string CertName { get; set; }
                 public string CertOrg { get; set; }
-                public string DomainName { get; set; }
                 public string CertStartTime { get; set; }
                 public string CertType { get; set; }
-                public string CertName { get; set; }
+                public string CertUpdateTime { get; set; }
                 public string DomainCnameStatus { get; set; }
+                public string DomainName { get; set; }
                 public string ServerCertificate { get; set; }
+                public string ServerCertificateStatus { get; set; }
+                public string Status { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

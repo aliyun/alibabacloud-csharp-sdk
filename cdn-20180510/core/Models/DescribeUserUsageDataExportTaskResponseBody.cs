@@ -17,15 +17,6 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage UsageDataPerPage { get; set; }
         public class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage : TeaModel {
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
             [NameInMap("Data")]
             [Validation(Required=false)]
             public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData Data { get; set; }
@@ -34,29 +25,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 [Validation(Required=false)]
                 public List<DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem> DataItem { get; set; }
                 public class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem : TeaModel {
-                    [NameInMap("Status")]
+                    [NameInMap("CreateTime")]
                     [Validation(Required=false)]
-                    public string Status { get; set; }
-
-                    [NameInMap("UpdateTime")]
-                    [Validation(Required=false)]
-                    public string UpdateTime { get; set; }
+                    public string CreateTime { get; set; }
 
                     [NameInMap("DownloadUrl")]
                     [Validation(Required=false)]
                     public string DownloadUrl { get; set; }
 
-                    [NameInMap("CreateTime")]
+                    [NameInMap("Status")]
                     [Validation(Required=false)]
-                    public string CreateTime { get; set; }
-
-                    [NameInMap("TaskName")]
-                    [Validation(Required=false)]
-                    public string TaskName { get; set; }
-
-                    [NameInMap("TaskId")]
-                    [Validation(Required=false)]
-                    public string TaskId { get; set; }
+                    public string Status { get; set; }
 
                     [NameInMap("TaskConfig")]
                     [Validation(Required=false)]
@@ -70,9 +49,30 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                         public string StartTime { get; set; }
                     };
 
+                    [NameInMap("TaskId")]
+                    [Validation(Required=false)]
+                    public string TaskId { get; set; }
+
+                    [NameInMap("TaskName")]
+                    [Validation(Required=false)]
+                    public string TaskName { get; set; }
+
+                    [NameInMap("UpdateTime")]
+                    [Validation(Required=false)]
+                    public string UpdateTime { get; set; }
+
                 }
 
             }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
         };
 
     }

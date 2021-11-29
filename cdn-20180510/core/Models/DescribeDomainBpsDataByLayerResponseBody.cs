@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainBpsDataByLayerResponseBody : TeaModel {
-        [NameInMap("DataInterval")]
-        [Validation(Required=false)]
-        public string DataInterval { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("BpsDataInterval")]
         [Validation(Required=false)]
         public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval BpsDataInterval { get; set; }
@@ -25,11 +17,19 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule> DataModule { get; set; }
             public class DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule : TeaModel {
-                public string Value { get; set; }
-                public string TrafficValue { get; set; }
                 public string TimeStamp { get; set; }
+                public string TrafficValue { get; set; }
+                public string Value { get; set; }
             }
         };
+
+        [NameInMap("DataInterval")]
+        [Validation(Required=false)]
+        public string DataInterval { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

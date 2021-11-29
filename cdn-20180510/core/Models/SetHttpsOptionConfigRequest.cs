@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetHttpsOptionConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ConfigId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public long? ConfigId { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("ConfigId")]
-        [Validation(Required=false)]
-        public long? ConfigId { get; set; }
-
         [NameInMap("Http2")]
         [Validation(Required=false)]
         public string Http2 { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

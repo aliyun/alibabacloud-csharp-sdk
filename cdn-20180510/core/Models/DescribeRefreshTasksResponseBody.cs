@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeRefreshTasksResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
@@ -21,9 +17,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -33,15 +29,19 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
             [Validation(Required=false)]
             public List<DescribeRefreshTasksResponseBodyTasksCDNTask> CDNTask { get; set; }
             public class DescribeRefreshTasksResponseBodyTasksCDNTask : TeaModel {
-                public string Status { get; set; }
                 public string CreationTime { get; set; }
-                public string ObjectType { get; set; }
-                public string Process { get; set; }
                 public string Description { get; set; }
                 public string ObjectPath { get; set; }
+                public string ObjectType { get; set; }
+                public string Process { get; set; }
+                public string Status { get; set; }
                 public string TaskId { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

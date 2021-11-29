@@ -9,27 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class DescribeDomainNamesOfVersionResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Contents")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public List<DescribeDomainNamesOfVersionResponseBodyContents> Contents { get; set; }
+        public class DescribeDomainNamesOfVersionResponseBodyContents : TeaModel {
+            [NameInMap("DomainId")]
+            [Validation(Required=false)]
+            public string DomainId { get; set; }
+
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+
+        }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Contents")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public List<DescribeDomainNamesOfVersionResponseBodyContents> Contents { get; set; }
-        public class DescribeDomainNamesOfVersionResponseBodyContents : TeaModel {
-            [NameInMap("DomainName")]
-            [Validation(Required=false)]
-            public string DomainName { get; set; }
-
-            [NameInMap("DomainId")]
-            [Validation(Required=false)]
-            public string DomainId { get; set; }
-
-        }
+        public int? TotalCount { get; set; }
 
     }
 

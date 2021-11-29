@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class RefreshObjectCachesRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
         public string ObjectPath { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [NameInMap("ObjectType")]
         [Validation(Required=false)]
         public string ObjectType { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

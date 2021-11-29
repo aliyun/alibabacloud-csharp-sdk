@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class SetWaitingRoomConfigRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AllowPct")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public int? AllowPct { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("WaitUri")]
+        [NameInMap("GapTime")]
         [Validation(Required=false)]
-        public string WaitUri { get; set; }
-
-        [NameInMap("AllowPct")]
-        [Validation(Required=false)]
-        public int? AllowPct { get; set; }
+        public int? GapTime { get; set; }
 
         [NameInMap("MaxTimeWait")]
         [Validation(Required=false)]
         public int? MaxTimeWait { get; set; }
 
-        [NameInMap("GapTime")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public int? GapTime { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("WaitUri")]
+        [Validation(Required=false)]
+        public string WaitUri { get; set; }
 
         [NameInMap("WaitUrl")]
         [Validation(Required=false)]

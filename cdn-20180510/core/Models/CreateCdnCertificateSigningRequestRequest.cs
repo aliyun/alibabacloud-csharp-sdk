@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
     public class CreateCdnCertificateSigningRequestRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("City")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string City { get; set; }
 
         [NameInMap("CommonName")]
         [Validation(Required=false)]
         public string CommonName { get; set; }
 
-        [NameInMap("SANs")]
+        [NameInMap("Country")]
         [Validation(Required=false)]
-        public string SANs { get; set; }
+        public string Country { get; set; }
+
+        [NameInMap("Email")]
+        [Validation(Required=false)]
+        public string Email { get; set; }
 
         [NameInMap("Organization")]
         [Validation(Required=false)]
@@ -29,21 +33,17 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string OrganizationUnit { get; set; }
 
-        [NameInMap("Country")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Country { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SANs")]
+        [Validation(Required=false)]
+        public string SANs { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
-
-        [NameInMap("City")]
-        [Validation(Required=false)]
-        public string City { get; set; }
-
-        [NameInMap("Email")]
-        [Validation(Required=false)]
-        public string Email { get; set; }
 
     }
 
