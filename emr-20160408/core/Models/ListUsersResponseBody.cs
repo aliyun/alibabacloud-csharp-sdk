@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyUserListUser> User { get; set; }
             public class ListUsersResponseBodyUserListUser : TeaModel {
-                public string LinuxStatus { get; set; }
-                public string K8sStatus { get; set; }
-                public string KnoxStatus { get; set; }
                 public string GroupName { get; set; }
-                public string UserId { get; set; }
+                public string K8sStatus { get; set; }
                 public string KerberosStatus { get; set; }
+                public string KnoxStatus { get; set; }
+                public string LinuxStatus { get; set; }
+                public string UserId { get; set; }
                 public string UserName { get; set; }
             }
         };

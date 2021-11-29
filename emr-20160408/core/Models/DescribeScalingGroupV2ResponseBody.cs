@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeScalingGroupV2ResponseBody : TeaModel {
+        [NameInMap("ActiveStatus")]
+        [Validation(Required=false)]
+        public string ActiveStatus { get; set; }
+
+        [NameInMap("ConfigState")]
+        [Validation(Required=false)]
+        public string ConfigState { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -17,21 +25,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string HostGroupBizId { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("ConfigState")]
+        [NameInMap("ScalingGroupId")]
         [Validation(Required=false)]
-        public string ConfigState { get; set; }
+        public string ScalingGroupId { get; set; }
 
         [NameInMap("ScalingInMode")]
         [Validation(Required=false)]
         public string ScalingInMode { get; set; }
-
-        [NameInMap("ScalingGroupId")]
-        [Validation(Required=false)]
-        public string ScalingGroupId { get; set; }
 
         [NameInMap("ScalingMaxSize")]
         [Validation(Required=false)]
@@ -40,14 +48,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("ScalingMinSize")]
         [Validation(Required=false)]
         public int? ScalingMinSize { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("ActiveStatus")]
-        [Validation(Required=false)]
-        public string ActiveStatus { get; set; }
 
     }
 

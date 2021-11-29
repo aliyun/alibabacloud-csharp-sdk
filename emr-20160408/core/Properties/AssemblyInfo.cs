@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-emr")]
 [assembly: AssemblyDescription("Alibaba Cloud Emr (20160408) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("678472d0-4a4e-11eb-8797-0dda699da1e4")]
+[assembly: Guid("529a2390-5111-11ec-87ca-ab9f39c4ed83")]
 
 // Version information for an assembly consists of the following four values:
 //

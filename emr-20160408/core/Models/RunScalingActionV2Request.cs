@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class RunScalingActionV2Request : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ActionParam")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string ActionParam { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("ScalingActionType")]
         [Validation(Required=false)]
         public string ScalingActionType { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("ScalingGroupBizId")]
         [Validation(Required=false)]
         public string ScalingGroupBizId { get; set; }
-
-        [NameInMap("ActionParam")]
-        [Validation(Required=false)]
-        public string ActionParam { get; set; }
 
     }
 

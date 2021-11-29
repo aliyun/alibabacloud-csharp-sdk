@@ -9,29 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListClusterHostComponentRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
-
-        [NameInMap("HostInstanceId")]
-        [Validation(Required=false)]
-        public string HostInstanceId { get; set; }
-
-        [NameInMap("HostName")]
-        [Validation(Required=false)]
-        public string HostName { get; set; }
-
-        [NameInMap("ServiceName")]
-        [Validation(Required=false)]
-        public string ServiceName { get; set; }
 
         [NameInMap("ComponentName")]
         [Validation(Required=false)]
@@ -40,6 +20,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("ComponentStatus")]
         [Validation(Required=false)]
         public string ComponentStatus { get; set; }
+
+        [NameInMap("HostInstanceId")]
+        [Validation(Required=false)]
+        public string HostInstanceId { get; set; }
+
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
 
         [NameInMap("HostRole")]
         [Validation(Required=false)]
@@ -52,6 +40,18 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
 
     }
 

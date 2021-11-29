@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DeleteTagRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Category { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

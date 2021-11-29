@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListBackupsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public ListBackupsResponseBodyItems Items { get; set; }
@@ -33,12 +17,11 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListBackupsResponseBodyItemsItem> Item { get; set; }
             public class ListBackupsResponseBodyItemsItem : TeaModel {
-                public string Status { get; set; }
-                public string TarFileName { get; set; }
-                public string StorePath { get; set; }
-                public long? CreateTime { get; set; }
-                public string Md5 { get; set; }
                 public string BackupPlanId { get; set; }
+                public string ClusterId { get; set; }
+                public long? CreateTime { get; set; }
+                public string Id { get; set; }
+                public string Md5 { get; set; }
                 public ListBackupsResponseBodyItemsItemMetadataInfo MetadataInfo { get; set; }
                 public class ListBackupsResponseBodyItemsItemMetadataInfo : TeaModel {
                     [NameInMap("MetadataType")]
@@ -50,10 +33,27 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     public string Properties { get; set; }
 
                 }
-                public string Id { get; set; }
-                public string ClusterId { get; set; }
+                public string Status { get; set; }
+                public string StorePath { get; set; }
+                public string TarFileName { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class CreateLibraryRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("LibraryVersion")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public string LibraryVersion { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("LibraryVersion")]
+        [NameInMap("Properties")]
         [Validation(Required=false)]
-        public string LibraryVersion { get; set; }
+        public string Properties { get; set; }
 
-        [NameInMap("SourceType")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string SourceType { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("SourceLocation")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string SourceLocation { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
-        [NameInMap("Properties")]
+        [NameInMap("SourceLocation")]
         [Validation(Required=false)]
-        public string Properties { get; set; }
+        public string SourceLocation { get; set; }
+
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class UpdateDataSourceRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("Conf")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Conf { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -25,17 +25,17 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("Conf")]
-        [Validation(Required=false)]
-        public string Conf { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

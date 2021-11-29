@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeFlowNodeInstanceContainerLogResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("LogEnd")]
         [Validation(Required=false)]
         public bool? LogEnd { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 public string Content { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

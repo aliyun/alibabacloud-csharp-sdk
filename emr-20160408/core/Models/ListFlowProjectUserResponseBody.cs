@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowProjectUserResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Total")]
         [Validation(Required=false)]
@@ -33,12 +33,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListFlowProjectUserResponseBodyUsersUser> User { get; set; }
             public class ListFlowProjectUserResponseBodyUsersUser : TeaModel {
-                public string ProjectId { get; set; }
+                public string AccountUserId { get; set; }
                 public long? GmtCreate { get; set; }
                 public long? GmtModified { get; set; }
-                public string UserName { get; set; }
-                public string AccountUserId { get; set; }
                 public string OwnerId { get; set; }
+                public string ProjectId { get; set; }
+                public string UserName { get; set; }
             }
         };
 

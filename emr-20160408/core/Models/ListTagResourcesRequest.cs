@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListTagResourcesRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

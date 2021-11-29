@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class CreateBackupRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("MetadataType")]
         [Validation(Required=false)]
         public string MetadataType { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeClusterServiceConfigResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Config")]
         [Validation(Required=false)]
         public DescribeClusterServiceConfigResponseBodyConfig Config { get; set; }
@@ -20,15 +16,12 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("Applied")]
             [Validation(Required=false)]
             public string Applied { get; set; }
+            [NameInMap("Author")]
+            [Validation(Required=false)]
+            public string Author { get; set; }
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-            [NameInMap("ConfigVersion")]
-            [Validation(Required=false)]
-            public string ConfigVersion { get; set; }
             [NameInMap("ConfigValueList")]
             [Validation(Required=false)]
             public DescribeClusterServiceConfigResponseBodyConfigConfigValueList ConfigValueList { get; set; }
@@ -37,13 +30,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 [Validation(Required=false)]
                 public List<DescribeClusterServiceConfigResponseBodyConfigConfigValueListConfigValue> ConfigValue { get; set; }
                 public class DescribeClusterServiceConfigResponseBodyConfigConfigValueListConfigValue : TeaModel {
-                    [NameInMap("ConfigName")]
+                    [NameInMap("AllowCustom")]
                     [Validation(Required=false)]
-                    public string ConfigName { get; set; }
-
-                    [NameInMap("ScopeId")]
-                    [Validation(Required=false)]
-                    public long? ScopeId { get; set; }
+                    public bool? AllowCustom { get; set; }
 
                     [NameInMap("ConfigItemValueList")]
                     [Validation(Required=false)]
@@ -53,27 +42,34 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                         [Validation(Required=false)]
                         public List<DescribeClusterServiceConfigResponseBodyConfigConfigValueListConfigValueConfigItemValueListConfigItemValue> ConfigItemValue { get; set; }
                         public class DescribeClusterServiceConfigResponseBodyConfigConfigValueListConfigValueConfigItemValueListConfigItemValue : TeaModel {
-                            public string Value { get; set; }
                             public string Description { get; set; }
-                            public string ItemName { get; set; }
                             public bool? IsCustom { get; set; }
+                            public string ItemName { get; set; }
+                            public string Value { get; set; }
                         }
                     };
 
-                    [NameInMap("AllowCustom")]
+                    [NameInMap("ConfigName")]
                     [Validation(Required=false)]
-                    public bool? AllowCustom { get; set; }
+                    public string ConfigName { get; set; }
 
                     [NameInMap("Scope")]
                     [Validation(Required=false)]
                     public string Scope { get; set; }
 
+                    [NameInMap("ScopeId")]
+                    [Validation(Required=false)]
+                    public long? ScopeId { get; set; }
+
                 }
 
             }
-            [NameInMap("Author")]
+            [NameInMap("ConfigVersion")]
             [Validation(Required=false)]
-            public string Author { get; set; }
+            public string ConfigVersion { get; set; }
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
             [NameInMap("PropertyInfoList")]
             [Validation(Required=false)]
             public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoList PropertyInfoList { get; set; }
@@ -82,26 +78,17 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 [Validation(Required=false)]
                 public List<DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfo> PropertyInfo { get; set; }
                 public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfo : TeaModel {
-                    [NameInMap("DisplayName")]
+                    [NameInMap("Component")]
                     [Validation(Required=false)]
-                    public string DisplayName { get; set; }
-
-                    [NameInMap("Value")]
-                    [Validation(Required=false)]
-                    public string Value { get; set; }
-
-                    [NameInMap("PropertyTypes")]
-                    [Validation(Required=false)]
-                    public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyTypes PropertyTypes { get; set; }
-                    public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyTypes : TeaModel {
-                        [NameInMap("propertyType")]
-                        [Validation(Required=false)]
-                        public List<string> PropertyType { get; set; }
-                    };
+                    public string Component { get; set; }
 
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
+
+                    [NameInMap("DisplayName")]
+                    [Validation(Required=false)]
+                    public string DisplayName { get; set; }
 
                     [NameInMap("EffectWay")]
                     [Validation(Required=false)]
@@ -115,60 +102,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                         public string InvokeServiceName { get; set; }
                     };
 
-                    [NameInMap("Component")]
-                    [Validation(Required=false)]
-                    public string Component { get; set; }
-
-                    [NameInMap("PropertyValueAttributes")]
-                    [Validation(Required=false)]
-                    public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributes PropertyValueAttributes { get; set; }
-                    public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributes : TeaModel {
-                        [NameInMap("Type")]
-                        [Validation(Required=false)]
-                        public string Type { get; set; }
-                        [NameInMap("Maximum")]
-                        [Validation(Required=false)]
-                        public string Maximum { get; set; }
-                        [NameInMap("Unit")]
-                        [Validation(Required=false)]
-                        public string Unit { get; set; }
-                        [NameInMap("Hidden")]
-                        [Validation(Required=false)]
-                        public bool? Hidden { get; set; }
-                        [NameInMap("IncrememtStep")]
-                        [Validation(Required=false)]
-                        public string IncrememtStep { get; set; }
-                        [NameInMap("ReadOnly")]
-                        [Validation(Required=false)]
-                        public bool? ReadOnly { get; set; }
-                        [NameInMap("Entries")]
-                        [Validation(Required=false)]
-                        public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntries Entries { get; set; }
-                        public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntries : TeaModel {
-                            [NameInMap("ValueEntryInfo")]
-                            [Validation(Required=false)]
-                            public List<DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntriesValueEntryInfo> ValueEntryInfo { get; set; }
-                            public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntriesValueEntryInfo : TeaModel {
-                                [NameInMap("Value")]
-                                [Validation(Required=false)]
-                                public string Value { get; set; }
-
-                                [NameInMap("Description")]
-                                [Validation(Required=false)]
-                                public string Description { get; set; }
-
-                                [NameInMap("Label")]
-                                [Validation(Required=false)]
-                                public string Label { get; set; }
-
-                            }
-
-                        }
-                        [NameInMap("Mimimum")]
-                        [Validation(Required=false)]
-                        public string Mimimum { get; set; }
-                    };
-
                     [NameInMap("FileName")]
                     [Validation(Required=false)]
                     public string FileName { get; set; }
@@ -177,9 +110,72 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    [NameInMap("PropertyTypes")]
+                    [Validation(Required=false)]
+                    public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyTypes PropertyTypes { get; set; }
+                    public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyTypes : TeaModel {
+                        [NameInMap("propertyType")]
+                        [Validation(Required=false)]
+                        public List<string> PropertyType { get; set; }
+                    };
+
+                    [NameInMap("PropertyValueAttributes")]
+                    [Validation(Required=false)]
+                    public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributes PropertyValueAttributes { get; set; }
+                    public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributes : TeaModel {
+                        [NameInMap("Entries")]
+                        [Validation(Required=false)]
+                        public DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntries Entries { get; set; }
+                        public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntries : TeaModel {
+                            [NameInMap("ValueEntryInfo")]
+                            [Validation(Required=false)]
+                            public List<DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntriesValueEntryInfo> ValueEntryInfo { get; set; }
+                            public class DescribeClusterServiceConfigResponseBodyConfigPropertyInfoListPropertyInfoPropertyValueAttributesEntriesValueEntryInfo : TeaModel {
+                                [NameInMap("Description")]
+                                [Validation(Required=false)]
+                                public string Description { get; set; }
+
+                                [NameInMap("Label")]
+                                [Validation(Required=false)]
+                                public string Label { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
+                        }
+                        [NameInMap("Hidden")]
+                        [Validation(Required=false)]
+                        public bool? Hidden { get; set; }
+                        [NameInMap("IncrememtStep")]
+                        [Validation(Required=false)]
+                        public string IncrememtStep { get; set; }
+                        [NameInMap("Maximum")]
+                        [Validation(Required=false)]
+                        public string Maximum { get; set; }
+                        [NameInMap("Mimimum")]
+                        [Validation(Required=false)]
+                        public string Mimimum { get; set; }
+                        [NameInMap("ReadOnly")]
+                        [Validation(Required=false)]
+                        public bool? ReadOnly { get; set; }
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+                        [NameInMap("Unit")]
+                        [Validation(Required=false)]
+                        public string Unit { get; set; }
+                    };
+
                     [NameInMap("ServiceName")]
                     [Validation(Required=false)]
                     public string ServiceName { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
 
                 }
 
@@ -188,6 +184,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

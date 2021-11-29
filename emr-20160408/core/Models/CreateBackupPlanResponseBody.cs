@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class CreateBackupPlanResponseBody : TeaModel {
-        [NameInMap("RootPath")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string RootPath { get; set; }
+        public string ClusterId { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("RootPath")]
+        [Validation(Required=false)]
+        public string RootPath { get; set; }
 
     }
 

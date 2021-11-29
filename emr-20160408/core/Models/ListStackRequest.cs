@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListStackRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("StackName")]
         [Validation(Required=false)]
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("StackVersion")]
         [Validation(Required=false)]
         public string StackVersion { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
     }
 

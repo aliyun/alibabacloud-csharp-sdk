@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListRolesRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

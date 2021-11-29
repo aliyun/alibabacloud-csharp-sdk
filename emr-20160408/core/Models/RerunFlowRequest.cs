@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class RerunFlowRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("FlowInstanceId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string FlowInstanceId { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
-        [NameInMap("FlowInstanceId")]
-        [Validation(Required=false)]
-        public string FlowInstanceId { get; set; }
-
         [NameInMap("ReRunFail")]
         [Validation(Required=false)]
         public bool? ReRunFail { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

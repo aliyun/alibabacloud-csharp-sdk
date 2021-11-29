@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListClusterServiceConfigHistoryResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("ConfigHistoryList")]
         [Validation(Required=false)]
         public ListClusterServiceConfigHistoryResponseBodyConfigHistoryList ConfigHistoryList { get; set; }
@@ -21,22 +17,26 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterServiceConfigHistoryResponseBodyConfigHistoryListConfigHistory> ConfigHistory { get; set; }
             public class ListClusterServiceConfigHistoryResponseBodyConfigHistoryListConfigHistory : TeaModel {
-                public string OldValue { get; set; }
-                public string Comment { get; set; }
-                public long? CreateTime { get; set; }
-                public string Author { get; set; }
-                public string HostName { get; set; }
-                public string ConfigItemName { get; set; }
-                public string HostGroupId { get; set; }
-                public string NewValue { get; set; }
-                public string HostInstanceId { get; set; }
-                public string ConfigFileName { get; set; }
                 public bool? Applied { get; set; }
+                public string Author { get; set; }
+                public string Comment { get; set; }
+                public string ConfigFileName { get; set; }
+                public string ConfigItemName { get; set; }
                 public string ConfigVersion { get; set; }
-                public string ServiceName { get; set; }
+                public long? CreateTime { get; set; }
+                public string HostGroupId { get; set; }
                 public string HostGroupName { get; set; }
+                public string HostInstanceId { get; set; }
+                public string HostName { get; set; }
+                public string NewValue { get; set; }
+                public string OldValue { get; set; }
+                public string ServiceName { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

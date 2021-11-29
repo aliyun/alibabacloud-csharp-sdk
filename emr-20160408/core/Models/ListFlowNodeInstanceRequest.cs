@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowNodeInstanceRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public string ProjectId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
@@ -37,9 +25,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
         [NameInMap("StatusList")]
         [Validation(Required=false)]

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeScalingConfigItemV2ResponseBody : TeaModel {
+        [NameInMap("ConfigItemInformation")]
+        [Validation(Required=false)]
+        public string ConfigItemInformation { get; set; }
+
+        [NameInMap("ConfigItemType")]
+        [Validation(Required=false)]
+        public string ConfigItemType { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("ScalingGroupBizId")]
         [Validation(Required=false)]
         public string ScalingGroupBizId { get; set; }
-
-        [NameInMap("ConfigItemInformation")]
-        [Validation(Required=false)]
-        public string ConfigItemInformation { get; set; }
-
-        [NameInMap("ConfigItemType")]
-        [Validation(Required=false)]
-        public string ConfigItemType { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class KillFlowJobRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("JobInstanceId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string JobInstanceId { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
-        [NameInMap("JobInstanceId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string JobInstanceId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

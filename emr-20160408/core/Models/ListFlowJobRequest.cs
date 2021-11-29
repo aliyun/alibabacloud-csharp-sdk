@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowJobRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Adhoc")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public string ProjectId { get; set; }
+        public bool? Adhoc { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -25,14 +21,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("Adhoc")]
-        [Validation(Required=false)]
-        public bool? Adhoc { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

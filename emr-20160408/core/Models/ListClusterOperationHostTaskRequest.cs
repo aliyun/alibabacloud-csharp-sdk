@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListClusterOperationHostTaskRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
-
-        [NameInMap("OperationId")]
-        [Validation(Required=false)]
-        public string OperationId { get; set; }
 
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("OperationId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string OperationId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

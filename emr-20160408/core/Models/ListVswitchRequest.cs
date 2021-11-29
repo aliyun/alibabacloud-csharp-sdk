@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListVswitchRequest : TeaModel {
+        [NameInMap("DepositType")]
+        [Validation(Required=false)]
+        public string DepositType { get; set; }
+
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public string ProductType { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
-
-        [NameInMap("DepositType")]
-        [Validation(Required=false)]
-        public string DepositType { get; set; }
-
-        [NameInMap("ProductType")]
-        [Validation(Required=false)]
-        public string ProductType { get; set; }
 
     }
 

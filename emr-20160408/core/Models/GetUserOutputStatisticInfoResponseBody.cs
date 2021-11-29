@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<GetUserOutputStatisticInfoResponseBodyUserOutputListClusterStatUserOutput> ClusterStatUserOutput { get; set; }
             public class GetUserOutputStatisticInfoResponseBodyUserOutputListClusterStatUserOutput : TeaModel {
-                public string User { get; set; }
                 public long? BytesOutput { get; set; }
+                public string User { get; set; }
             }
         };
 

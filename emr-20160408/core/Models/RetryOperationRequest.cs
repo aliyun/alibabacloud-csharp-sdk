@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class RetryOperationRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("OperationId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string OperationId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("OperationId")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string OperationId { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

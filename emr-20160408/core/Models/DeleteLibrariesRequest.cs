@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DeleteLibrariesRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("LibraryBizIdList")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public List<string> LibraryBizIdList { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("LibraryBizIdList")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public List<string> LibraryBizIdList { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

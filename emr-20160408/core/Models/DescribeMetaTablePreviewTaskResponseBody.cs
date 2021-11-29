@@ -9,34 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeMetaTablePreviewTaskResponseBody : TeaModel {
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TaskProcess")]
-        [Validation(Required=false)]
-        public int? TaskProcess { get; set; }
-
-        [NameInMap("ExecuteTime")]
-        [Validation(Required=false)]
-        public long? ExecuteTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeMetaTablePreviewTaskResponseBodyData Data { get; set; }
         public class DescribeMetaTablePreviewTaskResponseBodyData : TeaModel {
+            [NameInMap("Headers")]
+            [Validation(Required=false)]
+            public DescribeMetaTablePreviewTaskResponseBodyDataHeaders Headers { get; set; }
+            public class DescribeMetaTablePreviewTaskResponseBodyDataHeaders : TeaModel {
+                [NameInMap("Header")]
+                [Validation(Required=false)]
+                public List<string> Header { get; set; }
+
+            }
             [NameInMap("Rows")]
             [Validation(Required=false)]
             public DescribeMetaTablePreviewTaskResponseBodyDataRows Rows { get; set; }
@@ -57,16 +42,31 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
 
             }
-            [NameInMap("Headers")]
-            [Validation(Required=false)]
-            public DescribeMetaTablePreviewTaskResponseBodyDataHeaders Headers { get; set; }
-            public class DescribeMetaTablePreviewTaskResponseBodyDataHeaders : TeaModel {
-                [NameInMap("Header")]
-                [Validation(Required=false)]
-                public List<string> Header { get; set; }
-
-            }
         };
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        [NameInMap("ExecuteTime")]
+        [Validation(Required=false)]
+        public long? ExecuteTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
+        [NameInMap("TaskProcess")]
+        [Validation(Required=false)]
+        public int? TaskProcess { get; set; }
 
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]

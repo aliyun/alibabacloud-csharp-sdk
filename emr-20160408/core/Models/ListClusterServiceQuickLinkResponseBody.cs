@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListClusterServiceQuickLinkResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("QuickLinkList")]
         [Validation(Required=false)]
         public ListClusterServiceQuickLinkResponseBodyQuickLinkList QuickLinkList { get; set; }
@@ -21,14 +17,18 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterServiceQuickLinkResponseBodyQuickLinkListQuickLink> QuickLink { get; set; }
             public class ListClusterServiceQuickLinkResponseBodyQuickLinkListQuickLink : TeaModel {
-                public string ServiceDisplayName { get; set; }
-                public string Type { get; set; }
-                public string Protocol { get; set; }
-                public string ServiceName { get; set; }
-                public string QuickLinkAddress { get; set; }
                 public string Port { get; set; }
+                public string Protocol { get; set; }
+                public string QuickLinkAddress { get; set; }
+                public string ServiceDisplayName { get; set; }
+                public string ServiceName { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

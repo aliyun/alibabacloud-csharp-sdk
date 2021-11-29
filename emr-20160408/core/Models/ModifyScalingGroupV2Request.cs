@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ModifyScalingGroupV2Request : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("ScalingGroupBizId")]
         [Validation(Required=false)]

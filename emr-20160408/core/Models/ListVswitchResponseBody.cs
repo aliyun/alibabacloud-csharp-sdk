@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListVswitchResponseBodyVswitchListVswitch> Vswitch { get; set; }
             public class ListVswitchResponseBodyVswitchListVswitch : TeaModel {
-                public string CreationTime { get; set; }
-                public string Status { get; set; }
-                public string VpcId { get; set; }
-                public bool? IsDefault { get; set; }
-                public string VSwitchId { get; set; }
-                public string CidrBlock { get; set; }
-                public string Description { get; set; }
                 public string AvailableIpAddressCount { get; set; }
+                public string CidrBlock { get; set; }
+                public string CreationTime { get; set; }
+                public string Description { get; set; }
+                public bool? IsDefault { get; set; }
                 public string ResourceGroupId { get; set; }
-                public string ZoneId { get; set; }
+                public string Status { get; set; }
+                public string VSwitchId { get; set; }
                 public string VSwitchName { get; set; }
+                public string VpcId { get; set; }
+                public string ZoneId { get; set; }
             }
         };
 

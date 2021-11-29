@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class UninstallLibrariesRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ClusterBizIdList")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<string> ClusterBizIdList { get; set; }
 
         [NameInMap("LibraryBizId")]
         [Validation(Required=false)]
         public string LibraryBizId { get; set; }
 
-        [NameInMap("ClusterBizIdList")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> ClusterBizIdList { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

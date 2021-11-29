@@ -9,9 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListClusterOperationHostTaskResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("ClusterOperationHostTaskList")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskList ClusterOperationHostTaskList { get; set; }
+        public class ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskList : TeaModel {
+            [NameInMap("ClusterOperationHostTask")]
+            [Validation(Required=false)]
+            public List<ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskListClusterOperationHostTask> ClusterOperationHostTask { get; set; }
+            public class ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskListClusterOperationHostTask : TeaModel {
+                public string Percentage { get; set; }
+                public string Status { get; set; }
+                public string TaskId { get; set; }
+                public string TaskName { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,24 +36,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("ClusterOperationHostTaskList")]
-        [Validation(Required=false)]
-        public ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskList ClusterOperationHostTaskList { get; set; }
-        public class ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskList : TeaModel {
-            [NameInMap("ClusterOperationHostTask")]
-            [Validation(Required=false)]
-            public List<ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskListClusterOperationHostTask> ClusterOperationHostTask { get; set; }
-            public class ListClusterOperationHostTaskResponseBodyClusterOperationHostTaskListClusterOperationHostTask : TeaModel {
-                public string Status { get; set; }
-                public string TaskName { get; set; }
-                public string Percentage { get; set; }
-                public string TaskId { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

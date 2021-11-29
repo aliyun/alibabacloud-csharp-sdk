@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeLibraryInstallTaskDetailResponseBody : TeaModel {
-        [NameInMap("TaskId")]
+        [NameInMap("ClusterBizId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string ClusterBizId { get; set; }
+
+        [NameInMap("Detail")]
+        [Validation(Required=false)]
+        public string Detail { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TaskGroupId")]
-        [Validation(Required=false)]
-        public string TaskGroupId { get; set; }
 
         [NameInMap("ExecuteTime")]
         [Validation(Required=false)]
@@ -33,33 +29,37 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string Hostname { get; set; }
 
+        [NameInMap("LibraryBizId")]
+        [Validation(Required=false)]
+        public string LibraryBizId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
-        [NameInMap("TaskStatus")]
+        [NameInMap("TaskGroupId")]
         [Validation(Required=false)]
-        public string TaskStatus { get; set; }
+        public string TaskGroupId { get; set; }
 
-        [NameInMap("LibraryBizId")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string LibraryBizId { get; set; }
+        public string TaskId { get; set; }
 
         [NameInMap("TaskProcess")]
         [Validation(Required=false)]
         public int? TaskProcess { get; set; }
 
-        [NameInMap("ClusterBizId")]
+        [NameInMap("TaskStatus")]
         [Validation(Required=false)]
-        public string ClusterBizId { get; set; }
+        public string TaskStatus { get; set; }
 
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
-
-        [NameInMap("Detail")]
-        [Validation(Required=false)]
-        public string Detail { get; set; }
 
     }
 

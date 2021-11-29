@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowProjectRequest : TeaModel {
-        [NameInMap("ProductType")]
-        [Validation(Required=false)]
-        public string ProductType { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ProjectId")]
-        [Validation(Required=false)]
-        public string ProjectId { get; set; }
-
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -32,6 +20,18 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public string ProductType { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

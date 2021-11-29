@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowClusterAllHostsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClusterId { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

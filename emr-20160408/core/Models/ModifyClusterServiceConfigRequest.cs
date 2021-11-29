@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ModifyClusterServiceConfigRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
-
-        [NameInMap("ServiceName")]
-        [Validation(Required=false)]
-        public string ServiceName { get; set; }
 
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -33,9 +21,17 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string ConfigParams { get; set; }
 
+        [NameInMap("ConfigType")]
+        [Validation(Required=false)]
+        public string ConfigType { get; set; }
+
         [NameInMap("CustomConfigParams")]
         [Validation(Required=false)]
         public string CustomConfigParams { get; set; }
+
+        [NameInMap("GatewayClusterIdList")]
+        [Validation(Required=false)]
+        public List<string> GatewayClusterIdList { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -45,17 +41,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string HostInstanceId { get; set; }
 
-        [NameInMap("ConfigType")]
-        [Validation(Required=false)]
-        public string ConfigType { get; set; }
-
         [NameInMap("RefreshHostConfig")]
         [Validation(Required=false)]
         public bool? RefreshHostConfig { get; set; }
 
-        [NameInMap("GatewayClusterIdList")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> GatewayClusterIdList { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
 
     }
 

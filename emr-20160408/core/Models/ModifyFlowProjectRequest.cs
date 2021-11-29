@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ModifyFlowProjectRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class GetHdfsCapacityStatisticInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("HdfsCapacityList")]
         [Validation(Required=false)]
         public GetHdfsCapacityStatisticInfoResponseBodyHdfsCapacityList HdfsCapacityList { get; set; }
@@ -21,17 +17,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<GetHdfsCapacityStatisticInfoResponseBodyHdfsCapacityListClusterStatHdfsCapacity> ClusterStatHdfsCapacity { get; set; }
             public class GetHdfsCapacityStatisticInfoResponseBodyHdfsCapacityListClusterStatHdfsCapacity : TeaModel {
-                public long? CapacityUsedNonDfs { get; set; }
+                public long? CapacityRemaining { get; set; }
+                public long? CapacityRemainingGB { get; set; }
                 public long? CapacityTotal { get; set; }
                 public long? CapacityTotalGB { get; set; }
-                public long? CapacityRemaining { get; set; }
                 public long? CapacityUsed { get; set; }
-                public string ClusterBizId { get; set; }
                 public long? CapacityUsedGB { get; set; }
+                public long? CapacityUsedNonDfs { get; set; }
+                public string ClusterBizId { get; set; }
                 public string DateTime { get; set; }
-                public long? CapacityRemainingGB { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

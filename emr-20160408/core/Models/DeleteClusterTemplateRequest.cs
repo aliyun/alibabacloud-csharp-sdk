@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DeleteClusterTemplateRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("BizId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string BizId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("BizId")]
-        [Validation(Required=false)]
-        public string BizId { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

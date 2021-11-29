@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListClusterInstalledServiceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ClusterInstalledServiceList")]
         [Validation(Required=false)]
         public ListClusterInstalledServiceResponseBodyClusterInstalledServiceList ClusterInstalledServiceList { get; set; }
@@ -21,29 +17,27 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledService> ClusterInstalledService { get; set; }
             public class ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledService : TeaModel {
-                public string ServiceEcmVersion { get; set; }
-                public string ServiceDisplayName { get; set; }
                 public ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledServiceServiceActionList ServiceActionList { get; set; }
                 public class ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledServiceServiceActionList : TeaModel {
                     [NameInMap("ServiceAction")]
                     [Validation(Required=false)]
                     public List<ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledServiceServiceActionListServiceAction> ServiceAction { get; set; }
                     public class ListClusterInstalledServiceResponseBodyClusterInstalledServiceListClusterInstalledServiceServiceActionListServiceAction : TeaModel {
-                        [NameInMap("DisplayName")]
+                        [NameInMap("ActionName")]
                         [Validation(Required=false)]
-                        public string DisplayName { get; set; }
-
-                        [NameInMap("ComponentName")]
-                        [Validation(Required=false)]
-                        public string ComponentName { get; set; }
+                        public string ActionName { get; set; }
 
                         [NameInMap("Command")]
                         [Validation(Required=false)]
                         public string Command { get; set; }
 
-                        [NameInMap("ActionName")]
+                        [NameInMap("ComponentName")]
                         [Validation(Required=false)]
-                        public string ActionName { get; set; }
+                        public string ComponentName { get; set; }
+
+                        [NameInMap("DisplayName")]
+                        [Validation(Required=false)]
+                        public string DisplayName { get; set; }
 
                         [NameInMap("ServiceName")]
                         [Validation(Required=false)]
@@ -52,16 +46,23 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                     }
 
                 }
-                public int? NotStartedNum { get; set; }
-                public string ServiceVersion { get; set; }
-                public string Comment { get; set; }
-                public int? AbnormalNum { get; set; }
+                public string ServiceDisplayName { get; set; }
+                public string ServiceEcmVersion { get; set; }
                 public string ServiceName { get; set; }
+                public string ServiceVersion { get; set; }
+                public string State { get; set; }
+                public int? AbnormalNum { get; set; }
+                public string Comment { get; set; }
+                public int? NeedRestartNum { get; set; }
+                public int? NotStartedNum { get; set; }
                 public bool? OnlyClient { get; set; }
                 public string ServiceStatus { get; set; }
-                public int? NeedRestartNum { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

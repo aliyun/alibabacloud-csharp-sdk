@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowNodeSqlResultRequest : TeaModel {
+        [NameInMap("Length")]
+        [Validation(Required=false)]
+        public int? Length { get; set; }
+
         [NameInMap("NodeInstanceId")]
         [Validation(Required=false)]
         public string NodeInstanceId { get; set; }
 
-        [NameInMap("SqlIndex")]
-        [Validation(Required=false)]
-        public int? SqlIndex { get; set; }
-
         [NameInMap("Offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
-
-        [NameInMap("Length")]
-        [Validation(Required=false)]
-        public int? Length { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("SqlIndex")]
+        [Validation(Required=false)]
+        public int? SqlIndex { get; set; }
 
     }
 

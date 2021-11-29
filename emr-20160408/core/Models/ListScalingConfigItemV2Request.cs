@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListScalingConfigItemV2Request : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ConfigItemType")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("Limit")]
-        [Validation(Required=false)]
-        public int? Limit { get; set; }
+        public string ConfigItemType { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,29 +21,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentSize")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? CurrentSize { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("PageCount")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public int? PageCount { get; set; }
+        public string ResourceGroupId { get; set; }
 
-        [NameInMap("OrderField")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string OrderField { get; set; }
-
-        [NameInMap("OrderMode")]
-        [Validation(Required=false)]
-        public string OrderMode { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("ScalingGroupBizId")]
         [Validation(Required=false)]
         public string ScalingGroupBizId { get; set; }
-
-        [NameInMap("ConfigItemType")]
-        [Validation(Required=false)]
-        public string ConfigItemType { get; set; }
 
     }
 

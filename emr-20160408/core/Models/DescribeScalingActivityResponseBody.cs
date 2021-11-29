@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeScalingActivityResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("BizId")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string BizId { get; set; }
+
+        [NameInMap("Cause")]
+        [Validation(Required=false)]
+        public string Cause { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -21,41 +25,37 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ExpectNum")]
         [Validation(Required=false)]
         public int? ExpectNum { get; set; }
-
-        [NameInMap("Cause")]
-        [Validation(Required=false)]
-        public string Cause { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("ScalingRuleId")]
-        [Validation(Required=false)]
-        public string ScalingRuleId { get; set; }
-
-        [NameInMap("Transition")]
-        [Validation(Required=false)]
-        public string Transition { get; set; }
-
-        [NameInMap("TotalCapacity")]
-        [Validation(Required=false)]
-        public int? TotalCapacity { get; set; }
 
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
-        [NameInMap("BizId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string BizId { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("ScalingRuleId")]
+        [Validation(Required=false)]
+        public string ScalingRuleId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("TotalCapacity")]
+        [Validation(Required=false)]
+        public int? TotalCapacity { get; set; }
+
+        [NameInMap("Transition")]
+        [Validation(Required=false)]
+        public string Transition { get; set; }
 
     }
 

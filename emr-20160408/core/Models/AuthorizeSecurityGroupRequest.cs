@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class AuthorizeSecurityGroupRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("BizContent")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string BizContent { get; set; }
 
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
-        [NameInMap("BizContent")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string BizContent { get; set; }
+        public string ClusterId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

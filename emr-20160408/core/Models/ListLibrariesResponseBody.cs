@@ -9,13 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListLibrariesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Items")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public ListLibrariesResponseBodyItems Items { get; set; }
+        public class ListLibrariesResponseBodyItems : TeaModel {
+            [NameInMap("Item")]
+            [Validation(Required=false)]
+            public List<ListLibrariesResponseBodyItemsItem> Item { get; set; }
+            public class ListLibrariesResponseBodyItemsItem : TeaModel {
+                public string BizId { get; set; }
+                public long? CreateTime { get; set; }
+                public string LibraryVersion { get; set; }
+                public string Name { get; set; }
+                public string Properties { get; set; }
+                public string Scope { get; set; }
+                public string SourceLocation { get; set; }
+                public string SourceType { get; set; }
+                public string Type { get; set; }
+                public string UserId { get; set; }
+            }
+        };
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -25,30 +46,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Items")]
-        [Validation(Required=false)]
-        public ListLibrariesResponseBodyItems Items { get; set; }
-        public class ListLibrariesResponseBodyItems : TeaModel {
-            [NameInMap("Item")]
-            [Validation(Required=false)]
-            public List<ListLibrariesResponseBodyItemsItem> Item { get; set; }
-            public class ListLibrariesResponseBodyItemsItem : TeaModel {
-                public string Type { get; set; }
-                public long? CreateTime { get; set; }
-                public string UserId { get; set; }
-                public string SourceType { get; set; }
-                public string BizId { get; set; }
-                public string Scope { get; set; }
-                public string LibraryVersion { get; set; }
-                public string Name { get; set; }
-                public string Properties { get; set; }
-                public string SourceLocation { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

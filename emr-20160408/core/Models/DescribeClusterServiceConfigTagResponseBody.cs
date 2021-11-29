@@ -17,20 +17,25 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTag> ConfigTag { get; set; }
             public class DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTag : TeaModel {
-                [NameInMap("Value")]
-                [Validation(Required=false)]
-                public List<DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValue> Value { get; set; }
-                public class DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValue : TeaModel {
+                public string Tag { get; set; }
+                public string TagDesc { get; set; }
+                public DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValueList ValueList { get; set; }
+                public class DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValueList : TeaModel {
                     [NameInMap("Value")]
                     [Validation(Required=false)]
-                    public string Value { get; set; }
+                    public List<DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValueListValue> Value { get; set; }
+                    public class DescribeClusterServiceConfigTagResponseBodyConfigTagListConfigTagValueListValue : TeaModel {
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
 
-                    [NameInMap("ValueDesc")]
-                    [Validation(Required=false)]
-                    public string ValueDesc { get; set; }
+                        [NameInMap("ValueDesc")]
+                        [Validation(Required=false)]
+                        public string ValueDesc { get; set; }
+
+                    }
 
                 }
-
             }
         };
 

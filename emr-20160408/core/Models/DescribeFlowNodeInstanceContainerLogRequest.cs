@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeFlowNodeInstanceContainerLogRequest : TeaModel {
-        [NameInMap("Offset")]
-        [Validation(Required=false)]
-        public int? Offset { get; set; }
-
-        [NameInMap("Length")]
-        [Validation(Required=false)]
-        public int? Length { get; set; }
-
-        [NameInMap("NodeInstanceId")]
-        [Validation(Required=false)]
-        public string NodeInstanceId { get; set; }
-
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -29,9 +17,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string ContainerId { get; set; }
 
+        [NameInMap("Length")]
+        [Validation(Required=false)]
+        public int? Length { get; set; }
+
         [NameInMap("LogName")]
         [Validation(Required=false)]
         public string LogName { get; set; }
+
+        [NameInMap("NodeInstanceId")]
+        [Validation(Required=false)]
+        public string NodeInstanceId { get; set; }
+
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

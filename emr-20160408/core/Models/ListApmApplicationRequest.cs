@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListApmApplicationRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string AppId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClusterId { get; set; }
 
-        [NameInMap("StartTimeFrom")]
+        [NameInMap("DiagnoseResult")]
         [Validation(Required=false)]
-        public long? StartTimeFrom { get; set; }
-
-        [NameInMap("StartTimeTo")]
-        [Validation(Required=false)]
-        public long? StartTimeTo { get; set; }
+        public string DiagnoseResult { get; set; }
 
         [NameInMap("EndTimeFrom")]
         [Validation(Required=false)]
@@ -33,45 +29,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public long? EndTimeTo { get; set; }
 
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        [NameInMap("AppId")]
-        [Validation(Required=false)]
-        public string AppId { get; set; }
-
-        [NameInMap("State")]
-        [Validation(Required=false)]
-        public string State { get; set; }
-
         [NameInMap("FinalStatus")]
         [Validation(Required=false)]
         public string FinalStatus { get; set; }
-
-        [NameInMap("User")]
-        [Validation(Required=false)]
-        public string User { get; set; }
-
-        [NameInMap("Queue")]
-        [Validation(Required=false)]
-        public string Queue { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
 
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
-
-        [NameInMap("DiagnoseResult")]
-        [Validation(Required=false)]
-        public string DiagnoseResult { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -80,6 +52,34 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Queue")]
+        [Validation(Required=false)]
+        public string Queue { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("StartTimeFrom")]
+        [Validation(Required=false)]
+        public long? StartTimeFrom { get; set; }
+
+        [NameInMap("StartTimeTo")]
+        [Validation(Required=false)]
+        public long? StartTimeTo { get; set; }
+
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
+        [NameInMap("User")]
+        [Validation(Required=false)]
+        public string User { get; set; }
 
     }
 

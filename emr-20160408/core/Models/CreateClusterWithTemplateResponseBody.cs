@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class CreateClusterWithTemplateResponseBody : TeaModel {
-        [NameInMap("MasterOrderId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string MasterOrderId { get; set; }
+        public string ClusterId { get; set; }
 
         [NameInMap("CoreOrderId")]
         [Validation(Required=false)]
         public string CoreOrderId { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("EmrOrderId")]
         [Validation(Required=false)]
         public string EmrOrderId { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("MasterOrderId")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string MasterOrderId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

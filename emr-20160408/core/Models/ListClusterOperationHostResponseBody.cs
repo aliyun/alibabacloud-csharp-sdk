@@ -9,9 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListClusterOperationHostResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("ClusterOperationHostList")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public ListClusterOperationHostResponseBodyClusterOperationHostList ClusterOperationHostList { get; set; }
+        public class ListClusterOperationHostResponseBodyClusterOperationHostList : TeaModel {
+            [NameInMap("ClusterOperationHost")]
+            [Validation(Required=false)]
+            public List<ListClusterOperationHostResponseBodyClusterOperationHostListClusterOperationHost> ClusterOperationHost { get; set; }
+            public class ListClusterOperationHostResponseBodyClusterOperationHostListClusterOperationHost : TeaModel {
+                public string HostId { get; set; }
+                public string HostName { get; set; }
+                public string Percentage { get; set; }
+                public string Status { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,24 +36,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("ClusterOperationHostList")]
-        [Validation(Required=false)]
-        public ListClusterOperationHostResponseBodyClusterOperationHostList ClusterOperationHostList { get; set; }
-        public class ListClusterOperationHostResponseBodyClusterOperationHostList : TeaModel {
-            [NameInMap("ClusterOperationHost")]
-            [Validation(Required=false)]
-            public List<ListClusterOperationHostResponseBodyClusterOperationHostListClusterOperationHost> ClusterOperationHost { get; set; }
-            public class ListClusterOperationHostResponseBodyClusterOperationHostListClusterOperationHost : TeaModel {
-                public string Status { get; set; }
-                public string HostName { get; set; }
-                public string Percentage { get; set; }
-                public string HostId { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

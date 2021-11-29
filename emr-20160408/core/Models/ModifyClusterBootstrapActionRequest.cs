@@ -9,13 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ModifyClusterBootstrapActionRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("BootstrapAction")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public List<ModifyClusterBootstrapActionRequestBootstrapAction> BootstrapAction { get; set; }
+        public class ModifyClusterBootstrapActionRequestBootstrapAction : TeaModel {
+            [NameInMap("Arg")]
+            [Validation(Required=false)]
+            public string Arg { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+            [NameInMap("ExecutionFailStrategy")]
+            [Validation(Required=false)]
+            public string ExecutionFailStrategy { get; set; }
+
+            [NameInMap("ExecutionMoment")]
+            [Validation(Required=false)]
+            public string ExecutionMoment { get; set; }
+
+            [NameInMap("ExecutionTarget")]
+            [Validation(Required=false)]
+            public string ExecutionTarget { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+        }
 
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -25,35 +47,13 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        [NameInMap("BootstrapAction")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<ModifyClusterBootstrapActionRequestBootstrapAction> BootstrapAction { get; set; }
-        public class ModifyClusterBootstrapActionRequestBootstrapAction : TeaModel {
-            [NameInMap("ExecutionFailStrategy")]
-            [Validation(Required=false)]
-            public string ExecutionFailStrategy { get; set; }
+        public string RegionId { get; set; }
 
-            [NameInMap("Arg")]
-            [Validation(Required=false)]
-            public string Arg { get; set; }
-
-            [NameInMap("Path")]
-            [Validation(Required=false)]
-            public string Path { get; set; }
-
-            [NameInMap("ExecutionTarget")]
-            [Validation(Required=false)]
-            public string ExecutionTarget { get; set; }
-
-            [NameInMap("ExecutionMoment")]
-            [Validation(Required=false)]
-            public string ExecutionMoment { get; set; }
-
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-        }
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

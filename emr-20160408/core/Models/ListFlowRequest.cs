@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClusterId { get; set; }
 
-        [NameInMap("ProjectId")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string ProjectId { get; set; }
+        public string Id { get; set; }
 
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -25,22 +25,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("Periodic")]
-        [Validation(Required=false)]
-        public bool? Periodic { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -48,6 +32,22 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Periodic")]
+        [Validation(Required=false)]
+        public bool? Periodic { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

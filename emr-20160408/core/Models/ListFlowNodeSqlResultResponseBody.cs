@@ -9,6 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowNodeSqlResultResponseBody : TeaModel {
+        [NameInMap("End")]
+        [Validation(Required=false)]
+        public bool? End { get; set; }
+
+        [NameInMap("HeaderList")]
+        [Validation(Required=false)]
+        public ListFlowNodeSqlResultResponseBodyHeaderList HeaderList { get; set; }
+        public class ListFlowNodeSqlResultResponseBodyHeaderList : TeaModel {
+            [NameInMap("Header")]
+            [Validation(Required=false)]
+            public List<string> Header { get; set; }
+        };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("RowList")]
         [Validation(Required=false)]
         public ListFlowNodeSqlResultResponseBodyRowList RowList { get; set; }
@@ -27,23 +44,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
                 }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HeaderList")]
-        [Validation(Required=false)]
-        public ListFlowNodeSqlResultResponseBodyHeaderList HeaderList { get; set; }
-        public class ListFlowNodeSqlResultResponseBodyHeaderList : TeaModel {
-            [NameInMap("Header")]
-            [Validation(Required=false)]
-            public List<string> Header { get; set; }
-        };
-
-        [NameInMap("End")]
-        [Validation(Required=false)]
-        public bool? End { get; set; }
 
     }
 

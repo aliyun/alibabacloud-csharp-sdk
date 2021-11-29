@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeFlowCategoryTreeRequest : TeaModel {
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public string CategoryId { get; set; }
+
+        [NameInMap("Keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
+
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
-        [NameInMap("Keyword")]
-        [Validation(Required=false)]
-        public string Keyword { get; set; }
-
-        [NameInMap("CategoryId")]
-        [Validation(Required=false)]
-        public string CategoryId { get; set; }
 
     }
 

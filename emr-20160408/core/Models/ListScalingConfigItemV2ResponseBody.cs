@@ -9,13 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListScalingConfigItemV2ResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Items")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public ListScalingConfigItemV2ResponseBodyItems Items { get; set; }
+        public class ListScalingConfigItemV2ResponseBodyItems : TeaModel {
+            [NameInMap("Item")]
+            [Validation(Required=false)]
+            public List<ListScalingConfigItemV2ResponseBodyItemsItem> Item { get; set; }
+            public class ListScalingConfigItemV2ResponseBodyItemsItem : TeaModel {
+                public string ConfigItemInformation { get; set; }
+                public string ConfigItemType { get; set; }
+                public string ScalingConfigItemBizId { get; set; }
+                public string ScalingGroupBizId { get; set; }
+            }
+        };
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -25,24 +40,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Items")]
-        [Validation(Required=false)]
-        public ListScalingConfigItemV2ResponseBodyItems Items { get; set; }
-        public class ListScalingConfigItemV2ResponseBodyItems : TeaModel {
-            [NameInMap("Item")]
-            [Validation(Required=false)]
-            public List<ListScalingConfigItemV2ResponseBodyItemsItem> Item { get; set; }
-            public class ListScalingConfigItemV2ResponseBodyItemsItem : TeaModel {
-                public string ConfigItemType { get; set; }
-                public string ScalingConfigItemBizId { get; set; }
-                public string ScalingGroupBizId { get; set; }
-                public string ConfigItemInformation { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

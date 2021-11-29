@@ -9,49 +9,53 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class DescribeFlowJobResponseBody : TeaModel {
-        [NameInMap("FailAct")]
+        [NameInMap("Adhoc")]
         [Validation(Required=false)]
-        public string FailAct { get; set; }
+        public string Adhoc { get; set; }
+
+        [NameInMap("AlertConf")]
+        [Validation(Required=false)]
+        public string AlertConf { get; set; }
 
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public string CategoryId { get; set; }
 
+        [NameInMap("CustomVariables")]
+        [Validation(Required=false)]
+        public string CustomVariables { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("EditLockDetail")]
+        [Validation(Required=false)]
+        public string EditLockDetail { get; set; }
+
+        [NameInMap("EnvConf")]
+        [Validation(Required=false)]
+        public string EnvConf { get; set; }
+
+        [NameInMap("FailAct")]
+        [Validation(Required=false)]
+        public string FailAct { get; set; }
+
+        [NameInMap("GmtCreate")]
+        [Validation(Required=false)]
+        public long? GmtCreate { get; set; }
 
         [NameInMap("GmtModified")]
         [Validation(Required=false)]
         public long? GmtModified { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("ParamConf")]
-        [Validation(Required=false)]
-        public string ParamConf { get; set; }
-
-        [NameInMap("mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
-        [NameInMap("Adhoc")]
-        [Validation(Required=false)]
-        public string Adhoc { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Id { get; set; }
 
         [NameInMap("LastInstanceId")]
         [Validation(Required=false)]
         public string LastInstanceId { get; set; }
-
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public string Params { get; set; }
 
         [NameInMap("MaxRetry")]
         [Validation(Required=false)]
@@ -61,17 +65,25 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public long? MaxRunningTimeSec { get; set; }
 
-        [NameInMap("EditLockDetail")]
+        [NameInMap("MonitorConf")]
         [Validation(Required=false)]
-        public string EditLockDetail { get; set; }
+        public string MonitorConf { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string Name { get; set; }
 
-        [NameInMap("GmtCreate")]
+        [NameInMap("ParamConf")]
         [Validation(Required=false)]
-        public long? GmtCreate { get; set; }
+        public string ParamConf { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public string Params { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("ResourceList")]
         [Validation(Required=false)]
@@ -81,42 +93,30 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<DescribeFlowJobResponseBodyResourceListResource> Resource { get; set; }
             public class DescribeFlowJobResponseBodyResourceListResource : TeaModel {
-                public string Path { get; set; }
                 public string Alias { get; set; }
+                public string Path { get; set; }
             }
         };
-
-        [NameInMap("EnvConf")]
-        [Validation(Required=false)]
-        public string EnvConf { get; set; }
-
-        [NameInMap("MonitorConf")]
-        [Validation(Required=false)]
-        public string MonitorConf { get; set; }
 
         [NameInMap("RetryInterval")]
         [Validation(Required=false)]
         public long? RetryInterval { get; set; }
 
-        [NameInMap("RunConf")]
-        [Validation(Required=false)]
-        public string RunConf { get; set; }
-
-        [NameInMap("Id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
         [NameInMap("RetryPolicy")]
         [Validation(Required=false)]
         public string RetryPolicy { get; set; }
 
-        [NameInMap("CustomVariables")]
+        [NameInMap("RunConf")]
         [Validation(Required=false)]
-        public string CustomVariables { get; set; }
+        public string RunConf { get; set; }
 
-        [NameInMap("AlertConf")]
+        [NameInMap("Type")]
         [Validation(Required=false)]
-        public string AlertConf { get; set; }
+        public string Type { get; set; }
+
+        [NameInMap("mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
 
     }
 

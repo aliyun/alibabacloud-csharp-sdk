@@ -9,9 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListJobsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Jobs")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public ListJobsResponseBodyJobs Jobs { get; set; }
+        public class ListJobsResponseBodyJobs : TeaModel {
+            [NameInMap("JobInfo")]
+            [Validation(Required=false)]
+            public List<ListJobsResponseBodyJobsJobInfo> JobInfo { get; set; }
+            public class ListJobsResponseBodyJobsJobInfo : TeaModel {
+                public string FailAct { get; set; }
+                public string Id { get; set; }
+                public int? MaxRetry { get; set; }
+                public string Name { get; set; }
+                public int? RetryInterval { get; set; }
+                public string RunParameter { get; set; }
+                public string Type { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,27 +39,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Jobs")]
-        [Validation(Required=false)]
-        public ListJobsResponseBodyJobs Jobs { get; set; }
-        public class ListJobsResponseBodyJobs : TeaModel {
-            [NameInMap("JobInfo")]
-            [Validation(Required=false)]
-            public List<ListJobsResponseBodyJobsJobInfo> JobInfo { get; set; }
-            public class ListJobsResponseBodyJobsJobInfo : TeaModel {
-                public string Type { get; set; }
-                public string FailAct { get; set; }
-                public int? RetryInterval { get; set; }
-                public string Name { get; set; }
-                public string Id { get; set; }
-                public string RunParameter { get; set; }
-                public int? MaxRetry { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

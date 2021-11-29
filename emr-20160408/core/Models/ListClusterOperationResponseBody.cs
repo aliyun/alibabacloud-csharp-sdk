@@ -17,19 +17,19 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListClusterOperationResponseBodyClusterOperationListClusterOperation> ClusterOperation { get; set; }
             public class ListClusterOperationResponseBodyClusterOperationListClusterOperation : TeaModel {
-                public string Status { get; set; }
-                public string StartTime { get; set; }
                 public string Comment { get; set; }
-                public string OperationName { get; set; }
-                public string OperationId { get; set; }
                 public string Duration { get; set; }
+                public string OperationId { get; set; }
+                public string OperationName { get; set; }
                 public string Percentage { get; set; }
+                public string StartTime { get; set; }
+                public string Status { get; set; }
             }
         };
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

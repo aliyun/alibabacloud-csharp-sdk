@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class CreateFlowCategoryRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("ParentId")]
+        [Validation(Required=false)]
+        public string ParentId { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("ParentId")]
-        [Validation(Required=false)]
-        public string ParentId { get; set; }
 
     }
 

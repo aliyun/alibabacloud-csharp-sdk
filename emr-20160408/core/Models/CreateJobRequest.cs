@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class CreateJobRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("FailAct")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string FailAct { get; set; }
+
+        [NameInMap("MaxRetry")]
+        [Validation(Required=false)]
+        public int? MaxRetry { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -21,29 +25,25 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string ResourceGroupId { get; set; }
 
-        [NameInMap("RunParameter")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string RunParameter { get; set; }
-
-        [NameInMap("FailAct")]
-        [Validation(Required=false)]
-        public string FailAct { get; set; }
-
-        [NameInMap("MaxRetry")]
-        [Validation(Required=false)]
-        public int? MaxRetry { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("RetryInterval")]
         [Validation(Required=false)]
         public int? RetryInterval { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("RunParameter")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string RunParameter { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

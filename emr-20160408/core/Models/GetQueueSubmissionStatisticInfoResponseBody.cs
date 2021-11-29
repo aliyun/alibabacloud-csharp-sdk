@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class GetQueueSubmissionStatisticInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("QueueSubmissionList")]
         [Validation(Required=false)]
         public GetQueueSubmissionStatisticInfoResponseBodyQueueSubmissionList QueueSubmissionList { get; set; }
@@ -21,10 +17,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<GetQueueSubmissionStatisticInfoResponseBodyQueueSubmissionListClusterStatQueueSubmission> ClusterStatQueueSubmission { get; set; }
             public class GetQueueSubmissionStatisticInfoResponseBodyQueueSubmissionListClusterStatQueueSubmission : TeaModel {
-                public long? Submission { get; set; }
                 public string Queue { get; set; }
+                public long? Submission { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

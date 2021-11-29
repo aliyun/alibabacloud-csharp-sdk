@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListStackResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("StackList")]
         [Validation(Required=false)]
@@ -33,11 +29,15 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public List<ListStackResponseBodyStackListStack> Stack { get; set; }
             public class ListStackResponseBodyStackListStack : TeaModel {
+                public string Name { get; set; }
                 public string Status { get; set; }
                 public string Version { get; set; }
-                public string Name { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -13,22 +13,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string FailAct { get; set; }
 
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("RunParameter")]
-        [Validation(Required=false)]
-        public string RunParameter { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("RetryInterval")]
-        [Validation(Required=false)]
-        public int? RetryInterval { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -40,6 +24,22 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("RetryInterval")]
+        [Validation(Required=false)]
+        public int? RetryInterval { get; set; }
+
+        [NameInMap("RunParameter")]
+        [Validation(Required=false)]
+        public string RunParameter { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

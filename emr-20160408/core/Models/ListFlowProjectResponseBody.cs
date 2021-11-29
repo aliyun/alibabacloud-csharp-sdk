@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowProjectResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("Total")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? Total { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("Projects")]
         [Validation(Required=false)]
@@ -34,13 +26,21 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             public List<ListFlowProjectResponseBodyProjectsProject> Project { get; set; }
             public class ListFlowProjectResponseBodyProjectsProject : TeaModel {
                 public string Description { get; set; }
-                public string UserId { get; set; }
                 public long? GmtCreate { get; set; }
                 public long? GmtModified { get; set; }
-                public string Name { get; set; }
                 public string Id { get; set; }
+                public string Name { get; set; }
+                public string UserId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

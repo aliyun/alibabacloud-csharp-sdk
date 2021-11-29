@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListFlowNodeInstanceContainerStatusRequest : TeaModel {
+        [NameInMap("NodeInstanceId")]
+        [Validation(Required=false)]
+        public string NodeInstanceId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("NodeInstanceId")]
-        [Validation(Required=false)]
-        public string NodeInstanceId { get; set; }
 
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

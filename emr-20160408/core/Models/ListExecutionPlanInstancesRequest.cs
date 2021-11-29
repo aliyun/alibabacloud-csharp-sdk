@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ListExecutionPlanInstancesRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ExecutionPlanIdList")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("OnlyLastInstance")]
-        [Validation(Required=false)]
-        public bool? OnlyLastInstance { get; set; }
+        public List<string> ExecutionPlanIdList { get; set; }
 
         [NameInMap("IsDesc")]
         [Validation(Required=false)]
         public bool? IsDesc { get; set; }
+
+        [NameInMap("OnlyLastInstance")]
+        [Validation(Required=false)]
+        public bool? OnlyLastInstance { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,9 +29,13 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ExecutionPlanIdList")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<string> ExecutionPlanIdList { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("StatusList")]
         [Validation(Required=false)]

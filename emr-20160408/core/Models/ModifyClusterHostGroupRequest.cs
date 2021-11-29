@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ModifyClusterHostGroupRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
 
         [NameInMap("HostGroupId")]
         [Validation(Required=false)]
@@ -29,6 +25,14 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string HostGroupName { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
@@ -36,10 +40,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [NameInMap("VswitchId")]
         [Validation(Required=false)]
         public string VswitchId { get; set; }
-
-        [NameInMap("Comment")]
-        [Validation(Required=false)]
-        public string Comment { get; set; }
 
     }
 

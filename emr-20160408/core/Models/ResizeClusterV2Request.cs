@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class ResizeClusterV2Request : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ClusterId")]
-        [Validation(Required=false)]
-        public string ClusterId { get; set; }
-
         [NameInMap("AutoPayOrder")]
         [Validation(Required=false)]
         public bool? AutoPayOrder { get; set; }
 
-        [NameInMap("VswitchId")]
+        [NameInMap("ClusterId")]
         [Validation(Required=false)]
-        public string VswitchId { get; set; }
-
-        [NameInMap("IsOpenPublicIp")]
-        [Validation(Required=false)]
-        public bool? IsOpenPublicIp { get; set; }
+        public string ClusterId { get; set; }
 
         [NameInMap("HostComponentInfo")]
         [Validation(Required=false)]
@@ -51,26 +39,6 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public List<ResizeClusterV2RequestHostGroup> HostGroup { get; set; }
         public class ResizeClusterV2RequestHostGroup : TeaModel {
-            [NameInMap("SysDiskCapacity")]
-            [Validation(Required=false)]
-            public int? SysDiskCapacity { get; set; }
-
-            [NameInMap("HostGroupType")]
-            [Validation(Required=false)]
-            public string HostGroupType { get; set; }
-
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public string Comment { get; set; }
-
-            [NameInMap("VswitchId")]
-            [Validation(Required=false)]
-            public int? VswitchId { get; set; }
-
-            [NameInMap("SysDiskType")]
-            [Validation(Required=false)]
-            public string SysDiskType { get; set; }
-
             [NameInMap("AutoRenew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
@@ -78,6 +46,26 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
+
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            [NameInMap("Comment")]
+            [Validation(Required=false)]
+            public string Comment { get; set; }
+
+            [NameInMap("CreateType")]
+            [Validation(Required=false)]
+            public string CreateType { get; set; }
+
+            [NameInMap("DiskCapacity")]
+            [Validation(Required=false)]
+            public int? DiskCapacity { get; set; }
+
+            [NameInMap("DiskCount")]
+            [Validation(Required=false)]
+            public int? DiskCount { get; set; }
 
             [NameInMap("DiskType")]
             [Validation(Required=false)]
@@ -87,65 +75,85 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
 
-            [NameInMap("InstanceType")]
+            [NameInMap("HostGroupName")]
             [Validation(Required=false)]
-            public string InstanceType { get; set; }
+            public string HostGroupName { get; set; }
+
+            [NameInMap("HostGroupType")]
+            [Validation(Required=false)]
+            public string HostGroupType { get; set; }
 
             [NameInMap("HostKeyPairName")]
             [Validation(Required=false)]
             public string HostKeyPairName { get; set; }
 
-            [NameInMap("DiskCount")]
-            [Validation(Required=false)]
-            public int? DiskCount { get; set; }
-
-            [NameInMap("CreateType")]
-            [Validation(Required=false)]
-            public string CreateType { get; set; }
-
-            [NameInMap("Period")]
-            [Validation(Required=false)]
-            public int? Period { get; set; }
-
             [NameInMap("HostPassword")]
             [Validation(Required=false)]
             public string HostPassword { get; set; }
 
-            [NameInMap("DiskCapacity")]
+            [NameInMap("InstanceType")]
             [Validation(Required=false)]
-            public int? DiskCapacity { get; set; }
+            public string InstanceType { get; set; }
 
             [NameInMap("NodeCount")]
             [Validation(Required=false)]
             public int? NodeCount { get; set; }
 
-            [NameInMap("HostGroupName")]
+            [NameInMap("Period")]
             [Validation(Required=false)]
-            public string HostGroupName { get; set; }
+            public int? Period { get; set; }
 
-            [NameInMap("ClusterId")]
+            [NameInMap("PrivatePoolOptionsId")]
             [Validation(Required=false)]
-            public string ClusterId { get; set; }
+            public string PrivatePoolOptionsId { get; set; }
+
+            [NameInMap("PrivatePoolOptionsMatchCriteria")]
+            [Validation(Required=false)]
+            public string PrivatePoolOptionsMatchCriteria { get; set; }
+
+            [NameInMap("SysDiskCapacity")]
+            [Validation(Required=false)]
+            public int? SysDiskCapacity { get; set; }
+
+            [NameInMap("SysDiskType")]
+            [Validation(Required=false)]
+            public string SysDiskType { get; set; }
+
+            [NameInMap("VswitchId")]
+            [Validation(Required=false)]
+            public int? VswitchId { get; set; }
 
         }
+
+        [NameInMap("IsOpenPublicIp")]
+        [Validation(Required=false)]
+        public bool? IsOpenPublicIp { get; set; }
 
         [NameInMap("PromotionInfo")]
         [Validation(Required=false)]
         public List<ResizeClusterV2RequestPromotionInfo> PromotionInfo { get; set; }
         public class ResizeClusterV2RequestPromotionInfo : TeaModel {
-            [NameInMap("PromotionOptionNo")]
+            [NameInMap("ProductCode")]
             [Validation(Required=false)]
-            public string PromotionOptionNo { get; set; }
+            public string ProductCode { get; set; }
 
             [NameInMap("PromotionOptionCode")]
             [Validation(Required=false)]
             public string PromotionOptionCode { get; set; }
 
-            [NameInMap("ProductCode")]
+            [NameInMap("PromotionOptionNo")]
             [Validation(Required=false)]
-            public string ProductCode { get; set; }
+            public string PromotionOptionNo { get; set; }
 
         }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("VswitchId")]
+        [Validation(Required=false)]
+        public string VswitchId { get; set; }
 
     }
 

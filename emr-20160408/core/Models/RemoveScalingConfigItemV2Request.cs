@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20160408.Models
 {
     public class RemoveScalingConfigItemV2Request : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ConfigItemBizId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string ConfigItemBizId { get; set; }
+
+        [NameInMap("ConfigItemType")]
+        [Validation(Required=false)]
+        public string ConfigItemType { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Emr20160408.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("ScalingGroupBizId")]
         [Validation(Required=false)]
         public string ScalingGroupBizId { get; set; }
-
-        [NameInMap("ConfigItemType")]
-        [Validation(Required=false)]
-        public string ConfigItemType { get; set; }
-
-        [NameInMap("ConfigItemBizId")]
-        [Validation(Required=false)]
-        public string ConfigItemBizId { get; set; }
 
     }
 
