@@ -13,57 +13,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("IsSuccess")]
-        [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public List<ListInstanceEndpointResponseBodyEndpoints> Endpoints { get; set; }
         public class ListInstanceEndpointResponseBodyEndpoints : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("EndpointType")]
-            [Validation(Required=false)]
-            public string EndpointType { get; set; }
-
             [NameInMap("AclEnable")]
             [Validation(Required=false)]
             public bool? AclEnable { get; set; }
-
-            [NameInMap("Enable")]
-            [Validation(Required=false)]
-            public bool? Enable { get; set; }
-
-            [NameInMap("Domains")]
-            [Validation(Required=false)]
-            public List<ListInstanceEndpointResponseBodyEndpointsDomains> Domains { get; set; }
-            public class ListInstanceEndpointResponseBodyEndpointsDomains : TeaModel {
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                [NameInMap("Domain")]
-                [Validation(Required=false)]
-                public string Domain { get; set; }
-
-            }
-
-            [NameInMap("LinkedVpcs")]
-            [Validation(Required=false)]
-            public List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> LinkedVpcs { get; set; }
-            public class ListInstanceEndpointResponseBodyEndpointsLinkedVpcs : TeaModel {
-                [NameInMap("VpcId")]
-                [Validation(Required=false)]
-                public string VpcId { get; set; }
-
-            }
 
             [NameInMap("AclEntries")]
             [Validation(Required=false)]
@@ -75,7 +31,51 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             }
 
+            [NameInMap("Domains")]
+            [Validation(Required=false)]
+            public List<ListInstanceEndpointResponseBodyEndpointsDomains> Domains { get; set; }
+            public class ListInstanceEndpointResponseBodyEndpointsDomains : TeaModel {
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
+                public string Domain { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+            [NameInMap("EndpointType")]
+            [Validation(Required=false)]
+            public string EndpointType { get; set; }
+
+            [NameInMap("LinkedVpcs")]
+            [Validation(Required=false)]
+            public List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> LinkedVpcs { get; set; }
+            public class ListInstanceEndpointResponseBodyEndpointsLinkedVpcs : TeaModel {
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+            }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
         }
+
+        [NameInMap("IsSuccess")]
+        [Validation(Required=false)]
+        public bool? IsSuccess { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

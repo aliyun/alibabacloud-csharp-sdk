@@ -9,21 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepositoryResponseBody : TeaModel {
-        [NameInMap("Summary")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Summary { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
-        [NameInMap("IsSuccess")]
+        [NameInMap("Detail")]
         [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
+        public string Detail { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("IsSuccess")]
+        [Validation(Required=false)]
+        public bool? IsSuccess { get; set; }
+
+        [NameInMap("ModifiedTime")]
+        [Validation(Required=false)]
+        public long? ModifiedTime { get; set; }
+
+        [NameInMap("RepoBuildType")]
+        [Validation(Required=false)]
+        public string RepoBuildType { get; set; }
+
+        [NameInMap("RepoId")]
+        [Validation(Required=false)]
+        public string RepoId { get; set; }
+
+        [NameInMap("RepoName")]
+        [Validation(Required=false)]
+        public string RepoName { get; set; }
+
+        [NameInMap("RepoNamespaceName")]
+        [Validation(Required=false)]
+        public string RepoNamespaceName { get; set; }
 
         [NameInMap("RepoStatus")]
         [Validation(Required=false)]
@@ -33,41 +57,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoType { get; set; }
 
-        [NameInMap("RepoBuildType")]
-        [Validation(Required=false)]
-        public string RepoBuildType { get; set; }
-
-        [NameInMap("ModifiedTime")]
-        [Validation(Required=false)]
-        public long? ModifiedTime { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("RepoId")]
+        [NameInMap("Summary")]
         [Validation(Required=false)]
-        public string RepoId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("RepoNamespaceName")]
-        [Validation(Required=false)]
-        public string RepoNamespaceName { get; set; }
+        public string Summary { get; set; }
 
         [NameInMap("TagImmutability")]
         [Validation(Required=false)]
         public bool? TagImmutability { get; set; }
-
-        [NameInMap("RepoName")]
-        [Validation(Required=false)]
-        public string RepoName { get; set; }
-
-        [NameInMap("Detail")]
-        [Validation(Required=false)]
-        public string Detail { get; set; }
 
     }
 

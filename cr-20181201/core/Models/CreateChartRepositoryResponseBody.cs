@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("RepoId")]
-        [Validation(Required=false)]
-        public string RepoId { get; set; }
-
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
+
+        [NameInMap("RepoId")]
+        [Validation(Required=false)]
+        public string RepoId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

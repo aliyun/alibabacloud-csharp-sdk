@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public List<ListRepoTriggerResponseBodyTriggers> Triggers { get; set; }
         public class ListRepoTriggerResponseBodyTriggers : TeaModel {
-            [NameInMap("TriggerName")]
-            [Validation(Required=false)]
-            public string TriggerName { get; set; }
-
             [NameInMap("RepoEvent")]
             [Validation(Required=false)]
             public string RepoEvent { get; set; }
@@ -37,17 +33,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string TriggerId { get; set; }
 
-            [NameInMap("TriggerUrl")]
+            [NameInMap("TriggerName")]
             [Validation(Required=false)]
-            public string TriggerUrl { get; set; }
+            public string TriggerName { get; set; }
+
+            [NameInMap("TriggerTag")]
+            [Validation(Required=false)]
+            public string TriggerTag { get; set; }
 
             [NameInMap("TriggerType")]
             [Validation(Required=false)]
             public string TriggerType { get; set; }
 
-            [NameInMap("TriggerTag")]
+            [NameInMap("TriggerUrl")]
             [Validation(Required=false)]
-            public string TriggerTag { get; set; }
+            public string TriggerUrl { get; set; }
 
         }
 

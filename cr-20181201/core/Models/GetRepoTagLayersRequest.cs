@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagLayersRequest : TeaModel {
+        [NameInMap("Digest")]
+        [Validation(Required=false)]
+        public string Digest { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
-
-        [NameInMap("Digest")]
-        [Validation(Required=false)]
-        public string Digest { get; set; }
 
     }
 

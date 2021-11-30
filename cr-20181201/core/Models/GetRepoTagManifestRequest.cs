@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("RepoId")]
         [Validation(Required=false)]
-        public string Tag { get; set; }
+        public string RepoId { get; set; }
 
         [NameInMap("SchemaVersion")]
         [Validation(Required=false)]
         public int? SchemaVersion { get; set; }
 
-        [NameInMap("RepoId")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public string RepoId { get; set; }
+        public string Tag { get; set; }
 
     }
 

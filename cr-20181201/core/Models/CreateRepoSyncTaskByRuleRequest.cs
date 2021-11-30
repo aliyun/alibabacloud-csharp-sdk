@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public string Tag { get; set; }
-
         [NameInMap("SyncRuleId")]
         [Validation(Required=false)]
         public string SyncRuleId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
 
     }
 

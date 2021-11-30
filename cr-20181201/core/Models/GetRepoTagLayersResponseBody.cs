@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Layers")]
         [Validation(Required=false)]
         public List<GetRepoTagLayersResponseBodyLayers> Layers { get; set; }
@@ -28,6 +24,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [NameInMap("BlobDigest")]
             [Validation(Required=false)]
             public string BlobDigest { get; set; }
+
+            [NameInMap("BlobSize")]
+            [Validation(Required=false)]
+            public long? BlobSize { get; set; }
+
+            [NameInMap("LayerCMD")]
+            [Validation(Required=false)]
+            public string LayerCMD { get; set; }
 
             [NameInMap("LayerIndex")]
             [Validation(Required=false)]
@@ -37,15 +41,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string LayerInstruction { get; set; }
 
-            [NameInMap("LayerCMD")]
-            [Validation(Required=false)]
-            public string LayerCMD { get; set; }
-
-            [NameInMap("BlobSize")]
-            [Validation(Required=false)]
-            public long? BlobSize { get; set; }
-
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

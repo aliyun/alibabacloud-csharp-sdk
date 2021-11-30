@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("NamespaceName")]
+        [Validation(Required=false)]
+        public string NamespaceName { get; set; }
+
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("NamespaceName")]
-        [Validation(Required=false)]
-        public string NamespaceName { get; set; }
 
         [NameInMap("RepoName")]
         [Validation(Required=false)]

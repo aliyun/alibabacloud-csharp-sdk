@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListArtifactBuildTaskLogResponseBody : TeaModel {
+        [NameInMap("BuildTaskLogs")]
+        [Validation(Required=false)]
+        public List<ListArtifactBuildTaskLogResponseBodyBuildTaskLogs> BuildTaskLogs { get; set; }
+        public class ListArtifactBuildTaskLogResponseBodyBuildTaskLogs : TeaModel {
+            [NameInMap("LineNumber")]
+            [Validation(Required=false)]
+            public int? LineNumber { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+        }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -24,20 +38,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
-
-        [NameInMap("BuildTaskLogs")]
-        [Validation(Required=false)]
-        public List<ListArtifactBuildTaskLogResponseBodyBuildTaskLogs> BuildTaskLogs { get; set; }
-        public class ListArtifactBuildTaskLogResponseBodyBuildTaskLogs : TeaModel {
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("LineNumber")]
-            [Validation(Required=false)]
-            public int? LineNumber { get; set; }
-
-        }
 
     }
 

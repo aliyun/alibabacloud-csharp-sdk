@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CancelRepoBuildRecordRequest : TeaModel {
+        [NameInMap("BuildRecordId")]
+        [Validation(Required=false)]
+        public string BuildRecordId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("RepoId")]
         [Validation(Required=false)]
         public string RepoId { get; set; }
-
-        [NameInMap("BuildRecordId")]
-        [Validation(Required=false)]
-        public string BuildRecordId { get; set; }
 
     }
 

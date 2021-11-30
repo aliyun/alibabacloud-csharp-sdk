@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListChartReleaseRequest : TeaModel {
+        [NameInMap("Chart")]
+        [Validation(Required=false)]
+        public string Chart { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("RepoName")]
-        [Validation(Required=false)]
-        public string RepoName { get; set; }
-
-        [NameInMap("RepoNamespaceName")]
-        [Validation(Required=false)]
-        public string RepoNamespaceName { get; set; }
 
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -29,9 +25,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Chart")]
+        [NameInMap("RepoName")]
         [Validation(Required=false)]
-        public string Chart { get; set; }
+        public string RepoName { get; set; }
+
+        [NameInMap("RepoNamespaceName")]
+        [Validation(Required=false)]
+        public string RepoNamespaceName { get; set; }
 
     }
 

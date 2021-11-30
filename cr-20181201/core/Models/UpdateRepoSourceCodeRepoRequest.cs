@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoSourceCodeRepoRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("AutoBuild")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string AutoBuild { get; set; }
 
-        [NameInMap("RepoId")]
+        [NameInMap("CodeRepoId")]
         [Validation(Required=false)]
-        public string RepoId { get; set; }
-
-        [NameInMap("CodeRepoType")]
-        [Validation(Required=false)]
-        public string CodeRepoType { get; set; }
-
-        [NameInMap("CodeRepoNamespaceName")]
-        [Validation(Required=false)]
-        public string CodeRepoNamespaceName { get; set; }
+        public string CodeRepoId { get; set; }
 
         [NameInMap("CodeRepoName")]
         [Validation(Required=false)]
         public string CodeRepoName { get; set; }
 
-        [NameInMap("AutoBuild")]
+        [NameInMap("CodeRepoNamespaceName")]
         [Validation(Required=false)]
-        public string AutoBuild { get; set; }
+        public string CodeRepoNamespaceName { get; set; }
 
-        [NameInMap("OverseaBuild")]
+        [NameInMap("CodeRepoType")]
         [Validation(Required=false)]
-        public string OverseaBuild { get; set; }
+        public string CodeRepoType { get; set; }
 
         [NameInMap("DisableCacheBuild")]
         [Validation(Required=false)]
         public string DisableCacheBuild { get; set; }
 
-        [NameInMap("CodeRepoId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string CodeRepoId { get; set; }
+        public string InstanceId { get; set; }
+
+        [NameInMap("OverseaBuild")]
+        [Validation(Required=false)]
+        public string OverseaBuild { get; set; }
+
+        [NameInMap("RepoId")]
+        [Validation(Required=false)]
+        public string RepoId { get; set; }
 
     }
 

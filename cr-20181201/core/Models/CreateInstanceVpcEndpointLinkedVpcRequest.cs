@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ModuleName")]
+        [Validation(Required=false)]
+        public string ModuleName { get; set; }
+
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("VswitchId")]
         [Validation(Required=false)]
         public string VswitchId { get; set; }
-
-        [NameInMap("ModuleName")]
-        [Validation(Required=false)]
-        public string ModuleName { get; set; }
 
     }
 

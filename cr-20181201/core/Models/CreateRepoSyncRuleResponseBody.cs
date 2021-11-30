@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("SyncRuleId")]
-        [Validation(Required=false)]
-        public string SyncRuleId { get; set; }
-
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SyncRuleId")]
+        [Validation(Required=false)]
+        public string SyncRuleId { get; set; }
 
     }
 

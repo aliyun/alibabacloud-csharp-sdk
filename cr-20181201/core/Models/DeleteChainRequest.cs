@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class ListRepoTriggerRecordRequest : TeaModel {
+    public class DeleteChainRequest : TeaModel {
+        [NameInMap("ChainId")]
+        [Validation(Required=false)]
+        public string ChainId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("TriggerRecordId")]
-        [Validation(Required=false)]
-        public string TriggerRecordId { get; set; }
 
     }
 

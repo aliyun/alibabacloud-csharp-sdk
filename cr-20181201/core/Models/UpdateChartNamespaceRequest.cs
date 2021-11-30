@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateChartNamespaceRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("NamespaceName")]
-        [Validation(Required=false)]
-        public string NamespaceName { get; set; }
-
         [NameInMap("AutoCreateRepo")]
         [Validation(Required=false)]
         public bool? AutoCreateRepo { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("DefaultRepoType")]
         [Validation(Required=false)]
         public string DefaultRepoType { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("NamespaceName")]
+        [Validation(Required=false)]
+        public string NamespaceName { get; set; }
 
     }
 

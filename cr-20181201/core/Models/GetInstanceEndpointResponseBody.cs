@@ -9,43 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceEndpointResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("IsSuccess")]
-        [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
-
         [NameInMap("AclEnable")]
         [Validation(Required=false)]
         public bool? AclEnable { get; set; }
-
-        [NameInMap("Enable")]
-        [Validation(Required=false)]
-        public bool? Enable { get; set; }
-
-        [NameInMap("Domains")]
-        [Validation(Required=false)]
-        public List<GetInstanceEndpointResponseBodyDomains> Domains { get; set; }
-        public class GetInstanceEndpointResponseBodyDomains : TeaModel {
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("Domain")]
-            [Validation(Required=false)]
-            public string Domain { get; set; }
-
-        }
 
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
@@ -60,6 +26,40 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Entry { get; set; }
 
         }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Domains")]
+        [Validation(Required=false)]
+        public List<GetInstanceEndpointResponseBodyDomains> Domains { get; set; }
+        public class GetInstanceEndpointResponseBodyDomains : TeaModel {
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+        [NameInMap("Enable")]
+        [Validation(Required=false)]
+        public bool? Enable { get; set; }
+
+        [NameInMap("IsSuccess")]
+        [Validation(Required=false)]
+        public bool? IsSuccess { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

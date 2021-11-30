@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceResponseBody : TeaModel {
-        [NameInMap("ModifiedTime")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? ModifiedTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -29,21 +29,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceSpecification { get; set; }
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("InstanceStatus")]
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
+
+        [NameInMap("ModifiedTime")]
+        [Validation(Required=false)]
+        public long? ModifiedTime { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

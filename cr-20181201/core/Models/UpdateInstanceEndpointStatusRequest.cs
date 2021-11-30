@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateInstanceEndpointStatusRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Enable")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public bool? Enable { get; set; }
 
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
-        [NameInMap("Enable")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public bool? Enable { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("ModuleName")]
         [Validation(Required=false)]

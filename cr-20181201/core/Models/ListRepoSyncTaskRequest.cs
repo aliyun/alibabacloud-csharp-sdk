@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("RepoNamespaceName")]
-        [Validation(Required=false)]
-        public string RepoNamespaceName { get; set; }
-
-        [NameInMap("RepoName")]
-        [Validation(Required=false)]
-        public string RepoName { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public string Tag { get; set; }
-
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
@@ -33,9 +21,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RepoName")]
+        [Validation(Required=false)]
+        public string RepoName { get; set; }
+
+        [NameInMap("RepoNamespaceName")]
+        [Validation(Required=false)]
+        public string RepoNamespaceName { get; set; }
+
         [NameInMap("SyncRecordId")]
         [Validation(Required=false)]
         public string SyncRecordId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
 
     }
 

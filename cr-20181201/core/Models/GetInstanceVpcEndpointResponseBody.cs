@@ -13,26 +13,30 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("IsSuccess")]
+        [NameInMap("Domains")]
         [Validation(Required=false)]
-        public bool? IsSuccess { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<string> Domains { get; set; }
 
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
-        [NameInMap("Domains")]
+        [NameInMap("IsSuccess")]
         [Validation(Required=false)]
-        public List<string> Domains { get; set; }
+        public bool? IsSuccess { get; set; }
 
         [NameInMap("LinkedVpcs")]
         [Validation(Required=false)]
         public List<GetInstanceVpcEndpointResponseBodyLinkedVpcs> LinkedVpcs { get; set; }
         public class GetInstanceVpcEndpointResponseBodyLinkedVpcs : TeaModel {
+            [NameInMap("DefaultAccess")]
+            [Validation(Required=false)]
+            public bool? DefaultAccess { get; set; }
+
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -41,19 +45,15 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
-            [NameInMap("Ip")]
-            [Validation(Required=false)]
-            public string Ip { get; set; }
-
-            [NameInMap("DefaultAccess")]
-            [Validation(Required=false)]
-            public bool? DefaultAccess { get; set; }
-
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

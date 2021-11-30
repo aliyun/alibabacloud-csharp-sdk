@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class ListRepoTriggerRecordResponse : TeaModel {
+    public class ListChainInstanceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListRepoTriggerRecordResponseBody Body { get; set; }
+        public ListChainInstanceResponseBody Body { get; set; }
 
     }
 

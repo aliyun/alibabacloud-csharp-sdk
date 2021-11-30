@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoTagScanTaskRequest : TeaModel {
+        [NameInMap("Digest")]
+        [Validation(Required=false)]
+        public string Digest { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -17,17 +21,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public string Tag { get; set; }
-
-        [NameInMap("Digest")]
-        [Validation(Required=false)]
-        public string Digest { get; set; }
-
         [NameInMap("ScanService")]
         [Validation(Required=false)]
         public string ScanService { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
 
     }
 

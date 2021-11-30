@@ -9,37 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListChartRepositoryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
 
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
 
         [NameInMap("Repositories")]
         [Validation(Required=false)]
         public List<ListChartRepositoryResponseBodyRepositories> Repositories { get; set; }
         public class ListChartRepositoryResponseBodyRepositories : TeaModel {
-            [NameInMap("Summary")]
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string Summary { get; set; }
+            public long? CreateTime { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
 
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
@@ -49,31 +45,35 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string RepoId { get; set; }
 
-            [NameInMap("CreateTime")]
+            [NameInMap("RepoName")]
             [Validation(Required=false)]
-            public long? CreateTime { get; set; }
+            public string RepoName { get; set; }
 
             [NameInMap("RepoNamespaceName")]
             [Validation(Required=false)]
             public string RepoNamespaceName { get; set; }
 
-            [NameInMap("InstanceId")]
+            [NameInMap("RepoStatus")]
             [Validation(Required=false)]
-            public string InstanceId { get; set; }
+            public string RepoStatus { get; set; }
 
             [NameInMap("RepoType")]
             [Validation(Required=false)]
             public string RepoType { get; set; }
 
-            [NameInMap("RepoStatus")]
+            [NameInMap("Summary")]
             [Validation(Required=false)]
-            public string RepoStatus { get; set; }
-
-            [NameInMap("RepoName")]
-            [Validation(Required=false)]
-            public string RepoName { get; set; }
+            public string Summary { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

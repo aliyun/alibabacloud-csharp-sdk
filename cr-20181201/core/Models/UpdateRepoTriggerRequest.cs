@@ -17,25 +17,25 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
+        [NameInMap("TriggerId")]
+        [Validation(Required=false)]
+        public string TriggerId { get; set; }
+
         [NameInMap("TriggerName")]
         [Validation(Required=false)]
         public string TriggerName { get; set; }
-
-        [NameInMap("TriggerUrl")]
-        [Validation(Required=false)]
-        public string TriggerUrl { get; set; }
-
-        [NameInMap("TriggerType")]
-        [Validation(Required=false)]
-        public string TriggerType { get; set; }
 
         [NameInMap("TriggerTag")]
         [Validation(Required=false)]
         public string TriggerTag { get; set; }
 
-        [NameInMap("TriggerId")]
+        [NameInMap("TriggerType")]
         [Validation(Required=false)]
-        public string TriggerId { get; set; }
+        public string TriggerType { get; set; }
+
+        [NameInMap("TriggerUrl")]
+        [Validation(Required=false)]
+        public string TriggerUrl { get; set; }
 
     }
 

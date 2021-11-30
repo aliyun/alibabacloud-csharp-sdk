@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepositoryRequest : TeaModel {
+        [NameInMap("Detail")]
+        [Validation(Required=false)]
+        public string Detail { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("Summary")]
         [Validation(Required=false)]
         public string Summary { get; set; }
-
-        [NameInMap("Detail")]
-        [Validation(Required=false)]
-        public string Detail { get; set; }
 
         [NameInMap("TagImmutability")]
         [Validation(Required=false)]

@@ -21,9 +21,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoName { get; set; }
 
-        [NameInMap("TargetRegionId")]
+        [NameInMap("SyncRuleName")]
         [Validation(Required=false)]
-        public string TargetRegionId { get; set; }
+        public string SyncRuleName { get; set; }
+
+        [NameInMap("SyncScope")]
+        [Validation(Required=false)]
+        public string SyncScope { get; set; }
+
+        [NameInMap("SyncTrigger")]
+        [Validation(Required=false)]
+        public string SyncTrigger { get; set; }
+
+        [NameInMap("TagFilter")]
+        [Validation(Required=false)]
+        public string TagFilter { get; set; }
 
         [NameInMap("TargetInstanceId")]
         [Validation(Required=false)]
@@ -33,25 +45,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string TargetNamespaceName { get; set; }
 
+        [NameInMap("TargetRegionId")]
+        [Validation(Required=false)]
+        public string TargetRegionId { get; set; }
+
         [NameInMap("TargetRepoName")]
         [Validation(Required=false)]
         public string TargetRepoName { get; set; }
 
-        [NameInMap("TagFilter")]
+        [NameInMap("TargetUserId")]
         [Validation(Required=false)]
-        public string TagFilter { get; set; }
-
-        [NameInMap("SyncScope")]
-        [Validation(Required=false)]
-        public string SyncScope { get; set; }
-
-        [NameInMap("SyncRuleName")]
-        [Validation(Required=false)]
-        public string SyncRuleName { get; set; }
-
-        [NameInMap("SyncTrigger")]
-        [Validation(Required=false)]
-        public string SyncTrigger { get; set; }
+        public string TargetUserId { get; set; }
 
     }
 

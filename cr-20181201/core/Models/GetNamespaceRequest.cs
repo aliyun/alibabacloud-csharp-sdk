@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("NamespaceName")]
-        [Validation(Required=false)]
-        public string NamespaceName { get; set; }
-
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
+
+        [NameInMap("NamespaceName")]
+        [Validation(Required=false)]
+        public string NamespaceName { get; set; }
 
     }
 

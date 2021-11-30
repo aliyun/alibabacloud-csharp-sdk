@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoBuildRuleRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("BuildRuleId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("RepoId")]
-        [Validation(Required=false)]
-        public string RepoId { get; set; }
+        public string BuildRuleId { get; set; }
 
         [NameInMap("DockerfileLocation")]
         [Validation(Required=false)]
@@ -25,25 +21,29 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string DockerfileName { get; set; }
 
-        [NameInMap("PushType")]
+        [NameInMap("ImageTag")]
         [Validation(Required=false)]
-        public string PushType { get; set; }
+        public string ImageTag { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("Platforms")]
+        [Validation(Required=false)]
+        public List<string> Platforms { get; set; }
 
         [NameInMap("PushName")]
         [Validation(Required=false)]
         public string PushName { get; set; }
 
-        [NameInMap("ImageTag")]
+        [NameInMap("PushType")]
         [Validation(Required=false)]
-        public string ImageTag { get; set; }
+        public string PushType { get; set; }
 
-        [NameInMap("BuildRuleId")]
+        [NameInMap("RepoId")]
         [Validation(Required=false)]
-        public string BuildRuleId { get; set; }
-
-        [NameInMap("Platforms")]
-        [Validation(Required=false)]
-        public List<string> Platforms { get; set; }
+        public string RepoId { get; set; }
 
     }
 

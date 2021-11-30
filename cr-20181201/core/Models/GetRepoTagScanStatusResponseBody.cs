@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagScanStatusResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("ScanService")]
         [Validation(Required=false)]
         public string ScanService { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

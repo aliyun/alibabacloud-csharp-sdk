@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoBuildRecordStatusResponseBody : TeaModel {
+        [NameInMap("BuildStatus")]
+        [Validation(Required=false)]
+        public string BuildStatus { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("BuildStatus")]
-        [Validation(Required=false)]
-        public string BuildStatus { get; set; }
 
     }
 

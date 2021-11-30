@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteInstanceEndpointAclPolicyRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
         public string EndpointType { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("Entry")]
         [Validation(Required=false)]
         public string Entry { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("ModuleName")]
         [Validation(Required=false)]

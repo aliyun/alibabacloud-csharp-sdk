@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateInstanceEndpointAclPolicyRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Comment")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string Comment { get; set; }
 
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Entry { get; set; }
 
-        [NameInMap("Comment")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("ModuleName")]
         [Validation(Required=false)]
