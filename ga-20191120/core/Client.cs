@@ -846,6 +846,8 @@ namespace AlibabaCloud.SDK.Ga20191120
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             query["AutoPay"] = request.AutoPay;
+            query["AutoRenew"] = request.AutoRenew;
+            query["AutoRenewDuration"] = request.AutoRenewDuration;
             query["AutoUseCoupon"] = request.AutoUseCoupon;
             query["ClientToken"] = request.ClientToken;
             query["Duration"] = request.Duration;
@@ -876,6 +878,8 @@ namespace AlibabaCloud.SDK.Ga20191120
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             query["AutoPay"] = request.AutoPay;
+            query["AutoRenew"] = request.AutoRenew;
+            query["AutoRenewDuration"] = request.AutoRenewDuration;
             query["AutoUseCoupon"] = request.AutoUseCoupon;
             query["ClientToken"] = request.ClientToken;
             query["Duration"] = request.Duration;
@@ -2443,6 +2447,70 @@ namespace AlibabaCloud.SDK.Ga20191120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAcceleratorWithOptionsAsync(request, runtime);
+        }
+
+        public DescribeAcceleratorAutoRenewAttributeResponse DescribeAcceleratorAutoRenewAttributeWithOptions(DescribeAcceleratorAutoRenewAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AcceleratorId"] = request.AcceleratorId;
+            query["RegionId"] = request.RegionId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAcceleratorAutoRenewAttribute",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAcceleratorAutoRenewAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeAcceleratorAutoRenewAttributeResponse> DescribeAcceleratorAutoRenewAttributeWithOptionsAsync(DescribeAcceleratorAutoRenewAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AcceleratorId"] = request.AcceleratorId;
+            query["RegionId"] = request.RegionId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAcceleratorAutoRenewAttribute",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAcceleratorAutoRenewAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeAcceleratorAutoRenewAttributeResponse DescribeAcceleratorAutoRenewAttribute(DescribeAcceleratorAutoRenewAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAcceleratorAutoRenewAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeAcceleratorAutoRenewAttributeResponse> DescribeAcceleratorAutoRenewAttributeAsync(DescribeAcceleratorAutoRenewAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAcceleratorAutoRenewAttributeWithOptionsAsync(request, runtime);
         }
 
         public DescribeBandwidthPackageResponse DescribeBandwidthPackageWithOptions(DescribeBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4741,6 +4809,80 @@ namespace AlibabaCloud.SDK.Ga20191120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAcceleratorWithOptionsAsync(request, runtime);
+        }
+
+        public UpdateAcceleratorAutoRenewAttributeResponse UpdateAcceleratorAutoRenewAttributeWithOptions(UpdateAcceleratorAutoRenewAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AcceleratorId"] = request.AcceleratorId;
+            query["AutoRenew"] = request.AutoRenew;
+            query["AutoRenewDuration"] = request.AutoRenewDuration;
+            query["ClientToken"] = request.ClientToken;
+            query["Name"] = request.Name;
+            query["RegionId"] = request.RegionId;
+            query["RenewalStatus"] = request.RenewalStatus;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAcceleratorAutoRenewAttribute",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAcceleratorAutoRenewAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateAcceleratorAutoRenewAttributeResponse> UpdateAcceleratorAutoRenewAttributeWithOptionsAsync(UpdateAcceleratorAutoRenewAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AcceleratorId"] = request.AcceleratorId;
+            query["AutoRenew"] = request.AutoRenew;
+            query["AutoRenewDuration"] = request.AutoRenewDuration;
+            query["ClientToken"] = request.ClientToken;
+            query["Name"] = request.Name;
+            query["RegionId"] = request.RegionId;
+            query["RenewalStatus"] = request.RenewalStatus;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAcceleratorAutoRenewAttribute",
+                Version = "2019-11-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAcceleratorAutoRenewAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateAcceleratorAutoRenewAttributeResponse UpdateAcceleratorAutoRenewAttribute(UpdateAcceleratorAutoRenewAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAcceleratorAutoRenewAttributeWithOptions(request, runtime);
+        }
+
+        public async Task<UpdateAcceleratorAutoRenewAttributeResponse> UpdateAcceleratorAutoRenewAttributeAsync(UpdateAcceleratorAutoRenewAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAcceleratorAutoRenewAttributeWithOptionsAsync(request, runtime);
         }
 
         public UpdateAcceleratorConfirmResponse UpdateAcceleratorConfirmWithOptions(UpdateAcceleratorConfirmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)

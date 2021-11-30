@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
+            [NameInMap("Pop")]
+            [Validation(Required=false)]
+            public bool? Pop { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
