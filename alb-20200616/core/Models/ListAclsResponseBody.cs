@@ -45,6 +45,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string AddressIPVersion { get; set; }
 
             /// <summary>
+            /// 配置管理
+            /// </summary>
+            [NameInMap("ConfigManagedEnabled")]
+            [Validation(Required=false)]
+            public bool? ConfigManagedEnabled { get; set; }
+
+            /// <summary>
             /// 资源组ID
             /// </summary>
             [NameInMap("ResourceGroupId")]

@@ -38,6 +38,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListServerGroupsResponseBodyServerGroups> ServerGroups { get; set; }
         public class ListServerGroupsResponseBodyServerGroups : TeaModel {
             /// <summary>
+            /// 是否开启配置管理
+            /// </summary>
+            [NameInMap("ConfigManagedEnabled")]
+            [Validation(Required=false)]
+            public bool? ConfigManagedEnabled { get; set; }
+
+            /// <summary>
             /// 健康检查配置
             /// </summary>
             [NameInMap("HealthCheckConfig")]
@@ -81,6 +88,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public int? UnhealthyThreshold { get; set; }
             };
+
+            /// <summary>
+            /// 是否支持Ipv6
+            /// </summary>
+            [NameInMap("Ipv6Enabled")]
+            [Validation(Required=false)]
+            public bool? Ipv6Enabled { get; set; }
 
             /// <summary>
             /// 服务器组协议
@@ -181,6 +195,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Value { get; set; }
 
             }
+
+            /// <summary>
+            /// 是否开启后端长链接
+            /// </summary>
+            [NameInMap("UpstreamKeepaliveEnabled")]
+            [Validation(Required=false)]
+            public bool? UpstreamKeepaliveEnabled { get; set; }
 
             /// <summary>
             /// 服务器组所在VpcId

@@ -32,6 +32,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string AddressAllocatedMode { get; set; }
 
         /// <summary>
+        /// 协议版本
+        /// </summary>
+        [NameInMap("AddressIpVersion")]
+        [Validation(Required=false)]
+        public string AddressIpVersion { get; set; }
+
+        /// <summary>
         /// 地址类型
         /// </summary>
         [NameInMap("AddressType")]
@@ -73,6 +80,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string EnabledTime { get; set; }
         };
+
+        /// <summary>
+        /// IPV6地址类型
+        /// </summary>
+        [NameInMap("Ipv6AddressType")]
+        [Validation(Required=false)]
+        public string Ipv6AddressType { get; set; }
 
         /// <summary>
         /// 计费相关属性
@@ -230,6 +244,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("Address")]
                 [Validation(Required=false)]
                 public string Address { get; set; }
+
+                /// <summary>
+                /// Ipv6地址
+                /// </summary>
+                [NameInMap("Ipv6Address")]
+                [Validation(Required=false)]
+                public string Ipv6Address { get; set; }
 
             }
 
