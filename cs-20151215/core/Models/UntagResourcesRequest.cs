@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
+        /// 是否删除全部自定义标签，仅当tag_keys为空时生效，取值：[true,false]。
+        /// </summary>
+        [NameInMap("all")]
+        [Validation(Required=false)]
+        public bool? All { get; set; }
+
+        /// <summary>
         /// 资源所属的地域ID
         /// </summary>
         [NameInMap("region_id")]

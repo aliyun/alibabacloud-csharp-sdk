@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UntagResourcesResponse : TeaModel {
+    public class DeleteAlertContactResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
-
-        [NameInMap("body")]
-        [Validation(Required=true)]
-        public UntagResourcesResponseBody Body { get; set; }
 
     }
 
