@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("CreateUser")]
+            [Validation(Required=false)]
+            public string CreateUser { get; set; }
+
             [NameInMap("CycTime")]
             [Validation(Required=false)]
             public long? CycTime { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string BizDate { get; set; }
 
+        [NameInMap("DagType")]
+        [Validation(Required=false)]
+        public string DagType { get; set; }
+
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
+
+        [NameInMap("SchedulerType")]
+        [Validation(Required=false)]
+        public string SchedulerType { get; set; }
 
     }
 

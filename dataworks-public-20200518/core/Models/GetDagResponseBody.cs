@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+            [NameInMap("OpSeq")]
+            [Validation(Required=false)]
+            public long? OpSeq { get; set; }
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
             public long? ProjectId { get; set; }

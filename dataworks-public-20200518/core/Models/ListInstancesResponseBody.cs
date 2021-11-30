@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BusinessId { get; set; }
                 public string Connection { get; set; }
                 public long? CreateTime { get; set; }
+                public string CreateUser { get; set; }
                 public long? CycTime { get; set; }
                 public long? DagId { get; set; }
                 public string DagType { get; set; }
