@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Saf20190521.Models
 {
     public class ExecuteExtendServiceResponseBody : TeaModel {
-        [NameInMap("Message")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public string HttpStatusCode { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,9 +22,17 @@ namespace AlibabaCloud.SDK.Saf20190521.Models
             public string InvokeResult { get; set; }
         };
 
-        [NameInMap("Code")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public string HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

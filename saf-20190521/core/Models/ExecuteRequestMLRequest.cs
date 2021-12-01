@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Saf20190521.Models
 {
     public class ExecuteRequestMLRequest : TeaModel {
-        [NameInMap("ServiceParameters")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string ServiceParameters { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("Service")]
         [Validation(Required=false)]
         public string Service { get; set; }
+
+        [NameInMap("ServiceParameters")]
+        [Validation(Required=false)]
+        public string ServiceParameters { get; set; }
 
     }
 

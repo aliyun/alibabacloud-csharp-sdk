@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Saf20190521.Models
 {
-    public class ExecuteRequestMLResponseBody : TeaModel {
+    public class RequestDecisionResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public long? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Saf20190521.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Saf20190521.Models
 {
     public class ExecuteRequestResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Data { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Saf20190521.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Data { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
 
     }
 

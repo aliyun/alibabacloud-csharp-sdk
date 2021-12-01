@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Saf20190521.Models
 {
-    public class ExecuteRequestSGRequest : TeaModel {
-        [NameInMap("Lang")]
+    public class RequestDecisionRequest : TeaModel {
+        [NameInMap("EventCode")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("Service")]
-        [Validation(Required=false)]
-        public string Service { get; set; }
+        public string EventCode { get; set; }
 
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
