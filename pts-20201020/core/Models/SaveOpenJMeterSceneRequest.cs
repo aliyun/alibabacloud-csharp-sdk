@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("Concurrency")]
             [Validation(Required=false)]
             public int? Concurrency { get; set; }
-            [NameInMap("ConstantThroughputTimers")]
+            [NameInMap("ConstantThroughputTimerType")]
             [Validation(Required=false)]
-            public string ConstantThroughputTimers { get; set; }
+            public string ConstantThroughputTimerType { get; set; }
             [NameInMap("DnsCacheConfig")]
             [Validation(Required=false)]
             public SaveOpenJMeterSceneRequestOpenJMeterSceneDnsCacheConfig DnsCacheConfig { get; set; }
@@ -88,9 +88,9 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("Steps")]
             [Validation(Required=false)]
             public int? Steps { get; set; }
-            [NameInMap("SyncTimers")]
+            [NameInMap("SyncTimerType")]
             [Validation(Required=false)]
-            public string SyncTimers { get; set; }
+            public string SyncTimerType { get; set; }
             [NameInMap("TestFile")]
             [Validation(Required=false)]
             public string TestFile { get; set; }
