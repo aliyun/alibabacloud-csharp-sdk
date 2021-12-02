@@ -35,6 +35,13 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// 域名名称，使用域名名称拼接上函数计算域名，可以采用HTTP协议调用到触发器对应版本的函数。例如{domainName}.cn-shanghai.fc.aliyuncs.com
+            /// </summary>
+            [NameInMap("domainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+
+            /// <summary>
             /// 调用函数使用的RAM角色的ARN
             /// </summary>
             [NameInMap("invocationRole")]

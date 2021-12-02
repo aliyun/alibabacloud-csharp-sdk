@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public long? Current { get; set; }
 
         /// <summary>
+        /// 预留实例创建失败时的错误信息
+        /// </summary>
+        [NameInMap("currentError")]
+        [Validation(Required=false)]
+        public string CurrentError { get; set; }
+
+        /// <summary>
         /// 资源描述
         /// </summary>
         [NameInMap("resource")]

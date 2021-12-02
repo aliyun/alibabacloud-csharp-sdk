@@ -42,6 +42,20 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         public CustomContainerConfig CustomContainerConfig { get; set; }
 
         /// <summary>
+        /// 函数自定义DNS配置
+        /// </summary>
+        [NameInMap("customDNS")]
+        [Validation(Required=false)]
+        public CustomDNS CustomDNS { get; set; }
+
+        /// <summary>
+        /// Custom Runtime函数详细配置
+        /// </summary>
+        [NameInMap("customRuntimeConfig")]
+        [Validation(Required=false)]
+        public CustomRuntimeConfig CustomRuntimeConfig { get; set; }
+
+        /// <summary>
         /// 函数描述
         /// </summary>
         [NameInMap("description")]
