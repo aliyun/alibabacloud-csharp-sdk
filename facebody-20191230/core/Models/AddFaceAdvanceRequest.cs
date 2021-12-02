@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public float? QualityScoreThreshold { get; set; }
 
-        [NameInMap("SimilarityScoreThresholdInEntity")]
-        [Validation(Required=false)]
-        public float? SimilarityScoreThresholdInEntity { get; set; }
-
         [NameInMap("SimilarityScoreThresholdBetweenEntity")]
         [Validation(Required=false)]
         public float? SimilarityScoreThresholdBetweenEntity { get; set; }
+
+        [NameInMap("SimilarityScoreThresholdInEntity")]
+        [Validation(Required=false)]
+        public float? SimilarityScoreThresholdInEntity { get; set; }
 
     }
 

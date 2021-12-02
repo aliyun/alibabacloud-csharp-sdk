@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectCelebrityResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectCelebrityResponseBodyData Data { get; set; }
@@ -24,13 +20,17 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public List<string> FaceBoxes { get; set; }
                 public string Name { get; set; }
             }
-            [NameInMap("Width")]
-            [Validation(Required=false)]
-            public int? Width { get; set; }
             [NameInMap("Height")]
             [Validation(Required=false)]
             public int? Height { get; set; }
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public int? Width { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

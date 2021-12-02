@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -17,11 +20,11 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public long? DbId { get; set; }
 
         /// <summary>
-        /// 实体ID，可以包含数字、字母和下划线，相同db下不可以重复，长度1-64。
+        /// 自定义信息。支持字母、数字、标点符号和汉字。不超过4096个字符。
         /// </summary>
-        [NameInMap("PersonId")]
+        [NameInMap("ExtraData")]
         [Validation(Required=false)]
-        public long? PersonId { get; set; }
+        public string ExtraData { get; set; }
 
         /// <summary>
         /// Trace图片信息列表
@@ -30,6 +33,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public List<AddBodyTraceRequestImages> Images { get; set; }
         public class AddBodyTraceRequestImages : TeaModel {
+            [NameInMap("ImageData")]
+            [Validation(Required=false)]
+            public byte[] ImageData { get; set; }
+
             /// <summary>
             /// Trace图片URL
             /// </summary>
@@ -37,18 +44,14 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public string ImageURL { get; set; }
 
-            [NameInMap("ImageData")]
-            [Validation(Required=false)]
-            public byte[] ImageData { get; set; }
-
         }
 
         /// <summary>
-        /// 自定义信息。支持字母、数字、标点符号和汉字。不超过4096个字符。
+        /// 实体ID，可以包含数字、字母和下划线，相同db下不可以重复，长度1-64。
         /// </summary>
-        [NameInMap("ExtraData")]
+        [NameInMap("PersonId")]
         [Validation(Required=false)]
-        public string ExtraData { get; set; }
+        public long? PersonId { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class RecognizeActionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeActionResponseBodyData Data { get; set; }
@@ -21,15 +17,19 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<RecognizeActionResponseBodyDataElements> Elements { get; set; }
             public class RecognizeActionResponseBodyDataElements : TeaModel {
-                public List<string> Scores { get; set; }
-                public List<string> Labels { get; set; }
                 public List<RecognizeActionResponseBodyDataElementsBoxes> Boxes { get; set; }
                 public class RecognizeActionResponseBodyDataElementsBoxes : TeaModel {
                     public List<string> Box { get; set; }
                 }
+                public List<string> Labels { get; set; }
+                public List<string> Scores { get; set; }
                 public int? Timestamp { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

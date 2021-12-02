@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public int? Type { get; set; }
 
-        [NameInMap("VideoUrl")]
-        [Validation(Required=false)]
-        public string VideoUrl { get; set; }
-
         [NameInMap("URLList")]
         [Validation(Required=false)]
         public List<RecognizeActionRequestURLList> URLList { get; set; }
@@ -34,6 +30,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("VideoData")]
         [Validation(Required=false)]
         public byte[] VideoData { get; set; }
+
+        [NameInMap("VideoUrl")]
+        [Validation(Required=false)]
+        public string VideoUrl { get; set; }
 
     }
 

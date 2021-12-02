@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public List<RecognizePublicFaceRequestTask> Task { get; set; }
         public class RecognizePublicFaceRequestTask : TeaModel {
-            [NameInMap("ImageURL")]
-            [Validation(Required=false)]
-            public string ImageURL { get; set; }
-
             [NameInMap("ImageData")]
             [Validation(Required=false)]
             public byte[] ImageData { get; set; }
+
+            [NameInMap("ImageURL")]
+            [Validation(Required=false)]
+            public string ImageURL { get; set; }
 
         }
 

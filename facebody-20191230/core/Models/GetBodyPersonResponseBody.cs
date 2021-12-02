@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class GetBodyPersonResponseBody : TeaModel {
-        /// <summary>
-        /// RequestId
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBodyPersonResponseBodyData Data { get; set; }
@@ -36,10 +29,17 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<GetBodyPersonResponseBodyDataTraceList> TraceList { get; set; }
             public class GetBodyPersonResponseBodyDataTraceList : TeaModel {
-                public long? Id { get; set; }
                 public string ExtraData { get; set; }
+                public long? Id { get; set; }
             }
         };
+
+        /// <summary>
+        /// RequestId
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

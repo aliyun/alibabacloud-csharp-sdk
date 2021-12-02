@@ -9,20 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class ListBodyDbsResponseBody : TeaModel {
-        /// <summary>
-        /// RequestId
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListBodyDbsResponseBodyData Data { get; set; }
         public class ListBodyDbsResponseBodyData : TeaModel {
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public long? Total { get; set; }
             [NameInMap("DbList")]
             [Validation(Required=false)]
             public List<ListBodyDbsResponseBodyDataDbList> DbList { get; set; }
@@ -30,7 +20,17 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public long? Id { get; set; }
                 public string Name { get; set; }
             }
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public long? Total { get; set; }
         };
+
+        /// <summary>
+        /// RequestId
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class GenerateHumanAnimeStyleRequest : TeaModel {
-        [NameInMap("ImageURL")]
-        [Validation(Required=false)]
-        public string ImageURL { get; set; }
-
         [NameInMap("AlgoType")]
         [Validation(Required=false)]
         public string AlgoType { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public string ImageURL { get; set; }
 
     }
 

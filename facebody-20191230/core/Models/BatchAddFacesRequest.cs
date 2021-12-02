@@ -17,14 +17,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
-        [NameInMap("SimilarityScoreThresholdInEntity")]
-        [Validation(Required=false)]
-        public float? SimilarityScoreThresholdInEntity { get; set; }
-
-        [NameInMap("SimilarityScoreThresholdBetweenEntity")]
-        [Validation(Required=false)]
-        public float? SimilarityScoreThresholdBetweenEntity { get; set; }
-
         [NameInMap("Faces")]
         [Validation(Required=false)]
         public List<BatchAddFacesRequestFaces> Faces { get; set; }
@@ -42,6 +34,14 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("QualityScoreThreshold")]
         [Validation(Required=false)]
         public float? QualityScoreThreshold { get; set; }
+
+        [NameInMap("SimilarityScoreThresholdBetweenEntity")]
+        [Validation(Required=false)]
+        public float? SimilarityScoreThresholdBetweenEntity { get; set; }
+
+        [NameInMap("SimilarityScoreThresholdInEntity")]
+        [Validation(Required=false)]
+        public float? SimilarityScoreThresholdInEntity { get; set; }
 
     }
 

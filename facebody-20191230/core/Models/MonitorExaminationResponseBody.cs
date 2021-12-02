@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class MonitorExaminationResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MonitorExaminationResponseBodyData Data { get; set; }
         public class MonitorExaminationResponseBodyData : TeaModel {
+            [NameInMap("ChatScore")]
+            [Validation(Required=false)]
+            public float? ChatScore { get; set; }
             [NameInMap("FaceInfo")]
             [Validation(Required=false)]
             public MonitorExaminationResponseBodyDataFaceInfo FaceInfo { get; set; }
@@ -81,13 +77,17 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 public long? PersonNumber { get; set; }
 
             }
-            [NameInMap("ChatScore")]
-            [Validation(Required=false)]
-            public float? ChatScore { get; set; }
             [NameInMap("Threshold")]
             [Validation(Required=false)]
             public float? Threshold { get; set; }
         };
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

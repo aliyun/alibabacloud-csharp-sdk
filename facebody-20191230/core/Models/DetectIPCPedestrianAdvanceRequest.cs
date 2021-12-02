@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=true)]
         public Stream ImageURLObject { get; set; }
 
+        [NameInMap("Height")]
+        [Validation(Required=false)]
+        public int? Height { get; set; }
+
         [NameInMap("ImageData")]
         [Validation(Required=false)]
         public string ImageData { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [NameInMap("Width")]
         [Validation(Required=false)]
         public int? Width { get; set; }
-
-        [NameInMap("Height")]
-        [Validation(Required=false)]
-        public int? Height { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectPedestrianIntrusionShrinkRequest : TeaModel {
-        [NameInMap("ImageURL")]
-        [Validation(Required=false)]
-        public string ImageURL { get; set; }
-
         [NameInMap("DetectRegion")]
         [Validation(Required=false)]
         public string DetectRegionShrink { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public string ImageURL { get; set; }
 
         [NameInMap("RegionType")]
         [Validation(Required=false)]

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class GetRealPersonVerificationResultRequest : TeaModel {
-        [NameInMap("VerificationToken")]
-        [Validation(Required=false)]
-        public string VerificationToken { get; set; }
-
         [NameInMap("MaterialHash")]
         [Validation(Required=false)]
         public string MaterialHash { get; set; }
+
+        [NameInMap("VerificationToken")]
+        [Validation(Required=false)]
+        public string VerificationToken { get; set; }
 
     }
 

@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public bool? Landmark { get; set; }
 
-        [NameInMap("Quality")]
+        [NameInMap("MaxFaceNumber")]
         [Validation(Required=false)]
-        public bool? Quality { get; set; }
+        public long? MaxFaceNumber { get; set; }
 
         [NameInMap("Pose")]
         [Validation(Required=false)]
         public bool? Pose { get; set; }
 
-        [NameInMap("MaxFaceNumber")]
+        [NameInMap("Quality")]
         [Validation(Required=false)]
-        public long? MaxFaceNumber { get; set; }
+        public bool? Quality { get; set; }
 
     }
 

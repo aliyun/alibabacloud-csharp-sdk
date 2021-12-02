@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class AddBodyTraceResponseBody : TeaModel {
-        /// <summary>
-        /// RequestId
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddBodyTraceResponseBodyData Data { get; set; }
@@ -24,6 +17,13 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
         };
+
+        /// <summary>
+        /// RequestId
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

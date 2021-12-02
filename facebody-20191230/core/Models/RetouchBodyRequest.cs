@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string ImageURL { get; set; }
 
-        [NameInMap("SlimDegree")]
-        [Validation(Required=false)]
-        public float? SlimDegree { get; set; }
-
         [NameInMap("LengthenDegree")]
         [Validation(Required=false)]
         public float? LengthenDegree { get; set; }
+
+        [NameInMap("SlimDegree")]
+        [Validation(Required=false)]
+        public float? SlimDegree { get; set; }
 
     }
 

@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         public List<SearchBodyTraceRequestImages> Images { get; set; }
         public class SearchBodyTraceRequestImages : TeaModel {
             /// <summary>
-            /// Trace图片URL
-            /// </summary>
-            [NameInMap("ImageURL")]
-            [Validation(Required=false)]
-            public string ImageURL { get; set; }
-
-            /// <summary>
             /// 图片Base64数据
             /// </summary>
             [NameInMap("ImageData")]
             [Validation(Required=false)]
             public byte[] ImageData { get; set; }
+
+            /// <summary>
+            /// Trace图片URL
+            /// </summary>
+            [NameInMap("ImageURL")]
+            [Validation(Required=false)]
+            public string ImageURL { get; set; }
 
         }
 

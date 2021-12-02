@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class ExtractFingerPrintRequest : TeaModel {
-        [NameInMap("ImageURL")]
-        [Validation(Required=false)]
-        public string ImageURL { get; set; }
-
         [NameInMap("ImageData")]
         [Validation(Required=false)]
         public byte[] ImageData { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public string ImageURL { get; set; }
 
     }
 

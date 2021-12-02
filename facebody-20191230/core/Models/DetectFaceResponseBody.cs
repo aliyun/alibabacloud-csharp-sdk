@@ -9,43 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectFaceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetectFaceResponseBodyData Data { get; set; }
         public class DetectFaceResponseBodyData : TeaModel {
-            [NameInMap("FaceProbabilityList")]
-            [Validation(Required=false)]
-            public List<string> FaceProbabilityList { get; set; }
-            [NameInMap("Pupils")]
-            [Validation(Required=false)]
-            public List<string> Pupils { get; set; }
-            [NameInMap("FaceRectangles")]
-            [Validation(Required=false)]
-            public List<string> FaceRectangles { get; set; }
             [NameInMap("FaceCount")]
             [Validation(Required=false)]
             public int? FaceCount { get; set; }
-            [NameInMap("PoseList")]
+            [NameInMap("FaceProbabilityList")]
             [Validation(Required=false)]
-            public List<string> PoseList { get; set; }
-            [NameInMap("Landmarks")]
+            public List<string> FaceProbabilityList { get; set; }
+            [NameInMap("FaceRectangles")]
             [Validation(Required=false)]
-            public List<string> Landmarks { get; set; }
+            public List<string> FaceRectangles { get; set; }
             [NameInMap("LandmarkCount")]
             [Validation(Required=false)]
             public int? LandmarkCount { get; set; }
+            [NameInMap("Landmarks")]
+            [Validation(Required=false)]
+            public List<string> Landmarks { get; set; }
+            [NameInMap("PoseList")]
+            [Validation(Required=false)]
+            public List<string> PoseList { get; set; }
+            [NameInMap("Pupils")]
+            [Validation(Required=false)]
+            public List<string> Pupils { get; set; }
             [NameInMap("Qualities")]
             [Validation(Required=false)]
             public DetectFaceResponseBodyDataQualities Qualities { get; set; }
             public class DetectFaceResponseBodyDataQualities : TeaModel {
-                [NameInMap("ScoreList")]
-                [Validation(Required=false)]
-                public List<float?> ScoreList { get; set; }
-
                 [NameInMap("BlurList")]
                 [Validation(Required=false)]
                 public List<float?> BlurList { get; set; }
@@ -74,8 +66,16 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 [Validation(Required=false)]
                 public List<float?> PoseList { get; set; }
 
+                [NameInMap("ScoreList")]
+                [Validation(Required=false)]
+                public List<float?> ScoreList { get; set; }
+
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

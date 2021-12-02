@@ -16,13 +16,13 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("ImageURL")]
-        [Validation(Required=false)]
-        public string ImageURL { get; set; }
-
         [NameInMap("GestureType")]
         [Validation(Required=false)]
         public string GestureType { get; set; }
+
+        [NameInMap("ImageURL")]
+        [Validation(Required=false)]
+        public string ImageURL { get; set; }
 
     }
 

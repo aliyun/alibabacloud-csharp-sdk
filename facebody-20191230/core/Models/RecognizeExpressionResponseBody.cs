@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class RecognizeExpressionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeExpressionResponseBodyData Data { get; set; }
@@ -21,16 +17,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<RecognizeExpressionResponseBodyDataElements> Elements { get; set; }
             public class RecognizeExpressionResponseBodyDataElements : TeaModel {
+                public string Expression { get; set; }
+                public float? FaceProbability { get; set; }
                 public RecognizeExpressionResponseBodyDataElementsFaceRectangle FaceRectangle { get; set; }
                 public class RecognizeExpressionResponseBodyDataElementsFaceRectangle : TeaModel {
-                    [NameInMap("Top")]
-                    [Validation(Required=false)]
-                    public int? Top { get; set; }
-
-                    [NameInMap("Width")]
-                    [Validation(Required=false)]
-                    public int? Width { get; set; }
-
                     [NameInMap("Height")]
                     [Validation(Required=false)]
                     public int? Height { get; set; }
@@ -39,11 +29,21 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                     [Validation(Required=false)]
                     public int? Left { get; set; }
 
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public int? Top { get; set; }
+
+                    [NameInMap("Width")]
+                    [Validation(Required=false)]
+                    public int? Width { get; set; }
+
                 }
-                public string Expression { get; set; }
-                public float? FaceProbability { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -16,15 +16,15 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public BeautifyBodyResponseBodyData Data { get; set; }
         public class BeautifyBodyResponseBodyData : TeaModel {
+            [NameInMap("Action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
             [NameInMap("XFlowURL")]
             [Validation(Required=false)]
             public string XFlowURL { get; set; }
             [NameInMap("YFlowURL")]
             [Validation(Required=false)]
             public string YFlowURL { get; set; }
-            [NameInMap("Action")]
-            [Validation(Required=false)]
-            public string Action { get; set; }
         };
 
         [NameInMap("RequestId")]
