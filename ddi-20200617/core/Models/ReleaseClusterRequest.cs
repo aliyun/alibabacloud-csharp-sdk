@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
     public class ReleaseClusterRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ForceRelease")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public bool? ForceRelease { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
-        [NameInMap("ForceRelease")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? ForceRelease { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

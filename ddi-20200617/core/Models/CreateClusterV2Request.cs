@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -9,45 +12,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
     public class CreateClusterV2Request : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("AuthorizeContent")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("LogPath")]
-        [Validation(Required=false)]
-        public string LogPath { get; set; }
-
-        [NameInMap("SecurityGroupId")]
-        [Validation(Required=false)]
-        public string SecurityGroupId { get; set; }
-
-        [NameInMap("IsOpenPublicIp")]
-        [Validation(Required=false)]
-        public bool? IsOpenPublicIp { get; set; }
-
-        [NameInMap("SecurityGroupName")]
-        [Validation(Required=false)]
-        public string SecurityGroupName { get; set; }
-
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
+        public string AuthorizeContent { get; set; }
 
         [NameInMap("Auto")]
         [Validation(Required=false)]
@@ -57,131 +24,97 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
         [Validation(Required=false)]
         public bool? AutoPayOrder { get; set; }
 
-        [NameInMap("VpcId")]
+        [NameInMap("BootstrapAction")]
         [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public List<CreateClusterV2RequestBootstrapAction> BootstrapAction { get; set; }
+        public class CreateClusterV2RequestBootstrapAction : TeaModel {
+            [NameInMap("Arg")]
+            [Validation(Required=false)]
+            public string Arg { get; set; }
 
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
-        [NameInMap("NetType")]
-        [Validation(Required=false)]
-        public string NetType { get; set; }
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
 
-        [NameInMap("UserDefinedEmrEcsRole")]
-        [Validation(Required=false)]
-        public string UserDefinedEmrEcsRole { get; set; }
+        }
 
-        [NameInMap("EmrVer")]
+        [NameInMap("ChargeType")]
         [Validation(Required=false)]
-        public string EmrVer { get; set; }
-
-        [NameInMap("ClusterType")]
-        [Validation(Required=false)]
-        public string ClusterType { get; set; }
-
-        [NameInMap("EnableHighAvailability")]
-        [Validation(Required=false)]
-        public bool? EnableHighAvailability { get; set; }
-
-        [NameInMap("UseLocalMetaDb")]
-        [Validation(Required=false)]
-        public bool? UseLocalMetaDb { get; set; }
-
-        [NameInMap("EnableSsh")]
-        [Validation(Required=false)]
-        public bool? EnableSsh { get; set; }
-
-        [NameInMap("InstanceGeneration")]
-        [Validation(Required=false)]
-        public string InstanceGeneration { get; set; }
-
-        [NameInMap("MasterPwd")]
-        [Validation(Required=false)]
-        public string MasterPwd { get; set; }
-
-        [NameInMap("KeyPairName")]
-        [Validation(Required=false)]
-        public string KeyPairName { get; set; }
-
-        [NameInMap("MetaStoreType")]
-        [Validation(Required=false)]
-        public string MetaStoreType { get; set; }
-
-        [NameInMap("MetaStoreConf")]
-        [Validation(Required=false)]
-        public string MetaStoreConf { get; set; }
+        public string ChargeType { get; set; }
 
         [NameInMap("ClickHouseConf")]
         [Validation(Required=false)]
         public string ClickHouseConf { get; set; }
 
-        [NameInMap("ExtraAttributes")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ExtraAttributes { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("DepositType")]
+        [NameInMap("ClusterType")]
         [Validation(Required=false)]
-        public string DepositType { get; set; }
+        public string ClusterType { get; set; }
 
-        [NameInMap("MachineType")]
+        [NameInMap("Config")]
         [Validation(Required=false)]
-        public string MachineType { get; set; }
+        public List<CreateClusterV2RequestConfig> Config { get; set; }
+        public class CreateClusterV2RequestConfig : TeaModel {
+            [NameInMap("ConfigKey")]
+            [Validation(Required=false)]
+            public string ConfigKey { get; set; }
 
-        [NameInMap("UseCustomHiveMetaDB")]
-        [Validation(Required=false)]
-        public bool? UseCustomHiveMetaDB { get; set; }
+            [NameInMap("ConfigValue")]
+            [Validation(Required=false)]
+            public string ConfigValue { get; set; }
 
-        [NameInMap("InitCustomHiveMetaDB")]
-        [Validation(Required=false)]
-        public bool? InitCustomHiveMetaDB { get; set; }
+            [NameInMap("Encrypt")]
+            [Validation(Required=false)]
+            public string Encrypt { get; set; }
+
+            [NameInMap("FileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+
+            [NameInMap("Replace")]
+            [Validation(Required=false)]
+            public string Replace { get; set; }
+
+            [NameInMap("ServiceName")]
+            [Validation(Required=false)]
+            public string ServiceName { get; set; }
+
+        }
 
         [NameInMap("Configurations")]
         [Validation(Required=false)]
         public string Configurations { get; set; }
 
+        [NameInMap("DepositType")]
+        [Validation(Required=false)]
+        public string DepositType { get; set; }
+
+        [NameInMap("EmrVer")]
+        [Validation(Required=false)]
+        public string EmrVer { get; set; }
+
         [NameInMap("EnableEas")]
         [Validation(Required=false)]
         public bool? EnableEas { get; set; }
 
-        [NameInMap("RelatedClusterId")]
+        [NameInMap("EnableHighAvailability")]
         [Validation(Required=false)]
-        public string RelatedClusterId { get; set; }
+        public bool? EnableHighAvailability { get; set; }
 
-        [NameInMap("WhiteListType")]
+        [NameInMap("EnableSsh")]
         [Validation(Required=false)]
-        public string WhiteListType { get; set; }
+        public bool? EnableSsh { get; set; }
 
-        [NameInMap("AuthorizeContent")]
+        [NameInMap("ExtraAttributes")]
         [Validation(Required=false)]
-        public string AuthorizeContent { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("UserInfo")]
-        [Validation(Required=false)]
-        public List<CreateClusterV2RequestUserInfo> UserInfo { get; set; }
-        public class CreateClusterV2RequestUserInfo : TeaModel {
-            [NameInMap("Password")]
-            [Validation(Required=false)]
-            public string Password { get; set; }
-
-            [NameInMap("UserId")]
-            [Validation(Required=false)]
-            public string UserId { get; set; }
-
-            [NameInMap("UserName")]
-            [Validation(Required=false)]
-            public string UserName { get; set; }
-
-        }
+        public string ExtraAttributes { get; set; }
 
         [NameInMap("HostComponentInfo")]
         [Validation(Required=false)]
@@ -198,38 +131,6 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
-
-        }
-
-        [NameInMap("ServiceInfo")]
-        [Validation(Required=false)]
-        public List<CreateClusterV2RequestServiceInfo> ServiceInfo { get; set; }
-        public class CreateClusterV2RequestServiceInfo : TeaModel {
-            [NameInMap("ServiceName")]
-            [Validation(Required=false)]
-            public string ServiceName { get; set; }
-
-            [NameInMap("ServiceVersion")]
-            [Validation(Required=false)]
-            public string ServiceVersion { get; set; }
-
-        }
-
-        [NameInMap("PromotionInfo")]
-        [Validation(Required=false)]
-        public List<CreateClusterV2RequestPromotionInfo> PromotionInfo { get; set; }
-        public class CreateClusterV2RequestPromotionInfo : TeaModel {
-            [NameInMap("ProductCode")]
-            [Validation(Required=false)]
-            public string ProductCode { get; set; }
-
-            [NameInMap("PromotionOptionCode")]
-            [Validation(Required=false)]
-            public string PromotionOptionCode { get; set; }
-
-            [NameInMap("PromotionOptionNo")]
-            [Validation(Required=false)]
-            public string PromotionOptionNo { get; set; }
 
         }
 
@@ -311,51 +212,107 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
 
         }
 
-        [NameInMap("BootstrapAction")]
+        [NameInMap("InitCustomHiveMetaDB")]
         [Validation(Required=false)]
-        public List<CreateClusterV2RequestBootstrapAction> BootstrapAction { get; set; }
-        public class CreateClusterV2RequestBootstrapAction : TeaModel {
-            [NameInMap("Arg")]
-            [Validation(Required=false)]
-            public string Arg { get; set; }
+        public bool? InitCustomHiveMetaDB { get; set; }
 
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
+        [NameInMap("InstanceGeneration")]
+        [Validation(Required=false)]
+        public string InstanceGeneration { get; set; }
 
-            [NameInMap("Path")]
+        [NameInMap("IsOpenPublicIp")]
+        [Validation(Required=false)]
+        public bool? IsOpenPublicIp { get; set; }
+
+        [NameInMap("KeyPairName")]
+        [Validation(Required=false)]
+        public string KeyPairName { get; set; }
+
+        [NameInMap("LogPath")]
+        [Validation(Required=false)]
+        public string LogPath { get; set; }
+
+        [NameInMap("MachineType")]
+        [Validation(Required=false)]
+        public string MachineType { get; set; }
+
+        [NameInMap("MasterPwd")]
+        [Validation(Required=false)]
+        public string MasterPwd { get; set; }
+
+        [NameInMap("MetaStoreConf")]
+        [Validation(Required=false)]
+        public string MetaStoreConf { get; set; }
+
+        [NameInMap("MetaStoreType")]
+        [Validation(Required=false)]
+        public string MetaStoreType { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("NetType")]
+        [Validation(Required=false)]
+        public string NetType { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("PromotionInfo")]
+        [Validation(Required=false)]
+        public List<CreateClusterV2RequestPromotionInfo> PromotionInfo { get; set; }
+        public class CreateClusterV2RequestPromotionInfo : TeaModel {
+            [NameInMap("ProductCode")]
             [Validation(Required=false)]
-            public string Path { get; set; }
+            public string ProductCode { get; set; }
+
+            [NameInMap("PromotionOptionCode")]
+            [Validation(Required=false)]
+            public string PromotionOptionCode { get; set; }
+
+            [NameInMap("PromotionOptionNo")]
+            [Validation(Required=false)]
+            public string PromotionOptionNo { get; set; }
 
         }
 
-        [NameInMap("Config")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<CreateClusterV2RequestConfig> Config { get; set; }
-        public class CreateClusterV2RequestConfig : TeaModel {
-            [NameInMap("ConfigKey")]
-            [Validation(Required=false)]
-            public string ConfigKey { get; set; }
+        public string RegionId { get; set; }
 
-            [NameInMap("ConfigValue")]
-            [Validation(Required=false)]
-            public string ConfigValue { get; set; }
+        [NameInMap("RelatedClusterId")]
+        [Validation(Required=false)]
+        public string RelatedClusterId { get; set; }
 
-            [NameInMap("Encrypt")]
-            [Validation(Required=false)]
-            public string Encrypt { get; set; }
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
-            [NameInMap("FileName")]
-            [Validation(Required=false)]
-            public string FileName { get; set; }
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
-            [NameInMap("Replace")]
-            [Validation(Required=false)]
-            public string Replace { get; set; }
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
 
+        [NameInMap("SecurityGroupName")]
+        [Validation(Required=false)]
+        public string SecurityGroupName { get; set; }
+
+        [NameInMap("ServiceInfo")]
+        [Validation(Required=false)]
+        public List<CreateClusterV2RequestServiceInfo> ServiceInfo { get; set; }
+        public class CreateClusterV2RequestServiceInfo : TeaModel {
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
+            [NameInMap("ServiceVersion")]
+            [Validation(Required=false)]
+            public string ServiceVersion { get; set; }
 
         }
 
@@ -372,6 +329,52 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("UseCustomHiveMetaDB")]
+        [Validation(Required=false)]
+        public bool? UseCustomHiveMetaDB { get; set; }
+
+        [NameInMap("UseLocalMetaDb")]
+        [Validation(Required=false)]
+        public bool? UseLocalMetaDb { get; set; }
+
+        [NameInMap("UserDefinedEmrEcsRole")]
+        [Validation(Required=false)]
+        public string UserDefinedEmrEcsRole { get; set; }
+
+        [NameInMap("UserInfo")]
+        [Validation(Required=false)]
+        public List<CreateClusterV2RequestUserInfo> UserInfo { get; set; }
+        public class CreateClusterV2RequestUserInfo : TeaModel {
+            [NameInMap("Password")]
+            [Validation(Required=false)]
+            public string Password { get; set; }
+
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
+
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+        }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        [NameInMap("WhiteListType")]
+        [Validation(Required=false)]
+        public string WhiteListType { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

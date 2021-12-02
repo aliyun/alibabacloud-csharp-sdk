@@ -9,29 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
     public class ListClustersRequest : TeaModel {
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("ClusterTypeList")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<string> ClusterTypeList { get; set; }
 
         [NameInMap("CreateType")]
         [Validation(Required=false)]
         public string CreateType { get; set; }
 
-        [NameInMap("MachineType")]
+        [NameInMap("DefaultStatus")]
         [Validation(Required=false)]
-        public string MachineType { get; set; }
+        public bool? DefaultStatus { get; set; }
+
+        [NameInMap("DepositType")]
+        [Validation(Required=false)]
+        public string DepositType { get; set; }
+
+        [NameInMap("ExpiredTagList")]
+        [Validation(Required=false)]
+        public List<string> ExpiredTagList { get; set; }
 
         [NameInMap("IsDesc")]
         [Validation(Required=false)]
         public bool? IsDesc { get; set; }
 
-        [NameInMap("DepositType")]
+        [NameInMap("MachineType")]
         [Validation(Required=false)]
-        public string DepositType { get; set; }
+        public string MachineType { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -41,21 +49,17 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("DefaultStatus")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? DefaultStatus { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("ClusterTypeList")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public List<string> ClusterTypeList { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("StatusList")]
         [Validation(Required=false)]
@@ -74,10 +78,6 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("ExpiredTagList")]
-        [Validation(Required=false)]
-        public List<string> ExpiredTagList { get; set; }
 
     }
 
