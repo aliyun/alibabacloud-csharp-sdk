@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
-    public class DescribeEmptyNumberDetectResponseBody : TeaModel {
+    public class DescribePhoneNumberAnalysisResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<DescribeEmptyNumberDetectResponseBodyData> Data { get; set; }
-        public class DescribeEmptyNumberDetectResponseBodyData : TeaModel {
+        public List<DescribePhoneNumberAnalysisResponseBodyData> Data { get; set; }
+        public class DescribePhoneNumberAnalysisResponseBodyData : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
             [NameInMap("Number")]
             [Validation(Required=false)]
             public string Number { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
 
         }
 

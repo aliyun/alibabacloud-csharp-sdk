@@ -17,24 +17,24 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PhoneStatus")]
         [Validation(Required=false)]
         public DescribePhoneNumberStatusResponseBodyPhoneStatus PhoneStatus { get; set; }
         public class DescribePhoneNumberStatusResponseBodyPhoneStatus : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("SerialId")]
-            [Validation(Required=false)]
-            public string SerialId { get; set; }
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
+            [NameInMap("SerialId")]
+            [Validation(Required=false)]
+            public string SerialId { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

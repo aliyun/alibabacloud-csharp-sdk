@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PhoneNumberAttribute")]
         [Validation(Required=false)]
         public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute PhoneNumberAttribute { get; set; }
@@ -31,19 +27,23 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
+            [NameInMap("City")]
+            [Validation(Required=false)]
+            public string City { get; set; }
             [NameInMap("IsNumberPortability")]
             [Validation(Required=false)]
             public bool? IsNumberPortability { get; set; }
             [NameInMap("NumberSegment")]
             [Validation(Required=false)]
             public long? NumberSegment { get; set; }
-            [NameInMap("City")]
-            [Validation(Required=false)]
-            public string City { get; set; }
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
