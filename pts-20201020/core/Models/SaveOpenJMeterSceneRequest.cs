@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public int? Duration { get; set; }
-            [NameInMap("EnviromentId")]
+            [NameInMap("EnvironmentId")]
             [Validation(Required=false)]
-            public string EnviromentId { get; set; }
+            public string EnvironmentId { get; set; }
             [NameInMap("FileList")]
             [Validation(Required=false)]
             public List<SaveOpenJMeterSceneRequestOpenJMeterSceneFileList> FileList { get; set; }
