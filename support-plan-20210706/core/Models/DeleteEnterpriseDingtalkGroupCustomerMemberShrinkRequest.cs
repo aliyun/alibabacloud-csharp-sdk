@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class DeleteEnterpriseDingtalkGroupCustomerMemberShrinkRequest : TeaModel {
-        [NameInMap("OpenGroupId")]
-        [Validation(Required=false)]
-        public string OpenGroupId { get; set; }
-
         [NameInMap("Mobiles")]
         [Validation(Required=false)]
         public string MobilesShrink { get; set; }
+
+        [NameInMap("OpenGroupId")]
+        [Validation(Required=false)]
+        public string OpenGroupId { get; set; }
 
     }
 

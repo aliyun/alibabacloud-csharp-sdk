@@ -8,11 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
-    public class DeleteEnterpriseDingtalkGroupCustomerMemberRequest : TeaModel {
-        [NameInMap("Mobiles")]
-        [Validation(Required=false)]
-        public List<string> Mobiles { get; set; }
-
+    public class ListProductByGroupRequest : TeaModel {
+        /// <summary>
+        /// 主群关联Id
+        /// </summary>
         [NameInMap("OpenGroupId")]
         [Validation(Required=false)]
         public string OpenGroupId { get; set; }
