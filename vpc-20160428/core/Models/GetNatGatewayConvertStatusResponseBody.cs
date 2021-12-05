@@ -9,18 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetNatGatewayConvertStatusResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DstNatType")]
-        [Validation(Required=false)]
-        public string DstNatType { get; set; }
-
         [NameInMap("ConvertSteps")]
         [Validation(Required=false)]
         public List<GetNatGatewayConvertStatusResponseBodyConvertSteps> ConvertSteps { get; set; }
         public class GetNatGatewayConvertStatusResponseBodyConvertSteps : TeaModel {
+            [NameInMap("StepName")]
+            [Validation(Required=false)]
+            public string StepName { get; set; }
+
             [NameInMap("StepStartTime")]
             [Validation(Required=false)]
             public string StepStartTime { get; set; }
@@ -29,15 +25,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string StepStatus { get; set; }
 
-            [NameInMap("StepName")]
-            [Validation(Required=false)]
-            public string StepName { get; set; }
-
         }
+
+        [NameInMap("DstNatType")]
+        [Validation(Required=false)]
+        public string DstNatType { get; set; }
 
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

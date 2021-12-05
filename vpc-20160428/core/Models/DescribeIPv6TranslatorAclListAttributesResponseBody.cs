@@ -23,22 +23,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
         };
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
@@ -46,6 +30,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("AclName")]
         [Validation(Required=false)]
         public string AclName { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

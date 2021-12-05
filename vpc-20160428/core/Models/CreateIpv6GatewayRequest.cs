@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIpv6GatewayRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("Spec")]
-        [Validation(Required=false)]
-        public string Spec { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -45,9 +41,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Spec")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string Spec { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

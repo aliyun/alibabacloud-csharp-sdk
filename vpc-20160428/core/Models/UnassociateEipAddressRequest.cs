@@ -9,9 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateEipAddressRequest : TeaModel {
+        [NameInMap("AllocationId")]
+        [Validation(Required=false)]
+        public string AllocationId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,38 +52,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Force")]
-        [Validation(Required=false)]
-        public bool? Force { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("AllocationId")]
-        [Validation(Required=false)]
-        public string AllocationId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
-        [NameInMap("PrivateIpAddress")]
-        [Validation(Required=false)]
-        public string PrivateIpAddress { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

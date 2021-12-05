@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteTableListResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("RouterTableList")]
         [Validation(Required=false)]
@@ -33,10 +29,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeRouteTableListResponseBodyRouterTableListRouterTableListType> RouterTableListType { get; set; }
             public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType : TeaModel {
-                public string Status { get; set; }
+                public string AssociateType { get; set; }
                 public string CreationTime { get; set; }
-                public string VpcId { get; set; }
+                public string Description { get; set; }
+                public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds GatewayIds { get; set; }
+                public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds : TeaModel {
+                    [NameInMap("GatewayIds")]
+                    [Validation(Required=false)]
+                    public List<string> GatewayIds { get; set; }
+
+                }
+                public long? OwnerId { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string RouteTableId { get; set; }
+                public string RouteTableName { get; set; }
+                public string RouteTableType { get; set; }
                 public string RouterId { get; set; }
+                public string RouterType { get; set; }
+                public string Status { get; set; }
                 public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags Tags { get; set; }
                 public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags : TeaModel {
                     [NameInMap("Tag")]
@@ -54,11 +64,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
-                public string RouteTableId { get; set; }
-                public long? OwnerId { get; set; }
-                public string Description { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string RouteTableType { get; set; }
                 public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds VSwitchIds { get; set; }
                 public class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds : TeaModel {
                     [NameInMap("VSwitchId")]
@@ -66,10 +71,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<string> VSwitchId { get; set; }
 
                 }
-                public string RouterType { get; set; }
-                public string RouteTableName { get; set; }
+                public string VpcId { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

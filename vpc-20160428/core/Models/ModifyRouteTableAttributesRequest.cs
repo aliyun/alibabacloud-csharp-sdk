@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyRouteTableAttributesRequest : TeaModel {
-        [NameInMap("RouteTableId")]
-        [Validation(Required=false)]
-        public string RouteTableId { get; set; }
-
-        [NameInMap("RouteTableName")]
-        [Validation(Required=false)]
-        public string RouteTableName { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -33,29 +33,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Bandwidth")]
+        [NameInMap("RouteTableId")]
         [Validation(Required=false)]
-        public string Bandwidth { get; set; }
+        public string RouteTableId { get; set; }
 
-        [NameInMap("KbpsBandwidth")]
+        [NameInMap("RouteTableName")]
         [Validation(Required=false)]
-        public string KbpsBandwidth { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("ResourceBid")]
-        [Validation(Required=false)]
-        public string ResourceBid { get; set; }
-
-        [NameInMap("ResourceUid")]
-        [Validation(Required=false)]
-        public long? ResourceUid { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RouteTableName { get; set; }
 
     }
 

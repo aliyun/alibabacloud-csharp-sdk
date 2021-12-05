@@ -9,38 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetDhcpOptionsSetResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("DhcpOptionsSetId")]
-        [Validation(Required=false)]
-        public string DhcpOptionsSetId { get; set; }
-
-        [NameInMap("DhcpOptions")]
-        [Validation(Required=false)]
-        public GetDhcpOptionsSetResponseBodyDhcpOptions DhcpOptions { get; set; }
-        public class GetDhcpOptionsSetResponseBodyDhcpOptions : TeaModel {
-            [NameInMap("DomainNameServers")]
-            [Validation(Required=false)]
-            public string DomainNameServers { get; set; }
-            [NameInMap("DomainName")]
-            [Validation(Required=false)]
-            public string DomainName { get; set; }
-        };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("DhcpOptionsSetName")]
-        [Validation(Required=false)]
-        public string DhcpOptionsSetName { get; set; }
-
         [NameInMap("AssociateVpcs")]
         [Validation(Required=false)]
         public List<GetDhcpOptionsSetResponseBodyAssociateVpcs> AssociateVpcs { get; set; }
@@ -55,9 +23,47 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("DhcpOptions")]
+        [Validation(Required=false)]
+        public GetDhcpOptionsSetResponseBodyDhcpOptions DhcpOptions { get; set; }
+        public class GetDhcpOptionsSetResponseBodyDhcpOptions : TeaModel {
+            [NameInMap("BootFileName")]
+            [Validation(Required=false)]
+            public string BootFileName { get; set; }
+            [NameInMap("DomainName")]
+            [Validation(Required=false)]
+            public string DomainName { get; set; }
+            [NameInMap("DomainNameServers")]
+            [Validation(Required=false)]
+            public string DomainNameServers { get; set; }
+            [NameInMap("TFTPServerName")]
+            [Validation(Required=false)]
+            public string TFTPServerName { get; set; }
+        };
+
         [NameInMap("DhcpOptionsSetDescription")]
         [Validation(Required=false)]
         public string DhcpOptionsSetDescription { get; set; }
+
+        [NameInMap("DhcpOptionsSetId")]
+        [Validation(Required=false)]
+        public string DhcpOptionsSetId { get; set; }
+
+        [NameInMap("DhcpOptionsSetName")]
+        [Validation(Required=false)]
+        public string DhcpOptionsSetName { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

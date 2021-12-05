@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnConnectionRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("AutoConfigRoute")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public bool? AutoConfigRoute { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("BgpConfig")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string BgpConfig { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -37,41 +25,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string CustomerGatewayId { get; set; }
 
-        [NameInMap("VpnGatewayId")]
-        [Validation(Required=false)]
-        public string VpnGatewayId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("LocalSubnet")]
-        [Validation(Required=false)]
-        public string LocalSubnet { get; set; }
-
-        [NameInMap("RemoteSubnet")]
-        [Validation(Required=false)]
-        public string RemoteSubnet { get; set; }
-
         [NameInMap("EffectImmediately")]
         [Validation(Required=false)]
         public bool? EffectImmediately { get; set; }
-
-        [NameInMap("IkeConfig")]
-        [Validation(Required=false)]
-        public string IkeConfig { get; set; }
-
-        [NameInMap("IpsecConfig")]
-        [Validation(Required=false)]
-        public string IpsecConfig { get; set; }
-
-        [NameInMap("HealthCheckConfig")]
-        [Validation(Required=false)]
-        public string HealthCheckConfig { get; set; }
-
-        [NameInMap("AutoConfigRoute")]
-        [Validation(Required=false)]
-        public bool? AutoConfigRoute { get; set; }
 
         [NameInMap("EnableDpd")]
         [Validation(Required=false)]
@@ -81,13 +37,57 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableNatTraversal { get; set; }
 
-        [NameInMap("BgpConfig")]
+        [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
-        public string BgpConfig { get; set; }
+        public string HealthCheckConfig { get; set; }
+
+        [NameInMap("IkeConfig")]
+        [Validation(Required=false)]
+        public string IkeConfig { get; set; }
+
+        [NameInMap("IpsecConfig")]
+        [Validation(Required=false)]
+        public string IpsecConfig { get; set; }
+
+        [NameInMap("LocalSubnet")]
+        [Validation(Required=false)]
+        public string LocalSubnet { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("RemoteCaCertificate")]
         [Validation(Required=false)]
         public string RemoteCaCertificate { get; set; }
+
+        [NameInMap("RemoteSubnet")]
+        [Validation(Required=false)]
+        public string RemoteSubnet { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("VpnGatewayId")]
+        [Validation(Required=false)]
+        public string VpnGatewayId { get; set; }
 
     }
 

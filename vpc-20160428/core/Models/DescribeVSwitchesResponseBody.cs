@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
@@ -33,11 +33,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> VSwitch { get; set; }
             public class DescribeVSwitchesResponseBodyVSwitchesVSwitch : TeaModel {
-                public string CreationTime { get; set; }
-                public string Status { get; set; }
-                public string VpcId { get; set; }
-                public bool? IsDefault { get; set; }
                 public long? AvailableIpAddressCount { get; set; }
+                public string CidrBlock { get; set; }
+                public string CreationTime { get; set; }
+                public string Description { get; set; }
+                public string Ipv6CidrBlock { get; set; }
+                public bool? IsDefault { get; set; }
+                public string NetworkAclId { get; set; }
+                public long? OwnerId { get; set; }
+                public string ResourceGroupId { get; set; }
+                public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable RouteTable { get; set; }
+                public class DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable : TeaModel {
+                    [NameInMap("RouteTableId")]
+                    [Validation(Required=false)]
+                    public string RouteTableId { get; set; }
+
+                    [NameInMap("RouteTableType")]
+                    [Validation(Required=false)]
+                    public string RouteTableType { get; set; }
+
+                }
+                public string Status { get; set; }
                 public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags Tags { get; set; }
                 public class DescribeVSwitchesResponseBodyVSwitchesVSwitchTags : TeaModel {
                     [NameInMap("Tag")]
@@ -55,26 +71,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     }
 
                 }
-                public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable RouteTable { get; set; }
-                public class DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable : TeaModel {
-                    [NameInMap("RouteTableType")]
-                    [Validation(Required=false)]
-                    public string RouteTableType { get; set; }
-
-                    [NameInMap("RouteTableId")]
-                    [Validation(Required=false)]
-                    public string RouteTableId { get; set; }
-
-                }
-                public string NetworkAclId { get; set; }
-                public long? OwnerId { get; set; }
                 public string VSwitchId { get; set; }
-                public string CidrBlock { get; set; }
-                public string Description { get; set; }
-                public string ResourceGroupId { get; set; }
-                public string ZoneId { get; set; }
-                public string Ipv6CidrBlock { get; set; }
                 public string VSwitchName { get; set; }
+                public string VpcId { get; set; }
+                public string ZoneId { get; set; }
             }
         };
 

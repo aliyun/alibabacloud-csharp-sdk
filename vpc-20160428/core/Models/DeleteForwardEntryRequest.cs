@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteForwardEntryRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("ForwardEntryId")]
+        [Validation(Required=false)]
+        public string ForwardEntryId { get; set; }
+
+        [NameInMap("ForwardTableId")]
+        [Validation(Required=false)]
+        public string ForwardTableId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,26 +40,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ForwardTableId")]
-        [Validation(Required=false)]
-        public string ForwardTableId { get; set; }
-
-        [NameInMap("ForwardEntryId")]
-        [Validation(Required=false)]
-        public string ForwardEntryId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

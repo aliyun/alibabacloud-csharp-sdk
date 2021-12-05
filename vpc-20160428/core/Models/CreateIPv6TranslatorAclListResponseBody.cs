@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorAclListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -13,41 +13,41 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSets> DhcpOptionsSets { get; set; }
         public class ListDhcpOptionsSetsResponseBodyDhcpOptionsSets : TeaModel {
-            [NameInMap("DhcpOptionsSetDescription")]
+            [NameInMap("AssociateVpcCount")]
             [Validation(Required=false)]
-            public string DhcpOptionsSetDescription { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("DhcpOptionsSetId")]
-            [Validation(Required=false)]
-            public string DhcpOptionsSetId { get; set; }
+            public int? AssociateVpcCount { get; set; }
 
             [NameInMap("DhcpOptions")]
             [Validation(Required=false)]
             public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions DhcpOptions { get; set; }
             public class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions : TeaModel {
-                [NameInMap("DomainNameServers")]
-                [Validation(Required=false)]
-                public string DomainNameServers { get; set; }
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
+                [NameInMap("DomainNameServers")]
+                [Validation(Required=false)]
+                public string DomainNameServers { get; set; }
             };
+
+            [NameInMap("DhcpOptionsSetDescription")]
+            [Validation(Required=false)]
+            public string DhcpOptionsSetDescription { get; set; }
+
+            [NameInMap("DhcpOptionsSetId")]
+            [Validation(Required=false)]
+            public string DhcpOptionsSetId { get; set; }
 
             [NameInMap("DhcpOptionsSetName")]
             [Validation(Required=false)]
             public string DhcpOptionsSetName { get; set; }
 
-            [NameInMap("AssociateVpcCount")]
-            [Validation(Required=false)]
-            public int? AssociateVpcCount { get; set; }
-
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public long? OwnerId { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
         }
 

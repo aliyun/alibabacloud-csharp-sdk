@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRegionsRequest : TeaModel {
-        [NameInMap("ProductType")]
-        [Validation(Required=false)]
-        public string ProductType { get; set; }
-
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -28,10 +28,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

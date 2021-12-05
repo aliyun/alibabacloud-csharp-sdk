@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNetworkAclRequest : TeaModel {
-        [NameInMap("VpcId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public string ClientToken { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("NetworkAclName")]
         [Validation(Required=false)]
         public string NetworkAclName { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -33,13 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string VpcId { get; set; }
 
     }
 

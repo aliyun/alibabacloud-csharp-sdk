@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeInstanceAutoRenewAttributeRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -21,13 +17,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
-        [NameInMap("RenewalStatus")]
-        [Validation(Required=false)]
-        public string RenewalStatus { get; set; }
-
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RenewalStatus")]
+        [Validation(Required=false)]
+        public string RenewalStatus { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -36,14 +44,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

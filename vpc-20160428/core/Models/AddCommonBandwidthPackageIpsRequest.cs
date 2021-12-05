@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddCommonBandwidthPackageIpsRequest : TeaModel {
+        [NameInMap("BandwidthPackageId")]
+        [Validation(Required=false)]
+        public string BandwidthPackageId { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("IpInstanceIds")]
+        [Validation(Required=false)]
+        public List<string> IpInstanceIds { get; set; }
+
+        [NameInMap("IpType")]
+        [Validation(Required=false)]
+        public string IpType { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,26 +44,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("BandwidthPackageId")]
-        [Validation(Required=false)]
-        public string BandwidthPackageId { get; set; }
-
-        [NameInMap("IpType")]
-        [Validation(Required=false)]
-        public string IpType { get; set; }
-
-        [NameInMap("IpInstanceIds")]
-        [Validation(Required=false)]
-        public List<string> IpInstanceIds { get; set; }
 
     }
 

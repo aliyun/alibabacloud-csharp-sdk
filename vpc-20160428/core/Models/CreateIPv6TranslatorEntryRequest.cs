@@ -9,37 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorEntryRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("AclId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string AclId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("AclStatus")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AclStatus { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Ipv6TranslatorId")]
-        [Validation(Required=false)]
-        public string Ipv6TranslatorId { get; set; }
-
-        [NameInMap("EntryName")]
-        [Validation(Required=false)]
-        public string EntryName { get; set; }
-
-        [NameInMap("EntryDescription")]
-        [Validation(Required=false)]
-        public string EntryDescription { get; set; }
+        public string AclType { get; set; }
 
         [NameInMap("AllocateIpv6Port")]
         [Validation(Required=false)]
@@ -53,25 +33,45 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? BackendIpv4Port { get; set; }
 
-        [NameInMap("TransProtocol")]
-        [Validation(Required=false)]
-        public string TransProtocol { get; set; }
-
         [NameInMap("EntryBandwidth")]
         [Validation(Required=false)]
         public int? EntryBandwidth { get; set; }
 
-        [NameInMap("AclStatus")]
+        [NameInMap("EntryDescription")]
         [Validation(Required=false)]
-        public string AclStatus { get; set; }
+        public string EntryDescription { get; set; }
 
-        [NameInMap("AclType")]
+        [NameInMap("EntryName")]
         [Validation(Required=false)]
-        public string AclType { get; set; }
+        public string EntryName { get; set; }
 
-        [NameInMap("AclId")]
+        [NameInMap("Ipv6TranslatorId")]
         [Validation(Required=false)]
-        public string AclId { get; set; }
+        public string Ipv6TranslatorId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("TransProtocol")]
+        [Validation(Required=false)]
+        public string TransProtocol { get; set; }
 
     }
 

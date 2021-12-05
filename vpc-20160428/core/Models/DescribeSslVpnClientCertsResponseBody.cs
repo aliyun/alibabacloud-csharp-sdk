@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientCertsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("SslVpnClientCertKeys")]
         [Validation(Required=false)]
         public DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeys SslVpnClientCertKeys { get; set; }
@@ -33,15 +29,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey> SslVpnClientCertKey { get; set; }
             public class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey : TeaModel {
-                public string Status { get; set; }
-                public long? EndTime { get; set; }
                 public long? CreateTime { get; set; }
-                public string SslVpnClientCertId { get; set; }
-                public string SslVpnServerId { get; set; }
+                public long? EndTime { get; set; }
                 public string Name { get; set; }
                 public string RegionId { get; set; }
+                public string SslVpnClientCertId { get; set; }
+                public string SslVpnServerId { get; set; }
+                public string Status { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

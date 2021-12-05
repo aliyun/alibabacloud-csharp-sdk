@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorAclListsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Ipv6TranslatorAcls")]
         [Validation(Required=false)]
         public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls Ipv6TranslatorAcls { get; set; }
@@ -37,6 +21,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string AclName { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatGatewayResponseBody : TeaModel {
+        [NameInMap("ForwardTableIds")]
+        [Validation(Required=false)]
+        public CreateNatGatewayResponseBodyForwardTableIds ForwardTableIds { get; set; }
+        public class CreateNatGatewayResponseBodyForwardTableIds : TeaModel {
+            [NameInMap("ForwardTableId")]
+            [Validation(Required=false)]
+            public List<string> ForwardTableId { get; set; }
+        };
+
+        [NameInMap("FullNatTableIds")]
+        [Validation(Required=false)]
+        public CreateNatGatewayResponseBodyFullNatTableIds FullNatTableIds { get; set; }
+        public class CreateNatGatewayResponseBodyFullNatTableIds : TeaModel {
+            [NameInMap("FullNatTableId")]
+            [Validation(Required=false)]
+            public List<string> FullNatTableId { get; set; }
+        };
+
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,19 +43,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<string> SnatTableId { get; set; }
         };
-
-        [NameInMap("ForwardTableIds")]
-        [Validation(Required=false)]
-        public CreateNatGatewayResponseBodyForwardTableIds ForwardTableIds { get; set; }
-        public class CreateNatGatewayResponseBodyForwardTableIds : TeaModel {
-            [NameInMap("ForwardTableId")]
-            [Validation(Required=false)]
-            public List<string> ForwardTableId { get; set; }
-        };
-
-        [NameInMap("NatGatewayId")]
-        [Validation(Required=false)]
-        public string NatGatewayId { get; set; }
 
     }
 

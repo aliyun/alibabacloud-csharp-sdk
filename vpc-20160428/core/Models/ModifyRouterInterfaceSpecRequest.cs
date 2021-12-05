@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyRouterInterfaceSpecRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("RouterInterfaceId")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string RouterInterfaceId { get; set; }
-
-        [NameInMap("Spec")]
-        [Validation(Required=false)]
-        public string Spec { get; set; }
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("RouterInterfaceId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string RouterInterfaceId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Spec")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string Spec { get; set; }
 
     }
 

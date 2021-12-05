@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnTagResourcesRequest : TeaModel {
-        [NameInMap("ResourceType")]
+        [NameInMap("All")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public bool? All { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -29,27 +37,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("All")]
-        [Validation(Required=false)]
-        public bool? All { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public List<string> ResourceId { get; set; }
+        public string ResourceType { get; set; }
 
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<UnTagResourcesRequestTag> Tag { get; set; }
-        public class UnTagResourcesRequestTag : TeaModel {
-        }
 
     }
 

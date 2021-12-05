@@ -9,57 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateSslVpnServerRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("Cipher")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("VpnGatewayId")]
-        [Validation(Required=false)]
-        public string VpnGatewayId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Cipher { get; set; }
 
         [NameInMap("ClientIpPool")]
         [Validation(Required=false)]
         public string ClientIpPool { get; set; }
 
-        [NameInMap("LocalSubnet")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string LocalSubnet { get; set; }
-
-        [NameInMap("Proto")]
-        [Validation(Required=false)]
-        public string Proto { get; set; }
-
-        [NameInMap("Cipher")]
-        [Validation(Required=false)]
-        public string Cipher { get; set; }
-
-        [NameInMap("Port")]
-        [Validation(Required=false)]
-        public int? Port { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("Compress")]
         [Validation(Required=false)]
@@ -72,6 +32,50 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("IDaaSInstanceId")]
         [Validation(Required=false)]
         public string IDaaSInstanceId { get; set; }
+
+        [NameInMap("IDaaSRegionId")]
+        [Validation(Required=false)]
+        public string IDaaSRegionId { get; set; }
+
+        [NameInMap("LocalSubnet")]
+        [Validation(Required=false)]
+        public string LocalSubnet { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public int? Port { get; set; }
+
+        [NameInMap("Proto")]
+        [Validation(Required=false)]
+        public string Proto { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("VpnGatewayId")]
+        [Validation(Required=false)]
+        public string VpnGatewayId { get; set; }
 
     }
 

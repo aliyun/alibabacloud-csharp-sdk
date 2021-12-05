@@ -9,48 +9,111 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnConnectionResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("LocalSubnet")]
-        [Validation(Required=false)]
-        public string LocalSubnet { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? CreateTime { get; set; }
 
         [NameInMap("CustomerGatewayId")]
         [Validation(Required=false)]
         public string CustomerGatewayId { get; set; }
 
-        [NameInMap("CreateTime")]
+        [NameInMap("EffectImmediately")]
         [Validation(Required=false)]
-        public long? CreateTime { get; set; }
+        public bool? EffectImmediately { get; set; }
+
+        [NameInMap("EnableDpd")]
+        [Validation(Required=false)]
+        public bool? EnableDpd { get; set; }
+
+        [NameInMap("EnableNatTraversal")]
+        [Validation(Required=false)]
+        public bool? EnableNatTraversal { get; set; }
+
+        [NameInMap("IkeConfig")]
+        [Validation(Required=false)]
+        public DescribeVpnConnectionResponseBodyIkeConfig IkeConfig { get; set; }
+        public class DescribeVpnConnectionResponseBodyIkeConfig : TeaModel {
+            [NameInMap("IkeAuthAlg")]
+            [Validation(Required=false)]
+            public string IkeAuthAlg { get; set; }
+            [NameInMap("IkeEncAlg")]
+            [Validation(Required=false)]
+            public string IkeEncAlg { get; set; }
+            [NameInMap("IkeLifetime")]
+            [Validation(Required=false)]
+            public long? IkeLifetime { get; set; }
+            [NameInMap("IkeMode")]
+            [Validation(Required=false)]
+            public string IkeMode { get; set; }
+            [NameInMap("IkePfs")]
+            [Validation(Required=false)]
+            public string IkePfs { get; set; }
+            [NameInMap("IkeVersion")]
+            [Validation(Required=false)]
+            public string IkeVersion { get; set; }
+            [NameInMap("LocalId")]
+            [Validation(Required=false)]
+            public string LocalId { get; set; }
+            [NameInMap("Psk")]
+            [Validation(Required=false)]
+            public string Psk { get; set; }
+            [NameInMap("RemoteId")]
+            [Validation(Required=false)]
+            public string RemoteId { get; set; }
+        };
+
+        [NameInMap("IpsecConfig")]
+        [Validation(Required=false)]
+        public DescribeVpnConnectionResponseBodyIpsecConfig IpsecConfig { get; set; }
+        public class DescribeVpnConnectionResponseBodyIpsecConfig : TeaModel {
+            [NameInMap("IpsecAuthAlg")]
+            [Validation(Required=false)]
+            public string IpsecAuthAlg { get; set; }
+            [NameInMap("IpsecEncAlg")]
+            [Validation(Required=false)]
+            public string IpsecEncAlg { get; set; }
+            [NameInMap("IpsecLifetime")]
+            [Validation(Required=false)]
+            public long? IpsecLifetime { get; set; }
+            [NameInMap("IpsecPfs")]
+            [Validation(Required=false)]
+            public string IpsecPfs { get; set; }
+        };
+
+        [NameInMap("LocalSubnet")]
+        [Validation(Required=false)]
+        public string LocalSubnet { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("EffectImmediately")]
+        [NameInMap("RemoteCaCertificate")]
         [Validation(Required=false)]
-        public bool? EffectImmediately { get; set; }
+        public string RemoteCaCertificate { get; set; }
 
         [NameInMap("RemoteSubnet")]
         [Validation(Required=false)]
         public string RemoteSubnet { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("VcoHealthCheck")]
         [Validation(Required=false)]
         public DescribeVpnConnectionResponseBodyVcoHealthCheck VcoHealthCheck { get; set; }
         public class DescribeVpnConnectionResponseBodyVcoHealthCheck : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
             [NameInMap("Dip")]
             [Validation(Required=false)]
             public string Dip { get; set; }
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public string Enable { get; set; }
             [NameInMap("Interval")]
             [Validation(Required=false)]
             public int? Interval { get; set; }
@@ -60,108 +123,48 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("Sip")]
             [Validation(Required=false)]
             public string Sip { get; set; }
-            [NameInMap("Enable")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string Enable { get; set; }
-        };
-
-        [NameInMap("VpnGatewayId")]
-        [Validation(Required=false)]
-        public string VpnGatewayId { get; set; }
-
-        [NameInMap("IpsecConfig")]
-        [Validation(Required=false)]
-        public DescribeVpnConnectionResponseBodyIpsecConfig IpsecConfig { get; set; }
-        public class DescribeVpnConnectionResponseBodyIpsecConfig : TeaModel {
-            [NameInMap("IpsecLifetime")]
-            [Validation(Required=false)]
-            public long? IpsecLifetime { get; set; }
-            [NameInMap("IpsecEncAlg")]
-            [Validation(Required=false)]
-            public string IpsecEncAlg { get; set; }
-            [NameInMap("IpsecPfs")]
-            [Validation(Required=false)]
-            public string IpsecPfs { get; set; }
-            [NameInMap("IpsecAuthAlg")]
-            [Validation(Required=false)]
-            public string IpsecAuthAlg { get; set; }
-        };
-
-        [NameInMap("RemoteCaCertificate")]
-        [Validation(Required=false)]
-        public string RemoteCaCertificate { get; set; }
-
-        [NameInMap("VpnConnectionId")]
-        [Validation(Required=false)]
-        public string VpnConnectionId { get; set; }
-
-        [NameInMap("EnableNatTraversal")]
-        [Validation(Required=false)]
-        public bool? EnableNatTraversal { get; set; }
-
-        [NameInMap("EnableDpd")]
-        [Validation(Required=false)]
-        public bool? EnableDpd { get; set; }
-
-        [NameInMap("IkeConfig")]
-        [Validation(Required=false)]
-        public DescribeVpnConnectionResponseBodyIkeConfig IkeConfig { get; set; }
-        public class DescribeVpnConnectionResponseBodyIkeConfig : TeaModel {
-            [NameInMap("RemoteId")]
-            [Validation(Required=false)]
-            public string RemoteId { get; set; }
-            [NameInMap("IkeLifetime")]
-            [Validation(Required=false)]
-            public long? IkeLifetime { get; set; }
-            [NameInMap("IkeEncAlg")]
-            [Validation(Required=false)]
-            public string IkeEncAlg { get; set; }
-            [NameInMap("LocalId")]
-            [Validation(Required=false)]
-            public string LocalId { get; set; }
-            [NameInMap("IkeMode")]
-            [Validation(Required=false)]
-            public string IkeMode { get; set; }
-            [NameInMap("IkeVersion")]
-            [Validation(Required=false)]
-            public string IkeVersion { get; set; }
-            [NameInMap("IkePfs")]
-            [Validation(Required=false)]
-            public string IkePfs { get; set; }
-            [NameInMap("Psk")]
-            [Validation(Required=false)]
-            public string Psk { get; set; }
-            [NameInMap("IkeAuthAlg")]
-            [Validation(Required=false)]
-            public string IkeAuthAlg { get; set; }
+            public string Status { get; set; }
         };
 
         [NameInMap("VpnBgpConfig")]
         [Validation(Required=false)]
         public DescribeVpnConnectionResponseBodyVpnBgpConfig VpnBgpConfig { get; set; }
         public class DescribeVpnConnectionResponseBodyVpnBgpConfig : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("AuthKey")]
             [Validation(Required=false)]
-            public string Status { get; set; }
-            [NameInMap("PeerBgpIp")]
-            [Validation(Required=false)]
-            public string PeerBgpIp { get; set; }
-            [NameInMap("TunnelCidr")]
-            [Validation(Required=false)]
-            public string TunnelCidr { get; set; }
+            public string AuthKey { get; set; }
             [NameInMap("EnableBgp")]
             [Validation(Required=false)]
             public string EnableBgp { get; set; }
+            [NameInMap("LocalAsn")]
+            [Validation(Required=false)]
+            public long? LocalAsn { get; set; }
             [NameInMap("LocalBgpIp")]
             [Validation(Required=false)]
             public string LocalBgpIp { get; set; }
             [NameInMap("PeerAsn")]
             [Validation(Required=false)]
-            public string PeerAsn { get; set; }
-            [NameInMap("LocalAsn")]
+            public long? PeerAsn { get; set; }
+            [NameInMap("PeerBgpIp")]
             [Validation(Required=false)]
-            public string LocalAsn { get; set; }
+            public string PeerBgpIp { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+            [NameInMap("TunnelCidr")]
+            [Validation(Required=false)]
+            public string TunnelCidr { get; set; }
         };
+
+        [NameInMap("VpnConnectionId")]
+        [Validation(Required=false)]
+        public string VpnConnectionId { get; set; }
+
+        [NameInMap("VpnGatewayId")]
+        [Validation(Required=false)]
+        public string VpnGatewayId { get; set; }
 
     }
 

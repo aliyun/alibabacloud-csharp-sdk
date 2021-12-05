@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCustomerGatewayResponseBody : TeaModel {
-        [NameInMap("Description")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? CreateTime { get; set; }
 
         [NameInMap("CustomerGatewayId")]
         [Validation(Required=false)]
         public string CustomerGatewayId { get; set; }
 
-        [NameInMap("CreateTime")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public long? CreateTime { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("IpAddress")]
         [Validation(Required=false)]
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

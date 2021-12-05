@@ -9,33 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListDhcpOptionsSetsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("DhcpOptionsSetId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public List<string> DhcpOptionsSetId { get; set; }
 
         [NameInMap("DhcpOptionsSetName")]
         [Validation(Required=false)]
         public string DhcpOptionsSetName { get; set; }
 
-        [NameInMap("DhcpOptionsSetId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public List<string> DhcpOptionsSetId { get; set; }
+        public string DomainName { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -44,10 +48,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
 
     }
 

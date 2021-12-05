@@ -9,49 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyRouterInterfaceAttributeRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DeleteHealthCheckIp")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("RouterInterfaceId")]
-        [Validation(Required=false)]
-        public string RouterInterfaceId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public bool? DeleteHealthCheckIp { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("OppositeInterfaceId")]
+        [NameInMap("HcRate")]
         [Validation(Required=false)]
-        public string OppositeInterfaceId { get; set; }
+        public int? HcRate { get; set; }
 
-        [NameInMap("OppositeRouterId")]
+        [NameInMap("HcThreshold")]
         [Validation(Required=false)]
-        public string OppositeRouterId { get; set; }
-
-        [NameInMap("OppositeRouterType")]
-        [Validation(Required=false)]
-        public string OppositeRouterType { get; set; }
-
-        [NameInMap("OppositeInterfaceOwnerId")]
-        [Validation(Required=false)]
-        public long? OppositeInterfaceOwnerId { get; set; }
+        public int? HcThreshold { get; set; }
 
         [NameInMap("HealthCheckSourceIp")]
         [Validation(Required=false)]
@@ -61,17 +33,45 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string HealthCheckTargetIp { get; set; }
 
-        [NameInMap("HcThreshold")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public int? HcThreshold { get; set; }
+        public string Name { get; set; }
 
-        [NameInMap("HcRate")]
+        [NameInMap("OppositeInterfaceId")]
         [Validation(Required=false)]
-        public int? HcRate { get; set; }
+        public string OppositeInterfaceId { get; set; }
 
-        [NameInMap("DeleteHealthCheckIp")]
+        [NameInMap("OppositeInterfaceOwnerId")]
         [Validation(Required=false)]
-        public bool? DeleteHealthCheckIp { get; set; }
+        public long? OppositeInterfaceOwnerId { get; set; }
+
+        [NameInMap("OppositeRouterId")]
+        [Validation(Required=false)]
+        public string OppositeRouterId { get; set; }
+
+        [NameInMap("OppositeRouterType")]
+        [Validation(Required=false)]
+        public string OppositeRouterType { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RouterInterfaceId")]
+        [Validation(Required=false)]
+        public string RouterInterfaceId { get; set; }
 
     }
 

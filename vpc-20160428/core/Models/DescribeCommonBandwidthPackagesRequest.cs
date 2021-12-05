@@ -9,41 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeCommonBandwidthPackagesRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string BandwidthPackageId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public bool? DryRun { get; set; }
 
         [NameInMap("IncludeReservationData")]
         [Validation(Required=false)]
         public bool? IncludeReservationData { get; set; }
 
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("BandwidthPackageId")]
-        [Validation(Required=false)]
-        public string BandwidthPackageId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -53,15 +41,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("DryRun")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? DryRun { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public List<DescribeCommonBandwidthPackagesRequestTag> Tag { get; set; }
-        public class DescribeCommonBandwidthPackagesRequestTag : TeaModel {
-        }
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// 是否开启安全防护
+        /// </summary>
+        [NameInMap("SecurityProtectionEnabled")]
+        [Validation(Required=false)]
+        public bool? SecurityProtectionEnabled { get; set; }
 
     }
 

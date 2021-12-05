@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CopyNetworkAclEntriesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
         public string NetworkAclId { get; set; }
 
-        [NameInMap("SourceNetworkAclId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string SourceNetworkAclId { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -29,13 +33,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("SourceNetworkAclId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string SourceNetworkAclId { get; set; }
 
     }
 

@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateVpcCidrBlockRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("SecondaryCidrBlock")]
-        [Validation(Required=false)]
-        public string SecondaryCidrBlock { get; set; }
-
-        [NameInMap("IPv6CidrBlock")]
-        [Validation(Required=false)]
-        public string IPv6CidrBlock { get; set; }
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -37,9 +29,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecondaryCidrBlock")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string SecondaryCidrBlock { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

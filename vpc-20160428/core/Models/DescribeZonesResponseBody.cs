@@ -23,6 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
                 public string LocalName { get; set; }
                 public string ZoneId { get; set; }
+                public string ZoneType { get; set; }
             }
         };
 

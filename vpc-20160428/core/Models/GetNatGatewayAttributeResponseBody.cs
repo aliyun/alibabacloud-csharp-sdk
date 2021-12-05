@@ -9,9 +9,52 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetNatGatewayAttributeResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("BillingConfig")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public GetNatGatewayAttributeResponseBodyBillingConfig BillingConfig { get; set; }
+        public class GetNatGatewayAttributeResponseBodyBillingConfig : TeaModel {
+            [NameInMap("AutoPay")]
+            [Validation(Required=false)]
+            public string AutoPay { get; set; }
+            [NameInMap("InstanceChargeType")]
+            [Validation(Required=false)]
+            public string InstanceChargeType { get; set; }
+            [NameInMap("InternetChargeType")]
+            [Validation(Required=false)]
+            public string InternetChargeType { get; set; }
+            [NameInMap("Spec")]
+            [Validation(Required=false)]
+            public string Spec { get; set; }
+        };
+
+        [NameInMap("BusinessStatus")]
+        [Validation(Required=false)]
+        public string BusinessStatus { get; set; }
+
+        [NameInMap("CreationTime")]
+        [Validation(Required=false)]
+        public string CreationTime { get; set; }
+
+        [NameInMap("DeletionProtectionInfo")]
+        [Validation(Required=false)]
+        public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo DeletionProtectionInfo { get; set; }
+        public class GetNatGatewayAttributeResponseBodyDeletionProtectionInfo : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+        };
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("EcsMetricEnabled")]
+        [Validation(Required=false)]
+        public bool? EcsMetricEnabled { get; set; }
+
+        [NameInMap("ExpiredTime")]
+        [Validation(Required=false)]
+        public string ExpiredTime { get; set; }
 
         [NameInMap("ForwardTable")]
         [Validation(Required=false)]
@@ -25,9 +68,90 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ForwardTableId { get; set; }
         };
 
-        [NameInMap("Description")]
+        [NameInMap("FullNatTable")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public GetNatGatewayAttributeResponseBodyFullNatTable FullNatTable { get; set; }
+        public class GetNatGatewayAttributeResponseBodyFullNatTable : TeaModel {
+            [NameInMap("FullNatEntryCount")]
+            [Validation(Required=false)]
+            public long? FullNatEntryCount { get; set; }
+            [NameInMap("FullNatTableId")]
+            [Validation(Required=false)]
+            public string FullNatTableId { get; set; }
+        };
+
+        [NameInMap("IpList")]
+        [Validation(Required=false)]
+        public List<GetNatGatewayAttributeResponseBodyIpList> IpList { get; set; }
+        public class GetNatGatewayAttributeResponseBodyIpList : TeaModel {
+            [NameInMap("AllocationId")]
+            [Validation(Required=false)]
+            public string AllocationId { get; set; }
+
+            [NameInMap("IpAddress")]
+            [Validation(Required=false)]
+            public string IpAddress { get; set; }
+
+            [NameInMap("UsingStatus")]
+            [Validation(Required=false)]
+            public string UsingStatus { get; set; }
+
+        }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
+
+        [NameInMap("NatType")]
+        [Validation(Required=false)]
+        public string NatType { get; set; }
+
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
+        [NameInMap("PrivateInfo")]
+        [Validation(Required=false)]
+        public GetNatGatewayAttributeResponseBodyPrivateInfo PrivateInfo { get; set; }
+        public class GetNatGatewayAttributeResponseBodyPrivateInfo : TeaModel {
+            [NameInMap("EniInstanceId")]
+            [Validation(Required=false)]
+            public string EniInstanceId { get; set; }
+            [NameInMap("IzNo")]
+            [Validation(Required=false)]
+            public string IzNo { get; set; }
+            [NameInMap("MaxBandwidth")]
+            [Validation(Required=false)]
+            public int? MaxBandwidth { get; set; }
+            [NameInMap("PrivateIpAddress")]
+            [Validation(Required=false)]
+            public string PrivateIpAddress { get; set; }
+            [NameInMap("VswitchId")]
+            [Validation(Required=false)]
+            public string VswitchId { get; set; }
+        };
+
+        /// <summary>
+        /// 默认不支持私网链接。设置为1则意味着支持私网链接
+        /// </summary>
+        [NameInMap("PrivateLinkEnabled")]
+        [Validation(Required=false)]
+        public bool? PrivateLinkEnabled { get; set; }
+
+        /// <summary>
+        /// Fullnat：使用FullNat模式 Geneve：使用Geneve模式。 预估大部分场景都是非Geneve模式的。
+        /// </summary>
+        [NameInMap("PrivateLinkMode")]
+        [Validation(Required=false)]
+        public string PrivateLinkMode { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -36,59 +160,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("IpList")]
-        [Validation(Required=false)]
-        public List<GetNatGatewayAttributeResponseBodyIpList> IpList { get; set; }
-        public class GetNatGatewayAttributeResponseBodyIpList : TeaModel {
-            [NameInMap("UsingStatus")]
-            [Validation(Required=false)]
-            public string UsingStatus { get; set; }
-
-            [NameInMap("IpAddress")]
-            [Validation(Required=false)]
-            public string IpAddress { get; set; }
-
-            [NameInMap("AllocationId")]
-            [Validation(Required=false)]
-            public string AllocationId { get; set; }
-
-        }
-
-        [NameInMap("DeletionProtectionInfo")]
-        [Validation(Required=false)]
-        public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo DeletionProtectionInfo { get; set; }
-        public class GetNatGatewayAttributeResponseBodyDeletionProtectionInfo : TeaModel {
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-        };
-
-        [NameInMap("BillingConfig")]
-        [Validation(Required=false)]
-        public GetNatGatewayAttributeResponseBodyBillingConfig BillingConfig { get; set; }
-        public class GetNatGatewayAttributeResponseBodyBillingConfig : TeaModel {
-            [NameInMap("AutoPay")]
-            [Validation(Required=false)]
-            public string AutoPay { get; set; }
-            [NameInMap("Spec")]
-            [Validation(Required=false)]
-            public string Spec { get; set; }
-            [NameInMap("InternetChargeType")]
-            [Validation(Required=false)]
-            public string InternetChargeType { get; set; }
-            [NameInMap("InstanceChargeType")]
-            [Validation(Required=false)]
-            public string InstanceChargeType { get; set; }
-        };
-
-        [NameInMap("NatType")]
-        [Validation(Required=false)]
-        public string NatType { get; set; }
-
-        [NameInMap("BusinessStatus")]
-        [Validation(Required=false)]
-        public string BusinessStatus { get; set; }
 
         [NameInMap("SnatTable")]
         [Validation(Required=false)]
@@ -102,54 +173,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string SnatTableId { get; set; }
         };
 
-        [NameInMap("Name")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("EcsMetricEnabled")]
-        [Validation(Required=false)]
-        public bool? EcsMetricEnabled { get; set; }
+        public string Status { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
-
-        [NameInMap("ExpiredTime")]
-        [Validation(Required=false)]
-        public string ExpiredTime { get; set; }
-
-        [NameInMap("CreationTime")]
-        [Validation(Required=false)]
-        public string CreationTime { get; set; }
-
-        [NameInMap("PrivateInfo")]
-        [Validation(Required=false)]
-        public GetNatGatewayAttributeResponseBodyPrivateInfo PrivateInfo { get; set; }
-        public class GetNatGatewayAttributeResponseBodyPrivateInfo : TeaModel {
-            [NameInMap("VswitchId")]
-            [Validation(Required=false)]
-            public string VswitchId { get; set; }
-            [NameInMap("EniInstanceId")]
-            [Validation(Required=false)]
-            public string EniInstanceId { get; set; }
-            [NameInMap("MaxBandwidth")]
-            [Validation(Required=false)]
-            public int? MaxBandwidth { get; set; }
-            [NameInMap("PrivateIpAddress")]
-            [Validation(Required=false)]
-            public string PrivateIpAddress { get; set; }
-            [NameInMap("IzNo")]
-            [Validation(Required=false)]
-            public string IzNo { get; set; }
-        };
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("NatGatewayId")]
-        [Validation(Required=false)]
-        public string NatGatewayId { get; set; }
 
     }
 

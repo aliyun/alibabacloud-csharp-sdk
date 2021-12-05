@@ -9,25 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ReplaceVpcDhcpOptionsSetRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("DhcpOptionsSetId")]
         [Validation(Required=false)]
         public string DhcpOptionsSetId { get; set; }
 
-        [NameInMap("VpcId")]
+        [NameInMap("DryRun")]
         [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public bool? DryRun { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -37,13 +41,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DryRun")]
-        [Validation(Required=false)]
-        public bool? DryRun { get; set; }
+        public string VpcId { get; set; }
 
     }
 

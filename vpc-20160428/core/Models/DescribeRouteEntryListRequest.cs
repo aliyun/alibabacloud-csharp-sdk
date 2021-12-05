@@ -9,33 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteEntryListRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("RouteTableId")]
-        [Validation(Required=false)]
-        public string RouteTableId { get; set; }
-
-        [NameInMap("RouteEntryId")]
-        [Validation(Required=false)]
-        public string RouteEntryId { get; set; }
-
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
-
-        [NameInMap("RouteEntryName")]
-        [Validation(Required=false)]
-        public string RouteEntryName { get; set; }
 
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
-        [NameInMap("RouteEntryType")]
+        [NameInMap("MaxResult")]
         [Validation(Required=false)]
-        public string RouteEntryType { get; set; }
+        public int? MaxResult { get; set; }
 
         [NameInMap("NextHopId")]
         [Validation(Required=false)]
@@ -45,17 +29,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string NextHopType { get; set; }
 
-        [NameInMap("MaxResult")]
-        [Validation(Required=false)]
-        public int? MaxResult { get; set; }
-
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -65,9 +53,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("RouteEntryId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string RouteEntryId { get; set; }
+
+        [NameInMap("RouteEntryName")]
+        [Validation(Required=false)]
+        public string RouteEntryName { get; set; }
+
+        [NameInMap("RouteEntryType")]
+        [Validation(Required=false)]
+        public string RouteEntryType { get; set; }
+
+        [NameInMap("RouteTableId")]
+        [Validation(Required=false)]
+        public string RouteTableId { get; set; }
 
     }
 

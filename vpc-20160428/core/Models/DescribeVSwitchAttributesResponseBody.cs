@@ -9,21 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchAttributesResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("AvailableIpAddressCount")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public long? AvailableIpAddressCount { get; set; }
 
-        [NameInMap("IsDefault")]
+        [NameInMap("CidrBlock")]
         [Validation(Required=false)]
-        public bool? IsDefault { get; set; }
+        public string CidrBlock { get; set; }
+
+        [NameInMap("CreationTime")]
+        [Validation(Required=false)]
+        public string CreationTime { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Ipv6CidrBlock")]
+        [Validation(Required=false)]
+        public string Ipv6CidrBlock { get; set; }
+
+        [NameInMap("IsDefault")]
+        [Validation(Required=false)]
+        public bool? IsDefault { get; set; }
+
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
         public string NetworkAclId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -33,53 +49,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("RouteTable")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public DescribeVSwitchAttributesResponseBodyRouteTable RouteTable { get; set; }
+        public class DescribeVSwitchAttributesResponseBodyRouteTable : TeaModel {
+            [NameInMap("RouteTableId")]
+            [Validation(Required=false)]
+            public string RouteTableId { get; set; }
+            [NameInMap("RouteTableType")]
+            [Validation(Required=false)]
+            public string RouteTableType { get; set; }
+        };
 
-        [NameInMap("AvailableIpAddressCount")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public long? AvailableIpAddressCount { get; set; }
+        public string Status { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
-        [NameInMap("CidrBlock")]
+        [NameInMap("VSwitchName")]
         [Validation(Required=false)]
-        public string CidrBlock { get; set; }
-
-        [NameInMap("RouteTable")]
-        [Validation(Required=false)]
-        public DescribeVSwitchAttributesResponseBodyRouteTable RouteTable { get; set; }
-        public class DescribeVSwitchAttributesResponseBodyRouteTable : TeaModel {
-            [NameInMap("RouteTableType")]
-            [Validation(Required=false)]
-            public string RouteTableType { get; set; }
-            [NameInMap("RouteTableId")]
-            [Validation(Required=false)]
-            public string RouteTableId { get; set; }
-        };
+        public string VSwitchName { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("CreationTime")]
-        [Validation(Required=false)]
-        public string CreationTime { get; set; }
-
-        [NameInMap("VSwitchName")]
-        [Validation(Required=false)]
-        public string VSwitchName { get; set; }
-
-        [NameInMap("Ipv6CidrBlock")]
-        [Validation(Required=false)]
-        public string Ipv6CidrBlock { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

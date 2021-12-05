@@ -9,37 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorEntriesRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("AclId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string AclId { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("AclStatus")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AclStatus { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("AclType")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Ipv6TranslatorId")]
-        [Validation(Required=false)]
-        public string Ipv6TranslatorId { get; set; }
-
-        [NameInMap("Ipv6TranslatorEntryId")]
-        [Validation(Required=false)]
-        public string Ipv6TranslatorEntryId { get; set; }
-
-        [NameInMap("EntryName")]
-        [Validation(Required=false)]
-        public string EntryName { get; set; }
+        public string AclType { get; set; }
 
         [NameInMap("AllocateIpv6Addr")]
         [Validation(Required=false)]
@@ -57,21 +37,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? BackendIpv4Port { get; set; }
 
-        [NameInMap("TransProtocol")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string TransProtocol { get; set; }
+        public string ClientToken { get; set; }
 
-        [NameInMap("AclStatus")]
+        [NameInMap("EntryName")]
         [Validation(Required=false)]
-        public string AclStatus { get; set; }
+        public string EntryName { get; set; }
 
-        [NameInMap("AclType")]
+        [NameInMap("Ipv6TranslatorEntryId")]
         [Validation(Required=false)]
-        public string AclType { get; set; }
+        public string Ipv6TranslatorEntryId { get; set; }
 
-        [NameInMap("AclId")]
+        [NameInMap("Ipv6TranslatorId")]
         [Validation(Required=false)]
-        public string AclId { get; set; }
+        public string Ipv6TranslatorId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -81,9 +69,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("TransProtocol")]
+        [Validation(Required=false)]
+        public string TransProtocol { get; set; }
 
     }
 

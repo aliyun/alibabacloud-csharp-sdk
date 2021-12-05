@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHighDefinitionMonitorLogAttributeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("LogStore")]
-        [Validation(Required=false)]
-        public string LogStore { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("LogProject")]
         [Validation(Required=false)]
         public string LogProject { get; set; }
+
+        [NameInMap("LogStore")]
+        [Validation(Required=false)]
+        public string LogStore { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

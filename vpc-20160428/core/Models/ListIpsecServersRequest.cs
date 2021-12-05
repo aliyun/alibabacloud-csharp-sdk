@@ -9,37 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListIpsecServersRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("IpsecServerId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<string> IpsecServerId { get; set; }
 
         [NameInMap("IpsecServerName")]
         [Validation(Required=false)]
         public string IpsecServerName { get; set; }
 
-        [NameInMap("VpnGatewayId")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string VpnGatewayId { get; set; }
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("IpsecServerId")]
+        [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]
-        public List<string> IpsecServerId { get; set; }
-
-        [NameInMap("callerBid")]
-        [Validation(Required=false)]
-        public string CallerBid { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string VpnGatewayId { get; set; }
 
     }
 

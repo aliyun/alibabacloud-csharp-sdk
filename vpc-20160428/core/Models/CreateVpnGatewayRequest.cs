@@ -9,42 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnGatewayRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("InstanceChargeType")]
-        [Validation(Required=false)]
-        public string InstanceChargeType { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
-
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -52,6 +16,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         [NameInMap("EnableIpsec")]
         [Validation(Required=false)]
@@ -61,6 +29,38 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableSsl { get; set; }
 
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("SslConnections")]
         [Validation(Required=false)]
         public int? SslConnections { get; set; }
@@ -69,13 +69,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
         [NameInMap("VpnType")]
         [Validation(Required=false)]
         public string VpnType { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
 
     }
 

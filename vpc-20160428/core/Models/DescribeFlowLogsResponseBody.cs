@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeFlowLogsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
         [NameInMap("FlowLogs")]
         [Validation(Required=false)]
         public DescribeFlowLogsResponseBodyFlowLogs FlowLogs { get; set; }
@@ -21,19 +17,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeFlowLogsResponseBodyFlowLogsFlowLog> FlowLog { get; set; }
             public class DescribeFlowLogsResponseBodyFlowLogsFlowLog : TeaModel {
-                public string Status { get; set; }
                 public string CreationTime { get; set; }
-                public string FlowLogName { get; set; }
-                public string TrafficType { get; set; }
-                public string ResourceType { get; set; }
                 public string Description { get; set; }
-                public string ProjectName { get; set; }
-                public string LogStoreName { get; set; }
-                public string ResourceId { get; set; }
-                public string RegionId { get; set; }
                 public string FlowLogId { get; set; }
+                public string FlowLogName { get; set; }
+                public string LogStoreName { get; set; }
+                public string ProjectName { get; set; }
+                public string RegionId { get; set; }
+                public string ResourceId { get; set; }
+                public string ResourceType { get; set; }
+                public string Status { get; set; }
+                public string TrafficType { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -43,13 +43,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public string PageNumber { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

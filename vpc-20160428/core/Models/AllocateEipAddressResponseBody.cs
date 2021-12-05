@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipAddressResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public string AllocationId { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

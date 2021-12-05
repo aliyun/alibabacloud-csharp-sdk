@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("RouteEntryId")]
+        [Validation(Required=false)]
+        public string RouteEntryId { get; set; }
+
     }
 
 }

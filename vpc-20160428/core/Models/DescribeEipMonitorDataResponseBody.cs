@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEipMonitorDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("EipMonitorDatas")]
         [Validation(Required=false)]
         public DescribeEipMonitorDataResponseBodyEipMonitorDatas EipMonitorDatas { get; set; }
@@ -21,14 +17,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData> EipMonitorData { get; set; }
             public class DescribeEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData : TeaModel {
-                public long? EipTX { get; set; }
-                public int? EipPackets { get; set; }
                 public int? EipBandwidth { get; set; }
-                public string TimeStamp { get; set; }
                 public int? EipFlow { get; set; }
+                public int? EipPackets { get; set; }
                 public long? EipRX { get; set; }
+                public long? EipTX { get; set; }
+                public string TimeStamp { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

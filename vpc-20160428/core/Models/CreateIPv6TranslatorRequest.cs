@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public int? Duration { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,30 +36,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Spec")]
-        [Validation(Required=false)]
-        public string Spec { get; set; }
 
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -49,17 +45,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
-        [NameInMap("Duration")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? Duration { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("AutoPay")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("Bandwidth")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("Spec")]
+        [Validation(Required=false)]
+        public string Spec { get; set; }
 
     }
 

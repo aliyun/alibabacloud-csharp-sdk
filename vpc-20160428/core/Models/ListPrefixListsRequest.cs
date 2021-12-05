@@ -1,0 +1,52 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Vpc20160428.Models
+{
+    public class ListPrefixListsRequest : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public long? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// 前缀列表的实例ID
+        /// </summary>
+        [NameInMap("PrefixListIds")]
+        [Validation(Required=false)]
+        public List<string> PrefixListIds { get; set; }
+
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+    }
+
+}

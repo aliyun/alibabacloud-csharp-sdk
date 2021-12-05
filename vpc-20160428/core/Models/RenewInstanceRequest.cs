@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RenewInstanceRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? Duration { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("PricingCycle")]
-        [Validation(Required=false)]
-        public string PricingCycle { get; set; }
-
-        [NameInMap("Duration")]
-        [Validation(Required=false)]
-        public int? Duration { get; set; }
 
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PricingCycle")]
+        [Validation(Required=false)]
+        public string PricingCycle { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

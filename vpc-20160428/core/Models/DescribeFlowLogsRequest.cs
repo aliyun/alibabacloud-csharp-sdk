@@ -9,57 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeFlowLogsRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("FlowLogName")]
-        [Validation(Required=false)]
-        public string FlowLogName { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("FlowLogId")]
         [Validation(Required=false)]
         public string FlowLogId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("FlowLogName")]
         [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        [NameInMap("TrafficType")]
-        [Validation(Required=false)]
-        public string TrafficType { get; set; }
-
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
+        public string FlowLogName { get; set; }
 
         [NameInMap("LogStoreName")]
         [Validation(Required=false)]
         public string LogStoreName { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -69,9 +41,37 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ProjectName")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string ProjectName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("TrafficType")]
+        [Validation(Required=false)]
+        public string TrafficType { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]

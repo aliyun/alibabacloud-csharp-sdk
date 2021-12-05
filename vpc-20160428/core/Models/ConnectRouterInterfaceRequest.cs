@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         [NameInMap("RouterInterfaceId")]
         [Validation(Required=false)]

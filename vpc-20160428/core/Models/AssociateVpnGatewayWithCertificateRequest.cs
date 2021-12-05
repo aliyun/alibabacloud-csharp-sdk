@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateVpnGatewayWithCertificateRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("VpnGatewayId")]
-        [Validation(Required=false)]
-        public string VpnGatewayId { get; set; }
-
-        [NameInMap("CertificateType")]
-        [Validation(Required=false)]
-        public string CertificateType { get; set; }
-
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
         public string CertificateId { get; set; }
 
-        [NameInMap("callerBid")]
+        [NameInMap("CertificateType")]
         [Validation(Required=false)]
-        public string CallerBid { get; set; }
+        public string CertificateType { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -37,9 +25,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("VpnGatewayId")]
+        [Validation(Required=false)]
+        public string VpnGatewayId { get; set; }
 
     }
 

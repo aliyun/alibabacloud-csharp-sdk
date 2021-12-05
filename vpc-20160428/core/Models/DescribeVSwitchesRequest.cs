@@ -9,38 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("VSwitchName")]
-        [Validation(Required=false)]
-        public string VSwitchName { get; set; }
-
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -49,13 +17,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
 
-        [NameInMap("RouteTableId")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string RouteTableId { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -65,19 +33,45 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("RouteTableId")]
+        [Validation(Required=false)]
+        public string RouteTableId { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
+        [NameInMap("VSwitchName")]
+        [Validation(Required=false)]
+        public string VSwitchName { get; set; }
 
         [NameInMap("VSwitchOwnerId")]
         [Validation(Required=false)]
         public long? VSwitchOwnerId { get; set; }
 
-        [NameInMap("Tag")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public List<DescribeVSwitchesRequestTag> Tag { get; set; }
-        public class DescribeVSwitchesRequestTag : TeaModel {
-        }
+        public string VpcId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

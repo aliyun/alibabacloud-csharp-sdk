@@ -9,9 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpNetworksResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("BgpNetworks")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public DescribeBgpNetworksResponseBodyBgpNetworks BgpNetworks { get; set; }
+        public class DescribeBgpNetworksResponseBodyBgpNetworks : TeaModel {
+            [NameInMap("BgpNetwork")]
+            [Validation(Required=false)]
+            public List<DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork> BgpNetwork { get; set; }
+            public class DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork : TeaModel {
+                public string DstCidrBlock { get; set; }
+                public string RouterId { get; set; }
+                public string Status { get; set; }
+                public string VpcId { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,24 +36,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("BgpNetworks")]
-        [Validation(Required=false)]
-        public DescribeBgpNetworksResponseBodyBgpNetworks BgpNetworks { get; set; }
-        public class DescribeBgpNetworksResponseBodyBgpNetworks : TeaModel {
-            [NameInMap("BgpNetwork")]
-            [Validation(Required=false)]
-            public List<DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork> BgpNetwork { get; set; }
-            public class DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork : TeaModel {
-                public string Status { get; set; }
-                public string VpcId { get; set; }
-                public string RouterId { get; set; }
-                public string DstCidrBlock { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

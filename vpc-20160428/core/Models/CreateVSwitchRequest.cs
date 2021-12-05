@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVSwitchRequest : TeaModel {
+        [NameInMap("CidrBlock")]
+        [Validation(Required=false)]
+        public string CidrBlock { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Ipv6CidrBlock")]
+        [Validation(Required=false)]
+        public int? Ipv6CidrBlock { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,41 +45,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("VSwitchName")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("CidrBlock")]
-        [Validation(Required=false)]
-        public string CidrBlock { get; set; }
-
-        [NameInMap("Ipv6CidrBlock")]
-        [Validation(Required=false)]
-        public int? Ipv6CidrBlock { get; set; }
+        public string VSwitchName { get; set; }
 
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
-        [NameInMap("VSwitchName")]
+        [NameInMap("VpcIpv6CidrBlock")]
         [Validation(Required=false)]
-        public string VSwitchName { get; set; }
+        public string VpcIpv6CidrBlock { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

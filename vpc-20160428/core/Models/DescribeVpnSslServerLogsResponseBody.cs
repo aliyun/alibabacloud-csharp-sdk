@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnSslServerLogsResponseBody : TeaModel {
-        [NameInMap("PageSize")]
+        [NameInMap("Count")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("IsCompleted")]
-        [Validation(Required=false)]
-        public bool? IsCompleted { get; set; }
+        public int? Count { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,9 +22,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<string> Logs { get; set; }
         };
 
-        [NameInMap("Count")]
+        [NameInMap("IsCompleted")]
         [Validation(Required=false)]
-        public int? Count { get; set; }
+        public bool? IsCompleted { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

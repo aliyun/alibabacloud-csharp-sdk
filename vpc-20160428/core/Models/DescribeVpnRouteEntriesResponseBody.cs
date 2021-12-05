@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnRouteEntriesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
         [NameInMap("VpnRouteEntries")]
         [Validation(Required=false)]
         public DescribeVpnRouteEntriesResponseBodyVpnRouteEntries VpnRouteEntries { get; set; }
@@ -29,22 +33,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry> VpnRouteEntry { get; set; }
             public class DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry : TeaModel {
-                public string RouteEntryType { get; set; }
-                public string NextHop { get; set; }
-                public int? Weight { get; set; }
-                public string RouteDest { get; set; }
                 public string AsPath { get; set; }
-                public string State { get; set; }
-                public long? CreateTime { get; set; }
                 public string Community { get; set; }
+                public long? CreateTime { get; set; }
+                public string NextHop { get; set; }
+                public string RouteDest { get; set; }
+                public string RouteEntryType { get; set; }
                 public string Source { get; set; }
+                public string State { get; set; }
                 public string VpnInstanceId { get; set; }
+                public int? Weight { get; set; }
             }
         };
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

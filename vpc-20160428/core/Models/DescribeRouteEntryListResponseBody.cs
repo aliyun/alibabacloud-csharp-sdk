@@ -25,34 +25,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry> RouteEntry { get; set; }
             public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry : TeaModel {
-                public string Status { get; set; }
-                public string Type { get; set; }
-                public string IpVersion { get; set; }
                 public string Description { get; set; }
-                public string RouteEntryName { get; set; }
                 public string DestinationCidrBlock { get; set; }
-                public string RouteEntryId { get; set; }
+                public string IpVersion { get; set; }
                 public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops NextHops { get; set; }
                 public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops : TeaModel {
                     [NameInMap("NextHop")]
                     [Validation(Required=false)]
                     public List<DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHop> NextHop { get; set; }
                     public class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHop : TeaModel {
-                        [NameInMap("Weight")]
+                        [NameInMap("Enabled")]
                         [Validation(Required=false)]
-                        public int? Weight { get; set; }
+                        public int? Enabled { get; set; }
 
                         [NameInMap("NextHopId")]
                         [Validation(Required=false)]
                         public string NextHopId { get; set; }
 
-                        [NameInMap("Enabled")]
+                        [NameInMap("NextHopRegionId")]
                         [Validation(Required=false)]
-                        public int? Enabled { get; set; }
-
-                        [NameInMap("NextHopType")]
-                        [Validation(Required=false)]
-                        public string NextHopType { get; set; }
+                        public string NextHopRegionId { get; set; }
 
                         [NameInMap("NextHopRelatedInfo")]
                         [Validation(Required=false)]
@@ -69,14 +61,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                             public string RegionId { get; set; }
                         };
 
-                        [NameInMap("NextHopRegionId")]
+                        [NameInMap("NextHopType")]
                         [Validation(Required=false)]
-                        public string NextHopRegionId { get; set; }
+                        public string NextHopType { get; set; }
+
+                        [NameInMap("Weight")]
+                        [Validation(Required=false)]
+                        public int? Weight { get; set; }
 
                     }
 
                 }
+                public string RouteEntryId { get; set; }
+                public string RouteEntryName { get; set; }
                 public string RouteTableId { get; set; }
+                public string Status { get; set; }
+                public string Type { get; set; }
             }
         };
 

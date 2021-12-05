@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifySslVpnClientCertResponseBody : TeaModel {
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("SslVpnClientCertId")]
         [Validation(Required=false)]
         public string SslVpnClientCertId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
 
     }
 

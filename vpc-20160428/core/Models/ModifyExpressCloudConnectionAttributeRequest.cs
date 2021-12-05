@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressCloudConnectionAttributeRequest : TeaModel {
+        [NameInMap("BgpAs")]
+        [Validation(Required=false)]
+        public string BgpAs { get; set; }
+
+        [NameInMap("CeIp")]
+        [Validation(Required=false)]
+        public string CeIp { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("EccId")]
+        [Validation(Required=false)]
+        public string EccId { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -17,6 +37,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PeIp")]
+        [Validation(Required=false)]
+        public string PeIp { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -24,34 +52,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("EccId")]
-        [Validation(Required=false)]
-        public string EccId { get; set; }
-
-        [NameInMap("BgpAs")]
-        [Validation(Required=false)]
-        public string BgpAs { get; set; }
-
-        [NameInMap("PeIp")]
-        [Validation(Required=false)]
-        public string PeIp { get; set; }
-
-        [NameInMap("CeIp")]
-        [Validation(Required=false)]
-        public string CeIp { get; set; }
 
     }
 

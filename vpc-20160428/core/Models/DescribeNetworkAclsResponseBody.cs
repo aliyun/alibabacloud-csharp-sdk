@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNetworkAclsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
         [NameInMap("NetworkAcls")]
         [Validation(Required=false)]
         public DescribeNetworkAclsResponseBodyNetworkAcls NetworkAcls { get; set; }
@@ -21,8 +17,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAcl> NetworkAcl { get; set; }
             public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAcl : TeaModel {
-                public string Status { get; set; }
-                public string VpcId { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
                 public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntries EgressAclEntries { get; set; }
@@ -31,13 +25,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [Validation(Required=false)]
                     public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntriesEgressAclEntry> EgressAclEntry { get; set; }
                     public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntriesEgressAclEntry : TeaModel {
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
+                        [NameInMap("DestinationCidrIp")]
+                        [Validation(Required=false)]
+                        public string DestinationCidrIp { get; set; }
+
                         [NameInMap("NetworkAclEntryId")]
                         [Validation(Required=false)]
                         public string NetworkAclEntryId { get; set; }
-
-                        [NameInMap("EntryType")]
-                        [Validation(Required=false)]
-                        public string EntryType { get; set; }
 
                         [NameInMap("NetworkAclEntryName")]
                         [Validation(Required=false)]
@@ -47,39 +45,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         [Validation(Required=false)]
                         public string Policy { get; set; }
 
-                        [NameInMap("Description")]
+                        [NameInMap("Port")]
                         [Validation(Required=false)]
-                        public string Description { get; set; }
+                        public string Port { get; set; }
 
                         [NameInMap("Protocol")]
                         [Validation(Required=false)]
                         public string Protocol { get; set; }
 
-                        [NameInMap("DestinationCidrIp")]
-                        [Validation(Required=false)]
-                        public string DestinationCidrIp { get; set; }
-
-                        [NameInMap("Port")]
-                        [Validation(Required=false)]
-                        public string Port { get; set; }
-
                     }
 
                 }
-                public string NetworkAclName { get; set; }
                 public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntries IngressAclEntries { get; set; }
                 public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntries : TeaModel {
                     [NameInMap("IngressAclEntry")]
                     [Validation(Required=false)]
                     public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntriesIngressAclEntry> IngressAclEntry { get; set; }
                     public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntriesIngressAclEntry : TeaModel {
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
                         [NameInMap("NetworkAclEntryId")]
                         [Validation(Required=false)]
                         public string NetworkAclEntryId { get; set; }
-
-                        [NameInMap("EntryType")]
-                        [Validation(Required=false)]
-                        public string EntryType { get; set; }
 
                         [NameInMap("NetworkAclEntryName")]
                         [Validation(Required=false)]
@@ -89,51 +78,54 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         [Validation(Required=false)]
                         public string Policy { get; set; }
 
-                        [NameInMap("Description")]
+                        [NameInMap("Port")]
                         [Validation(Required=false)]
-                        public string Description { get; set; }
-
-                        [NameInMap("SourceCidrIp")]
-                        [Validation(Required=false)]
-                        public string SourceCidrIp { get; set; }
+                        public string Port { get; set; }
 
                         [NameInMap("Protocol")]
                         [Validation(Required=false)]
                         public string Protocol { get; set; }
 
-                        [NameInMap("Port")]
+                        [NameInMap("SourceCidrIp")]
                         [Validation(Required=false)]
-                        public string Port { get; set; }
+                        public string SourceCidrIp { get; set; }
 
                     }
 
                 }
                 public string NetworkAclId { get; set; }
+                public string NetworkAclName { get; set; }
                 public long? OwnerId { get; set; }
+                public string RegionId { get; set; }
                 public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclResources Resources { get; set; }
                 public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclResources : TeaModel {
                     [NameInMap("Resource")]
                     [Validation(Required=false)]
                     public List<DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclResourcesResource> Resource { get; set; }
                     public class DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclResourcesResource : TeaModel {
-                        [NameInMap("Status")]
+                        [NameInMap("ResourceId")]
                         [Validation(Required=false)]
-                        public string Status { get; set; }
+                        public string ResourceId { get; set; }
 
                         [NameInMap("ResourceType")]
                         [Validation(Required=false)]
                         public string ResourceType { get; set; }
 
-                        [NameInMap("ResourceId")]
+                        [NameInMap("Status")]
                         [Validation(Required=false)]
-                        public string ResourceId { get; set; }
+                        public string Status { get; set; }
 
                     }
 
                 }
-                public string RegionId { get; set; }
+                public string Status { get; set; }
+                public string VpcId { get; set; }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -143,9 +135,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public string TotalCount { get; set; }
 
     }
 

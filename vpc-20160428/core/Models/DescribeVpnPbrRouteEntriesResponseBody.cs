@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnPbrRouteEntriesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("VpnPbrRouteEntries")]
         [Validation(Required=false)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry> VpnPbrRouteEntry { get; set; }
             public class DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry : TeaModel {
-                public string NextHop { get; set; }
-                public int? Weight { get; set; }
-                public string RouteDest { get; set; }
-                public string State { get; set; }
                 public long? CreateTime { get; set; }
-                public string VpnInstanceId { get; set; }
+                public string NextHop { get; set; }
+                public string RouteDest { get; set; }
                 public string RouteSource { get; set; }
+                public string State { get; set; }
+                public string VpnInstanceId { get; set; }
+                public int? Weight { get; set; }
             }
         };
 
