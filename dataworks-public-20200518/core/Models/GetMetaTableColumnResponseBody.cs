@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsPartitionColumn { get; set; }
                 public bool? IsPrimaryKey { get; set; }
                 public int? Position { get; set; }
+                public long? RelationCount { get; set; }
             }
             [NameInMap("PageNum")]
             [Validation(Required=false)]
