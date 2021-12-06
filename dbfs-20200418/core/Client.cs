@@ -621,6 +621,70 @@ namespace AlibabaCloud.SDK.DBFS20200418
             return await ListDbfsWithOptionsAsync(request, runtime);
         }
 
+        public ListDbfsAttachableEcsInstancesResponse ListDbfsAttachableEcsInstancesWithOptions(ListDbfsAttachableEcsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDbfsAttachableEcsInstancesResponse>(DoRPCRequest("ListDbfsAttachableEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListDbfsAttachableEcsInstancesResponse> ListDbfsAttachableEcsInstancesWithOptionsAsync(ListDbfsAttachableEcsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDbfsAttachableEcsInstancesResponse>(await DoRPCRequestAsync("ListDbfsAttachableEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListDbfsAttachableEcsInstancesResponse ListDbfsAttachableEcsInstances(ListDbfsAttachableEcsInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDbfsAttachableEcsInstancesWithOptions(request, runtime);
+        }
+
+        public async Task<ListDbfsAttachableEcsInstancesResponse> ListDbfsAttachableEcsInstancesAsync(ListDbfsAttachableEcsInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDbfsAttachableEcsInstancesWithOptionsAsync(request, runtime);
+        }
+
+        public ListDbfsAttachedEcsInstancesResponse ListDbfsAttachedEcsInstancesWithOptions(ListDbfsAttachedEcsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDbfsAttachedEcsInstancesResponse>(DoRPCRequest("ListDbfsAttachedEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public async Task<ListDbfsAttachedEcsInstancesResponse> ListDbfsAttachedEcsInstancesWithOptionsAsync(ListDbfsAttachedEcsInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+            };
+            return TeaModel.ToObject<ListDbfsAttachedEcsInstancesResponse>(await DoRPCRequestAsync("ListDbfsAttachedEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime));
+        }
+
+        public ListDbfsAttachedEcsInstancesResponse ListDbfsAttachedEcsInstances(ListDbfsAttachedEcsInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDbfsAttachedEcsInstancesWithOptions(request, runtime);
+        }
+
+        public async Task<ListDbfsAttachedEcsInstancesResponse> ListDbfsAttachedEcsInstancesAsync(ListDbfsAttachedEcsInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDbfsAttachedEcsInstancesWithOptionsAsync(request, runtime);
+        }
+
         public ListSnapshotResponse ListSnapshotWithOptions(ListSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
