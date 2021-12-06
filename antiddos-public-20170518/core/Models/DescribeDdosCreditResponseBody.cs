@@ -9,24 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class DescribeDdosCreditResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DdosCredit")]
         [Validation(Required=false)]
         public DescribeDdosCreditResponseBodyDdosCredit DdosCredit { get; set; }
         public class DescribeDdosCreditResponseBodyDdosCredit : TeaModel {
+            [NameInMap("BlackholeTime")]
+            [Validation(Required=false)]
+            public int? BlackholeTime { get; set; }
             [NameInMap("Score")]
             [Validation(Required=false)]
             public int? Score { get; set; }
             [NameInMap("ScoreLevel")]
             [Validation(Required=false)]
             public string ScoreLevel { get; set; }
-            [NameInMap("BlackholeTime")]
-            [Validation(Required=false)]
-            public int? BlackholeTime { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

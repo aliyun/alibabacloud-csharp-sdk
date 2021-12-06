@@ -9,37 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class ModifyDefenseThresholdRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        [NameInMap("Bps")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
+        public int? Bps { get; set; }
 
         [NameInMap("DdosRegionId")]
         [Validation(Required=false)]
         public string DdosRegionId { get; set; }
 
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("Bps")]
+        [NameInMap("InstanceType")]
         [Validation(Required=false)]
-        public int? Bps { get; set; }
-
-        [NameInMap("Pps")]
-        [Validation(Required=false)]
-        public int? Pps { get; set; }
+        public string InstanceType { get; set; }
 
         [NameInMap("IsAuto")]
         [Validation(Required=false)]
         public bool? IsAuto { get; set; }
+
+        [NameInMap("Pps")]
+        [Validation(Required=false)]
+        public int? Pps { get; set; }
 
     }
 

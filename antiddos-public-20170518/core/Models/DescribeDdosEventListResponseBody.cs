@@ -11,33 +11,20 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
     public class DescribeDdosEventListResponseBody : TeaModel {
         [NameInMap("DdosEventList")]
         [Validation(Required=false)]
-        public List<DescribeDdosEventListResponseBodyDdosEventList> DdosEventList { get; set; }
+        public DescribeDdosEventListResponseBodyDdosEventList DdosEventList { get; set; }
         public class DescribeDdosEventListResponseBodyDdosEventList : TeaModel {
-            [NameInMap("DdosType")]
+            [NameInMap("DdosEvent")]
             [Validation(Required=false)]
-            public string DdosType { get; set; }
-
-            [NameInMap("EndTime")]
-            [Validation(Required=false)]
-            public long? EndTime { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public long? StartTime { get; set; }
-
-            [NameInMap("DelayTime")]
-            [Validation(Required=false)]
-            public long? DelayTime { get; set; }
-
-            [NameInMap("DdosStatus")]
-            [Validation(Required=false)]
-            public string DdosStatus { get; set; }
-
-            [NameInMap("UnBlackholeTime")]
-            [Validation(Required=false)]
-            public long? UnBlackholeTime { get; set; }
-
-        }
+            public List<DescribeDdosEventListResponseBodyDdosEventListDdosEvent> DdosEvent { get; set; }
+            public class DescribeDdosEventListResponseBodyDdosEventListDdosEvent : TeaModel {
+                public string DdosStatus { get; set; }
+                public string DdosType { get; set; }
+                public long? DelayTime { get; set; }
+                public long? EndTime { get; set; }
+                public long? StartTime { get; set; }
+                public long? UnBlackholeTime { get; set; }
+            }
+        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

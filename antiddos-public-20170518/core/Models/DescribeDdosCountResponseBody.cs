@@ -13,12 +13,12 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         [Validation(Required=false)]
         public DescribeDdosCountResponseBodyDdosCount DdosCount { get; set; }
         public class DescribeDdosCountResponseBodyDdosCount : TeaModel {
-            [NameInMap("DefenseCount")]
-            [Validation(Required=false)]
-            public int? DefenseCount { get; set; }
             [NameInMap("BlackholeCount")]
             [Validation(Required=false)]
             public int? BlackholeCount { get; set; }
+            [NameInMap("DefenseCount")]
+            [Validation(Required=false)]
+            public int? DefenseCount { get; set; }
             [NameInMap("InstacenCount")]
             [Validation(Required=false)]
             public int? InstacenCount { get; set; }

@@ -15,41 +15,22 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 
         [NameInMap("Thresholds")]
         [Validation(Required=false)]
-        public List<DescribeDdosThresholdResponseBodyThresholds> Thresholds { get; set; }
+        public DescribeDdosThresholdResponseBodyThresholds Thresholds { get; set; }
         public class DescribeDdosThresholdResponseBodyThresholds : TeaModel {
-            [NameInMap("DdosType")]
+            [NameInMap("Threshold")]
             [Validation(Required=false)]
-            public string DdosType { get; set; }
-
-            [NameInMap("IsAuto")]
-            [Validation(Required=false)]
-            public bool? IsAuto { get; set; }
-
-            [NameInMap("MaxBps")]
-            [Validation(Required=false)]
-            public int? MaxBps { get; set; }
-
-            [NameInMap("ElasticBps")]
-            [Validation(Required=false)]
-            public int? ElasticBps { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("Bps")]
-            [Validation(Required=false)]
-            public int? Bps { get; set; }
-
-            [NameInMap("Pps")]
-            [Validation(Required=false)]
-            public int? Pps { get; set; }
-
-            [NameInMap("MaxPps")]
-            [Validation(Required=false)]
-            public int? MaxPps { get; set; }
-
-        }
+            public List<DescribeDdosThresholdResponseBodyThresholdsThreshold> Threshold { get; set; }
+            public class DescribeDdosThresholdResponseBodyThresholdsThreshold : TeaModel {
+                public int? Bps { get; set; }
+                public string DdosType { get; set; }
+                public int? ElasticBps { get; set; }
+                public string InstanceId { get; set; }
+                public bool? IsAuto { get; set; }
+                public int? MaxBps { get; set; }
+                public int? MaxPps { get; set; }
+                public int? Pps { get; set; }
+            }
+        };
 
     }
 
