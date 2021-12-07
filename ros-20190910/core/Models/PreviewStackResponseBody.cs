@@ -23,6 +23,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("DisableRollback")]
             [Validation(Required=false)]
             public bool? DisableRollback { get; set; }
+            [NameInMap("Log")]
+            [Validation(Required=false)]
+            public PreviewStackResponseBodyStackLog Log { get; set; }
+            public class PreviewStackResponseBodyStackLog : TeaModel {
+                [NameInMap("TerraformLogs")]
+                [Validation(Required=false)]
+                public List<PreviewStackResponseBodyStackLogTerraformLogs> TerraformLogs { get; set; }
+                public class PreviewStackResponseBodyStackLogTerraformLogs : TeaModel {
+                    [NameInMap("Command")]
+                    [Validation(Required=false)]
+                    public string Command { get; set; }
+
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("Stream")]
+                    [Validation(Required=false)]
+                    public string Stream { get; set; }
+
+                }
+
+            }
             [NameInMap("Parameters")]
             [Validation(Required=false)]
             public List<PreviewStackResponseBodyStackParameters> Parameters { get; set; }

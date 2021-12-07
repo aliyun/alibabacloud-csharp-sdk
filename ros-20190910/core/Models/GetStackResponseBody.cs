@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string DriftDetectionTime { get; set; }
 
+        [NameInMap("Log")]
+        [Validation(Required=false)]
+        public GetStackResponseBodyLog Log { get; set; }
+        public class GetStackResponseBodyLog : TeaModel {
+            [NameInMap("TerraformLogs")]
+            [Validation(Required=false)]
+            public List<GetStackResponseBodyLogTerraformLogs> TerraformLogs { get; set; }
+            public class GetStackResponseBodyLogTerraformLogs : TeaModel {
+                public string Command { get; set; }
+                public string Content { get; set; }
+                public string Stream { get; set; }
+            }
+        };
+
         [NameInMap("NotificationURLs")]
         [Validation(Required=false)]
         public List<string> NotificationURLs { get; set; }
