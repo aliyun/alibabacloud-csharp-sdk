@@ -9,18 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeVpcAccessesRequest : TeaModel {
-        [NameInMap("AccurateQuery")]
-        [Validation(Required=false)]
-        public bool? AccurateQuery { get; set; }
-
+        /// <summary>
+        /// VPC授权名称
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// 当前页码
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// 每页展示条目
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -28,6 +33,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        /// <summary>
+        /// Vpc授权ID
+        /// </summary>
+        [NameInMap("VpcAccessId")]
+        [Validation(Required=false)]
+        public string VpcAccessId { get; set; }
 
     }
 

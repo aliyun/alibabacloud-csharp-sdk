@@ -39,6 +39,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 public string Name { get; set; }
                 public int? Port { get; set; }
                 public string RegionId { get; set; }
+                public string VpcAccessId { get; set; }
                 public string VpcId { get; set; }
             }
         };

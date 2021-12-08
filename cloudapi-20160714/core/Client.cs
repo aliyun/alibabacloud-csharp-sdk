@@ -67,21 +67,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public AbolishApiResponse AbolishApiWithOptions(AbolishApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AbolishApiResponse>(DoRPCRequest("AbolishApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AbolishApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AbolishApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<AbolishApiResponse> AbolishApiWithOptionsAsync(AbolishApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AbolishApiResponse>(await DoRPCRequestAsync("AbolishApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AbolishApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AbolishApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public AbolishApiResponse AbolishApi(AbolishApiRequest request)
@@ -99,21 +135,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public AddIpControlPolicyItemResponse AddIpControlPolicyItemWithOptions(AddIpControlPolicyItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["CidrIp"] = request.CidrIp;
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AddIpControlPolicyItemResponse>(DoRPCRequest("AddIpControlPolicyItem", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddIpControlPolicyItem",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddIpControlPolicyItemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<AddIpControlPolicyItemResponse> AddIpControlPolicyItemWithOptionsAsync(AddIpControlPolicyItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["CidrIp"] = request.CidrIp;
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AddIpControlPolicyItemResponse>(await DoRPCRequestAsync("AddIpControlPolicyItem", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddIpControlPolicyItem",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddIpControlPolicyItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public AddIpControlPolicyItemResponse AddIpControlPolicyItem(AddIpControlPolicyItemRequest request)
@@ -131,21 +203,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public AddTrafficSpecialControlResponse AddTrafficSpecialControlWithOptions(AddTrafficSpecialControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SpecialKey"] = request.SpecialKey;
+            query["SpecialType"] = request.SpecialType;
+            query["TrafficControlId"] = request.TrafficControlId;
+            query["TrafficValue"] = request.TrafficValue;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AddTrafficSpecialControlResponse>(DoRPCRequest("AddTrafficSpecialControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTrafficSpecialControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTrafficSpecialControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<AddTrafficSpecialControlResponse> AddTrafficSpecialControlWithOptionsAsync(AddTrafficSpecialControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SpecialKey"] = request.SpecialKey;
+            query["SpecialType"] = request.SpecialType;
+            query["TrafficControlId"] = request.TrafficControlId;
+            query["TrafficValue"] = request.TrafficValue;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AddTrafficSpecialControlResponse>(await DoRPCRequestAsync("AddTrafficSpecialControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTrafficSpecialControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTrafficSpecialControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public AddTrafficSpecialControlResponse AddTrafficSpecialControl(AddTrafficSpecialControlRequest request)
@@ -163,21 +273,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public AttachPluginResponse AttachPluginWithOptions(AttachPluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PluginId"] = request.PluginId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AttachPluginResponse>(DoRPCRequest("AttachPlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachPlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachPluginResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<AttachPluginResponse> AttachPluginWithOptionsAsync(AttachPluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PluginId"] = request.PluginId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<AttachPluginResponse>(await DoRPCRequestAsync("AttachPlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachPlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public AttachPluginResponse AttachPlugin(AttachPluginRequest request)
@@ -195,21 +345,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public BatchAbolishApisResponse BatchAbolishApisWithOptions(BatchAbolishApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Api"] = request.Api;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<BatchAbolishApisResponse>(DoRPCRequest("BatchAbolishApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAbolishApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAbolishApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<BatchAbolishApisResponse> BatchAbolishApisWithOptionsAsync(BatchAbolishApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Api"] = request.Api;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<BatchAbolishApisResponse>(await DoRPCRequestAsync("BatchAbolishApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAbolishApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAbolishApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public BatchAbolishApisResponse BatchAbolishApis(BatchAbolishApisRequest request)
@@ -227,21 +409,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public BatchDeployApisResponse BatchDeployApisWithOptions(BatchDeployApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Api"] = request.Api;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<BatchDeployApisResponse>(DoRPCRequest("BatchDeployApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeployApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeployApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<BatchDeployApisResponse> BatchDeployApisWithOptionsAsync(BatchDeployApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Api"] = request.Api;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<BatchDeployApisResponse>(await DoRPCRequestAsync("BatchDeployApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeployApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeployApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public BatchDeployApisResponse BatchDeployApis(BatchDeployApisRequest request)
@@ -259,21 +477,99 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateApiResponse CreateApiWithOptions(CreateApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AllowSignatureMethod"] = request.AllowSignatureMethod;
+            query["ApiName"] = request.ApiName;
+            query["AppCodeAuthType"] = request.AppCodeAuthType;
+            query["AuthType"] = request.AuthType;
+            query["ConstantParameters"] = request.ConstantParameters;
+            query["Description"] = request.Description;
+            query["DisableInternet"] = request.DisableInternet;
+            query["ErrorCodeSamples"] = request.ErrorCodeSamples;
+            query["FailResultSample"] = request.FailResultSample;
+            query["ForceNonceCheck"] = request.ForceNonceCheck;
+            query["GroupId"] = request.GroupId;
+            query["OpenIdConnectConfig"] = request.OpenIdConnectConfig;
+            query["RequestConfig"] = request.RequestConfig;
+            query["RequestParameters"] = request.RequestParameters;
+            query["ResultBodyModel"] = request.ResultBodyModel;
+            query["ResultDescriptions"] = request.ResultDescriptions;
+            query["ResultSample"] = request.ResultSample;
+            query["ResultType"] = request.ResultType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["ServiceConfig"] = request.ServiceConfig;
+            query["ServiceParameters"] = request.ServiceParameters;
+            query["ServiceParametersMap"] = request.ServiceParametersMap;
+            query["SystemParameters"] = request.SystemParameters;
+            query["Visibility"] = request.Visibility;
+            query["WebSocketApiType"] = request.WebSocketApiType;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateApiResponse>(DoRPCRequest("CreateApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateApiResponse> CreateApiWithOptionsAsync(CreateApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AllowSignatureMethod"] = request.AllowSignatureMethod;
+            query["ApiName"] = request.ApiName;
+            query["AppCodeAuthType"] = request.AppCodeAuthType;
+            query["AuthType"] = request.AuthType;
+            query["ConstantParameters"] = request.ConstantParameters;
+            query["Description"] = request.Description;
+            query["DisableInternet"] = request.DisableInternet;
+            query["ErrorCodeSamples"] = request.ErrorCodeSamples;
+            query["FailResultSample"] = request.FailResultSample;
+            query["ForceNonceCheck"] = request.ForceNonceCheck;
+            query["GroupId"] = request.GroupId;
+            query["OpenIdConnectConfig"] = request.OpenIdConnectConfig;
+            query["RequestConfig"] = request.RequestConfig;
+            query["RequestParameters"] = request.RequestParameters;
+            query["ResultBodyModel"] = request.ResultBodyModel;
+            query["ResultDescriptions"] = request.ResultDescriptions;
+            query["ResultSample"] = request.ResultSample;
+            query["ResultType"] = request.ResultType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["ServiceConfig"] = request.ServiceConfig;
+            query["ServiceParameters"] = request.ServiceParameters;
+            query["ServiceParametersMap"] = request.ServiceParametersMap;
+            query["SystemParameters"] = request.SystemParameters;
+            query["Visibility"] = request.Visibility;
+            query["WebSocketApiType"] = request.WebSocketApiType;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateApiResponse>(await DoRPCRequestAsync("CreateApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateApiResponse CreateApi(CreateApiRequest request)
@@ -291,21 +587,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateApiGroupResponse CreateApiGroupWithOptions(CreateApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["BasePath"] = request.BasePath;
+            query["Description"] = request.Description;
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateApiGroupResponse>(DoRPCRequest("CreateApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateApiGroupResponse> CreateApiGroupWithOptionsAsync(CreateApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["BasePath"] = request.BasePath;
+            query["Description"] = request.Description;
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateApiGroupResponse>(await DoRPCRequestAsync("CreateApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateApiGroupResponse CreateApiGroup(CreateApiGroupRequest request)
@@ -323,21 +659,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateApiStageVariableResponse CreateApiStageVariableWithOptions(CreateApiStageVariableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageId"] = request.StageId;
+            query["StageRouteModel"] = request.StageRouteModel;
+            query["SupportRoute"] = request.SupportRoute;
+            query["VariableName"] = request.VariableName;
+            query["VariableValue"] = request.VariableValue;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateApiStageVariableResponse>(DoRPCRequest("CreateApiStageVariable", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiStageVariable",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiStageVariableResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateApiStageVariableResponse> CreateApiStageVariableWithOptionsAsync(CreateApiStageVariableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageId"] = request.StageId;
+            query["StageRouteModel"] = request.StageRouteModel;
+            query["SupportRoute"] = request.SupportRoute;
+            query["VariableName"] = request.VariableName;
+            query["VariableValue"] = request.VariableValue;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateApiStageVariableResponse>(await DoRPCRequestAsync("CreateApiStageVariable", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiStageVariable",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateApiStageVariableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateApiStageVariableResponse CreateApiStageVariable(CreateApiStageVariableRequest request)
@@ -355,21 +733,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateAppResponse CreateAppWithOptions(CreateAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppName"] = request.AppName;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Source"] = request.Source;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateAppResponse>(DoRPCRequest("CreateApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateAppResponse> CreateAppWithOptionsAsync(CreateAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppName"] = request.AppName;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Source"] = request.Source;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateAppResponse>(await DoRPCRequestAsync("CreateApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateAppResponse CreateApp(CreateAppRequest request)
@@ -387,21 +803,67 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AutoPay"] = request.AutoPay;
+            query["ChargeType"] = request.ChargeType;
+            query["Duration"] = request.Duration;
+            query["HttpsPolicy"] = request.HttpsPolicy;
+            query["InstanceName"] = request.InstanceName;
+            query["InstanceSpec"] = request.InstanceSpec;
+            query["PricingCycle"] = request.PricingCycle;
+            query["Token"] = request.Token;
+            query["ZoneId"] = request.ZoneId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateInstanceResponse>(DoRPCRequest("CreateInstance", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstance",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AutoPay"] = request.AutoPay;
+            query["ChargeType"] = request.ChargeType;
+            query["Duration"] = request.Duration;
+            query["HttpsPolicy"] = request.HttpsPolicy;
+            query["InstanceName"] = request.InstanceName;
+            query["InstanceSpec"] = request.InstanceSpec;
+            query["PricingCycle"] = request.PricingCycle;
+            query["Token"] = request.Token;
+            query["ZoneId"] = request.ZoneId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateInstanceResponse>(await DoRPCRequestAsync("CreateInstance", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstance",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
@@ -419,21 +881,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateIntranetDomainResponse CreateIntranetDomainWithOptions(CreateIntranetDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateIntranetDomainResponse>(DoRPCRequest("CreateIntranetDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIntranetDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIntranetDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateIntranetDomainResponse> CreateIntranetDomainWithOptionsAsync(CreateIntranetDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateIntranetDomainResponse>(await DoRPCRequestAsync("CreateIntranetDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIntranetDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIntranetDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateIntranetDomainResponse CreateIntranetDomain(CreateIntranetDomainRequest request)
@@ -451,21 +945,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateIpControlResponse CreateIpControlWithOptions(CreateIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["IpControlName"] = request.IpControlName;
+            query["IpControlPolicys"] = request.IpControlPolicys;
+            query["IpControlType"] = request.IpControlType;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateIpControlResponse>(DoRPCRequest("CreateIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIpControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateIpControlResponse> CreateIpControlWithOptionsAsync(CreateIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["IpControlName"] = request.IpControlName;
+            query["IpControlPolicys"] = request.IpControlPolicys;
+            query["IpControlType"] = request.IpControlType;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateIpControlResponse>(await DoRPCRequestAsync("CreateIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIpControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateIpControlResponse CreateIpControl(CreateIpControlRequest request)
@@ -483,21 +1015,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateLogConfigResponse CreateLogConfigWithOptions(CreateLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SlsLogStore"] = request.SlsLogStore;
+            query["SlsProject"] = request.SlsProject;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateLogConfigResponse>(DoRPCRequest("CreateLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateLogConfigResponse> CreateLogConfigWithOptionsAsync(CreateLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SlsLogStore"] = request.SlsLogStore;
+            query["SlsProject"] = request.SlsProject;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateLogConfigResponse>(await DoRPCRequestAsync("CreateLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateLogConfigResponse CreateLogConfig(CreateLogConfigRequest request)
@@ -515,21 +1083,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateModelResponse CreateModelWithOptions(CreateModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["ModelName"] = request.ModelName;
+            query["Schema"] = request.Schema;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateModelResponse>(DoRPCRequest("CreateModel", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModel",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateModelResponse> CreateModelWithOptionsAsync(CreateModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["ModelName"] = request.ModelName;
+            query["Schema"] = request.Schema;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateModelResponse>(await DoRPCRequestAsync("CreateModel", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModel",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateModelResponse CreateModel(CreateModelRequest request)
@@ -547,21 +1151,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateMonitorGroupResponse CreateMonitorGroupWithOptions(CreateMonitorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Auth"] = request.Auth;
+            query["GroupId"] = request.GroupId;
+            query["RawMonitorGroupId"] = request.RawMonitorGroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateMonitorGroupResponse>(DoRPCRequest("CreateMonitorGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMonitorGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMonitorGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateMonitorGroupResponse> CreateMonitorGroupWithOptionsAsync(CreateMonitorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Auth"] = request.Auth;
+            query["GroupId"] = request.GroupId;
+            query["RawMonitorGroupId"] = request.RawMonitorGroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateMonitorGroupResponse>(await DoRPCRequestAsync("CreateMonitorGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMonitorGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMonitorGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateMonitorGroupResponse CreateMonitorGroup(CreateMonitorGroupRequest request)
@@ -579,21 +1219,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreatePluginResponse CreatePluginWithOptions(CreatePluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["PluginData"] = request.PluginData;
+            query["PluginName"] = request.PluginName;
+            query["PluginType"] = request.PluginType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreatePluginResponse>(DoRPCRequest("CreatePlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePluginResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreatePluginResponse> CreatePluginWithOptionsAsync(CreatePluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["PluginData"] = request.PluginData;
+            query["PluginName"] = request.PluginName;
+            query["PluginType"] = request.PluginType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreatePluginResponse>(await DoRPCRequestAsync("CreatePlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreatePluginResponse CreatePlugin(CreatePluginRequest request)
@@ -611,21 +1291,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateSignatureResponse CreateSignatureWithOptions(CreateSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureKey"] = request.SignatureKey;
+            query["SignatureName"] = request.SignatureName;
+            query["SignatureSecret"] = request.SignatureSecret;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateSignatureResponse>(DoRPCRequest("CreateSignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSignatureResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateSignatureResponse> CreateSignatureWithOptionsAsync(CreateSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureKey"] = request.SignatureKey;
+            query["SignatureName"] = request.SignatureName;
+            query["SignatureSecret"] = request.SignatureSecret;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateSignatureResponse>(await DoRPCRequestAsync("CreateSignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSignatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateSignatureResponse CreateSignature(CreateSignatureRequest request)
@@ -643,21 +1359,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public CreateTrafficControlResponse CreateTrafficControlWithOptions(CreateTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiDefault"] = request.ApiDefault;
+            query["AppDefault"] = request.AppDefault;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlName"] = request.TrafficControlName;
+            query["TrafficControlUnit"] = request.TrafficControlUnit;
+            query["UserDefault"] = request.UserDefault;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateTrafficControlResponse>(DoRPCRequest("CreateTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrafficControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateTrafficControlResponse> CreateTrafficControlWithOptionsAsync(CreateTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiDefault"] = request.ApiDefault;
+            query["AppDefault"] = request.AppDefault;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlName"] = request.TrafficControlName;
+            query["TrafficControlUnit"] = request.TrafficControlUnit;
+            query["UserDefault"] = request.UserDefault;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<CreateTrafficControlResponse>(await DoRPCRequestAsync("CreateTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrafficControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateTrafficControlResponse CreateTrafficControl(CreateTrafficControlRequest request)
@@ -675,21 +1433,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteAllTrafficSpecialControlResponse DeleteAllTrafficSpecialControlWithOptions(DeleteAllTrafficSpecialControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteAllTrafficSpecialControlResponse>(DoRPCRequest("DeleteAllTrafficSpecialControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAllTrafficSpecialControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAllTrafficSpecialControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteAllTrafficSpecialControlResponse> DeleteAllTrafficSpecialControlWithOptionsAsync(DeleteAllTrafficSpecialControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteAllTrafficSpecialControlResponse>(await DoRPCRequestAsync("DeleteAllTrafficSpecialControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAllTrafficSpecialControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAllTrafficSpecialControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteAllTrafficSpecialControlResponse DeleteAllTrafficSpecialControl(DeleteAllTrafficSpecialControlRequest request)
@@ -707,21 +1497,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteApiResponse DeleteApiWithOptions(DeleteApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteApiResponse>(DoRPCRequest("DeleteApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteApiResponse> DeleteApiWithOptionsAsync(DeleteApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteApiResponse>(await DoRPCRequestAsync("DeleteApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteApiResponse DeleteApi(DeleteApiRequest request)
@@ -739,21 +1563,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteApiGroupResponse DeleteApiGroupWithOptions(DeleteApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteApiGroupResponse>(DoRPCRequest("DeleteApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApiGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteApiGroupResponse> DeleteApiGroupWithOptionsAsync(DeleteApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteApiGroupResponse>(await DoRPCRequestAsync("DeleteApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApiGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteApiGroupResponse DeleteApiGroup(DeleteApiGroupRequest request)
@@ -771,21 +1629,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteApiStageVariableResponse DeleteApiStageVariableWithOptions(DeleteApiStageVariableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageId"] = request.StageId;
+            query["VariableName"] = request.VariableName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteApiStageVariableResponse>(DoRPCRequest("DeleteApiStageVariable", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApiStageVariable",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApiStageVariableResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteApiStageVariableResponse> DeleteApiStageVariableWithOptionsAsync(DeleteApiStageVariableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageId"] = request.StageId;
+            query["VariableName"] = request.VariableName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteApiStageVariableResponse>(await DoRPCRequestAsync("DeleteApiStageVariable", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApiStageVariable",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApiStageVariableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteApiStageVariableResponse DeleteApiStageVariable(DeleteApiStageVariableRequest request)
@@ -803,21 +1697,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteAppResponse DeleteAppWithOptions(DeleteAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteAppResponse>(DoRPCRequest("DeleteApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteAppResponse> DeleteAppWithOptionsAsync(DeleteAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteAppResponse>(await DoRPCRequestAsync("DeleteApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteAppResponse DeleteApp(DeleteAppRequest request)
@@ -835,21 +1763,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteDomainResponse DeleteDomainWithOptions(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteDomainResponse>(DoRPCRequest("DeleteDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteDomainResponse> DeleteDomainWithOptionsAsync(DeleteDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteDomainResponse>(await DoRPCRequestAsync("DeleteDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteDomainResponse DeleteDomain(DeleteDomainRequest request)
@@ -867,21 +1829,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteDomainCertificateResponse DeleteDomainCertificateWithOptions(DeleteDomainCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["CertificateId"] = request.CertificateId;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteDomainCertificateResponse>(DoRPCRequest("DeleteDomainCertificate", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomainCertificate",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDomainCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteDomainCertificateResponse> DeleteDomainCertificateWithOptionsAsync(DeleteDomainCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["CertificateId"] = request.CertificateId;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteDomainCertificateResponse>(await DoRPCRequestAsync("DeleteDomainCertificate", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDomainCertificate",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDomainCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteDomainCertificateResponse DeleteDomainCertificate(DeleteDomainCertificateRequest request)
@@ -899,21 +1897,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteInstanceResponse DeleteInstanceWithOptions(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteInstanceResponse>(DoRPCRequest("DeleteInstance", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstance",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(DeleteInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteInstanceResponse>(await DoRPCRequestAsync("DeleteInstance", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstance",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest request)
@@ -931,21 +1961,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteIpControlResponse DeleteIpControlWithOptions(DeleteIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteIpControlResponse>(DoRPCRequest("DeleteIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIpControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteIpControlResponse> DeleteIpControlWithOptionsAsync(DeleteIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteIpControlResponse>(await DoRPCRequestAsync("DeleteIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIpControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteIpControlResponse DeleteIpControl(DeleteIpControlRequest request)
@@ -963,21 +2025,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteLogConfigResponse DeleteLogConfigWithOptions(DeleteLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteLogConfigResponse>(DoRPCRequest("DeleteLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteLogConfigResponse> DeleteLogConfigWithOptionsAsync(DeleteLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteLogConfigResponse>(await DoRPCRequestAsync("DeleteLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteLogConfigResponse DeleteLogConfig(DeleteLogConfigRequest request)
@@ -995,21 +2089,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteModelResponse DeleteModelWithOptions(DeleteModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["ModelName"] = request.ModelName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteModelResponse>(DoRPCRequest("DeleteModel", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteModel",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteModelResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteModelResponse> DeleteModelWithOptionsAsync(DeleteModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["ModelName"] = request.ModelName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteModelResponse>(await DoRPCRequestAsync("DeleteModel", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteModel",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteModelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteModelResponse DeleteModel(DeleteModelRequest request)
@@ -1027,21 +2153,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeletePluginResponse DeletePluginWithOptions(DeletePluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PluginId"] = request.PluginId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeletePluginResponse>(DoRPCRequest("DeletePlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePluginResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeletePluginResponse> DeletePluginWithOptionsAsync(DeletePluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PluginId"] = request.PluginId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeletePluginResponse>(await DoRPCRequestAsync("DeletePlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeletePluginResponse DeletePlugin(DeletePluginRequest request)
@@ -1059,21 +2219,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteSignatureResponse DeleteSignatureWithOptions(DeleteSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteSignatureResponse>(DoRPCRequest("DeleteSignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSignatureResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteSignatureResponse> DeleteSignatureWithOptionsAsync(DeleteSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteSignatureResponse>(await DoRPCRequestAsync("DeleteSignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSignatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteSignatureResponse DeleteSignature(DeleteSignatureRequest request)
@@ -1091,21 +2283,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteTrafficControlResponse DeleteTrafficControlWithOptions(DeleteTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteTrafficControlResponse>(DoRPCRequest("DeleteTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrafficControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteTrafficControlResponse> DeleteTrafficControlWithOptionsAsync(DeleteTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteTrafficControlResponse>(await DoRPCRequestAsync("DeleteTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrafficControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteTrafficControlResponse DeleteTrafficControl(DeleteTrafficControlRequest request)
@@ -1123,21 +2347,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeleteTrafficSpecialControlResponse DeleteTrafficSpecialControlWithOptions(DeleteTrafficSpecialControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SpecialKey"] = request.SpecialKey;
+            query["SpecialType"] = request.SpecialType;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteTrafficSpecialControlResponse>(DoRPCRequest("DeleteTrafficSpecialControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrafficSpecialControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrafficSpecialControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteTrafficSpecialControlResponse> DeleteTrafficSpecialControlWithOptionsAsync(DeleteTrafficSpecialControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SpecialKey"] = request.SpecialKey;
+            query["SpecialType"] = request.SpecialType;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeleteTrafficSpecialControlResponse>(await DoRPCRequestAsync("DeleteTrafficSpecialControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrafficSpecialControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrafficSpecialControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteTrafficSpecialControlResponse DeleteTrafficSpecialControl(DeleteTrafficSpecialControlRequest request)
@@ -1155,21 +2415,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DeployApiResponse DeployApiWithOptions(DeployApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeployApiResponse>(DoRPCRequest("DeployApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeployApiResponse> DeployApiWithOptionsAsync(DeployApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DeployApiResponse>(await DoRPCRequestAsync("DeployApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeployApiResponse DeployApi(DeployApiRequest request)
@@ -1187,21 +2485,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeAbolishApiTaskResponse DescribeAbolishApiTaskWithOptions(DescribeAbolishApiTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OperationUid"] = request.OperationUid;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAbolishApiTaskResponse>(DoRPCRequest("DescribeAbolishApiTask", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAbolishApiTask",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAbolishApiTaskResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeAbolishApiTaskResponse> DescribeAbolishApiTaskWithOptionsAsync(DescribeAbolishApiTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OperationUid"] = request.OperationUid;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAbolishApiTaskResponse>(await DoRPCRequestAsync("DescribeAbolishApiTask", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAbolishApiTask",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAbolishApiTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeAbolishApiTaskResponse DescribeAbolishApiTask(DescribeAbolishApiTaskRequest request)
@@ -1219,21 +2549,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiResponse DescribeApiWithOptions(DescribeApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiResponse>(DoRPCRequest("DescribeApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiResponse> DescribeApiWithOptionsAsync(DescribeApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiResponse>(await DoRPCRequestAsync("DescribeApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiResponse DescribeApi(DescribeApiRequest request)
@@ -1251,21 +2615,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiDocResponse DescribeApiDocWithOptions(DescribeApiDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiDocResponse>(DoRPCRequest("DescribeApiDoc", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiDoc",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiDocResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiDocResponse> DescribeApiDocWithOptionsAsync(DescribeApiDocRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiDocResponse>(await DoRPCRequestAsync("DescribeApiDoc", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiDoc",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiDocResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiDocResponse DescribeApiDoc(DescribeApiDocRequest request)
@@ -1283,21 +2683,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiGroupResponse DescribeApiGroupWithOptions(DescribeApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiGroupResponse>(DoRPCRequest("DescribeApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiGroupResponse> DescribeApiGroupWithOptionsAsync(DescribeApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiGroupResponse>(await DoRPCRequestAsync("DescribeApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiGroupResponse DescribeApiGroup(DescribeApiGroupRequest request)
@@ -1315,21 +2749,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiGroupVpcWhitelistResponse DescribeApiGroupVpcWhitelistWithOptions(DescribeApiGroupVpcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiGroupVpcWhitelistResponse>(DoRPCRequest("DescribeApiGroupVpcWhitelist", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiGroupVpcWhitelist",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiGroupVpcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiGroupVpcWhitelistResponse> DescribeApiGroupVpcWhitelistWithOptionsAsync(DescribeApiGroupVpcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiGroupVpcWhitelistResponse>(await DoRPCRequestAsync("DescribeApiGroupVpcWhitelist", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiGroupVpcWhitelist",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiGroupVpcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiGroupVpcWhitelistResponse DescribeApiGroupVpcWhitelist(DescribeApiGroupVpcWhitelistRequest request)
@@ -1347,21 +2813,67 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiGroupsResponse DescribeApiGroupsWithOptions(DescribeApiGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["GroupId"] = request.GroupId;
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Sort"] = request.Sort;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiGroupsResponse>(DoRPCRequest("DescribeApiGroups", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiGroups",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiGroupsResponse> DescribeApiGroupsWithOptionsAsync(DescribeApiGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["GroupId"] = request.GroupId;
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Sort"] = request.Sort;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiGroupsResponse>(await DoRPCRequestAsync("DescribeApiGroups", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiGroups",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiGroupsResponse DescribeApiGroups(DescribeApiGroupsRequest request)
@@ -1379,21 +2891,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiHistoriesResponse DescribeApiHistoriesWithOptions(DescribeApiHistoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiHistoriesResponse>(DoRPCRequest("DescribeApiHistories", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiHistories",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiHistoriesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiHistoriesResponse> DescribeApiHistoriesWithOptionsAsync(DescribeApiHistoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiHistoriesResponse>(await DoRPCRequestAsync("DescribeApiHistories", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiHistories",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiHistoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiHistoriesResponse DescribeApiHistories(DescribeApiHistoriesRequest request)
@@ -1411,21 +2965,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiHistoryResponse DescribeApiHistoryWithOptions(DescribeApiHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["HistoryVersion"] = request.HistoryVersion;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiHistoryResponse>(DoRPCRequest("DescribeApiHistory", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiHistory",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiHistoryResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiHistoryResponse> DescribeApiHistoryWithOptionsAsync(DescribeApiHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["HistoryVersion"] = request.HistoryVersion;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiHistoryResponse>(await DoRPCRequestAsync("DescribeApiHistory", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiHistory",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiHistoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiHistoryResponse DescribeApiHistory(DescribeApiHistoryRequest request)
@@ -1443,21 +3035,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiIpControlsResponse DescribeApiIpControlsWithOptions(DescribeApiIpControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiIpControlsResponse>(DoRPCRequest("DescribeApiIpControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiIpControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiIpControlsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiIpControlsResponse> DescribeApiIpControlsWithOptionsAsync(DescribeApiIpControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiIpControlsResponse>(await DoRPCRequestAsync("DescribeApiIpControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiIpControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiIpControlsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiIpControlsResponse DescribeApiIpControls(DescribeApiIpControlsRequest request)
@@ -1475,21 +3107,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiLatencyDataResponse DescribeApiLatencyDataWithOptions(DescribeApiLatencyDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["EndTime"] = request.EndTime;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["StartTime"] = request.StartTime;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiLatencyDataResponse>(DoRPCRequest("DescribeApiLatencyData", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiLatencyData",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiLatencyDataResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiLatencyDataResponse> DescribeApiLatencyDataWithOptionsAsync(DescribeApiLatencyDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["EndTime"] = request.EndTime;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["StartTime"] = request.StartTime;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiLatencyDataResponse>(await DoRPCRequestAsync("DescribeApiLatencyData", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiLatencyData",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiLatencyDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiLatencyDataResponse DescribeApiLatencyData(DescribeApiLatencyDataRequest request)
@@ -1507,21 +3179,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiMarketAttributesResponse DescribeApiMarketAttributesWithOptions(DescribeApiMarketAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiMarketAttributesResponse>(DoRPCRequest("DescribeApiMarketAttributes", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiMarketAttributes",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiMarketAttributesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiMarketAttributesResponse> DescribeApiMarketAttributesWithOptionsAsync(DescribeApiMarketAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiMarketAttributesResponse>(await DoRPCRequestAsync("DescribeApiMarketAttributes", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiMarketAttributes",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiMarketAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiMarketAttributesResponse DescribeApiMarketAttributes(DescribeApiMarketAttributesRequest request)
@@ -1539,21 +3245,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiQpsDataResponse DescribeApiQpsDataWithOptions(DescribeApiQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["EndTime"] = request.EndTime;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["StartTime"] = request.StartTime;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiQpsDataResponse>(DoRPCRequest("DescribeApiQpsData", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiQpsData",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiQpsDataResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiQpsDataResponse> DescribeApiQpsDataWithOptionsAsync(DescribeApiQpsDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["EndTime"] = request.EndTime;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["StartTime"] = request.StartTime;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiQpsDataResponse>(await DoRPCRequestAsync("DescribeApiQpsData", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiQpsData",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiQpsDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiQpsDataResponse DescribeApiQpsData(DescribeApiQpsDataRequest request)
@@ -1571,21 +3317,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiSignaturesResponse DescribeApiSignaturesWithOptions(DescribeApiSignaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiSignaturesResponse>(DoRPCRequest("DescribeApiSignatures", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiSignatures",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiSignaturesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiSignaturesResponse> DescribeApiSignaturesWithOptionsAsync(DescribeApiSignaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiSignaturesResponse>(await DoRPCRequestAsync("DescribeApiSignatures", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiSignatures",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiSignaturesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiSignaturesResponse DescribeApiSignatures(DescribeApiSignaturesRequest request)
@@ -1600,56 +3386,64 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             return await DescribeApiSignaturesWithOptionsAsync(request, runtime);
         }
 
-        public DescribeApiStageResponse DescribeApiStageWithOptions(DescribeApiStageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeApiStageResponse>(DoRPCRequest("DescribeApiStage", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public async Task<DescribeApiStageResponse> DescribeApiStageWithOptionsAsync(DescribeApiStageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            return TeaModel.ToObject<DescribeApiStageResponse>(await DoRPCRequestAsync("DescribeApiStage", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
-        }
-
-        public DescribeApiStageResponse DescribeApiStage(DescribeApiStageRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeApiStageWithOptions(request, runtime);
-        }
-
-        public async Task<DescribeApiStageResponse> DescribeApiStageAsync(DescribeApiStageRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeApiStageWithOptionsAsync(request, runtime);
-        }
-
         public DescribeApiTrafficControlsResponse DescribeApiTrafficControlsWithOptions(DescribeApiTrafficControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiTrafficControlsResponse>(DoRPCRequest("DescribeApiTrafficControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiTrafficControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiTrafficControlsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiTrafficControlsResponse> DescribeApiTrafficControlsWithOptionsAsync(DescribeApiTrafficControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiTrafficControlsResponse>(await DoRPCRequestAsync("DescribeApiTrafficControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiTrafficControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiTrafficControlsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiTrafficControlsResponse DescribeApiTrafficControls(DescribeApiTrafficControlsRequest request)
@@ -1667,21 +3461,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApiTrafficDataResponse DescribeApiTrafficDataWithOptions(DescribeApiTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["EndTime"] = request.EndTime;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["StartTime"] = request.StartTime;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiTrafficDataResponse>(DoRPCRequest("DescribeApiTrafficData", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiTrafficData",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiTrafficDataResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApiTrafficDataResponse> DescribeApiTrafficDataWithOptionsAsync(DescribeApiTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["EndTime"] = request.EndTime;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["StartTime"] = request.StartTime;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApiTrafficDataResponse>(await DoRPCRequestAsync("DescribeApiTrafficData", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApiTrafficData",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApiTrafficDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApiTrafficDataResponse DescribeApiTrafficData(DescribeApiTrafficDataRequest request)
@@ -1699,21 +3533,69 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApisResponse DescribeApisWithOptions(DescribeApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["CatalogId"] = request.CatalogId;
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
+            query["Visibility"] = request.Visibility;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisResponse>(DoRPCRequest("DescribeApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApisResponse> DescribeApisWithOptionsAsync(DescribeApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["CatalogId"] = request.CatalogId;
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
+            query["Visibility"] = request.Visibility;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisResponse>(await DoRPCRequestAsync("DescribeApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApisResponse DescribeApis(DescribeApisRequest request)
@@ -1731,21 +3613,65 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApisByAppResponse DescribeApisByAppWithOptions(DescribeApisByAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiName"] = request.ApiName;
+            query["ApiUid"] = request.ApiUid;
+            query["AppId"] = request.AppId;
+            query["Method"] = request.Method;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["Path"] = request.Path;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisByAppResponse>(DoRPCRequest("DescribeApisByApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisByApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisByAppResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApisByAppResponse> DescribeApisByAppWithOptionsAsync(DescribeApisByAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiName"] = request.ApiName;
+            query["ApiUid"] = request.ApiUid;
+            query["AppId"] = request.AppId;
+            query["Method"] = request.Method;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["Path"] = request.Path;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisByAppResponse>(await DoRPCRequestAsync("DescribeApisByApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisByApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisByAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApisByAppResponse DescribeApisByApp(DescribeApisByAppRequest request)
@@ -1763,21 +3689,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApisByIpControlResponse DescribeApisByIpControlWithOptions(DescribeApisByIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisByIpControlResponse>(DoRPCRequest("DescribeApisByIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisByIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisByIpControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApisByIpControlResponse> DescribeApisByIpControlWithOptionsAsync(DescribeApisByIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisByIpControlResponse>(await DoRPCRequestAsync("DescribeApisByIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisByIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisByIpControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApisByIpControlResponse DescribeApisByIpControl(DescribeApisByIpControlRequest request)
@@ -1795,21 +3757,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApisBySignatureResponse DescribeApisBySignatureWithOptions(DescribeApisBySignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisBySignatureResponse>(DoRPCRequest("DescribeApisBySignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisBySignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisBySignatureResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApisBySignatureResponse> DescribeApisBySignatureWithOptionsAsync(DescribeApisBySignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisBySignatureResponse>(await DoRPCRequestAsync("DescribeApisBySignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisBySignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisBySignatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApisBySignatureResponse DescribeApisBySignature(DescribeApisBySignatureRequest request)
@@ -1827,21 +3825,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeApisByTrafficControlResponse DescribeApisByTrafficControlWithOptions(DescribeApisByTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisByTrafficControlResponse>(DoRPCRequest("DescribeApisByTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisByTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisByTrafficControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeApisByTrafficControlResponse> DescribeApisByTrafficControlWithOptionsAsync(DescribeApisByTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeApisByTrafficControlResponse>(await DoRPCRequestAsync("DescribeApisByTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApisByTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApisByTrafficControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeApisByTrafficControlResponse DescribeApisByTrafficControl(DescribeApisByTrafficControlRequest request)
@@ -1859,21 +3893,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeAppResponse DescribeAppWithOptions(DescribeAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppResponse>(DoRPCRequest("DescribeApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeAppResponse> DescribeAppWithOptionsAsync(DescribeAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppResponse>(await DoRPCRequestAsync("DescribeApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeAppResponse DescribeApp(DescribeAppRequest request)
@@ -1891,21 +3957,69 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeAppAttributesResponse DescribeAppAttributesWithOptions(DescribeAppAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppCode"] = request.AppCode;
+            query["AppId"] = request.AppId;
+            query["AppKey"] = request.AppKey;
+            query["AppName"] = request.AppName;
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Sort"] = request.Sort;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppAttributesResponse>(DoRPCRequest("DescribeAppAttributes", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppAttributes",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppAttributesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeAppAttributesResponse> DescribeAppAttributesWithOptionsAsync(DescribeAppAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppCode"] = request.AppCode;
+            query["AppId"] = request.AppId;
+            query["AppKey"] = request.AppKey;
+            query["AppName"] = request.AppName;
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Sort"] = request.Sort;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppAttributesResponse>(await DoRPCRequestAsync("DescribeAppAttributes", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppAttributes",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeAppAttributesResponse DescribeAppAttributes(DescribeAppAttributesRequest request)
@@ -1923,21 +4037,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeAppSecurityResponse DescribeAppSecurityWithOptions(DescribeAppSecurityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppSecurityResponse>(DoRPCRequest("DescribeAppSecurity", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppSecurity",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppSecurityResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeAppSecurityResponse> DescribeAppSecurityWithOptionsAsync(DescribeAppSecurityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppSecurityResponse>(await DoRPCRequestAsync("DescribeAppSecurity", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAppSecurity",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppSecurityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeAppSecurityResponse DescribeAppSecurity(DescribeAppSecurityRequest request)
@@ -1955,21 +4103,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeAppsResponse DescribeAppsWithOptions(DescribeAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["AppOwner"] = request.AppOwner;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppsResponse>(DoRPCRequest("DescribeApps", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApps",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeAppsResponse> DescribeAppsWithOptionsAsync(DescribeAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["AppOwner"] = request.AppOwner;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAppsResponse>(await DoRPCRequestAsync("DescribeApps", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApps",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeAppsResponse DescribeApps(DescribeAppsRequest request)
@@ -1987,21 +4173,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeAuthorizedApisResponse DescribeAuthorizedApisWithOptions(DescribeAuthorizedApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAuthorizedApisResponse>(DoRPCRequest("DescribeAuthorizedApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAuthorizedApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAuthorizedApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeAuthorizedApisResponse> DescribeAuthorizedApisWithOptionsAsync(DescribeAuthorizedApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAuthorizedApisResponse>(await DoRPCRequestAsync("DescribeAuthorizedApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAuthorizedApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAuthorizedApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeAuthorizedApisResponse DescribeAuthorizedApis(DescribeAuthorizedApisRequest request)
@@ -2019,21 +4241,67 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeAuthorizedAppsResponse DescribeAuthorizedAppsWithOptions(DescribeAuthorizedAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["AppId"] = request.AppId;
+            query["AppName"] = request.AppName;
+            query["AppOwnerId"] = request.AppOwnerId;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAuthorizedAppsResponse>(DoRPCRequest("DescribeAuthorizedApps", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAuthorizedApps",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAuthorizedAppsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeAuthorizedAppsResponse> DescribeAuthorizedAppsWithOptionsAsync(DescribeAuthorizedAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["AppId"] = request.AppId;
+            query["AppName"] = request.AppName;
+            query["AppOwnerId"] = request.AppOwnerId;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeAuthorizedAppsResponse>(await DoRPCRequestAsync("DescribeAuthorizedApps", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAuthorizedApps",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAuthorizedAppsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeAuthorizedAppsResponse DescribeAuthorizedApps(DescribeAuthorizedAppsRequest request)
@@ -2051,21 +4319,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeDeployApiTaskResponse DescribeDeployApiTaskWithOptions(DescribeDeployApiTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OperationUid"] = request.OperationUid;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDeployApiTaskResponse>(DoRPCRequest("DescribeDeployApiTask", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeployApiTask",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeployApiTaskResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeDeployApiTaskResponse> DescribeDeployApiTaskWithOptionsAsync(DescribeDeployApiTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OperationUid"] = request.OperationUid;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDeployApiTaskResponse>(await DoRPCRequestAsync("DescribeDeployApiTask", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeployApiTask",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeployApiTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeDeployApiTaskResponse DescribeDeployApiTask(DescribeDeployApiTaskRequest request)
@@ -2083,21 +4383,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeDeployedApiResponse DescribeDeployedApiWithOptions(DescribeDeployedApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDeployedApiResponse>(DoRPCRequest("DescribeDeployedApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeployedApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeployedApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeDeployedApiResponse> DescribeDeployedApiWithOptionsAsync(DescribeDeployedApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDeployedApiResponse>(await DoRPCRequestAsync("DescribeDeployedApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeployedApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeployedApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeDeployedApiResponse DescribeDeployedApi(DescribeDeployedApiRequest request)
@@ -2115,21 +4451,67 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeDeployedApisResponse DescribeDeployedApisWithOptions(DescribeDeployedApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDeployedApisResponse>(DoRPCRequest("DescribeDeployedApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeployedApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeployedApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeDeployedApisResponse> DescribeDeployedApisWithOptionsAsync(DescribeDeployedApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["EnableTagAuth"] = request.EnableTagAuth;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDeployedApisResponse>(await DoRPCRequestAsync("DescribeDeployedApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeployedApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeployedApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeDeployedApisResponse DescribeDeployedApis(DescribeDeployedApisRequest request)
@@ -2147,21 +4529,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeDomainResponse DescribeDomainWithOptions(DescribeDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDomainResponse>(DoRPCRequest("DescribeDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeDomainResponse> DescribeDomainWithOptionsAsync(DescribeDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeDomainResponse>(await DoRPCRequestAsync("DescribeDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeDomainResponse DescribeDomain(DescribeDomainRequest request)
@@ -2179,21 +4595,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeHistoryApisResponse DescribeHistoryApisWithOptions(DescribeHistoryApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeHistoryApisResponse>(DoRPCRequest("DescribeHistoryApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeHistoryApisResponse> DescribeHistoryApisWithOptionsAsync(DescribeHistoryApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeHistoryApisResponse>(await DoRPCRequestAsync("DescribeHistoryApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeHistoryApisResponse DescribeHistoryApis(DescribeHistoryApisRequest request)
@@ -2211,21 +4669,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeIpControlPolicyItemsResponse DescribeIpControlPolicyItemsWithOptions(DescribeIpControlPolicyItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["PolicyItemId"] = request.PolicyItemId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeIpControlPolicyItemsResponse>(DoRPCRequest("DescribeIpControlPolicyItems", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeIpControlPolicyItems",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeIpControlPolicyItemsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeIpControlPolicyItemsResponse> DescribeIpControlPolicyItemsWithOptionsAsync(DescribeIpControlPolicyItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["PolicyItemId"] = request.PolicyItemId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeIpControlPolicyItemsResponse>(await DoRPCRequestAsync("DescribeIpControlPolicyItems", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeIpControlPolicyItems",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeIpControlPolicyItemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeIpControlPolicyItemsResponse DescribeIpControlPolicyItems(DescribeIpControlPolicyItemsRequest request)
@@ -2243,21 +4739,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeIpControlsResponse DescribeIpControlsWithOptions(DescribeIpControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["IpControlName"] = request.IpControlName;
+            query["IpControlType"] = request.IpControlType;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeIpControlsResponse>(DoRPCRequest("DescribeIpControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeIpControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeIpControlsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeIpControlsResponse> DescribeIpControlsWithOptionsAsync(DescribeIpControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["IpControlName"] = request.IpControlName;
+            query["IpControlType"] = request.IpControlType;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeIpControlsResponse>(await DoRPCRequestAsync("DescribeIpControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeIpControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeIpControlsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeIpControlsResponse DescribeIpControls(DescribeIpControlsRequest request)
@@ -2275,21 +4811,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeLogConfigResponse DescribeLogConfigWithOptions(DescribeLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeLogConfigResponse>(DoRPCRequest("DescribeLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeLogConfigResponse> DescribeLogConfigWithOptionsAsync(DescribeLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeLogConfigResponse>(await DoRPCRequestAsync("DescribeLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeLogConfigResponse DescribeLogConfig(DescribeLogConfigRequest request)
@@ -2307,21 +4875,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeMarketRemainsQuotaResponse DescribeMarketRemainsQuotaWithOptions(DescribeMarketRemainsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeMarketRemainsQuotaResponse>(DoRPCRequest("DescribeMarketRemainsQuota", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMarketRemainsQuota",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMarketRemainsQuotaResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeMarketRemainsQuotaResponse> DescribeMarketRemainsQuotaWithOptionsAsync(DescribeMarketRemainsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeMarketRemainsQuotaResponse>(await DoRPCRequestAsync("DescribeMarketRemainsQuota", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMarketRemainsQuota",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMarketRemainsQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeMarketRemainsQuotaResponse DescribeMarketRemainsQuota(DescribeMarketRemainsQuotaRequest request)
@@ -2339,21 +4939,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeModelsResponse DescribeModelsWithOptions(DescribeModelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["ModelId"] = request.ModelId;
+            query["ModelName"] = request.ModelName;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeModelsResponse>(DoRPCRequest("DescribeModels", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeModels",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeModelsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeModelsResponse> DescribeModelsWithOptionsAsync(DescribeModelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["ModelId"] = request.ModelId;
+            query["ModelName"] = request.ModelName;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeModelsResponse>(await DoRPCRequestAsync("DescribeModels", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeModels",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeModelsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeModelsResponse DescribeModels(DescribeModelsRequest request)
@@ -2371,21 +5009,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribePluginSchemasResponse DescribePluginSchemasWithOptions(DescribePluginSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginSchemasResponse>(DoRPCRequest("DescribePluginSchemas", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePluginSchemas",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginSchemasResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribePluginSchemasResponse> DescribePluginSchemasWithOptionsAsync(DescribePluginSchemasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginSchemasResponse>(await DoRPCRequestAsync("DescribePluginSchemas", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePluginSchemas",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginSchemasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribePluginSchemasResponse DescribePluginSchemas(DescribePluginSchemasRequest request)
@@ -2403,21 +5073,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribePluginTemplatesResponse DescribePluginTemplatesWithOptions(DescribePluginTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["PluginName"] = request.PluginName;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginTemplatesResponse>(DoRPCRequest("DescribePluginTemplates", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePluginTemplates",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribePluginTemplatesResponse> DescribePluginTemplatesWithOptionsAsync(DescribePluginTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["PluginName"] = request.PluginName;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginTemplatesResponse>(await DoRPCRequestAsync("DescribePluginTemplates", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePluginTemplates",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribePluginTemplatesResponse DescribePluginTemplates(DescribePluginTemplatesRequest request)
@@ -2435,21 +5139,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribePluginsResponse DescribePluginsWithOptions(DescribePluginsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["PluginId"] = request.PluginId;
+            query["PluginName"] = request.PluginName;
+            query["PluginType"] = request.PluginType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginsResponse>(DoRPCRequest("DescribePlugins", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePlugins",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribePluginsResponse> DescribePluginsWithOptionsAsync(DescribePluginsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["PluginId"] = request.PluginId;
+            query["PluginName"] = request.PluginName;
+            query["PluginType"] = request.PluginType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginsResponse>(await DoRPCRequestAsync("DescribePlugins", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePlugins",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribePluginsResponse DescribePlugins(DescribePluginsRequest request)
@@ -2467,21 +5213,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribePluginsByApiResponse DescribePluginsByApiWithOptions(DescribePluginsByApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginsByApiResponse>(DoRPCRequest("DescribePluginsByApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePluginsByApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginsByApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribePluginsByApiResponse> DescribePluginsByApiWithOptionsAsync(DescribePluginsByApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePluginsByApiResponse>(await DoRPCRequestAsync("DescribePluginsByApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePluginsByApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePluginsByApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribePluginsByApiResponse DescribePluginsByApi(DescribePluginsByApiRequest request)
@@ -2499,21 +5281,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribePurchasedApiGroupResponse DescribePurchasedApiGroupWithOptions(DescribePurchasedApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePurchasedApiGroupResponse>(DoRPCRequest("DescribePurchasedApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePurchasedApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePurchasedApiGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribePurchasedApiGroupResponse> DescribePurchasedApiGroupWithOptionsAsync(DescribePurchasedApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePurchasedApiGroupResponse>(await DoRPCRequestAsync("DescribePurchasedApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePurchasedApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePurchasedApiGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribePurchasedApiGroupResponse DescribePurchasedApiGroup(DescribePurchasedApiGroupRequest request)
@@ -2531,21 +5345,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribePurchasedApiGroupsResponse DescribePurchasedApiGroupsWithOptions(DescribePurchasedApiGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePurchasedApiGroupsResponse>(DoRPCRequest("DescribePurchasedApiGroups", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePurchasedApiGroups",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePurchasedApiGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribePurchasedApiGroupsResponse> DescribePurchasedApiGroupsWithOptionsAsync(DescribePurchasedApiGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePurchasedApiGroupsResponse>(await DoRPCRequestAsync("DescribePurchasedApiGroups", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePurchasedApiGroups",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePurchasedApiGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribePurchasedApiGroupsResponse DescribePurchasedApiGroups(DescribePurchasedApiGroupsRequest request)
@@ -2563,21 +5411,65 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribePurchasedApisResponse DescribePurchasedApisWithOptions(DescribePurchasedApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["Visibility"] = request.Visibility;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePurchasedApisResponse>(DoRPCRequest("DescribePurchasedApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePurchasedApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePurchasedApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribePurchasedApisResponse> DescribePurchasedApisWithOptionsAsync(DescribePurchasedApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["Visibility"] = request.Visibility;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribePurchasedApisResponse>(await DoRPCRequestAsync("DescribePurchasedApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePurchasedApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePurchasedApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribePurchasedApisResponse DescribePurchasedApis(DescribePurchasedApisRequest request)
@@ -2595,21 +5487,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(DoRPCRequest("DescribeRegions", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(await DoRPCRequestAsync("DescribeRegions", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
@@ -2627,21 +5551,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeSignaturesResponse DescribeSignaturesWithOptions(DescribeSignaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["SignatureName"] = request.SignatureName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeSignaturesResponse>(DoRPCRequest("DescribeSignatures", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSignatures",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSignaturesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeSignaturesResponse> DescribeSignaturesWithOptionsAsync(DescribeSignaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["SignatureName"] = request.SignatureName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeSignaturesResponse>(await DoRPCRequestAsync("DescribeSignatures", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSignatures",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSignaturesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeSignaturesResponse DescribeSignatures(DescribeSignaturesRequest request)
@@ -2659,21 +5621,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeSignaturesByApiResponse DescribeSignaturesByApiWithOptions(DescribeSignaturesByApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeSignaturesByApiResponse>(DoRPCRequest("DescribeSignaturesByApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSignaturesByApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSignaturesByApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeSignaturesByApiResponse> DescribeSignaturesByApiWithOptionsAsync(DescribeSignaturesByApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeSignaturesByApiResponse>(await DoRPCRequestAsync("DescribeSignaturesByApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSignaturesByApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSignaturesByApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeSignaturesByApiResponse DescribeSignaturesByApi(DescribeSignaturesByApiRequest request)
@@ -2691,21 +5689,51 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeSystemParametersResponse DescribeSystemParametersWithOptions(DescribeSystemParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeSystemParametersResponse>(DoRPCRequest("DescribeSystemParameters", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSystemParameters",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSystemParametersResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeSystemParametersResponse> DescribeSystemParametersWithOptionsAsync(DescribeSystemParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeSystemParametersResponse>(await DoRPCRequestAsync("DescribeSystemParameters", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSystemParameters",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSystemParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeSystemParametersResponse DescribeSystemParameters(DescribeSystemParametersRequest request)
@@ -2723,21 +5751,65 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeTrafficControlsResponse DescribeTrafficControlsWithOptions(DescribeTrafficControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["TrafficControlId"] = request.TrafficControlId;
+            query["TrafficControlName"] = request.TrafficControlName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeTrafficControlsResponse>(DoRPCRequest("DescribeTrafficControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrafficControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrafficControlsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeTrafficControlsResponse> DescribeTrafficControlsWithOptionsAsync(DescribeTrafficControlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["TrafficControlId"] = request.TrafficControlId;
+            query["TrafficControlName"] = request.TrafficControlName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeTrafficControlsResponse>(await DoRPCRequestAsync("DescribeTrafficControls", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrafficControls",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrafficControlsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeTrafficControlsResponse DescribeTrafficControls(DescribeTrafficControlsRequest request)
@@ -2755,21 +5827,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeTrafficControlsByApiResponse DescribeTrafficControlsByApiWithOptions(DescribeTrafficControlsByApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeTrafficControlsByApiResponse>(DoRPCRequest("DescribeTrafficControlsByApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrafficControlsByApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrafficControlsByApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeTrafficControlsByApiResponse> DescribeTrafficControlsByApiWithOptionsAsync(DescribeTrafficControlsByApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeTrafficControlsByApiResponse>(await DoRPCRequestAsync("DescribeTrafficControlsByApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrafficControlsByApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrafficControlsByApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeTrafficControlsByApiResponse DescribeTrafficControlsByApi(DescribeTrafficControlsByApiRequest request)
@@ -2787,21 +5895,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeUpdateVpcInfoTaskResponse DescribeUpdateVpcInfoTaskWithOptions(DescribeUpdateVpcInfoTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OperationUid"] = request.OperationUid;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeUpdateVpcInfoTaskResponse>(DoRPCRequest("DescribeUpdateVpcInfoTask", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUpdateVpcInfoTask",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUpdateVpcInfoTaskResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeUpdateVpcInfoTaskResponse> DescribeUpdateVpcInfoTaskWithOptionsAsync(DescribeUpdateVpcInfoTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OperationUid"] = request.OperationUid;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeUpdateVpcInfoTaskResponse>(await DoRPCRequestAsync("DescribeUpdateVpcInfoTask", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUpdateVpcInfoTask",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUpdateVpcInfoTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeUpdateVpcInfoTaskResponse DescribeUpdateVpcInfoTask(DescribeUpdateVpcInfoTaskRequest request)
@@ -2819,21 +5959,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeVpcAccessesResponse DescribeVpcAccessesWithOptions(DescribeVpcAccessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Name"] = request.Name;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcAccessId"] = request.VpcAccessId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeVpcAccessesResponse>(DoRPCRequest("DescribeVpcAccesses", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcAccesses",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcAccessesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeVpcAccessesResponse> DescribeVpcAccessesWithOptionsAsync(DescribeVpcAccessesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Name"] = request.Name;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcAccessId"] = request.VpcAccessId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeVpcAccessesResponse>(await DoRPCRequestAsync("DescribeVpcAccesses", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcAccesses",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcAccessesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeVpcAccessesResponse DescribeVpcAccesses(DescribeVpcAccessesRequest request)
@@ -2851,21 +6029,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public DescribeZonesResponse DescribeZonesWithOptions(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeZonesResponse>(DoRPCRequest("DescribeZones", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeZones",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeZonesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeZonesResponse> DescribeZonesWithOptionsAsync(DescribeZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DescribeZonesResponse>(await DoRPCRequestAsync("DescribeZones", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeZones",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeZonesResponse DescribeZones(DescribeZonesRequest request)
@@ -2889,11 +6099,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 request.GlobalConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalCondition, "GlobalCondition", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DataFormat"] = request.DataFormat;
+            query["GlobalCondition"] = request.GlobalConditionShrink;
+            query["GroupId"] = request.GroupId;
+            query["Overwrite"] = request.Overwrite;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DryRunSwaggerResponse>(DoRPCRequest("DryRunSwagger", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DryRunSwagger",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DryRunSwaggerResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DryRunSwaggerResponse> DryRunSwaggerWithOptionsAsync(DryRunSwaggerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2905,11 +6134,30 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 request.GlobalConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalCondition, "GlobalCondition", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DataFormat"] = request.DataFormat;
+            query["GlobalCondition"] = request.GlobalConditionShrink;
+            query["GroupId"] = request.GroupId;
+            query["Overwrite"] = request.Overwrite;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<DryRunSwaggerResponse>(await DoRPCRequestAsync("DryRunSwagger", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DryRunSwagger",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DryRunSwaggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DryRunSwaggerResponse DryRunSwagger(DryRunSwaggerRequest request)
@@ -2933,11 +6181,31 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 request.GlobalConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalCondition, "GlobalCondition", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DataFormat"] = request.DataFormat;
+            query["DryRun"] = request.DryRun;
+            query["GlobalCondition"] = request.GlobalConditionShrink;
+            query["GroupId"] = request.GroupId;
+            query["Overwrite"] = request.Overwrite;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ImportSwaggerResponse>(DoRPCRequest("ImportSwagger", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportSwagger",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportSwaggerResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ImportSwaggerResponse> ImportSwaggerWithOptionsAsync(ImportSwaggerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2949,11 +6217,31 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 request.GlobalConditionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalCondition, "GlobalCondition", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DataFormat"] = request.DataFormat;
+            query["DryRun"] = request.DryRun;
+            query["GlobalCondition"] = request.GlobalConditionShrink;
+            query["GroupId"] = request.GroupId;
+            query["Overwrite"] = request.Overwrite;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ImportSwaggerResponse>(await DoRPCRequestAsync("ImportSwagger", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportSwagger",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportSwaggerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ImportSwaggerResponse ImportSwagger(ImportSwaggerRequest request)
@@ -2971,21 +6259,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["NextToken"] = request.NextToken;
+            query["ResourceId"] = request.ResourceId;
+            query["ResourceType"] = request.ResourceType;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(DoRPCRequest("ListTagResources", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["NextToken"] = request.NextToken;
+            query["ResourceId"] = request.ResourceId;
+            query["ResourceType"] = request.ResourceType;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(await DoRPCRequestAsync("ListTagResources", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
@@ -3003,21 +6327,101 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyApiResponse ModifyApiWithOptions(ModifyApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AllowSignatureMethod"] = request.AllowSignatureMethod;
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["AppCodeAuthType"] = request.AppCodeAuthType;
+            query["AuthType"] = request.AuthType;
+            query["ConstantParameters"] = request.ConstantParameters;
+            query["Description"] = request.Description;
+            query["DisableInternet"] = request.DisableInternet;
+            query["ErrorCodeSamples"] = request.ErrorCodeSamples;
+            query["FailResultSample"] = request.FailResultSample;
+            query["ForceNonceCheck"] = request.ForceNonceCheck;
+            query["GroupId"] = request.GroupId;
+            query["OpenIdConnectConfig"] = request.OpenIdConnectConfig;
+            query["RequestConfig"] = request.RequestConfig;
+            query["RequestParameters"] = request.RequestParameters;
+            query["ResultBodyModel"] = request.ResultBodyModel;
+            query["ResultDescriptions"] = request.ResultDescriptions;
+            query["ResultSample"] = request.ResultSample;
+            query["ResultType"] = request.ResultType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["ServiceConfig"] = request.ServiceConfig;
+            query["ServiceParameters"] = request.ServiceParameters;
+            query["ServiceParametersMap"] = request.ServiceParametersMap;
+            query["SystemParameters"] = request.SystemParameters;
+            query["Visibility"] = request.Visibility;
+            query["WebSocketApiType"] = request.WebSocketApiType;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyApiResponse>(DoRPCRequest("ModifyApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyApiResponse> ModifyApiWithOptionsAsync(ModifyApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AllowSignatureMethod"] = request.AllowSignatureMethod;
+            query["ApiId"] = request.ApiId;
+            query["ApiName"] = request.ApiName;
+            query["AppCodeAuthType"] = request.AppCodeAuthType;
+            query["AuthType"] = request.AuthType;
+            query["ConstantParameters"] = request.ConstantParameters;
+            query["Description"] = request.Description;
+            query["DisableInternet"] = request.DisableInternet;
+            query["ErrorCodeSamples"] = request.ErrorCodeSamples;
+            query["FailResultSample"] = request.FailResultSample;
+            query["ForceNonceCheck"] = request.ForceNonceCheck;
+            query["GroupId"] = request.GroupId;
+            query["OpenIdConnectConfig"] = request.OpenIdConnectConfig;
+            query["RequestConfig"] = request.RequestConfig;
+            query["RequestParameters"] = request.RequestParameters;
+            query["ResultBodyModel"] = request.ResultBodyModel;
+            query["ResultDescriptions"] = request.ResultDescriptions;
+            query["ResultSample"] = request.ResultSample;
+            query["ResultType"] = request.ResultType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["ServiceConfig"] = request.ServiceConfig;
+            query["ServiceParameters"] = request.ServiceParameters;
+            query["ServiceParametersMap"] = request.ServiceParametersMap;
+            query["SystemParameters"] = request.SystemParameters;
+            query["Visibility"] = request.Visibility;
+            query["WebSocketApiType"] = request.WebSocketApiType;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyApiResponse>(await DoRPCRequestAsync("ModifyApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyApiResponse ModifyApi(ModifyApiRequest request)
@@ -3035,21 +6439,75 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyApiGroupResponse ModifyApiGroupWithOptions(ModifyApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["BasePath"] = request.BasePath;
+            query["CompatibleFlags"] = request.CompatibleFlags;
+            query["CustomTraceConfig"] = request.CustomTraceConfig;
+            query["CustomerConfigs"] = request.CustomerConfigs;
+            query["DefaultDomain"] = request.DefaultDomain;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["GroupName"] = request.GroupName;
+            query["PassthroughHeaders"] = request.PassthroughHeaders;
+            query["RpcPattern"] = request.RpcPattern;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
+            query["UserLogConfig"] = request.UserLogConfig;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyApiGroupResponse>(DoRPCRequest("ModifyApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyApiGroupResponse> ModifyApiGroupWithOptionsAsync(ModifyApiGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["BasePath"] = request.BasePath;
+            query["CompatibleFlags"] = request.CompatibleFlags;
+            query["CustomTraceConfig"] = request.CustomTraceConfig;
+            query["CustomerConfigs"] = request.CustomerConfigs;
+            query["DefaultDomain"] = request.DefaultDomain;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["GroupName"] = request.GroupName;
+            query["PassthroughHeaders"] = request.PassthroughHeaders;
+            query["RpcPattern"] = request.RpcPattern;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
+            query["UserLogConfig"] = request.UserLogConfig;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyApiGroupResponse>(await DoRPCRequestAsync("ModifyApiGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyApiGroupResponse ModifyApiGroup(ModifyApiGroupRequest request)
@@ -3067,21 +6525,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyApiGroupVpcWhitelistResponse ModifyApiGroupVpcWhitelistWithOptions(ModifyApiGroupVpcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcIds"] = request.VpcIds;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyApiGroupVpcWhitelistResponse>(DoRPCRequest("ModifyApiGroupVpcWhitelist", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroupVpcWhitelist",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupVpcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyApiGroupVpcWhitelistResponse> ModifyApiGroupVpcWhitelistWithOptionsAsync(ModifyApiGroupVpcWhitelistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcIds"] = request.VpcIds;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyApiGroupVpcWhitelistResponse>(await DoRPCRequestAsync("ModifyApiGroupVpcWhitelist", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApiGroupVpcWhitelist",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyApiGroupVpcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyApiGroupVpcWhitelistResponse ModifyApiGroupVpcWhitelist(ModifyApiGroupVpcWhitelistRequest request)
@@ -3099,21 +6591,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyAppResponse ModifyAppWithOptions(ModifyAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["AppName"] = request.AppName;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyAppResponse>(DoRPCRequest("ModifyApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAppResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyAppResponse> ModifyAppWithOptionsAsync(ModifyAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["AppName"] = request.AppName;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyAppResponse>(await DoRPCRequestAsync("ModifyApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyAppResponse ModifyApp(ModifyAppRequest request)
@@ -3131,21 +6661,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyInstanceSpecResponse ModifyInstanceSpecWithOptions(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AutoPay"] = request.AutoPay;
+            query["InstanceId"] = request.InstanceId;
+            query["InstanceSpec"] = request.InstanceSpec;
+            query["Token"] = request.Token;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyInstanceSpecResponse>(DoRPCRequest("ModifyInstanceSpec", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSpec",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecWithOptionsAsync(ModifyInstanceSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AutoPay"] = request.AutoPay;
+            query["InstanceId"] = request.InstanceId;
+            query["InstanceSpec"] = request.InstanceSpec;
+            query["Token"] = request.Token;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyInstanceSpecResponse>(await DoRPCRequestAsync("ModifyInstanceSpec", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSpec",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request)
@@ -3163,21 +6729,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyIpControlResponse ModifyIpControlWithOptions(ModifyIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["IpControlId"] = request.IpControlId;
+            query["IpControlName"] = request.IpControlName;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyIpControlResponse>(DoRPCRequest("ModifyIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyIpControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyIpControlResponse> ModifyIpControlWithOptionsAsync(ModifyIpControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["IpControlId"] = request.IpControlId;
+            query["IpControlName"] = request.IpControlName;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyIpControlResponse>(await DoRPCRequestAsync("ModifyIpControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyIpControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyIpControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyIpControlResponse ModifyIpControl(ModifyIpControlRequest request)
@@ -3195,21 +6797,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyIpControlPolicyItemResponse ModifyIpControlPolicyItemWithOptions(ModifyIpControlPolicyItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["CidrIp"] = request.CidrIp;
+            query["IpControlId"] = request.IpControlId;
+            query["PolicyItemId"] = request.PolicyItemId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyIpControlPolicyItemResponse>(DoRPCRequest("ModifyIpControlPolicyItem", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyIpControlPolicyItem",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyIpControlPolicyItemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyIpControlPolicyItemResponse> ModifyIpControlPolicyItemWithOptionsAsync(ModifyIpControlPolicyItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["CidrIp"] = request.CidrIp;
+            query["IpControlId"] = request.IpControlId;
+            query["PolicyItemId"] = request.PolicyItemId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyIpControlPolicyItemResponse>(await DoRPCRequestAsync("ModifyIpControlPolicyItem", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyIpControlPolicyItem",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyIpControlPolicyItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyIpControlPolicyItemResponse ModifyIpControlPolicyItem(ModifyIpControlPolicyItemRequest request)
@@ -3227,21 +6867,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyLogConfigResponse ModifyLogConfigWithOptions(ModifyLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SlsLogStore"] = request.SlsLogStore;
+            query["SlsProject"] = request.SlsProject;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyLogConfigResponse>(DoRPCRequest("ModifyLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyLogConfigResponse> ModifyLogConfigWithOptionsAsync(ModifyLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["LogType"] = request.LogType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SlsLogStore"] = request.SlsLogStore;
+            query["SlsProject"] = request.SlsProject;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyLogConfigResponse>(await DoRPCRequestAsync("ModifyLogConfig", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLogConfig",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyLogConfigResponse ModifyLogConfig(ModifyLogConfigRequest request)
@@ -3259,21 +6935,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyModelResponse ModifyModelWithOptions(ModifyModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["ModelName"] = request.ModelName;
+            query["NewModelName"] = request.NewModelName;
+            query["Schema"] = request.Schema;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyModelResponse>(DoRPCRequest("ModifyModel", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyModel",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyModelResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyModelResponse> ModifyModelWithOptionsAsync(ModifyModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["ModelName"] = request.ModelName;
+            query["NewModelName"] = request.NewModelName;
+            query["Schema"] = request.Schema;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyModelResponse>(await DoRPCRequestAsync("ModifyModel", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyModel",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyModelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyModelResponse ModifyModel(ModifyModelRequest request)
@@ -3291,21 +7005,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyPluginResponse ModifyPluginWithOptions(ModifyPluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["PluginData"] = request.PluginData;
+            query["PluginId"] = request.PluginId;
+            query["PluginName"] = request.PluginName;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyPluginResponse>(DoRPCRequest("ModifyPlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPluginResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyPluginResponse> ModifyPluginWithOptionsAsync(ModifyPluginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["PluginData"] = request.PluginData;
+            query["PluginId"] = request.PluginId;
+            query["PluginName"] = request.PluginName;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyPluginResponse>(await DoRPCRequestAsync("ModifyPlugin", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPlugin",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest request)
@@ -3323,21 +7077,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifySignatureResponse ModifySignatureWithOptions(ModifySignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["SignatureKey"] = request.SignatureKey;
+            query["SignatureName"] = request.SignatureName;
+            query["SignatureSecret"] = request.SignatureSecret;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifySignatureResponse>(DoRPCRequest("ModifySignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySignatureResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifySignatureResponse> ModifySignatureWithOptionsAsync(ModifySignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["SignatureKey"] = request.SignatureKey;
+            query["SignatureName"] = request.SignatureName;
+            query["SignatureSecret"] = request.SignatureSecret;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifySignatureResponse>(await DoRPCRequestAsync("ModifySignature", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySignature",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySignatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifySignatureResponse ModifySignature(ModifySignatureRequest request)
@@ -3355,21 +7147,65 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ModifyTrafficControlResponse ModifyTrafficControlWithOptions(ModifyTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiDefault"] = request.ApiDefault;
+            query["AppDefault"] = request.AppDefault;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
+            query["TrafficControlName"] = request.TrafficControlName;
+            query["TrafficControlUnit"] = request.TrafficControlUnit;
+            query["UserDefault"] = request.UserDefault;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyTrafficControlResponse>(DoRPCRequest("ModifyTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTrafficControlResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ModifyTrafficControlResponse> ModifyTrafficControlWithOptionsAsync(ModifyTrafficControlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiDefault"] = request.ApiDefault;
+            query["AppDefault"] = request.AppDefault;
+            query["Description"] = request.Description;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TrafficControlId"] = request.TrafficControlId;
+            query["TrafficControlName"] = request.TrafficControlName;
+            query["TrafficControlUnit"] = request.TrafficControlUnit;
+            query["UserDefault"] = request.UserDefault;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ModifyTrafficControlResponse>(await DoRPCRequestAsync("ModifyTrafficControl", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTrafficControl",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTrafficControlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ModifyTrafficControlResponse ModifyTrafficControl(ModifyTrafficControlRequest request)
@@ -3387,13 +7223,37 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public OpenApiGatewayServiceResponse OpenApiGatewayServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<OpenApiGatewayServiceResponse>(DoRPCRequest("OpenApiGatewayService", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenApiGatewayService",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenApiGatewayServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<OpenApiGatewayServiceResponse> OpenApiGatewayServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            return TeaModel.ToObject<OpenApiGatewayServiceResponse>(await DoRPCRequestAsync("OpenApiGatewayService", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenApiGatewayService",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenApiGatewayServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public OpenApiGatewayServiceResponse OpenApiGatewayService()
@@ -3411,21 +7271,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ReactivateDomainResponse ReactivateDomainWithOptions(ReactivateDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ReactivateDomainResponse>(DoRPCRequest("ReactivateDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReactivateDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReactivateDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ReactivateDomainResponse> ReactivateDomainWithOptionsAsync(ReactivateDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ReactivateDomainResponse>(await DoRPCRequestAsync("ReactivateDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReactivateDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReactivateDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ReactivateDomainResponse ReactivateDomain(ReactivateDomainRequest request)
@@ -3443,21 +7337,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveApisAuthoritiesResponse RemoveApisAuthoritiesWithOptions(RemoveApisAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["AppId"] = request.AppId;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveApisAuthoritiesResponse>(DoRPCRequest("RemoveApisAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveApisAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveApisAuthoritiesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveApisAuthoritiesResponse> RemoveApisAuthoritiesWithOptionsAsync(RemoveApisAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["AppId"] = request.AppId;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveApisAuthoritiesResponse>(await DoRPCRequestAsync("RemoveApisAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveApisAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveApisAuthoritiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveApisAuthoritiesResponse RemoveApisAuthorities(RemoveApisAuthoritiesRequest request)
@@ -3475,21 +7409,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveAppsAuthoritiesResponse RemoveAppsAuthoritiesWithOptions(RemoveAppsAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["AppIds"] = request.AppIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveAppsAuthoritiesResponse>(DoRPCRequest("RemoveAppsAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveAppsAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveAppsAuthoritiesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveAppsAuthoritiesResponse> RemoveAppsAuthoritiesWithOptionsAsync(RemoveAppsAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["AppIds"] = request.AppIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveAppsAuthoritiesResponse>(await DoRPCRequestAsync("RemoveAppsAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveAppsAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveAppsAuthoritiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveAppsAuthoritiesResponse RemoveAppsAuthorities(RemoveAppsAuthoritiesRequest request)
@@ -3507,21 +7479,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveIpControlApisResponse RemoveIpControlApisWithOptions(RemoveIpControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveIpControlApisResponse>(DoRPCRequest("RemoveIpControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveIpControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveIpControlApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveIpControlApisResponse> RemoveIpControlApisWithOptionsAsync(RemoveIpControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveIpControlApisResponse>(await DoRPCRequestAsync("RemoveIpControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveIpControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveIpControlApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveIpControlApisResponse RemoveIpControlApis(RemoveIpControlApisRequest request)
@@ -3539,21 +7549,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveIpControlPolicyItemResponse RemoveIpControlPolicyItemWithOptions(RemoveIpControlPolicyItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["PolicyItemIds"] = request.PolicyItemIds;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveIpControlPolicyItemResponse>(DoRPCRequest("RemoveIpControlPolicyItem", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveIpControlPolicyItem",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveIpControlPolicyItemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveIpControlPolicyItemResponse> RemoveIpControlPolicyItemWithOptionsAsync(RemoveIpControlPolicyItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["IpControlId"] = request.IpControlId;
+            query["PolicyItemIds"] = request.PolicyItemIds;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveIpControlPolicyItemResponse>(await DoRPCRequestAsync("RemoveIpControlPolicyItem", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveIpControlPolicyItem",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveIpControlPolicyItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveIpControlPolicyItemResponse RemoveIpControlPolicyItem(RemoveIpControlPolicyItemRequest request)
@@ -3571,21 +7615,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveSignatureApisResponse RemoveSignatureApisWithOptions(RemoveSignatureApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveSignatureApisResponse>(DoRPCRequest("RemoveSignatureApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveSignatureApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveSignatureApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveSignatureApisResponse> RemoveSignatureApisWithOptionsAsync(RemoveSignatureApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveSignatureApisResponse>(await DoRPCRequestAsync("RemoveSignatureApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveSignatureApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveSignatureApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveSignatureApisResponse RemoveSignatureApis(RemoveSignatureApisRequest request)
@@ -3603,21 +7685,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveTrafficControlApisResponse RemoveTrafficControlApisWithOptions(RemoveTrafficControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveTrafficControlApisResponse>(DoRPCRequest("RemoveTrafficControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTrafficControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTrafficControlApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveTrafficControlApisResponse> RemoveTrafficControlApisWithOptionsAsync(RemoveTrafficControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveTrafficControlApisResponse>(await DoRPCRequestAsync("RemoveTrafficControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTrafficControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTrafficControlApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveTrafficControlApisResponse RemoveTrafficControlApis(RemoveTrafficControlApisRequest request)
@@ -3635,21 +7755,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveVpcAccessResponse RemoveVpcAccessWithOptions(RemoveVpcAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["NeedBatchWork"] = request.NeedBatchWork;
+            query["Port"] = request.Port;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcId"] = request.VpcId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveVpcAccessResponse>(DoRPCRequest("RemoveVpcAccess", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveVpcAccess",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveVpcAccessResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveVpcAccessResponse> RemoveVpcAccessWithOptionsAsync(RemoveVpcAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["NeedBatchWork"] = request.NeedBatchWork;
+            query["Port"] = request.Port;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcId"] = request.VpcId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveVpcAccessResponse>(await DoRPCRequestAsync("RemoveVpcAccess", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveVpcAccess",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveVpcAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveVpcAccessResponse RemoveVpcAccess(RemoveVpcAccessRequest request)
@@ -3667,21 +7825,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public RemoveVpcAccessAndAbolishApisResponse RemoveVpcAccessAndAbolishApisWithOptions(RemoveVpcAccessAndAbolishApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["NeedBatchWork"] = request.NeedBatchWork;
+            query["Port"] = request.Port;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcId"] = request.VpcId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveVpcAccessAndAbolishApisResponse>(DoRPCRequest("RemoveVpcAccessAndAbolishApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveVpcAccessAndAbolishApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveVpcAccessAndAbolishApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveVpcAccessAndAbolishApisResponse> RemoveVpcAccessAndAbolishApisWithOptionsAsync(RemoveVpcAccessAndAbolishApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["NeedBatchWork"] = request.NeedBatchWork;
+            query["Port"] = request.Port;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcId"] = request.VpcId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<RemoveVpcAccessAndAbolishApisResponse>(await DoRPCRequestAsync("RemoveVpcAccessAndAbolishApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveVpcAccessAndAbolishApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveVpcAccessAndAbolishApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveVpcAccessAndAbolishApisResponse RemoveVpcAccessAndAbolishApis(RemoveVpcAccessAndAbolishApisRequest request)
@@ -3699,21 +7895,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ResetAppCodeResponse ResetAppCodeWithOptions(ResetAppCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppCode"] = request.AppCode;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ResetAppCodeResponse>(DoRPCRequest("ResetAppCode", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetAppCode",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetAppCodeResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ResetAppCodeResponse> ResetAppCodeWithOptionsAsync(ResetAppCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppCode"] = request.AppCode;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ResetAppCodeResponse>(await DoRPCRequestAsync("ResetAppCode", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetAppCode",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetAppCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ResetAppCodeResponse ResetAppCode(ResetAppCodeRequest request)
@@ -3731,21 +7959,53 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public ResetAppSecretResponse ResetAppSecretWithOptions(ResetAppSecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppKey"] = request.AppKey;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ResetAppSecretResponse>(DoRPCRequest("ResetAppSecret", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetAppSecret",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetAppSecretResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ResetAppSecretResponse> ResetAppSecretWithOptionsAsync(ResetAppSecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppKey"] = request.AppKey;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<ResetAppSecretResponse>(await DoRPCRequestAsync("ResetAppSecret", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetAppSecret",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetAppSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ResetAppSecretResponse ResetAppSecret(ResetAppSecretRequest request)
@@ -3763,21 +8023,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SdkGenerateByAppResponse SdkGenerateByAppWithOptions(SdkGenerateByAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SdkGenerateByAppResponse>(DoRPCRequest("SdkGenerateByApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SdkGenerateByApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SdkGenerateByAppResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SdkGenerateByAppResponse> SdkGenerateByAppWithOptionsAsync(SdkGenerateByAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AppId"] = request.AppId;
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SdkGenerateByAppResponse>(await DoRPCRequestAsync("SdkGenerateByApp", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SdkGenerateByApp",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SdkGenerateByAppResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SdkGenerateByAppResponse SdkGenerateByApp(SdkGenerateByAppRequest request)
@@ -3795,21 +8089,55 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SdkGenerateByGroupResponse SdkGenerateByGroupWithOptions(SdkGenerateByGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SdkGenerateByGroupResponse>(DoRPCRequest("SdkGenerateByGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SdkGenerateByGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SdkGenerateByGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SdkGenerateByGroupResponse> SdkGenerateByGroupWithOptionsAsync(SdkGenerateByGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupId"] = request.GroupId;
+            query["Language"] = request.Language;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SdkGenerateByGroupResponse>(await DoRPCRequestAsync("SdkGenerateByGroup", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SdkGenerateByGroup",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SdkGenerateByGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SdkGenerateByGroupResponse SdkGenerateByGroup(SdkGenerateByGroupRequest request)
@@ -3827,21 +8155,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetApisAuthoritiesResponse SetApisAuthoritiesWithOptions(SetApisAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["AppId"] = request.AppId;
+            query["AuthValidTime"] = request.AuthValidTime;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetApisAuthoritiesResponse>(DoRPCRequest("SetApisAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetApisAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetApisAuthoritiesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetApisAuthoritiesResponse> SetApisAuthoritiesWithOptionsAsync(SetApisAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["AppId"] = request.AppId;
+            query["AuthValidTime"] = request.AuthValidTime;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetApisAuthoritiesResponse>(await DoRPCRequestAsync("SetApisAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetApisAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetApisAuthoritiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetApisAuthoritiesResponse SetApisAuthorities(SetApisAuthoritiesRequest request)
@@ -3859,21 +8229,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetAppsAuthoritiesResponse SetAppsAuthoritiesWithOptions(SetAppsAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["AppIds"] = request.AppIds;
+            query["AuthValidTime"] = request.AuthValidTime;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetAppsAuthoritiesResponse>(DoRPCRequest("SetAppsAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAppsAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAppsAuthoritiesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetAppsAuthoritiesResponse> SetAppsAuthoritiesWithOptionsAsync(SetAppsAuthoritiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["AppIds"] = request.AppIds;
+            query["AuthValidTime"] = request.AuthValidTime;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetAppsAuthoritiesResponse>(await DoRPCRequestAsync("SetAppsAuthorities", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAppsAuthorities",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAppsAuthoritiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetAppsAuthoritiesResponse SetAppsAuthorities(SetAppsAuthoritiesRequest request)
@@ -3891,21 +8303,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetDomainResponse SetDomainWithOptions(SetDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["BindStageName"] = request.BindStageName;
+            query["CustomDomainType"] = request.CustomDomainType;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["IsForce"] = request.IsForce;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetDomainResponse>(DoRPCRequest("SetDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDomainResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetDomainResponse> SetDomainWithOptionsAsync(SetDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["BindStageName"] = request.BindStageName;
+            query["CustomDomainType"] = request.CustomDomainType;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["IsForce"] = request.IsForce;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetDomainResponse>(await DoRPCRequestAsync("SetDomain", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDomain",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetDomainResponse SetDomain(SetDomainRequest request)
@@ -3923,21 +8373,63 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetDomainCertificateResponse SetDomainCertificateWithOptions(SetDomainCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["CaCertificateBody"] = request.CaCertificateBody;
+            query["CertificateBody"] = request.CertificateBody;
+            query["CertificateName"] = request.CertificateName;
+            query["CertificatePrivateKey"] = request.CertificatePrivateKey;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetDomainCertificateResponse>(DoRPCRequest("SetDomainCertificate", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDomainCertificate",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDomainCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetDomainCertificateResponse> SetDomainCertificateWithOptionsAsync(SetDomainCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["CaCertificateBody"] = request.CaCertificateBody;
+            query["CertificateBody"] = request.CertificateBody;
+            query["CertificateName"] = request.CertificateName;
+            query["CertificatePrivateKey"] = request.CertificatePrivateKey;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetDomainCertificateResponse>(await DoRPCRequestAsync("SetDomainCertificate", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDomainCertificate",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDomainCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetDomainCertificateResponse SetDomainCertificate(SetDomainCertificateRequest request)
@@ -3955,21 +8447,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetDomainWebSocketStatusResponse SetDomainWebSocketStatusWithOptions(SetDomainWebSocketStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ActionValue"] = request.ActionValue;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetDomainWebSocketStatusResponse>(DoRPCRequest("SetDomainWebSocketStatus", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDomainWebSocketStatus",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDomainWebSocketStatusResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetDomainWebSocketStatusResponse> SetDomainWebSocketStatusWithOptionsAsync(SetDomainWebSocketStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ActionValue"] = request.ActionValue;
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetDomainWebSocketStatusResponse>(await DoRPCRequestAsync("SetDomainWebSocketStatus", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetDomainWebSocketStatus",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetDomainWebSocketStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetDomainWebSocketStatusResponse SetDomainWebSocketStatus(SetDomainWebSocketStatusRequest request)
@@ -3987,21 +8515,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetIpControlApisResponse SetIpControlApisWithOptions(SetIpControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetIpControlApisResponse>(DoRPCRequest("SetIpControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetIpControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetIpControlApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetIpControlApisResponse> SetIpControlApisWithOptionsAsync(SetIpControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["IpControlId"] = request.IpControlId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetIpControlApisResponse>(await DoRPCRequestAsync("SetIpControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetIpControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetIpControlApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetIpControlApisResponse SetIpControlApis(SetIpControlApisRequest request)
@@ -4019,21 +8585,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetSignatureApisResponse SetSignatureApisWithOptions(SetSignatureApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetSignatureApisResponse>(DoRPCRequest("SetSignatureApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSignatureApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSignatureApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetSignatureApisResponse> SetSignatureApisWithOptionsAsync(SetSignatureApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SignatureId"] = request.SignatureId;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetSignatureApisResponse>(await DoRPCRequestAsync("SetSignatureApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSignatureApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSignatureApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetSignatureApisResponse SetSignatureApis(SetSignatureApisRequest request)
@@ -4051,21 +8655,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetTrafficControlApisResponse SetTrafficControlApisWithOptions(SetTrafficControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetTrafficControlApisResponse>(DoRPCRequest("SetTrafficControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetTrafficControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetTrafficControlApisResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetTrafficControlApisResponse> SetTrafficControlApisWithOptionsAsync(SetTrafficControlApisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiIds"] = request.ApiIds;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
+            query["TrafficControlId"] = request.TrafficControlId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetTrafficControlApisResponse>(await DoRPCRequestAsync("SetTrafficControlApis", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetTrafficControlApis",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetTrafficControlApisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetTrafficControlApisResponse SetTrafficControlApis(SetTrafficControlApisRequest request)
@@ -4083,21 +8725,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetVpcAccessResponse SetVpcAccessWithOptions(SetVpcAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["InstanceId"] = request.InstanceId;
+            query["Name"] = request.Name;
+            query["Port"] = request.Port;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcId"] = request.VpcId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetVpcAccessResponse>(DoRPCRequest("SetVpcAccess", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetVpcAccess",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetVpcAccessResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetVpcAccessResponse> SetVpcAccessWithOptionsAsync(SetVpcAccessRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["Description"] = request.Description;
+            query["InstanceId"] = request.InstanceId;
+            query["Name"] = request.Name;
+            query["Port"] = request.Port;
+            query["SecurityToken"] = request.SecurityToken;
+            query["VpcId"] = request.VpcId;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetVpcAccessResponse>(await DoRPCRequestAsync("SetVpcAccess", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetVpcAccess",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetVpcAccessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetVpcAccessResponse SetVpcAccess(SetVpcAccessRequest request)
@@ -4115,21 +8797,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SetWildcardDomainPatternsResponse SetWildcardDomainPatternsWithOptions(SetWildcardDomainPatternsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["WildcardDomainPatterns"] = request.WildcardDomainPatterns;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetWildcardDomainPatternsResponse>(DoRPCRequest("SetWildcardDomainPatterns", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWildcardDomainPatterns",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWildcardDomainPatternsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SetWildcardDomainPatternsResponse> SetWildcardDomainPatternsWithOptionsAsync(SetWildcardDomainPatternsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["GroupId"] = request.GroupId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["WildcardDomainPatterns"] = request.WildcardDomainPatterns;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SetWildcardDomainPatternsResponse>(await DoRPCRequestAsync("SetWildcardDomainPatterns", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWildcardDomainPatterns",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWildcardDomainPatternsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SetWildcardDomainPatternsResponse SetWildcardDomainPatterns(SetWildcardDomainPatternsRequest request)
@@ -4147,21 +8865,61 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public SwitchApiResponse SwitchApiWithOptions(SwitchApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["HistoryVersion"] = request.HistoryVersion;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SwitchApiResponse>(DoRPCRequest("SwitchApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchApiResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<SwitchApiResponse> SwitchApiWithOptionsAsync(SwitchApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ApiId"] = request.ApiId;
+            query["Description"] = request.Description;
+            query["GroupId"] = request.GroupId;
+            query["HistoryVersion"] = request.HistoryVersion;
+            query["SecurityToken"] = request.SecurityToken;
+            query["StageName"] = request.StageName;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<SwitchApiResponse>(await DoRPCRequestAsync("SwitchApi", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchApi",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public SwitchApiResponse SwitchApi(SwitchApiRequest request)
@@ -4179,21 +8937,57 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ResourceId"] = request.ResourceId;
+            query["ResourceType"] = request.ResourceType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<TagResourcesResponse>(DoRPCRequest("TagResources", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ResourceId"] = request.ResourceId;
+            query["ResourceType"] = request.ResourceType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["Tag"] = request.Tag;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<TagResourcesResponse>(await DoRPCRequestAsync("TagResources", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public TagResourcesResponse TagResources(TagResourcesRequest request)
@@ -4211,21 +9005,59 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["All"] = request.All;
+            query["ResourceId"] = request.ResourceId;
+            query["ResourceType"] = request.ResourceType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TagKey"] = request.TagKey;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(DoRPCRequest("UntagResources", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["All"] = request.All;
+            query["ResourceId"] = request.ResourceId;
+            query["ResourceType"] = request.ResourceType;
+            query["SecurityToken"] = request.SecurityToken;
+            query["TagKey"] = request.TagKey;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(await DoRPCRequestAsync("UntagResources", "2016-07-14", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2016-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
