@@ -13,17 +13,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSecretAsrDetailResponseBodyData Data { get; set; }
         public class GetSecretAsrDetailResponseBodyData : TeaModel {
-            [NameInMap("RequestId")]
+            [NameInMap("BizDuration")]
             [Validation(Required=false)]
-            public string RequestId { get; set; }
+            public long? BizDuration { get; set; }
             [NameInMap("BusinessId")]
             [Validation(Required=false)]
             public string BusinessId { get; set; }
@@ -36,25 +32,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("Msg")]
             [Validation(Required=false)]
             public string Msg { get; set; }
-            [NameInMap("BizDuration")]
+            [NameInMap("RequestId")]
             [Validation(Required=false)]
-            public long? BizDuration { get; set; }
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
+            public string RequestId { get; set; }
             [NameInMap("Sentences")]
             [Validation(Required=false)]
             public List<GetSecretAsrDetailResponseBodyDataSentences> Sentences { get; set; }
             public class GetSecretAsrDetailResponseBodyDataSentences : TeaModel {
+                public long? BeginTime { get; set; }
+                public int? ChannelId { get; set; }
+                public string EmotionValue { get; set; }
                 public long? EndTime { get; set; }
                 public long? SilenceDuration { get; set; }
-                public long? BeginTime { get; set; }
-                public string Text { get; set; }
-                public int? ChannelId { get; set; }
                 public int? SpeechRate { get; set; }
-                public string EmotionValue { get; set; }
+                public string Text { get; set; }
             }
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Module")]
         [Validation(Required=false)]
         public List<QueryPhoneNoAByTrackNoResponseBodyModule> Module { get; set; }
@@ -29,15 +25,19 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [Validation(Required=false)]
             public string Extension { get; set; }
 
-            [NameInMap("PhoneNoX")]
-            [Validation(Required=false)]
-            public string PhoneNoX { get; set; }
-
             [NameInMap("PhoneNoA")]
             [Validation(Required=false)]
             public string PhoneNoA { get; set; }
 
+            [NameInMap("PhoneNoX")]
+            [Validation(Required=false)]
+            public string PhoneNoX { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

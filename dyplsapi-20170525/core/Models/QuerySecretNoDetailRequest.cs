@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
-    public class GetSubscriptionDetailRequest : TeaModel {
+    public class QuerySecretNoDetailRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -28,10 +28,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("SecretNo")]
         [Validation(Required=false)]
         public string SecretNo { get; set; }
-
-        [NameInMap("SubsId")]
-        [Validation(Required=false)]
-        public long? SubsId { get; set; }
 
     }
 

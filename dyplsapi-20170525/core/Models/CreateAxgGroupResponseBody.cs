@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public long? GroupId { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public long? GroupId { get; set; }
 
     }
 

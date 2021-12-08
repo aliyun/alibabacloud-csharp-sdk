@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class InitFaceVerifyRequest : TeaModel {
+        [NameInMap("MetaInfo")]
+        [Validation(Required=false)]
+        public string MetaInfo { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("MetaInfo")]
-        [Validation(Required=false)]
-        public string MetaInfo { get; set; }
 
     }
 

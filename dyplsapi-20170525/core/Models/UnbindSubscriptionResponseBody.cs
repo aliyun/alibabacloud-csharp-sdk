@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class UnbindSubscriptionResponseBody : TeaModel {
+        [NameInMap("ChargeId")]
+        [Validation(Required=false)]
+        public string ChargeId { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ChargeId")]
-        [Validation(Required=false)]
-        public string ChargeId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QuerySecretNoRemainRequest : TeaModel {
+        [NameInMap("City")]
+        [Validation(Required=false)]
+        public string City { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,17 +25,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SpecId")]
-        [Validation(Required=false)]
-        public long? SpecId { get; set; }
-
-        [NameInMap("City")]
-        [Validation(Required=false)]
-        public string City { get; set; }
-
         [NameInMap("SecretNo")]
         [Validation(Required=false)]
         public string SecretNo { get; set; }
+
+        [NameInMap("SpecId")]
+        [Validation(Required=false)]
+        public long? SpecId { get; set; }
 
     }
 

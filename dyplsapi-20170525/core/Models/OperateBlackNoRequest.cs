@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class OperateBlackNoRequest : TeaModel {
+        [NameInMap("BlackNo")]
+        [Validation(Required=false)]
+        public string BlackNo { get; set; }
+
+        [NameInMap("OperateType")]
+        [Validation(Required=false)]
+        public string OperateType { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PoolKey")]
+        [Validation(Required=false)]
+        public string PoolKey { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("PoolKey")]
-        [Validation(Required=false)]
-        public string PoolKey { get; set; }
-
-        [NameInMap("BlackNo")]
-        [Validation(Required=false)]
-        public string BlackNo { get; set; }
-
-        [NameInMap("OperateType")]
-        [Validation(Required=false)]
-        public string OperateType { get; set; }
 
         [NameInMap("Tips")]
         [Validation(Required=false)]

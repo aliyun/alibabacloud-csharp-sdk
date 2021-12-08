@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             [NameInMap("CalledNo")]
             [Validation(Required=false)]
             public string CalledNo { get; set; }
+            [NameInMap("Extension")]
+            [Validation(Required=false)]
+            public string Extension { get; set; }
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }

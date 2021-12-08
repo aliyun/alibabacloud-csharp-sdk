@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class UpdatePhoneNumberRequest : TeaModel {
+        [NameInMap("BindToken")]
+        [Validation(Required=false)]
+        public string BindToken { get; set; }
+
+        [NameInMap("NewPhoneNo")]
+        [Validation(Required=false)]
+        public string NewPhoneNo { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PoolKey")]
+        [Validation(Required=false)]
+        public string PoolKey { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,25 +33,13 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("PoolKey")]
-        [Validation(Required=false)]
-        public string PoolKey { get; set; }
-
-        [NameInMap("SubsId")]
-        [Validation(Required=false)]
-        public long? SubsId { get; set; }
-
         [NameInMap("SecretNo")]
         [Validation(Required=false)]
         public string SecretNo { get; set; }
 
-        [NameInMap("NewPhoneNo")]
+        [NameInMap("SubsId")]
         [Validation(Required=false)]
-        public string NewPhoneNo { get; set; }
-
-        [NameInMap("BindToken")]
-        [Validation(Required=false)]
-        public string BindToken { get; set; }
+        public long? SubsId { get; set; }
 
     }
 

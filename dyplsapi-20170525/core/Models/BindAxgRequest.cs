@@ -9,45 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class BindAxgRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("ASRModelId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string ASRModelId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("ASRStatus")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public bool? ASRStatus { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("CallDisplayType")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public int? CallDisplayType { get; set; }
 
-        [NameInMap("PoolKey")]
+        [NameInMap("CallRestrict")]
         [Validation(Required=false)]
-        public string PoolKey { get; set; }
+        public string CallRestrict { get; set; }
 
-        [NameInMap("PhoneNoA")]
+        [NameInMap("ExpectCity")]
         [Validation(Required=false)]
-        public string PhoneNoA { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("PhoneNoB")]
-        [Validation(Required=false)]
-        public string PhoneNoB { get; set; }
-
-        [NameInMap("PhoneNoX")]
-        [Validation(Required=false)]
-        public string PhoneNoX { get; set; }
+        public string ExpectCity { get; set; }
 
         [NameInMap("Expiration")]
         [Validation(Required=false)]
         public string Expiration { get; set; }
 
-        [NameInMap("ExpectCity")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string ExpectCity { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("IsRecordingEnabled")]
         [Validation(Required=false)]
@@ -61,25 +49,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
 
-        [NameInMap("CallDisplayType")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public int? CallDisplayType { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PhoneNoA")]
+        [Validation(Required=false)]
+        public string PhoneNoA { get; set; }
+
+        [NameInMap("PhoneNoB")]
+        [Validation(Required=false)]
+        public string PhoneNoB { get; set; }
+
+        [NameInMap("PhoneNoX")]
+        [Validation(Required=false)]
+        public string PhoneNoX { get; set; }
+
+        [NameInMap("PoolKey")]
+        [Validation(Required=false)]
+        public string PoolKey { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("RingConfig")]
         [Validation(Required=false)]
         public string RingConfig { get; set; }
-
-        [NameInMap("ASRStatus")]
-        [Validation(Required=false)]
-        public bool? ASRStatus { get; set; }
-
-        [NameInMap("ASRModelId")]
-        [Validation(Required=false)]
-        public string ASRModelId { get; set; }
-
-        [NameInMap("CallRestrict")]
-        [Validation(Required=false)]
-        public string CallRestrict { get; set; }
 
     }
 

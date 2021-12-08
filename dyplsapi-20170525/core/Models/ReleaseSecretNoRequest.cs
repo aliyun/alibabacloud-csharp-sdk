@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PoolKey")]
+        [Validation(Required=false)]
+        public string PoolKey { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("PoolKey")]
-        [Validation(Required=false)]
-        public string PoolKey { get; set; }
 
         [NameInMap("SecretNo")]
         [Validation(Required=false)]

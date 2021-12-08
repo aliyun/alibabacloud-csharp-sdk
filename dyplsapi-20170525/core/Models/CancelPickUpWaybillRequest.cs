@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
-    public class GetSubscriptionDetailRequest : TeaModel {
+    public class CancelPickUpWaybillRequest : TeaModel {
+        [NameInMap("CancelDesc")]
+        [Validation(Required=false)]
+        public string CancelDesc { get; set; }
+
+        [NameInMap("OuterOrderCode")]
+        [Validation(Required=false)]
+        public string OuterOrderCode { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("PoolKey")]
-        [Validation(Required=false)]
-        public string PoolKey { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -24,14 +28,6 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SecretNo")]
-        [Validation(Required=false)]
-        public string SecretNo { get; set; }
-
-        [NameInMap("SubsId")]
-        [Validation(Required=false)]
-        public long? SubsId { get; set; }
 
     }
 
