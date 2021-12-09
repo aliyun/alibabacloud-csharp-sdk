@@ -1,0 +1,21 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Oss20190517.Models
+{
+    public class SSEKMS : TeaModel {
+        /// <summary>
+        /// The CMK used in the SSE-KMS encryption method
+        /// </summary>
+        [NameInMap("KeyId")]
+        [Validation(Required=false)]
+        public string KeyId { get; set; }
+
+    }
+
+}
