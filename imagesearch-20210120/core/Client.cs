@@ -44,19 +44,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CommodityTitle",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CommodityTitleResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<CommodityTitleResponse>(DoRPCRequest("CommodityTitle", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<CommodityTitleResponse> CommodityTitleWithOptionsAsync(CommodityTitleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -66,19 +54,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CommodityTitle",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CommodityTitleResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<CommodityTitleResponse>(await DoRPCRequestAsync("CommodityTitle", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public CommodityTitleResponse CommodityTitle(CommodityTitleRequest request)
@@ -262,19 +238,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GeneralRecognition",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GeneralRecognitionResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GeneralRecognitionResponse>(DoRPCRequest("GeneralRecognition", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<GeneralRecognitionResponse> GeneralRecognitionWithOptionsAsync(GeneralRecognitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -284,19 +248,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GeneralRecognition",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GeneralRecognitionResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GeneralRecognitionResponse>(await DoRPCRequestAsync("GeneralRecognition", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public GeneralRecognitionResponse GeneralRecognition(GeneralRecognitionRequest request)
@@ -480,19 +432,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageAmazon",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageAmazonResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ImageAmazonResponse>(DoRPCRequest("ImageAmazon", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<ImageAmazonResponse> ImageAmazonWithOptionsAsync(ImageAmazonRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -502,19 +442,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageAmazon",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageAmazonResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ImageAmazonResponse>(await DoRPCRequestAsync("ImageAmazon", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public ImageAmazonResponse ImageAmazon(ImageAmazonRequest request)
@@ -536,19 +464,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageCategory",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageCategoryResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ImageCategoryResponse>(DoRPCRequest("ImageCategory", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<ImageCategoryResponse> ImageCategoryWithOptionsAsync(ImageCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -558,19 +474,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageCategory",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageCategoryResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ImageCategoryResponse>(await DoRPCRequestAsync("ImageCategory", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public ImageCategoryResponse ImageCategory(ImageCategoryRequest request)
@@ -592,19 +496,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageDuplication",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageDuplicationResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ImageDuplicationResponse>(DoRPCRequest("ImageDuplication", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<ImageDuplicationResponse> ImageDuplicationWithOptionsAsync(ImageDuplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -614,19 +506,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageDuplication",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageDuplicationResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ImageDuplicationResponse>(await DoRPCRequestAsync("ImageDuplication", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public ImageDuplicationResponse ImageDuplication(ImageDuplicationRequest request)
@@ -648,19 +528,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageProperty",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImagePropertyResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ImagePropertyResponse>(DoRPCRequest("ImageProperty", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<ImagePropertyResponse> ImagePropertyWithOptionsAsync(ImagePropertyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -670,19 +538,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageProperty",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImagePropertyResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ImagePropertyResponse>(await DoRPCRequestAsync("ImageProperty", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public ImagePropertyResponse ImageProperty(ImagePropertyRequest request)
@@ -704,19 +560,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageSegmentation",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageSegmentationResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ImageSegmentationResponse>(DoRPCRequest("ImageSegmentation", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public async Task<ImageSegmentationResponse> ImageSegmentationWithOptionsAsync(ImageSegmentationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -726,19 +570,7 @@ namespace AlibabaCloud.SDK.ImageSearch20210120
             {
                 Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageSegmentation",
-                Version = "2021-01-20",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageSegmentationResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ImageSegmentationResponse>(await DoRPCRequestAsync("ImageSegmentation", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime));
         }
 
         public ImageSegmentationResponse ImageSegmentation(ImageSegmentationRequest request)
