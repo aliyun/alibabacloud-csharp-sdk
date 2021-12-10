@@ -8,14 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC_Open20210406.Models
 {
-    public class UpdateAliasHeaders : TeaModel {
+    public class CreateLayerVersionHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
-
-        [NameInMap("If-Match")]
-        [Validation(Required=false)]
-        public string IfMatch { get; set; }
 
         [NameInMap("X-Fc-Account-Id")]
         [Validation(Required=false)]

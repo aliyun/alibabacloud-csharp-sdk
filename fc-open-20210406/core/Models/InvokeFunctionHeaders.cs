@@ -17,23 +17,35 @@ namespace AlibabaCloud.SDK.FC_Open20210406.Models
         [Validation(Required=false)]
         public string XFcAccountId { get; set; }
 
+        [NameInMap("X-Fc-Code-Checksum")]
+        [Validation(Required=false)]
+        public string XFcCodeChecksum { get; set; }
+
+        [NameInMap("X-Fc-Date")]
+        [Validation(Required=false)]
+        public string XFcDate { get; set; }
+
         /// <summary>
         /// 调用方式:Sync或者Async，默认值：Sync
         /// </summary>
-        [NameInMap("x-fc-invocation-type")]
+        [NameInMap("X-Fc-Invocation-Type")]
         [Validation(Required=false)]
         public string XFcInvocationType { get; set; }
 
         /// <summary>
         /// 请求返回日志类型, Tail 为返回函数日志最后 4KB 数据，None 或空值则返回不带有日志，默认为 None
         /// </summary>
-        [NameInMap("x-fc-log-type")]
+        [NameInMap("X-Fc-Log-Type")]
         [Validation(Required=false)]
         public string XFcLogType { get; set; }
 
-        [NameInMap("x-fc-stateful-async-invocation-id")]
+        [NameInMap("X-Fc-Stateful-Async-Invocation-Id")]
         [Validation(Required=false)]
         public string XFcStatefulAsyncInvocationId { get; set; }
+
+        [NameInMap("X-Fc-Trace-Id")]
+        [Validation(Required=false)]
+        public string XFcTraceId { get; set; }
 
     }
 
