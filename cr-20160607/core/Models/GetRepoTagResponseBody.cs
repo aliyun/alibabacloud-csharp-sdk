@@ -9,37 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
     public class GetRepoTagResponseBody : TeaModel {
-        [NameInMap("imageUpdate")]
-        [Validation(Required=false)]
-        public long? ImageUpdate { get; set; }
-
-        [NameInMap("imageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("digest")]
         [Validation(Required=false)]
         public string Digest { get; set; }
-
-        [NameInMap("imageSize")]
-        [Validation(Required=false)]
-        public long? ImageSize { get; set; }
-
-        [NameInMap("tag")]
-        [Validation(Required=false)]
-        public string Tag { get; set; }
 
         [NameInMap("imageCreate")]
         [Validation(Required=false)]
         public long? ImageCreate { get; set; }
 
+        [NameInMap("imageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        [NameInMap("imageSize")]
+        [Validation(Required=false)]
+        public long? ImageSize { get; set; }
+
+        [NameInMap("imageUpdate")]
+        [Validation(Required=false)]
+        public long? ImageUpdate { get; set; }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
 
     }
 

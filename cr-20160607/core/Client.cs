@@ -53,20 +53,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public CancelRepoBuildResponse CancelRepoBuildWithOptions(string RepoNamespace, string RepoName, string BuildId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CancelRepoBuildResponse>(DoROARequest("CancelRepoBuild", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}/build/{BuildId}/cancel", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelRepoBuild",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/build/" + BuildId + "/cancel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CancelRepoBuildResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CancelRepoBuildResponse> CancelRepoBuildWithOptionsAsync(string RepoNamespace, string RepoName, string BuildId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CancelRepoBuildResponse>(await DoROARequestAsync("CancelRepoBuild", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}/build/{BuildId}/cancel", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelRepoBuild",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/build/" + BuildId + "/cancel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CancelRepoBuildResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateNamespaceResponse CreateNamespace()
@@ -89,7 +119,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateNamespaceResponse>(DoROARequest("CreateNamespace", "2016-06-07", "HTTPS", "PUT", "AK", "/namespace", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateNamespaceResponse> CreateNamespaceWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -98,7 +140,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateNamespaceResponse>(await DoROARequestAsync("CreateNamespace", "2016-06-07", "HTTPS", "PUT", "AK", "/namespace", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateRepoResponse CreateRepo()
@@ -121,7 +175,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateRepoResponse>(DoROARequest("CreateRepo", "2016-06-07", "HTTPS", "PUT", "AK", "/repos", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRepoResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateRepoResponse> CreateRepoWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -130,7 +196,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateRepoResponse>(await DoROARequestAsync("CreateRepo", "2016-06-07", "HTTPS", "PUT", "AK", "/repos", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateRepoBuildRuleResponse CreateRepoBuildRule(string RepoNamespace, string RepoName)
@@ -149,20 +227,48 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public CreateRepoBuildRuleResponse CreateRepoBuildRuleWithOptions(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateRepoBuildRuleResponse>(DoROARequest("CreateRepoBuildRule", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRepoBuildRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRepoBuildRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateRepoBuildRuleResponse> CreateRepoBuildRuleWithOptionsAsync(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateRepoBuildRuleResponse>(await DoROARequestAsync("CreateRepoBuildRule", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRepoBuildRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRepoBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateRepoWebhookResponse CreateRepoWebhook(string RepoNamespace, string RepoName)
@@ -181,20 +287,48 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public CreateRepoWebhookResponse CreateRepoWebhookWithOptions(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateRepoWebhookResponse>(DoROARequest("CreateRepoWebhook", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateRepoWebhookResponse> CreateRepoWebhookWithOptionsAsync(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateRepoWebhookResponse>(await DoROARequestAsync("CreateRepoWebhook", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateUserInfoResponse CreateUserInfo()
@@ -217,7 +351,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateUserInfoResponse>(DoROARequest("CreateUserInfo", "2016-06-07", "HTTPS", "PUT", "AK", "/users", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserInfo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/users",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateUserInfoResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateUserInfoResponse> CreateUserInfoWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -226,7 +372,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<CreateUserInfoResponse>(await DoROARequestAsync("CreateUserInfo", "2016-06-07", "HTTPS", "PUT", "AK", "/users", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserInfo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/users",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateUserInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteImageResponse DeleteImage(string RepoNamespace, string RepoName, string Tag)
@@ -245,20 +403,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public DeleteImageResponse DeleteImageWithOptions(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteImageResponse>(DoROARequest("DeleteImage", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteImageResponse> DeleteImageWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteImageResponse>(await DoROARequestAsync("DeleteImage", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteNamespaceResponse DeleteNamespace(string Namespace)
@@ -277,20 +465,46 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public DeleteNamespaceResponse DeleteNamespaceWithOptions(string Namespace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            Namespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Namespace);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteNamespaceResponse>(DoROARequest("DeleteNamespace", "2016-06-07", "HTTPS", "DELETE", "AK", "/namespace/" + Namespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace/" + Namespace,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteNamespaceResponse> DeleteNamespaceWithOptionsAsync(string Namespace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            Namespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Namespace);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteNamespaceResponse>(await DoROARequestAsync("DeleteNamespace", "2016-06-07", "HTTPS", "DELETE", "AK", "/namespace/" + Namespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace/" + Namespace,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteRepoResponse DeleteRepo(string RepoNamespace, string RepoName)
@@ -309,20 +523,48 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public DeleteRepoResponse DeleteRepoWithOptions(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteRepoResponse>(DoROARequest("DeleteRepo", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteRepoResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteRepoResponse> DeleteRepoWithOptionsAsync(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteRepoResponse>(await DoROARequestAsync("DeleteRepo", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteRepoBuildRuleResponse DeleteRepoBuildRule(string RepoNamespace, string RepoName, string BuildRuleId)
@@ -341,20 +583,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public DeleteRepoBuildRuleResponse DeleteRepoBuildRuleWithOptions(string RepoNamespace, string RepoName, string BuildRuleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildRuleId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildRuleId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteRepoBuildRuleResponse>(DoROARequest("DeleteRepoBuildRule", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules/{BuildRuleId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRepoBuildRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules/" + BuildRuleId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteRepoBuildRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteRepoBuildRuleResponse> DeleteRepoBuildRuleWithOptionsAsync(string RepoNamespace, string RepoName, string BuildRuleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildRuleId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildRuleId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteRepoBuildRuleResponse>(await DoROARequestAsync("DeleteRepoBuildRule", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules/{BuildRuleId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRepoBuildRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules/" + BuildRuleId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteRepoBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteRepoWebhookResponse DeleteRepoWebhook(string RepoNamespace, string RepoName, string WebhookId)
@@ -373,20 +645,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public DeleteRepoWebhookResponse DeleteRepoWebhookWithOptions(string RepoNamespace, string RepoName, string WebhookId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            WebhookId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WebhookId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteRepoWebhookResponse>(DoROARequest("DeleteRepoWebhook", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks/{WebhookId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks/" + WebhookId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteRepoWebhookResponse> DeleteRepoWebhookWithOptionsAsync(string RepoNamespace, string RepoName, string WebhookId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            WebhookId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WebhookId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<DeleteRepoWebhookResponse>(await DoROARequestAsync("DeleteRepoWebhook", "2016-06-07", "HTTPS", "DELETE", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks/{WebhookId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks/" + WebhookId,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetAuthorizationTokenResponse GetAuthorizationToken()
@@ -409,7 +711,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetAuthorizationTokenResponse>(DoROARequest("GetAuthorizationToken", "2016-06-07", "HTTPS", "GET", "AK", "/tokens", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthorizationToken",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/tokens",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetAuthorizationTokenResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetAuthorizationTokenResponse> GetAuthorizationTokenWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -418,7 +732,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetAuthorizationTokenResponse>(await DoROARequestAsync("GetAuthorizationToken", "2016-06-07", "HTTPS", "GET", "AK", "/tokens", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthorizationToken",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/tokens",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetAuthorizationTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetImageLayerResponse GetImageLayer(string RepoNamespace, string RepoName, string Tag)
@@ -437,20 +763,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetImageLayerResponse GetImageLayerWithOptions(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetImageLayerResponse>(DoROARequest("GetImageLayer", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/layers", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageLayer",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/layers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetImageLayerResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetImageLayerResponse> GetImageLayerWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetImageLayerResponse>(await DoROARequestAsync("GetImageLayer", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/layers", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageLayer",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/layers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetImageLayerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetImageManifestResponse GetImageManifest(string RepoNamespace, string RepoName, string Tag, GetImageManifestRequest request)
@@ -470,6 +826,9 @@ namespace AlibabaCloud.SDK.Cr20160607
         public GetImageManifestResponse GetImageManifestWithOptions(string RepoNamespace, string RepoName, string Tag, GetImageManifestRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaVersion))
             {
@@ -480,12 +839,27 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetImageManifestResponse>(DoROARequest("GetImageManifest", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/manifest", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageManifest",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/manifest",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetImageManifestResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetImageManifestResponse> GetImageManifestWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, GetImageManifestRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaVersion))
             {
@@ -496,7 +870,19 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetImageManifestResponse>(await DoROARequestAsync("GetImageManifest", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/manifest", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageManifest",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/manifest",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetImageManifestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetNamespaceResponse GetNamespace(string Namespace)
@@ -515,20 +901,46 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetNamespaceResponse GetNamespaceWithOptions(string Namespace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            Namespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Namespace);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetNamespaceResponse>(DoROARequest("GetNamespace", "2016-06-07", "HTTPS", "GET", "AK", "/namespace/" + Namespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace/" + Namespace,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetNamespaceResponse> GetNamespaceWithOptionsAsync(string Namespace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            Namespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Namespace);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetNamespaceResponse>(await DoROARequestAsync("GetNamespace", "2016-06-07", "HTTPS", "GET", "AK", "/namespace/" + Namespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace/" + Namespace,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetNamespaceListResponse GetNamespaceList(GetNamespaceListRequest request)
@@ -549,40 +961,64 @@ namespace AlibabaCloud.SDK.Cr20160607
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorize))
             {
                 query["Authorize"] = request.Authorize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetNamespaceListResponse>(DoROARequest("GetNamespaceList", "2016-06-07", "HTTPS", "GET", "AK", "/namespace", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNamespaceList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetNamespaceListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetNamespaceListResponse> GetNamespaceListWithOptionsAsync(GetNamespaceListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorize))
             {
                 query["Authorize"] = request.Authorize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetNamespaceListResponse>(await DoROARequestAsync("GetNamespaceList", "2016-06-07", "HTTPS", "GET", "AK", "/namespace", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNamespaceList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetNamespaceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRegionResponse GetRegion(GetRegionRequest request)
@@ -612,7 +1048,19 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRegionResponse>(DoROARequest("GetRegion", "2016-06-07", "HTTPS", "GET", "AK", "/regions", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRegion",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRegionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRegionResponse> GetRegionWithOptionsAsync(GetRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -628,7 +1076,19 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRegionResponse>(await DoROARequestAsync("GetRegion", "2016-06-07", "HTTPS", "GET", "AK", "/regions", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRegion",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRegionListResponse GetRegionList()
@@ -651,7 +1111,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRegionListResponse>(DoROARequest("GetRegionList", "2016-06-07", "HTTPS", "GET", "AK", "/regions", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRegionList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRegionListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRegionListResponse> GetRegionListWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -660,7 +1132,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRegionListResponse>(await DoROARequestAsync("GetRegionList", "2016-06-07", "HTTPS", "GET", "AK", "/regions", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRegionList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRegionListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoResponse GetRepo(string RepoNamespace, string RepoName)
@@ -679,20 +1163,48 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetRepoResponse GetRepoWithOptions(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoResponse>(DoROARequest("GetRepo", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoResponse> GetRepoWithOptionsAsync(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoResponse>(await DoROARequestAsync("GetRepo", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoBuildListResponse GetRepoBuildList(string RepoNamespace, string RepoName, GetRepoBuildListRequest request)
@@ -712,6 +1224,8 @@ namespace AlibabaCloud.SDK.Cr20160607
         public GetRepoBuildListResponse GetRepoBuildListWithOptions(string RepoNamespace, string RepoName, GetRepoBuildListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -726,12 +1240,26 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoBuildListResponse>(DoROARequest("GetRepoBuildList", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/build", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoBuildList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/build",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoBuildListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoBuildListResponse> GetRepoBuildListWithOptionsAsync(string RepoNamespace, string RepoName, GetRepoBuildListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -746,7 +1274,19 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoBuildListResponse>(await DoROARequestAsync("GetRepoBuildList", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/build", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoBuildList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/build",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoBuildListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoBuildRuleListResponse GetRepoBuildRuleList(string RepoNamespace, string RepoName)
@@ -765,20 +1305,48 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetRepoBuildRuleListResponse GetRepoBuildRuleListWithOptions(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoBuildRuleListResponse>(DoROARequest("GetRepoBuildRuleList", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoBuildRuleList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoBuildRuleListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoBuildRuleListResponse> GetRepoBuildRuleListWithOptionsAsync(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoBuildRuleListResponse>(await DoROARequestAsync("GetRepoBuildRuleList", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoBuildRuleList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoBuildRuleListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoBuildStatusResponse GetRepoBuildStatus(string RepoNamespace, string RepoName, string BuildId)
@@ -797,20 +1365,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetRepoBuildStatusResponse GetRepoBuildStatusWithOptions(string RepoNamespace, string RepoName, string BuildId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoBuildStatusResponse>(DoROARequest("GetRepoBuildStatus", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/build/{BuildId}/status", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoBuildStatus",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/build/" + BuildId + "/status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoBuildStatusResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoBuildStatusResponse> GetRepoBuildStatusWithOptionsAsync(string RepoNamespace, string RepoName, string BuildId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoBuildStatusResponse>(await DoROARequestAsync("GetRepoBuildStatus", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/build/{BuildId}/status", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoBuildStatus",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/build/" + BuildId + "/status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoBuildStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoListResponse GetRepoList(GetRepoListRequest request)
@@ -831,10 +1429,6 @@ namespace AlibabaCloud.SDK.Cr20160607
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -843,22 +1437,34 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoListResponse>(DoROARequest("GetRepoList", "2016-06-07", "HTTPS", "GET", "AK", "/repos", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoListResponse> GetRepoListWithOptionsAsync(GetRepoListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -867,12 +1473,28 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoListResponse>(await DoROARequestAsync("GetRepoList", "2016-06-07", "HTTPS", "GET", "AK", "/repos", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoListByNamespaceResponse GetRepoListByNamespace(string RepoNamespace, GetRepoListByNamespaceRequest request)
@@ -892,11 +1514,8 @@ namespace AlibabaCloud.SDK.Cr20160607
         public GetRepoListByNamespaceResponse GetRepoListByNamespaceWithOptions(string RepoNamespace, GetRepoListByNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -905,22 +1524,35 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoListByNamespaceResponse>(DoROARequest("GetRepoListByNamespace", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoListByNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoListByNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoListByNamespaceResponse> GetRepoListByNamespaceWithOptionsAsync(string RepoNamespace, GetRepoListByNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
-            {
-                query["Status"] = request.Status;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -929,12 +1561,28 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoListByNamespaceResponse>(await DoROARequestAsync("GetRepoListByNamespace", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoListByNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoListByNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoTagResponse GetRepoTag(string RepoNamespace, string RepoName, string Tag)
@@ -953,74 +1601,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetRepoTagResponse GetRepoTagWithOptions(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoTagResponse>(DoROARequest("GetRepoTag", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTag",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRepoTagResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoTagResponse> GetRepoTagWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoTagResponse>(await DoROARequestAsync("GetRepoTag", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}", "json", req, runtime));
-        }
-
-        public GetRepoTagsResponse GetRepoTags(string RepoNamespace, string RepoName, GetRepoTagsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetRepoTagsWithOptions(RepoNamespace, RepoName, request, headers, runtime);
-        }
-
-        public async Task<GetRepoTagsResponse> GetRepoTagsAsync(string RepoNamespace, string RepoName, GetRepoTagsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetRepoTagsWithOptionsAsync(RepoNamespace, RepoName, request, headers, runtime);
-        }
-
-        public GetRepoTagsResponse GetRepoTagsWithOptions(string RepoNamespace, string RepoName, GetRepoTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                query["Page"] = request.Page;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Action = "GetRepoTag",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
             };
-            return TeaModel.ToObject<GetRepoTagsResponse>(DoROARequest("GetRepoTags", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags", "none", req, runtime));
-        }
-
-        public async Task<GetRepoTagsResponse> GetRepoTagsWithOptionsAsync(string RepoNamespace, string RepoName, GetRepoTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
-            {
-                query["Page"] = request.Page;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            return TeaModel.ToObject<GetRepoTagsResponse>(await DoROARequestAsync("GetRepoTags", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags", "none", req, runtime));
+            return TeaModel.ToObject<GetRepoTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoTagScanListResponse GetRepoTagScanList(string RepoNamespace, string RepoName, string Tag, GetRepoTagScanListRequest request)
@@ -1040,6 +1664,9 @@ namespace AlibabaCloud.SDK.Cr20160607
         public GetRepoTagScanListResponse GetRepoTagScanListWithOptions(string RepoNamespace, string RepoName, string Tag, GetRepoTagScanListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -1058,12 +1685,27 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoTagScanListResponse>(DoROARequest("GetRepoTagScanList", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scanResult", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTagScanList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scanResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagScanListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoTagScanListResponse> GetRepoTagScanListWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, GetRepoTagScanListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -1082,7 +1724,19 @@ namespace AlibabaCloud.SDK.Cr20160607
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetRepoTagScanListResponse>(await DoROARequestAsync("GetRepoTagScanList", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scanResult", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTagScanList",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scanResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagScanListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoTagScanStatusResponse GetRepoTagScanStatus(string RepoNamespace, string RepoName, string Tag)
@@ -1101,20 +1755,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetRepoTagScanStatusResponse GetRepoTagScanStatusWithOptions(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoTagScanStatusResponse>(DoROARequest("GetRepoTagScanStatus", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scanStatus", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTagScanStatus",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scanStatus",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagScanStatusResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoTagScanStatusResponse> GetRepoTagScanStatusWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoTagScanStatusResponse>(await DoROARequestAsync("GetRepoTagScanStatus", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scanStatus", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTagScanStatus",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scanStatus",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagScanStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoTagScanSummaryResponse GetRepoTagScanSummary(string RepoNamespace, string RepoName, string Tag)
@@ -1133,20 +1817,132 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetRepoTagScanSummaryResponse GetRepoTagScanSummaryWithOptions(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(DoROARequest("GetRepoTagScanSummary", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scanCount", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTagScanSummary",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scanCount",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoTagScanSummaryResponse> GetRepoTagScanSummaryWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(await DoROARequestAsync("GetRepoTagScanSummary", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scanCount", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTagScanSummary",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scanCount",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetRepoTagsResponse GetRepoTags(string RepoNamespace, string RepoName, GetRepoTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRepoTagsWithOptions(RepoNamespace, RepoName, request, headers, runtime);
+        }
+
+        public async Task<GetRepoTagsResponse> GetRepoTagsAsync(string RepoNamespace, string RepoName, GetRepoTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRepoTagsWithOptionsAsync(RepoNamespace, RepoName, request, headers, runtime);
+        }
+
+        public GetRepoTagsResponse GetRepoTagsWithOptions(string RepoNamespace, string RepoName, GetRepoTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTags",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetRepoTagsResponse> GetRepoTagsWithOptionsAsync(string RepoNamespace, string RepoName, GetRepoTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoTags",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRepoWebhookResponse GetRepoWebhook(string RepoNamespace, string RepoName)
@@ -1165,20 +1961,106 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public GetRepoWebhookResponse GetRepoWebhookWithOptions(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoWebhookResponse>(DoROARequest("GetRepoWebhook", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRepoWebhookResponse> GetRepoWebhookWithOptionsAsync(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<GetRepoWebhookResponse>(await DoROARequestAsync("GetRepoWebhook", "2016-06-07", "HTTPS", "GET", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetResourceQuotaResponse GetResourceQuota(string ResourceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetResourceQuotaWithOptions(ResourceName, headers, runtime);
+        }
+
+        public async Task<GetResourceQuotaResponse> GetResourceQuotaAsync(string ResourceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetResourceQuotaWithOptionsAsync(ResourceName, headers, runtime);
+        }
+
+        public GetResourceQuotaResponse GetResourceQuotaWithOptions(string ResourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ResourceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceQuota",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/resource/" + ResourceName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetResourceQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetResourceQuotaResponse> GetResourceQuotaWithOptionsAsync(string ResourceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            ResourceName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ResourceName);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceQuota",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/resource/" + ResourceName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<GetResourceQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public StartImageScanResponse StartImageScan(string RepoNamespace, string RepoName, string Tag)
@@ -1197,20 +2079,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public StartImageScanResponse StartImageScanWithOptions(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<StartImageScanResponse>(DoROARequest("StartImageScan", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scan", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartImageScan",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scan",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<StartImageScanResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<StartImageScanResponse> StartImageScanWithOptionsAsync(string RepoNamespace, string RepoName, string Tag, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            Tag = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Tag);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<StartImageScanResponse>(await DoROARequestAsync("StartImageScan", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/tags/{Tag}/scan", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartImageScan",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/tags/" + Tag + "/scan",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<StartImageScanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public StartRepoBuildByRuleResponse StartRepoBuildByRule(string RepoNamespace, string RepoName, string BuildRuleId)
@@ -1229,20 +2141,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public StartRepoBuildByRuleResponse StartRepoBuildByRuleWithOptions(string RepoNamespace, string RepoName, string BuildRuleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildRuleId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildRuleId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<StartRepoBuildByRuleResponse>(DoROARequest("StartRepoBuildByRule", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules/{BuildRuleId}/build", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRepoBuildByRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules/" + BuildRuleId + "/build",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<StartRepoBuildByRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<StartRepoBuildByRuleResponse> StartRepoBuildByRuleWithOptionsAsync(string RepoNamespace, string RepoName, string BuildRuleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildRuleId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildRuleId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<StartRepoBuildByRuleResponse>(await DoROARequestAsync("StartRepoBuildByRule", "2016-06-07", "HTTPS", "PUT", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules/{BuildRuleId}/build", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRepoBuildByRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules/" + BuildRuleId + "/build",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<StartRepoBuildByRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateNamespaceResponse UpdateNamespace(string Namespace)
@@ -1261,20 +2203,46 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public UpdateNamespaceResponse UpdateNamespaceWithOptions(string Namespace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            Namespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Namespace);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateNamespaceResponse>(DoROARequest("UpdateNamespace", "2016-06-07", "HTTPS", "POST", "AK", "/namespace/" + Namespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace/" + Namespace,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateNamespaceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateNamespaceResponse> UpdateNamespaceWithOptionsAsync(string Namespace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            Namespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(Namespace);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateNamespaceResponse>(await DoROARequestAsync("UpdateNamespace", "2016-06-07", "HTTPS", "POST", "AK", "/namespace/" + Namespace, "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNamespace",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/namespace/" + Namespace,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateRepoResponse UpdateRepo(string RepoNamespace, string RepoName)
@@ -1293,20 +2261,48 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public UpdateRepoResponse UpdateRepoWithOptions(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateRepoResponse>(DoROARequest("UpdateRepo", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRepoResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateRepoResponse> UpdateRepoWithOptionsAsync(string RepoNamespace, string RepoName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateRepoResponse>(await DoROARequestAsync("UpdateRepo", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRepo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateRepoBuildRuleResponse UpdateRepoBuildRule(string RepoNamespace, string RepoName, string BuildRuleId)
@@ -1325,20 +2321,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public UpdateRepoBuildRuleResponse UpdateRepoBuildRuleWithOptions(string RepoNamespace, string RepoName, string BuildRuleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildRuleId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildRuleId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateRepoBuildRuleResponse>(DoROARequest("UpdateRepoBuildRule", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules/{BuildRuleId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRepoBuildRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules/" + BuildRuleId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRepoBuildRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateRepoBuildRuleResponse> UpdateRepoBuildRuleWithOptionsAsync(string RepoNamespace, string RepoName, string BuildRuleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            BuildRuleId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(BuildRuleId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateRepoBuildRuleResponse>(await DoROARequestAsync("UpdateRepoBuildRule", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}/rules/{BuildRuleId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRepoBuildRule",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/rules/" + BuildRuleId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRepoBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateRepoWebhookResponse UpdateRepoWebhook(string RepoNamespace, string RepoName, string WebhookId)
@@ -1357,20 +2383,50 @@ namespace AlibabaCloud.SDK.Cr20160607
 
         public UpdateRepoWebhookResponse UpdateRepoWebhookWithOptions(string RepoNamespace, string RepoName, string WebhookId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            WebhookId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WebhookId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateRepoWebhookResponse>(DoROARequest("UpdateRepoWebhook", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks/{WebhookId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks/" + WebhookId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateRepoWebhookResponse> UpdateRepoWebhookWithOptionsAsync(string RepoNamespace, string RepoName, string WebhookId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            RepoNamespace = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoNamespace);
+            RepoName = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RepoName);
+            WebhookId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WebhookId);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateRepoWebhookResponse>(await DoROARequestAsync("UpdateRepoWebhook", "2016-06-07", "HTTPS", "POST", "AK", "/repos/" + RepoNamespace + "/{RepoName}/webhooks/{WebhookId}", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRepoWebhook",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/repos/" + RepoNamespace + "/" + RepoName + "/webhooks/" + WebhookId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateUserInfoResponse UpdateUserInfo()
@@ -1393,7 +2449,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateUserInfoResponse>(DoROARequest("UpdateUserInfo", "2016-06-07", "HTTPS", "POST", "AK", "/users", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserInfo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/users",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateUserInfoResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateUserInfoResponse> UpdateUserInfoWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1402,7 +2470,19 @@ namespace AlibabaCloud.SDK.Cr20160607
             {
                 Headers = headers,
             };
-            return TeaModel.ToObject<UpdateUserInfoResponse>(await DoROARequestAsync("UpdateUserInfo", "2016-06-07", "HTTPS", "POST", "AK", "/users", "none", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserInfo",
+                Version = "2016-06-07",
+                Protocol = "HTTPS",
+                Pathname = "/users",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateUserInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }

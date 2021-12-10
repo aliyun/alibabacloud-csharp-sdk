@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
     public class GetRepoListByNamespaceRequest : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Cr20160607.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 
