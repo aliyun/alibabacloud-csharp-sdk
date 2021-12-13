@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Config20190108.Models
             [NameInMap("ConfigurationRecorderStatus")]
             [Validation(Required=false)]
             public string ConfigurationRecorderStatus { get; set; }
+            [NameInMap("OrganizationEnableStatus")]
+            [Validation(Required=false)]
+            public string OrganizationEnableStatus { get; set; }
+            [NameInMap("OrganizationMasterId")]
+            [Validation(Required=false)]
+            public long? OrganizationMasterId { get; set; }
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]
             public List<string> ResourceTypes { get; set; }
