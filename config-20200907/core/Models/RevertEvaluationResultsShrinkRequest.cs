@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class StartAggregateRemediationResponseBody : TeaModel {
-        [NameInMap("Data")]
+    public class RevertEvaluationResultsShrinkRequest : TeaModel {
+        [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public string ConfigRuleId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Resources")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ResourcesShrink { get; set; }
 
     }
 

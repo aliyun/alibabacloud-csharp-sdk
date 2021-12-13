@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class GenerateResourceInventoryResponseBody : TeaModel {
+    public class RevertEvaluationResultsResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

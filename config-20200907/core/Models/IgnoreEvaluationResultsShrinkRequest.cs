@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class StartRemediationRequest : TeaModel {
+    public class IgnoreEvaluationResultsShrinkRequest : TeaModel {
         [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
         public string ConfigRuleId { get; set; }
+
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
+
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public string ResourcesShrink { get; set; }
 
     }
 

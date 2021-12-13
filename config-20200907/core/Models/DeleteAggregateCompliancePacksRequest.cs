@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string CompliancePackIds { get; set; }
 
+        [NameInMap("DeleteRule")]
+        [Validation(Required=false)]
+        public bool? DeleteRule { get; set; }
+
     }
 
 }

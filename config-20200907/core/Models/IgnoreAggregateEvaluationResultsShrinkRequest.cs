@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class GenerateAggregateResourceInventoryRequest : TeaModel {
-        [NameInMap("AccountIds")]
-        [Validation(Required=false)]
-        public string AccountIds { get; set; }
-
+    public class IgnoreAggregateEvaluationResultsShrinkRequest : TeaModel {
         [NameInMap("AggregatorId")]
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
-        [NameInMap("Regions")]
+        [NameInMap("ConfigRuleId")]
         [Validation(Required=false)]
-        public string Regions { get; set; }
+        public string ConfigRuleId { get; set; }
 
-        [NameInMap("ResourceTypes")]
+        [NameInMap("Reason")]
         [Validation(Required=false)]
-        public string ResourceTypes { get; set; }
+        public string Reason { get; set; }
+
+        [NameInMap("Resources")]
+        [Validation(Required=false)]
+        public string ResourcesShrink { get; set; }
 
     }
 

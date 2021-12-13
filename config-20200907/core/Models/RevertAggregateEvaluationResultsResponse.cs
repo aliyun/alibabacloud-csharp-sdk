@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class ListAggregateRemediationsResponse : TeaModel {
+    public class RevertAggregateEvaluationResultsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ListAggregateRemediationsResponseBody Body { get; set; }
+        public RevertAggregateEvaluationResultsResponseBody Body { get; set; }
 
     }
 

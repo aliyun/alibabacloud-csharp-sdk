@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class GetAggregateResourceInventoryRequest : TeaModel {
-        [NameInMap("AggregatorId")]
+    public class IgnoreAggregateEvaluationResultsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AggregatorId { get; set; }
+        public string RequestId { get; set; }
 
     }
 
