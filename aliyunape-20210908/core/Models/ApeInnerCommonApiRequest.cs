@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -8,7 +11,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliyunape20210908.Models
 {
-    public class HistoricalRequest : TeaModel {
+    public class ApeInnerCommonApiRequest : TeaModel {
+        /// <summary>
+        /// appName
+        /// </summary>
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// channel
+        /// </summary>
+        [NameInMap("Channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
         /// <summary>
         /// endTime
         /// </summary>
@@ -17,11 +34,18 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 用户中心--我的订单--订单请求--实例名称：aliyunape_meteor12_public_cn-0ju2d2hh90b
+        /// lat
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("Lat")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string Lat { get; set; }
+
+        /// <summary>
+        /// lon
+        /// </summary>
+        [NameInMap("Lon")]
+        [Validation(Required=false)]
+        public string Lon { get; set; }
 
         /// <summary>
         /// pageNum
@@ -38,6 +62,13 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// spCode
+        /// </summary>
+        [NameInMap("SpCode")]
+        [Validation(Required=false)]
+        public string SpCode { get; set; }
+
+        /// <summary>
         /// startTime
         /// </summary>
         [NameInMap("StartTime")]
@@ -45,7 +76,7 @@ namespace AlibabaCloud.SDK.Aliyunape20210908.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 全国（入参单一站点）
+        /// station
         /// </summary>
         [NameInMap("Station")]
         [Validation(Required=false)]
