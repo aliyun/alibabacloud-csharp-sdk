@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class GetInstanceIpWhiteListResponseBody : TeaModel {
+    public class CreateLindormInstanceResponseBody : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("IpList")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public List<string> IpList { get; set; }
+        public long? OrderId { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("alibabacloud-hitsdb")]
 [assembly: AssemblyDescription("Alibaba Cloud Time  Series and Spatial-Temporal  Database (20200615) SDK Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alibaba Cloud, Inc")]
+[assembly: AssemblyCompany("Alibaba Cloud")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ffcc3a00-7334-11eb-a42f-d9a49e6f9598")]
+[assembly: Guid("e14ab460-5cdd-11ec-8c32-476997b88c4f")]
 
 // Version information for an assembly consists of the following four values:
 //

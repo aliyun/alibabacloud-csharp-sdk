@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class GetLindormInstanceEngineListRequest : TeaModel {
+    public class ReleaseLindormInstanceRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

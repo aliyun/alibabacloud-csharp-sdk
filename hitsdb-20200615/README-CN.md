@@ -6,10 +6,10 @@
 
 ## 安装
 
-### Composer
+### Nuget
 
 ```bash
-composer require AlibabaCloud.SDK.Hitsdb20200615
+dotnet add package AlibabaCloud.SDK.Hitsdb20200615
 ```
 
 ## 问题

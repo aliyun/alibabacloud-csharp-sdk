@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateInstanceIpWhiteListRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string GroupName { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,21 +37,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("SecurityIpList")]
         [Validation(Required=false)]
         public string SecurityIpList { get; set; }
 
-        [NameInMap("GroupName")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string GroupName { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

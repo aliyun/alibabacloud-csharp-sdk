@@ -87,24 +87,170 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CreateLindormInstanceResponse CreateLindormInstanceWithOptions(CreateLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ColdStorage"] = request.ColdStorage;
+            query["CoreSpec"] = request.CoreSpec;
+            query["DiskCategory"] = request.DiskCategory;
+            query["Duration"] = request.Duration;
+            query["FilestoreNum"] = request.FilestoreNum;
+            query["FilestoreSpec"] = request.FilestoreSpec;
+            query["InstanceAlias"] = request.InstanceAlias;
+            query["InstanceStorage"] = request.InstanceStorage;
+            query["LindormNum"] = request.LindormNum;
+            query["LindormSpec"] = request.LindormSpec;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["PayType"] = request.PayType;
+            query["PricingCycle"] = request.PricingCycle;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SolrNum"] = request.SolrNum;
+            query["SolrSpec"] = request.SolrSpec;
+            query["TsdbNum"] = request.TsdbNum;
+            query["TsdbSpec"] = request.TsdbSpec;
+            query["VPCId"] = request.VPCId;
+            query["VSwitchId"] = request.VSwitchId;
+            query["ZoneId"] = request.ZoneId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLindormInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateLindormInstanceResponse> CreateLindormInstanceWithOptionsAsync(CreateLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ColdStorage"] = request.ColdStorage;
+            query["CoreSpec"] = request.CoreSpec;
+            query["DiskCategory"] = request.DiskCategory;
+            query["Duration"] = request.Duration;
+            query["FilestoreNum"] = request.FilestoreNum;
+            query["FilestoreSpec"] = request.FilestoreSpec;
+            query["InstanceAlias"] = request.InstanceAlias;
+            query["InstanceStorage"] = request.InstanceStorage;
+            query["LindormNum"] = request.LindormNum;
+            query["LindormSpec"] = request.LindormSpec;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["PayType"] = request.PayType;
+            query["PricingCycle"] = request.PricingCycle;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SolrNum"] = request.SolrNum;
+            query["SolrSpec"] = request.SolrSpec;
+            query["TsdbNum"] = request.TsdbNum;
+            query["TsdbSpec"] = request.TsdbSpec;
+            query["VPCId"] = request.VPCId;
+            query["VSwitchId"] = request.VSwitchId;
+            query["ZoneId"] = request.ZoneId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLindormInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateLindormInstanceResponse CreateLindormInstance(CreateLindormInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLindormInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<CreateLindormInstanceResponse> CreateLindormInstanceAsync(CreateLindormInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLindormInstanceWithOptionsAsync(request, runtime);
+        }
+
         public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AcceptLanguage"] = request.AcceptLanguage;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(DoRPCRequest("DescribeRegions", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["AcceptLanguage"] = request.AcceptLanguage;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(await DoRPCRequestAsync("DescribeRegions", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
@@ -122,21 +268,61 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         public GetInstanceIpWhiteListResponse GetInstanceIpWhiteListWithOptions(GetInstanceIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetInstanceIpWhiteListResponse>(DoRPCRequest("GetInstanceIpWhiteList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceIpWhiteList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceIpWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetInstanceIpWhiteListResponse> GetInstanceIpWhiteListWithOptionsAsync(GetInstanceIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetInstanceIpWhiteListResponse>(await DoRPCRequestAsync("GetInstanceIpWhiteList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceIpWhiteList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceIpWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetInstanceIpWhiteListResponse GetInstanceIpWhiteList(GetInstanceIpWhiteListRequest request)
@@ -154,21 +340,61 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         public GetLindormInstanceResponse GetLindormInstanceWithOptions(GetLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetLindormInstanceResponse>(DoRPCRequest("GetLindormInstance", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLindormInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetLindormInstanceResponse> GetLindormInstanceWithOptionsAsync(GetLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetLindormInstanceResponse>(await DoRPCRequestAsync("GetLindormInstance", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLindormInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetLindormInstanceResponse GetLindormInstance(GetLindormInstanceRequest request)
@@ -186,21 +412,61 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         public GetLindormInstanceEngineListResponse GetLindormInstanceEngineListWithOptions(GetLindormInstanceEngineListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetLindormInstanceEngineListResponse>(DoRPCRequest("GetLindormInstanceEngineList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLindormInstanceEngineList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLindormInstanceEngineListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetLindormInstanceEngineListResponse> GetLindormInstanceEngineListWithOptionsAsync(GetLindormInstanceEngineListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetLindormInstanceEngineListResponse>(await DoRPCRequestAsync("GetLindormInstanceEngineList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLindormInstanceEngineList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLindormInstanceEngineListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetLindormInstanceEngineListResponse GetLindormInstanceEngineList(GetLindormInstanceEngineListRequest request)
@@ -218,21 +484,69 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         public GetLindormInstanceListResponse GetLindormInstanceListWithOptions(GetLindormInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["QueryStr"] = request.QueryStr;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["ServiceType"] = request.ServiceType;
+            query["SupportEngine"] = request.SupportEngine;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetLindormInstanceListResponse>(DoRPCRequest("GetLindormInstanceList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLindormInstanceList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLindormInstanceListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetLindormInstanceListResponse> GetLindormInstanceListWithOptionsAsync(GetLindormInstanceListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["PageNumber"] = request.PageNumber;
+            query["PageSize"] = request.PageSize;
+            query["QueryStr"] = request.QueryStr;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["ServiceType"] = request.ServiceType;
+            query["SupportEngine"] = request.SupportEngine;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<GetLindormInstanceListResponse>(await DoRPCRequestAsync("GetLindormInstanceList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLindormInstanceList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLindormInstanceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetLindormInstanceListResponse GetLindormInstanceList(GetLindormInstanceListRequest request)
@@ -247,24 +561,136 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await GetLindormInstanceListWithOptionsAsync(request, runtime);
         }
 
+        public ReleaseLindormInstanceResponse ReleaseLindormInstanceWithOptions(ReleaseLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseLindormInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ReleaseLindormInstanceResponse> ReleaseLindormInstanceWithOptionsAsync(ReleaseLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseLindormInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ReleaseLindormInstanceResponse ReleaseLindormInstance(ReleaseLindormInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReleaseLindormInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<ReleaseLindormInstanceResponse> ReleaseLindormInstanceAsync(ReleaseLindormInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReleaseLindormInstanceWithOptionsAsync(request, runtime);
+        }
+
         public UpdateInstanceIpWhiteListResponse UpdateInstanceIpWhiteListWithOptions(UpdateInstanceIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityIpList"] = request.SecurityIpList;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<UpdateInstanceIpWhiteListResponse>(DoRPCRequest("UpdateInstanceIpWhiteList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceIpWhiteList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceIpWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateInstanceIpWhiteListResponse> UpdateInstanceIpWhiteListWithOptionsAsync(UpdateInstanceIpWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["GroupName"] = request.GroupName;
+            query["InstanceId"] = request.InstanceId;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityIpList"] = request.SecurityIpList;
+            query["SecurityToken"] = request.SecurityToken;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            return TeaModel.ToObject<UpdateInstanceIpWhiteListResponse>(await DoRPCRequestAsync("UpdateInstanceIpWhiteList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceIpWhiteList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceIpWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateInstanceIpWhiteListResponse UpdateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request)
@@ -277,6 +703,114 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceIpWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        public UpgradeLindormInstanceResponse UpgradeLindormInstanceWithOptions(UpgradeLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ClusterStorage"] = request.ClusterStorage;
+            query["ColdStorage"] = request.ColdStorage;
+            query["CoreNum"] = request.CoreNum;
+            query["CoreSpec"] = request.CoreSpec;
+            query["FilestoreNum"] = request.FilestoreNum;
+            query["FilestoreSpec"] = request.FilestoreSpec;
+            query["InstanceId"] = request.InstanceId;
+            query["LindormNum"] = request.LindormNum;
+            query["LindormSpec"] = request.LindormSpec;
+            query["LtsCoreNum"] = request.LtsCoreNum;
+            query["LtsCoreSpec"] = request.LtsCoreSpec;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["PhoenixCoreNum"] = request.PhoenixCoreNum;
+            query["PhoenixCoreSpec"] = request.PhoenixCoreSpec;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SolrNum"] = request.SolrNum;
+            query["SolrSpec"] = request.SolrSpec;
+            query["TsdbNum"] = request.TsdbNum;
+            query["TsdbSpec"] = request.TsdbSpec;
+            query["UpgradeType"] = request.UpgradeType;
+            query["ZoneId"] = request.ZoneId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeLindormInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpgradeLindormInstanceResponse> UpgradeLindormInstanceWithOptionsAsync(UpgradeLindormInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["ClusterStorage"] = request.ClusterStorage;
+            query["ColdStorage"] = request.ColdStorage;
+            query["CoreNum"] = request.CoreNum;
+            query["CoreSpec"] = request.CoreSpec;
+            query["FilestoreNum"] = request.FilestoreNum;
+            query["FilestoreSpec"] = request.FilestoreSpec;
+            query["InstanceId"] = request.InstanceId;
+            query["LindormNum"] = request.LindormNum;
+            query["LindormSpec"] = request.LindormSpec;
+            query["LtsCoreNum"] = request.LtsCoreNum;
+            query["LtsCoreSpec"] = request.LtsCoreSpec;
+            query["OwnerAccount"] = request.OwnerAccount;
+            query["OwnerId"] = request.OwnerId;
+            query["PhoenixCoreNum"] = request.PhoenixCoreNum;
+            query["PhoenixCoreSpec"] = request.PhoenixCoreSpec;
+            query["RegionId"] = request.RegionId;
+            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            query["SecurityToken"] = request.SecurityToken;
+            query["SolrNum"] = request.SolrNum;
+            query["SolrSpec"] = request.SolrSpec;
+            query["TsdbNum"] = request.TsdbNum;
+            query["TsdbSpec"] = request.TsdbSpec;
+            query["UpgradeType"] = request.UpgradeType;
+            query["ZoneId"] = request.ZoneId;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeLindormInstance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeLindormInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpgradeLindormInstanceResponse UpgradeLindormInstance(UpgradeLindormInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpgradeLindormInstanceWithOptions(request, runtime);
+        }
+
+        public async Task<UpgradeLindormInstanceResponse> UpgradeLindormInstanceAsync(UpgradeLindormInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpgradeLindormInstanceWithOptionsAsync(request, runtime);
         }
 
     }

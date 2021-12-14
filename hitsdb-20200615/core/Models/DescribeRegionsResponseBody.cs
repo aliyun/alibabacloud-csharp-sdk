@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
@@ -30,6 +26,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string RegionId { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
