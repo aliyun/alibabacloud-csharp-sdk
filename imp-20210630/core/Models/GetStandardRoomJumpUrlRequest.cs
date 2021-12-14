@@ -45,6 +45,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string Platform { get; set; }
 
         /// <summary>
+        /// cn-shanghai
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
         /// 用户UserId,在AppId下单独唯一
         /// </summary>
         [NameInMap("UserId")]

@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string ConferenceId { get; set; }
 
         /// <summary>
+        /// 地域
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
         /// 申请连麦用户
         /// </summary>
         [NameInMap("UserId")]

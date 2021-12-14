@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
         /// 房间ID，最大长度36个字符，传空值，则随机生成一个房间ID。
         /// </summary>

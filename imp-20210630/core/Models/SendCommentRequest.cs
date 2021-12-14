@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Extension { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
         /// 直播间唯一标识，在调用CreateRoom返回。
         /// </summary>

@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
         /// 课程状态，0-未开课 1-上课中 2-已下课，不传则返回所有课程。
         /// </summary>

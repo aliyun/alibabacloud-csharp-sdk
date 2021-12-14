@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imp20210630.Models
 {
-    public class VerifyDomainOwnerRequest : TeaModel {
-        /// <summary>
-        /// 直播域名
-        /// </summary>
-        [NameInMap("LiveDomainName")]
-        [Validation(Required=false)]
-        public string LiveDomainName { get; set; }
-
+    public class GetImpProductStatusRequest : TeaModel {
         /// <summary>
         /// 地域
         /// </summary>
