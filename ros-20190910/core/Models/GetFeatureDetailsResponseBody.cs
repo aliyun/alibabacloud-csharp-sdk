@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<string> EstimateCost { get; set; }
 
+                [NameInMap("ResourceGroup")]
+                [Validation(Required=false)]
+                public List<string> ResourceGroup { get; set; }
+
                 [NameInMap("SystemTag")]
                 [Validation(Required=false)]
                 public List<string> SystemTag { get; set; }

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public bool? SupportDriftDetection { get; set; }
 
+        [NameInMap("SupportScratchDetection")]
+        [Validation(Required=false)]
+        public bool? SupportScratchDetection { get; set; }
+
     }
 
 }
