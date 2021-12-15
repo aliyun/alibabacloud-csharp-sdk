@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [NameInMap("Height")]
             [Validation(Required=false)]
             public long? Height { get; set; }
+            [NameInMap("InputFile")]
+            [Validation(Required=false)]
+            public string InputFile { get; set; }
             [NameInMap("Width")]
             [Validation(Required=false)]
             public long? Width { get; set; }
