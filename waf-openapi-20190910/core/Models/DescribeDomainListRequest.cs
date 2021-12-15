@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class DescribeDomainListRequest : TeaModel {
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string DomainName { get; set; }
+
+        [NameInMap("DomainNames")]
+        [Validation(Required=false)]
+        public List<string> DomainNames { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("IsSub")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public int? IsSub { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,13 +33,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("IsSub")]
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public int? IsSub { get; set; }
-
-        [NameInMap("DomainNames")]
-        [Validation(Required=false)]
-        public List<string> DomainNames { get; set; }
+        public string ResourceGroupId { get; set; }
 
     }
 

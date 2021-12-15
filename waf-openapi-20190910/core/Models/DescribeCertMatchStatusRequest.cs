@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class DescribeCertMatchStatusRequest : TeaModel {
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
-
         [NameInMap("Certificate")]
         [Validation(Required=false)]
         public string Certificate { get; set; }
 
-        [NameInMap("PrivateKey")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string PrivateKey { get; set; }
+        public string Domain { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("PrivateKey")]
+        [Validation(Required=false)]
+        public string PrivateKey { get; set; }
 
     }
 

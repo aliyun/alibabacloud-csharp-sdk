@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
-    public class DescribeProtectionModuleModeResponse : TeaModel {
+    public class MoveResourceGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeProtectionModuleModeResponseBody Body { get; set; }
+        public MoveResourceGroupResponseBody Body { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class DescribeProtectionModuleRulesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,6 +17,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [Validation(Required=false)]
         public List<DescribeProtectionModuleRulesResponseBodyRules> Rules { get; set; }
         public class DescribeProtectionModuleRulesResponseBodyRules : TeaModel {
+            [NameInMap("Content")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Content { get; set; }
+
+            [NameInMap("RuleId")]
+            [Validation(Required=false)]
+            public long? RuleId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public long? Status { get; set; }
@@ -33,15 +37,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
             [Validation(Required=false)]
             public long? Version { get; set; }
 
-            [NameInMap("Content")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> Content { get; set; }
-
-            [NameInMap("RuleId")]
-            [Validation(Required=false)]
-            public long? RuleId { get; set; }
-
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

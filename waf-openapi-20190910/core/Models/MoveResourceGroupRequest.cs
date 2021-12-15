@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
-    public class SetDomainRuleGroupRequest : TeaModel {
-        [NameInMap("Domains")]
+    public class MoveResourceGroupRequest : TeaModel {
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Domains { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("RuleGroupId")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public long? RuleGroupId { get; set; }
+        public string ResourceId { get; set; }
 
-        [NameInMap("WafVersion")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public long? WafVersion { get; set; }
+        public string ResourceType { get; set; }
 
     }
 

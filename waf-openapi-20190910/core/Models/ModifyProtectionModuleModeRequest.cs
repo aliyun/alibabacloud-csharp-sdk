@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class ModifyProtectionModuleModeRequest : TeaModel {
-        [NameInMap("Domain")]
-        [Validation(Required=false)]
-        public string Domain { get; set; }
-
         [NameInMap("DefenseType")]
         [Validation(Required=false)]
         public string DefenseType { get; set; }
 
-        [NameInMap("Mode")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public int? Mode { get; set; }
+        public string Domain { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public int? Mode { get; set; }
 
     }
 

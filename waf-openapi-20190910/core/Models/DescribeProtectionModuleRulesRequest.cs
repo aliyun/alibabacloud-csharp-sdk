@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class DescribeProtectionModuleRulesRequest : TeaModel {
-        [NameInMap("PageSize")]
+        [NameInMap("DefenseType")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string DefenseType { get; set; }
 
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
-        [NameInMap("DefenseType")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string DefenseType { get; set; }
-
-        [NameInMap("Query")]
-        [Validation(Required=false)]
-        public string Query { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

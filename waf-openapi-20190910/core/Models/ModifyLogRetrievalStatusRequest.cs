@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class ModifyLogRetrievalStatusRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public int? Enabled { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
     }
 

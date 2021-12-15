@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class DescribeDomainBasicConfigsRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("DomainKey")]
-        [Validation(Required=false)]
-        public string DomainKey { get; set; }
-
         [NameInMap("AccessType")]
         [Validation(Required=false)]
         public string AccessType { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
         [NameInMap("CloudNativeProductId")]
         [Validation(Required=false)]
         public int? CloudNativeProductId { get; set; }
+
+        [NameInMap("DomainKey")]
+        [Validation(Required=false)]
+        public string DomainKey { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

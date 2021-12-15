@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20190910.Models
 {
     public class DescribeDomainListResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("DomainNames")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public List<string> DomainNames { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DomainNames")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public List<string> DomainNames { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 
