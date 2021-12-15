@@ -45,6 +45,13 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// 输出的视频，oss三元组
+        /// </summary>
+        [NameInMap("Output")]
+        [Validation(Required=false)]
+        public string Output { get; set; }
+
+        /// <summary>
         /// 水印起始时间(单位是秒)，不填写默认为0
         /// </summary>
         [NameInMap("StartTime")]
@@ -59,11 +66,11 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         public long? TotalTime { get; set; }
 
         /// <summary>
-        /// 输出的视频，oss三元组
+        /// 外部url链接(Input和url二选一)
         /// </summary>
-        [NameInMap("Output")]
+        [NameInMap("Url")]
         [Validation(Required=false)]
-        public string Output { get; set; }
+        public string Url { get; set; }
 
         /// <summary>
         /// 用户自定义数据
@@ -71,13 +78,6 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
-
-        /// <summary>
-        /// 外部url链接(Input和url二选一)
-        /// </summary>
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
 
     }
 

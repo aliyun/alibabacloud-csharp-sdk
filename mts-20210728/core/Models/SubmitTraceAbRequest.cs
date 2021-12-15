@@ -38,18 +38,18 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
         public string Output { get; set; }
 
         /// <summary>
-        /// 用户自定义数据，最大长度1024个字节
-        /// </summary>
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
-
-        /// <summary>
         /// 外部url链接(Input和url二选一)
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
+
+        /// <summary>
+        /// 用户自定义数据，最大长度1024个字节
+        /// </summary>
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 

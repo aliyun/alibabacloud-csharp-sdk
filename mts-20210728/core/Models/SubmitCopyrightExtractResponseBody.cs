@@ -8,32 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mts20210728.Models
 {
-    public class SubmitTracemuResponseBody : TeaModel {
-        /// <summary>
-        /// 返回数据
-        /// </summary>
+    public class SubmitCopyrightExtractResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public SubmitTracemuResponseBodyData Data { get; set; }
-        public class SubmitTracemuResponseBodyData : TeaModel {
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
+        public SubmitCopyrightExtractResponseBodyData Data { get; set; }
+        public class SubmitCopyrightExtractResponseBodyData : TeaModel {
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
         };
 
         /// <summary>
-        /// 返回信息
+        /// 返回消息
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// 请求Id
-        /// </summary>
         [NameInMap("RequestID")]
         [Validation(Required=false)]
         public string RequestID { get; set; }

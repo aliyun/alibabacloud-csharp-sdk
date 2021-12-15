@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mts20210728.Models
 {
     public class QueryCopyrightResponseBody : TeaModel {
-        [NameInMap("RequestID")]
-        [Validation(Required=false)]
-        public string RequestID { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryCopyrightResponseBodyData> Data { get; set; }
@@ -102,6 +98,10 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
             public long? UserId { get; set; }
 
         }
+
+        [NameInMap("RequestID")]
+        [Validation(Required=false)]
+        public string RequestID { get; set; }
 
         /// <summary>
         /// 状态码

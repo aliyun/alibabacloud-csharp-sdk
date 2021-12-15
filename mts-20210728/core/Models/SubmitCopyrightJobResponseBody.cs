@@ -10,20 +10,6 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
 {
     public class SubmitCopyrightJobResponseBody : TeaModel {
         /// <summary>
-        /// 请求Id
-        /// </summary>
-        [NameInMap("RequestID")]
-        [Validation(Required=false)]
-        public string RequestID { get; set; }
-
-        /// <summary>
-        /// 返回信息
-        /// </summary>
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        /// <summary>
         /// 返回数据
         /// </summary>
         [NameInMap("Data")]
@@ -34,6 +20,20 @@ namespace AlibabaCloud.SDK.Mts20210728.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
         };
+
+        /// <summary>
+        /// 返回信息
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// 请求Id
+        /// </summary>
+        [NameInMap("RequestID")]
+        [Validation(Required=false)]
+        public string RequestID { get; set; }
 
         /// <summary>
         /// 状态码
