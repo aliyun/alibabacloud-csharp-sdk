@@ -49,7 +49,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -60,7 +59,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeEmptyNumberDetectResponse>(CallApi(params_, req, runtime));
@@ -78,7 +77,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -89,7 +87,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeEmptyNumberDetectResponse>(await CallApiAsync(params_, req, runtime));
@@ -122,7 +120,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -133,7 +130,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberAnalysisResponse>(CallApi(params_, req, runtime));
@@ -154,7 +151,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -165,7 +161,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberAnalysisResponse>(await CallApiAsync(params_, req, runtime));
@@ -194,7 +190,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -205,7 +200,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberAttributeResponse>(CallApi(params_, req, runtime));
@@ -222,7 +217,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -233,7 +227,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberAttributeResponse>(await CallApiAsync(params_, req, runtime));
@@ -263,7 +257,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -274,7 +267,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(CallApi(params_, req, runtime));
@@ -292,7 +285,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -303,7 +295,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberResaleResponse>(await CallApiAsync(params_, req, runtime));
@@ -332,7 +324,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -343,7 +334,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberStatusResponse>(CallApi(params_, req, runtime));
@@ -360,7 +351,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -371,7 +361,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePhoneNumberStatusResponse>(await CallApiAsync(params_, req, runtime));
@@ -401,7 +391,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "none",
             };
             return TeaModel.ToObject<PvrCallbackFCUResponse>(CallApi(params_, req, runtime));
@@ -419,7 +409,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "none",
             };
             return TeaModel.ToObject<PvrCallbackFCUResponse>(await CallApiAsync(params_, req, runtime));

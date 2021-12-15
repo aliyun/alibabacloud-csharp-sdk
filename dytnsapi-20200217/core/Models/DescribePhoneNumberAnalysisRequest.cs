@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
         [NameInMap("NumberType")]
         [Validation(Required=false)]
-        public long? NumberType { get; set; }
+        public int? NumberType { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
