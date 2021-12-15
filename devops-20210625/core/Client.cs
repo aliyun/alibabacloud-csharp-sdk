@@ -37,6 +37,166 @@ namespace AlibabaCloud.SDK.Devops20210625
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        public CreateFlowTagResponse CreateFlowTag(string organizationId, CreateFlowTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateFlowTagWithOptions(organizationId, request, headers, runtime);
+        }
+
+        public async Task<CreateFlowTagResponse> CreateFlowTagAsync(string organizationId, CreateFlowTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateFlowTagWithOptionsAsync(organizationId, request, headers, runtime);
+        }
+
+        public CreateFlowTagResponse CreateFlowTagWithOptions(string organizationId, CreateFlowTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Color))
+            {
+                query["color"] = request.Color;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTagGroupId))
+            {
+                query["flowTagGroupId"] = request.FlowTagGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowTag",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tags",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateFlowTagResponse> CreateFlowTagWithOptionsAsync(string organizationId, CreateFlowTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Color))
+            {
+                query["color"] = request.Color;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTagGroupId))
+            {
+                query["flowTagGroupId"] = request.FlowTagGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowTag",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tags",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateFlowTagGroupResponse CreateFlowTagGroup(string organizationId, CreateFlowTagGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateFlowTagGroupWithOptions(organizationId, request, headers, runtime);
+        }
+
+        public async Task<CreateFlowTagGroupResponse> CreateFlowTagGroupAsync(string organizationId, CreateFlowTagGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateFlowTagGroupWithOptionsAsync(organizationId, request, headers, runtime);
+        }
+
+        public CreateFlowTagGroupResponse CreateFlowTagGroupWithOptions(string organizationId, CreateFlowTagGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowTagGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateFlowTagGroupResponse> CreateFlowTagGroupWithOptionsAsync(string organizationId, CreateFlowTagGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowTagGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public CreateHostGroupResponse CreateHostGroup(string organizationId, CreateHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -537,6 +697,126 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<CreateWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public DeleteFlowTagResponse DeleteFlowTag(string organizationId, string id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteFlowTagWithOptions(organizationId, id, headers, runtime);
+        }
+
+        public async Task<DeleteFlowTagResponse> DeleteFlowTagAsync(string organizationId, string id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteFlowTagWithOptionsAsync(organizationId, id, headers, runtime);
+        }
+
+        public DeleteFlowTagResponse DeleteFlowTagWithOptions(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowTag",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tags/" + id,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteFlowTagResponse> DeleteFlowTagWithOptionsAsync(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowTag",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tags/" + id,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DeleteFlowTagGroupResponse DeleteFlowTagGroup(string organizationId, string id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteFlowTagGroupWithOptions(organizationId, id, headers, runtime);
+        }
+
+        public async Task<DeleteFlowTagGroupResponse> DeleteFlowTagGroupAsync(string organizationId, string id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteFlowTagGroupWithOptionsAsync(organizationId, id, headers, runtime);
+        }
+
+        public DeleteFlowTagGroupResponse DeleteFlowTagGroupWithOptions(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups/" + id,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowTagGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DeleteFlowTagGroupResponse> DeleteFlowTagGroupWithOptionsAsync(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups/" + id,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowTagGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public DeleteHostGroupResponse DeleteHostGroup(string organizationId, string id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -839,6 +1119,66 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<FrozenWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public GetFlowTagGroupResponse GetFlowTagGroup(string organizationId, string id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetFlowTagGroupWithOptions(organizationId, id, headers, runtime);
+        }
+
+        public async Task<GetFlowTagGroupResponse> GetFlowTagGroupAsync(string organizationId, string id)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetFlowTagGroupWithOptionsAsync(organizationId, id, headers, runtime);
+        }
+
+        public GetFlowTagGroupResponse GetFlowTagGroupWithOptions(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups/" + id,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowTagGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetFlowTagGroupResponse> GetFlowTagGroupWithOptionsAsync(string organizationId, string id, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups/" + id,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowTagGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public GetHostGroupResponse GetHostGroup(string organizationId, string id)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1081,6 +1421,66 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<GetPipelineRunResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public GetProjectInfoResponse GetProjectInfo(string organizationId, string projectId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetProjectInfoWithOptions(organizationId, projectId, headers, runtime);
+        }
+
+        public async Task<GetProjectInfoResponse> GetProjectInfoAsync(string organizationId, string projectId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetProjectInfoWithOptionsAsync(organizationId, projectId, headers, runtime);
+        }
+
+        public GetProjectInfoResponse GetProjectInfoWithOptions(string organizationId, string projectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            projectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectInfo",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/project/" + projectId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetProjectInfoResponse> GetProjectInfoWithOptionsAsync(string organizationId, string projectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            projectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProjectInfo",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/project/" + projectId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public GetVMDeployOrderResponse GetVMDeployOrder(string organizationId, string pipelineId, string deployOrderId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1259,6 +1659,64 @@ namespace AlibabaCloud.SDK.Devops20210625
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListFlowTagGroupsResponse ListFlowTagGroups(string organizationId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListFlowTagGroupsWithOptions(organizationId, headers, runtime);
+        }
+
+        public async Task<ListFlowTagGroupsResponse> ListFlowTagGroupsAsync(string organizationId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListFlowTagGroupsWithOptionsAsync(organizationId, headers, runtime);
+        }
+
+        public ListFlowTagGroupsResponse ListFlowTagGroupsWithOptions(string organizationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowTagGroups",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowTagGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListFlowTagGroupsResponse> ListFlowTagGroupsWithOptionsAsync(string organizationId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowTagGroups",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowTagGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListHostGroupsResponse ListHostGroups(string organizationId, ListHostGroupsRequest request)
@@ -1781,6 +2239,80 @@ namespace AlibabaCloud.SDK.Devops20210625
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListPipelinesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListProjectMembersResponse ListProjectMembers(string organizationId, string projectId, ListProjectMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListProjectMembersWithOptions(organizationId, projectId, request, headers, runtime);
+        }
+
+        public async Task<ListProjectMembersResponse> ListProjectMembersAsync(string organizationId, string projectId, ListProjectMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListProjectMembersWithOptionsAsync(organizationId, projectId, request, headers, runtime);
+        }
+
+        public ListProjectMembersResponse ListProjectMembersWithOptions(string organizationId, string projectId, ListProjectMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            projectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjectMembers",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/projects/" + projectId + "/listMembers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListProjectMembersResponse> ListProjectMembersWithOptionsAsync(string organizationId, string projectId, ListProjectMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            projectId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjectMembers",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/projects/" + projectId + "/listMembers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListResourceMembersResponse ListResourceMembers(string organizationId, string resourceType, string resourceId)
@@ -3079,6 +3611,170 @@ namespace AlibabaCloud.SDK.Devops20210625
             return TeaModel.ToObject<StopVMDeployOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public UpdateFlowTagResponse UpdateFlowTag(string organizationId, string id, UpdateFlowTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateFlowTagWithOptions(organizationId, id, request, headers, runtime);
+        }
+
+        public async Task<UpdateFlowTagResponse> UpdateFlowTagAsync(string organizationId, string id, UpdateFlowTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateFlowTagWithOptionsAsync(organizationId, id, request, headers, runtime);
+        }
+
+        public UpdateFlowTagResponse UpdateFlowTagWithOptions(string organizationId, string id, UpdateFlowTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Color))
+            {
+                query["color"] = request.Color;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTagGroupId))
+            {
+                query["flowTagGroupId"] = request.FlowTagGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowTag",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tags/" + id,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateFlowTagResponse> UpdateFlowTagWithOptionsAsync(string organizationId, string id, UpdateFlowTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Color))
+            {
+                query["color"] = request.Color;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTagGroupId))
+            {
+                query["flowTagGroupId"] = request.FlowTagGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowTag",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tags/" + id,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateFlowTagGroupResponse UpdateFlowTagGroup(string organizationId, string id, UpdateFlowTagGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateFlowTagGroupWithOptions(organizationId, id, request, headers, runtime);
+        }
+
+        public async Task<UpdateFlowTagGroupResponse> UpdateFlowTagGroupAsync(string organizationId, string id, UpdateFlowTagGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateFlowTagGroupWithOptionsAsync(organizationId, id, request, headers, runtime);
+        }
+
+        public UpdateFlowTagGroupResponse UpdateFlowTagGroupWithOptions(string organizationId, string id, UpdateFlowTagGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups/" + id,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowTagGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateFlowTagGroupResponse> UpdateFlowTagGroupWithOptionsAsync(string organizationId, string id, UpdateFlowTagGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            id = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowTagGroup",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/flow/tagGroups/" + id,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowTagGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public UpdateHostGroupResponse UpdateHostGroup(string organizationId, string id, UpdateHostGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3223,6 +3919,96 @@ namespace AlibabaCloud.SDK.Devops20210625
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateHostGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdatePipelineBaseInfoResponse UpdatePipelineBaseInfo(string organizationId, string pipelineId, UpdatePipelineBaseInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdatePipelineBaseInfoWithOptions(organizationId, pipelineId, request, headers, runtime);
+        }
+
+        public async Task<UpdatePipelineBaseInfoResponse> UpdatePipelineBaseInfoAsync(string organizationId, string pipelineId, UpdatePipelineBaseInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdatePipelineBaseInfoWithOptionsAsync(organizationId, pipelineId, request, headers, runtime);
+        }
+
+        public UpdatePipelineBaseInfoResponse UpdatePipelineBaseInfoWithOptions(string organizationId, string pipelineId, UpdatePipelineBaseInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
+            {
+                query["envId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                query["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["tagList"] = request.TagList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePipelineBaseInfo",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/pipelines/" + pipelineId + "/baseInfo",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePipelineBaseInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdatePipelineBaseInfoResponse> UpdatePipelineBaseInfoWithOptionsAsync(string organizationId, string pipelineId, UpdatePipelineBaseInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            organizationId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(organizationId);
+            pipelineId = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pipelineId);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
+            {
+                query["envId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                query["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["tagList"] = request.TagList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePipelineBaseInfo",
+                Version = "2021-06-25",
+                Protocol = "HTTPS",
+                Pathname = "/organization/" + organizationId + "/pipelines/" + pipelineId + "/baseInfo",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePipelineBaseInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateResourceMemberResponse UpdateResourceMember(string organizationId, string resourceType, string resourceId, string accountId, UpdateResourceMemberRequest request)
