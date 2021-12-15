@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
     public class DescribeHostEcsLevelInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("HostEcsLevelInfos")]
         [Validation(Required=false)]
         public List<DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfos> HostEcsLevelInfos { get; set; }
@@ -25,17 +21,9 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
             [Validation(Required=false)]
             public List<DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems> Items { get; set; }
             public class DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems : TeaModel {
-                [NameInMap("NetBandWidth")]
+                [NameInMap("CloudStorageBandwidth")]
                 [Validation(Required=false)]
-                public float? NetBandWidth { get; set; }
-
-                [NameInMap("EcsClass")]
-                [Validation(Required=false)]
-                public string EcsClass { get; set; }
-
-                [NameInMap("RdsClassCode")]
-                [Validation(Required=false)]
-                public string RdsClassCode { get; set; }
+                public float? CloudStorageBandwidth { get; set; }
 
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
@@ -45,13 +33,17 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
                 [Validation(Required=false)]
                 public string CpuFrequency { get; set; }
 
-                [NameInMap("StorageIops")]
+                [NameInMap("CpuVersion")]
                 [Validation(Required=false)]
-                public int? StorageIops { get; set; }
+                public string CpuVersion { get; set; }
 
-                [NameInMap("CloudStorageBandwidth")]
+                [NameInMap("Description")]
                 [Validation(Required=false)]
-                public float? CloudStorageBandwidth { get; set; }
+                public string Description { get; set; }
+
+                [NameInMap("EcsClass")]
+                [Validation(Required=false)]
+                public string EcsClass { get; set; }
 
                 [NameInMap("EcsClassCode")]
                 [Validation(Required=false)]
@@ -61,29 +53,37 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
                 [Validation(Required=false)]
                 public int? IsCloudDisk { get; set; }
 
+                [NameInMap("LocalStorage")]
+                [Validation(Required=false)]
+                public string LocalStorage { get; set; }
+
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
                 public int? Memory { get; set; }
+
+                [NameInMap("NetBandWidth")]
+                [Validation(Required=false)]
+                public float? NetBandWidth { get; set; }
 
                 [NameInMap("NetPackage")]
                 [Validation(Required=false)]
                 public int? NetPackage { get; set; }
 
-                [NameInMap("CpuVersion")]
+                [NameInMap("RdsClassCode")]
                 [Validation(Required=false)]
-                public string CpuVersion { get; set; }
+                public string RdsClassCode { get; set; }
 
-                [NameInMap("LocalStorage")]
+                [NameInMap("StorageIops")]
                 [Validation(Required=false)]
-                public string LocalStorage { get; set; }
-
-                [NameInMap("Description")]
-                [Validation(Required=false)]
-                public string Description { get; set; }
+                public int? StorageIops { get; set; }
 
             }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

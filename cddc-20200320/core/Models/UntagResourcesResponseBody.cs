@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class DropDedicatedHostUserResponseBody : TeaModel {
+    public class UntagResourcesResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

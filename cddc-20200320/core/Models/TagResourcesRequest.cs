@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class DescribeHostWebShellRequest : TeaModel {
-        [NameInMap("DedicatedHostId")]
-        [Validation(Required=false)]
-        public string DedicatedHostId { get; set; }
-
+    public class TagResourcesRequest : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -29,9 +29,23 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("ZoneId")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string ResourceType { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<TagResourcesRequestTag> Tag { get; set; }
+        public class TagResourcesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

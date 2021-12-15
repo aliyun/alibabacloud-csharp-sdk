@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class ClearDedicatedHostResponseBody : TeaModel {
-        [NameInMap("DedicatedHostId")]
-        [Validation(Required=false)]
-        public string DedicatedHostId { get; set; }
-
+    public class TagResourcesResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
 
     }
 

@@ -8,10 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cddc20200320.Models
 {
-    public class DropDedicatedHostUserRequest : TeaModel {
+    public class UntagResourcesRequest : TeaModel {
+        [NameInMap("All")]
+        [Validation(Required=false)]
+        public bool? All { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,17 +33,13 @@ namespace AlibabaCloud.SDK.Cddc20200320.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("DedicatedHostName")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string DedicatedHostName { get; set; }
+        public string ResourceType { get; set; }
 
-        [NameInMap("UserName")]
+        [NameInMap("TagKey")]
         [Validation(Required=false)]
-        public string UserName { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<string> TagKey { get; set; }
 
     }
 
