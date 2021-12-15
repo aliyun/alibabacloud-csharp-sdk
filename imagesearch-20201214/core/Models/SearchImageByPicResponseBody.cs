@@ -9,9 +9,47 @@ using Tea;
 namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class SearchImageByPicResponseBody : TeaModel {
-        [NameInMap("Msg")]
+        [NameInMap("Auctions")]
         [Validation(Required=false)]
-        public string Msg { get; set; }
+        public List<SearchImageByPicResponseBodyAuctions> Auctions { get; set; }
+        public class SearchImageByPicResponseBodyAuctions : TeaModel {
+            [NameInMap("CategoryId")]
+            [Validation(Required=false)]
+            public int? CategoryId { get; set; }
+
+            [NameInMap("CustomContent")]
+            [Validation(Required=false)]
+            public string CustomContent { get; set; }
+
+            [NameInMap("IntAttr")]
+            [Validation(Required=false)]
+            public int? IntAttr { get; set; }
+
+            [NameInMap("PicName")]
+            [Validation(Required=false)]
+            public string PicName { get; set; }
+
+            [NameInMap("ProductId")]
+            [Validation(Required=false)]
+            public string ProductId { get; set; }
+
+            [NameInMap("Score")]
+            [Validation(Required=false)]
+            public float? Score { get; set; }
+
+            [NameInMap("SortExprValues")]
+            [Validation(Required=false)]
+            public string SortExprValues { get; set; }
+
+            [NameInMap("StrAttr")]
+            [Validation(Required=false)]
+            public string StrAttr { get; set; }
+
+        }
+
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
 
         [NameInMap("Head")]
         [Validation(Required=false)]
@@ -28,59 +66,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? SearchTime { get; set; }
         };
 
-        [NameInMap("RequestId")]
+        [NameInMap("Msg")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Auctions")]
-        [Validation(Required=false)]
-        public List<SearchImageByPicResponseBodyAuctions> Auctions { get; set; }
-        public class SearchImageByPicResponseBodyAuctions : TeaModel {
-            [NameInMap("PicName")]
-            [Validation(Required=false)]
-            public string PicName { get; set; }
-
-            [NameInMap("IntAttr")]
-            [Validation(Required=false)]
-            public int? IntAttr { get; set; }
-
-            [NameInMap("CategoryId")]
-            [Validation(Required=false)]
-            public int? CategoryId { get; set; }
-
-            [NameInMap("ProductId")]
-            [Validation(Required=false)]
-            public string ProductId { get; set; }
-
-            [NameInMap("StrAttr")]
-            [Validation(Required=false)]
-            public string StrAttr { get; set; }
-
-            [NameInMap("SortExprValues")]
-            [Validation(Required=false)]
-            public string SortExprValues { get; set; }
-
-            [NameInMap("CustomContent")]
-            [Validation(Required=false)]
-            public string CustomContent { get; set; }
-
-            [NameInMap("Score")]
-            [Validation(Required=false)]
-            public float? Score { get; set; }
-
-        }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Msg { get; set; }
 
         [NameInMap("PicInfo")]
         [Validation(Required=false)]
         public SearchImageByPicResponseBodyPicInfo PicInfo { get; set; }
         public class SearchImageByPicResponseBodyPicInfo : TeaModel {
-            [NameInMap("Region")]
+            [NameInMap("AllCategories")]
             [Validation(Required=false)]
-            public string Region { get; set; }
+            public List<SearchImageByPicResponseBodyPicInfoAllCategories> AllCategories { get; set; }
+            public class SearchImageByPicResponseBodyPicInfoAllCategories : TeaModel {
+                public int? Id { get; set; }
+                public string Name { get; set; }
+            }
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public class SearchImageByPicResponseBodyPicInfoMultiRegion : TeaModel {
                 public string Region { get; set; }
             }
-            [NameInMap("AllCategories")]
+            [NameInMap("Region")]
             [Validation(Required=false)]
-            public List<SearchImageByPicResponseBodyPicInfoAllCategories> AllCategories { get; set; }
-            public class SearchImageByPicResponseBodyPicInfoAllCategories : TeaModel {
-                public string Name { get; set; }
-                public int? Id { get; set; }
-            }
+            public string Region { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

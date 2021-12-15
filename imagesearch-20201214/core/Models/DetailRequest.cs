@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
-    public class DeleteImageRequest : TeaModel {
+    public class DetailRequest : TeaModel {
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
-
-        [NameInMap("PicName")]
-        [Validation(Required=false)]
-        public string PicName { get; set; }
-
-        [NameInMap("ProductId")]
-        [Validation(Required=false)]
-        public string ProductId { get; set; }
 
     }
 

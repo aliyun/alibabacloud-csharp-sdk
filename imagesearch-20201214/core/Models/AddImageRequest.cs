@@ -12,22 +12,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class AddImageRequest : TeaModel {
-        [NameInMap("InstanceName")]
-        [Validation(Required=false)]
-        public string InstanceName { get; set; }
-
-        [NameInMap("ProductId")]
-        [Validation(Required=false)]
-        public string ProductId { get; set; }
-
-        [NameInMap("PicName")]
-        [Validation(Required=false)]
-        public string PicName { get; set; }
-
-        [NameInMap("PicContent")]
-        [Validation(Required=false)]
-        public string PicContent { get; set; }
-
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public int? CategoryId { get; set; }
@@ -36,17 +20,33 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public bool? Crop { get; set; }
 
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
         [NameInMap("CustomContent")]
         [Validation(Required=false)]
         public string CustomContent { get; set; }
 
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         [NameInMap("IntAttr")]
         [Validation(Required=false)]
         public int? IntAttr { get; set; }
+
+        [NameInMap("PicContent")]
+        [Validation(Required=false)]
+        public string PicContent { get; set; }
+
+        [NameInMap("PicName")]
+        [Validation(Required=false)]
+        public string PicName { get; set; }
+
+        [NameInMap("ProductId")]
+        [Validation(Required=false)]
+        public string ProductId { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
         [NameInMap("StrAttr")]
         [Validation(Required=false)]

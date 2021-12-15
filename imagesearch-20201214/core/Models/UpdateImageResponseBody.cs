@@ -8,26 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
-    public class AddImageResponseBody : TeaModel {
+    public class UpdateImageResponseBody : TeaModel {
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// Id of the request
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
-
-        [NameInMap("PicInfo")]
-        [Validation(Required=false)]
-        public AddImageResponseBodyPicInfo PicInfo { get; set; }
-        public class AddImageResponseBodyPicInfo : TeaModel {
-            [NameInMap("CategoryId")]
-            [Validation(Required=false)]
-            public int? CategoryId { get; set; }
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
-        };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
