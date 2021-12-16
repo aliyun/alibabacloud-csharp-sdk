@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class CreateRepoTriggerRequest : TeaModel {
+    public class GetRepoTagRequest : TeaModel {
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -21,21 +21,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
-        [NameInMap("TriggerName")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public string TriggerName { get; set; }
-
-        [NameInMap("TriggerTag")]
-        [Validation(Required=false)]
-        public string TriggerTag { get; set; }
-
-        [NameInMap("TriggerType")]
-        [Validation(Required=false)]
-        public string TriggerType { get; set; }
-
-        [NameInMap("TriggerUrl")]
-        [Validation(Required=false)]
-        public string TriggerUrl { get; set; }
+        public string Tag { get; set; }
 
     }
 
