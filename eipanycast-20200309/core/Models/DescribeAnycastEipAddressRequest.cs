@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public string BindInstanceId { get; set; }
 
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
+
     }
 
 }
