@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public List<Part> Part { get; set; }
 
+        [NameInMap("PartNumberMarker")]
+        [Validation(Required=false)]
+        public long? PartNumberMarker { get; set; }
+
         [NameInMap("UploadId")]
         [Validation(Required=false)]
         public string UploadId { get; set; }

@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
-    public class UploadPartRequest : TeaModel {
-        [NameInMap("body")]
+    public class ListPartsShrinkRequest : TeaModel {
+        [NameInMap("encoding-type")]
         [Validation(Required=false)]
-        public Stream Body { get; set; }
+        public string EncodingTypeShrink { get; set; }
 
-        [NameInMap("partNumber")]
+        [NameInMap("max-parts")]
         [Validation(Required=false)]
-        public long? PartNumber { get; set; }
+        public long? MaxParts { get; set; }
+
+        [NameInMap("part-number-marker")]
+        [Validation(Required=false)]
+        public long? PartNumberMarker { get; set; }
 
         [NameInMap("uploadId")]
         [Validation(Required=false)]

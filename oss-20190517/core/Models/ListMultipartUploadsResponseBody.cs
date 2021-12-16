@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("Upload")]
         [Validation(Required=false)]
-        public List<Upload> Upload { get; set; }
+        public List<Upload> Uploads { get; set; }
 
         [NameInMap("UploadIdMarker")]
         [Validation(Required=false)]

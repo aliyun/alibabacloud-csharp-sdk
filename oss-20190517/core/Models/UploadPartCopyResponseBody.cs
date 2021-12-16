@@ -8,17 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oss20190517.Models
 {
-    public class CopyPartResult : TeaModel {
-        /// <summary>
-        /// A short description of ETag
-        /// </summary>
+    public class UploadPartCopyResponseBody : TeaModel {
         [NameInMap("ETag")]
         [Validation(Required=false)]
         public string ETag { get; set; }
 
-        /// <summary>
-        /// A short description of LastModified
-        /// </summary>
         [NameInMap("LastModified")]
         [Validation(Required=false)]
         public string LastModified { get; set; }

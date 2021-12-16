@@ -13,33 +13,29 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
-        [NameInMap("source-bucket")]
+        [NameInMap("x-oss-copy-source")]
         [Validation(Required=false)]
-        public string SourceBucket { get; set; }
-
-        [NameInMap("source-key")]
-        [Validation(Required=false)]
-        public string SourceKey { get; set; }
+        public string CopySource { get; set; }
 
         [NameInMap("x-oss-copy-source-if-match")]
         [Validation(Required=false)]
-        public string XOssCopySourceIfMatch { get; set; }
+        public string CopySourceIfMatch { get; set; }
 
         [NameInMap("x-oss-copy-source-if-modified-since")]
         [Validation(Required=false)]
-        public string XOssCopySourceIfModifiedSince { get; set; }
+        public string CopySourceIfModifiedSince { get; set; }
 
         [NameInMap("x-oss-copy-source-if-none-match")]
         [Validation(Required=false)]
-        public string XOssCopySourceIfNoneMatch { get; set; }
+        public string CopySourceIfNoneMatch { get; set; }
 
         [NameInMap("x-oss-copy-source-if-unmodified-since")]
         [Validation(Required=false)]
-        public string XOssCopySourceIfUnmodifiedSince { get; set; }
+        public string CopySourceIfUnmodifiedSince { get; set; }
 
         [NameInMap("x-oss-copy-source-range")]
         [Validation(Required=false)]
-        public string XOssCopySourceRange { get; set; }
+        public string CopySourceRange { get; set; }
 
     }
 

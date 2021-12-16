@@ -444,13 +444,13 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders = headers.CommonHeaders;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCompleteAll))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CompleteAll))
             {
-                realHeaders["x-oss-complete-all"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCompleteAll);
+                realHeaders["x-oss-complete-all"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CompleteAll);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssForbidOverwrite))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ForbidOverwrite))
             {
-                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssForbidOverwrite);
+                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ForbidOverwrite);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -499,13 +499,13 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders = headers.CommonHeaders;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCompleteAll))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CompleteAll))
             {
-                realHeaders["x-oss-complete-all"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCompleteAll);
+                realHeaders["x-oss-complete-all"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CompleteAll);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssForbidOverwrite))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ForbidOverwrite))
             {
-                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssForbidOverwrite);
+                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ForbidOverwrite);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4537,23 +4537,25 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
-        public ListMultipartUploadsResponse ListMultipartUploads(ListMultipartUploadsRequest request)
+        public ListMultipartUploadsResponse ListMultipartUploads(string bucket, ListMultipartUploadsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListMultipartUploadsWithOptions(request, headers, runtime);
+            return ListMultipartUploadsWithOptions(bucket, request, headers, runtime);
         }
 
-        public async Task<ListMultipartUploadsResponse> ListMultipartUploadsAsync(ListMultipartUploadsRequest request)
+        public async Task<ListMultipartUploadsResponse> ListMultipartUploadsAsync(string bucket, ListMultipartUploadsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListMultipartUploadsWithOptionsAsync(request, headers, runtime);
+            return await ListMultipartUploadsWithOptionsAsync(bucket, request, headers, runtime);
         }
 
-        public ListMultipartUploadsResponse ListMultipartUploadsWithOptions(ListMultipartUploadsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListMultipartUploadsResponse ListMultipartUploadsWithOptions(string bucket, ListMultipartUploadsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["bucket"] = bucket;
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delimiter))
             {
@@ -4581,6 +4583,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
@@ -4599,9 +4602,11 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListMultipartUploadsResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<ListMultipartUploadsResponse> ListMultipartUploadsWithOptionsAsync(ListMultipartUploadsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListMultipartUploadsResponse> ListMultipartUploadsWithOptionsAsync(string bucket, ListMultipartUploadsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["bucket"] = bucket;
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Delimiter))
             {
@@ -4629,6 +4634,7 @@ namespace AlibabaCloud.SDK.Oss20190517
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                HostMap = hostMap,
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
@@ -5009,16 +5015,22 @@ namespace AlibabaCloud.SDK.Oss20190517
             return await ListPartsWithOptionsAsync(bucket, key, request, headers, runtime);
         }
 
-        public ListPartsResponse ListPartsWithOptions(string bucket, string key, ListPartsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPartsResponse ListPartsWithOptions(string bucket, string key, ListPartsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
             key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
+            ListPartsShrinkRequest request = new ListPartsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EncodingType))
             {
-                query["encoding-type"] = request.EncodingType;
+                request.EncodingTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncodingType, "encoding-type", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingTypeShrink))
+            {
+                query["encoding-type"] = request.EncodingTypeShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxParts))
             {
@@ -5053,16 +5065,22 @@ namespace AlibabaCloud.SDK.Oss20190517
             return TeaModel.ToObject<ListPartsResponse>(Execute(params_, req, runtime));
         }
 
-        public async Task<ListPartsResponse> ListPartsWithOptionsAsync(string bucket, string key, ListPartsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPartsResponse> ListPartsWithOptionsAsync(string bucket, string key, ListPartsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["bucket"] = bucket;
             key = AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(key);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingType))
+            ListPartsShrinkRequest request = new ListPartsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EncodingType))
             {
-                query["encoding-type"] = request.EncodingType;
+                request.EncodingTypeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EncodingType, "encoding-type", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncodingTypeShrink))
+            {
+                query["encoding-type"] = request.EncodingTypeShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxParts))
             {
@@ -7019,9 +7037,9 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders = headers.CommonHeaders;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssForbidOverwrite))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ForbidOverwrite))
             {
-                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssForbidOverwrite);
+                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ForbidOverwrite);
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Acl))
             {
@@ -7065,9 +7083,9 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders = headers.CommonHeaders;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssForbidOverwrite))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.ForbidOverwrite))
             {
-                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssForbidOverwrite);
+                realHeaders["x-oss-forbid-overwrite"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.ForbidOverwrite);
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Acl))
             {
@@ -7393,33 +7411,29 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders = headers.CommonHeaders;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.SourceBucket))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySource))
             {
-                realHeaders["source-bucket"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.SourceBucket);
+                realHeaders["x-oss-copy-source"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySource);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.SourceKey))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfMatch))
             {
-                realHeaders["source-key"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.SourceKey);
+                realHeaders["x-oss-copy-source-if-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfMatch);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfMatch))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfModifiedSince))
             {
-                realHeaders["x-oss-copy-source-if-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfMatch);
+                realHeaders["x-oss-copy-source-if-modified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfModifiedSince);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfModifiedSince))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfNoneMatch))
             {
-                realHeaders["x-oss-copy-source-if-modified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfModifiedSince);
+                realHeaders["x-oss-copy-source-if-none-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfNoneMatch);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfNoneMatch))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfUnmodifiedSince))
             {
-                realHeaders["x-oss-copy-source-if-none-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfNoneMatch);
+                realHeaders["x-oss-copy-source-if-unmodified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfUnmodifiedSince);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfUnmodifiedSince))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceRange))
             {
-                realHeaders["x-oss-copy-source-if-unmodified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfUnmodifiedSince);
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceRange))
-            {
-                realHeaders["x-oss-copy-source-range"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceRange);
+                realHeaders["x-oss-copy-source-range"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceRange);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7462,33 +7476,29 @@ namespace AlibabaCloud.SDK.Oss20190517
             {
                 realHeaders = headers.CommonHeaders;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.SourceBucket))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySource))
             {
-                realHeaders["source-bucket"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.SourceBucket);
+                realHeaders["x-oss-copy-source"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySource);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.SourceKey))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfMatch))
             {
-                realHeaders["source-key"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.SourceKey);
+                realHeaders["x-oss-copy-source-if-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfMatch);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfMatch))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfModifiedSince))
             {
-                realHeaders["x-oss-copy-source-if-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfMatch);
+                realHeaders["x-oss-copy-source-if-modified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfModifiedSince);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfModifiedSince))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfNoneMatch))
             {
-                realHeaders["x-oss-copy-source-if-modified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfModifiedSince);
+                realHeaders["x-oss-copy-source-if-none-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfNoneMatch);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfNoneMatch))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceIfUnmodifiedSince))
             {
-                realHeaders["x-oss-copy-source-if-none-match"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfNoneMatch);
+                realHeaders["x-oss-copy-source-if-unmodified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceIfUnmodifiedSince);
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceIfUnmodifiedSince))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CopySourceRange))
             {
-                realHeaders["x-oss-copy-source-if-unmodified-since"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceIfUnmodifiedSince);
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XOssCopySourceRange))
-            {
-                realHeaders["x-oss-copy-source-range"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XOssCopySourceRange);
+                realHeaders["x-oss-copy-source-range"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.CopySourceRange);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

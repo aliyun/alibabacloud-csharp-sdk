@@ -15,11 +15,11 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("x-oss-complete-all")]
         [Validation(Required=false)]
-        public string XOssCompleteAll { get; set; }
+        public string CompleteAll { get; set; }
 
         [NameInMap("x-oss-forbid-overwrite")]
         [Validation(Required=false)]
-        public string XOssForbidOverwrite { get; set; }
+        public string ForbidOverwrite { get; set; }
 
     }
 

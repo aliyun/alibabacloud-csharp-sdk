@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("x-oss-forbid-overwrite")]
         [Validation(Required=false)]
-        public string XOssForbidOverwrite { get; set; }
+        public string ForbidOverwrite { get; set; }
 
         [NameInMap("x-oss-object-acl")]
         [Validation(Required=false)]

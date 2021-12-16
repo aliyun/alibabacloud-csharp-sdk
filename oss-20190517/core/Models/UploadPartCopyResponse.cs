@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Oss20190517.Models
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CopyPartResult Body { get; set; }
+        public UploadPartCopyResponseBody Body { get; set; }
 
     }
 
