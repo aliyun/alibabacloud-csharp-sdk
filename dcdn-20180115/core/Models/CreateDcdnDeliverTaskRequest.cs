@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CreateDcdnDeliverTaskRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Deliver")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("Reports")]
-        [Validation(Required=false)]
-        public string Reports { get; set; }
+        public string Deliver { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("Deliver")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Deliver { get; set; }
+        public string Name { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("Reports")]
+        [Validation(Required=false)]
+        public string Reports { get; set; }
 
         [NameInMap("Schedule")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Schedule { get; set; }
+        public string Schedule { get; set; }
 
     }
 

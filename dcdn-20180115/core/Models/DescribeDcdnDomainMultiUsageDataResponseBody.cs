@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -29,12 +25,16 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule> RequestDataModule { get; set; }
             public class DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule : TeaModel {
-                public string Type { get; set; }
-                public string TimeStamp { get; set; }
                 public string Domain { get; set; }
                 public long? Request { get; set; }
+                public string TimeStamp { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("TrafficPerInterval")]
         [Validation(Required=false)]
@@ -44,11 +44,11 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule> TrafficDataModule { get; set; }
             public class DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule : TeaModel {
-                public string Type { get; set; }
-                public string Domain { get; set; }
-                public string TimeStamp { get; set; }
                 public string Area { get; set; }
                 public float? Bps { get; set; }
+                public string Domain { get; set; }
+                public string TimeStamp { get; set; }
+                public string Type { get; set; }
             }
         };
 

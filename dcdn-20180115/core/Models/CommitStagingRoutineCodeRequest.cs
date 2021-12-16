@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class CommitStagingRoutineCodeRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("CodeDescription")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string CodeDescription { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("CodeDescription")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string CodeDescription { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

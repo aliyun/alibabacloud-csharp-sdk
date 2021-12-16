@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserSecDropResponseBody : TeaModel {
+        [NameInMap("Drops")]
+        [Validation(Required=false)]
+        public int? Drops { get; set; }
+
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Drops")]
-        [Validation(Required=false)]
-        public int? Drops { get; set; }
 
         [NameInMap("UuidStr")]
         [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainByCertificateResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CertInfos")]
         [Validation(Required=false)]
         public DescribeDcdnDomainByCertificateResponseBodyCertInfos CertInfos { get; set; }
@@ -21,17 +17,21 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo> CertInfo { get; set; }
             public class DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo : TeaModel {
-                public string CertStartTime { get; set; }
-                public string CertExpireTime { get; set; }
                 public string CertCaIsLegacy { get; set; }
+                public string CertExpireTime { get; set; }
+                public string CertExpired { get; set; }
+                public string CertStartTime { get; set; }
                 public string CertSubjectCommonName { get; set; }
                 public string CertType { get; set; }
-                public string DomainNames { get; set; }
-                public string CertExpired { get; set; }
-                public string Issuer { get; set; }
                 public string DomainList { get; set; }
+                public string DomainNames { get; set; }
+                public string Issuer { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

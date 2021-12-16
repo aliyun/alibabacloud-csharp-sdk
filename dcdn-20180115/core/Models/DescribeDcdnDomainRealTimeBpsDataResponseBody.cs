@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainRealTimeBpsDataResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDcdnDomainRealTimeBpsDataResponseBodyData Data { get; set; }
@@ -25,6 +21,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public string TimeStamp { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

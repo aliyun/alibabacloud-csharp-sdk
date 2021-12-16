@@ -9,58 +9,58 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody : TeaModel {
-        [NameInMap("EndTime")]
+        [NameInMap("DataInterval")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DataInterval { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("DataInterval")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string DataInterval { get; set; }
+        public string EndTime { get; set; }
 
-        [NameInMap("DataPerInterval")]
+        [NameInMap("HttpCodeDataPerInterval")]
         [Validation(Required=false)]
-        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerInterval DataPerInterval { get; set; }
-        public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerInterval : TeaModel {
+        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerInterval HttpCodeDataPerInterval { get; set; }
+        public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerInterval : TeaModel {
             [NameInMap("DataModule")]
             [Validation(Required=false)]
-            public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule> DataModule { get; set; }
-            public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule : TeaModel {
+            public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModule> DataModule { get; set; }
+            public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModule : TeaModel {
                 public string TimeStamp { get; set; }
-                public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval WebsocketHttpCodeDataPerInterval { get; set; }
-                public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval : TeaModel {
+                public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCode WebsocketHttpCode { get; set; }
+                public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCode : TeaModel {
                     [NameInMap("HttpCodeDataModule")]
                     [Validation(Required=false)]
-                    public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerIntervalHttpCodeDataModule> HttpCodeDataModule { get; set; }
-                    public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerIntervalHttpCodeDataModule : TeaModel {
+                    public List<DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCodeHttpCodeDataModule> HttpCodeDataModule { get; set; }
+                    public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyHttpCodeDataPerIntervalDataModuleWebsocketHttpCodeHttpCodeDataModule : TeaModel {
                         [NameInMap("Code")]
                         [Validation(Required=false)]
                         public int? Code { get; set; }
 
-                        [NameInMap("Proportion")]
-                        [Validation(Required=false)]
-                        public float? Proportion { get; set; }
-
                         [NameInMap("Count")]
                         [Validation(Required=false)]
                         public float? Count { get; set; }
+
+                        [NameInMap("Proportion")]
+                        [Validation(Required=false)]
+                        public float? Proportion { get; set; }
 
                     }
 
                 }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

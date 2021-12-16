@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnCertificateDetailResponseBody : TeaModel {
-        [NameInMap("CertName")]
-        [Validation(Required=false)]
-        public string CertName { get; set; }
-
-        [NameInMap("Key")]
-        [Validation(Required=false)]
-        public string Key { get; set; }
-
         [NameInMap("Cert")]
         [Validation(Required=false)]
         public string Cert { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("CertId")]
         [Validation(Required=false)]
         public long? CertId { get; set; }
+
+        [NameInMap("CertName")]
+        [Validation(Required=false)]
+        public string CertName { get; set; }
+
+        [NameInMap("Key")]
+        [Validation(Required=false)]
+        public string Key { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

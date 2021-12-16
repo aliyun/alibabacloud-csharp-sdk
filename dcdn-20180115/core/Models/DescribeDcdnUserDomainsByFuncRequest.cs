@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserDomainsByFuncRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string DomainName { get; set; }
+
+        [NameInMap("FuncFilter")]
+        [Validation(Required=false)]
+        public string FuncFilter { get; set; }
 
         [NameInMap("FuncId")]
         [Validation(Required=false)]
         public int? FuncId { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

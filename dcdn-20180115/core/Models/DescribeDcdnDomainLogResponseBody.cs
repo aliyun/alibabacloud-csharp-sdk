@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainLogResponseBody : TeaModel {
-        [NameInMap("DomainName")]
-        [Validation(Required=false)]
-        public string DomainName { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DomainLogDetails")]
         [Validation(Required=false)]
         public DescribeDcdnDomainLogResponseBodyDomainLogDetails DomainLogDetails { get; set; }
@@ -36,14 +28,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
-                        [NameInMap("LogSize")]
-                        [Validation(Required=false)]
-                        public long? LogSize { get; set; }
-
-                        [NameInMap("StartTime")]
-                        [Validation(Required=false)]
-                        public string StartTime { get; set; }
-
                         [NameInMap("LogName")]
                         [Validation(Required=false)]
                         public string LogName { get; set; }
@@ -51,6 +35,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         [NameInMap("LogPath")]
                         [Validation(Required=false)]
                         public string LogPath { get; set; }
+
+                        [NameInMap("LogSize")]
+                        [Validation(Required=false)]
+                        public long? LogSize { get; set; }
+
+                        [NameInMap("StartTime")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
 
                     }
 
@@ -72,6 +64,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 }
             }
         };
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

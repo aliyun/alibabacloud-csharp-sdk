@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserSecDropRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
-        [NameInMap("SecFunc")]
-        [Validation(Required=false)]
-        public string SecFunc { get; set; }
-
         [NameInMap("Metric")]
         [Validation(Required=false)]
         public string Metric { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("SecFunc")]
+        [Validation(Required=false)]
+        public string SecFunc { get; set; }
 
     }
 

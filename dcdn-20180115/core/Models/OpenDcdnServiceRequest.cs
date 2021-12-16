@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class OpenDcdnServiceRequest : TeaModel {
+        [NameInMap("BillType")]
+        [Validation(Required=false)]
+        public string BillType { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("BillType")]
-        [Validation(Required=false)]
-        public string BillType { get; set; }
 
         [NameInMap("WebsocketBillType")]
         [Validation(Required=false)]

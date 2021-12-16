@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnIpInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("RegionEname")]
-        [Validation(Required=false)]
-        public string RegionEname { get; set; }
-
-        [NameInMap("Region")]
-        [Validation(Required=false)]
-        public string Region { get; set; }
-
-        [NameInMap("IspEname")]
-        [Validation(Required=false)]
-        public string IspEname { get; set; }
-
         [NameInMap("DcdnIp")]
         [Validation(Required=false)]
         public string DcdnIp { get; set; }
@@ -32,6 +16,22 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("ISP")]
         [Validation(Required=false)]
         public string ISP { get; set; }
+
+        [NameInMap("IspEname")]
+        [Validation(Required=false)]
+        public string IspEname { get; set; }
+
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
+        [NameInMap("RegionEname")]
+        [Validation(Required=false)]
+        public string RegionEname { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

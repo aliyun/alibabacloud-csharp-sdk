@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainQpsDataResponseBody : TeaModel {
-        [NameInMap("EndTime")]
+        [NameInMap("DataInterval")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DataInterval { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("DataInterval")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string DataInterval { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("QpsDataPerInterval")]
         [Validation(Required=false)]
@@ -37,19 +29,27 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeDcdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule : TeaModel {
-                public float? DynamicHttpsAcc { get; set; }
-                public float? DynamicHttpAcc { get; set; }
-                public float? Qps { get; set; }
-                public float? StaticHttpsAcc { get; set; }
-                public float? StaticHttpQps { get; set; }
-                public float? StaticHttpAcc { get; set; }
-                public float? DynamicHttpsQps { get; set; }
                 public float? Acc { get; set; }
-                public float? StaticHttpsQps { get; set; }
+                public float? DynamicHttpAcc { get; set; }
                 public float? DynamicHttpQps { get; set; }
+                public float? DynamicHttpsAcc { get; set; }
+                public float? DynamicHttpsQps { get; set; }
+                public float? Qps { get; set; }
+                public float? StaticHttpAcc { get; set; }
+                public float? StaticHttpQps { get; set; }
+                public float? StaticHttpsAcc { get; set; }
+                public float? StaticHttpsQps { get; set; }
                 public string TimeStamp { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

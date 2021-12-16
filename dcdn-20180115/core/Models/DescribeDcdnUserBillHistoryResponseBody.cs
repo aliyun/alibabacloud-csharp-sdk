@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnUserBillHistoryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("BillHistoryData")]
         [Validation(Required=false)]
         public DescribeDcdnUserBillHistoryResponseBodyBillHistoryData BillHistoryData { get; set; }
@@ -21,26 +17,17 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem> BillHistoryDataItem { get; set; }
             public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem : TeaModel {
-                public string Dimension { get; set; }
-                public string BillType { get; set; }
                 public string BillTime { get; set; }
+                public string BillType { get; set; }
                 public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData BillingData { get; set; }
                 public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData : TeaModel {
                     [NameInMap("BillingDataItem")]
                     [Validation(Required=false)]
                     public List<DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem> BillingDataItem { get; set; }
                     public class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem : TeaModel {
-                        [NameInMap("Flow")]
-                        [Validation(Required=false)]
-                        public float? Flow { get; set; }
-
                         [NameInMap("Bandwidth")]
                         [Validation(Required=false)]
                         public float? Bandwidth { get; set; }
-
-                        [NameInMap("Count")]
-                        [Validation(Required=false)]
-                        public float? Count { get; set; }
 
                         [NameInMap("CdnRegion")]
                         [Validation(Required=false)]
@@ -50,11 +37,24 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         [Validation(Required=false)]
                         public string ChargeType { get; set; }
 
+                        [NameInMap("Count")]
+                        [Validation(Required=false)]
+                        public float? Count { get; set; }
+
+                        [NameInMap("Flow")]
+                        [Validation(Required=false)]
+                        public float? Flow { get; set; }
+
                     }
 
                 }
+                public string Dimension { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

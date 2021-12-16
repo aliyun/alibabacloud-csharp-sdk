@@ -9,49 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnRefreshTasksRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string DomainName { get; set; }
 
-        [NameInMap("SecurityToken")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
-
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("ObjectPath")]
         [Validation(Required=false)]
         public string ObjectPath { get; set; }
 
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("ObjectType")]
         [Validation(Required=false)]
         public string ObjectType { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public long? OwnerId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string Status { get; set; }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

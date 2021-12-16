@@ -9,33 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainIpaTrafficDataRequest : TeaModel {
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("TimeMerge")]
+        [NameInMap("FixTimeGap")]
         [Validation(Required=false)]
-        public string TimeMerge { get; set; }
+        public string FixTimeGap { get; set; }
 
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
-
-        [NameInMap("FixTimeGap")]
-        [Validation(Required=false)]
-        public string FixTimeGap { get; set; }
 
         [NameInMap("IspNameEn")]
         [Validation(Required=false)]
@@ -44,6 +32,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         [NameInMap("LocationNameEn")]
         [Validation(Required=false)]
         public string LocationNameEn { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("TimeMerge")]
+        [Validation(Required=false)]
+        public string TimeMerge { get; set; }
 
     }
 

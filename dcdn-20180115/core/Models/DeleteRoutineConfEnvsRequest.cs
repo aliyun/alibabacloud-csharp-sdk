@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DeleteRoutineConfEnvsRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("Envs")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public Dictionary<string, object> Envs { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Envs")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Envs { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

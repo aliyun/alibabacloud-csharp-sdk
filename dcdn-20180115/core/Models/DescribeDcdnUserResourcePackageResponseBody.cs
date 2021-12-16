@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public List<DescribeDcdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo> ResourcePackageInfo { get; set; }
             public class DescribeDcdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo : TeaModel {
-                public string EndTime { get; set; }
-                public string Status { get; set; }
-                public string DisplayName { get; set; }
-                public string StartTime { get; set; }
                 public string CommodityCode { get; set; }
                 public string CurrCapacity { get; set; }
+                public string DisplayName { get; set; }
+                public string EndTime { get; set; }
                 public string InitCapacity { get; set; }
                 public string InstanceId { get; set; }
+                public string StartTime { get; set; }
+                public string Status { get; set; }
                 public string TemplateName { get; set; }
             }
         };
