@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class DeleteSkillGroupRequest : TeaModel {
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
         public string SkillGroupId { get; set; }
-
-        [NameInMap("Force")]
-        [Validation(Required=false)]
-        public bool? Force { get; set; }
 
     }
 

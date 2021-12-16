@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("SkillGroupId")]
-        [Validation(Required=false)]
-        public string SkillGroupId { get; set; }
-
         [NameInMap("NumberList")]
         [Validation(Required=false)]
         public string NumberList { get; set; }
+
+        [NameInMap("SkillGroupId")]
+        [Validation(Required=false)]
+        public string SkillGroupId { get; set; }
 
     }
 

@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class HoldCallRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("ChannelId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string ChannelId { get; set; }
 
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
-        [NameInMap("ChannelId")]
-        [Validation(Required=false)]
-        public string ChannelId { get; set; }
-
         [NameInMap("Music")]
         [Validation(Required=false)]
         public string Music { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

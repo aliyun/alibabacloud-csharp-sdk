@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SaveTerminalLogResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public long? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         [NameInMap("TimeStamp")]
         [Validation(Required=false)]

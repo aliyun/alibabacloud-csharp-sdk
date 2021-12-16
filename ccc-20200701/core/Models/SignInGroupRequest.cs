@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SignInGroupRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("SignedSkillGroupIdList")]
         [Validation(Required=false)]
         public string SignedSkillGroupIdList { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("UserId")]
+        [NameInMap("IsMember")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public bool? IsMember { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("IsMember")]
-        [Validation(Required=false)]
-        public bool? IsMember { get; set; }
-
         [NameInMap("SearchPattern")]
         [Validation(Required=false)]
         public string SearchPattern { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

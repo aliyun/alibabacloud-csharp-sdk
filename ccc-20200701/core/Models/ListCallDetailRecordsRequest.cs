@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListCallDetailRecordsRequest : TeaModel {
-        [NameInMap("PageNumber")]
+        [NameInMap("AgentId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string AgentId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("CalledNumber")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string CalledNumber { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("CallingNumber")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        [NameInMap("ContactType")]
-        [Validation(Required=false)]
-        public string ContactType { get; set; }
+        public string CallingNumber { get; set; }
 
         [NameInMap("ContactDisposition")]
         [Validation(Required=false)]
@@ -37,17 +29,21 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
-        [NameInMap("AgentId")]
+        [NameInMap("ContactType")]
         [Validation(Required=false)]
-        public string AgentId { get; set; }
+        public string ContactType { get; set; }
 
-        [NameInMap("SkillGroupId")]
+        [NameInMap("Criteria")]
         [Validation(Required=false)]
-        public string SkillGroupId { get; set; }
+        public string Criteria { get; set; }
 
-        [NameInMap("SortOrder")]
+        [NameInMap("EarlyMediaStateList")]
         [Validation(Required=false)]
-        public string SortOrder { get; set; }
+        public string EarlyMediaStateList { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -57,17 +53,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string OrderByField { get; set; }
 
-        [NameInMap("Criteria")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Criteria { get; set; }
+        public int? PageNumber { get; set; }
 
-        [NameInMap("CallingNumber")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string CallingNumber { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("CalledNumber")]
+        [NameInMap("SatisfactionDescriptionList")]
         [Validation(Required=false)]
-        public string CalledNumber { get; set; }
+        public string SatisfactionDescriptionList { get; set; }
 
         [NameInMap("SatisfactionList")]
         [Validation(Required=false)]
@@ -77,9 +73,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string SatisfactionSurveyChannel { get; set; }
 
-        [NameInMap("SatisfactionDescriptionList")]
+        [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
-        public string SatisfactionDescriptionList { get; set; }
+        public string SkillGroupId { get; set; }
+
+        [NameInMap("SortOrder")]
+        [Validation(Required=false)]
+        public string SortOrder { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

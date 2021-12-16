@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListIvrTrackingDetailsRequest : TeaModel {
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("ContactId")]
         [Validation(Required=false)]
         public string ContactId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

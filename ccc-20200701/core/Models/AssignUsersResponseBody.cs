@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AssignUsersResponseBody : TeaModel {
-        [NameInMap("HttpStatusCode")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -25,17 +33,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Sync { get; set; }
 
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("WorkflowId")]
         [Validation(Required=false)]
         public string WorkflowId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
     }
 

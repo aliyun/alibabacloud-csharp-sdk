@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class UpdateConfigItemsRequest : TeaModel {
+        [NameInMap("ConfigItems")]
+        [Validation(Required=false)]
+        public string ConfigItems { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("ObjectType")]
         [Validation(Required=false)]
         public string ObjectType { get; set; }
-
-        [NameInMap("ConfigItems")]
-        [Validation(Required=false)]
-        public string ConfigItems { get; set; }
 
     }
 

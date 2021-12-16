@@ -13,26 +13,22 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public List<string> Params { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListRamUsersResponseBodyData Data { get; set; }
         public class ListRamUsersResponseBodyData : TeaModel {
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<ListRamUsersResponseBodyDataList> List { get; set; }
+            public class ListRamUsersResponseBodyDataList : TeaModel {
+                public long? AliyunUid { get; set; }
+                public string DisplayName { get; set; }
+                public string Email { get; set; }
+                public string LoginName { get; set; }
+                public string Mobile { get; set; }
+                public bool? Primary { get; set; }
+                public string RamId { get; set; }
+            }
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
@@ -42,19 +38,23 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
-            [NameInMap("List")]
-            [Validation(Required=false)]
-            public List<ListRamUsersResponseBodyDataList> List { get; set; }
-            public class ListRamUsersResponseBodyDataList : TeaModel {
-                public string DisplayName { get; set; }
-                public string Email { get; set; }
-                public string LoginName { get; set; }
-                public string Mobile { get; set; }
-                public long? AliyunUid { get; set; }
-                public bool? Primary { get; set; }
-                public string RamId { get; set; }
-            }
         };
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public List<string> Params { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

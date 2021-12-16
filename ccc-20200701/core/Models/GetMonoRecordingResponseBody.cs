@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetMonoRecordingResponseBodyData Data { get; set; }
+        public class GetMonoRecordingResponseBodyData : TeaModel {
+            [NameInMap("FileName")]
+            [Validation(Required=false)]
+            public string FileName { get; set; }
+            [NameInMap("FileUrl")]
+            [Validation(Required=false)]
+            public string FileUrl { get; set; }
+        };
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -24,18 +36,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetMonoRecordingResponseBodyData Data { get; set; }
-        public class GetMonoRecordingResponseBodyData : TeaModel {
-            [NameInMap("FileUrl")]
-            [Validation(Required=false)]
-            public string FileUrl { get; set; }
-            [NameInMap("FileName")]
-            [Validation(Required=false)]
-            public string FileName { get; set; }
-        };
 
     }
 

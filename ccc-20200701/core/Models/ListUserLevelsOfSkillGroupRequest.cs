@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("SkillGroupId")]
-        [Validation(Required=false)]
-        public string SkillGroupId { get; set; }
-
         [NameInMap("IsMember")]
         [Validation(Required=false)]
         public bool? IsMember { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("SearchPattern")]
         [Validation(Required=false)]
         public string SearchPattern { get; set; }
+
+        [NameInMap("SkillGroupId")]
+        [Validation(Required=false)]
+        public string SkillGroupId { get; set; }
 
     }
 

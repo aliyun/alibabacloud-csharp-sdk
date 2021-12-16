@@ -13,6 +13,28 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<ListAgentStateLogsResponseBodyData> Data { get; set; }
+        public class ListAgentStateLogsResponseBodyData : TeaModel {
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public long? Duration { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+
+            [NameInMap("StateCode")]
+            [Validation(Required=false)]
+            public string StateCode { get; set; }
+
+        }
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -24,28 +46,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public List<ListAgentStateLogsResponseBodyData> Data { get; set; }
-        public class ListAgentStateLogsResponseBodyData : TeaModel {
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public long? StartTime { get; set; }
-
-            [NameInMap("StateCode")]
-            [Validation(Required=false)]
-            public string StateCode { get; set; }
-
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public long? Duration { get; set; }
-
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-
-        }
 
     }
 

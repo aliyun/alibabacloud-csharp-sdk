@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class InitiateAttendedTransferRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
-        [NameInMap("Transferor")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Transferor { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("Transferee")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public string Transferee { get; set; }
+        public string JobId { get; set; }
 
         [NameInMap("TimeoutSeconds")]
         [Validation(Required=false)]
         public int? TimeoutSeconds { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("Transferee")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string Transferee { get; set; }
+
+        [NameInMap("Transferor")]
+        [Validation(Required=false)]
+        public string Transferor { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

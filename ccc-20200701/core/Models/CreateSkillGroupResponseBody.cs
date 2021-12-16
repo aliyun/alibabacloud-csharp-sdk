@@ -13,6 +13,24 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public CreateSkillGroupResponseBodyData Data { get; set; }
+        public class CreateSkillGroupResponseBodyData : TeaModel {
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+            [NameInMap("SkillGroupId")]
+            [Validation(Required=false)]
+            public string SkillGroupId { get; set; }
+        };
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -24,24 +42,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public CreateSkillGroupResponseBodyData Data { get; set; }
-        public class CreateSkillGroupResponseBodyData : TeaModel {
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-            [NameInMap("Description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-            [NameInMap("SkillGroupId")]
-            [Validation(Required=false)]
-            public string SkillGroupId { get; set; }
-        };
 
     }
 

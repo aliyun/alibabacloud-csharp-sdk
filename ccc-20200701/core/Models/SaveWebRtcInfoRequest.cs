@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SaveWebRtcInfoRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string Content { get; set; }
 
         [NameInMap("ContentType")]
         [Validation(Required=false)]
         public string ContentType { get; set; }
 
-        [NameInMap("Content")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public string InstanceId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
     }
 

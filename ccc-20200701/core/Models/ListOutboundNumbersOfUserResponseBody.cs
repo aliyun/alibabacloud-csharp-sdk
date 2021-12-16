@@ -13,6 +13,29 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ListOutboundNumbersOfUserResponseBodyData Data { get; set; }
+        public class ListOutboundNumbersOfUserResponseBodyData : TeaModel {
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<ListOutboundNumbersOfUserResponseBodyDataList> List { get; set; }
+            public class ListOutboundNumbersOfUserResponseBodyDataList : TeaModel {
+                public string City { get; set; }
+                public string Number { get; set; }
+                public string Province { get; set; }
+            }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -24,29 +47,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ListOutboundNumbersOfUserResponseBodyData Data { get; set; }
-        public class ListOutboundNumbersOfUserResponseBodyData : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("List")]
-            [Validation(Required=false)]
-            public List<ListOutboundNumbersOfUserResponseBodyDataList> List { get; set; }
-            public class ListOutboundNumbersOfUserResponseBodyDataList : TeaModel {
-                public string Number { get; set; }
-                public string City { get; set; }
-                public string Province { get; set; }
-            }
-        };
 
     }
 

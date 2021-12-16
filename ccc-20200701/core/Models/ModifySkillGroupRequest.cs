@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ModifySkillGroupRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("DisplayName")]
+        [Validation(Required=false)]
+        public string DisplayName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
         public string SkillGroupId { get; set; }
-
-        [NameInMap("DisplayName")]
-        [Validation(Required=false)]
-        public string DisplayName { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
 
     }
 

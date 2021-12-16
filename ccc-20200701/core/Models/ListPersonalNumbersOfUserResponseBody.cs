@@ -13,6 +13,32 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ListPersonalNumbersOfUserResponseBodyData Data { get; set; }
+        public class ListPersonalNumbersOfUserResponseBodyData : TeaModel {
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<ListPersonalNumbersOfUserResponseBodyDataList> List { get; set; }
+            public class ListPersonalNumbersOfUserResponseBodyDataList : TeaModel {
+                public bool? Active { get; set; }
+                public string City { get; set; }
+                public string ContactFlowId { get; set; }
+                public string InstanceId { get; set; }
+                public string Number { get; set; }
+                public string Province { get; set; }
+            }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -24,32 +50,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ListPersonalNumbersOfUserResponseBodyData Data { get; set; }
-        public class ListPersonalNumbersOfUserResponseBodyData : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("List")]
-            [Validation(Required=false)]
-            public List<ListPersonalNumbersOfUserResponseBodyDataList> List { get; set; }
-            public class ListPersonalNumbersOfUserResponseBodyDataList : TeaModel {
-                public bool? Active { get; set; }
-                public string Number { get; set; }
-                public string City { get; set; }
-                public string InstanceId { get; set; }
-                public string ContactFlowId { get; set; }
-                public string Province { get; set; }
-            }
-        };
 
     }
 

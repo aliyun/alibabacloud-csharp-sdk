@@ -13,33 +13,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Params")]
-        [Validation(Required=false)]
-        public List<string> Params { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDevicesResponseBodyData> Data { get; set; }
         public class ListDevicesResponseBodyData : TeaModel {
-            [NameInMap("Extension")]
+            [NameInMap("CallId")]
             [Validation(Required=false)]
-            public string Extension { get; set; }
-
-            [NameInMap("Expires")]
-            [Validation(Required=false)]
-            public long? Expires { get; set; }
+            public string CallId { get; set; }
 
             [NameInMap("Contact")]
             [Validation(Required=false)]
@@ -49,19 +29,39 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
-            [NameInMap("UserId")]
+            [NameInMap("Expires")]
             [Validation(Required=false)]
-            public string UserId { get; set; }
+            public long? Expires { get; set; }
 
-            [NameInMap("CallId")]
+            [NameInMap("Extension")]
             [Validation(Required=false)]
-            public string CallId { get; set; }
+            public string Extension { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
+
         }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public List<string> Params { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

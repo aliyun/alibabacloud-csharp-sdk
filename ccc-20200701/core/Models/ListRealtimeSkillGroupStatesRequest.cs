@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListRealtimeSkillGroupStatesRequest : TeaModel {
-        [NameInMap("SkillGroupIdList")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string SkillGroupIdList { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("SkillGroupIdList")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string SkillGroupIdList { get; set; }
 
     }
 

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("RamIdList")]
+        [Validation(Required=false)]
+        public string RamIdList { get; set; }
+
         [NameInMap("RoleId")]
         [Validation(Required=false)]
         public string RoleId { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("SkillLevelList")]
         [Validation(Required=false)]
         public string SkillLevelList { get; set; }
-
-        [NameInMap("RamIdList")]
-        [Validation(Required=false)]
-        public string RamIdList { get; set; }
 
         [NameInMap("WorkMode")]
         [Validation(Required=false)]

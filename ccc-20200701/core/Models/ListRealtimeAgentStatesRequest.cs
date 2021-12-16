@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListRealtimeAgentStatesRequest : TeaModel {
-        [NameInMap("SkillGroupId")]
+        [NameInMap("AgentIdList")]
         [Validation(Required=false)]
-        public string SkillGroupId { get; set; }
+        public string AgentIdList { get; set; }
+
+        [NameInMap("AgentName")]
+        [Validation(Required=false)]
+        public string AgentName { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,21 +29,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("AgentIdList")]
-        [Validation(Required=false)]
-        public string AgentIdList { get; set; }
+        public string SkillGroupId { get; set; }
 
         [NameInMap("StateList")]
         [Validation(Required=false)]
         public string StateList { get; set; }
-
-        [NameInMap("AgentName")]
-        [Validation(Required=false)]
-        public string AgentName { get; set; }
 
     }
 

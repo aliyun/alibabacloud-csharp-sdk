@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public GetTurnCredentialsResponseBodyData Data { get; set; }
+        public class GetTurnCredentialsResponseBodyData : TeaModel {
+            [NameInMap("Password")]
+            [Validation(Required=false)]
+            public string Password { get; set; }
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+        };
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -21,25 +33,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public GetTurnCredentialsResponseBodyData Data { get; set; }
-        public class GetTurnCredentialsResponseBodyData : TeaModel {
-            [NameInMap("UserName")]
-            [Validation(Required=false)]
-            public string UserName { get; set; }
-            [NameInMap("Password")]
-            [Validation(Required=false)]
-            public string Password { get; set; }
-        };
+        public string RequestId { get; set; }
 
     }
 

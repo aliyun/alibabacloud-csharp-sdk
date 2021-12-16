@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListUnassignedNumbersRequest : TeaModel {
-        [NameInMap("SearchPattern")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string SearchPattern { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("InstanceId")]
+        [NameInMap("SearchPattern")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string SearchPattern { get; set; }
 
     }
 

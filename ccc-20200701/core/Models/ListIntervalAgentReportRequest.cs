@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string AgentId { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
@@ -28,6 +24,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

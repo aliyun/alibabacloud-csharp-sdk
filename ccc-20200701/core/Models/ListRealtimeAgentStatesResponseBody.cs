@@ -13,6 +13,35 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ListRealtimeAgentStatesResponseBodyData Data { get; set; }
+        public class ListRealtimeAgentStatesResponseBodyData : TeaModel {
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<ListRealtimeAgentStatesResponseBodyDataList> List { get; set; }
+            public class ListRealtimeAgentStatesResponseBodyDataList : TeaModel {
+                public string AgentId { get; set; }
+                public string AgentName { get; set; }
+                public string CounterParty { get; set; }
+                public string Extension { get; set; }
+                public string InstanceId { get; set; }
+                public List<string> SkillGroupIdList { get; set; }
+                public string State { get; set; }
+                public string StateCode { get; set; }
+                public long? StateTime { get; set; }
+            }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -24,35 +53,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ListRealtimeAgentStatesResponseBodyData Data { get; set; }
-        public class ListRealtimeAgentStatesResponseBodyData : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("List")]
-            [Validation(Required=false)]
-            public List<ListRealtimeAgentStatesResponseBodyDataList> List { get; set; }
-            public class ListRealtimeAgentStatesResponseBodyDataList : TeaModel {
-                public string Extension { get; set; }
-                public string StateCode { get; set; }
-                public string State { get; set; }
-                public string AgentId { get; set; }
-                public long? StateTime { get; set; }
-                public string AgentName { get; set; }
-                public string InstanceId { get; set; }
-                public string CounterParty { get; set; }
-                public List<string> SkillGroupIdList { get; set; }
-            }
-        };
 
     }
 

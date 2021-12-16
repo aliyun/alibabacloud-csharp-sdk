@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListAgentStateLogsRequest : TeaModel {
-        [NameInMap("StartTime")]
+        [NameInMap("AgentId")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string AgentId { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        [NameInMap("AgentId")]
-        [Validation(Required=false)]
-        public string AgentId { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

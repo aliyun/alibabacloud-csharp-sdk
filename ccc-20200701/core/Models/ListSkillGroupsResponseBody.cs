@@ -13,6 +13,33 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ListSkillGroupsResponseBodyData Data { get; set; }
+        public class ListSkillGroupsResponseBodyData : TeaModel {
+            [NameInMap("List")]
+            [Validation(Required=false)]
+            public List<ListSkillGroupsResponseBodyDataList> List { get; set; }
+            public class ListSkillGroupsResponseBodyDataList : TeaModel {
+                public string Description { get; set; }
+                public string DisplayName { get; set; }
+                public string InstanceId { get; set; }
+                public int? PhoneNumberCount { get; set; }
+                public string SkillGroupId { get; set; }
+                public string SkillGroupName { get; set; }
+                public int? UserCount { get; set; }
+            }
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+        };
+
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -24,33 +51,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ListSkillGroupsResponseBodyData Data { get; set; }
-        public class ListSkillGroupsResponseBodyData : TeaModel {
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public int? PageNumber { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-            [NameInMap("TotalCount")]
-            [Validation(Required=false)]
-            public int? TotalCount { get; set; }
-            [NameInMap("List")]
-            [Validation(Required=false)]
-            public List<ListSkillGroupsResponseBodyDataList> List { get; set; }
-            public class ListSkillGroupsResponseBodyDataList : TeaModel {
-                public string DisplayName { get; set; }
-                public string Description { get; set; }
-                public int? PhoneNumberCount { get; set; }
-                public string SkillGroupId { get; set; }
-                public string SkillGroupName { get; set; }
-                public int? UserCount { get; set; }
-                public string InstanceId { get; set; }
-            }
-        };
 
     }
 

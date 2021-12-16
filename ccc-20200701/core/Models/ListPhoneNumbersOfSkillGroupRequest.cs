@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListPhoneNumbersOfSkillGroupRequest : TeaModel {
+        [NameInMap("Active")]
+        [Validation(Required=false)]
+        public bool? Active { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("SkillGroupId")]
+        [NameInMap("IsMember")]
         [Validation(Required=false)]
-        public string SkillGroupId { get; set; }
+        public bool? IsMember { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("IsMember")]
-        [Validation(Required=false)]
-        public bool? IsMember { get; set; }
-
         [NameInMap("SearchPattern")]
         [Validation(Required=false)]
         public string SearchPattern { get; set; }
 
-        [NameInMap("Active")]
+        [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
-        public bool? Active { get; set; }
+        public string SkillGroupId { get; set; }
 
     }
 
