@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
+        [NameInMap("ProtectedEnabled")]
+        [Validation(Required=false)]
+        public bool? ProtectedEnabled { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
