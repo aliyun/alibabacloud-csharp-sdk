@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// 运行时。
+        /// </summary>
+        [NameInMap("runtime")]
+        [Validation(Required=false)]
+        public string Runtime { get; set; }
+
     }
 
 }

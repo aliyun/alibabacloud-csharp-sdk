@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("labels")]
                 [Validation(Required=false)]
                 public List<string> Labels { get; set; }
+                [NameInMap("node_name_mode")]
+                [Validation(Required=false)]
+                public string NodeNameMode { get; set; }
                 [NameInMap("runtime")]
                 [Validation(Required=false)]
                 public string Runtime { get; set; }
@@ -214,6 +217,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("data_disks")]
                 [Validation(Required=false)]
                 public List<string> DataDisks { get; set; }
+                [NameInMap("deploymentset_id")]
+                [Validation(Required=false)]
+                public string DeploymentsetId { get; set; }
                 [NameInMap("image_id")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
