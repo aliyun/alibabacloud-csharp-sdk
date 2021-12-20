@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SourceURL")]
+        [Validation(Required=false)]
+        public string SourceURL { get; set; }
+
+        [NameInMap("StreamFileURL")]
+        [Validation(Required=false)]
+        public string StreamFileURL { get; set; }
+
         [NameInMap("StreamJobId")]
         [Validation(Required=false)]
         public string StreamJobId { get; set; }
