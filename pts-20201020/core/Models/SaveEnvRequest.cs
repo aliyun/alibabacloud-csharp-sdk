@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                 public string FileName { get; set; }
                 public string FileOssAddress { get; set; }
             }
-            [NameInMap("JmeterPluginLabel")]
-            [Validation(Required=false)]
-            public string JmeterPluginLabel { get; set; }
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public List<SaveEnvRequestEnvProperties> Properties { get; set; }

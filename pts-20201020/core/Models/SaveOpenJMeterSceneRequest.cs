@@ -70,9 +70,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                 public string Name { get; set; }
                 public string Value { get; set; }
             }
-            [NameInMap("JmeterPluginLabel")]
-            [Validation(Required=false)]
-            public string JmeterPluginLabel { get; set; }
             [NameInMap("RampUp")]
             [Validation(Required=false)]
             public int? RampUp { get; set; }

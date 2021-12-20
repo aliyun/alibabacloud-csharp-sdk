@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("HasReport")]
             [Validation(Required=false)]
             public bool? HasReport { get; set; }
+            [NameInMap("HoldFor")]
+            [Validation(Required=false)]
+            public int? HoldFor { get; set; }
             [NameInMap("IsDebugging")]
             [Validation(Required=false)]
             public bool? IsDebugging { get; set; }
@@ -66,6 +69,9 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
             [NameInMap("StageName")]
             [Validation(Required=false)]
             public string StageName { get; set; }
+            [NameInMap("StartTimeTS")]
+            [Validation(Required=false)]
+            public long? StartTimeTS { get; set; }
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
