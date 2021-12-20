@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateScratchId { get; set; }
 
+        [NameInMap("TemplateScratchRegionId")]
+        [Validation(Required=false)]
+        public string TemplateScratchRegionId { get; set; }
+
         [NameInMap("TemplateURL")]
         [Validation(Required=false)]
         public string TemplateURL { get; set; }

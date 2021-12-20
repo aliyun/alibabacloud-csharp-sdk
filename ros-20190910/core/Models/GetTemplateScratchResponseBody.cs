@@ -69,12 +69,26 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public List<string> ResourceTypeFilter { get; set; }
 
             }
+            [NameInMap("StackProvision")]
+            [Validation(Required=false)]
+            public GetTemplateScratchResponseBodyTemplateScratchStackProvision StackProvision { get; set; }
+            public class GetTemplateScratchResponseBodyTemplateScratchStackProvision : TeaModel {
+                [NameInMap("Creatable")]
+                [Validation(Required=false)]
+                public bool? Creatable { get; set; }
+
+                [NameInMap("Importable")]
+                [Validation(Required=false)]
+                public bool? Importable { get; set; }
+
+            }
             [NameInMap("Stacks")]
             [Validation(Required=false)]
             public List<GetTemplateScratchResponseBodyTemplateScratchStacks> Stacks { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchStacks : TeaModel {
                 public string RegionId { get; set; }
                 public string StackId { get; set; }
+                public string UsageType { get; set; }
             }
             [NameInMap("Status")]
             [Validation(Required=false)]

@@ -312,6 +312,7 @@ namespace AlibabaCloud.SDK.ROS20190910
             query["TemplateBody"] = request.TemplateBody;
             query["TemplateId"] = request.TemplateId;
             query["TemplateScratchId"] = request.TemplateScratchId;
+            query["TemplateScratchRegionId"] = request.TemplateScratchRegionId;
             query["TemplateURL"] = request.TemplateURL;
             query["TemplateVersion"] = request.TemplateVersion;
             query["TimeoutInMinutes"] = request.TimeoutInMinutes;
@@ -355,6 +356,7 @@ namespace AlibabaCloud.SDK.ROS20190910
             query["TemplateBody"] = request.TemplateBody;
             query["TemplateId"] = request.TemplateId;
             query["TemplateScratchId"] = request.TemplateScratchId;
+            query["TemplateScratchRegionId"] = request.TemplateScratchRegionId;
             query["TemplateURL"] = request.TemplateURL;
             query["TemplateVersion"] = request.TemplateVersion;
             query["TimeoutInMinutes"] = request.TimeoutInMinutes;
@@ -2529,6 +2531,7 @@ namespace AlibabaCloud.SDK.ROS20190910
             query["TemplateBody"] = request.TemplateBody;
             query["TemplateId"] = request.TemplateId;
             query["TemplateScratchId"] = request.TemplateScratchId;
+            query["TemplateScratchRegionId"] = request.TemplateScratchRegionId;
             query["TemplateURL"] = request.TemplateURL;
             query["TemplateVersion"] = request.TemplateVersion;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2560,6 +2563,7 @@ namespace AlibabaCloud.SDK.ROS20190910
             query["TemplateBody"] = request.TemplateBody;
             query["TemplateId"] = request.TemplateId;
             query["TemplateScratchId"] = request.TemplateScratchId;
+            query["TemplateScratchRegionId"] = request.TemplateScratchRegionId;
             query["TemplateURL"] = request.TemplateURL;
             query["TemplateVersion"] = request.TemplateVersion;
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4046,6 +4050,7 @@ namespace AlibabaCloud.SDK.ROS20190910
             query["TemplateBody"] = request.TemplateBody;
             query["TemplateId"] = request.TemplateId;
             query["TemplateScratchId"] = request.TemplateScratchId;
+            query["TemplateScratchRegionId"] = request.TemplateScratchRegionId;
             query["TemplateURL"] = request.TemplateURL;
             query["TemplateVersion"] = request.TemplateVersion;
             query["TimeoutInMinutes"] = request.TimeoutInMinutes;
@@ -4083,6 +4088,7 @@ namespace AlibabaCloud.SDK.ROS20190910
             query["TemplateBody"] = request.TemplateBody;
             query["TemplateId"] = request.TemplateId;
             query["TemplateScratchId"] = request.TemplateScratchId;
+            query["TemplateScratchRegionId"] = request.TemplateScratchRegionId;
             query["TemplateURL"] = request.TemplateURL;
             query["TemplateVersion"] = request.TemplateVersion;
             query["TimeoutInMinutes"] = request.TimeoutInMinutes;
