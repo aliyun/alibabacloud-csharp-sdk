@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string Mobile { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("RoleNames")]
         [Validation(Required=false)]
         public string RoleNames { get; set; }

@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string ProjectName { get; set; }
         };
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
         public List<long?> RelatedUserList { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList { get; set; }
         public class ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList : TeaModel {
+            [NameInMap("AffectRows")]
+            [Validation(Required=false)]
+            public long? AffectRows { get; set; }
+
             [NameInMap("CurrentSql")]
             [Validation(Required=false)]
             public string CurrentSql { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("DbId")]
             [Validation(Required=false)]
             public long? DbId { get; set; }
+
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
 
             [NameInMap("ExecuteCount")]
             [Validation(Required=false)]
@@ -49,9 +57,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string SqlType { get; set; }
 
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("TimeDelay")]
+            [Validation(Required=false)]
+            public long? TimeDelay { get; set; }
 
         }
 

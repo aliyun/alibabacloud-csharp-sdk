@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class DeleteLogicTableRouteConfigRequest : TeaModel {
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("RouteKey")]
         [Validation(Required=false)]
         public string RouteKey { get; set; }

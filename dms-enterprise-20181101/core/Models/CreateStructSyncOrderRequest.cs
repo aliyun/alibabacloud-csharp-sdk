@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
         };
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
         public List<long?> RelatedUserList { get; set; }

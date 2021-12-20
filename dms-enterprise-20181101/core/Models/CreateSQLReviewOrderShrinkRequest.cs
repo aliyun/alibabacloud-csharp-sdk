@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ParamShrink { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("RelatedUserList")]
         [Validation(Required=false)]
         public string RelatedUserListShrink { get; set; }

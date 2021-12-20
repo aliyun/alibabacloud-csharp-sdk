@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase> LogicDatabase { get; set; }
             public class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase : TeaModel {
+                public string Alias { get; set; }
                 public string DatabaseId { get; set; }
                 public string DbType { get; set; }
                 public string EnvType { get; set; }
