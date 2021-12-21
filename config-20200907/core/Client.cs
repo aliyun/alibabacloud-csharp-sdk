@@ -51,7 +51,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -62,7 +61,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ActiveAggregateConfigRulesResponse>(CallApi(params_, req, runtime));
@@ -77,7 +76,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ActiveAggregateConfigRulesResponse>(await CallApiAsync(params_, req, runtime));
@@ -116,7 +114,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -127,7 +124,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AttachAggregateConfigRuleToCompliancePackResponse>(CallApi(params_, req, runtime));
@@ -143,7 +140,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -154,7 +150,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AttachAggregateConfigRuleToCompliancePackResponse>(await CallApiAsync(params_, req, runtime));
@@ -181,7 +177,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -192,7 +187,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AttachConfigRuleToCompliancePackResponse>(CallApi(params_, req, runtime));
@@ -207,7 +202,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -218,7 +212,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AttachConfigRuleToCompliancePackResponse>(await CallApiAsync(params_, req, runtime));
@@ -245,9 +239,38 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackTemplateId))
+            {
+                body["CompliancePackTemplateId"] = request.CompliancePackTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -273,9 +296,38 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackTemplateId))
+            {
+                body["CompliancePackTemplateId"] = request.CompliancePackTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -317,9 +369,74 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdentifier))
+            {
+                body["SourceIdentifier"] = request.SourceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOwner))
+            {
+                body["SourceOwner"] = request.SourceOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -349,9 +466,74 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdentifier))
+            {
+                body["SourceIdentifier"] = request.SourceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOwner))
+            {
+                body["SourceOwner"] = request.SourceOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -389,9 +571,30 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.AggregatorAccountsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AggregatorAccounts, "AggregatorAccounts", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorAccountsShrink))
+            {
+                body["AggregatorAccounts"] = request.AggregatorAccountsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorName))
+            {
+                body["AggregatorName"] = request.AggregatorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorType))
+            {
+                body["AggregatorType"] = request.AggregatorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -417,9 +620,30 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.AggregatorAccountsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AggregatorAccounts, "AggregatorAccounts", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorAccountsShrink))
+            {
+                body["AggregatorAccounts"] = request.AggregatorAccountsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorName))
+            {
+                body["AggregatorName"] = request.AggregatorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorType))
+            {
+                body["AggregatorType"] = request.AggregatorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -457,9 +681,34 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackTemplateId))
+            {
+                body["CompliancePackTemplateId"] = request.CompliancePackTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -485,9 +734,34 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackTemplateId))
+            {
+                body["CompliancePackTemplateId"] = request.CompliancePackTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -529,9 +803,70 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdentifier))
+            {
+                body["SourceIdentifier"] = request.SourceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOwner))
+            {
+                body["SourceOwner"] = request.SourceOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -561,9 +896,70 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdentifier))
+            {
+                body["SourceIdentifier"] = request.SourceIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOwner))
+            {
+                body["SourceOwner"] = request.SourceOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -601,7 +997,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -612,7 +1007,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeactiveAggregateConfigRulesResponse>(CallApi(params_, req, runtime));
@@ -627,7 +1022,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -638,7 +1032,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeactiveAggregateConfigRulesResponse>(await CallApiAsync(params_, req, runtime));
@@ -664,7 +1058,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -675,7 +1068,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeactiveConfigRulesResponse>(CallApi(params_, req, runtime));
@@ -689,7 +1082,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -700,7 +1092,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeactiveConfigRulesResponse>(await CallApiAsync(params_, req, runtime));
@@ -721,9 +1113,26 @@ namespace AlibabaCloud.SDK.Config20200907
         public DeleteAggregateCompliancePacksResponse DeleteAggregateCompliancePacksWithOptions(DeleteAggregateCompliancePacksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackIds))
+            {
+                body["CompliancePackIds"] = request.CompliancePackIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRule))
+            {
+                body["DeleteRule"] = request.DeleteRule;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -743,9 +1152,26 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<DeleteAggregateCompliancePacksResponse> DeleteAggregateCompliancePacksWithOptionsAsync(DeleteAggregateCompliancePacksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackIds))
+            {
+                body["CompliancePackIds"] = request.CompliancePackIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRule))
+            {
+                body["DeleteRule"] = request.DeleteRule;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -783,7 +1209,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -794,7 +1219,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteAggregateConfigRulesResponse>(CallApi(params_, req, runtime));
@@ -809,7 +1234,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -820,7 +1244,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteAggregateConfigRulesResponse>(await CallApiAsync(params_, req, runtime));
@@ -841,9 +1265,18 @@ namespace AlibabaCloud.SDK.Config20200907
         public DeleteAggregatorsResponse DeleteAggregatorsWithOptions(DeleteAggregatorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorIds))
+            {
+                body["AggregatorIds"] = request.AggregatorIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -863,9 +1296,18 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<DeleteAggregatorsResponse> DeleteAggregatorsWithOptionsAsync(DeleteAggregatorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorIds))
+            {
+                body["AggregatorIds"] = request.AggregatorIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -897,9 +1339,22 @@ namespace AlibabaCloud.SDK.Config20200907
         public DeleteCompliancePacksResponse DeleteCompliancePacksWithOptions(DeleteCompliancePacksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackIds))
+            {
+                body["CompliancePackIds"] = request.CompliancePackIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRule))
+            {
+                body["DeleteRule"] = request.DeleteRule;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -919,9 +1374,22 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<DeleteCompliancePacksResponse> DeleteCompliancePacksWithOptionsAsync(DeleteCompliancePacksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackIds))
+            {
+                body["CompliancePackIds"] = request.CompliancePackIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRule))
+            {
+                body["DeleteRule"] = request.DeleteRule;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -960,7 +1428,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -971,7 +1438,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DetachAggregateConfigRuleToCompliancePackResponse>(CallApi(params_, req, runtime));
@@ -987,7 +1454,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -998,7 +1464,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DetachAggregateConfigRuleToCompliancePackResponse>(await CallApiAsync(params_, req, runtime));
@@ -1025,7 +1491,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1036,7 +1501,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DetachConfigRuleToCompliancePackResponse>(CallApi(params_, req, runtime));
@@ -1051,7 +1516,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1062,7 +1526,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DetachConfigRuleToCompliancePackResponse>(await CallApiAsync(params_, req, runtime));
@@ -1083,9 +1547,22 @@ namespace AlibabaCloud.SDK.Config20200907
         public GenerateAggregateCompliancePackReportResponse GenerateAggregateCompliancePackReportWithOptions(GenerateAggregateCompliancePackReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1105,9 +1582,22 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<GenerateAggregateCompliancePackReportResponse> GenerateAggregateCompliancePackReportWithOptionsAsync(GenerateAggregateCompliancePackReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1139,9 +1629,18 @@ namespace AlibabaCloud.SDK.Config20200907
         public GenerateAggregateConfigRulesReportResponse GenerateAggregateConfigRulesReportWithOptions(GenerateAggregateConfigRulesReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1161,9 +1660,18 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<GenerateAggregateConfigRulesReportResponse> GenerateAggregateConfigRulesReportWithOptionsAsync(GenerateAggregateConfigRulesReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1195,9 +1703,18 @@ namespace AlibabaCloud.SDK.Config20200907
         public GenerateCompliancePackReportResponse GenerateCompliancePackReportWithOptions(GenerateCompliancePackReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1217,9 +1734,18 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<GenerateCompliancePackReportResponse> GenerateCompliancePackReportWithOptionsAsync(GenerateCompliancePackReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1251,9 +1777,14 @@ namespace AlibabaCloud.SDK.Config20200907
         public GenerateConfigRulesReportResponse GenerateConfigRulesReportWithOptions(GenerateConfigRulesReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1273,9 +1804,14 @@ namespace AlibabaCloud.SDK.Config20200907
         public async Task<GenerateConfigRulesReportResponse> GenerateConfigRulesReportWithOptionsAsync(GenerateConfigRulesReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1321,7 +1857,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateAccountComplianceByPackResponse>(CallApi(params_, req, runtime));
@@ -1344,7 +1880,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateAccountComplianceByPackResponse>(await CallApiAsync(params_, req, runtime));
@@ -1379,7 +1915,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateCompliancePackResponse>(CallApi(params_, req, runtime));
@@ -1402,7 +1938,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateCompliancePackResponse>(await CallApiAsync(params_, req, runtime));
@@ -1437,7 +1973,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateCompliancePackReportResponse>(CallApi(params_, req, runtime));
@@ -1460,7 +1996,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateCompliancePackReportResponse>(await CallApiAsync(params_, req, runtime));
@@ -1487,7 +2023,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1498,7 +2033,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRuleResponse>(CallApi(params_, req, runtime));
@@ -1513,7 +2048,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1524,7 +2058,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRuleResponse>(await CallApiAsync(params_, req, runtime));
@@ -1559,7 +2093,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRuleComplianceByPackResponse>(CallApi(params_, req, runtime));
@@ -1582,7 +2116,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRuleComplianceByPackResponse>(await CallApiAsync(params_, req, runtime));
@@ -1617,7 +2151,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRuleSummaryByRiskLevelResponse>(CallApi(params_, req, runtime));
@@ -1640,7 +2174,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRuleSummaryByRiskLevelResponse>(await CallApiAsync(params_, req, runtime));
@@ -1675,7 +2209,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRulesReportResponse>(CallApi(params_, req, runtime));
@@ -1698,7 +2232,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateConfigRulesReportResponse>(await CallApiAsync(params_, req, runtime));
@@ -1733,7 +2267,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceComplianceByConfigRuleResponse>(CallApi(params_, req, runtime));
@@ -1756,7 +2290,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceComplianceByConfigRuleResponse>(await CallApiAsync(params_, req, runtime));
@@ -1791,7 +2325,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceComplianceByPackResponse>(CallApi(params_, req, runtime));
@@ -1814,7 +2348,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceComplianceByPackResponse>(await CallApiAsync(params_, req, runtime));
@@ -1849,7 +2383,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceComplianceTimelineResponse>(CallApi(params_, req, runtime));
@@ -1872,7 +2406,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceComplianceTimelineResponse>(await CallApiAsync(params_, req, runtime));
@@ -1907,7 +2441,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceConfigurationTimelineResponse>(CallApi(params_, req, runtime));
@@ -1930,7 +2464,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceConfigurationTimelineResponse>(await CallApiAsync(params_, req, runtime));
@@ -1965,7 +2499,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceCountsGroupByRegionResponse>(CallApi(params_, req, runtime));
@@ -1988,7 +2522,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceCountsGroupByRegionResponse>(await CallApiAsync(params_, req, runtime));
@@ -2023,7 +2557,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceCountsGroupByResourceTypeResponse>(CallApi(params_, req, runtime));
@@ -2046,7 +2580,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregateResourceCountsGroupByResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
@@ -2081,7 +2615,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregatorResponse>(CallApi(params_, req, runtime));
@@ -2104,7 +2638,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAggregatorResponse>(await CallApiAsync(params_, req, runtime));
@@ -2139,7 +2673,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCompliancePackResponse>(CallApi(params_, req, runtime));
@@ -2162,7 +2696,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCompliancePackResponse>(await CallApiAsync(params_, req, runtime));
@@ -2197,7 +2731,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCompliancePackReportResponse>(CallApi(params_, req, runtime));
@@ -2220,7 +2754,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCompliancePackReportResponse>(await CallApiAsync(params_, req, runtime));
@@ -2246,7 +2780,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2257,7 +2790,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRuleResponse>(CallApi(params_, req, runtime));
@@ -2271,7 +2804,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2282,7 +2814,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRuleResponse>(await CallApiAsync(params_, req, runtime));
@@ -2317,7 +2849,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRuleComplianceByPackResponse>(CallApi(params_, req, runtime));
@@ -2340,7 +2872,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRuleComplianceByPackResponse>(await CallApiAsync(params_, req, runtime));
@@ -2370,7 +2902,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRuleSummaryByRiskLevelResponse>(CallApi(params_, req, runtime));
@@ -2388,7 +2920,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRuleSummaryByRiskLevelResponse>(await CallApiAsync(params_, req, runtime));
@@ -2418,7 +2950,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRulesReportResponse>(CallApi(params_, req, runtime));
@@ -2436,7 +2968,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetConfigRulesReportResponse>(await CallApiAsync(params_, req, runtime));
@@ -2471,7 +3003,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetDiscoveredResourceCountsGroupByRegionResponse>(CallApi(params_, req, runtime));
@@ -2494,7 +3026,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetDiscoveredResourceCountsGroupByRegionResponse>(await CallApiAsync(params_, req, runtime));
@@ -2529,7 +3061,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetDiscoveredResourceCountsGroupByResourceTypeResponse>(CallApi(params_, req, runtime));
@@ -2552,7 +3084,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetDiscoveredResourceCountsGroupByResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
@@ -2587,7 +3119,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceComplianceByConfigRuleResponse>(CallApi(params_, req, runtime));
@@ -2610,7 +3142,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceComplianceByConfigRuleResponse>(await CallApiAsync(params_, req, runtime));
@@ -2645,7 +3177,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceComplianceByPackResponse>(CallApi(params_, req, runtime));
@@ -2668,7 +3200,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceComplianceByPackResponse>(await CallApiAsync(params_, req, runtime));
@@ -2703,7 +3235,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceComplianceTimelineResponse>(CallApi(params_, req, runtime));
@@ -2726,7 +3258,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceComplianceTimelineResponse>(await CallApiAsync(params_, req, runtime));
@@ -2761,7 +3293,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceConfigurationTimelineResponse>(CallApi(params_, req, runtime));
@@ -2784,7 +3316,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceConfigurationTimelineResponse>(await CallApiAsync(params_, req, runtime));
@@ -2811,9 +3343,26 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2839,9 +3388,26 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2879,9 +3445,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2907,9 +3486,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2955,7 +3547,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateCompliancePacksResponse>(CallApi(params_, req, runtime));
@@ -2978,7 +3570,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateCompliancePacksResponse>(await CallApiAsync(params_, req, runtime));
@@ -3013,7 +3605,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateConfigRuleEvaluationResultsResponse>(CallApi(params_, req, runtime));
@@ -3036,7 +3628,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateConfigRuleEvaluationResultsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3071,7 +3663,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateConfigRulesResponse>(CallApi(params_, req, runtime));
@@ -3094,7 +3686,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateConfigRulesResponse>(await CallApiAsync(params_, req, runtime));
@@ -3129,7 +3721,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateResourceEvaluationResultsResponse>(CallApi(params_, req, runtime));
@@ -3152,7 +3744,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregateResourceEvaluationResultsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3187,7 +3779,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregatorsResponse>(CallApi(params_, req, runtime));
@@ -3210,7 +3802,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAggregatorsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3245,7 +3837,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCompliancePackTemplatesResponse>(CallApi(params_, req, runtime));
@@ -3268,7 +3860,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCompliancePackTemplatesResponse>(await CallApiAsync(params_, req, runtime));
@@ -3303,7 +3895,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCompliancePacksResponse>(CallApi(params_, req, runtime));
@@ -3326,7 +3918,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCompliancePacksResponse>(await CallApiAsync(params_, req, runtime));
@@ -3361,7 +3953,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListConfigRuleEvaluationResultsResponse>(CallApi(params_, req, runtime));
@@ -3384,7 +3976,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListConfigRuleEvaluationResultsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3419,7 +4011,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListResourceEvaluationResultsResponse>(CallApi(params_, req, runtime));
@@ -3442,7 +4034,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListResourceEvaluationResultsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3469,9 +4061,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3497,9 +4102,22 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3537,9 +4155,18 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3565,9 +4192,18 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Resources, "Resources", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcesShrink))
+            {
+                body["Resources"] = request.ResourcesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3607,7 +4243,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3618,7 +4253,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartAggregateConfigRuleEvaluationResponse>(CallApi(params_, req, runtime));
@@ -3635,7 +4270,6 @@ namespace AlibabaCloud.SDK.Config20200907
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3646,7 +4280,7 @@ namespace AlibabaCloud.SDK.Config20200907
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartAggregateConfigRuleEvaluationResponse>(await CallApiAsync(params_, req, runtime));
@@ -3673,9 +4307,38 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3701,9 +4364,38 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3745,9 +4437,70 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3777,9 +4530,70 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3817,9 +4631,30 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.AggregatorAccountsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AggregatorAccounts, "AggregatorAccounts", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorAccountsShrink))
+            {
+                body["AggregatorAccounts"] = request.AggregatorAccountsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorName))
+            {
+                body["AggregatorName"] = request.AggregatorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3845,9 +4680,30 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.AggregatorAccountsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AggregatorAccounts, "AggregatorAccounts", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorAccountsShrink))
+            {
+                body["AggregatorAccounts"] = request.AggregatorAccountsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorId))
+            {
+                body["AggregatorId"] = request.AggregatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregatorName))
+            {
+                body["AggregatorName"] = request.AggregatorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3885,9 +4741,34 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3913,9 +4794,34 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ConfigRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigRules, "ConfigRules", "json");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
+            {
+                body["CompliancePackId"] = request.CompliancePackId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackName))
+            {
+                body["CompliancePackName"] = request.CompliancePackName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRulesShrink))
+            {
+                body["ConfigRules"] = request.ConfigRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3957,9 +4863,66 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3989,9 +4952,66 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 request.ResourceTypesScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTypesScope, "ResourceTypesScope", "simple");
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleId))
+            {
+                body["ConfigRuleId"] = request.ConfigRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleName))
+            {
+                body["ConfigRuleName"] = request.ConfigRuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRuleTriggerTypes))
+            {
+                body["ConfigRuleTriggerTypes"] = request.ConfigRuleTriggerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
+            {
+                body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
+            {
+                body["InputParameters"] = request.InputParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumExecutionFrequency))
+            {
+                body["MaximumExecutionFrequency"] = request.MaximumExecutionFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionIdsScope))
+            {
+                body["RegionIdsScope"] = request.RegionIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIdsScope))
+            {
+                body["ResourceGroupIdsScope"] = request.ResourceGroupIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypesScopeShrink))
+            {
+                body["ResourceTypesScope"] = request.ResourceTypesScopeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLevel))
+            {
+                body["RiskLevel"] = request.RiskLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeyScope))
+            {
+                body["TagKeyScope"] = request.TagKeyScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagValueScope))
+            {
+                body["TagValueScope"] = request.TagValueScope;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
