@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenVbrHealthCheckResponseBody : TeaModel {
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
@@ -33,13 +33,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck> VbrHealthCheck { get; set; }
             public class DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck : TeaModel {
+                public string CenId { get; set; }
+                public int? HealthCheckInterval { get; set; }
+                public bool? HealthCheckOnly { get; set; }
+                public string HealthCheckSourceIp { get; set; }
                 public string HealthCheckTargetIp { get; set; }
+                public int? HealthyThreshold { get; set; }
                 public string VbrInstanceId { get; set; }
                 public string VbrInstanceRegionId { get; set; }
-                public string CenId { get; set; }
-                public int? HealthyThreshold { get; set; }
-                public int? HealthCheckInterval { get; set; }
-                public string HealthCheckSourceIp { get; set; }
             }
         };
 

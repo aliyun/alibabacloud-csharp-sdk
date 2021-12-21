@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
@@ -36,6 +28,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string RegionId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

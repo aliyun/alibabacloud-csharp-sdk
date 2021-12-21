@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToCenResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("GrantRules")]
         [Validation(Required=false)]
         public DescribeGrantRulesToCenResponseBodyGrantRules GrantRules { get; set; }
@@ -21,13 +17,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
             public class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule : TeaModel {
-                public string ChildInstanceType { get; set; }
-                public string ChildInstanceRegionId { get; set; }
-                public long? ChildInstanceOwnerId { get; set; }
-                public string ChildInstanceId { get; set; }
                 public string CenId { get; set; }
+                public string ChildInstanceId { get; set; }
+                public long? ChildInstanceOwnerId { get; set; }
+                public string ChildInstanceRegionId { get; set; }
+                public string ChildInstanceType { get; set; }
+                public string OrderType { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

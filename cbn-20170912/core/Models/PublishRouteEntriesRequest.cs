@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class PublishRouteEntriesRequest : TeaModel {
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("CenId")]
         [Validation(Required=false)]
         public string CenId { get; set; }
@@ -24,10 +16,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ChildInstanceId")]
         [Validation(Required=false)]
         public string ChildInstanceId { get; set; }
-
-        [NameInMap("ChildInstanceType")]
-        [Validation(Required=false)]
-        public string ChildInstanceType { get; set; }
 
         [NameInMap("ChildInstanceRegionId")]
         [Validation(Required=false)]
@@ -37,9 +25,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ChildInstanceRouteTableId { get; set; }
 
+        [NameInMap("ChildInstanceType")]
+        [Validation(Required=false)]
+        public string ChildInstanceType { get; set; }
+
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

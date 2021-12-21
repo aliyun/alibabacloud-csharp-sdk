@@ -9,6 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenChildInstanceRouteEntryToCenRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
+        [NameInMap("ChildInstanceAliUid")]
+        [Validation(Required=false)]
+        public long? ChildInstanceAliUid { get; set; }
+
+        [NameInMap("ChildInstanceId")]
+        [Validation(Required=false)]
+        public string ChildInstanceId { get; set; }
+
+        [NameInMap("ChildInstanceRegionId")]
+        [Validation(Required=false)]
+        public string ChildInstanceRegionId { get; set; }
+
+        [NameInMap("ChildInstanceType")]
+        [Validation(Required=false)]
+        public string ChildInstanceType { get; set; }
+
+        [NameInMap("DestinationCidrBlock")]
+        [Validation(Required=false)]
+        public string DestinationCidrBlock { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -25,33 +49,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
-
-        [NameInMap("ChildInstanceId")]
-        [Validation(Required=false)]
-        public string ChildInstanceId { get; set; }
-
-        [NameInMap("ChildInstanceType")]
-        [Validation(Required=false)]
-        public string ChildInstanceType { get; set; }
-
-        [NameInMap("ChildInstanceRegionId")]
-        [Validation(Required=false)]
-        public string ChildInstanceRegionId { get; set; }
-
-        [NameInMap("ChildInstanceAliUid")]
-        [Validation(Required=false)]
-        public long? ChildInstanceAliUid { get; set; }
-
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
-
-        [NameInMap("DestinationCidrBlock")]
-        [Validation(Required=false)]
-        public string DestinationCidrBlock { get; set; }
 
     }
 

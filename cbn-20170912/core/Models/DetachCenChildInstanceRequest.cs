@@ -9,6 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DetachCenChildInstanceRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
+        [NameInMap("CenOwnerId")]
+        [Validation(Required=false)]
+        public long? CenOwnerId { get; set; }
+
+        [NameInMap("ChildInstanceId")]
+        [Validation(Required=false)]
+        public string ChildInstanceId { get; set; }
+
+        [NameInMap("ChildInstanceOwnerId")]
+        [Validation(Required=false)]
+        public long? ChildInstanceOwnerId { get; set; }
+
+        [NameInMap("ChildInstanceRegionId")]
+        [Validation(Required=false)]
+        public string ChildInstanceRegionId { get; set; }
+
+        [NameInMap("ChildInstanceType")]
+        [Validation(Required=false)]
+        public string ChildInstanceType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -24,30 +48,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
-
-        [NameInMap("ChildInstanceId")]
-        [Validation(Required=false)]
-        public string ChildInstanceId { get; set; }
-
-        [NameInMap("ChildInstanceType")]
-        [Validation(Required=false)]
-        public string ChildInstanceType { get; set; }
-
-        [NameInMap("ChildInstanceRegionId")]
-        [Validation(Required=false)]
-        public string ChildInstanceRegionId { get; set; }
-
-        [NameInMap("ChildInstanceOwnerId")]
-        [Validation(Required=false)]
-        public long? ChildInstanceOwnerId { get; set; }
-
-        [NameInMap("CenOwnerId")]
-        [Validation(Required=false)]
-        public long? CenOwnerId { get; set; }
 
     }
 

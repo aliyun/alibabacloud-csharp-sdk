@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenPrivateZoneRoutesRequest : TeaModel {
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("AccessRegionId")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string AccessRegionId { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("CenId")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string CenId { get; set; }
+
+        [NameInMap("HostRegionId")]
+        [Validation(Required=false)]
+        public string HostRegionId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CenId")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string CenId { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("AccessRegionId")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string AccessRegionId { get; set; }
-
-        [NameInMap("HostRegionId")]
-        [Validation(Required=false)]
-        public string HostRegionId { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRouteMapsRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
+        [NameInMap("CenRegionId")]
+        [Validation(Required=false)]
+        public string CenRegionId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CenId")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string CenId { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("RouteMapId")]
         [Validation(Required=false)]
         public string RouteMapId { get; set; }
-
-        [NameInMap("CenRegionId")]
-        [Validation(Required=false)]
-        public string CenRegionId { get; set; }
 
         [NameInMap("TransmitDirection")]
         [Validation(Required=false)]

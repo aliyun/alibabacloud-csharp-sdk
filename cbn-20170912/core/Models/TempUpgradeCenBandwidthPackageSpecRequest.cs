@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class TempUpgradeCenBandwidthPackageSpecRequest : TeaModel {
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
+
+        [NameInMap("CenBandwidthPackageId")]
+        [Validation(Required=false)]
+        public string CenBandwidthPackageId { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -24,18 +36,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("CenBandwidthPackageId")]
-        [Validation(Required=false)]
-        public string CenBandwidthPackageId { get; set; }
-
-        [NameInMap("Bandwidth")]
-        [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
 
     }
 

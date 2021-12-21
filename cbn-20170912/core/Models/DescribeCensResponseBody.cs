@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCensResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Cens")]
         [Validation(Required=false)]
         public DescribeCensResponseBodyCens Cens { get; set; }
@@ -33,12 +17,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public List<DescribeCensResponseBodyCensCen> Cen { get; set; }
             public class DescribeCensResponseBodyCensCen : TeaModel {
-                public string Status { get; set; }
+                public DescribeCensResponseBodyCensCenCenBandwidthPackageIds CenBandwidthPackageIds { get; set; }
+                public class DescribeCensResponseBodyCensCenCenBandwidthPackageIds : TeaModel {
+                    [NameInMap("CenBandwidthPackageId")]
+                    [Validation(Required=false)]
+                    public List<string> CenBandwidthPackageId { get; set; }
+
+                }
+                public string CenId { get; set; }
                 public string CreationTime { get; set; }
                 public string Description { get; set; }
-                public string CenId { get; set; }
-                public string ProtectionLevel { get; set; }
                 public string Name { get; set; }
+                public string ProtectionLevel { get; set; }
+                public string Status { get; set; }
                 public DescribeCensResponseBodyCensCenTags Tags { get; set; }
                 public class DescribeCensResponseBodyCensCenTags : TeaModel {
                     [NameInMap("Tag")]
@@ -56,15 +47,24 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                     }
 
                 }
-                public DescribeCensResponseBodyCensCenCenBandwidthPackageIds CenBandwidthPackageIds { get; set; }
-                public class DescribeCensResponseBodyCensCenCenBandwidthPackageIds : TeaModel {
-                    [NameInMap("CenBandwidthPackageId")]
-                    [Validation(Required=false)]
-                    public List<string> CenBandwidthPackageId { get; set; }
-
-                }
             }
         };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
 
     }
 

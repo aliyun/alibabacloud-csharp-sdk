@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpansRequest : TeaModel {
+        [NameInMap("GeographicSpanId")]
+        [Validation(Required=false)]
+        public string GeographicSpanId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,14 +20,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,9 +29,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("GeographicSpanId")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string GeographicSpanId { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

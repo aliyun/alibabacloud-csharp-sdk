@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenRouteMapRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
+        [NameInMap("CenRegionId")]
+        [Validation(Required=false)]
+        public string CenRegionId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -24,14 +32,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
-
-        [NameInMap("CenRegionId")]
-        [Validation(Required=false)]
-        public string CenRegionId { get; set; }
 
         [NameInMap("RouteMapId")]
         [Validation(Required=false)]

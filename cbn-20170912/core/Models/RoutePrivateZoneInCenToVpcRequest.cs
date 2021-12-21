@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RoutePrivateZoneInCenToVpcRequest : TeaModel {
+        [NameInMap("AccessRegionId")]
+        [Validation(Required=false)]
+        public string AccessRegionId { get; set; }
+
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
+        [NameInMap("HostRegionId")]
+        [Validation(Required=false)]
+        public string HostRegionId { get; set; }
+
+        [NameInMap("HostVpcId")]
+        [Validation(Required=false)]
+        public string HostVpcId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -24,22 +40,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
-
-        [NameInMap("AccessRegionId")]
-        [Validation(Required=false)]
-        public string AccessRegionId { get; set; }
-
-        [NameInMap("HostRegionId")]
-        [Validation(Required=false)]
-        public string HostRegionId { get; set; }
-
-        [NameInMap("HostVpcId")]
-        [Validation(Required=false)]
-        public string HostVpcId { get; set; }
 
     }
 

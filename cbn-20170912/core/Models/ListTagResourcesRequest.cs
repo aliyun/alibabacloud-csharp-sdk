@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTagResourcesRequest : TeaModel {
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,6 +20,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -28,18 +40,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public List<string> ResourceId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

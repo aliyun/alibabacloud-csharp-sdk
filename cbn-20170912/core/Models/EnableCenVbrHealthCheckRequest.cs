@@ -9,6 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class EnableCenVbrHealthCheckRequest : TeaModel {
+        [NameInMap("CenId")]
+        [Validation(Required=false)]
+        public string CenId { get; set; }
+
+        [NameInMap("HealthCheckInterval")]
+        [Validation(Required=false)]
+        public int? HealthCheckInterval { get; set; }
+
+        [NameInMap("HealthCheckOnly")]
+        [Validation(Required=false)]
+        public bool? HealthCheckOnly { get; set; }
+
+        [NameInMap("HealthCheckSourceIp")]
+        [Validation(Required=false)]
+        public string HealthCheckSourceIp { get; set; }
+
+        [NameInMap("HealthCheckTargetIp")]
+        [Validation(Required=false)]
+        public string HealthCheckTargetIp { get; set; }
+
+        [NameInMap("HealthyThreshold")]
+        [Validation(Required=false)]
+        public int? HealthyThreshold { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -25,37 +49,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("CenId")]
-        [Validation(Required=false)]
-        public string CenId { get; set; }
-
-        [NameInMap("VbrInstanceRegionId")]
-        [Validation(Required=false)]
-        public string VbrInstanceRegionId { get; set; }
-
         [NameInMap("VbrInstanceId")]
         [Validation(Required=false)]
         public string VbrInstanceId { get; set; }
-
-        [NameInMap("HealthCheckSourceIp")]
-        [Validation(Required=false)]
-        public string HealthCheckSourceIp { get; set; }
-
-        [NameInMap("HealthCheckTargetIp")]
-        [Validation(Required=false)]
-        public string HealthCheckTargetIp { get; set; }
 
         [NameInMap("VbrInstanceOwnerId")]
         [Validation(Required=false)]
         public long? VbrInstanceOwnerId { get; set; }
 
-        [NameInMap("HealthCheckInterval")]
+        [NameInMap("VbrInstanceRegionId")]
         [Validation(Required=false)]
-        public int? HealthCheckInterval { get; set; }
-
-        [NameInMap("HealthyThreshold")]
-        [Validation(Required=false)]
-        public int? HealthyThreshold { get; set; }
+        public string VbrInstanceRegionId { get; set; }
 
     }
 

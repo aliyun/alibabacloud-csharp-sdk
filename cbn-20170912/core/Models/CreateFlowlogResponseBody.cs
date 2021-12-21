@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateFlowlogResponseBody : TeaModel {
+        [NameInMap("FlowLogId")]
+        [Validation(Required=false)]
+        public string FlowLogId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
-
-        [NameInMap("FlowLogId")]
-        [Validation(Required=false)]
-        public string FlowLogId { get; set; }
 
     }
 

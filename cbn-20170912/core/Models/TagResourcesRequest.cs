@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public List<string> ResourceId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
-
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public List<string> ResourceId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
