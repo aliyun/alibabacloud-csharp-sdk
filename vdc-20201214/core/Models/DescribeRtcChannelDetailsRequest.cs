@@ -24,13 +24,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// 起始时间，UTC格式
-        /// </summary>
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        /// <summary>
         /// 结束时间，UTC时间
         /// </summary>
         [NameInMap("EndTime")]
@@ -50,6 +43,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// 起始时间，UTC格式
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

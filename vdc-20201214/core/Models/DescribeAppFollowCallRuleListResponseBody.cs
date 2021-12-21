@@ -24,25 +24,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// 具体规则，JSON格式
-            /// </summary>
-            [NameInMap("Rule")]
-            [Validation(Required=false)]
-            public string Rule { get; set; }
-
-            /// <summary>
             /// 创建时间，秒级时间戳，如1614836732
             /// </summary>
             [NameInMap("CreatedTs")]
             [Validation(Required=false)]
             public long? CreatedTs { get; set; }
-
-            /// <summary>
-            /// 修改时间，秒级时间戳，如1614836732
-            /// </summary>
-            [NameInMap("ModifiedTs")]
-            [Validation(Required=false)]
-            public long? ModifiedTs { get; set; }
 
             /// <summary>
             /// 创建时间，待删除
@@ -57,6 +43,20 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [NameInMap("GmtModifiedTs")]
             [Validation(Required=false)]
             public long? GmtModifiedTs { get; set; }
+
+            /// <summary>
+            /// 修改时间，秒级时间戳，如1614836732
+            /// </summary>
+            [NameInMap("ModifiedTs")]
+            [Validation(Required=false)]
+            public long? ModifiedTs { get; set; }
+
+            /// <summary>
+            /// 具体规则，JSON格式
+            /// </summary>
+            [NameInMap("Rule")]
+            [Validation(Required=false)]
+            public string Rule { get; set; }
 
         }
 

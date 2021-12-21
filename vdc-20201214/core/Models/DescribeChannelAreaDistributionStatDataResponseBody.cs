@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public int? CallUserCount { get; set; }
 
             /// <summary>
+            /// 优质传输率，用小数表示，例如0.9999表示优质传输率为99.99%。
+            /// </summary>
+            [NameInMap("HighQualityTransmissionRate")]
+            [Validation(Required=false)]
+            public string HighQualityTransmissionRate { get; set; }
+
+            /// <summary>
             /// 发布端人数。
             /// </summary>
             [NameInMap("PubUserCount")]
@@ -43,13 +50,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [NameInMap("SubUserCount")]
             [Validation(Required=false)]
             public int? SubUserCount { get; set; }
-
-            /// <summary>
-            /// 优质传输率，用小数表示，例如0.9999表示优质传输率为99.99%。
-            /// </summary>
-            [NameInMap("HighQualityTransmissionRate")]
-            [Validation(Required=false)]
-            public string HighQualityTransmissionRate { get; set; }
 
         }
 

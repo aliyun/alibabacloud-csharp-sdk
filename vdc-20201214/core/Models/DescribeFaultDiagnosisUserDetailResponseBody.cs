@@ -19,12 +19,12 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
-            [NameInMap("ChannelId")]
-            [Validation(Required=false)]
-            public string ChannelId { get; set; }
             [NameInMap("CallStatus")]
             [Validation(Required=false)]
             public string CallStatus { get; set; }
+            [NameInMap("ChannelId")]
+            [Validation(Required=false)]
+            public string ChannelId { get; set; }
             [NameInMap("CreatedTs")]
             [Validation(Required=false)]
             public long? CreatedTs { get; set; }
@@ -34,65 +34,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
-        };
-
-        /// <summary>
-        /// 诊断用户详细信，QueryCallUserInfo=false是返回息
-        /// </summary>
-        [NameInMap("UserDetail")]
-        [Validation(Required=false)]
-        public DescribeFaultDiagnosisUserDetailResponseBodyUserDetail UserDetail { get; set; }
-        public class DescribeFaultDiagnosisUserDetailResponseBodyUserDetail : TeaModel {
-            [NameInMap("UserId")]
-            [Validation(Required=false)]
-            public string UserId { get; set; }
-            [NameInMap("Location")]
-            [Validation(Required=false)]
-            public string Location { get; set; }
-            [NameInMap("OnlinePeriods")]
-            [Validation(Required=false)]
-            public List<DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods> OnlinePeriods { get; set; }
-            public class DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods : TeaModel {
-                public long? JoinTs { get; set; }
-                public long? LeaveTs { get; set; }
-            }
-            [NameInMap("CreatedTs")]
-            [Validation(Required=false)]
-            public long? CreatedTs { get; set; }
-            [NameInMap("DestroyedTs")]
-            [Validation(Required=false)]
-            public long? DestroyedTs { get; set; }
-            [NameInMap("OnlineDuration")]
-            [Validation(Required=false)]
-            public long? OnlineDuration { get; set; }
-            [NameInMap("Duration")]
-            [Validation(Required=false)]
-            public long? Duration { get; set; }
-            [NameInMap("SdkVersion")]
-            [Validation(Required=false)]
-            public string SdkVersion { get; set; }
-            [NameInMap("Os")]
-            [Validation(Required=false)]
-            public string Os { get; set; }
-            [NameInMap("Network")]
-            [Validation(Required=false)]
-            public string Network { get; set; }
-        };
-
-        /// <summary>
-        /// 异常指标
-        /// </summary>
-        [NameInMap("FaultMetricData")]
-        [Validation(Required=false)]
-        public DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData FaultMetricData { get; set; }
-        public class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData : TeaModel {
-            [NameInMap("Nodes")]
-            [Validation(Required=false)]
-            public List<DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes> Nodes { get; set; }
-            public class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes : TeaModel {
-                public string X { get; set; }
-                public string Y { get; set; }
-            }
         };
 
         /// <summary>
@@ -117,66 +58,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public string FaultSource { get; set; }
 
             /// <summary>
-            /// 关联的指标，坐标数据，当FaultType为AUDIO_STUCK、VIDEO_STUCK、VIDEO_VAGUE、HIGH_DELAY时返回
-            /// </summary>
-            [NameInMap("RelatedMetricDatas")]
-            [Validation(Required=false)]
-            public List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas> RelatedMetricDatas { get; set; }
-            public class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas : TeaModel {
-                /// <summary>
-                /// 来源角色： SENDER：发布端，即上行 RECEIVER：订阅端，即下行
-                /// </summary>
-                [NameInMap("Role")]
-                [Validation(Required=false)]
-                public string Role { get; set; }
-
-                /// <summary>
-                /// 数据来自对应发布端的用户ID
-                /// </summary>
-                [NameInMap("UserId")]
-                [Validation(Required=false)]
-                public string UserId { get; set; }
-
-                /// <summary>
-                /// 指标类型，参照端到端指标接口的指标类型
-                /// </summary>
-                [NameInMap("Type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-                /// <summary>
-                /// 坐标数据列表
-                /// </summary>
-                [NameInMap("Nodes")]
-                [Validation(Required=false)]
-                public List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes> Nodes { get; set; }
-                public class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes : TeaModel {
-                    /// <summary>
-                    /// X坐标值，秒级时间戳
-                    /// </summary>
-                    [NameInMap("X")]
-                    [Validation(Required=false)]
-                    public string X { get; set; }
-
-                    /// <summary>
-                    /// Y坐标值，指标值
-                    /// </summary>
-                    [NameInMap("Y")]
-                    [Validation(Required=false)]
-                    public string Y { get; set; }
-
-                    /// <summary>
-                    /// 扩展数据
-                    /// </summary>
-                    [NameInMap("Ext")]
-                    [Validation(Required=false)]
-                    public Dictionary<string, object> Ext { get; set; }
-
-                }
-
-            }
-
-            /// <summary>
             /// 关联的事件，按时间分组，当FaultType为AUDIO_STUCK、VIDEO_STUCK、VIDEO_VAGUE、HIGH_DELAY时返回
             /// </summary>
             [NameInMap("RelatedEventDatas")]
@@ -184,33 +65,12 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatas> RelatedEventDatas { get; set; }
             public class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatas : TeaModel {
                 /// <summary>
-                /// 用户ID
-                /// </summary>
-                [NameInMap("UserId")]
-                [Validation(Required=false)]
-                public string UserId { get; set; }
-
-                /// <summary>
-                /// 来源角色： SENDER：发布端，即上行 RECEIVER：订阅端，即下行
-                /// </summary>
-                [NameInMap("Role")]
-                [Validation(Required=false)]
-                public string Role { get; set; }
-
-                /// <summary>
                 /// 事件数据列表
                 /// </summary>
                 [NameInMap("EventDataItems")]
                 [Validation(Required=false)]
                 public List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItems> EventDataItems { get; set; }
                 public class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItems : TeaModel {
-                    /// <summary>
-                    /// 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
-                    /// </summary>
-                    [NameInMap("Ts")]
-                    [Validation(Required=false)]
-                    public long? Ts { get; set; }
-
                     /// <summary>
                     /// 事件列表。
                     /// </summary>
@@ -241,11 +101,108 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 
                     }
 
+                    /// <summary>
+                    /// 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
+                    /// </summary>
+                    [NameInMap("Ts")]
+                    [Validation(Required=false)]
+                    public long? Ts { get; set; }
+
                 }
+
+                /// <summary>
+                /// 来源角色： SENDER：发布端，即上行 RECEIVER：订阅端，即下行
+                /// </summary>
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
+
+                /// <summary>
+                /// 用户ID
+                /// </summary>
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
+
+            }
+
+            /// <summary>
+            /// 关联的指标，坐标数据，当FaultType为AUDIO_STUCK、VIDEO_STUCK、VIDEO_VAGUE、HIGH_DELAY时返回
+            /// </summary>
+            [NameInMap("RelatedMetricDatas")]
+            [Validation(Required=false)]
+            public List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas> RelatedMetricDatas { get; set; }
+            public class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatas : TeaModel {
+                /// <summary>
+                /// 坐标数据列表
+                /// </summary>
+                [NameInMap("Nodes")]
+                [Validation(Required=false)]
+                public List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes> Nodes { get; set; }
+                public class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes : TeaModel {
+                    /// <summary>
+                    /// 扩展数据
+                    /// </summary>
+                    [NameInMap("Ext")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> Ext { get; set; }
+
+                    /// <summary>
+                    /// X坐标值，秒级时间戳
+                    /// </summary>
+                    [NameInMap("X")]
+                    [Validation(Required=false)]
+                    public string X { get; set; }
+
+                    /// <summary>
+                    /// Y坐标值，指标值
+                    /// </summary>
+                    [NameInMap("Y")]
+                    [Validation(Required=false)]
+                    public string Y { get; set; }
+
+                }
+
+                /// <summary>
+                /// 来源角色： SENDER：发布端，即上行 RECEIVER：订阅端，即下行
+                /// </summary>
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
+
+                /// <summary>
+                /// 指标类型，参照端到端指标接口的指标类型
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// 数据来自对应发布端的用户ID
+                /// </summary>
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
 
             }
 
         }
+
+        /// <summary>
+        /// 异常指标
+        /// </summary>
+        [NameInMap("FaultMetricData")]
+        [Validation(Required=false)]
+        public DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData FaultMetricData { get; set; }
+        public class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricData : TeaModel {
+            [NameInMap("Nodes")]
+            [Validation(Required=false)]
+            public List<DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes> Nodes { get; set; }
+            public class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes : TeaModel {
+                public string X { get; set; }
+                public string Y { get; set; }
+            }
+        };
 
         /// <summary>
         /// 网络运营商列表
@@ -260,6 +217,49 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 诊断用户详细信，QueryCallUserInfo=false是返回息
+        /// </summary>
+        [NameInMap("UserDetail")]
+        [Validation(Required=false)]
+        public DescribeFaultDiagnosisUserDetailResponseBodyUserDetail UserDetail { get; set; }
+        public class DescribeFaultDiagnosisUserDetailResponseBodyUserDetail : TeaModel {
+            [NameInMap("CreatedTs")]
+            [Validation(Required=false)]
+            public long? CreatedTs { get; set; }
+            [NameInMap("DestroyedTs")]
+            [Validation(Required=false)]
+            public long? DestroyedTs { get; set; }
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public long? Duration { get; set; }
+            [NameInMap("Location")]
+            [Validation(Required=false)]
+            public string Location { get; set; }
+            [NameInMap("Network")]
+            [Validation(Required=false)]
+            public string Network { get; set; }
+            [NameInMap("OnlineDuration")]
+            [Validation(Required=false)]
+            public long? OnlineDuration { get; set; }
+            [NameInMap("OnlinePeriods")]
+            [Validation(Required=false)]
+            public List<DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods> OnlinePeriods { get; set; }
+            public class DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods : TeaModel {
+                public long? JoinTs { get; set; }
+                public long? LeaveTs { get; set; }
+            }
+            [NameInMap("Os")]
+            [Validation(Required=false)]
+            public string Os { get; set; }
+            [NameInMap("SdkVersion")]
+            [Validation(Required=false)]
+            public string SdkVersion { get; set; }
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
+        };
 
     }
 

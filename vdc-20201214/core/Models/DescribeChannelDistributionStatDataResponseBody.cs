@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeChannelDistributionStatDataResponseBody : TeaModel {
         /// <summary>
+        /// 请求ID。
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 频道分布统计列表。
         /// </summary>
         [NameInMap("StatList")]
         [Validation(Required=false)]
         public List<DescribeChannelDistributionStatDataResponseBodyStatList> StatList { get; set; }
         public class DescribeChannelDistributionStatDataResponseBodyStatList : TeaModel {
-            /// <summary>
-            /// 统计维度。
-            /// </summary>
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             /// <summary>
             /// 通信人数。
             /// </summary>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [Validation(Required=false)]
             public string CallUserRatio { get; set; }
 
-        }
+            /// <summary>
+            /// 统计维度。
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        }
 
     }
 

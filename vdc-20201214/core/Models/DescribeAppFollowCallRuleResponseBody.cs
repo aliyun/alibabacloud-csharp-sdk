@@ -19,21 +19,21 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
-            [NameInMap("Rule")]
-            [Validation(Required=false)]
-            public string Rule { get; set; }
             [NameInMap("CreatedTs")]
             [Validation(Required=false)]
             public long? CreatedTs { get; set; }
-            [NameInMap("ModifiedTs")]
-            [Validation(Required=false)]
-            public long? ModifiedTs { get; set; }
             [NameInMap("GmtCreateTs")]
             [Validation(Required=false)]
             public long? GmtCreateTs { get; set; }
             [NameInMap("GmtModifiedTs")]
             [Validation(Required=false)]
             public long? GmtModifiedTs { get; set; }
+            [NameInMap("ModifiedTs")]
+            [Validation(Required=false)]
+            public long? ModifiedTs { get; set; }
+            [NameInMap("Rule")]
+            [Validation(Required=false)]
+            public string Rule { get; set; }
         };
 
         /// <summary>

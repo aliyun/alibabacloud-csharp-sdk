@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// 起始时间，UTC格式
+        /// ChannelId
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("ChannelId")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string ChannelId { get; set; }
 
         /// <summary>
         /// 结束时间，UTC格式
@@ -29,13 +29,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
-
-        /// <summary>
-        /// ChannelId
-        /// </summary>
-        [NameInMap("ChannelId")]
-        [Validation(Required=false)]
-        public string ChannelId { get; set; }
 
         /// <summary>
         /// 页号
@@ -50,6 +43,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// 起始时间，UTC格式
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 总数
         /// </summary>
         [NameInMap("TotalCnt")]
@@ -41,31 +48,24 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [Validation(Required=false)]
             public List<DescribeRtcChannelUsersResponseBodyUserListUserList> UserList { get; set; }
             public class DescribeRtcChannelUsersResponseBodyUserListUserList : TeaModel {
-                public string UserId { get; set; }
                 public string Channel { get; set; }
-                public string StartTime { get; set; }
                 public string EndTime { get; set; }
-                public string ServiceArea { get; set; }
                 public string Location { get; set; }
-                public int? SubAudio { get; set; }
                 public int? PubAudio { get; set; }
-                public int? SubVideo360 { get; set; }
-                public int? PubVideo360 { get; set; }
-                public int? SubVideo720 { get; set; }
-                public int? PubVideo720 { get; set; }
-                public int? SubVideo1080 { get; set; }
-                public int? PubVideo1080 { get; set; }
-                public int? SubContent { get; set; }
                 public int? PubContent { get; set; }
+                public int? PubVideo1080 { get; set; }
+                public int? PubVideo360 { get; set; }
+                public int? PubVideo720 { get; set; }
+                public string ServiceArea { get; set; }
+                public string StartTime { get; set; }
+                public int? SubAudio { get; set; }
+                public int? SubContent { get; set; }
+                public int? SubVideo1080 { get; set; }
+                public int? SubVideo360 { get; set; }
+                public int? SubVideo720 { get; set; }
+                public string UserId { get; set; }
             }
         };
-
-        /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

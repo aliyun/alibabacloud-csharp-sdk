@@ -10,34 +10,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeRtcChannelDetailsResponseBody : TeaModel {
         /// <summary>
-        /// 请求Id
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 页号
-        /// </summary>
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
-
-        /// <summary>
-        /// 显示数量
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
-        /// 总数量
-        /// </summary>
-        [NameInMap("TotalSize")]
-        [Validation(Required=false)]
-        public int? TotalSize { get; set; }
-
-        /// <summary>
         /// 频道ID
         /// </summary>
         [NameInMap("ChannelId")]
@@ -52,18 +24,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public List<DescribeRtcChannelDetailsResponseBodyChannelInfo> ChannelInfo { get; set; }
         public class DescribeRtcChannelDetailsResponseBodyChannelInfo : TeaModel {
             /// <summary>
-            /// SessionID
+            /// 设备类型
             /// </summary>
-            [NameInMap("Sid")]
+            [NameInMap("DeviceType")]
             [Validation(Required=false)]
-            public string Sid { get; set; }
-
-            /// <summary>
-            /// 参会者ID
-            /// </summary>
-            [NameInMap("Uid")]
-            [Validation(Required=false)]
-            public string Uid { get; set; }
+            public string DeviceType { get; set; }
 
             /// <summary>
             /// 用户入会时间，UTC格式
@@ -80,11 +45,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public string LeaveTime { get; set; }
 
             /// <summary>
-            /// SDK版本
+            /// 操作系统
             /// </summary>
-            [NameInMap("SdkVersion")]
+            [NameInMap("OS")]
             [Validation(Required=false)]
-            public string SdkVersion { get; set; }
+            public string OS { get; set; }
 
             /// <summary>
             /// 平台信息
@@ -94,20 +59,55 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// 操作系统
+            /// SDK版本
             /// </summary>
-            [NameInMap("OS")]
+            [NameInMap("SdkVersion")]
             [Validation(Required=false)]
-            public string OS { get; set; }
+            public string SdkVersion { get; set; }
 
             /// <summary>
-            /// 设备类型
+            /// SessionID
             /// </summary>
-            [NameInMap("DeviceType")]
+            [NameInMap("Sid")]
             [Validation(Required=false)]
-            public string DeviceType { get; set; }
+            public string Sid { get; set; }
+
+            /// <summary>
+            /// 参会者ID
+            /// </summary>
+            [NameInMap("Uid")]
+            [Validation(Required=false)]
+            public string Uid { get; set; }
 
         }
+
+        /// <summary>
+        /// 页号
+        /// </summary>
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        /// <summary>
+        /// 显示数量
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// 请求Id
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// 总数量
+        /// </summary>
+        [NameInMap("TotalSize")]
+        [Validation(Required=false)]
+        public int? TotalSize { get; set; }
 
     }
 

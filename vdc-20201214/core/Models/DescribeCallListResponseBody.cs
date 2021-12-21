@@ -10,27 +10,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeCallListResponseBody : TeaModel {
         /// <summary>
-        /// 页码。
-        /// </summary>
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
-
-        /// <summary>
-        /// 每页数量。
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
-        /// 总数量。
-        /// </summary>
-        [NameInMap("TotalCnt")]
-        [Validation(Required=false)]
-        public int? TotalCnt { get; set; }
-
-        /// <summary>
         /// 通信列表。
         /// </summary>
         [NameInMap("CallList")]
@@ -45,11 +24,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// 频道ID。
+            /// 通信体验差的用户数。
             /// </summary>
-            [NameInMap("ChannelId")]
+            [NameInMap("BadExpUserCnt")]
             [Validation(Required=false)]
-            public string ChannelId { get; set; }
+            public int? BadExpUserCnt { get; set; }
 
             /// <summary>
             /// 通信状态，IN：进行中，OUT：已结束
@@ -57,6 +36,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [NameInMap("CallStatus")]
             [Validation(Required=false)]
             public string CallStatus { get; set; }
+
+            /// <summary>
+            /// 频道ID。
+            /// </summary>
+            [NameInMap("ChannelId")]
+            [Validation(Required=false)]
+            public string ChannelId { get; set; }
 
             /// <summary>
             /// 通信的创建时间戳，使用UNIX时间戳表示，单位：秒。
@@ -86,14 +72,21 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [Validation(Required=false)]
             public int? UserCnt { get; set; }
 
-            /// <summary>
-            /// 通信体验差的用户数。
-            /// </summary>
-            [NameInMap("BadExpUserCnt")]
-            [Validation(Required=false)]
-            public int? BadExpUserCnt { get; set; }
-
         }
+
+        /// <summary>
+        /// 页码。
+        /// </summary>
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        /// <summary>
+        /// 每页数量。
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// 请求ID。
@@ -101,6 +94,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 总数量。
+        /// </summary>
+        [NameInMap("TotalCnt")]
+        [Validation(Required=false)]
+        public int? TotalCnt { get; set; }
 
     }
 

@@ -24,13 +24,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// 查询时间点日期，天粒度，UTC格式
-        /// </summary>
-        [NameInMap("TimePoint")]
-        [Validation(Required=false)]
-        public string TimePoint { get; set; }
-
-        /// <summary>
         /// 页号
         /// </summary>
         [NameInMap("PageNo")]
@@ -43,6 +36,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// 查询时间点日期，天粒度，UTC格式
+        /// </summary>
+        [NameInMap("TimePoint")]
+        [Validation(Required=false)]
+        public string TimePoint { get; set; }
 
     }
 

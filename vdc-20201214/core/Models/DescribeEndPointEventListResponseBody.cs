@@ -17,26 +17,12 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public List<DescribeEndPointEventListResponseBodyNodes> Nodes { get; set; }
         public class DescribeEndPointEventListResponseBodyNodes : TeaModel {
             /// <summary>
-            /// 用户ID
-            /// </summary>
-            [NameInMap("UserId")]
-            [Validation(Required=false)]
-            public string UserId { get; set; }
-
-            /// <summary>
             /// 事件数据列表
             /// </summary>
             [NameInMap("EventDataItems")]
             [Validation(Required=false)]
             public List<DescribeEndPointEventListResponseBodyNodesEventDataItems> EventDataItems { get; set; }
             public class DescribeEndPointEventListResponseBodyNodesEventDataItems : TeaModel {
-                /// <summary>
-                /// 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
-                /// </summary>
-                [NameInMap("Ts")]
-                [Validation(Required=false)]
-                public long? Ts { get; set; }
-
                 /// <summary>
                 /// 事件列表。
                 /// </summary>
@@ -67,7 +53,21 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 
                 }
 
+                /// <summary>
+                /// 第一个事件发生的时间，使用UNIX时间戳表示，单位：秒。
+                /// </summary>
+                [NameInMap("Ts")]
+                [Validation(Required=false)]
+                public long? Ts { get; set; }
+
             }
+
+            /// <summary>
+            /// 用户ID
+            /// </summary>
+            [NameInMap("UserId")]
+            [Validation(Required=false)]
+            public string UserId { get; set; }
 
         }
 

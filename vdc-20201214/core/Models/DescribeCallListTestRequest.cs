@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("StartTs")]
-        [Validation(Required=false)]
-        public long? StartTs { get; set; }
-
         [NameInMap("EndTs")]
         [Validation(Required=false)]
         public long? EndTs { get; set; }
+
+        [NameInMap("StartTs")]
+        [Validation(Required=false)]
+        public long? StartTs { get; set; }
 
     }
 

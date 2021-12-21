@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeFaultDiagnosisFactorDistributionStatResponseBody : TeaModel {
         /// <summary>
+        /// 请求ID。
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 影响因素分布统计数据
         /// </summary>
         [NameInMap("StatList")]
@@ -38,13 +45,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public float? UserRatio { get; set; }
 
         }
-
-        /// <summary>
-        /// 请求ID。
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

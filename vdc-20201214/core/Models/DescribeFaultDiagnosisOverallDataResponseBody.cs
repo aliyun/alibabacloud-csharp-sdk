@@ -10,24 +10,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeFaultDiagnosisOverallDataResponseBody : TeaModel {
         /// <summary>
-        /// 总览数据
-        /// </summary>
-        [NameInMap("OverallData")]
-        [Validation(Required=false)]
-        public DescribeFaultDiagnosisOverallDataResponseBodyOverallData OverallData { get; set; }
-        public class DescribeFaultDiagnosisOverallDataResponseBodyOverallData : TeaModel {
-            [NameInMap("FaultUserCount")]
-            [Validation(Required=false)]
-            public int? FaultUserCount { get; set; }
-            [NameInMap("TotalUserCount")]
-            [Validation(Required=false)]
-            public int? TotalUserCount { get; set; }
-            [NameInMap("FaultUserRatio")]
-            [Validation(Required=false)]
-            public float? FaultUserRatio { get; set; }
-        };
-
-        /// <summary>
         /// 异常指标数据
         /// </summary>
         [NameInMap("MetricData")]
@@ -38,10 +20,28 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             [Validation(Required=false)]
             public List<DescribeFaultDiagnosisOverallDataResponseBodyMetricDataNodes> Nodes { get; set; }
             public class DescribeFaultDiagnosisOverallDataResponseBodyMetricDataNodes : TeaModel {
+                public Dictionary<string, string> Ext { get; set; }
                 public string X { get; set; }
                 public string Y { get; set; }
-                public Dictionary<string, string> Ext { get; set; }
             }
+        };
+
+        /// <summary>
+        /// 总览数据
+        /// </summary>
+        [NameInMap("OverallData")]
+        [Validation(Required=false)]
+        public DescribeFaultDiagnosisOverallDataResponseBodyOverallData OverallData { get; set; }
+        public class DescribeFaultDiagnosisOverallDataResponseBodyOverallData : TeaModel {
+            [NameInMap("FaultUserCount")]
+            [Validation(Required=false)]
+            public int? FaultUserCount { get; set; }
+            [NameInMap("FaultUserRatio")]
+            [Validation(Required=false)]
+            public float? FaultUserRatio { get; set; }
+            [NameInMap("TotalUserCount")]
+            [Validation(Required=false)]
+            public int? TotalUserCount { get; set; }
         };
 
         /// <summary>

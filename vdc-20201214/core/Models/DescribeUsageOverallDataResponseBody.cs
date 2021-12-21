@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeUsageOverallDataResponseBody : TeaModel {
         /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 用量概览数据列表
         /// </summary>
         [NameInMap("UsageOverallData")]
         [Validation(Required=false)]
         public List<DescribeUsageOverallDataResponseBodyUsageOverallData> UsageOverallData { get; set; }
         public class DescribeUsageOverallDataResponseBodyUsageOverallData : TeaModel {
-            /// <summary>
-            /// 类型，半角逗号分隔    总时长：TOTAL_CALL_DURATION  视频通信时长：VIDEO_CALL_DURATION  音频通信时长：AUDIO_CALL_DURATION    通信频道数：CALL_CHANNEL_COUNT  高并发通信频道数：  HIGHLY_CONCURRENT_CHANNEL_COUNT  并发频道数峰值：  CHANNEL_CONCURRENT_PEAK    在线人数峰值：ONLINE_USER_PEAK  累计通话人数：  TOTAL_CALL_USER  累计进出人次：  TOTAL_INOUT_NUM
-            /// </summary>
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
             /// <summary>
             /// 坐标点列表
             /// </summary>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 
             }
 
-        }
+            /// <summary>
+            /// 类型，半角逗号分隔    总时长：TOTAL_CALL_DURATION  视频通信时长：VIDEO_CALL_DURATION  音频通信时长：AUDIO_CALL_DURATION    通信频道数：CALL_CHANNEL_COUNT  高并发通信频道数：  HIGHLY_CONCURRENT_CHANNEL_COUNT  并发频道数峰值：  CHANNEL_CONCURRENT_PEAK    在线人数峰值：ONLINE_USER_PEAK  累计通话人数：  TOTAL_CALL_USER  累计进出人次：  TOTAL_INOUT_NUM
+            /// </summary>
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
-        /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        }
 
     }
 

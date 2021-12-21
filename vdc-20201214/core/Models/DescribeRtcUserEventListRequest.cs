@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// 结束时间，UTC格式
         /// </summary>
-        [NameInMap("Uid")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string Uid { get; set; }
+        public string EndTime { get; set; }
 
         /// <summary>
         /// 起始时间，UTC格式
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 结束时间，UTC格式
+        /// 用户ID
         /// </summary>
-        [NameInMap("EndTime")]
+        [NameInMap("Uid")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string Uid { get; set; }
 
     }
 

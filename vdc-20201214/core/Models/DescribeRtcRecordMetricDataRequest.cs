@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeRtcRecordMetricDataRequest : TeaModel {
         /// <summary>
-        /// 起始时间，UTC格式
+        /// appId
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string AppId { get; set; }
 
         /// <summary>
         /// 结束时间，UTC格式
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public string ServiceArea { get; set; }
 
         /// <summary>
-        /// appId
+        /// 起始时间，UTC格式
         /// </summary>
-        [NameInMap("AppId")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string AppId { get; set; }
+        public string StartTime { get; set; }
 
     }
 

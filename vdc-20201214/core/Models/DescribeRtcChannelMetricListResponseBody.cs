@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeRtcChannelMetricListResponseBody : TeaModel {
         /// <summary>
-        /// 请求Id
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 指标列表
         /// </summary>
         [NameInMap("Metrics")]
@@ -24,11 +17,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public List<DescribeRtcChannelMetricListResponseBodyMetrics> Metrics { get; set; }
         public class DescribeRtcChannelMetricListResponseBodyMetrics : TeaModel {
             /// <summary>
-            /// 用户ID
+            /// 指标键值对,指标发生时间:指标值
             /// </summary>
-            [NameInMap("Uid")]
+            [NameInMap("KVs")]
             [Validation(Required=false)]
-            public string Uid { get; set; }
+            public Dictionary<string, object> KVs { get; set; }
 
             /// <summary>
             /// 指标ID
@@ -38,13 +31,20 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public int? Mid { get; set; }
 
             /// <summary>
-            /// 指标键值对,指标发生时间:指标值
+            /// 用户ID
             /// </summary>
-            [NameInMap("KVs")]
+            [NameInMap("Uid")]
             [Validation(Required=false)]
-            public Dictionary<string, object> KVs { get; set; }
+            public string Uid { get; set; }
 
         }
+
+        /// <summary>
+        /// 请求Id
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

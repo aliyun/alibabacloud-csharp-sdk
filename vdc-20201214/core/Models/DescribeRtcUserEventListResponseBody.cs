@@ -10,13 +10,6 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
 {
     public class DescribeRtcUserEventListResponseBody : TeaModel {
         /// <summary>
-        /// 请求ID
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
         /// 指标列表
         /// </summary>
         [NameInMap("Events")]
@@ -24,11 +17,11 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
         public List<DescribeRtcUserEventListResponseBodyEvents> Events { get; set; }
         public class DescribeRtcUserEventListResponseBodyEvents : TeaModel {
             /// <summary>
-            /// 时间发生unix timestamp
+            /// 事件类型
             /// </summary>
-            [NameInMap("EventTime")]
+            [NameInMap("Category")]
             [Validation(Required=false)]
-            public long? EventTime { get; set; }
+            public string Category { get; set; }
 
             /// <summary>
             /// 事件Id
@@ -38,13 +31,20 @@ namespace AlibabaCloud.SDK.Vdc20201214.Models
             public int? EventId { get; set; }
 
             /// <summary>
-            /// 事件类型
+            /// 时间发生unix timestamp
             /// </summary>
-            [NameInMap("Category")]
+            [NameInMap("EventTime")]
             [Validation(Required=false)]
-            public string Category { get; set; }
+            public long? EventTime { get; set; }
 
         }
+
+        /// <summary>
+        /// 请求ID
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
