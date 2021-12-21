@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class CreateCertificateWithCsrRequestResponseBody : TeaModel {
+    public class RenewCertificateOrderForPackageRequestResponseBody : TeaModel {
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }

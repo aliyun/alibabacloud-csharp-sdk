@@ -8,7 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class CreateCertificateRequestRequest : TeaModel {
+    public class CreateCertificateForPackageRequestRequest : TeaModel {
+        [NameInMap("CompanyName")]
+        [Validation(Required=false)]
+        public string CompanyName { get; set; }
+
+        [NameInMap("Csr")]
+        [Validation(Required=false)]
+        public string Csr { get; set; }
+
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
