@@ -3342,6 +3342,74 @@ namespace AlibabaCloud.SDK.Vod20170321
             return await DescribeVodDomainSrcBpsDataWithOptionsAsync(request, runtime);
         }
 
+        public DescribeVodDomainSrcTrafficDataResponse DescribeVodDomainSrcTrafficDataWithOptions(DescribeVodDomainSrcTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["EndTime"] = request.EndTime;
+            query["Interval"] = request.Interval;
+            query["OwnerId"] = request.OwnerId;
+            query["StartTime"] = request.StartTime;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainSrcTrafficData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainSrcTrafficDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeVodDomainSrcTrafficDataResponse> DescribeVodDomainSrcTrafficDataWithOptionsAsync(DescribeVodDomainSrcTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            query["DomainName"] = request.DomainName;
+            query["EndTime"] = request.EndTime;
+            query["Interval"] = request.Interval;
+            query["OwnerId"] = request.OwnerId;
+            query["StartTime"] = request.StartTime;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodDomainSrcTrafficData",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodDomainSrcTrafficDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeVodDomainSrcTrafficDataResponse DescribeVodDomainSrcTrafficData(DescribeVodDomainSrcTrafficDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodDomainSrcTrafficDataWithOptions(request, runtime);
+        }
+
+        public async Task<DescribeVodDomainSrcTrafficDataResponse> DescribeVodDomainSrcTrafficDataAsync(DescribeVodDomainSrcTrafficDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodDomainSrcTrafficDataWithOptionsAsync(request, runtime);
+        }
+
         public DescribeVodDomainTrafficDataResponse DescribeVodDomainTrafficDataWithOptions(DescribeVodDomainTrafficDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UploadStreamByURLResponseBody : TeaModel {
+        [NameInMap("FileURL")]
+        [Validation(Required=false)]
+        public string FileURL { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("SourceURL")]
         [Validation(Required=false)]
         public string SourceURL { get; set; }
-
-        [NameInMap("StreamFileURL")]
-        [Validation(Required=false)]
-        public string StreamFileURL { get; set; }
 
         [NameInMap("StreamJobId")]
         [Validation(Required=false)]
