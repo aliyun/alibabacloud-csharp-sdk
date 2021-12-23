@@ -8,26 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
-    public class ListFunctionDeploymentRequest : TeaModel {
-        [NameInMap("Name")]
+    public class DescribeResourceUsageRequest : TeaModel {
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string EndTime { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("Format")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string Format { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public long? PageSize { get; set; }
 
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string StartTime { get; set; }
 
     }
 

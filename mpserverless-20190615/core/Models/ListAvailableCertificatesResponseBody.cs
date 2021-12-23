@@ -9,27 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListAvailableCertificatesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAvailableCertificatesResponseBodyData> Data { get; set; }
         public class ListAvailableCertificatesResponseBodyData : TeaModel {
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("StatusCode")]
             [Validation(Required=false)]
             public string StatusCode { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

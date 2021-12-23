@@ -16,13 +16,17 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public bool? Data { get; set; }
 
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -31,10 +35,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public bool? Data { get; set; }
 
     }
 

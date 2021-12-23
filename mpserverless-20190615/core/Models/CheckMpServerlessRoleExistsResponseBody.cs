@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class CheckMpServerlessRoleExistsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Exists")]
         [Validation(Required=false)]
         public bool? Exists { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

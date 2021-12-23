@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListFunctionRequest : TeaModel {
+        [NameInMap("FilterBy")]
+        [Validation(Required=false)]
+        public string FilterBy { get; set; }
+
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("FilterBy")]
-        [Validation(Required=false)]
-        public string FilterBy { get; set; }
 
         [NameInMap("SpaceId")]
         [Validation(Required=false)]

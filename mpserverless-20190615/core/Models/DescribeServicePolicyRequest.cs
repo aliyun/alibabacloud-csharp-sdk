@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class DescribeServicePolicyRequest : TeaModel {
-        [NameInMap("SpaceId")]
+        [NameInMap("CollectionName")]
         [Validation(Required=false)]
-        public string SpaceId { get; set; }
+        public string CollectionName { get; set; }
 
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
-        [NameInMap("CollectionName")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string CollectionName { get; set; }
+        public string SpaceId { get; set; }
 
     }
 

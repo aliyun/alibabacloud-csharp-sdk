@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string ServiceStatus { get; set; }
 
-        [NameInMap("Count")]
-        [Validation(Required=false)]
-        public int? Count { get; set; }
-
     }
 
 }

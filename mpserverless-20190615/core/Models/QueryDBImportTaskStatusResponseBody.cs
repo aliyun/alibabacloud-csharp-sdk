@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class QueryDBImportTaskStatusResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("DetailMessage")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string DetailMessage { get; set; }
 
         [NameInMap("FailedCount")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DetailMessage")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string DetailMessage { get; set; }
+        public string Status { get; set; }
 
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]

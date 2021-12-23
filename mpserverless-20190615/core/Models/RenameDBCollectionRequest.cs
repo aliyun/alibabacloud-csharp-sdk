@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class RenameDBCollectionRequest : TeaModel {
-        [NameInMap("SpaceId")]
+        [NameInMap("NewCollection")]
         [Validation(Required=false)]
-        public string SpaceId { get; set; }
+        public string NewCollection { get; set; }
 
         [NameInMap("OriginCollection")]
         [Validation(Required=false)]
         public string OriginCollection { get; set; }
 
-        [NameInMap("NewCollection")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string NewCollection { get; set; }
+        public string SpaceId { get; set; }
 
     }
 

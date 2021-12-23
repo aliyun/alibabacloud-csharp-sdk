@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class SaveWebHostingCustomDomainConfigRequest : TeaModel {
-        [NameInMap("SpaceId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string SpaceId { get; set; }
+        public string DomainName { get; set; }
 
         [NameInMap("ForceRedirectType")]
         [Validation(Required=false)]
         public string ForceRedirectType { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string SpaceId { get; set; }
 
     }
 

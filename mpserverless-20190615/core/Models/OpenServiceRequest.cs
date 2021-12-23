@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class OpenServiceRequest : TeaModel {
-        [NameInMap("SpaceId")]
-        [Validation(Required=false)]
-        public string SpaceId { get; set; }
-
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("SpaceId")]
+        [Validation(Required=false)]
+        public string SpaceId { get; set; }
 
     }
 

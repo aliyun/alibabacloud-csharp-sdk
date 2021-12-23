@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
-    public class CreateSmsSignResponse : TeaModel {
+    public class DescribeResourceUsageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CreateSmsSignResponseBody Body { get; set; }
+        public DescribeResourceUsageResponseBody Body { get; set; }
 
     }
 

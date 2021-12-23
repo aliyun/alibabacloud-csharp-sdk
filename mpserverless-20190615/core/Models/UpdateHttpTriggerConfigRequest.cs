@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class UpdateHttpTriggerConfigRequest : TeaModel {
-        [NameInMap("EnableService")]
-        [Validation(Required=false)]
-        public bool? EnableService { get; set; }
-
-        [NameInMap("SpaceId")]
-        [Validation(Required=false)]
-        public string SpaceId { get; set; }
-
         [NameInMap("CustomDomain")]
         [Validation(Required=false)]
         public string CustomDomain { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("CustomDomainPrivateKey")]
         [Validation(Required=false)]
         public string CustomDomainPrivateKey { get; set; }
+
+        [NameInMap("EnableService")]
+        [Validation(Required=false)]
+        public bool? EnableService { get; set; }
+
+        [NameInMap("SpaceId")]
+        [Validation(Required=false)]
+        public string SpaceId { get; set; }
 
     }
 

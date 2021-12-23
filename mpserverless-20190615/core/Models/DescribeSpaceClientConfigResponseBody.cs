@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public string ApiKey { get; set; }
 
-        [NameInMap("SpaceId")]
-        [Validation(Required=false)]
-        public string SpaceId { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PrivateKey")]
-        [Validation(Required=false)]
-        public string PrivateKey { get; set; }
-
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
@@ -36,6 +24,18 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("PrivateKey")]
+        [Validation(Required=false)]
+        public string PrivateKey { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SpaceId")]
+        [Validation(Required=false)]
+        public string SpaceId { get; set; }
 
     }
 

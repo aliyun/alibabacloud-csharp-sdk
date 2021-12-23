@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListFileRequest : TeaModel {
-        [NameInMap("SpaceId")]
+        [NameInMap("Keyword")]
         [Validation(Required=false)]
-        public string SpaceId { get; set; }
+        public string Keyword { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Keyword")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string Keyword { get; set; }
+        public string SpaceId { get; set; }
 
     }
 

@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class SaveAppAuthTokenRequest : TeaModel {
-        [NameInMap("SpaceId")]
+        [NameInMap("AppAuthToken")]
         [Validation(Required=false)]
-        public string SpaceId { get; set; }
-
-        [NameInMap("IsvAppId")]
-        [Validation(Required=false)]
-        public string IsvAppId { get; set; }
+        public string AppAuthToken { get; set; }
 
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("AppAuthToken")]
+        [NameInMap("IsvAppId")]
         [Validation(Required=false)]
-        public string AppAuthToken { get; set; }
+        public string IsvAppId { get; set; }
+
+        [NameInMap("SpaceId")]
+        [Validation(Required=false)]
+        public string SpaceId { get; set; }
 
     }
 

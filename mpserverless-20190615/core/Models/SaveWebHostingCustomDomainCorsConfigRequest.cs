@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class SaveWebHostingCustomDomainCorsConfigRequest : TeaModel {
-        [NameInMap("SpaceId")]
+        [NameInMap("AccessControlAllowOrigin")]
         [Validation(Required=false)]
-        public string SpaceId { get; set; }
+        public string AccessControlAllowOrigin { get; set; }
 
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public bool? EnableCors { get; set; }
 
-        [NameInMap("AccessControlAllowOrigin")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string AccessControlAllowOrigin { get; set; }
+        public string SpaceId { get; set; }
 
     }
 

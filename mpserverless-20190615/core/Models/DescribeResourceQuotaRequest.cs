@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
-    public class MoveWebHostingFileRequest : TeaModel {
+    public class DescribeResourceQuotaRequest : TeaModel {
         [NameInMap("SpaceId")]
         [Validation(Required=false)]
         public string SpaceId { get; set; }
-
-        [NameInMap("SourceFilePath")]
-        [Validation(Required=false)]
-        public string SourceFilePath { get; set; }
-
-        [NameInMap("TargetFilePath")]
-        [Validation(Required=false)]
-        public string TargetFilePath { get; set; }
 
     }
 

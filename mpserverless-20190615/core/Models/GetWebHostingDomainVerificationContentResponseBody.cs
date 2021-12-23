@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class GetWebHostingDomainVerificationContentResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWebHostingDomainVerificationContentResponseBodyData Data { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

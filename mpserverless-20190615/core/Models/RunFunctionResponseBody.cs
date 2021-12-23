@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.MPServerless20190615.Models
         [Validation(Required=false)]
         public RunFunctionResponseBodyRuntimeMeta RuntimeMeta { get; set; }
         public class RunFunctionResponseBodyRuntimeMeta : TeaModel {
-            [NameInMap("InvocationDuration")]
-            [Validation(Required=false)]
-            public int? InvocationDuration { get; set; }
-            [NameInMap("RequestId")]
-            [Validation(Required=false)]
-            public string RequestId { get; set; }
             [NameInMap("BillingDuration")]
             [Validation(Required=false)]
             public int? BillingDuration { get; set; }
+            [NameInMap("InvocationDuration")]
+            [Validation(Required=false)]
+            public int? InvocationDuration { get; set; }
             [NameInMap("MaxMemoryUsage")]
             [Validation(Required=false)]
             public int? MaxMemoryUsage { get; set; }
+            [NameInMap("RequestId")]
+            [Validation(Required=false)]
+            public string RequestId { get; set; }
         };
 
     }

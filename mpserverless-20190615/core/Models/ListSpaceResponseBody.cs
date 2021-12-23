@@ -9,41 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.MPServerless20190615.Models
 {
     public class ListSpaceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Count")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Count { get; set; }
 
         [NameInMap("GmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
-        [NameInMap("Count")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? Count { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("Spaces")]
         [Validation(Required=false)]
         public List<ListSpaceResponseBodySpaces> Spaces { get; set; }
         public class ListSpaceResponseBodySpaces : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("Desc")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string Desc { get; set; }
 
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
-            [NameInMap("SpaceId")]
-            [Validation(Required=false)]
-            public string SpaceId { get; set; }
-
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Desc")]
+            [NameInMap("SpaceId")]
             [Validation(Required=false)]
-            public string Desc { get; set; }
+            public string SpaceId { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
         }
 
