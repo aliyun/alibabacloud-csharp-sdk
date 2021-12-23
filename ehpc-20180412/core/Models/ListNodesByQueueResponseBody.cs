@@ -33,6 +33,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string PublicIpAddress { get; set; }
                 public string RegionId { get; set; }
                 public string SpotStrategy { get; set; }
+                public string StateInSched { get; set; }
                 public string Status { get; set; }
                 public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources TotalResources { get; set; }
                 public class ListNodesByQueueResponseBodyNodesNodeInfoTotalResources : TeaModel {

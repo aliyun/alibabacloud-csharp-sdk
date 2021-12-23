@@ -41,6 +41,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
                 }
                 public string SpotStrategy { get; set; }
+                public string StateInSched { get; set; }
                 public string Status { get; set; }
                 public ListNodesResponseBodyNodesNodeInfoTotalResources TotalResources { get; set; }
                 public class ListNodesResponseBodyNodesNodeInfoTotalResources : TeaModel {

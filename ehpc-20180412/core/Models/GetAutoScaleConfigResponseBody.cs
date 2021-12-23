@@ -61,6 +61,39 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public List<GetAutoScaleConfigResponseBodyQueuesQueueInfo> QueueInfo { get; set; }
             public class GetAutoScaleConfigResponseBodyQueuesQueueInfo : TeaModel {
+                public GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks DataDisks { get; set; }
+                public class GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisks : TeaModel {
+                    [NameInMap("DataDisksInfo")]
+                    [Validation(Required=false)]
+                    public List<GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo> DataDisksInfo { get; set; }
+                    public class GetAutoScaleConfigResponseBodyQueuesQueueInfoDataDisksDataDisksInfo : TeaModel {
+                        [NameInMap("DataDiskCategory")]
+                        [Validation(Required=false)]
+                        public string DataDiskCategory { get; set; }
+
+                        [NameInMap("DataDiskDeleteWithInstance")]
+                        [Validation(Required=false)]
+                        public bool? DataDiskDeleteWithInstance { get; set; }
+
+                        [NameInMap("DataDiskEncrypted")]
+                        [Validation(Required=false)]
+                        public bool? DataDiskEncrypted { get; set; }
+
+                        [NameInMap("DataDiskKMSKeyId")]
+                        [Validation(Required=false)]
+                        public string DataDiskKMSKeyId { get; set; }
+
+                        [NameInMap("DataDiskPerformanceLevel")]
+                        [Validation(Required=false)]
+                        public string DataDiskPerformanceLevel { get; set; }
+
+                        [NameInMap("DataDiskSize")]
+                        [Validation(Required=false)]
+                        public int? DataDiskSize { get; set; }
+
+                    }
+
+                }
                 public bool? EnableAutoGrow { get; set; }
                 public bool? EnableAutoShrink { get; set; }
                 public string HostNamePrefix { get; set; }

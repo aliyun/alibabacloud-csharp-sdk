@@ -230,6 +230,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 
         }
 
+        [NameInMap("RamNodeTypes")]
+        [Validation(Required=false)]
+        public List<string> RamNodeTypes { get; set; }
+
+        [NameInMap("RamRoleName")]
+        [Validation(Required=false)]
+        public string RamRoleName { get; set; }
+
         [NameInMap("RemoteDirectory")]
         [Validation(Required=false)]
         public string RemoteDirectory { get; set; }

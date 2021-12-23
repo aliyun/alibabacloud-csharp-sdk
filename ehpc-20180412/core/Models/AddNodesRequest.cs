@@ -49,6 +49,36 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string CreateMode { get; set; }
 
+        [NameInMap("DataDisks")]
+        [Validation(Required=false)]
+        public List<AddNodesRequestDataDisks> DataDisks { get; set; }
+        public class AddNodesRequestDataDisks : TeaModel {
+            [NameInMap("DataDiskCategory")]
+            [Validation(Required=false)]
+            public string DataDiskCategory { get; set; }
+
+            [NameInMap("DataDiskDeleteWithInstance")]
+            [Validation(Required=false)]
+            public bool? DataDiskDeleteWithInstance { get; set; }
+
+            [NameInMap("DataDiskEncrypted")]
+            [Validation(Required=false)]
+            public bool? DataDiskEncrypted { get; set; }
+
+            [NameInMap("DataDiskKMSKeyId")]
+            [Validation(Required=false)]
+            public string DataDiskKMSKeyId { get; set; }
+
+            [NameInMap("DataDiskPerformanceLevel")]
+            [Validation(Required=false)]
+            public string DataDiskPerformanceLevel { get; set; }
+
+            [NameInMap("DataDiskSize")]
+            [Validation(Required=false)]
+            public int? DataDiskSize { get; set; }
+
+        }
+
         [NameInMap("EcsChargeType")]
         [Validation(Required=false)]
         public string EcsChargeType { get; set; }

@@ -21,6 +21,32 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [Validation(Required=false)]
             public int? Amount { get; set; }
 
+            [NameInMap("DataDisks")]
+            [Validation(Required=false)]
+            public List<DescribePriceRequestCommoditiesDataDisks> DataDisks { get; set; }
+            public class DescribePriceRequestCommoditiesDataDisks : TeaModel {
+                [NameInMap("category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
+                [NameInMap("deleteWithInstance")]
+                [Validation(Required=false)]
+                public bool? DeleteWithInstance { get; set; }
+
+                [NameInMap("encrypted")]
+                [Validation(Required=false)]
+                public bool? Encrypted { get; set; }
+
+                [NameInMap("performanceLevel")]
+                [Validation(Required=false)]
+                public string PerformanceLevel { get; set; }
+
+                [NameInMap("size")]
+                [Validation(Required=false)]
+                public int? Size { get; set; }
+
+            }
+
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }

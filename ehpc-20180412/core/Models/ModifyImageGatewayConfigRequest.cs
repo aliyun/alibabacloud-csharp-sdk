@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? PullUpdateTimeout { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Repo")]
         [Validation(Required=false)]
         public List<ModifyImageGatewayConfigRequestRepo> Repo { get; set; }

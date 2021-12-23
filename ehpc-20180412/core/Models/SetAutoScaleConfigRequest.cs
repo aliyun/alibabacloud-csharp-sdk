@@ -53,6 +53,36 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public List<SetAutoScaleConfigRequestQueues> Queues { get; set; }
         public class SetAutoScaleConfigRequestQueues : TeaModel {
+            [NameInMap("DataDisks")]
+            [Validation(Required=false)]
+            public List<SetAutoScaleConfigRequestQueuesDataDisks> DataDisks { get; set; }
+            public class SetAutoScaleConfigRequestQueuesDataDisks : TeaModel {
+                [NameInMap("DataDiskCategory")]
+                [Validation(Required=false)]
+                public string DataDiskCategory { get; set; }
+
+                [NameInMap("DataDiskDeleteWithInstance")]
+                [Validation(Required=false)]
+                public bool? DataDiskDeleteWithInstance { get; set; }
+
+                [NameInMap("DataDiskEncrypted")]
+                [Validation(Required=false)]
+                public bool? DataDiskEncrypted { get; set; }
+
+                [NameInMap("DataDiskKMSKeyId")]
+                [Validation(Required=false)]
+                public string DataDiskKMSKeyId { get; set; }
+
+                [NameInMap("DataDiskPerformanceLevel")]
+                [Validation(Required=false)]
+                public string DataDiskPerformanceLevel { get; set; }
+
+                [NameInMap("DataDiskSize")]
+                [Validation(Required=false)]
+                public int? DataDiskSize { get; set; }
+
+            }
+
             [NameInMap("EnableAutoGrow")]
             [Validation(Required=false)]
             public bool? EnableAutoGrow { get; set; }

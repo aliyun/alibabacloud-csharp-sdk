@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string ClientVersion { get; set; }
                 public string DeployMode { get; set; }
                 public string Description { get; set; }
+                public bool? HasPlugin { get; set; }
                 public string Id { get; set; }
                 public bool? IsComputeEss { get; set; }
                 public string Location { get; set; }

@@ -50,6 +50,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 public string DeployMode { get; set; }
                 public string Description { get; set; }
                 public string EhpcVersion { get; set; }
+                public bool? HasPlugin { get; set; }
                 public string Id { get; set; }
                 public string ImageId { get; set; }
                 public string ImageOwnerAlias { get; set; }

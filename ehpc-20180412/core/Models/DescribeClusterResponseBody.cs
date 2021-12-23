@@ -97,6 +97,18 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public string InstanceType { get; set; }
                 };
 
+                [NameInMap("ProxyMgr")]
+                [Validation(Required=false)]
+                public DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr ProxyMgr { get; set; }
+                public class DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr : TeaModel {
+                    [NameInMap("Count")]
+                    [Validation(Required=false)]
+                    public int? Count { get; set; }
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+                };
+
             }
             [NameInMap("HaEnable")]
             [Validation(Required=false)]
@@ -122,6 +134,29 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+            [NameInMap("OnPremiseInfo")]
+            [Validation(Required=false)]
+            public DescribeClusterResponseBodyClusterInfoOnPremiseInfo OnPremiseInfo { get; set; }
+            public class DescribeClusterResponseBodyClusterInfoOnPremiseInfo : TeaModel {
+                [NameInMap("OnPremiseInfo")]
+                [Validation(Required=false)]
+                public List<DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo> OnPremiseInfo { get; set; }
+                public class DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo : TeaModel {
+                    [NameInMap("HostName")]
+                    [Validation(Required=false)]
+                    public string HostName { get; set; }
+
+                    [NameInMap("IP")]
+                    [Validation(Required=false)]
+                    public string IP { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+            }
             [NameInMap("OsTag")]
             [Validation(Required=false)]
             public string OsTag { get; set; }

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddContainerAppResponse>(CallApi(params_, req, runtime));
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddContainerAppResponse>(await CallApiAsync(params_, req, runtime));
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddExistedNodesResponse>(CallApi(params_, req, runtime));
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddExistedNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddLocalNodesResponse>(CallApi(params_, req, runtime));
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddLocalNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddNodesResponse>(CallApi(params_, req, runtime));
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddQueueResponse>(CallApi(params_, req, runtime));
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddQueueResponse>(await CallApiAsync(params_, req, runtime));
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddSecurityGroupResponse>(CallApi(params_, req, runtime));
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddUsersResponse>(CallApi(params_, req, runtime));
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddUsersResponse>(await CallApiAsync(params_, req, runtime));
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ApplyNodesResponse>(CallApi(params_, req, runtime));
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ApplyNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -518,7 +518,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -576,7 +576,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateGWSClusterResponse>(CallApi(params_, req, runtime));
@@ -599,7 +599,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateGWSClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -634,7 +634,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateGWSImageResponse>(CallApi(params_, req, runtime));
@@ -657,7 +657,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateGWSImageResponse>(await CallApiAsync(params_, req, runtime));
@@ -692,7 +692,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateGWSInstanceResponse>(CallApi(params_, req, runtime));
@@ -715,7 +715,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateGWSInstanceResponse>(await CallApiAsync(params_, req, runtime));
@@ -750,7 +750,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateHybridClusterResponse>(CallApi(params_, req, runtime));
@@ -773,7 +773,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateHybridClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -808,7 +808,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateJobFileResponse>(CallApi(params_, req, runtime));
@@ -831,7 +831,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateJobFileResponse>(await CallApiAsync(params_, req, runtime));
@@ -866,7 +866,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateJobTemplateResponse>(CallApi(params_, req, runtime));
@@ -889,7 +889,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateJobTemplateResponse>(await CallApiAsync(params_, req, runtime));
@@ -924,7 +924,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
@@ -947,7 +947,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -982,7 +982,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteContainerAppsResponse>(CallApi(params_, req, runtime));
@@ -1005,7 +1005,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteContainerAppsResponse>(await CallApiAsync(params_, req, runtime));
@@ -1040,7 +1040,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteGWSClusterResponse>(CallApi(params_, req, runtime));
@@ -1063,7 +1063,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteGWSClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -1098,7 +1098,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteGWSInstanceResponse>(CallApi(params_, req, runtime));
@@ -1121,7 +1121,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteGWSInstanceResponse>(await CallApiAsync(params_, req, runtime));
@@ -1156,7 +1156,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteImageResponse>(CallApi(params_, req, runtime));
@@ -1179,7 +1179,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteImageResponse>(await CallApiAsync(params_, req, runtime));
@@ -1214,7 +1214,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteJobTemplatesResponse>(CallApi(params_, req, runtime));
@@ -1237,7 +1237,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteJobTemplatesResponse>(await CallApiAsync(params_, req, runtime));
@@ -1272,7 +1272,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteJobsResponse>(CallApi(params_, req, runtime));
@@ -1295,7 +1295,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteJobsResponse>(await CallApiAsync(params_, req, runtime));
@@ -1330,7 +1330,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteNodesResponse>(CallApi(params_, req, runtime));
@@ -1353,7 +1353,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -1388,7 +1388,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteQueueResponse>(CallApi(params_, req, runtime));
@@ -1411,7 +1411,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteQueueResponse>(await CallApiAsync(params_, req, runtime));
@@ -1446,7 +1446,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteSecurityGroupResponse>(CallApi(params_, req, runtime));
@@ -1469,7 +1469,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
@@ -1504,7 +1504,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteUsersResponse>(CallApi(params_, req, runtime));
@@ -1527,7 +1527,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteUsersResponse>(await CallApiAsync(params_, req, runtime));
@@ -1562,7 +1562,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeAutoScaleConfigResponse>(CallApi(params_, req, runtime));
@@ -1585,7 +1585,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeAutoScaleConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -1620,7 +1620,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeClusterResponse>(CallApi(params_, req, runtime));
@@ -1643,7 +1643,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -1678,7 +1678,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeContainerAppResponse>(CallApi(params_, req, runtime));
@@ -1701,7 +1701,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeContainerAppResponse>(await CallApiAsync(params_, req, runtime));
@@ -1729,7 +1729,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1740,7 +1739,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSClusterPolicyResponse>(CallApi(params_, req, runtime));
@@ -1756,7 +1755,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1767,7 +1765,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSClusterPolicyResponse>(await CallApiAsync(params_, req, runtime));
@@ -1802,7 +1800,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSClustersResponse>(CallApi(params_, req, runtime));
@@ -1825,7 +1823,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSClustersResponse>(await CallApiAsync(params_, req, runtime));
@@ -1860,7 +1858,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSImagesResponse>(CallApi(params_, req, runtime));
@@ -1883,7 +1881,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSImagesResponse>(await CallApiAsync(params_, req, runtime));
@@ -1918,7 +1916,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSInstancesResponse>(CallApi(params_, req, runtime));
@@ -1941,7 +1939,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeGWSInstancesResponse>(await CallApiAsync(params_, req, runtime));
@@ -1976,7 +1974,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeImageResponse>(CallApi(params_, req, runtime));
@@ -1999,7 +1997,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeImageResponse>(await CallApiAsync(params_, req, runtime));
@@ -2034,7 +2032,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeImageGatewayConfigResponse>(CallApi(params_, req, runtime));
@@ -2057,7 +2055,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeImageGatewayConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -2092,7 +2090,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeImagePriceResponse>(CallApi(params_, req, runtime));
@@ -2115,7 +2113,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeImagePriceResponse>(await CallApiAsync(params_, req, runtime));
@@ -2150,7 +2148,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeJobResponse>(CallApi(params_, req, runtime));
@@ -2173,7 +2171,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeJobResponse>(await CallApiAsync(params_, req, runtime));
@@ -2208,7 +2206,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeNFSClientStatusResponse>(CallApi(params_, req, runtime));
@@ -2231,7 +2229,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeNFSClientStatusResponse>(await CallApiAsync(params_, req, runtime));
@@ -2266,7 +2264,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
@@ -2289,7 +2287,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
@@ -2324,7 +2322,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<EcdDeleteDesktopsResponse>(CallApi(params_, req, runtime));
@@ -2347,7 +2345,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<EcdDeleteDesktopsResponse>(await CallApiAsync(params_, req, runtime));
@@ -2382,7 +2380,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<EditJobTemplateResponse>(CallApi(params_, req, runtime));
@@ -2405,7 +2403,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<EditJobTemplateResponse>(await CallApiAsync(params_, req, runtime));
@@ -2440,7 +2438,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAccountingReportResponse>(CallApi(params_, req, runtime));
@@ -2463,7 +2461,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAccountingReportResponse>(await CallApiAsync(params_, req, runtime));
@@ -2498,7 +2496,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAutoScaleConfigResponse>(CallApi(params_, req, runtime));
@@ -2521,7 +2519,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetAutoScaleConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -2556,7 +2554,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCloudMetricLogsResponse>(CallApi(params_, req, runtime));
@@ -2579,7 +2577,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCloudMetricLogsResponse>(await CallApiAsync(params_, req, runtime));
@@ -2614,7 +2612,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCloudMetricProfilingResponse>(CallApi(params_, req, runtime));
@@ -2637,7 +2635,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetCloudMetricProfilingResponse>(await CallApiAsync(params_, req, runtime));
@@ -2672,7 +2670,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetClusterVolumesResponse>(CallApi(params_, req, runtime));
@@ -2695,7 +2693,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetClusterVolumesResponse>(await CallApiAsync(params_, req, runtime));
@@ -2730,7 +2728,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetGWSConnectTicketResponse>(CallApi(params_, req, runtime));
@@ -2753,7 +2751,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetGWSConnectTicketResponse>(await CallApiAsync(params_, req, runtime));
@@ -2788,7 +2786,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetHealthMonitorLogsResponse>(CallApi(params_, req, runtime));
@@ -2811,7 +2809,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetHealthMonitorLogsResponse>(await CallApiAsync(params_, req, runtime));
@@ -2846,7 +2844,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetHybridClusterConfigResponse>(CallApi(params_, req, runtime));
@@ -2869,7 +2867,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetHybridClusterConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -2904,7 +2902,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetIfEcsTypeSupportHtConfigResponse>(CallApi(params_, req, runtime));
@@ -2927,7 +2925,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetIfEcsTypeSupportHtConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -2962,7 +2960,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetSchedulerInfoResponse>(CallApi(params_, req, runtime));
@@ -2985,7 +2983,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetSchedulerInfoResponse>(await CallApiAsync(params_, req, runtime));
@@ -3020,7 +3018,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetVisualServiceStatusResponse>(CallApi(params_, req, runtime));
@@ -3043,7 +3041,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetVisualServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
@@ -3078,7 +3076,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetWorkbenchTokenResponse>(CallApi(params_, req, runtime));
@@ -3101,7 +3099,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetWorkbenchTokenResponse>(await CallApiAsync(params_, req, runtime));
@@ -3136,7 +3134,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<InitializeEHPCResponse>(CallApi(params_, req, runtime));
@@ -3159,7 +3157,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<InitializeEHPCResponse>(await CallApiAsync(params_, req, runtime));
@@ -3194,7 +3192,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<InstallSoftwareResponse>(CallApi(params_, req, runtime));
@@ -3217,7 +3215,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<InstallSoftwareResponse>(await CallApiAsync(params_, req, runtime));
@@ -3252,7 +3250,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<InvokeShellCommandResponse>(CallApi(params_, req, runtime));
@@ -3275,7 +3273,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<InvokeShellCommandResponse>(await CallApiAsync(params_, req, runtime));
@@ -3310,7 +3308,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAvailableEcsTypesResponse>(CallApi(params_, req, runtime));
@@ -3333,7 +3331,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListAvailableEcsTypesResponse>(await CallApiAsync(params_, req, runtime));
@@ -3368,7 +3366,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCloudMetricProfilingsResponse>(CallApi(params_, req, runtime));
@@ -3391,7 +3389,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCloudMetricProfilingsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3426,7 +3424,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListClusterLogsResponse>(CallApi(params_, req, runtime));
@@ -3449,7 +3447,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListClusterLogsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3484,7 +3482,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListClustersResponse>(CallApi(params_, req, runtime));
@@ -3507,7 +3505,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListClustersResponse>(await CallApiAsync(params_, req, runtime));
@@ -3542,7 +3540,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListClustersMetaResponse>(CallApi(params_, req, runtime));
@@ -3565,7 +3563,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListClustersMetaResponse>(await CallApiAsync(params_, req, runtime));
@@ -3600,7 +3598,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCommandsResponse>(CallApi(params_, req, runtime));
@@ -3623,7 +3621,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCommandsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3658,7 +3656,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListContainerAppsResponse>(CallApi(params_, req, runtime));
@@ -3681,7 +3679,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListContainerAppsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3716,7 +3714,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListContainerImagesResponse>(CallApi(params_, req, runtime));
@@ -3739,7 +3737,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListContainerImagesResponse>(await CallApiAsync(params_, req, runtime));
@@ -3774,7 +3772,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCpfsFileSystemsResponse>(CallApi(params_, req, runtime));
@@ -3797,7 +3795,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCpfsFileSystemsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3827,7 +3825,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCurrentClientVersionResponse>(CallApi(params_, req, runtime));
@@ -3845,7 +3843,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCurrentClientVersionResponse>(await CallApiAsync(params_, req, runtime));
@@ -3880,7 +3878,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCustomImagesResponse>(CallApi(params_, req, runtime));
@@ -3903,7 +3901,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListCustomImagesResponse>(await CallApiAsync(params_, req, runtime));
@@ -3938,7 +3936,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListFileSystemWithMountTargetsResponse>(CallApi(params_, req, runtime));
@@ -3961,7 +3959,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListFileSystemWithMountTargetsResponse>(await CallApiAsync(params_, req, runtime));
@@ -3996,7 +3994,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListImagesResponse>(CallApi(params_, req, runtime));
@@ -4019,7 +4017,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListImagesResponse>(await CallApiAsync(params_, req, runtime));
@@ -4054,7 +4052,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInstalledSoftwareResponse>(CallApi(params_, req, runtime));
@@ -4077,7 +4075,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInstalledSoftwareResponse>(await CallApiAsync(params_, req, runtime));
@@ -4112,7 +4110,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInvocationResultsResponse>(CallApi(params_, req, runtime));
@@ -4135,7 +4133,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInvocationResultsResponse>(await CallApiAsync(params_, req, runtime));
@@ -4170,7 +4168,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInvocationStatusResponse>(CallApi(params_, req, runtime));
@@ -4193,7 +4191,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListInvocationStatusResponse>(await CallApiAsync(params_, req, runtime));
@@ -4228,7 +4226,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListJobTemplatesResponse>(CallApi(params_, req, runtime));
@@ -4251,7 +4249,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListJobTemplatesResponse>(await CallApiAsync(params_, req, runtime));
@@ -4286,7 +4284,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListJobsResponse>(CallApi(params_, req, runtime));
@@ -4309,7 +4307,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListJobsResponse>(await CallApiAsync(params_, req, runtime));
@@ -4344,7 +4342,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListNodesResponse>(CallApi(params_, req, runtime));
@@ -4367,7 +4365,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -4402,7 +4400,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListNodesByQueueResponse>(CallApi(params_, req, runtime));
@@ -4425,7 +4423,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListNodesByQueueResponse>(await CallApiAsync(params_, req, runtime));
@@ -4460,7 +4458,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListNodesNoPagingResponse>(CallApi(params_, req, runtime));
@@ -4483,7 +4481,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListNodesNoPagingResponse>(await CallApiAsync(params_, req, runtime));
@@ -4518,7 +4516,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListPreferredEcsTypesResponse>(CallApi(params_, req, runtime));
@@ -4541,7 +4539,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListPreferredEcsTypesResponse>(await CallApiAsync(params_, req, runtime));
@@ -4576,7 +4574,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListQueuesResponse>(CallApi(params_, req, runtime));
@@ -4599,7 +4597,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListQueuesResponse>(await CallApiAsync(params_, req, runtime));
@@ -4629,7 +4627,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListRegionsResponse>(CallApi(params_, req, runtime));
@@ -4647,7 +4645,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListRegionsResponse>(await CallApiAsync(params_, req, runtime));
@@ -4682,7 +4680,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListSecurityGroupsResponse>(CallApi(params_, req, runtime));
@@ -4705,7 +4703,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListSecurityGroupsResponse>(await CallApiAsync(params_, req, runtime));
@@ -4740,7 +4738,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListSoftwaresResponse>(CallApi(params_, req, runtime));
@@ -4763,7 +4761,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListSoftwaresResponse>(await CallApiAsync(params_, req, runtime));
@@ -4798,7 +4796,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListTasksResponse>(CallApi(params_, req, runtime));
@@ -4821,7 +4819,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListTasksResponse>(await CallApiAsync(params_, req, runtime));
@@ -4856,7 +4854,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
@@ -4879,7 +4877,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
@@ -4914,7 +4912,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListVolumesResponse>(CallApi(params_, req, runtime));
@@ -4937,7 +4935,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ListVolumesResponse>(await CallApiAsync(params_, req, runtime));
@@ -4972,7 +4970,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyClusterAttributesResponse>(CallApi(params_, req, runtime));
@@ -4995,7 +4993,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyClusterAttributesResponse>(await CallApiAsync(params_, req, runtime));
@@ -5030,7 +5028,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyContainerAppAttributesResponse>(CallApi(params_, req, runtime));
@@ -5053,7 +5051,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyContainerAppAttributesResponse>(await CallApiAsync(params_, req, runtime));
@@ -5088,7 +5086,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyImageGatewayConfigResponse>(CallApi(params_, req, runtime));
@@ -5111,7 +5109,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyImageGatewayConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -5146,7 +5144,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyUserGroupsResponse>(CallApi(params_, req, runtime));
@@ -5169,7 +5167,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyUserGroupsResponse>(await CallApiAsync(params_, req, runtime));
@@ -5204,7 +5202,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyUserPasswordsResponse>(CallApi(params_, req, runtime));
@@ -5227,7 +5225,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyUserPasswordsResponse>(await CallApiAsync(params_, req, runtime));
@@ -5262,7 +5260,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyVisualServicePasswdResponse>(CallApi(params_, req, runtime));
@@ -5285,7 +5283,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyVisualServicePasswdResponse>(await CallApiAsync(params_, req, runtime));
@@ -5320,7 +5318,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<MountNFSResponse>(CallApi(params_, req, runtime));
@@ -5343,7 +5341,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<MountNFSResponse>(await CallApiAsync(params_, req, runtime));
@@ -5378,7 +5376,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<PullImageResponse>(CallApi(params_, req, runtime));
@@ -5401,7 +5399,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<PullImageResponse>(await CallApiAsync(params_, req, runtime));
@@ -5431,7 +5429,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryServicePackAndPriceResponse>(CallApi(params_, req, runtime));
@@ -5449,7 +5447,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryServicePackAndPriceResponse>(await CallApiAsync(params_, req, runtime));
@@ -5484,7 +5482,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RecoverClusterResponse>(CallApi(params_, req, runtime));
@@ -5507,7 +5505,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RecoverClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -5542,7 +5540,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RerunJobsResponse>(CallApi(params_, req, runtime));
@@ -5565,7 +5563,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RerunJobsResponse>(await CallApiAsync(params_, req, runtime));
@@ -5600,7 +5598,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ResetNodesResponse>(CallApi(params_, req, runtime));
@@ -5623,7 +5621,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ResetNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -5658,7 +5656,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RunCloudMetricProfilingResponse>(CallApi(params_, req, runtime));
@@ -5681,7 +5679,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RunCloudMetricProfilingResponse>(await CallApiAsync(params_, req, runtime));
@@ -5716,7 +5714,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetAutoScaleConfigResponse>(CallApi(params_, req, runtime));
@@ -5739,7 +5737,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetAutoScaleConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -5771,7 +5769,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5782,7 +5779,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetGWSClusterPolicyResponse>(CallApi(params_, req, runtime));
@@ -5802,7 +5799,6 @@ namespace AlibabaCloud.SDK.EHPC20180412
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5813,7 +5809,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetGWSClusterPolicyResponse>(await CallApiAsync(params_, req, runtime));
@@ -5848,7 +5844,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetGWSInstanceNameResponse>(CallApi(params_, req, runtime));
@@ -5871,7 +5867,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetGWSInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
@@ -5906,7 +5902,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetGWSInstanceUserResponse>(CallApi(params_, req, runtime));
@@ -5929,7 +5925,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetGWSInstanceUserResponse>(await CallApiAsync(params_, req, runtime));
@@ -5964,7 +5960,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetQueueResponse>(CallApi(params_, req, runtime));
@@ -5987,7 +5983,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetQueueResponse>(await CallApiAsync(params_, req, runtime));
@@ -6022,7 +6018,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetSchedulerInfoResponse>(CallApi(params_, req, runtime));
@@ -6045,7 +6041,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SetSchedulerInfoResponse>(await CallApiAsync(params_, req, runtime));
@@ -6080,7 +6076,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartClusterResponse>(CallApi(params_, req, runtime));
@@ -6103,7 +6099,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -6138,7 +6134,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartGWSInstanceResponse>(CallApi(params_, req, runtime));
@@ -6161,7 +6157,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartGWSInstanceResponse>(await CallApiAsync(params_, req, runtime));
@@ -6196,7 +6192,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartNodesResponse>(CallApi(params_, req, runtime));
@@ -6219,7 +6215,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -6254,7 +6250,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartVisualServiceResponse>(CallApi(params_, req, runtime));
@@ -6277,7 +6273,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StartVisualServiceResponse>(await CallApiAsync(params_, req, runtime));
@@ -6312,7 +6308,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopClusterResponse>(CallApi(params_, req, runtime));
@@ -6335,7 +6331,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopClusterResponse>(await CallApiAsync(params_, req, runtime));
@@ -6370,7 +6366,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopGWSInstanceResponse>(CallApi(params_, req, runtime));
@@ -6393,7 +6389,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopGWSInstanceResponse>(await CallApiAsync(params_, req, runtime));
@@ -6428,7 +6424,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopJobsResponse>(CallApi(params_, req, runtime));
@@ -6451,7 +6447,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopJobsResponse>(await CallApiAsync(params_, req, runtime));
@@ -6486,7 +6482,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopNodesResponse>(CallApi(params_, req, runtime));
@@ -6509,7 +6505,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopNodesResponse>(await CallApiAsync(params_, req, runtime));
@@ -6544,7 +6540,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopVisualServiceResponse>(CallApi(params_, req, runtime));
@@ -6567,7 +6563,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<StopVisualServiceResponse>(await CallApiAsync(params_, req, runtime));
@@ -6602,7 +6598,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SubmitJobResponse>(CallApi(params_, req, runtime));
@@ -6625,7 +6621,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<SubmitJobResponse>(await CallApiAsync(params_, req, runtime));
@@ -6641,6 +6637,64 @@ namespace AlibabaCloud.SDK.EHPC20180412
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitJobWithOptionsAsync(request, runtime);
+        }
+
+        public SyncUsersResponse SyncUsersWithOptions(SyncUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncUsers",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<SyncUsersResponse> SyncUsersWithOptionsAsync(SyncUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncUsers",
+                Version = "2018-04-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public SyncUsersResponse SyncUsers(SyncUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SyncUsersWithOptions(request, runtime);
+        }
+
+        public async Task<SyncUsersResponse> SyncUsersAsync(SyncUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SyncUsersWithOptionsAsync(request, runtime);
         }
 
         public UninstallSoftwareResponse UninstallSoftwareWithOptions(UninstallSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6660,7 +6714,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UninstallSoftwareResponse>(CallApi(params_, req, runtime));
@@ -6683,7 +6737,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UninstallSoftwareResponse>(await CallApiAsync(params_, req, runtime));
@@ -6718,7 +6772,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateClusterVolumesResponse>(CallApi(params_, req, runtime));
@@ -6741,7 +6795,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateClusterVolumesResponse>(await CallApiAsync(params_, req, runtime));
@@ -6776,7 +6830,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateQueueConfigResponse>(CallApi(params_, req, runtime));
@@ -6799,7 +6853,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateQueueConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -6834,7 +6888,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpgradeClientResponse>(CallApi(params_, req, runtime));
@@ -6857,7 +6911,7 @@ namespace AlibabaCloud.SDK.EHPC20180412
                 Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpgradeClientResponse>(await CallApiAsync(params_, req, runtime));
