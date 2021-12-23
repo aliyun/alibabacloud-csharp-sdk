@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class DeleteFileMetaRequest : TeaModel {
+    public class UpdateFigureClusterRequest : TeaModel {
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
+        [NameInMap("FigureCluster")]
+        [Validation(Required=false)]
+        public FigureCluster FigureCluster { get; set; }
+
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
-
-        [NameInMap("URI")]
-        [Validation(Required=false)]
-        public string URI { get; set; }
 
     }
 

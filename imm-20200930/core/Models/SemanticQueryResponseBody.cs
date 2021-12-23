@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class SimpleQueryResponseBody : TeaModel {
+    public class SemanticQueryResponseBody : TeaModel {
         /// <summary>
         /// 聚合字段的字段名
         /// </summary>
         [NameInMap("Aggregations")]
         [Validation(Required=false)]
-        public List<SimpleQueryResponseBodyAggregations> Aggregations { get; set; }
-        public class SimpleQueryResponseBodyAggregations : TeaModel {
+        public List<SemanticQueryResponseBodyAggregations> Aggregations { get; set; }
+        public class SemanticQueryResponseBodyAggregations : TeaModel {
             /// <summary>
             /// 聚合字段名
             /// </summary>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// </summary>
             [NameInMap("Groups")]
             [Validation(Required=false)]
-            public List<SimpleQueryResponseBodyAggregationsGroups> Groups { get; set; }
-            public class SimpleQueryResponseBodyAggregationsGroups : TeaModel {
+            public List<SemanticQueryResponseBodyAggregationsGroups> Groups { get; set; }
+            public class SemanticQueryResponseBodyAggregationsGroups : TeaModel {
                 /// <summary>
                 /// 分组聚合的计数
                 /// </summary>

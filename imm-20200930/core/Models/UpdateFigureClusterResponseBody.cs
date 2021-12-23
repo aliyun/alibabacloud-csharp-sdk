@@ -8,20 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class CreateOfficeConversionTaskResponseBody : TeaModel {
+    public class UpdateFigureClusterResponseBody : TeaModel {
         /// <summary>
-        /// 请求 id
+        /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// 任务 id
-        /// </summary>
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
 
     }
 

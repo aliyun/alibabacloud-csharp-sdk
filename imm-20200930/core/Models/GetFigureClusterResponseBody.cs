@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class BatchDeleteFileMetaResponseBody : TeaModel {
+    public class GetFigureClusterResponseBody : TeaModel {
+        [NameInMap("FigureCluster")]
+        [Validation(Required=false)]
+        public FigureCluster FigureCluster { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>

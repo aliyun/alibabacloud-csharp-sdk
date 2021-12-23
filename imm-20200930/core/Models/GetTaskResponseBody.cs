@@ -8,27 +8,48 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class OfficeConversionTask : TeaModel {
+    public class GetTaskResponseBody : TeaModel {
         /// <summary>
-        /// 任务创建时间
+        /// 任务错误码
         /// </summary>
-        [NameInMap("CreateTime")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string CreateTime { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
-        /// 任务解释时间
+        /// 任务结束时间
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// Status 解释
+        /// 事件Id
         /// </summary>
-        [NameInMap("Reason")]
+        [NameInMap("EventId")]
         [Validation(Required=false)]
-        public string Reason { get; set; }
+        public string EventId { get; set; }
+
+        /// <summary>
+        /// 任务错误消息
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// 项目名称
+        /// </summary>
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
+
+        /// <summary>
+        /// 请求唯一Id
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 任务开始时间
@@ -38,28 +59,28 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// 任务运行状态
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// 任务 id
+        /// 任务唯一ID
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// 转换页数
+        /// 任务类型
         /// </summary>
-        [NameInMap("TotalPages")]
+        [NameInMap("TaskType")]
         [Validation(Required=false)]
-        public long? TotalPages { get; set; }
+        public string TaskType { get; set; }
 
         /// <summary>
-        /// 用户自定义内容
+        /// 用户自定义信息
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Label : TeaModel {
         /// <summary>
+        /// CentricScore
+        /// </summary>
+        [NameInMap("CentricScore")]
+        [Validation(Required=false)]
+        public float? CentricScore { get; set; }
+
+        /// <summary>
         /// LabelConfidence
         /// </summary>
         [NameInMap("LabelConfidence")]
@@ -36,6 +43,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
+
+        /// <summary>
+        /// ParentLabelName
+        /// </summary>
+        [NameInMap("ParentLabelName")]
+        [Validation(Required=false)]
+        public string ParentLabelName { get; set; }
 
     }
 

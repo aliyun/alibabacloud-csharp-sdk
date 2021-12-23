@@ -9,9 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class BatchUpdateFileMetaResponseBody : TeaModel {
-        [NameInMap("EventId")]
+        [NameInMap("Files")]
         [Validation(Required=false)]
-        public string EventId { get; set; }
+        public List<BatchUpdateFileMetaResponseBodyFiles> Files { get; set; }
+        public class BatchUpdateFileMetaResponseBodyFiles : TeaModel {
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("Success")]
+            [Validation(Required=false)]
+            public bool? Success { get; set; }
+
+            [NameInMap("URI")]
+            [Validation(Required=false)]
+            public string URI { get; set; }
+
+        }
 
         /// <summary>
         /// Id of the request

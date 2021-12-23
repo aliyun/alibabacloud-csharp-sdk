@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class GetOfficeConversionTaskRequest : TeaModel {
+    public class GetTaskRequest : TeaModel {
         /// <summary>
         /// 项目名称
         /// </summary>
@@ -17,11 +17,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// 任务 id
+        /// TaskId
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        /// <summary>
+        /// TaskType
+        /// </summary>
+        [NameInMap("TaskType")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
 
     }
 

@@ -8,27 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ListOfficeConversionTaskRequest : TeaModel {
-        /// <summary>
-        /// 最大结果数
-        /// </summary>
+    public class ListFigureClustersRequest : TeaModel {
+        [NameInMap("DatasetName")]
+        [Validation(Required=false)]
+        public string DatasetName { get; set; }
+
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public string Labels { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
-        /// <summary>
-        /// 下一条记录开始标记
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// 项目名称
-        /// </summary>
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
     }
 

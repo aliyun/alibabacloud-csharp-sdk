@@ -73,20 +73,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? AudioDuration { get; set; }
 
         /// <summary>
-        /// AudioEmbeddingsFloat32
-        /// </summary>
-        [NameInMap("AudioEmbeddingsFloat32")]
-        [Validation(Required=false)]
-        public List<float?> AudioEmbeddingsFloat32 { get; set; }
-
-        /// <summary>
-        /// AudioEmbeddingsInt8
-        /// </summary>
-        [NameInMap("AudioEmbeddingsInt8")]
-        [Validation(Required=false)]
-        public List<int?> AudioEmbeddingsInt8 { get; set; }
-
-        /// <summary>
         /// AudioLanguage
         /// </summary>
         [NameInMap("AudioLanguage")]
@@ -199,20 +185,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DocumentContent { get; set; }
 
         /// <summary>
-        /// DocumentEmbeddingsFloat32
-        /// </summary>
-        [NameInMap("DocumentEmbeddingsFloat32")]
-        [Validation(Required=false)]
-        public List<float?> DocumentEmbeddingsFloat32 { get; set; }
-
-        /// <summary>
-        /// DocumentEmbeddingsInt8
-        /// </summary>
-        [NameInMap("DocumentEmbeddingsInt8")]
-        [Validation(Required=false)]
-        public List<int?> DocumentEmbeddingsInt8 { get; set; }
-
-        /// <summary>
         /// DocumentLanguage
         /// </summary>
         [NameInMap("DocumentLanguage")]
@@ -234,18 +206,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EXIF { get; set; }
 
         /// <summary>
-        /// FaceCount
+        /// FigureCount
         /// </summary>
-        [NameInMap("FaceCount")]
+        [NameInMap("FigureCount")]
         [Validation(Required=false)]
-        public long? FaceCount { get; set; }
+        public long? FigureCount { get; set; }
 
         /// <summary>
-        /// Faces
+        /// Figures
         /// </summary>
-        [NameInMap("Faces")]
+        [NameInMap("Figures")]
         [Validation(Required=false)]
-        public List<Face> Faces { get; set; }
+        public List<Figure> Figures { get; set; }
 
         /// <summary>
         /// FileAccessTime
@@ -281,20 +253,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Filename")]
         [Validation(Required=false)]
         public string Filename { get; set; }
-
-        /// <summary>
-        /// ImageEmbeddingsFloat32
-        /// </summary>
-        [NameInMap("ImageEmbeddingsFloat32")]
-        [Validation(Required=false)]
-        public List<float?> ImageEmbeddingsFloat32 { get; set; }
-
-        /// <summary>
-        /// ImageEmbeddingsInt8
-        /// </summary>
-        [NameInMap("ImageEmbeddingsInt8")]
-        [Validation(Required=false)]
-        public List<int?> ImageEmbeddingsInt8 { get; set; }
 
         /// <summary>
         /// ImageHeight
@@ -343,6 +301,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<OCRContents> OCRContents { get; set; }
 
         /// <summary>
+        /// OSSCRC64
+        /// </summary>
+        [NameInMap("OSSCRC64")]
+        [Validation(Required=false)]
+        public string OSSCRC64 { get; set; }
+
+        /// <summary>
         /// OSSDeleteMarker
         /// </summary>
         [NameInMap("OSSDeleteMarker")]
@@ -364,6 +329,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OSSObjectType { get; set; }
 
         /// <summary>
+        /// OSSStorageClass
+        /// </summary>
+        [NameInMap("OSSStorageClass")]
+        [Validation(Required=false)]
+        public string OSSStorageClass { get; set; }
+
+        /// <summary>
         /// OSSTagging
         /// </summary>
         [NameInMap("OSSTagging")]
@@ -376,6 +348,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("OSSTaggingCount")]
         [Validation(Required=false)]
         public long? OSSTaggingCount { get; set; }
+
+        /// <summary>
+        /// OSSURI
+        /// </summary>
+        [NameInMap("OSSURI")]
+        [Validation(Required=false)]
+        public string OSSURI { get; set; }
 
         /// <summary>
         /// OSSUserMeta
@@ -490,13 +469,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// StorageClass
-        /// </summary>
-        [NameInMap("StorageClass")]
-        [Validation(Required=false)]
-        public string StorageClass { get; set; }
-
-        /// <summary>
         /// Subtitles
         /// </summary>
         [NameInMap("Subtitles")]
@@ -551,20 +523,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("VideoDuration")]
         [Validation(Required=false)]
         public float? VideoDuration { get; set; }
-
-        /// <summary>
-        /// VideoEmbeddingsFloat32
-        /// </summary>
-        [NameInMap("VideoEmbeddingsFloat32")]
-        [Validation(Required=false)]
-        public List<float?> VideoEmbeddingsFloat32 { get; set; }
-
-        /// <summary>
-        /// VideoEmbeddingsInt8
-        /// </summary>
-        [NameInMap("VideoEmbeddingsInt8")]
-        [Validation(Required=false)]
-        public List<int?> VideoEmbeddingsInt8 { get; set; }
 
         /// <summary>
         /// VideoHeight
