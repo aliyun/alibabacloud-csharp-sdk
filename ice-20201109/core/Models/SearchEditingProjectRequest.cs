@@ -42,6 +42,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProjectType { get; set; }
 
         /// <summary>
+        /// RegionId
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
         /// 结果排序方式
         /// </summary>
         [NameInMap("SortBy")]

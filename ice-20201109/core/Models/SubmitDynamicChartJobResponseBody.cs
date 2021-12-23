@@ -8,18 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class UpdateSmartJobRequest : TeaModel {
-        [NameInMap("FEExtend")]
-        [Validation(Required=false)]
-        public string FEExtend { get; set; }
-
+    public class SubmitDynamicChartJobResponseBody : TeaModel {
+        /// <summary>
+        /// 任务Id
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
-        [NameInMap("RegionId")]
+        /// <summary>
+        /// 请求Id
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

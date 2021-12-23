@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
+        /// <summary>
+        /// 区域标识
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
     }
 
 }

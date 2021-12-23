@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class GetPublicMediaInfoRequest : TeaModel {
-        [NameInMap("MediaId")]
-        [Validation(Required=false)]
-        public string MediaId { get; set; }
-
+    public class GetEventCallbackRequest : TeaModel {
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
