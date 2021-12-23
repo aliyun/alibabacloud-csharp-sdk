@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateServerCertificateWithCsrResponseBody : TeaModel {
+        [NameInMap("CertificateChain")]
+        [Validation(Required=false)]
+        public string CertificateChain { get; set; }
+
         [NameInMap("Identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }
