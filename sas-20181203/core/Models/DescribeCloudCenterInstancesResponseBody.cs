@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             [NameInMap("GroupId")]
             [Validation(Required=false)]
-            public string GroupId { get; set; }
+            public long? GroupId { get; set; }
 
             [NameInMap("GroupTrace")]
             [Validation(Required=false)]

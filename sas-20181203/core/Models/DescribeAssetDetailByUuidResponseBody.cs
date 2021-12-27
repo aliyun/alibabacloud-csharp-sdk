@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ClientStatus")]
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
+            [NameInMap("ClientVersion")]
+            [Validation(Required=false)]
+            public string ClientVersion { get; set; }
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public int? Cpu { get; set; }
@@ -40,6 +43,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("DiskInfoList")]
             [Validation(Required=false)]
             public List<string> DiskInfoList { get; set; }
+            [NameInMap("Flag")]
+            [Validation(Required=false)]
+            public int? Flag { get; set; }
             [NameInMap("GroupTrace")]
             [Validation(Required=false)]
             public string GroupTrace { get; set; }
@@ -73,6 +79,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Mem")]
             [Validation(Required=false)]
             public int? Mem { get; set; }
+            [NameInMap("Memory")]
+            [Validation(Required=false)]
+            public long? Memory { get; set; }
             [NameInMap("Os")]
             [Validation(Required=false)]
             public string Os { get; set; }

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public class DescribeRiskCheckItemResultResponseBodyPageContentResource : TeaModel {
             [NameInMap("ContentResource")]
             [Validation(Required=false)]
-            public Dictionary<string, string> ContentResource { get; set; }
+            public string ContentResource { get; set; }
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }

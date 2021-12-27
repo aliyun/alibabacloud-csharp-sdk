@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperationParams { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
         [NameInMap("SecurityEventIds")]
         [Validation(Required=false)]
         public List<string> SecurityEventIds { get; set; }
