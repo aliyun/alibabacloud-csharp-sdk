@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class SmsConversionRequest : TeaModel {
-        [NameInMap("MessageId")]
+        [NameInMap("ConversionTime")]
         [Validation(Required=false)]
-        public string MessageId { get; set; }
+        public long? ConversionTime { get; set; }
 
         [NameInMap("Delivered")]
         [Validation(Required=false)]
         public bool? Delivered { get; set; }
 
-        [NameInMap("ConversionTime")]
+        [NameInMap("MessageId")]
         [Validation(Required=false)]
-        public long? ConversionTime { get; set; }
+        public string MessageId { get; set; }
 
     }
 

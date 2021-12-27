@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class ConversionDataRequest : TeaModel {
-        [NameInMap("ReportTime")]
-        [Validation(Required=false)]
-        public long? ReportTime { get; set; }
-
         [NameInMap("ConversionRate")]
         [Validation(Required=false)]
         public string ConversionRate { get; set; }
+
+        [NameInMap("ReportTime")]
+        [Validation(Required=false)]
+        public long? ReportTime { get; set; }
 
     }
 

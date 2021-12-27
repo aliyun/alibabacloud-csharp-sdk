@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class SendMessageWithTemplateResponseBody : TeaModel {
-        [NameInMap("ResponseCode")]
+        [NameInMap("MessageId")]
         [Validation(Required=false)]
-        public string ResponseCode { get; set; }
+        public string MessageId { get; set; }
 
         [NameInMap("NumberDetail")]
         [Validation(Required=false)]
@@ -20,13 +20,21 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResponseCode")]
+        [Validation(Required=false)]
+        public string ResponseCode { get; set; }
 
         [NameInMap("ResponseDescription")]
         [Validation(Required=false)]
@@ -39,10 +47,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         [NameInMap("To")]
         [Validation(Required=false)]
         public string To { get; set; }
-
-        [NameInMap("MessageId")]
-        [Validation(Required=false)]
-        public string MessageId { get; set; }
 
     }
 

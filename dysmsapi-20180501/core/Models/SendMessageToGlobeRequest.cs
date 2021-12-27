@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class SendMessageToGlobeRequest : TeaModel {
-        [NameInMap("To")]
-        [Validation(Required=false)]
-        public string To { get; set; }
-
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("To")]
+        [Validation(Required=false)]
+        public string To { get; set; }
 
     }
 

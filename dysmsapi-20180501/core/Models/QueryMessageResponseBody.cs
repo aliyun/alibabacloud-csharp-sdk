@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class QueryMessageResponseBody : TeaModel {
-        [NameInMap("Status")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string ErrorCode { get; set; }
 
         [NameInMap("ErrorDescription")]
         [Validation(Required=false)]
         public string ErrorDescription { get; set; }
 
-        [NameInMap("ResponseCode")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string ResponseCode { get; set; }
+        public string Message { get; set; }
 
-        [NameInMap("ReceiveDate")]
+        [NameInMap("MessageId")]
         [Validation(Required=false)]
-        public string ReceiveDate { get; set; }
+        public string MessageId { get; set; }
 
         [NameInMap("NumberDetail")]
         [Validation(Required=false)]
@@ -32,37 +32,41 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
         };
 
-        [NameInMap("Message")]
+        [NameInMap("ReceiveDate")]
         [Validation(Required=false)]
-        public string Message { get; set; }
+        public string ReceiveDate { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResponseCode")]
+        [Validation(Required=false)]
+        public string ResponseCode { get; set; }
 
         [NameInMap("ResponseDescription")]
         [Validation(Required=false)]
         public string ResponseDescription { get; set; }
 
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
         [NameInMap("SendDate")]
         [Validation(Required=false)]
         public string SendDate { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("To")]
         [Validation(Required=false)]
         public string To { get; set; }
-
-        [NameInMap("MessageId")]
-        [Validation(Required=false)]
-        public string MessageId { get; set; }
 
     }
 

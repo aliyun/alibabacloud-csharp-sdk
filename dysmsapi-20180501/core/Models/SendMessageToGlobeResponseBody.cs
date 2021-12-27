@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class SendMessageToGlobeResponseBody : TeaModel {
-        [NameInMap("ResponseCode")]
+        [NameInMap("From")]
         [Validation(Required=false)]
-        public string ResponseCode { get; set; }
+        public string From { get; set; }
+
+        [NameInMap("MessageId")]
+        [Validation(Required=false)]
+        public string MessageId { get; set; }
 
         [NameInMap("NumberDetail")]
         [Validation(Required=false)]
@@ -20,37 +24,33 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
-            [NameInMap("Region")]
-            [Validation(Required=false)]
-            public string Region { get; set; }
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
+            [NameInMap("Region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
         };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Segments")]
+        [NameInMap("ResponseCode")]
         [Validation(Required=false)]
-        public string Segments { get; set; }
+        public string ResponseCode { get; set; }
 
         [NameInMap("ResponseDescription")]
         [Validation(Required=false)]
         public string ResponseDescription { get; set; }
 
-        [NameInMap("From")]
+        [NameInMap("Segments")]
         [Validation(Required=false)]
-        public string From { get; set; }
+        public string Segments { get; set; }
 
         [NameInMap("To")]
         [Validation(Required=false)]
         public string To { get; set; }
-
-        [NameInMap("MessageId")]
-        [Validation(Required=false)]
-        public string MessageId { get; set; }
 
     }
 

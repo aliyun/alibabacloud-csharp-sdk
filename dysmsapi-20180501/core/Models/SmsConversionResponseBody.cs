@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class SmsConversionResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ResponseCode")]
         [Validation(Required=false)]
         public string ResponseCode { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         [NameInMap("ResponseDescription")]
         [Validation(Required=false)]
         public string ResponseDescription { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

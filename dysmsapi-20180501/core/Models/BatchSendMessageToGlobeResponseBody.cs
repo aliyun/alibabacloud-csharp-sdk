@@ -9,21 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class BatchSendMessageToGlobeResponseBody : TeaModel {
-        [NameInMap("ResponseCode")]
-        [Validation(Required=false)]
-        public string ResponseCode { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("FailedList")]
         [Validation(Required=false)]
         public string FailedList { get; set; }
-
-        [NameInMap("ResponseDescription")]
-        [Validation(Required=false)]
-        public string ResponseDescription { get; set; }
 
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -32,6 +20,18 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         [NameInMap("MessageIdList")]
         [Validation(Required=false)]
         public string MessageIdList { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("ResponseCode")]
+        [Validation(Required=false)]
+        public string ResponseCode { get; set; }
+
+        [NameInMap("ResponseDescription")]
+        [Validation(Required=false)]
+        public string ResponseDescription { get; set; }
 
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]
