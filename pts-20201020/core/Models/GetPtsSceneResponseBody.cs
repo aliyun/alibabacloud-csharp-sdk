@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                 [Validation(Required=false)]
                 public List<GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList> ApiLoadConfigList { get; set; }
                 public class GetPtsSceneResponseBodySceneLoadConfigApiLoadConfigList : TeaModel {
+                    [NameInMap("ApiId")]
+                    [Validation(Required=false)]
+                    public string ApiId { get; set; }
+
                     [NameInMap("RpsBegin")]
                     [Validation(Required=false)]
                     public int? RpsBegin { get; set; }
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
                     [NameInMap("ConcurrencyLimit")]
                     [Validation(Required=false)]
                     public int? ConcurrencyLimit { get; set; }
+
+                    [NameInMap("RelationId")]
+                    [Validation(Required=false)]
+                    public string RelationId { get; set; }
 
                 }
 
