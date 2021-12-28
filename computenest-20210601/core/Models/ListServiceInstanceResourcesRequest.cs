@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class ListPoliciesRequest : TeaModel {
+    public class ListServiceInstanceResourcesRequest : TeaModel {
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public string MaxResults { get; set; }
@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("ServiceInstanceId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ServiceInstanceId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceLogsResponseBody : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public string MaxResults { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -17,17 +21,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public string MaxResults { get; set; }
-
         [NameInMap("ServiceInstancesLogs")]
         [Validation(Required=false)]
         public List<ListServiceInstanceLogsResponseBodyServiceInstancesLogs> ServiceInstancesLogs { get; set; }
         public class ListServiceInstanceLogsResponseBodyServiceInstancesLogs : TeaModel {
-            [NameInMap("Timestamp")]
+            [NameInMap("Content")]
             [Validation(Required=false)]
-            public string Timestamp { get; set; }
+            public string Content { get; set; }
+
+            [NameInMap("Phase")]
+            [Validation(Required=false)]
+            public string Phase { get; set; }
 
             [NameInMap("ServiceInstanceId")]
             [Validation(Required=false)]
@@ -37,13 +41,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string Source { get; set; }
 
-            [NameInMap("Phase")]
+            [NameInMap("Timestamp")]
             [Validation(Required=false)]
-            public string Phase { get; set; }
-
-            [NameInMap("Content")]
-            [Validation(Required=false)]
-            public string Content { get; set; }
+            public string Timestamp { get; set; }
 
         }
 

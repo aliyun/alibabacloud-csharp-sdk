@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceLogsRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public string MaxResults { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ServiceInstanceId")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,17 +16,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("ServiceInstanceId")]
+        [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public string ServiceInstanceId { get; set; }
+        public string Parameters { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("Parameters")]
+        [NameInMap("ServiceInstanceId")]
         [Validation(Required=false)]
-        public string Parameters { get; set; }
+        public string ServiceInstanceId { get; set; }
 
     }
 

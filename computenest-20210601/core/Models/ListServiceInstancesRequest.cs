@@ -9,9 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstancesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Filter")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<ListServiceInstancesRequestFilter> Filter { get; set; }
+        public class ListServiceInstancesRequestFilter : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public List<string> Value { get; set; }
+
+        }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -21,24 +31,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("Filter")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public List<ListServiceInstancesRequestFilter> Filter { get; set; }
-        public class ListServiceInstancesRequestFilter : TeaModel {
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public List<string> Value { get; set; }
+        public string RegionId { get; set; }
 
-            [NameInMap("Name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-        }
-
-        [NameInMap("RequestTags")]
+        [NameInMap("RequestTag")]
         [Validation(Required=false)]
-        public List<ListServiceInstancesRequestRequestTags> RequestTags { get; set; }
-        public class ListServiceInstancesRequestRequestTags : TeaModel {
+        public List<ListServiceInstancesRequestRequestTag> RequestTag { get; set; }
+        public class ListServiceInstancesRequestRequestTag : TeaModel {
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
