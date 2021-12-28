@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ActionType { get; set; }
 
-        [NameInMap("clientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         [NameInMap("networkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [NameInMap("nodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
+
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
     }
 
