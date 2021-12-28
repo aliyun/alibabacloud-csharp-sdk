@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string SourceOwner { get; set; }
 
+        [NameInMap("TagKeyLogicScope")]
+        [Validation(Required=false)]
+        public string TagKeyLogicScope { get; set; }
+
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
         public string TagKeyScope { get; set; }

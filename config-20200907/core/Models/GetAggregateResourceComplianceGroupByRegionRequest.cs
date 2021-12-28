@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class GenerateConfigRulesReportResponseBody : TeaModel {
-        [NameInMap("ReportId")]
+    public class GetAggregateResourceComplianceGroupByRegionRequest : TeaModel {
+        [NameInMap("AggregatorId")]
         [Validation(Required=false)]
-        public string ReportId { get; set; }
+        public string AggregatorId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("ConfigRuleIds")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ConfigRuleIds { get; set; }
 
     }
 

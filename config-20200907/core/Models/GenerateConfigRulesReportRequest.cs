@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ConfigRuleIds")]
+        [Validation(Required=false)]
+        public string ConfigRuleIds { get; set; }
+
     }
 
 }

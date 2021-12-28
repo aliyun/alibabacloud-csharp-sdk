@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        [NameInMap("ReportId")]
+        [Validation(Required=false)]
+        public string ReportId { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

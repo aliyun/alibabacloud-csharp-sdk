@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [NameInMap("ReportCreateTimestamp")]
             [Validation(Required=false)]
             public long? ReportCreateTimestamp { get; set; }
+            [NameInMap("ReportId")]
+            [Validation(Required=false)]
+            public string ReportId { get; set; }
             [NameInMap("ReportStatus")]
             [Validation(Required=false)]
             public string ReportStatus { get; set; }
