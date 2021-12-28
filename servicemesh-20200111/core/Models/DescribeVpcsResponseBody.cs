@@ -10,18 +10,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeVpcsResponseBody : TeaModel {
         /// <summary>
-        /// TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+        /// MaxResults本次请求所返回的最大记录条数
         /// </summary>
-        [NameInMap("TotalCount")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
         /// 表示当前调用返回读取到的位置，空代表数据已经读取完毕
@@ -31,11 +24,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// MaxResults本次请求所返回的最大记录条数
+        /// Id of the request
         /// </summary>
-        [NameInMap("MaxResults")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
         /// <summary>
         /// Vpcs
@@ -44,6 +44,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public List<DescribeVpcsResponseBodyVpcs> Vpcs { get; set; }
         public class DescribeVpcsResponseBodyVpcs : TeaModel {
+            [NameInMap("IsDefault")]
+            [Validation(Required=false)]
+            public bool? IsDefault { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
@@ -51,14 +59,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             [NameInMap("VpcName")]
             [Validation(Required=false)]
             public string VpcName { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("IsDefault")]
-            [Validation(Required=false)]
-            public bool? IsDefault { get; set; }
 
         }
 

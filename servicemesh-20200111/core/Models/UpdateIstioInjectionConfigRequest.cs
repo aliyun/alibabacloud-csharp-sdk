@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateIstioInjectionConfigRequest : TeaModel {
-        [NameInMap("ServiceMeshId")]
+        [NameInMap("EnableIstioInjection")]
         [Validation(Required=false)]
-        public string ServiceMeshId { get; set; }
+        public bool? EnableIstioInjection { get; set; }
+
+        [NameInMap("EnableSidecarSetInjection")]
+        [Validation(Required=false)]
+        public bool? EnableSidecarSetInjection { get; set; }
 
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
-        [NameInMap("EnableIstioInjection")]
+        [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
-        public bool? EnableIstioInjection { get; set; }
+        public string ServiceMeshId { get; set; }
 
     }
 

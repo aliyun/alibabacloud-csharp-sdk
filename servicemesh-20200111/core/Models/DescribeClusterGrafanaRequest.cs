@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeClusterGrafanaRequest : TeaModel {
-        [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
-        public string ServiceMeshId { get; set; }
-
         [NameInMap("K8sClusterId")]
         [Validation(Required=false)]
         public string K8sClusterId { get; set; }
+
+        [NameInMap("ServiceMeshId")]
+        [Validation(Required=false)]
+        public string ServiceMeshId { get; set; }
 
     }
 

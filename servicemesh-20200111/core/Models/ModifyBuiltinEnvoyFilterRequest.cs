@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class ModifyBuiltinEnvoyFilterRequest : TeaModel {
-        [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
-        public string ServiceMeshId { get; set; }
-
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("IstioVersion")]
+        [Validation(Required=false)]
+        public string IstioVersion { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
-        [NameInMap("IstioVersion")]
+        [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
-        public string IstioVersion { get; set; }
+        public string ServiceMeshId { get; set; }
 
     }
 

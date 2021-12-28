@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class AddMeshTagToEcsRequest : TeaModel {
-        [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
-        public string ServiceMeshId { get; set; }
-
         [NameInMap("EcsId")]
         [Validation(Required=false)]
         public string EcsId { get; set; }
+
+        [NameInMap("ServiceMeshId")]
+        [Validation(Required=false)]
+        public string ServiceMeshId { get; set; }
 
     }
 

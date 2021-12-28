@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetVmMetaRequest : TeaModel {
-        [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
-        public string ServiceMeshId { get; set; }
-
-        [NameInMap("TrustDomain")]
-        [Validation(Required=false)]
-        public string TrustDomain { get; set; }
-
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ServiceAccount")]
         [Validation(Required=false)]
         public string ServiceAccount { get; set; }
+
+        [NameInMap("ServiceMeshId")]
+        [Validation(Required=false)]
+        public string ServiceMeshId { get; set; }
+
+        [NameInMap("TrustDomain")]
+        [Validation(Required=false)]
+        public string TrustDomain { get; set; }
 
     }
 

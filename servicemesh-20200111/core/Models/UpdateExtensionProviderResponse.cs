@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class AddVmAppToMeshResponse : TeaModel {
+    public class UpdateExtensionProviderResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public AddVmAppToMeshResponseBody Body { get; set; }
+        public UpdateExtensionProviderResponseBody Body { get; set; }
 
     }
 

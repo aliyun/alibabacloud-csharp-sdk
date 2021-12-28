@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetRegisteredServiceEndpointsRequest : TeaModel {
-        [NameInMap("ServiceMeshId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string ServiceMeshId { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string ServiceMeshId { get; set; }
 
     }
 

@@ -9,27 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetServiceMeshSlbResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetServiceMeshSlbResponseBodyData> Data { get; set; }
         public class GetServiceMeshSlbResponseBodyData : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("LoadBalancerId")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string LoadBalancerId { get; set; }
 
             [NameInMap("ServerHealthStatus")]
             [Validation(Required=false)]
             public string ServerHealthStatus { get; set; }
 
-            [NameInMap("LoadBalancerId")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string LoadBalancerId { get; set; }
+            public string Status { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

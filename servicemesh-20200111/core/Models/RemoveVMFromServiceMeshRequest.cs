@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
-    public class AddVmAppToMeshResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class RemoveVMFromServiceMeshRequest : TeaModel {
+        [NameInMap("EcsId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string EcsId { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public string ServiceMeshId { get; set; }
 
     }
 

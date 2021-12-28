@@ -17,151 +17,97 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public DescribeServiceMeshDetailResponseBodyServiceMesh ServiceMesh { get; set; }
         public class DescribeServiceMeshDetailResponseBodyServiceMesh : TeaModel {
+            [NameInMap("Clusters")]
+            [Validation(Required=false)]
+            public List<string> Clusters { get; set; }
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints Endpoints { get; set; }
             public class DescribeServiceMeshDetailResponseBodyServiceMeshEndpoints : TeaModel {
-                [NameInMap("IntranetPilotEndpoint")]
-                [Validation(Required=false)]
-                public string IntranetPilotEndpoint { get; set; }
-
-                [NameInMap("PublicPilotEndpoint")]
-                [Validation(Required=false)]
-                public string PublicPilotEndpoint { get; set; }
-
                 [NameInMap("IntranetApiServerEndpoint")]
                 [Validation(Required=false)]
                 public string IntranetApiServerEndpoint { get; set; }
 
+                [NameInMap("IntranetPilotEndpoint")]
+                [Validation(Required=false)]
+                public string IntranetPilotEndpoint { get; set; }
+
                 [NameInMap("PublicApiServerEndpoint")]
                 [Validation(Required=false)]
                 public string PublicApiServerEndpoint { get; set; }
+
+                [NameInMap("PublicPilotEndpoint")]
+                [Validation(Required=false)]
+                public string PublicPilotEndpoint { get; set; }
 
             }
             [NameInMap("ServiceMeshInfo")]
             [Validation(Required=false)]
             public DescribeServiceMeshDetailResponseBodyServiceMeshServiceMeshInfo ServiceMeshInfo { get; set; }
             public class DescribeServiceMeshDetailResponseBodyServiceMeshServiceMeshInfo : TeaModel {
-                [NameInMap("Profile")]
-                [Validation(Required=false)]
-                public string Profile { get; set; }
-
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
-
-                [NameInMap("UpdateTime")]
-                [Validation(Required=false)]
-                public string UpdateTime { get; set; }
 
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
-                [NameInMap("Version")]
+                [NameInMap("Name")]
                 [Validation(Required=false)]
-                public string Version { get; set; }
+                public string Name { get; set; }
 
-                [NameInMap("State")]
+                [NameInMap("Profile")]
                 [Validation(Required=false)]
-                public string State { get; set; }
+                public string Profile { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
 
                 [NameInMap("ServiceMeshId")]
                 [Validation(Required=false)]
                 public string ServiceMeshId { get; set; }
 
-                [NameInMap("Name")]
+                [NameInMap("State")]
                 [Validation(Required=false)]
-                public string Name { get; set; }
+                public string State { get; set; }
 
-                [NameInMap("RegionId")]
+                [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
-                public string RegionId { get; set; }
+                public string UpdateTime { get; set; }
+
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
 
             }
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public DescribeServiceMeshDetailResponseBodyServiceMeshSpec Spec { get; set; }
             public class DescribeServiceMeshDetailResponseBodyServiceMeshSpec : TeaModel {
-                [NameInMap("Network")]
-                [Validation(Required=false)]
-                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork Network { get; set; }
-                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork : TeaModel {
-                    [NameInMap("VpcId")]
-                    [Validation(Required=false)]
-                    public string VpcId { get; set; }
-                    [NameInMap("SecurityGroupId")]
-                    [Validation(Required=false)]
-                    public string SecurityGroupId { get; set; }
-                    [NameInMap("VSwitches")]
-                    [Validation(Required=false)]
-                    public List<string> VSwitches { get; set; }
-                };
-
                 [NameInMap("LoadBalancer")]
                 [Validation(Required=false)]
                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer LoadBalancer { get; set; }
                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer : TeaModel {
-                    [NameInMap("PilotPublicEip")]
-                    [Validation(Required=false)]
-                    public bool? PilotPublicEip { get; set; }
-                    [NameInMap("PilotPublicLoadbalancerId")]
-                    [Validation(Required=false)]
-                    public string PilotPublicLoadbalancerId { get; set; }
                     [NameInMap("ApiServerLoadbalancerId")]
                     [Validation(Required=false)]
                     public string ApiServerLoadbalancerId { get; set; }
                     [NameInMap("ApiServerPublicEip")]
                     [Validation(Required=false)]
                     public bool? ApiServerPublicEip { get; set; }
+                    [NameInMap("PilotPublicEip")]
+                    [Validation(Required=false)]
+                    public bool? PilotPublicEip { get; set; }
+                    [NameInMap("PilotPublicLoadbalancerId")]
+                    [Validation(Required=false)]
+                    public string PilotPublicLoadbalancerId { get; set; }
                 };
 
                 [NameInMap("MeshConfig")]
                 [Validation(Required=false)]
                 public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig MeshConfig { get; set; }
                 public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig : TeaModel {
-                    [NameInMap("OPA")]
-                    [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigOPA OPA { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigOPA : TeaModel {
-                        [NameInMap("RequestMemory")]
-                        [Validation(Required=false)]
-                        public string RequestMemory { get; set; }
-
-                        [NameInMap("LogLevel")]
-                        [Validation(Required=false)]
-                        public string LogLevel { get; set; }
-
-                        [NameInMap("Enabled")]
-                        [Validation(Required=false)]
-                        public bool? Enabled { get; set; }
-
-                        [NameInMap("LimitMemory")]
-                        [Validation(Required=false)]
-                        public string LimitMemory { get; set; }
-
-                        [NameInMap("RequestCPU")]
-                        [Validation(Required=false)]
-                        public string RequestCPU { get; set; }
-
-                        [NameInMap("LimitCPU")]
-                        [Validation(Required=false)]
-                        public string LimitCPU { get; set; }
-
-                    }
-                    [NameInMap("Prometheus")]
-                    [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPrometheus Prometheus { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPrometheus : TeaModel {
-                        [NameInMap("UseExternal")]
-                        [Validation(Required=false)]
-                        public bool? UseExternal { get; set; }
-
-                        [NameInMap("ExternalUrl")]
-                        [Validation(Required=false)]
-                        public string ExternalUrl { get; set; }
-
-                    }
                     [NameInMap("AccessLog")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAccessLog AccessLog { get; set; }
@@ -170,131 +116,249 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
 
-                    }
-                    [NameInMap("Pilot")]
-                    [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot Pilot { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot : TeaModel {
-                        [NameInMap("Http10Enabled")]
+                        [NameInMap("Project")]
                         [Validation(Required=false)]
-                        public bool? Http10Enabled { get; set; }
-
-                        [NameInMap("TraceSampling")]
-                        [Validation(Required=false)]
-                        public float? TraceSampling { get; set; }
-
-                        [NameInMap("Feature")]
-                        [Validation(Required=false)]
-                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature Feature { get; set; }
-                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature : TeaModel {
-                            [NameInMap("FilterGatewayClusterConfig")]
-                            [Validation(Required=false)]
-                            public bool? FilterGatewayClusterConfig { get; set; }
-                            [NameInMap("EnableSDSServer")]
-                            [Validation(Required=false)]
-                            public bool? EnableSDSServer { get; set; }
-                        };
+                        public string Project { get; set; }
 
                     }
-                    [NameInMap("MSE")]
+                    [NameInMap("Audit")]
                     [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigMSE MSE { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigMSE : TeaModel {
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit Audit { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit : TeaModel {
+                        [NameInMap("AuditProjectStatus")]
+                        [Validation(Required=false)]
+                        public string AuditProjectStatus { get; set; }
+
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
+
+                        [NameInMap("Project")]
+                        [Validation(Required=false)]
+                        public string Project { get; set; }
+
+                    }
+                    [NameInMap("ControlPlaneLogInfo")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo ControlPlaneLogInfo { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo : TeaModel {
+                        [NameInMap("Enabled")]
+                        [Validation(Required=false)]
+                        public bool? Enabled { get; set; }
+
+                        [NameInMap("Project")]
+                        [Validation(Required=false)]
+                        public string Project { get; set; }
 
                     }
                     [NameInMap("CustomizedZipkin")]
                     [Validation(Required=false)]
                     public bool? CustomizedZipkin { get; set; }
-                    [NameInMap("SidecarInjector")]
+                    [NameInMap("Edition")]
                     [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector SidecarInjector { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector : TeaModel {
-                        [NameInMap("EnableNamespacesByDefault")]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigEdition Edition { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigEdition : TeaModel {
+                        [NameInMap("IstiodImageTag")]
                         [Validation(Required=false)]
-                        public bool? EnableNamespacesByDefault { get; set; }
+                        public string IstiodImageTag { get; set; }
 
-                        [NameInMap("RequestMemory")]
+                        [NameInMap("Name")]
                         [Validation(Required=false)]
-                        public string RequestMemory { get; set; }
+                        public string Name { get; set; }
 
-                        [NameInMap("LimitMemory")]
+                        [NameInMap("ProxyImageTag")]
                         [Validation(Required=false)]
-                        public string LimitMemory { get; set; }
+                        public string ProxyImageTag { get; set; }
 
-                        [NameInMap("RequestCPU")]
+                    }
+                    [NameInMap("EnableLocalityLB")]
+                    [Validation(Required=false)]
+                    public bool? EnableLocalityLB { get; set; }
+                    [NameInMap("ExcludeIPRanges")]
+                    [Validation(Required=false)]
+                    public string ExcludeIPRanges { get; set; }
+                    [NameInMap("ExcludeInboundPorts")]
+                    [Validation(Required=false)]
+                    public string ExcludeInboundPorts { get; set; }
+                    [NameInMap("ExcludeOutboundPorts")]
+                    [Validation(Required=false)]
+                    public string ExcludeOutboundPorts { get; set; }
+                    [NameInMap("ExtraConfiguration")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration ExtraConfiguration { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration : TeaModel {
+                        [NameInMap("CRAggregationEnabled")]
                         [Validation(Required=false)]
-                        public string RequestCPU { get; set; }
+                        public bool? CRAggregationEnabled { get; set; }
 
-                        [NameInMap("AutoInjectionPolicyEnabled")]
+                        [NameInMap("DiscoverySelectors")]
                         [Validation(Required=false)]
-                        public bool? AutoInjectionPolicyEnabled { get; set; }
+                        public List<Dictionary<string, object>> DiscoverySelectors { get; set; }
 
-                        [NameInMap("LimitCPU")]
+                        [NameInMap("IstioCRHistory")]
                         [Validation(Required=false)]
-                        public string LimitCPU { get; set; }
-
-                        [NameInMap("InitCNIConfiguration")]
-                        [Validation(Required=false)]
-                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration InitCNIConfiguration { get; set; }
-                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration : TeaModel {
-                            [NameInMap("ExcludeNamespaces")]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstioCRHistory IstioCRHistory { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationIstioCRHistory : TeaModel {
+                            [NameInMap("EnableHistory")]
                             [Validation(Required=false)]
-                            public string ExcludeNamespaces { get; set; }
+                            public bool? EnableHistory { get; set; }
+                        };
+
+                        [NameInMap("Lifecycle")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle Lifecycle { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecycle : TeaModel {
+                            [NameInMap("PostStart")]
+                            [Validation(Required=false)]
+                            public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart PostStart { get; set; }
+                            public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStart : TeaModel {
+                                [NameInMap("Exec")]
+                                [Validation(Required=false)]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec Exec { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec : TeaModel {
+                                    [NameInMap("Command")]
+                                    [Validation(Required=false)]
+                                    public List<string> Command { get; set; }
+                                };
+
+                                [NameInMap("HTTPGet")]
+                                [Validation(Required=false)]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet HTTPGet { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGet : TeaModel {
+                                    [NameInMap("HTTPHeaders")]
+                                    [Validation(Required=false)]
+                                    public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders> HTTPHeaders { get; set; }
+                                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartHTTPGetHTTPHeaders : TeaModel {
+                                        public string Name { get; set; }
+                                        public string Value { get; set; }
+                                    }
+                                    [NameInMap("Host")]
+                                    [Validation(Required=false)]
+                                    public string Host { get; set; }
+                                    [NameInMap("Port")]
+                                    [Validation(Required=false)]
+                                    public string Port { get; set; }
+                                    [NameInMap("Scheme")]
+                                    [Validation(Required=false)]
+                                    public string Scheme { get; set; }
+                                };
+
+                                [NameInMap("TCPSocket")]
+                                [Validation(Required=false)]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket TCPSocket { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartTCPSocket : TeaModel {
+                                    [NameInMap("Host")]
+                                    [Validation(Required=false)]
+                                    public string Host { get; set; }
+                                    [NameInMap("Port")]
+                                    [Validation(Required=false)]
+                                    public string Port { get; set; }
+                                };
+
+                            }
+                            [NameInMap("PreStop")]
+                            [Validation(Required=false)]
+                            public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop PreStop { get; set; }
+                            public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStop : TeaModel {
+                                [NameInMap("Exec")]
+                                [Validation(Required=false)]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec Exec { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec : TeaModel {
+                                    [NameInMap("Command")]
+                                    [Validation(Required=false)]
+                                    public List<string> Command { get; set; }
+                                };
+
+                                [NameInMap("HTTPGet")]
+                                [Validation(Required=false)]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet HTTPGet { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGet : TeaModel {
+                                    [NameInMap("HTTPHeaders")]
+                                    [Validation(Required=false)]
+                                    public List<DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders> HTTPHeaders { get; set; }
+                                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopHTTPGetHTTPHeaders : TeaModel {
+                                        public string Name { get; set; }
+                                        public string Value { get; set; }
+                                    }
+                                    [NameInMap("Host")]
+                                    [Validation(Required=false)]
+                                    public string Host { get; set; }
+                                    [NameInMap("Port")]
+                                    [Validation(Required=false)]
+                                    public string Port { get; set; }
+                                    [NameInMap("Scheme")]
+                                    [Validation(Required=false)]
+                                    public string Scheme { get; set; }
+                                };
+
+                                [NameInMap("TCPSocket")]
+                                [Validation(Required=false)]
+                                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket TCPSocket { get; set; }
+                                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopTCPSocket : TeaModel {
+                                    [NameInMap("Host")]
+                                    [Validation(Required=false)]
+                                    public string Host { get; set; }
+                                    [NameInMap("Port")]
+                                    [Validation(Required=false)]
+                                    public string Port { get; set; }
+                                };
+
+                            }
+                        };
+
+                        [NameInMap("MultiBuffer")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer MultiBuffer { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationMultiBuffer : TeaModel {
                             [NameInMap("Enabled")]
                             [Validation(Required=false)]
                             public bool? Enabled { get; set; }
+                            [NameInMap("PollDelay")]
+                            [Validation(Required=false)]
+                            public string PollDelay { get; set; }
                         };
 
-                        [NameInMap("SidecarInjectorWebhookAsYaml")]
+                        [NameInMap("SidecarProxyInitResourceLimit")]
                         [Validation(Required=false)]
-                        public string SidecarInjectorWebhookAsYaml { get; set; }
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit SidecarProxyInitResourceLimit { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit : TeaModel {
+                            [NameInMap("ResourceCPULimit")]
+                            [Validation(Required=false)]
+                            public string ResourceCPULimit { get; set; }
+                            [NameInMap("ResourceMemoryLimit")]
+                            [Validation(Required=false)]
+                            public string ResourceMemoryLimit { get; set; }
+                        };
+
+                        [NameInMap("SidecarProxyInitResourceRequest")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceRequest SidecarProxyInitResourceRequest { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceRequest : TeaModel {
+                            [NameInMap("ResourceCPURequest")]
+                            [Validation(Required=false)]
+                            public string ResourceCPURequest { get; set; }
+                            [NameInMap("ResourceMemoryRequest")]
+                            [Validation(Required=false)]
+                            public string ResourceMemoryRequest { get; set; }
+                        };
+
+                        [NameInMap("TerminationDrainDuration")]
+                        [Validation(Required=false)]
+                        public string TerminationDrainDuration { get; set; }
 
                     }
                     [NameInMap("IncludeIPRanges")]
                     [Validation(Required=false)]
                     public string IncludeIPRanges { get; set; }
-                    [NameInMap("ExcludeIPRanges")]
+                    [NameInMap("K8sNewAPIsSupport")]
                     [Validation(Required=false)]
-                    public string ExcludeIPRanges { get; set; }
-                    [NameInMap("ExcludeOutboundPorts")]
-                    [Validation(Required=false)]
-                    public string ExcludeOutboundPorts { get; set; }
-                    [NameInMap("ExcludeInboundPorts")]
-                    [Validation(Required=false)]
-                    public string ExcludeInboundPorts { get; set; }
-                    [NameInMap("Telemetry")]
-                    [Validation(Required=false)]
-                    public bool? Telemetry { get; set; }
-                    [NameInMap("Edition")]
-                    [Validation(Required=false)]
-                    public string Edition { get; set; }
-                    [NameInMap("ProtocolSupport")]
-                    [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport ProtocolSupport { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport : TeaModel {
-                        [NameInMap("MysqlFilterEnabled")]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport K8sNewAPIsSupport { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport : TeaModel {
+                        [NameInMap("GatewayAPIEnabled")]
                         [Validation(Required=false)]
-                        public bool? MysqlFilterEnabled { get; set; }
-
-                        [NameInMap("RedisFilterEnabled")]
-                        [Validation(Required=false)]
-                        public bool? RedisFilterEnabled { get; set; }
-
-                        [NameInMap("ThriftFilterEnabled")]
-                        [Validation(Required=false)]
-                        public bool? ThriftFilterEnabled { get; set; }
-
-                        [NameInMap("DubboFilterEnabled")]
-                        [Validation(Required=false)]
-                        public bool? DubboFilterEnabled { get; set; }
+                        public bool? GatewayAPIEnabled { get; set; }
 
                     }
-                    [NameInMap("OutboundTrafficPolicy")]
-                    [Validation(Required=false)]
-                    public string OutboundTrafficPolicy { get; set; }
                     [NameInMap("Kiali")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigKiali Kiali { get; set; }
@@ -308,61 +372,146 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         public string Url { get; set; }
 
                     }
-                    [NameInMap("Tracing")]
+                    [NameInMap("LocalityLB")]
                     [Validation(Required=false)]
-                    public bool? Tracing { get; set; }
-                    [NameInMap("WebAssemblyFilterDeployment")]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB LocalityLB { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigLocalityLB : TeaModel {
+                        [NameInMap("Distribute")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> Distribute { get; set; }
+
+                        [NameInMap("Enabled")]
+                        [Validation(Required=false)]
+                        public bool? Enabled { get; set; }
+
+                        [NameInMap("Failover")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> Failover { get; set; }
+
+                    }
+                    [NameInMap("MSE")]
                     [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigWebAssemblyFilterDeployment WebAssemblyFilterDeployment { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigWebAssemblyFilterDeployment : TeaModel {
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigMSE MSE { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigMSE : TeaModel {
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
 
                     }
-                    [NameInMap("EnableLocalityLB")]
+                    [NameInMap("OPA")]
                     [Validation(Required=false)]
-                    public bool? EnableLocalityLB { get; set; }
-                    [NameInMap("Audit")]
-                    [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit Audit { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit : TeaModel {
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigOPA OPA { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigOPA : TeaModel {
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]
                         public bool? Enabled { get; set; }
 
-                        [NameInMap("Project")]
+                        [NameInMap("LimitCPU")]
                         [Validation(Required=false)]
-                        public string Project { get; set; }
+                        public string LimitCPU { get; set; }
+
+                        [NameInMap("LimitMemory")]
+                        [Validation(Required=false)]
+                        public string LimitMemory { get; set; }
+
+                        [NameInMap("LogLevel")]
+                        [Validation(Required=false)]
+                        public string LogLevel { get; set; }
+
+                        [NameInMap("RequestCPU")]
+                        [Validation(Required=false)]
+                        public string RequestCPU { get; set; }
+
+                        [NameInMap("RequestMemory")]
+                        [Validation(Required=false)]
+                        public string RequestMemory { get; set; }
+
+                    }
+                    [NameInMap("OutboundTrafficPolicy")]
+                    [Validation(Required=false)]
+                    public string OutboundTrafficPolicy { get; set; }
+                    [NameInMap("Pilot")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot Pilot { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot : TeaModel {
+                        [NameInMap("ConfigSource")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotConfigSource ConfigSource { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotConfigSource : TeaModel {
+                            [NameInMap("Enabled")]
+                            [Validation(Required=false)]
+                            public bool? Enabled { get; set; }
+                            [NameInMap("NacosID")]
+                            [Validation(Required=false)]
+                            public string NacosID { get; set; }
+                        };
+
+                        [NameInMap("Feature")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature Feature { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature : TeaModel {
+                            [NameInMap("EnableSDSServer")]
+                            [Validation(Required=false)]
+                            public bool? EnableSDSServer { get; set; }
+                            [NameInMap("FilterGatewayClusterConfig")]
+                            [Validation(Required=false)]
+                            public bool? FilterGatewayClusterConfig { get; set; }
+                        };
+
+                        [NameInMap("Http10Enabled")]
+                        [Validation(Required=false)]
+                        public bool? Http10Enabled { get; set; }
+
+                        [NameInMap("TraceSampling")]
+                        [Validation(Required=false)]
+                        public float? TraceSampling { get; set; }
+
+                    }
+                    [NameInMap("Prometheus")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPrometheus Prometheus { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPrometheus : TeaModel {
+                        [NameInMap("ExternalUrl")]
+                        [Validation(Required=false)]
+                        public string ExternalUrl { get; set; }
+
+                        [NameInMap("UseExternal")]
+                        [Validation(Required=false)]
+                        public bool? UseExternal { get; set; }
+
+                    }
+                    [NameInMap("ProtocolSupport")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport ProtocolSupport { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport : TeaModel {
+                        [NameInMap("DubboFilterEnabled")]
+                        [Validation(Required=false)]
+                        public bool? DubboFilterEnabled { get; set; }
+
+                        [NameInMap("MysqlFilterEnabled")]
+                        [Validation(Required=false)]
+                        public bool? MysqlFilterEnabled { get; set; }
+
+                        [NameInMap("RedisFilterEnabled")]
+                        [Validation(Required=false)]
+                        public bool? RedisFilterEnabled { get; set; }
+
+                        [NameInMap("ThriftFilterEnabled")]
+                        [Validation(Required=false)]
+                        public bool? ThriftFilterEnabled { get; set; }
 
                     }
                     [NameInMap("Proxy")]
                     [Validation(Required=false)]
                     public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy Proxy { get; set; }
                     public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy : TeaModel {
-                        [NameInMap("RequestMemory")]
+                        [NameInMap("AccessLogFile")]
                         [Validation(Required=false)]
-                        public string RequestMemory { get; set; }
+                        public string AccessLogFile { get; set; }
 
-                        [NameInMap("ClusterDomain")]
+                        [NameInMap("AccessLogFormat")]
                         [Validation(Required=false)]
-                        public string ClusterDomain { get; set; }
-
-                        [NameInMap("LimitMemory")]
-                        [Validation(Required=false)]
-                        public string LimitMemory { get; set; }
-
-                        [NameInMap("RequestCPU")]
-                        [Validation(Required=false)]
-                        public string RequestCPU { get; set; }
-
-                        [NameInMap("EnableDNSProxying")]
-                        [Validation(Required=false)]
-                        public bool? EnableDNSProxying { get; set; }
-
-                        [NameInMap("LimitCPU")]
-                        [Validation(Required=false)]
-                        public string LimitCPU { get; set; }
+                        public string AccessLogFormat { get; set; }
 
                         [NameInMap("AccessLogServiceEnabled")]
                         [Validation(Required=false)]
@@ -376,22 +525,109 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
                         [Validation(Required=false)]
                         public int? AccessLogServicePort { get; set; }
 
-                    }
-                    [NameInMap("K8sNewAPIsSupport")]
-                    [Validation(Required=false)]
-                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport K8sNewAPIsSupport { get; set; }
-                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport : TeaModel {
-                        [NameInMap("GatewayAPIEnabled")]
+                        [NameInMap("ClusterDomain")]
                         [Validation(Required=false)]
-                        public bool? GatewayAPIEnabled { get; set; }
+                        public string ClusterDomain { get; set; }
+
+                        [NameInMap("EnableDNSProxying")]
+                        [Validation(Required=false)]
+                        public bool? EnableDNSProxying { get; set; }
+
+                        [NameInMap("LimitCPU")]
+                        [Validation(Required=false)]
+                        public string LimitCPU { get; set; }
+
+                        [NameInMap("LimitMemory")]
+                        [Validation(Required=false)]
+                        public string LimitMemory { get; set; }
+
+                        [NameInMap("RequestCPU")]
+                        [Validation(Required=false)]
+                        public string RequestCPU { get; set; }
+
+                        [NameInMap("RequestMemory")]
+                        [Validation(Required=false)]
+                        public string RequestMemory { get; set; }
+
+                    }
+                    [NameInMap("SidecarInjector")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector SidecarInjector { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector : TeaModel {
+                        [NameInMap("AutoInjectionPolicyEnabled")]
+                        [Validation(Required=false)]
+                        public bool? AutoInjectionPolicyEnabled { get; set; }
+
+                        [NameInMap("EnableNamespacesByDefault")]
+                        [Validation(Required=false)]
+                        public bool? EnableNamespacesByDefault { get; set; }
+
+                        [NameInMap("InitCNIConfiguration")]
+                        [Validation(Required=false)]
+                        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration InitCNIConfiguration { get; set; }
+                        public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration : TeaModel {
+                            [NameInMap("Enabled")]
+                            [Validation(Required=false)]
+                            public bool? Enabled { get; set; }
+                            [NameInMap("ExcludeNamespaces")]
+                            [Validation(Required=false)]
+                            public string ExcludeNamespaces { get; set; }
+                        };
+
+                        [NameInMap("LimitCPU")]
+                        [Validation(Required=false)]
+                        public string LimitCPU { get; set; }
+
+                        [NameInMap("LimitMemory")]
+                        [Validation(Required=false)]
+                        public string LimitMemory { get; set; }
+
+                        [NameInMap("RequestCPU")]
+                        [Validation(Required=false)]
+                        public string RequestCPU { get; set; }
+
+                        [NameInMap("RequestMemory")]
+                        [Validation(Required=false)]
+                        public string RequestMemory { get; set; }
+
+                        [NameInMap("SidecarInjectorWebhookAsYaml")]
+                        [Validation(Required=false)]
+                        public string SidecarInjectorWebhookAsYaml { get; set; }
+
+                    }
+                    [NameInMap("Telemetry")]
+                    [Validation(Required=false)]
+                    public bool? Telemetry { get; set; }
+                    [NameInMap("Tracing")]
+                    [Validation(Required=false)]
+                    public bool? Tracing { get; set; }
+                    [NameInMap("WebAssemblyFilterDeployment")]
+                    [Validation(Required=false)]
+                    public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigWebAssemblyFilterDeployment WebAssemblyFilterDeployment { get; set; }
+                    public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigWebAssemblyFilterDeployment : TeaModel {
+                        [NameInMap("Enabled")]
+                        [Validation(Required=false)]
+                        public bool? Enabled { get; set; }
 
                     }
                 };
 
+                [NameInMap("Network")]
+                [Validation(Required=false)]
+                public DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork Network { get; set; }
+                public class DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork : TeaModel {
+                    [NameInMap("SecurityGroupId")]
+                    [Validation(Required=false)]
+                    public string SecurityGroupId { get; set; }
+                    [NameInMap("VSwitches")]
+                    [Validation(Required=false)]
+                    public List<string> VSwitches { get; set; }
+                    [NameInMap("VpcId")]
+                    [Validation(Required=false)]
+                    public string VpcId { get; set; }
+                };
+
             }
-            [NameInMap("Clusters")]
-            [Validation(Required=false)]
-            public List<string> Clusters { get; set; }
         };
 
     }

@@ -9,197 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateMeshFeatureRequest : TeaModel {
-        [NameInMap("ServiceMeshId")]
-        [Validation(Required=false)]
-        public string ServiceMeshId { get; set; }
-
-        [NameInMap("Tracing")]
-        [Validation(Required=false)]
-        public bool? Tracing { get; set; }
-
-        [NameInMap("TraceSampling")]
-        [Validation(Required=false)]
-        public float? TraceSampling { get; set; }
-
-        [NameInMap("LocalityLoadBalancing")]
-        [Validation(Required=false)]
-        public bool? LocalityLoadBalancing { get; set; }
-
-        [NameInMap("Telemetry")]
-        [Validation(Required=false)]
-        public bool? Telemetry { get; set; }
-
-        [NameInMap("OpenAgentPolicy")]
-        [Validation(Required=false)]
-        public bool? OpenAgentPolicy { get; set; }
-
-        [NameInMap("OPALogLevel")]
-        [Validation(Required=false)]
-        public string OPALogLevel { get; set; }
-
-        [NameInMap("OPARequestCPU")]
-        [Validation(Required=false)]
-        public string OPARequestCPU { get; set; }
-
-        [NameInMap("OPARequestMemory")]
-        [Validation(Required=false)]
-        public string OPARequestMemory { get; set; }
-
-        [NameInMap("OPALimitCPU")]
-        [Validation(Required=false)]
-        public string OPALimitCPU { get; set; }
-
-        [NameInMap("OPALimitMemory")]
-        [Validation(Required=false)]
-        public string OPALimitMemory { get; set; }
-
-        [NameInMap("EnableAudit")]
-        [Validation(Required=false)]
-        public bool? EnableAudit { get; set; }
-
-        [NameInMap("AuditProject")]
-        [Validation(Required=false)]
-        public string AuditProject { get; set; }
-
-        [NameInMap("ClusterDomain")]
-        [Validation(Required=false)]
-        public string ClusterDomain { get; set; }
-
-        [NameInMap("CustomizedZipkin")]
-        [Validation(Required=false)]
-        public bool? CustomizedZipkin { get; set; }
-
-        [NameInMap("OutboundTrafficPolicy")]
-        [Validation(Required=false)]
-        public string OutboundTrafficPolicy { get; set; }
-
-        [NameInMap("ProxyRequestCPU")]
-        [Validation(Required=false)]
-        public string ProxyRequestCPU { get; set; }
-
-        [NameInMap("ProxyRequestMemory")]
-        [Validation(Required=false)]
-        public string ProxyRequestMemory { get; set; }
-
-        [NameInMap("ProxyLimitCPU")]
-        [Validation(Required=false)]
-        public string ProxyLimitCPU { get; set; }
-
-        [NameInMap("ProxyLimitMemory")]
-        [Validation(Required=false)]
-        public string ProxyLimitMemory { get; set; }
-
-        [NameInMap("IncludeIPRanges")]
-        [Validation(Required=false)]
-        public string IncludeIPRanges { get; set; }
-
-        [NameInMap("ExcludeIPRanges")]
-        [Validation(Required=false)]
-        public string ExcludeIPRanges { get; set; }
-
-        [NameInMap("ExcludeOutboundPorts")]
-        [Validation(Required=false)]
-        public string ExcludeOutboundPorts { get; set; }
-
-        [NameInMap("ExcludeInboundPorts")]
-        [Validation(Required=false)]
-        public string ExcludeInboundPorts { get; set; }
-
-        [NameInMap("EnableNamespacesByDefault")]
-        [Validation(Required=false)]
-        public bool? EnableNamespacesByDefault { get; set; }
-
-        [NameInMap("AutoInjectionPolicyEnabled")]
-        [Validation(Required=false)]
-        public bool? AutoInjectionPolicyEnabled { get; set; }
-
-        [NameInMap("SidecarInjectorRequestCPU")]
-        [Validation(Required=false)]
-        public string SidecarInjectorRequestCPU { get; set; }
-
-        [NameInMap("SidecarInjectorRequestMemory")]
-        [Validation(Required=false)]
-        public string SidecarInjectorRequestMemory { get; set; }
-
-        [NameInMap("SidecarInjectorLimitCPU")]
-        [Validation(Required=false)]
-        public string SidecarInjectorLimitCPU { get; set; }
-
-        [NameInMap("SidecarInjectorLimitMemory")]
-        [Validation(Required=false)]
-        public string SidecarInjectorLimitMemory { get; set; }
-
-        [NameInMap("SidecarInjectorWebhookAsYaml")]
-        [Validation(Required=false)]
-        public string SidecarInjectorWebhookAsYaml { get; set; }
-
-        [NameInMap("CniEnabled")]
-        [Validation(Required=false)]
-        public bool? CniEnabled { get; set; }
-
-        [NameInMap("CniExcludeNamespaces")]
-        [Validation(Required=false)]
-        public string CniExcludeNamespaces { get; set; }
-
-        [NameInMap("OpaEnabled")]
-        [Validation(Required=false)]
-        public bool? OpaEnabled { get; set; }
-
-        [NameInMap("Http10Enabled")]
-        [Validation(Required=false)]
-        public bool? Http10Enabled { get; set; }
-
-        [NameInMap("KialiEnabled")]
-        [Validation(Required=false)]
-        public bool? KialiEnabled { get; set; }
-
-        [NameInMap("CustomizedPrometheus")]
-        [Validation(Required=false)]
-        public bool? CustomizedPrometheus { get; set; }
-
-        [NameInMap("PrometheusUrl")]
-        [Validation(Required=false)]
-        public string PrometheusUrl { get; set; }
-
         [NameInMap("AccessLogEnabled")]
         [Validation(Required=false)]
         public bool? AccessLogEnabled { get; set; }
 
-        [NameInMap("MSEEnabled")]
+        [NameInMap("AccessLogFile")]
         [Validation(Required=false)]
-        public bool? MSEEnabled { get; set; }
+        public string AccessLogFile { get; set; }
 
-        [NameInMap("RedisFilterEnabled")]
+        [NameInMap("AccessLogFormat")]
         [Validation(Required=false)]
-        public bool? RedisFilterEnabled { get; set; }
+        public string AccessLogFormat { get; set; }
 
-        [NameInMap("MysqlFilterEnabled")]
+        [NameInMap("AccessLogProject")]
         [Validation(Required=false)]
-        public bool? MysqlFilterEnabled { get; set; }
-
-        [NameInMap("ThriftFilterEnabled")]
-        [Validation(Required=false)]
-        public bool? ThriftFilterEnabled { get; set; }
-
-        [NameInMap("WebAssemblyFilterEnabled")]
-        [Validation(Required=false)]
-        public bool? WebAssemblyFilterEnabled { get; set; }
-
-        [NameInMap("DNSProxyingEnabled")]
-        [Validation(Required=false)]
-        public bool? DNSProxyingEnabled { get; set; }
-
-        [NameInMap("DubboFilterEnabled")]
-        [Validation(Required=false)]
-        public bool? DubboFilterEnabled { get; set; }
-
-        [NameInMap("FilterGatewayClusterConfig")]
-        [Validation(Required=false)]
-        public bool? FilterGatewayClusterConfig { get; set; }
-
-        [NameInMap("EnableSDSServer")]
-        [Validation(Required=false)]
-        public bool? EnableSDSServer { get; set; }
+        public string AccessLogProject { get; set; }
 
         [NameInMap("AccessLogServiceEnabled")]
         [Validation(Required=false)]
@@ -213,9 +37,25 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public int? AccessLogServicePort { get; set; }
 
-        [NameInMap("GatewayAPIEnabled")]
+        [NameInMap("AuditProject")]
         [Validation(Required=false)]
-        public bool? GatewayAPIEnabled { get; set; }
+        public string AuditProject { get; set; }
+
+        [NameInMap("AutoInjectionPolicyEnabled")]
+        [Validation(Required=false)]
+        public bool? AutoInjectionPolicyEnabled { get; set; }
+
+        [NameInMap("CRAggregationEnabled")]
+        [Validation(Required=false)]
+        public bool? CRAggregationEnabled { get; set; }
+
+        [NameInMap("CniEnabled")]
+        [Validation(Required=false)]
+        public bool? CniEnabled { get; set; }
+
+        [NameInMap("CniExcludeNamespaces")]
+        [Validation(Required=false)]
+        public string CniExcludeNamespaces { get; set; }
 
         [NameInMap("ConfigSourceEnabled")]
         [Validation(Required=false)]
@@ -224,6 +64,226 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ConfigSourceNacosID")]
         [Validation(Required=false)]
         public string ConfigSourceNacosID { get; set; }
+
+        [NameInMap("CustomizedPrometheus")]
+        [Validation(Required=false)]
+        public bool? CustomizedPrometheus { get; set; }
+
+        [NameInMap("CustomizedZipkin")]
+        [Validation(Required=false)]
+        public bool? CustomizedZipkin { get; set; }
+
+        [NameInMap("DNSProxyingEnabled")]
+        [Validation(Required=false)]
+        public bool? DNSProxyingEnabled { get; set; }
+
+        [NameInMap("DiscoverySelectors")]
+        [Validation(Required=false)]
+        public string DiscoverySelectors { get; set; }
+
+        [NameInMap("DubboFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? DubboFilterEnabled { get; set; }
+
+        [NameInMap("EnableAudit")]
+        [Validation(Required=false)]
+        public bool? EnableAudit { get; set; }
+
+        [NameInMap("EnableCRHistory")]
+        [Validation(Required=false)]
+        public bool? EnableCRHistory { get; set; }
+
+        [NameInMap("EnableNamespacesByDefault")]
+        [Validation(Required=false)]
+        public bool? EnableNamespacesByDefault { get; set; }
+
+        [NameInMap("EnableSDSServer")]
+        [Validation(Required=false)]
+        public bool? EnableSDSServer { get; set; }
+
+        [NameInMap("ExcludeIPRanges")]
+        [Validation(Required=false)]
+        public string ExcludeIPRanges { get; set; }
+
+        [NameInMap("ExcludeInboundPorts")]
+        [Validation(Required=false)]
+        public string ExcludeInboundPorts { get; set; }
+
+        [NameInMap("ExcludeOutboundPorts")]
+        [Validation(Required=false)]
+        public string ExcludeOutboundPorts { get; set; }
+
+        [NameInMap("FilterGatewayClusterConfig")]
+        [Validation(Required=false)]
+        public bool? FilterGatewayClusterConfig { get; set; }
+
+        [NameInMap("GatewayAPIEnabled")]
+        [Validation(Required=false)]
+        public bool? GatewayAPIEnabled { get; set; }
+
+        [NameInMap("Http10Enabled")]
+        [Validation(Required=false)]
+        public bool? Http10Enabled { get; set; }
+
+        [NameInMap("IncludeIPRanges")]
+        [Validation(Required=false)]
+        public string IncludeIPRanges { get; set; }
+
+        [NameInMap("IncludeInboundPorts")]
+        [Validation(Required=false)]
+        public string IncludeInboundPorts { get; set; }
+
+        [NameInMap("KialiEnabled")]
+        [Validation(Required=false)]
+        public bool? KialiEnabled { get; set; }
+
+        [NameInMap("Lifecycle")]
+        [Validation(Required=false)]
+        public string Lifecycle { get; set; }
+
+        [NameInMap("LocalityLBConf")]
+        [Validation(Required=false)]
+        public string LocalityLBConf { get; set; }
+
+        [NameInMap("LocalityLoadBalancing")]
+        [Validation(Required=false)]
+        public bool? LocalityLoadBalancing { get; set; }
+
+        [NameInMap("MSEEnabled")]
+        [Validation(Required=false)]
+        public bool? MSEEnabled { get; set; }
+
+        [NameInMap("MultiBufferEnabled")]
+        [Validation(Required=false)]
+        public bool? MultiBufferEnabled { get; set; }
+
+        [NameInMap("MultiBufferPollDelay")]
+        [Validation(Required=false)]
+        public string MultiBufferPollDelay { get; set; }
+
+        [NameInMap("MysqlFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? MysqlFilterEnabled { get; set; }
+
+        [NameInMap("OPALimitCPU")]
+        [Validation(Required=false)]
+        public string OPALimitCPU { get; set; }
+
+        [NameInMap("OPALimitMemory")]
+        [Validation(Required=false)]
+        public string OPALimitMemory { get; set; }
+
+        [NameInMap("OPALogLevel")]
+        [Validation(Required=false)]
+        public string OPALogLevel { get; set; }
+
+        [NameInMap("OPARequestCPU")]
+        [Validation(Required=false)]
+        public string OPARequestCPU { get; set; }
+
+        [NameInMap("OPARequestMemory")]
+        [Validation(Required=false)]
+        public string OPARequestMemory { get; set; }
+
+        [NameInMap("OpaEnabled")]
+        [Validation(Required=false)]
+        public bool? OpaEnabled { get; set; }
+
+        [NameInMap("OpenAgentPolicy")]
+        [Validation(Required=false)]
+        public bool? OpenAgentPolicy { get; set; }
+
+        [NameInMap("OutboundTrafficPolicy")]
+        [Validation(Required=false)]
+        public string OutboundTrafficPolicy { get; set; }
+
+        [NameInMap("PrometheusUrl")]
+        [Validation(Required=false)]
+        public string PrometheusUrl { get; set; }
+
+        [NameInMap("ProxyInitCPUResourceLimit")]
+        [Validation(Required=false)]
+        public string ProxyInitCPUResourceLimit { get; set; }
+
+        [NameInMap("ProxyInitCPUResourceRequest")]
+        [Validation(Required=false)]
+        public string ProxyInitCPUResourceRequest { get; set; }
+
+        [NameInMap("ProxyInitMemoryResourceLimit")]
+        [Validation(Required=false)]
+        public string ProxyInitMemoryResourceLimit { get; set; }
+
+        [NameInMap("ProxyInitMemoryResourceRequest")]
+        [Validation(Required=false)]
+        public string ProxyInitMemoryResourceRequest { get; set; }
+
+        [NameInMap("ProxyLimitCPU")]
+        [Validation(Required=false)]
+        public string ProxyLimitCPU { get; set; }
+
+        [NameInMap("ProxyLimitMemory")]
+        [Validation(Required=false)]
+        public string ProxyLimitMemory { get; set; }
+
+        [NameInMap("ProxyRequestCPU")]
+        [Validation(Required=false)]
+        public string ProxyRequestCPU { get; set; }
+
+        [NameInMap("ProxyRequestMemory")]
+        [Validation(Required=false)]
+        public string ProxyRequestMemory { get; set; }
+
+        [NameInMap("RedisFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? RedisFilterEnabled { get; set; }
+
+        [NameInMap("ServiceMeshId")]
+        [Validation(Required=false)]
+        public string ServiceMeshId { get; set; }
+
+        [NameInMap("SidecarInjectorLimitCPU")]
+        [Validation(Required=false)]
+        public string SidecarInjectorLimitCPU { get; set; }
+
+        [NameInMap("SidecarInjectorLimitMemory")]
+        [Validation(Required=false)]
+        public string SidecarInjectorLimitMemory { get; set; }
+
+        [NameInMap("SidecarInjectorRequestCPU")]
+        [Validation(Required=false)]
+        public string SidecarInjectorRequestCPU { get; set; }
+
+        [NameInMap("SidecarInjectorRequestMemory")]
+        [Validation(Required=false)]
+        public string SidecarInjectorRequestMemory { get; set; }
+
+        [NameInMap("SidecarInjectorWebhookAsYaml")]
+        [Validation(Required=false)]
+        public string SidecarInjectorWebhookAsYaml { get; set; }
+
+        [NameInMap("Telemetry")]
+        [Validation(Required=false)]
+        public bool? Telemetry { get; set; }
+
+        [NameInMap("TerminationDrainDuration")]
+        [Validation(Required=false)]
+        public string TerminationDrainDuration { get; set; }
+
+        [NameInMap("ThriftFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? ThriftFilterEnabled { get; set; }
+
+        [NameInMap("TraceSampling")]
+        [Validation(Required=false)]
+        public float? TraceSampling { get; set; }
+
+        [NameInMap("Tracing")]
+        [Validation(Required=false)]
+        public bool? Tracing { get; set; }
+
+        [NameInMap("WebAssemblyFilterEnabled")]
+        [Validation(Required=false)]
+        public bool? WebAssemblyFilterEnabled { get; set; }
 
     }
 
