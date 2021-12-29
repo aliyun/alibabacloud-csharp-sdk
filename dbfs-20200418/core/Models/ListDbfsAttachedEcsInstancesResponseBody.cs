@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public List<ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo> EcsLabelInfo { get; set; }
         public class ListDbfsAttachedEcsInstancesResponseBodyEcsLabelInfo : TeaModel {
+            [NameInMap("InstanceTypeFamily")]
+            [Validation(Required=false)]
+            public string InstanceTypeFamily { get; set; }
+
             [NameInMap("MountPoint")]
             [Validation(Required=false)]
             public string MountPoint { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
             [NameInMap("MountedTime")]
             [Validation(Required=false)]
             public string MountedTime { get; set; }
+
+            [NameInMap("OSName")]
+            [Validation(Required=false)]
+            public string OSName { get; set; }
 
             [NameInMap("label")]
             [Validation(Required=false)]

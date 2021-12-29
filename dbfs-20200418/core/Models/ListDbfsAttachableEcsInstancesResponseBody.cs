@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
         [Validation(Required=false)]
         public List<ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo> EcsLabelInfo { get; set; }
         public class ListDbfsAttachableEcsInstancesResponseBodyEcsLabelInfo : TeaModel {
+            [NameInMap("InstanceTypeFamily")]
+            [Validation(Required=false)]
+            public string InstanceTypeFamily { get; set; }
+
+            [NameInMap("OSName")]
+            [Validation(Required=false)]
+            public string OSName { get; set; }
+
             [NameInMap("label")]
             [Validation(Required=false)]
             public string Label { get; set; }
