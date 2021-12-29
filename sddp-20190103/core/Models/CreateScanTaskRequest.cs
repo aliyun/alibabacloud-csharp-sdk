@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? IntervalDay { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         [NameInMap("OssScanPath")]
         [Validation(Required=false)]
         public string OssScanPath { get; set; }

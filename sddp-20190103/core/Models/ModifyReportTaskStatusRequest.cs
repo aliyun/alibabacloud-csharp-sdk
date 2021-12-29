@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
-    public class ExecDatamaskRequest : TeaModel {
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
-
+    public class ModifyReportTaskStatusRequest : TeaModel {
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
-        [NameInMap("TemplateId")]
+        [NameInMap("ReportTaskStatus")]
         [Validation(Required=false)]
-        public long? TemplateId { get; set; }
+        public int? ReportTaskStatus { get; set; }
 
     }
 

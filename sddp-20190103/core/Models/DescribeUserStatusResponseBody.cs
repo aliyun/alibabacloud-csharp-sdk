@@ -23,9 +23,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("Authed")]
             [Validation(Required=false)]
             public bool? Authed { get; set; }
-            [NameInMap("Buyed")]
-            [Validation(Required=false)]
-            public bool? Buyed { get; set; }
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
@@ -38,6 +35,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("LabStatus")]
             [Validation(Required=false)]
             public int? LabStatus { get; set; }
+            [NameInMap("Purchased")]
+            [Validation(Required=false)]
+            public bool? Purchased { get; set; }
             [NameInMap("RemainDays")]
             [Validation(Required=false)]
             public int? RemainDays { get; set; }
