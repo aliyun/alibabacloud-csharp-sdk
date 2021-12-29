@@ -31,13 +31,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         public string IntegrationMode { get; set; }
 
         /// <summary>
-        /// 地域
-        /// </summary>
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        /// <summary>
         /// 应用模板场景，电商business，课堂classroom
         /// </summary>
         [NameInMap("Scene")]

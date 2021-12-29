@@ -33,13 +33,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
 
         }
 
-        /// <summary>
-        /// 地域
-        /// </summary>
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
     }
 
 }

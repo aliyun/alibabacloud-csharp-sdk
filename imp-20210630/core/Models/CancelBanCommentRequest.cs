@@ -23,10 +23,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string BanCommentUser { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         /// <summary>
         /// 房间唯一标识，由调用CreateRoom返回。
         /// </summary>

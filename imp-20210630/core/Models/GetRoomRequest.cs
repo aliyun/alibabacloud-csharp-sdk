@@ -16,10 +16,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         /// <summary>
         /// 房间唯一标识，由字母、数字、符号.和-组成，最大长度36位。
         /// </summary>

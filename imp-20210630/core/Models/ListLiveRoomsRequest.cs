@@ -30,10 +30,6 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         /// <summary>
         /// 直播状态，0-在播 1-下播，不传则返回所有直播。
         /// </summary>
