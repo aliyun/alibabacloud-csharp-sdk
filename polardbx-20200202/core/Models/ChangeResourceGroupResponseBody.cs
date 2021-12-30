@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class CancelPolarxOrderResponseBody : TeaModel {
+    public class ChangeResourceGroupResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

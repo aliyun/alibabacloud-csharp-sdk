@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// 数据库实例名称
+            /// </summary>
+            [NameInMap("DBInstanceName")]
+            [Validation(Required=false)]
+            public string DBInstanceName { get; set; }
+
             [NameInMap("DBType")]
             [Validation(Required=false)]
             public string DBType { get; set; }
@@ -107,6 +114,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// 资源组ID
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -114,6 +128,29 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("StorageUsed")]
             [Validation(Required=false)]
             public long? StorageUsed { get; set; }
+
+            /// <summary>
+            /// 标签集合
+            /// </summary>
+            [NameInMap("TagSet")]
+            [Validation(Required=false)]
+            public List<DescribeDBInstancesResponseBodyDBInstancesTagSet> TagSet { get; set; }
+            public class DescribeDBInstancesResponseBodyDBInstancesTagSet : TeaModel {
+                /// <summary>
+                /// 标签名称
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// 标签值
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("Type")]
             [Validation(Required=false)]

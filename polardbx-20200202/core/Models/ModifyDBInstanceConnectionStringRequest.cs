@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class GetPolarxCommodityRequest : TeaModel {
+    public class ModifyDBInstanceConnectionStringRequest : TeaModel {
+        [NameInMap("ConnectionString")]
+        [Validation(Required=false)]
+        public string ConnectionString { get; set; }
+
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("OrderType")]
+        [NameInMap("NewPort")]
         [Validation(Required=false)]
-        public string OrderType { get; set; }
+        public string NewPort { get; set; }
+
+        [NameInMap("NewPrefix")]
+        [Validation(Required=false)]
+        public string NewPrefix { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]

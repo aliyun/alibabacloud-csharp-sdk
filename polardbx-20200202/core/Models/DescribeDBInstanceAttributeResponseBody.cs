@@ -106,6 +106,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
             [NameInMap("RightsSeparationEnabled")]
             [Validation(Required=false)]
             public bool? RightsSeparationEnabled { get; set; }
@@ -118,6 +121,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("StorageUsed")]
             [Validation(Required=false)]
             public long? StorageUsed { get; set; }
+            [NameInMap("TagSet")]
+            [Validation(Required=false)]
+            public List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> TagSet { get; set; }
+            public class DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet : TeaModel {
+                public string Key { get; set; }
+                public string Value { get; set; }
+            }
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class CancelPolarxOrderResponse : TeaModel {
+    public class InitDBInstanceResourceGroupIdResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public CancelPolarxOrderResponseBody Body { get; set; }
+        public InitDBInstanceResourceGroupIdResponseBody Body { get; set; }
 
     }
 

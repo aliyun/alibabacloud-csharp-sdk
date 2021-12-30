@@ -8,18 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class CancelPolarxOrderRequest : TeaModel {
+    public class DescribeTagsRequest : TeaModel {
+        /// <summary>
+        /// 实例名称
+        /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// 地域
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("ScaleOutToken")]
+        /// <summary>
+        /// 标签Key
+        /// </summary>
+        [NameInMap("TagKey")]
         [Validation(Required=false)]
-        public string ScaleOutToken { get; set; }
+        public string TagKey { get; set; }
 
     }
 
