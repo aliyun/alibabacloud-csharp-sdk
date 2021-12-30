@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsForUserResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("HostAccounts")]
         [Validation(Required=false)]
         public List<ListHostAccountsForUserResponseBodyHostAccounts> HostAccounts { get; set; }
         public class ListHostAccountsForUserResponseBodyHostAccounts : TeaModel {
+            [NameInMap("HostAccountId")]
+            [Validation(Required=false)]
+            public string HostAccountId { get; set; }
+
             [NameInMap("HostAccountName")]
             [Validation(Required=false)]
             public string HostAccountName { get; set; }
 
-            [NameInMap("HostAccountId")]
+            [NameInMap("HostId")]
             [Validation(Required=false)]
-            public string HostAccountId { get; set; }
+            public string HostId { get; set; }
 
             [NameInMap("IsAuthorized")]
             [Validation(Required=false)]
@@ -37,11 +33,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string ProtocolName { get; set; }
 
-            [NameInMap("HostId")]
-            [Validation(Required=false)]
-            public string HostId { get; set; }
-
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

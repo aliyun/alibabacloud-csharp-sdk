@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateUserGroupResponseBody : TeaModel {
-        [NameInMap("UserGroupId")]
-        [Validation(Required=false)]
-        public string UserGroupId { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("UserGroupId")]
+        [Validation(Required=false)]
+        public string UserGroupId { get; set; }
 
     }
 

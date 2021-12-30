@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostGroupsRequest : TeaModel {
+        [NameInMap("HostGroupName")]
+        [Validation(Required=false)]
+        public string HostGroupName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        [NameInMap("HostGroupName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string HostGroupName { get; set; }
+        public string RegionId { get; set; }
 
     }
 

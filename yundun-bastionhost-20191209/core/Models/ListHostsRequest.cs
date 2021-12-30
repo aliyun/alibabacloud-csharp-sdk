@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsRequest : TeaModel {
+        [NameInMap("HostAddress")]
+        [Validation(Required=false)]
+        public string HostAddress { get; set; }
+
+        [NameInMap("HostGroupId")]
+        [Validation(Required=false)]
+        public string HostGroupId { get; set; }
+
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("OSType")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string OSType { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,17 +37,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        [NameInMap("OSType")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string OSType { get; set; }
-
-        [NameInMap("HostName")]
-        [Validation(Required=false)]
-        public string HostName { get; set; }
-
-        [NameInMap("HostAddress")]
-        [Validation(Required=false)]
-        public string HostAddress { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -48,10 +52,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("SourceInstanceState")]
         [Validation(Required=false)]
         public string SourceInstanceState { get; set; }
-
-        [NameInMap("HostGroupId")]
-        [Validation(Required=false)]
-        public string HostGroupId { get; set; }
 
     }
 

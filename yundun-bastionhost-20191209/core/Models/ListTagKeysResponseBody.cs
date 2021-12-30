@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -21,9 +17,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
@@ -38,6 +34,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string TagKey { get; set; }
 
         }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

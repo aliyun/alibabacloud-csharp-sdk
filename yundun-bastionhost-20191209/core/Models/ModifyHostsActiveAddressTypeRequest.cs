@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyHostsActiveAddressTypeRequest : TeaModel {
+        [NameInMap("ActiveAddressType")]
+        [Validation(Required=false)]
+        public string ActiveAddressType { get; set; }
+
+        [NameInMap("HostIds")]
+        [Validation(Required=false)]
+        public string HostIds { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("HostIds")]
-        [Validation(Required=false)]
-        public string HostIds { get; set; }
-
-        [NameInMap("ActiveAddressType")]
-        [Validation(Required=false)]
-        public string ActiveAddressType { get; set; }
 
     }
 

@@ -9,34 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("VswitchId")]
-            [Validation(Required=false)]
-            public string VswitchId { get; set; }
-
-            [NameInMap("ImageVersion")]
-            [Validation(Required=false)]
-            public string ImageVersion { get; set; }
-
-            [NameInMap("PlanCode")]
-            [Validation(Required=false)]
-            public string PlanCode { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -45,47 +21,71 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
-            [NameInMap("Legacy")]
+            [NameInMap("ImageVersion")]
             [Validation(Required=false)]
-            public bool? Legacy { get; set; }
+            public string ImageVersion { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("InstanceStatus")]
+            [Validation(Required=false)]
+            public string InstanceStatus { get; set; }
+
             [NameInMap("InternetEndpoint")]
             [Validation(Required=false)]
             public string InternetEndpoint { get; set; }
-
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
 
             [NameInMap("IntranetEndpoint")]
             [Validation(Required=false)]
             public string IntranetEndpoint { get; set; }
 
-            [NameInMap("StartTime")]
+            [NameInMap("Legacy")]
             [Validation(Required=false)]
-            public long? StartTime { get; set; }
-
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            [NameInMap("InstanceStatus")]
-            [Validation(Required=false)]
-            public string InstanceStatus { get; set; }
+            public bool? Legacy { get; set; }
 
             [NameInMap("LicenseCode")]
             [Validation(Required=false)]
             public string LicenseCode { get; set; }
 
+            [NameInMap("PlanCode")]
+            [Validation(Required=false)]
+            public string PlanCode { get; set; }
+
             [NameInMap("PublicNetworkAccess")]
             [Validation(Required=false)]
             public bool? PublicNetworkAccess { get; set; }
 
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+            [NameInMap("VswitchId")]
+            [Validation(Required=false)]
+            public string VswitchId { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

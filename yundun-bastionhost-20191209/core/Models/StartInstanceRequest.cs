@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("VswitchId")]
-        [Validation(Required=false)]
-        public string VswitchId { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
+
+        [NameInMap("VswitchId")]
+        [Validation(Required=false)]
+        public string VswitchId { get; set; }
 
     }
 

@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("ActiveAddressType")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string ActiveAddressType { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Comment")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Comment { get; set; }
+
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
 
         [NameInMap("HostPrivateAddress")]
         [Validation(Required=false)]
@@ -25,33 +29,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string HostPublicAddress { get; set; }
 
-        [NameInMap("ActiveAddressType")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string ActiveAddressType { get; set; }
+        public string InstanceId { get; set; }
 
-        [NameInMap("HostName")]
+        [NameInMap("InstanceRegionId")]
         [Validation(Required=false)]
-        public string HostName { get; set; }
-
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
+        public string InstanceRegionId { get; set; }
 
         [NameInMap("OSType")]
         [Validation(Required=false)]
         public string OSType { get; set; }
 
-        [NameInMap("Comment")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
 
         [NameInMap("SourceInstanceId")]
         [Validation(Required=false)]
         public string SourceInstanceId { get; set; }
-
-        [NameInMap("InstanceRegionId")]
-        [Validation(Required=false)]
-        public string InstanceRegionId { get; set; }
 
     }
 

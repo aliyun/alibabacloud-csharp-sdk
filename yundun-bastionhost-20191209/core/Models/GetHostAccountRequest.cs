@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostAccountRequest : TeaModel {
+        [NameInMap("HostAccountId")]
+        [Validation(Required=false)]
+        public string HostAccountId { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("HostAccountId")]
-        [Validation(Required=false)]
-        public string HostAccountId { get; set; }
 
     }
 

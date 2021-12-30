@@ -9,44 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Host")]
         [Validation(Required=false)]
         public GetHostResponseBodyHost Host { get; set; }
         public class GetHostResponseBodyHost : TeaModel {
-            [NameInMap("Comment")]
-            [Validation(Required=false)]
-            public string Comment { get; set; }
             [NameInMap("ActiveAddressType")]
             [Validation(Required=false)]
             public string ActiveAddressType { get; set; }
-            [NameInMap("HostPublicAddress")]
+            [NameInMap("Comment")]
             [Validation(Required=false)]
-            public string HostPublicAddress { get; set; }
-            [NameInMap("HostName")]
-            [Validation(Required=false)]
-            public string HostName { get; set; }
-            [NameInMap("Source")]
-            [Validation(Required=false)]
-            public string Source { get; set; }
-            [NameInMap("HostPrivateAddress")]
-            [Validation(Required=false)]
-            public string HostPrivateAddress { get; set; }
-            [NameInMap("OSType")]
-            [Validation(Required=false)]
-            public string OSType { get; set; }
+            public string Comment { get; set; }
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
-            [NameInMap("SourceInstanceState")]
+            [NameInMap("HostName")]
             [Validation(Required=false)]
-            public string SourceInstanceState { get; set; }
-            [NameInMap("SourceInstanceId")]
+            public string HostName { get; set; }
+            [NameInMap("HostPrivateAddress")]
             [Validation(Required=false)]
-            public string SourceInstanceId { get; set; }
+            public string HostPrivateAddress { get; set; }
+            [NameInMap("HostPublicAddress")]
+            [Validation(Required=false)]
+            public string HostPublicAddress { get; set; }
+            [NameInMap("OSType")]
+            [Validation(Required=false)]
+            public string OSType { get; set; }
             [NameInMap("Protocols")]
             [Validation(Required=false)]
             public List<GetHostResponseBodyHostProtocols> Protocols { get; set; }
@@ -55,7 +42,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public int? Port { get; set; }
                 public string ProtocolName { get; set; }
             }
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+            [NameInMap("SourceInstanceId")]
+            [Validation(Required=false)]
+            public string SourceInstanceId { get; set; }
+            [NameInMap("SourceInstanceState")]
+            [Validation(Required=false)]
+            public string SourceInstanceState { get; set; }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

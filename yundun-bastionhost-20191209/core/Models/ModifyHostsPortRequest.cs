@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyHostsPortRequest : TeaModel {
+        [NameInMap("HostIds")]
+        [Validation(Required=false)]
+        public string HostIds { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Port")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("HostIds")]
-        [Validation(Required=false)]
-        public string HostIds { get; set; }
+        public string Port { get; set; }
 
         [NameInMap("ProtocolName")]
         [Validation(Required=false)]
         public string ProtocolName { get; set; }
 
-        [NameInMap("Port")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Port { get; set; }
+        public string RegionId { get; set; }
 
     }
 

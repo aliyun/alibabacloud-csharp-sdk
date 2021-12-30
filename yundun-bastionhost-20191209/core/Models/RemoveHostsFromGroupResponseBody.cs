@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
             public string HostGroupId { get; set; }
@@ -32,6 +28,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("HostId")]
             [Validation(Required=false)]
             public string HostId { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
 
         }
 

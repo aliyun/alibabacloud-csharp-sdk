@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyHostAccountRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("HostAccountId")]
         [Validation(Required=false)]
         public string HostAccountId { get; set; }
@@ -24,6 +16,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("HostAccountName")]
         [Validation(Required=false)]
         public string HostAccountName { get; set; }
+
+        [NameInMap("HostShareKeyId")]
+        [Validation(Required=false)]
+        public string HostShareKeyId { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("PassPhrase")]
+        [Validation(Required=false)]
+        public string PassPhrase { get; set; }
 
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -33,9 +37,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
 
-        [NameInMap("PassPhrase")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string PassPhrase { get; set; }
+        public string RegionId { get; set; }
 
     }
 

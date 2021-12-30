@@ -21,18 +21,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
-            [NameInMap("HostGroupId")]
-            [Validation(Required=false)]
-            public string HostGroupId { get; set; }
-
-            [NameInMap("UserGroupId")]
-            [Validation(Required=false)]
-            public string UserGroupId { get; set; }
-
             [NameInMap("HostAccountNames")]
             [Validation(Required=false)]
             public List<AttachHostGroupAccountsToUserGroupResponseBodyResultsHostAccountNames> HostAccountNames { get; set; }
@@ -41,15 +29,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                [NameInMap("Message")]
-                [Validation(Required=false)]
-                public string Message { get; set; }
-
                 [NameInMap("HostAccountName")]
                 [Validation(Required=false)]
                 public string HostAccountName { get; set; }
 
+                [NameInMap("Message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
             }
+
+            [NameInMap("HostGroupId")]
+            [Validation(Required=false)]
+            public string HostGroupId { get; set; }
+
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            [NameInMap("UserGroupId")]
+            [Validation(Required=false)]
+            public string UserGroupId { get; set; }
 
         }
 

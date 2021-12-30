@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyHostRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("Comment")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Comment { get; set; }
 
         [NameInMap("HostId")]
         [Validation(Required=false)]
         public string HostId { get; set; }
+
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
 
         [NameInMap("HostPrivateAddress")]
         [Validation(Required=false)]
@@ -29,17 +29,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string HostPublicAddress { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         [NameInMap("OSType")]
         [Validation(Required=false)]
         public string OSType { get; set; }
 
-        [NameInMap("HostName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string HostName { get; set; }
-
-        [NameInMap("Comment")]
-        [Validation(Required=false)]
-        public string Comment { get; set; }
+        public string RegionId { get; set; }
 
     }
 
