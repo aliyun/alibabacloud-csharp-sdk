@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             [NameInMap("LayoutIds")]
             [Validation(Required=false)]
-            public List<int?> LayoutIds { get; set; }
+            public List<long?> LayoutIds { get; set; }
 
             [NameInMap("MediaEncode")]
             [Validation(Required=false)]

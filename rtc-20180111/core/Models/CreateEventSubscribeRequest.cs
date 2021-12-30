@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public List<string> Events { get; set; }
 
+        [NameInMap("NeedCallbackAuth")]
+        [Validation(Required=false)]
+        public bool? NeedCallbackAuth { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
