@@ -26,13 +26,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             public List<DescribePluginsResponseBodyPluginsPluginAttribute> PluginAttribute { get; set; }
             public class DescribePluginsResponseBodyPluginsPluginAttribute : TeaModel {
                 public string CreatedTime { get; set; }
-                public int? Description { get; set; }
+                public string Description { get; set; }
                 public string ModifiedTime { get; set; }
                 public string PluginData { get; set; }
                 public string PluginId { get; set; }
                 public string PluginName { get; set; }
                 public string PluginType { get; set; }
-                public int? RegionId { get; set; }
+                public string RegionId { get; set; }
                 public DescribePluginsResponseBodyPluginsPluginAttributeTags Tags { get; set; }
                 public class DescribePluginsResponseBodyPluginsPluginAttributeTags : TeaModel {
                     [NameInMap("TagInfo")]

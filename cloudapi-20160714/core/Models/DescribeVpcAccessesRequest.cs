@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeVpcAccessesRequest : TeaModel {
         /// <summary>
+        /// 实例ID
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
         /// VPC授权名称
         /// </summary>
         [NameInMap("Name")]
@@ -30,6 +37,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// 端口号
+        /// </summary>
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public string Port { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
@@ -40,6 +54,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("VpcAccessId")]
         [Validation(Required=false)]
         public string VpcAccessId { get; set; }
+
+        /// <summary>
+        /// Vpc ID
+        /// </summary>
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 
