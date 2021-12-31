@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListStatisticReportRequest : TeaModel {
-        [NameInMap("startTime")]
+        [NameInMap("columns")]
         [Validation(Required=false)]
-        public int? StartTime { get; set; }
+        public string Columns { get; set; }
 
         [NameInMap("endTime")]
         [Validation(Required=false)]
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("columns")]
-        [Validation(Required=false)]
-        public string Columns { get; set; }
-
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
+
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public int? StartTime { get; set; }
 
     }
 

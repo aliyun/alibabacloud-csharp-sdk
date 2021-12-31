@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeScheduledTaskResponseBody : TeaModel {
-        [NameInMap("result")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Result { get; set; }
-
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("result")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Result { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeAppGroupDataReportRequest : TeaModel {
-        [NameInMap("startTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

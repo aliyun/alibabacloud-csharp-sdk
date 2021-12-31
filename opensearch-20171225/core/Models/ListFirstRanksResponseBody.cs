@@ -9,29 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListFirstRanksResponseBody : TeaModel {
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListFirstRanksResponseBodyResult> Result { get; set; }
         public class ListFirstRanksResponseBodyResult : TeaModel {
-            [NameInMap("created")]
-            [Validation(Required=false)]
-            public int? Created { get; set; }
-
             [NameInMap("active")]
             [Validation(Required=false)]
             public bool? Active { get; set; }
 
+            [NameInMap("created")]
+            [Validation(Required=false)]
+            public int? Created { get; set; }
+
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-
-            [NameInMap("updated")]
-            [Validation(Required=false)]
-            public int? Updated { get; set; }
-
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
 
             [NameInMap("meta")]
             [Validation(Required=false)]
@@ -51,11 +47,15 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 
             }
 
-        }
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+            [NameInMap("updated")]
+            [Validation(Required=false)]
+            public int? Updated { get; set; }
+
+        }
 
     }
 

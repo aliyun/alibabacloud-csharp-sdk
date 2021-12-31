@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListAppGroupMetricsRequest : TeaModel {
-        [NameInMap("metricType")]
-        [Validation(Required=false)]
-        public string MetricType { get; set; }
-
-        [NameInMap("startTime")]
-        [Validation(Required=false)]
-        public int? StartTime { get; set; }
-
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public int? EndTime { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [NameInMap("indexes")]
         [Validation(Required=false)]
         public string Indexes { get; set; }
+
+        [NameInMap("metricType")]
+        [Validation(Required=false)]
+        public string MetricType { get; set; }
+
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public int? StartTime { get; set; }
 
     }
 

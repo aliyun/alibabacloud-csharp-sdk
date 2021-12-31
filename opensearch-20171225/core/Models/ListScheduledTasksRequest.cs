@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListScheduledTasksRequest : TeaModel {
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

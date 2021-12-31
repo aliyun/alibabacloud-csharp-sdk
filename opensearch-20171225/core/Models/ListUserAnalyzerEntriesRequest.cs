@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListUserAnalyzerEntriesRequest : TeaModel {
-        [NameInMap("word")]
-        [Validation(Required=false)]
-        public string Word { get; set; }
-
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("word")]
+        [Validation(Required=false)]
+        public string Word { get; set; }
 
     }
 

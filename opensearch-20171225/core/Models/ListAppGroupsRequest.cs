@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListAppGroupsRequest : TeaModel {
-        [NameInMap("pageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("pageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -25,13 +17,25 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("pageNumber")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("sortBy")]
         [Validation(Required=false)]
         public int? SortBy { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

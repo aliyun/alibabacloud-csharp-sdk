@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class RemoveFirstRankResponseBody : TeaModel {
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("result")]
         [Validation(Required=false)]
         public RemoveFirstRankResponseBodyResult Result { get; set; }
@@ -19,9 +23,6 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
             [NameInMap("meta")]
             [Validation(Required=false)]
             public List<RemoveFirstRankResponseBodyResultMeta> Meta { get; set; }
@@ -30,11 +31,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 public string Attribute { get; set; }
                 public float? Weight { get; set; }
             }
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
         };
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

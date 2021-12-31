@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListABTestScenesResponseBody : TeaModel {
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListABTestScenesResponseBodyResult> Result { get; set; }
@@ -17,9 +21,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public int? Created { get; set; }
 
-            [NameInMap("values")]
+            [NameInMap("id")]
             [Validation(Required=false)]
-            public List<string> Values { get; set; }
+            public string Id { get; set; }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
             [NameInMap("status")]
             [Validation(Required=false)]
@@ -29,19 +37,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public int? Updated { get; set; }
 
-            [NameInMap("name")]
+            [NameInMap("values")]
             [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
+            public List<string> Values { get; set; }
 
         }
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

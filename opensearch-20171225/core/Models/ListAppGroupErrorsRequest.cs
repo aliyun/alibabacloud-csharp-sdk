@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("startTime")]
-        [Validation(Required=false)]
-        public int? StartTime { get; set; }
-
-        [NameInMap("stopTime")]
-        [Validation(Required=false)]
-        public int? StopTime { get; set; }
-
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public int? StartTime { get; set; }
+
+        [NameInMap("stopTime")]
+        [Validation(Required=false)]
+        public int? StopTime { get; set; }
 
     }
 

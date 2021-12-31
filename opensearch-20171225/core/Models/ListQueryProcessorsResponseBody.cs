@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListQueryProcessorsResponseBody : TeaModel {
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListQueryProcessorsResponseBodyResult> Result { get; set; }
         public class ListQueryProcessorsResponseBodyResult : TeaModel {
-            [NameInMap("created")]
-            [Validation(Required=false)]
-            public int? Created { get; set; }
-
             [NameInMap("active")]
             [Validation(Required=false)]
             public bool? Active { get; set; }
+
+            [NameInMap("created")]
+            [Validation(Required=false)]
+            public int? Created { get; set; }
 
             [NameInMap("domain")]
             [Validation(Required=false)]
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public List<string> Indexes { get; set; }
 
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
             [NameInMap("processors")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Processors { get; set; }
@@ -37,15 +45,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public int? Updated { get; set; }
 
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
         }
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

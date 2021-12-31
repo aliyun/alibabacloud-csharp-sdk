@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyResult> Result { get; set; }
         public class DescribeRegionsResponseBodyResult : TeaModel {
-            [NameInMap("regionId")]
+            [NameInMap("consoleUrl")]
             [Validation(Required=false)]
-            public string RegionId { get; set; }
+            public string ConsoleUrl { get; set; }
 
             [NameInMap("endpoint")]
             [Validation(Required=false)]
@@ -25,15 +29,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
-            [NameInMap("consoleUrl")]
+            [NameInMap("regionId")]
             [Validation(Required=false)]
-            public string ConsoleUrl { get; set; }
+            public string RegionId { get; set; }
 
         }
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListStatisticLogsRequest : TeaModel {
-        [NameInMap("startTime")]
+        [NameInMap("columns")]
         [Validation(Required=false)]
-        public int? StartTime { get; set; }
+        public string Columns { get; set; }
 
-        [NameInMap("stopTime")]
+        [NameInMap("distinct")]
         [Validation(Required=false)]
-        public int? StopTime { get; set; }
+        public bool? Distinct { get; set; }
 
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
-        [NameInMap("distinct")]
+        [NameInMap("startTime")]
         [Validation(Required=false)]
-        public bool? Distinct { get; set; }
+        public int? StartTime { get; set; }
 
-        [NameInMap("columns")]
+        [NameInMap("stopTime")]
         [Validation(Required=false)]
-        public string Columns { get; set; }
+        public int? StopTime { get; set; }
 
     }
 

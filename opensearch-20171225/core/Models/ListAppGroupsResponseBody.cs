@@ -9,10 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListAppGroupsResponseBody : TeaModel {
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListAppGroupsResponseBodyResult> Result { get; set; }
         public class ListAppGroupsResponseBodyResult : TeaModel {
+            [NameInMap("chargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("chargingWay")]
+            [Validation(Required=false)]
+            public int? ChargingWay { get; set; }
+
+            [NameInMap("commodityCode")]
+            [Validation(Required=false)]
+            public string CommodityCode { get; set; }
+
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
@@ -21,110 +37,102 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string CurrentVersion { get; set; }
 
-            [NameInMap("pendingSecondRankAlgoDeploymentId")]
+            [NameInMap("description")]
             [Validation(Required=false)]
-            public int? PendingSecondRankAlgoDeploymentId { get; set; }
+            public string Description { get; set; }
 
-            [NameInMap("lockMode")]
+            [NameInMap("domain")]
             [Validation(Required=false)]
-            public string LockMode { get; set; }
-
-            [NameInMap("updated")]
-            [Validation(Required=false)]
-            public int? Updated { get; set; }
-
-            [NameInMap("id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
-            [NameInMap("chargeType")]
-            [Validation(Required=false)]
-            public string ChargeType { get; set; }
-
-            [NameInMap("hasPendingQuotaReviewTask")]
-            [Validation(Required=false)]
-            public int? HasPendingQuotaReviewTask { get; set; }
-
-            [NameInMap("secondRankAlgoDeploymentId")]
-            [Validation(Required=false)]
-            public int? SecondRankAlgoDeploymentId { get; set; }
-
-            [NameInMap("quota")]
-            [Validation(Required=false)]
-            public ListAppGroupsResponseBodyResultQuota Quota { get; set; }
-            public class ListAppGroupsResponseBodyResultQuota : TeaModel {
-                [NameInMap("spec")]
-                [Validation(Required=false)]
-                public string Spec { get; set; }
-                [NameInMap("docSize")]
-                [Validation(Required=false)]
-                public int? DocSize { get; set; }
-                [NameInMap("computeResource")]
-                [Validation(Required=false)]
-                public int? ComputeResource { get; set; }
-            };
-
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("processingOrderId")]
-            [Validation(Required=false)]
-            public string ProcessingOrderId { get; set; }
-
-            [NameInMap("instanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-            [NameInMap("chargingWay")]
-            [Validation(Required=false)]
-            public int? ChargingWay { get; set; }
-
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("projectId")]
-            [Validation(Required=false)]
-            public string ProjectId { get; set; }
-
-            [NameInMap("commodityCode")]
-            [Validation(Required=false)]
-            public string CommodityCode { get; set; }
-
-            [NameInMap("switchedTime")]
-            [Validation(Required=false)]
-            public int? SwitchedTime { get; set; }
+            public string Domain { get; set; }
 
             [NameInMap("expireOn")]
             [Validation(Required=false)]
             public string ExpireOn { get; set; }
 
-            [NameInMap("description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
             [NameInMap("firstRankAlgoDeploymentId")]
             [Validation(Required=false)]
             public int? FirstRankAlgoDeploymentId { get; set; }
+
+            [NameInMap("hasPendingQuotaReviewTask")]
+            [Validation(Required=false)]
+            public int? HasPendingQuotaReviewTask { get; set; }
+
+            [NameInMap("id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("instanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("lockMode")]
+            [Validation(Required=false)]
+            public string LockMode { get; set; }
 
             [NameInMap("lockedByExpiration")]
             [Validation(Required=false)]
             public int? LockedByExpiration { get; set; }
 
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("pendingSecondRankAlgoDeploymentId")]
+            [Validation(Required=false)]
+            public int? PendingSecondRankAlgoDeploymentId { get; set; }
+
+            [NameInMap("processingOrderId")]
+            [Validation(Required=false)]
+            public string ProcessingOrderId { get; set; }
+
             [NameInMap("produced")]
             [Validation(Required=false)]
             public int? Produced { get; set; }
 
-        }
+            [NameInMap("projectId")]
+            [Validation(Required=false)]
+            public string ProjectId { get; set; }
 
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
+            [NameInMap("quota")]
+            [Validation(Required=false)]
+            public ListAppGroupsResponseBodyResultQuota Quota { get; set; }
+            public class ListAppGroupsResponseBodyResultQuota : TeaModel {
+                [NameInMap("computeResource")]
+                [Validation(Required=false)]
+                public int? ComputeResource { get; set; }
+                [NameInMap("docSize")]
+                [Validation(Required=false)]
+                public int? DocSize { get; set; }
+                [NameInMap("spec")]
+                [Validation(Required=false)]
+                public string Spec { get; set; }
+            };
+
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            [NameInMap("secondRankAlgoDeploymentId")]
+            [Validation(Required=false)]
+            public int? SecondRankAlgoDeploymentId { get; set; }
+
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("switchedTime")]
+            [Validation(Required=false)]
+            public int? SwitchedTime { get; set; }
+
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("updated")]
+            [Validation(Required=false)]
+            public int? Updated { get; set; }
+
+        }
 
         [NameInMap("totalCount")]
         [Validation(Required=false)]
