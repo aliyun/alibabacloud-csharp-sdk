@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<AbortBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<AbortBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<AbortMultipartUploadResponse>(Execute(params_, req, runtime));
         }
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<AbortMultipartUploadResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<AppendObjectResponse>(Execute(params_, req, runtime));
         }
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<AppendObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CompleteBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<CompleteBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -748,7 +748,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketResponse>(Execute(params_, req, runtime));
         }
@@ -772,7 +772,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -810,7 +810,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketCorsResponse>(Execute(params_, req, runtime));
         }
@@ -834,7 +834,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketCorsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -872,7 +872,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketEncryptionResponse>(Execute(params_, req, runtime));
         }
@@ -896,7 +896,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketEncryptionResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -941,7 +941,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketInventoryResponse>(Execute(params_, req, runtime));
         }
@@ -972,7 +972,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1010,7 +1010,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketLifecycleResponse>(Execute(params_, req, runtime));
         }
@@ -1034,7 +1034,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketLifecycleResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1072,7 +1072,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketLoggingResponse>(Execute(params_, req, runtime));
         }
@@ -1096,7 +1096,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1134,7 +1134,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketPolicyResponse>(Execute(params_, req, runtime));
         }
@@ -1158,7 +1158,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1203,7 +1203,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketReplicationResponse>(Execute(params_, req, runtime));
         }
@@ -1234,7 +1234,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketReplicationResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1272,7 +1272,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketTagsResponse>(Execute(params_, req, runtime));
         }
@@ -1296,7 +1296,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1334,7 +1334,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketWebsiteResponse>(Execute(params_, req, runtime));
         }
@@ -1358,7 +1358,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteBucketWebsiteResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1397,7 +1397,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteLiveChannelResponse>(Execute(params_, req, runtime));
         }
@@ -1422,7 +1422,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1550,7 +1550,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "binary",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteObjectResponse>(Execute(params_, req, runtime));
         }
@@ -1582,7 +1582,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "binary",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -1628,7 +1628,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteObjectTaggingResponse>(Execute(params_, req, runtime));
         }
@@ -1660,9 +1660,79 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<DeleteObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeRegionsWithOptions(request, headers, runtime);
+        }
+
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Regions))
+            {
+                query["regions"] = request.Regions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2019-05-17",
+                Protocol = "HTTPS",
+                Pathname = "/?regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "xml",
+                BodyType = "xml",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(Execute(params_, req, runtime));
+        }
+
+        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Regions))
+            {
+                query["regions"] = request.Regions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2019-05-17",
+                Protocol = "HTTPS",
+                Pathname = "/?regions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "xml",
+                BodyType = "xml",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         public ExtendBucketWormResponse ExtendBucketWorm(string bucket, ExtendBucketWormRequest request)
@@ -1711,7 +1781,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<ExtendBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -1748,7 +1818,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<ExtendBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -3554,7 +3624,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<GetObjectMetaResponse>(Execute(params_, req, runtime));
         }
@@ -3586,7 +3656,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<GetObjectMetaResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -3796,7 +3866,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<GetSymlinkResponse>(Execute(params_, req, runtime));
         }
@@ -3828,7 +3898,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<GetSymlinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -3981,7 +4051,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<HeadObjectResponse>(Execute(params_, req, runtime));
         }
@@ -4034,7 +4104,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<HeadObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -4079,7 +4149,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<InitiateBucketWormResponse>(Execute(params_, req, runtime));
         }
@@ -4110,7 +4180,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<InitiateBucketWormResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5166,7 +5236,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<OptionObjectResponse>(Execute(params_, req, runtime));
         }
@@ -5208,7 +5278,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<OptionObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5246,7 +5316,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "none",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PostObjectResponse>(Execute(params_, req, runtime));
         }
@@ -5270,7 +5340,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "none",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PostObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5321,7 +5391,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PostVodPlaylistResponse>(Execute(params_, req, runtime));
         }
@@ -5358,7 +5428,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PostVodPlaylistResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5412,7 +5482,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketResponse>(Execute(params_, req, runtime));
         }
@@ -5452,7 +5522,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5499,7 +5569,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketAclResponse>(Execute(params_, req, runtime));
         }
@@ -5532,7 +5602,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5577,7 +5647,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketCorsResponse>(Execute(params_, req, runtime));
         }
@@ -5608,7 +5678,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketCorsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5653,7 +5723,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketEncryptionResponse>(Execute(params_, req, runtime));
         }
@@ -5684,7 +5754,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketEncryptionResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5735,7 +5805,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketInventoryResponse>(Execute(params_, req, runtime));
         }
@@ -5772,7 +5842,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketInventoryResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5817,7 +5887,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketLifecycleResponse>(Execute(params_, req, runtime));
         }
@@ -5848,7 +5918,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketLifecycleResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5893,7 +5963,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketLoggingResponse>(Execute(params_, req, runtime));
         }
@@ -5924,7 +5994,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketLoggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -5964,7 +6034,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketPolicyResponse>(Execute(params_, req, runtime));
         }
@@ -5990,7 +6060,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "json",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketPolicyResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6035,7 +6105,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketRefererResponse>(Execute(params_, req, runtime));
         }
@@ -6066,7 +6136,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketRefererResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6111,7 +6181,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketReplicationResponse>(Execute(params_, req, runtime));
         }
@@ -6142,7 +6212,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketReplicationResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6187,7 +6257,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketRequestPaymentResponse>(Execute(params_, req, runtime));
         }
@@ -6218,7 +6288,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketRequestPaymentResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6263,7 +6333,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketTagsResponse>(Execute(params_, req, runtime));
         }
@@ -6294,7 +6364,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketTagsResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6339,7 +6409,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketTransferAccelerationResponse>(Execute(params_, req, runtime));
         }
@@ -6370,7 +6440,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketTransferAccelerationResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6415,7 +6485,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketVersioningResponse>(Execute(params_, req, runtime));
         }
@@ -6446,7 +6516,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketVersioningResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6491,7 +6561,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketWebsiteResponse>(Execute(params_, req, runtime));
         }
@@ -6522,7 +6592,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutBucketWebsiteResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6646,7 +6716,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutLiveChannelStatusResponse>(Execute(params_, req, runtime));
         }
@@ -6678,7 +6748,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutLiveChannelStatusResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6757,7 +6827,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "binary",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutObjectResponse>(Execute(params_, req, runtime));
         }
@@ -6822,7 +6892,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "binary",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6877,7 +6947,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutObjectAclResponse>(Execute(params_, req, runtime));
         }
@@ -6918,7 +6988,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutObjectAclResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -6970,7 +7040,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutObjectTaggingResponse>(Execute(params_, req, runtime));
         }
@@ -7008,7 +7078,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutObjectTaggingResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -7068,7 +7138,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutSymlinkResponse>(Execute(params_, req, runtime));
         }
@@ -7114,7 +7184,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<PutSymlinkResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -7166,7 +7236,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<RestoreObjectResponse>(Execute(params_, req, runtime));
         }
@@ -7204,7 +7274,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "xml",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<RestoreObjectResponse>(await ExecuteAsync(params_, req, runtime));
         }
@@ -7334,7 +7404,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UploadPartResponse>(Execute(params_, req, runtime));
         }
@@ -7372,7 +7442,7 @@ namespace AlibabaCloud.SDK.Oss20190517
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "binary",
-                BodyType = "xml",
+                BodyType = "none",
             };
             return TeaModel.ToObject<UploadPartResponse>(await ExecuteAsync(params_, req, runtime));
         }
