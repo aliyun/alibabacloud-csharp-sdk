@@ -8,38 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class CreateServerlessDBInstanceRequest : TeaModel {
-        [NameInMap("AccountPassword")]
+    public class DescribeDBInstancesOverviewRequest : TeaModel {
+        [NameInMap("ArchitectureType")]
         [Validation(Required=false)]
-        public string AccountPassword { get; set; }
+        public string ArchitectureType { get; set; }
 
-        [NameInMap("AutoRenew")]
+        [NameInMap("ChargeType")]
         [Validation(Required=false)]
-        public string AutoRenew { get; set; }
-
-        [NameInMap("CapacityUnit")]
-        [Validation(Required=false)]
-        public string CapacityUnit { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("DBInstanceDescription")]
-        [Validation(Required=false)]
-        public string DBInstanceDescription { get; set; }
-
-        [NameInMap("DBInstanceStorage")]
-        [Validation(Required=false)]
-        public int? DBInstanceStorage { get; set; }
-
-        [NameInMap("Engine")]
-        [Validation(Required=false)]
-        public string Engine { get; set; }
+        public string ChargeType { get; set; }
 
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
+
+        [NameInMap("ExpireTime")]
+        [Validation(Required=false)]
+        public string ExpireTime { get; set; }
+
+        [NameInMap("InstanceClass")]
+        [Validation(Required=false)]
+        public string InstanceClass { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public string InstanceIds { get; set; }
+
+        [NameInMap("InstanceStatus")]
+        [Validation(Required=false)]
+        public string InstanceStatus { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -48,14 +52,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public int? Period { get; set; }
-
-        [NameInMap("PeriodPriceType")]
-        [Validation(Required=false)]
-        public string PeriodPriceType { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -73,17 +69,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SecurityIPList")]
+        [NameInMap("SearchKey")]
         [Validation(Required=false)]
-        public string SecurityIPList { get; set; }
+        public string SearchKey { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
-
-        [NameInMap("StorageEngine")]
-        [Validation(Required=false)]
-        public string StorageEngine { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

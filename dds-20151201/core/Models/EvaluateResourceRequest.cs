@@ -33,9 +33,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("ReadonlyReplicas")]
+        [Validation(Required=false)]
+        public string ReadonlyReplicas { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ReplicationFactor")]
+        [Validation(Required=false)]
+        public string ReplicationFactor { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
