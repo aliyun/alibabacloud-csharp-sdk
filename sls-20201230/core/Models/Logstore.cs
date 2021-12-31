@@ -17,13 +17,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? AppendMeta { get; set; }
 
         /// <summary>
-        /// archiveSeconds
-        /// </summary>
-        [NameInMap("archiveSeconds")]
-        [Validation(Required=false)]
-        public int? ArchiveSeconds { get; set; }
-
-        /// <summary>
         /// auto spilt shard
         /// </summary>
         [NameInMap("autoSplit")]
@@ -40,9 +33,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// enable web tracking
         /// </summary>
-        [NameInMap("enableTracking")]
+        [NameInMap("enable_tracking")]
         [Validation(Required=false)]
         public bool? EnableTracking { get; set; }
+
+        /// <summary>
+        /// Encrypt configuration
+        /// </summary>
+        [NameInMap("encrypt_conf")]
+        [Validation(Required=false)]
+        public EncryptConf EncryptConf { get; set; }
 
         /// <summary>
         /// last modify time

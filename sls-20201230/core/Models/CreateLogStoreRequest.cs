@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? EnableTracking { get; set; }
 
+        [NameInMap("encrypt_conf")]
+        [Validation(Required=false)]
+        public EncryptConf EncryptConf { get; set; }
+
         [NameInMap("logstoreName")]
         [Validation(Required=false)]
         public string LogstoreName { get; set; }

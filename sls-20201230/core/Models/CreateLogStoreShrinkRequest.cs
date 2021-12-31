@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class UpdateLogStoreRequest : TeaModel {
+    public class CreateLogStoreShrinkRequest : TeaModel {
         [NameInMap("appendMeta")]
         [Validation(Required=false)]
         public bool? AppendMeta { get; set; }
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("encrypt_conf")]
         [Validation(Required=false)]
-        public EncryptConf EncryptConf { get; set; }
+        public string EncryptConfShrink { get; set; }
 
         [NameInMap("logstoreName")]
         [Validation(Required=false)]

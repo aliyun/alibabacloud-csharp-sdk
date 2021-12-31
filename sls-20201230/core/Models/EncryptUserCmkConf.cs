@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,27 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ConsumerGroup : TeaModel {
+    public class EncryptUserCmkConf : TeaModel {
         /// <summary>
-        /// consumerGroup
+        /// arn
         /// </summary>
-        [NameInMap("name")]
+        [NameInMap("arn")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Arn { get; set; }
 
         /// <summary>
-        /// order
+        /// cmk_key_id
         /// </summary>
-        [NameInMap("order")]
+        [NameInMap("cmk_key_id")]
         [Validation(Required=false)]
-        public bool? Order { get; set; }
+        public string CmkKeyId { get; set; }
 
         /// <summary>
-        /// timeout
+        /// region_id
         /// </summary>
-        [NameInMap("timeout")]
+        [NameInMap("region_id")]
         [Validation(Required=false)]
-        public int? Timeout { get; set; }
+        public string RegionId { get; set; }
 
     }
 
