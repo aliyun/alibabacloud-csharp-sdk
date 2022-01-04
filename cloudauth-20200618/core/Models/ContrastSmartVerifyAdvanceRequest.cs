@@ -13,34 +13,6 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=true)]
         public Stream FacePicFileObject { get; set; }
 
-        [NameInMap("SceneId")]
-        [Validation(Required=false)]
-        public long? SceneId { get; set; }
-
-        [NameInMap("OuterOrderNo")]
-        [Validation(Required=false)]
-        public string OuterOrderNo { get; set; }
-
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
-        [NameInMap("CertType")]
-        [Validation(Required=false)]
-        public string CertType { get; set; }
-
-        [NameInMap("Mobile")]
-        [Validation(Required=false)]
-        public string Mobile { get; set; }
-
-        [NameInMap("Ip")]
-        [Validation(Required=false)]
-        public string Ip { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
@@ -49,13 +21,41 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string CertNo { get; set; }
 
-        [NameInMap("FacePicUrl")]
+        [NameInMap("CertType")]
         [Validation(Required=false)]
-        public string FacePicUrl { get; set; }
+        public string CertType { get; set; }
 
         [NameInMap("FacePicString")]
         [Validation(Required=false)]
         public string FacePicString { get; set; }
+
+        [NameInMap("FacePicUrl")]
+        [Validation(Required=false)]
+        public string FacePicUrl { get; set; }
+
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
+
+        [NameInMap("Mobile")]
+        [Validation(Required=false)]
+        public string Mobile { get; set; }
+
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
+        [NameInMap("OuterOrderNo")]
+        [Validation(Required=false)]
+        public string OuterOrderNo { get; set; }
+
+        [NameInMap("SceneId")]
+        [Validation(Required=false)]
+        public long? SceneId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

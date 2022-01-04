@@ -9,37 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class InitSmartVerifyRequest : TeaModel {
-        [NameInMap("SceneId")]
+        [NameInMap("CallbackToken")]
         [Validation(Required=false)]
-        public long? SceneId { get; set; }
+        public string CallbackToken { get; set; }
 
-        [NameInMap("OuterOrderNo")]
+        [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
-        public string OuterOrderNo { get; set; }
-
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
-
-        [NameInMap("CertType")]
-        [Validation(Required=false)]
-        public string CertType { get; set; }
-
-        [NameInMap("MetaInfo")]
-        [Validation(Required=false)]
-        public string MetaInfo { get; set; }
-
-        [NameInMap("Mobile")]
-        [Validation(Required=false)]
-        public string Mobile { get; set; }
-
-        [NameInMap("Ip")]
-        [Validation(Required=false)]
-        public string Ip { get; set; }
-
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string CallbackUrl { get; set; }
 
         [NameInMap("CertName")]
         [Validation(Required=false)]
@@ -49,17 +25,13 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string CertNo { get; set; }
 
-        [NameInMap("Ocr")]
+        [NameInMap("CertType")]
         [Validation(Required=false)]
-        public string Ocr { get; set; }
+        public string CertType { get; set; }
 
-        [NameInMap("CallbackUrl")]
+        [NameInMap("CertifyId")]
         [Validation(Required=false)]
-        public string CallbackUrl { get; set; }
-
-        [NameInMap("CallbackToken")]
-        [Validation(Required=false)]
-        public string CallbackToken { get; set; }
+        public string CertifyId { get; set; }
 
         [NameInMap("FacePictureBase64")]
         [Validation(Required=false)]
@@ -69,9 +41,33 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string FacePictureUrl { get; set; }
 
-        [NameInMap("CertifyId")]
+        [NameInMap("IdName")]
         [Validation(Required=false)]
-        public string CertifyId { get; set; }
+        public string IdName { get; set; }
+
+        [NameInMap("IdNo")]
+        [Validation(Required=false)]
+        public string IdNo { get; set; }
+
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
+
+        [NameInMap("MetaInfo")]
+        [Validation(Required=false)]
+        public string MetaInfo { get; set; }
+
+        [NameInMap("Mobile")]
+        [Validation(Required=false)]
+        public string Mobile { get; set; }
+
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
+        [NameInMap("Ocr")]
+        [Validation(Required=false)]
+        public string Ocr { get; set; }
 
         [NameInMap("OssBucketName")]
         [Validation(Required=false)]
@@ -81,13 +77,17 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [Validation(Required=false)]
         public string OssObjectName { get; set; }
 
-        [NameInMap("IdNo")]
+        [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]
-        public string IdNo { get; set; }
+        public string OuterOrderNo { get; set; }
 
-        [NameInMap("IdName")]
+        [NameInMap("SceneId")]
         [Validation(Required=false)]
-        public string IdName { get; set; }
+        public long? SceneId { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

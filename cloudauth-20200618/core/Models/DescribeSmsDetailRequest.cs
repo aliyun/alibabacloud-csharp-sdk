@@ -9,21 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class DescribeSmsDetailRequest : TeaModel {
-        [NameInMap("Mobile")]
+        [NameInMap("BizId")]
         [Validation(Required=false)]
-        public string Mobile { get; set; }
+        public string BizId { get; set; }
 
-        [NameInMap("SendDate")]
-        [Validation(Required=false)]
-        public string SendDate { get; set; }
+        [NameInMap("CurrentPage")]
+        [Validation(Required=true)]
+        public int? CurrentPage { get; set; }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        [NameInMap("Mobile")]
+        [Validation(Required=false)]
+        public string Mobile { get; set; }
+
         [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]
         public string OuterOrderNo { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=true)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("SendDate")]
+        [Validation(Required=true)]
+        public string SendDate { get; set; }
 
         [NameInMap("SendStatus")]
         [Validation(Required=false)]
@@ -36,18 +48,6 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("BizId")]
-        [Validation(Required=false)]
-        public string BizId { get; set; }
 
     }
 

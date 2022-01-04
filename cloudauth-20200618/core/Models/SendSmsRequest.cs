@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Cloudauth20200618.Models
 {
     public class SendSmsRequest : TeaModel {
         [NameInMap("Mobile")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string Mobile { get; set; }
 
-        [NameInMap("SignName")]
+        [NameInMap("OuterOrderNo")]
         [Validation(Required=false)]
+        public string OuterOrderNo { get; set; }
+
+        [NameInMap("SignName")]
+        [Validation(Required=true)]
         public string SignName { get; set; }
 
         [NameInMap("TemplateCode")]
-        [Validation(Required=false)]
+        [Validation(Required=true)]
         public string TemplateCode { get; set; }
 
         [NameInMap("TemplateParam")]
         [Validation(Required=false)]
         public string TemplateParam { get; set; }
-
-        [NameInMap("OuterOrderNo")]
-        [Validation(Required=false)]
-        public string OuterOrderNo { get; set; }
 
     }
 
