@@ -41,17 +41,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SubsId"] = request.SubsId;
-            query["trackNo"] = request.TrackNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrackNo))
+            {
+                query["trackNo"] = request.TrackNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -62,7 +82,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddAxnTrackNoResponse>(CallApi(params_, req, runtime));
@@ -72,17 +92,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SubsId"] = request.SubsId;
-            query["trackNo"] = request.TrackNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrackNo))
+            {
+                query["trackNo"] = request.TrackNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -93,7 +133,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddAxnTrackNoResponse>(await CallApiAsync(params_, req, runtime));
@@ -115,15 +155,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BlackNo"] = request.BlackNo;
-            query["BlackType"] = request.BlackType;
-            query["PoolKey"] = request.PoolKey;
-            query["Remark"] = request.Remark;
-            query["WayControl"] = request.WayControl;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackNo))
+            {
+                query["BlackNo"] = request.BlackNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackType))
+            {
+                query["BlackType"] = request.BlackType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WayControl))
+            {
+                query["WayControl"] = request.WayControl;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -134,7 +188,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddSecretBlacklistResponse>(CallApi(params_, req, runtime));
@@ -144,15 +198,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BlackNo"] = request.BlackNo;
-            query["BlackType"] = request.BlackType;
-            query["PoolKey"] = request.PoolKey;
-            query["Remark"] = request.Remark;
-            query["WayControl"] = request.WayControl;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackNo))
+            {
+                query["BlackNo"] = request.BlackNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackType))
+            {
+                query["BlackType"] = request.BlackType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WayControl))
+            {
+                query["WayControl"] = request.WayControl;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -163,7 +231,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<AddSecretBlacklistResponse>(await CallApiAsync(params_, req, runtime));
@@ -185,28 +253,81 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["CallTimeout"] = request.CallTimeout;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeout))
+            {
+                query["CallTimeout"] = request.CallTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -217,7 +338,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxbResponse>(CallApi(params_, req, runtime));
@@ -227,28 +348,81 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["CallTimeout"] = request.CallTimeout;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeout))
+            {
+                query["CallTimeout"] = request.CallTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -259,7 +433,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxbResponse>(await CallApiAsync(params_, req, runtime));
@@ -281,28 +455,81 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["GroupId"] = request.GroupId;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -313,7 +540,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxgResponse>(CallApi(params_, req, runtime));
@@ -323,28 +550,81 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["GroupId"] = request.GroupId;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -355,7 +635,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxgResponse>(await CallApiAsync(params_, req, runtime));
@@ -377,29 +657,85 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["CallTimeout"] = request.CallTimeout;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["NoType"] = request.NoType;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeout))
+            {
+                query["CallTimeout"] = request.CallTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoType))
+            {
+                query["NoType"] = request.NoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -410,7 +746,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxnResponse>(CallApi(params_, req, runtime));
@@ -420,29 +756,85 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["CallTimeout"] = request.CallTimeout;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["NoType"] = request.NoType;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeout))
+            {
+                query["CallTimeout"] = request.CallTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoType))
+            {
+                query["NoType"] = request.NoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -453,7 +845,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxnResponse>(await CallApiAsync(params_, req, runtime));
@@ -475,28 +867,81 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["Extension"] = request.Extension;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extension))
+            {
+                query["Extension"] = request.Extension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -507,7 +952,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxnExtensionResponse>(CallApi(params_, req, runtime));
@@ -517,28 +962,81 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["ExpectCity"] = request.ExpectCity;
-            query["Expiration"] = request.Expiration;
-            query["Extension"] = request.Extension;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OutId"] = request.OutId;
-            query["OutOrderId"] = request.OutOrderId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectCity))
+            {
+                query["ExpectCity"] = request.ExpectCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extension))
+            {
+                query["Extension"] = request.Extension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["OutOrderId"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -549,7 +1047,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BindAxnExtensionResponse>(await CallApiAsync(params_, req, runtime));
@@ -571,18 +1069,41 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["City"] = request.City;
-            query["DisplayPool"] = request.DisplayPool;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SpecId"] = request.SpecId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayPool))
+            {
+                query["DisplayPool"] = request.DisplayPool;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecId))
+            {
+                query["SpecId"] = request.SpecId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -593,7 +1114,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BuySecretNoResponse>(CallApi(params_, req, runtime));
@@ -603,18 +1124,41 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["City"] = request.City;
-            query["DisplayPool"] = request.DisplayPool;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SpecId"] = request.SpecId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayPool))
+            {
+                query["DisplayPool"] = request.DisplayPool;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecId))
+            {
+                query["SpecId"] = request.SpecId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -625,7 +1169,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<BuySecretNoResponse>(await CallApiAsync(params_, req, runtime));
@@ -647,15 +1191,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CancelDesc"] = request.CancelDesc;
-            query["OuterOrderCode"] = request.OuterOrderCode;
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CancelDesc))
+            {
+                query["CancelDesc"] = request.CancelDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderCode))
+            {
+                query["OuterOrderCode"] = request.OuterOrderCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -666,7 +1224,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CancelPickUpWaybillResponse>(CallApi(params_, req, runtime));
@@ -676,15 +1234,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CancelDesc"] = request.CancelDesc;
-            query["OuterOrderCode"] = request.OuterOrderCode;
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CancelDesc))
+            {
+                query["CancelDesc"] = request.CancelDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderCode))
+            {
+                query["OuterOrderCode"] = request.OuterOrderCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -695,7 +1267,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CancelPickUpWaybillResponse>(await CallApiAsync(params_, req, runtime));
@@ -717,16 +1289,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -737,7 +1326,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ConfirmSendSmsResponse>(CallApi(params_, req, runtime));
@@ -747,16 +1336,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -767,7 +1373,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ConfirmSendSmsResponse>(await CallApiAsync(params_, req, runtime));
@@ -789,17 +1395,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Name"] = request.Name;
-            query["Numbers"] = request.Numbers;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["Remark"] = request.Remark;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                query["Numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -810,7 +1436,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateAxgGroupResponse>(CallApi(params_, req, runtime));
@@ -820,17 +1446,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Name"] = request.Name;
-            query["Numbers"] = request.Numbers;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["Remark"] = request.Remark;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                query["Numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -841,7 +1487,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateAxgGroupResponse>(await CallApiAsync(params_, req, runtime));
@@ -877,23 +1523,61 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 request.SendAddressShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendAddress.ToMap(), "SendAddress", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ConsigneeAddress"] = request.ConsigneeAddressShrink;
-            query["ConsigneeMobile"] = request.ConsigneeMobile;
-            query["ConsigneeName"] = request.ConsigneeName;
-            query["ConsigneePhone"] = request.ConsigneePhone;
-            query["CpCode"] = request.CpCode;
-            query["GoodsInfos"] = request.GoodsInfosShrink;
-            query["OrderChannels"] = request.OrderChannels;
-            query["OuterOrderCode"] = request.OuterOrderCode;
-            query["Remark"] = request.Remark;
-            query["SendAddress"] = request.SendAddressShrink;
-            query["SendMobile"] = request.SendMobile;
-            query["SendName"] = request.SendName;
-            query["SendPhone"] = request.SendPhone;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeAddressShrink))
+            {
+                query["ConsigneeAddress"] = request.ConsigneeAddressShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeMobile))
+            {
+                query["ConsigneeMobile"] = request.ConsigneeMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeName))
+            {
+                query["ConsigneeName"] = request.ConsigneeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneePhone))
+            {
+                query["ConsigneePhone"] = request.ConsigneePhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpCode))
+            {
+                query["CpCode"] = request.CpCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GoodsInfosShrink))
+            {
+                query["GoodsInfos"] = request.GoodsInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderChannels))
+            {
+                query["OrderChannels"] = request.OrderChannels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderCode))
+            {
+                query["OuterOrderCode"] = request.OuterOrderCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendAddressShrink))
+            {
+                query["SendAddress"] = request.SendAddressShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendMobile))
+            {
+                query["SendMobile"] = request.SendMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendName))
+            {
+                query["SendName"] = request.SendName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendPhone))
+            {
+                query["SendPhone"] = request.SendPhone;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -904,7 +1588,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreatePickUpWaybillResponse>(CallApi(params_, req, runtime));
@@ -928,23 +1612,61 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 request.SendAddressShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendAddress.ToMap(), "SendAddress", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ConsigneeAddress"] = request.ConsigneeAddressShrink;
-            query["ConsigneeMobile"] = request.ConsigneeMobile;
-            query["ConsigneeName"] = request.ConsigneeName;
-            query["ConsigneePhone"] = request.ConsigneePhone;
-            query["CpCode"] = request.CpCode;
-            query["GoodsInfos"] = request.GoodsInfosShrink;
-            query["OrderChannels"] = request.OrderChannels;
-            query["OuterOrderCode"] = request.OuterOrderCode;
-            query["Remark"] = request.Remark;
-            query["SendAddress"] = request.SendAddressShrink;
-            query["SendMobile"] = request.SendMobile;
-            query["SendName"] = request.SendName;
-            query["SendPhone"] = request.SendPhone;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeAddressShrink))
+            {
+                query["ConsigneeAddress"] = request.ConsigneeAddressShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeMobile))
+            {
+                query["ConsigneeMobile"] = request.ConsigneeMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneeName))
+            {
+                query["ConsigneeName"] = request.ConsigneeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsigneePhone))
+            {
+                query["ConsigneePhone"] = request.ConsigneePhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpCode))
+            {
+                query["CpCode"] = request.CpCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GoodsInfosShrink))
+            {
+                query["GoodsInfos"] = request.GoodsInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderChannels))
+            {
+                query["OrderChannels"] = request.OrderChannels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuterOrderCode))
+            {
+                query["OuterOrderCode"] = request.OuterOrderCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendAddressShrink))
+            {
+                query["SendAddress"] = request.SendAddressShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendMobile))
+            {
+                query["SendMobile"] = request.SendMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendName))
+            {
+                query["SendName"] = request.SendName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendPhone))
+            {
+                query["SendPhone"] = request.SendPhone;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -955,7 +1677,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreatePickUpWaybillResponse>(await CallApiAsync(params_, req, runtime));
@@ -973,93 +1695,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return await CreatePickUpWaybillWithOptionsAsync(request, runtime);
         }
 
-        public CreateSubscriptionResponse CreateSubscriptionWithOptions(CreateSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BindToken"] = request.BindToken;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNo"] = request.PhoneNo;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateSubscription",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateSubscriptionResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<CreateSubscriptionResponse> CreateSubscriptionWithOptionsAsync(CreateSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BindToken"] = request.BindToken;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNo"] = request.PhoneNo;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateSubscription",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateSubscriptionWithOptions(request, runtime);
-        }
-
-        public async Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateSubscriptionWithOptionsAsync(request, runtime);
-        }
-
         public DeleteSecretBlacklistResponse DeleteSecretBlacklistWithOptions(DeleteSecretBlacklistRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BlackNo"] = request.BlackNo;
-            query["BlackType"] = request.BlackType;
-            query["PoolKey"] = request.PoolKey;
-            query["Remark"] = request.Remark;
-            query["WayControl"] = request.WayControl;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackNo))
+            {
+                query["BlackNo"] = request.BlackNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackType))
+            {
+                query["BlackType"] = request.BlackType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WayControl))
+            {
+                query["WayControl"] = request.WayControl;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1070,7 +1732,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteSecretBlacklistResponse>(CallApi(params_, req, runtime));
@@ -1080,15 +1742,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BlackNo"] = request.BlackNo;
-            query["BlackType"] = request.BlackType;
-            query["PoolKey"] = request.PoolKey;
-            query["Remark"] = request.Remark;
-            query["WayControl"] = request.WayControl;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackNo))
+            {
+                query["BlackNo"] = request.BlackNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackType))
+            {
+                query["BlackType"] = request.BlackType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WayControl))
+            {
+                query["WayControl"] = request.WayControl;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1099,7 +1775,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<DeleteSecretBlacklistResponse>(await CallApiAsync(params_, req, runtime));
@@ -1117,85 +1793,25 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return await DeleteSecretBlacklistWithOptionsAsync(request, runtime);
         }
 
-        public GetFaceVerifyResponse GetFaceVerifyWithOptions(GetFaceVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["VerifyToken"] = request.VerifyToken;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetFaceVerify",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetFaceVerifyResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<GetFaceVerifyResponse> GetFaceVerifyWithOptionsAsync(GetFaceVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["VerifyToken"] = request.VerifyToken;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetFaceVerify",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetFaceVerifyResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public GetFaceVerifyResponse GetFaceVerify(GetFaceVerifyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetFaceVerifyWithOptions(request, runtime);
-        }
-
-        public async Task<GetFaceVerifyResponse> GetFaceVerifyAsync(GetFaceVerifyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetFaceVerifyWithOptionsAsync(request, runtime);
-        }
-
         public GetSecretAsrDetailResponse GetSecretAsrDetailWithOptions(GetSecretAsrDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["CallTime"] = request.CallTime;
-            query["PoolKey"] = request.PoolKey;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTime))
+            {
+                query["CallTime"] = request.CallTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1206,7 +1822,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetSecretAsrDetailResponse>(CallApi(params_, req, runtime));
@@ -1216,13 +1832,21 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["CallTime"] = request.CallTime;
-            query["PoolKey"] = request.PoolKey;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTime))
+            {
+                query["CallTime"] = request.CallTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1233,7 +1857,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetSecretAsrDetailResponse>(await CallApiAsync(params_, req, runtime));
@@ -1255,16 +1879,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1275,7 +1916,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetSubscriptionDetailResponse>(CallApi(params_, req, runtime));
@@ -1285,16 +1926,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1305,7 +1963,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetSubscriptionDetailResponse>(await CallApiAsync(params_, req, runtime));
@@ -1327,17 +1985,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["CallTime"] = request.CallTime;
-            query["CheckSubs"] = request.CheckSubs;
-            query["OwnerId"] = request.OwnerId;
-            query["PartnerKey"] = request.PartnerKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTime))
+            {
+                query["CallTime"] = request.CallTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckSubs))
+            {
+                query["CheckSubs"] = request.CheckSubs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartnerKey))
+            {
+                query["PartnerKey"] = request.PartnerKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1348,7 +2026,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetTotalPublicUrlResponse>(CallApi(params_, req, runtime));
@@ -1358,17 +2036,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["CallTime"] = request.CallTime;
-            query["CheckSubs"] = request.CheckSubs;
-            query["OwnerId"] = request.OwnerId;
-            query["PartnerKey"] = request.PartnerKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTime))
+            {
+                query["CallTime"] = request.CallTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckSubs))
+            {
+                query["CheckSubs"] = request.CheckSubs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartnerKey))
+            {
+                query["PartnerKey"] = request.PartnerKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1379,7 +2077,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<GetTotalPublicUrlResponse>(await CallApiAsync(params_, req, runtime));
@@ -1397,87 +2095,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return await GetTotalPublicUrlWithOptionsAsync(request, runtime);
         }
 
-        public InitFaceVerifyResponse InitFaceVerifyWithOptions(InitFaceVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["MetaInfo"] = request.MetaInfo;
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "InitFaceVerify",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<InitFaceVerifyResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<InitFaceVerifyResponse> InitFaceVerifyWithOptionsAsync(InitFaceVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["MetaInfo"] = request.MetaInfo;
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "InitFaceVerify",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<InitFaceVerifyResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public InitFaceVerifyResponse InitFaceVerify(InitFaceVerifyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return InitFaceVerifyWithOptions(request, runtime);
-        }
-
-        public async Task<InitFaceVerifyResponse> InitFaceVerifyAsync(InitFaceVerifyRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await InitFaceVerifyWithOptionsAsync(request, runtime);
-        }
-
         public LockSecretNoResponse LockSecretNoWithOptions(LockSecretNoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1488,7 +2132,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<LockSecretNoResponse>(CallApi(params_, req, runtime));
@@ -1498,15 +2142,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1517,7 +2175,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<LockSecretNoResponse>(await CallApiAsync(params_, req, runtime));
@@ -1539,17 +2197,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["GroupId"] = request.GroupId;
-            query["Numbers"] = request.Numbers;
-            query["OperateType"] = request.OperateType;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                query["Numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1560,7 +2238,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<OperateAxgGroupResponse>(CallApi(params_, req, runtime));
@@ -1570,17 +2248,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["GroupId"] = request.GroupId;
-            query["Numbers"] = request.Numbers;
-            query["OperateType"] = request.OperateType;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numbers))
+            {
+                query["Numbers"] = request.Numbers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1591,7 +2289,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<OperateAxgGroupResponse>(await CallApiAsync(params_, req, runtime));
@@ -1613,17 +2311,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BlackNo"] = request.BlackNo;
-            query["OperateType"] = request.OperateType;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["Tips"] = request.Tips;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackNo))
+            {
+                query["BlackNo"] = request.BlackNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tips))
+            {
+                query["Tips"] = request.Tips;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1634,7 +2352,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<OperateBlackNoResponse>(CallApi(params_, req, runtime));
@@ -1644,17 +2362,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BlackNo"] = request.BlackNo;
-            query["OperateType"] = request.OperateType;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["Tips"] = request.Tips;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlackNo))
+            {
+                query["BlackNo"] = request.BlackNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tips))
+            {
+                query["Tips"] = request.Tips;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1665,7 +2403,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<OperateBlackNoResponse>(await CallApiAsync(params_, req, runtime));
@@ -1687,16 +2425,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallNo"] = request.CallNo;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallNo))
+            {
+                query["CallNo"] = request.CallNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1707,7 +2462,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryCallStatusResponse>(CallApi(params_, req, runtime));
@@ -1717,16 +2472,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallNo"] = request.CallNo;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallNo))
+            {
+                query["CallNo"] = request.CallNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1737,7 +2509,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryCallStatusResponse>(await CallApiAsync(params_, req, runtime));
@@ -1759,16 +2531,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CabinetNo"] = request.CabinetNo;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["trackNo"] = request.TrackNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CabinetNo))
+            {
+                query["CabinetNo"] = request.CabinetNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrackNo))
+            {
+                query["trackNo"] = request.TrackNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1779,7 +2568,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryPhoneNoAByTrackNoResponse>(CallApi(params_, req, runtime));
@@ -1789,16 +2578,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CabinetNo"] = request.CabinetNo;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["trackNo"] = request.TrackNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CabinetNo))
+            {
+                query["CabinetNo"] = request.CabinetNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrackNo))
+            {
+                query["trackNo"] = request.TrackNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1809,7 +2615,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryPhoneNoAByTrackNoResponse>(await CallApiAsync(params_, req, runtime));
@@ -1831,17 +2637,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["CallTime"] = request.CallTime;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTime))
+            {
+                query["CallTime"] = request.CallTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1852,7 +2678,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryRecordFileDownloadUrlResponse>(CallApi(params_, req, runtime));
@@ -1862,17 +2688,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["CallId"] = request.CallId;
-            query["CallTime"] = request.CallTime;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTime))
+            {
+                query["CallTime"] = request.CallTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1883,7 +2729,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QueryRecordFileDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
@@ -1905,15 +2751,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1924,7 +2784,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySecretNoDetailResponse>(CallApi(params_, req, runtime));
@@ -1934,15 +2794,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1953,7 +2827,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySecretNoDetailResponse>(await CallApiAsync(params_, req, runtime));
@@ -1975,16 +2849,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["City"] = request.City;
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SpecId"] = request.SpecId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecId))
+            {
+                query["SpecId"] = request.SpecId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1995,7 +2886,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySecretNoRemainResponse>(CallApi(params_, req, runtime));
@@ -2005,16 +2896,33 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["City"] = request.City;
-            query["OwnerId"] = request.OwnerId;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SpecId"] = request.SpecId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecId))
+            {
+                query["SpecId"] = request.SpecId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2025,7 +2933,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySecretNoRemainResponse>(await CallApiAsync(params_, req, runtime));
@@ -2047,15 +2955,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2066,7 +2988,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySubsIdResponse>(CallApi(params_, req, runtime));
@@ -2076,15 +2998,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2095,7 +3031,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySubsIdResponse>(await CallApiAsync(params_, req, runtime));
@@ -2117,17 +3053,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2138,7 +3094,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySubscriptionDetailResponse>(CallApi(params_, req, runtime));
@@ -2148,17 +3104,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2169,7 +3145,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<QuerySubscriptionDetailResponse>(await CallApiAsync(params_, req, runtime));
@@ -2191,15 +3167,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2210,7 +3200,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ReleaseSecretNoResponse>(CallApi(params_, req, runtime));
@@ -2220,15 +3210,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2239,7 +3243,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ReleaseSecretNoResponse>(await CallApiAsync(params_, req, runtime));
@@ -2261,17 +3265,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2282,7 +3306,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UnbindSubscriptionResponse>(CallApi(params_, req, runtime));
@@ -2292,17 +3316,37 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2313,7 +3357,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UnbindSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
@@ -2335,15 +3379,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2354,7 +3412,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UnlockSecretNoResponse>(CallApi(params_, req, runtime));
@@ -2364,15 +3422,29 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretNo))
+            {
+                query["SecretNo"] = request.SecretNo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2383,7 +3455,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UnlockSecretNoResponse>(await CallApiAsync(params_, req, runtime));
@@ -2401,257 +3473,89 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
             return await UnlockSecretNoWithOptionsAsync(request, runtime);
         }
 
-        public UpdateDefaultBResponse UpdateDefaultBWithOptions(UpdateDefaultBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNo"] = request.PhoneNo;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateDefaultB",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateDefaultBResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<UpdateDefaultBResponse> UpdateDefaultBWithOptionsAsync(UpdateDefaultBRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNo"] = request.PhoneNo;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdateDefaultB",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdateDefaultBResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public UpdateDefaultBResponse UpdateDefaultB(UpdateDefaultBRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdateDefaultBWithOptions(request, runtime);
-        }
-
-        public async Task<UpdateDefaultBResponse> UpdateDefaultBAsync(UpdateDefaultBRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdateDefaultBWithOptionsAsync(request, runtime);
-        }
-
-        public UpdatePhoneNumberResponse UpdatePhoneNumberWithOptions(UpdatePhoneNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BindToken"] = request.BindToken;
-            query["NewPhoneNo"] = request.NewPhoneNo;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdatePhoneNumber",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdatePhoneNumberResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<UpdatePhoneNumberResponse> UpdatePhoneNumberWithOptionsAsync(UpdatePhoneNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["BindToken"] = request.BindToken;
-            query["NewPhoneNo"] = request.NewPhoneNo;
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdatePhoneNumber",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdatePhoneNumberResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public UpdatePhoneNumberResponse UpdatePhoneNumber(UpdatePhoneNumberRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdatePhoneNumberWithOptions(request, runtime);
-        }
-
-        public async Task<UpdatePhoneNumberResponse> UpdatePhoneNumberAsync(UpdatePhoneNumberRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdatePhoneNumberWithOptionsAsync(request, runtime);
-        }
-
-        public UpdatePhoneSwitchResponse UpdatePhoneSwitchWithOptions(UpdatePhoneSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
-            query["SwitchStatus"] = request.SwitchStatus;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdatePhoneSwitch",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdatePhoneSwitchResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<UpdatePhoneSwitchResponse> UpdatePhoneSwitchWithOptionsAsync(UpdatePhoneSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["OwnerId"] = request.OwnerId;
-            query["PoolKey"] = request.PoolKey;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["SecretNo"] = request.SecretNo;
-            query["SubsId"] = request.SubsId;
-            query["SwitchStatus"] = request.SwitchStatus;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UpdatePhoneSwitch",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<UpdatePhoneSwitchResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public UpdatePhoneSwitchResponse UpdatePhoneSwitch(UpdatePhoneSwitchRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UpdatePhoneSwitchWithOptions(request, runtime);
-        }
-
-        public async Task<UpdatePhoneSwitchResponse> UpdatePhoneSwitchAsync(UpdatePhoneSwitchRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UpdatePhoneSwitchWithOptionsAsync(request, runtime);
-        }
-
         public UpdateSubscriptionResponse UpdateSubscriptionWithOptions(UpdateSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["Expiration"] = request.Expiration;
-            query["GroupId"] = request.GroupId;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OperateType"] = request.OperateType;
-            query["OutId"] = request.OutId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2662,7 +3566,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateSubscriptionResponse>(CallApi(params_, req, runtime));
@@ -2672,29 +3576,85 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["ASRModelId"] = request.ASRModelId;
-            query["ASRStatus"] = request.ASRStatus;
-            query["CallDisplayType"] = request.CallDisplayType;
-            query["CallRestrict"] = request.CallRestrict;
-            query["Expiration"] = request.Expiration;
-            query["GroupId"] = request.GroupId;
-            query["IsRecordingEnabled"] = request.IsRecordingEnabled;
-            query["OperateType"] = request.OperateType;
-            query["OutId"] = request.OutId;
-            query["OwnerId"] = request.OwnerId;
-            query["PhoneNoA"] = request.PhoneNoA;
-            query["PhoneNoB"] = request.PhoneNoB;
-            query["PhoneNoX"] = request.PhoneNoX;
-            query["PoolKey"] = request.PoolKey;
-            query["ProductType"] = request.ProductType;
-            query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            query["ResourceOwnerId"] = request.ResourceOwnerId;
-            query["RingConfig"] = request.RingConfig;
-            query["SubsId"] = request.SubsId;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRModelId))
+            {
+                query["ASRModelId"] = request.ASRModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ASRStatus))
+            {
+                query["ASRStatus"] = request.ASRStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDisplayType))
+            {
+                query["CallDisplayType"] = request.CallDisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRestrict))
+            {
+                query["CallRestrict"] = request.CallRestrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expiration))
+            {
+                query["Expiration"] = request.Expiration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRecordingEnabled))
+            {
+                query["IsRecordingEnabled"] = request.IsRecordingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoB))
+            {
+                query["PhoneNoB"] = request.PhoneNoB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoX))
+            {
+                query["PhoneNoX"] = request.PhoneNoX;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PoolKey))
+            {
+                query["PoolKey"] = request.PoolKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RingConfig))
+            {
+                query["RingConfig"] = request.RingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubsId))
+            {
+                query["SubsId"] = request.SubsId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2705,7 +3665,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<UpdateSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
