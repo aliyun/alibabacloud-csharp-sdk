@@ -177,10 +177,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [Validation(Required=false)]
         public bool? OpenAgentPolicy { get; set; }
 
-        [NameInMap("PilotPublicEip")]
-        [Validation(Required=false)]
-        public bool? PilotPublicEip { get; set; }
-
         [NameInMap("PrometheusUrl")]
         [Validation(Required=false)]
         public string PrometheusUrl { get; set; }
