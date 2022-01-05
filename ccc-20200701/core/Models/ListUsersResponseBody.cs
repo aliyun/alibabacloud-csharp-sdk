@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string Usage { get; set; }
                 }
                 public bool? PrimaryAccount { get; set; }
+                public long? RamId { get; set; }
                 public string RoleId { get; set; }
                 public string RoleName { get; set; }
                 public List<ListUsersResponseBodyDataListSkillLevelList> SkillLevelList { get; set; }

@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("UserKey")]
             [Validation(Required=false)]
             public string UserKey { get; set; }
+            [NameInMap("WorkMode")]
+            [Validation(Required=false)]
+            public string WorkMode { get; set; }
         };
 
         [NameInMap("HttpStatusCode")]
