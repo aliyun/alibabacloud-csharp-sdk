@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTablesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeTablesResponseBodyItems Items { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeTablesResponseBodyItemsTable> Table { get; set; }
             public class DescribeTablesResponseBodyItemsTable : TeaModel {
+                public string DBClusterId { get; set; }
                 public string SchemaName { get; set; }
                 public string TableName { get; set; }
-                public string DBClusterId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

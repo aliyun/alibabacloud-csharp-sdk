@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public List<DescribeDBClusterHealthReportResponseBodyItems> Items { get; set; }
         public class DescribeDBClusterHealthReportResponseBodyItems : TeaModel {
+            [NameInMap("Avg")]
+            [Validation(Required=false)]
+            public string Avg { get; set; }
+
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-
-            [NameInMap("Avg")]
-            [Validation(Required=false)]
-            public string Avg { get; set; }
 
         }
 

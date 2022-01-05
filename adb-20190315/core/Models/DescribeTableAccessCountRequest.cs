@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("TableName")]
-        [Validation(Required=false)]
-        public string TableName { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
@@ -36,6 +28,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
 
     }
 

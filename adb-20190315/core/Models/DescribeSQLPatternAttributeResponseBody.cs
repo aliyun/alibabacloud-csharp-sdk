@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public DescribeSQLPatternAttributeResponseBodyPatternDetail PatternDetail { get; set; }
         public class DescribeSQLPatternAttributeResponseBodyPatternDetail : TeaModel {
-            [NameInMap("SQLPattern")]
-            [Validation(Required=false)]
-            public string SQLPattern { get; set; }
-            [NameInMap("QueryCount")]
-            [Validation(Required=false)]
-            public long? QueryCount { get; set; }
-            [NameInMap("TotalQueryTime")]
-            [Validation(Required=false)]
-            public string TotalQueryTime { get; set; }
-            [NameInMap("AverageQueryTime")]
-            [Validation(Required=false)]
-            public string AverageQueryTime { get; set; }
             [NameInMap("AverageMemory")]
             [Validation(Required=false)]
             public string AverageMemory { get; set; }
+            [NameInMap("AverageQueryTime")]
+            [Validation(Required=false)]
+            public string AverageQueryTime { get; set; }
+            [NameInMap("QueryCount")]
+            [Validation(Required=false)]
+            public long? QueryCount { get; set; }
+            [NameInMap("SQLPattern")]
+            [Validation(Required=false)]
+            public string SQLPattern { get; set; }
+            [NameInMap("TotalQueryTime")]
+            [Validation(Required=false)]
+            public string TotalQueryTime { get; set; }
         };
 
         [NameInMap("RequestId")]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterHealthReportRequest : TeaModel {
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

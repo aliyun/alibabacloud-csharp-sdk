@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public List<string> ClientIps { get; set; }
 
-        [NameInMap("ResourceGroups")]
-        [Validation(Required=false)]
-        public List<string> ResourceGroups { get; set; }
-
-        [NameInMap("UserNames")]
-        [Validation(Required=false)]
-        public List<string> UserNames { get; set; }
-
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public List<string> Databases { get; set; }
@@ -28,6 +20,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("ResourceGroups")]
+        [Validation(Required=false)]
+        public List<string> ResourceGroups { get; set; }
+
+        [NameInMap("UserNames")]
+        [Validation(Required=false)]
+        public List<string> UserNames { get; set; }
 
     }
 

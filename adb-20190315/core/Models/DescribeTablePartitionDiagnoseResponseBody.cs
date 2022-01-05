@@ -9,25 +9,43 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTablePartitionDiagnoseResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string DBClusterId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Items")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<DescribeTablePartitionDiagnoseResponseBodyItems> Items { get; set; }
+        public class DescribeTablePartitionDiagnoseResponseBodyItems : TeaModel {
+            [NameInMap("PartitionDetail")]
+            [Validation(Required=false)]
+            public string PartitionDetail { get; set; }
 
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+            [NameInMap("PartitionNumber")]
+            [Validation(Required=false)]
+            public int? PartitionNumber { get; set; }
+
+            [NameInMap("SchemaName")]
+            [Validation(Required=false)]
+            public string SchemaName { get; set; }
+
+            [NameInMap("TableName")]
+            [Validation(Required=false)]
+            public string TableName { get; set; }
+
+        }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("SuggestMaxRecordsPerPartition")]
         [Validation(Required=false)]
@@ -37,27 +55,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? SuggestMinRecordsPerPartition { get; set; }
 
-        [NameInMap("Items")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public List<DescribeTablePartitionDiagnoseResponseBodyItems> Items { get; set; }
-        public class DescribeTablePartitionDiagnoseResponseBodyItems : TeaModel {
-            [NameInMap("TableName")]
-            [Validation(Required=false)]
-            public string TableName { get; set; }
-
-            [NameInMap("PartitionDetail")]
-            [Validation(Required=false)]
-            public string PartitionDetail { get; set; }
-
-            [NameInMap("SchemaName")]
-            [Validation(Required=false)]
-            public string SchemaName { get; set; }
-
-            [NameInMap("PartitionNumber")]
-            [Validation(Required=false)]
-            public int? PartitionNumber { get; set; }
-
-        }
+        public int? TotalCount { get; set; }
 
     }
 

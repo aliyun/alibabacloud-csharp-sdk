@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AccountList")]
         [Validation(Required=false)]
         public DescribeAccountsResponseBodyAccountList AccountList { get; set; }
@@ -22,11 +18,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeAccountsResponseBodyAccountListDBAccount> DBAccount { get; set; }
             public class DescribeAccountsResponseBodyAccountListDBAccount : TeaModel {
                 public string AccountDescription { get; set; }
-                public string AccountType { get; set; }
-                public string AccountStatus { get; set; }
                 public string AccountName { get; set; }
+                public string AccountStatus { get; set; }
+                public string AccountType { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

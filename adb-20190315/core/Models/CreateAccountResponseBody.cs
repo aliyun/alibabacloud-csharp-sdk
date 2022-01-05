@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class CreateAccountResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TaskId")]
         [Validation(Required=false)]

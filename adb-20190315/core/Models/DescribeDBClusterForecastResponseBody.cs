@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            [NameInMap("Unit")]
-            [Validation(Required=false)]
-            public string Unit { get; set; }
-
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeDBClusterForecastResponseBodyPerformancesSeries> Series { get; set; }
@@ -34,6 +30,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Values { get; set; }
 
             }
+
+            [NameInMap("Unit")]
+            [Validation(Required=false)]
+            public string Unit { get; set; }
 
         }
 

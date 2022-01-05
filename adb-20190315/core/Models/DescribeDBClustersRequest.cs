@@ -9,9 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClustersRequest : TeaModel {
+        [NameInMap("DBClusterDescription")]
+        [Validation(Required=false)]
+        public string DBClusterDescription { get; set; }
+
+        [NameInMap("DBClusterIds")]
+        [Validation(Required=false)]
+        public string DBClusterIds { get; set; }
+
+        [NameInMap("DBClusterStatus")]
+        [Validation(Required=false)]
+        public string DBClusterStatus { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,38 +52,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DBClusterIds")]
-        [Validation(Required=false)]
-        public string DBClusterIds { get; set; }
-
-        [NameInMap("DBClusterDescription")]
-        [Validation(Required=false)]
-        public string DBClusterDescription { get; set; }
-
-        [NameInMap("DBClusterStatus")]
-        [Validation(Required=false)]
-        public string DBClusterStatus { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

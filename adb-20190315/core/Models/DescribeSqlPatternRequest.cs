@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSqlPatternRequest : TeaModel {
-        [NameInMap("StartTime")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string DBClusterId { get; set; }
 
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -21,18 +21,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        [NameInMap("SqlPattern")]
-        [Validation(Required=false)]
-        public string SqlPattern { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("DBClusterId")]
-        [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -40,6 +28,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("SqlPattern")]
+        [Validation(Required=false)]
+        public string SqlPattern { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

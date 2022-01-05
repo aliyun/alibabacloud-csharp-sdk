@@ -9,57 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSqlPatternResponseBody : TeaModel {
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSqlPatternResponseBodyItems> Items { get; set; }
         public class DescribeSqlPatternResponseBodyItems : TeaModel {
-            [NameInMap("AvgStageCount")]
-            [Validation(Required=false)]
-            public string AvgStageCount { get; set; }
-
-            [NameInMap("MaxCpuTime")]
-            [Validation(Required=false)]
-            public string MaxCpuTime { get; set; }
-
             [NameInMap("AccessIP")]
             [Validation(Required=false)]
             public string AccessIP { get; set; }
-
-            [NameInMap("AvgScanSize")]
-            [Validation(Required=false)]
-            public string AvgScanSize { get; set; }
-
-            [NameInMap("MaxScanSize")]
-            [Validation(Required=false)]
-            public string MaxScanSize { get; set; }
-
-            [NameInMap("MaxPeakMemory")]
-            [Validation(Required=false)]
-            public string MaxPeakMemory { get; set; }
 
             [NameInMap("AvgCpuTime")]
             [Validation(Required=false)]
             public string AvgCpuTime { get; set; }
 
-            [NameInMap("User")]
-            [Validation(Required=false)]
-            public string User { get; set; }
-
             [NameInMap("AvgPeakMemory")]
             [Validation(Required=false)]
             public string AvgPeakMemory { get; set; }
+
+            [NameInMap("AvgScanSize")]
+            [Validation(Required=false)]
+            public string AvgScanSize { get; set; }
+
+            [NameInMap("AvgStageCount")]
+            [Validation(Required=false)]
+            public string AvgStageCount { get; set; }
+
+            [NameInMap("AvgTaskCount")]
+            [Validation(Required=false)]
+            public string AvgTaskCount { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("MaxCpuTime")]
+            [Validation(Required=false)]
+            public string MaxCpuTime { get; set; }
+
+            [NameInMap("MaxPeakMemory")]
+            [Validation(Required=false)]
+            public string MaxPeakMemory { get; set; }
+
+            [NameInMap("MaxScanSize")]
+            [Validation(Required=false)]
+            public string MaxScanSize { get; set; }
 
             [NameInMap("MaxStageCount")]
             [Validation(Required=false)]
@@ -69,9 +61,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string MaxTaskCount { get; set; }
 
-            [NameInMap("InstanceName")]
+            [NameInMap("Pattern")]
             [Validation(Required=false)]
-            public string InstanceName { get; set; }
+            public string Pattern { get; set; }
 
             [NameInMap("QueryCount")]
             [Validation(Required=false)]
@@ -81,19 +73,27 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string ReportDate { get; set; }
 
-            [NameInMap("Pattern")]
+            [NameInMap("User")]
             [Validation(Required=false)]
-            public string Pattern { get; set; }
-
-            [NameInMap("AvgTaskCount")]
-            [Validation(Required=false)]
-            public string AvgTaskCount { get; set; }
+            public string User { get; set; }
 
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

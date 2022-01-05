@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeColumnsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeColumnsResponseBodyItems Items { get; set; }
@@ -21,15 +17,19 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeColumnsResponseBodyItemsColumn> Column { get; set; }
             public class DescribeColumnsResponseBodyItemsColumn : TeaModel {
-                public string Type { get; set; }
-                public string ColumnName { get; set; }
-                public string TableName { get; set; }
                 public bool? AutoIncrementColumn { get; set; }
+                public string ColumnName { get; set; }
                 public string DBClusterId { get; set; }
                 public bool? PrimaryKey { get; set; }
                 public string SchemaName { get; set; }
+                public string TableName { get; set; }
+                public string Type { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

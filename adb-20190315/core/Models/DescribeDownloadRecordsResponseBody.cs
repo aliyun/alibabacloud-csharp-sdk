@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public List<DescribeDownloadRecordsResponseBodyRecords> Records { get; set; }
         public class DescribeDownloadRecordsResponseBodyRecords : TeaModel {
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
             [NameInMap("DownloadId")]
             [Validation(Required=false)]
             public long? DownloadId { get; set; }
@@ -25,13 +21,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string ExceptionMsg { get; set; }
 
-            [NameInMap("Url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
-
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
 
         }
 

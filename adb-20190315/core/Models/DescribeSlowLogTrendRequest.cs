@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSlowLogTrendRequest : TeaModel {
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -21,25 +37,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBClusterId")]
-        [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("DBName")]
-        [Validation(Required=false)]
-        public string DBName { get; set; }
 
     }
 

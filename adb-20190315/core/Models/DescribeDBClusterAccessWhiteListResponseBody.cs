@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClusterAccessWhiteListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDBClusterAccessWhiteListResponseBodyItems Items { get; set; }
@@ -21,11 +17,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterAccessWhiteListResponseBodyItemsIPArray> IPArray { get; set; }
             public class DescribeDBClusterAccessWhiteListResponseBodyItemsIPArray : TeaModel {
-                public string DBClusterIPArrayName { get; set; }
                 public string DBClusterIPArrayAttribute { get; set; }
+                public string DBClusterIPArrayName { get; set; }
                 public string SecurityIPList { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

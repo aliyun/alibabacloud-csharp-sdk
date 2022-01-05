@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyDBResourcePoolRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string DBClusterId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("NodeNum")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public int? NodeNum { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public long? OwnerId { get; set; }
 
         [NameInMap("PoolName")]
         [Validation(Required=false)]
@@ -37,9 +33,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
-        [NameInMap("NodeNum")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public int? NodeNum { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

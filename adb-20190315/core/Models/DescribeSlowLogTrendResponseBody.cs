@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSlowLogTrendResponseBody : TeaModel {
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -34,7 +26,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem> SlowLogTrendItem { get; set; }
             public class DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem : TeaModel {
                 public string Key { get; set; }
-                public string Unit { get; set; }
                 public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeries Series { get; set; }
                 public class DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeries : TeaModel {
                     [NameInMap("SeriesItem")]
@@ -52,8 +43,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     }
 
                 }
+                public string Unit { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

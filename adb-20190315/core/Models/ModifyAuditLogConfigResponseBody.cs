@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("UpdateSucceed")]
+        [Validation(Required=false)]
+        public bool? UpdateSucceed { get; set; }
+
     }
 
 }

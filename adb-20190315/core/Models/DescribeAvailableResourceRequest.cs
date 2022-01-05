@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAvailableResourceRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -33,13 +37,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("AcceptLanguage")]
-        [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string ZoneId { get; set; }
 
     }
 

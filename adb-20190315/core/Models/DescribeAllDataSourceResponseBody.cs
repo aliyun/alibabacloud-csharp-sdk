@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeAllDataSourceResponseBody : TeaModel {
+        [NameInMap("Columns")]
+        [Validation(Required=false)]
+        public DescribeAllDataSourceResponseBodyColumns Columns { get; set; }
+        public class DescribeAllDataSourceResponseBodyColumns : TeaModel {
+            [NameInMap("Column")]
+            [Validation(Required=false)]
+            public List<DescribeAllDataSourceResponseBodyColumnsColumn> Column { get; set; }
+            public class DescribeAllDataSourceResponseBodyColumnsColumn : TeaModel {
+                public bool? AutoIncrementColumn { get; set; }
+                public string ColumnName { get; set; }
+                public string DBClusterId { get; set; }
+                public bool? PrimaryKey { get; set; }
+                public string SchemaName { get; set; }
+                public string TableName { get; set; }
+                public string Type { get; set; }
+            }
+        };
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,8 +39,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeAllDataSourceResponseBodySchemasSchema> Schema { get; set; }
             public class DescribeAllDataSourceResponseBodySchemasSchema : TeaModel {
-                public string SchemaName { get; set; }
                 public string DBClusterId { get; set; }
+                public string SchemaName { get; set; }
             }
         };
 
@@ -34,27 +52,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeAllDataSourceResponseBodyTablesTable> Table { get; set; }
             public class DescribeAllDataSourceResponseBodyTablesTable : TeaModel {
+                public string DBClusterId { get; set; }
                 public string SchemaName { get; set; }
                 public string TableName { get; set; }
-                public string DBClusterId { get; set; }
-            }
-        };
-
-        [NameInMap("Columns")]
-        [Validation(Required=false)]
-        public DescribeAllDataSourceResponseBodyColumns Columns { get; set; }
-        public class DescribeAllDataSourceResponseBodyColumns : TeaModel {
-            [NameInMap("Column")]
-            [Validation(Required=false)]
-            public List<DescribeAllDataSourceResponseBodyColumnsColumn> Column { get; set; }
-            public class DescribeAllDataSourceResponseBodyColumnsColumn : TeaModel {
-                public string Type { get; set; }
-                public string ColumnName { get; set; }
-                public string TableName { get; set; }
-                public bool? AutoIncrementColumn { get; set; }
-                public string DBClusterId { get; set; }
-                public bool? PrimaryKey { get; set; }
-                public string SchemaName { get; set; }
             }
         };
 

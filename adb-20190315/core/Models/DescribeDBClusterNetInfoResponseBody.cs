@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string ClusterNetworkType { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDBClusterNetInfoResponseBodyItems Items { get; set; }
@@ -25,15 +21,19 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterNetInfoResponseBodyItemsAddress> Address { get; set; }
             public class DescribeDBClusterNetInfoResponseBodyItemsAddress : TeaModel {
-                public string VSwitchId { get; set; }
                 public string ConnectionString { get; set; }
+                public string ConnectionStringPrefix { get; set; }
+                public string IPAddress { get; set; }
                 public string NetType { get; set; }
                 public string Port { get; set; }
                 public string VPCId { get; set; }
-                public string IPAddress { get; set; }
-                public string ConnectionStringPrefix { get; set; }
+                public string VSwitchId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

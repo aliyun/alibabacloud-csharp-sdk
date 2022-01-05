@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PatternId")]
         [Validation(Required=false)]
         public long? PatternId { get; set; }
 
-        [NameInMap("Lang")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

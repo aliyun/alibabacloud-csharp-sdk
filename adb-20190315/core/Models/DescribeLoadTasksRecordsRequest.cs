@@ -9,9 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeLoadTasksRecordsRequest : TeaModel {
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -21,37 +49,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBClusterId")]
-        [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("DBName")]
-        [Validation(Required=false)]
-        public string DBName { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Order")]
-        [Validation(Required=false)]
-        public string Order { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]

@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public DescribeTaskInfoResponseBodyTaskInfo TaskInfo { get; set; }
         public class DescribeTaskInfoResponseBodyTaskInfo : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("BeginTime")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string BeginTime { get; set; }
             [NameInMap("FinishTime")]
             [Validation(Required=false)]
             public string FinishTime { get; set; }
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public int? TaskId { get; set; }
-            [NameInMap("BeginTime")]
-            [Validation(Required=false)]
-            public string BeginTime { get; set; }
         };
 
     }

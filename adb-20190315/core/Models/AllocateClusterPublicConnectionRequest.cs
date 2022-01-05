@@ -12,6 +12,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class AllocateClusterPublicConnectionRequest : TeaModel {
+        [NameInMap("ConnectionStringPrefix")]
+        [Validation(Required=false)]
+        public string ConnectionStringPrefix { get; set; }
+
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -23,18 +35,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBClusterId")]
-        [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
-        [NameInMap("ConnectionStringPrefix")]
-        [Validation(Required=false)]
-        public string ConnectionStringPrefix { get; set; }
 
     }
 

@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("Performances")]
         [Validation(Required=false)]
         public List<DescribePatternPerformanceResponseBodyPerformances> Performances { get; set; }
@@ -29,25 +21,33 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            [NameInMap("Unit")]
-            [Validation(Required=false)]
-            public string Unit { get; set; }
-
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribePatternPerformanceResponseBodyPerformancesSeries> Series { get; set; }
             public class DescribePatternPerformanceResponseBodyPerformancesSeries : TeaModel {
-                [NameInMap("Values")]
-                [Validation(Required=false)]
-                public List<string> Values { get; set; }
-
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
+
             }
 
+            [NameInMap("Unit")]
+            [Validation(Required=false)]
+            public string Unit { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

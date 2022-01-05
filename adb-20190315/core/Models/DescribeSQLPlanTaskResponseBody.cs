@@ -17,21 +17,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public List<DescribeSQLPlanTaskResponseBodyTaskList> TaskList { get; set; }
         public class DescribeSQLPlanTaskResponseBodyTaskList : TeaModel {
-            [NameInMap("OutputSize")]
+            [NameInMap("ElapsedTime")]
             [Validation(Required=false)]
-            public long? OutputSize { get; set; }
+            public long? ElapsedTime { get; set; }
 
-            [NameInMap("ScanCost")]
+            [NameInMap("InputRows")]
             [Validation(Required=false)]
-            public long? ScanCost { get; set; }
+            public long? InputRows { get; set; }
 
             [NameInMap("InputSize")]
             [Validation(Required=false)]
             public long? InputSize { get; set; }
-
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
 
             [NameInMap("OperatorCost")]
             [Validation(Required=false)]
@@ -41,29 +37,33 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public long? OutputRows { get; set; }
 
-            [NameInMap("ScanSize")]
+            [NameInMap("OutputSize")]
             [Validation(Required=false)]
-            public long? ScanSize { get; set; }
-
-            [NameInMap("ElapsedTime")]
-            [Validation(Required=false)]
-            public long? ElapsedTime { get; set; }
-
-            [NameInMap("ScanRows")]
-            [Validation(Required=false)]
-            public long? ScanRows { get; set; }
+            public long? OutputSize { get; set; }
 
             [NameInMap("PeakMemory")]
             [Validation(Required=false)]
             public long? PeakMemory { get; set; }
 
+            [NameInMap("ScanCost")]
+            [Validation(Required=false)]
+            public long? ScanCost { get; set; }
+
+            [NameInMap("ScanRows")]
+            [Validation(Required=false)]
+            public long? ScanRows { get; set; }
+
+            [NameInMap("ScanSize")]
+            [Validation(Required=false)]
+            public long? ScanSize { get; set; }
+
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public int? TaskId { get; set; }
-
-            [NameInMap("InputRows")]
-            [Validation(Required=false)]
-            public long? InputRows { get; set; }
 
         }
 

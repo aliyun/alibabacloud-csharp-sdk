@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyAccountDescriptionRequest : TeaModel {
+        [NameInMap("AccountDescription")]
+        [Validation(Required=false)]
+        public string AccountDescription { get; set; }
+
+        [NameInMap("AccountName")]
+        [Validation(Required=false)]
+        public string AccountName { get; set; }
+
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,22 +36,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBClusterId")]
-        [Validation(Required=false)]
-        public string DBClusterId { get; set; }
-
-        [NameInMap("AccountName")]
-        [Validation(Required=false)]
-        public string AccountName { get; set; }
-
-        [NameInMap("AccountDescription")]
-        [Validation(Required=false)]
-        public string AccountDescription { get; set; }
 
     }
 

@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? AvgSize { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeTableDetailResponseBodyItems Items { get; set; }
@@ -25,10 +21,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeTableDetailResponseBodyItemsShard> Shard { get; set; }
             public class DescribeTableDetailResponseBodyItemsShard : TeaModel {
-                public long? Size { get; set; }
                 public int? Id { get; set; }
+                public long? Size { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

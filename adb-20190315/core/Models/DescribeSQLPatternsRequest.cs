@@ -13,21 +13,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -41,9 +37,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Lang")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 
