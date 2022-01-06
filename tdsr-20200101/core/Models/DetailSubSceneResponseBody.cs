@@ -52,6 +52,20 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// 矫正后图的路径
+        /// </summary>
+        [NameInMap("ImageUrl")]
+        [Validation(Required=false)]
+        public string ImageUrl { get; set; }
+
+        /// <summary>
+        /// 墙线标注数据
+        /// </summary>
+        [NameInMap("LayoutData")]
+        [Validation(Required=false)]
+        public string LayoutData { get; set; }
+
+        /// <summary>
         /// 错误消息
         /// </summary>
         [NameInMap("Message")]
@@ -64,6 +78,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 原图路径
+        /// </summary>
+        [NameInMap("OriginUrl")]
+        [Validation(Required=false)]
+        public string OriginUrl { get; set; }
 
         /// <summary>
         /// 请求ID，与入参requestId对应
@@ -92,6 +113,13 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        /// <summary>
+        /// 资源类型
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         /// <summary>
         /// 图片路径/视频路径
