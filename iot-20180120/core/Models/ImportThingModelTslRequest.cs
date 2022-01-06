@@ -9,17 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ImportThingModelTslRequest : TeaModel {
+        [NameInMap("FunctionBlockId")]
+        [Validation(Required=false)]
+        public string FunctionBlockId { get; set; }
+
+        [NameInMap("FunctionBlockName")]
+        [Validation(Required=false)]
+        public string FunctionBlockName { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("TslStr")]
         [Validation(Required=false)]
@@ -28,14 +36,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("TslUrl")]
         [Validation(Required=false)]
         public string TslUrl { get; set; }
-
-        [NameInMap("FunctionBlockId")]
-        [Validation(Required=false)]
-        public string FunctionBlockId { get; set; }
-
-        [NameInMap("FunctionBlockName")]
-        [Validation(Required=false)]
-        public string FunctionBlockName { get; set; }
 
     }
 

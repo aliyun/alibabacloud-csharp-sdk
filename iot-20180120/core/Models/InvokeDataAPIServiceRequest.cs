@@ -13,35 +13,35 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ApiSrn { get; set; }
 
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
+
         [NameInMap("Param")]
         [Validation(Required=false)]
         public List<InvokeDataAPIServiceRequestParam> Param { get; set; }
         public class InvokeDataAPIServiceRequestParam : TeaModel {
-            [NameInMap("ParamType")]
+            [NameInMap("ListParamType")]
             [Validation(Required=false)]
-            public string ParamType { get; set; }
+            public string ListParamType { get; set; }
 
             [NameInMap("ListParamValue")]
             [Validation(Required=false)]
             public List<string> ListParamValue { get; set; }
 
-            [NameInMap("ListParamType")]
-            [Validation(Required=false)]
-            public string ListParamType { get; set; }
-
             [NameInMap("ParamName")]
             [Validation(Required=false)]
             public string ParamName { get; set; }
+
+            [NameInMap("ParamType")]
+            [Validation(Required=false)]
+            public string ParamType { get; set; }
 
             [NameInMap("ParamValue")]
             [Validation(Required=false)]
             public string ParamValue { get; set; }
 
         }
-
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
 
     }
 

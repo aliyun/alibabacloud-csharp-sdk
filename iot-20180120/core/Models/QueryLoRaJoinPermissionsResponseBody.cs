@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryLoRaJoinPermissionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -24,10 +16,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
 
         [NameInMap("JoinPermissions")]
         [Validation(Required=false)]
@@ -37,14 +25,26 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission> JoinPermission { get; set; }
             public class QueryLoRaJoinPermissionsResponseBodyJoinPermissionsJoinPermission : TeaModel {
+                public string ClassMode { get; set; }
+                public bool? Enabled { get; set; }
                 public string JoinPermissionId { get; set; }
                 public string JoinPermissionName { get; set; }
                 public string JoinPermissionType { get; set; }
                 public string OwnerAliyunPk { get; set; }
-                public bool? Enabled { get; set; }
-                public string ClassMode { get; set; }
             }
         };
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

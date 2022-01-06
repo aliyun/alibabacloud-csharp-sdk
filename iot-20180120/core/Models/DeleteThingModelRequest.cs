@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class DeleteThingModelRequest : TeaModel {
+        [NameInMap("EventIdentifier")]
+        [Validation(Required=false)]
+        public List<string> EventIdentifier { get; set; }
+
+        [NameInMap("FunctionBlockId")]
+        [Validation(Required=false)]
+        public string FunctionBlockId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public List<string> PropertyIdentifier { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("ServiceIdentifier")]
         [Validation(Required=false)]
         public List<string> ServiceIdentifier { get; set; }
-
-        [NameInMap("EventIdentifier")]
-        [Validation(Required=false)]
-        public List<string> EventIdentifier { get; set; }
-
-        [NameInMap("FunctionBlockId")]
-        [Validation(Required=false)]
-        public string FunctionBlockId { get; set; }
 
     }
 

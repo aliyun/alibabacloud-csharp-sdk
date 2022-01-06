@@ -9,45 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateOTADynamicUpgradeJobRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("DynamicMode")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public int? DynamicMode { get; set; }
 
         [NameInMap("FirmwareId")]
         [Validation(Required=false)]
         public string FirmwareId { get; set; }
 
-        [NameInMap("ProductKey")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("SrcVersion")]
-        [Validation(Required=false)]
-        public List<string> SrcVersion { get; set; }
-
-        [NameInMap("RetryInterval")]
-        [Validation(Required=false)]
-        public int? RetryInterval { get; set; }
-
-        [NameInMap("RetryCount")]
-        [Validation(Required=false)]
-        public int? RetryCount { get; set; }
-
-        [NameInMap("TimeoutInMinutes")]
-        [Validation(Required=false)]
-        public int? TimeoutInMinutes { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("MaximumPerMinute")]
         [Validation(Required=false)]
         public int? MaximumPerMinute { get; set; }
 
+        [NameInMap("NeedConfirm")]
+        [Validation(Required=false)]
+        public bool? NeedConfirm { get; set; }
+
+        [NameInMap("NeedPush")]
+        [Validation(Required=false)]
+        public bool? NeedPush { get; set; }
+
         [NameInMap("OverwriteMode")]
         [Validation(Required=false)]
         public int? OverwriteMode { get; set; }
 
-        [NameInMap("DynamicMode")]
+        [NameInMap("ProductKey")]
         [Validation(Required=false)]
-        public int? DynamicMode { get; set; }
+        public string ProductKey { get; set; }
+
+        [NameInMap("RetryCount")]
+        [Validation(Required=false)]
+        public int? RetryCount { get; set; }
+
+        [NameInMap("RetryInterval")]
+        [Validation(Required=false)]
+        public int? RetryInterval { get; set; }
+
+        [NameInMap("SrcVersion")]
+        [Validation(Required=false)]
+        public List<string> SrcVersion { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -62,6 +66,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("TimeoutInMinutes")]
+        [Validation(Required=false)]
+        public int? TimeoutInMinutes { get; set; }
 
     }
 

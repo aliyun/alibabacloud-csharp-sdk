@@ -1,3 +1,6 @@
+2022-01-06 Version: 3.0.0
+- Iot_20180120 TeaDSL sdk.
+
 2021-05-02 Version: 2.1.2
 - Generated csharp 2018-01-20 for Iot.
 

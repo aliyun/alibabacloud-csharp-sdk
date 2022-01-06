@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class StartCpuRequest : TeaModel {
-        [NameInMap("TargetValue")]
-        [Validation(Required=false)]
-        public string TargetValue { get; set; }
-
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
+
+        [NameInMap("TargetValue")]
+        [Validation(Required=false)]
+        public string TargetValue { get; set; }
 
     }
 

@@ -9,6 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceEventDataRequest : TeaModel {
+        [NameInMap("Asc")]
+        [Validation(Required=false)]
+        public int? Asc { get; set; }
+
+        [NameInMap("DeviceName")]
+        [Validation(Required=false)]
+        public string DeviceName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        [NameInMap("EventType")]
+        [Validation(Required=false)]
+        public string EventType { get; set; }
+
+        [NameInMap("Identifier")]
+        [Validation(Required=false)]
+        public string Identifier { get; set; }
+
+        [NameInMap("IotId")]
+        [Validation(Required=false)]
+        public string IotId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -21,33 +45,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
-        [NameInMap("DeviceName")]
-        [Validation(Required=false)]
-        public string DeviceName { get; set; }
-
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
-
-        [NameInMap("Identifier")]
-        [Validation(Required=false)]
-        public string Identifier { get; set; }
-
-        [NameInMap("EventType")]
-        [Validation(Required=false)]
-        public string EventType { get; set; }
-
-        [NameInMap("Asc")]
-        [Validation(Required=false)]
-        public int? Asc { get; set; }
-
-        [NameInMap("IotId")]
-        [Validation(Required=false)]
-        public string IotId { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
 
     }
 

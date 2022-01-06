@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryProductListRequest : TeaModel {
+        [NameInMap("AliyunCommodityCode")]
+        [Validation(Required=false)]
+        public string AliyunCommodityCode { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("AliyunCommodityCode")]
-        [Validation(Required=false)]
-        public string AliyunCommodityCode { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

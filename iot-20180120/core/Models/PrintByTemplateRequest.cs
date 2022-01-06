@@ -9,33 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class PrintByTemplateRequest : TeaModel {
-        [NameInMap("ParamsJsonString")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string ParamsJsonString { get; set; }
+        public string DeviceName { get; set; }
 
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
 
-        [NameInMap("ProjectCode")]
-        [Validation(Required=false)]
-        public string ProjectCode { get; set; }
-
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("TemplateBizCode")]
+        [NameInMap("ParamsJsonString")]
         [Validation(Required=false)]
-        public string TemplateBizCode { get; set; }
+        public string ParamsJsonString { get; set; }
 
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
-        [NameInMap("DeviceName")]
+        [NameInMap("ProjectCode")]
         [Validation(Required=false)]
-        public string DeviceName { get; set; }
+        public string ProjectCode { get; set; }
+
+        [NameInMap("TemplateBizCode")]
+        [Validation(Required=false)]
+        public string TemplateBizCode { get; set; }
 
     }
 

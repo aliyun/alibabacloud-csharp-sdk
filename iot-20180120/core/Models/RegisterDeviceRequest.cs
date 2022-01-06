@@ -9,21 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class RegisterDeviceRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("AppKey")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string AppKey { get; set; }
 
-        [NameInMap("ProductKey")]
+        [NameInMap("DevEui")]
         [Validation(Required=false)]
-        public string ProductKey { get; set; }
+        public string DevEui { get; set; }
 
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public string DeviceName { get; set; }
 
-        [NameInMap("DevEui")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string DevEui { get; set; }
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("JoinEui")]
+        [Validation(Required=false)]
+        public string JoinEui { get; set; }
+
+        [NameInMap("LoraNodeType")]
+        [Validation(Required=false)]
+        public string LoraNodeType { get; set; }
 
         [NameInMap("Nickname")]
         [Validation(Required=false)]
@@ -33,17 +41,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string PinCode { get; set; }
 
-        [NameInMap("JoinEui")]
+        [NameInMap("ProductKey")]
         [Validation(Required=false)]
-        public string JoinEui { get; set; }
-
-        [NameInMap("AppKey")]
-        [Validation(Required=false)]
-        public string AppKey { get; set; }
-
-        [NameInMap("LoraNodeType")]
-        [Validation(Required=false)]
-        public string LoraNodeType { get; set; }
+        public string ProductKey { get; set; }
 
     }
 

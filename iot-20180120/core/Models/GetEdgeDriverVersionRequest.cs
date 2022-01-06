@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetEdgeDriverVersionRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
         [NameInMap("DriverId")]
         [Validation(Required=false)]
         public string DriverId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("DriverVersion")]
         [Validation(Required=false)]
         public string DriverVersion { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
 
     }
 

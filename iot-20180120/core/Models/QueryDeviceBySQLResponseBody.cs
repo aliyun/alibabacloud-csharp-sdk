@@ -9,53 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceBySQLResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryDeviceBySQLResponseBodyData> Data { get; set; }
         public class QueryDeviceBySQLResponseBodyData : TeaModel {
-            [NameInMap("ProductKey")]
-            [Validation(Required=false)]
-            public string ProductKey { get; set; }
-
-            [NameInMap("DeviceName")]
-            [Validation(Required=false)]
-            public string DeviceName { get; set; }
-
-            [NameInMap("Nickname")]
-            [Validation(Required=false)]
-            public string Nickname { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
             [NameInMap("ActiveTime")]
             [Validation(Required=false)]
             public string ActiveTime { get; set; }
 
-            [NameInMap("IotId")]
+            [NameInMap("DeviceName")]
             [Validation(Required=false)]
-            public string IotId { get; set; }
+            public string DeviceName { get; set; }
 
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -75,6 +43,36 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
             }
 
+            [NameInMap("IotId")]
+            [Validation(Required=false)]
+            public string IotId { get; set; }
+
+            [NameInMap("Nickname")]
+            [Validation(Required=false)]
+            public string Nickname { get; set; }
+
+            [NameInMap("OTAModules")]
+            [Validation(Required=false)]
+            public List<QueryDeviceBySQLResponseBodyDataOTAModules> OTAModules { get; set; }
+            public class QueryDeviceBySQLResponseBodyDataOTAModules : TeaModel {
+                [NameInMap("FirmwareVersion")]
+                [Validation(Required=false)]
+                public string FirmwareVersion { get; set; }
+
+                [NameInMap("ModuleName")]
+                [Validation(Required=false)]
+                public string ModuleName { get; set; }
+
+            }
+
+            [NameInMap("ProductKey")]
+            [Validation(Required=false)]
+            public string ProductKey { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<QueryDeviceBySQLResponseBodyDataTags> Tags { get; set; }
@@ -89,21 +87,23 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
             }
 
-            [NameInMap("OTAModules")]
-            [Validation(Required=false)]
-            public List<QueryDeviceBySQLResponseBodyDataOTAModules> OTAModules { get; set; }
-            public class QueryDeviceBySQLResponseBodyDataOTAModules : TeaModel {
-                [NameInMap("ModuleName")]
-                [Validation(Required=false)]
-                public string ModuleName { get; set; }
-
-                [NameInMap("FirmwareVersion")]
-                [Validation(Required=false)]
-                public string FirmwareVersion { get; set; }
-
-            }
-
         }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SourceModelVersion")]
+        [Validation(Required=false)]
+        public string SourceModelVersion { get; set; }
+
         [NameInMap("SourceProductKey")]
         [Validation(Required=false)]
         public string SourceProductKey { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("TargetProductKey")]
         [Validation(Required=false)]
         public string TargetProductKey { get; set; }
-
-        [NameInMap("SourceModelVersion")]
-        [Validation(Required=false)]
-        public string SourceModelVersion { get; set; }
 
     }
 

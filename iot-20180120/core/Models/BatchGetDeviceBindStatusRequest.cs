@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchGetDeviceBindStatusRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
         [NameInMap("IotIds")]
         [Validation(Required=false)]
         public List<string> IotIds { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
 
     }
 

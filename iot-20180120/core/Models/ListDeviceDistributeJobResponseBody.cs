@@ -9,29 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListDeviceDistributeJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDeviceDistributeJobResponseBodyData Data { get; set; }
         public class ListDeviceDistributeJobResponseBodyData : TeaModel {
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public int? Total { get; set; }
             [NameInMap("JobInfo")]
             [Validation(Required=false)]
             public ListDeviceDistributeJobResponseBodyDataJobInfo JobInfo { get; set; }
@@ -44,29 +29,29 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     [Validation(Required=false)]
                     public long? GmtCreate { get; set; }
 
-                    [NameInMap("SourceUid")]
-                    [Validation(Required=false)]
-                    public string SourceUid { get; set; }
-
-                    [NameInMap("TargetUid")]
-                    [Validation(Required=false)]
-                    public string TargetUid { get; set; }
-
                     [NameInMap("JobId")]
                     [Validation(Required=false)]
                     public string JobId { get; set; }
-
-                    [NameInMap("SourceInstanceId")]
-                    [Validation(Required=false)]
-                    public string SourceInstanceId { get; set; }
 
                     [NameInMap("ProductKey")]
                     [Validation(Required=false)]
                     public string ProductKey { get; set; }
 
-                    [NameInMap("Total")]
+                    [NameInMap("SourceInstanceId")]
                     [Validation(Required=false)]
-                    public int? Total { get; set; }
+                    public string SourceInstanceId { get; set; }
+
+                    [NameInMap("SourceInstanceName")]
+                    [Validation(Required=false)]
+                    public string SourceInstanceName { get; set; }
+
+                    [NameInMap("SourceRegion")]
+                    [Validation(Required=false)]
+                    public string SourceRegion { get; set; }
+
+                    [NameInMap("SourceUid")]
+                    [Validation(Required=false)]
+                    public string SourceUid { get; set; }
 
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -75,14 +60,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                     [NameInMap("Strategy")]
                     [Validation(Required=false)]
                     public int? Strategy { get; set; }
-
-                    [NameInMap("SourceRegion")]
-                    [Validation(Required=false)]
-                    public string SourceRegion { get; set; }
-
-                    [NameInMap("SourceInstanceName")]
-                    [Validation(Required=false)]
-                    public string SourceInstanceName { get; set; }
 
                     [NameInMap("TargetInstanceConfigs")]
                     [Validation(Required=false)]
@@ -93,15 +70,41 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                         public List<ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs> TargetInstanceConfigs { get; set; }
                         public class ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs : TeaModel {
                             public string TargetInstanceId { get; set; }
-                            public string TargetRegion { get; set; }
                             public string TargetInstanceName { get; set; }
+                            public string TargetRegion { get; set; }
                         }
                     };
+
+                    [NameInMap("TargetUid")]
+                    [Validation(Required=false)]
+                    public string TargetUid { get; set; }
+
+                    [NameInMap("Total")]
+                    [Validation(Required=false)]
+                    public int? Total { get; set; }
 
                 }
 
             }
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
         };
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

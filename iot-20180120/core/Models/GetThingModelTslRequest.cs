@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetThingModelTslRequest : TeaModel {
+        [NameInMap("FunctionBlockId")]
+        [Validation(Required=false)]
+        public string FunctionBlockId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
 
         [NameInMap("ModelVersion")]
         [Validation(Required=false)]
         public string ModelVersion { get; set; }
 
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
         [NameInMap("Simple")]
         [Validation(Required=false)]
         public bool? Simple { get; set; }
-
-        [NameInMap("FunctionBlockId")]
-        [Validation(Required=false)]
-        public string FunctionBlockId { get; set; }
 
     }
 

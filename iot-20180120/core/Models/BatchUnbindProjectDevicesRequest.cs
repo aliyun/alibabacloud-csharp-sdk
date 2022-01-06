@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public List<BatchUnbindProjectDevicesRequestDevices> Devices { get; set; }
         public class BatchUnbindProjectDevicesRequestDevices : TeaModel {
-            [NameInMap("ProductKey")]
-            [Validation(Required=false)]
-            public string ProductKey { get; set; }
-
             [NameInMap("DeviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
+
+            [NameInMap("ProductKey")]
+            [Validation(Required=false)]
+            public string ProductKey { get; set; }
 
         }
 

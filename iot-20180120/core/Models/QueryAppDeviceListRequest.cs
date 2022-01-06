@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryAppDeviceListRequest : TeaModel {
+        [NameInMap("AppKey")]
+        [Validation(Required=false)]
+        public string AppKey { get; set; }
+
+        [NameInMap("CategoryKeyList")]
+        [Validation(Required=false)]
+        public List<string> CategoryKeyList { get; set; }
+
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -20,14 +32,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ProductKeyList")]
         [Validation(Required=false)]
         public List<string> ProductKeyList { get; set; }
-
-        [NameInMap("CategoryKeyList")]
-        [Validation(Required=false)]
-        public List<string> CategoryKeyList { get; set; }
-
-        [NameInMap("AppKey")]
-        [Validation(Required=false)]
-        public string AppKey { get; set; }
 
         [NameInMap("TagList")]
         [Validation(Required=false)]
@@ -42,10 +46,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public string TagValue { get; set; }
 
         }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

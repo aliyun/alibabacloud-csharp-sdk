@@ -9,49 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateOTAFirmwareRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
-        [NameInMap("FirmwareName")]
-        [Validation(Required=false)]
-        public string FirmwareName { get; set; }
-
         [NameInMap("DestVersion")]
         [Validation(Required=false)]
         public string DestVersion { get; set; }
-
-        [NameInMap("FirmwareUrl")]
-        [Validation(Required=false)]
-        public string FirmwareUrl { get; set; }
-
-        [NameInMap("FirmwareSign")]
-        [Validation(Required=false)]
-        public string FirmwareSign { get; set; }
-
-        [NameInMap("SignMethod")]
-        [Validation(Required=false)]
-        public string SignMethod { get; set; }
-
-        [NameInMap("FirmwareSize")]
-        [Validation(Required=false)]
-        public int? FirmwareSize { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
 
         [NameInMap("FirmwareDesc")]
         [Validation(Required=false)]
         public string FirmwareDesc { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("FirmwareName")]
         [Validation(Required=false)]
-        public int? Type { get; set; }
+        public string FirmwareName { get; set; }
 
-        [NameInMap("SrcVersion")]
+        [NameInMap("FirmwareSign")]
         [Validation(Required=false)]
-        public string SrcVersion { get; set; }
+        public string FirmwareSign { get; set; }
+
+        [NameInMap("FirmwareSize")]
+        [Validation(Required=false)]
+        public int? FirmwareSize { get; set; }
+
+        [NameInMap("FirmwareUrl")]
+        [Validation(Required=false)]
+        public string FirmwareUrl { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
 
         [NameInMap("ModuleName")]
         [Validation(Required=false)]
@@ -60,6 +44,26 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("NeedToVerify")]
         [Validation(Required=false)]
         public bool? NeedToVerify { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
+        [NameInMap("SignMethod")]
+        [Validation(Required=false)]
+        public string SignMethod { get; set; }
+
+        [NameInMap("SrcVersion")]
+        [Validation(Required=false)]
+        public string SrcVersion { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public int? Type { get; set; }
+
+        [NameInMap("Udi")]
+        [Validation(Required=false)]
+        public string Udi { get; set; }
 
     }
 

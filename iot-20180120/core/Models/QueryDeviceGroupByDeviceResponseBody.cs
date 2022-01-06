@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceGroupByDeviceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -33,12 +25,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo> GroupInfo { get; set; }
             public class QueryDeviceGroupByDeviceResponseBodyGroupInfosGroupInfo : TeaModel {
+                public string GroupDesc { get; set; }
                 public string GroupId { get; set; }
                 public string GroupName { get; set; }
                 public string UtcCreate { get; set; }
-                public string GroupDesc { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

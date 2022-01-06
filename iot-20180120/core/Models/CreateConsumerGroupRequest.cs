@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateConsumerGroupRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
 
     }
 

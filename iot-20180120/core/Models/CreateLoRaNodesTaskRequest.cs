@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateLoRaNodesTaskRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
-
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public List<CreateLoRaNodesTaskRequestDeviceInfo> DeviceInfo { get; set; }
@@ -30,6 +22,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public string PinCode { get; set; }
 
         }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
 
     }
 

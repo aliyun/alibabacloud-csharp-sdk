@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateRuleRequest : TeaModel {
+        [NameInMap("DataType")]
+        [Validation(Required=false)]
+        public string DataType { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("RuleDesc")]
+        [Validation(Required=false)]
+        public string RuleDesc { get; set; }
 
         [NameInMap("Select")]
         [Validation(Required=false)]
@@ -21,37 +41,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ShortTopic { get; set; }
 
-        [NameInMap("Where")]
+        [NameInMap("Topic")]
         [Validation(Required=false)]
-        public string Where { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("RuleDesc")]
-        [Validation(Required=false)]
-        public string RuleDesc { get; set; }
-
-        [NameInMap("DataType")]
-        [Validation(Required=false)]
-        public string DataType { get; set; }
+        public string Topic { get; set; }
 
         [NameInMap("TopicType")]
         [Validation(Required=false)]
         public int? TopicType { get; set; }
 
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("Where")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("Topic")]
-        [Validation(Required=false)]
-        public string Topic { get; set; }
+        public string Where { get; set; }
 
     }
 

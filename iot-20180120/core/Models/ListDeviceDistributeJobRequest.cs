@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListDeviceDistributeJobRequest : TeaModel {
-        [NameInMap("TargetUid")]
-        [Validation(Required=false)]
-        public string TargetUid { get; set; }
-
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -25,9 +29,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("TargetUid")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string TargetUid { get; set; }
 
     }
 

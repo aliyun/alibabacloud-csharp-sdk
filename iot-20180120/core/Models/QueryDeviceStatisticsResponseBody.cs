@@ -9,6 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceStatisticsResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public QueryDeviceStatisticsResponseBodyData Data { get; set; }
+        public class QueryDeviceStatisticsResponseBodyData : TeaModel {
+            [NameInMap("activeCount")]
+            [Validation(Required=false)]
+            public long? ActiveCount { get; set; }
+            [NameInMap("deviceCount")]
+            [Validation(Required=false)]
+            public long? DeviceCount { get; set; }
+            [NameInMap("onlineCount")]
+            [Validation(Required=false)]
+            public long? OnlineCount { get; set; }
+        };
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,29 +39,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public QueryDeviceStatisticsResponseBodyData Data { get; set; }
-        public class QueryDeviceStatisticsResponseBodyData : TeaModel {
-            [NameInMap("deviceCount")]
-            [Validation(Required=false)]
-            public long? DeviceCount { get; set; }
-            [NameInMap("onlineCount")]
-            [Validation(Required=false)]
-            public long? OnlineCount { get; set; }
-            [NameInMap("activeCount")]
-            [Validation(Required=false)]
-            public long? ActiveCount { get; set; }
-        };
 
     }
 

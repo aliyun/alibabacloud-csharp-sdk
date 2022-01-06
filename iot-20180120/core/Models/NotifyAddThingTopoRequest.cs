@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class NotifyAddThingTopoRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
         [NameInMap("DeviceListStr")]
         [Validation(Required=false)]
         public string DeviceListStr { get; set; }
+
+        [NameInMap("GwDeviceName")]
+        [Validation(Required=false)]
+        public string GwDeviceName { get; set; }
 
         [NameInMap("GwIotId")]
         [Validation(Required=false)]
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string GwProductKey { get; set; }
 
-        [NameInMap("GwDeviceName")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string GwDeviceName { get; set; }
+        public string IotInstanceId { get; set; }
 
     }
 

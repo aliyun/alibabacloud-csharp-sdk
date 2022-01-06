@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateRuleActionRequest : TeaModel {
+        [NameInMap("Configuration")]
+        [Validation(Required=false)]
+        public string Configuration { get; set; }
+
+        [NameInMap("ErrorActionFlag")]
+        [Validation(Required=false)]
+        public bool? ErrorActionFlag { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
-
-        [NameInMap("Configuration")]
-        [Validation(Required=false)]
-        public string Configuration { get; set; }
-
-        [NameInMap("ErrorActionFlag")]
-        [Validation(Required=false)]
-        public bool? ErrorActionFlag { get; set; }
 
     }
 

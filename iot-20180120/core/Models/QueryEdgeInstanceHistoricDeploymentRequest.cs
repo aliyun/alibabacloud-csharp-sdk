@@ -9,17 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryEdgeInstanceHistoricDeploymentRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
 
     }
 

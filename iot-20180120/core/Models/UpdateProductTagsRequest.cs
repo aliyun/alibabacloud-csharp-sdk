@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public List<UpdateProductTagsRequestProductTag> ProductTag { get; set; }
         public class UpdateProductTagsRequestProductTag : TeaModel {
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
 
         }
 

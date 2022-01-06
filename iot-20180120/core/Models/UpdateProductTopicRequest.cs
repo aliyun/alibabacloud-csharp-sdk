@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateProductTopicRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
         [NameInMap("Desc")]
         [Validation(Required=false)]
         public string Desc { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
 
         [NameInMap("Operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }
 
-        [NameInMap("TopicShortName")]
-        [Validation(Required=false)]
-        public string TopicShortName { get; set; }
-
         [NameInMap("TopicId")]
         [Validation(Required=false)]
         public string TopicId { get; set; }
+
+        [NameInMap("TopicShortName")]
+        [Validation(Required=false)]
+        public string TopicShortName { get; set; }
 
     }
 

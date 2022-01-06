@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetThingTopoRequest : TeaModel {
+        [NameInMap("DeviceName")]
+        [Validation(Required=false)]
+        public string DeviceName { get; set; }
+
+        [NameInMap("IotId")]
+        [Validation(Required=false)]
+        public string IotId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
+
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
-
-        [NameInMap("DeviceName")]
-        [Validation(Required=false)]
-        public string DeviceName { get; set; }
-
-        [NameInMap("PageNo")]
-        [Validation(Required=false)]
-        public int? PageNo { get; set; }
-
-        [NameInMap("IotId")]
-        [Validation(Required=false)]
-        public string IotId { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateDeviceGroupRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("GroupDesc")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string GroupDesc { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("GroupDesc")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string GroupDesc { get; set; }
+        public string IotInstanceId { get; set; }
 
     }
 

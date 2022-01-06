@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateEdgeDriverRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("CpuArch")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string CpuArch { get; set; }
 
         [NameInMap("DriverName")]
         [Validation(Required=false)]
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string DriverProtocol { get; set; }
 
-        [NameInMap("Runtime")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string Runtime { get; set; }
-
-        [NameInMap("CpuArch")]
-        [Validation(Required=false)]
-        public string CpuArch { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("IsBuiltIn")]
         [Validation(Required=false)]
         public bool? IsBuiltIn { get; set; }
+
+        [NameInMap("Runtime")]
+        [Validation(Required=false)]
+        public string Runtime { get; set; }
 
     }
 

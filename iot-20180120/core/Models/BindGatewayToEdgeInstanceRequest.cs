@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BindGatewayToEdgeInstanceRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string DeviceName { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("DeviceName")]
-        [Validation(Required=false)]
-        public string DeviceName { get; set; }
-
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
 
     }
 

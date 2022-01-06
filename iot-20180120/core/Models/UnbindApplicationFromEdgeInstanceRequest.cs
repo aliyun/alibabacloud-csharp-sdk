@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UnbindApplicationFromEdgeInstanceRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("ApplicationId")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string ApplicationId { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("ApplicationId")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string ApplicationId { get; set; }
+        public string IotInstanceId { get; set; }
 
     }
 

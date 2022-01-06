@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchRegisterDeviceWithApplyIdRequest : TeaModel {
+        [NameInMap("ApplyId")]
+        [Validation(Required=false)]
+        public long? ApplyId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
-
-        [NameInMap("ApplyId")]
-        [Validation(Required=false)]
-        public long? ApplyId { get; set; }
 
     }
 

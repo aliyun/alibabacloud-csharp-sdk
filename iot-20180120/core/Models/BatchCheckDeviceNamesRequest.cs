@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchCheckDeviceNamesRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
-
         [NameInMap("DeviceName")]
         [Validation(Required=false)]
         public List<string> DeviceName { get; set; }
@@ -34,6 +26,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             public string DeviceNickname { get; set; }
 
         }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
 
     }
 

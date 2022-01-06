@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class SetDeviceDesiredPropertyRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string DeviceName { get; set; }
 
         [NameInMap("IotId")]
         [Validation(Required=false)]
         public string IotId { get; set; }
 
-        [NameInMap("DeviceName")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string DeviceName { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
         public string Items { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
 
         [NameInMap("Versions")]
         [Validation(Required=false)]

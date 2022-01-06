@@ -9,6 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListAnalyticsDataResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public ListAnalyticsDataResponseBodyData Data { get; set; }
+        public class ListAnalyticsDataResponseBodyData : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public long? Count { get; set; }
+            [NameInMap("HasNext")]
+            [Validation(Required=false)]
+            public bool? HasNext { get; set; }
+            [NameInMap("PageNum")]
+            [Validation(Required=false)]
+            public int? PageNum { get; set; }
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+            [NameInMap("ResultJson")]
+            [Validation(Required=false)]
+            public string ResultJson { get; set; }
+        };
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -16,35 +45,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ListAnalyticsDataResponseBodyData Data { get; set; }
-        public class ListAnalyticsDataResponseBodyData : TeaModel {
-            [NameInMap("HasNext")]
-            [Validation(Required=false)]
-            public bool? HasNext { get; set; }
-            [NameInMap("ResultJson")]
-            [Validation(Required=false)]
-            public string ResultJson { get; set; }
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public long? Count { get; set; }
-            [NameInMap("PageNum")]
-            [Validation(Required=false)]
-            public int? PageNum { get; set; }
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public int? PageSize { get; set; }
-        };
 
     }
 

@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,27 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class BatchAddDeviceGroupRelationsRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("Device")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public List<BatchAddDeviceGroupRelationsRequestDevice> Device { get; set; }
+        public class BatchAddDeviceGroupRelationsRequestDevice : TeaModel {
+            [NameInMap("DeviceName")]
+            [Validation(Required=false)]
+            public string DeviceName { get; set; }
+
+            [NameInMap("ProductKey")]
+            [Validation(Required=false)]
+            public string ProductKey { get; set; }
+
+        }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        [NameInMap("Device")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public List<BatchAddDeviceGroupRelationsRequestDevice> Device { get; set; }
-        public class BatchAddDeviceGroupRelationsRequestDevice : TeaModel {
-            [NameInMap("ProductKey")]
-            [Validation(Required=false)]
-            public string ProductKey { get; set; }
-
-            [NameInMap("DeviceName")]
-            [Validation(Required=false)]
-            public string DeviceName { get; set; }
-
-        }
+        public string IotInstanceId { get; set; }
 
     }
 

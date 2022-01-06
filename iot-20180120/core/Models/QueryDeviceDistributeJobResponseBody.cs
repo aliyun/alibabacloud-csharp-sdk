@@ -9,50 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryDeviceDistributeJobResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("ErrorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryDeviceDistributeJobResponseBodyData Data { get; set; }
         public class QueryDeviceDistributeJobResponseBodyData : TeaModel {
-            [NameInMap("SourceUid")]
+            [NameInMap("GmtCreate")]
             [Validation(Required=false)]
-            public string SourceUid { get; set; }
-            [NameInMap("TargetUid")]
-            [Validation(Required=false)]
-            public string TargetUid { get; set; }
-            [NameInMap("SourceInstanceId")]
-            [Validation(Required=false)]
-            public string SourceInstanceId { get; set; }
+            public long? GmtCreate { get; set; }
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
             [NameInMap("ProductKey")]
             [Validation(Required=false)]
             public string ProductKey { get; set; }
-            [NameInMap("Total")]
+            [NameInMap("SourceInstanceId")]
             [Validation(Required=false)]
-            public int? Total { get; set; }
+            public string SourceInstanceId { get; set; }
+            [NameInMap("SourceUid")]
+            [Validation(Required=false)]
+            public string SourceUid { get; set; }
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
-            [NameInMap("GmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
             [NameInMap("Strategy")]
             [Validation(Required=false)]
             public int? Strategy { get; set; }
@@ -71,7 +53,25 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
                 }
 
             }
+            [NameInMap("TargetUid")]
+            [Validation(Required=false)]
+            public string TargetUid { get; set; }
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
         };
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateEdgeDriverVersionRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("Argument")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string Argument { get; set; }
+
+        [NameInMap("ConfigCheckRule")]
+        [Validation(Required=false)]
+        public string ConfigCheckRule { get; set; }
+
+        [NameInMap("ContainerConfig")]
+        [Validation(Required=false)]
+        public string ContainerConfig { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("DriverConfig")]
+        [Validation(Required=false)]
+        public string DriverConfig { get; set; }
 
         [NameInMap("DriverId")]
         [Validation(Required=false)]
@@ -25,29 +41,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string EdgeVersion { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("SourceConfig")]
         [Validation(Required=false)]
         public string SourceConfig { get; set; }
-
-        [NameInMap("DriverConfig")]
-        [Validation(Required=false)]
-        public string DriverConfig { get; set; }
-
-        [NameInMap("ContainerConfig")]
-        [Validation(Required=false)]
-        public string ContainerConfig { get; set; }
-
-        [NameInMap("ConfigCheckRule")]
-        [Validation(Required=false)]
-        public string ConfigCheckRule { get; set; }
-
-        [NameInMap("Argument")]
-        [Validation(Required=false)]
-        public string Argument { get; set; }
 
     }
 

@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
-
         [NameInMap("Spec")]
         [Validation(Required=false)]
         public int? Spec { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
 
     }
 

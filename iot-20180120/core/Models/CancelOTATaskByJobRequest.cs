@@ -9,22 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CancelOTATaskByJobRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
-        [NameInMap("CancelScheduledTask")]
-        [Validation(Required=false)]
-        public bool? CancelScheduledTask { get; set; }
-
-        [NameInMap("CancelQueuedTask")]
-        [Validation(Required=false)]
-        public bool? CancelQueuedTask { get; set; }
-
         [NameInMap("CancelInProgressTask")]
         [Validation(Required=false)]
         public bool? CancelInProgressTask { get; set; }
@@ -32,6 +16,26 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("CancelNotifiedTask")]
         [Validation(Required=false)]
         public bool? CancelNotifiedTask { get; set; }
+
+        [NameInMap("CancelQueuedTask")]
+        [Validation(Required=false)]
+        public bool? CancelQueuedTask { get; set; }
+
+        [NameInMap("CancelScheduledTask")]
+        [Validation(Required=false)]
+        public bool? CancelScheduledTask { get; set; }
+
+        [NameInMap("CancelUnconfirmedTask")]
+        [Validation(Required=false)]
+        public bool? CancelUnconfirmedTask { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
     }
 

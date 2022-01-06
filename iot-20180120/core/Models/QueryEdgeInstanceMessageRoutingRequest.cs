@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryEdgeInstanceMessageRoutingRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]

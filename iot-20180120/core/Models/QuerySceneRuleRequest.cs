@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QuerySceneRuleRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
-
-        [NameInMap("RuleName")]
-        [Validation(Required=false)]
-        public string RuleName { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        [NameInMap("RuleName")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string RuleName { get; set; }
 
     }
 

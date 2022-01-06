@@ -9,29 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QuerySubscribeRelationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("ErrorMessage")]
+        [NameInMap("ConsumerGroupIds")]
         [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public List<string> ConsumerGroupIds { get; set; }
 
         [NameInMap("DeviceDataFlag")]
         [Validation(Required=false)]
@@ -45,41 +29,57 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public bool? DeviceStatusChangeFlag { get; set; }
 
+        [NameInMap("DeviceTagFlag")]
+        [Validation(Required=false)]
+        public bool? DeviceTagFlag { get; set; }
+
         [NameInMap("DeviceTopoLifeCycleFlag")]
         [Validation(Required=false)]
         public bool? DeviceTopoLifeCycleFlag { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
 
         [NameInMap("FoundDeviceListFlag")]
         [Validation(Required=false)]
         public bool? FoundDeviceListFlag { get; set; }
 
-        [NameInMap("OtaEventFlag")]
-        [Validation(Required=false)]
-        public bool? OtaEventFlag { get; set; }
-
-        [NameInMap("ThingHistoryFlag")]
-        [Validation(Required=false)]
-        public bool? ThingHistoryFlag { get; set; }
-
         [NameInMap("MnsConfiguration")]
         [Validation(Required=false)]
         public string MnsConfiguration { get; set; }
 
-        [NameInMap("DeviceTagFlag")]
+        [NameInMap("OtaEventFlag")]
         [Validation(Required=false)]
-        public bool? DeviceTagFlag { get; set; }
-
-        [NameInMap("OtaVersionFlag")]
-        [Validation(Required=false)]
-        public bool? OtaVersionFlag { get; set; }
+        public bool? OtaEventFlag { get; set; }
 
         [NameInMap("OtaJobFlag")]
         [Validation(Required=false)]
         public bool? OtaJobFlag { get; set; }
 
-        [NameInMap("ConsumerGroupIds")]
+        [NameInMap("OtaVersionFlag")]
         [Validation(Required=false)]
-        public List<string> ConsumerGroupIds { get; set; }
+        public bool? OtaVersionFlag { get; set; }
+
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("ThingHistoryFlag")]
+        [Validation(Required=false)]
+        public bool? ThingHistoryFlag { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

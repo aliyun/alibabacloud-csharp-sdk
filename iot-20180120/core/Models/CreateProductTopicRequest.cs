@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateProductTopicRequest : TeaModel {
+        [NameInMap("Desc")]
+        [Validation(Required=false)]
+        public string Desc { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
+
+        [NameInMap("Operation")]
+        [Validation(Required=false)]
+        public string Operation { get; set; }
 
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("TopicShortName")]
         [Validation(Required=false)]
         public string TopicShortName { get; set; }
-
-        [NameInMap("Operation")]
-        [Validation(Required=false)]
-        public string Operation { get; set; }
-
-        [NameInMap("Desc")]
-        [Validation(Required=false)]
-        public string Desc { get; set; }
 
     }
 

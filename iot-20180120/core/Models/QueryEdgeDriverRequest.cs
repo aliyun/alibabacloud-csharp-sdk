@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryEdgeDriverRequest : TeaModel {
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
+        [NameInMap("DriverName")]
+        [Validation(Required=false)]
+        public string DriverName { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -17,17 +25,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
         [NameInMap("Type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
-
-        [NameInMap("DriverName")]
-        [Validation(Required=false)]
-        public string DriverName { get; set; }
 
     }
 

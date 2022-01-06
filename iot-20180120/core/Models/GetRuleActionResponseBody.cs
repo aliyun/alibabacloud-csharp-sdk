@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetRuleActionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -25,10 +17,20 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("RuleActionInfo")]
         [Validation(Required=false)]
         public GetRuleActionResponseBodyRuleActionInfo RuleActionInfo { get; set; }
         public class GetRuleActionResponseBodyRuleActionInfo : TeaModel {
+            [NameInMap("Configuration")]
+            [Validation(Required=false)]
+            public string Configuration { get; set; }
+            [NameInMap("ErrorActionFlag")]
+            [Validation(Required=false)]
+            public bool? ErrorActionFlag { get; set; }
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -38,13 +40,11 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
-            [NameInMap("Configuration")]
-            [Validation(Required=false)]
-            public string Configuration { get; set; }
-            [NameInMap("ErrorActionFlag")]
-            [Validation(Required=false)]
-            public bool? ErrorActionFlag { get; set; }
         };
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

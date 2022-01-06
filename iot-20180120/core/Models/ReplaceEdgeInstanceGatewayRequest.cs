@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ReplaceEdgeInstanceGatewayRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("CurrentGatewayId")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public string CurrentGatewayId { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("CurrentGatewayId")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string CurrentGatewayId { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("NewGatewayId")]
         [Validation(Required=false)]

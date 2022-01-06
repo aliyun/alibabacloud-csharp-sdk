@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GenerateFileUploadURLRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
-        [NameInMap("FileSuffix")]
-        [Validation(Required=false)]
-        public string FileSuffix { get; set; }
-
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
+
+        [NameInMap("FileSuffix")]
+        [Validation(Required=false)]
+        public string FileSuffix { get; set; }
+
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
 
     }
 

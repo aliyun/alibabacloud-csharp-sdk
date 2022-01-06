@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public List<string> DeviceName { get; set; }
 
-        [NameInMap("SourceInstanceId")]
-        [Validation(Required=false)]
-        public string SourceInstanceId { get; set; }
-
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }
 
-        [NameInMap("TargetUid")]
+        [NameInMap("SourceInstanceId")]
         [Validation(Required=false)]
-        public string TargetUid { get; set; }
+        public string SourceInstanceId { get; set; }
+
+        [NameInMap("Strategy")]
+        [Validation(Required=false)]
+        public int? Strategy { get; set; }
 
         [NameInMap("TargetAliyunId")]
         [Validation(Required=false)]
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
 
         }
 
-        [NameInMap("Strategy")]
+        [NameInMap("TargetUid")]
         [Validation(Required=false)]
-        public int? Strategy { get; set; }
+        public string TargetUid { get; set; }
 
     }
 

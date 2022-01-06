@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetLoraNodesTaskResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -25,17 +17,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
-        [NameInMap("TaskId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string RequestId { get; set; }
 
-        [NameInMap("TaskState")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string TaskState { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
+        public bool? Success { get; set; }
 
         [NameInMap("SuccessCount")]
         [Validation(Required=false)]
@@ -49,6 +37,18 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
             [Validation(Required=false)]
             public List<string> SuccessDevEui { get; set; }
         };
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
+        [NameInMap("TaskState")]
+        [Validation(Required=false)]
+        public string TaskState { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

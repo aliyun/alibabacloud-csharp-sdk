@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class QueryThingModelExtendConfigPublishedRequest : TeaModel {
+        [NameInMap("FunctionBlockId")]
+        [Validation(Required=false)]
+        public string FunctionBlockId { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
 
         [NameInMap("ModelVersion")]
         [Validation(Required=false)]
         public string ModelVersion { get; set; }
 
-        [NameInMap("FunctionBlockId")]
+        [NameInMap("ProductKey")]
         [Validation(Required=false)]
-        public string FunctionBlockId { get; set; }
+        public string ProductKey { get; set; }
 
     }
 

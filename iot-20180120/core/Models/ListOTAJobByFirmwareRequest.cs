@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class ListOTAJobByFirmwareRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
+        public int? CurrentPage { get; set; }
 
         [NameInMap("FirmwareId")]
         [Validation(Required=false)]
         public string FirmwareId { get; set; }
 
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
 
     }
 

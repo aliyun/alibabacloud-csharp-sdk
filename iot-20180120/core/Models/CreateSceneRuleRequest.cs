@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
 
-        [NameInMap("RuleName")]
-        [Validation(Required=false)]
-        public string RuleName { get; set; }
-
         [NameInMap("RuleContent")]
         [Validation(Required=false)]
         public string RuleContent { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("RuleDescription")]
         [Validation(Required=false)]
         public string RuleDescription { get; set; }
+
+        [NameInMap("RuleName")]
+        [Validation(Required=false)]
+        public string RuleName { get; set; }
 
     }
 

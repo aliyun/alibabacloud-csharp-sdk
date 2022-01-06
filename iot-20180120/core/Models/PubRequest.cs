@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class PubRequest : TeaModel {
+        [NameInMap("CorrelationData")]
+        [Validation(Required=false)]
+        public string CorrelationData { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
+
+        [NameInMap("MessageContent")]
+        [Validation(Required=false)]
+        public string MessageContent { get; set; }
 
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
@@ -21,21 +29,13 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public int? Qos { get; set; }
 
-        [NameInMap("TopicFullName")]
-        [Validation(Required=false)]
-        public string TopicFullName { get; set; }
-
-        [NameInMap("MessageContent")]
-        [Validation(Required=false)]
-        public string MessageContent { get; set; }
-
         [NameInMap("ResponseTopic")]
         [Validation(Required=false)]
         public string ResponseTopic { get; set; }
 
-        [NameInMap("CorrelationData")]
+        [NameInMap("TopicFullName")]
         [Validation(Required=false)]
-        public string CorrelationData { get; set; }
+        public string TopicFullName { get; set; }
 
         [NameInMap("UserProp")]
         [Validation(Required=false)]

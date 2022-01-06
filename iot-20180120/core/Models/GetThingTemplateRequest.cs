@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class GetThingTemplateRequest : TeaModel {
+        [NameInMap("CategoryKey")]
+        [Validation(Required=false)]
+        public string CategoryKey { get; set; }
+
         [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
         public string IotInstanceId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("CategoryKey")]
-        [Validation(Required=false)]
-        public string CategoryKey { get; set; }
 
     }
 

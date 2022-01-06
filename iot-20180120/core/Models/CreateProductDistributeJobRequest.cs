@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateProductDistributeJobRequest : TeaModel {
+        [NameInMap("ProductKey")]
+        [Validation(Required=false)]
+        public string ProductKey { get; set; }
+
         [NameInMap("SourceInstanceId")]
         [Validation(Required=false)]
         public string SourceInstanceId { get; set; }
 
-        [NameInMap("ProductKey")]
+        [NameInMap("TargetAliyunId")]
         [Validation(Required=false)]
-        public string ProductKey { get; set; }
+        public string TargetAliyunId { get; set; }
 
         [NameInMap("TargetInstanceId")]
         [Validation(Required=false)]
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("TargetUid")]
         [Validation(Required=false)]
         public string TargetUid { get; set; }
-
-        [NameInMap("TargetAliyunId")]
-        [Validation(Required=false)]
-        public string TargetAliyunId { get; set; }
 
     }
 

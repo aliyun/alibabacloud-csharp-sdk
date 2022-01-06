@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class CreateSubscribeRelationRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
+        [NameInMap("ConsumerGroupIds")]
         [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
-        [NameInMap("ProductKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
+        public List<string> ConsumerGroupIds { get; set; }
 
         [NameInMap("DeviceDataFlag")]
         [Validation(Required=false)]
@@ -29,6 +25,10 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public bool? DeviceStatusChangeFlag { get; set; }
 
+        [NameInMap("DeviceTagFlag")]
+        [Validation(Required=false)]
+        public bool? DeviceTagFlag { get; set; }
+
         [NameInMap("DeviceTopoLifeCycleFlag")]
         [Validation(Required=false)]
         public bool? DeviceTopoLifeCycleFlag { get; set; }
@@ -37,37 +37,37 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [Validation(Required=false)]
         public bool? FoundDeviceListFlag { get; set; }
 
+        [NameInMap("IotInstanceId")]
+        [Validation(Required=false)]
+        public string IotInstanceId { get; set; }
+
         [NameInMap("MnsConfiguration")]
         [Validation(Required=false)]
         public string MnsConfiguration { get; set; }
-
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
-
-        [NameInMap("ConsumerGroupIds")]
-        [Validation(Required=false)]
-        public List<string> ConsumerGroupIds { get; set; }
 
         [NameInMap("OtaEventFlag")]
         [Validation(Required=false)]
         public bool? OtaEventFlag { get; set; }
 
-        [NameInMap("ThingHistoryFlag")]
+        [NameInMap("OtaJobFlag")]
         [Validation(Required=false)]
-        public bool? ThingHistoryFlag { get; set; }
-
-        [NameInMap("DeviceTagFlag")]
-        [Validation(Required=false)]
-        public bool? DeviceTagFlag { get; set; }
+        public bool? OtaJobFlag { get; set; }
 
         [NameInMap("OtaVersionFlag")]
         [Validation(Required=false)]
         public bool? OtaVersionFlag { get; set; }
 
-        [NameInMap("OtaJobFlag")]
+        [NameInMap("ProductKey")]
         [Validation(Required=false)]
-        public bool? OtaJobFlag { get; set; }
+        public string ProductKey { get; set; }
+
+        [NameInMap("ThingHistoryFlag")]
+        [Validation(Required=false)]
+        public bool? ThingHistoryFlag { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateJobRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("TimeoutConfig")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public string TimeoutConfig { get; set; }
+        public string IotInstanceId { get; set; }
+
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
 
         [NameInMap("RolloutConfig")]
         [Validation(Required=false)]
         public string RolloutConfig { get; set; }
 
-        [NameInMap("JobId")]
+        [NameInMap("TimeoutConfig")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string TimeoutConfig { get; set; }
 
     }
 

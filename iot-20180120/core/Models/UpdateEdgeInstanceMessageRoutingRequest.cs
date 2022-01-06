@@ -9,37 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Iot20180120.Models
 {
     public class UpdateEdgeInstanceMessageRoutingRequest : TeaModel {
-        [NameInMap("IotInstanceId")]
-        [Validation(Required=false)]
-        public string IotInstanceId { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("RouteId")]
+        [NameInMap("IotInstanceId")]
         [Validation(Required=false)]
-        public long? RouteId { get; set; }
+        public string IotInstanceId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("TopicFilter")]
+        [NameInMap("RouteId")]
         [Validation(Required=false)]
-        public string TopicFilter { get; set; }
-
-        [NameInMap("SourceType")]
-        [Validation(Required=false)]
-        public string SourceType { get; set; }
+        public long? RouteId { get; set; }
 
         [NameInMap("SourceData")]
         [Validation(Required=false)]
         public string SourceData { get; set; }
 
-        [NameInMap("TargetType")]
+        [NameInMap("SourceType")]
         [Validation(Required=false)]
-        public string TargetType { get; set; }
+        public string SourceType { get; set; }
 
         [NameInMap("TargetData")]
         [Validation(Required=false)]
@@ -48,6 +40,14 @@ namespace AlibabaCloud.SDK.Iot20180120.Models
         [NameInMap("TargetIotHubQos")]
         [Validation(Required=false)]
         public int? TargetIotHubQos { get; set; }
+
+        [NameInMap("TargetType")]
+        [Validation(Required=false)]
+        public string TargetType { get; set; }
+
+        [NameInMap("TopicFilter")]
+        [Validation(Required=false)]
+        public string TopicFilter { get; set; }
 
     }
 
