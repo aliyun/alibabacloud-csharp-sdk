@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("GetMobileResultDTO")]
         [Validation(Required=false)]
         public GetMobileResponseBodyGetMobileResultDTO GetMobileResultDTO { get; set; }
@@ -29,6 +21,14 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [Validation(Required=false)]
             public string Mobile { get; set; }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

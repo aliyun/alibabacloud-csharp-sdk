@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthTokenRequest : TeaModel {
+        [NameInMap("Origin")]
+        [Validation(Required=false)]
+        public string Origin { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("Url")]
         [Validation(Required=false)]
         public string Url { get; set; }
-
-        [NameInMap("Origin")]
-        [Validation(Required=false)]
-        public string Origin { get; set; }
 
     }
 

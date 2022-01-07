@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetAuthorizationUrlRequest : TeaModel {
+        [NameInMap("EndDate")]
+        [Validation(Required=false)]
+        public string EndDate { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PhoneNo")]
+        [Validation(Required=false)]
+        public string PhoneNo { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -24,17 +29,9 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("PhoneNo")]
-        [Validation(Required=false)]
-        public string PhoneNo { get; set; }
-
         [NameInMap("SchemeId")]
         [Validation(Required=false)]
         public long? SchemeId { get; set; }
-
-        [NameInMap("EndDate")]
-        [Validation(Required=false)]
-        public string EndDate { get; set; }
 
     }
 

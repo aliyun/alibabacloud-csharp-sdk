@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PhoneNumber")]
+        [Validation(Required=false)]
+        public string PhoneNumber { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("PhoneNumber")]
-        [Validation(Required=false)]
-        public string PhoneNumber { get; set; }
 
         [NameInMap("SpToken")]
         [Validation(Required=false)]

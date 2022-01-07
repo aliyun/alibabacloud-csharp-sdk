@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("GateVerify")]
+        [Validation(Required=false)]
+        public VerifyPhoneWithTokenResponseBodyGateVerify GateVerify { get; set; }
+        public class VerifyPhoneWithTokenResponseBodyGateVerify : TeaModel {
+            [NameInMap("VerifyId")]
+            [Validation(Required=false)]
+            public string VerifyId { get; set; }
+            [NameInMap("VerifyResult")]
+            [Validation(Required=false)]
+            public string VerifyResult { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -20,18 +32,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("GateVerify")]
-        [Validation(Required=false)]
-        public VerifyPhoneWithTokenResponseBodyGateVerify GateVerify { get; set; }
-        public class VerifyPhoneWithTokenResponseBodyGateVerify : TeaModel {
-            [NameInMap("VerifyResult")]
-            [Validation(Required=false)]
-            public string VerifyResult { get; set; }
-            [NameInMap("VerifyId")]
-            [Validation(Required=false)]
-            public string VerifyId { get; set; }
-        };
 
     }
 

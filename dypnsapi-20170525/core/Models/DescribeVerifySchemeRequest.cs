@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class DescribeVerifySchemeRequest : TeaModel {
+        [NameInMap("CustomerId")]
+        [Validation(Required=false)]
+        public long? CustomerId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("SchemeCode")]
         [Validation(Required=false)]
         public string SchemeCode { get; set; }
-
-        [NameInMap("CustomerId")]
-        [Validation(Required=false)]
-        public long? CustomerId { get; set; }
 
     }
 

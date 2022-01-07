@@ -13,25 +13,21 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetCertifyResultResponseBodyData> Data { get; set; }
         public class GetCertifyResultResponseBodyData : TeaModel {
-            [NameInMap("MaterialInfo")]
+            [NameInMap("DeviceToken")]
             [Validation(Required=false)]
-            public string MaterialInfo { get; set; }
+            public string DeviceToken { get; set; }
 
             [NameInMap("IdentityInfo")]
             [Validation(Required=false)]
             public string IdentityInfo { get; set; }
+
+            [NameInMap("MaterialInfo")]
+            [Validation(Required=false)]
+            public string MaterialInfo { get; set; }
 
             [NameInMap("VerifyDesc")]
             [Validation(Required=false)]
@@ -41,11 +37,15 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
             [Validation(Required=false)]
             public string VerifyResult { get; set; }
 
-            [NameInMap("DeviceToken")]
-            [Validation(Required=false)]
-            public string DeviceToken { get; set; }
-
         }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

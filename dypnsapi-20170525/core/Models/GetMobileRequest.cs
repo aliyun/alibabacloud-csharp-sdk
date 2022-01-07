@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class GetMobileRequest : TeaModel {
+        [NameInMap("AccessToken")]
+        [Validation(Required=false)]
+        public string AccessToken { get; set; }
+
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("AccessToken")]
-        [Validation(Required=false)]
-        public string AccessToken { get; set; }
-
-        [NameInMap("OutId")]
-        [Validation(Required=false)]
-        public string OutId { get; set; }
 
     }
 

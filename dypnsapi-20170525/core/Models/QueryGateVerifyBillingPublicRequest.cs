@@ -8,10 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
-    public class TwiceTelVerifyRequest : TeaModel {
+    public class QueryGateVerifyBillingPublicRequest : TeaModel {
+        [NameInMap("AuthenticationType")]
+        [Validation(Required=false)]
+        public int? AuthenticationType { get; set; }
+
+        [NameInMap("Month")]
+        [Validation(Required=false)]
+        public string Month { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("ProdCode")]
+        [Validation(Required=false)]
+        public string ProdCode { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -20,14 +32,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("Since")]
-        [Validation(Required=false)]
-        public string Since { get; set; }
-
-        [NameInMap("PhoneNumber")]
-        [Validation(Required=false)]
-        public string PhoneNumber { get; set; }
 
     }
 
