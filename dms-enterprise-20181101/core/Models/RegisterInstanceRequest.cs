@@ -73,10 +73,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? QueryTimeout { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("SafeRule")]
         [Validation(Required=false)]
         public string SafeRule { get; set; }
