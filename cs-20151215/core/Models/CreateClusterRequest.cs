@@ -387,6 +387,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// 集群所属资源组ID
+        /// </summary>
+        [NameInMap("resource_group_id")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public Runtime Runtime { get; set; }

@@ -151,6 +151,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("data_disks")]
             [Validation(Required=false)]
             public List<string> DataDisks { get; set; }
+            [NameInMap("desired_size")]
+            [Validation(Required=false)]
+            public long? DesiredSize { get; set; }
             [NameInMap("image_id")]
             [Validation(Required=false)]
             public string ImageId { get; set; }

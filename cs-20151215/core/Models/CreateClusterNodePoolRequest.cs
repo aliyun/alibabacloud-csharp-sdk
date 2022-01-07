@@ -205,6 +205,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("deploymentset_id")]
             [Validation(Required=false)]
             public string DeploymentsetId { get; set; }
+            [NameInMap("desired_size")]
+            [Validation(Required=false)]
+            public long? DesiredSize { get; set; }
             [NameInMap("image_id")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
