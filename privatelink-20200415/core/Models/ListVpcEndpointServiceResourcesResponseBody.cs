@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public List<ListVpcEndpointServiceResourcesResponseBodyResources> Resources { get; set; }
         public class ListVpcEndpointServiceResourcesResponseBodyResources : TeaModel {
+            [NameInMap("AutoAllocatedEnabled")]
+            [Validation(Required=false)]
+            public bool? AutoAllocatedEnabled { get; set; }
+
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
@@ -32,6 +36,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("RelatedDeprecatedEndpointCount")]
+            [Validation(Required=false)]
+            public long? RelatedDeprecatedEndpointCount { get; set; }
+
+            [NameInMap("RelatedEndpointCount")]
+            [Validation(Required=false)]
+            public long? RelatedEndpointCount { get; set; }
 
             [NameInMap("ResourceId")]
             [Validation(Required=false)]

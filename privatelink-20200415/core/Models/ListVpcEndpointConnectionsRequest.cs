@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ReplacedResourceId")]
+        [Validation(Required=false)]
+        public string ReplacedResourceId { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }

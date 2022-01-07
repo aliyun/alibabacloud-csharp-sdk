@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 [Validation(Required=false)]
                 public string EniId { get; set; }
 
+                [NameInMap("ReplacedEniId")]
+                [Validation(Required=false)]
+                public string ReplacedEniId { get; set; }
+
+                [NameInMap("ReplacedResourceId")]
+                [Validation(Required=false)]
+                public string ReplacedResourceId { get; set; }
+
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
@@ -68,6 +76,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
+
+                [NameInMap("ZoneStatus")]
+                [Validation(Required=false)]
+                public string ZoneStatus { get; set; }
 
             }
 
