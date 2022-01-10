@@ -69,12 +69,18 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("HlsUrl")]
             [Validation(Required=false)]
             public string HlsUrl { get; set; }
+            [NameInMap("HlsUrlHttps")]
+            [Validation(Required=false)]
+            public string HlsUrlHttps { get; set; }
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }
             [NameInMap("LiveUrl")]
             [Validation(Required=false)]
             public string LiveUrl { get; set; }
+            [NameInMap("LiveUrlHttps")]
+            [Validation(Required=false)]
+            public string LiveUrlHttps { get; set; }
             [NameInMap("Notice")]
             [Validation(Required=false)]
             public string Notice { get; set; }
@@ -84,6 +90,9 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("PlaybackUrl")]
             [Validation(Required=false)]
             public string PlaybackUrl { get; set; }
+            [NameInMap("PlaybackUrlHttps")]
+            [Validation(Required=false)]
+            public string PlaybackUrlHttps { get; set; }
             [NameInMap("PluginInstanceInfoList")]
             [Validation(Required=false)]
             public List<GetLiveRoomResponseBodyResultPluginInstanceInfoList> PluginInstanceInfoList { get; set; }
@@ -102,6 +111,9 @@ namespace AlibabaCloud.SDK.Imp20210630.Models
             [NameInMap("RoomId")]
             [Validation(Required=false)]
             public string RoomId { get; set; }
+            [NameInMap("RtmpUrl")]
+            [Validation(Required=false)]
+            public string RtmpUrl { get; set; }
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
