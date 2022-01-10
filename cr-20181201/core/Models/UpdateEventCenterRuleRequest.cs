@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("RepoNames")]
         [Validation(Required=false)]
         public List<string> RepoNames { get; set; }

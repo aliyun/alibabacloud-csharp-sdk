@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("CrossUser")]
+        [Validation(Required=false)]
+        public bool? CrossUser { get; set; }
+
         [NameInMap("ImageFrom")]
         [Validation(Required=false)]
         public GetRepoSyncTaskResponseBodyImageFrom ImageFrom { get; set; }
@@ -108,6 +112,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("SyncTaskId")]
         [Validation(Required=false)]
         public string SyncTaskId { get; set; }
+
+        [NameInMap("SyncTransAccelerate")]
+        [Validation(Required=false)]
+        public bool? SyncTransAccelerate { get; set; }
 
         [NameInMap("SyncedSize")]
         [Validation(Required=false)]

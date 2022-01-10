@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string SyncTaskId { get; set; }
 
+            [NameInMap("SyncTransAccelerate")]
+            [Validation(Required=false)]
+            public bool? SyncTransAccelerate { get; set; }
+
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public string TaskStatus { get; set; }
