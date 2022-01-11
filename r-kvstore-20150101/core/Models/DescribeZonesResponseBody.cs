@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesKVStoreZone> KVStoreZone { get; set; }
             public class DescribeZonesResponseBodyZonesKVStoreZone : TeaModel {
+                public bool? Disabled { get; set; }
+                public bool? IsRds { get; set; }
                 public string RegionId { get; set; }
+                public bool? SwitchNetwork { get; set; }
                 public string ZoneId { get; set; }
                 public string ZoneName { get; set; }
-                public bool? SwitchNetwork { get; set; }
-                public bool? IsRds { get; set; }
-                public bool? Disabled { get; set; }
             }
         };
 

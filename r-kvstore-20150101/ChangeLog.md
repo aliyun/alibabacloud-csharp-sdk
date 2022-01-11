@@ -1,3 +1,6 @@
+2022-01-11 Version: 1.0.4
+- Update mongodb sdk.
+
 2021-03-23 Version: 1.0.3
 - Generated csharp 2015-01-01 for R-kvstore.
 

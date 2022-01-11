@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceSSLResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("CertCommonName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string CertCommonName { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SSLEnabled")]
         [Validation(Required=false)]
         public string SSLEnabled { get; set; }
-
-        [NameInMap("CertCommonName")]
-        [Validation(Required=false)]
-        public string CertCommonName { get; set; }
 
         [NameInMap("SSLExpiredTime")]
         [Validation(Required=false)]

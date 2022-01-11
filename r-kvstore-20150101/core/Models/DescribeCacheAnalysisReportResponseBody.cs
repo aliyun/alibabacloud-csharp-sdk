@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("BigKeys")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<Dictionary<string, object>> BigKeys { get; set; }
 
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("HotKeys")]
         [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public List<Dictionary<string, object>> HotKeys { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,13 +25,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
-        [NameInMap("HotKeys")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public List<Dictionary<string, string>> HotKeys { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("BigKeys")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<Dictionary<string, string>> BigKeys { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 

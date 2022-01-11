@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupTasksResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("BackupJobs")]
         [Validation(Required=false)]
         public List<DescribeBackupTasksResponseBodyBackupJobs> BackupJobs { get; set; }
@@ -33,6 +25,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public string JobMode { get; set; }
 
+            [NameInMap("NodeId")]
+            [Validation(Required=false)]
+            public string NodeId { get; set; }
+
             [NameInMap("Process")]
             [Validation(Required=false)]
             public string Process { get; set; }
@@ -46,6 +42,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string TaskAction { get; set; }
 
         }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

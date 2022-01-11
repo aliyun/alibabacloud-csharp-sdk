@@ -9,9 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeParametersResponseBodyConfigParameters ConfigParameters { get; set; }
+        public class DescribeParametersResponseBodyConfigParameters : TeaModel {
+            [NameInMap("Parameter")]
+            [Validation(Required=false)]
+            public List<DescribeParametersResponseBodyConfigParametersParameter> Parameter { get; set; }
+            public class DescribeParametersResponseBodyConfigParametersParameter : TeaModel {
+                public string CheckingCode { get; set; }
+                public bool? ForceRestart { get; set; }
+                public bool? ModifiableStatus { get; set; }
+                public string ParameterDescription { get; set; }
+                public string ParameterName { get; set; }
+                public string ParameterValue { get; set; }
+            }
+        };
 
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -21,22 +34,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
-        [NameInMap("ConfigParameters")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public DescribeParametersResponseBodyConfigParameters ConfigParameters { get; set; }
-        public class DescribeParametersResponseBodyConfigParameters : TeaModel {
-            [NameInMap("Parameter")]
-            [Validation(Required=false)]
-            public List<DescribeParametersResponseBodyConfigParametersParameter> Parameter { get; set; }
-            public class DescribeParametersResponseBodyConfigParametersParameter : TeaModel {
-                public string ParameterName { get; set; }
-                public string ParameterValue { get; set; }
-                public bool? ModifiableStatus { get; set; }
-                public bool? ForceRestart { get; set; }
-                public string CheckingCode { get; set; }
-                public string ParameterDescription { get; set; }
-            }
-        };
+        public string RequestId { get; set; }
 
         [NameInMap("RunningParameters")]
         [Validation(Required=false)]
@@ -46,12 +46,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeParametersResponseBodyRunningParametersParameter : TeaModel {
+                public string CheckingCode { get; set; }
+                public string ForceRestart { get; set; }
+                public string ModifiableStatus { get; set; }
+                public string ParameterDescription { get; set; }
                 public string ParameterName { get; set; }
                 public string ParameterValue { get; set; }
-                public string ModifiableStatus { get; set; }
-                public string ForceRestart { get; set; }
-                public string CheckingCode { get; set; }
-                public string ParameterDescription { get; set; }
             }
         };
 

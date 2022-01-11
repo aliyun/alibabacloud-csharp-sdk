@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeLogicInstanceTopologyResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -25,10 +21,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo : TeaModel {
-                public string NodeId { get; set; }
-                public string Connection { get; set; }
                 public string Bandwidth { get; set; }
                 public string Capacity { get; set; }
+                public string Connection { get; set; }
+                public string NodeId { get; set; }
                 public string NodeType { get; set; }
             }
         };
@@ -41,13 +37,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo : TeaModel {
-                public string NodeId { get; set; }
-                public string Connection { get; set; }
                 public string Bandwidth { get; set; }
                 public string Capacity { get; set; }
+                public string Connection { get; set; }
+                public string NodeId { get; set; }
                 public string NodeType { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

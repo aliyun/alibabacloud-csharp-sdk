@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public DescribeAvailableResourceResponseBodyAvailableZones AvailableZones { get; set; }
@@ -22,8 +18,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone : TeaModel {
                 public string RegionId { get; set; }
-                public string ZoneId { get; set; }
-                public string ZoneName { get; set; }
                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines SupportedEngines { get; set; }
                 public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines : TeaModel {
                     [NameInMap("SupportedEngine")]
@@ -61,7 +55,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                             [Validation(Required=false)]
                                             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersion> SupportedEngineVersion { get; set; }
                                             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersion : TeaModel {
-                                                public string Version { get; set; }
                                                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersionSupportedArchitectureTypes SupportedArchitectureTypes { get; set; }
                                                 public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersionSupportedArchitectureTypes : TeaModel {
                                                     [NameInMap("SupportedArchitectureType")]
@@ -87,10 +80,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                                                     [Validation(Required=false)]
                                                                     public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersionSupportedArchitectureTypesSupportedArchitectureTypeSupportedShardNumbersSupportedShardNumberSupportedNodeTypesSupportedNodeType> SupportedNodeType { get; set; }
                                                                     public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersionSupportedArchitectureTypesSupportedArchitectureTypeSupportedShardNumbersSupportedShardNumberSupportedNodeTypesSupportedNodeType : TeaModel {
-                                                                        [NameInMap("SupportedNodeType")]
-                                                                        [Validation(Required=false)]
-                                                                        public string SupportedNodeType { get; set; }
-
                                                                         [NameInMap("AvailableResources")]
                                                                         [Validation(Required=false)]
                                                                         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersionSupportedArchitectureTypesSupportedArchitectureTypeSupportedShardNumbersSupportedShardNumberSupportedNodeTypesSupportedNodeTypeAvailableResources AvailableResources { get; set; }
@@ -99,10 +88,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                                                             [Validation(Required=false)]
                                                                             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersionSupportedArchitectureTypesSupportedArchitectureTypeSupportedShardNumbersSupportedShardNumberSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResource> AvailableResource { get; set; }
                                                                             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersionSupportedArchitectureTypesSupportedArchitectureTypeSupportedShardNumbersSupportedShardNumberSupportedNodeTypesSupportedNodeTypeAvailableResourcesAvailableResource : TeaModel {
+                                                                                public long? Capacity { get; set; }
                                                                                 public string InstanceClass { get; set; }
                                                                                 public string InstanceClassRemark { get; set; }
                                                                             }
                                                                         };
+
+                                                                        [NameInMap("SupportedNodeType")]
+                                                                        [Validation(Required=false)]
+                                                                        public string SupportedNodeType { get; set; }
 
                                                                     }
 
@@ -113,6 +107,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                                     }
 
                                                 }
+                                                public string Version { get; set; }
                                             }
                                         };
 
@@ -125,8 +120,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     }
 
                 }
+                public string ZoneId { get; set; }
+                public string ZoneName { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

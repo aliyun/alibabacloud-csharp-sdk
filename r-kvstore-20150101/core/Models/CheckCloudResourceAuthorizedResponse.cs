@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyUserClusterHostResponse : TeaModel {
+    public class CheckCloudResourceAuthorizedResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public ModifyUserClusterHostResponseBody Body { get; set; }
+        public CheckCloudResourceAuthorizedResponseBody Body { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class TransformToPrePaidResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string RequestId { get; set; }
 
     }
 

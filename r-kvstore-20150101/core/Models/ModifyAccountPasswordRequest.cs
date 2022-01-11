@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyAccountPasswordRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AccountName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AccountName { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("NewAccountPassword")]
+        [Validation(Required=false)]
+        public string NewAccountPassword { get; set; }
+
+        [NameInMap("OldAccountPassword")]
+        [Validation(Required=false)]
+        public string OldAccountPassword { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,25 +41,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("AccountName")]
-        [Validation(Required=false)]
-        public string AccountName { get; set; }
-
-        [NameInMap("OldAccountPassword")]
-        [Validation(Required=false)]
-        public string OldAccountPassword { get; set; }
-
-        [NameInMap("NewAccountPassword")]
-        [Validation(Required=false)]
-        public string NewAccountPassword { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

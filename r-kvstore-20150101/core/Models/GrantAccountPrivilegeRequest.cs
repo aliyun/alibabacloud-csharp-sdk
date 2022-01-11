@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AccountName")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AccountName { get; set; }
+
+        [NameInMap("AccountPrivilege")]
+        [Validation(Required=false)]
+        public string AccountPrivilege { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,21 +37,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("AccountName")]
-        [Validation(Required=false)]
-        public string AccountName { get; set; }
-
-        [NameInMap("AccountPrivilege")]
-        [Validation(Required=false)]
-        public string AccountPrivilege { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

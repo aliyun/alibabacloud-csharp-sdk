@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEngineVersionResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("DBVersionRelease")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DBVersionRelease { get; set; }
+
+        [NameInMap("EnableUpgradeMajorVersion")]
+        [Validation(Required=false)]
+        public bool? EnableUpgradeMajorVersion { get; set; }
+
+        [NameInMap("EnableUpgradeMinorVersion")]
+        [Validation(Required=false)]
+        public bool? EnableUpgradeMinorVersion { get; set; }
 
         [NameInMap("Engine")]
         [Validation(Required=false)]
@@ -21,21 +29,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public bool? IsLatestVersion { get; set; }
 
-        [NameInMap("MinorVersion")]
-        [Validation(Required=false)]
-        public string MinorVersion { get; set; }
-
-        [NameInMap("EnableUpgradeMinorVersion")]
-        [Validation(Required=false)]
-        public bool? EnableUpgradeMinorVersion { get; set; }
-
         [NameInMap("MajorVersion")]
         [Validation(Required=false)]
         public string MajorVersion { get; set; }
 
-        [NameInMap("EnableUpgradeMajorVersion")]
+        [NameInMap("MinorVersion")]
         [Validation(Required=false)]
-        public bool? EnableUpgradeMajorVersion { get; set; }
+        public string MinorVersion { get; set; }
+
+        [NameInMap("ProxyMinorVersion")]
+        [Validation(Required=false)]
+        public string ProxyMinorVersion { get; set; }
+
+        [NameInMap("ProxyVersionRelease")]
+        [Validation(Required=false)]
+        public string ProxyVersionRelease { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

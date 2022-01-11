@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateAccountResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("AcountName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string AcountName { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("AcountName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string AcountName { get; set; }
+        public string RequestId { get; set; }
 
     }
 

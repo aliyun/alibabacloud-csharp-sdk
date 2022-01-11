@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalDistributeCacheRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("GlobalInstanceId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string GlobalInstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,21 +37,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("GlobalInstanceId")]
-        [Validation(Required=false)]
-        public string GlobalInstanceId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public string PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public string SecurityToken { get; set; }
 
         [NameInMap("SubInstanceId")]
         [Validation(Required=false)]

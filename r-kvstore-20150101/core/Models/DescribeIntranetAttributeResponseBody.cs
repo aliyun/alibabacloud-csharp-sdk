@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeIntranetAttributeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("AutoRenewal")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public bool? AutoRenewal { get; set; }
 
-        [NameInMap("IntranetBandwidth")]
+        [NameInMap("BandwidthExpireTime")]
         [Validation(Required=false)]
-        public int? IntranetBandwidth { get; set; }
+        public string BandwidthExpireTime { get; set; }
 
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
-        [NameInMap("BandwidthExpireTime")]
+        [NameInMap("IntranetBandwidth")]
         [Validation(Required=false)]
-        public string BandwidthExpireTime { get; set; }
+        public int? IntranetBandwidth { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,13 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportListRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("Days")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public int? Days { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public string NodeId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumbers")]
+        [Validation(Required=false)]
+        public int? PageNumbers { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,29 +45,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("Days")]
-        [Validation(Required=false)]
-        public int? Days { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumbers")]
-        [Validation(Required=false)]
-        public int? PageNumbers { get; set; }
-
-        [NameInMap("NodeId")]
-        [Validation(Required=false)]
-        public string NodeId { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRegionsRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,13 +29,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("AcceptLanguage")]
-        [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

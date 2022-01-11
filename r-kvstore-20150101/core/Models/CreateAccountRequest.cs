@@ -9,9 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateAccountRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AccountDescription")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AccountDescription { get; set; }
+
+        [NameInMap("AccountName")]
+        [Validation(Required=false)]
+        public string AccountName { get; set; }
+
+        [NameInMap("AccountPassword")]
+        [Validation(Required=false)]
+        public string AccountPassword { get; set; }
+
+        [NameInMap("AccountPrivilege")]
+        [Validation(Required=false)]
+        public string AccountPrivilege { get; set; }
+
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,33 +49,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("AccountName")]
-        [Validation(Required=false)]
-        public string AccountName { get; set; }
-
-        [NameInMap("AccountPrivilege")]
-        [Validation(Required=false)]
-        public string AccountPrivilege { get; set; }
-
-        [NameInMap("AccountPassword")]
-        [Validation(Required=false)]
-        public string AccountPassword { get; set; }
-
-        [NameInMap("AccountDescription")]
-        [Validation(Required=false)]
-        public string AccountDescription { get; set; }
-
-        [NameInMap("AccountType")]
-        [Validation(Required=false)]
-        public string AccountType { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

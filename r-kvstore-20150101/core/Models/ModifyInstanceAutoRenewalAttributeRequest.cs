@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceAutoRenewalAttributeRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("AutoRenew")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string AutoRenew { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public string Duration { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,21 +37,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("Duration")]
-        [Validation(Required=false)]
-        public string Duration { get; set; }
-
-        [NameInMap("AutoRenew")]
-        [Validation(Required=false)]
-        public string AutoRenew { get; set; }
+        public string SecurityToken { get; set; }
 
     }
 

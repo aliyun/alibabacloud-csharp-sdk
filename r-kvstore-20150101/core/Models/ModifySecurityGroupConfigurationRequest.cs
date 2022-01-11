@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifySecurityGroupConfigurationRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
 
     }
 

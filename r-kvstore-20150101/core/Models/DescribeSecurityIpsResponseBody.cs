@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup> SecurityIpGroup { get; set; }
             public class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup : TeaModel {
-                public string SecurityIpGroupName { get; set; }
                 public string SecurityIpGroupAttribute { get; set; }
+                public string SecurityIpGroupName { get; set; }
                 public string SecurityIpList { get; set; }
             }
         };

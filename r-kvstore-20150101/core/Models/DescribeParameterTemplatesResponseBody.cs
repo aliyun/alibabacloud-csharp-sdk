@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ParameterCount { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public DescribeParameterTemplatesResponseBodyParameters Parameters { get; set; }
@@ -41,6 +37,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ParameterValue { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

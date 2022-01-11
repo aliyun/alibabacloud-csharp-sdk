@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AddShardingNodeResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("NodeIds")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public List<string> NodeIds { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
-        [NameInMap("NodeIds")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public List<string> NodeIds { get; set; }
+        public string RequestId { get; set; }
 
     }
 

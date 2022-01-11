@@ -9,9 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRoleZoneInfoResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Node")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeRoleZoneInfoResponseBodyNode Node { get; set; }
+        public class DescribeRoleZoneInfoResponseBodyNode : TeaModel {
+            [NameInMap("NodeInfo")]
+            [Validation(Required=false)]
+            public List<DescribeRoleZoneInfoResponseBodyNodeNodeInfo> NodeInfo { get; set; }
+            public class DescribeRoleZoneInfoResponseBodyNodeNodeInfo : TeaModel {
+                public long? CurrentBandWidth { get; set; }
+                public string CurrentMinorVersion { get; set; }
+                public string CustinsId { get; set; }
+                public long? DefaultBandWidth { get; set; }
+                public string InsName { get; set; }
+                public int? InsType { get; set; }
+                public int? IsLatestVersion { get; set; }
+                public bool? IsOpenBandWidthService { get; set; }
+                public string NodeId { get; set; }
+                public string NodeType { get; set; }
+                public string Role { get; set; }
+                public string ZoneId { get; set; }
+            }
+        };
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,32 +40,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
-
-        [NameInMap("Node")]
-        [Validation(Required=false)]
-        public DescribeRoleZoneInfoResponseBodyNode Node { get; set; }
-        public class DescribeRoleZoneInfoResponseBodyNode : TeaModel {
-            [NameInMap("NodeInfo")]
-            [Validation(Required=false)]
-            public List<DescribeRoleZoneInfoResponseBodyNodeNodeInfo> NodeInfo { get; set; }
-            public class DescribeRoleZoneInfoResponseBodyNodeNodeInfo : TeaModel {
-                public string NodeId { get; set; }
-                public string NodeType { get; set; }
-                public string Role { get; set; }
-                public string ZoneId { get; set; }
-                public string CustinsId { get; set; }
-                public int? InsType { get; set; }
-                public string InsName { get; set; }
-                public int? IsLatestVersion { get; set; }
-                public string CurrentMinorVersion { get; set; }
-                public long? CurrentBandWidth { get; set; }
-                public long? DefaultBandWidth { get; set; }
-                public bool? IsOpenBandWidthService { get; set; }
-            }
-        };
 
     }
 

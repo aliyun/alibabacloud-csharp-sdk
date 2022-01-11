@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairInstanceResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Bandwidth")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? Bandwidth { get; set; }
+
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
+        [NameInMap("ConnectionDomain")]
+        [Validation(Required=false)]
+        public string ConnectionDomain { get; set; }
+
+        [NameInMap("Connections")]
+        [Validation(Required=false)]
+        public long? Connections { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,49 +37,33 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
-        [NameInMap("ConnectionDomain")]
+        [NameInMap("InstanceStatus")]
         [Validation(Required=false)]
-        public string ConnectionDomain { get; set; }
+        public string InstanceStatus { get; set; }
 
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
-        [NameInMap("InstanceStatus")]
+        [NameInMap("QPS")]
         [Validation(Required=false)]
-        public string InstanceStatus { get; set; }
+        public long? QPS { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("QPS")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public long? QPS { get; set; }
-
-        [NameInMap("Bandwidth")]
-        [Validation(Required=false)]
-        public long? Bandwidth { get; set; }
-
-        [NameInMap("Connections")]
-        [Validation(Required=false)]
-        public long? Connections { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
-        [NameInMap("Config")]
-        [Validation(Required=false)]
-        public string Config { get; set; }
-
-        [NameInMap("ChargeType")]
-        [Validation(Required=false)]
-        public string ChargeType { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

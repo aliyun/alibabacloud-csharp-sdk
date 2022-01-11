@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class MigrateToOtherZoneRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,25 +33,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("SecondaryZoneId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string SecondaryZoneId { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
+        public string SecurityToken { get; set; }
 
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
-        [NameInMap("EffectiveTime")]
+        [NameInMap("ZoneId")]
         [Validation(Required=false)]
-        public string EffectiveTime { get; set; }
+        public string ZoneId { get; set; }
 
     }
 
