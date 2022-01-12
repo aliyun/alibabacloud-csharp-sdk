@@ -33,9 +33,17 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public List<ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors> IoTCloudConnectors { get; set; }
             public class ListIoTCloudConnectorGroupsResponseBodyIoTCloudConnectorGroupsIoTCloudConnectors : TeaModel {
+                [NameInMap("APN")]
+                [Validation(Required=false)]
+                public string APN { get; set; }
+
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("ISP")]
+                [Validation(Required=false)]
+                public string ISP { get; set; }
 
                 [NameInMap("IoTCloudConnectorDescription")]
                 [Validation(Required=false)]

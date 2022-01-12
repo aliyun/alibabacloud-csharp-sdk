@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TotalCount")]
+        [NameInMap("TotalIpsCount")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? TotalIpsCount { get; set; }
 
     }
 

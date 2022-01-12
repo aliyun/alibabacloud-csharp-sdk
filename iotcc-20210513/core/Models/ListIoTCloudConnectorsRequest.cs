@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [Validation(Required=false)]
         public List<string> ISP { get; set; }
 
+        [NameInMap("IoTCloudConnectorGroupId")]
+        [Validation(Required=false)]
+        public string IoTCloudConnectorGroupId { get; set; }
+
         [NameInMap("IoTCloudConnectorIds")]
         [Validation(Required=false)]
         public List<string> IoTCloudConnectorIds { get; set; }
