@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 }
                 public string TerraformVersion { get; set; }
                 public string Transform { get; set; }
+                public List<string> UpdateAllowedTransforms { get; set; }
             }
         };
 
