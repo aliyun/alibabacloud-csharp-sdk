@@ -432,9 +432,21 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAccountIdsScope))
+            {
+                body["ExcludeAccountIdsScope"] = request.ExcludeAccountIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeFolderIdsScope))
+            {
+                body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
+            {
+                body["FolderIdsScope"] = request.FolderIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {
@@ -533,9 +545,21 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAccountIdsScope))
+            {
+                body["ExcludeAccountIdsScope"] = request.ExcludeAccountIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeFolderIdsScope))
+            {
+                body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
+            {
+                body["FolderIdsScope"] = request.FolderIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {
@@ -5236,9 +5260,21 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAccountIdsScope))
+            {
+                body["ExcludeAccountIdsScope"] = request.ExcludeAccountIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeFolderIdsScope))
+            {
+                body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
+            {
+                body["FolderIdsScope"] = request.FolderIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {
@@ -5333,9 +5369,21 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAccountIdsScope))
+            {
+                body["ExcludeAccountIdsScope"] = request.ExcludeAccountIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeFolderIdsScope))
+            {
+                body["ExcludeFolderIdsScope"] = request.ExcludeFolderIdsScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeResourceIdsScope))
             {
                 body["ExcludeResourceIdsScope"] = request.ExcludeResourceIdsScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderIdsScope))
+            {
+                body["FolderIdsScope"] = request.FolderIdsScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputParametersShrink))
             {

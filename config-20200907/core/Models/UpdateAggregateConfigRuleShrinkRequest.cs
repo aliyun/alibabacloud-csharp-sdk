@@ -33,9 +33,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ExcludeAccountIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeAccountIdsScope { get; set; }
+
+        [NameInMap("ExcludeFolderIdsScope")]
+        [Validation(Required=false)]
+        public string ExcludeFolderIdsScope { get; set; }
+
         [NameInMap("ExcludeResourceIdsScope")]
         [Validation(Required=false)]
         public string ExcludeResourceIdsScope { get; set; }
+
+        [NameInMap("FolderIdsScope")]
+        [Validation(Required=false)]
+        public string FolderIdsScope { get; set; }
 
         [NameInMap("InputParameters")]
         [Validation(Required=false)]
