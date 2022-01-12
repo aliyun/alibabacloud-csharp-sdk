@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstancesOverviewRequest : TeaModel {
-        [NameInMap("ArchitectureType")]
-        [Validation(Required=false)]
-        public string ArchitectureType { get; set; }
-
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -20,10 +16,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
-
-        [NameInMap("ExpireTime")]
-        [Validation(Required=false)]
-        public string ExpireTime { get; set; }
 
         [NameInMap("InstanceClass")]
         [Validation(Required=false)]
@@ -53,10 +45,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -68,10 +56,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SearchKey")]
-        [Validation(Required=false)]
-        public string SearchKey { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

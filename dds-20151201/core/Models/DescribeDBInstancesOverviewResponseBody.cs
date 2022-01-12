@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public List<DescribeDBInstancesOverviewResponseBodyDBInstances> DBInstances { get; set; }
         public class DescribeDBInstancesOverviewResponseBodyDBInstances : TeaModel {
+            [NameInMap("CapacityUnit")]
+            [Validation(Required=false)]
+            public string CapacityUnit { get; set; }
+
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
@@ -157,16 +161,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         }
 
-        /// <summary>
-        /// Id of the request
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public string TotalCount { get; set; }
 
     }
 
