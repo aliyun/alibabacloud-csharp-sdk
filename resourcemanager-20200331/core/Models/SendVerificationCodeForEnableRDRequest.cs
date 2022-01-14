@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class DeleteAccountResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class SendVerificationCodeForEnableRDRequest : TeaModel {
+        [NameInMap("SecureMobilePhone")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string SecureMobilePhone { get; set; }
 
     }
 

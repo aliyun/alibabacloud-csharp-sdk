@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string JoinTime { get; set; }
                 public string ModifyTime { get; set; }
                 public string ResourceDirectoryId { get; set; }
+                public string ResourceDirectoryPath { get; set; }
                 public string Status { get; set; }
                 public string Type { get; set; }
             }

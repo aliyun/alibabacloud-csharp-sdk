@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class DeleteAccountResponse : TeaModel {
+    public class EnableResourceDirectoryResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DeleteAccountResponseBody Body { get; set; }
+        public EnableResourceDirectoryResponseBody Body { get; set; }
 
     }
 
