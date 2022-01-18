@@ -15,12 +15,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public CreateLogstashResponseBodyResult Result { get; set; }
-        public class CreateLogstashResponseBodyResult : TeaModel {
-            [NameInMap("instanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-        };
+        public Logstash Result { get; set; }
 
     }
 

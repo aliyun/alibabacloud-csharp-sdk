@@ -36,17 +36,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public class ListComponentIndicesResponseBodyResultContent : TeaModel {
                 [NameInMap("_meta")]
                 [Validation(Required=false)]
-                public ListComponentIndicesResponseBodyResultContentMeta Meta { get; set; }
-                public class ListComponentIndicesResponseBodyResultContentMeta : TeaModel {
-                    [NameInMap("description")]
-                    [Validation(Required=false)]
-                    public string Description { get; set; }
-
-                    [NameInMap("managed")]
-                    [Validation(Required=false)]
-                    public bool? Managed { get; set; }
-
-                }
+                public Dictionary<string, string> Meta { get; set; }
                 [NameInMap("template")]
                 [Validation(Required=false)]
                 public ListComponentIndicesResponseBodyResultContentTemplate Template { get; set; }

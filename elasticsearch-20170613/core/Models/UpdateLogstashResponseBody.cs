@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
     public class UpdateLogstashResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public Logstash RequestId { get; set; }
 
         [NameInMap("Result")]
         [Validation(Required=false)]

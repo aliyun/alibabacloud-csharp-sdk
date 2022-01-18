@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
