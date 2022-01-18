@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Liveness { get; set; }
 
+        [NameInMap("MinReadyInstanceRatio")]
+        [Validation(Required=false)]
+        public int? MinReadyInstanceRatio { get; set; }
+
         [NameInMap("MinReadyInstances")]
         [Validation(Required=false)]
         public int? MinReadyInstances { get; set; }

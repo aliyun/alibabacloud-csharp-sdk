@@ -13,6 +13,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AcrAssumeRoleArn { get; set; }
 
+        /// <summary>
+        /// ACR 企业版实例 ID
+        /// </summary>
+        [NameInMap("AcrInstanceId")]
+        [Validation(Required=false)]
+        public string AcrInstanceId { get; set; }
+
         [NameInMap("AppDescription")]
         [Validation(Required=false)]
         public string AppDescription { get; set; }

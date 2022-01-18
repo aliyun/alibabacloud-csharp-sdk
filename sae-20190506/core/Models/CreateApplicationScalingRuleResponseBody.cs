@@ -19,6 +19,36 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+            [NameInMap("LastDisableTime")]
+            [Validation(Required=false)]
+            public long? LastDisableTime { get; set; }
+            [NameInMap("Metric")]
+            [Validation(Required=false)]
+            public CreateApplicationScalingRuleResponseBodyDataMetric Metric { get; set; }
+            public class CreateApplicationScalingRuleResponseBodyDataMetric : TeaModel {
+                [NameInMap("MaxReplicas")]
+                [Validation(Required=false)]
+                public int? MaxReplicas { get; set; }
+
+                [NameInMap("Metrics")]
+                [Validation(Required=false)]
+                public List<CreateApplicationScalingRuleResponseBodyDataMetricMetrics> Metrics { get; set; }
+                public class CreateApplicationScalingRuleResponseBodyDataMetricMetrics : TeaModel {
+                    [NameInMap("MetricTargetAverageUtilization")]
+                    [Validation(Required=false)]
+                    public int? MetricTargetAverageUtilization { get; set; }
+
+                    [NameInMap("MetricType")]
+                    [Validation(Required=false)]
+                    public string MetricType { get; set; }
+
+                }
+
+                [NameInMap("MinReplicas")]
+                [Validation(Required=false)]
+                public int? MinReplicas { get; set; }
+
+            }
             [NameInMap("ScaleRuleEnabled")]
             [Validation(Required=false)]
             public bool? ScaleRuleEnabled { get; set; }

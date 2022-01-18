@@ -86,6 +86,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public int? Memory { get; set; }
+            [NameInMap("MinReadyInstanceRatio")]
+            [Validation(Required=false)]
+            public int? MinReadyInstanceRatio { get; set; }
             [NameInMap("MinReadyInstances")]
             [Validation(Required=false)]
             public int? MinReadyInstances { get; set; }

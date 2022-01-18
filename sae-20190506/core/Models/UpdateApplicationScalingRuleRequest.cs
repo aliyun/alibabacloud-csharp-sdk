@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("MinReadyInstanceRatio")]
+        [Validation(Required=false)]
+        public int? MinReadyInstanceRatio { get; set; }
+
+        [NameInMap("MinReadyInstances")]
+        [Validation(Required=false)]
+        public int? MinReadyInstances { get; set; }
+
+        [NameInMap("ScalingRuleMetric")]
+        [Validation(Required=false)]
+        public string ScalingRuleMetric { get; set; }
+
         [NameInMap("ScalingRuleName")]
         [Validation(Required=false)]
         public string ScalingRuleName { get; set; }

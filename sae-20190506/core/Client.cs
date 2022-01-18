@@ -688,6 +688,10 @@ namespace AlibabaCloud.SDK.Sae20190506
                 query["WebContainer"] = request.WebContainer;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcrInstanceId))
+            {
+                body["AcrInstanceId"] = request.AcrInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociateEip))
             {
                 body["AssociateEip"] = request.AssociateEip;
@@ -894,6 +898,10 @@ namespace AlibabaCloud.SDK.Sae20190506
                 query["WebContainer"] = request.WebContainer;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcrInstanceId))
+            {
+                body["AcrInstanceId"] = request.AcrInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociateEip))
             {
                 body["AssociateEip"] = request.AssociateEip;
@@ -961,9 +969,21 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
+            {
+                query["MinReadyInstances"] = request.MinReadyInstances;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleEnable))
             {
                 query["ScalingRuleEnable"] = request.ScalingRuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleMetric))
+            {
+                query["ScalingRuleMetric"] = request.ScalingRuleMetric;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
             {
@@ -1005,9 +1025,21 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
+            {
+                query["MinReadyInstances"] = request.MinReadyInstances;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleEnable))
             {
                 query["ScalingRuleEnable"] = request.ScalingRuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleMetric))
+            {
+                query["ScalingRuleMetric"] = request.ScalingRuleMetric;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
             {
@@ -1963,6 +1995,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Liveness"] = request.Liveness;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
                 query["MinReadyInstances"] = request.MinReadyInstances;
@@ -2156,6 +2192,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
@@ -2725,6 +2765,84 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DescribeApplicationInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        public DescribeApplicationScalingRuleResponse DescribeApplicationScalingRule(DescribeApplicationScalingRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeApplicationScalingRuleWithOptions(request, headers, runtime);
+        }
+
+        public async Task<DescribeApplicationScalingRuleResponse> DescribeApplicationScalingRuleAsync(DescribeApplicationScalingRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DescribeApplicationScalingRuleResponse DescribeApplicationScalingRuleWithOptions(DescribeApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
+            {
+                query["ScalingRuleName"] = request.ScalingRuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationScalingRule",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/scale/applicationScalingRule",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationScalingRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeApplicationScalingRuleResponse> DescribeApplicationScalingRuleWithOptionsAsync(DescribeApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
+            {
+                query["ScalingRuleName"] = request.ScalingRuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationScalingRule",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/scale/applicationScalingRule",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
         public DescribeApplicationScalingRulesResponse DescribeApplicationScalingRules(DescribeApplicationScalingRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3151,6 +3269,84 @@ namespace AlibabaCloud.SDK.Sae20190506
                 BodyType = "json",
             };
             return TeaModel.ToObject<DescribeConfigMapResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public DescribeConfigurationPriceResponse DescribeConfigurationPrice(DescribeConfigurationPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeConfigurationPriceWithOptions(request, headers, runtime);
+        }
+
+        public async Task<DescribeConfigurationPriceResponse> DescribeConfigurationPriceAsync(DescribeConfigurationPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeConfigurationPriceWithOptionsAsync(request, headers, runtime);
+        }
+
+        public DescribeConfigurationPriceResponse DescribeConfigurationPriceWithOptions(DescribeConfigurationPriceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                query["Cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                query["Memory"] = request.Memory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeConfigurationPrice",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/paas/configurationPrice",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeConfigurationPriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<DescribeConfigurationPriceResponse> DescribeConfigurationPriceWithOptionsAsync(DescribeConfigurationPriceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                query["Cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                query["Memory"] = request.Memory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeConfigurationPrice",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/paas/configurationPrice",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeConfigurationPriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DescribeEdasContainersResponse DescribeEdasContainers()
@@ -4015,7 +4211,7 @@ namespace AlibabaCloud.SDK.Sae20190506
                 Action = "DownloadFiles",
                 Version = "2019-05-06",
                 Protocol = "HTTPS",
-                Pathname = "/pop/v1/sam/app/downloadFiles.json",
+                Pathname = "/pop/v1/sam/app/downloadFiles",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4051,7 +4247,7 @@ namespace AlibabaCloud.SDK.Sae20190506
                 Action = "DownloadFiles",
                 Version = "2019-05-06",
                 Protocol = "HTTPS",
-                Pathname = "/pop/v1/sam/app/downloadFiles.json",
+                Pathname = "/pop/v1/sam/app/downloadFiles",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5559,6 +5755,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AutoEnableApplicationScalingRule"] = request.AutoEnableApplicationScalingRule;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
                 query["MinReadyInstances"] = request.MinReadyInstances;
@@ -5598,6 +5798,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoEnableApplicationScalingRule))
             {
                 query["AutoEnableApplicationScalingRule"] = request.AutoEnableApplicationScalingRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
@@ -5735,6 +5939,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
                 query["MinReadyInstances"] = request.MinReadyInstances;
@@ -5766,6 +5974,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
@@ -5899,6 +6111,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["BatchWaitTime"] = request.BatchWaitTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
                 query["MinReadyInstances"] = request.MinReadyInstances;
@@ -5946,6 +6162,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchWaitTime))
             {
                 query["BatchWaitTime"] = request.BatchWaitTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
             {
@@ -6501,6 +6721,18 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
+            {
+                query["MinReadyInstances"] = request.MinReadyInstances;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleMetric))
+            {
+                query["ScalingRuleMetric"] = request.ScalingRuleMetric;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
             {
                 query["ScalingRuleName"] = request.ScalingRuleName;
@@ -6536,6 +6768,18 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
+            {
+                query["MinReadyInstances"] = request.MinReadyInstances;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleMetric))
+            {
+                query["ScalingRuleMetric"] = request.ScalingRuleMetric;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleName))
             {
@@ -7071,7 +7315,7 @@ namespace AlibabaCloud.SDK.Sae20190506
                 Action = "UploadFiles",
                 Version = "2019-05-06",
                 Protocol = "HTTPS",
-                Pathname = "/pop/v1/sam/app/uploadFiles.json",
+                Pathname = "/pop/v1/sam/app/uploadFiles",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -7111,7 +7355,7 @@ namespace AlibabaCloud.SDK.Sae20190506
                 Action = "UploadFiles",
                 Version = "2019-05-06",
                 Protocol = "HTTPS",
-                Pathname = "/pop/v1/sam/app/uploadFiles.json",
+                Pathname = "/pop/v1/sam/app/uploadFiles",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",

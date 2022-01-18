@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("EnableAgent")]
             [Validation(Required=false)]
             public bool? EnableAgent { get; set; }
+            [NameInMap("FileSizeLimit")]
+            [Validation(Required=false)]
+            public long? FileSizeLimit { get; set; }
             [NameInMap("LastChangeOrderId")]
             [Validation(Required=false)]
             public string LastChangeOrderId { get; set; }
