@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Attributes { get; set; }
 
+        [NameInMap("EntityType")]
+        [Validation(Required=false)]
+        public string EntityType { get; set; }
+
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public Dictionary<string, object> Properties { get; set; }

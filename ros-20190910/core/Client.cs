@@ -4251,9 +4251,18 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await ListChangeSetsWithOptionsAsync(request, runtime);
         }
 
-        public ListResourceTypesResponse ListResourceTypesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListResourceTypesResponse ListResourceTypesWithOptions(ListResourceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListResourceTypes",
@@ -4269,9 +4278,18 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<ListResourceTypesResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<ListResourceTypesResponse> ListResourceTypesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListResourceTypesResponse> ListResourceTypesWithOptionsAsync(ListResourceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListResourceTypes",
@@ -4287,16 +4305,16 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<ListResourceTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        public ListResourceTypesResponse ListResourceTypes()
+        public ListResourceTypesResponse ListResourceTypes(ListResourceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListResourceTypesWithOptions(runtime);
+            return ListResourceTypesWithOptions(request, runtime);
         }
 
-        public async Task<ListResourceTypesResponse> ListResourceTypesAsync()
+        public async Task<ListResourceTypesResponse> ListResourceTypesAsync(ListResourceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListResourceTypesWithOptionsAsync(runtime);
+            return await ListResourceTypesWithOptionsAsync(request, runtime);
         }
 
         public ListStackEventsResponse ListStackEventsWithOptions(ListStackEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
