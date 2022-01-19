@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ExportNacosConfigRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string AcceptLanguage { get; set; }
 
-        [NameInMap("NamespaceId")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public string NamespaceId { get; set; }
-
-        [NameInMap("Ids")]
-        [Validation(Required=false)]
-        public string Ids { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DataId")]
         [Validation(Required=false)]
@@ -29,9 +25,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Group { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string Ids { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("NamespaceId")]
+        [Validation(Required=false)]
+        public string NamespaceId { get; set; }
 
     }
 

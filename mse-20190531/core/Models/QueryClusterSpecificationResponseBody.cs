@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryClusterSpecificationResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public int? Code { get; set; }
 
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,29 +21,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ClusterSpecificationName { get; set; }
 
+            [NameInMap("CpuCapacity")]
+            [Validation(Required=false)]
+            public string CpuCapacity { get; set; }
+
             [NameInMap("DiskCapacity")]
             [Validation(Required=false)]
             public string DiskCapacity { get; set; }
-
-            [NameInMap("MemoryCapacity")]
-            [Validation(Required=false)]
-            public string MemoryCapacity { get; set; }
 
             [NameInMap("InstanceCount")]
             [Validation(Required=false)]
             public string InstanceCount { get; set; }
 
-            [NameInMap("MaxTps")]
-            [Validation(Required=false)]
-            public string MaxTps { get; set; }
-
             [NameInMap("MaxCon")]
             [Validation(Required=false)]
             public string MaxCon { get; set; }
 
-            [NameInMap("CpuCapacity")]
+            [NameInMap("MaxTps")]
             [Validation(Required=false)]
-            public string CpuCapacity { get; set; }
+            public string MaxTps { get; set; }
+
+            [NameInMap("MemoryCapacity")]
+            [Validation(Required=false)]
+            public string MemoryCapacity { get; set; }
 
         }
 
@@ -59,9 +51,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
-        [NameInMap("Code")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

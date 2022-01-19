@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ImportNacosConfigRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
+        [Validation(Required=false)]
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("FileUrl")]
+        [Validation(Required=false)]
+        public string FileUrl { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -20,10 +28,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
-
-        [NameInMap("FileUrl")]
-        [Validation(Required=false)]
-        public string FileUrl { get; set; }
 
     }
 

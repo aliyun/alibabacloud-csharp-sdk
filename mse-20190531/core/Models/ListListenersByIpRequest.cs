@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListListenersByIpRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
 
     }
 

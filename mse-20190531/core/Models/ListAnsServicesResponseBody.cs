@@ -9,41 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAnsServicesResponseBody : TeaModel {
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public string HttpCode { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAnsServicesResponseBodyData> Data { get; set; }
         public class ListAnsServicesResponseBodyData : TeaModel {
-            [NameInMap("HealthyInstanceCount")]
+            [NameInMap("ClusterCount")]
             [Validation(Required=false)]
-            public int? HealthyInstanceCount { get; set; }
+            public int? ClusterCount { get; set; }
 
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
+
+            [NameInMap("HealthyInstanceCount")]
+            [Validation(Required=false)]
+            public int? HealthyInstanceCount { get; set; }
 
             [NameInMap("IpCount")]
             [Validation(Required=false)]
@@ -53,19 +33,39 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("ClusterCount")]
-            [Validation(Required=false)]
-            public int? ClusterCount { get; set; }
-
         }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        [NameInMap("HttpCode")]
+        [Validation(Required=false)]
+        public string HttpCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

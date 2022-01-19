@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateAclRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
+        [Validation(Required=false)]
+        public string AcceptLanguage { get; set; }
+
         [NameInMap("AclEntryList")]
         [Validation(Required=false)]
         public string AclEntryList { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetImportFileUrlRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
+        [Validation(Required=false)]
+        public string AcceptLanguage { get; set; }
+
         [NameInMap("ContentType")]
         [Validation(Required=false)]
         public string ContentType { get; set; }

@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAnsServicesRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
-
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public int? PageNum { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
-
-        [NameInMap("ServiceName")]
-        [Validation(Required=false)]
-        public string ServiceName { get; set; }
 
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -44,6 +32,22 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
+
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
+
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
 
     }
 

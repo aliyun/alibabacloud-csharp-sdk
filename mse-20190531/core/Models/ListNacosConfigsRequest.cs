@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListNacosConfigsRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
 
-        [NameInMap("PageNum")]
+        [NameInMap("AppName")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AppName { get; set; }
 
         [NameInMap("DataId")]
         [Validation(Required=false)]
@@ -37,17 +25,33 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Group { get; set; }
 
-        [NameInMap("AppName")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string Tags { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
+
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
 
     }
 

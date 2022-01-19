@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpgradeClusterRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
 
         [NameInMap("UpgradeVersion")]
         [Validation(Required=false)]

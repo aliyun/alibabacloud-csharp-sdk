@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteNacosConfigsRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string Ids { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

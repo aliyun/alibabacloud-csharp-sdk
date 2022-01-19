@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListEurekaInstancesRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -21,9 +25,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("RequestPars")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string RequestPars { get; set; }
 
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

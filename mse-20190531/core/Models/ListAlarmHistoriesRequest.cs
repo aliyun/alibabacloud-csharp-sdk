@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAlarmHistoriesRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("AlarmMseType")]
+        [Validation(Required=false)]
+        public string AlarmMseType { get; set; }
+
+        [NameInMap("AlarmName")]
+        [Validation(Required=false)]
+        public string AlarmName { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -21,21 +33,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("AlarmMseType")]
+        [NameInMap("RequestPars")]
         [Validation(Required=false)]
-        public string AlarmMseType { get; set; }
+        public string RequestPars { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        [NameInMap("AlarmName")]
-        [Validation(Required=false)]
-        public string AlarmName { get; set; }
 
     }
 

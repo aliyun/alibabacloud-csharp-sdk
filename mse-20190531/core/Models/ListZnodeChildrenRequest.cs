@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListZnodeChildrenRequest : TeaModel {
-        [NameInMap("Path")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string Path { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
 
     }
 

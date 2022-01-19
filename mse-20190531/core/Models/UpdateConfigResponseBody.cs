@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateConfigResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -16,10 +24,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

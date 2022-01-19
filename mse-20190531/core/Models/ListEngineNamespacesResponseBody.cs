@@ -9,45 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListEngineNamespacesResponseBody : TeaModel {
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public string HttpCode { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListEngineNamespacesResponseBodyData> Data { get; set; }
         public class ListEngineNamespacesResponseBodyData : TeaModel {
-            [NameInMap("Type")]
+            [NameInMap("ConfigCount")]
             [Validation(Required=false)]
-            public int? Type { get; set; }
-
-            [NameInMap("NamespaceShowName")]
-            [Validation(Required=false)]
-            public string NamespaceShowName { get; set; }
-
-            [NameInMap("Quota")]
-            [Validation(Required=false)]
-            public int? Quota { get; set; }
+            public int? ConfigCount { get; set; }
 
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -57,13 +25,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string NamespaceDesc { get; set; }
 
-            [NameInMap("ConfigCount")]
+            [NameInMap("NamespaceShowName")]
             [Validation(Required=false)]
-            public int? ConfigCount { get; set; }
+            public string NamespaceShowName { get; set; }
+
+            [NameInMap("Quota")]
+            [Validation(Required=false)]
+            public int? Quota { get; set; }
 
             [NameInMap("ServiceCount")]
             [Validation(Required=false)]
             public string ServiceCount { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
 
         }
 
@@ -71,9 +47,33 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        [NameInMap("HttpCode")]
+        [Validation(Required=false)]
+        public string HttpCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

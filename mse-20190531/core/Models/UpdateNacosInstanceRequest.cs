@@ -9,33 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateNacosInstanceRequest : TeaModel {
-        /// <summary>
-        /// 实例id
-        /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        /// <summary>
-        /// 服务名
-        /// </summary>
-        [NameInMap("ServiceName")]
-        [Validation(Required=false)]
-        public string ServiceName { get; set; }
-
-        /// <summary>
-        /// 分组名
-        /// </summary>
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
-
-        /// <summary>
-        /// 命名空间id
-        /// </summary>
-        [NameInMap("NamespaceId")]
-        [Validation(Required=false)]
-        public string NamespaceId { get; set; }
+        public string AcceptLanguage { get; set; }
 
         /// <summary>
         /// Nacos集群名
@@ -45,18 +21,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// Nacos实例ip
+        /// 服务禁用标志
         /// </summary>
-        [NameInMap("Ip")]
+        [NameInMap("Enabled")]
         [Validation(Required=false)]
-        public string Ip { get; set; }
-
-        /// <summary>
-        /// Nacos实例端口
-        /// </summary>
-        [NameInMap("Port")]
-        [Validation(Required=false)]
-        public int? Port { get; set; }
+        public bool? Enabled { get; set; }
 
         /// <summary>
         /// 临时节点标志
@@ -66,18 +35,25 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Ephemeral { get; set; }
 
         /// <summary>
-        /// 权重
+        /// 分组名
         /// </summary>
-        [NameInMap("Weight")]
+        [NameInMap("GroupName")]
         [Validation(Required=false)]
-        public string Weight { get; set; }
+        public string GroupName { get; set; }
 
         /// <summary>
-        /// 服务禁用标志
+        /// 实例id
         /// </summary>
-        [NameInMap("Enabled")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public bool? Enabled { get; set; }
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// Nacos实例ip
+        /// </summary>
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
 
         /// <summary>
         /// 节点元数据
@@ -85,6 +61,34 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public string Metadata { get; set; }
+
+        /// <summary>
+        /// 命名空间id
+        /// </summary>
+        [NameInMap("NamespaceId")]
+        [Validation(Required=false)]
+        public string NamespaceId { get; set; }
+
+        /// <summary>
+        /// Nacos实例端口
+        /// </summary>
+        [NameInMap("Port")]
+        [Validation(Required=false)]
+        public int? Port { get; set; }
+
+        /// <summary>
+        /// 服务名
+        /// </summary>
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
+
+        /// <summary>
+        /// 权重
+        /// </summary>
+        [NameInMap("Weight")]
+        [Validation(Required=false)]
+        public string Weight { get; set; }
 
     }
 

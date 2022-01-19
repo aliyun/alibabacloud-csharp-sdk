@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosConfigRequest : TeaModel {
-        [NameInMap("InstanceId")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("Beta")]
+        [Validation(Required=false)]
+        public bool? Beta { get; set; }
 
         [NameInMap("DataId")]
         [Validation(Required=false)]
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("Group")]
         [Validation(Required=false)]
         public string Group { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

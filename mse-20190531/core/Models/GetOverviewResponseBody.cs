@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetOverviewResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public int? Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -17,21 +29,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public string Data { get; set; }
-
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
-
-        [NameInMap("HttpStatusCode")]
-        [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
 
     }
 

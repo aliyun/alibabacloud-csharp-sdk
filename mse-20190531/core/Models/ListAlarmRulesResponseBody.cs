@@ -9,53 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAlarmRulesResponseBody : TeaModel {
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public string HttpCode { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAlarmRulesResponseBodyData> Data { get; set; }
         public class ListAlarmRulesResponseBodyData : TeaModel {
-            [NameInMap("AlarmStatus")]
+            [NameInMap("AlarmName")]
             [Validation(Required=false)]
-            public string AlarmStatus { get; set; }
-
-            [NameInMap("AlarmRuleId")]
-            [Validation(Required=false)]
-            public string AlarmRuleId { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
+            public string AlarmName { get; set; }
 
             [NameInMap("AlarmRuleDetail")]
             [Validation(Required=false)]
             public string AlarmRuleDetail { get; set; }
 
-            [NameInMap("AlarmName")]
+            [NameInMap("AlarmRuleId")]
             [Validation(Required=false)]
-            public string AlarmName { get; set; }
+            public string AlarmRuleId { get; set; }
+
+            [NameInMap("AlarmStatus")]
+            [Validation(Required=false)]
+            public string AlarmStatus { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
 
         }
 
@@ -63,9 +39,33 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        [NameInMap("HttpCode")]
+        [Validation(Required=false)]
+        public string HttpCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

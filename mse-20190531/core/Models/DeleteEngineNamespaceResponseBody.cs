@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteEngineNamespaceResponseBody : TeaModel {
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public string HttpCode { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListClustersRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("ClusterAliasName")]
+        [Validation(Required=false)]
+        public string ClusterAliasName { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -21,13 +25,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClusterAliasName")]
-        [Validation(Required=false)]
-        public string ClusterAliasName { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
 
     }
 

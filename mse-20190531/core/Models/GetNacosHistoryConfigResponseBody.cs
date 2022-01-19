@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosHistoryConfigResponseBody : TeaModel {
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public GetNacosHistoryConfigResponseBodyConfiguration Configuration { get; set; }
@@ -24,18 +16,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
-            [NameInMap("Md5")]
-            [Validation(Required=false)]
-            public string Md5 { get; set; }
-            [NameInMap("DataId")]
-            [Validation(Required=false)]
-            public string DataId { get; set; }
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+            [NameInMap("EncryptedDataKey")]
+            [Validation(Required=false)]
+            public string EncryptedDataKey { get; set; }
             [NameInMap("Group")]
             [Validation(Required=false)]
             public string Group { get; set; }
+            [NameInMap("Md5")]
+            [Validation(Required=false)]
+            public string Md5 { get; set; }
             [NameInMap("OpType")]
             [Validation(Required=false)]
             public string OpType { get; set; }
@@ -44,6 +39,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("Success")]
         [Validation(Required=false)]

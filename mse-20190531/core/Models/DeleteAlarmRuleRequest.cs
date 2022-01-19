@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteAlarmRuleRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("AlarmRuleId")]
         [Validation(Required=false)]
         public string AlarmRuleId { get; set; }
+
+        [NameInMap("RequestPars")]
+        [Validation(Required=false)]
+        public string RequestPars { get; set; }
 
     }
 

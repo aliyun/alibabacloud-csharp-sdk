@@ -9,57 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListClustersResponseBody : TeaModel {
-        [NameInMap("HttpCode")]
-        [Validation(Required=false)]
-        public string HttpCode { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListClustersResponseBodyData> Data { get; set; }
         public class ListClustersResponseBodyData : TeaModel {
-            [NameInMap("EndDate")]
+            [NameInMap("AppVersion")]
             [Validation(Required=false)]
-            public string EndDate { get; set; }
+            public string AppVersion { get; set; }
 
-            [NameInMap("IntranetDomain")]
+            [NameInMap("CanUpdate")]
             [Validation(Required=false)]
-            public string IntranetDomain { get; set; }
-
-            [NameInMap("InternetDomain")]
-            [Validation(Required=false)]
-            public string InternetDomain { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
+            public bool? CanUpdate { get; set; }
 
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
-            [NameInMap("IntranetAddress")]
+            [NameInMap("ClusterAliasName")]
             [Validation(Required=false)]
-            public string IntranetAddress { get; set; }
+            public string ClusterAliasName { get; set; }
+
+            [NameInMap("ClusterName")]
+            [Validation(Required=false)]
+            public string ClusterName { get; set; }
+
+            [NameInMap("ClusterType")]
+            [Validation(Required=false)]
+            public string ClusterType { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("EndDate")]
+            [Validation(Required=false)]
+            public string EndDate { get; set; }
+
+            [NameInMap("InitStatus")]
+            [Validation(Required=false)]
+            public string InitStatus { get; set; }
+
+            [NameInMap("InstanceCount")]
+            [Validation(Required=false)]
+            public long? InstanceCount { get; set; }
 
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -69,21 +61,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string InternetAddress { get; set; }
 
-            [NameInMap("ClusterAliasName")]
+            [NameInMap("InternetDomain")]
             [Validation(Required=false)]
-            public string ClusterAliasName { get; set; }
+            public string InternetDomain { get; set; }
 
-            [NameInMap("ClusterType")]
+            [NameInMap("IntranetAddress")]
             [Validation(Required=false)]
-            public string ClusterType { get; set; }
+            public string IntranetAddress { get; set; }
 
-            [NameInMap("InitStatus")]
+            [NameInMap("IntranetDomain")]
             [Validation(Required=false)]
-            public string InitStatus { get; set; }
+            public string IntranetDomain { get; set; }
 
-            [NameInMap("AppVersion")]
+            [NameInMap("VersionCode")]
             [Validation(Required=false)]
-            public string AppVersion { get; set; }
+            public string VersionCode { get; set; }
 
         }
 
@@ -91,9 +83,33 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        [NameInMap("HttpCode")]
+        [Validation(Required=false)]
+        public string HttpCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

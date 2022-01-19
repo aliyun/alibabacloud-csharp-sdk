@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateZnodeRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
 
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
+
         [NameInMap("Path")]
         [Validation(Required=false)]
         public string Path { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("RequestPars")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public string RequestPars { get; set; }
 
     }
 

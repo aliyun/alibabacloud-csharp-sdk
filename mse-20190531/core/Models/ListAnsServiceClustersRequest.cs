@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAnsServiceClustersRequest : TeaModel {
-        [NameInMap("RequestPars")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public string RequestPars { get; set; }
+        public string AcceptLanguage { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        [NameInMap("ClusterName")]
+        [Validation(Required=false)]
+        public string ClusterName { get; set; }
+
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("NamespaceId")]
+        [Validation(Required=false)]
+        public string NamespaceId { get; set; }
 
         [NameInMap("PageNum")]
         [Validation(Required=false)]
@@ -21,25 +41,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("ClusterId")]
+        [NameInMap("RequestPars")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string RequestPars { get; set; }
 
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
-
-        [NameInMap("GroupName")]
-        [Validation(Required=false)]
-        public string GroupName { get; set; }
-
-        [NameInMap("NamespaceId")]
-        [Validation(Required=false)]
-        public string NamespaceId { get; set; }
-
-        [NameInMap("ClusterName")]
-        [Validation(Required=false)]
-        public string ClusterName { get; set; }
 
     }
 
