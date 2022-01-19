@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
             [Validation(Required=false)]
             public string KMSKeyId { get; set; }
 
+            [NameInMap("LastFailed")]
+            [Validation(Required=false)]
+            public string LastFailed { get; set; }
+
             [NameInMap("LastMountTime")]
             [Validation(Required=false)]
             public string LastMountTime { get; set; }
