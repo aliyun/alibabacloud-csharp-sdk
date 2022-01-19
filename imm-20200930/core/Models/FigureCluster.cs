@@ -129,11 +129,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// Version
+        /// VideoCount
         /// </summary>
-        [NameInMap("Version")]
+        [NameInMap("VideoCount")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public long? VideoCount { get; set; }
 
     }
 

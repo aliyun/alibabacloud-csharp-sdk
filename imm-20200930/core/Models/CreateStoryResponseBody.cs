@@ -8,7 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ClusterFiguresResponseBody : TeaModel {
+    public class CreateStoryResponseBody : TeaModel {
+        [NameInMap("EventId")]
+        [Validation(Required=false)]
+        public string EventId { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>

@@ -8,34 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ListFigureClustersRequest : TeaModel {
+    public class CreateFigureClusteringTaskRequest : TeaModel {
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        [NameInMap("Labels")]
+        [NameInMap("NotifyEndpoint")]
         [Validation(Required=false)]
-        public string Labels { get; set; }
+        public string NotifyEndpoint { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
-        public long? MaxResults { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("Order")]
-        [Validation(Required=false)]
-        public string Order { get; set; }
+        public string NotifyTopicName { get; set; }
 
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
-        [NameInMap("Sort")]
+        [NameInMap("UserData")]
         [Validation(Required=false)]
-        public string Sort { get; set; }
+        public string UserData { get; set; }
 
     }
 

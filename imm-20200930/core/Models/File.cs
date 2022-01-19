@@ -45,18 +45,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AlbumArtist { get; set; }
 
         /// <summary>
-        /// Artists
+        /// Artist
         /// </summary>
-        [NameInMap("Artists")]
+        [NameInMap("Artist")]
         [Validation(Required=false)]
-        public List<string> Artists { get; set; }
-
-        /// <summary>
-        /// AudioBitrate
-        /// </summary>
-        [NameInMap("AudioBitrate")]
-        [Validation(Required=false)]
-        public float? AudioBitrate { get; set; }
+        public string Artist { get; set; }
 
         /// <summary>
         /// AudioCovers
@@ -66,32 +59,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<Image> AudioCovers { get; set; }
 
         /// <summary>
-        /// AudioDuration
-        /// </summary>
-        [NameInMap("AudioDuration")]
-        [Validation(Required=false)]
-        public float? AudioDuration { get; set; }
-
-        /// <summary>
-        /// AudioLanguage
-        /// </summary>
-        [NameInMap("AudioLanguage")]
-        [Validation(Required=false)]
-        public string AudioLanguage { get; set; }
-
-        /// <summary>
         /// AudioStreams
         /// </summary>
         [NameInMap("AudioStreams")]
         [Validation(Required=false)]
         public List<AudioStream> AudioStreams { get; set; }
-
-        /// <summary>
-        /// AudioTakenTime
-        /// </summary>
-        [NameInMap("AudioTakenTime")]
-        [Validation(Required=false)]
-        public string AudioTakenTime { get; set; }
 
         /// <summary>
         /// CacheControl
@@ -280,6 +252,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<Label> Labels { get; set; }
 
         /// <summary>
+        /// Language
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
+        /// <summary>
         /// LatLong
         /// </summary>
         [NameInMap("LatLong")]
@@ -396,7 +375,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </summary>
         [NameInMap("Orientation")]
         [Validation(Required=false)]
-        public string Orientation { get; set; }
+        public long? Orientation { get; set; }
 
         /// <summary>
         /// OwnerId
@@ -511,20 +490,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// VideoBitrate
-        /// </summary>
-        [NameInMap("VideoBitrate")]
-        [Validation(Required=false)]
-        public long? VideoBitrate { get; set; }
-
-        /// <summary>
-        /// VideoDuration
-        /// </summary>
-        [NameInMap("VideoDuration")]
-        [Validation(Required=false)]
-        public float? VideoDuration { get; set; }
-
-        /// <summary>
         /// VideoHeight
         /// </summary>
         [NameInMap("VideoHeight")]
@@ -544,13 +509,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("VideoStreams")]
         [Validation(Required=false)]
         public List<VideoStream> VideoStreams { get; set; }
-
-        /// <summary>
-        /// VideoTakenTime
-        /// </summary>
-        [NameInMap("VideoTakenTime")]
-        [Validation(Required=false)]
-        public string VideoTakenTime { get; set; }
 
         /// <summary>
         /// VideoWidth

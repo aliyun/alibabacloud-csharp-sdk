@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class UpdateFigureClusterRequest : TeaModel {
+    public class GetStoryRequest : TeaModel {
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        [NameInMap("FigureCluster")]
+        [NameInMap("ObjectId")]
         [Validation(Required=false)]
-        public FigureClusterForReq FigureCluster { get; set; }
+        public string ObjectId { get; set; }
 
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

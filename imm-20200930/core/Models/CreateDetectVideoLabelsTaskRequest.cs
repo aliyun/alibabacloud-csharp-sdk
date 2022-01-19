@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateDetectVideoLabelsTaskRequest : TeaModel {
         /// <summary>
+        /// NotifyEndpoint
+        /// </summary>
+        [NameInMap("NotifyEndpoint")]
+        [Validation(Required=false)]
+        public string NotifyEndpoint { get; set; }
+
+        /// <summary>
+        /// NotifyTopicName
+        /// </summary>
+        [NameInMap("NotifyTopicName")]
+        [Validation(Required=false)]
+        public string NotifyTopicName { get; set; }
+
+        /// <summary>
         /// 项目名称
         /// </summary>
         [NameInMap("ProjectName")]

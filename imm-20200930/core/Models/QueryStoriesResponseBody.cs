@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ListFigureClustersResponseBody : TeaModel {
-        [NameInMap("FigureClusters")]
-        [Validation(Required=false)]
-        public List<FigureCluster> FigureClusters { get; set; }
-
+    public class QueryStoriesResponseBody : TeaModel {
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -23,6 +19,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Stories")]
+        [Validation(Required=false)]
+        public List<Story> Stories { get; set; }
 
     }
 

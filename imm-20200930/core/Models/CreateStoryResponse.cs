@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class GetFileSignedURIResponse : TeaModel {
+    public class CreateStoryResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public GetFileSignedURIResponseBody Body { get; set; }
+        public CreateStoryResponseBody Body { get; set; }
 
     }
 

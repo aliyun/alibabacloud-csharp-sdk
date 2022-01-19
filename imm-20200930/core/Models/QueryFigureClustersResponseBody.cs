@@ -8,20 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class GetFileSignedURIResponseBody : TeaModel {
+    public class QueryFigureClustersResponseBody : TeaModel {
+        [NameInMap("FigureClusters")]
+        [Validation(Required=false)]
+        public List<FigureCluster> FigureClusters { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// 签名地址
-        /// </summary>
-        [NameInMap("URI")]
-        [Validation(Required=false)]
-        public string URI { get; set; }
 
     }
 

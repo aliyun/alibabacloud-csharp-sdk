@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        [NameInMap("FigureClusterId")]
+        [NameInMap("ObjectId")]
         [Validation(Required=false)]
-        public string FigureClusterId { get; set; }
+        public string ObjectId { get; set; }
 
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

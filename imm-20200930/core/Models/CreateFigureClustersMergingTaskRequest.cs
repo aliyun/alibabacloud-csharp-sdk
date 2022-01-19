@@ -8,22 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class ClusterFiguresRequest : TeaModel {
-        [NameInMap("CustomMessage")]
-        [Validation(Required=false)]
-        public string CustomMessage { get; set; }
-
+    public class CreateFigureClustersMergingTaskRequest : TeaModel {
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
-        [NameInMap("FigureType")]
+        /// <summary>
+        /// 源cluster
+        /// </summary>
+        [NameInMap("From")]
         [Validation(Required=false)]
-        public string FigureType { get; set; }
+        public string From { get; set; }
 
-        [NameInMap("NotifyTopicEndpoint")]
+        [NameInMap("NotifyEndpoint")]
         [Validation(Required=false)]
-        public string NotifyTopicEndpoint { get; set; }
+        public string NotifyEndpoint { get; set; }
 
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
@@ -32,6 +31,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
+
+        /// <summary>
+        /// 目的cluster
+        /// </summary>
+        [NameInMap("To")]
+        [Validation(Required=false)]
+        public string To { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
     }
 

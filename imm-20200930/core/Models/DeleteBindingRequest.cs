@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DeleteBindingRequest : TeaModel {
+        [NameInMap("Cleanup")]
+        [Validation(Required=false)]
+        public bool? Cleanup { get; set; }
+
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }

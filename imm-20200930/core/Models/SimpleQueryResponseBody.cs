@@ -53,12 +53,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public string Operation { get; set; }
 
-            /// <summary>
-            /// 聚合的统计结果
-            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
-            public float? Value { get; set; }
+            public string Value { get; set; }
 
         }
 

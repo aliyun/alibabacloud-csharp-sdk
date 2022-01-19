@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </summary>
         [NameInMap("AverageFrameRate")]
         [Validation(Required=false)]
-        public float? AverageFrameRate { get; set; }
+        public string AverageFrameRate { get; set; }
 
         /// <summary>
         /// Bitrate
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </summary>
         [NameInMap("FrameRate")]
         [Validation(Required=false)]
-        public float? FrameRate { get; set; }
+        public string FrameRate { get; set; }
 
         /// <summary>
         /// HasBFrames
         /// </summary>
         [NameInMap("HasBFrames")]
         [Validation(Required=false)]
-        public string HasBFrames { get; set; }
+        public long? HasBFrames { get; set; }
 
         /// <summary>
         /// Height
@@ -134,6 +134,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public string Profile { get; set; }
+
+        /// <summary>
+        /// Rotate
+        /// </summary>
+        [NameInMap("Rotate")]
+        [Validation(Required=false)]
+        public string Rotate { get; set; }
 
         /// <summary>
         /// SampleAspectRatio
