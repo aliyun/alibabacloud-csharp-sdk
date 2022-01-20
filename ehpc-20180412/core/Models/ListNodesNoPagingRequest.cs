@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public string HostName { get; set; }
 
-        [NameInMap("OnlyDetached")]
-        [Validation(Required=false)]
-        public bool? OnlyDetached { get; set; }
-
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }

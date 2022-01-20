@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         [Validation(Required=false)]
         public int? Interval { get; set; }
 
+        [NameInMap("JobQueue")]
+        [Validation(Required=false)]
+        public string JobQueue { get; set; }
+
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
