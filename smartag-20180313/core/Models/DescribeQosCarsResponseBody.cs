@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeQosCarsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         [NameInMap("QosCars")]
         [Validation(Required=false)]
@@ -21,31 +25,27 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeQosCarsResponseBodyQosCarsQosCar> QosCar { get; set; }
             public class DescribeQosCarsResponseBodyQosCarsQosCar : TeaModel {
-                public int? MaxBandwidthAbs { get; set; }
-                public string PercentSourceType { get; set; }
-                public int? MinBandwidthAbs { get; set; }
-                public int? MaxBandwidthPercent { get; set; }
                 public string Description { get; set; }
-                public string QosId { get; set; }
                 public string LimitType { get; set; }
-                public int? Priority { get; set; }
-                public string Name { get; set; }
+                public int? MaxBandwidthAbs { get; set; }
+                public int? MaxBandwidthPercent { get; set; }
+                public int? MinBandwidthAbs { get; set; }
                 public int? MinBandwidthPercent { get; set; }
+                public string Name { get; set; }
+                public string PercentSourceType { get; set; }
+                public int? Priority { get; set; }
                 public string QosCarId { get; set; }
+                public string QosId { get; set; }
             }
         };
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

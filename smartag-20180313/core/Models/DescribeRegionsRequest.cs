@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeRegionsRequest : TeaModel {
+        [NameInMap("AcceptLanguage")]
+        [Validation(Required=false)]
+        public string AcceptLanguage { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("AcceptLanguage")]
-        [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
 
     }
 

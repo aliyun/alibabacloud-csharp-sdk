@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class GetQosAttributeRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("QosId")]
         [Validation(Required=false)]
         public string QosId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

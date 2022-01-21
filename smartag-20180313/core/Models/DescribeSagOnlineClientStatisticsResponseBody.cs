@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagOnlineClientStatisticsResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("SagStatistics")]
         [Validation(Required=false)]
         public DescribeSagOnlineClientStatisticsResponseBodySagStatistics SagStatistics { get; set; }
@@ -17,14 +21,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics> Statistics { get; set; }
             public class DescribeSagOnlineClientStatisticsResponseBodySagStatisticsStatistics : TeaModel {
-                public string SmartAGId { get; set; }
                 public string OnlineCount { get; set; }
+                public string SmartAGId { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
     }
 

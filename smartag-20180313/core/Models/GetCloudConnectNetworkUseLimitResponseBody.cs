@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class GetCloudConnectNetworkUseLimitResponseBody : TeaModel {
-        [NameInMap("UsedAmount")]
-        [Validation(Required=false)]
-        public int? UsedAmount { get; set; }
-
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("TotalAmount")]
         [Validation(Required=false)]
         public int? TotalAmount { get; set; }
+
+        [NameInMap("UsedAmount")]
+        [Validation(Required=false)]
+        public int? UsedAmount { get; set; }
 
     }
 

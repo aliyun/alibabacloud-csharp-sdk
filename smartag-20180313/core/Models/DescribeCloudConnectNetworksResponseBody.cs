@@ -17,9 +17,18 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork> CloudConnectNetwork { get; set; }
             public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork : TeaModel {
-                public long? CreateTime { get; set; }
+                public string AssociatedCenId { get; set; }
                 public string AssociatedCenOwnerId { get; set; }
                 public string AssociatedCloudBoxCount { get; set; }
+                public string AvailableCloudBoxCount { get; set; }
+                public string CcnId { get; set; }
+                public string CidrBlock { get; set; }
+                public long? CreateTime { get; set; }
+                public string Description { get; set; }
+                public string InterworkingStatus { get; set; }
+                public string Name { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string SnatCidrBlock { get; set; }
                 public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags Tags { get; set; }
                 public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTags : TeaModel {
                     [NameInMap("Tag")]
@@ -37,21 +46,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                     }
 
                 }
-                public string InterworkingStatus { get; set; }
-                public string CcnId { get; set; }
-                public string AvailableCloudBoxCount { get; set; }
-                public string CidrBlock { get; set; }
-                public string Description { get; set; }
-                public string SnatCidrBlock { get; set; }
-                public string AssociatedCenId { get; set; }
-                public string Name { get; set; }
-                public string ResourceGroupId { get; set; }
             }
         };
 
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

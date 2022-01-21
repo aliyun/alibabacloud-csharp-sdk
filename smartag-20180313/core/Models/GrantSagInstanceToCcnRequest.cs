@@ -9,30 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class GrantSagInstanceToCcnRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("SmartAGId")]
-        [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
         [NameInMap("CcnInstanceId")]
         [Validation(Required=false)]
         public string CcnInstanceId { get; set; }
@@ -44,6 +20,30 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("GrantTrafficService")]
         [Validation(Required=false)]
         public bool? GrantTrafficService { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SmartAGId")]
+        [Validation(Required=false)]
+        public string SmartAGId { get; set; }
 
     }
 

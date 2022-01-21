@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateACLResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

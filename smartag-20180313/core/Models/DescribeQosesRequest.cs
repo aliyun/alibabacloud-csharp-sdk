@@ -17,17 +17,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public int? PageNumber { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("QosIds")]
         [Validation(Required=false)]
@@ -37,13 +33,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string QosName { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

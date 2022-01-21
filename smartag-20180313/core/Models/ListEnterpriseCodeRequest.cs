@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListEnterpriseCodeRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("EnterpriseCode")]
         [Validation(Required=false)]
         public string EnterpriseCode { get; set; }
@@ -21,13 +17,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
+        public string RegionId { get; set; }
 
     }
 

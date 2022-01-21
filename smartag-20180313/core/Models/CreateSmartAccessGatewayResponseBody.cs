@@ -13,25 +13,25 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        [NameInMap("SmartAGId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SmartAGId")]
+        [Validation(Required=false)]
+        public string SmartAGId { get; set; }
 
     }
 

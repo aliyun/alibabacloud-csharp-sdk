@@ -9,33 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeHealthCheckAttributeResponseBody : TeaModel {
-        [NameInMap("SrcPort")]
+        [NameInMap("CreateTime")]
         [Validation(Required=false)]
-        public int? SrcPort { get; set; }
+        public long? CreateTime { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DstIpAddr")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DstIpAddr { get; set; }
 
-        [NameInMap("SrcIpAddr")]
+        [NameInMap("DstPort")]
         [Validation(Required=false)]
-        public string SrcIpAddr { get; set; }
-
-        [NameInMap("CreateTime")]
-        [Validation(Required=false)]
-        public long? CreateTime { get; set; }
+        public int? DstPort { get; set; }
 
         [NameInMap("FailCountThreshold")]
         [Validation(Required=false)]
         public int? FailCountThreshold { get; set; }
 
-        [NameInMap("DstPort")]
+        [NameInMap("HcInstanceId")]
         [Validation(Required=false)]
-        public int? DstPort { get; set; }
+        public string HcInstanceId { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -45,37 +41,41 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public int? ProbeCount { get; set; }
 
-        [NameInMap("Type")]
+        [NameInMap("ProbeInterval")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public int? ProbeInterval { get; set; }
 
         [NameInMap("ProbeTimeout")]
         [Validation(Required=false)]
         public int? ProbeTimeout { get; set; }
 
-        [NameInMap("HcInstanceId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string HcInstanceId { get; set; }
-
-        [NameInMap("RttThreshold")]
-        [Validation(Required=false)]
-        public int? RttThreshold { get; set; }
-
-        [NameInMap("ProbeInterval")]
-        [Validation(Required=false)]
-        public int? ProbeInterval { get; set; }
-
-        [NameInMap("SmartAGId")]
-        [Validation(Required=false)]
-        public string SmartAGId { get; set; }
+        public string RequestId { get; set; }
 
         [NameInMap("RttFailThreshold")]
         [Validation(Required=false)]
         public int? RttFailThreshold { get; set; }
 
-        [NameInMap("DstIpAddr")]
+        [NameInMap("RttThreshold")]
         [Validation(Required=false)]
-        public string DstIpAddr { get; set; }
+        public int? RttThreshold { get; set; }
+
+        [NameInMap("SmartAGId")]
+        [Validation(Required=false)]
+        public string SmartAGId { get; set; }
+
+        [NameInMap("SrcIpAddr")]
+        [Validation(Required=false)]
+        public string SrcIpAddr { get; set; }
+
+        [NameInMap("SrcPort")]
+        [Validation(Required=false)]
+        public int? SrcPort { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

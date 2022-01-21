@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class UpdateEnterpriseCodeRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("EnterpriseCode")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
 
-        [NameInMap("ClientToken")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string RegionId { get; set; }
 
     }
 

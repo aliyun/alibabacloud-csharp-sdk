@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RemoteAccessIp")]
+        [Validation(Required=false)]
+        public string RemoteAccessIp { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SmartAGId")]
-        [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }
 
-        [NameInMap("RemoteAccessIp")]
+        [NameInMap("SmartAGId")]
         [Validation(Required=false)]
-        public string RemoteAccessIp { get; set; }
+        public string SmartAGId { get; set; }
 
     }
 

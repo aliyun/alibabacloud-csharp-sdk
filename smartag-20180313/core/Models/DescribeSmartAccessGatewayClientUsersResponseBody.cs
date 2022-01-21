@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSmartAccessGatewayClientUsersResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public int? TotalCount { get; set; }
 
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -33,12 +33,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser> User { get; set; }
             public class DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser : TeaModel {
-                public int? Bandwidth { get; set; }
-                public int? State { get; set; }
-                public string ClientIp { get; set; }
-                public string UserName { get; set; }
-                public string UserMail { get; set; }
                 public long? AccelerateBandwidth { get; set; }
+                public int? Bandwidth { get; set; }
+                public string ClientIp { get; set; }
+                public long? IsStaticIp { get; set; }
+                public int? State { get; set; }
+                public string UserMail { get; set; }
+                public string UserName { get; set; }
             }
         };
 

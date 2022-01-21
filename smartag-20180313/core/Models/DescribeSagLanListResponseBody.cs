@@ -9,36 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagLanListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TaskStates")]
-        [Validation(Required=false)]
-        public List<DescribeSagLanListResponseBodyTaskStates> TaskStates { get; set; }
-        public class DescribeSagLanListResponseBodyTaskStates : TeaModel {
-            [NameInMap("ErrorMessage")]
-            [Validation(Required=false)]
-            public string ErrorMessage { get; set; }
-
-            [NameInMap("State")]
-            [Validation(Required=false)]
-            public string State { get; set; }
-
-            [NameInMap("ErrorCode")]
-            [Validation(Required=false)]
-            public string ErrorCode { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-        }
-
         [NameInMap("Lans")]
         [Validation(Required=false)]
         public List<DescribeSagLanListResponseBodyLans> Lans { get; set; }
         public class DescribeSagLanListResponseBodyLans : TeaModel {
+            [NameInMap("EndIp")]
+            [Validation(Required=false)]
+            public string EndIp { get; set; }
+
+            [NameInMap("IP")]
+            [Validation(Required=false)]
+            public string IP { get; set; }
+
+            [NameInMap("IPType")]
+            [Validation(Required=false)]
+            public string IPType { get; set; }
+
             [NameInMap("Lease")]
             [Validation(Required=false)]
             public string Lease { get; set; }
@@ -46,10 +32,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("Mask")]
             [Validation(Required=false)]
             public string Mask { get; set; }
-
-            [NameInMap("EndIp")]
-            [Validation(Required=false)]
-            public string EndIp { get; set; }
 
             [NameInMap("PortName")]
             [Validation(Required=false)]
@@ -59,13 +41,31 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public string StartIp { get; set; }
 
-            [NameInMap("IPType")]
-            [Validation(Required=false)]
-            public string IPType { get; set; }
+        }
 
-            [NameInMap("IP")]
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TaskStates")]
+        [Validation(Required=false)]
+        public List<DescribeSagLanListResponseBodyTaskStates> TaskStates { get; set; }
+        public class DescribeSagLanListResponseBodyTaskStates : TeaModel {
+            [NameInMap("CreateTime")]
             [Validation(Required=false)]
-            public string IP { get; set; }
+            public string CreateTime { get; set; }
+
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
 
         }
 

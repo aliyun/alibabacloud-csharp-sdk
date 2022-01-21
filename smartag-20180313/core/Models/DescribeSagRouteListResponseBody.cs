@@ -17,25 +17,25 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public List<DescribeSagRouteListResponseBodyRoutes> Routes { get; set; }
         public class DescribeSagRouteListResponseBodyRoutes : TeaModel {
-            [NameInMap("NextHop")]
+            [NameInMap("ConflictCidrs")]
             [Validation(Required=false)]
-            public string NextHop { get; set; }
-
-            [NameInMap("DestinationCidr")]
-            [Validation(Required=false)]
-            public string DestinationCidr { get; set; }
+            public List<string> ConflictCidrs { get; set; }
 
             [NameInMap("Cost")]
             [Validation(Required=false)]
             public string Cost { get; set; }
 
+            [NameInMap("DestinationCidr")]
+            [Validation(Required=false)]
+            public string DestinationCidr { get; set; }
+
+            [NameInMap("NextHop")]
+            [Validation(Required=false)]
+            public string NextHop { get; set; }
+
             [NameInMap("PortName")]
             [Validation(Required=false)]
             public string PortName { get; set; }
-
-            [NameInMap("ConflictCidrs")]
-            [Validation(Required=false)]
-            public List<string> ConflictCidrs { get; set; }
 
             [NameInMap("RouteProtocol")]
             [Validation(Required=false)]

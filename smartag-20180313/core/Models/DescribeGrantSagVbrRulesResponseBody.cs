@@ -9,9 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeGrantSagVbrRulesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("GrantRules")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public DescribeGrantSagVbrRulesResponseBodyGrantRules GrantRules { get; set; }
+        public class DescribeGrantSagVbrRulesResponseBodyGrantRules : TeaModel {
+            [NameInMap("GrantRule")]
+            [Validation(Required=false)]
+            public List<DescribeGrantSagVbrRulesResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
+            public class DescribeGrantSagVbrRulesResponseBodyGrantRulesGrantRule : TeaModel {
+                public bool? Bound { get; set; }
+                public long? CreateTime { get; set; }
+                public string InstanceId { get; set; }
+                public string SmartAGId { get; set; }
+                public long? SmartAGUid { get; set; }
+                public string VbrInstanceId { get; set; }
+                public string VbrRegionId { get; set; }
+                public long? VbrUid { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,28 +40,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("GrantRules")]
-        [Validation(Required=false)]
-        public DescribeGrantSagVbrRulesResponseBodyGrantRules GrantRules { get; set; }
-        public class DescribeGrantSagVbrRulesResponseBodyGrantRules : TeaModel {
-            [NameInMap("GrantRule")]
-            [Validation(Required=false)]
-            public List<DescribeGrantSagVbrRulesResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
-            public class DescribeGrantSagVbrRulesResponseBodyGrantRulesGrantRule : TeaModel {
-                public string VbrInstanceId { get; set; }
-                public long? VbrUid { get; set; }
-                public string VbrRegionId { get; set; }
-                public long? CreateTime { get; set; }
-                public string SmartAGId { get; set; }
-                public bool? Bound { get; set; }
-                public string InstanceId { get; set; }
-                public long? SmartAGUid { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSmartAccessGatewayHaResponseBody : TeaModel {
+        [NameInMap("BackupDeviceId")]
+        [Validation(Required=false)]
+        public string BackupDeviceId { get; set; }
+
         [NameInMap("DeviceLevelBackupState")]
         [Validation(Required=false)]
         public string DeviceLevelBackupState { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DeviceLevelBackupType")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("BackupDeviceId")]
-        [Validation(Required=false)]
-        public string BackupDeviceId { get; set; }
+        public string DeviceLevelBackupType { get; set; }
 
         [NameInMap("LinkBackupInfoList")]
         [Validation(Required=false)]
@@ -29,26 +29,26 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public List<DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList> LinkBackupInfoList { get; set; }
             public class DescribeSmartAccessGatewayHaResponseBodyLinkBackupInfoListLinkBackupInfoList : TeaModel {
-                public string MainLinkId { get; set; }
+                public string BackupLinkId { get; set; }
                 public string BackupLinkState { get; set; }
                 public string LinkLevelBackupState { get; set; }
-                public string BackupLinkId { get; set; }
-                public string MainLinkState { get; set; }
                 public string LinkLevelBackupType { get; set; }
+                public string MainLinkId { get; set; }
+                public string MainLinkState { get; set; }
             }
         };
-
-        [NameInMap("SmartAGId")]
-        [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
-        [NameInMap("DeviceLevelBackupType")]
-        [Validation(Required=false)]
-        public string DeviceLevelBackupType { get; set; }
 
         [NameInMap("MainDeviceId")]
         [Validation(Required=false)]
         public string MainDeviceId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SmartAGId")]
+        [Validation(Required=false)]
+        public string SmartAGId { get; set; }
 
     }
 

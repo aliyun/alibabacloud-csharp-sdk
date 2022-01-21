@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -25,17 +29,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("VbrInstanceIds")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public List<string> VbrInstanceIds { get; set; }
 
         [NameInMap("VbrRegionId")]
         [Validation(Required=false)]
         public string VbrRegionId { get; set; }
-
-        [NameInMap("VbrInstanceIds")]
-        [Validation(Required=false)]
-        public List<string> VbrInstanceIds { get; set; }
 
     }
 

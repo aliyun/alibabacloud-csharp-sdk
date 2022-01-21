@@ -9,18 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateCloudConnectNetworkResponseBody : TeaModel {
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("CcnId")]
         [Validation(Required=false)]
         public string CcnId { get; set; }
@@ -29,17 +17,29 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
-        [NameInMap("SnatCidrBlock")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string SnatCidrBlock { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SnatCidrBlock")]
+        [Validation(Required=false)]
+        public string SnatCidrBlock { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

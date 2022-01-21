@@ -9,9 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeGrantRulesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("GrantRules")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public DescribeGrantRulesResponseBodyGrantRules GrantRules { get; set; }
+        public class DescribeGrantRulesResponseBodyGrantRules : TeaModel {
+            [NameInMap("GrantRule")]
+            [Validation(Required=false)]
+            public List<DescribeGrantRulesResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
+            public class DescribeGrantRulesResponseBodyGrantRulesGrantRule : TeaModel {
+                public string CcnInstanceId { get; set; }
+                public long? CcnUid { get; set; }
+                public string CenInstanceId { get; set; }
+                public long? CenUid { get; set; }
+                public long? GmtCreate { get; set; }
+                public long? GmtModified { get; set; }
+                public string GrantRuleId { get; set; }
+                public bool? GrantTrafficService { get; set; }
+                public string RegionId { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,29 +41,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("GrantRules")]
-        [Validation(Required=false)]
-        public DescribeGrantRulesResponseBodyGrantRules GrantRules { get; set; }
-        public class DescribeGrantRulesResponseBodyGrantRules : TeaModel {
-            [NameInMap("GrantRule")]
-            [Validation(Required=false)]
-            public List<DescribeGrantRulesResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
-            public class DescribeGrantRulesResponseBodyGrantRulesGrantRule : TeaModel {
-                public string CenInstanceId { get; set; }
-                public long? CenUid { get; set; }
-                public long? GmtCreate { get; set; }
-                public string GrantRuleId { get; set; }
-                public bool? GrantTrafficService { get; set; }
-                public long? GmtModified { get; set; }
-                public long? CcnUid { get; set; }
-                public string RegionId { get; set; }
-                public string CcnInstanceId { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

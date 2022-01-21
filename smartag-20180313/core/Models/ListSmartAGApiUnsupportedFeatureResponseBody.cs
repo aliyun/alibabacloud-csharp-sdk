@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListSmartAGApiUnsupportedFeatureResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Features")]
         [Validation(Required=false)]
         public List<ListSmartAGApiUnsupportedFeatureResponseBodyFeatures> Features { get; set; }
@@ -22,6 +18,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Feature { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

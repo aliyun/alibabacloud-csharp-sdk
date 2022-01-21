@@ -9,57 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifyFlowLogAttributeRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("ActiveAging")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? ActiveAging { get; set; }
 
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("FlowLogId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("ActiveAging")]
-        [Validation(Required=false)]
-        public int? ActiveAging { get; set; }
+        public string FlowLogId { get; set; }
 
         [NameInMap("InactiveAging")]
         [Validation(Required=false)]
         public int? InactiveAging { get; set; }
 
-        [NameInMap("OutputType")]
-        [Validation(Required=false)]
-        public string OutputType { get; set; }
-
-        [NameInMap("SlsRegionId")]
-        [Validation(Required=false)]
-        public string SlsRegionId { get; set; }
-
-        [NameInMap("ProjectName")]
-        [Validation(Required=false)]
-        public string ProjectName { get; set; }
-
         [NameInMap("LogstoreName")]
         [Validation(Required=false)]
         public string LogstoreName { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("NetflowServerIp")]
         [Validation(Required=false)]
@@ -73,9 +45,37 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string NetflowVersion { get; set; }
 
-        [NameInMap("FlowLogId")]
+        [NameInMap("OutputType")]
         [Validation(Required=false)]
-        public string FlowLogId { get; set; }
+        public string OutputType { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ProjectName")]
+        [Validation(Required=false)]
+        public string ProjectName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SlsRegionId")]
+        [Validation(Required=false)]
+        public string SlsRegionId { get; set; }
 
     }
 

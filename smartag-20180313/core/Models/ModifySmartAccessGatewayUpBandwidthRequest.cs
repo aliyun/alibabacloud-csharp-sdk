@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -29,17 +33,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string SmartAGId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("UpBandwidth4G")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? UpBandwidth4G { get; set; }
 
         [NameInMap("UpBandwidthWan")]
         [Validation(Required=false)]
         public int? UpBandwidthWan { get; set; }
-
-        [NameInMap("UpBandwidth4G")]
-        [Validation(Required=false)]
-        public int? UpBandwidth4G { get; set; }
 
     }
 

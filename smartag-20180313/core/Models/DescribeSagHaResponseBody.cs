@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagHaResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
@@ -31,10 +27,22 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TaskStates")]
         [Validation(Required=false)]
         public List<DescribeSagHaResponseBodyTaskStates> TaskStates { get; set; }
         public class DescribeSagHaResponseBodyTaskStates : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
@@ -42,14 +50,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-
-            [NameInMap("ErrorCode")]
-            [Validation(Required=false)]
-            public string ErrorCode { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
 
         }
 

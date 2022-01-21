@@ -9,25 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateSmartAccessGatewayRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("AlreadyHaveSag")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public bool? AlreadyHaveSag { get; set; }
 
-        [NameInMap("OwnerId")]
+        [NameInMap("AutoPay")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public bool? AutoPay { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("BuyerMessage")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public string BuyerMessage { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("CPEVersion")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string CPEVersion { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("ChargeType")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ChargeType { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("HaType")]
+        [Validation(Required=false)]
+        public string HaType { get; set; }
+
+        [NameInMap("HardWareSpec")]
+        [Validation(Required=false)]
+        public string HardWareSpec { get; set; }
 
         [NameInMap("MaxBandWidth")]
         [Validation(Required=false)]
@@ -37,49 +49,37 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
-        [NameInMap("AutoPay")]
+        [NameInMap("ReceiverAddress")]
         [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
-
-        [NameInMap("HardWareSpec")]
-        [Validation(Required=false)]
-        public string HardWareSpec { get; set; }
-
-        [NameInMap("ReceiverCountry")]
-        [Validation(Required=false)]
-        public string ReceiverCountry { get; set; }
-
-        [NameInMap("ReceiverState")]
-        [Validation(Required=false)]
-        public string ReceiverState { get; set; }
+        public string ReceiverAddress { get; set; }
 
         [NameInMap("ReceiverCity")]
         [Validation(Required=false)]
         public string ReceiverCity { get; set; }
 
+        [NameInMap("ReceiverCountry")]
+        [Validation(Required=false)]
+        public string ReceiverCountry { get; set; }
+
         [NameInMap("ReceiverDistrict")]
         [Validation(Required=false)]
         public string ReceiverDistrict { get; set; }
 
-        [NameInMap("ReceiverTown")]
+        [NameInMap("ReceiverEmail")]
         [Validation(Required=false)]
-        public string ReceiverTown { get; set; }
-
-        [NameInMap("ReceiverZip")]
-        [Validation(Required=false)]
-        public string ReceiverZip { get; set; }
-
-        [NameInMap("ReceiverPhone")]
-        [Validation(Required=false)]
-        public string ReceiverPhone { get; set; }
+        public string ReceiverEmail { get; set; }
 
         [NameInMap("ReceiverMobile")]
         [Validation(Required=false)]
@@ -89,33 +89,33 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string ReceiverName { get; set; }
 
-        [NameInMap("ReceiverEmail")]
+        [NameInMap("ReceiverPhone")]
         [Validation(Required=false)]
-        public string ReceiverEmail { get; set; }
+        public string ReceiverPhone { get; set; }
 
-        [NameInMap("BuyerMessage")]
+        [NameInMap("ReceiverState")]
         [Validation(Required=false)]
-        public string BuyerMessage { get; set; }
+        public string ReceiverState { get; set; }
 
-        [NameInMap("ReceiverAddress")]
+        [NameInMap("ReceiverTown")]
         [Validation(Required=false)]
-        public string ReceiverAddress { get; set; }
+        public string ReceiverTown { get; set; }
 
-        [NameInMap("HaType")]
+        [NameInMap("ReceiverZip")]
         [Validation(Required=false)]
-        public string HaType { get; set; }
+        public string ReceiverZip { get; set; }
 
-        [NameInMap("ChargeType")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ChargeType { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("AlreadyHaveSag")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public bool? AlreadyHaveSag { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("CPEVersion")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string CPEVersion { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

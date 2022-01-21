@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public List<DescribeSagWanSnatResponseBodyTaskStates> TaskStates { get; set; }
         public class DescribeSagWanSnatResponseBodyTaskStates : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
@@ -28,14 +36,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-
-            [NameInMap("ErrorCode")]
-            [Validation(Required=false)]
-            public string ErrorCode { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
 
         }
 

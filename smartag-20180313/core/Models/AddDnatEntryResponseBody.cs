@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AddDnatEntryResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DnatEntryId")]
         [Validation(Required=false)]
         public string DnatEntryId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

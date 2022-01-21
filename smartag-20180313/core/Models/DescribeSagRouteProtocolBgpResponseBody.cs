@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public int? HoldTime { get; set; }
 
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("KeepAlive")]
         [Validation(Required=false)]
         public int? KeepAlive { get; set; }
@@ -24,6 +20,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("LocalAs")]
         [Validation(Required=false)]
         public int? LocalAs { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("RouterId")]
         [Validation(Required=false)]
@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public List<DescribeSagRouteProtocolBgpResponseBodyTaskStates> TaskStates { get; set; }
         public class DescribeSagRouteProtocolBgpResponseBodyTaskStates : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
@@ -40,14 +48,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-
-            [NameInMap("ErrorCode")]
-            [Validation(Required=false)]
-            public string ErrorCode { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
 
         }
 

@@ -9,9 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeACLsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("Acls")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public DescribeACLsResponseBodyAcls Acls { get; set; }
+        public class DescribeACLsResponseBodyAcls : TeaModel {
+            [NameInMap("Acl")]
+            [Validation(Required=false)]
+            public List<DescribeACLsResponseBodyAclsAcl> Acl { get; set; }
+            public class DescribeACLsResponseBodyAclsAcl : TeaModel {
+                public string AclId { get; set; }
+                public string Name { get; set; }
+                public string ResourceGroupId { get; set; }
+                public string SagCount { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,24 +36,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Acls")]
-        [Validation(Required=false)]
-        public DescribeACLsResponseBodyAcls Acls { get; set; }
-        public class DescribeACLsResponseBodyAcls : TeaModel {
-            [NameInMap("Acl")]
-            [Validation(Required=false)]
-            public List<DescribeACLsResponseBodyAclsAcl> Acl { get; set; }
-            public class DescribeACLsResponseBodyAclsAcl : TeaModel {
-                public string SagCount { get; set; }
-                public string AclId { get; set; }
-                public string Name { get; set; }
-                public string ResourceGroupId { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 

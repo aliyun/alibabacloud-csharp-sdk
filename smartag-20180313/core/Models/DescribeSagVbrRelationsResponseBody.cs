@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public List<DescribeSagVbrRelationsResponseBodySagVbrRelations> SagVbrRelations { get; set; }
         public class DescribeSagVbrRelationsResponseBodySagVbrRelations : TeaModel {
-            [NameInMap("VbrInstanceId")]
+            [NameInMap("SagInstanceId")]
             [Validation(Required=false)]
-            public string VbrInstanceId { get; set; }
+            public string SagInstanceId { get; set; }
 
             [NameInMap("SagUid")]
             [Validation(Required=false)]
             public string SagUid { get; set; }
 
-            [NameInMap("SagInstanceId")]
+            [NameInMap("VbrInstanceId")]
             [Validation(Required=false)]
-            public string SagInstanceId { get; set; }
+            public string VbrInstanceId { get; set; }
 
         }
 

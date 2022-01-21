@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateSmartAccessGatewayClientUserResponseBody : TeaModel {
-        [NameInMap("UserName")]
+        [NameInMap("Bandwidth")]
         [Validation(Required=false)]
-        public string UserName { get; set; }
+        public int? Bandwidth { get; set; }
+
+        [NameInMap("ClientIp")]
+        [Validation(Required=false)]
+        public string ClientIp { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,13 +25,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string UserMail { get; set; }
 
-        [NameInMap("Bandwidth")]
+        [NameInMap("UserName")]
         [Validation(Required=false)]
-        public int? Bandwidth { get; set; }
-
-        [NameInMap("ClientIp")]
-        [Validation(Required=false)]
-        public string ClientIp { get; set; }
+        public string UserName { get; set; }
 
     }
 

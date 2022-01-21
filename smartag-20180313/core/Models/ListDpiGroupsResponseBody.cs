@@ -9,9 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListDpiGroupsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("DpiGroup")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public List<ListDpiGroupsResponseBodyDpiGroup> DpiGroup { get; set; }
+        public class ListDpiGroupsResponseBodyDpiGroup : TeaModel {
+            [NameInMap("DpiGroupId")]
+            [Validation(Required=false)]
+            public string DpiGroupId { get; set; }
+
+            [NameInMap("DpiGroupName")]
+            [Validation(Required=false)]
+            public string DpiGroupName { get; set; }
+
+            [NameInMap("MinEngineVersion")]
+            [Validation(Required=false)]
+            public string MinEngineVersion { get; set; }
+
+            [NameInMap("MinSignatureDbVersion")]
+            [Validation(Required=false)]
+            public string MinSignatureDbVersion { get; set; }
+
+        }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -21,27 +39,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("DpiGroup")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public List<ListDpiGroupsResponseBodyDpiGroup> DpiGroup { get; set; }
-        public class ListDpiGroupsResponseBodyDpiGroup : TeaModel {
-            [NameInMap("MinSignatureDbVersion")]
-            [Validation(Required=false)]
-            public string MinSignatureDbVersion { get; set; }
-
-            [NameInMap("DpiGroupName")]
-            [Validation(Required=false)]
-            public string DpiGroupName { get; set; }
-
-            [NameInMap("DpiGroupId")]
-            [Validation(Required=false)]
-            public string DpiGroupId { get; set; }
-
-            [NameInMap("MinEngineVersion")]
-            [Validation(Required=false)]
-            public string MinEngineVersion { get; set; }
-
-        }
+        public int? TotalCount { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifySagStaticRouteRequest : TeaModel {
+        [NameInMap("DestinationCidr")]
+        [Validation(Required=false)]
+        public string DestinationCidr { get; set; }
+
+        [NameInMap("NextHop")]
+        [Validation(Required=false)]
+        public string NextHop { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,6 +24,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PortName")]
+        [Validation(Required=false)]
+        public string PortName { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,10 +41,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("SmartAGId")]
         [Validation(Required=false)]
         public string SmartAGId { get; set; }
@@ -36,18 +48,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("SmartAGSn")]
         [Validation(Required=false)]
         public string SmartAGSn { get; set; }
-
-        [NameInMap("PortName")]
-        [Validation(Required=false)]
-        public string PortName { get; set; }
-
-        [NameInMap("DestinationCidr")]
-        [Validation(Required=false)]
-        public string DestinationCidr { get; set; }
-
-        [NameInMap("NextHop")]
-        [Validation(Required=false)]
-        public string NextHop { get; set; }
 
         [NameInMap("Vlan")]
         [Validation(Required=false)]

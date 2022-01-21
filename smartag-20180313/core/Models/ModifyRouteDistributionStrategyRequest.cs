@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifyRouteDistributionStrategyRequest : TeaModel {
+        [NameInMap("DestCidrBlock")]
+        [Validation(Required=false)]
+        public string DestCidrBlock { get; set; }
+
+        [NameInMap("HcInstanceId")]
+        [Validation(Required=false)]
+        public string HcInstanceId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,6 +24,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,33 +37,21 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("RouteDistribution")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("SmartAGId")]
-        [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
-        [NameInMap("HcInstanceId")]
-        [Validation(Required=false)]
-        public string HcInstanceId { get; set; }
-
-        [NameInMap("SourceType")]
-        [Validation(Required=false)]
-        public string SourceType { get; set; }
-
-        [NameInMap("DestCidrBlock")]
-        [Validation(Required=false)]
-        public string DestCidrBlock { get; set; }
+        public string RouteDistribution { get; set; }
 
         [NameInMap("RouteSource")]
         [Validation(Required=false)]
         public string RouteSource { get; set; }
 
-        [NameInMap("RouteDistribution")]
+        [NameInMap("SmartAGId")]
         [Validation(Required=false)]
-        public string RouteDistribution { get; set; }
+        public string SmartAGId { get; set; }
+
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
 
     }
 

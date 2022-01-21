@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListDpiGroupsRequest : TeaModel {
+        [NameInMap("DpiGroupIds")]
+        [Validation(Required=false)]
+        public List<string> DpiGroupIds { get; set; }
+
+        [NameInMap("DpiGroupNames")]
+        [Validation(Required=false)]
+        public List<string> DpiGroupNames { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -17,6 +33,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -24,26 +44,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("DpiGroupIds")]
-        [Validation(Required=false)]
-        public List<string> DpiGroupIds { get; set; }
-
-        [NameInMap("DpiGroupNames")]
-        [Validation(Required=false)]
-        public List<string> DpiGroupNames { get; set; }
 
     }
 

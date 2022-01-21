@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateQosCarResponseBody : TeaModel {
-        [NameInMap("MinBandwidthAbs")]
-        [Validation(Required=false)]
-        public int? MinBandwidthAbs { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("LimitType")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("QosCarId")]
-        [Validation(Required=false)]
-        public string QosCarId { get; set; }
+        public string LimitType { get; set; }
 
         [NameInMap("MaxBandwidthAbs")]
         [Validation(Required=false)]
@@ -33,25 +25,33 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public int? MaxBandwidthPercent { get; set; }
 
-        [NameInMap("Priority")]
+        [NameInMap("MinBandwidthAbs")]
         [Validation(Required=false)]
-        public int? Priority { get; set; }
-
-        [NameInMap("QosId")]
-        [Validation(Required=false)]
-        public string QosId { get; set; }
-
-        [NameInMap("PercentSourceType")]
-        [Validation(Required=false)]
-        public string PercentSourceType { get; set; }
+        public int? MinBandwidthAbs { get; set; }
 
         [NameInMap("MinBandwidthPercent")]
         [Validation(Required=false)]
         public int? MinBandwidthPercent { get; set; }
 
-        [NameInMap("LimitType")]
+        [NameInMap("PercentSourceType")]
         [Validation(Required=false)]
-        public string LimitType { get; set; }
+        public string PercentSourceType { get; set; }
+
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
+        [NameInMap("QosCarId")]
+        [Validation(Required=false)]
+        public string QosCarId { get; set; }
+
+        [NameInMap("QosId")]
+        [Validation(Required=false)]
+        public string QosId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

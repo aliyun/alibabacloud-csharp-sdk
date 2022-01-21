@@ -9,65 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSmartAccessGatewaysRequest : TeaModel {
-        [NameInMap("OwnerAccount")]
+        [NameInMap("AclIds")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string AclIds { get; set; }
 
         [NameInMap("AssociatedCcnId")]
         [Validation(Required=false)]
         public string AssociatedCcnId { get; set; }
 
-        [NameInMap("SmartAGId")]
+        [NameInMap("BusinessState")]
         [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("SerialNumber")]
-        [Validation(Required=false)]
-        public string SerialNumber { get; set; }
-
-        [NameInMap("AclIds")]
-        [Validation(Required=false)]
-        public string AclIds { get; set; }
-
-        [NameInMap("UnboundAclIds")]
-        [Validation(Required=false)]
-        public string UnboundAclIds { get; set; }
-
-        [NameInMap("InstanceType")]
-        [Validation(Required=false)]
-        public string InstanceType { get; set; }
+        public string BusinessState { get; set; }
 
         [NameInMap("CanAssociateQos")]
         [Validation(Required=false)]
@@ -77,25 +29,73 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string HardwareType { get; set; }
 
-        [NameInMap("SoftwareVersion")]
+        [NameInMap("InstanceType")]
         [Validation(Required=false)]
-        public string SoftwareVersion { get; set; }
+        public string InstanceType { get; set; }
 
-        [NameInMap("VersionComparator")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string VersionComparator { get; set; }
+        public string Name { get; set; }
 
-        [NameInMap("BusinessState")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string BusinessState { get; set; }
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SerialNumber")]
+        [Validation(Required=false)]
+        public string SerialNumber { get; set; }
+
+        [NameInMap("SmartAGId")]
+        [Validation(Required=false)]
+        public string SmartAGId { get; set; }
+
         [NameInMap("SmartAGIds")]
         [Validation(Required=false)]
         public List<string> SmartAGIds { get; set; }
+
+        [NameInMap("SoftwareVersion")]
+        [Validation(Required=false)]
+        public string SoftwareVersion { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        [NameInMap("UnboundAclIds")]
+        [Validation(Required=false)]
+        public string UnboundAclIds { get; set; }
+
+        [NameInMap("VersionComparator")]
+        [Validation(Required=false)]
+        public string VersionComparator { get; set; }
 
     }
 

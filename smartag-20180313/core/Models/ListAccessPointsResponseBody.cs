@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public List<ListAccessPointsResponseBodyAccessPoints> AccessPoints { get; set; }
         public class ListAccessPointsResponseBodyAccessPoints : TeaModel {
-            [NameInMap("Longitude")]
+            [NameInMap("AccessPointId")]
             [Validation(Required=false)]
-            public string Longitude { get; set; }
+            public int? AccessPointId { get; set; }
 
             [NameInMap("ActiveSmartAGCount")]
             [Validation(Required=false)]
@@ -29,19 +29,19 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public string Latitude { get; set; }
 
-            [NameInMap("AccessPointId")]
+            [NameInMap("Longitude")]
             [Validation(Required=false)]
-            public int? AccessPointId { get; set; }
+            public string Longitude { get; set; }
 
         }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

@@ -13,33 +13,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("DestCidr")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("QosPolicyId")]
-        [Validation(Required=false)]
-        public string QosPolicyId { get; set; }
-
-        [NameInMap("SourcePortRange")]
-        [Validation(Required=false)]
-        public string SourcePortRange { get; set; }
-
-        [NameInMap("SourceCidr")]
-        [Validation(Required=false)]
-        public string SourceCidr { get; set; }
-
-        [NameInMap("Priority")]
-        [Validation(Required=false)]
-        public int? Priority { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string DestCidr { get; set; }
 
         [NameInMap("DestPortRange")]
         [Validation(Required=false)]
@@ -54,14 +30,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public List<string> DpiGroupId { get; set; }
         };
 
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("DestCidr")]
-        [Validation(Required=false)]
-        public string DestCidr { get; set; }
-
         [NameInMap("DpiSignatureIds")]
         [Validation(Required=false)]
         public CreateQosPolicyResponseBodyDpiSignatureIds DpiSignatureIds { get; set; }
@@ -71,13 +39,45 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public List<string> DpiSignatureId { get; set; }
         };
 
-        [NameInMap("QosId")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string QosId { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
         public string IpProtocol { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
+        [NameInMap("QosId")]
+        [Validation(Required=false)]
+        public string QosId { get; set; }
+
+        [NameInMap("QosPolicyId")]
+        [Validation(Required=false)]
+        public string QosPolicyId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SourceCidr")]
+        [Validation(Required=false)]
+        public string SourceCidr { get; set; }
+
+        [NameInMap("SourcePortRange")]
+        [Validation(Required=false)]
+        public string SourcePortRange { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

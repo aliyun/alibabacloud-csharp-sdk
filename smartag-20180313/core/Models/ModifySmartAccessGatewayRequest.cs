@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifySmartAccessGatewayRequest : TeaModel {
+        [NameInMap("CidrBlock")]
+        [Validation(Required=false)]
+        public string CidrBlock { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,6 +28,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,33 +41,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SmartAGId")]
+        [NameInMap("RoutingStrategy")]
         [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("CidrBlock")]
-        [Validation(Required=false)]
-        public string CidrBlock { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RoutingStrategy { get; set; }
 
         [NameInMap("SecurityLockThreshold")]
         [Validation(Required=false)]
         public int? SecurityLockThreshold { get; set; }
 
-        [NameInMap("RoutingStrategy")]
+        [NameInMap("SmartAGId")]
         [Validation(Required=false)]
-        public string RoutingStrategy { get; set; }
+        public string SmartAGId { get; set; }
 
     }
 

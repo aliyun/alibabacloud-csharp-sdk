@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifySagRouteProtocolBgpRequest : TeaModel {
+        [NameInMap("HoldTime")]
+        [Validation(Required=false)]
+        public int? HoldTime { get; set; }
+
+        [NameInMap("KeepAlive")]
+        [Validation(Required=false)]
+        public int? KeepAlive { get; set; }
+
+        [NameInMap("LocalAs")]
+        [Validation(Required=false)]
+        public long? LocalAs { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,6 +28,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,9 +41,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("RouterId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RouterId { get; set; }
 
         [NameInMap("SmartAGId")]
         [Validation(Required=false)]
@@ -36,22 +52,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("SmartAGSn")]
         [Validation(Required=false)]
         public string SmartAGSn { get; set; }
-
-        [NameInMap("RouterId")]
-        [Validation(Required=false)]
-        public string RouterId { get; set; }
-
-        [NameInMap("LocalAs")]
-        [Validation(Required=false)]
-        public int? LocalAs { get; set; }
-
-        [NameInMap("HoldTime")]
-        [Validation(Required=false)]
-        public int? HoldTime { get; set; }
-
-        [NameInMap("KeepAlive")]
-        [Validation(Required=false)]
-        public int? KeepAlive { get; set; }
 
     }
 

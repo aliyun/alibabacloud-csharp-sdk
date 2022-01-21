@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagPortListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Ports")]
         [Validation(Required=false)]
         public List<DescribeSagPortListResponseBodyPorts> Ports { get; set; }
         public class DescribeSagPortListResponseBodyPorts : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("Mac")]
             [Validation(Required=false)]
-            public string Status { get; set; }
+            public string Mac { get; set; }
 
             [NameInMap("PortName")]
             [Validation(Required=false)]
@@ -29,16 +25,28 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [Validation(Required=false)]
             public string Role { get; set; }
 
-            [NameInMap("Mac")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public string Mac { get; set; }
+            public string Status { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         [NameInMap("TaskStates")]
         [Validation(Required=false)]
         public List<DescribeSagPortListResponseBodyTaskStates> TaskStates { get; set; }
         public class DescribeSagPortListResponseBodyTaskStates : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
@@ -46,14 +54,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
-
-            [NameInMap("ErrorCode")]
-            [Validation(Required=false)]
-            public string ErrorCode { get; set; }
-
-            [NameInMap("CreateTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
 
         }
 

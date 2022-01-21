@@ -9,9 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListEnterpriseCodeResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("EnterpriseCodes")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public List<ListEnterpriseCodeResponseBodyEnterpriseCodes> EnterpriseCodes { get; set; }
+        public class ListEnterpriseCodeResponseBodyEnterpriseCodes : TeaModel {
+            [NameInMap("EnterpriseCode")]
+            [Validation(Required=false)]
+            public string EnterpriseCode { get; set; }
+
+            [NameInMap("IsDefault")]
+            [Validation(Required=false)]
+            public bool? IsDefault { get; set; }
+
+        }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -21,23 +35,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("MaxResults")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        [NameInMap("EnterpriseCodes")]
-        [Validation(Required=false)]
-        public List<ListEnterpriseCodeResponseBodyEnterpriseCodes> EnterpriseCodes { get; set; }
-        public class ListEnterpriseCodeResponseBodyEnterpriseCodes : TeaModel {
-            [NameInMap("IsDefault")]
-            [Validation(Required=false)]
-            public bool? IsDefault { get; set; }
-
-            [NameInMap("EnterpriseCode")]
-            [Validation(Required=false)]
-            public string EnterpriseCode { get; set; }
-
-        }
+        public int? TotalCount { get; set; }
 
     }
 

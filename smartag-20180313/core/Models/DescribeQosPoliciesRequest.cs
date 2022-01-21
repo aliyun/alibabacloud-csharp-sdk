@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeQosPoliciesRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -17,17 +21,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
+        public int? PageNumber { get; set; }
 
-        [NameInMap("ResourceOwnerId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("RegionId")]
+        [NameInMap("Priority")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? Priority { get; set; }
 
         [NameInMap("QosId")]
         [Validation(Required=false)]
@@ -37,21 +41,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string QosPolicyId { get; set; }
 
-        [NameInMap("Description")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("PageSize")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Priority")]
-        [Validation(Required=false)]
-        public int? Priority { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

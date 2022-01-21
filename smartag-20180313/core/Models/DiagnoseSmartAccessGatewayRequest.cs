@@ -9,25 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DiagnoseSmartAccessGatewayRequest : TeaModel {
-        [NameInMap("SmartAGId")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string SmartAGId { get; set; }
-
-        [NameInMap("SmartAGSn")]
-        [Validation(Required=false)]
-        public string SmartAGSn { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -36,6 +28,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("SmartAGId")]
+        [Validation(Required=false)]
+        public string SmartAGId { get; set; }
+
+        [NameInMap("SmartAGSn")]
+        [Validation(Required=false)]
+        public string SmartAGSn { get; set; }
 
     }
 

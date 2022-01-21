@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class UpgradeSmartAccessGatewaySoftwareRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("DataPlan")]
+        [Validation(Required=false)]
+        public long? DataPlan { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -16,6 +24,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -28,18 +40,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("SmartAGId")]
         [Validation(Required=false)]
         public string SmartAGId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("AutoPay")]
-        [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
-
-        [NameInMap("DataPlan")]
-        [Validation(Required=false)]
-        public long? DataPlan { get; set; }
 
         [NameInMap("UserCount")]
         [Validation(Required=false)]

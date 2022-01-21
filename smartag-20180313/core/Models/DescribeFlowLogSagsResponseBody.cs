@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeFlowLogSagsResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -20,10 +20,6 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
         [NameInMap("Sags")]
         [Validation(Required=false)]
@@ -34,10 +30,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public List<DescribeFlowLogSagsResponseBodySagsSag> Sag { get; set; }
             public class DescribeFlowLogSagsResponseBodySagsSag : TeaModel {
                 public string Description { get; set; }
-                public string SmartAGId { get; set; }
                 public string Name { get; set; }
+                public string SmartAGId { get; set; }
             }
         };
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

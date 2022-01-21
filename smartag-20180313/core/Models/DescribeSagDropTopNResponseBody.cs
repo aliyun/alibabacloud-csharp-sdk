@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagDropTopNResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DropTopN")]
         [Validation(Required=false)]
         public List<DescribeSagDropTopNResponseBodyDropTopN> DropTopN { get; set; }
@@ -34,6 +30,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string RegionId { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

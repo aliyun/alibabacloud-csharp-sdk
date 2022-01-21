@@ -9,9 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeGrantSagRulesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
+        [NameInMap("GrantRules")]
         [Validation(Required=false)]
-        public int? TotalCount { get; set; }
+        public DescribeGrantSagRulesResponseBodyGrantRules GrantRules { get; set; }
+        public class DescribeGrantSagRulesResponseBodyGrantRules : TeaModel {
+            [NameInMap("GrantRule")]
+            [Validation(Required=false)]
+            public List<DescribeGrantSagRulesResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
+            public class DescribeGrantSagRulesResponseBodyGrantRulesGrantRule : TeaModel {
+                public string CcnInstanceId { get; set; }
+                public long? CcnUid { get; set; }
+                public long? CreateTime { get; set; }
+                public bool? GrantTrafficService { get; set; }
+                public string InstanceId { get; set; }
+                public string SmartAGId { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -21,26 +38,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("GrantRules")]
-        [Validation(Required=false)]
-        public DescribeGrantSagRulesResponseBodyGrantRules GrantRules { get; set; }
-        public class DescribeGrantSagRulesResponseBodyGrantRules : TeaModel {
-            [NameInMap("GrantRule")]
-            [Validation(Required=false)]
-            public List<DescribeGrantSagRulesResponseBodyGrantRulesGrantRule> GrantRule { get; set; }
-            public class DescribeGrantSagRulesResponseBodyGrantRulesGrantRule : TeaModel {
-                public long? CreateTime { get; set; }
-                public string SmartAGId { get; set; }
-                public bool? GrantTrafficService { get; set; }
-                public string InstanceId { get; set; }
-                public long? CcnUid { get; set; }
-                public string CcnInstanceId { get; set; }
-            }
-        };
+        public int? TotalCount { get; set; }
 
     }
 
