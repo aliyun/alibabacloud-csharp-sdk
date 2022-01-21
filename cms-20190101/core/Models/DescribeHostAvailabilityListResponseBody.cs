@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Total")]
-        [Validation(Required=false)]
-        public int? Total { get; set; }
-
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
@@ -37,76 +33,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig> NodeTaskConfig { get; set; }
             public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig : TeaModel {
-                public string TaskType { get; set; }
-                public string GroupName { get; set; }
-                public long? GroupId { get; set; }
-                public string TaskName { get; set; }
-                public bool? Disabled { get; set; }
-                public string TaskScope { get; set; }
-                public long? Id { get; set; }
-                public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances Instances { get; set; }
-                public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances : TeaModel {
-                    [NameInMap("Instance")]
-                    [Validation(Required=false)]
-                    public List<string> Instance { get; set; }
-
-                }
-                public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption TaskOption { get; set; }
-                public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption : TeaModel {
-                    [NameInMap("HttpMethod")]
-                    [Validation(Required=false)]
-                    public string HttpMethod { get; set; }
-
-                    [NameInMap("Interval")]
-                    [Validation(Required=false)]
-                    public int? Interval { get; set; }
-
-                    [NameInMap("HttpURI")]
-                    [Validation(Required=false)]
-                    public string HttpURI { get; set; }
-
-                    [NameInMap("TelnetOrPingHost")]
-                    [Validation(Required=false)]
-                    public string TelnetOrPingHost { get; set; }
-
-                    [NameInMap("HttpResponseCharset")]
-                    [Validation(Required=false)]
-                    public string HttpResponseCharset { get; set; }
-
-                    [NameInMap("HttpPostContent")]
-                    [Validation(Required=false)]
-                    public string HttpPostContent { get; set; }
-
-                    [NameInMap("HttpNegative")]
-                    [Validation(Required=false)]
-                    public bool? HttpNegative { get; set; }
-
-                    [NameInMap("HttpKeyword")]
-                    [Validation(Required=false)]
-                    public string HttpKeyword { get; set; }
-
-                }
                 public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig AlertConfig { get; set; }
                 public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig : TeaModel {
-                    [NameInMap("SilenceTime")]
-                    [Validation(Required=false)]
-                    public int? SilenceTime { get; set; }
-
                     [NameInMap("EndTime")]
                     [Validation(Required=false)]
                     public int? EndTime { get; set; }
-
-                    [NameInMap("StartTime")]
-                    [Validation(Required=false)]
-                    public int? StartTime { get; set; }
-
-                    [NameInMap("WebHook")]
-                    [Validation(Required=false)]
-                    public string WebHook { get; set; }
-
-                    [NameInMap("NotifyType")]
-                    [Validation(Required=false)]
-                    public int? NotifyType { get; set; }
 
                     [NameInMap("EscalationList")]
                     [Validation(Required=false)]
@@ -116,17 +47,86 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         [Validation(Required=false)]
                         public List<DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList> EscalationList { get; set; }
                         public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList : TeaModel {
-                            public string Value { get; set; }
+                            public string Aggregate { get; set; }
                             public string MetricName { get; set; }
                             public string Operator { get; set; }
                             public string Times { get; set; }
-                            public string Aggregate { get; set; }
+                            public string Value { get; set; }
                         }
                     };
 
+                    [NameInMap("NotifyType")]
+                    [Validation(Required=false)]
+                    public int? NotifyType { get; set; }
+
+                    [NameInMap("SilenceTime")]
+                    [Validation(Required=false)]
+                    public int? SilenceTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public int? StartTime { get; set; }
+
+                    [NameInMap("WebHook")]
+                    [Validation(Required=false)]
+                    public string WebHook { get; set; }
+
                 }
+                public bool? Disabled { get; set; }
+                public long? GroupId { get; set; }
+                public string GroupName { get; set; }
+                public long? Id { get; set; }
+                public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances Instances { get; set; }
+                public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances : TeaModel {
+                    [NameInMap("Instance")]
+                    [Validation(Required=false)]
+                    public List<string> Instance { get; set; }
+
+                }
+                public string TaskName { get; set; }
+                public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption TaskOption { get; set; }
+                public class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption : TeaModel {
+                    [NameInMap("HttpKeyword")]
+                    [Validation(Required=false)]
+                    public string HttpKeyword { get; set; }
+
+                    [NameInMap("HttpMethod")]
+                    [Validation(Required=false)]
+                    public string HttpMethod { get; set; }
+
+                    [NameInMap("HttpNegative")]
+                    [Validation(Required=false)]
+                    public bool? HttpNegative { get; set; }
+
+                    [NameInMap("HttpPostContent")]
+                    [Validation(Required=false)]
+                    public string HttpPostContent { get; set; }
+
+                    [NameInMap("HttpResponseCharset")]
+                    [Validation(Required=false)]
+                    public string HttpResponseCharset { get; set; }
+
+                    [NameInMap("HttpURI")]
+                    [Validation(Required=false)]
+                    public string HttpURI { get; set; }
+
+                    [NameInMap("Interval")]
+                    [Validation(Required=false)]
+                    public int? Interval { get; set; }
+
+                    [NameInMap("TelnetOrPingHost")]
+                    [Validation(Required=false)]
+                    public string TelnetOrPingHost { get; set; }
+
+                }
+                public string TaskScope { get; set; }
+                public string TaskType { get; set; }
             }
         };
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyHostInfoRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("HostName")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string HostName { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("HostName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string HostName { get; set; }
+        public string RegionId { get; set; }
 
     }
 

@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<PutMetricRuleTargetsRequestTargets> Targets { get; set; }
         public class PutMetricRuleTargetsRequestTargets : TeaModel {
-            [NameInMap("Id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
 
             [NameInMap("Level")]
             [Validation(Required=false)]

@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutExporterOutputRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("DestName")]
-        [Validation(Required=false)]
-        public string DestName { get; set; }
-
         [NameInMap("ConfigJson")]
         [Validation(Required=false)]
         public string ConfigJson { get; set; }
@@ -25,9 +17,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Desc { get; set; }
 
+        [NameInMap("DestName")]
+        [Validation(Required=false)]
+        public string DestName { get; set; }
+
         [NameInMap("DestType")]
         [Validation(Required=false)]
         public string DestType { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

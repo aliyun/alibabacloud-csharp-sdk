@@ -9,45 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricListRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Dimensions")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Namespace")]
-        [Validation(Required=false)]
-        public string Namespace { get; set; }
-
-        [NameInMap("MetricName")]
-        [Validation(Required=false)]
-        public string MetricName { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public string Period { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public string Dimensions { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        [NameInMap("Dimensions")]
+        [NameInMap("Express")]
         [Validation(Required=false)]
-        public string Dimensions { get; set; }
-
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public string Express { get; set; }
 
         [NameInMap("Length")]
         [Validation(Required=false)]
         public string Length { get; set; }
 
-        [NameInMap("Express")]
+        [NameInMap("MetricName")]
         [Validation(Required=false)]
-        public string Express { get; set; }
+        public string MetricName { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public string Period { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

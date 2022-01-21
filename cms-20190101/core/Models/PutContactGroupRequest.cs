@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string ContactGroupName { get; set; }
 
+        [NameInMap("ContactNames")]
+        [Validation(Required=false)]
+        public List<string> ContactNames { get; set; }
+
         [NameInMap("Describe")]
         [Validation(Required=false)]
         public string Describe { get; set; }
@@ -20,10 +24,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("EnableSubscribed")]
         [Validation(Required=false)]
         public bool? EnableSubscribed { get; set; }
-
-        [NameInMap("ContactNames")]
-        [Validation(Required=false)]
-        public List<string> ContactNames { get; set; }
 
     }
 

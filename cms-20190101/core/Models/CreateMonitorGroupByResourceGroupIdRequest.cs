@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupByResourceGroupIdRequest : TeaModel {
-        [NameInMap("EnableSubscribeEvent")]
+        [NameInMap("ContactGroupList")]
         [Validation(Required=false)]
-        public bool? EnableSubscribeEvent { get; set; }
+        public List<string> ContactGroupList { get; set; }
 
         [NameInMap("EnableInstallAgent")]
         [Validation(Required=false)]
         public bool? EnableInstallAgent { get; set; }
+
+        [NameInMap("EnableSubscribeEvent")]
+        [Validation(Required=false)]
+        public bool? EnableSubscribeEvent { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -28,10 +32,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
-
-        [NameInMap("ContactGroupList")]
-        [Validation(Required=false)]
-        public List<string> ContactGroupList { get; set; }
 
     }
 

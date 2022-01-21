@@ -9,33 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventAttributeRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
-        [NameInMap("Name")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("Level")]
         [Validation(Required=false)]
         public string Level { get; set; }
 
-        [NameInMap("Status")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Name { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("SearchKeywords")]
         [Validation(Required=false)]
@@ -45,17 +53,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("EndTime")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string Status { get; set; }
 
     }
 

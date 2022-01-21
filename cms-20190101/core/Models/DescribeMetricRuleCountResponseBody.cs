@@ -17,6 +17,27 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("MetricRuleCount")]
+        [Validation(Required=false)]
+        public DescribeMetricRuleCountResponseBodyMetricRuleCount MetricRuleCount { get; set; }
+        public class DescribeMetricRuleCountResponseBodyMetricRuleCount : TeaModel {
+            [NameInMap("Alarm")]
+            [Validation(Required=false)]
+            public int? Alarm { get; set; }
+            [NameInMap("Disable")]
+            [Validation(Required=false)]
+            public int? Disable { get; set; }
+            [NameInMap("Nodata")]
+            [Validation(Required=false)]
+            public int? Nodata { get; set; }
+            [NameInMap("Ok")]
+            [Validation(Required=false)]
+            public int? Ok { get; set; }
+            [NameInMap("Total")]
+            [Validation(Required=false)]
+            public int? Total { get; set; }
+        };
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -24,27 +45,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("MetricRuleCount")]
-        [Validation(Required=false)]
-        public DescribeMetricRuleCountResponseBodyMetricRuleCount MetricRuleCount { get; set; }
-        public class DescribeMetricRuleCountResponseBodyMetricRuleCount : TeaModel {
-            [NameInMap("Ok")]
-            [Validation(Required=false)]
-            public int? Ok { get; set; }
-            [NameInMap("Nodata")]
-            [Validation(Required=false)]
-            public int? Nodata { get; set; }
-            [NameInMap("Disable")]
-            [Validation(Required=false)]
-            public int? Disable { get; set; }
-            [NameInMap("Total")]
-            [Validation(Required=false)]
-            public int? Total { get; set; }
-            [NameInMap("Alarm")]
-            [Validation(Required=false)]
-            public int? Alarm { get; set; }
-        };
 
     }
 

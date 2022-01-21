@@ -13,6 +13,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DescribeSiteMonitorQuotaResponseBodyData Data { get; set; }
+        public class DescribeSiteMonitorQuotaResponseBodyData : TeaModel {
+            [NameInMap("SecondMonitor")]
+            [Validation(Required=false)]
+            public bool? SecondMonitor { get; set; }
+            [NameInMap("SiteMonitorIdcQuota")]
+            [Validation(Required=false)]
+            public int? SiteMonitorIdcQuota { get; set; }
+            [NameInMap("SiteMonitorOperatorQuotaQuota")]
+            [Validation(Required=false)]
+            public int? SiteMonitorOperatorQuotaQuota { get; set; }
+            [NameInMap("SiteMonitorQuotaTaskUsed")]
+            [Validation(Required=false)]
+            public int? SiteMonitorQuotaTaskUsed { get; set; }
+            [NameInMap("SiteMonitorTaskQuota")]
+            [Validation(Required=false)]
+            public int? SiteMonitorTaskQuota { get; set; }
+            [NameInMap("SiteMonitorVersion")]
+            [Validation(Required=false)]
+            public string SiteMonitorVersion { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,30 +48,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public DescribeSiteMonitorQuotaResponseBodyData Data { get; set; }
-        public class DescribeSiteMonitorQuotaResponseBodyData : TeaModel {
-            [NameInMap("SiteMonitorOperatorQuotaQuota")]
-            [Validation(Required=false)]
-            public int? SiteMonitorOperatorQuotaQuota { get; set; }
-            [NameInMap("SecondMonitor")]
-            [Validation(Required=false)]
-            public bool? SecondMonitor { get; set; }
-            [NameInMap("SiteMonitorQuotaTaskUsed")]
-            [Validation(Required=false)]
-            public int? SiteMonitorQuotaTaskUsed { get; set; }
-            [NameInMap("SiteMonitorTaskQuota")]
-            [Validation(Required=false)]
-            public int? SiteMonitorTaskQuota { get; set; }
-            [NameInMap("SiteMonitorVersion")]
-            [Validation(Required=false)]
-            public string SiteMonitorVersion { get; set; }
-            [NameInMap("SiteMonitorIdcQuota")]
-            [Validation(Required=false)]
-            public int? SiteMonitorIdcQuota { get; set; }
-        };
 
     }
 

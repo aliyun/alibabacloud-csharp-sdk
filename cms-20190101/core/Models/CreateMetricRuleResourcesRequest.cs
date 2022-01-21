@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMetricRuleResourcesRequest : TeaModel {
-        [NameInMap("RuleId")]
-        [Validation(Required=false)]
-        public string RuleId { get; set; }
-
         [NameInMap("Overwrite")]
         [Validation(Required=false)]
         public string Overwrite { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public string Resources { get; set; }
+
+        [NameInMap("RuleId")]
+        [Validation(Required=false)]
+        public string RuleId { get; set; }
 
     }
 

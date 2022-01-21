@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("CustomEventCounts")]
+        [Validation(Required=false)]
+        public DescribeCustomEventCountResponseBodyCustomEventCounts CustomEventCounts { get; set; }
+        public class DescribeCustomEventCountResponseBodyCustomEventCounts : TeaModel {
+            [NameInMap("CustomEventCount")]
+            [Validation(Required=false)]
+            public List<DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount> CustomEventCount { get; set; }
+            public class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount : TeaModel {
+                public string Name { get; set; }
+                public int? Num { get; set; }
+                public long? Time { get; set; }
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,20 +38,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("CustomEventCounts")]
-        [Validation(Required=false)]
-        public DescribeCustomEventCountResponseBodyCustomEventCounts CustomEventCounts { get; set; }
-        public class DescribeCustomEventCountResponseBodyCustomEventCounts : TeaModel {
-            [NameInMap("CustomEventCount")]
-            [Validation(Required=false)]
-            public List<DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount> CustomEventCount { get; set; }
-            public class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount : TeaModel {
-                public long? Time { get; set; }
-                public int? Num { get; set; }
-                public string Name { get; set; }
-            }
-        };
 
     }
 

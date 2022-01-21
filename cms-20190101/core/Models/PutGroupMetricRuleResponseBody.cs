@@ -21,6 +21,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Result")]
+        [Validation(Required=false)]
+        public PutGroupMetricRuleResponseBodyResult Result { get; set; }
+        public class PutGroupMetricRuleResponseBodyResult : TeaModel {
+            [NameInMap("RuleId")]
+            [Validation(Required=false)]
+            public string RuleId { get; set; }
+        };
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

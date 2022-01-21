@@ -13,14 +13,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("Message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("ContactParameters")]
         [Validation(Required=false)]
         public DescribeEventRuleTargetListResponseBodyContactParameters ContactParameters { get; set; }
@@ -30,8 +22,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeEventRuleTargetListResponseBodyContactParametersContactParameter> ContactParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyContactParametersContactParameter : TeaModel {
                 public string ContactGroupName { get; set; }
-                public string Level { get; set; }
                 public string Id { get; set; }
+                public string Level { get; set; }
             }
         };
 
@@ -43,13 +35,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeEventRuleTargetListResponseBodyFcParametersFCParameter> FCParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyFcParametersFCParameter : TeaModel {
-                public string ServiceName { get; set; }
-                public string FunctionName { get; set; }
                 public string Arn { get; set; }
+                public string FunctionName { get; set; }
                 public string Id { get; set; }
                 public string Region { get; set; }
+                public string ServiceName { get; set; }
             }
         };
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("MnsParameters")]
         [Validation(Required=false)]
@@ -59,10 +55,48 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter> MnsParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter : TeaModel {
-                public string Queue { get; set; }
                 public string Arn { get; set; }
-                public string Region { get; set; }
                 public string Id { get; set; }
+                public string Queue { get; set; }
+                public string Region { get; set; }
+            }
+        };
+
+        [NameInMap("OpenApiParameters")]
+        [Validation(Required=false)]
+        public DescribeEventRuleTargetListResponseBodyOpenApiParameters OpenApiParameters { get; set; }
+        public class DescribeEventRuleTargetListResponseBodyOpenApiParameters : TeaModel {
+            [NameInMap("OpenApiParameters")]
+            [Validation(Required=false)]
+            public List<DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters> OpenApiParameters { get; set; }
+            public class DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters : TeaModel {
+                public string Action { get; set; }
+                public string Arn { get; set; }
+                public string Id { get; set; }
+                public string Product { get; set; }
+                public string Region { get; set; }
+                public string Role { get; set; }
+                public string Version { get; set; }
+            }
+        };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SlsParameters")]
+        [Validation(Required=false)]
+        public DescribeEventRuleTargetListResponseBodySlsParameters SlsParameters { get; set; }
+        public class DescribeEventRuleTargetListResponseBodySlsParameters : TeaModel {
+            [NameInMap("SlsParameter")]
+            [Validation(Required=false)]
+            public List<DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter> SlsParameter { get; set; }
+            public class DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter : TeaModel {
+                public string Arn { get; set; }
+                public string Id { get; set; }
+                public string LogStore { get; set; }
+                public string Project { get; set; }
+                public string Region { get; set; }
             }
         };
 
@@ -74,26 +108,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter> WebhookParameter { get; set; }
             public class DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter : TeaModel {
-                public string Url { get; set; }
+                public string Id { get; set; }
                 public string Method { get; set; }
                 public string Protocol { get; set; }
-                public string Id { get; set; }
-            }
-        };
-
-        [NameInMap("SlsParameters")]
-        [Validation(Required=false)]
-        public DescribeEventRuleTargetListResponseBodySlsParameters SlsParameters { get; set; }
-        public class DescribeEventRuleTargetListResponseBodySlsParameters : TeaModel {
-            [NameInMap("SlsParameter")]
-            [Validation(Required=false)]
-            public List<DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter> SlsParameter { get; set; }
-            public class DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter : TeaModel {
-                public string Project { get; set; }
-                public string LogStore { get; set; }
-                public string Arn { get; set; }
-                public string Region { get; set; }
-                public string Id { get; set; }
+                public string Url { get; set; }
             }
         };
 

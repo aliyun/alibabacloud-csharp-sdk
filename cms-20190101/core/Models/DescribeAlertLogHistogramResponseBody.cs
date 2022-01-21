@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogHistogramResponseBody : TeaModel {
+        [NameInMap("AlertLogHistogramList")]
+        [Validation(Required=false)]
+        public List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> AlertLogHistogramList { get; set; }
+        public class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList : TeaModel {
+            [NameInMap("Count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+
+            [NameInMap("From")]
+            [Validation(Required=false)]
+            public long? From { get; set; }
+
+            [NameInMap("To")]
+            [Validation(Required=false)]
+            public long? To { get; set; }
+
+        }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -24,24 +42,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        [NameInMap("AlertLogHistogramList")]
-        [Validation(Required=false)]
-        public List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> AlertLogHistogramList { get; set; }
-        public class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList : TeaModel {
-            [NameInMap("From")]
-            [Validation(Required=false)]
-            public long? From { get; set; }
-
-            [NameInMap("To")]
-            [Validation(Required=false)]
-            public long? To { get; set; }
-
-            [NameInMap("Count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-
-        }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHostAvailabilityListRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public long? GroupId { get; set; }
 
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
-        [NameInMap("TaskName")]
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string TaskName { get; set; }
+        public string Ids { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,9 +29,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public long? GroupId { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ContactGroups")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string ContactGroups { get; set; }
 
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
-        [NameInMap("ContactGroups")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string ContactGroups { get; set; }
+        public string RegionId { get; set; }
 
     }
 

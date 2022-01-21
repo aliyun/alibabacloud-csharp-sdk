@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRuleTargetsRequest : TeaModel {
+        [NameInMap("Ids")]
+        [Validation(Required=false)]
+        public List<string> Ids { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
-
-        [NameInMap("Ids")]
-        [Validation(Required=false)]
-        public List<string> Ids { get; set; }
 
     }
 

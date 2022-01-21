@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupInstanceAttributeRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Category { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public string InstanceIds { get; set; }
+
+        [NameInMap("Keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -25,21 +33,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         [NameInMap("Total")]
         [Validation(Required=false)]
         public bool? Total { get; set; }
-
-        [NameInMap("Category")]
-        [Validation(Required=false)]
-        public string Category { get; set; }
-
-        [NameInMap("Keyword")]
-        [Validation(Required=false)]
-        public string Keyword { get; set; }
-
-        [NameInMap("InstanceIds")]
-        [Validation(Required=false)]
-        public string InstanceIds { get; set; }
 
     }
 

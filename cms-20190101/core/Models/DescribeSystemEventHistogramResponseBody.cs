@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram> SystemEventHistogram { get; set; }
             public class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram : TeaModel {
+                public long? Count { get; set; }
                 public long? EndTime { get; set; }
                 public long? StartTime { get; set; }
-                public long? Count { get; set; }
             }
         };
 

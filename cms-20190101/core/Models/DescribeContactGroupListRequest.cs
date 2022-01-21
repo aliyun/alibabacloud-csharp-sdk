@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeContactGroupListRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string RegionId { get; set; }
 
     }
 

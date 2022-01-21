@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutExporterRuleRequest : TeaModel {
+        [NameInMap("Describe")]
+        [Validation(Required=false)]
+        public string Describe { get; set; }
+
+        [NameInMap("DstNames")]
+        [Validation(Required=false)]
+        public List<string> DstNames { get; set; }
+
+        [NameInMap("MetricName")]
+        [Validation(Required=false)]
+        public string MetricName { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -17,25 +33,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
-        [NameInMap("Namespace")]
-        [Validation(Required=false)]
-        public string Namespace { get; set; }
-
-        [NameInMap("MetricName")]
-        [Validation(Required=false)]
-        public string MetricName { get; set; }
-
         [NameInMap("TargetWindows")]
         [Validation(Required=false)]
         public string TargetWindows { get; set; }
-
-        [NameInMap("Describe")]
-        [Validation(Required=false)]
-        public string Describe { get; set; }
-
-        [NameInMap("DstNames")]
-        [Validation(Required=false)]
-        public List<string> DstNames { get; set; }
 
     }
 

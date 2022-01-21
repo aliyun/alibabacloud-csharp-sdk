@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupInstancesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Category")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Category { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string InstanceIdList { get; set; }
 
-        [NameInMap("Category")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Category { get; set; }
+        public string RegionId { get; set; }
 
     }
 

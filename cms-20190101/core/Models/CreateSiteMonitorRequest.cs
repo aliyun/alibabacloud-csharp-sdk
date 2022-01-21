@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateSiteMonitorRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
-        [NameInMap("TaskType")]
+        [NameInMap("AlertIds")]
         [Validation(Required=false)]
-        public string TaskType { get; set; }
-
-        [NameInMap("TaskName")]
-        [Validation(Required=false)]
-        public string TaskName { get; set; }
+        public string AlertIds { get; set; }
 
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
-
-        [NameInMap("IntervalUnit")]
-        [Validation(Required=false)]
-        public string IntervalUnit { get; set; }
 
         [NameInMap("IspCities")]
         [Validation(Required=false)]
@@ -41,9 +29,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string OptionsJson { get; set; }
 
-        [NameInMap("AlertIds")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string AlertIds { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("TaskName")]
+        [Validation(Required=false)]
+        public string TaskName { get; set; }
+
+        [NameInMap("TaskType")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
 
     }
 

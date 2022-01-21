@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount> SystemEventCount { get; set; }
             public class DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount : TeaModel {
+                public string Content { get; set; }
+                public string GroupId { get; set; }
+                public string InstanceName { get; set; }
+                public string Level { get; set; }
+                public string Name { get; set; }
+                public long? Num { get; set; }
+                public string Product { get; set; }
+                public string RegionId { get; set; }
+                public string ResourceId { get; set; }
                 public string Status { get; set; }
                 public long? Time { get; set; }
-                public string GroupId { get; set; }
-                public string Product { get; set; }
-                public string InstanceName { get; set; }
-                public long? Num { get; set; }
-                public string ResourceId { get; set; }
-                public string Name { get; set; }
-                public string Content { get; set; }
-                public string Level { get; set; }
-                public string RegionId { get; set; }
             }
         };
 

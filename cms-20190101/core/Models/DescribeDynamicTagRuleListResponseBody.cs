@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeDynamicTagRuleListResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -25,17 +17,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public string PageSize { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
-        [NameInMap("Total")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? Total { get; set; }
+        public string PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
         [NameInMap("TagGroupList")]
         [Validation(Required=false)]
@@ -45,10 +41,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup> TagGroup { get; set; }
             public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup : TeaModel {
-                public string Status { get; set; }
-                public string MatchExpressFilterRelation { get; set; }
-                public string RegionId { get; set; }
-                public string TagKey { get; set; }
+                public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList ContactGroupList { get; set; }
+                public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList : TeaModel {
+                    [NameInMap("ContactGroupList")]
+                    [Validation(Required=false)]
+                    public List<string> ContactGroupList { get; set; }
+
+                }
                 public string DynamicTagRuleId { get; set; }
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress MatchExpress { get; set; }
                 public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress : TeaModel {
@@ -67,6 +66,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                 }
+                public string MatchExpressFilterRelation { get; set; }
+                public string RegionId { get; set; }
+                public string Status { get; set; }
+                public string TagKey { get; set; }
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList TemplateIdList { get; set; }
                 public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList : TeaModel {
                     [NameInMap("TemplateIdList")]
@@ -76,6 +79,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
             }
         };
+
+        [NameInMap("Total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 

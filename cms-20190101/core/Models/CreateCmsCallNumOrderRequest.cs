@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateCmsCallNumOrderRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("AutoRenewPeriod")]
+        [Validation(Required=false)]
+        public int? AutoRenewPeriod { get; set; }
+
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
@@ -16,18 +28,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
-
-        [NameInMap("AutoRenewPeriod")]
-        [Validation(Required=false)]
-        public int? AutoRenewPeriod { get; set; }
-
-        [NameInMap("AutoPay")]
-        [Validation(Required=false)]
-        public bool? AutoPay { get; set; }
-
-        [NameInMap("AutoUseCoupon")]
-        [Validation(Required=false)]
-        public bool? AutoUseCoupon { get; set; }
 
         [NameInMap("PhoneCount")]
         [Validation(Required=false)]

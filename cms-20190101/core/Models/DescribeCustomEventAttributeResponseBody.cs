@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("CustomEvents")]
+        [Validation(Required=false)]
+        public DescribeCustomEventAttributeResponseBodyCustomEvents CustomEvents { get; set; }
+        public class DescribeCustomEventAttributeResponseBodyCustomEvents : TeaModel {
+            [NameInMap("CustomEvent")]
+            [Validation(Required=false)]
+            public List<DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent> CustomEvent { get; set; }
+            public class DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent : TeaModel {
+                public string Content { get; set; }
+                public string GroupId { get; set; }
+                public string Id { get; set; }
+                public string Name { get; set; }
+                public string Time { get; set; }
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,22 +40,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
-
-        [NameInMap("CustomEvents")]
-        [Validation(Required=false)]
-        public DescribeCustomEventAttributeResponseBodyCustomEvents CustomEvents { get; set; }
-        public class DescribeCustomEventAttributeResponseBodyCustomEvents : TeaModel {
-            [NameInMap("CustomEvent")]
-            [Validation(Required=false)]
-            public List<DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent> CustomEvent { get; set; }
-            public class DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent : TeaModel {
-                public string Time { get; set; }
-                public string Name { get; set; }
-                public string GroupId { get; set; }
-                public string Content { get; set; }
-                public string Id { get; set; }
-            }
-        };
 
     }
 

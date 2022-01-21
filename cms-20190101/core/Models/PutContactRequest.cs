@@ -13,18 +13,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public PutContactRequestChannels Channels { get; set; }
         public class PutContactRequestChannels : TeaModel {
-            [NameInMap("SMS")]
-            [Validation(Required=false)]
-            public string SMS { get; set; }
-            [NameInMap("Mail")]
-            [Validation(Required=false)]
-            public string Mail { get; set; }
             [NameInMap("AliIM")]
             [Validation(Required=false)]
             public string AliIM { get; set; }
             [NameInMap("DingWebHook")]
             [Validation(Required=false)]
             public string DingWebHook { get; set; }
+            [NameInMap("Mail")]
+            [Validation(Required=false)]
+            public string Mail { get; set; }
+            [NameInMap("SMS")]
+            [Validation(Required=false)]
+            public string SMS { get; set; }
         };
 
         [NameInMap("ContactName")]

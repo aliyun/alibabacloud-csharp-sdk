@@ -12,6 +12,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class AddTagsRequest : TeaModel {
+        [NameInMap("GroupIds")]
+        [Validation(Required=false)]
+        public List<string> GroupIds { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -29,10 +33,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Value { get; set; }
 
         }
-
-        [NameInMap("GroupIds")]
-        [Validation(Required=false)]
-        public List<string> GroupIds { get; set; }
 
     }
 

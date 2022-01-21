@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertingMetricRuleResourcesRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("Dimensions")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("RuleId")]
-        [Validation(Required=false)]
-        public string RuleId { get; set; }
+        public string Dimensions { get; set; }
 
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         [NameInMap("Page")]
         [Validation(Required=false)]
@@ -29,13 +29,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("Namespace")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("Dimensions")]
+        [NameInMap("RuleId")]
         [Validation(Required=false)]
-        public string Dimensions { get; set; }
+        public string RuleId { get; set; }
 
     }
 

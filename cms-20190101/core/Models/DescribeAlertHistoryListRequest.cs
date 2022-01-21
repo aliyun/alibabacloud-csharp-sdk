@@ -9,6 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertHistoryListRequest : TeaModel {
+        [NameInMap("Ascending")]
+        [Validation(Required=false)]
+        public bool? Ascending { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        [NameInMap("MetricName")]
+        [Validation(Required=false)]
+        public string MetricName { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
+        [NameInMap("Page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -21,45 +49,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
-        [NameInMap("Namespace")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
-
-        [NameInMap("MetricName")]
-        [Validation(Required=false)]
-        public string MetricName { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
-        [NameInMap("Status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
+        public string StartTime { get; set; }
 
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
-        [NameInMap("Ascending")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public bool? Ascending { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("Page")]
-        [Validation(Required=false)]
-        public int? Page { get; set; }
+        public string Status { get; set; }
 
     }
 

@@ -9,41 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateCmsOrderRequest : TeaModel {
-        [NameInMap("Period")]
+        [NameInMap("ApiCount")]
         [Validation(Required=false)]
-        public int? Period { get; set; }
-
-        [NameInMap("PeriodUnit")]
-        [Validation(Required=false)]
-        public string PeriodUnit { get; set; }
-
-        [NameInMap("AutoRenewPeriod")]
-        [Validation(Required=false)]
-        public int? AutoRenewPeriod { get; set; }
+        public string ApiCount { get; set; }
 
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("AutoRenewPeriod")]
+        [Validation(Required=false)]
+        public int? AutoRenewPeriod { get; set; }
+
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
-        [NameInMap("PayType")]
+        [NameInMap("CustomTimeSeries")]
         [Validation(Required=false)]
-        public string PayType { get; set; }
+        public string CustomTimeSeries { get; set; }
 
-        [NameInMap("SuggestType")]
+        [NameInMap("EventStoreNum")]
         [Validation(Required=false)]
-        public string SuggestType { get; set; }
-
-        [NameInMap("ApiCount")]
-        [Validation(Required=false)]
-        public string ApiCount { get; set; }
-
-        [NameInMap("SiteOperatorNum")]
-        [Validation(Required=false)]
-        public string SiteOperatorNum { get; set; }
+        public string EventStoreNum { get; set; }
 
         [NameInMap("EventStoreTime")]
         [Validation(Required=false)]
@@ -53,29 +41,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string LogMonitorStream { get; set; }
 
-        [NameInMap("SiteTaskNum")]
+        [NameInMap("PayType")]
         [Validation(Required=false)]
-        public string SiteTaskNum { get; set; }
+        public string PayType { get; set; }
 
-        [NameInMap("EventStoreNum")]
+        [NameInMap("Period")]
         [Validation(Required=false)]
-        public string EventStoreNum { get; set; }
+        public int? Period { get; set; }
+
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
+
+        [NameInMap("PhoneCount")]
+        [Validation(Required=false)]
+        public string PhoneCount { get; set; }
 
         [NameInMap("SiteEcsNum")]
         [Validation(Required=false)]
         public string SiteEcsNum { get; set; }
 
-        [NameInMap("CustomTimeSeries")]
+        [NameInMap("SiteOperatorNum")]
         [Validation(Required=false)]
-        public string CustomTimeSeries { get; set; }
+        public string SiteOperatorNum { get; set; }
+
+        [NameInMap("SiteTaskNum")]
+        [Validation(Required=false)]
+        public string SiteTaskNum { get; set; }
 
         [NameInMap("SmsCount")]
         [Validation(Required=false)]
         public string SmsCount { get; set; }
 
-        [NameInMap("PhoneCount")]
+        [NameInMap("SuggestType")]
         [Validation(Required=false)]
-        public string PhoneCount { get; set; }
+        public string SuggestType { get; set; }
 
     }
 

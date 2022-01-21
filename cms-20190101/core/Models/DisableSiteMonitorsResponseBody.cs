@@ -13,6 +13,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DisableSiteMonitorsResponseBodyData Data { get; set; }
+        public class DisableSiteMonitorsResponseBodyData : TeaModel {
+            [NameInMap("count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,15 +33,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public DisableSiteMonitorsResponseBodyData Data { get; set; }
-        public class DisableSiteMonitorsResponseBodyData : TeaModel {
-            [NameInMap("count")]
-            [Validation(Required=false)]
-            public int? Count { get; set; }
-        };
 
     }
 

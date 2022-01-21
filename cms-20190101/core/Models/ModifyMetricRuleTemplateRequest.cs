@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMetricRuleTemplateRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("TemplateId")]
-        [Validation(Required=false)]
-        public long? TemplateId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
-
-        [NameInMap("RestVersion")]
-        [Validation(Required=false)]
-        public long? RestVersion { get; set; }
-
         [NameInMap("AlertTemplates")]
         [Validation(Required=false)]
         public List<ModifyMetricRuleTemplateRequestAlertTemplates> AlertTemplates { get; set; }
@@ -37,21 +17,42 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=true)]
             public ModifyMetricRuleTemplateRequestAlertTemplatesEscalations Escalations { get; set; }
             public class ModifyMetricRuleTemplateRequestAlertTemplatesEscalations : TeaModel {
-                [NameInMap("Info")]
+                [NameInMap("Critical")]
                 [Validation(Required=true)]
-                public ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsInfo Info { get; set; }
-                public class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsInfo : TeaModel {
-                    [NameInMap("Threshold")]
+                public ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsCritical Critical { get; set; }
+                public class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsCritical : TeaModel {
+                    [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
-                    public string Threshold { get; set; }
+                    public string ComparisonOperator { get; set; }
 
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
 
+                    [NameInMap("Threshold")]
+                    [Validation(Required=false)]
+                    public string Threshold { get; set; }
+
+                    [NameInMap("Times")]
+                    [Validation(Required=false)]
+                    public int? Times { get; set; }
+
+                }
+                [NameInMap("Info")]
+                [Validation(Required=true)]
+                public ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsInfo Info { get; set; }
+                public class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsInfo : TeaModel {
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
+
+                    [NameInMap("Statistics")]
+                    [Validation(Required=false)]
+                    public string Statistics { get; set; }
+
+                    [NameInMap("Threshold")]
+                    [Validation(Required=false)]
+                    public string Threshold { get; set; }
 
                     [NameInMap("Times")]
                     [Validation(Required=false)]
@@ -62,14 +63,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=true)]
                 public ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsWarn Warn { get; set; }
                 public class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsWarn : TeaModel {
-                    [NameInMap("Threshold")]
-                    [Validation(Required=false)]
-                    public string Threshold { get; set; }
-
-                    [NameInMap("Times")]
-                    [Validation(Required=false)]
-                    public int? Times { get; set; }
-
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
@@ -78,37 +71,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
 
-                }
-                [NameInMap("Critical")]
-                [Validation(Required=true)]
-                public ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsCritical Critical { get; set; }
-                public class ModifyMetricRuleTemplateRequestAlertTemplatesEscalationsCritical : TeaModel {
-                    [NameInMap("Times")]
-                    [Validation(Required=false)]
-                    public int? Times { get; set; }
-
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public string Threshold { get; set; }
 
-                    [NameInMap("Statistics")]
+                    [NameInMap("Times")]
                     [Validation(Required=false)]
-                    public string Statistics { get; set; }
-
-                    [NameInMap("ComparisonOperator")]
-                    [Validation(Required=false)]
-                    public string ComparisonOperator { get; set; }
+                    public int? Times { get; set; }
 
                 }
             };
 
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
-
-            [NameInMap("Webhook")]
-            [Validation(Required=false)]
-            public string Webhook { get; set; }
 
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -126,11 +106,31 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Selector { get; set; }
 
-            [NameInMap("Category")]
+            [NameInMap("Webhook")]
             [Validation(Required=false)]
-            public string Category { get; set; }
+            public string Webhook { get; set; }
 
         }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        [NameInMap("RestVersion")]
+        [Validation(Required=false)]
+        public long? RestVersion { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public long? TemplateId { get; set; }
 
     }
 

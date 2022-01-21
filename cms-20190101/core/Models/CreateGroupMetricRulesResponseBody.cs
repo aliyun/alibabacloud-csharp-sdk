@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public CreateGroupMetricRulesResponseBodyResources Resources { get; set; }
@@ -35,11 +31,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public class CreateGroupMetricRulesResponseBodyResourcesAlertResult : TeaModel {
                 public int? Code { get; set; }
                 public string Message { get; set; }
-                public bool? Success { get; set; }
-                public string RuleName { get; set; }
                 public string RuleId { get; set; }
+                public string RuleName { get; set; }
+                public bool? Success { get; set; }
             }
         };
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupNotifyPolicyRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string GroupId { get; set; }
 
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
-        [NameInMap("GroupId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string GroupId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

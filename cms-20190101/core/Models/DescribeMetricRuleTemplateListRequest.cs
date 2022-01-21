@@ -9,21 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleTemplateListRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("History")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
+        public bool? History { get; set; }
 
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
-        [NameInMap("TemplateId")]
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public long? TemplateId { get; set; }
+        public string Name { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -33,9 +29,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
-        [NameInMap("History")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public bool? History { get; set; }
+        public string RegionId { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public long? TemplateId { get; set; }
 
     }
 

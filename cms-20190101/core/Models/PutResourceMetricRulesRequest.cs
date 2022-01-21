@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=true)]
             public PutResourceMetricRulesRequestRulesEscalations Escalations { get; set; }
             public class PutResourceMetricRulesRequestRulesEscalations : TeaModel {
-                [NameInMap("Info")]
+                [NameInMap("Critical")]
                 [Validation(Required=true)]
-                public PutResourceMetricRulesRequestRulesEscalationsInfo Info { get; set; }
-                public class PutResourceMetricRulesRequestRulesEscalationsInfo : TeaModel {
+                public PutResourceMetricRulesRequestRulesEscalationsCritical Critical { get; set; }
+                public class PutResourceMetricRulesRequestRulesEscalationsCritical : TeaModel {
+                    [NameInMap("ComparisonOperator")]
+                    [Validation(Required=false)]
+                    public string ComparisonOperator { get; set; }
+
+                    [NameInMap("Statistics")]
+                    [Validation(Required=false)]
+                    public string Statistics { get; set; }
+
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public string Threshold { get; set; }
@@ -29,78 +37,98 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public int? Times { get; set; }
 
+                }
+                [NameInMap("Info")]
+                [Validation(Required=true)]
+                public PutResourceMetricRulesRequestRulesEscalationsInfo Info { get; set; }
+                public class PutResourceMetricRulesRequestRulesEscalationsInfo : TeaModel {
+                    [NameInMap("ComparisonOperator")]
+                    [Validation(Required=false)]
+                    public string ComparisonOperator { get; set; }
+
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
 
-                    [NameInMap("ComparisonOperator")]
+                    [NameInMap("Threshold")]
                     [Validation(Required=false)]
-                    public string ComparisonOperator { get; set; }
+                    public string Threshold { get; set; }
+
+                    [NameInMap("Times")]
+                    [Validation(Required=false)]
+                    public int? Times { get; set; }
 
                 }
                 [NameInMap("Warn")]
                 [Validation(Required=true)]
                 public PutResourceMetricRulesRequestRulesEscalationsWarn Warn { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsWarn : TeaModel {
-                    [NameInMap("Threshold")]
-                    [Validation(Required=false)]
-                    public string Threshold { get; set; }
-
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
-
-                    [NameInMap("Times")]
-                    [Validation(Required=false)]
-                    public int? Times { get; set; }
 
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
 
-                }
-                [NameInMap("Critical")]
-                [Validation(Required=true)]
-                public PutResourceMetricRulesRequestRulesEscalationsCritical Critical { get; set; }
-                public class PutResourceMetricRulesRequestRulesEscalationsCritical : TeaModel {
-                    [NameInMap("Times")]
-                    [Validation(Required=false)]
-                    public int? Times { get; set; }
-
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public string Threshold { get; set; }
 
-                    [NameInMap("Statistics")]
+                    [NameInMap("Times")]
                     [Validation(Required=false)]
-                    public string Statistics { get; set; }
-
-                    [NameInMap("ComparisonOperator")]
-                    [Validation(Required=false)]
-                    public string ComparisonOperator { get; set; }
+                    public int? Times { get; set; }
 
                 }
             };
 
-            [NameInMap("MetricName")]
+            [NameInMap("ContactGroups")]
             [Validation(Required=false)]
-            public string MetricName { get; set; }
+            public string ContactGroups { get; set; }
 
             [NameInMap("EffectiveInterval")]
             [Validation(Required=false)]
             public string EffectiveInterval { get; set; }
 
+            [NameInMap("EmailSubject")]
+            [Validation(Required=false)]
+            public string EmailSubject { get; set; }
+
+            [NameInMap("Interval")]
+            [Validation(Required=false)]
+            public string Interval { get; set; }
+
+            [NameInMap("MetricName")]
+            [Validation(Required=false)]
+            public string MetricName { get; set; }
+
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
+            [NameInMap("NoDataPolicy")]
+            [Validation(Required=false)]
+            public string NoDataPolicy { get; set; }
+
             [NameInMap("NoEffectiveInterval")]
             [Validation(Required=false)]
             public string NoEffectiveInterval { get; set; }
+
+            [NameInMap("Period")]
+            [Validation(Required=false)]
+            public string Period { get; set; }
+
+            [NameInMap("Resources")]
+            [Validation(Required=false)]
+            public string Resources { get; set; }
 
             [NameInMap("RuleId")]
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
-            [NameInMap("Resources")]
+            [NameInMap("RuleName")]
             [Validation(Required=false)]
-            public string Resources { get; set; }
+            public string RuleName { get; set; }
 
             [NameInMap("SilenceTime")]
             [Validation(Required=false)]
@@ -109,30 +137,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("Webhook")]
             [Validation(Required=false)]
             public string Webhook { get; set; }
-
-            [NameInMap("ContactGroups")]
-            [Validation(Required=false)]
-            public string ContactGroups { get; set; }
-
-            [NameInMap("Namespace")]
-            [Validation(Required=false)]
-            public string Namespace { get; set; }
-
-            [NameInMap("EmailSubject")]
-            [Validation(Required=false)]
-            public string EmailSubject { get; set; }
-
-            [NameInMap("Period")]
-            [Validation(Required=false)]
-            public string Period { get; set; }
-
-            [NameInMap("RuleName")]
-            [Validation(Required=false)]
-            public string RuleName { get; set; }
-
-            [NameInMap("Interval")]
-            [Validation(Required=false)]
-            public string Interval { get; set; }
 
         }
 

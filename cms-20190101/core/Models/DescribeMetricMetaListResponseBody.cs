@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public string TotalCount { get; set; }
-
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
-
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public DescribeMetricMetaListResponseBodyResources Resources { get; set; }
@@ -37,16 +29,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMetricMetaListResponseBodyResourcesResource> Resource { get; set; }
             public class DescribeMetricMetaListResponseBodyResourcesResource : TeaModel {
-                public string MetricName { get; set; }
                 public string Description { get; set; }
-                public string Labels { get; set; }
-                public string Unit { get; set; }
                 public string Dimensions { get; set; }
+                public string Labels { get; set; }
+                public string MetricName { get; set; }
                 public string Namespace { get; set; }
                 public string Periods { get; set; }
                 public string Statistics { get; set; }
+                public string Unit { get; set; }
             }
         };
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

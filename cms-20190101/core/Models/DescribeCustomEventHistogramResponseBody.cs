@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("EventHistograms")]
+        [Validation(Required=false)]
+        public DescribeCustomEventHistogramResponseBodyEventHistograms EventHistograms { get; set; }
+        public class DescribeCustomEventHistogramResponseBodyEventHistograms : TeaModel {
+            [NameInMap("EventHistogram")]
+            [Validation(Required=false)]
+            public List<DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram> EventHistogram { get; set; }
+            public class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram : TeaModel {
+                public long? Count { get; set; }
+                public long? EndTime { get; set; }
+                public long? StartTime { get; set; }
+            }
+        };
+
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -24,20 +38,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
-
-        [NameInMap("EventHistograms")]
-        [Validation(Required=false)]
-        public DescribeCustomEventHistogramResponseBodyEventHistograms EventHistograms { get; set; }
-        public class DescribeCustomEventHistogramResponseBodyEventHistograms : TeaModel {
-            [NameInMap("EventHistogram")]
-            [Validation(Required=false)]
-            public List<DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram> EventHistogram { get; set; }
-            public class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram : TeaModel {
-                public long? EndTime { get; set; }
-                public long? StartTime { get; set; }
-                public long? Count { get; set; }
-            }
-        };
 
     }
 

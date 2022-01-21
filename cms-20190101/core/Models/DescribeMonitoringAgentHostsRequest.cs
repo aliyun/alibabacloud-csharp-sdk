@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitoringAgentHostsRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("AliyunHost")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("KeyWord")]
-        [Validation(Required=false)]
-        public string KeyWord { get; set; }
+        public bool? AliyunHost { get; set; }
 
         [NameInMap("HostName")]
         [Validation(Required=false)]
@@ -25,9 +21,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
-        [NameInMap("SerialNumbers")]
+        [NameInMap("InstanceRegionId")]
         [Validation(Required=false)]
-        public string SerialNumbers { get; set; }
+        public string InstanceRegionId { get; set; }
+
+        [NameInMap("KeyWord")]
+        [Validation(Required=false)]
+        public string KeyWord { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("InstanceRegionId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string InstanceRegionId { get; set; }
+        public string RegionId { get; set; }
 
-        [NameInMap("AliyunHost")]
+        [NameInMap("SerialNumbers")]
         [Validation(Required=false)]
-        public bool? AliyunHost { get; set; }
+        public string SerialNumbers { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]

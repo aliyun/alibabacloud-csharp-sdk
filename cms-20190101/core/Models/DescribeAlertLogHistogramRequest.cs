@@ -9,17 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogHistogramRequest : TeaModel {
-        [NameInMap("RegionId")]
+        [NameInMap("ContactGroup")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string ContactGroup { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
+
+        [NameInMap("GroupBy")]
+        [Validation(Required=false)]
+        public string GroupBy { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        [NameInMap("LastMin")]
+        [Validation(Required=false)]
+        public string LastMin { get; set; }
+
+        [NameInMap("Level")]
+        [Validation(Required=false)]
+        public string Level { get; set; }
+
+        [NameInMap("MetricName")]
+        [Validation(Required=false)]
+        public string MetricName { get; set; }
+
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -29,49 +49,29 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("SearchKey")]
-        [Validation(Required=false)]
-        public string SearchKey { get; set; }
-
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public string GroupId { get; set; }
-
         [NameInMap("Product")]
         [Validation(Required=false)]
         public string Product { get; set; }
 
-        [NameInMap("Namespace")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
-
-        [NameInMap("Level")]
-        [Validation(Required=false)]
-        public string Level { get; set; }
-
-        [NameInMap("SendStatus")]
-        [Validation(Required=false)]
-        public string SendStatus { get; set; }
-
-        [NameInMap("ContactGroup")]
-        [Validation(Required=false)]
-        public string ContactGroup { get; set; }
+        public string RegionId { get; set; }
 
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
-        [NameInMap("MetricName")]
+        [NameInMap("SearchKey")]
         [Validation(Required=false)]
-        public string MetricName { get; set; }
+        public string SearchKey { get; set; }
 
-        [NameInMap("LastMin")]
+        [NameInMap("SendStatus")]
         [Validation(Required=false)]
-        public string LastMin { get; set; }
+        public string SendStatus { get; set; }
 
-        [NameInMap("GroupBy")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string GroupBy { get; set; }
+        public long? StartTime { get; set; }
 
     }
 

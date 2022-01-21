@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitorGroupDynamicRuleRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
@@ -21,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public List<PutMonitorGroupDynamicRuleRequestGroupRules> GroupRules { get; set; }
         public class PutMonitorGroupDynamicRuleRequestGroupRules : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
             [NameInMap("FilterRelation")]
             [Validation(Required=false)]
             public string FilterRelation { get; set; }
@@ -29,25 +29,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<PutMonitorGroupDynamicRuleRequestGroupRulesFilters> Filters { get; set; }
             public class PutMonitorGroupDynamicRuleRequestGroupRulesFilters : TeaModel {
-                [NameInMap("Value")]
+                [NameInMap("Function")]
                 [Validation(Required=false)]
-                public string Value { get; set; }
+                public string Function { get; set; }
 
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                [NameInMap("Function")]
+                [NameInMap("Value")]
                 [Validation(Required=false)]
-                public string Function { get; set; }
+                public string Value { get; set; }
 
             }
 
-            [NameInMap("Category")]
-            [Validation(Required=false)]
-            public string Category { get; set; }
-
         }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 
