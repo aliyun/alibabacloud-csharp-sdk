@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
     public class ListFlowResponseBody : TeaModel {
+        /// <summary>
+        /// 工作流列表
+        /// </summary>
         [NameInMap("Flow")]
         [Validation(Required=false)]
         public ListFlowResponseBodyFlow Flow { get; set; }
@@ -40,18 +43,30 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
             }
         };
 
+        /// <summary>
+        /// 页码。
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// 每页数量。
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// 请求ID。
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 总数。
+        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }

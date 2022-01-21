@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
     public class ListFlowJobHistoryResponseBody : TeaModel {
+        /// <summary>
+        /// 作业实例列表。
+        /// </summary>
         [NameInMap("NodeInstances")]
         [Validation(Required=false)]
         public ListFlowJobHistoryResponseBodyNodeInstances NodeInstances { get; set; }
@@ -46,18 +49,30 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
             }
         };
 
+        /// <summary>
+        /// 当前页码。
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// 分页查询时设置的每页行数。
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// 请求ID。
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 记录总数。
+        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }

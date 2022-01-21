@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddi20200617.Models
 {
     public class ListFlowProjectsResponseBody : TeaModel {
+        /// <summary>
+        /// 页码
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// 每页数量
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// 项目列表
+        /// </summary>
         [NameInMap("Projects")]
         [Validation(Required=false)]
         public ListFlowProjectsResponseBodyProjects Projects { get; set; }
@@ -34,10 +43,16 @@ namespace AlibabaCloud.SDK.Ddi20200617.Models
             }
         };
 
+        /// <summary>
+        /// 请求ID
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// 总数
+        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public int? Total { get; set; }
