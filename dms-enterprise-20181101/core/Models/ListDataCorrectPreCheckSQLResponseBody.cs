@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string SqlType { get; set; }
 
+            [NameInMap("TableNames")]
+            [Validation(Required=false)]
+            public string TableNames { get; set; }
+
         }
 
         /// <summary>
