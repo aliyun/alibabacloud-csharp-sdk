@@ -29,6 +29,25 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        [NameInMap("BackendConfig")]
+        [Validation(Required=false)]
+        public DescribeApiHistoryResponseBodyBackendConfig BackendConfig { get; set; }
+        public class DescribeApiHistoryResponseBodyBackendConfig : TeaModel {
+            [NameInMap("BackendId")]
+            [Validation(Required=false)]
+            public string BackendId { get; set; }
+            [NameInMap("BackendName")]
+            [Validation(Required=false)]
+            public string BackendName { get; set; }
+            [NameInMap("BackendType")]
+            [Validation(Required=false)]
+            public string BackendType { get; set; }
+        };
+
+        [NameInMap("BackendEnable")]
+        [Validation(Required=false)]
+        public bool? BackendEnable { get; set; }
+
         [NameInMap("ConstantParameters")]
         [Validation(Required=false)]
         public DescribeApiHistoryResponseBodyConstantParameters ConstantParameters { get; set; }

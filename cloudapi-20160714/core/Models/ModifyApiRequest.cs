@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        [NameInMap("BackendEnable")]
+        [Validation(Required=false)]
+        public bool? BackendEnable { get; set; }
+
+        [NameInMap("BackendId")]
+        [Validation(Required=false)]
+        public string BackendId { get; set; }
+
         [NameInMap("ConstantParameters")]
         [Validation(Required=false)]
         public string ConstantParameters { get; set; }
