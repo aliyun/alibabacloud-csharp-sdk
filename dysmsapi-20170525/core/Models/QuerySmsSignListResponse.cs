@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
-    public class QueryCardSmsTemplateResponse : TeaModel {
+    public class QuerySmsSignListResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public QueryCardSmsTemplateResponseBody Body { get; set; }
+        public QuerySmsSignListResponseBody Body { get; set; }
 
     }
 
