@@ -69,6 +69,25 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public CreateRuleRequestRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
             public class CreateRuleRequestRuleActionsForwardGroupConfig : TeaModel {
+                [NameInMap("ServerGroupStickySession")]
+                [Validation(Required=false)]
+                public CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession ServerGroupStickySession { get; set; }
+                public class CreateRuleRequestRuleActionsForwardGroupConfigServerGroupStickySession : TeaModel {
+                    /// <summary>
+                    /// 是否开启会话保持
+                    /// </summary>
+                    [NameInMap("Enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    /// <summary>
+                    /// 超时时间
+                    /// </summary>
+                    [NameInMap("Timeout")]
+                    [Validation(Required=false)]
+                    public int? Timeout { get; set; }
+
+                }
                 [NameInMap("ServerGroupTuples")]
                 [Validation(Required=false)]
                 public List<CreateRuleRequestRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
@@ -145,6 +164,45 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [NameInMap("Query")]
                 [Validation(Required=false)]
                 public string Query { get; set; }
+            };
+
+            /// <summary>
+            /// 流量限速
+            /// </summary>
+            [NameInMap("TrafficLimitConfig")]
+            [Validation(Required=false)]
+            public CreateRuleRequestRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
+            public class CreateRuleRequestRuleActionsTrafficLimitConfig : TeaModel {
+                [NameInMap("QPS")]
+                [Validation(Required=false)]
+                public int? QPS { get; set; }
+            };
+
+            /// <summary>
+            /// 流量镜像
+            /// </summary>
+            [NameInMap("TrafficMirrorConfig")]
+            [Validation(Required=false)]
+            public CreateRuleRequestRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
+            public class CreateRuleRequestRuleActionsTrafficMirrorConfig : TeaModel {
+                [NameInMap("MirrorGroupConfig")]
+                [Validation(Required=false)]
+                public CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig MirrorGroupConfig { get; set; }
+                public class CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig : TeaModel {
+                    [NameInMap("ServerGroupTuples")]
+                    [Validation(Required=false)]
+                    public List<CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
+                    public class CreateRuleRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples : TeaModel {
+                        [NameInMap("ServerGroupId")]
+                        [Validation(Required=false)]
+                        public string ServerGroupId { get; set; }
+
+                    }
+
+                }
+                [NameInMap("TargetType")]
+                [Validation(Required=false)]
+                public string TargetType { get; set; }
             };
 
             /// <summary>
@@ -244,6 +302,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Key { get; set; }
                     public string Value { get; set; }
                 }
+            };
+
+            /// <summary>
+            /// 基于源IP业务流量匹配
+            /// </summary>
+            [NameInMap("SourceIpConfig")]
+            [Validation(Required=false)]
+            public CreateRuleRequestRuleConditionsSourceIpConfig SourceIpConfig { get; set; }
+            public class CreateRuleRequestRuleConditionsSourceIpConfig : TeaModel {
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<string> Values { get; set; }
             };
 
             /// <summary>

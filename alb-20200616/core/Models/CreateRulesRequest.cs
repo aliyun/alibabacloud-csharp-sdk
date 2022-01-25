@@ -83,6 +83,25 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public CreateRulesRequestRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
                 public class CreateRulesRequestRulesRuleActionsForwardGroupConfig : TeaModel {
+                    [NameInMap("ServerGroupStickySession")]
+                    [Validation(Required=false)]
+                    public CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession ServerGroupStickySession { get; set; }
+                    public class CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession : TeaModel {
+                        /// <summary>
+                        /// 是否开启会话保持
+                        /// </summary>
+                        [NameInMap("Enabled")]
+                        [Validation(Required=false)]
+                        public bool? Enabled { get; set; }
+
+                        /// <summary>
+                        /// 超时时间
+                        /// </summary>
+                        [NameInMap("Timeout")]
+                        [Validation(Required=false)]
+                        public int? Timeout { get; set; }
+
+                    }
                     [NameInMap("ServerGroupTuples")]
                     [Validation(Required=false)]
                     public List<CreateRulesRequestRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
@@ -159,6 +178,45 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Query")]
                     [Validation(Required=false)]
                     public string Query { get; set; }
+                };
+
+                /// <summary>
+                /// 流量限速
+                /// </summary>
+                [NameInMap("TrafficLimitConfig")]
+                [Validation(Required=false)]
+                public CreateRulesRequestRulesRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
+                public class CreateRulesRequestRulesRuleActionsTrafficLimitConfig : TeaModel {
+                    [NameInMap("QPS")]
+                    [Validation(Required=false)]
+                    public int? QPS { get; set; }
+                };
+
+                /// <summary>
+                /// 流量镜像
+                /// </summary>
+                [NameInMap("TrafficMirrorConfig")]
+                [Validation(Required=false)]
+                public CreateRulesRequestRulesRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
+                public class CreateRulesRequestRulesRuleActionsTrafficMirrorConfig : TeaModel {
+                    [NameInMap("MirrorGroupConfig")]
+                    [Validation(Required=false)]
+                    public CreateRulesRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig MirrorGroupConfig { get; set; }
+                    public class CreateRulesRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig : TeaModel {
+                        [NameInMap("ServerGroupTuples")]
+                        [Validation(Required=false)]
+                        public List<CreateRulesRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
+                        public class CreateRulesRequestRulesRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples : TeaModel {
+                            [NameInMap("ServerGroupId")]
+                            [Validation(Required=false)]
+                            public string ServerGroupId { get; set; }
+
+                        }
+
+                    }
+                    [NameInMap("TargetType")]
+                    [Validation(Required=false)]
+                    public string TargetType { get; set; }
                 };
 
                 /// <summary>
@@ -270,6 +328,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
+                    [NameInMap("Values")]
+                    [Validation(Required=false)]
+                    public List<string> Values { get; set; }
+                };
+
+                /// <summary>
+                /// 基于源IP业务流量匹配
+                /// </summary>
+                [NameInMap("SourceIpConfig")]
+                [Validation(Required=false)]
+                public CreateRulesRequestRulesRuleConditionsSourceIpConfig SourceIpConfig { get; set; }
+                public class CreateRulesRequestRulesRuleConditionsSourceIpConfig : TeaModel {
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<string> Values { get; set; }

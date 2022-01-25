@@ -90,6 +90,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ServerGroupName { get; set; }
 
         /// <summary>
+        /// 服务器名称
+        /// </summary>
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
+
+        /// <summary>
         /// 会话保持配置
         /// </summary>
         [NameInMap("StickySessionConfig")]
