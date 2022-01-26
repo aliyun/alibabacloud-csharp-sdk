@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
         [Validation(Required=false)]
         public List<GetDiagnoseResultForSingleCardResponseBodyErrorResult> ErrorResult { get; set; }
         public class GetDiagnoseResultForSingleCardResponseBodyErrorResult : TeaModel {
-            [NameInMap("ErrorDes")]
+            [NameInMap("ErrorDesc")]
             [Validation(Required=false)]
-            public string ErrorDes { get; set; }
+            public string ErrorDesc { get; set; }
 
             [NameInMap("ErrorLevel")]
             [Validation(Required=false)]
