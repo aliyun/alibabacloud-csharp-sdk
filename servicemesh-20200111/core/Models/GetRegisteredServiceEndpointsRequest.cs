@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetRegisteredServiceEndpointsRequest : TeaModel {
+        [NameInMap("ClusterIds")]
+        [Validation(Required=false)]
+        public string ClusterIds { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
+
+        [NameInMap("ServiceType")]
+        [Validation(Required=false)]
+        public string ServiceType { get; set; }
 
     }
 
