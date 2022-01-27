@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public string Destination { get; set; }
 
+            [NameInMap("DiagnoseTime")]
+            [Validation(Required=false)]
+            public long? DiagnoseTime { get; set; }
+
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
         }
 
         [NameInMap("MaxResults")]
@@ -49,11 +57,15 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
 
         [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public long? NextToken { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 
