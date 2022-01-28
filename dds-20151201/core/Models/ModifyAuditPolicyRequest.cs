@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyAuditPolicyRequest : TeaModel {
+        [NameInMap("AuditLogSwitchSource")]
+        [Validation(Required=false)]
+        public string AuditLogSwitchSource { get; set; }
+
         [NameInMap("AuditStatus")]
         [Validation(Required=false)]
         public string AuditStatus { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        [NameInMap("ServiceType")]
+        [Validation(Required=false)]
+        public string ServiceType { get; set; }
 
         [NameInMap("StoragePeriod")]
         [Validation(Required=false)]

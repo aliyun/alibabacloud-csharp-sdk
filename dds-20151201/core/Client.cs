@@ -775,6 +775,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["EngineVersion"] = request.EngineVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiddenZoneId))
+            {
+                query["HiddenZoneId"] = request.HiddenZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 query["NetworkType"] = request.NetworkType;
@@ -818,6 +822,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
             {
                 query["RestoreTime"] = request.RestoreTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryZoneId))
+            {
+                query["SecondaryZoneId"] = request.SecondaryZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
             {
@@ -926,6 +934,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["EngineVersion"] = request.EngineVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiddenZoneId))
+            {
+                query["HiddenZoneId"] = request.HiddenZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 query["NetworkType"] = request.NetworkType;
@@ -969,6 +981,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
             {
                 query["RestoreTime"] = request.RestoreTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryZoneId))
+            {
+                query["SecondaryZoneId"] = request.SecondaryZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
             {
@@ -4875,6 +4891,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -4961,6 +4981,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -8559,6 +8583,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogSwitchSource))
+            {
+                query["AuditLogSwitchSource"] = request.AuditLogSwitchSource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
             {
                 query["AuditStatus"] = request.AuditStatus;
@@ -8586,6 +8614,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePeriod))
             {
@@ -8614,6 +8646,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogSwitchSource))
+            {
+                query["AuditLogSwitchSource"] = request.AuditLogSwitchSource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
             {
                 query["AuditStatus"] = request.AuditStatus;
@@ -8641,6 +8677,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePeriod))
             {
