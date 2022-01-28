@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribePrePaidInstanceStockRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("DataDiskSize")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public int? DataDiskSize { get; set; }
 
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("InstanceSpec")]
+        [Validation(Required=false)]
+        public string InstanceSpec { get; set; }
+
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }
 
-        [NameInMap("DataDiskSize")]
+        [NameInMap("Version")]
         [Validation(Required=false)]
-        public int? DataDiskSize { get; set; }
-
-        [NameInMap("InstanceSpec")]
-        [Validation(Required=false)]
-        public string InstanceSpec { get; set; }
+        public string Version { get; set; }
 
     }
 

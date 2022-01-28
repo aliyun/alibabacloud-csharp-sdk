@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        [NameInMap("Msg")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Msg { get; set; }
+        public string Data { get; set; }
 
         [NameInMap("Desc")]
         [Validation(Required=false)]
         public string Desc { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("Msg")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public string Msg { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]

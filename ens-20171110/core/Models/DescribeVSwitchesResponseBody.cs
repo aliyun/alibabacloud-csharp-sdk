@@ -35,8 +35,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public class DescribeVSwitchesResponseBodyVSwitchesVSwitch : TeaModel {
                 public string CidrBlock { get; set; }
                 public string CreatedTime { get; set; }
+                public string Description { get; set; }
                 public string EnsRegionId { get; set; }
                 public long? FreeIpCount { get; set; }
+                public string NetworkId { get; set; }
                 public string Status { get; set; }
                 public string VSwitchId { get; set; }
                 public string VSwitchName { get; set; }

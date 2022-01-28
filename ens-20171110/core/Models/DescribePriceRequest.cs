@@ -9,15 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribePriceRequest : TeaModel {
-        [NameInMap("SystemDisk")]
-        [Validation(Required=false)]
-        public DescribePriceRequestSystemDisk SystemDisk { get; set; }
-        public class DescribePriceRequestSystemDisk : TeaModel {
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-        };
-
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<DescribePriceRequestDataDisk> DataDisk { get; set; }
@@ -28,17 +19,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        [NameInMap("Version")]
+        [NameInMap("SystemDisk")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public DescribePriceRequestSystemDisk SystemDisk { get; set; }
+        public class DescribePriceRequestSystemDisk : TeaModel {
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+        };
+
+        [NameInMap("EnsRegionId")]
+        [Validation(Required=false)]
+        public string EnsRegionId { get; set; }
 
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
-        [NameInMap("EnsRegionId")]
+        [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
-        public string EnsRegionId { get; set; }
+        public string InternetChargeType { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Quantity { get; set; }
 
-        [NameInMap("InternetChargeType")]
+        [NameInMap("Version")]
         [Validation(Required=false)]
-        public string InternetChargeType { get; set; }
+        public string Version { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("Uuid")]
-        [Validation(Required=false)]
-        public string Uuid { get; set; }
-
         [NameInMap("PodConfigName")]
         [Validation(Required=false)]
         public string PodConfigName { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

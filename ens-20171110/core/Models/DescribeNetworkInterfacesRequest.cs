@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworkInterfacesRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
-        [NameInMap("PrimaryIpAddress")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string PrimaryIpAddress { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -32,6 +24,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("PrimaryIpAddress")]
+        [Validation(Required=false)]
+        public string PrimaryIpAddress { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
 
     }
 

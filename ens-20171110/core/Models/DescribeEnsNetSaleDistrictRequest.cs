@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsNetSaleDistrictRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("NetDistrictCode")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string NetDistrictCode { get; set; }
 
         [NameInMap("NetLevelCode")]
         [Validation(Required=false)]
         public string NetLevelCode { get; set; }
 
-        [NameInMap("NetDistrictCode")]
+        [NameInMap("Version")]
         [Validation(Required=false)]
-        public string NetDistrictCode { get; set; }
+        public string Version { get; set; }
 
     }
 

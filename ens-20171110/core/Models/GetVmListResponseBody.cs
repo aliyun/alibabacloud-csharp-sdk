@@ -17,20 +17,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        /// <summary>
-        /// 返回信息
-        /// </summary>
-        [NameInMap("Msg")]
-        [Validation(Required=false)]
-        public string Msg { get; set; }
-
-        /// <summary>
         /// 业务数据
         /// </summary>
         [NameInMap("Data")]
@@ -40,6 +26,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("Desc")]
         [Validation(Required=false)]
         public string Desc { get; set; }
+
+        /// <summary>
+        /// 返回信息
+        /// </summary>
+        [NameInMap("Msg")]
+        [Validation(Required=false)]
+        public string Msg { get; set; }
+
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

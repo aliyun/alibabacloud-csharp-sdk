@@ -9,25 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateImageRequest : TeaModel {
-        [NameInMap("product")]
+        [NameInMap("DeleteAfterImageUpload")]
         [Validation(Required=false)]
-        public string Product { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string DeleteAfterImageUpload { get; set; }
 
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
-        [NameInMap("DeleteAfterImageUpload")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string DeleteAfterImageUpload { get; set; }
+        public string InstanceId { get; set; }
+
+        [NameInMap("product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
 
     }
 

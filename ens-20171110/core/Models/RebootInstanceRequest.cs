@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RebootInstanceRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("ForceStop")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string ForceStop { get; set; }
 
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("ForceStop")]
+        [NameInMap("Version")]
         [Validation(Required=false)]
-        public string ForceStop { get; set; }
+        public string Version { get; set; }
 
     }
 

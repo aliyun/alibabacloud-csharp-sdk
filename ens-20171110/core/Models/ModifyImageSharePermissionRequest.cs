@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyImageSharePermissionRequest : TeaModel {
-        [NameInMap("ImageId")]
-        [Validation(Required=false)]
-        public string ImageId { get; set; }
-
         [NameInMap("AddAccounts")]
         [Validation(Required=false)]
         public string AddAccounts { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
 
         [NameInMap("RemoveAccounts")]
         [Validation(Required=false)]

@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EPNInstanceName { get; set; }
 
-        [NameInMap("NetworkingModel")]
-        [Validation(Required=false)]
-        public string NetworkingModel { get; set; }
-
         [NameInMap("InternetMaxBandwidthOut")]
         [Validation(Required=false)]
         public int? InternetMaxBandwidthOut { get; set; }
+
+        [NameInMap("NetworkingModel")]
+        [Validation(Required=false)]
+        public string NetworkingModel { get; set; }
 
     }
 

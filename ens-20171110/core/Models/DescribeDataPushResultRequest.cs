@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string DataVersions { get; set; }
 
-        [NameInMap("MinDate")]
-        [Validation(Required=false)]
-        public string MinDate { get; set; }
-
         [NameInMap("MaxDate")]
         [Validation(Required=false)]
         public string MaxDate { get; set; }
+
+        [NameInMap("MinDate")]
+        [Validation(Required=false)]
+        public string MinDate { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

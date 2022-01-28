@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeMeasurementDataRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("EndDate")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string EndDate { get; set; }
 
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
-        [NameInMap("EndDate")]
+        [NameInMap("Version")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string Version { get; set; }
 
     }
 

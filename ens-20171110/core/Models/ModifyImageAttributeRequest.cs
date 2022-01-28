@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyImageAttributeRequest : TeaModel {
-        [NameInMap("product")]
-        [Validation(Required=false)]
-        public string Product { get; set; }
-
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
@@ -24,6 +16,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
+
+        [NameInMap("product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
 
     }
 

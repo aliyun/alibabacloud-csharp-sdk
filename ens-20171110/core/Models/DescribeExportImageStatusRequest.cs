@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeExportImageStatusRequest : TeaModel {
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

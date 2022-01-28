@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeUserBandWidthDataRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("StartTime")]
+        [NameInMap("Isp")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public string Isp { get; set; }
 
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
 
-        [NameInMap("Isp")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string Isp { get; set; }
+        public string StartTime { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

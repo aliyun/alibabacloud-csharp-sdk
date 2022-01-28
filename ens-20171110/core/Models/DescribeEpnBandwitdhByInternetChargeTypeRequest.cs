@@ -9,29 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEpnBandwitdhByInternetChargeTypeRequest : TeaModel {
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
-
-        [NameInMap("Isp")]
-        [Validation(Required=false)]
-        public string Isp { get; set; }
 
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("Isp")]
+        [Validation(Required=false)]
+        public string Isp { get; set; }
+
         [NameInMap("NetworkingModel")]
         [Validation(Required=false)]
         public string NetworkingModel { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

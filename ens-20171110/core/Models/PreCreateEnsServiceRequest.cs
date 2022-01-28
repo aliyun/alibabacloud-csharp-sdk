@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PreCreateEnsServiceRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("BandwidthType")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string BandwidthType { get; set; }
+
+        [NameInMap("BuyResourcesDetail")]
+        [Validation(Required=false)]
+        public string BuyResourcesDetail { get; set; }
+
+        [NameInMap("DataDiskSize")]
+        [Validation(Required=false)]
+        public string DataDiskSize { get; set; }
 
         [NameInMap("EnsServiceName")]
         [Validation(Required=false)]
@@ -21,53 +29,45 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
-        [NameInMap("InstanceSpec")]
-        [Validation(Required=false)]
-        public string InstanceSpec { get; set; }
-
-        [NameInMap("SystemDiskSize")]
-        [Validation(Required=false)]
-        public string SystemDiskSize { get; set; }
-
-        [NameInMap("DataDiskSize")]
-        [Validation(Required=false)]
-        public string DataDiskSize { get; set; }
-
-        [NameInMap("BandwidthType")]
-        [Validation(Required=false)]
-        public string BandwidthType { get; set; }
-
         [NameInMap("InstanceBandwithdLimit")]
         [Validation(Required=false)]
         public string InstanceBandwithdLimit { get; set; }
 
-        [NameInMap("Password")]
+        [NameInMap("InstanceSpec")]
         [Validation(Required=false)]
-        public string Password { get; set; }
+        public string InstanceSpec { get; set; }
 
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
-        [NameInMap("UserData")]
-        [Validation(Required=false)]
-        public string UserData { get; set; }
-
         [NameInMap("NetLevel")]
         [Validation(Required=false)]
         public string NetLevel { get; set; }
 
-        [NameInMap("SchedulingStrategy")]
+        [NameInMap("Password")]
         [Validation(Required=false)]
-        public string SchedulingStrategy { get; set; }
+        public string Password { get; set; }
 
         [NameInMap("SchedulingPriceStrategy")]
         [Validation(Required=false)]
         public string SchedulingPriceStrategy { get; set; }
 
-        [NameInMap("BuyResourcesDetail")]
+        [NameInMap("SchedulingStrategy")]
         [Validation(Required=false)]
-        public string BuyResourcesDetail { get; set; }
+        public string SchedulingStrategy { get; set; }
+
+        [NameInMap("SystemDiskSize")]
+        [Validation(Required=false)]
+        public string SystemDiskSize { get; set; }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

@@ -17,32 +17,39 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData> MeasurementData { get; set; }
             public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData : TeaModel {
-                [NameInMap("BandWidthFeeData")]
-                [Validation(Required=false)]
-                public List<DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeData> BandWidthFeeData { get; set; }
-                public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeData : TeaModel {
-                    [NameInMap("CostCode")]
+                public DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas BandWidthFeeDatas { get; set; }
+                public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas : TeaModel {
+                    [NameInMap("BandWidthFeeData")]
                     [Validation(Required=false)]
-                    public string CostCode { get; set; }
+                    public List<DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData> BandWidthFeeData { get; set; }
+                    public class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData : TeaModel {
+                        [NameInMap("CostCode")]
+                        [Validation(Required=false)]
+                        public string CostCode { get; set; }
 
-                    [NameInMap("CostName")]
-                    [Validation(Required=false)]
-                    public string CostName { get; set; }
+                        [NameInMap("CostName")]
+                        [Validation(Required=false)]
+                        public string CostName { get; set; }
 
-                    [NameInMap("CostType")]
-                    [Validation(Required=false)]
-                    public string CostType { get; set; }
+                        [NameInMap("CostType")]
+                        [Validation(Required=false)]
+                        public string CostType { get; set; }
 
-                    [NameInMap("CostVal")]
-                    [Validation(Required=false)]
-                    public int? CostVal { get; set; }
+                        [NameInMap("CostVal")]
+                        [Validation(Required=false)]
+                        public int? CostVal { get; set; }
 
-                    [NameInMap("IspLine")]
-                    [Validation(Required=false)]
-                    public string IspLine { get; set; }
+                        [NameInMap("IspLine")]
+                        [Validation(Required=false)]
+                        public string IspLine { get; set; }
+
+                    }
 
                 }
-
+                public string ChargeModel { get; set; }
+                public string CostCycle { get; set; }
+                public string CostEndTime { get; set; }
+                public string CostStartTime { get; set; }
             }
         };
 

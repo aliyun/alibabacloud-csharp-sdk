@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ImportKeyPairRequest : TeaModel {
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("PublicKeyBody")]
         [Validation(Required=false)]
         public string PublicKeyBody { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

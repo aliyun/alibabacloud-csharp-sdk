@@ -17,20 +17,24 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<ListApplicationsResponseBodyApplicationsApplication> Application { get; set; }
             public class ListApplicationsResponseBodyApplicationsApplication : TeaModel {
-                [NameInMap("App")]
-                [Validation(Required=false)]
-                public List<ListApplicationsResponseBodyApplicationsApplicationApp> App { get; set; }
-                public class ListApplicationsResponseBodyApplicationsApplicationApp : TeaModel {
-                    [NameInMap("AppId")]
+                public ListApplicationsResponseBodyApplicationsApplicationAppList AppList { get; set; }
+                public class ListApplicationsResponseBodyApplicationsApplicationAppList : TeaModel {
+                    [NameInMap("App")]
                     [Validation(Required=false)]
-                    public string AppId { get; set; }
+                    public List<ListApplicationsResponseBodyApplicationsApplicationAppListApp> App { get; set; }
+                    public class ListApplicationsResponseBodyApplicationsApplicationAppListApp : TeaModel {
+                        [NameInMap("AppId")]
+                        [Validation(Required=false)]
+                        public string AppId { get; set; }
 
-                    [NameInMap("AppInfo")]
-                    [Validation(Required=false)]
-                    public string AppInfo { get; set; }
+                        [NameInMap("AppInfo")]
+                        [Validation(Required=false)]
+                        public string AppInfo { get; set; }
+
+                    }
 
                 }
-
+                public string ClusterName { get; set; }
             }
         };
 

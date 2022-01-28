@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachEnsInstancesRequest : TeaModel {
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("Scripts")]
         [Validation(Required=false)]
         public string Scripts { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

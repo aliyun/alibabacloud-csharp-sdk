@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string EnsRegionId { get; set; }
                 public string EnsRegionIdName { get; set; }
                 public int? InstanceCount { get; set; }
-                public int? InternetBandwidth { get; set; }
+                public long? InternetBandwidth { get; set; }
                 public string Isp { get; set; }
                 public int? VCpu { get; set; }
             }

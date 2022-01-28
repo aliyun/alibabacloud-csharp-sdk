@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ExportImageRequest : TeaModel {
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
@@ -21,17 +17,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string OSSBucket { get; set; }
 
-        [NameInMap("OSSRegionId")]
-        [Validation(Required=false)]
-        public string OSSRegionId { get; set; }
-
         [NameInMap("OSSPrefix")]
         [Validation(Required=false)]
         public string OSSPrefix { get; set; }
 
+        [NameInMap("OSSRegionId")]
+        [Validation(Required=false)]
+        public string OSSRegionId { get; set; }
+
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

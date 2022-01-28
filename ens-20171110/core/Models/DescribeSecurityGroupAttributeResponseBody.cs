@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSecurityGroupAttributeResponseBody : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public DescribeSecurityGroupAttributeResponseBodyPermissions Permissions { get; set; }
@@ -18,6 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeSecurityGroupAttributeResponseBodyPermissionsPermission> Permission { get; set; }
             public class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission : TeaModel {
                 public string CreationTime { get; set; }
+                public string Description { get; set; }
                 public string DestCidrIp { get; set; }
                 public string Direction { get; set; }
                 public string IpProtocol { get; set; }
@@ -36,6 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("SecurityGroupName")]
+        [Validation(Required=false)]
+        public string SecurityGroupName { get; set; }
 
     }
 

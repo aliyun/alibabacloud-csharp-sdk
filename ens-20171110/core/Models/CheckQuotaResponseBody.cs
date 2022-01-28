@@ -9,13 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CheckQuotaResponseBody : TeaModel {
-        /// <summary>
-        /// Id of the request
-        /// </summary>
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
@@ -24,13 +17,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        [NameInMap("Desc")]
+        [Validation(Required=false)]
+        public string Desc { get; set; }
+
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
-        [NameInMap("Desc")]
+        /// <summary>
+        /// Id of the request
+        /// </summary>
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Desc { get; set; }
+        public string RequestId { get; set; }
 
     }
 

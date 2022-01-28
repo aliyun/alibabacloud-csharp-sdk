@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string FromAppVersion { get; set; }
 
-        [NameInMap("ToAppVersion")]
-        [Validation(Required=false)]
-        public string ToAppVersion { get; set; }
-
         [NameInMap("Timeout")]
         [Validation(Required=false)]
         public int? Timeout { get; set; }
+
+        [NameInMap("ToAppVersion")]
+        [Validation(Required=false)]
+        public string ToAppVersion { get; set; }
 
     }
 

@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup> SecurityGroup { get; set; }
             public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup : TeaModel {
                 public string CreationTime { get; set; }
+                public string Description { get; set; }
+                public int? InstanceCount { get; set; }
                 public string SecurityGroupId { get; set; }
                 public string SecurityGroupName { get; set; }
             }

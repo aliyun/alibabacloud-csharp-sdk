@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEpnBandWidthDataRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("EPNInstanceId")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string EPNInstanceId { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
 
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
@@ -21,18 +25,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("Period")]
-        [Validation(Required=false)]
-        public string Period { get; set; }
-
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }
@@ -41,9 +33,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NetworkingModel { get; set; }
 
-        [NameInMap("EPNInstanceId")]
+        [NameInMap("Period")]
         [Validation(Required=false)]
-        public string EPNInstanceId { get; set; }
+        public string Period { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

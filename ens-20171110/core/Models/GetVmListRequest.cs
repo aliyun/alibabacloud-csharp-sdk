@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string GroupUuid { get; set; }
 
+        [NameInMap("InstanceUuid")]
+        [Validation(Required=false)]
+        public string InstanceUuid { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("WorkloadUuid")]
+        [Validation(Required=false)]
+        public string WorkloadUuid { get; set; }
 
     }
 

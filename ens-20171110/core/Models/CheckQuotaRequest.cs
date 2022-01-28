@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public long? AliUid { get; set; }
 
-        [NameInMap("ResourceAttribute")]
-        [Validation(Required=false)]
-        public string ResourceAttribute { get; set; }
-
         [NameInMap("GroupUuid")]
         [Validation(Required=false)]
         public string GroupUuid { get; set; }
+
+        [NameInMap("ResourceAttribute")]
+        [Validation(Required=false)]
+        public string ResourceAttribute { get; set; }
 
     }
 

@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReleaseEipAddressRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("Eips")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string Eips { get; set; }
 
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
-        [NameInMap("Eips")]
+        [NameInMap("Version")]
         [Validation(Required=false)]
-        public string Eips { get; set; }
+        public string Version { get; set; }
 
     }
 

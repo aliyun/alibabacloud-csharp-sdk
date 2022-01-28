@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSecurityGroupRequest : TeaModel {
-        [NameInMap("Version")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public string Version { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("SecurityGroupName")]
         [Validation(Required=false)]
         public string SecurityGroupName { get; set; }
+
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

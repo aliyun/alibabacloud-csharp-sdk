@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRegionIdResourceRequest : TeaModel {
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("Isp")]
+        [Validation(Required=false)]
+        public string Isp { get; set; }
 
         [NameInMap("OrderByParams")]
         [Validation(Required=false)]
@@ -33,9 +29,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
-        [NameInMap("Isp")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string Isp { get; set; }
+        public string StartTime { get; set; }
 
     }
 
