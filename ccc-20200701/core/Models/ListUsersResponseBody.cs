@@ -21,9 +21,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyDataList> List { get; set; }
             public class ListUsersResponseBodyDataList : TeaModel {
+                public string DeviceExt { get; set; }
+                public string DeviceId { get; set; }
+                public string DeviceState { get; set; }
                 public string DisplayId { get; set; }
                 public string DisplayName { get; set; }
                 public string Email { get; set; }
+                public string Extension { get; set; }
                 public string LoginName { get; set; }
                 public string Mobile { get; set; }
                 public List<ListUsersResponseBodyDataListPersonalOutboundNumberList> PersonalOutboundNumberList { get; set; }

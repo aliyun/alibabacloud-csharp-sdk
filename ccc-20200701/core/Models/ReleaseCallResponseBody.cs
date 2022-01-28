@@ -84,6 +84,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string JobId { get; set; }
 
             }
+            [NameInMap("ContextId")]
+            [Validation(Required=false)]
+            public long? ContextId { get; set; }
             [NameInMap("UserContext")]
             [Validation(Required=false)]
             public ReleaseCallResponseBodyDataUserContext UserContext { get; set; }

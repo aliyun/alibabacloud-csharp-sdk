@@ -17,6 +17,15 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public GetUserResponseBodyData Data { get; set; }
         public class GetUserResponseBodyData : TeaModel {
+            [NameInMap("DeviceExt")]
+            [Validation(Required=false)]
+            public string DeviceExt { get; set; }
+            [NameInMap("DeviceId")]
+            [Validation(Required=false)]
+            public string DeviceId { get; set; }
+            [NameInMap("DeviceState")]
+            [Validation(Required=false)]
+            public string DeviceState { get; set; }
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
