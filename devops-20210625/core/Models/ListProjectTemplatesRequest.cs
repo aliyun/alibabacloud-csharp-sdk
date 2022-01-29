@@ -8,10 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devops20210625.Models
 {
-    public class DeleteProjectRequest : TeaModel {
-        [NameInMap("identifier")]
+    public class ListProjectTemplatesRequest : TeaModel {
+        /// <summary>
+        /// 模板类型
+        /// </summary>
+        [NameInMap("category")]
         [Validation(Required=false)]
-        public string Identifier { get; set; }
+        public string Category { get; set; }
 
     }
 
