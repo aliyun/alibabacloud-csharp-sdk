@@ -61,6 +61,28 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> Items { get; set; }
                 public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems : TeaModel {
+                    [NameInMap("Activated")]
+                    [Validation(Required=false)]
+                    public bool? Activated { get; set; }
+
+                    [NameInMap("Azone")]
+                    [Validation(Required=false)]
+                    public string Azone { get; set; }
+
+                    [NameInMap("AzoneRoleList")]
+                    [Validation(Required=false)]
+                    public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList> AzoneRoleList { get; set; }
+                    public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList : TeaModel {
+                        [NameInMap("Azone")]
+                        [Validation(Required=false)]
+                        public string Azone { get; set; }
+
+                        [NameInMap("Role")]
+                        [Validation(Required=false)]
+                        public string Role { get; set; }
+
+                    }
+
                     [NameInMap("CharacterType")]
                     [Validation(Required=false)]
                     public string CharacterType { get; set; }
@@ -146,6 +168,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [NameInMap("MaxIops")]
                     [Validation(Required=false)]
                     public int? MaxIops { get; set; }
+
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                    [NameInMap("Role")]
+                    [Validation(Required=false)]
+                    public string Role { get; set; }
 
                 }
 

@@ -1,3 +1,6 @@
+2022-02-08 Version: 1.0.7
+- Generated csharp 2020-02-02 for polardbx.
+
 2021-12-30 Version: 1.0.6
 - Fixed some bugs.
 

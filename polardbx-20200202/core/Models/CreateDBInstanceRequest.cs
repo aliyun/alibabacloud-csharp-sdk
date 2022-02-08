@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string PrimaryDBInstanceName { get; set; }
 
+        [NameInMap("PrimaryZone")]
+        [Validation(Required=false)]
+        public string PrimaryZone { get; set; }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -56,6 +60,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SecondaryZone")]
+        [Validation(Required=false)]
+        public string SecondaryZone { get; set; }
+
+        [NameInMap("TertiaryZone")]
+        [Validation(Required=false)]
+        public string TertiaryZone { get; set; }
+
+        [NameInMap("TopologyType")]
+        [Validation(Required=false)]
+        public string TopologyType { get; set; }
 
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
