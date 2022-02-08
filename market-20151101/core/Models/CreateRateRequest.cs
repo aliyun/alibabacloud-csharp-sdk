@@ -13,9 +13,17 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        [NameInMap("CustomerLabels")]
+        [Validation(Required=false)]
+        public string CustomerLabels { get; set; }
+
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
+
+        [NameInMap("PackageVersion")]
+        [Validation(Required=false)]
+        public string PackageVersion { get; set; }
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
