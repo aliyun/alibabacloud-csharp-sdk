@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterMigrationResponseBody : TeaModel {
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
+
         [NameInMap("DBClusterEndpointList")]
         [Validation(Required=false)]
         public List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> DBClusterEndpointList { get; set; }
@@ -17,13 +21,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems> AddressItems { get; set; }
             public class DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems : TeaModel {
-                [NameInMap("VSwitchId")]
-                [Validation(Required=false)]
-                public string VSwitchId { get; set; }
-
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
+
+                [NameInMap("IPAddress")]
+                [Validation(Required=false)]
+                public string IPAddress { get; set; }
 
                 [NameInMap("NetType")]
                 [Validation(Required=false)]
@@ -37,9 +41,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
-                [NameInMap("IPAddress")]
+                [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
-                public string IPAddress { get; set; }
+                public string VSwitchId { get; set; }
 
             }
 
@@ -53,33 +57,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
-        [NameInMap("Comment")]
-        [Validation(Required=false)]
-        public string Comment { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("ExpiredTime")]
-        [Validation(Required=false)]
-        public string ExpiredTime { get; set; }
-
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
-
-        [NameInMap("Topologies")]
-        [Validation(Required=false)]
-        public string Topologies { get; set; }
-
-        [NameInMap("RdsReadWriteMode")]
-        [Validation(Required=false)]
-        public string RdsReadWriteMode { get; set; }
-
-        [NameInMap("SourceRDSDBInstanceId")]
-        [Validation(Required=false)]
-        public string SourceRDSDBInstanceId { get; set; }
 
         [NameInMap("DBClusterReadWriteMode")]
         [Validation(Required=false)]
@@ -88,6 +68,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DelayedSeconds")]
         [Validation(Required=false)]
         public int? DelayedSeconds { get; set; }
+
+        [NameInMap("ExpiredTime")]
+        [Validation(Required=false)]
+        public string ExpiredTime { get; set; }
 
         [NameInMap("MigrationStatus")]
         [Validation(Required=false)]
@@ -101,13 +85,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> AddressItems { get; set; }
             public class DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems : TeaModel {
-                [NameInMap("VSwitchId")]
-                [Validation(Required=false)]
-                public string VSwitchId { get; set; }
-
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
+
+                [NameInMap("IPAddress")]
+                [Validation(Required=false)]
+                public string IPAddress { get; set; }
 
                 [NameInMap("NetType")]
                 [Validation(Required=false)]
@@ -121,9 +105,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string VPCId { get; set; }
 
-                [NameInMap("IPAddress")]
+                [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
-                public string IPAddress { get; set; }
+                public string VSwitchId { get; set; }
 
             }
 
@@ -136,6 +120,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EndpointType { get; set; }
 
         }
+
+        [NameInMap("RdsReadWriteMode")]
+        [Validation(Required=false)]
+        public string RdsReadWriteMode { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("SourceRDSDBInstanceId")]
+        [Validation(Required=false)]
+        public string SourceRDSDBInstanceId { get; set; }
+
+        [NameInMap("Topologies")]
+        [Validation(Required=false)]
+        public string Topologies { get; set; }
 
     }
 

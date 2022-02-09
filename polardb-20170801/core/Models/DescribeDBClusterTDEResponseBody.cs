@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterTDEResponseBody : TeaModel {
-        [NameInMap("TDEStatus")]
-        [Validation(Required=false)]
-        public string TDEStatus { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("EncryptNewTables")]
+        [Validation(Required=false)]
+        public string EncryptNewTables { get; set; }
 
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
-        [NameInMap("EncryptNewTables")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string EncryptNewTables { get; set; }
+        public string RequestId { get; set; }
+
+        [NameInMap("TDEStatus")]
+        [Validation(Required=false)]
+        public string TDEStatus { get; set; }
 
     }
 

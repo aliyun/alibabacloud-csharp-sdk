@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -37,21 +25,34 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord> SQLSlowRecord { get; set; }
             public class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord : TeaModel {
+                public string DBName { get; set; }
+                public string DBNodeId { get; set; }
                 public string ExecutionStartTime { get; set; }
                 public string HostAddress { get; set; }
-                public long? QueryTimes { get; set; }
-                public string SQLText { get; set; }
-                public long? ReturnRowCounts { get; set; }
-                public long? ParseRowCounts { get; set; }
-                public string DBName { get; set; }
                 public long? LockTimes { get; set; }
-                public string DBNodeId { get; set; }
+                public long? ParseRowCounts { get; set; }
+                public long? QueryTimeMS { get; set; }
+                public long? QueryTimes { get; set; }
+                public long? ReturnRowCounts { get; set; }
+                public string SQLText { get; set; }
             }
         };
 
-        [NameInMap("Engine")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Engine { get; set; }
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 

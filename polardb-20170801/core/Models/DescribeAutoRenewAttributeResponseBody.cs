@@ -9,9 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAutoRenewAttributeResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("Items")]
         [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
+        public DescribeAutoRenewAttributeResponseBodyItems Items { get; set; }
+        public class DescribeAutoRenewAttributeResponseBodyItems : TeaModel {
+            [NameInMap("AutoRenewAttribute")]
+            [Validation(Required=false)]
+            public List<DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute> AutoRenewAttribute { get; set; }
+            public class DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute : TeaModel {
+                public bool? AutoRenewEnabled { get; set; }
+                public string DBClusterId { get; set; }
+                public int? Duration { get; set; }
+                public string PeriodUnit { get; set; }
+                public string RegionId { get; set; }
+                public string RenewalStatus { get; set; }
+            }
+        };
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
@@ -21,26 +38,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("Items")]
-        [Validation(Required=false)]
-        public DescribeAutoRenewAttributeResponseBodyItems Items { get; set; }
-        public class DescribeAutoRenewAttributeResponseBodyItems : TeaModel {
-            [NameInMap("AutoRenewAttribute")]
-            [Validation(Required=false)]
-            public List<DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute> AutoRenewAttribute { get; set; }
-            public class DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute : TeaModel {
-                public string DBClusterId { get; set; }
-                public string PeriodUnit { get; set; }
-                public int? Duration { get; set; }
-                public string RenewalStatus { get; set; }
-                public bool? AutoRenewEnabled { get; set; }
-                public string RegionId { get; set; }
-            }
-        };
+        public int? TotalRecordCount { get; set; }
 
     }
 

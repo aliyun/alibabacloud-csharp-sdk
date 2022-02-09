@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBLinksResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DBInstanceName { get; set; }
 
         [NameInMap("DBLinkInfos")]
         [Validation(Required=false)]
@@ -29,23 +29,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string SourceDBName { get; set; }
 
-            [NameInMap("TargetDBName")]
+            [NameInMap("TargetAccount")]
             [Validation(Required=false)]
-            public string TargetDBName { get; set; }
+            public string TargetAccount { get; set; }
 
             [NameInMap("TargetDBInstanceName")]
             [Validation(Required=false)]
             public string TargetDBInstanceName { get; set; }
 
-            [NameInMap("TargetAccount")]
+            [NameInMap("TargetDBName")]
             [Validation(Required=false)]
-            public string TargetAccount { get; set; }
+            public string TargetDBName { get; set; }
 
         }
 
-        [NameInMap("DBInstanceName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DBInstanceName { get; set; }
+        public string RequestId { get; set; }
 
     }
 

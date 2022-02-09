@@ -9,33 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("BackupFrequency")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string BackupFrequency { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("BackupRetentionPolicyOnClusterDeletion")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string BackupRetentionPolicyOnClusterDeletion { get; set; }
 
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
-
-        [NameInMap("PreferredBackupTime")]
-        [Validation(Required=false)]
-        public string PreferredBackupTime { get; set; }
-
-        [NameInMap("PreferredBackupPeriod")]
-        [Validation(Required=false)]
-        public string PreferredBackupPeriod { get; set; }
 
         [NameInMap("DataLevel1BackupRetentionPeriod")]
         [Validation(Required=false)]
@@ -45,13 +29,29 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DataLevel2BackupRetentionPeriod { get; set; }
 
-        [NameInMap("BackupRetentionPolicyOnClusterDeletion")]
+        [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
-        public string BackupRetentionPolicyOnClusterDeletion { get; set; }
+        public string OwnerAccount { get; set; }
 
-        [NameInMap("BackupFrequency")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string BackupFrequency { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PreferredBackupPeriod")]
+        [Validation(Required=false)]
+        public string PreferredBackupPeriod { get; set; }
+
+        [NameInMap("PreferredBackupTime")]
+        [Validation(Required=false)]
+        public string PreferredBackupTime { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

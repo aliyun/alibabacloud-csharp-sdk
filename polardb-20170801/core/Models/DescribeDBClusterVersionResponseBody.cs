@@ -9,33 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterVersionResponseBody : TeaModel {
-        [NameInMap("IsLatestVersion")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public string IsLatestVersion { get; set; }
+        public string DBClusterId { get; set; }
 
-        [NameInMap("DBVersion")]
+        [NameInMap("DBLatestVersion")]
         [Validation(Required=false)]
-        public string DBVersion { get; set; }
+        public string DBLatestVersion { get; set; }
+
+        [NameInMap("DBMinorVersion")]
+        [Validation(Required=false)]
+        public string DBMinorVersion { get; set; }
 
         [NameInMap("DBRevisionVersion")]
         [Validation(Required=false)]
         public string DBRevisionVersion { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DBVersion")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DBVersion { get; set; }
 
         [NameInMap("DBVersionStatus")]
         [Validation(Required=false)]
         public string DBVersionStatus { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("IsLatestVersion")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string IsLatestVersion { get; set; }
 
-        [NameInMap("DBMinorVersion")]
+        [NameInMap("ProxyLatestVersion")]
         [Validation(Required=false)]
-        public string DBMinorVersion { get; set; }
+        public string ProxyLatestVersion { get; set; }
 
         [NameInMap("ProxyRevisionVersion")]
         [Validation(Required=false)]
@@ -45,13 +49,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ProxyVersionStatus { get; set; }
 
-        [NameInMap("ProxyLatestVersion")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string ProxyLatestVersion { get; set; }
-
-        [NameInMap("DBLatestVersion")]
-        [Validation(Required=false)]
-        public string DBLatestVersion { get; set; }
+        public string RequestId { get; set; }
 
     }
 

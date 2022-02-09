@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBInitializeVariableResponseBody : TeaModel {
+        [NameInMap("DBType")]
+        [Validation(Required=false)]
+        public string DBType { get; set; }
+
+        [NameInMap("DBVersion")]
+        [Validation(Required=false)]
+        public string DBVersion { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("Variables")]
         [Validation(Required=false)]
         public DescribeDBInitializeVariableResponseBodyVariables Variables { get; set; }
@@ -22,18 +34,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Ctype { get; set; }
             }
         };
-
-        [NameInMap("DBVersion")]
-        [Validation(Required=false)]
-        public string DBVersion { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("DBType")]
-        [Validation(Required=false)]
-        public string DBType { get; set; }
 
     }
 

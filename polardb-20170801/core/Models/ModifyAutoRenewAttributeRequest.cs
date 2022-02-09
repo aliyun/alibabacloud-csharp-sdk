@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAutoRenewAttributeRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("DBClusterIds")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string DBClusterIds { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("Duration")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string Duration { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
-        [NameInMap("DBClusterIds")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string DBClusterIds { get; set; }
+        public long? OwnerId { get; set; }
+
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RenewalStatus { get; set; }
 
-        [NameInMap("Duration")]
-        [Validation(Required=false)]
-        public string Duration { get; set; }
-
-        [NameInMap("PeriodUnit")]
-        [Validation(Required=false)]
-        public string PeriodUnit { get; set; }
-
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

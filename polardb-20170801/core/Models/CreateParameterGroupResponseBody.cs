@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateParameterGroupResponseBody : TeaModel {
+        [NameInMap("ParameterGroupId")]
+        [Validation(Required=false)]
+        public string ParameterGroupId { get; set; }
+
         /// <summary>
         /// Id of the request
         /// </summary>

@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
-        [NameInMap("ParameterCount")]
+        [NameInMap("DBType")]
         [Validation(Required=false)]
-        public string ParameterCount { get; set; }
+        public string DBType { get; set; }
 
         [NameInMap("DBVersion")]
         [Validation(Required=false)]
         public string DBVersion { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
+        [NameInMap("ParameterCount")]
+        [Validation(Required=false)]
+        public string ParameterCount { get; set; }
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -26,25 +34,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeParameterTemplatesResponseBodyParametersTemplateRecord> TemplateRecord { get; set; }
             public class DescribeParameterTemplatesResponseBodyParametersTemplateRecord : TeaModel {
                 public string CheckingCode { get; set; }
-                public string ParameterName { get; set; }
-                public string ParameterValue { get; set; }
                 public string ForceModify { get; set; }
                 public string ForceRestart { get; set; }
                 public string ParameterDescription { get; set; }
+                public string ParameterName { get; set; }
+                public string ParameterValue { get; set; }
             }
         };
 
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("DBType")]
-        [Validation(Required=false)]
-        public string DBType { get; set; }
-
-        [NameInMap("Engine")]
-        [Validation(Required=false)]
-        public string Engine { get; set; }
 
     }
 

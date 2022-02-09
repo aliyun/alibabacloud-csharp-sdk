@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeRegionsResponseBodyRegions Regions { get; set; }
@@ -21,26 +17,30 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
+                public string RegionId { get; set; }
                 public DescribeRegionsResponseBodyRegionsRegionZones Zones { get; set; }
                 public class DescribeRegionsResponseBodyRegionsRegionZones : TeaModel {
                     [NameInMap("Zone")]
                     [Validation(Required=false)]
                     public List<DescribeRegionsResponseBodyRegionsRegionZonesZone> Zone { get; set; }
                     public class DescribeRegionsResponseBodyRegionsRegionZonesZone : TeaModel {
-                        [NameInMap("ZoneId")]
-                        [Validation(Required=false)]
-                        public string ZoneId { get; set; }
-
                         [NameInMap("VpcEnabled")]
                         [Validation(Required=false)]
                         public bool? VpcEnabled { get; set; }
 
+                        [NameInMap("ZoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
+
                     }
 
                 }
-                public string RegionId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

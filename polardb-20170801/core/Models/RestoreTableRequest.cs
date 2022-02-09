@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RestoreTableRequest : TeaModel {
-        [NameInMap("SecurityToken")]
+        [NameInMap("BackupId")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string BackupId { get; set; }
+
+        [NameInMap("DBClusterId")]
+        [Validation(Required=false)]
+        public string DBClusterId { get; set; }
+
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,25 +33,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        [NameInMap("RestoreTime")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string RestoreTime { get; set; }
 
-        [NameInMap("DBClusterId")]
+        [NameInMap("SecurityToken")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public string SecurityToken { get; set; }
 
         [NameInMap("TableMeta")]
         [Validation(Required=false)]
         public string TableMeta { get; set; }
-
-        [NameInMap("BackupId")]
-        [Validation(Required=false)]
-        public string BackupId { get; set; }
-
-        [NameInMap("RestoreTime")]
-        [Validation(Required=false)]
-        public string RestoreTime { get; set; }
 
     }
 

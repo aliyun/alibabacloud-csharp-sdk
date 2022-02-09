@@ -9,9 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAccessWhitelistResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("DBClusterSecurityGroups")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups DBClusterSecurityGroups { get; set; }
+        public class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups : TeaModel {
+            [NameInMap("DBClusterSecurityGroup")]
+            [Validation(Required=false)]
+            public List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> DBClusterSecurityGroup { get; set; }
+            public class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup : TeaModel {
+                public string SecurityGroupId { get; set; }
+                public string SecurityGroupName { get; set; }
+            }
+        };
 
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,18 +36,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
         };
 
-        [NameInMap("DBClusterSecurityGroups")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups DBClusterSecurityGroups { get; set; }
-        public class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups : TeaModel {
-            [NameInMap("DBClusterSecurityGroup")]
-            [Validation(Required=false)]
-            public List<DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup> DBClusterSecurityGroup { get; set; }
-            public class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup : TeaModel {
-                public string SecurityGroupId { get; set; }
-                public string SecurityGroupName { get; set; }
-            }
-        };
+        public string RequestId { get; set; }
 
     }
 

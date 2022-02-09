@@ -9,26 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeMetaListResponseBody : TeaModel {
-        [NameInMap("TotalPageCount")]
-        [Validation(Required=false)]
-        public string TotalPageCount { get; set; }
-
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public string TotalRecordCount { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public string PageSize { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public string PageNumber { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeMetaListResponseBodyItems> Items { get; set; }
@@ -42,6 +22,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<string> Tables { get; set; }
 
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public string PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalPageCount")]
+        [Validation(Required=false)]
+        public string TotalPageCount { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public string TotalRecordCount { get; set; }
 
     }
 

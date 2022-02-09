@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDatabasesResponseBody : TeaModel {
-        [NameInMap("PageRecordCount")]
-        [Validation(Required=false)]
-        public int? PageRecordCount { get; set; }
-
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public DescribeDatabasesResponseBodyDatabases Databases { get; set; }
@@ -21,46 +17,50 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeDatabasesResponseBodyDatabasesDatabase> Database { get; set; }
             public class DescribeDatabasesResponseBodyDatabasesDatabase : TeaModel {
-                public string DBDescription { get; set; }
-                public string DBStatus { get; set; }
-                public string DBName { get; set; }
-                public string Engine { get; set; }
-                public string CharacterSetName { get; set; }
                 public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts Accounts { get; set; }
                 public class DescribeDatabasesResponseBodyDatabasesDatabaseAccounts : TeaModel {
                     [NameInMap("Account")]
                     [Validation(Required=false)]
                     public List<DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount> Account { get; set; }
                     public class DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount : TeaModel {
-                        [NameInMap("PrivilegeStatus")]
+                        [NameInMap("AccountName")]
                         [Validation(Required=false)]
-                        public string PrivilegeStatus { get; set; }
-
-                        [NameInMap("AccountStatus")]
-                        [Validation(Required=false)]
-                        public string AccountStatus { get; set; }
+                        public string AccountName { get; set; }
 
                         [NameInMap("AccountPrivilege")]
                         [Validation(Required=false)]
                         public string AccountPrivilege { get; set; }
 
-                        [NameInMap("AccountName")]
+                        [NameInMap("AccountStatus")]
                         [Validation(Required=false)]
-                        public string AccountName { get; set; }
+                        public string AccountStatus { get; set; }
+
+                        [NameInMap("PrivilegeStatus")]
+                        [Validation(Required=false)]
+                        public string PrivilegeStatus { get; set; }
 
                     }
 
                 }
+                public string CharacterSetName { get; set; }
+                public string DBDescription { get; set; }
+                public string DBName { get; set; }
+                public string DBStatus { get; set; }
+                public string Engine { get; set; }
             }
         };
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
+
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

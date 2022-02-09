@@ -9,13 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeTasksResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
+        public string DBClusterId { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
 
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -25,42 +41,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<DescribeTasksResponseBodyTasksTask> Task { get; set; }
             public class DescribeTasksResponseBodyTasksTask : TeaModel {
-                public string FinishTime { get; set; }
-                public string StepsInfo { get; set; }
-                public int? Progress { get; set; }
-                public string ExpectedFinishTime { get; set; }
                 public string BeginTime { get; set; }
-                public string TaskErrorCode { get; set; }
-                public string ProgressInfo { get; set; }
                 public string CurrentStepName { get; set; }
-                public string StepProgressInfo { get; set; }
-                public string TaskErrorMessage { get; set; }
-                public string TaskAction { get; set; }
                 public string DBName { get; set; }
+                public string ExpectedFinishTime { get; set; }
+                public string FinishTime { get; set; }
+                public int? Progress { get; set; }
+                public string ProgressInfo { get; set; }
                 public int? Remain { get; set; }
+                public string StepProgressInfo { get; set; }
+                public string StepsInfo { get; set; }
+                public string TaskAction { get; set; }
+                public string TaskErrorCode { get; set; }
+                public string TaskErrorMessage { get; set; }
                 public string TaskId { get; set; }
             }
         };
 
-        [NameInMap("EndTime")]
+        [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("DBClusterId")]
-        [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public int? TotalRecordCount { get; set; }
 
     }
 

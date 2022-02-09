@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBClusterEndpointRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AutoAddNewNodes")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string AutoAddNewNodes { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public string ClientToken { get; set; }
 
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("DBEndpointDescription")]
+        [Validation(Required=false)]
+        public string DBEndpointDescription { get; set; }
+
+        [NameInMap("EndpointConfig")]
+        [Validation(Required=false)]
+        public string EndpointConfig { get; set; }
 
         [NameInMap("EndpointType")]
         [Validation(Required=false)]
@@ -37,25 +37,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Nodes { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("ReadWriteMode")]
         [Validation(Required=false)]
         public string ReadWriteMode { get; set; }
 
-        [NameInMap("AutoAddNewNodes")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public string AutoAddNewNodes { get; set; }
+        public string ResourceOwnerAccount { get; set; }
 
-        [NameInMap("EndpointConfig")]
+        [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
-        public string EndpointConfig { get; set; }
-
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        [NameInMap("DBEndpointDescription")]
-        [Validation(Required=false)]
-        public string DBEndpointDescription { get; set; }
+        public long? ResourceOwnerId { get; set; }
 
     }
 

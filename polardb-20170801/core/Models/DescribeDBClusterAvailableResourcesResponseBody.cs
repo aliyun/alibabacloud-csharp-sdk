@@ -9,35 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAvailableResourcesResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZones> AvailableZones { get; set; }
         public class DescribeDBClusterAvailableResourcesResponseBodyAvailableZones : TeaModel {
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
             public List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEngines> SupportedEngines { get; set; }
             public class DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEngines : TeaModel {
-                [NameInMap("Engine")]
-                [Validation(Required=false)]
-                public string Engine { get; set; }
-
                 [NameInMap("AvailableResources")]
                 [Validation(Required=false)]
                 public List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEnginesAvailableResources> AvailableResources { get; set; }
                 public class DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEnginesAvailableResources : TeaModel {
-                    [NameInMap("DBNodeClass")]
-                    [Validation(Required=false)]
-                    public string DBNodeClass { get; set; }
-
                     [NameInMap("Category")]
                     [Validation(Required=false)]
                     public string Category { get; set; }
 
+                    [NameInMap("DBNodeClass")]
+                    [Validation(Required=false)]
+                    public string DBNodeClass { get; set; }
+
                 }
+
+                [NameInMap("Engine")]
+                [Validation(Required=false)]
+                public string Engine { get; set; }
 
             }
 
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
-            [NameInMap("RegionId")]
-            [Validation(Required=false)]
-            public string RegionId { get; set; }
-
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,61 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePendingMaintenanceActionResponseBody : TeaModel {
-        [NameInMap("TotalRecordCount")]
-        [Validation(Required=false)]
-        public int? TotalRecordCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribePendingMaintenanceActionResponseBodyItems> Items { get; set; }
         public class DescribePendingMaintenanceActionResponseBodyItems : TeaModel {
-            [NameInMap("Status")]
+            [NameInMap("CreatedTime")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string CreatedTime { get; set; }
 
-            [NameInMap("PrepareInterval")]
+            [NameInMap("DBClusterId")]
             [Validation(Required=false)]
-            public string PrepareInterval { get; set; }
-
-            [NameInMap("Deadline")]
-            [Validation(Required=false)]
-            public string Deadline { get; set; }
+            public string DBClusterId { get; set; }
 
             [NameInMap("DBType")]
             [Validation(Required=false)]
             public string DBType { get; set; }
 
-            [NameInMap("TaskType")]
-            [Validation(Required=false)]
-            public string TaskType { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=false)]
-            public string StartTime { get; set; }
-
             [NameInMap("DBVersion")]
             [Validation(Required=false)]
             public string DBVersion { get; set; }
+
+            [NameInMap("Deadline")]
+            [Validation(Required=false)]
+            public string Deadline { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public int? Id { get; set; }
 
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
-            [NameInMap("DBClusterId")]
+            [NameInMap("PrepareInterval")]
             [Validation(Required=false)]
-            public string DBClusterId { get; set; }
+            public string PrepareInterval { get; set; }
 
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -73,19 +53,39 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string ResultInfo { get; set; }
 
-            [NameInMap("CreatedTime")]
+            [NameInMap("StartTime")]
             [Validation(Required=false)]
-            public string CreatedTime { get; set; }
+            public string StartTime { get; set; }
 
-            [NameInMap("Id")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public int? Id { get; set; }
+            public int? Status { get; set; }
 
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
+            [NameInMap("TaskType")]
+            [Validation(Required=false)]
+            public string TaskType { get; set; }
+
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 
