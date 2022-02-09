@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
-    public class RecognizeIdcardRequest : TeaModel {
-        /// <summary>
-        /// 是否需要图案检测功能，默认不需要
-        /// </summary>
-        [NameInMap("OutputFigure")]
-        [Validation(Required=false)]
-        public bool? OutputFigure { get; set; }
-
+    public class RecognizeTollInvoiceRequest : TeaModel {
         /// <summary>
         /// 图片链接（长度不超 2048，不支持 base64）
         /// </summary>

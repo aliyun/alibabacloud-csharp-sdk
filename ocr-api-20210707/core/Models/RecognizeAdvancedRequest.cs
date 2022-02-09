@@ -27,6 +27,13 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         public bool? NeedSortPage { get; set; }
 
         /// <summary>
+        /// 是否需要去除印章功能，默认不需要。true：需要 false：不需要
+        /// </summary>
+        [NameInMap("NoStamp")]
+        [Validation(Required=false)]
+        public bool? NoStamp { get; set; }
+
+        /// <summary>
         /// 是否输出单字识别结果
         /// </summary>
         [NameInMap("OutputCharInfo")]
@@ -34,11 +41,32 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         public bool? OutputCharInfo { get; set; }
 
         /// <summary>
+        /// 是否需要图案检测功能，默认不需要。true：需要 false：不需要
+        /// </summary>
+        [NameInMap("OutputFigure")]
+        [Validation(Required=false)]
+        public bool? OutputFigure { get; set; }
+
+        /// <summary>
         /// 是否输出表格识别结果，包含单元格信息
         /// </summary>
         [NameInMap("OutputTable")]
         [Validation(Required=false)]
         public bool? OutputTable { get; set; }
+
+        /// <summary>
+        /// 是否需要分段功能，默认不需要。true：需要 false：不需要
+        /// </summary>
+        [NameInMap("Paragraph")]
+        [Validation(Required=false)]
+        public bool? Paragraph { get; set; }
+
+        /// <summary>
+        /// 是否需要成行返回功能，默认不需要
+        /// </summary>
+        [NameInMap("Row")]
+        [Validation(Required=false)]
+        public bool? Row { get; set; }
 
         /// <summary>
         /// 图片链接（长度不超 2048，不支持 base64）

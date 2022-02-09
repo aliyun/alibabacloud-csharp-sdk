@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
-    public class RecognizeIdcardRequest : TeaModel {
+    public class RecognizeExitEntryPermitToMainlandRequest : TeaModel {
         /// <summary>
-        /// 是否需要图案检测功能，默认不需要
+        /// 图案坐标信息输出，针对结构化，如身份证人脸头像
         /// </summary>
         [NameInMap("OutputFigure")]
         [Validation(Required=false)]

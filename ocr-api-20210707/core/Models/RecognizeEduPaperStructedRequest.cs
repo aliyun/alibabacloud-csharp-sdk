@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         public bool? NeedRotate { get; set; }
 
         /// <summary>
+        /// 学科类型
+        /// </summary>
+        [NameInMap("Subject")]
+        [Validation(Required=false)]
+        public string Subject { get; set; }
+
+        /// <summary>
         /// 图片链接（长度不超 2048，不支持 base64）
         /// </summary>
         [NameInMap("Url")]
