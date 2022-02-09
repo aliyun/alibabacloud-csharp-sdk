@@ -8,26 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeVulListPageRequest : TeaModel {
+    public class DescribeImageBaselineCheckSummaryRequest : TeaModel {
+        [NameInMap("Criteria")]
+        [Validation(Required=false)]
+        public string Criteria { get; set; }
+
+        [NameInMap("CriteriaType")]
+        [Validation(Required=false)]
+        public string CriteriaType { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        [NameInMap("CveId")]
+        [NameInMap("Lang")]
         [Validation(Required=false)]
-        public string CveId { get; set; }
+        public string Lang { get; set; }
 
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("SourceIp")]
+        [NameInMap("RiskLevel")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("VulNameLike")]
-        [Validation(Required=false)]
-        public string VulNameLike { get; set; }
+        public string RiskLevel { get; set; }
 
     }
 

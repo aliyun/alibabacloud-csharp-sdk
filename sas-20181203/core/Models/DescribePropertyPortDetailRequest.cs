@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyPortDetailRequest : TeaModel {
+        [NameInMap("BindIp")]
+        [Validation(Required=false)]
+        public string BindIp { get; set; }
+
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }

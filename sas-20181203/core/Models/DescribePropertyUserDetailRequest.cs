@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string IsRoot { get; set; }
 
+        [NameInMap("LastLoginTimeEnd")]
+        [Validation(Required=false)]
+        public long? LastLoginTimeEnd { get; set; }
+
+        [NameInMap("LastLoginTimeStart")]
+        [Validation(Required=false)]
+        public long? LastLoginTimeStart { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }

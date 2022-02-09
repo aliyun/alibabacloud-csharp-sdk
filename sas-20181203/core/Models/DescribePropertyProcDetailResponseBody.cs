@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            [NameInMap("IsPackage")]
+            [Validation(Required=false)]
+            public int? IsPackage { get; set; }
+
             [NameInMap("Md5")]
             [Validation(Required=false)]
             public string Md5 { get; set; }
@@ -86,6 +90,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
+            [NameInMap("StartTimeDt")]
+            [Validation(Required=false)]
+            public long? StartTimeDt { get; set; }
+
+            [NameInMap("State")]
+            [Validation(Required=false)]
+            public string State { get; set; }
 
             [NameInMap("User")]
             [Validation(Required=false)]

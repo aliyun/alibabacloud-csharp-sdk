@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
-    public class DescribeContainerTagsResponse : TeaModel {
+    public class DescribeImageBaselineCheckSummaryResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("body")]
         [Validation(Required=true)]
-        public DescribeContainerTagsResponseBody Body { get; set; }
+        public DescribeImageBaselineCheckSummaryResponseBody Body { get; set; }
 
     }
 

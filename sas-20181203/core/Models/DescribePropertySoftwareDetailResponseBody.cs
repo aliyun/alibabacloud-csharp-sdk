@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstallTime { get; set; }
 
+            [NameInMap("InstallTimeDt")]
+            [Validation(Required=false)]
+            public long? InstallTimeDt { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }

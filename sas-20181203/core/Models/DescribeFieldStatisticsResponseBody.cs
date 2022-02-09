@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("GroupCount")]
             [Validation(Required=false)]
             public int? GroupCount { get; set; }
+            [NameInMap("HuaweiInstanceCount")]
+            [Validation(Required=false)]
+            public int? HuaweiInstanceCount { get; set; }
             [NameInMap("IdcInstanceCount")]
             [Validation(Required=false)]
             public int? IdcInstanceCount { get; set; }

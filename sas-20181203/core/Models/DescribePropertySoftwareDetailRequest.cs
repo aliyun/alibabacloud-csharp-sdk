@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("InstallTimeEnd")]
+        [Validation(Required=false)]
+        public long? InstallTimeEnd { get; set; }
+
+        [NameInMap("InstallTimeStart")]
+        [Validation(Required=false)]
+        public long? InstallTimeStart { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

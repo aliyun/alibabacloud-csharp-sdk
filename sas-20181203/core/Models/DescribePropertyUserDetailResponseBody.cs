@@ -67,9 +67,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            [NameInMap("IsCouldLogin")]
+            [Validation(Required=false)]
+            public int? IsCouldLogin { get; set; }
+
+            [NameInMap("IsPasswdExpired")]
+            [Validation(Required=false)]
+            public int? IsPasswdExpired { get; set; }
+
+            [NameInMap("IsPasswdLocked")]
+            [Validation(Required=false)]
+            public int? IsPasswdLocked { get; set; }
+
             [NameInMap("IsRoot")]
             [Validation(Required=false)]
             public string IsRoot { get; set; }
+
+            [NameInMap("IsSudoer")]
+            [Validation(Required=false)]
+            public int? IsSudoer { get; set; }
+
+            [NameInMap("IsUserExpired")]
+            [Validation(Required=false)]
+            public int? IsUserExpired { get; set; }
 
             [NameInMap("LastLoginIp")]
             [Validation(Required=false)]
@@ -78,6 +98,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("LastLoginTime")]
             [Validation(Required=false)]
             public string LastLoginTime { get; set; }
+
+            [NameInMap("LastLoginTimeDt")]
+            [Validation(Required=false)]
+            public long? LastLoginTimeDt { get; set; }
 
             [NameInMap("LastLoginTimestamp")]
             [Validation(Required=false)]

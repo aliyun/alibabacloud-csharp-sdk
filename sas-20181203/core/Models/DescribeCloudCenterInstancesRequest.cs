@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MachineTypes { get; set; }
 
+        [NameInMap("NoGroupTrace")]
+        [Validation(Required=false)]
+        public bool? NoGroupTrace { get; set; }
+
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
