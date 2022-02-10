@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.DBFS20200418.Models
             [Validation(Required=false)]
             public string OSName { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
             [NameInMap("label")]
             [Validation(Required=false)]
             public string Label { get; set; }
