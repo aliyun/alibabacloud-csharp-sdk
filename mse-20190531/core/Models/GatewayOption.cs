@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GatewayOption : TeaModel {
         /// <summary>
+        /// 是否禁用http
+        /// </summary>
+        [NameInMap("DisableHttp2Alpn")]
+        [Validation(Required=false)]
+        public bool? DisableHttp2Alpn { get; set; }
+
+        /// <summary>
+        /// 是否开启硬件加速
+        /// </summary>
+        [NameInMap("EnableHardwareAcceleration")]
+        [Validation(Required=false)]
+        public bool? EnableHardwareAcceleration { get; set; }
+
+        /// <summary>
         /// 日志配置详情
         /// </summary>
         [NameInMap("LogConfigDetails")]
