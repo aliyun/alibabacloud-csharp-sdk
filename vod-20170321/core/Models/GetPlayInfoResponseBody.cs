@@ -17,6 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<GetPlayInfoResponseBodyPlayInfoListPlayInfo> PlayInfo { get; set; }
             public class GetPlayInfoResponseBodyPlayInfoListPlayInfo : TeaModel {
+                public int? BitDepth { get; set; }
                 public string Bitrate { get; set; }
                 public string CreationTime { get; set; }
                 public string Definition { get; set; }
