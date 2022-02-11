@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [Validation(Required=false)]
             public string Destination { get; set; }
 
+            [NameInMap("DestinationType")]
+            [Validation(Required=false)]
+            public string DestinationType { get; set; }
+
             [NameInMap("DiagnoseTime")]
             [Validation(Required=false)]
             public long? DiagnoseTime { get; set; }
@@ -40,6 +44,14 @@ namespace AlibabaCloud.SDK.IoTCC20210513.Models
             [NameInMap("IoTCloudConnectorId")]
             [Validation(Required=false)]
             public string IoTCloudConnectorId { get; set; }
+
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
+            [NameInMap("SourceType")]
+            [Validation(Required=false)]
+            public string SourceType { get; set; }
 
             [NameInMap("Status")]
             [Validation(Required=false)]
