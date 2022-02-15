@@ -75,6 +75,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public List<UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies> EscalationPlanStrategies { get; set; }
             public class UpdateEscalationPlanRequestEscalationPlanRulesEscalationPlanStrategies : TeaModel {
                 /// <summary>
+                /// 是否支持群通知
+                /// </summary>
+                [NameInMap("enableWebhook")]
+                [Validation(Required=false)]
+                public bool? EnableWebhook { get; set; }
+
+                /// <summary>
                 /// 通知渠道
                 /// </summary>
                 [NameInMap("noticeChannels")]
@@ -94,6 +101,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 [NameInMap("noticeTime")]
                 [Validation(Required=false)]
                 public long? NoticeTime { get; set; }
+
+                /// <summary>
+                /// 服务组id
+                /// </summary>
+                [NameInMap("serviceGroupIds")]
+                [Validation(Required=false)]
+                public List<long?> ServiceGroupIds { get; set; }
 
             }
 

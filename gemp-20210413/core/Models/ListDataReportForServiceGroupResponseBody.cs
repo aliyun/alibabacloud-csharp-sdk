@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public long? EscalationIncidentCount { get; set; }
 
             /// <summary>
+            /// 事件完结数
+            /// </summary>
+            [NameInMap("finishIncidentCount")]
+            [Validation(Required=false)]
+            public long? FinishIncidentCount { get; set; }
+
+            /// <summary>
             /// 完结率
             /// </summary>
             [NameInMap("finishProportion")]

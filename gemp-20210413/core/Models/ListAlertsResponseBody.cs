@@ -31,6 +31,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public string AlertLevel { get; set; }
 
             /// <summary>
+            /// 报警编号
+            /// </summary>
+            [NameInMap("alertNumber")]
+            [Validation(Required=false)]
+            public string AlertNumber { get; set; }
+
+            /// <summary>
             /// 报警源
             /// </summary>
             [NameInMap("alertSourceName")]
@@ -64,6 +71,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("routeRuleId")]
             [Validation(Required=false)]
             public long? RouteRuleId { get; set; }
+
+            /// <summary>
+            /// 流转规则名字
+            /// </summary>
+            [NameInMap("routeRuleName")]
+            [Validation(Required=false)]
+            public string RouteRuleName { get; set; }
 
             /// <summary>
             /// 收敛量

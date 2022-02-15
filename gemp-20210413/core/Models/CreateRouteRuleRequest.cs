@@ -24,6 +24,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string AssignObjectType { get; set; }
 
         /// <summary>
+        /// 子规则关系AND,OR
+        /// </summary>
+        [NameInMap("childRuleRelation")]
+        [Validation(Required=false)]
+        public string ChildRuleRelation { get; set; }
+
+        /// <summary>
         /// 幂等号
         /// </summary>
         [NameInMap("clientToken")]
@@ -79,6 +86,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public List<CreateRouteRuleRequestRouteChildRules> RouteChildRules { get; set; }
         public class CreateRouteRuleRequestRouteChildRules : TeaModel {
+            /// <summary>
+            /// 0-与，1-或
+            /// </summary>
+            [NameInMap("childConditionRelation")]
+            [Validation(Required=false)]
+            public long? ChildConditionRelation { get; set; }
+
             /// <summary>
             /// 条件
             /// </summary>

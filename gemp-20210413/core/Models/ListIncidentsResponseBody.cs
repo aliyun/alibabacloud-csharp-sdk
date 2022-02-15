@@ -108,6 +108,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public long? RouteRuleId { get; set; }
 
+            /// <summary>
+            /// 流转规则
+            /// </summary>
             [NameInMap("routeRuleName")]
             [Validation(Required=false)]
             public string RouteRuleName { get; set; }

@@ -105,6 +105,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("progressSummary")]
             [Validation(Required=false)]
             public string ProgressSummary { get; set; }
+            [NameInMap("progressSummaryRichTextId")]
+            [Validation(Required=false)]
+            public long? ProgressSummaryRichTextId { get; set; }
             [NameInMap("recoveryTime")]
             [Validation(Required=false)]
             public string RecoveryTime { get; set; }

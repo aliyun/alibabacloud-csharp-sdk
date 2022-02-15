@@ -66,6 +66,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             public long? MatchCount { get; set; }
 
             /// <summary>
+            /// 监控源名称
+            /// </summary>
+            [NameInMap("monitorSourceNames")]
+            [Validation(Required=false)]
+            public string MonitorSourceNames { get; set; }
+
+            /// <summary>
             /// 关联服务ID
             /// </summary>
             [NameInMap("relatedServiceId")]

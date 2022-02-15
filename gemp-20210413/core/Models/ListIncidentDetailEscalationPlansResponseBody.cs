@@ -35,6 +35,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     public string NoticeObjectPhone { get; set; }
                 }
                 public long? NoticeTime { get; set; }
+                public List<ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList> ServiceGroupList { get; set; }
+                public class ListIncidentDetailEscalationPlansResponseBodyDataNuAcknowledgeEscalationPlanServiceGroupList : TeaModel {
+                    public long? Id { get; set; }
+                    public string Name { get; set; }
+                }
                 public long? StartTime { get; set; }
                 public string Status { get; set; }
             }
@@ -51,6 +56,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                     public string NoticeObjectPhone { get; set; }
                 }
                 public int? NoticeTime { get; set; }
+                public List<ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList> ServiceGroupList { get; set; }
+                public class ListIncidentDetailEscalationPlansResponseBodyDataUnFinishEscalationPlanServiceGroupList : TeaModel {
+                    public long? Id { get; set; }
+                    public string Name { get; set; }
+                }
                 public long? StartTime { get; set; }
                 public string Status { get; set; }
             }

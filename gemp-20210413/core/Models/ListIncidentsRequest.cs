@@ -79,6 +79,13 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         [Validation(Required=false)]
         public long? RelationServiceId { get; set; }
 
+        /// <summary>
+        /// 流转规则名字
+        /// </summary>
+        [NameInMap("ruleName")]
+        [Validation(Required=false)]
+        public string RuleName { get; set; }
+
     }
 
 }

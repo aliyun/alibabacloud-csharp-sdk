@@ -24,6 +24,43 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
         public string EnableWebhook { get; set; }
 
         /// <summary>
+        /// 监控源模版列表
+        /// </summary>
+        [NameInMap("monitorSourceTemplates")]
+        [Validation(Required=false)]
+        public List<UpdateServiceGroupRequestMonitorSourceTemplates> MonitorSourceTemplates { get; set; }
+        public class UpdateServiceGroupRequestMonitorSourceTemplates : TeaModel {
+            /// <summary>
+            /// 监控报警源Id
+            /// </summary>
+            [NameInMap("monitorSourceId")]
+            [Validation(Required=false)]
+            public long? MonitorSourceId { get; set; }
+
+            /// <summary>
+            /// 监控报警源
+            /// </summary>
+            [NameInMap("monitorSourceName")]
+            [Validation(Required=false)]
+            public string MonitorSourceName { get; set; }
+
+            /// <summary>
+            /// 消息模版内容
+            /// </summary>
+            [NameInMap("templateContent")]
+            [Validation(Required=false)]
+            public string TemplateContent { get; set; }
+
+            /// <summary>
+            /// 消息模版ID
+            /// </summary>
+            [NameInMap("templateId")]
+            [Validation(Required=false)]
+            public long? TemplateId { get; set; }
+
+        }
+
+        /// <summary>
         /// 服务描述
         /// </summary>
         [NameInMap("serviceGroupDescription")]

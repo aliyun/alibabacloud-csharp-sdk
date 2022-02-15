@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                 public long? EscalationPlanRuleId { get; set; }
                 public List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies> EscalationPlanStrategies { get; set; }
                 public class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategies : TeaModel {
+                    public bool? EnableWebhook { get; set; }
                     public string EscalationPlanType { get; set; }
                     public string NoticeChannels { get; set; }
                     public List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesNoticeObjectList> NoticeObjectList { get; set; }
@@ -48,6 +49,11 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
                         public string NoticeObjectName { get; set; }
                     }
                     public long? NoticeTime { get; set; }
+                    public List<GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups> ServiceGroups { get; set; }
+                    public class GetEscalationPlanResponseBodyDataEscalationPlanRulesEscalationPlanStrategiesServiceGroups : TeaModel {
+                        public long? Id { get; set; }
+                        public string ServiceGroupName { get; set; }
+                    }
                 }
             }
             [NameInMap("escalationPlanScopeObjects")]

@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("assignObjectType")]
             [Validation(Required=false)]
             public string AssignObjectType { get; set; }
+            [NameInMap("childRuleRelation")]
+            [Validation(Required=false)]
+            public string ChildRuleRelation { get; set; }
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -38,6 +41,7 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [Validation(Required=false)]
             public List<GetRouteRuleResponseBodyDataEventRouteChildRules> EventRouteChildRules { get; set; }
             public class GetRouteRuleResponseBodyDataEventRouteChildRules : TeaModel {
+                public long? ChildConditionRelation { get; set; }
                 public long? ChildRouteRuleId { get; set; }
                 public List<GetRouteRuleResponseBodyDataEventRouteChildRulesConditions> Conditions { get; set; }
                 public class GetRouteRuleResponseBodyDataEventRouteChildRulesConditions : TeaModel {

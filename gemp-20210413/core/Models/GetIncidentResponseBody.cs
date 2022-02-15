@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("isUpgrade")]
             [Validation(Required=false)]
             public bool? IsUpgrade { get; set; }
+            [NameInMap("notifyChannels")]
+            [Validation(Required=false)]
+            public List<string> NotifyChannels { get; set; }
             [NameInMap("problemId")]
             [Validation(Required=false)]
             public long? ProblemId { get; set; }
@@ -64,6 +67,12 @@ namespace AlibabaCloud.SDK.GEMP20210413.Models
             [NameInMap("relatedServiceDescription")]
             [Validation(Required=false)]
             public string RelatedServiceDescription { get; set; }
+            [NameInMap("relatedServiceGroupId")]
+            [Validation(Required=false)]
+            public long? RelatedServiceGroupId { get; set; }
+            [NameInMap("relatedServiceGroupName")]
+            [Validation(Required=false)]
+            public string RelatedServiceGroupName { get; set; }
             [NameInMap("relatedServiceId")]
             [Validation(Required=false)]
             public long? RelatedServiceId { get; set; }

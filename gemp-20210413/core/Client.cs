@@ -68,7 +68,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<AddProblemServiceGroupResponse>(DoROARequest("AddProblemServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/problem/addServiceGroup", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddProblemServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/addServiceGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddProblemServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<AddProblemServiceGroupResponse> AddProblemServiceGroupWithOptionsAsync(AddProblemServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -88,7 +100,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<AddProblemServiceGroupResponse>(await DoROARequestAsync("AddProblemServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/problem/addServiceGroup", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddProblemServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/addServiceGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddProblemServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CancelProblemResponse CancelProblem(CancelProblemRequest request)
@@ -134,7 +158,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CancelProblemResponse>(DoROARequest("CancelProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/cancel", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/cancel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CancelProblemResponse> CancelProblemWithOptionsAsync(CancelProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -166,7 +202,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CancelProblemResponse>(await DoROARequestAsync("CancelProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/cancel", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/cancel",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelProblemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CheckWebhookResponse CheckWebhook(CheckWebhookRequest request)
@@ -204,7 +252,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CheckWebhookResponse>(DoROARequest("CheckWebhook", "2021-04-13", "HTTPS", "POST", "AK", "/services/check/webhook", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckWebhook",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/check/webhook",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckWebhookResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CheckWebhookResponse> CheckWebhookWithOptionsAsync(CheckWebhookRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -228,7 +288,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CheckWebhookResponse>(await DoROARequestAsync("CheckWebhook", "2021-04-13", "HTTPS", "POST", "AK", "/services/check/webhook", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckWebhook",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/check/webhook",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ConfirmIntegrationConfigResponse ConfirmIntegrationConfig(ConfirmIntegrationConfigRequest request)
@@ -262,7 +334,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ConfirmIntegrationConfigResponse>(DoROARequest("ConfirmIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/confirm", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfirmIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/confirm",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfirmIntegrationConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ConfirmIntegrationConfigResponse> ConfirmIntegrationConfigWithOptionsAsync(ConfirmIntegrationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -282,7 +366,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ConfirmIntegrationConfigResponse>(await DoROARequestAsync("ConfirmIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/confirm", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfirmIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/confirm",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfirmIntegrationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateEscalationPlanResponse CreateEscalationPlan(CreateEscalationPlanRequest request)
@@ -328,7 +424,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateEscalationPlanResponse>(DoROARequest("CreateEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEscalationPlanResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateEscalationPlanResponse> CreateEscalationPlanWithOptionsAsync(CreateEscalationPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -360,7 +468,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateEscalationPlanResponse>(await DoROARequestAsync("CreateEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEscalationPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateIncidentResponse CreateIncident(CreateIncidentRequest request)
@@ -422,7 +542,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateIncidentResponse>(DoROARequest("CreateIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/manualSave", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/manualSave",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIncidentResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateIncidentResponse> CreateIncidentWithOptionsAsync(CreateIncidentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -470,7 +602,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateIncidentResponse>(await DoROARequestAsync("CreateIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/manualSave", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/manualSave",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIncidentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateIncidentSubtotalResponse CreateIncidentSubtotal(CreateIncidentSubtotalRequest request)
@@ -508,7 +652,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateIncidentSubtotalResponse>(DoROARequest("CreateIncidentSubtotal", "2021-04-13", "HTTPS", "POST", "AK", "/incident/save/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIncidentSubtotal",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/save/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIncidentSubtotalResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateIncidentSubtotalResponse> CreateIncidentSubtotalWithOptionsAsync(CreateIncidentSubtotalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -532,7 +688,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateIncidentSubtotalResponse>(await DoROARequestAsync("CreateIncidentSubtotal", "2021-04-13", "HTTPS", "POST", "AK", "/incident/save/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIncidentSubtotal",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/save/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIncidentSubtotalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateIntegrationConfigResponse CreateIntegrationConfig(CreateIntegrationConfigRequest request)
@@ -566,7 +734,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateIntegrationConfigResponse>(DoROARequest("CreateIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIntegrationConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateIntegrationConfigResponse> CreateIntegrationConfigWithOptionsAsync(CreateIntegrationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -586,7 +766,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateIntegrationConfigResponse>(await DoROARequestAsync("CreateIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIntegrationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateProblemResponse CreateProblem(CreateProblemRequest request)
@@ -651,6 +843,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["progressSummary"] = request.ProgressSummary;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProgressSummaryRichTextId))
+            {
+                body["progressSummaryRichTextId"] = request.ProgressSummaryRichTextId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoveryTime))
             {
                 body["recoveryTime"] = request.RecoveryTime;
@@ -668,7 +864,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemResponse>(DoROARequest("CreateProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/upgrade", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/upgrade",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateProblemResponse> CreateProblemWithOptionsAsync(CreateProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -719,6 +927,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["progressSummary"] = request.ProgressSummary;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProgressSummaryRichTextId))
+            {
+                body["progressSummaryRichTextId"] = request.ProgressSummaryRichTextId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoveryTime))
             {
                 body["recoveryTime"] = request.RecoveryTime;
@@ -736,7 +948,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemResponse>(await DoROARequestAsync("CreateProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/upgrade", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/upgrade",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateProblemEffectionServiceResponse CreateProblemEffectionService(CreateProblemEffectionServiceRequest request)
@@ -790,7 +1014,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemEffectionServiceResponse>(DoROARequest("CreateProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemEffectionServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateProblemEffectionServiceResponse> CreateProblemEffectionServiceWithOptionsAsync(CreateProblemEffectionServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -830,7 +1066,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemEffectionServiceResponse>(await DoROARequestAsync("CreateProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemEffectionServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateProblemMeasureResponse CreateProblemMeasure(CreateProblemMeasureRequest request)
@@ -896,7 +1144,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemMeasureResponse>(DoROARequest("CreateProblemMeasure", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/measure/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemMeasure",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/measure/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemMeasureResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateProblemMeasureResponse> CreateProblemMeasureWithOptionsAsync(CreateProblemMeasureRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -948,7 +1208,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemMeasureResponse>(await DoROARequestAsync("CreateProblemMeasure", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/measure/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemMeasure",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/measure/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemMeasureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateProblemSubtotalResponse CreateProblemSubtotal(CreateProblemSubtotalRequest request)
@@ -986,7 +1258,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemSubtotalResponse>(DoROARequest("CreateProblemSubtotal", "2021-04-13", "HTTPS", "POST", "AK", "/problem/save/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemSubtotal",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/save/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemSubtotalResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateProblemSubtotalResponse> CreateProblemSubtotalWithOptionsAsync(CreateProblemSubtotalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1010,7 +1294,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemSubtotalResponse>(await DoROARequestAsync("CreateProblemSubtotal", "2021-04-13", "HTTPS", "POST", "AK", "/problem/save/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemSubtotal",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/save/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemSubtotalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateProblemTimelineResponse CreateProblemTimeline(CreateProblemTimelineRequest request)
@@ -1056,7 +1352,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemTimelineResponse>(DoROARequest("CreateProblemTimeline", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemTimeline",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemTimelineResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateProblemTimelineResponse> CreateProblemTimelineWithOptionsAsync(CreateProblemTimelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1088,7 +1396,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemTimelineResponse>(await DoROARequestAsync("CreateProblemTimeline", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemTimeline",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemTimelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateProblemTimelinesResponse CreateProblemTimelines(CreateProblemTimelinesRequest request)
@@ -1126,7 +1446,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemTimelinesResponse>(DoROARequest("CreateProblemTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/batchCreate", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/batchCreate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemTimelinesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateProblemTimelinesResponse> CreateProblemTimelinesWithOptionsAsync(CreateProblemTimelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1150,7 +1482,105 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateProblemTimelinesResponse>(await DoROARequestAsync("CreateProblemTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/batchCreate", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProblemTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/batchCreate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProblemTimelinesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public CreateRichTextResponse CreateRichText(CreateRichTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRichTextWithOptions(request, headers, runtime);
+        }
+
+        public async Task<CreateRichTextResponse> CreateRichTextAsync(CreateRichTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRichTextWithOptionsAsync(request, headers, runtime);
+        }
+
+        public CreateRichTextResponse CreateRichTextWithOptions(CreateRichTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichText))
+            {
+                body["richText"] = request.RichText;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRichText",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRichTextResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<CreateRichTextResponse> CreateRichTextWithOptionsAsync(CreateRichTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichText))
+            {
+                body["richText"] = request.RichText;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRichText",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRichTextResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateRouteRuleResponse CreateRouteRule(CreateRouteRuleRequest request)
@@ -1179,6 +1609,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["assignObjectType"] = request.AssignObjectType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildRuleRelation))
+            {
+                body["childRuleRelation"] = request.ChildRuleRelation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["clientToken"] = request.ClientToken;
@@ -1232,7 +1666,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateRouteRuleResponse>(DoROARequest("CreateRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateRouteRuleResponse> CreateRouteRuleWithOptionsAsync(CreateRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1247,6 +1693,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["assignObjectType"] = request.AssignObjectType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildRuleRelation))
+            {
+                body["childRuleRelation"] = request.ChildRuleRelation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["clientToken"] = request.ClientToken;
@@ -1300,7 +1750,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateRouteRuleResponse>(await DoROARequestAsync("CreateRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateServiceResponse CreateService(CreateServiceRequest request)
@@ -1338,7 +1800,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateServiceResponse>(DoROARequest("CreateService", "2021-04-13", "HTTPS", "POST", "AK", "/services/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateServiceResponse> CreateServiceWithOptionsAsync(CreateServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1362,7 +1836,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateServiceResponse>(await DoROARequestAsync("CreateService", "2021-04-13", "HTTPS", "POST", "AK", "/services/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateServiceGroupResponse CreateServiceGroup(CreateServiceGroupRequest request)
@@ -1391,6 +1877,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["enableWebhook"] = request.EnableWebhook;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSourceTemplates))
+            {
+                body["monitorSourceTemplates"] = request.MonitorSourceTemplates;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupDescription))
             {
                 body["serviceGroupDescription"] = request.ServiceGroupDescription;
@@ -1416,7 +1906,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateServiceGroupResponse>(DoROARequest("CreateServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/insert", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/insert",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateServiceGroupResponse> CreateServiceGroupWithOptionsAsync(CreateServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1431,6 +1933,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["enableWebhook"] = request.EnableWebhook;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSourceTemplates))
+            {
+                body["monitorSourceTemplates"] = request.MonitorSourceTemplates;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupDescription))
             {
                 body["serviceGroupDescription"] = request.ServiceGroupDescription;
@@ -1456,7 +1962,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateServiceGroupResponse>(await DoROARequestAsync("CreateServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/insert", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/insert",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateServiceGroupSchedulingResponse CreateServiceGroupScheduling(CreateServiceGroupSchedulingRequest request)
@@ -1502,7 +2020,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateServiceGroupSchedulingResponse>(DoROARequest("CreateServiceGroupScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceGroupScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceGroupSchedulingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateServiceGroupSchedulingResponse> CreateServiceGroupSchedulingWithOptionsAsync(CreateServiceGroupSchedulingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1534,7 +2064,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateServiceGroupSchedulingResponse>(await DoROARequestAsync("CreateServiceGroupScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/save", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceGroupScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceGroupSchedulingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request)
@@ -1604,7 +2146,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateSubscriptionResponse>(DoROARequest("CreateSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateSubscriptionResponse> CreateSubscriptionWithOptionsAsync(CreateSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1660,7 +2214,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateSubscriptionResponse>(await DoROARequestAsync("CreateSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateTenantApplicationResponse CreateTenantApplication(CreateTenantApplicationRequest request)
@@ -1694,7 +2260,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateTenantApplicationResponse>(DoROARequest("CreateTenantApplication", "2021-04-13", "HTTPS", "POST", "AK", "/mobileApp/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTenantApplication",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/mobileApp/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTenantApplicationResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateTenantApplicationResponse> CreateTenantApplicationWithOptionsAsync(CreateTenantApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1714,7 +2292,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateTenantApplicationResponse>(await DoROARequestAsync("CreateTenantApplication", "2021-04-13", "HTTPS", "POST", "AK", "/mobileApp/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTenantApplication",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/mobileApp/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTenantApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public CreateUserResponse CreateUser(CreateUserRequest request)
@@ -1760,7 +2350,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateUserResponse>(DoROARequest("CreateUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<CreateUserResponse> CreateUserWithOptionsAsync(CreateUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1792,7 +2394,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<CreateUserResponse>(await DoROARequestAsync("CreateUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/create", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteEscalationPlanResponse DeleteEscalationPlan(DeleteEscalationPlanRequest request)
@@ -1826,7 +2440,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteEscalationPlanResponse>(DoROARequest("DeleteEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEscalationPlanResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteEscalationPlanResponse> DeleteEscalationPlanWithOptionsAsync(DeleteEscalationPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1846,7 +2472,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteEscalationPlanResponse>(await DoROARequestAsync("DeleteEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEscalationPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteIncidentResponse DeleteIncident(DeleteIncidentRequest request)
@@ -1880,7 +2518,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteIncidentResponse>(DoROARequest("DeleteIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIncidentResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteIncidentResponse> DeleteIncidentWithOptionsAsync(DeleteIncidentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1900,7 +2550,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteIncidentResponse>(await DoROARequestAsync("DeleteIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIncidentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteIntegrationConfigResponse DeleteIntegrationConfig(DeleteIntegrationConfigRequest request)
@@ -1934,7 +2596,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteIntegrationConfigResponse>(DoROARequest("DeleteIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIntegrationConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteIntegrationConfigResponse> DeleteIntegrationConfigWithOptionsAsync(DeleteIntegrationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -1954,7 +2628,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteIntegrationConfigResponse>(await DoROARequestAsync("DeleteIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteIntegrationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteProblemResponse DeleteProblem(DeleteProblemRequest request)
@@ -1988,7 +2674,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemResponse>(DoROARequest("DeleteProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteProblemResponse> DeleteProblemWithOptionsAsync(DeleteProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2008,7 +2706,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemResponse>(await DoROARequestAsync("DeleteProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteProblemEffectionServiceResponse DeleteProblemEffectionService(DeleteProblemEffectionServiceRequest request)
@@ -2046,7 +2756,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemEffectionServiceResponse>(DoROARequest("DeleteProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemEffectionServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteProblemEffectionServiceResponse> DeleteProblemEffectionServiceWithOptionsAsync(DeleteProblemEffectionServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2070,7 +2792,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemEffectionServiceResponse>(await DoROARequestAsync("DeleteProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemEffectionServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteProblemMeasureResponse DeleteProblemMeasure(DeleteProblemMeasureRequest request)
@@ -2108,7 +2842,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemMeasureResponse>(DoROARequest("DeleteProblemMeasure", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/measure/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblemMeasure",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/measure/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemMeasureResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteProblemMeasureResponse> DeleteProblemMeasureWithOptionsAsync(DeleteProblemMeasureRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2132,7 +2878,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemMeasureResponse>(await DoROARequestAsync("DeleteProblemMeasure", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/measure/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblemMeasure",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/measure/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemMeasureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteProblemTimelineResponse DeleteProblemTimeline(DeleteProblemTimelineRequest request)
@@ -2170,7 +2928,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemTimelineResponse>(DoROARequest("DeleteProblemTimeline", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblemTimeline",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemTimelineResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteProblemTimelineResponse> DeleteProblemTimelineWithOptionsAsync(DeleteProblemTimelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2194,7 +2964,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteProblemTimelineResponse>(await DoROARequestAsync("DeleteProblemTimeline", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProblemTimeline",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProblemTimelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteRouteRuleResponse DeleteRouteRule(DeleteRouteRuleRequest request)
@@ -2228,7 +3010,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteRouteRuleResponse>(DoROARequest("DeleteRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteRouteRuleResponse> DeleteRouteRuleWithOptionsAsync(DeleteRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2248,7 +3042,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteRouteRuleResponse>(await DoROARequestAsync("DeleteRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteServiceResponse DeleteService(DeleteServiceRequest request)
@@ -2282,7 +3088,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteServiceResponse>(DoROARequest("DeleteService", "2021-04-13", "HTTPS", "POST", "AK", "/services/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteServiceResponse> DeleteServiceWithOptionsAsync(DeleteServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2302,7 +3120,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteServiceResponse>(await DoROARequestAsync("DeleteService", "2021-04-13", "HTTPS", "POST", "AK", "/services/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteServiceGroupResponse DeleteServiceGroup(DeleteServiceGroupRequest request)
@@ -2336,7 +3166,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteServiceGroupResponse>(DoROARequest("DeleteServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteServiceGroupResponse> DeleteServiceGroupWithOptionsAsync(DeleteServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2356,7 +3198,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteServiceGroupResponse>(await DoROARequestAsync("DeleteServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteServiceGroupUserResponse DeleteServiceGroupUser(DeleteServiceGroupUserRequest request)
@@ -2402,7 +3256,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteServiceGroupUserResponse>(DoROARequest("DeleteServiceGroupUser", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/deleteServiceGroupUser", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceGroupUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/deleteServiceGroupUser",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceGroupUserResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteServiceGroupUserResponse> DeleteServiceGroupUserWithOptionsAsync(DeleteServiceGroupUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2434,7 +3300,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteServiceGroupUserResponse>(await DoROARequestAsync("DeleteServiceGroupUser", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/deleteServiceGroupUser", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceGroupUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/deleteServiceGroupUser",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceGroupUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteSubscriptionResponse DeleteSubscription(DeleteSubscriptionRequest request)
@@ -2464,7 +3342,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteSubscriptionResponse>(DoROARequest("DeleteSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteSubscriptionResponse> DeleteSubscriptionWithOptionsAsync(DeleteSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2480,7 +3370,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteSubscriptionResponse>(await DoROARequestAsync("DeleteSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeleteUserResponse DeleteUser(DeleteUserRequest request)
@@ -2514,7 +3416,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteUserResponse>(DoROARequest("DeleteUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeleteUserResponse> DeleteUserWithOptionsAsync(DeleteUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2534,7 +3448,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeleteUserResponse>(await DoROARequestAsync("DeleteUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/delete", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DeliverIncidentResponse DeliverIncident(DeliverIncidentRequest request)
@@ -2572,7 +3498,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeliverIncidentResponse>(DoROARequest("DeliverIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/deliver", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeliverIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/deliver",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeliverIncidentResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DeliverIncidentResponse> DeliverIncidentWithOptionsAsync(DeliverIncidentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2596,7 +3534,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DeliverIncidentResponse>(await DoROARequestAsync("DeliverIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/deliver", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeliverIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/deliver",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeliverIncidentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DisableEscalationPlanResponse DisableEscalationPlan(DisableEscalationPlanRequest request)
@@ -2630,7 +3580,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableEscalationPlanResponse>(DoROARequest("DisableEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/disable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableEscalationPlanResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DisableEscalationPlanResponse> DisableEscalationPlanWithOptionsAsync(DisableEscalationPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2650,7 +3612,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableEscalationPlanResponse>(await DoROARequestAsync("DisableEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/disable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableEscalationPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DisableIntegrationConfigResponse DisableIntegrationConfig(DisableIntegrationConfigRequest request)
@@ -2684,7 +3658,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableIntegrationConfigResponse>(DoROARequest("DisableIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/disable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableIntegrationConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DisableIntegrationConfigResponse> DisableIntegrationConfigWithOptionsAsync(DisableIntegrationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2704,7 +3690,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableIntegrationConfigResponse>(await DoROARequestAsync("DisableIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/disable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableIntegrationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DisableRouteRuleResponse DisableRouteRule(DisableRouteRuleRequest request)
@@ -2738,7 +3736,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableRouteRuleResponse>(DoROARequest("DisableRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/disable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableRouteRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DisableRouteRuleResponse> DisableRouteRuleWithOptionsAsync(DisableRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2758,7 +3768,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableRouteRuleResponse>(await DoROARequestAsync("DisableRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/disable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableRouteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DisableServiceGroupWebhookResponse DisableServiceGroupWebhook(DisableServiceGroupWebhookRequest request)
@@ -2792,7 +3814,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableServiceGroupWebhookResponse>(DoROARequest("DisableServiceGroupWebhook", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/disableWebhook", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableServiceGroupWebhook",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/disableWebhook",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableServiceGroupWebhookResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DisableServiceGroupWebhookResponse> DisableServiceGroupWebhookWithOptionsAsync(DisableServiceGroupWebhookRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2812,7 +3846,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableServiceGroupWebhookResponse>(await DoROARequestAsync("DisableServiceGroupWebhook", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/disableWebhook", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableServiceGroupWebhook",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/disableWebhook",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableServiceGroupWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public DisableSubscriptionResponse DisableSubscription(DisableSubscriptionRequest request)
@@ -2842,7 +3888,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableSubscriptionResponse>(DoROARequest("DisableSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/doDisable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/doDisable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<DisableSubscriptionResponse> DisableSubscriptionWithOptionsAsync(DisableSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2858,7 +3916,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<DisableSubscriptionResponse>(await DoROARequestAsync("DisableSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/doDisable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/doDisable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public EnableEscalationPlanResponse EnableEscalationPlan(EnableEscalationPlanRequest request)
@@ -2892,7 +3962,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableEscalationPlanResponse>(DoROARequest("EnableEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableEscalationPlanResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<EnableEscalationPlanResponse> EnableEscalationPlanWithOptionsAsync(EnableEscalationPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2912,7 +3994,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableEscalationPlanResponse>(await DoROARequestAsync("EnableEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableEscalationPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public EnableIntegrationConfigResponse EnableIntegrationConfig(EnableIntegrationConfigRequest request)
@@ -2946,7 +4040,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableIntegrationConfigResponse>(DoROARequest("EnableIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableIntegrationConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<EnableIntegrationConfigResponse> EnableIntegrationConfigWithOptionsAsync(EnableIntegrationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -2966,7 +4072,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableIntegrationConfigResponse>(await DoROARequestAsync("EnableIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableIntegrationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public EnableRouteRuleResponse EnableRouteRule(EnableRouteRuleRequest request)
@@ -3000,7 +4118,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableRouteRuleResponse>(DoROARequest("EnableRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableRouteRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<EnableRouteRuleResponse> EnableRouteRuleWithOptionsAsync(EnableRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3020,7 +4150,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableRouteRuleResponse>(await DoROARequestAsync("EnableRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableRouteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public EnableServiceGroupWebhookResponse EnableServiceGroupWebhook(EnableServiceGroupWebhookRequest request)
@@ -3054,7 +4196,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableServiceGroupWebhookResponse>(DoROARequest("EnableServiceGroupWebhook", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/enableWebhook", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableServiceGroupWebhook",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/enableWebhook",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableServiceGroupWebhookResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<EnableServiceGroupWebhookResponse> EnableServiceGroupWebhookWithOptionsAsync(EnableServiceGroupWebhookRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3074,7 +4228,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableServiceGroupWebhookResponse>(await DoROARequestAsync("EnableServiceGroupWebhook", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/enableWebhook", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableServiceGroupWebhook",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/enableWebhook",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableServiceGroupWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public EnableSubscriptionResponse EnableSubscription(EnableSubscriptionRequest request)
@@ -3104,7 +4270,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableSubscriptionResponse>(DoROARequest("EnableSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<EnableSubscriptionResponse> EnableSubscriptionWithOptionsAsync(EnableSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3120,7 +4298,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<EnableSubscriptionResponse>(await DoROARequestAsync("EnableSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/enable", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public FinishIncidentResponse FinishIncident(FinishIncidentRequest request)
@@ -3170,7 +4360,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<FinishIncidentResponse>(DoROARequest("FinishIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/finish", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/finish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishIncidentResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<FinishIncidentResponse> FinishIncidentWithOptionsAsync(FinishIncidentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3206,7 +4408,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<FinishIncidentResponse>(await DoROARequestAsync("FinishIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/finish", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/finish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishIncidentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public FinishProblemResponse FinishProblem(FinishProblemRequest request)
@@ -3240,7 +4454,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<FinishProblemResponse>(DoROARequest("FinishProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/finish", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/finish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<FinishProblemResponse> FinishProblemWithOptionsAsync(FinishProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3260,7 +4486,183 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<FinishProblemResponse>(await DoROARequestAsync("FinishProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/finish", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/finish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishProblemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GeneratePictureLinkResponse GeneratePictureLink(GeneratePictureLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GeneratePictureLinkWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GeneratePictureLinkResponse> GeneratePictureLinkAsync(GeneratePictureLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GeneratePictureLinkWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GeneratePictureLinkResponse GeneratePictureLinkWithOptions(GeneratePictureLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                body["keys"] = request.Keys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProblemId))
+            {
+                body["problemId"] = request.ProblemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GeneratePictureLink",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/oss/getPictureLink",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GeneratePictureLinkResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GeneratePictureLinkResponse> GeneratePictureLinkWithOptionsAsync(GeneratePictureLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keys))
+            {
+                body["keys"] = request.Keys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProblemId))
+            {
+                body["problemId"] = request.ProblemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GeneratePictureLink",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/oss/getPictureLink",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GeneratePictureLinkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GeneratePictureUploadSignResponse GeneratePictureUploadSign(GeneratePictureUploadSignRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GeneratePictureUploadSignWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GeneratePictureUploadSignResponse> GeneratePictureUploadSignAsync(GeneratePictureUploadSignRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GeneratePictureUploadSignWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GeneratePictureUploadSignResponse GeneratePictureUploadSignWithOptions(GeneratePictureUploadSignRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
+            {
+                body["files"] = request.Files;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GeneratePictureUploadSign",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/oss/generatePostPolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GeneratePictureUploadSignResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GeneratePictureUploadSignResponse> GeneratePictureUploadSignWithOptionsAsync(GeneratePictureUploadSignRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
+            {
+                body["files"] = request.Files;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GeneratePictureUploadSign",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/oss/generatePostPolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GeneratePictureUploadSignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GenerateProblemPictureLinkResponse GenerateProblemPictureLink(GenerateProblemPictureLinkRequest request)
@@ -3294,7 +4696,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GenerateProblemPictureLinkResponse>(DoROARequest("GenerateProblemPictureLink", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/oss/getPresignedLink", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateProblemPictureLink",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/oss/getPresignedLink",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateProblemPictureLinkResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GenerateProblemPictureLinkResponse> GenerateProblemPictureLinkWithOptionsAsync(GenerateProblemPictureLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3314,7 +4728,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GenerateProblemPictureLinkResponse>(await DoROARequestAsync("GenerateProblemPictureLink", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/oss/getPresignedLink", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateProblemPictureLink",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/oss/getPresignedLink",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateProblemPictureLinkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GenerateProblemPictureUploadSignResponse GenerateProblemPictureUploadSign(GenerateProblemPictureUploadSignRequest request)
@@ -3356,7 +4782,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GenerateProblemPictureUploadSignResponse>(DoROARequest("GenerateProblemPictureUploadSign", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/oss/generatePostPolicy", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateProblemPictureUploadSign",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/oss/generatePostPolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateProblemPictureUploadSignResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GenerateProblemPictureUploadSignResponse> GenerateProblemPictureUploadSignWithOptionsAsync(GenerateProblemPictureUploadSignRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3384,7 +4822,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GenerateProblemPictureUploadSignResponse>(await DoROARequestAsync("GenerateProblemPictureUploadSign", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/oss/generatePostPolicy", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateProblemPictureUploadSign",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/oss/generatePostPolicy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateProblemPictureUploadSignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetEscalationPlanResponse GetEscalationPlan(GetEscalationPlanRequest request)
@@ -3418,7 +4868,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetEscalationPlanResponse>(DoROARequest("GetEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEscalationPlanResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetEscalationPlanResponse> GetEscalationPlanWithOptionsAsync(GetEscalationPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3438,7 +4900,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetEscalationPlanResponse>(await DoROARequestAsync("GetEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEscalationPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetEventResponse GetEvent(GetEventRequest request)
@@ -3468,7 +4942,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetEventResponse>(DoROARequest("GetEvent", "2021-04-13", "HTTPS", "POST", "AK", "/events/getLastTimeEvent", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEvent",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/getLastTimeEvent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetEventResponse> GetEventWithOptionsAsync(GetEventRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3484,7 +4970,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetEventResponse>(await DoROARequestAsync("GetEvent", "2021-04-13", "HTTPS", "POST", "AK", "/events/getLastTimeEvent", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEvent",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/getLastTimeEvent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetHomePageGuidanceResponse GetHomePageGuidance(GetHomePageGuidanceRequest request)
@@ -3514,7 +5012,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetHomePageGuidanceResponse>(DoROARequest("GetHomePageGuidance", "2021-04-13", "HTTPS", "POST", "AK", "/guidance/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHomePageGuidance",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/guidance/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHomePageGuidanceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetHomePageGuidanceResponse> GetHomePageGuidanceWithOptionsAsync(GetHomePageGuidanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3530,7 +5040,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetHomePageGuidanceResponse>(await DoROARequestAsync("GetHomePageGuidance", "2021-04-13", "HTTPS", "POST", "AK", "/guidance/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHomePageGuidance",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/guidance/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHomePageGuidanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetIncidentResponse GetIncident(GetIncidentRequest request)
@@ -3564,7 +5086,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIncidentResponse>(DoROARequest("GetIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetIncidentResponse> GetIncidentWithOptionsAsync(GetIncidentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3584,7 +5118,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIncidentResponse>(await DoROARequestAsync("GetIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetIncidentStatisticsResponse GetIncidentStatistics(GetIncidentStatisticsRequest request)
@@ -3614,7 +5160,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIncidentStatisticsResponse>(DoROARequest("GetIncidentStatistics", "2021-04-13", "HTTPS", "POST", "AK", "/incident/count", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentStatistics",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetIncidentStatisticsResponse> GetIncidentStatisticsWithOptionsAsync(GetIncidentStatisticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3630,7 +5188,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIncidentStatisticsResponse>(await DoROARequestAsync("GetIncidentStatistics", "2021-04-13", "HTTPS", "POST", "AK", "/incident/count", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentStatistics",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetIncidentSubtotalCountResponse GetIncidentSubtotalCount(GetIncidentSubtotalCountRequest request)
@@ -3664,7 +5234,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIncidentSubtotalCountResponse>(DoROARequest("GetIncidentSubtotalCount", "2021-04-13", "HTTPS", "POST", "AK", "/incident/subtotal/count", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentSubtotalCount",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/subtotal/count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentSubtotalCountResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetIncidentSubtotalCountResponse> GetIncidentSubtotalCountWithOptionsAsync(GetIncidentSubtotalCountRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3684,7 +5266,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIncidentSubtotalCountResponse>(await DoROARequestAsync("GetIncidentSubtotalCount", "2021-04-13", "HTTPS", "POST", "AK", "/incident/subtotal/count", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentSubtotalCount",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/subtotal/count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentSubtotalCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetIntegrationConfigResponse GetIntegrationConfig(GetIntegrationConfigRequest request)
@@ -3718,7 +5312,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIntegrationConfigResponse>(DoROARequest("GetIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIntegrationConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetIntegrationConfigResponse> GetIntegrationConfigWithOptionsAsync(GetIntegrationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3738,7 +5344,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetIntegrationConfigResponse>(await DoROARequestAsync("GetIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIntegrationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetProblemResponse GetProblem(GetProblemRequest request)
@@ -3772,7 +5390,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemResponse>(DoROARequest("GetProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetProblemResponse> GetProblemWithOptionsAsync(GetProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3792,7 +5422,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemResponse>(await DoROARequestAsync("GetProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetProblemEffectionServiceResponse GetProblemEffectionService(GetProblemEffectionServiceRequest request)
@@ -3830,7 +5472,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemEffectionServiceResponse>(DoROARequest("GetProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemEffectionServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetProblemEffectionServiceResponse> GetProblemEffectionServiceWithOptionsAsync(GetProblemEffectionServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3854,7 +5508,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemEffectionServiceResponse>(await DoROARequestAsync("GetProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemEffectionServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetProblemImprovementResponse GetProblemImprovement(GetProblemImprovementRequest request)
@@ -3888,7 +5554,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemImprovementResponse>(DoROARequest("GetProblemImprovement", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblemImprovement",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemImprovementResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetProblemImprovementResponse> GetProblemImprovementWithOptionsAsync(GetProblemImprovementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -3908,7 +5586,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemImprovementResponse>(await DoROARequestAsync("GetProblemImprovement", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblemImprovement",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemImprovementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetProblemPreviewResponse GetProblemPreview(GetProblemPreviewRequest request)
@@ -3966,7 +5656,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemPreviewResponse>(DoROARequest("GetProblemPreview", "2021-04-13", "HTTPS", "POST", "AK", "/problem/preview", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblemPreview",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemPreviewResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetProblemPreviewResponse> GetProblemPreviewWithOptionsAsync(GetProblemPreviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4010,7 +5712,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetProblemPreviewResponse>(await DoROARequestAsync("GetProblemPreview", "2021-04-13", "HTTPS", "POST", "AK", "/problem/preview", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProblemPreview",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProblemPreviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetResourceStatisticsResponse GetResourceStatistics(GetResourceStatisticsRequest request)
@@ -4040,7 +5754,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetResourceStatisticsResponse>(DoROARequest("GetResourceStatistics", "2021-04-13", "HTTPS", "POST", "AK", "/config/resource/count", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceStatistics",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/config/resource/count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetResourceStatisticsResponse> GetResourceStatisticsWithOptionsAsync(GetResourceStatisticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4056,7 +5782,105 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetResourceStatisticsResponse>(await DoROARequestAsync("GetResourceStatistics", "2021-04-13", "HTTPS", "POST", "AK", "/config/resource/count", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceStatistics",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/config/resource/count",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public GetRichTextResponse GetRichText(GetRichTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRichTextWithOptions(request, headers, runtime);
+        }
+
+        public async Task<GetRichTextResponse> GetRichTextAsync(GetRichTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRichTextWithOptionsAsync(request, headers, runtime);
+        }
+
+        public GetRichTextResponse GetRichTextWithOptions(GetRichTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichTextId))
+            {
+                body["richTextId"] = request.RichTextId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRichText",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRichTextResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<GetRichTextResponse> GetRichTextWithOptionsAsync(GetRichTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichTextId))
+            {
+                body["richTextId"] = request.RichTextId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRichText",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRichTextResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetRouteRuleResponse GetRouteRule(GetRouteRuleRequest request)
@@ -4090,7 +5914,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetRouteRuleResponse>(DoROARequest("GetRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRouteRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetRouteRuleResponse> GetRouteRuleWithOptionsAsync(GetRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4110,7 +5946,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetRouteRuleResponse>(await DoROARequestAsync("GetRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRouteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetServiceResponse GetService(GetServiceRequest request)
@@ -4144,7 +5992,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceResponse>(DoROARequest("GetService", "2021-04-13", "HTTPS", "POST", "AK", "/services/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetServiceResponse> GetServiceWithOptionsAsync(GetServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4164,7 +6024,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceResponse>(await DoROARequestAsync("GetService", "2021-04-13", "HTTPS", "POST", "AK", "/services/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetServiceGroupResponse GetServiceGroup(GetServiceGroupRequest request)
@@ -4198,7 +6070,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupResponse>(DoROARequest("GetServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetServiceGroupResponse> GetServiceGroupWithOptionsAsync(GetServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4218,7 +6102,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupResponse>(await DoROARequestAsync("GetServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetServiceGroupPersonSchedulingResponse GetServiceGroupPersonScheduling(GetServiceGroupPersonSchedulingRequest request)
@@ -4264,7 +6160,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupPersonSchedulingResponse>(DoROARequest("GetServiceGroupPersonScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/user/getScheduling", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupPersonScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/user/getScheduling",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupPersonSchedulingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetServiceGroupPersonSchedulingResponse> GetServiceGroupPersonSchedulingWithOptionsAsync(GetServiceGroupPersonSchedulingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4296,7 +6204,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupPersonSchedulingResponse>(await DoROARequestAsync("GetServiceGroupPersonScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/user/getScheduling", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupPersonScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/user/getScheduling",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupPersonSchedulingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetServiceGroupSchedulingResponse GetServiceGroupScheduling(GetServiceGroupSchedulingRequest request)
@@ -4330,7 +6250,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupSchedulingResponse>(DoROARequest("GetServiceGroupScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupSchedulingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetServiceGroupSchedulingResponse> GetServiceGroupSchedulingWithOptionsAsync(GetServiceGroupSchedulingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4350,7 +6282,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupSchedulingResponse>(await DoROARequestAsync("GetServiceGroupScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupSchedulingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetServiceGroupSchedulingPreviewResponse GetServiceGroupSchedulingPreview(GetServiceGroupSchedulingPreviewRequest request)
@@ -4404,7 +6348,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupSchedulingPreviewResponse>(DoROARequest("GetServiceGroupSchedulingPreview", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/preview", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupSchedulingPreview",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupSchedulingPreviewResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetServiceGroupSchedulingPreviewResponse> GetServiceGroupSchedulingPreviewWithOptionsAsync(GetServiceGroupSchedulingPreviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4444,7 +6400,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupSchedulingPreviewResponse>(await DoROARequestAsync("GetServiceGroupSchedulingPreview", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/preview", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupSchedulingPreview",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupSchedulingPreviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetServiceGroupSpecialPersonSchedulingResponse GetServiceGroupSpecialPersonScheduling(GetServiceGroupSpecialPersonSchedulingRequest request)
@@ -4482,7 +6450,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupSpecialPersonSchedulingResponse>(DoROARequest("GetServiceGroupSpecialPersonScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/getUserScheduling", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupSpecialPersonScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/getUserScheduling",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupSpecialPersonSchedulingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetServiceGroupSpecialPersonSchedulingResponse> GetServiceGroupSpecialPersonSchedulingWithOptionsAsync(GetServiceGroupSpecialPersonSchedulingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4506,7 +6486,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetServiceGroupSpecialPersonSchedulingResponse>(await DoROARequestAsync("GetServiceGroupSpecialPersonScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/getUserScheduling", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceGroupSpecialPersonScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/getUserScheduling",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceGroupSpecialPersonSchedulingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetSimilarIncidentStatisticsResponse GetSimilarIncidentStatistics(GetSimilarIncidentStatisticsRequest request)
@@ -4556,7 +6548,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetSimilarIncidentStatisticsResponse>(DoROARequest("GetSimilarIncidentStatistics", "2021-04-13", "HTTPS", "POST", "AK", "/incident/similarIncident/statistics", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSimilarIncidentStatistics",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/similarIncident/statistics",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSimilarIncidentStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetSimilarIncidentStatisticsResponse> GetSimilarIncidentStatisticsWithOptionsAsync(GetSimilarIncidentStatisticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4592,7 +6596,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetSimilarIncidentStatisticsResponse>(await DoROARequestAsync("GetSimilarIncidentStatistics", "2021-04-13", "HTTPS", "POST", "AK", "/incident/similarIncident/statistics", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSimilarIncidentStatistics",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/similarIncident/statistics",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSimilarIncidentStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetSubscriptionResponse GetSubscription(GetSubscriptionRequest request)
@@ -4622,7 +6638,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetSubscriptionResponse>(DoROARequest("GetSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetSubscriptionResponse> GetSubscriptionWithOptionsAsync(GetSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4638,7 +6666,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetSubscriptionResponse>(await DoROARequestAsync("GetSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetTenantApplicationResponse GetTenantApplication(GetTenantApplicationRequest request)
@@ -4668,7 +6708,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetTenantApplicationResponse>(DoROARequest("GetTenantApplication", "2021-04-13", "HTTPS", "POST", "AK", "/mobileApp/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTenantApplication",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/mobileApp/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTenantApplicationResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetTenantApplicationResponse> GetTenantApplicationWithOptionsAsync(GetTenantApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4684,7 +6736,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetTenantApplicationResponse>(await DoROARequestAsync("GetTenantApplication", "2021-04-13", "HTTPS", "POST", "AK", "/mobileApp/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTenantApplication",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/mobileApp/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTenantApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetUserResponse GetUser(GetUserRequest request)
@@ -4718,7 +6782,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetUserResponse>(DoROARequest("GetUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/getUser", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/getUser",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetUserResponse> GetUserWithOptionsAsync(GetUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4738,7 +6814,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetUserResponse>(await DoROARequestAsync("GetUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/getUser", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/getUser",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public GetUserGuideStatusResponse GetUserGuideStatus(GetUserGuideStatusRequest request)
@@ -4768,7 +6856,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetUserGuideStatusResponse>(DoROARequest("GetUserGuideStatus", "2021-04-13", "HTTPS", "POST", "AK", "/user/guide/status", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserGuideStatus",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/guide/status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserGuideStatusResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<GetUserGuideStatusResponse> GetUserGuideStatusWithOptionsAsync(GetUserGuideStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4784,7 +6884,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<GetUserGuideStatusResponse>(await DoROARequestAsync("GetUserGuideStatus", "2021-04-13", "HTTPS", "POST", "AK", "/user/guide/status", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserGuideStatus",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/guide/status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserGuideStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListAlertsResponse ListAlerts(ListAlertsRequest request)
@@ -4833,6 +6945,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["relatedServiceId"] = request.RelatedServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["startTime"] = request.StartTime;
@@ -4842,7 +6958,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListAlertsResponse>(DoROARequest("ListAlerts", "2021-04-13", "HTTPS", "POST", "AK", "/alerts/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlerts",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListAlertsResponse> ListAlertsWithOptionsAsync(ListAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4877,6 +7005,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["relatedServiceId"] = request.RelatedServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["startTime"] = request.StartTime;
@@ -4886,7 +7018,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListAlertsResponse>(await DoROARequestAsync("ListAlerts", "2021-04-13", "HTTPS", "POST", "AK", "/alerts/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAlerts",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/alerts/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAlertsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListChartDataForServiceGroupResponse ListChartDataForServiceGroup(ListChartDataForServiceGroupRequest request)
@@ -4924,7 +7068,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListChartDataForServiceGroupResponse>(DoROARequest("ListChartDataForServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/chartDataForServiceGroup/", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChartDataForServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/chartDataForServiceGroup/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChartDataForServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListChartDataForServiceGroupResponse> ListChartDataForServiceGroupWithOptionsAsync(ListChartDataForServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -4948,7 +7104,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListChartDataForServiceGroupResponse>(await DoROARequestAsync("ListChartDataForServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/chartDataForServiceGroup/", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChartDataForServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/chartDataForServiceGroup/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChartDataForServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListChartDataForUserResponse ListChartDataForUser(ListChartDataForUserRequest request)
@@ -4986,7 +7154,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListChartDataForUserResponse>(DoROARequest("ListChartDataForUser", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/chartDataForUser/", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChartDataForUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/chartDataForUser/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChartDataForUserResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListChartDataForUserResponse> ListChartDataForUserWithOptionsAsync(ListChartDataForUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5010,7 +7190,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListChartDataForUserResponse>(await DoROARequestAsync("ListChartDataForUser", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/chartDataForUser/", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChartDataForUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/chartDataForUser/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChartDataForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListConfigsResponse ListConfigs(ListConfigsRequest request)
@@ -5040,7 +7232,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListConfigsResponse>(DoROARequest("ListConfigs", "2021-04-13", "HTTPS", "POST", "AK", "/config/all", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConfigs",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/config/all",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConfigsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListConfigsResponse> ListConfigsWithOptionsAsync(ListConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5056,7 +7260,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListConfigsResponse>(await DoROARequestAsync("ListConfigs", "2021-04-13", "HTTPS", "POST", "AK", "/config/all", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConfigs",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/config/all",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListDataReportForServiceGroupResponse ListDataReportForServiceGroup(ListDataReportForServiceGroupRequest request)
@@ -5094,7 +7310,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListDataReportForServiceGroupResponse>(DoROARequest("ListDataReportForServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/listDataReportForServiceGroup", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataReportForServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/listDataReportForServiceGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataReportForServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListDataReportForServiceGroupResponse> ListDataReportForServiceGroupWithOptionsAsync(ListDataReportForServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5118,7 +7346,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListDataReportForServiceGroupResponse>(await DoROARequestAsync("ListDataReportForServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/listDataReportForServiceGroup", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataReportForServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/listDataReportForServiceGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataReportForServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListDataReportForUserResponse ListDataReportForUser(ListDataReportForUserRequest request)
@@ -5160,7 +7400,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListDataReportForUserResponse>(DoROARequest("ListDataReportForUser", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/listDataReportForUser", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataReportForUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/listDataReportForUser",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataReportForUserResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListDataReportForUserResponse> ListDataReportForUserWithOptionsAsync(ListDataReportForUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5188,7 +7440,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListDataReportForUserResponse>(await DoROARequestAsync("ListDataReportForUser", "2021-04-13", "HTTPS", "POST", "AK", "/statistics/listDataReportForUser", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataReportForUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/statistics/listDataReportForUser",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataReportForUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListDictionariesResponse ListDictionaries(ListDictionariesRequest request)
@@ -5218,7 +7482,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListDictionariesResponse>(DoROARequest("ListDictionaries", "2021-04-13", "HTTPS", "POST", "AK", "/dict/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDictionaries",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/dict/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDictionariesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListDictionariesResponse> ListDictionariesWithOptionsAsync(ListDictionariesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5234,7 +7510,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListDictionariesResponse>(await DoROARequestAsync("ListDictionaries", "2021-04-13", "HTTPS", "POST", "AK", "/dict/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDictionaries",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/dict/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDictionariesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListEscalationPlanServicesResponse ListEscalationPlanServices(ListEscalationPlanServicesRequest request)
@@ -5264,7 +7552,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListEscalationPlanServicesResponse>(DoROARequest("ListEscalationPlanServices", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/services", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEscalationPlanServices",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/services",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEscalationPlanServicesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListEscalationPlanServicesResponse> ListEscalationPlanServicesWithOptionsAsync(ListEscalationPlanServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5280,7 +7580,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListEscalationPlanServicesResponse>(await DoROARequestAsync("ListEscalationPlanServices", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/services", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEscalationPlanServices",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/services",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEscalationPlanServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListEscalationPlansResponse ListEscalationPlans(ListEscalationPlansRequest request)
@@ -5326,7 +7638,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListEscalationPlansResponse>(DoROARequest("ListEscalationPlans", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEscalationPlans",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEscalationPlansResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListEscalationPlansResponse> ListEscalationPlansWithOptionsAsync(ListEscalationPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5358,7 +7682,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListEscalationPlansResponse>(await DoROARequestAsync("ListEscalationPlans", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEscalationPlans",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEscalationPlansResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListIncidentDetailEscalationPlansResponse ListIncidentDetailEscalationPlans(ListIncidentDetailEscalationPlansRequest request)
@@ -5392,7 +7728,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentDetailEscalationPlansResponse>(DoROARequest("ListIncidentDetailEscalationPlans", "2021-04-13", "HTTPS", "POST", "AK", "/incident/detail/escalation", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentDetailEscalationPlans",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/detail/escalation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentDetailEscalationPlansResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListIncidentDetailEscalationPlansResponse> ListIncidentDetailEscalationPlansWithOptionsAsync(ListIncidentDetailEscalationPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5412,7 +7760,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentDetailEscalationPlansResponse>(await DoROARequestAsync("ListIncidentDetailEscalationPlans", "2021-04-13", "HTTPS", "POST", "AK", "/incident/detail/escalation", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentDetailEscalationPlans",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/detail/escalation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentDetailEscalationPlansResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListIncidentDetailTimelinesResponse ListIncidentDetailTimelines(ListIncidentDetailTimelinesRequest request)
@@ -5454,7 +7814,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentDetailTimelinesResponse>(DoROARequest("ListIncidentDetailTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/incident/detail/timeline", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentDetailTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/detail/timeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentDetailTimelinesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListIncidentDetailTimelinesResponse> ListIncidentDetailTimelinesWithOptionsAsync(ListIncidentDetailTimelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5482,7 +7854,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentDetailTimelinesResponse>(await DoROARequestAsync("ListIncidentDetailTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/incident/detail/timeline", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentDetailTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/detail/timeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentDetailTimelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListIncidentSubtotalsResponse ListIncidentSubtotals(ListIncidentSubtotalsRequest request)
@@ -5516,7 +7900,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentSubtotalsResponse>(DoROARequest("ListIncidentSubtotals", "2021-04-13", "HTTPS", "POST", "AK", "/incident/list/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentSubtotals",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/list/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentSubtotalsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListIncidentSubtotalsResponse> ListIncidentSubtotalsWithOptionsAsync(ListIncidentSubtotalsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5536,7 +7932,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentSubtotalsResponse>(await DoROARequestAsync("ListIncidentSubtotals", "2021-04-13", "HTTPS", "POST", "AK", "/incident/list/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentSubtotals",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/list/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentSubtotalsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListIncidentTimelinesResponse ListIncidentTimelines(ListIncidentTimelinesRequest request)
@@ -5574,7 +7982,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentTimelinesResponse>(DoROARequest("ListIncidentTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/incident/timeline", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/timeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentTimelinesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListIncidentTimelinesResponse> ListIncidentTimelinesWithOptionsAsync(ListIncidentTimelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5598,7 +8018,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentTimelinesResponse>(await DoROARequestAsync("ListIncidentTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/incident/timeline", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidentTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/timeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentTimelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListIncidentsResponse ListIncidents(ListIncidentsRequest request)
@@ -5659,12 +8091,28 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["relationServiceId"] = request.RelationServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentsResponse>(DoROARequest("ListIncidents", "2021-04-13", "HTTPS", "POST", "AK", "/incident/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidents",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListIncidentsResponse> ListIncidentsWithOptionsAsync(ListIncidentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5711,12 +8159,28 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["relationServiceId"] = request.RelationServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIncidentsResponse>(await DoROARequestAsync("ListIncidents", "2021-04-13", "HTTPS", "POST", "AK", "/incident/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIncidents",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIncidentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListIntegrationConfigTimelinesResponse ListIntegrationConfigTimelines(ListIntegrationConfigTimelinesRequest request)
@@ -5758,7 +8222,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIntegrationConfigTimelinesResponse>(DoROARequest("ListIntegrationConfigTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/timeline", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationConfigTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/timeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationConfigTimelinesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListIntegrationConfigTimelinesResponse> ListIntegrationConfigTimelinesWithOptionsAsync(ListIntegrationConfigTimelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5786,7 +8262,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIntegrationConfigTimelinesResponse>(await DoROARequestAsync("ListIntegrationConfigTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/timeline", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationConfigTimelines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/timeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationConfigTimelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListIntegrationConfigsResponse ListIntegrationConfigs(ListIntegrationConfigsRequest request)
@@ -5820,7 +8308,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIntegrationConfigsResponse>(DoROARequest("ListIntegrationConfigs", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationConfigs",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationConfigsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListIntegrationConfigsResponse> ListIntegrationConfigsWithOptionsAsync(ListIntegrationConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5840,7 +8340,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListIntegrationConfigsResponse>(await DoROARequestAsync("ListIntegrationConfigs", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationConfigs",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListMonitorSourcesResponse ListMonitorSources(ListMonitorSourcesRequest request)
@@ -5870,7 +8382,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListMonitorSourcesResponse>(DoROARequest("ListMonitorSources", "2021-04-13", "HTTPS", "POST", "AK", "/monitorSource/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMonitorSources",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/monitorSource/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMonitorSourcesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListMonitorSourcesResponse> ListMonitorSourcesWithOptionsAsync(ListMonitorSourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5886,7 +8410,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListMonitorSourcesResponse>(await DoROARequestAsync("ListMonitorSources", "2021-04-13", "HTTPS", "POST", "AK", "/monitorSource/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMonitorSources",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/monitorSource/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMonitorSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListProblemDetailOperationsResponse ListProblemDetailOperations(ListProblemDetailOperationsRequest request)
@@ -5932,7 +8468,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemDetailOperationsResponse>(DoROARequest("ListProblemDetailOperations", "2021-04-13", "HTTPS", "POST", "AK", "/problem/detail/operations", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemDetailOperations",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/detail/operations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemDetailOperationsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListProblemDetailOperationsResponse> ListProblemDetailOperationsWithOptionsAsync(ListProblemDetailOperationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -5964,7 +8512,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemDetailOperationsResponse>(await DoROARequestAsync("ListProblemDetailOperations", "2021-04-13", "HTTPS", "POST", "AK", "/problem/detail/operations", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemDetailOperations",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/detail/operations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemDetailOperationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListProblemOperationsResponse ListProblemOperations(ListProblemOperationsRequest request)
@@ -6002,7 +8562,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemOperationsResponse>(DoROARequest("ListProblemOperations", "2021-04-13", "HTTPS", "POST", "AK", "/problem/operations", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemOperations",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/operations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemOperationsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListProblemOperationsResponse> ListProblemOperationsWithOptionsAsync(ListProblemOperationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6026,7 +8598,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemOperationsResponse>(await DoROARequestAsync("ListProblemOperations", "2021-04-13", "HTTPS", "POST", "AK", "/problem/operations", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemOperations",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/operations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemOperationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListProblemSubtotalsResponse ListProblemSubtotals(ListProblemSubtotalsRequest request)
@@ -6060,7 +8644,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemSubtotalsResponse>(DoROARequest("ListProblemSubtotals", "2021-04-13", "HTTPS", "POST", "AK", "/problem/list/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemSubtotals",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/list/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemSubtotalsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListProblemSubtotalsResponse> ListProblemSubtotalsWithOptionsAsync(ListProblemSubtotalsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6080,7 +8676,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemSubtotalsResponse>(await DoROARequestAsync("ListProblemSubtotals", "2021-04-13", "HTTPS", "POST", "AK", "/problem/list/subtotal", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemSubtotals",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/list/subtotal",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemSubtotalsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListProblemTimeLinesResponse ListProblemTimeLines(ListProblemTimeLinesRequest request)
@@ -6114,7 +8722,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemTimeLinesResponse>(DoROARequest("ListProblemTimeLines", "2021-04-13", "HTTPS", "POST", "AK", "/problem/detail/timeLines", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemTimeLines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/detail/timeLines",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemTimeLinesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListProblemTimeLinesResponse> ListProblemTimeLinesWithOptionsAsync(ListProblemTimeLinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6134,7 +8754,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemTimeLinesResponse>(await DoROARequestAsync("ListProblemTimeLines", "2021-04-13", "HTTPS", "POST", "AK", "/problem/detail/timeLines", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblemTimeLines",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/detail/timeLines",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemTimeLinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListProblemsResponse ListProblems(ListProblemsRequest request)
@@ -6216,7 +8848,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemsResponse>(DoROARequest("ListProblems", "2021-04-13", "HTTPS", "POST", "AK", "/problem/listProblems", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblems",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/listProblems",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListProblemsResponse> ListProblemsWithOptionsAsync(ListProblemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6284,7 +8928,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListProblemsResponse>(await DoROARequestAsync("ListProblems", "2021-04-13", "HTTPS", "POST", "AK", "/problem/listProblems", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProblems",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/listProblems",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProblemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListRouteRulesResponse ListRouteRules(ListRouteRulesRequest request)
@@ -6317,6 +8973,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["pageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteType))
+            {
+                body["routeType"] = request.RouteType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
                 body["ruleName"] = request.RuleName;
@@ -6330,7 +8990,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListRouteRulesResponse>(DoROARequest("ListRouteRules", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRouteRules",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRouteRulesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListRouteRulesResponse> ListRouteRulesWithOptionsAsync(ListRouteRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6349,6 +9021,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["pageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteType))
+            {
+                body["routeType"] = request.RouteType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
                 body["ruleName"] = request.RuleName;
@@ -6362,7 +9038,105 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListRouteRulesResponse>(await DoROARequestAsync("ListRouteRules", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRouteRules",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRouteRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListServiceGroupMonitorSourceTemplatesResponse ListServiceGroupMonitorSourceTemplates(ListServiceGroupMonitorSourceTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListServiceGroupMonitorSourceTemplatesWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListServiceGroupMonitorSourceTemplatesResponse> ListServiceGroupMonitorSourceTemplatesAsync(ListServiceGroupMonitorSourceTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListServiceGroupMonitorSourceTemplatesWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListServiceGroupMonitorSourceTemplatesResponse ListServiceGroupMonitorSourceTemplatesWithOptions(ListServiceGroupMonitorSourceTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupId))
+            {
+                body["serviceGroupId"] = request.ServiceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceGroupMonitorSourceTemplates",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/listServiceGroupMonitorSourceTemplates",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceGroupMonitorSourceTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListServiceGroupMonitorSourceTemplatesResponse> ListServiceGroupMonitorSourceTemplatesWithOptionsAsync(ListServiceGroupMonitorSourceTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupId))
+            {
+                body["serviceGroupId"] = request.ServiceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceGroupMonitorSourceTemplates",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/listServiceGroupMonitorSourceTemplates",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceGroupMonitorSourceTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListServiceGroupsResponse ListServiceGroups(ListServiceGroupsRequest request)
@@ -6420,7 +9194,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListServiceGroupsResponse>(DoROARequest("ListServiceGroups", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceGroups",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListServiceGroupsResponse> ListServiceGroupsWithOptionsAsync(ListServiceGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6464,7 +9250,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListServiceGroupsResponse>(await DoROARequestAsync("ListServiceGroups", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceGroups",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListServicesResponse ListServices(ListServicesRequest request)
@@ -6506,7 +9304,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListServicesResponse>(DoROARequest("ListServices", "2021-04-13", "HTTPS", "POST", "AK", "/services/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServices",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServicesResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListServicesResponse> ListServicesWithOptionsAsync(ListServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6534,7 +9344,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListServicesResponse>(await DoROARequestAsync("ListServices", "2021-04-13", "HTTPS", "POST", "AK", "/services/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServices",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListSourceEventsResponse ListSourceEvents(ListSourceEventsRequest request)
@@ -6596,7 +9418,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSourceEventsResponse>(DoROARequest("ListSourceEvents", "2021-04-13", "HTTPS", "POST", "AK", "/events/listOriginalEvent", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSourceEvents",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/listOriginalEvent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSourceEventsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListSourceEventsResponse> ListSourceEventsWithOptionsAsync(ListSourceEventsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6644,7 +9478,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSourceEventsResponse>(await DoROARequestAsync("ListSourceEvents", "2021-04-13", "HTTPS", "POST", "AK", "/events/listOriginalEvent", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSourceEvents",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/listOriginalEvent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSourceEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListSourceEventsForMonitorSourceResponse ListSourceEventsForMonitorSource(ListSourceEventsForMonitorSourceRequest request)
@@ -6674,7 +9520,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSourceEventsForMonitorSourceResponse>(DoROARequest("ListSourceEventsForMonitorSource", "2021-04-13", "HTTPS", "POST", "AK", "/events/queryLastestEvents", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSourceEventsForMonitorSource",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/queryLastestEvents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSourceEventsForMonitorSourceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListSourceEventsForMonitorSourceResponse> ListSourceEventsForMonitorSourceWithOptionsAsync(ListSourceEventsForMonitorSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6690,7 +9548,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSourceEventsForMonitorSourceResponse>(await DoROARequestAsync("ListSourceEventsForMonitorSource", "2021-04-13", "HTTPS", "POST", "AK", "/events/queryLastestEvents", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSourceEventsForMonitorSource",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/queryLastestEvents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSourceEventsForMonitorSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListSubscriptionServiceGroupsResponse ListSubscriptionServiceGroups(ListSubscriptionServiceGroupsRequest request)
@@ -6724,7 +9594,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSubscriptionServiceGroupsResponse>(DoROARequest("ListSubscriptionServiceGroups", "2021-04-13", "HTTPS", "POST", "AK", "/problem/serviceGroup/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSubscriptionServiceGroups",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/serviceGroup/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSubscriptionServiceGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListSubscriptionServiceGroupsResponse> ListSubscriptionServiceGroupsWithOptionsAsync(ListSubscriptionServiceGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6744,7 +9626,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSubscriptionServiceGroupsResponse>(await DoROARequestAsync("ListSubscriptionServiceGroups", "2021-04-13", "HTTPS", "POST", "AK", "/problem/serviceGroup/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSubscriptionServiceGroups",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/serviceGroup/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSubscriptionServiceGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListSubscriptionsResponse ListSubscriptions(ListSubscriptionsRequest request)
@@ -6802,7 +9696,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSubscriptionsResponse>(DoROARequest("ListSubscriptions", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSubscriptions",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSubscriptionsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListSubscriptionsResponse> ListSubscriptionsWithOptionsAsync(ListSubscriptionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6846,7 +9752,129 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListSubscriptionsResponse>(await DoROARequestAsync("ListSubscriptions", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSubscriptions",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSubscriptionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public ListTrendForSourceEventResponse ListTrendForSourceEvent(ListTrendForSourceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTrendForSourceEventWithOptions(request, headers, runtime);
+        }
+
+        public async Task<ListTrendForSourceEventResponse> ListTrendForSourceEventAsync(ListTrendForSourceEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTrendForSourceEventWithOptionsAsync(request, headers, runtime);
+        }
+
+        public ListTrendForSourceEventResponse ListTrendForSourceEventWithOptions(ListTrendForSourceEventRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeUnit))
+            {
+                body["timeUnit"] = request.TimeUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTrendForSourceEvent",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/querySourceEventTrend",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTrendForSourceEventResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<ListTrendForSourceEventResponse> ListTrendForSourceEventWithOptionsAsync(ListTrendForSourceEventRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeUnit))
+            {
+                body["timeUnit"] = request.TimeUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTrendForSourceEvent",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/events/querySourceEventTrend",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTrendForSourceEventResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListUserSerivceGroupsResponse ListUserSerivceGroups(ListUserSerivceGroupsRequest request)
@@ -6880,7 +9908,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListUserSerivceGroupsResponse>(DoROARequest("ListUserSerivceGroups", "2021-04-13", "HTTPS", "POST", "AK", "/user/preview/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserSerivceGroups",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/preview/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserSerivceGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListUserSerivceGroupsResponse> ListUserSerivceGroupsWithOptionsAsync(ListUserSerivceGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -6900,7 +9940,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListUserSerivceGroupsResponse>(await DoROARequestAsync("ListUserSerivceGroups", "2021-04-13", "HTTPS", "POST", "AK", "/user/preview/detail", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserSerivceGroups",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/preview/detail",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserSerivceGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ListUsersResponse ListUsers(ListUsersRequest request)
@@ -6958,7 +10010,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListUsersResponse>(DoROARequest("ListUsers", "2021-04-13", "HTTPS", "POST", "AK", "/user/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUsers",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ListUsersResponse> ListUsersWithOptionsAsync(ListUsersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7002,7 +10066,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ListUsersResponse>(await DoROARequestAsync("ListUsers", "2021-04-13", "HTTPS", "POST", "AK", "/user/list", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUsers",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/list",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RecoverProblemResponse RecoverProblem(RecoverProblemRequest request)
@@ -7040,7 +10116,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RecoverProblemResponse>(DoROARequest("RecoverProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/recovery", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/recovery",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RecoverProblemResponse> RecoverProblemWithOptionsAsync(RecoverProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7064,7 +10152,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RecoverProblemResponse>(await DoROARequestAsync("RecoverProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/recovery", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/recovery",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverProblemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RefreshIntegrationConfigKeyResponse RefreshIntegrationConfigKey(RefreshIntegrationConfigKeyRequest request)
@@ -7098,7 +10198,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RefreshIntegrationConfigKeyResponse>(DoROARequest("RefreshIntegrationConfigKey", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/refreshKey", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshIntegrationConfigKey",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/refreshKey",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshIntegrationConfigKeyResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RefreshIntegrationConfigKeyResponse> RefreshIntegrationConfigKeyWithOptionsAsync(RefreshIntegrationConfigKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7118,7 +10230,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RefreshIntegrationConfigKeyResponse>(await DoROARequestAsync("RefreshIntegrationConfigKey", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/refreshKey", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshIntegrationConfigKey",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/refreshKey",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshIntegrationConfigKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RemoveProblemServiceGroupResponse RemoveProblemServiceGroup(RemoveProblemServiceGroupRequest request)
@@ -7152,7 +10276,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RemoveProblemServiceGroupResponse>(DoROARequest("RemoveProblemServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/problem/removeServiceGroup", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveProblemServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/removeServiceGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveProblemServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RemoveProblemServiceGroupResponse> RemoveProblemServiceGroupWithOptionsAsync(RemoveProblemServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7172,7 +10308,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RemoveProblemServiceGroupResponse>(await DoROARequestAsync("RemoveProblemServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/problem/removeServiceGroup", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveProblemServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/removeServiceGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveProblemServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public ReplayProblemResponse ReplayProblem(ReplayProblemRequest request)
@@ -7210,7 +10358,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ReplayProblemResponse>(DoROARequest("ReplayProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/replay", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplayProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/replay",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplayProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<ReplayProblemResponse> ReplayProblemWithOptionsAsync(ReplayProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7234,7 +10394,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<ReplayProblemResponse>(await DoROARequestAsync("ReplayProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/replay", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplayProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/replay",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplayProblemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RespondIncidentResponse RespondIncident(RespondIncidentRequest request)
@@ -7268,7 +10440,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RespondIncidentResponse>(DoROARequest("RespondIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/response", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RespondIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/response",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RespondIncidentResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RespondIncidentResponse> RespondIncidentWithOptionsAsync(RespondIncidentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7288,7 +10472,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RespondIncidentResponse>(await DoROARequestAsync("RespondIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/response", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RespondIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/response",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RespondIncidentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public RevokeProblemRecoveryResponse RevokeProblemRecovery(RevokeProblemRecoveryRequest request)
@@ -7326,7 +10522,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RevokeProblemRecoveryResponse>(DoROARequest("RevokeProblemRecovery", "2021-04-13", "HTTPS", "POST", "AK", "/problem/revoke", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeProblemRecovery",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/revoke",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeProblemRecoveryResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<RevokeProblemRecoveryResponse> RevokeProblemRecoveryWithOptionsAsync(RevokeProblemRecoveryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7350,7 +10558,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<RevokeProblemRecoveryResponse>(await DoROARequestAsync("RevokeProblemRecovery", "2021-04-13", "HTTPS", "POST", "AK", "/problem/revoke", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeProblemRecovery",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/revoke",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeProblemRecoveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateEscalationPlanResponse UpdateEscalationPlan(UpdateEscalationPlanRequest request)
@@ -7400,7 +10620,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateEscalationPlanResponse>(DoROARequest("UpdateEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEscalationPlanResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateEscalationPlanResponse> UpdateEscalationPlanWithOptionsAsync(UpdateEscalationPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7436,7 +10668,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateEscalationPlanResponse>(await DoROARequestAsync("UpdateEscalationPlan", "2021-04-13", "HTTPS", "POST", "AK", "/escalationPlan/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEscalationPlan",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/escalationPlan/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEscalationPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateIncidentResponse UpdateIncident(UpdateIncidentRequest request)
@@ -7482,7 +10726,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateIncidentResponse>(DoROARequest("UpdateIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIncidentResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateIncidentResponse> UpdateIncidentWithOptionsAsync(UpdateIncidentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7514,7 +10770,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateIncidentResponse>(await DoROARequestAsync("UpdateIncident", "2021-04-13", "HTTPS", "POST", "AK", "/incident/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIncident",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/incident/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIncidentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateIntegrationConfigResponse UpdateIntegrationConfig(UpdateIntegrationConfigRequest request)
@@ -7552,7 +10820,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateIntegrationConfigResponse>(DoROARequest("UpdateIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIntegrationConfigResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateIntegrationConfigResponse> UpdateIntegrationConfigWithOptionsAsync(UpdateIntegrationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7576,7 +10856,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateIntegrationConfigResponse>(await DoROARequestAsync("UpdateIntegrationConfig", "2021-04-13", "HTTPS", "POST", "AK", "/integrationConfig/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIntegrationConfig",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/integrationConfig/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateIntegrationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateProblemResponse UpdateProblem(UpdateProblemRequest request)
@@ -7625,6 +10917,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["progressSummary"] = request.ProgressSummary;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProgressSummaryRichTextId))
+            {
+                body["progressSummaryRichTextId"] = request.ProgressSummaryRichTextId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedServiceId))
             {
                 body["relatedServiceId"] = request.RelatedServiceId;
@@ -7638,7 +10934,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemResponse>(DoROARequest("UpdateProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateProblemResponse> UpdateProblemWithOptionsAsync(UpdateProblemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7673,6 +10981,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["progressSummary"] = request.ProgressSummary;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProgressSummaryRichTextId))
+            {
+                body["progressSummaryRichTextId"] = request.ProgressSummaryRichTextId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedServiceId))
             {
                 body["relatedServiceId"] = request.RelatedServiceId;
@@ -7686,7 +10998,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemResponse>(await DoROARequestAsync("UpdateProblem", "2021-04-13", "HTTPS", "POST", "AK", "/problem/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblem",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateProblemEffectionServiceResponse UpdateProblemEffectionService(UpdateProblemEffectionServiceRequest request)
@@ -7744,7 +11068,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemEffectionServiceResponse>(DoROARequest("UpdateProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemEffectionServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateProblemEffectionServiceResponse> UpdateProblemEffectionServiceWithOptionsAsync(UpdateProblemEffectionServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7788,7 +11124,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemEffectionServiceResponse>(await DoROARequestAsync("UpdateProblemEffectionService", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/effectionService/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemEffectionService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/effectionService/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemEffectionServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateProblemImprovementResponse UpdateProblemImprovement(UpdateProblemImprovementRequest request)
@@ -7874,7 +11222,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemImprovementResponse>(DoROARequest("UpdateProblemImprovement", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemImprovement",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemImprovementResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateProblemImprovementResponse> UpdateProblemImprovementWithOptionsAsync(UpdateProblemImprovementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -7946,7 +11306,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemImprovementResponse>(await DoROARequestAsync("UpdateProblemImprovement", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemImprovement",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemImprovementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateProblemMeasureResponse UpdateProblemMeasure(UpdateProblemMeasureRequest request)
@@ -8016,7 +11388,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemMeasureResponse>(DoROARequest("UpdateProblemMeasure", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/measure/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemMeasure",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/measure/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemMeasureResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateProblemMeasureResponse> UpdateProblemMeasureWithOptionsAsync(UpdateProblemMeasureRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8072,7 +11456,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemMeasureResponse>(await DoROARequestAsync("UpdateProblemMeasure", "2021-04-13", "HTTPS", "POST", "AK", "/problem/improvement/measure/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemMeasure",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/improvement/measure/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemMeasureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateProblemNoticeResponse UpdateProblemNotice(UpdateProblemNoticeRequest request)
@@ -8110,7 +11506,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemNoticeResponse>(DoROARequest("UpdateProblemNotice", "2021-04-13", "HTTPS", "POST", "AK", "/problem/notify", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemNotice",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/notify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemNoticeResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateProblemNoticeResponse> UpdateProblemNoticeWithOptionsAsync(UpdateProblemNoticeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8134,7 +11542,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemNoticeResponse>(await DoROARequestAsync("UpdateProblemNotice", "2021-04-13", "HTTPS", "POST", "AK", "/problem/notify", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemNotice",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/notify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemNoticeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateProblemTimelineResponse UpdateProblemTimeline(UpdateProblemTimelineRequest request)
@@ -8184,7 +11604,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemTimelineResponse>(DoROARequest("UpdateProblemTimeline", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemTimeline",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemTimelineResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateProblemTimelineResponse> UpdateProblemTimelineWithOptionsAsync(UpdateProblemTimelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8220,7 +11652,113 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateProblemTimelineResponse>(await DoROARequestAsync("UpdateProblemTimeline", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProblemTimeline",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/problem/process/timeline/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProblemTimelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public UpdateRichTextResponse UpdateRichText(UpdateRichTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateRichTextWithOptions(request, headers, runtime);
+        }
+
+        public async Task<UpdateRichTextResponse> UpdateRichTextAsync(UpdateRichTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateRichTextWithOptionsAsync(request, headers, runtime);
+        }
+
+        public UpdateRichTextResponse UpdateRichTextWithOptions(UpdateRichTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichText))
+            {
+                body["richText"] = request.RichText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichTextId))
+            {
+                body["richTextId"] = request.RichTextId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRichText",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRichTextResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<UpdateRichTextResponse> UpdateRichTextWithOptionsAsync(UpdateRichTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichText))
+            {
+                body["richText"] = request.RichText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RichTextId))
+            {
+                body["richTextId"] = request.RichTextId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRichText",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/rich/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRichTextResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateRouteRuleResponse UpdateRouteRule(UpdateRouteRuleRequest request)
@@ -8249,6 +11787,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["assignObjectType"] = request.AssignObjectType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildRuleRelation))
+            {
+                body["childRuleRelation"] = request.ChildRuleRelation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["clientToken"] = request.ClientToken;
@@ -8302,7 +11844,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateRouteRuleResponse>(DoROARequest("UpdateRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/edit", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/edit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteRuleResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateRouteRuleResponse> UpdateRouteRuleWithOptionsAsync(UpdateRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8317,6 +11871,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["assignObjectType"] = request.AssignObjectType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildRuleRelation))
+            {
+                body["childRuleRelation"] = request.ChildRuleRelation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["clientToken"] = request.ClientToken;
@@ -8370,7 +11928,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateRouteRuleResponse>(await DoROARequestAsync("UpdateRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/edit", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/edit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateServiceResponse UpdateService(UpdateServiceRequest request)
@@ -8412,7 +11982,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceResponse>(DoROARequest("UpdateService", "2021-04-13", "HTTPS", "POST", "AK", "/services/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateServiceResponse> UpdateServiceWithOptionsAsync(UpdateServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8440,7 +12022,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceResponse>(await DoROARequestAsync("UpdateService", "2021-04-13", "HTTPS", "POST", "AK", "/services/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateService",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateServiceGroupResponse UpdateServiceGroup(UpdateServiceGroupRequest request)
@@ -8469,6 +12063,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["enableWebhook"] = request.EnableWebhook;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSourceTemplates))
+            {
+                body["monitorSourceTemplates"] = request.MonitorSourceTemplates;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupDescription))
             {
                 body["serviceGroupDescription"] = request.ServiceGroupDescription;
@@ -8498,7 +12096,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceGroupResponse>(DoROARequest("UpdateServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/modify", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/modify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateServiceGroupResponse> UpdateServiceGroupWithOptionsAsync(UpdateServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8513,6 +12123,10 @@ namespace AlibabaCloud.SDK.GEMP20210413
             {
                 body["enableWebhook"] = request.EnableWebhook;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorSourceTemplates))
+            {
+                body["monitorSourceTemplates"] = request.MonitorSourceTemplates;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceGroupDescription))
             {
                 body["serviceGroupDescription"] = request.ServiceGroupDescription;
@@ -8542,7 +12156,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceGroupResponse>(await DoROARequestAsync("UpdateServiceGroup", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/modify", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceGroup",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/modify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateServiceGroupSchedulingResponse UpdateServiceGroupScheduling(UpdateServiceGroupSchedulingRequest request)
@@ -8588,7 +12214,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceGroupSchedulingResponse>(DoROARequest("UpdateServiceGroupScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceGroupScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceGroupSchedulingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateServiceGroupSchedulingResponse> UpdateServiceGroupSchedulingWithOptionsAsync(UpdateServiceGroupSchedulingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8620,7 +12258,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceGroupSchedulingResponse>(await DoROARequestAsync("UpdateServiceGroupScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceGroupScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceGroupSchedulingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateServiceGroupSpecialDaySchedulingResponse UpdateServiceGroupSpecialDayScheduling(UpdateServiceGroupSpecialDaySchedulingRequest request)
@@ -8662,7 +12312,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceGroupSpecialDaySchedulingResponse>(DoROARequest("UpdateServiceGroupSpecialDayScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/updateSpecialDayScheduling", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceGroupSpecialDayScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/updateSpecialDayScheduling",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceGroupSpecialDaySchedulingResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateServiceGroupSpecialDaySchedulingResponse> UpdateServiceGroupSpecialDaySchedulingWithOptionsAsync(UpdateServiceGroupSpecialDaySchedulingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8690,7 +12352,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateServiceGroupSpecialDaySchedulingResponse>(await DoROARequestAsync("UpdateServiceGroupSpecialDayScheduling", "2021-04-13", "HTTPS", "POST", "AK", "/services/group/scheduling/updateSpecialDayScheduling", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceGroupSpecialDayScheduling",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/services/group/scheduling/updateSpecialDayScheduling",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceGroupSpecialDaySchedulingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateSubscriptionResponse UpdateSubscription(UpdateSubscriptionRequest request)
@@ -8760,7 +12434,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateSubscriptionResponse>(DoROARequest("UpdateSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSubscriptionResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateSubscriptionResponse> UpdateSubscriptionWithOptionsAsync(UpdateSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8816,7 +12502,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateSubscriptionResponse>(await DoROARequestAsync("UpdateSubscription", "2021-04-13", "HTTPS", "POST", "AK", "/notify/subscription/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSubscription",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/notify/subscription/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateUserResponse UpdateUser(UpdateUserRequest request)
@@ -8866,7 +12564,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateUserResponse>(DoROARequest("UpdateUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateUserResponse> UpdateUserWithOptionsAsync(UpdateUserRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8902,7 +12612,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateUserResponse>(await DoROARequestAsync("UpdateUser", "2021-04-13", "HTTPS", "POST", "AK", "/user/update", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUser",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         public UpdateUserGuideStatusResponse UpdateUserGuideStatus(UpdateUserGuideStatusRequest request)
@@ -8936,7 +12658,19 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateUserGuideStatusResponse>(DoROARequest("UpdateUserGuideStatus", "2021-04-13", "HTTPS", "POST", "AK", "/user/update/guide/status", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserGuideStatus",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/update/guide/status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserGuideStatusResponse>(CallApi(params_, req, runtime));
         }
 
         public async Task<UpdateUserGuideStatusResponse> UpdateUserGuideStatusWithOptionsAsync(UpdateUserGuideStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
@@ -8956,7 +12690,97 @@ namespace AlibabaCloud.SDK.GEMP20210413
                 Headers = headers,
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            return TeaModel.ToObject<UpdateUserGuideStatusResponse>(await DoROARequestAsync("UpdateUserGuideStatus", "2021-04-13", "HTTPS", "POST", "AK", "/user/update/guide/status", "json", req, runtime));
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserGuideStatus",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/user/update/guide/status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserGuideStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        public VerifyRouteRuleResponse VerifyRouteRule(VerifyRouteRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VerifyRouteRuleWithOptions(request, headers, runtime);
+        }
+
+        public async Task<VerifyRouteRuleResponse> VerifyRouteRuleAsync(VerifyRouteRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VerifyRouteRuleWithOptionsAsync(request, headers, runtime);
+        }
+
+        public VerifyRouteRuleResponse VerifyRouteRuleWithOptions(VerifyRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteRuleId))
+            {
+                body["routeRuleId"] = request.RouteRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestSourceEvents))
+            {
+                body["testSourceEvents"] = request.TestSourceEvents;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyRouteRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        public async Task<VerifyRouteRuleResponse> VerifyRouteRuleWithOptionsAsync(VerifyRouteRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteRuleId))
+            {
+                body["routeRuleId"] = request.RouteRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TestSourceEvents))
+            {
+                body["testSourceEvents"] = request.TestSourceEvents;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyRouteRule",
+                Version = "2021-04-13",
+                Protocol = "HTTPS",
+                Pathname = "/routeRule/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyRouteRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
     }
