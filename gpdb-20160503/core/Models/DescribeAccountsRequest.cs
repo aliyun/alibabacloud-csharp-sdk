@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeAccountsRequest : TeaModel {
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
 
     }
 

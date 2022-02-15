@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
 
     }
 

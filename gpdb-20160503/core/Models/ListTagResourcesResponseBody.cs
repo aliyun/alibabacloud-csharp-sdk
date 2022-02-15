@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                public string ResourceType { get; set; }
-                public string TagValue { get; set; }
                 public string ResourceId { get; set; }
+                public string ResourceType { get; set; }
                 public string TagKey { get; set; }
+                public string TagValue { get; set; }
             }
         };
 

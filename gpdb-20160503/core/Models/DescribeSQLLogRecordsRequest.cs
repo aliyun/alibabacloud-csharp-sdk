@@ -13,6 +13,26 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("Database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        [NameInMap("Form")]
+        [Validation(Required=false)]
+        public string Form { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("QueryKeywords")]
         [Validation(Required=false)]
         public string QueryKeywords { get; set; }
@@ -21,29 +41,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
-        [NameInMap("Database")]
-        [Validation(Required=false)]
-        public string Database { get; set; }
-
         [NameInMap("User")]
         [Validation(Required=false)]
         public string User { get; set; }
-
-        [NameInMap("Form")]
-        [Validation(Required=false)]
-        public string Form { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
 
     }
 

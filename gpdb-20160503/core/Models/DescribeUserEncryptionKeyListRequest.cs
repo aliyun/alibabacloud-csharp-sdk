@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeUserEncryptionKeyListRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

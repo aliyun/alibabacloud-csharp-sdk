@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class AddBuDBInstanceRelationResponseBody : TeaModel {
+        [NameInMap("BusinessUnit")]
+        [Validation(Required=false)]
+        public string BusinessUnit { get; set; }
+
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
@@ -16,10 +20,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("BusinessUnit")]
-        [Validation(Required=false)]
-        public string BusinessUnit { get; set; }
 
     }
 

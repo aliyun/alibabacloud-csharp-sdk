@@ -9,17 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateAccountRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("AccountDescription")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("DatabaseName")]
-        [Validation(Required=false)]
-        public string DatabaseName { get; set; }
+        public string AccountDescription { get; set; }
 
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -29,9 +21,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
-        [NameInMap("AccountDescription")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string AccountDescription { get; set; }
+        public string DBInstanceId { get; set; }
+
+        [NameInMap("DatabaseName")]
+        [Validation(Required=false)]
+        public string DatabaseName { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
 
     }
 

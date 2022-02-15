@@ -13,21 +13,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("QueryKeywords")]
-        [Validation(Required=false)]
-        public string QueryKeywords { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
         [NameInMap("Database")]
         [Validation(Required=false)]
         public string Database { get; set; }
-
-        [NameInMap("User")]
-        [Validation(Required=false)]
-        public string User { get; set; }
 
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -37,13 +25,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string ExecuteCost { get; set; }
 
-        [NameInMap("SourceIP")]
-        [Validation(Required=false)]
-        public string SourceIP { get; set; }
-
         [NameInMap("ExecuteState")]
         [Validation(Required=false)]
         public string ExecuteState { get; set; }
+
+        [NameInMap("MaxExecuteCost")]
+        [Validation(Required=false)]
+        public string MaxExecuteCost { get; set; }
+
+        [NameInMap("MinExecuteCost")]
+        [Validation(Required=false)]
+        public string MinExecuteCost { get; set; }
 
         [NameInMap("OperationClass")]
         [Validation(Required=false)]
@@ -53,13 +45,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string OperationType { get; set; }
 
-        [NameInMap("MaxExecuteCost")]
+        [NameInMap("QueryKeywords")]
         [Validation(Required=false)]
-        public string MaxExecuteCost { get; set; }
+        public string QueryKeywords { get; set; }
 
-        [NameInMap("MinExecuteCost")]
+        [NameInMap("SourceIP")]
         [Validation(Required=false)]
-        public string MinExecuteCost { get; set; }
+        public string SourceIP { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
+
+        [NameInMap("User")]
+        [Validation(Required=false)]
+        public string User { get; set; }
 
     }
 

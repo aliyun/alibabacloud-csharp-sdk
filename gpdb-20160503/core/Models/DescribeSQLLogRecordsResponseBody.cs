@@ -9,9 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSQLLogRecordsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+        [NameInMap("Items")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public DescribeSQLLogRecordsResponseBodyItems Items { get; set; }
+        public class DescribeSQLLogRecordsResponseBodyItems : TeaModel {
+            [NameInMap("SQLRecord")]
+            [Validation(Required=false)]
+            public List<DescribeSQLLogRecordsResponseBodyItemsSQLRecord> SQLRecord { get; set; }
+            public class DescribeSQLLogRecordsResponseBodyItemsSQLRecord : TeaModel {
+                public string AccountName { get; set; }
+                public string DBName { get; set; }
+                public string ExecuteTime { get; set; }
+                public string HostAddress { get; set; }
+                public long? ReturnRowCounts { get; set; }
+                public string SQLText { get; set; }
+                public string ThreadID { get; set; }
+                public long? TotalExecutionTimes { get; set; }
+            }
+        };
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -21,28 +36,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }
-
-        [NameInMap("Items")]
-        [Validation(Required=false)]
-        public DescribeSQLLogRecordsResponseBodyItems Items { get; set; }
-        public class DescribeSQLLogRecordsResponseBodyItems : TeaModel {
-            [NameInMap("SQLRecord")]
-            [Validation(Required=false)]
-            public List<DescribeSQLLogRecordsResponseBodyItemsSQLRecord> SQLRecord { get; set; }
-            public class DescribeSQLLogRecordsResponseBodyItemsSQLRecord : TeaModel {
-                public string HostAddress { get; set; }
-                public string SQLText { get; set; }
-                public long? ReturnRowCounts { get; set; }
-                public string DBName { get; set; }
-                public string ExecuteTime { get; set; }
-                public string ThreadID { get; set; }
-                public long? TotalExecutionTimes { get; set; }
-                public string AccountName { get; set; }
-            }
-        };
 
     }
 

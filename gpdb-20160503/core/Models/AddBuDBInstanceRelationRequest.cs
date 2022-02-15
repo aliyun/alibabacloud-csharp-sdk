@@ -12,17 +12,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class AddBuDBInstanceRelationRequest : TeaModel {
-        [NameInMap("OwnerId")]
+        [NameInMap("BusinessUnit")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public string BusinessUnit { get; set; }
 
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("BusinessUnit")]
+        [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string BusinessUnit { get; set; }
+        public long? OwnerId { get; set; }
 
     }
 

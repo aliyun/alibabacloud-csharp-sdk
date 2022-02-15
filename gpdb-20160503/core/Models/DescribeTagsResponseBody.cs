@@ -17,13 +17,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<DescribeTagsResponseBodyTags> Tags { get; set; }
         public class DescribeTagsResponseBodyTags : TeaModel {
-            [NameInMap("TagValue")]
-            [Validation(Required=false)]
-            public string TagValue { get; set; }
-
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
 
         }
 

@@ -9,21 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBClusterPerformanceResponseBody : TeaModel {
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
 
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -33,21 +25,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            [NameInMap("Unit")]
-            [Validation(Required=false)]
-            public string Unit { get; set; }
-
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeDBClusterPerformanceResponseBodyPerformanceKeysSeries> Series { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformanceKeysSeries : TeaModel {
-                [NameInMap("Role")]
-                [Validation(Required=false)]
-                public string Role { get; set; }
-
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
 
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -61,7 +49,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             }
 
+            [NameInMap("Unit")]
+            [Validation(Required=false)]
+            public string Unit { get; set; }
+
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

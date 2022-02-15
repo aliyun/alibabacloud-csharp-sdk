@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
         [NameInMap("VPCId")]
         [Validation(Required=false)]
         public string VPCId { get; set; }
@@ -24,10 +28,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
-
-        [NameInMap("PrivateIpAddress")]
-        [Validation(Required=false)]
-        public string PrivateIpAddress { get; set; }
 
     }
 

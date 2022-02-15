@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ReleaseInstancePublicConnectionRequest : TeaModel {
-        [NameInMap("DBInstanceId")]
+        [NameInMap("AddressType")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public string AddressType { get; set; }
 
         [NameInMap("CurrentConnectionString")]
         [Validation(Required=false)]
         public string CurrentConnectionString { get; set; }
 
-        [NameInMap("AddressType")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string AddressType { get; set; }
+        public string DBInstanceId { get; set; }
 
     }
 

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySecurityIpsRequest : TeaModel {
+        [NameInMap("DBInstanceIPArrayAttribute")]
+        [Validation(Required=false)]
+        public string DBInstanceIPArrayAttribute { get; set; }
+
+        [NameInMap("DBInstanceIPArrayName")]
+        [Validation(Required=false)]
+        public string DBInstanceIPArrayName { get; set; }
+
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -16,14 +24,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("SecurityIPList")]
         [Validation(Required=false)]
         public string SecurityIPList { get; set; }
-
-        [NameInMap("DBInstanceIPArrayName")]
-        [Validation(Required=false)]
-        public string DBInstanceIPArrayName { get; set; }
-
-        [NameInMap("DBInstanceIPArrayAttribute")]
-        [Validation(Required=false)]
-        public string DBInstanceIPArrayAttribute { get; set; }
 
     }
 

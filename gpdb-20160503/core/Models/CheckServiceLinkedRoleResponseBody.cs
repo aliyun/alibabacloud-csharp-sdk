@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("HasServiceLinkedRole")]
         [Validation(Required=false)]
         public string HasServiceLinkedRole { get; set; }
@@ -20,6 +16,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

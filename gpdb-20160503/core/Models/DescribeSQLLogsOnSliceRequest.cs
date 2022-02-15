@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSQLLogsOnSliceRequest : TeaModel {
-        [NameInMap("PageSize")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string DBInstanceId { get; set; }
 
-        [NameInMap("PageNumber")]
+        [NameInMap("ExecuteState")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string ExecuteState { get; set; }
 
         [NameInMap("MaxExecuteCost")]
         [Validation(Required=false)]
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string MinExecuteCost { get; set; }
 
-        [NameInMap("ExecuteState")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string ExecuteState { get; set; }
+        public int? PageNumber { get; set; }
 
-        [NameInMap("DBInstanceId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("QueryId")]
         [Validation(Required=false)]

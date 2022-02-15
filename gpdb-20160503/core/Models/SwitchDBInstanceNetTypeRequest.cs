@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class SwitchDBInstanceNetTypeRequest : TeaModel {
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
 
         [NameInMap("Port")]
         [Validation(Required=false)]

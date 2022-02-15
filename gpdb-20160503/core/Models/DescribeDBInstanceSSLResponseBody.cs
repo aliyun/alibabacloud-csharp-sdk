@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceSSLResponseBody : TeaModel {
+        [NameInMap("CertCommonName")]
+        [Validation(Required=false)]
+        public string CertCommonName { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
@@ -20,14 +28,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("SSLEnabled")]
         [Validation(Required=false)]
         public bool? SSLEnabled { get; set; }
-
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("CertCommonName")]
-        [Validation(Required=false)]
-        public string CertCommonName { get; set; }
 
         [NameInMap("SSLExpiredTime")]
         [Validation(Required=false)]

@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? BackupRetentionPeriod { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("EnableRecoveryPoint")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public bool? EnableRecoveryPoint { get; set; }
 
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RecoveryPointPeriod { get; set; }
 
-        [NameInMap("EnableRecoveryPoint")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? EnableRecoveryPoint { get; set; }
+        public string RequestId { get; set; }
 
     }
 

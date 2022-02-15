@@ -9,30 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeLogBackupsResponseBody : TeaModel {
-        [NameInMap("TotalLogSize")]
-        [Validation(Required=false)]
-        public long? TotalLogSize { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public int? PageNumber { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public int? TotalCount { get; set; }
-
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeLogBackupsResponseBodyItems> Items { get; set; }
         public class DescribeLogBackupsResponseBodyItems : TeaModel {
+            [NameInMap("BackupId")]
+            [Validation(Required=false)]
+            public string BackupId { get; set; }
+
+            [NameInMap("DBInstanceId")]
+            [Validation(Required=false)]
+            public string DBInstanceId { get; set; }
+
+            [NameInMap("LogFileName")]
+            [Validation(Required=false)]
+            public string LogFileName { get; set; }
+
             [NameInMap("LogFileSize")]
             [Validation(Required=false)]
             public long? LogFileSize { get; set; }
@@ -45,19 +37,27 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string SegmentName { get; set; }
 
-            [NameInMap("LogFileName")]
-            [Validation(Required=false)]
-            public string LogFileName { get; set; }
-
-            [NameInMap("DBInstanceId")]
-            [Validation(Required=false)]
-            public string DBInstanceId { get; set; }
-
-            [NameInMap("BackupId")]
-            [Validation(Required=false)]
-            public string BackupId { get; set; }
-
         }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        [NameInMap("TotalLogSize")]
+        [Validation(Required=false)]
+        public long? TotalLogSize { get; set; }
 
     }
 

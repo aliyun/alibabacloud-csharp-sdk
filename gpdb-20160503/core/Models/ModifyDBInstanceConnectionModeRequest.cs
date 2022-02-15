@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyDBInstanceConnectionModeRequest : TeaModel {
-        [NameInMap("DBInstanceId")]
-        [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
         [NameInMap("ConnectionMode")]
         [Validation(Required=false)]
         public string ConnectionMode { get; set; }
+
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
 
     }
 

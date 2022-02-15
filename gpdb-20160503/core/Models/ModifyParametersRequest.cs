@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("Parameters")]
-        [Validation(Required=false)]
-        public string Parameters { get; set; }
-
         [NameInMap("ForceRestartInstance")]
         [Validation(Required=false)]
         public bool? ForceRestartInstance { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string Parameters { get; set; }
 
     }
 

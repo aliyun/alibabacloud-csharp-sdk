@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public DescribeAccountsResponseBodyAccounts Accounts { get; set; }
@@ -22,11 +18,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<DescribeAccountsResponseBodyAccountsDBInstanceAccount> DBInstanceAccount { get; set; }
             public class DescribeAccountsResponseBodyAccountsDBInstanceAccount : TeaModel {
                 public string AccountDescription { get; set; }
-                public string DBInstanceId { get; set; }
-                public string AccountStatus { get; set; }
                 public string AccountName { get; set; }
+                public string AccountStatus { get; set; }
+                public string DBInstanceId { get; set; }
             }
         };
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

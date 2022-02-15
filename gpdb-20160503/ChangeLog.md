@@ -1,3 +1,6 @@
+2022-02-15 Version: 1.0.7
+- AMP Version Change.
+
 2021-10-09 Version: 1.0.6
 - ADB for PG sdk.
 
