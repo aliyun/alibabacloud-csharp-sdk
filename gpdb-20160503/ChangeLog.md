@@ -1,3 +1,6 @@
+2022-02-16 Version: 1.0.8
+- Support set datashare.
+
 2022-02-15 Version: 1.0.7
 - AMP Version Change.
 
